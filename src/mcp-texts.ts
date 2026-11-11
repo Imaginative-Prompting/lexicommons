@@ -151,7 +151,7 @@ export function registerTextTools(server: McpServer, env: Env, { caller, sourceL
     },
     async ({ language }) =>
       guarded(async () => {
-        if (!WEAVE_RULES[language] || !WEAVE_LANGUAGES.includes(language)) throw new LibraryError(`Weaving into ${language} isn't ready yet: only ${WEAVE_LANGUAGES.join(", ")}.`);
+        if (!WEAVE_RULES[language] || !WEAVE_LANGUAGES.includes(language)) throw new LibraryError(`Weaving into ${language} isn't ready yet: only ${WEAVE_LANGUAGES.join(", ")} (get_weave_guide's Which languages names them).`);
         // The patterns a sentence's c may name: the language's grammar as the library has it now (add_weave checks against the same).
         await grammarReady(env, language);
         const patterns = Object.fromEntries(

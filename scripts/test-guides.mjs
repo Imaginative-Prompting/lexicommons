@@ -40,6 +40,7 @@ const { SMALLEST, FULL, OTHER_GENDER, READINGS, REFUSALS } = await import(join(A
 const { TEXT_EXAMPLE, TEXT_REFUSALS, BOOK_EXAMPLE } = await import(join(APP, "src/text-guide.ts"));
 const { WEAVE_EXAMPLE, WEAVE_EXAMPLE_ES, WEAVE_MORE, WEAVE_REFUSALS, FLIP_AT } = await import(join(APP, "src/weave-guide.ts"));
 const { WEAVE_LANGUAGES, WEAVE_TUNED } = await import(join(APP, "public/js/read/weave-languages.generated.js"));
+const { WEAVE_SPLIT } = await import(join(APP, "src/weave-rules.generated.ts"));
 const { bookFromText } = await import(join(APP, "public/js/read/import-text.js"));
 const { shownJson } = await import(join(APP, "src/guide-json.ts"));
 const { numberedSentences } = await import(join(APP, "src/weave-answer.ts"));
@@ -402,13 +403,34 @@ await test("every language a text can be woven into: its guide, saying whether L
     const { guide } = passes(await texts("get_weave_guide", { language: code }), `get_weave_guide ${code}`);
     const name = (await import(join(APP, "public/js/lang/index.js"))).LANGUAGES[code].name;
     ok(guide.startsWith(`# Weaving a text into ${name}`) && guide.includes(`"Weave this into ${name} for me in Lexicommons"`), `${code}'s guide isn't ${name}'s`);
-    const footing = WEAVE_TUNED.includes(code) ? `Lexicommons' rules are tuned for ${name}:` : `Lexicommons' rules aren't tuned for ${name} yet: you follow the general rules`;
+    const footing = WEAVE_TUNED.includes(code) ? `For ${name}, that means the rules at the end carry` : `${name} is one of those: the rules at the end`;
     ok(guide.includes(footing), `${code}'s guide doesn't say its footing: ${footing}`);
+    // What the mix check does for it, by its pronoun list: an empty one (its pronouns free words) says the pronoun check doesn't apply; none
+    // says any glossed pronoun after an English verb counts; a list says neither.
+    const list = WEAVE_SPLIT[code]?.objectPronouns;
+    const freeWords = guide.includes(`it doesn't look for an object pronoun left alone after an English verb, because ${name}'s object pronouns are words of their own`);
+    const noList = guide.includes(`The mix check has no list of ${name}'s object pronouns yet`);
+    ok(freeWords === (Array.isArray(list) && !list.length), `${code}'s guide ${freeWords ? "says" : "doesn't say"} the pronoun check doesn't apply (its list: ${JSON.stringify(list)})`);
+    ok(noList === !Array.isArray(list), `${code}'s guide ${noList ? "says" : "doesn't say"} it has no pronoun list (its list: ${JSON.stringify(list)})`);
+    // Said once, and every name filled: no placeholder left ({language}), and no sentence of the guide's own (its rules and examples aside) twice.
+    const own = guide.slice(0, guide.indexOf("## The rules")).split("\n").filter((line) => !/^\s*[[\]{}"]/.test(line)).join("\n");
+    const left = own.match(/\{[A-Za-z_]+\}/g);
+    ok(!left, `${code}'s guide has a placeholder left: ${left}`);
+    const sentences = own.split(/(?<=[.!?])\s+/).map((one) => one.trim().toLowerCase()).filter((one) => one.length > 40);
+    const twice = sentences.filter((one, i) => sentences.indexOf(one) !== i);
+    ok(!twice.length, `${code}'s guide says the same thing twice: ${twice[0]}`);
+    ok(own.trimEnd().length && /The last thing you say, every time, once it's sent: the text reads in English at first/.test(own), `${code}'s guide has no last thing to say`);
     ok(guide.includes(code === "es" ? shownJson(WEAVE_EXAMPLE_ES.weave) : shownJson(WEAVE_EXAMPLE.weave)), `${code}'s worked example`);
     ok(code === "nl" || code === "es" || guide.includes(`There's no worked example in ${name} yet`), `${code}'s guide doesn't say its example is Dutch's`);
     ok(!/woven for 90 days|kept here for weaving 90 days/.test(guide), `${code}'s guide says the 90 days as weaving`);
     said.push(`${code} ${WEAVE_TUNED.includes(code) ? "tuned" : "general"}`);
   }
+  // The controls: a planted placeholder and a sentence planted twice are what these look for, and they're found.
+  const plantedPlaceholder = "A guide. It names {language} here.";
+  ok(/\{[A-Za-z_]+\}/.test(plantedPlaceholder), "a planted placeholder isn't found: this measure can't fail");
+  const twiceOver = "This sentence is long enough to count as a claim of its own. This sentence is long enough to count as a claim of its own.";
+  const plantedSentences = twiceOver.split(/(?<=[.!?])\s+/).map((one) => one.trim().toLowerCase()).filter((one) => one.length > 40);
+  ok(plantedSentences.some((one, i) => plantedSentences.indexOf(one) !== i), "a sentence planted twice isn't found: this measure can't fail");
   return said.join(", ");
 });
 

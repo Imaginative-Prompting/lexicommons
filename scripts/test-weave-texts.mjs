@@ -270,5 +270,26 @@ await test("a possessive her (haar, its own lemma) after a verb is never taken f
   }
 });
 
+await test("the mix check's pronoun list as the pipeline gives it: an empty list (German's, Russian's) counts no pronoun left alone, no list counts any, a list counts its own", async () => {
+  const { splitForms } = await import(join(APP, "src/split-forms.generated.ts"));
+  const { WEAVE_SPLIT } = await import(join(APP, "src/weave-rules.generated.ts"));
+  const { weaveFromAnswer } = await import(join(APP, "src/weave-answer.ts"));
+  // German and Russian arrive with a list, empty: never left out (no list means any pronoun counts).
+  for (const code of ["de", "ru"]) {
+    assert.ok(Array.isArray(WEAVE_SPLIT[code]?.objectPronouns), `${code}: no pronoun list reached the app: ${JSON.stringify(WEAVE_SPLIT[code])}`);
+    assert.equal(WEAVE_SPLIT[code].objectPronouns.length, 0, `${code}: its list isn't empty: ${JSON.stringify(WEAVE_SPLIT[code])}`);
+  }
+  // One sentence with "her" as the object (lemma zij) shown alone after an English verb, read with each kind of list.
+  const one = POSSESSIVES[0];
+  const book = await bookFromText(one.text, { title: "pronoun lists", lang: "en" });
+  const made = await weaveFromAnswer(book, "nl", answerOf(one.t("zij"), one.nl, one.m("zij")));
+  assert.ok(made.weave, `the planted weave wasn't made: ${made.problems.join("; ")}`);
+  const alone = (rules) => splitForms(book, made.weave, rules).filter((f) => f.kind === "word:pronoun-alone").length;
+  assert.ok(alone(WEAVE_SPLIT.nl) > 0, "the control: Dutch's own list doesn't count its pronoun left alone");
+  assert.ok(alone({}) > 0, "no list doesn't count a pronoun left alone");
+  assert.equal(alone({ objectPronouns: [] }), 0, "an empty list counts a pronoun left alone");
+  assert.equal(alone(WEAVE_SPLIT.de), 0, "German's rules count a pronoun left alone");
+});
+
 console.log(`\n${passed}/${passed + failed} passed`);
 process.exit(failed ? 1 : 0);

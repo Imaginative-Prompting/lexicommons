@@ -561,27 +561,33 @@ const WHERE_IT_STARTS = `## The other way in: their press in Read
 A weave can also start with the person, in Read: on a text of theirs (one they pasted or uploaded, or one you added with add_text) in a language other than the one they learn, the reader offers "Weave it with your AI" at the text's end the first time, and after that in its Contents ("Weave it into Dutch", with a Weave it button). Their press sends you a weave request with the text. Then: list_requests (or wait_for_request) shows it, of kind weave; take_request with its request_id (keep the seat it gives); get_text with the request_id gives to_weave; weave it as below; add_weave with the request_id and your seat; if you can't, finish_request with couldnt and why.`;
 
 const nameOf = (code: string) => LANGUAGES[code as keyof typeof LANGUAGES]?.name ?? code;
-const listed = (codes: string[]) => (codes.length < 2 ? codes.map(nameOf).join("") : `${codes.slice(0, -1).map(nameOf).join(", ")} and ${nameOf(codes.at(-1)!)}`);
+const andList = (words: string[]) => (words.length < 2 ? words.join("") : `${words.slice(0, -1).join(", ")} and ${words.at(-1)}`);
+const listed = (codes: string[]) => andList(codes.map(nameOf));
+const byName = (codes: string[]) => [...codes].sort((a, b) => nameOf(a).localeCompare(nameOf(b), "en"));
 
 /**
- * Which languages a text can be woven into (weave-languages.generated.js: the books pipeline's weave-accepted.json and weave-own.json), and
- * this one's footing: Lexicommons' rules tuned for it (WEAVE_TUNED), or the general rules, said plainly; the mix check's data for it, or
- * what the check does without (lx-books, 11 Nov 2026: with no list of object pronouns it reads any word glossed as a pronoun after an English
- * verb as one shown alone).
+ * Which languages a text can be woven into (weave-languages.generated.js: the books pipeline's weave-own.json, and weave-accepted.json's
+ * entries that aren't the shelf's alone; the director's rule of 11 Nov 2026: a language with accepted rules whose woven words need no reading
+ * the reader can't yet draw), by name, and this one's footing: Lexicommons' rules tuned for it (WEAVE_TUNED: a worked example of its own in
+ * this guide and the mix check's data), or the general rules, said plainly, with what to do where a note seems wrong; the mix check's data for it, and what
+ * the check does with it (lx-books, 11 Nov 2026): an empty list of object pronouns (German's and Russian's are free words: "sah sie" is fine)
+ * means no pronoun is counted as left alone after an English verb; no list at all, any word glossed as a pronoun there is.
  */
 const languagesNow = (language: string) => {
   const tuned = WEAVE_LANGUAGES.filter((code) => WEAVE_TUNED.includes(code));
   const general = WEAVE_LANGUAGES.filter((code) => !WEAVE_TUNED.includes(code));
   const here = nameOf(language);
   const footing = WEAVE_TUNED.includes(language)
-    ? `Lexicommons' rules are tuned for ${here}: the rules at the end carry ${here}'s own notes, and the mix check has its object pronouns and verb forms.`
-    : `Lexicommons' rules aren't tuned for ${here} yet: you follow the general rules at the end, with the notes ${here} has, and your weave is checked the same way.${
-        Object.keys(WEAVE_SPLIT[language] ?? {}).length
-          ? ""
-          : ` The mix check has no list of ${here}'s object pronouns yet, so it reads any word you gloss as a pronoun right after an English verb as an object pronoun shown alone: keep an object pronoun in its verb's group.`
+    ? `For ${here}, that means the rules at the end carry ${here}'s own notes, the worked example below is ${here}'s own, and the mix check has its object pronouns and verb forms.`
+    : `${here} is one of those: the rules at the end, with the notes ${here} has, and your weave checked the same way. Its notes aren't tuned as ${andList(byName(tuned).map((code) => `${nameOf(code)}'s`))} are: where one seems wrong for ${here}, follow ${here}, and tell them which note you set aside.${
+        !Array.isArray(WEAVE_SPLIT[language]?.objectPronouns)
+          ? ` The mix check has no list of ${here}'s object pronouns yet, so it reads any word you gloss as a pronoun right after an English verb as an object pronoun shown alone: keep an object pronoun in its verb's group.`
+          : WEAVE_SPLIT[language].objectPronouns!.length
+            ? ""
+            : ` The mix check looks for a verb's form split from the rest of it; it doesn't look for an object pronoun left alone after an English verb, because ${here}'s object pronouns are words of their own that may follow a verb.`
       }`;
   return `## Which languages
-A text can be woven into ${listed(WEAVE_LANGUAGES)}. Lexicommons' rules are tuned for ${listed(tuned)}${general.length ? `; for ${listed(general)} you follow the general rules` : ""}. ${footing} The rules are written for a text in English, a language they know; the weave is checked the same way whatever the text's language. More languages come as their rules do.`;
+A text can be woven into ${WEAVE_LANGUAGES.length === 1 ? "one language" : `${WEAVE_LANGUAGES.length} languages`}: ${listed(byName(WEAVE_LANGUAGES))}. Lexicommons' rules are tuned for ${listed(byName(tuned))}${general.length ? "; for the others you follow the general rules" : ""}. ${footing} The rules are written for a text in English, a language they know; the weave is checked the same way whatever the text's language. More languages come as their rules do, and those written with readings (Japanese, Chinese, Arabic and Hebrew among them) once Read draws their readings.`;
 };
 
 // Their one message: everything an AI needs to do it with no more from them (11 Nov 2026: the main way in).
@@ -590,8 +596,9 @@ They ask you something like "Weave this into ${name} for me in Lexicommons", wit
 - If you don't have the text, ask for it: pasted, a link you can open, or a file. Nothing else to ask: the language is the one they learn (get_learner, or list_packs, says which; ask if neither does).
 - Before a long text, say it takes a while and uses a lot of your usage: every sentence is written three ways (word by word in English order, whole in ${name}, and the ${name}-order line) and checked. A chapter of about 3,000 words, some 150 sentences, is a long job.
 - A chapter at a time: each chapter its own text (add_text) and its own weave. A text goes up to ${TEXT_UPLOADS.text!.maxBytes / 1_000_000} MB; a weave sent inline should stay under about 1 MB (a few hundred sentences), and past that it goes up as a file (format weave, ${TEXT_UPLOADS.weave!.maxBytes / 1_000_000} MB).
-- What they'll see: the text in Read, its card saying "Woven into ${name}", a notification if they allow them, and the text in English at first, ${name} coming into it as they learn its words (see What they see).
+- What they'll see: the text in Read, its card saying "Woven into ${name}", and a notification if they allow them (What they see, below, has the rest).
 The server keeps its copy of a text you add for 90 days so you can weave it; the text and its weave stay on their devices. After that, weave it from Read: they press Weave it with your AI on the text. A text in a language they know (English, in the rules) is what's woven; an EPUB can't be woven by you yet: add it as plain text instead.
+The last thing you say, every time, once it's sent: the text reads in English at first, and ${name} comes into it only as they learn its words, so a text with none of their words yet looks unchanged, and nothing's wrong with it.
 
 ## The steps
 1. get_weave_guide with language ("${code}"): you're reading it. Read it once for each language you weave into; the rules at its end are the books pipeline's.
@@ -601,7 +608,7 @@ The server keeps its copy of a text you add for 90 days so you can weave it; the
 5. Check what's below under "Before you send".
 6. add_weave with text_id, language ("${code}") and the weave. Past about 1 MB: request_text_upload with format weave, send it, then add_weave with upload_id in place of weave.
 7. It's checked at once, as the pipeline's judges check a layer: every sentence and word, then the two mixes they count (a verb's form split from the rest of it, an object pronoun shown alone). Every problem comes back at once and nothing is kept: fix them all and send it again.
-8. Once it passes, it's on its way to each of their devices: a notification comes if they allow them, and in Read its card and its Contents say "Woven into ${name}". Tell them what to expect: the text reads in English at first, and ${name} comes into it as they learn its words (a sentence they know nearly all of shows in ${name} whole). get_text with the text_id says where it arrived.
+8. Once it passes, it's on its way to each of their devices: a notification comes if they allow them, and in Read its card and its Contents say "Woven into ${name}". get_text with the text_id says where it arrived. Then say the last thing, as Their one message ends.
 9. If you can't weave it, tell them why.`;
 
 // What a weave that passes every check still gets wrong (lx-books, 11 Nov 2026: Alice's 22 sentences woven by hand into Spanish passed the
@@ -629,7 +636,7 @@ The rules below say how to choose each one. Nothing else goes in: where each sen
 export const FLIP_AT = 90;
 
 const SEES = (name: string) => `## What they see
-- The text in Read, its card and its Contents saying "Woven into ${name}", and woven: the words they know show in the language they learn, in the English sentence, as they learn them; once they know ${FLIP_AT}% of a sentence's words (the reader's default; a setting there changes it), the whole sentence shows in natural {language}: its text.
+- The text in Read, its card and its Contents saying "Woven into ${name}", and woven: the words they know show in the language they learn, in the English sentence, as they learn them; once they know ${FLIP_AT}% of a sentence's words (the reader's default; a setting there changes it), the whole sentence shows in natural ${name}: its text.
 - A weave isn't undone: it stays with the text on their devices.`;
 
 const block = (value: unknown) => shownJson(value);

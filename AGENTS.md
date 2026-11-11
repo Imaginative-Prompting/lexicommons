@@ -616,7 +616,8 @@ node scripts/test-guides.mjs              # the AI guides hold true (src/text-gu
                                           # an AI calls them (a text's upload, PUT and add_text, Japanese, Chinese, Cantonese and Thai too; a weave in the
                                           # guide's form through add_weave, read at each level as the guide says; their one message: add_text, get_text's
                                           # to_weave by text_id, add_weave with text_id and language, nothing pressed; every language a text can be woven into,
-                                          # its footing said: tuned or the general rules; Spanish's own example into Spanish), and every refusal a guide lists planted
+                                          # its footing said: tuned or the general rules, and what the mix check does by its pronoun list; no placeholder left and
+                                          # nothing said twice in any; Spanish's own example into Spanish), and every refusal a guide lists planted
                                           # and said in its words; change a guide or what it describes and run it (exit 0 = pass)
 node scripts/test-text-relay.mjs          # the text relay (src/texts.ts) on the real migrations in Node's SQLite: a queued
                                           # change never taken back, Undo's 7 days, expiry, one upload per text; a text your AI adds kept for weaving
@@ -626,7 +627,9 @@ node scripts/test-weave-texts.mjs         # weaving a text of yours with your AI
                                           # that text, within the hour, never two requests'), add_weave refusing with nothing written (a language not accepted, a
                                           # weave into another, the format's checks, the pipeline's split-forms check, with Alice's accepted layer as its control)
                                           # and relaying a clean one as a change of kind weave served as part weave; the copy gone with the request, the tidy's
-                                          # sweep; a weave never making your text one your AI may remove, never undone (exit 0 = pass)
+                                          # sweep; a weave never making your text one your AI may remove, never undone; the mix check's object pronouns as the
+                                          # pipeline gives them (WEAVE_SPLIT: an empty list, German's and Russian's, counts none left alone; no list counts any;
+                                          # Dutch's its own, the control) (exit 0 = pass)
 node scripts/test-read-store.mjs          # the reading library with two accounts on one browser (read/store.js): listing,
                                           # opening, removing, deleting, shared covers, highlights going with their text
                                           # (exit 0 = pass)
