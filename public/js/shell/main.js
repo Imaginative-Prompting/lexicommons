@@ -33,7 +33,7 @@ import { SignedOut, keptMe, whoAmI } from "./api.js";
 import { hostedReady } from "../ai/hosted.js";
 import { checkKeyPresence, ownKeyPresent } from "../ai/own-key.js";
 import { renderStudy } from "./study.js";
-import { watchForUpdates } from "./update-prompt.js";
+import { watchForUpdates } from "./new-version.js";
 import { renderSettings } from "./settings.js";
 import { mayNeedWelcome, needsWelcome, openWelcome } from "./welcome.js";
 import { applyInterface, onInterfaceShown } from "./interface-language.js";
@@ -1478,8 +1478,8 @@ async function start() {
 
 if ("serviceWorker" in navigator) {
   const registration = navigator.serviceWorker.register("/sw.js").catch(() => null);
-  // A new version while the app is open: looked for whenever it comes back into view, then a quiet prompt to reload into it, never in the
-  // middle of a session (update-prompt.js).
+  // A new version while the app is open: looked for as it goes out of view and comes back, nothing on screen about it (Settings → About
+  // says so), and taken as it comes back after a long time away when nothing would be lost (new-version.js).
   watchForUpdates(registration);
   // A first open: the worker takes the page once it's installed, after the page loaded what it needed without it. What
   // it loaded (theme-boot.js keeps every entry) goes to the worker to keep, so the app opens offline as it looked (the

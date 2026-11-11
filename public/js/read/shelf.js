@@ -13,6 +13,7 @@
 //     known      optional: the set of lemmas you know in a language, to show how much of a book you'd see in it
 //   renderShelfSection(page, id, { open, known })      one section, all of it (#read/shelf/<id>)
 
+import { holdReload } from "../lx/reload-holds.js";
 import * as ui from "../lx/ui.js";
 import { lookToast } from "../shell/look-watch.js";
 import { el } from "../lx/ui.js";
@@ -295,8 +296,11 @@ export function opener({ open, known }) {
     const bar = ui.downloadBar({ label: `Opening ${meta.title}`, tinta: false });
     node?.querySelector('[data-part="book-cover"]')?.append(bar);
     say(`Opening ${meta.title}…`);
+    // While its file comes, the app doesn't reload into a new version by itself (shell/new-version.js).
+    const release = holdReload("a book");
     try {
       const record = await fetchOpenBook(meta, { onProgress: (share) => bar.set(share) });
+      release();
       if (stale) return;
       bar.done();
       bar.remove();
@@ -313,6 +317,7 @@ export function opener({ open, known }) {
         lookToast("wrong", error.message);
       } else say(error.message, "wrong");
     } finally {
+      release();
       opening = false;
     }
   }

@@ -43,7 +43,7 @@ import { symbol } from "../lx/symbols.js";
 import { t } from "../lx/i18n.js";
 import { celebration, wordsKnown } from "../know/celebration-ui.js";
 import { deckStep } from "./deck-steps.js";
-import { cardRows, setLetterHearing } from "./deck.js";
+import { cardRows, saidNoun, setLetterHearing, setSpeechHearing } from "./deck.js";
 import { bareChoice, gapMarks } from "./gap-marks.js";
 
 // The answer bar's quiet actions (Hint, I don't know, Can't speak now, Can't listen now): their words in a span of their own. They sit on
@@ -1629,7 +1629,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
   // A word said by itself, as the step reads a sentence: its words (an article, then the word), the word's lemma and reading on the last, no end mark.
   const wordItem = (step) => {
     const parts = String(step.text).trim().split(/\s+/);
-    const reading = parts.length === 1 ? readingOfForm(step.text) : null;
+    const reading = parts.length === 1 ? (step.reading ?? readingOfForm(step.text)) : null;
     return { id: null, means: step.means, punct: "", words: parts.map((text, i) => (i === parts.length - 1 ? [text, step.target ?? null, ...(reading ? [reading] : [])] : [text, null])) };
   };
   // Play again for a word (a recording of it, else the device's voice).
@@ -1638,8 +1638,16 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     return { row: el("div", { class: "lx-listen-row" }, again), play: () => again.lxPlay() };
   };
 
-  function drawSay(step, pictured) {
-    const word = step.kind === "say-word" || step.kind === "repeat-word";
+  // A pack's plain card said aloud (deck.js: a card whose text is in the pack's language, where something can listen) is Say the word on the
+  // card's text: asked from its meaning, the same tries and rows, right with a noun's article left off (deck.js saidNoun), matched by its reading
+  // where it has one. Its evidence is the card's own unit's (cardRows), as its other games record it, and its sound the card's own.
+  const cardAsked = (step) => ({ kind: "say", card: step.card, text: step.card.text, means: step.card.means, target: saidNoun(step.card), unit: step.unit, reading: step.card.reading ?? null, sound: step.sound ?? null });
+
+  function drawSay(shown, pictured) {
+    const card = shown.kind === "deck" ? shown.card : null;
+    // What's asked: the step itself, or a card's as a word step reads it. `shown` stays the session's own step (what current.step is held to).
+    const step = card ? cardAsked(shown) : shown;
+    const word = step.kind === "say-word" || step.kind === "repeat-word" || Boolean(card);
     const item = word ? wordItem(step) : step.item;
     const repeat = step.kind === "repeat" || step.kind === "repeat-word";
     const s = repeat ? settings.repeat : settings.say;
@@ -1647,7 +1655,10 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     // A word is right when the word itself was said (an article a recognizer drops isn't held against it), as a sentence's words are counted.
     const lemma = word ? item.words.at(-1)[1] : null;
     const saidRight = (match) => Boolean(match) && (word && lemma ? wordOutcomes(item.words, match, { spoken: true })[lemma] === "right" : match.ok);
-    const aboutWord = word ? `${step.text}: ${step.means}` : null;
+    const aboutWord = word ? `${step.text}${card?.reading ? ` (${card.reading})` : ""}: ${step.means}` : null;
+    // The answer aloud: a card's own sound on this device, else the device's voice; a word's recording.
+    const sayAnswer = card ? (options) => voice.speakCard({ text: card.text, clip: step.sound, lang: contentLanguage() }, options) : () => voice.speakWord(step.text);
+    const cardLearn = card ? () => ({ learn: cardPage(card, { say: sayAnswer, unit: step.unit }) }) : () => ({});
     const expected = expectedOf(item);
     // Said from its English, a sentence is right with its subject said or left out too, as the language allows, and so is another of
     // your sentences with the same English, and the same sentence for the other gender, shown as you said it (study/subjects.js);
@@ -1657,8 +1668,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     let tries = 0;
     let recorded = false;
     let listener = null;
-    current.step = step;
-    const ready = repeat ? "Listen, then press the microphone and say it back." : word ? "Press the microphone and say the word." : "Press the microphone and say the sentence.";
+    current.step = shown;
+    const ready = repeat ? "Listen, then press the microphone and say it back." : card ? "Press the microphone and say it." : word ? "Press the microphone and say the word." : "Press the microphone and say the sentence.";
     const showText = repeat ? s.show === "always" : !fromEnglish;
     const hearsIt = word ? voice.hearsWord(step.text) : voice.hearsItem(item);
     const speakIt = word ? () => voice.speakWord(step.text) : (options) => voice.speakItem(item, options);
@@ -1680,10 +1691,10 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     let preparing = false;
     speechApi();
     chooseEngine().then((choice) => {
-      if (choice.engine !== "whisper" || current.step !== step) return;
+      if (choice.engine !== "whisper" || current.step !== shown) return;
       let shown = false;
       readyWhisper(choice, (seconds) => {
-        if (listener || preparing || current.answered || current.step !== step || seconds < 1) return;
+        if (listener || preparing || current.answered || current.step !== shown || seconds < 1) return;
         status.textContent = loadingText(seconds);
         shown = true;
       })
@@ -1694,8 +1705,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     });
     // The middle of the step: what's happening, the wide speak button, and what you said.
     const game = el("div", { class: "lx-stack lx-reach lx-say-zone lx-game" }, status, mic, said);
-    const label = word ? (repeat ? PROMPTS.repeatWord : PROMPTS.sayWord) : repeat ? PROMPTS.repeat : fromEnglish ? PROMPTS.say : PROMPTS.read;
-    show(word ? stepTag(step) : null, prompt(label, fromEnglish ? item.means : null), el("div", { class: "lx-stimulus" }, listening?.row, fromEnglish ? hintLine : model), word ? wordPicture(step, pictured) : null, game);
+    const label = card ? PROMPTS.say : word ? (repeat ? PROMPTS.repeatWord : PROMPTS.sayWord) : repeat ? PROMPTS.repeat : fromEnglish ? PROMPTS.say : PROMPTS.read;
+    show(word && !card ? stepTag(step) : null, prompt(label, fromEnglish ? item.means : null), el("div", { class: "lx-stimulus" }, listening?.row, fromEnglish ? hintLine : model), word && !card ? wordPicture(step, pictured) : null, game);
     listening?.play();
 
     // The first try is what's recorded. A word: its unit, said or not (what you said kept for your AI when it wasn't).
@@ -1704,7 +1715,9 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
       recorded = true;
       if (word) {
         const right = saidRight(match);
-        record([{ concept: step.unit, outcome: right ? "right" : "wrong", activity: step.kind, ...TESTS[step.kind], ...(!right && heard ? { said: heard.slice(0, 300) } : {}) }]);
+        const row = { concept: step.unit, outcome: right ? "right" : "wrong", activity: step.kind, ...TESTS[step.kind], ...(!right && heard ? { said: heard.slice(0, 300) } : {}) };
+        // A card's row is its own unit's, and the word's too when the card is exactly a word (deck.js cardRows), as its other games record it.
+        record(card ? cardRows(card, { ...row, help: "none", item: step.unit.slice(2) }) : [row]);
         touched.add(step.unit);
         return;
       }
@@ -1732,8 +1745,10 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
       mic.lxState("asking");
       status.textContent = SAY_STATUS.asking;
       const choice = await chooseEngine();
-      if (current.step !== step || current.answered) return;
+      if (current.step !== shown || current.answered) return;
       if (!choice.engine) {
+        // Nothing can listen here: no later plan offers a card Say it (deck.js), as Study's tile stops offering the game.
+        if (choice.reason !== "setup") setSpeechHearing(false);
         mic.lxState(null);
         status.textContent = ready;
         return showSetup(choice.reason, choice.why);
@@ -1748,13 +1763,13 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
         } catch (error) {
           preparing = false;
           mic.lxState(null);
-          if (current.step !== step) return;
+          if (current.step !== shown) return;
           status.textContent = error?.message ?? "Whisper couldn't start. Try again, or use the browser's recognizer.";
           if (error?.code === "model-missing") showSetup("setup");
           return;
         }
         preparing = false;
-        if (current.step !== step || current.answered) return;
+        if (current.step !== shown || current.answered) return;
       }
       try {
         listener = choice.api.listen({
@@ -1774,7 +1789,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
         const result = await listener.done;
         listener = null;
         mic.lxState(null);
-        if (current.step !== step) return;
+        if (current.step !== shown) return;
         // Right on the sentence with its subject said or left out: shown on the sentence as written. Not right on it: heard again
         // against the sentence itself, so what's shown and recorded is never a variant's half-match.
         const heardAs =
@@ -1784,7 +1799,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
       } catch (error) {
         listener = null;
         mic.lxState(null);
-        if (current.step !== step) return;
+        if (current.step !== shown) return;
         status.textContent = error?.code === "aborted" ? ready : error?.message ?? "Something went wrong while listening. Try again.";
         if (error?.code === "model-missing") showSetup("setup");
       }
@@ -1802,7 +1817,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
       const about = word ? { line: aboutWord, about: aboutWord } : aboutOf(item);
       if (settled) status.textContent = "";
       // A word has no sentence under its answer to play: the word itself, as Pick the word's answer does.
-      if (word && (ok || tries >= 3) && settings.listening.answers) afterAnswerSound(() => voice.speakWord(step.text));
+      if (word && (ok || tries >= 3) && settings.listening.answers) afterAnswerSound(() => sayAnswer());
       if (ok) {
         const first = tries === 1;
         finishStep(first ? (hintUsed ? "hint" : "right") : "wrong", {
@@ -1812,6 +1827,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
           item: word ? undefined : item,
           literal: !word && s.literal && settings.right.literal,
           answer: heard || undefined,
+          ...cardLearn(),
         });
       } else if (tries < 3) {
         // Say the word has nothing to listen to (its English is the question); every other plays it again.
@@ -1819,7 +1835,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
         status.textContent = `${tries === 1 ? again : "Not quite. One more try."}${via}`;
         if (settings.listening.answers) (model ?? listening)?.[model ? "lxPlay" : "play"]();
       } else {
-        finishStep("wrong", { feedbackMeaning: "wrong", title: "Here's how it sounds", text: word ? `${aboutWord}${via}` : `Listen, then say it along with the recording.${via}`, item: word ? undefined : item, literal: word ? false : s.literal, answer: heard || undefined });
+        finishStep("wrong", { feedbackMeaning: "wrong", title: "Here's how it sounds", text: word ? `${aboutWord}${via}` : `Listen, then say it along with the recording.${via}`, item: word ? undefined : item, literal: word ? false : s.literal, answer: heard || undefined, ...cardLearn() });
       }
     }
 
@@ -1845,8 +1861,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
         if (current.answered) return;
         listener?.cancel();
         recordSay(null);
-        if (word && settings.listening.answers) afterAnswerSound(() => voice.speakWord(step.text));
-        finishStep("wrong", { feedbackMeaning: "wrong", title: "Here's how it sounds", text: word ? aboutWord : aboutOf(item).about, item: word ? undefined : item, literal: word ? false : s.literal, skipped: true });
+        if (word && settings.listening.answers) afterAnswerSound(() => sayAnswer());
+        finishStep("wrong", { feedbackMeaning: "wrong", title: "Here's how it sounds", text: word ? aboutWord : aboutOf(item).about, item: word ? undefined : item, literal: word ? false : s.literal, skipped: true, ...cardLearn() });
       },
     });
     const cantSpeak = ui.button(quiet("Can't speak now"), {
@@ -1957,7 +1973,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
   }
 
   // What a deck's steps need from the screen (deck-steps.js).
-  const deckScreen = { show, setBar, prompt, finishStep, fit, settings, touched, results, sayTapped, afterAnswerSound, tileSounds, advance: () => advance(), current: () => current, index: () => index };
+  const deckScreen = { show, setBar, prompt, finishStep, fit, settings, touched, results, sayTapped, afterAnswerSound, tileSounds, sayCard: (step) => drawSay(step, false), advance: () => advance(), current: () => current, index: () => index };
 
   // ---------- games that can't be played for now ----------
 

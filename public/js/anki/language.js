@@ -5,7 +5,7 @@
 
 // code: [its names, in English and in itself], its special letters, its common little words.
 const TABLE = {
-  en: ["english", "", "the a an of to and in is that it you for with on are this be have not was at by from they we or his her"],
+  en: ["english", "", "the a an of to and in is that it you for with on are this be have not was at by from they we or his her what your my i he she does how where who when why there can would"],
   nl: ["dutch nederlands flemish vlaams", "ĳ", "de het een en van ik je dat is niet op te zijn er maar met voor aan hij ze wat om ook naar dit bij"],
   de: ["german deutsch", "ßäöü", "der die das und ist nicht ich du er sie es ein eine zu mit auf für von den dem im wir aber auch wie"],
   fr: ["french français francais", "çœéèêàù", "le la les un une et des de du est que je tu il elle nous vous pas pour dans sur avec ce qui au"],
@@ -166,6 +166,19 @@ export function languageOfSample(texts) {
   // Sure only with a real count and a clear lead: a list of nouns often has neither.
   const sure = tokens.length >= 20 && first.score >= 0.06 && first.score >= second.score * 2;
   return { code: first.code, sure, score: first.score, second: second?.code };
+}
+
+/**
+ * How much a short text shows itself to be in a language: how many of that language's common little words are in it, and one more when it has
+ * one of the language's own letters. 0 says nothing (a noun alone shows neither); it's for telling a card's two sides apart by comparing two
+ * languages on the same text, never for naming a text's language.
+ */
+export function leansTo(text, code) {
+  const row = TABLE[code];
+  if (!row || typeof text !== "string") return 0;
+  const words = WORDS.get(code);
+  const hits = tokensOf(text).filter((token) => words.has(token)).length;
+  return hits + (row[1] && [...text.toLowerCase()].some((c) => row[1].includes(c)) ? 1 : 0);
 }
 
 const NAME_TO_CODE = (() => {

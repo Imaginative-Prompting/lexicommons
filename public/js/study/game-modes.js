@@ -7,6 +7,7 @@ import { GAME_MODES, modeOf, needsSound } from "./plan.js";
 import { hearsAnything } from "./voice.js";
 import { chooseEngine } from "./speaking.js";
 import { learningName } from "./learning.js";
+import { setSpeechHearing } from "./deck.js";
 
 /** The games, gentlest first, the way a learner meets them, as Study lists them (Study cards comes after them, in Tapping). */
 export const QUICK_GAMES = ["see", "word", "match", "meaning", "fill", "choose", "place", "arrange", "translate", "type", "type-word", "type-gap", "hear-gap", "listen", "repeat", "say", "say-word", "repeat-word"];
@@ -27,6 +28,8 @@ export function askSpeaking() {
   return chooseEngine()
     .then((choice) => {
       speaking = choice?.engine ? { ok: true } : { ok: false, why: choice?.why ?? (choice?.reason === "setup" ? "This browser has no speech recognizer of its own. Whisper can listen on this device once it's downloaded." : "This browser can't recognize speech.") };
+      // A pack's plain cards are offered Say it only where something can listen (deck.js).
+      setSpeechHearing(speaking.ok);
     })
     .catch(() => {});
 }

@@ -436,7 +436,7 @@ await test("a deck whose extras don't fit keeps every card, and says so", async 
 await test("the report counts each game once per card that has it", async () => {
   const { deck } = await read(decks.newApkg(SQL, SPEC));
   const { pack } = packOf(deck, { language: "nl", from: "en" });
-  same(gamesReport(pack.items, { sounded: new Set([pack.items[0].id]) }), { card: 4, type: 4, match: 3, choose: 4, fill: 2, listen: 1, arrange: 1 });
+  same(gamesReport(pack.items, { sounded: new Set([pack.items[0].id]) }), { card: 4, type: 4, match: 3, choose: 4, fill: 2, listen: 1, arrange: 1, say: 0 });
   same(itemOthers(pack.items)(pack.items[0]).means, 4);
 });
 

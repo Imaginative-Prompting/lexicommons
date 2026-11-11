@@ -13,8 +13,9 @@ import { fromFor, learning, learningFrom, setLearning } from "../study/learning.
 import { iSpeak } from "../shell/interface-language.js";
 import { gamesReport, leftOutLines, packOf } from "./deck.js";
 import { readDeckFile } from "./import.js";
+import { saidAloud } from "../study/deck.js";
 
-const GAME_NAMES = { card: "Study cards", type: "Type it", match: "Match", choose: "Choose", fill: "Fill the gap", listen: "Listening", arrange: "Word order" };
+const GAME_NAMES = { card: "Study cards", type: "Type it", match: "Match", choose: "Choose", fill: "Fill the gap", listen: "Listening", arrange: "Word order", say: "Say it" };
 const STAGE = { opening: "Opening the file", reading: "Reading its cards", sounds: "Keeping its sounds" };
 
 const separatorOfLang = (code) => LANGUAGES[code]?.separator ?? " ";
@@ -90,7 +91,7 @@ export function ankiImportPage(page) {
       const asking = !language || !from || deck.language.unsureAbout;
       const sounded = new Set(deck.cards.filter((card) => card.sounds?.length).map((card) => card.id));
       const shown = packOf(deck, { language: language ?? "en", from: from ?? "en", swap }).pack.items;
-      const games = gamesReport(shown, { sounded: deck.soundsHere ? sounded : new Set(), separator: separatorOfLang(language) });
+      const games = gamesReport(shown, { sounded: deck.soundsHere ? sounded : new Set(), separator: separatorOfLang(language), says: (item) => saidAloud(item, { language: language ?? "en", from: from ?? "en" }) });
       const left = leftOutLines(deck);
       const sample = shown[0];
       const add = ui.button(again ? "Replace my copy" : "Add to my packs", { variant: "go", block: true });

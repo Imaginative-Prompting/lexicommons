@@ -17,6 +17,7 @@
 // browser says it's on Wi-Fi and not saving data, with room to spare (navigator.connection; iOS doesn't say, so an iPhone
 // is always asked).
 
+import { holdReload } from "../lx/reload-holds.js";
 import { CACHE, LANGUAGES_WITH, RUNTIME, WAYS, filesOf } from "./models.js";
 
 const MB = 1e6;
@@ -153,6 +154,8 @@ export function downloadTranslator(lang, { onProgress } = {}) {
   failed.delete(lang);
   const files = allFiles(lang);
   const download = { got: 0, size: files.reduce((sum, file) => sum + file.size, 0), waiting: false, started: false, stopped: false, stopWait: null };
+  // While it runs, the app doesn't reload into a new version by itself (shell/new-version.js).
+  const release = holdReload("Translate");
   // Kept for good, if the browser lets us: a download someone chose shouldn't be the first thing cleared.
   navigator.storage?.persist?.().catch(() => {});
   download.promise = afterPacks(download)
@@ -174,7 +177,8 @@ export function downloadTranslator(lang, { onProgress } = {}) {
       if (error.message !== "stopped") failed.set(lang, error.message);
       tell();
       throw error;
-    });
+    })
+    .finally(release);
   downloads.set(lang, download);
   tell();
   return download.promise;

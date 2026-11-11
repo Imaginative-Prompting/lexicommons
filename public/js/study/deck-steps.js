@@ -1,5 +1,5 @@
 // A deck's steps on the session screen (session.js hands over what it has): a card, Choose, Type it, Fill the gap,
-// Listening, Word order and Match, built from the same parts as the sentence games. What a card says is only ever shown
+// Listening, Word order, Say it and Match, built from the same parts as the sentence games. What a card says is only ever shown
 // as text. Each answer is one row of evidence on the card's own unit, through TESTS as any game's is.
 
 import { t } from "../lx/i18n.js";
@@ -88,6 +88,8 @@ export function deckStep(step, s) {
   if (game === "fill") return fillGame();
   if (game === "listen") return listenGame();
   if (game === "arrange") return orderGame();
+  // Say it: the session screen's own speaking step, on the card's text (session.js drawSay).
+  if (game === "say") return s.sayCard(step);
   return matchGame();
 
   function cardGame() {

@@ -1,0 +1,12 @@
+  ok    a first open, and a look with nothing new: nothing on screen and nothing ready; Settings → About the version alone: nothing shown; About: Privacy · Terms · Versionv648 · Source codeOn GitHub, under the AGPL · Add to Home Screen; a planted toast found (A new version is ready)
+  ok    a version arriving mid-session: found and taken, nothing on screen and nothing in the page changing, the session going on; leaving it, nothing either: the step (Which one is it? @ 0/15) went on; nothing on Study after
+  ok    Settings → About says it and nothing else does: the row coming in while About is open, with Reload; the Settings menu as it was, no badge or dot; Reload takes it, the page and its history kept: {"before":["Privacy","Terms","Versionv648","Source codeOn GitHub, under the AGPL","Add to Home Screen"],"ready":["Versionv648","A new version is readyReload"],"history":{"length":5,"i":2,"hash":"#settings/about"}}
+  ok    a fresh open takes it: a new tab after it runs it, nothing ready there, while the tab left open has it ready (two tabs); that tab's next fresh open takes it too: {"version":"shell-648-check-547b8e-3","fresh":false,"reopened":false}
+  ok    back after 30 minutes away with a version ready: reloaded into it as it comes back, the page and its history kept; after 29 minutes, not: {"history":{"length":5,"i":1,"hash":"#study"}}
+  ok    a page in view is never reloaded, however long it's been open; out of view 30 minutes, it is (the control): in view: not reloaded in 12 s with 6 hours on the clock; away 31 minutes: reloaded
+  ok    not in a session; once it's left, it is: kept in the session; reloaded after it
+  ok    not with words typed and not sent (Translate's box); cleared, it is: kept with koffie typed; reloaded once it was empty
+  ok    not while a book from the shelf is downloading; once it's in, it is (in the reader): kept while it came; reloaded in the reader after
+  ok    the reader keeps its place to the word across it: the same chapter, page and first word: {"before":{"chapter":0,"page":2,"first":22,"word":22,"mode":"pages"},"after":{"chapter":0,"page":2,"first":22,"word":22,"mode":"pages"}}
+  ok    not offline; back online, it is: kept offline; reloaded online
+update check: all 11 stages passed

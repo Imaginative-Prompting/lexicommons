@@ -24,6 +24,7 @@ export const ITEM_LIMITS = {
   // What each game can draw.
   typed: 60, // a text you can be asked to type
   matched: 30, // a side that fits Match's tiles
+  said: 60, // a text you can be asked to say
   orderWords: { least: 3, most: 12 }, // words in a sentence you put in order
   orderWord: 24, // characters in one of its tiles
 };
@@ -145,8 +146,10 @@ export const orderOf = (item, { separator = " " } = {}) => orderSource(item, sep
  *   others   { means, answers }: how many other different means, and other different cloze answers, the pack's plain items have
  *   sound    whether its sound is on this device
  *   separator  what joins the language's words
+ *   says     whether its text can be asked aloud here: it's in the pack's language and this device can listen to that language (study/deck.js
+ *            saidAloud and hearsSpeech decide; this file knows no language). Then Say it, on a text short enough to say in one go.
  */
-export function gamesOf(item, { others = { means: 0, answers: 0 }, sound = false, separator = " " } = {}) {
+export function gamesOf(item, { others = { means: 0, answers: 0 }, sound = false, separator = " ", says = false } = {}) {
   const games = [];
   if (item.cloze) {
     games.push("fill");
@@ -159,6 +162,7 @@ export function gamesOf(item, { others = { means: 0, answers: 0 }, sound = false
   if (others.means >= 3) games.push("choose");
   if (sound && others.means >= 2) games.push("listen");
   if (orderSource(item, separator)) games.push("arrange");
+  if (says && item.means && item.text.length <= ITEM_LIMITS.said && /\p{L}/u.test(item.text)) games.push("say");
   return games;
 }
 

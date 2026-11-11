@@ -15,6 +15,7 @@ import { studiedUnits, unitState } from "./progress.js";
 import { LENGTHS, getStudySettings } from "./settings.js";
 import { WORDS } from "./content.js";
 import { spelledAlike } from "../lang/index.js";
+import { leansTo } from "../anki/language.js";
 
 const MATCH_PAIRS = 5;
 
@@ -76,6 +77,72 @@ function scriptGames(card, others, hears) {
   return games;
 }
 
+// ---------- a card said aloud (Say it) ----------
+
+// Whether this device can listen to the language you're learning (speaking.js chooseEngine, asked by game-modes.js askSpeaking, which tells this
+// file). Until it has answered, a card is offered Say it as a sentence is, and the step itself says what's missing; once it has said no, no card is.
+let hearsSpeech = true;
+export const setSpeechHearing = (can) => {
+  hearsSpeech = can !== false;
+};
+
+// The scripts a language is written in, as Unicode's four-letter codes: CLDR's likely script for it, and the scripts that one is made of.
+const SCRIPT_PARTS = { Jpan: ["Hani", "Hira", "Kana"], Kore: ["Hang", "Hani"], Hans: ["Hani"], Hant: ["Hani"] };
+const scriptsFound = new Map();
+function scriptsOf(lang) {
+  if (!scriptsFound.has(lang)) {
+    let scripts = null;
+    try {
+      const script = new Intl.Locale(lang).maximize().script;
+      scripts = script ? (SCRIPT_PARTS[script] ?? [script]) : null;
+      if (scripts) for (const one of scripts) new RegExp(`\\p{scx=${one}}`, "u");
+    } catch {
+      scripts = null; // a code Intl doesn't know, or a script this engine can't test: it can't be told
+    }
+    scriptsFound.set(lang, scripts);
+  }
+  return scriptsFound.get(lang);
+}
+const lettersOf = (text) => String(text ?? "").match(/\p{L}/gu) ?? [];
+const writtenIn = (text, scripts) => {
+  const letters = lettersOf(text);
+  return letters.length > 0 && letters.every((letter) => scripts.some((script) => new RegExp(`\\p{scx=${script}}`, "u").test(letter)));
+};
+
+/**
+ * Whether a card's text is the side to say aloud: it's in the pack's language, as far as that can be told. Never a cloze, a script's letter
+ * (a pack that teaches one), or a card with no meaning to ask it from.
+ *   - Its script first: every letter of the text in a script the language is written in. An English prompt on a Japanese deck, or a deck
+ *     whose sides are the other way round between two scripts, fails here, card by card.
+ *   - Where the language you're learning from is written in the same script (Dutch from English), script can't tell them apart. Then a card is
+ *     left out when its text shows itself to be in the language learned from more than in the pack's (by each language's little words and own
+ *     letters, anki/language.js leansTo) while its meaning doesn't: "the dog" / "de hond", "What is your name?" / "Hoe heet je?". Losing a card
+ *     that way costs it one game; asking an English prompt aloud would be wrong. A card that shows neither way ("huis" / "house") is taken as the
+ *     pack says: its language was settled when the pack was made (an imported deck's by the importer, which asks when it can't tell the sides apart).
+ *   - A language whose script can't be worked out is never asked aloud.
+ */
+export function saidAloud(card, pack) {
+  if (!card?.text || !card.means || card.cloze || teachesScript(pack)) return false;
+  const scripts = scriptsOf(pack?.language);
+  if (!scripts || !writtenIn(card.text, scripts)) return false;
+  const from = pack.from ?? "en";
+  const fromScripts = scriptsOf(from);
+  if (!fromScripts || !fromScripts.some((script) => scripts.includes(script))) return true;
+  const reversed = leansTo(card.text, from) > leansTo(card.text, pack.language) && leansTo(card.means, from) <= leansTo(card.means, pack.language);
+  return !reversed;
+}
+
+/**
+ * The word a card's answer turns on when it's a noun with its article ("het huis"): said without the article, it's right, as Say the word takes it.
+ * Null for anything else: the whole text is the answer.
+ */
+export function saidNoun(card) {
+  const parts = String(card?.text ?? "").trim().replace(/[.!?]+$/, "").split(/\s+/);
+  if (parts.length !== 2) return null;
+  const article = parts[0].toLocaleLowerCase();
+  return Object.hasOwn(WORDS, article) && /^the\b/.test(WORDS[article]) ? parts[1] : null;
+}
+
 /** Each card of a pack with what it can play, as this device has it. */
 export function cardsOf(pack) {
   const cards = plainItems(pack);
@@ -86,7 +153,7 @@ export function cardsOf(pack) {
   return cards.map((card) => {
     const clip = sounds[card.id];
     const sound = clip && hasClip(clip) ? clip : null;
-    const games = script ? scriptGames(card, others(card), Boolean(sound) || hearsLetter(card.text, pack.language)) : gamesOf(card, { others: others(card), sound: Boolean(sound), separator });
+    const games = script ? scriptGames(card, others(card), Boolean(sound) || hearsLetter(card.text, pack.language)) : gamesOf(card, { others: others(card), sound: Boolean(sound), separator, says: hearsSpeech && saidAloud(card, pack) });
     return { card, sound, unit: deckUnit(pack.id, card.id), ...(script ? { script } : {}), games };
   });
 }
@@ -115,6 +182,7 @@ export function deckLine({ due, fresh, total }) {
 }
 
 const READ_GAMES = ["choose", "arrange", "fill", "card"];
+const SAY_GAMES = ["type", "say"];
 const wayOf = (game) => (game === "card" ? "cards" : game);
 
 // The game a card is asked with now: the strength that's due first, a strength it hasn't started once the card's familiar,
@@ -130,11 +198,13 @@ function gameFor(entry, state, allowed) {
     const read = ["choose", "type", "card"].filter((game) => can.includes(game));
     return { game: read[state.reviews % read.length] ?? "card", skill: "read" };
   }
-  if (due === "say" && can.includes("type")) return { game: "type", skill: "say" };
+  // Saying it is typed or said aloud, in turn, whichever of the two the card can play.
+  const saying = SAY_GAMES.filter((game) => can.includes(game));
+  if (due === "say" && saying.length) return { game: saying[state.reviews % saying.length], skill: "say" };
   if (state.reviews >= 3 && state.trained.includes("hear") && !state.strengths.hear && can.includes("listen")) return { game: "listen", skill: "hear" };
-  if (state.reviews >= 2 && state.trained.includes("say") && !state.strengths.say && can.includes("type")) return { game: "type", skill: "say" };
+  if (state.reviews >= 2 && state.trained.includes("say") && !state.strengths.say && saying.length) return { game: saying[0], skill: "say" };
   const reading = READ_GAMES.filter((game) => can.includes(game));
-  if (!reading.length) return { game: can[0] ?? "card", skill: can[0] === "type" ? "say" : can[0] === "listen" ? "hear" : "read" };
+  if (!reading.length) return { game: can[0] ?? "card", skill: SAY_GAMES.includes(can[0]) ? "say" : can[0] === "listen" ? "hear" : "read" };
   return { game: reading[state.reviews % reading.length], skill: "read" };
 }
 
@@ -310,7 +380,7 @@ export function plainSteps(picked, fresh, { allowed, now = Date.now() }) {
 export function deckInstead(step, without) {
   const wayOut = (game) => without.has(game) || game === "match";
   const game = step.entry.games.find((one) => one !== step.game && !wayOut(one));
-  return game ? { ...step, game, skill: game === "type" && !step.entry.script ? "say" : game === "listen" ? "hear" : "read" } : null;
+  return game ? { ...step, game, skill: (game === "type" && !step.entry.script) || game === "say" ? "say" : game === "listen" ? "hear" : "read" } : null;
 }
 
 /** A list in an order that follows its seed, the same every time for the same one. */

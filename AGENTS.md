@@ -391,6 +391,12 @@ node scripts/test-ai-pack-path.mjs --list <frequency.nl.json>   # a pack your AI
                                           # Study a topic playing it; three at once in the order they came; one that grows after its lessons, its new words next and
                                           # nothing taught twice (plan.js lessonDone: a chosen pack's lesson is its words); off or removed leaving the path as it
                                           # was; a copy kept as yours and plain cards never laid out so; five laid out in little more time (exit 0 = pass)
+node scripts/test-card-say.mjs [<app dir>]   # Say it on a pack's plain card (pack-items.js gamesOf's `says`; study/deck.js saidAloud, saidNoun, setSpeechHearing): only a card
+                                          # whose text is the side in the pack's language (by its script; between two languages of one script, left out when the
+                                          # text leans to the language learned from and its meaning doesn't: anki/language.js leansTo), with a meaning, at most 60
+                                          # characters, where something can listen; never a cloze, a script's letter, a reversed card or an English prompt; a noun
+                                          # right without its article, a reading matched; in the deck's plan once its saying is due, on the card's own unit, another
+                                          # game with Can't speak now; another copy's dir to see it fail on one from before (exit 0 = pass)
 node scripts/test-plain-day.mjs           # a pack's plain items in the day (study/deck.js plainOfDay, plan.js), on the real path: what's due of any pack that's on, what's new only from
                                           # a pack you made or copied, met then asked, never ahead of a first lesson; an imported deck's new ones stay out; a big deck's share and cost (exit 0 = pass)
 node scripts/test-first-words.mjs --list <frequency.nl.json>
@@ -991,7 +997,10 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "speaki
   # the game's own evidence (say-word recall/say, repeat-word recall/sound); a noun said without its article right; said wrong, two more tries, then
   # the answer, one row with what was heard, the word never written out before it; the word's drawing under the step; Can't speak now and Can't
   # listen now asking the same word another way there and then; every frame of a try on a drawn word (frame-watch.mjs, a planted jump caught first):
-  # a wrong try moving nothing, the microphone where it was, and the answer moving nothing in one frame; LOCAL only, path-nl seeded (exit 0 = pass)
+  # a wrong try moving nothing, the microphone where it was, and the answer moving nothing in one frame; then a deck's plain card said aloud (a
+  # deck of its own): offered on the cards in the pack's language and not a reversed one, asked from its meaning with its text not shown, right and
+  # recorded on its own unit (say, recall, say), a noun without its article, three wrong tries one row, Can't speak now another of its games,
+  # every frame of a try, none offered where nothing listens; LOCAL only, path-nl seeded (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "result layout check" --kind parallel -- \
   node 08-lexicommons/app/scripts/result-layout-check.mjs http://localhost:<port> <outDir> --persist-to <dir> [--files <copy>] [--only right]
   # a game's result on a small phone (study/session.js setBar, components.css's answer bar), muted: a planted line over the title caught first; Fill the
@@ -2120,13 +2129,15 @@ migrations/       D1 schema
   - **A file goes in `SHELL` once.** `Cache.addAll` refuses a list naming a file twice, and then the worker never
     installs: no offline copy, no push. From v41 to v57 sixteen language files were listed twice, and no device ever
     had the worker. `test-sw-shell.mjs` fails on a duplicate or a missing file.
-  - **A new version while the app is open** (`shell/update-prompt.js`, 5 Nov 2026): coming back into view (at most
-    once a minute) the app asks the worker to look for one; a new worker taking a page that already had one shows "A
-    new version is ready" with Reload and Later. Never during a session or a practice in progress: it waits until you
-    leave, and one already up goes when a session or a practice starts and comes back after (6 Nov 2026: v99 kept it over
-    a whole session and its summary). The app never reloads by itself. Reload is `location.reload()` and nothing else: it keeps the history
-    and each entry's place, which the router owns (`test-history.mjs`). Run `update-check.mjs` after changing either file
-    or how `sw.js` installs.
+  - **A new version, with nothing on screen about it** (`shell/new-version.js`, 11 Nov 2026; a toast offered Reload and Later before):
+    no toast, banner, prompt, badge or dot for a new version, anywhere. A fresh open is the newest already (network first). A page left
+    open asks the worker to look as it goes out of view and comes back (at most once a minute); the new worker takes it and the page goes
+    on as it was. Settings → About's Version row then has "A new version is ready" with Reload under it, and only there. The one reload
+    the app does by itself: coming back after 30 minutes or more out of view with a new version already ready, and nothing lost
+    (`reloadBlocked`: no session or practice, nothing typed and not sent, no download the person started, which
+    holds it through `lx/reload-holds.js`, and the network answering). A page in view is never reloaded. Reload is `location.reload()`
+    and nothing else: it keeps the history and each entry's place, which the router owns (`test-history.mjs`). Run `update-check.mjs`
+    after changing either file, a download that should hold the reload, or how `sw.js` installs.
 - **Sign-in apps** (owned by imaginativeprompting@gmail.com and the Imaginative-Prompting GitHub account):
   - Google Cloud project `lexicommons-sign-in` (client "Lexicommons sign-in (web)", scopes `openid profile` only),
     apart from Drive's project so Drive's verification never holds sign-in back;

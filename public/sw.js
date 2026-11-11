@@ -1,21 +1,21 @@
 // Service worker: keeps the app shell available offline. Pages that change who you are or what you can reach
 // (sign-in, consent, the gate, every API, MCP, uploads) always go to the network and are never cached.
 
-const VERSION = "shell-647";
+const VERSION = "shell-649";
 // The whole app shell, so it works offline straight after install. Bump VERSION (and the ?v= in app/index.html)
 // whenever these change.
 const SHELL = [
   "/app/",
-  "/js/lx/theme-boot.js?v=647",
-  "/css/lx/tokens.css?v=647",
+  "/js/lx/theme-boot.js?v=649",
+  "/css/lx/tokens.css?v=649",
   "/css/lx/art.css",
-  "/css/lx/base.css?v=647",
-  "/css/lx/components.css?v=647",
-  "/css/lx/presets.css?v=647",
-  "/css/lx/appearance.css?v=647",
-  "/css/shell.css?v=647",
-  "/css/splash.css?v=647",
-  "/js/shell/main.js?v=647",
+  "/css/lx/base.css?v=649",
+  "/css/lx/components.css?v=649",
+  "/css/lx/presets.css?v=649",
+  "/css/lx/appearance.css?v=649",
+  "/css/shell.css?v=649",
+  "/css/splash.css?v=649",
+  "/js/shell/main.js?v=649",
   "/js/shell/api.js",
   "/js/shell/route.js",
   "/js/lx/i18n.js",
@@ -105,6 +105,7 @@ const SHELL = [
   "/audio/fx/tinta-hop.mp3",
   "/js/know/ui.js",
   "/js/lx/error-report.js",
+  "/js/lx/reload-holds.js",
   "/js/lx/error-clean.js",
   "/js/lx/bug-rules.js",
   "/js/lx/report-form.js",
@@ -183,7 +184,7 @@ const SHELL = [
   "/js/shell/look-watch.js",
   "/js/shell/settings-email.js",
   "/js/shell/settings-report.js",
-  "/js/shell/update-prompt.js",
+  "/js/shell/new-version.js",
   "/js/study/content.js",
   "/js/study/written.js",
   "/js/study/pack-words.js",
@@ -194,6 +195,7 @@ const SHELL = [
   "/js/study/notes.js",
   "/js/study/notes-worker.js",
   "/js/study/deck.js",
+  "/js/anki/language.js",
   "/js/study/deck-steps.js",
   "/js/study/pack-audio.js",
   "/js/study/keep-clips.js",
@@ -545,15 +547,15 @@ const SHELL = [
   "/js/practice/store.js",
   "/js/practice/learner.js",
   "/js/practice/ui.js",
-  "/css/lx/practice.css?v=647",
-  "/css/lx/reader.css?v=647",
-  "/css/lx/know.css?v=647",
-  "/css/lx/translate.css?v=647",
-  "/css/lx/explore.css?v=647",
-  "/css/lx/read.css?v=647",
-  "/css/lx/redesign.css?v=647",
-  "/css/lx/study-screens.css?v=647",
-  "/css/lx/path-page.css?v=647",
+  "/css/lx/practice.css?v=649",
+  "/css/lx/reader.css?v=649",
+  "/css/lx/know.css?v=649",
+  "/css/lx/translate.css?v=649",
+  "/css/lx/explore.css?v=649",
+  "/css/lx/read.css?v=649",
+  "/css/lx/redesign.css?v=649",
+  "/css/lx/study-screens.css?v=649",
+  "/css/lx/path-page.css?v=649",
   "/js/read/store.js",
   "/js/read/highlights.js",
   "/js/read/search.js",
@@ -724,6 +726,11 @@ function cacheOf(url) {
 // here (the language's flag, a script's font), so the app opens offline as it looked. Paths on this site only, each
 // kept where a fetch would keep it, a whole 200 only; what's kept already stays.
 self.addEventListener("message", (event) => {
+  // Which version this worker is (shell/new-version.js asks the one that has just taken its page), on the port it was given.
+  if (event.data?.ask === "version") {
+    event.ports?.[0]?.postMessage({ version: VERSION });
+    return;
+  }
   const keep = event.data?.keep;
   if (!Array.isArray(keep)) return;
   event.waitUntil(

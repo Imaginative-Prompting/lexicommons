@@ -68,12 +68,12 @@ import { remindersSettings } from "./settings-reminders.js";
 import { pushSupport } from "../push.js";
 import { openWelcome } from "./welcome.js";
 import { readSample, sampleOn } from "../study/sample-mode.js";
+import { newVersionReady, onNewVersionReady, reloadIntoNewVersion, runningVersion } from "./new-version.js";
 import { SAMPLE_PRESETS } from "../study/sample-learner.js";
 
 /** The version running: what the page's own script was asked for. */
 const appVersion = () => {
-  const main = document.querySelector('script[src*="/js/shell/main.js"]');
-  const v = main && new URL(main.src).searchParams.get("v");
+  const v = runningVersion();
   return v ? `v${v}` : "This copy";
 };
 
@@ -1336,14 +1336,21 @@ function deleteAccountGroup(msg) {
 // ---------- About ----------
 
 function about(page, ctx) {
-  // Add to Home Screen: this device's steps (or the browser's own install button) on a page of its own.
-  page.replaceChildren(
-    ui.pageTitle("About", "Free and open source."),
-    ui.group(null, [ui.listRow({ title: "Privacy", href: "/privacy" }), ui.listRow({ title: "Terms", href: "/terms" }), ui.listRow({ title: "Version", value: appVersion() })]),
-    ui.group(null, [sourceRow()]),
-    ui.group(null, [installAboutRow()]),
-  );
-  return { title: "About" };
+  // The version running, and under it, only while a newer one is ready on this device, a row saying so with Reload (shell/new-version.js:
+  // nothing else anywhere says it). Add to Home Screen: this device's steps (or the browser's own install button) on a page of its own.
+  const rows = () => [
+    ui.listRow({ title: "Privacy", href: "/privacy" }),
+    ui.listRow({ title: "Terms", href: "/terms" }),
+    ui.listRow({ title: "Version", value: appVersion() }),
+    ...(newVersionReady()
+      ? [ui.listRow({ title: "A new version is ready", trailing: ui.button("Reload", { variant: "fade", size: "sm", onclick: reloadIntoNewVersion }) })]
+      : []),
+  ];
+  const first = ui.group(null, rows());
+  page.replaceChildren(ui.pageTitle("About", "Free and open source."), first, ui.group(null, [sourceRow()]), ui.group(null, [installAboutRow()]));
+  // Ready while the page is open: the row comes in its place.
+  const dispose = onNewVersionReady(() => first.isConnected && first.replaceWith(ui.group(null, rows())));
+  return { title: "About", dispose };
 }
 
 /** The code the app runs, on GitHub: the AGPL offers it to everyone who uses the app. Opened in the browser, beside the app, with GitHub's

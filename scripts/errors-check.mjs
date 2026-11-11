@@ -344,7 +344,7 @@ await stage("the Home Screen app started again by itself: told once, with its sc
   assert(told.message === RELOAD.message && told.name === RELOAD.name && told.stack === "" && told.place === cleanPlace(where) && /^\d+$/.test(told.version), `sent: ${JSON.stringify(told)}`);
   notes.push(`told from ${told.place}, v${told.version}`);
 
-  // The app's own Reload (shell/update-prompt.js marks it first): nothing, and the mark is used up.
+  // The app's own Reload (shell/new-version.js marks it first): nothing, and the mark is used up.
   await app.tab.evaluate(async () => (await import("/js/lx/error-report.js")).markOwnReload());
   await app.endAndReload();
   assert(app.told.length === 1, `the app's own Reload told: ${JSON.stringify(app.told.slice(1))}`);

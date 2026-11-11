@@ -11,7 +11,7 @@ license.
 
 | What | Where |
 |---|---|
-| Language packs: the starters, Dutch's lessons, word packs and topic packs | `packs/` |
+| Language packs: the starters, the eight courses' lessons (Dutch, Spanish, French, German, Portuguese, Italian, Russian, Japanese), Dutch's word packs and topic packs, and Japanese's kana | `packs/` |
 | Each language's shared grammar, and the packs' notes | `library/grammar/`, `library/notes/` |
 | The word-frequency list | `library/lists/` (built on FrequencyWords, CC BY-SA 4.0; its attribution is in the file) |
 | The word pictures | `public/pictures/` |

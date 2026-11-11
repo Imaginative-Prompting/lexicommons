@@ -356,11 +356,11 @@ export function packOf(deck, { language, from, swap = false, separator = " " }) 
   return { pack, sounds };
 }
 
-/** How many cards get each game, for telling the person plainly what they got. sounded: card ids whose sound came through. */
-export function gamesReport(cards, { sounded = new Set(), separator = " " } = {}) {
+/** How many cards get each game, for telling the person plainly what they got. sounded: card ids whose sound came through; says: whether a card's text is the side to say aloud (study/deck.js saidAloud). */
+export function gamesReport(cards, { sounded = new Set(), separator = " ", says = () => false } = {}) {
   const others = itemOthers(cards);
-  const counts = { card: 0, type: 0, match: 0, choose: 0, fill: 0, listen: 0, arrange: 0 };
-  for (const card of cards) for (const game of gamesOf(card, { others: others(card), sound: sounded.has(card.id), separator })) counts[game]++;
+  const counts = { card: 0, type: 0, match: 0, choose: 0, fill: 0, listen: 0, arrange: 0, say: 0 };
+  for (const card of cards) for (const game of gamesOf(card, { others: others(card), sound: sounded.has(card.id), separator, says: says(card) })) counts[game]++;
   return counts;
 }
 

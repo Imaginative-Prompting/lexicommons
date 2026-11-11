@@ -4,6 +4,8 @@
 // SHA-256 as they arrive, and kept in Cache Storage under CACHE, which the service worker leaves alone.
 // No DOM here: the Whisper worker reads files through this module too.
 
+import { holdReload } from "../lx/reload-holds.js";
+
 export const CACHE = "lx-speech-v1";
 const BASE = "/models/";
 
@@ -110,7 +112,16 @@ async function fetchChunk(url, chunk, { signal, onBytes }) {
  * Downloads whatever of these packs isn't on the device yet. onProgress({ have, total }) in bytes, across all of
  * them. Stopping (signal) keeps the finished chunks, so the next try carries on from there.
  */
-export async function download(packs, { onProgress, signal } = {}) {
+export async function download(packs, options = {}) {
+  // A download the person started: the app doesn't reload into a new version by itself while it runs (shell/new-version.js).
+  const release = holdReload("Whisper");
+  try {
+    return await downloadNow(packs, options);
+  } finally {
+    release();
+  }
+}
+async function downloadNow(packs, { onProgress, signal } = {}) {
   const cache = await open();
   const datas = await Promise.all(packs.map((pack) => manifest(pack)));
   const keys = new Set((await cache.keys()).map((request) => request.url));

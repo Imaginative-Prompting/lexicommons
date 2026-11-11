@@ -244,7 +244,7 @@ export const HANDLERS = {
   },
 };
 /** The games a deck's card can be played as (study/deck-steps.js deckStep), each handled above. */
-export const DECK_GAMES = ["card", "choose", "type", "fill", "listen", "arrange"];
+export const DECK_GAMES = ["card", "choose", "type", "fill", "listen", "arrange", "say"];
 
 /**
  * Answers the step on screen and presses on: right unless `wrong`. Waits first for a step this hasn't answered (the session draws the

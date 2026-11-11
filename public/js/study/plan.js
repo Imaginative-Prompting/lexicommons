@@ -112,7 +112,7 @@ export const GAMES = {
   // The sentence is said and shown (session.js), so its answers are evidence of reading it (progress.js TESTS: read).
   translate: { name: "What does it say?", about: "Hear and read a sentence, then build its English", icon: "moved", mode: "tap" },
   listen: { name: "Listening", about: "Hear a sentence, then show you understood it", icon: "ear", mode: "tap" },
-  say: { name: "Say it", about: "Say a sentence aloud", icon: "mic", mode: "speak" },
+  say: { name: "Say it", about: "Say it aloud", icon: "mic", mode: "speak" },
   repeat: { name: "Repeat after", about: "Hear a sentence, then say it back", icon: "speaker", mode: "speak" },
   // The speaking twins of the games about one word: Pick the word's (its English and drawing, said) and Tap the picture's (heard, said back).
   "say-word": { name: "Say the word", about: "Read the English, then say its word", icon: "mic", mode: "speak" },

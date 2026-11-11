@@ -60,7 +60,7 @@ addEventListener("unhandledrejection", (event) => send("rejection", event.reason
 // The app started again by itself (error-clean.js startedAgainByItself): an iPhone ends a page that runs out of memory and loads it
 // again, and nothing the page runs sees that end, so this start says it, with the screen it was on and the app's version only. The
 // page's last state on screen is kept for this tab (sessionStorage, which a reload keeps), and the app's own Reload marks itself
-// first (markOwnReload, from shell/update-prompt.js).
+// first (markOwnReload, from shell/new-version.js).
 const OWN_RELOAD = "lx.reload.own";
 const LAST_SEEN = "lx.page.seen";
 

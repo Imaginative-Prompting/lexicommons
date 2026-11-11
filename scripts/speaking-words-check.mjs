@@ -383,6 +383,153 @@ for (const kind of ["say-word", "repeat-word"]) {
   });
 }
 
+// ---------- a pack's plain card said aloud (deck.js saidAloud; session.js drawSay through deck-steps.js) ----------
+// A small deck of its own, saved as the app saves a pack: a noun with its article, plain words, and a card whose sides are the other way round.
+const DECK = "say-check-deck";
+const deckSteps = () =>
+  page.evaluate(async (id) => {
+    const { savePack, setPackOn, allPacks } = await import("/js/study/packs.js");
+    const deck = await import("/js/study/deck.js");
+    if (!allPacks().some((pack) => pack.id === id)) {
+      const items = [
+        { id: "huis", text: "het huis", means: "the house" },
+        { id: "fiets", text: "fiets", means: "bicycle" },
+        { id: "boom", text: "boom", means: "tree" },
+        { id: "stoel", text: "stoel", means: "chair" },
+        { id: "raam", text: "raam", means: "window" },
+        { id: "rev", text: "the dog", means: "de hond" },
+      ];
+      const saved = await savePack({ format: "lexicommons-pack", version: 2, id, name: "Say check", language: "nl", from: "en", topics: {}, words: {}, chunks: {}, patterns: {}, items });
+      if (!saved.ok) throw new Error(JSON.stringify(saved.errors?.slice(0, 2)));
+      setPackOn(id, true);
+    }
+    deck.setSpeechHearing(true);
+    const pack = allPacks().find((one) => one.id === id);
+    const entries = deck.cardsOf(pack);
+    const step = (entry) => ({ kind: "deck", game: "say", skill: "say", pack: id, card: entry.card, sound: entry.sound, unit: entry.unit, entry, meaning: "review" });
+    return { games: Object.fromEntries(entries.map((entry) => [entry.card.id, entry.games])), steps: Object.fromEntries(entries.filter((entry) => entry.games.includes("say")).map((entry) => [entry.card.id, step(entry)])), noun: deck.saidNoun(entries[0].card) };
+  }, DECK);
+const cardRowsSince = async (from, unit) => (await rowsSince(from)).filter((row) => row.concept === unit);
+
+await stage("a deck's card, Say it: offered on the cards in the pack's language, never the one whose sides are the other way round", async () => {
+  const { games, noun } = await deckSteps();
+  assert(games.huis.includes("say") && games.fiets.includes("say"), `the Dutch cards' games: ${JSON.stringify(games)}`);
+  assert(!games.rev.includes("say"), `"the dog" / "de hond" is asked aloud: ${games.rev}`);
+  assert(noun === "huis", `het huis's own word: ${noun}`);
+  return `het huis: ${games.huis.join(", ")}; the dog: ${games.rev.join(", ")}`;
+});
+
+await stage("a deck's card, Say it: its meaning asked, its text not shown; said right, Right and recorded on the card's own unit as say, recall, say", async () => {
+  const { steps } = await deckSteps();
+  const step = steps.fiets;
+  await openPlan([step]);
+  const prompt = await page.locator(`${SESSION} [data-part="activity-prompt"]`).first().innerText();
+  assert(prompt.includes(step.card.means), `its meaning "${step.card.means}" isn't asked: ${prompt}`);
+  assert(!/(^|\s)fiets(\s|$)/i.test(await page.locator(SESSION).innerText()), "the card's text is on the screen before it's said");
+  assert((await mic().count()) === 1, "no microphone");
+  for (const name of ["I don't know", "Can't speak now"]) assert((await page.locator(SESSION).getByRole("button", { name }).count()) === 1, `no ${name}`);
+  await shot("card-say-1-question");
+  const from = await rowCount();
+  await say("fiets");
+  const said = await feedback();
+  assert(/^Right/.test(said) && said.includes("fiets: bicycle"), `"fiets" said: ${said || (await status())}`);
+  await shot("card-say-2-right");
+  const rows = await cardRowsSince(from, step.unit);
+  assert(rows.length === 1 && rows[0].activity === "say" && rows[0].outcome === "right" && rows[0].test === "recall" && rows[0].skill === "say", `what it recorded: ${JSON.stringify(rows)}`);
+  assert(step.unit === `k:${DECK}/fiets`, `its unit: ${step.unit}`);
+  const state = await page.evaluate(async (unit) => { const s = (await import("/js/study/progress.js")).unitState(unit, { lang: "nl" }); return { say: Boolean(s.strengths.say), due: s.strengths.say?.due ?? null }; }, step.unit);
+  assert(state.say && state.due === false, `its saying isn't scheduled: ${JSON.stringify(state)}`);
+  await leave();
+  return `"fiets" for "bicycle": ${JSON.stringify(rows[0])}`;
+});
+
+await stage("a deck's card, a noun said without its article: still right", async () => {
+  const { steps } = await deckSteps();
+  await openPlan([steps.huis]);
+  await say("huis");
+  const said = await feedback();
+  assert(/^Right/.test(said), `"huis" for "het huis": ${said || (await status())}`);
+  await leave();
+  return '"huis" for "het huis"';
+});
+
+await stage("a deck's card said wrong: only what was heard until the answer, two more tries, then the answer; one row, the first try's, wrong, with what was heard", async () => {
+  const { steps } = await deckSteps();
+  const step = steps.boom;
+  await openPlan([step]);
+  const from = await rowCount();
+  const shownText = async () => /(^|\s)boom(\s|$)/i.test(await page.locator(SESSION).innerText());
+  await say("zzz");
+  const first = await status();
+  assert(/^Not quite\. Try again\./.test(first) && !(await feedback()), `after one wrong try: ${first}`);
+  assert(/Heard: “zzz”/.test(await page.locator(`${SESSION} .lx-said`).innerText()), "what was heard isn't said");
+  assert(!(await shownText()), "the card's text written out after one wrong try");
+  await shot("card-say-3-wrong-try");
+  await say("zzz");
+  assert(/One more try/.test(await status()) && !(await shownText()), `after two: ${await status()}`);
+  await say("zzz");
+  const answer = await feedback();
+  assert(/Here's how it sounds/.test(answer) && answer.includes("boom: tree"), `after three: ${answer}`);
+  await shot("card-say-4-answer");
+  const rows = await cardRowsSince(from, step.unit);
+  assert(rows.length === 1 && rows[0].outcome === "wrong" && rows[0].said === "zzz" && rows[0].activity === "say", `what it recorded: ${JSON.stringify(rows)}`);
+  // Its "?" opens the card, as its other games' results do.
+  assert((await page.locator(`${SESSION} [data-part="learn-more"], ${SESSION} button[aria-label*="Learn"], ${SESSION} button[aria-label*="learn"]`).count()) >= 1, 'no "?" on the result');
+  await leave();
+  return "three tries, one row, the text hidden until the answer";
+});
+
+await stage("a deck's card with Can't speak now: the same card asked by another of its games, there and then, never a speaking one", async () => {
+  const { steps } = await deckSteps();
+  const step = steps.stoel;
+  await page.evaluate(async (one) => {
+    const { deckInstead } = await import("/js/study/deck.js");
+    globalThis.__stillPlan = { title: "Check", steps: [one], instead: (asked, without) => deckInstead(asked, without) };
+    location.hash = "#study/session/still/check";
+  }, step);
+  await page.waitForFunction((S) => document.querySelector(S)?.getAttribute("data-game") === "say", SESSION, { timeout: 20_000 });
+  await page.waitForTimeout(600);
+  await page.locator(SESSION).getByRole("button", { name: "Can't speak now" }).click();
+  await page.waitForFunction((S) => document.querySelector(S)?.getAttribute("data-game") !== "say", SESSION, { timeout: 5_000 }).catch(() => {});
+  const after = await page.evaluate((S) => { const s = document.querySelector(S)?.lxStep; return s ? { kind: s.kind, game: s.game, unit: s.unit } : null; }, SESSION);
+  assert(after?.kind === "deck" && after.game !== "say" && after.unit === step.unit, `after Can't speak now: ${JSON.stringify(after)}`);
+  // Once the swap has settled: the other game's own screen, no microphone left on it.
+  await page.waitForTimeout(1200);
+  assert((await mic().count()) === 0, "the microphone is still on the screen after the swap");
+  await shot("card-say-5-cant-speak");
+  await leave();
+  return `stoel: Say it became ${after.game}`;
+});
+
+await stage("a deck's card: a wrong try moves nothing, the microphone where it was; said right, and wrong three times, nothing moves in one frame", async () => {
+  const { steps } = await deckSteps();
+  const step = steps.raam;
+  const wrong = await tryFrames(step, "zzz");
+  assert(/^Not quite/.test(wrong.state.status) && !wrong.state.feedback, `not a first wrong try: ${JSON.stringify(wrong.state)}`);
+  assert(!wrong.found.length, jumps(wrong.found));
+  assert(wrong.moved !== null && Math.abs(wrong.moved) <= 1, `the microphone moved ${wrong.moved} px: ${wrong.shifted.join("; ")}`);
+  const notes = [`a wrong try: ${wrong.frames} frames, nothing moved`];
+  for (const [heard, tries, title] of [["raam", 1, /^Right/], ["zzz", 3, /Here's how it sounds/]]) {
+    const result = await tryFrames(step, heard, { tries });
+    assert(title.test(result.state.feedback), `after ${tries} ${heard === "zzz" ? "wrong tries" : "right"}: ${JSON.stringify(result.state)}`);
+    assert(!result.found.length, jumps(result.found));
+    notes.push(`${tries === 1 ? "right" : "three wrong"}: ${result.frames} frames, the microphone ${result.moved ? `moved ${result.moved} px on the result's curve` : "stayed where it was"}`);
+  }
+  return notes.join("; ");
+});
+
+await stage("where nothing can listen, no card is offered Say it", async () => {
+  const games = await page.evaluate(async (id) => {
+    const deck = await import("/js/study/deck.js");
+    const { allPacks } = await import("/js/study/packs.js");
+    deck.setSpeechHearing(false);
+    const out = deck.cardsOf(allPacks().find((one) => one.id === id)).map((entry) => entry.games.includes("say"));
+    deck.setSpeechHearing(true);
+    return out;
+  }, DECK);
+  assert(games.length === 6 && games.every((has) => !has), `still offered: ${games}`);
+});
+
 await stage("no page errors, and the speech module the stand-in", async () => {
   assert(stoodIn > 0, "the app never asked for /js/speech/speech.js, so nothing here listened");
   assert(!errors.length, errors.slice(0, 3).join(" | "));
