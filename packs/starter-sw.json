@@ -1,0 +1,7782 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-sw",
+  "name": "Starter: Swahili",
+  "about": "Swahili noun classes and verbs in real, everyday sentences.",
+  "language": "sw",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kahawa": "coffee",
+    "chai": "tea",
+    "maji": "water",
+    "mimi": "I, me",
+    "nywa": "to drink",
+    "na": "and, with; to have (nina: I have)",
+    "moja": "one (mmoja for people)",
+    "maziwa": "milk",
+    "zuri": "good, nice (-zuri: nzuri, mzuri…)",
+    "wa": "to be; to become (kuwa)",
+    "wewe": "you",
+    "si": "not",
+    "mwalimu": "teacher (walimu: teachers)",
+    "mwanafunzi": "student",
+    "ni": "is, am, are",
+    "mama": "mother, mom",
+    "baba": "father, dad",
+    "kaka": "brother",
+    "dada": "sister",
+    "angu": "my (-angu: yangu, zangu…)",
+    "huyu": "this",
+    "rafiki": "friend",
+    "daktari": "doctor",
+    "ufunguo": "key (funguo: keys)",
+    "simu": "phone",
+    "kitabu": "book",
+    "wapi": "where",
+    "hapa": "here",
+    "pale": "there",
+    "choo": "bathroom, toilet",
+    "wili": "two (wawili for people, mbili…)",
+    "tatu": "three",
+    "pesa": "money",
+    "zungumza": "to speak, to talk",
+    "kiingereza": "English",
+    "kiswahili": "Swahili",
+    "elewa": "to understand",
+    "kidogo": "a little",
+    "taka": "to want",
+    "nyumba": "house (nyumbani: at home)",
+    "chumba": "room",
+    "kubwa": "big",
+    "dogo": "small (-dogo: ndogo, vidogo…)",
+    "ishi": "to live",
+    "katika": "in",
+    "hii": "this (for a noun like filamu)",
+    "enda": "to go (kwenda)",
+    "shule": "school",
+    "mji": "city",
+    "gari": "car",
+    "hili": "this (for a noun like gari)",
+    "leo": "today",
+    "kesho": "tomorrow",
+    "fanya": "to do, to make (fanya kazi: to work)",
+    "kazi": "work, job",
+    "lazima": "must, have to",
+    "weza": "can, to be able to",
+    "sikia": "to hear; to feel",
+    "habari": "news (habari yako: how are you)",
+    "ako": "your (-ako: yako, lako, wako…)",
+    "jina": "name",
+    "nani": "who",
+    "soma": "to study; to read",
+    "a": "of (-a: la, ya, cha…)",
+    "jua": "to know",
+    "penda": "to like, to love",
+    "filamu": "movie",
+    "jana": "yesterday; last (mwaka jana: last year)",
+    "hospitali": "hospital",
+    "kuna": "there is (hakuna: there isn't)",
+    "meza": "table",
+    "kwenye": "in, at, on; to (after going or coming)",
+    "friji": "fridge",
+    "funga": "to close",
+    "dirisha": "window",
+    "jiko": "kitchen",
+    "roshani": "balcony",
+    "fika": "to arrive",
+    "pika": "to cook",
+    "mlango": "door",
+    "tafadhali": "please",
+    "subiri": "to wait (for)",
+    "bila": "without",
+    "sukari": "sugar",
+    "glasi": "glass",
+    "la": "to eat (kula)",
+    "kitu": "thing (kitu kitamu: something sweet)",
+    "tamu": "sweet",
+    "piza": "pizza",
+    "leta": "to bring (lete: bring!)",
+    "bili": "bill, check",
+    "bei": "price",
+    "gani": "which, what kind",
+    "kwa": "for, by, to (kwa basi: by bus)",
+    "yai": "egg (mayai: eggs)",
+    "kituo": "stop, station",
+    "basi": "bus",
+    "duka": "store, shop",
+    "nunua": "to buy",
+    "mkate": "bread",
+    "kiatu": "shoe (viatu: shoes)",
+    "pya": "new",
+    "treni": "train",
+    "chelewa": "to be late",
+    "dakika": "minute",
+    "kumi": "ten",
+    "wahi": "to be early; ever, before (sijawahi: I've never)",
+    "hivi": "these (for a plural noun like viatu)",
+    "sana": "very",
+    "chukua": "to take",
+    "teksi": "taxi",
+    "bibi": "grandma",
+    "tiketi": "ticket",
+    "shilingi": "shilling",
+    "elfu": "thousand",
+    "nyesha": "to rain; to fall, of rain",
+    "mvua": "rain",
+    "pigia": "to call (pigia simu: to phone)",
+    "sasa": "now",
+    "ja": "to come (kuja)",
+    "sinema": "the movies, movie theater",
+    "wikendi": "weekend",
+    "ufukwe": "beach (ufukweni: at the beach)",
+    "jifunza": "to learn",
+    "tangu": "since",
+    "mwaka": "year (mwaka jana: last year)",
+    "nini": "what",
+    "baridi": "cold",
+    "julisha": "to inform, to let someone know",
+    "tumaini": "to hope",
+    "nasi": "with us; and we",
+    "jumamosi": "Saturday",
+    "tayari": "ready",
+    "baki": "to stay, to remain",
+    "muda": "time",
+    "choka": "to get tired (nimechoka: I'm tired)",
+    "onana": "to see each other"
+  },
+  "chunks": {
+    "habari-yako": {
+      "text": "Habari yako",
+      "en": "How are you",
+      "about": "The everyday greeting to one person, literally your news?; the answer is often Nzuri (good)."
+    },
+    "fanya-kazi": {
+      "text": "fanya kazi",
+      "en": "to work",
+      "about": "Literally to do work: anafanya kazi, she works."
+    },
+    "piga-simu": {
+      "text": "piga simu",
+      "en": "to phone, to make a call",
+      "about": "The person called goes inside the verb, which takes -ia: nitakupigia simu, I'll call you."
+    },
+    "samahani": {
+      "text": "Samahani",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention or say sorry, to anyone."
+    },
+    "naomba": {
+      "text": "Naomba",
+      "en": "May I have, please",
+      "about": "A polite way to ask for something, literally I request: Naomba maji."
+    },
+    "chakula-cha-jioni": {
+      "text": "chakula cha jioni",
+      "en": "dinner",
+      "about": "Literally the food of the evening; lunch is chakula cha mchana."
+    },
+    "kifungua-kinywa": {
+      "text": "kifungua kinywa",
+      "en": "breakfast",
+      "about": "Literally the mouth-opener."
+    },
+    "hali-ya-hewa": {
+      "text": "hali ya hewa",
+      "en": "the weather",
+      "about": "Literally the state of the air."
+    },
+    "hello": {
+      "text": "Hujambo",
+      "en": "hello"
+    },
+    "please": {
+      "text": "tafadhali",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "asante",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "Kwaheri",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Ndiyo",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Hapana",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Jina lako ni nani",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Nimefurahi kukutana nawe",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "ni bei gani",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Lete bili, tafadhali",
+      "en": "the check, please"
+    },
+    "train-station": {
+      "text": "kituo cha treni",
+      "en": "train station"
+    },
+    "see-you-tomorrow": {
+      "text": "Tutaonana kesho",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "ninakunywa-kahawa",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "short-verbs"
+      ],
+      "text": "Ninakunywa kahawa.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Ninakunywa",
+          "nywa"
+        ],
+        [
+          "kahawa",
+          "kahawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ninakunywa na kahawa.",
+        "Ninakunywa kahawa na."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahawa",
+          "chai",
+          "maji"
+        ]
+      }
+    },
+    {
+      "id": "mimi-ninakunywa-chai",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Mimi ninakunywa chai.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Mimi",
+          "mimi"
+        ],
+        [
+          "ninakunywa",
+          "nywa"
+        ],
+        [
+          "chai",
+          "chai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi na ninakunywa chai.",
+        "Mimi ninakunywa chai na."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "chai",
+          "kahawa",
+          "maji"
+        ]
+      }
+    },
+    {
+      "id": "ninakunywa-maji",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninakunywa maji.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Ninakunywa",
+          "nywa"
+        ],
+        [
+          "maji",
+          "maji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ninakunywa na maji.",
+        "Ninakunywa maji na."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "maji",
+          "chai",
+          "kahawa"
+        ]
+      }
+    },
+    {
+      "id": "ninakunywa-kahawa-na-chai",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "no-articles"
+      ],
+      "text": "Ninakunywa kahawa na chai.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Ninakunywa",
+          "nywa"
+        ],
+        [
+          "kahawa",
+          "kahawa"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "chai",
+          "chai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ninakunywa na kahawa chai.",
+        "Ninakunywa kahawa chai na."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "chai",
+          "maji",
+          "kahawa"
+        ]
+      }
+    },
+    {
+      "id": "ninakunywa-chai-na-maji",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "no-articles"
+      ],
+      "text": "Ninakunywa chai na maji.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Ninakunywa",
+          "nywa"
+        ],
+        [
+          "chai",
+          "chai"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "maji",
+          "maji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ninakunywa na chai maji.",
+        "Ninakunywa chai maji na."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "chai",
+          "kahawa",
+          "maji"
+        ]
+      }
+    },
+    {
+      "id": "ninakunywa-maji-na-kahawa",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "no-articles"
+      ],
+      "text": "Ninakunywa maji na kahawa.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Ninakunywa",
+          "nywa"
+        ],
+        [
+          "maji",
+          "maji"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "kahawa",
+          "kahawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ninakunywa na maji kahawa.",
+        "Ninakunywa maji kahawa na."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kahawa",
+          "chai",
+          "maji"
+        ]
+      }
+    },
+    {
+      "id": "kahawa-moja-tafadhali",
+      "topic": "food",
+      "concepts": [
+        "noun-classes",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kahawa moja, tafadhali.",
+      "means": "One coffee, please.",
+      "words": [
+        [
+          "Kahawa",
+          "kahawa"
+        ],
+        [
+          "moja,",
+          "moja"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "coffee"
+        ],
+        [
+          "one"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja kahawa, tafadhali.",
+        "Kahawa moja na, tafadhali."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kahawa",
+          "Chai",
+          "Maji"
+        ]
+      }
+    },
+    {
+      "id": "hujambo-kahawa-moja-asante",
+      "topic": "food",
+      "concepts": [
+        "noun-classes",
+        "no-articles"
+      ],
+      "chunks": [
+        "hello",
+        "thank-you"
+      ],
+      "text": "Hujambo! Kahawa moja, asante.",
+      "means": "Hello! One coffee, thank you.",
+      "words": [
+        [
+          "Hujambo!"
+        ],
+        [
+          "Kahawa",
+          "kahawa"
+        ],
+        [
+          "moja,",
+          "moja"
+        ],
+        [
+          "asante"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "hello"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "one"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hujambo! Moja kahawa, asante.",
+        "Hujambo! Kahawa moja na, asante."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Kahawa",
+          "Chai",
+          "Maji"
+        ]
+      }
+    },
+    {
+      "id": "maziwa-tafadhali",
+      "topic": "food",
+      "concepts": [
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Maziwa, tafadhali.",
+      "means": "Milk, please.",
+      "words": [
+        [
+          "Maziwa,",
+          "maziwa"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "milk"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Maziwa na, tafadhali.",
+        "Na maziwa na, tafadhali."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Maziwa,",
+          "Chai,",
+          "Kahawa,"
+        ]
+      }
+    },
+    {
+      "id": "chai-moja-na-maji-tafadhali",
+      "topic": "food",
+      "concepts": [
+        "noun-classes",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Chai moja na maji, tafadhali.",
+      "means": "One tea and some water, please.",
+      "words": [
+        [
+          "Chai",
+          "chai"
+        ],
+        [
+          "moja",
+          "moja"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "maji,",
+          "maji"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "tea"
+        ],
+        [
+          "one"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja chai na maji, tafadhali.",
+        "Chai moja maji na, tafadhali."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maji,",
+          "maziwa,",
+          "kahawa,"
+        ]
+      }
+    },
+    {
+      "id": "hujambo-chai-moja-tafadhali",
+      "topic": "food",
+      "concepts": [
+        "noun-classes",
+        "no-articles"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Hujambo! Chai moja, tafadhali.",
+      "means": "Hello! One tea, please.",
+      "words": [
+        [
+          "Hujambo!"
+        ],
+        [
+          "Chai",
+          "chai"
+        ],
+        [
+          "moja,",
+          "moja"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "hello"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "one"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hujambo! Moja chai, tafadhali.",
+        "Hujambo! Chai moja na, tafadhali."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Chai",
+          "Kahawa",
+          "Maziwa"
+        ]
+      }
+    },
+    {
+      "id": "ninakunywa-maziwa",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninakunywa maziwa.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Ninakunywa",
+          "nywa"
+        ],
+        [
+          "maziwa",
+          "maziwa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ninakunywa na maziwa.",
+        "Ninakunywa maziwa na."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "maziwa",
+          "maji",
+          "chai"
+        ]
+      }
+    },
+    {
+      "id": "niko-vizuri-asante",
+      "topic": "people",
+      "concepts": [
+        "subject-prefix",
+        "locative-copula"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Niko vizuri, asante.",
+      "means": "I'm well, thank you.",
+      "words": [
+        [
+          "Niko",
+          "wa"
+        ],
+        [
+          "vizuri,",
+          "zuri"
+        ],
+        [
+          "asante"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Niko na vizuri, asante.",
+        "Mimi vizuri na, asante."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Niko",
+          "Ninakunywa",
+          "Mimi"
+        ]
+      }
+    },
+    {
+      "id": "ndiyo-tafadhali",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Ndiyo, tafadhali.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ndiyo,"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ndiyo na, tafadhali.",
+        "Ndiyo, mimi na tafadhali."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ndiyo,",
+          "Hapana,",
+          "Kwaheri,"
+        ]
+      }
+    },
+    {
+      "id": "hapana-asante",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Hapana, asante.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Hapana,"
+        ],
+        [
+          "asante"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "no"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hapana na, asante.",
+        "Hapana, mimi na asante."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hapana,",
+          "Ndiyo,",
+          "Hujambo,"
+        ]
+      }
+    },
+    {
+      "id": "ndiyo-asante-kwaheri",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Ndiyo, asante. Kwaheri!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ndiyo,"
+        ],
+        [
+          "asante."
+        ],
+        [
+          "Kwaheri"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ndiyo na, asante. Kwaheri!",
+        "Ndiyo, asante na. Kwaheri!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Kwaheri",
+          "Hujambo",
+          "Hapana"
+        ]
+      }
+    },
+    {
+      "id": "hapana-asante-kwaheri",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Hapana, asante. Kwaheri!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Hapana,"
+        ],
+        [
+          "asante."
+        ],
+        [
+          "Kwaheri"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "no"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hapana na, asante. Kwaheri!",
+        "Hapana, asante na. Kwaheri!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hapana,",
+          "Ndiyo,",
+          "Hujambo,"
+        ]
+      }
+    },
+    {
+      "id": "wewe-ni-mwanafunzi",
+      "topic": "people",
+      "concepts": [
+        "copula-ni",
+        "no-articles"
+      ],
+      "text": "Wewe ni mwanafunzi.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Wewe",
+          "wewe"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "mwanafunzi",
+          "mwanafunzi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wewe mwanafunzi ni.",
+        "Wewe ni na mwanafunzi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mwanafunzi",
+          "mwalimu",
+          "kahawa"
+        ]
+      }
+    },
+    {
+      "id": "wewe-ni-mwalimu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "copula-ni"
+      ],
+      "text": "Wewe ni mwalimu?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Wewe",
+          "wewe"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "mwalimu",
+          "mwalimu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wewe mwalimu ni?",
+        "Wewe ni na mwalimu?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Wewe",
+          "Mimi",
+          "Niko"
+        ]
+      }
+    },
+    {
+      "id": "mimi-si-mwalimu",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "no-articles"
+      ],
+      "text": "Mimi si mwalimu.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Mimi",
+          "mimi"
+        ],
+        [
+          "si",
+          "si"
+        ],
+        [
+          "mwalimu",
+          "mwalimu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi ni si mwalimu.",
+        "Mimi mwalimu si."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "si",
+          "ni",
+          "na"
+        ]
+      }
+    },
+    {
+      "id": "hujambo-nimefurahi-kukutana-nawe",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Hujambo! Nimefurahi kukutana nawe.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Hujambo!"
+        ],
+        [
+          "Nimefurahi"
+        ],
+        [
+          "kukutana"
+        ],
+        [
+          "nawe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "hello"
+        ],
+        [
+          "I am pleased"
+        ],
+        [
+          "to meet"
+        ],
+        [
+          "with you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hujambo! Nimefurahi nawe kukutana.",
+        "Hujambo! Nimefurahi kukutana na nawe."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nawe",
+          "wewe",
+          "mimi"
+        ]
+      }
+    },
+    {
+      "id": "mama-yangu-ni-mwalimu",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Mama yangu ni mwalimu.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Mama",
+          "mama"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "mwalimu",
+          "mwalimu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yangu mama ni mwalimu.",
+        "Mama yangu mwalimu ni."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mama",
+          "Baba",
+          "Kaka"
+        ]
+      }
+    },
+    {
+      "id": "huyu-ni-mama-yangu",
+      "topic": "people",
+      "concepts": [
+        "noun-classes",
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Huyu ni mama yangu.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Huyu",
+          "huyu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "yangu",
+          "angu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this person"
+        ],
+        [
+          "is"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Huyu ni yangu mama.",
+        "Huyu mama yangu ni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mama",
+          "baba",
+          "dada"
+        ]
+      }
+    },
+    {
+      "id": "huyu-ni-baba-yangu",
+      "topic": "people",
+      "concepts": [
+        "noun-classes",
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Huyu ni baba yangu.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Huyu",
+          "huyu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "baba",
+          "baba"
+        ],
+        [
+          "yangu",
+          "angu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this person"
+        ],
+        [
+          "is"
+        ],
+        [
+          "father"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Huyu ni yangu baba.",
+        "Huyu baba yangu ni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "baba",
+          "mama",
+          "kaka"
+        ]
+      }
+    },
+    {
+      "id": "baba-yangu-ni-mwalimu",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Baba yangu ni mwalimu.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Baba",
+          "baba"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "mwalimu",
+          "mwalimu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "father"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yangu baba ni mwalimu.",
+        "Baba yangu mwalimu ni."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mwalimu",
+          "mwanafunzi",
+          "mama"
+        ]
+      }
+    },
+    {
+      "id": "kaka-yangu-ni-mwanafunzi",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Kaka yangu ni mwanafunzi.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Kaka",
+          "kaka"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "mwanafunzi",
+          "mwanafunzi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "brother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yangu kaka ni mwanafunzi.",
+        "Kaka yangu mwanafunzi ni."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kaka",
+          "Baba",
+          "Mama"
+        ]
+      }
+    },
+    {
+      "id": "huyu-ni-dada-yangu",
+      "topic": "people",
+      "concepts": [
+        "noun-classes",
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Huyu ni dada yangu.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Huyu",
+          "huyu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "dada",
+          "dada"
+        ],
+        [
+          "yangu",
+          "angu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this person"
+        ],
+        [
+          "is"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Huyu ni yangu dada.",
+        "Huyu dada yangu ni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dada",
+          "kaka",
+          "baba"
+        ]
+      }
+    },
+    {
+      "id": "nina-simu",
+      "topic": "people",
+      "concepts": [
+        "na-have",
+        "subject-prefix",
+        "no-articles"
+      ],
+      "text": "Nina simu.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Nina",
+          "na"
+        ],
+        [
+          "simu",
+          "simu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi ni nina simu.",
+        "Nina na simu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nina",
+          "Una",
+          "Sina"
+        ]
+      }
+    },
+    {
+      "id": "una-ufunguo",
+      "topic": "people",
+      "concepts": [
+        "na-have",
+        "subject-prefix",
+        "question"
+      ],
+      "text": "Una ufunguo?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Una",
+          "na"
+        ],
+        [
+          "ufunguo",
+          "ufunguo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you have"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wewe ni una ufunguo?",
+        "Una na ufunguo?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Una",
+          "Nina",
+          "Sina"
+        ]
+      }
+    },
+    {
+      "id": "nina-kaka-na-dada",
+      "topic": "people",
+      "concepts": [
+        "na-have",
+        "subject-prefix",
+        "no-articles"
+      ],
+      "text": "Nina kaka na dada.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Nina",
+          "na"
+        ],
+        [
+          "kaka",
+          "kaka"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "dada",
+          "dada"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nina na kaka dada.",
+        "Nina kaka dada na."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nina",
+          "Una",
+          "Sina"
+        ]
+      }
+    },
+    {
+      "id": "sina-kitabu",
+      "topic": "people",
+      "concepts": [
+        "na-have",
+        "negation",
+        "no-articles"
+      ],
+      "text": "Sina kitabu.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Sina",
+          "na"
+        ],
+        [
+          "kitabu",
+          "kitabu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi si nina kitabu.",
+        "Sina na kitabu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sina",
+          "Nina",
+          "Una"
+        ]
+      }
+    },
+    {
+      "id": "dada-yangu-ni-daktari",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Dada yangu ni daktari.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Dada",
+          "dada"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "daktari",
+          "daktari"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yangu dada ni daktari.",
+        "Dada yangu daktari ni."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "daktari",
+          "mwalimu",
+          "mwanafunzi"
+        ]
+      }
+    },
+    {
+      "id": "wewe-ni-rafiki-mzuri",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "noun-classes",
+        "copula-ni"
+      ],
+      "text": "Wewe ni rafiki mzuri.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Wewe",
+          "wewe"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "rafiki",
+          "rafiki"
+        ],
+        [
+          "mzuri",
+          "zuri"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a friend"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wewe ni rafiki vizuri.",
+        "Wewe rafiki mzuri ni."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mzuri",
+          "vizuri",
+          "yangu"
+        ]
+      }
+    },
+    {
+      "id": "simu-yangu-iko-hapa",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative-copula",
+        "agreement"
+      ],
+      "text": "Simu yangu iko hapa.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Simu",
+          "simu"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "iko",
+          "wa"
+        ],
+        [
+          "hapa",
+          "hapa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "phone"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Simu yangu yuko hapa.",
+        "Simu yangu kiko hapa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "iko",
+          "yuko",
+          "kiko"
+        ]
+      }
+    },
+    {
+      "id": "ufunguo-uko-pale",
+      "topic": "out",
+      "concepts": [
+        "locative-copula",
+        "agreement",
+        "no-articles"
+      ],
+      "text": "Ufunguo uko pale.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Ufunguo",
+          "ufunguo"
+        ],
+        [
+          "uko",
+          "wa"
+        ],
+        [
+          "pale",
+          "pale"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "the key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ufunguo kiko pale.",
+        "Ufunguo yuko pale."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uko",
+          "kiko",
+          "iko"
+        ]
+      }
+    },
+    {
+      "id": "ufunguo-wangu-uko-wapi",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative-copula",
+        "question",
+        "agreement"
+      ],
+      "text": "Ufunguo wangu uko wapi?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Ufunguo",
+          "ufunguo"
+        ],
+        [
+          "wangu",
+          "angu"
+        ],
+        [
+          "uko",
+          "wa"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "key"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ufunguo yangu uko wapi?",
+        "Ufunguo wangu kiko wapi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "uko",
+          "iko",
+          "kiko"
+        ]
+      }
+    },
+    {
+      "id": "samahani-choo-kiko-wapi",
+      "topic": "out",
+      "concepts": [
+        "locative-copula",
+        "question",
+        "agreement"
+      ],
+      "chunks": [
+        "samahani"
+      ],
+      "text": "Samahani, choo kiko wapi?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Samahani,"
+        ],
+        [
+          "choo",
+          "choo"
+        ],
+        [
+          "kiko",
+          "wa"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "excuse me"
+        ],
+        [
+          "the bathroom"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Samahani, choo iko wapi?",
+        "Samahani, choo yuko wapi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kiko",
+          "iko",
+          "uko"
+        ]
+      }
+    },
+    {
+      "id": "mama-yangu-yuko-wapi",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative-copula",
+        "question",
+        "agreement"
+      ],
+      "text": "Mama yangu yuko wapi?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Mama",
+          "mama"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "yuko",
+          "wa"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mama yangu iko wapi?",
+        "Mama yangu kiko wapi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yuko",
+          "iko",
+          "kiko"
+        ]
+      }
+    },
+    {
+      "id": "dada-yangu-yuko-hapa",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative-copula",
+        "agreement"
+      ],
+      "text": "Dada yangu yuko hapa.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Dada",
+          "dada"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "yuko",
+          "wa"
+        ],
+        [
+          "hapa",
+          "hapa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dada yangu iko hapa.",
+        "Dada yangu uko hapa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hapa",
+          "pale",
+          "wapi"
+        ]
+      }
+    },
+    {
+      "id": "samahani-ni-bei-gani",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "copula-ni"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "samahani"
+      ],
+      "text": "Samahani, ni bei gani?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Samahani,"
+        ],
+        [
+          "ni"
+        ],
+        [
+          "bei"
+        ],
+        [
+          "gani"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "excuse me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the price"
+        ],
+        [
+          "what"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Samahani, ni gani bei?",
+        "Samahani, ni bei na gani?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gani",
+          "wapi",
+          "nani"
+        ]
+      }
+    },
+    {
+      "id": "kahawa-mbili-tafadhali",
+      "topic": "out",
+      "concepts": [
+        "noun-classes",
+        "agreement",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kahawa mbili, tafadhali.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Kahawa",
+          "kahawa"
+        ],
+        [
+          "mbili,",
+          "wili"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "coffees"
+        ],
+        [
+          "two"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kahawa wawili, tafadhali.",
+        "Mbili kahawa, tafadhali."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mbili,",
+          "wawili,",
+          "vitatu,"
+        ]
+      }
+    },
+    {
+      "id": "kitabu-kimoja-tafadhali",
+      "topic": "out",
+      "concepts": [
+        "noun-classes",
+        "agreement"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kitabu kimoja, tafadhali.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Kitabu",
+          "kitabu"
+        ],
+        [
+          "kimoja,",
+          "moja"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "book"
+        ],
+        [
+          "one"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kitabu mmoja, tafadhali.",
+        "Kimoja kitabu, tafadhali."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kimoja,",
+          "moja,",
+          "mmoja,"
+        ]
+      }
+    },
+    {
+      "id": "nina-vitabu-vitatu",
+      "topic": "out",
+      "concepts": [
+        "na-have",
+        "noun-classes",
+        "agreement"
+      ],
+      "text": "Nina vitabu vitatu.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Nina",
+          "na"
+        ],
+        [
+          "vitabu",
+          "kitabu"
+        ],
+        [
+          "vitatu",
+          "tatu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "books"
+        ],
+        [
+          "three"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nina kitabu vitatu.",
+        "Nina vitabu wawili."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vitatu",
+          "mbili",
+          "wawili"
+        ]
+      }
+    },
+    {
+      "id": "sina-pesa",
+      "topic": "out",
+      "concepts": [
+        "na-have",
+        "negation"
+      ],
+      "text": "Sina pesa.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Sina",
+          "na"
+        ],
+        [
+          "pesa",
+          "pesa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi si nina pesa.",
+        "Sina na pesa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sina",
+          "Nina",
+          "Una"
+        ]
+      }
+    },
+    {
+      "id": "ninazungumza-kiswahili-kidogo",
+      "topic": "people",
+      "concepts": [
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninazungumza Kiswahili kidogo.",
+      "means": "I speak a little Swahili.",
+      "words": [
+        [
+          "Ninazungumza",
+          "zungumza"
+        ],
+        [
+          "Kiswahili",
+          "kiswahili"
+        ],
+        [
+          "kidogo",
+          "kidogo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "Swahili"
+        ],
+        [
+          "a little"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi unazungumza Kiswahili kidogo.",
+        "Ninazungumza na Kiswahili kidogo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ninazungumza",
+          "Unazungumza",
+          "Ninakunywa"
+        ]
+      }
+    },
+    {
+      "id": "mimi-sielewi",
+      "topic": "people",
+      "concepts": [
+        "subject-prefix",
+        "negation"
+      ],
+      "text": "Mimi sielewi.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Mimi",
+          "mimi"
+        ],
+        [
+          "sielewi",
+          "elewa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi si sielewi.",
+        "Mimi ni sielewi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sielewi",
+          "unaelewa",
+          "ninazungumza"
+        ]
+      }
+    },
+    {
+      "id": "wewe-unaelewa",
+      "topic": "people",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "question"
+      ],
+      "text": "Wewe unaelewa?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Wewe",
+          "wewe"
+        ],
+        [
+          "unaelewa",
+          "elewa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wewe sielewi?",
+        "Wewe ni unaelewa?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "unaelewa",
+          "sielewi",
+          "ninazungumza"
+        ]
+      }
+    },
+    {
+      "id": "ninataka-kahawa",
+      "topic": "people",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "no-articles"
+      ],
+      "text": "Ninataka kahawa.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Ninataka",
+          "taka"
+        ],
+        [
+          "kahawa",
+          "kahawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi ni ninataka kahawa.",
+        "Ninataka na kahawa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ninataka",
+          "Ninakunywa",
+          "Ninazungumza"
+        ]
+      }
+    },
+    {
+      "id": "ninataka-maji-tafadhali",
+      "topic": "people",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ninataka maji, tafadhali.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Ninataka",
+          "taka"
+        ],
+        [
+          "maji,",
+          "maji"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi ni ninataka maji, tafadhali.",
+        "Ninataka maji na, tafadhali."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "maji,",
+          "kahawa,",
+          "maziwa,"
+        ]
+      }
+    },
+    {
+      "id": "mama-yangu-anaishi-hapa",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Mama yangu anaishi hapa.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mama",
+          "mama"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "anaishi",
+          "ishi"
+        ],
+        [
+          "hapa",
+          "hapa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mama yangu ninaishi hapa.",
+        "Mama yangu unaishi hapa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "anaishi",
+          "ninaishi",
+          "unaishi"
+        ]
+      }
+    },
+    {
+      "id": "unaishi-wapi",
+      "topic": "home",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "question"
+      ],
+      "text": "Unaishi wapi?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Unaishi",
+          "ishi"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you live"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wewe ninaishi wapi?",
+        "Wewe ni unaishi wapi?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Unaishi",
+          "Ninaishi",
+          "Anaishi"
+        ]
+      }
+    },
+    {
+      "id": "nyumba-hii-ni-kubwa",
+      "topic": "home",
+      "concepts": [
+        "noun-classes",
+        "agreement",
+        "copula-ni"
+      ],
+      "text": "Nyumba hii ni kubwa.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Nyumba",
+          "nyumba"
+        ],
+        [
+          "hii",
+          "hii"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "kubwa",
+          "kubwa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "house"
+        ],
+        [
+          "this"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nyumba huyu ni kubwa.",
+        "Nyumba hii kubwa ni."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hii",
+          "huyu",
+          "changu"
+        ]
+      }
+    },
+    {
+      "id": "chumba-changu-ni-kidogo",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "noun-classes",
+        "agreement",
+        "copula-ni"
+      ],
+      "text": "Chumba changu ni kidogo.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Chumba",
+          "chumba"
+        ],
+        [
+          "changu",
+          "angu"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "kidogo",
+          "dogo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "room"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chumba yangu ni kidogo.",
+        "Chumba changu ni ndogo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kidogo",
+          "ndogo",
+          "mzuri"
+        ]
+      }
+    },
+    {
+      "id": "ninaenda-shuleni",
+      "topic": "out",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "locative"
+      ],
+      "text": "Ninaenda shuleni.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Ninaenda",
+          "enda"
+        ],
+        [
+          "shuleni",
+          "shule"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi unaenda shuleni.",
+        "Mimi ni ninaenda shuleni."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ninaenda",
+          "Unaenda",
+          "Anaenda"
+        ]
+      }
+    },
+    {
+      "id": "unaenda-wapi",
+      "topic": "out",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "question"
+      ],
+      "text": "Unaenda wapi?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Unaenda",
+          "enda"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you are going"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wewe ninaenda wapi?",
+        "Wewe ni unaenda wapi?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Unaenda",
+          "Ninaenda",
+          "Anaenda"
+        ]
+      }
+    },
+    {
+      "id": "mama-yangu-anaenda-mjini",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "subject-prefix",
+        "present",
+        "locative"
+      ],
+      "text": "Mama yangu anaenda mjini.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mama",
+          "mama"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "anaenda",
+          "enda"
+        ],
+        [
+          "mjini",
+          "mji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mama yangu ninaenda mjini.",
+        "Mama yangu unaenda mjini."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "anaenda",
+          "ninaenda",
+          "unaenda"
+        ]
+      }
+    },
+    {
+      "id": "samahani-kituo-cha-treni-kiko-wapi",
+      "topic": "out",
+      "concepts": [
+        "locative-copula",
+        "question",
+        "agreement",
+        "of"
+      ],
+      "chunks": [
+        "train-station",
+        "samahani"
+      ],
+      "text": "Samahani, kituo cha treni kiko wapi?",
+      "means": "Excuse me, where is the train station?",
+      "words": [
+        [
+          "Samahani,"
+        ],
+        [
+          "kituo"
+        ],
+        [
+          "cha"
+        ],
+        [
+          "treni"
+        ],
+        [
+          "kiko",
+          "wa"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "excuse me"
+        ],
+        [
+          "the station"
+        ],
+        [
+          "of"
+        ],
+        [
+          "trains"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Samahani, kituo cha treni iko wapi?",
+        "Samahani, kituo cha treni uko wapi?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kiko",
+          "iko",
+          "uko"
+        ]
+      }
+    },
+    {
+      "id": "nina-gari",
+      "topic": "out",
+      "concepts": [
+        "na-have",
+        "no-articles"
+      ],
+      "text": "Nina gari.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Nina",
+          "na"
+        ],
+        [
+          "gari",
+          "gari"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi ni nina gari.",
+        "Nina na gari."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gari",
+          "simu",
+          "kitabu"
+        ]
+      }
+    },
+    {
+      "id": "gari-hili-ni-dogo",
+      "topic": "out",
+      "concepts": [
+        "noun-classes",
+        "agreement",
+        "copula-ni"
+      ],
+      "text": "Gari hili ni dogo.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Gari",
+          "gari"
+        ],
+        [
+          "hili",
+          "hili"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "dogo",
+          "dogo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "car"
+        ],
+        [
+          "this"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gari hii ni dogo.",
+        "Gari hili ni ndogo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dogo",
+          "ndogo",
+          "kidogo"
+        ]
+      }
+    },
+    {
+      "id": "kesho-ninaenda-mjini",
+      "topic": "plans",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "locative"
+      ],
+      "text": "Kesho ninaenda mjini.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Kesho",
+          "kesho"
+        ],
+        [
+          "ninaenda",
+          "enda"
+        ],
+        [
+          "mjini",
+          "mji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kesho mimi unaenda mjini.",
+        "Kesho mimi ni ninaenda mjini."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ninaenda",
+          "unaenda",
+          "anaenda"
+        ]
+      }
+    },
+    {
+      "id": "ninafanya-kazi-leo",
+      "topic": "plans",
+      "concepts": [
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninafanya kazi leo.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Ninafanya",
+          "fanya"
+        ],
+        [
+          "kazi",
+          "kazi"
+        ],
+        [
+          "leo",
+          "leo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do"
+        ],
+        [
+          "work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mimi ni ninafanya kazi leo.",
+        "Ninafanya leo kazi na."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "leo",
+          "kesho",
+          "sasa"
+        ]
+      }
+    },
+    {
+      "id": "siwezi-kwenda-leo",
+      "topic": "plans",
+      "concepts": [
+        "subject-prefix",
+        "negation",
+        "infinitive"
+      ],
+      "text": "Siwezi kwenda leo.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Siwezi",
+          "weza"
+        ],
+        [
+          "kwenda",
+          "enda"
+        ],
+        [
+          "leo",
+          "leo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I cannot"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siwezi ninaenda leo.",
+        "Siwezi niende leo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kwenda",
+          "ninaenda",
+          "niende"
+        ]
+      }
+    },
+    {
+      "id": "lazima-nifanye-kazi-kesho",
+      "topic": "plans",
+      "concepts": [
+        "subject-prefix",
+        "subjunctive"
+      ],
+      "text": "Lazima nifanye kazi kesho.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Lazima",
+          "lazima"
+        ],
+        [
+          "nifanye",
+          "fanya"
+        ],
+        [
+          "kazi",
+          "kazi"
+        ],
+        [
+          "kesho",
+          "kesho"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "must"
+        ],
+        [
+          "I do"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Lazima ni kazi nifanye kesho.",
+        "Lazima nifanye na kazi kesho."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kesho",
+          "leo",
+          "sasa"
+        ]
+      }
+    },
+    {
+      "id": "ninataka-kufanya-kazi",
+      "topic": "plans",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "infinitive"
+      ],
+      "text": "Ninataka kufanya kazi.",
+      "means": "I want to work.",
+      "words": [
+        [
+          "Ninataka",
+          "taka"
+        ],
+        [
+          "kufanya",
+          "fanya"
+        ],
+        [
+          "kazi",
+          "kazi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to do"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ninataka ninafanya kazi.",
+        "Ninataka kufanya na kazi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kufanya",
+          "ninafanya",
+          "ninaenda"
+        ]
+      }
+    },
+    {
+      "id": "habari-yako",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "question"
+      ],
+      "chunks": [
+        "habari-yako"
+      ],
+      "text": "Habari yako?",
+      "means": "How are you?",
+      "words": [
+        [
+          "Habari"
+        ],
+        [
+          "yako"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "News",
+          true
+        ],
+        [
+          "your",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Habari",
+        "yako"
+      ],
+      "wrong": [
+        "Habari wako?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "yako",
+          "wako",
+          "chako"
+        ]
+      }
+    },
+    {
+      "id": "jina-lako-ni-nani",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "noun-classes",
+        "question",
+        "copula-ni"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Jina lako ni nani?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Jina"
+        ],
+        [
+          "lako"
+        ],
+        [
+          "ni"
+        ],
+        [
+          "nani"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Name",
+          true
+        ],
+        [
+          "your",
+          true
+        ],
+        [
+          "is",
+          true
+        ],
+        [
+          "who",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Jina",
+        "lako",
+        "ni",
+        "nani"
+      ],
+      "wrong": [
+        "Jina yako ni nani?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lako",
+          "yako",
+          "wako"
+        ]
+      }
+    },
+    {
+      "id": "unazungumza-kiingereza",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Unazungumza Kiingereza?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Unazungumza",
+          "zungumza"
+        ],
+        [
+          "Kiingereza",
+          "kiingereza"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unazungumzi Kiingereza?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Unazungumza",
+          "Unazungumzi",
+          "Ninazungumzi"
+        ]
+      }
+    },
+    {
+      "id": "kaka-yangu-anasoma",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Kaka yangu anasoma Arusha.",
+      "means": "My brother studies in Arusha.",
+      "words": [
+        [
+          "Kaka",
+          "kaka"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "anasoma",
+          "soma"
+        ],
+        [
+          "Arusha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Brother",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "studies"
+        ],
+        [
+          "in Arusha"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Kaka",
+        "yangu"
+      ],
+      "wrong": [
+        "Kaka yangu ninasoma Arusha."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "anasoma",
+          "ninasoma",
+          "wanasoma"
+        ]
+      }
+    },
+    {
+      "id": "nina-dada-mmoja",
+      "topic": "people",
+      "concepts": [
+        "na-have",
+        "agreement"
+      ],
+      "text": "Nina dada mmoja na kaka wawili.",
+      "means": "I have one sister and two brothers.",
+      "words": [
+        [
+          "Nina",
+          "na"
+        ],
+        [
+          "dada",
+          "dada"
+        ],
+        [
+          "mmoja",
+          "moja"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "kaka",
+          "kaka"
+        ],
+        [
+          "wawili",
+          "wili"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "sister",
+          true
+        ],
+        [
+          "one",
+          true
+        ],
+        [
+          "and"
+        ],
+        [
+          "brothers",
+          true
+        ],
+        [
+          "two",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4
+      ],
+      "moved": [
+        "dada",
+        "mmoja",
+        "kaka",
+        "wawili"
+      ],
+      "wrong": [
+        "Nina dada mmoja na kaka viwili."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "wawili",
+          "viwili",
+          "mawili"
+        ]
+      }
+    },
+    {
+      "id": "gari-la-baba-yangu",
+      "topic": "people",
+      "concepts": [
+        "of",
+        "possessive",
+        "copula-ni"
+      ],
+      "text": "Hili ni gari la baba yangu.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Hili",
+          "hili"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "gari",
+          "gari"
+        ],
+        [
+          "la",
+          "a"
+        ],
+        [
+          "baba",
+          "baba"
+        ],
+        [
+          "yangu",
+          "angu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "car",
+          true
+        ],
+        [
+          "of",
+          true
+        ],
+        [
+          "dad",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gari",
+        "la",
+        "baba",
+        "yangu"
+      ],
+      "wrong": [
+        "Hili ni gari cha baba yangu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "la",
+          "cha",
+          "wa"
+        ]
+      }
+    },
+    {
+      "id": "sijui-anaishi-wapi",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "question",
+        "present"
+      ],
+      "text": "Sijui anaishi wapi.",
+      "means": "I don't know where they live.",
+      "words": [
+        [
+          "Sijui",
+          "jua"
+        ],
+        [
+          "anaishi",
+          "ishi"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't know"
+        ],
+        [
+          "he or she lives",
+          true
+        ],
+        [
+          "where",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "anaishi",
+        "wapi"
+      ],
+      "wrong": [
+        "Sinajui anaishi wapi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sijui",
+          "Sinajui",
+          "Sijua"
+        ]
+      }
+    },
+    {
+      "id": "mimi-ni-mwalimu",
+      "topic": "people",
+      "concepts": [
+        "no-articles",
+        "noun-classes",
+        "copula-ni"
+      ],
+      "text": "Mimi ni mwalimu.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Mimi",
+          "mimi"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "mwalimu",
+          "mwalimu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mimi ni walimu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mwalimu",
+          "walimu",
+          "kimwalimu"
+        ]
+      }
+    },
+    {
+      "id": "ninapenda-filamu-hii",
+      "topic": "people",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "agreement"
+      ],
+      "text": "Ninapenda filamu hii.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Ninapenda",
+          "penda"
+        ],
+        [
+          "filamu",
+          "filamu"
+        ],
+        [
+          "hii",
+          "hii"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "movie",
+          true
+        ],
+        [
+          "this",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "filamu",
+        "hii"
+      ],
+      "wrong": [
+        "Ninapenda filamu huyu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hii",
+          "huyu",
+          "hiki"
+        ]
+      }
+    },
+    {
+      "id": "jana-nilikuwa-nyumbani",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "locative",
+        "short-verbs"
+      ],
+      "text": "Jana nilikuwa nyumbani.",
+      "means": "Yesterday I was at home.",
+      "words": [
+        [
+          "Jana",
+          "jana"
+        ],
+        [
+          "nilikuwa",
+          "wa"
+        ],
+        [
+          "nyumbani",
+          "nyumba"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I was"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Jana nitakuwa nyumbani."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nilikuwa",
+          "nitakuwa",
+          "kuwa"
+        ]
+      }
+    },
+    {
+      "id": "mama-anafanya-kazi",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "possessive",
+        "present"
+      ],
+      "chunks": [
+        "fanya-kazi"
+      ],
+      "text": "Mama yangu anafanya kazi hospitalini.",
+      "means": "My mom works at the hospital.",
+      "words": [
+        [
+          "Mama",
+          "mama"
+        ],
+        [
+          "yangu",
+          "angu"
+        ],
+        [
+          "anafanya",
+          "fanya"
+        ],
+        [
+          "kazi",
+          "kazi"
+        ],
+        [
+          "hospitalini",
+          "hospitali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mom",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "does"
+        ],
+        [
+          "work"
+        ],
+        [
+          "at the hospital"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "moved": [
+        "Mama",
+        "yangu"
+      ],
+      "wrong": [
+        "Mama yangu ninafanya kazi hospitalini."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "hospitalini",
+          "hospitalia",
+          "hospitalinini"
+        ]
+      }
+    },
+    {
+      "id": "nyumba-ndogo",
+      "topic": "home",
+      "concepts": [
+        "agreement",
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninaishi katika nyumba ndogo.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Ninaishi",
+          "ishi"
+        ],
+        [
+          "katika",
+          "katika"
+        ],
+        [
+          "nyumba",
+          "nyumba"
+        ],
+        [
+          "ndogo",
+          "dogo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a house",
+          true
+        ],
+        [
+          "small",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nyumba",
+        "ndogo"
+      ],
+      "wrong": [
+        "Ninaishi katika nyumba mdogo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ndogo",
+          "mdogo",
+          "kidogo"
+        ]
+      }
+    },
+    {
+      "id": "kuna-kitabu-mezani",
+      "topic": "home",
+      "concepts": [
+        "kuna",
+        "locative",
+        "no-articles"
+      ],
+      "text": "Kuna kitabu mezani.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Kuna",
+          "kuna"
+        ],
+        [
+          "kitabu",
+          "kitabu"
+        ],
+        [
+          "mezani",
+          "meza"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "a book"
+        ],
+        [
+          "on the table"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Kuna kitabu mezini."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mezani",
+          "mezini",
+          "mezeni"
+        ]
+      }
+    },
+    {
+      "id": "hakuna-maziwa",
+      "topic": "home",
+      "concepts": [
+        "kuna",
+        "negation"
+      ],
+      "text": "Hakuna maziwa kwenye friji.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Hakuna",
+          "kuna"
+        ],
+        [
+          "maziwa",
+          "maziwa"
+        ],
+        [
+          "kwenye",
+          "kwenye"
+        ],
+        [
+          "friji",
+          "friji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There isn't"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Sikuna maziwa kwenye friji."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hakuna",
+          "Sikuna",
+          "Hakuni"
+        ]
+      }
+    },
+    {
+      "id": "kufunga-dirisha",
+      "topic": "home",
+      "concepts": [
+        "infinitive",
+        "question",
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Unaweza kufunga dirisha?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Unaweza",
+          "weza"
+        ],
+        [
+          "kufunga",
+          "funga"
+        ],
+        [
+          "dirisha",
+          "dirisha"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You can"
+        ],
+        [
+          "to close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unaweza kufungwa dirisha?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kufunga",
+          "kufungwa",
+          "funge"
+        ]
+      }
+    },
+    {
+      "id": "jiko-kubwa",
+      "topic": "home",
+      "concepts": [
+        "na-have",
+        "agreement",
+        "noun-classes"
+      ],
+      "text": "Tuna jiko kubwa na roshani ndogo.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Tuna",
+          "na"
+        ],
+        [
+          "jiko",
+          "jiko"
+        ],
+        [
+          "kubwa",
+          "kubwa"
+        ],
+        [
+          "na"
+        ],
+        [
+          "roshani",
+          "roshani"
+        ],
+        [
+          "ndogo",
+          "dogo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "kitchen",
+          true
+        ],
+        [
+          "big",
+          true
+        ],
+        [
+          "and"
+        ],
+        [
+          "balcony",
+          true
+        ],
+        [
+          "small",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "jiko",
+        "kubwa",
+        "roshani",
+        "ndogo"
+      ],
+      "wrong": [
+        "Tuna jiko kubwa na roshani mdogo."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ndogo",
+          "mdogo",
+          "kidogo"
+        ]
+      }
+    },
+    {
+      "id": "nikifika-nyumbani",
+      "topic": "home",
+      "concepts": [
+        "future",
+        "locative",
+        "ki-when"
+      ],
+      "chunks": [
+        "chakula-cha-jioni"
+      ],
+      "text": "Nikifika nyumbani, nitapika chakula cha jioni.",
+      "means": "When I get home, I'll cook dinner.",
+      "words": [
+        [
+          "Nikifika",
+          "fika"
+        ],
+        [
+          "nyumbani,",
+          "nyumba"
+        ],
+        [
+          "nitapika",
+          "pika"
+        ],
+        [
+          "chakula"
+        ],
+        [
+          "cha"
+        ],
+        [
+          "jioni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I arrive"
+        ],
+        [
+          "at home,"
+        ],
+        [
+          "I will cook"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Nikifika nyumbani, nilipika chakula cha jioni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nitapika",
+          "nilipika",
+          "kupika"
+        ]
+      }
+    },
+    {
+      "id": "funga-mlango",
+      "topic": "home",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Funga mlango, tafadhali.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Funga",
+          "funga"
+        ],
+        [
+          "mlango,",
+          "mlango"
+        ],
+        [
+          "tafadhali",
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Fungi mlango, tafadhali."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Funga",
+          "Fungwa",
+          "Fungi"
+        ]
+      }
+    },
+    {
+      "id": "funguo-zangu-ziko-wapi",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "agreement",
+        "possessive",
+        "locative-copula"
+      ],
+      "text": "Funguo zangu ziko wapi?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Funguo",
+          "ufunguo"
+        ],
+        [
+          "zangu",
+          "angu"
+        ],
+        [
+          "ziko"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Keys",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "are",
+          true
+        ],
+        [
+          "where",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Funguo",
+        "zangu",
+        "ziko",
+        "wapi"
+      ],
+      "wrong": [
+        "Funguo wangu ziko wapi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ziko",
+          "yuko",
+          "kuko"
+        ]
+      }
+    },
+    {
+      "id": "niko-nyumbani",
+      "topic": "home",
+      "concepts": [
+        "locative-copula",
+        "locative",
+        "subject-prefix"
+      ],
+      "text": "Niko nyumbani.",
+      "means": "I'm at home.",
+      "words": [
+        [
+          "Niko"
+        ],
+        [
+          "nyumbani",
+          "nyumba"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Mimi ni nyumbani."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nyumbani",
+          "nyumba",
+          "kwenye"
+        ]
+      }
+    },
+    {
+      "id": "nisubiri-hapa",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "object-infix",
+        "subjunctive"
+      ],
+      "text": "Nisubiri hapa!",
+      "means": "Wait for me here!",
+      "words": [
+        [
+          "Nisubiri",
+          "subiri"
+        ],
+        [
+          "hapa",
+          "hapa"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait for me"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Nisubira hapa!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nisubiri",
+          "Nisubira",
+          "Kusubiri"
+        ]
+      }
+    },
+    {
+      "id": "kahawa-bila-sukari",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "present",
+        "short-verbs"
+      ],
+      "text": "Ninakunywa kahawa bila sukari.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Ninakunywa",
+          "nywa"
+        ],
+        [
+          "kahawa",
+          "kahawa"
+        ],
+        [
+          "bila",
+          "bila"
+        ],
+        [
+          "sukari",
+          "sukari"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without"
+        ],
+        [
+          "sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ninakunywa kahawa bila sukarini."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bila",
+          "bali",
+          "bado"
+        ]
+      }
+    },
+    {
+      "id": "sinywi-kahawa",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "subject-prefix",
+        "short-verbs"
+      ],
+      "text": "Sinywi kahawa.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Sinywi",
+          "nywa"
+        ],
+        [
+          "kahawa",
+          "kahawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Sinakunywa kahawa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sinywi",
+          "Sinywa",
+          "Sikunywi"
+        ]
+      }
+    },
+    {
+      "id": "glasi-ya-maji",
+      "topic": "food",
+      "concepts": [
+        "of",
+        "agreement",
+        "present"
+      ],
+      "chunks": [
+        "naomba"
+      ],
+      "text": "Naomba glasi ya maji.",
+      "means": "Could I have a glass of water?",
+      "words": [
+        [
+          "Naomba"
+        ],
+        [
+          "glasi",
+          "glasi"
+        ],
+        [
+          "ya",
+          "a"
+        ],
+        [
+          "maji",
+          "maji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "May I have"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Naomba glasi la maji."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ya",
+          "la",
+          "cha"
+        ]
+      }
+    },
+    {
+      "id": "kitu-kitamu",
+      "topic": "food",
+      "concepts": [
+        "infinitive",
+        "agreement",
+        "present"
+      ],
+      "text": "Nataka kula kitu kitamu.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Nataka",
+          "taka"
+        ],
+        [
+          "kula",
+          "la"
+        ],
+        [
+          "kitu",
+          "kitu"
+        ],
+        [
+          "kitamu",
+          "tamu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something"
+        ],
+        [
+          "sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Nataka kula kitu mtamu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kitamu",
+          "mtamu",
+          "vitamu"
+        ]
+      }
+    },
+    {
+      "id": "tulikula-piza",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "subject-prefix",
+        "short-verbs"
+      ],
+      "text": "Jana tulikula piza.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Jana",
+          "jana"
+        ],
+        [
+          "tulikula",
+          "la"
+        ],
+        [
+          "piza",
+          "piza"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Jana tutakula piza."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tulikula",
+          "tutakula",
+          "kula"
+        ]
+      }
+    },
+    {
+      "id": "kupika-na-mama",
+      "topic": "food",
+      "concepts": [
+        "infinitive",
+        "possessive",
+        "present"
+      ],
+      "text": "Napenda kupika na mama yangu.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Napenda",
+          "penda"
+        ],
+        [
+          "kupika",
+          "pika"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "yangu",
+          "angu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "to cook"
+        ],
+        [
+          "with"
+        ],
+        [
+          "mom",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ],
+      "moved": [
+        "mama",
+        "yangu"
+      ],
+      "wrong": [
+        "Napenda kupikwa na mama yangu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kupika",
+          "kupikwa",
+          "nimepika"
+        ]
+      }
+    },
+    {
+      "id": "lete-bili",
+      "topic": "food",
+      "concepts": [
+        "imperative"
+      ],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "Lete bili, tafadhali.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Lete"
+        ],
+        [
+          "bili,"
+        ],
+        [
+          "tafadhali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bring"
+        ],
+        [
+          "the bill,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Kuleta bili, tafadhali."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Lete",
+          "Kuleta",
+          "Letwa"
+        ]
+      }
+    },
+    {
+      "id": "kahawa-ni-bei-gani",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "copula-ni"
+      ],
+      "chunks": [
+        "how-much-is-it"
+      ],
+      "text": "Kahawa ni bei gani?",
+      "means": "How much is the coffee?",
+      "words": [
+        [
+          "Kahawa",
+          "kahawa"
+        ],
+        [
+          "ni"
+        ],
+        [
+          "bei"
+        ],
+        [
+          "gani"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Coffee",
+          true
+        ],
+        [
+          "is",
+          true
+        ],
+        [
+          "price",
+          true
+        ],
+        [
+          "what",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Kahawa",
+        "ni",
+        "bei",
+        "gani"
+      ],
+      "wrong": [
+        "Kahawa ni bei nani?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gani",
+          "nani",
+          "wapi"
+        ]
+      }
+    },
+    {
+      "id": "kifungua-kinywa-mayai",
+      "topic": "food",
+      "concepts": [
+        "subject-prefix",
+        "noun-classes",
+        "present",
+        "short-verbs"
+      ],
+      "chunks": [
+        "kifungua-kinywa"
+      ],
+      "text": "Kwa kifungua kinywa ninakula mayai.",
+      "means": "I have eggs for breakfast.",
+      "words": [
+        [
+          "Kwa",
+          "kwa"
+        ],
+        [
+          "kifungua"
+        ],
+        [
+          "kinywa"
+        ],
+        [
+          "ninakula",
+          "la"
+        ],
+        [
+          "mayai",
+          "yai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For"
+        ],
+        [
+          "breakfast"
+        ],
+        [
+          "I eat"
+        ],
+        [
+          "eggs"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Kwa kifungua kinywa ninakula mayaini."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "mayai",
+          "mayaini",
+          "mayayi"
+        ]
+      }
+    },
+    {
+      "id": "kituo-cha-basi",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "of",
+        "agreement",
+        "locative-copula"
+      ],
+      "chunks": [
+        "samahani"
+      ],
+      "text": "Samahani, kituo cha basi kiko wapi?",
+      "means": "Excuse me, where's the bus stop?",
+      "words": [
+        [
+          "Samahani,"
+        ],
+        [
+          "kituo",
+          "kituo"
+        ],
+        [
+          "cha",
+          "a"
+        ],
+        [
+          "basi",
+          "basi"
+        ],
+        [
+          "kiko"
+        ],
+        [
+          "wapi",
+          "wapi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "stop",
+          true
+        ],
+        [
+          "of",
+          true
+        ],
+        [
+          "bus",
+          true
+        ],
+        [
+          "is",
+          true
+        ],
+        [
+          "where",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "kituo",
+        "cha",
+        "basi",
+        "kiko",
+        "wapi"
+      ],
+      "wrong": [
+        "Samahani, kituo cha basi yuko wapi?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kiko",
+          "yuko",
+          "ziko"
+        ]
+      }
+    },
+    {
+      "id": "dukani-kununua-mkate",
+      "topic": "out",
+      "concepts": [
+        "locative",
+        "infinitive",
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninaenda dukani kununua mkate.",
+      "means": "I'm going to the store to buy bread.",
+      "words": [
+        [
+          "Ninaenda",
+          "enda"
+        ],
+        [
+          "dukani",
+          "duka"
+        ],
+        [
+          "kununua",
+          "nunua"
+        ],
+        [
+          "mkate",
+          "mkate"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "to buy"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ninaenda dukani kununuliwa mkate."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dukani",
+          "dukanini",
+          "maduka"
+        ]
+      }
+    },
+    {
+      "id": "kesho-kazini-kwa-basi",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "locative"
+      ],
+      "text": "Kesho nitaenda kazini kwa basi.",
+      "means": "Tomorrow I'll go to work by bus.",
+      "words": [
+        [
+          "Kesho",
+          "kesho"
+        ],
+        [
+          "nitaenda",
+          "enda"
+        ],
+        [
+          "kazini",
+          "kazi"
+        ],
+        [
+          "kwa",
+          "kwa"
+        ],
+        [
+          "basi",
+          "basi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I will go"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by"
+        ],
+        [
+          "bus"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Kesho nilienda kazini kwa basi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nitaenda",
+          "nilienda",
+          "kwenda"
+        ]
+      }
+    },
+    {
+      "id": "viatu-vipya",
+      "topic": "out",
+      "concepts": [
+        "perfect",
+        "agreement",
+        "noun-classes"
+      ],
+      "text": "Nimenunua viatu vipya.",
+      "means": "I bought new shoes.",
+      "words": [
+        [
+          "Nimenunua",
+          "nunua"
+        ],
+        [
+          "viatu",
+          "kiatu"
+        ],
+        [
+          "vipya",
+          "pya"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have bought"
+        ],
+        [
+          "shoes",
+          true
+        ],
+        [
+          "new",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "viatu",
+        "vipya"
+      ],
+      "wrong": [
+        "Nimenunua viatu kipya."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vipya",
+          "kipya",
+          "mpya"
+        ]
+      }
+    },
+    {
+      "id": "treni-ilichelewa",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "agreement"
+      ],
+      "text": "Treni ilichelewa dakika kumi.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Treni",
+          "treni"
+        ],
+        [
+          "ilichelewa",
+          "chelewa"
+        ],
+        [
+          "dakika",
+          "dakika"
+        ],
+        [
+          "kumi",
+          "kumi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was late"
+        ],
+        [
+          "minutes",
+          true
+        ],
+        [
+          "ten",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dakika",
+        "kumi"
+      ],
+      "wrong": [
+        "Treni alichelewa dakika kumi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ilichelewa",
+          "alichelewa",
+          "kichelewa"
+        ]
+      }
+    },
+    {
+      "id": "sijawahi-kwenda-zanzibar",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "perfect",
+        "infinitive"
+      ],
+      "text": "Sijawahi kwenda Zanzibar.",
+      "means": "I've never been to Zanzibar.",
+      "words": [
+        [
+          "Sijawahi",
+          "wahi"
+        ],
+        [
+          "kwenda",
+          "enda"
+        ],
+        [
+          "Zanzibar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have never"
+        ],
+        [
+          "to go"
+        ],
+        [
+          "to Zanzibar"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sijawahi kwendwa Zanzibar."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kwenda",
+          "kwendwa",
+          "nenda"
+        ]
+      }
+    },
+    {
+      "id": "viatu-hivi-vidogo",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "noun-classes",
+        "copula-ni"
+      ],
+      "text": "Viatu hivi ni vidogo sana.",
+      "means": "These shoes are very small.",
+      "words": [
+        [
+          "Viatu",
+          "kiatu"
+        ],
+        [
+          "hivi",
+          "hivi"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "vidogo",
+          "dogo"
+        ],
+        [
+          "sana",
+          "sana"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Shoes",
+          true
+        ],
+        [
+          "these",
+          true
+        ],
+        [
+          "are"
+        ],
+        [
+          "small",
+          true
+        ],
+        [
+          "very",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ],
+      "moved": [
+        "Viatu",
+        "hivi",
+        "vidogo",
+        "sana"
+      ],
+      "wrong": [
+        "Viatu hivi ni ndogo sana."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vidogo",
+          "kidogo",
+          "ndogo"
+        ]
+      }
+    },
+    {
+      "id": "kuchukua-teksi",
+      "topic": "out",
+      "concepts": [
+        "infinitive",
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Tunaweza kuchukua teksi.",
+      "means": "We can take a taxi.",
+      "words": [
+        [
+          "Tunaweza",
+          "weza"
+        ],
+        [
+          "kuchukua",
+          "chukua"
+        ],
+        [
+          "teksi",
+          "teksi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We can"
+        ],
+        [
+          "to take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tunaweza kuchukuliwa teksi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kuchukua",
+          "kuchukuliwa",
+          "tumechukua"
+        ]
+      }
+    },
+    {
+      "id": "bibi-anatusubiri",
+      "topic": "out",
+      "concepts": [
+        "object-infix",
+        "locative",
+        "present"
+      ],
+      "text": "Bibi anatusubiri kituoni.",
+      "means": "Grandma's waiting for us at the station.",
+      "words": [
+        [
+          "Bibi",
+          "bibi"
+        ],
+        [
+          "anatusubiri",
+          "subiri"
+        ],
+        [
+          "kituoni",
+          "kituo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Grandma"
+        ],
+        [
+          "is waiting for us"
+        ],
+        [
+          "at the station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Bibi anatusubira kituoni."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "anatusubiri",
+          "anatusubira",
+          "tunatusubiri"
+        ]
+      }
+    },
+    {
+      "id": "jumamosi-kwa-bibi",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "subject-prefix"
+      ],
+      "text": "Jumamosi tutaenda kwa bibi.",
+      "means": "On Saturday we're going to grandma's.",
+      "words": [
+        [
+          "Jumamosi",
+          "jumamosi"
+        ],
+        [
+          "tutaenda",
+          "enda"
+        ],
+        [
+          "kwa",
+          "kwa"
+        ],
+        [
+          "bibi",
+          "bibi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we will go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jumamosi kutaenda kwa bibi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tutaenda",
+          "kutaenda",
+          "tutaende"
+        ]
+      }
+    },
+    {
+      "id": "tiketi-shilingi-elfu",
+      "topic": "out",
+      "concepts": [
+        "no-articles",
+        "agreement",
+        "copula-ni"
+      ],
+      "text": "Tiketi ni shilingi elfu moja.",
+      "means": "The ticket is a thousand shillings.",
+      "words": [
+        [
+          "Tiketi",
+          "tiketi"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "shilingi",
+          "shilingi"
+        ],
+        [
+          "elfu",
+          "elfu"
+        ],
+        [
+          "moja",
+          "moja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The ticket"
+        ],
+        [
+          "is"
+        ],
+        [
+          "shillings",
+          true
+        ],
+        [
+          "thousand"
+        ],
+        [
+          "one",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ],
+      "moved": [
+        "shilingi",
+        "moja"
+      ],
+      "wrong": [
+        "Tiketi ni shilingi elfu mmoja."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "moja",
+          "mmoja",
+          "kimoja"
+        ]
+      }
+    },
+    {
+      "id": "kesho-kutanyesha",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Kesho kutanyesha mvua.",
+      "means": "It'll rain tomorrow.",
+      "words": [
+        [
+          "Kesho",
+          "kesho"
+        ],
+        [
+          "kutanyesha",
+          "nyesha"
+        ],
+        [
+          "mvua",
+          "mvua"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "it will fall"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kesho kulinyesha mvua."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kutanyesha",
+          "kulinyesha",
+          "kunyeshe"
+        ]
+      }
+    },
+    {
+      "id": "nitakupigia-simu",
+      "topic": "plans",
+      "concepts": [
+        "object-infix",
+        "future"
+      ],
+      "chunks": [
+        "piga-simu"
+      ],
+      "text": "Nitakupigia simu kesho.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Nitakupigia",
+          "pigia"
+        ],
+        [
+          "simu",
+          "simu"
+        ],
+        [
+          "kesho",
+          "kesho"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I will call you"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nilikupigia simu kesho."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nitakupigia",
+          "Nilikupigia",
+          "Kukupigia"
+        ]
+      }
+    },
+    {
+      "id": "lazima-niende",
+      "topic": "plans",
+      "concepts": [
+        "subjunctive"
+      ],
+      "text": "Sasa lazima niende.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Sasa",
+          "sasa"
+        ],
+        [
+          "lazima",
+          "lazima"
+        ],
+        [
+          "niende",
+          "enda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "must"
+        ],
+        [
+          "that I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sasa lazima ninaende."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "niende",
+          "ninaende",
+          "niliende"
+        ]
+      }
+    },
+    {
+      "id": "utakuja-nasi",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "future",
+        "short-verbs"
+      ],
+      "text": "Utakuja nasi kwenye sinema?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Utakuja",
+          "ja"
+        ],
+        [
+          "nasi",
+          "nasi"
+        ],
+        [
+          "kwenye",
+          "kwenye"
+        ],
+        [
+          "sinema",
+          "sinema"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Will you come"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the movies"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Utakuje nasi kwenye sinema?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Utakuja",
+          "Utakuje",
+          "Kutakuja"
+        ]
+      }
+    },
+    {
+      "id": "wikendi-ufukweni",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "locative"
+      ],
+      "text": "Wikendi tutaenda ufukweni.",
+      "means": "We're going to the beach this weekend.",
+      "words": [
+        [
+          "Wikendi",
+          "wikendi"
+        ],
+        [
+          "tutaenda",
+          "enda"
+        ],
+        [
+          "ufukweni",
+          "ufukwe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the weekend"
+        ],
+        [
+          "we will go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Wikendi kutaenda ufukweni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ufukweni",
+          "ufukwe",
+          "fukweni"
+        ]
+      }
+    },
+    {
+      "id": "ninajifunza-kiswahili",
+      "topic": "plans",
+      "concepts": [
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninajifunza Kiswahili tangu mwaka jana.",
+      "means": "I've been learning Swahili since last year.",
+      "words": [
+        [
+          "Ninajifunza",
+          "jifunza"
+        ],
+        [
+          "Kiswahili"
+        ],
+        [
+          "tangu",
+          "tangu"
+        ],
+        [
+          "mwaka",
+          "mwaka"
+        ],
+        [
+          "jana",
+          "jana"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm learning"
+        ],
+        [
+          "Swahili"
+        ],
+        [
+          "since"
+        ],
+        [
+          "year",
+          true
+        ],
+        [
+          "last",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mwaka",
+        "jana"
+      ],
+      "wrong": [
+        "Ninajifunza Kiswahili tangu mwaka kesho."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ninajifunza",
+          "Ninajifunzi",
+          "Kujifunza"
+        ]
+      }
+    },
+    {
+      "id": "utafanya-nini-wikendi",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "future"
+      ],
+      "text": "Utafanya nini wikendi?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Utafanya",
+          "fanya"
+        ],
+        [
+          "nini",
+          "nini"
+        ],
+        [
+          "wikendi",
+          "wikendi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You will do",
+          true
+        ],
+        [
+          "what",
+          true
+        ],
+        [
+          "on the weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Utafanya",
+        "nini"
+      ],
+      "wrong": [
+        "Utafanya nani wikendi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nini",
+          "nani",
+          "gani"
+        ]
+      }
+    },
+    {
+      "id": "leo-kuna-baridi",
+      "topic": "plans",
+      "concepts": [
+        "kuna"
+      ],
+      "text": "Leo kuna baridi.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Leo",
+          "leo"
+        ],
+        [
+          "kuna",
+          "kuna"
+        ],
+        [
+          "baridi",
+          "baridi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Leo kuna baridini."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kuna",
+          "hakuna",
+          "kulikuwa"
+        ]
+      }
+    },
+    {
+      "id": "ninasikia-baridi",
+      "topic": "plans",
+      "concepts": [
+        "subject-prefix",
+        "present"
+      ],
+      "text": "Ninasikia baridi.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Ninasikia",
+          "sikia"
+        ],
+        [
+          "baridi",
+          "baridi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I feel"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Nina baridi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ninasikia",
+          "Nina",
+          "Ninasikii"
+        ]
+      }
+    },
+    {
+      "id": "nijulishe-kesho",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "object-infix",
+        "subjunctive"
+      ],
+      "text": "Nijulishe kesho!",
+      "means": "Let me know tomorrow!",
+      "words": [
+        [
+          "Nijulishe",
+          "julisha"
+        ],
+        [
+          "kesho",
+          "kesho"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let me know"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Nijulisha kesho!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nijulishe",
+          "Nijulisha",
+          "Kujulisha"
+        ]
+      }
+    },
+    {
+      "id": "hali-ya-hewa-nzuri",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "agreement",
+        "short-verbs",
+        "present"
+      ],
+      "chunks": [
+        "hali-ya-hewa"
+      ],
+      "text": "Natumaini hali ya hewa itakuwa nzuri kesho.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Natumaini",
+          "tumaini"
+        ],
+        [
+          "hali"
+        ],
+        [
+          "ya"
+        ],
+        [
+          "hewa"
+        ],
+        [
+          "itakuwa",
+          "wa"
+        ],
+        [
+          "nzuri",
+          "zuri"
+        ],
+        [
+          "kesho",
+          "kesho"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "the weather"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "good"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Natumaini hali ya hewa itakuwa mzuri kesho."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "nzuri",
+          "mzuri",
+          "kizuri"
+        ]
+      }
+    },
+    {
+      "id": "ukiwa-tayari-twende",
+      "topic": "plans",
+      "concepts": [
+        "ki-when",
+        "subjunctive",
+        "short-verbs"
+      ],
+      "text": "Ukiwa tayari, twende.",
+      "means": "When you're ready, let's go.",
+      "words": [
+        [
+          "Ukiwa",
+          "wa"
+        ],
+        [
+          "tayari,",
+          "tayari"
+        ],
+        [
+          "twende",
+          "enda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When you are"
+        ],
+        [
+          "ready,"
+        ],
+        [
+          "let's go"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ukiwa tayari, twenda."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "twende",
+          "twenda",
+          "kwende"
+        ]
+      }
+    },
+    {
+      "id": "mvua-ikinyesha",
+      "topic": "plans",
+      "concepts": [
+        "ki-when",
+        "future",
+        "locative"
+      ],
+      "text": "Mvua ikinyesha, tutabaki nyumbani.",
+      "means": "If it rains, we'll stay home.",
+      "words": [
+        [
+          "Mvua",
+          "mvua"
+        ],
+        [
+          "ikinyesha,",
+          "nyesha"
+        ],
+        [
+          "tutabaki",
+          "baki"
+        ],
+        [
+          "nyumbani",
+          "nyumba"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The rain",
+          true
+        ],
+        [
+          "if it falls,",
+          true
+        ],
+        [
+          "we will stay"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mvua",
+        "ikinyesha,"
+      ],
+      "wrong": [
+        "Mvua ikinyesha, tulibaki nyumbani."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ikinyesha,",
+          "ikinyeshe,",
+          "kinyesha,"
+        ]
+      }
+    },
+    {
+      "id": "leo-sina-muda",
+      "topic": "plans",
+      "concepts": [
+        "na-have",
+        "negation"
+      ],
+      "text": "Leo sina muda.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Leo",
+          "leo"
+        ],
+        [
+          "sina",
+          "na"
+        ],
+        [
+          "muda",
+          "muda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I don't have"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Leo sinana muda."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sina",
+          "sinana",
+          "sinani"
+        ]
+      }
+    },
+    {
+      "id": "nimechoka-sana",
+      "topic": "plans",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Nimechoka sana leo.",
+      "means": "I'm really tired today.",
+      "words": [
+        [
+          "Nimechoka",
+          "choka"
+        ],
+        [
+          "sana",
+          "sana"
+        ],
+        [
+          "leo",
+          "leo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I've gotten tired",
+          true
+        ],
+        [
+          "very",
+          true
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nimechoka",
+        "sana"
+      ],
+      "wrong": [
+        "Nimechoki sana leo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nimechoka",
+          "Nimechoki",
+          "Kuchoka"
+        ]
+      }
+    },
+    {
+      "id": "tutaonana-kesho",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "chunks": [
+        "see-you-tomorrow"
+      ],
+      "text": "Tutaonana kesho!",
+      "means": "See you tomorrow!",
+      "words": [
+        [
+          "Tutaonana"
+        ],
+        [
+          "kesho"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We'll see each other"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Tutaonana jana!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tutaonana",
+          "Tulionana",
+          "Kuonana"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kahawa",
+          "forms": [
+            "kahawa"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "chai",
+          "forms": [
+            "chai"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "maji",
+          "forms": [
+            "maji"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "mimi",
+          "forms": [
+            "mimi"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "nywa",
+          "forms": [
+            "ninakunywa"
+          ],
+          "picture": "drink",
+          "means": "ninakunywa = I drink"
+        },
+        {
+          "lemma": "na",
+          "forms": [
+            "na"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "subject-prefix",
+        "line": "A verb starts with who or what does it: ni- (I), u- (you), a- (he, she), tu- (we), m- (you all), wa- (they), and a thing's class (i- for treni), so mimi or wewe is often left out: ninasoma, unasoma, anasoma."
+      },
+      "items": [
+        "ninakunywa-kahawa",
+        "mimi-ninakunywa-chai",
+        "ninakunywa-maji",
+        "ninakunywa-kahawa-na-chai",
+        "ninakunywa-chai-na-maji",
+        "ninakunywa-maji-na-kahawa"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "moja",
+          "forms": [
+            "moja"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "maziwa",
+          "forms": [
+            "maziwa"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "kahawa-moja-tafadhali",
+        "hujambo-kahawa-moja-asante",
+        "maziwa-tafadhali",
+        "chai-moja-na-maji-tafadhali",
+        "hujambo-chai-moja-tafadhali",
+        "ninakunywa-maziwa"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "zuri",
+          "forms": [
+            "vizuri"
+          ],
+          "means": "vizuri = well"
+        },
+        {
+          "lemma": "wa",
+          "forms": [
+            "niko"
+          ],
+          "means": "niko = I am"
+        }
+      ],
+      "phrases": [
+        "habari-yako",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "possessive",
+        "line": "My (-angu) and your (-ako) come after the noun and take its class (jina lako: your name; viatu vyangu; funguo zangu: my keys), and many family words take y-: mama yangu, kaka yangu."
+      },
+      "items": [
+        "habari-yako",
+        "niko-vizuri-asante",
+        "ndiyo-tafadhali",
+        "hapana-asante",
+        "ndiyo-asante-kwaheri",
+        "hapana-asante-kwaheri"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "wewe",
+          "forms": [
+            "wewe"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "si",
+          "forms": [
+            "si"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "mwalimu",
+          "forms": [
+            "mwalimu"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "mwanafunzi",
+          "forms": [
+            "mwanafunzi"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "ni",
+          "forms": [
+            "ni"
+          ],
+          "means": "am, are, is"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "mimi-ni-mwalimu",
+        "wewe-ni-mwanafunzi",
+        "wewe-ni-mwalimu",
+        "mimi-si-mwalimu",
+        "jina-lako-ni-nani",
+        "hujambo-nimefurahi-kukutana-nawe"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mama",
+          "forms": [
+            "mama"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "baba",
+          "forms": [
+            "baba"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "kaka",
+          "forms": [
+            "kaka"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "dada",
+          "forms": [
+            "dada"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "angu",
+          "forms": [
+            "yangu"
+          ],
+          "means": "yangu = my"
+        },
+        {
+          "lemma": "huyu",
+          "forms": [
+            "huyu"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "copula-ni",
+        "line": "ni links someone or something to a name, kind, or description and never changes for am, is or are; its negative is si (Mimi ni mwalimu; Mimi si mwalimu), while location uses -ko forms instead."
+      },
+      "items": [
+        "mama-yangu-ni-mwalimu",
+        "huyu-ni-mama-yangu",
+        "huyu-ni-baba-yangu",
+        "baba-yangu-ni-mwalimu",
+        "kaka-yangu-ni-mwanafunzi",
+        "huyu-ni-dada-yangu"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "na",
+          "forms": [
+            "nina",
+            "una",
+            "sina"
+          ],
+          "means": "nina = I have; una = you have; sina = I do not have"
+        },
+        {
+          "lemma": "rafiki",
+          "forms": [
+            "rafiki"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "daktari",
+          "forms": [
+            "daktari"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "ufunguo",
+          "forms": [
+            "ufunguo"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "simu",
+          "forms": [
+            "simu"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "kitabu",
+          "forms": [
+            "kitabu"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "zuri",
+          "forms": [
+            "mzuri"
+          ],
+          "means": "mzuri = good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "nina-simu",
+        "una-ufunguo",
+        "nina-kaka-na-dada",
+        "sina-kitabu",
+        "dada-yangu-ni-daktari",
+        "wewe-ni-rafiki-mzuri"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "wapi",
+          "forms": [
+            "wapi"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "hapa",
+          "forms": [
+            "hapa"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "pale",
+          "forms": [
+            "pale"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "choo",
+          "forms": [
+            "choo"
+          ],
+          "means": "bathroom, toilet"
+        },
+        {
+          "lemma": "wa",
+          "forms": [
+            "kiko",
+            "uko",
+            "iko",
+            "yuko"
+          ],
+          "means": "kiko = is; uko = is; iko = is; yuko = is"
+        },
+        {
+          "lemma": "angu",
+          "forms": [
+            "wangu"
+          ],
+          "means": "wangu = my"
+        }
+      ],
+      "phrases": [
+        "samahani"
+      ],
+      "concept": {
+        "pattern": "no-articles",
+        "line": "Swahili has no words for a, an or the: Mimi ni mwalimu (I'm a teacher); Kuna kitabu mezani."
+      },
+      "items": [
+        "simu-yangu-iko-hapa",
+        "ufunguo-uko-pale",
+        "ufunguo-wangu-uko-wapi",
+        "samahani-choo-kiko-wapi",
+        "mama-yangu-yuko-wapi",
+        "dada-yangu-yuko-hapa"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "moja",
+          "forms": [
+            "kimoja",
+            "mmoja"
+          ],
+          "means": "kimoja = one; mmoja = one"
+        },
+        {
+          "lemma": "wili",
+          "forms": [
+            "mbili",
+            "wawili"
+          ],
+          "picture": "two",
+          "means": "mbili = two; wawili = two"
+        },
+        {
+          "lemma": "tatu",
+          "forms": [
+            "vitatu"
+          ],
+          "picture": "three",
+          "means": "vitatu = three"
+        },
+        {
+          "lemma": "pesa",
+          "forms": [
+            "pesa"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "kitabu",
+          "forms": [
+            "vitabu"
+          ],
+          "means": "vitabu = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "samahani-ni-bei-gani",
+        "lete-bili",
+        "kahawa-ni-bei-gani",
+        "kahawa-mbili-tafadhali",
+        "kitabu-kimoja-tafadhali",
+        "nina-vitabu-vitatu",
+        "sina-pesa",
+        "nina-dada-mmoja"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "zungumza",
+          "forms": [
+            "unazungumza",
+            "ninazungumza"
+          ],
+          "means": "unazungumza = you speak; ninazungumza = I speak"
+        },
+        {
+          "lemma": "kiingereza",
+          "forms": [
+            "Kiingereza"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "kiswahili",
+          "forms": [
+            "Kiswahili"
+          ],
+          "means": "Swahili"
+        },
+        {
+          "lemma": "elewa",
+          "forms": [
+            "sielewi",
+            "unaelewa"
+          ],
+          "means": "sielewi = I do not understand; unaelewa = you understand"
+        },
+        {
+          "lemma": "kidogo",
+          "forms": [
+            "kidogo"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "taka",
+          "forms": [
+            "ninataka"
+          ],
+          "means": "ninataka = I want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "-na- after the subject marker says it's happening now or usually (ninasoma: I read, I'm reading; anaishi: she lives), and with I, everyday forms often start with na- in place of nina-: napenda, nataka, naomba, natumaini."
+      },
+      "items": [
+        "unazungumza-kiingereza",
+        "ninazungumza-kiswahili-kidogo",
+        "mimi-sielewi",
+        "wewe-unaelewa",
+        "ninataka-kahawa",
+        "ninataka-maji-tafadhali"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "nyumba",
+          "forms": [
+            "nyumba"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "chumba",
+          "forms": [
+            "chumba"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "kubwa",
+          "forms": [
+            "kubwa"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "dogo",
+          "forms": [
+            "ndogo",
+            "kidogo"
+          ],
+          "picture": "small",
+          "means": "ndogo = small; kidogo = small"
+        },
+        {
+          "lemma": "ishi",
+          "forms": [
+            "ninaishi",
+            "unaishi",
+            "anaishi"
+          ],
+          "means": "ninaishi = I live; unaishi = you live; anaishi = lives"
+        },
+        {
+          "lemma": "katika",
+          "forms": [
+            "katika"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "hii",
+          "forms": [
+            "hii"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "angu",
+          "forms": [
+            "changu"
+          ],
+          "means": "changu = my"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mama-yangu-anaishi-hapa",
+        "unaishi-wapi",
+        "nyumba-hii-ni-kubwa",
+        "chumba-changu-ni-kidogo",
+        "nyumba-ndogo"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "enda",
+          "forms": [
+            "ninaenda",
+            "unaenda",
+            "anaenda"
+          ],
+          "means": "ninaenda = I go; unaenda = you are going; anaenda = goes"
+        },
+        {
+          "lemma": "shule",
+          "forms": [
+            "shuleni"
+          ],
+          "picture": "school",
+          "means": "shuleni = to school"
+        },
+        {
+          "lemma": "mji",
+          "forms": [
+            "mjini"
+          ],
+          "picture": "city",
+          "means": "mjini = to the city"
+        },
+        {
+          "lemma": "gari",
+          "forms": [
+            "gari"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "hili",
+          "forms": [
+            "hili"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "dogo",
+          "forms": [
+            "dogo"
+          ],
+          "means": "small"
+        }
+      ],
+      "phrases": [
+        "train-station"
+      ],
+      "concept": {
+        "pattern": "agreement",
+        "line": "Adjectives, this and that, and numbers usually follow their noun and show its class (viatu vipya; filamu hii; viatu viwili), while verbs show their subject's class (treni ilichelewa), but people take human agreement even when the noun looks different: dada mmoja, kaka wawili, kaka anasoma."
+      },
+      "items": [
+        "ninaenda-shuleni",
+        "unaenda-wapi",
+        "mama-yangu-anaenda-mjini",
+        "samahani-kituo-cha-treni-kiko-wapi",
+        "nina-gari",
+        "gari-hili-ni-dogo"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "leo",
+          "forms": [
+            "leo"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "kesho",
+          "forms": [
+            "kesho"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "fanya",
+          "forms": [
+            "ninafanya",
+            "kufanya",
+            "nifanye"
+          ],
+          "means": "ninafanya = I do; kufanya = to do; nifanye = I should do"
+        },
+        {
+          "lemma": "kazi",
+          "forms": [
+            "kazi"
+          ],
+          "picture": "work",
+          "means": "work"
+        },
+        {
+          "lemma": "lazima",
+          "forms": [
+            "lazima"
+          ],
+          "means": "must, have to"
+        },
+        {
+          "lemma": "weza",
+          "forms": [
+            "siwezi"
+          ],
+          "means": "siwezi = I cannot"
+        },
+        {
+          "lemma": "enda",
+          "forms": [
+            "kwenda"
+          ],
+          "means": "kwenda = to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "tutaonana-kesho",
+        "kesho-ninaenda-mjini",
+        "ninafanya-kazi-leo",
+        "siwezi-kwenda-leo",
+        "lazima-nifanye-kazi-kesho",
+        "ninataka-kufanya-kazi"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

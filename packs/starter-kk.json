@@ -1,0 +1,7479 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-kk",
+  "name": "Starter: Kazakh",
+  "about": "Kazakh in real, everyday sentences, with each one's words in Kazakh order.",
+  "language": "kk",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "кофе": "coffee",
+    "шай": "tea",
+    "су": "water",
+    "мен": "I (маған: to me, менің: my, мені: me)",
+    "ішу": "drink",
+    "және": "and",
+    "бір": "one, a",
+    "сүт": "milk",
+    "жақсы": "good, fine",
+    "сіз": "you (to a stranger; сізде: at you, in your possession)",
+    "ма": "a yes-or-no question (ма, ме, ба, бе, па, пе)",
+    "сен": "you (to a friend; саған: to you, сені: you)",
+    "емес": "isn't, not",
+    "мұғалім": "teacher",
+    "студент": "student",
+    "ана": "mother, mom",
+    "әке": "father, dad",
+    "аға": "older brother",
+    "әпке": "older sister",
+    "бұл": "this",
+    "бар": "there is",
+    "дос": "friend",
+    "дәрігер": "doctor",
+    "кілт": "key",
+    "телефон": "phone",
+    "кітап": "book",
+    "жоқ": "there isn't",
+    "қайда": "where",
+    "осында": "here",
+    "сонда": "there",
+    "дәретхана": "bathroom",
+    "екі": "two",
+    "үш": "three",
+    "ақша": "money",
+    "сөйлеу": "speak",
+    "ағылшынша": "in English",
+    "қазақша": "in Kazakh",
+    "түсіну": "to understand",
+    "аздап": "a little",
+    "келу": "come; after -ғым: I want to",
+    "үй": "house, home",
+    "бөлме": "room",
+    "үлкен": "big",
+    "кішкентай": "small",
+    "тұру": "live; cost (тұрады: it costs)",
+    "бару": "go",
+    "мектеп": "school",
+    "қала": "city",
+    "вокзал": "train station",
+    "көлік": "car",
+    "бүгін": "today",
+    "ертең": "tomorrow",
+    "қазір": "now",
+    "жұмыс істеу": "work (at a job)",
+    "керек": "must",
+    "алу": "take; after a verb's -а, -е: can",
+    "ат": "name",
+    "кім": "who",
+    "фильм": "movie",
+    "ұнау": "please (маған ұнайды: I like it)",
+    "бала": "child",
+    "аула": "yard",
+    "ойнау": "play",
+    "жату": "lie; after -ып: be doing",
+    "кино": "the movies",
+    "біз": "we (біздің: our)",
+    "пәтер": "apartment",
+    "үстел": "table",
+    "үст": "top (үстінде: on)",
+    "тоңазытқыш": "fridge",
+    "ас үй": "kitchen",
+    "тамақ": "food, meal",
+    "дайындау": "make, prepare",
+    "терезе": "window",
+    "жабу": "close (жабыңызшы: please close)",
+    "күн": "day (күнде: every day)",
+    "таңертең": "in the morning",
+    "орталық": "center",
+    "сөре": "shelf",
+    "кеше": "yesterday",
+    "қатты": "very, hard",
+    "шаршау": "get tired",
+    "қант": "sugar (қантсыз: without sugar)",
+    "карта": "card",
+    "төлеу": "pay",
+    "ет": "meat",
+    "жеу": "eat",
+    "мейрамхана": "restaurant",
+    "тамақтану": "eat, have a meal",
+    "дүкен": "store",
+    "нан": "bread",
+    "болу": "be (болмады: there wasn't)",
+    "стақан": "glass",
+    "беру": "give",
+    "палау": "plov",
+    "жақсы көру": "love, like a lot",
+    "жұмыс": "work",
+    "автобус": "bus",
+    "жақын": "near",
+    "жер": "place (жақын жерде: nearby, бұл жерден: from here)",
+    "банк": "bank",
+    "не": "what",
+    "істеу": "do",
+    "әуежай": "airport",
+    "алыс": "far",
+    "кешіру": "forgive (кешіріңіз: sorry, excuse me)",
+    "білу": "know",
+    "такси": "taxi",
+    "билет": "ticket",
+    "қанша": "how much, how many",
+    "жаңа": "new",
+    "аяқ киім": "shoes",
+    "сатып алу": "buy",
+    "дәріхана": "pharmacy",
+    "жан": "side (жанында: next to)",
+    "қоңырау шалу": "call (on the phone)",
+    "сенбі": "Saturday",
+    "өткен": "last, past",
+    "жаз": "summer",
+    "жаңбыр": "rain",
+    "жауу": "fall (rain, snow)",
+    "уақыт": "time",
+    "қазақ": "Kazakh",
+    "тіл": "language",
+    "үйрену": "learn",
+    "жүзу": "swim",
+    "демалу": "rest",
+    "көмектесу": "help"
+  },
+  "chunks": {
+    "hello": {
+      "text": "Сәлеметсіз бе",
+      "en": "hello"
+    },
+    "please-give-me": {
+      "text": "беріңізші",
+      "en": "please give me"
+    },
+    "thank-you": {
+      "text": "рақмет",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Қалыңыз қалай",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Сау болыңыз",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "иә",
+      "en": "yes"
+    },
+    "no": {
+      "text": "жоқ",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Сенің атың кім",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Танысқаныма қуаныштымын",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Кешіріңіз",
+      "en": "excuse me"
+    },
+    "how-much-does-it-cost": {
+      "text": "қанша тұрады",
+      "en": "how much does it cost?"
+    },
+    "the-check-please": {
+      "text": "Есепшотты беріңізші",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Ертең кездескенше",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "item",
+      "topic": "food",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Кофе ішемін.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Кофе",
+          "кофе"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кофе ішемінмін.",
+        "Кофе ішумін."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Кофе",
+          "Шай",
+          "Су"
+        ]
+      }
+    },
+    {
+      "id": "item-2",
+      "topic": "food",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен шай ішемін.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "шай",
+          "шай"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен шай ішесің.",
+        "Мен шай ішеді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "шай",
+          "кофе",
+          "су"
+        ]
+      }
+    },
+    {
+      "id": "item-3",
+      "topic": "food",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен су ішемін.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "су",
+          "су"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен су ішесің.",
+        "Мен су ішеді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "су",
+          "шай",
+          "кофе"
+        ]
+      }
+    },
+    {
+      "id": "item-4",
+      "topic": "food",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен кофе және шай ішемін.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "және",
+          "және"
+        ],
+        [
+          "шай",
+          "шай"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен кофе және шай ішесің.",
+        "Мен кофе және шай ішеді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "кофе",
+          "су",
+          "шай"
+        ]
+      }
+    },
+    {
+      "id": "item-5",
+      "topic": "food",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен шай және су ішемін.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "шай",
+          "шай"
+        ],
+        [
+          "және",
+          "және"
+        ],
+        [
+          "су",
+          "су"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен шай және су ішесің.",
+        "Мен шай және су ішеді."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "су",
+          "кофе",
+          "шай"
+        ]
+      }
+    },
+    {
+      "id": "item-6",
+      "topic": "food",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен су және кофе ішемін.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "су",
+          "су"
+        ],
+        [
+          "және",
+          "және"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен су және кофе ішесің.",
+        "Мен су және кофе ішеді."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "кофе",
+          "шай",
+          "су"
+        ]
+      }
+    },
+    {
+      "id": "item-7",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Бір кофе беріңізші.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Бір",
+          "бір"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бір кофелер беріңізші.",
+        "Бір кофеніге беріңізші."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "кофе",
+          "шай",
+          "су"
+        ]
+      }
+    },
+    {
+      "id": "item-8",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "hello",
+        "please-give-me"
+      ],
+      "text": "Сәлеметсіз бе! Бір шай беріңізші.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Сәлеметсіз"
+        ],
+        [
+          "бе!"
+        ],
+        [
+          "Бір",
+          "бір"
+        ],
+        [
+          "шай",
+          "шай"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сәлеметсіз бе! Бір шайлар беріңізші.",
+        "Сәлеметсіз бе! Бір шайні беріңізші."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "шай",
+          "кофе",
+          "су"
+        ]
+      }
+    },
+    {
+      "id": "item-9",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Бір шай және бір су беріңізші.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Бір",
+          "бір"
+        ],
+        [
+          "шай",
+          "шай"
+        ],
+        [
+          "және",
+          "және"
+        ],
+        [
+          "бір",
+          "бір"
+        ],
+        [
+          "су",
+          "су"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бір шайлар және бір су беріңізші.",
+        "Бір шай және бір сулар беріңізші."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "су",
+          "сүт",
+          "кофе"
+        ]
+      }
+    },
+    {
+      "id": "item-10",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Сүт беріңізші.",
+      "means": "Milk, please.",
+      "words": [
+        [
+          "Сүт",
+          "сүт"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Milk"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сүтні беріңізші.",
+        "Сүтды беріңізші."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Сүт",
+          "Шай",
+          "Су"
+        ]
+      }
+    },
+    {
+      "id": "item-11",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please-give-me",
+        "thank-you"
+      ],
+      "text": "Бір кофе беріңізші. Рақмет.",
+      "means": "A coffee, please. Thank you.",
+      "words": [
+        [
+          "Бір",
+          "бір"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "беріңізші."
+        ],
+        [
+          "Рақмет"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please give me"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бір кофелер беріңізші. Рақмет.",
+        "Бір кофеніге беріңізші. Рақмет."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "кофе",
+          "шай",
+          "сүт"
+        ]
+      }
+    },
+    {
+      "id": "item-12",
+      "topic": "food",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен сүт ішемін.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "сүт",
+          "сүт"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен сүт ішесің.",
+        "Мен сүт ішеді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "сүт",
+          "су",
+          "шай"
+        ]
+      }
+    },
+    {
+      "id": "item-13",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "hello",
+        "how-are-you"
+      ],
+      "text": "Сәлеметсіз бе! Қалыңыз қалай?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Сәлеметсіз"
+        ],
+        [
+          "бе!"
+        ],
+        [
+          "Қалыңыз"
+        ],
+        [
+          "қалай"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сәлеметсіз бе! Қалыңыз қалаймын?",
+        "Сәлеметсіз бе! Қалыңыз қалайсыз?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Қалыңыз",
+          "Қалыңызым",
+          "Қалымызсыз"
+        ]
+      }
+    },
+    {
+      "id": "item-14",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "vowel-harmony"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Жақсымын, рақмет.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Жақсымын,",
+          "жақсы"
+        ],
+        [
+          "рақмет"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Жақсымынмын, рақмет.",
+        "Жақсымызмын, рақмет."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Жақсымын,",
+          "Жақсымін,",
+          "Жақсымынмын,"
+        ]
+      }
+    },
+    {
+      "id": "item-15",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please-give-me",
+        "yes"
+      ],
+      "text": "Иә, беріңізші.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Иә,"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Иәмін, беріңізші.",
+        "Иә, беріңізсің."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Иә,",
+          "Жоқ,",
+          "Рақмет,"
+        ]
+      }
+    },
+    {
+      "id": "item-16",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Жоқ, рақмет.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Жоқ,"
+        ],
+        [
+          "рақмет"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Жоқмын, рақмет.",
+        "Жоқ, рақметмін."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Жоқ,",
+          "Иә,",
+          "Рақмет,"
+        ]
+      }
+    },
+    {
+      "id": "item-17",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Иә, рақмет. Сау болыңыз!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Иә,"
+        ],
+        [
+          "рақмет."
+        ],
+        [
+          "Сау"
+        ],
+        [
+          "болыңыз"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Иәмін, рақмет. Сау болыңыз!",
+        "Иә, рақметмін. Сау болыңыз!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Иә,",
+          "Жоқ,",
+          "Рақмет,"
+        ]
+      }
+    },
+    {
+      "id": "item-18",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Жоқ, рақмет. Сау болыңыз!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Жоқ,"
+        ],
+        [
+          "рақмет."
+        ],
+        [
+          "Сау"
+        ],
+        [
+          "болыңыз"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Жоқмын, рақмет. Сау болыңыз!",
+        "Жоқ, рақметмін. Сау болыңыз!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Жоқ,",
+          "Иә,",
+          "Рақмет,"
+        ]
+      }
+    },
+    {
+      "id": "item-19",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "question",
+        "vowel-harmony"
+      ],
+      "text": "Сіз жақсысыз ба?",
+      "means": "Are you feeling well?",
+      "words": [
+        [
+          "Сіз",
+          "сіз"
+        ],
+        [
+          "жақсысыз",
+          "жақсы"
+        ],
+        [
+          "ба",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are fine"
+        ],
+        [
+          "question"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сіз жақсымын ба?",
+        "Сіз жақсысыз бе?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ба",
+          "бе",
+          "па"
+        ]
+      }
+    },
+    {
+      "id": "item-20",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "vowel-harmony"
+      ],
+      "text": "Мен мұғаліммін.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "мұғаліммін",
+          "мұғалім"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен мұғалімсің.",
+        "Мен мұғалімсіз."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "мұғаліммін",
+          "мұғалімсің",
+          "мұғалімсіз"
+        ]
+      }
+    },
+    {
+      "id": "item-21",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Сен студентсің.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Сен",
+          "сен"
+        ],
+        [
+          "студентсің",
+          "студент"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сен студентпін.",
+        "Сен студентсіз."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "студентсің",
+          "студентпін",
+          "студентсіз"
+        ]
+      }
+    },
+    {
+      "id": "item-22",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Сәлеметсіз бе! Танысқаныма қуаныштымын.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Сәлеметсіз"
+        ],
+        [
+          "бе!"
+        ],
+        [
+          "Танысқаныма"
+        ],
+        [
+          "қуаныштымын"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "I am pleased to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сәлеметсіз бе! Танысқаныма қуаныштымін.",
+        "Сәлеметсіз бе! Танысқаныма қуаныштымынмын."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "қуаныштымын",
+          "қуаныштымін",
+          "қуаныштымынмын"
+        ]
+      }
+    },
+    {
+      "id": "item-23",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "question",
+        "vowel-harmony"
+      ],
+      "text": "Сен мұғалімсің бе?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Сен",
+          "сен"
+        ],
+        [
+          "мұғалімсің",
+          "мұғалім"
+        ],
+        [
+          "бе",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a teacher"
+        ],
+        [
+          "question"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сен мұғаліммін бе?",
+        "Сен мұғалімсің ба?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "бе",
+          "ба",
+          "пе"
+        ]
+      }
+    },
+    {
+      "id": "item-24",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "negation",
+        "consonant-agreement"
+      ],
+      "text": "Мен мұғалім емеспін.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "мұғалім",
+          "мұғалім"
+        ],
+        [
+          "емеспін",
+          "емес"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "am not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен мұғалім емессің.",
+        "Мен мұғалім емеспын."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "емеспін",
+          "емессің",
+          "емессіз"
+        ]
+      }
+    },
+    {
+      "id": "item-25",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "genitive",
+        "copula"
+      ],
+      "text": "Бұл менің анам.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "менің",
+          "мен"
+        ],
+        [
+          "анам",
+          "ана"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бұл менің анаң.",
+        "Бұл менің анамсың."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "анам",
+          "әкем",
+          "әпкем"
+        ]
+      }
+    },
+    {
+      "id": "item-26",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "genitive",
+        "copula"
+      ],
+      "text": "Бұл менің әкем.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "менің",
+          "мен"
+        ],
+        [
+          "әкем",
+          "әке"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бұл менің әкең.",
+        "Бұл менің әкемсің."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "әкем",
+          "ағам",
+          "анам"
+        ]
+      }
+    },
+    {
+      "id": "item-27",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Әкем мұғалім.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Әкем",
+          "әке"
+        ],
+        [
+          "мұғалім",
+          "мұғалім"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My father"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Әкем мұғаліммін.",
+        "Әкем мұғалімсің."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Әкем",
+          "Анам",
+          "Ағам"
+        ]
+      }
+    },
+    {
+      "id": "item-28",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Ағам студент.",
+      "means": "My older brother is a student.",
+      "words": [
+        [
+          "Ағам",
+          "аға"
+        ],
+        [
+          "студент",
+          "студент"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older brother"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ағам студентпін.",
+        "Ағам студентсің."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ағам",
+          "Әкем",
+          "Әпкем"
+        ]
+      }
+    },
+    {
+      "id": "item-29",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "genitive",
+        "copula"
+      ],
+      "text": "Бұл менің әпкем.",
+      "means": "This is my older sister.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "менің",
+          "мен"
+        ],
+        [
+          "әпкем",
+          "әпке"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "older sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бұл менің әпкең.",
+        "Бұл менің әпкемсің."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "әпкем",
+          "анам",
+          "ағам"
+        ]
+      }
+    },
+    {
+      "id": "item-30",
+      "topic": "people",
+      "concepts": [
+        "bar-zhoq",
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің телефоным бар.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "телефоным",
+          "телефон"
+        ],
+        [
+          "бар",
+          "бар"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "exists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің телефоның бар.",
+        "Менің телефоным бармын."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "телефоным",
+          "телефоның",
+          "телефоныңыз"
+        ]
+      }
+    },
+    {
+      "id": "item-31",
+      "topic": "people",
+      "concepts": [
+        "bar-zhoq",
+        "locative",
+        "question",
+        "vowel-harmony"
+      ],
+      "text": "Сізде кілт бар ма?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Сізде",
+          "сіз"
+        ],
+        [
+          "кілт",
+          "кілт"
+        ],
+        [
+          "бар",
+          "бар"
+        ],
+        [
+          "ма",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "In your possession"
+        ],
+        [
+          "a key"
+        ],
+        [
+          "exists"
+        ],
+        [
+          "question"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сізде кілт бар ме?",
+        "Сізде кілт барсыз ма?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ма",
+          "ме",
+          "па"
+        ]
+      }
+    },
+    {
+      "id": "item-32",
+      "topic": "people",
+      "concepts": [
+        "bar-zhoq",
+        "possessive",
+        "consonant-agreement"
+      ],
+      "text": "Менің кітабым жоқ.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "кітабым",
+          "кітап"
+        ],
+        [
+          "жоқ",
+          "жоқ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "book"
+        ],
+        [
+          "does not exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің кітабың жоқ.",
+        "Менің кітапым жоқ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "жоқ",
+          "бар",
+          "емеспін"
+        ]
+      }
+    },
+    {
+      "id": "item-33",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Әпкем дәрігер.",
+      "means": "My older sister is a doctor.",
+      "words": [
+        [
+          "Әпкем",
+          "әпке"
+        ],
+        [
+          "дәрігер",
+          "дәрігер"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Әпкем дәрігермін.",
+        "Әпкем дәрігерсің."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "дәрігер",
+          "мұғалім",
+          "студент"
+        ]
+      }
+    },
+    {
+      "id": "item-34",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "consonant-agreement"
+      ],
+      "text": "Сен жақсы доссың.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Сен",
+          "сен"
+        ],
+        [
+          "жақсы",
+          "жақсы"
+        ],
+        [
+          "доссың",
+          "дос"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "good"
+        ],
+        [
+          "are a friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сен жақсы доспын.",
+        "Сен жақсы доссыз."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "доссың",
+          "доспын",
+          "доссыз"
+        ]
+      }
+    },
+    {
+      "id": "item-35",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің кілтім қайда?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "кілтім",
+          "кілт"
+        ],
+        [
+          "қайда",
+          "қайда"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "key"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің кілтің қайда?",
+        "Менің кілтым қайда?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "кілтім",
+          "кілтің",
+          "кілттым"
+        ]
+      }
+    },
+    {
+      "id": "item-36",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "copula"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Кешіріңіз, дәретхана қайда?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Кешіріңіз,"
+        ],
+        [
+          "дәретхана",
+          "дәретхана"
+        ],
+        [
+          "қайда",
+          "қайда"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "the bathroom"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кешіріңіз, дәретхана қайдамын?",
+        "Кешіріңіз, дәретхана қайдасың?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "дәретхана",
+          "телефоным",
+          "кілтім"
+        ]
+      }
+    },
+    {
+      "id": "item-37",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "genitive",
+        "copula"
+      ],
+      "text": "Менің телефоным осында.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "телефоным",
+          "телефон"
+        ],
+        [
+          "осында",
+          "осында"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің телефоның осында.",
+        "Менің телефоным осындамын."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "осында",
+          "сонда",
+          "қайда"
+        ]
+      }
+    },
+    {
+      "id": "item-38",
+      "topic": "out",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Кілт сонда.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Кілт",
+          "кілт"
+        ],
+        [
+          "сонда",
+          "сонда"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кілт сондамын.",
+        "Кілт сондасың."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "сонда",
+          "осында",
+          "қайда"
+        ]
+      }
+    },
+    {
+      "id": "item-39",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің анам қайда?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "анам",
+          "ана"
+        ],
+        [
+          "қайда",
+          "қайда"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің анаң қайда?",
+        "Менің анам қайдасың?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "анам",
+          "әкем",
+          "әпкем"
+        ]
+      }
+    },
+    {
+      "id": "item-40",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Әпкем осында.",
+      "means": "My older sister is here.",
+      "words": [
+        [
+          "Әпкем",
+          "әпке"
+        ],
+        [
+          "осында",
+          "осында"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Әпкем осындамын.",
+        "Әпкем осындасың."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "осында",
+          "сонда",
+          "қайда"
+        ]
+      }
+    },
+    {
+      "id": "item-41",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "how-much-does-it-cost",
+        "excuse-me"
+      ],
+      "text": "Кешіріңіз, қанша тұрады?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Кешіріңіз,"
+        ],
+        [
+          "қанша"
+        ],
+        [
+          "тұрады"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much does it cost"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кешіріңіз, қанша тұрадымын?",
+        "Кешіріңіз, қанша тұрамынсыз?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "тұрады",
+          "тұрадымын",
+          "тұрамынсыз"
+        ]
+      }
+    },
+    {
+      "id": "item-42",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Сәлеметсіз бе! Есепшотты беріңізші.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Сәлеметсіз"
+        ],
+        [
+          "бе!"
+        ],
+        [
+          "Есепшотты"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check, please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сәлеметсіз бе! Есепшотті беріңізші.",
+        "Сәлеметсіз бе! Есепшотды беріңізші."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Есепшотты",
+          "Есепшотті",
+          "Есепшотды"
+        ]
+      }
+    },
+    {
+      "id": "item-43",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Екі кофе беріңізші.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Екі",
+          "екі"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Екі кофелер беріңізші.",
+        "Екі кофены беріңізші."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Екі",
+          "Бір",
+          "Үш"
+        ]
+      }
+    },
+    {
+      "id": "item-44",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Бір кітап беріңізші.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Бір",
+          "бір"
+        ],
+        [
+          "кітап",
+          "кітап"
+        ],
+        [
+          "беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бір кітаптар беріңізші.",
+        "Бір кітапні беріңізші."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Бір",
+          "Екі",
+          "Үш"
+        ]
+      }
+    },
+    {
+      "id": "item-45",
+      "topic": "out",
+      "concepts": [
+        "bar-zhoq",
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің үш кітабым бар.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "үш",
+          "үш"
+        ],
+        [
+          "кітабым",
+          "кітап"
+        ],
+        [
+          "бар",
+          "бар"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ],
+        [
+          "exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің үш кітаптарым бар.",
+        "Менің үш кітабың бар."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "үш",
+          "екі",
+          "бір"
+        ]
+      }
+    },
+    {
+      "id": "item-46",
+      "topic": "out",
+      "concepts": [
+        "bar-zhoq",
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің ақшам жоқ.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "ақшам",
+          "ақша"
+        ],
+        [
+          "жоқ",
+          "жоқ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "money"
+        ],
+        [
+          "does not exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің ақшаң жоқ.",
+        "Менің ақшам жоқмын."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "жоқ",
+          "бар",
+          "емеспін"
+        ]
+      }
+    },
+    {
+      "id": "item-47",
+      "topic": "people",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен қазақша аздап сөйлеймін.",
+      "means": "I speak a little Kazakh.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "қазақша",
+          "қазақша"
+        ],
+        [
+          "аздап",
+          "аздап"
+        ],
+        [
+          "сөйлеймін",
+          "сөйлеу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "in Kazakh"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "speak"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен қазақша аздап сөйлейсіз.",
+        "Мен қазақша аздап сөйлейді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "қазақша",
+          "ағылшынша",
+          "қазақшаны"
+        ]
+      }
+    },
+    {
+      "id": "item-48",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "present-future"
+      ],
+      "text": "Мен түсінбеймін.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "түсінбеймін",
+          "түсіну"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен түсінбейсің.",
+        "Мен түсінбейді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "түсінбеймін",
+          "түсінбейсің",
+          "түсінбейді"
+        ]
+      }
+    },
+    {
+      "id": "item-49",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present-future",
+        "vowel-harmony"
+      ],
+      "text": "Сіз түсінесіз бе?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Сіз",
+          "сіз"
+        ],
+        [
+          "түсінесіз",
+          "түсіну"
+        ],
+        [
+          "бе",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "question"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сіз түсінемін бе?",
+        "Сіз түсінесіз ба?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "бе",
+          "ба",
+          "пе"
+        ]
+      }
+    },
+    {
+      "id": "item-50",
+      "topic": "people",
+      "concepts": [
+        "want",
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің кофе ішкім келеді.",
+      "means": "I'd like a coffee.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "ішкім",
+          "ішу"
+        ],
+        [
+          "келеді",
+          "келу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "wish to drink"
+        ],
+        [
+          "comes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің кофе ішкің келеді.",
+        "Менің кофе ішкім келемін."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ішкім",
+          "ішкің",
+          "ішкісі"
+        ]
+      }
+    },
+    {
+      "id": "item-51",
+      "topic": "people",
+      "concepts": [
+        "want"
+      ],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Су ішкім келеді. Беріңізші.",
+      "means": "I'd like some water, please.",
+      "words": [
+        [
+          "Су",
+          "су"
+        ],
+        [
+          "ішкім",
+          "ішу"
+        ],
+        [
+          "келеді.",
+          "келу"
+        ],
+        [
+          "Беріңізші"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "my wish to drink"
+        ],
+        [
+          "comes"
+        ],
+        [
+          "please give me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Су ішкім келемін. Беріңізші.",
+        "Су ішкім келесің. Беріңізші."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Су",
+          "Шай",
+          "Кофе"
+        ]
+      }
+    },
+    {
+      "id": "item-52",
+      "topic": "home",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Бұл үй үлкен.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "үй",
+          "үй"
+        ],
+        [
+          "үлкен",
+          "үлкен"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бұл үй үлкенмін.",
+        "Бұл үй үлкенсің."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "үлкен",
+          "кішкентай",
+          "жақсы"
+        ]
+      }
+    },
+    {
+      "id": "item-53",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "genitive",
+        "copula"
+      ],
+      "text": "Менің бөлмем кішкентай.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "бөлмем",
+          "бөлме"
+        ],
+        [
+          "кішкентай",
+          "кішкентай"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің бөлмең кішкентай.",
+        "Менің бөлмем кішкентаймын."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "бөлмем",
+          "бөлмең",
+          "бөлмесі"
+        ]
+      }
+    },
+    {
+      "id": "item-54",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "present-future",
+        "vowel-harmony"
+      ],
+      "text": "Мен кішкентай үйде тұрамын.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "кішкентай",
+          "кішкентай"
+        ],
+        [
+          "үйде",
+          "үй"
+        ],
+        [
+          "тұрамын",
+          "тұру"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "small"
+        ],
+        [
+          "in a house"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен кішкентай үйда тұрамын.",
+        "Мен кішкентай үйде тұрасың."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "үйде",
+          "үйда",
+          "үйте"
+        ]
+      }
+    },
+    {
+      "id": "item-55",
+      "topic": "home",
+      "concepts": [
+        "present-future",
+        "possessive"
+      ],
+      "text": "Анам осында тұрады.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Анам",
+          "ана"
+        ],
+        [
+          "осында",
+          "осында"
+        ],
+        [
+          "тұрады",
+          "тұру"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "here"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Анам осында тұрамын.",
+        "Анам осында тұрасың."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "тұрады",
+          "тұрамын",
+          "тұрасың"
+        ]
+      }
+    },
+    {
+      "id": "item-56",
+      "topic": "out",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Бұл көлік кішкентай.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "көлік",
+          "көлік"
+        ],
+        [
+          "кішкентай",
+          "кішкентай"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бұл көлік кішкентаймын.",
+        "Бұл көлік кішкентайсың."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "көлік",
+          "үй",
+          "дәретхана"
+        ]
+      }
+    },
+    {
+      "id": "item-57",
+      "topic": "out",
+      "concepts": [
+        "dative",
+        "present-future",
+        "consonant-agreement"
+      ],
+      "text": "Мен мектепке барамын.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "мектепке",
+          "мектеп"
+        ],
+        [
+          "барамын",
+          "бару"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "to school"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен мектепге барамын.",
+        "Мен мектепке барасың."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "мектепке",
+          "мектепге",
+          "мектепқа"
+        ]
+      }
+    },
+    {
+      "id": "item-58",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present-future"
+      ],
+      "text": "Сен қайда барасың?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Сен",
+          "сен"
+        ],
+        [
+          "қайда",
+          "қайда"
+        ],
+        [
+          "барасың",
+          "бару"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "where"
+        ],
+        [
+          "are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сен қайда барамын?",
+        "Сен қайда барады?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "барасың",
+          "барамын",
+          "барады"
+        ]
+      }
+    },
+    {
+      "id": "item-59",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "copula"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Кешіріңіз, вокзал қайда?",
+      "means": "Excuse me, where is the train station?",
+      "words": [
+        [
+          "Кешіріңіз,"
+        ],
+        [
+          "вокзал",
+          "вокзал"
+        ],
+        [
+          "қайда",
+          "қайда"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "the train station"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кешіріңіз, вокзал қайдамын?",
+        "Кешіріңіз, вокзал қайдасың?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "вокзал",
+          "дәретхана",
+          "кілт"
+        ]
+      }
+    },
+    {
+      "id": "item-60",
+      "topic": "out",
+      "concepts": [
+        "dative",
+        "present-future",
+        "vowel-harmony"
+      ],
+      "text": "Анам қалаға барады.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Анам",
+          "ана"
+        ],
+        [
+          "қалаға",
+          "қала"
+        ],
+        [
+          "барады",
+          "бару"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Анам қалаға барамын.",
+        "Анам қалаге барады."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "қалаға",
+          "қалаге",
+          "қалақа"
+        ]
+      }
+    },
+    {
+      "id": "item-61",
+      "topic": "out",
+      "concepts": [
+        "bar-zhoq",
+        "possessive",
+        "consonant-agreement"
+      ],
+      "text": "Менің көлігім бар.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "көлігім",
+          "көлік"
+        ],
+        [
+          "бар",
+          "бар"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "car"
+        ],
+        [
+          "exists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің көлігің бар.",
+        "Менің көлікім бар."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "көлігім",
+          "көлігің",
+          "көлігі"
+        ]
+      }
+    },
+    {
+      "id": "item-62",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Рақмет. Ертең кездескенше!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Рақмет."
+        ],
+        [
+          "Ертең"
+        ],
+        [
+          "кездескенше"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Рақметмін. Ертең кездескенше!",
+        "Рақмет. Ертең кездескеншемін!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "кездескенше",
+          "кездескеншамын",
+          "кездескеншемін"
+        ]
+      }
+    },
+    {
+      "id": "item-63",
+      "topic": "plans",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен бүгін жұмыс істеймін.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "бүгін",
+          "бүгін"
+        ],
+        [
+          "жұмыс",
+          "жұмыс істеу"
+        ],
+        [
+          "істеймін",
+          "жұмыс істеу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "work"
+        ],
+        [
+          "do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен бүгін жұмыс істейсің.",
+        "Мен бүгін жұмыс істейді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "бүгін",
+          "ертең",
+          "қазір"
+        ]
+      }
+    },
+    {
+      "id": "item-64",
+      "topic": "plans",
+      "concepts": [
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің қазір баруым керек.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "қазір",
+          "қазір"
+        ],
+        [
+          "баруым",
+          "бару"
+        ],
+        [
+          "керек",
+          "керек"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "now"
+        ],
+        [
+          "going"
+        ],
+        [
+          "is necessary"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің қазір баруың керек.",
+        "Менің қазір баруым керекпін."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "баруым",
+          "баруың",
+          "баруы"
+        ]
+      }
+    },
+    {
+      "id": "item-65",
+      "topic": "plans",
+      "concepts": [
+        "present-future",
+        "dative"
+      ],
+      "text": "Ертең қалаға барамын.",
+      "means": "Tomorrow I'll go to the city.",
+      "words": [
+        [
+          "Ертең",
+          "ертең"
+        ],
+        [
+          "қалаға",
+          "қала"
+        ],
+        [
+          "барамын",
+          "бару"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "I will go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ертең қалаге барамын.",
+        "Ертең қалаға барамынмын."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ертең",
+          "Бүгін",
+          "Қазір"
+        ]
+      }
+    },
+    {
+      "id": "item-66",
+      "topic": "plans",
+      "concepts": [
+        "ability",
+        "negation",
+        "present-future"
+      ],
+      "text": "Мен бүгін бара алмаймын.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "бүгін",
+          "бүгін"
+        ],
+        [
+          "бара",
+          "бару"
+        ],
+        [
+          "алмаймын",
+          "алу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "go"
+        ],
+        [
+          "cannot"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен бүгін бара алмайсың.",
+        "Мен бүгін бара алмайды."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "алмаймын",
+          "алмайсың",
+          "алмайды"
+        ]
+      }
+    },
+    {
+      "id": "item-67",
+      "topic": "plans",
+      "concepts": [
+        "possessive",
+        "genitive"
+      ],
+      "text": "Менің ертең жұмыс істеуім керек.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "ертең",
+          "ертең"
+        ],
+        [
+          "жұмыс",
+          "жұмыс істеу"
+        ],
+        [
+          "істеуім",
+          "жұмыс істеу"
+        ],
+        [
+          "керек",
+          "керек"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "work"
+        ],
+        [
+          "doing"
+        ],
+        [
+          "is necessary"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Менің ертең жұмыс істеуің керек.",
+        "Менің ертең жұмыс істеуім керекпін."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "істеуім",
+          "істеуің",
+          "істеуі"
+        ]
+      }
+    },
+    {
+      "id": "senin-atyn-kim",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Сенің атың кім?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Сенің"
+        ],
+        [
+          "атың"
+        ],
+        [
+          "кім"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Your"
+        ],
+        [
+          "name"
+        ],
+        [
+          "who"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сенің атым кім?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "атың",
+          "атым",
+          "аты"
+        ]
+      }
+    },
+    {
+      "id": "men-amerikadanmyn",
+      "topic": "people",
+      "concepts": [
+        "ablative",
+        "copula"
+      ],
+      "text": "Мен Америкаданмын.",
+      "means": "I'm from America.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "Америкаданмын"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "from America I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен Америкадамын.",
+        "Мен Америкаданбыз."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Америкаданмын",
+          "Америкадамын",
+          "Америкаданбыз"
+        ]
+      }
+    },
+    {
+      "id": "anam-mugalim",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Анам мұғалім.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Анам",
+          "ана"
+        ],
+        [
+          "мұғалім",
+          "мұғалім"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Анаң мұғалім."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Анам",
+          "Анаң",
+          "Анасы"
+        ]
+      }
+    },
+    {
+      "id": "menin-bir-agam-zhane-bir-apkem-bar",
+      "topic": "people",
+      "concepts": [
+        "bar-zhoq"
+      ],
+      "text": "Менің бір ағам және бір әпкем бар.",
+      "means": "I have an older brother and an older sister.",
+      "words": [
+        [
+          "Менің",
+          "мен"
+        ],
+        [
+          "бір",
+          "бір"
+        ],
+        [
+          "ағам",
+          "аға"
+        ],
+        [
+          "және",
+          "және"
+        ],
+        [
+          "бір",
+          "бір"
+        ],
+        [
+          "әпкем",
+          "әпке"
+        ],
+        [
+          "бар",
+          "бар"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "one"
+        ],
+        [
+          "older brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "older sister"
+        ],
+        [
+          "there is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "бар"
+      ],
+      "wrong": [
+        "Менің бір ағам және бір әпкем жоқ.",
+        "Мен бір ағам және бір әпкем бар."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "бар",
+          "жоқ",
+          "барамын"
+        ]
+      }
+    },
+    {
+      "id": "agam-almatyda-turady",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "vowel-harmony"
+      ],
+      "text": "Ағам Алматыда тұрады.",
+      "means": "My older brother lives in Almaty.",
+      "words": [
+        [
+          "Ағам",
+          "аға"
+        ],
+        [
+          "Алматыда"
+        ],
+        [
+          "тұрады",
+          "тұру"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older brother"
+        ],
+        [
+          "in Almaty"
+        ],
+        [
+          "lives",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "тұрады"
+      ],
+      "wrong": [
+        "Ағам Алматыға тұрады.",
+        "Ағам Алматыде тұрады."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Алматыда",
+          "Алматыға",
+          "Алматыдан"
+        ]
+      }
+    },
+    {
+      "id": "apkem-agylshynsha-soilemeidi",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Әпкем ағылшынша сөйлемейді.",
+      "means": "My older sister doesn't speak English.",
+      "words": [
+        [
+          "Әпкем",
+          "әпке"
+        ],
+        [
+          "ағылшынша",
+          "ағылшынша"
+        ],
+        [
+          "сөйлемейді",
+          "сөйлеу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "in English"
+        ],
+        [
+          "doesn't speak",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "сөйлемейді"
+      ],
+      "wrong": [
+        "Әпкем ағылшынша сөйлейді.",
+        "Әпкем ағылшынша сөйлейді емес."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "сөйлемейді",
+          "сөйлейді",
+          "сөйлемеймін"
+        ]
+      }
+    },
+    {
+      "id": "bul-akemnin-koligi",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "consonant-agreement"
+      ],
+      "text": "Бұл әкемнің көлігі.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "әкемнің",
+          "әке"
+        ],
+        [
+          "көлігі",
+          "көлік"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my dad's"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бұл әкемнің көлік.",
+        "Бұл әкемдің көлігі."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "көлігі",
+          "көлік",
+          "көлігім"
+        ]
+      }
+    },
+    {
+      "id": "bul-menin-dosymnyn-kitaby",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "vowel-harmony"
+      ],
+      "text": "Бұл менің досымның кітабы.",
+      "means": "This is my friend's book.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "менің",
+          "мен"
+        ],
+        [
+          "досымның",
+          "дос"
+        ],
+        [
+          "кітабы",
+          "кітап"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "friend's"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бұл менің досымның кітап.",
+        "Бұл менің досымнің кітабы."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "досымның",
+          "досымнің",
+          "досымға"
+        ]
+      }
+    },
+    {
+      "id": "magan-bul-film-unaidy",
+      "topic": "people",
+      "concepts": [
+        "dative"
+      ],
+      "text": "Маған бұл фильм ұнайды.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Маған",
+          "мен"
+        ],
+        [
+          "бұл",
+          "бұл"
+        ],
+        [
+          "фильм",
+          "фильм"
+        ],
+        [
+          "ұнайды",
+          "ұнау"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "this movie"
+        ],
+        [
+          "pleases"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен бұл фильм ұнайды.",
+        "Менің бұл фильм ұнайды."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Маған",
+          "Мен",
+          "Мені"
+        ]
+      }
+    },
+    {
+      "id": "balalar-aulada-oinap-zhatyr",
+      "topic": "people",
+      "concepts": [
+        "plural",
+        "vowel-harmony",
+        "present-continuous"
+      ],
+      "text": "Балалар аулада ойнап жатыр.",
+      "means": "The children are playing in the yard.",
+      "words": [
+        [
+          "Балалар",
+          "бала"
+        ],
+        [
+          "аулада",
+          "аула"
+        ],
+        [
+          "ойнап",
+          "ойнау"
+        ],
+        [
+          "жатыр",
+          "жату"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The children"
+        ],
+        [
+          "in the yard"
+        ],
+        [
+          "are playing",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "ойнап",
+        "жатыр"
+      ],
+      "wrong": [
+        "Балалер аулада ойнап жатыр.",
+        "Балалар аулада ойнап жатырмын."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Балалар",
+          "Балалер",
+          "Бала"
+        ]
+      }
+    },
+    {
+      "id": "sen-qaida-turasyn",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "text": "Сен қайда тұрасың?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Сен",
+          "сен"
+        ],
+        [
+          "қайда",
+          "қайда"
+        ],
+        [
+          "тұрасың",
+          "тұру"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "where"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сен қайда тұрасың ба?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "қайда",
+          "қайдан",
+          "кім"
+        ]
+      }
+    },
+    {
+      "id": "agylshynsha-soileisiz-be",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "vowel-harmony",
+        "consonant-agreement"
+      ],
+      "text": "Ағылшынша сөйлейсіз бе?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Ағылшынша",
+          "ағылшынша"
+        ],
+        [
+          "сөйлейсіз",
+          "сөйлеу"
+        ],
+        [
+          "бе",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "In English"
+        ],
+        [
+          "do you speak",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "сөйлейсіз",
+        "бе"
+      ],
+      "wrong": [
+        "Ағылшынша сөйлейсіз ба?",
+        "Ағылшынша сөйлейсіз ма?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "бе",
+          "ба",
+          "ме"
+        ]
+      }
+    },
+    {
+      "id": "sen-studentsin-be",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "question",
+        "vowel-harmony"
+      ],
+      "text": "Сен студентсің бе?",
+      "means": "Are you a student?",
+      "words": [
+        [
+          "Сен",
+          "сен"
+        ],
+        [
+          "студентсің",
+          "студент"
+        ],
+        [
+          "бе",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сен студентпін бе?",
+        "Сен студентсің ба?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "студентсің",
+          "студентпін",
+          "студентпіз"
+        ]
+      }
+    },
+    {
+      "id": "bizdin-paterimiz-kishkentai",
+      "topic": "home",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Біздің пәтеріміз кішкентай.",
+      "means": "Our apartment is small.",
+      "words": [
+        [
+          "Біздің",
+          "біз"
+        ],
+        [
+          "пәтеріміз",
+          "пәтер"
+        ],
+        [
+          "кішкентай",
+          "кішкентай"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Our"
+        ],
+        [
+          "apartment"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Біздің пәтерім кішкентай."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "пәтеріміз",
+          "пәтерім",
+          "пәтерің"
+        ]
+      }
+    },
+    {
+      "id": "kiltter-usteldin-ustinde",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "plural",
+        "vowel-harmony"
+      ],
+      "text": "Кілттер үстелдің үстінде.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Кілттер",
+          "кілт"
+        ],
+        [
+          "үстелдің",
+          "үстел"
+        ],
+        [
+          "үстінде",
+          "үст"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The keys"
+        ],
+        [
+          "the table's"
+        ],
+        [
+          "on top"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кілттер үстелдің үстіне.",
+        "Кілттар үстелдің үстінде."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "үстінде",
+          "үстіне",
+          "үстінен"
+        ]
+      }
+    },
+    {
+      "id": "tonazytqyshta-sut-zhoq",
+      "topic": "home",
+      "concepts": [
+        "bar-zhoq",
+        "locative"
+      ],
+      "text": "Тоңазытқышта сүт жоқ.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Тоңазытқышта",
+          "тоңазытқыш"
+        ],
+        [
+          "сүт",
+          "сүт"
+        ],
+        [
+          "жоқ",
+          "жоқ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "there isn't",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "жоқ"
+      ],
+      "wrong": [
+        "Тоңазытқышта сүт емес.",
+        "Тоңазытқышқа сүт жоқ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "жоқ",
+          "емес",
+          "бар"
+        ]
+      }
+    },
+    {
+      "id": "anam-as-uide-tamaq-daiyndap-zhatyr",
+      "topic": "home",
+      "concepts": [
+        "present-continuous",
+        "locative"
+      ],
+      "text": "Анам ас үйде тамақ дайындап жатыр.",
+      "means": "My mom is cooking in the kitchen.",
+      "words": [
+        [
+          "Анам",
+          "ана"
+        ],
+        [
+          "ас",
+          "ас үй"
+        ],
+        [
+          "үйде",
+          "ас үй"
+        ],
+        [
+          "тамақ",
+          "тамақ"
+        ],
+        [
+          "дайындап",
+          "дайындау"
+        ],
+        [
+          "жатыр",
+          "жату"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "in the kitchen"
+        ],
+        [
+          "food"
+        ],
+        [
+          "is making",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "дайындап",
+        "жатыр"
+      ],
+      "wrong": [
+        "Анам ас үйде тамақ дайында жатыр.",
+        "Анам ас үйге тамақ дайындап жатыр."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "дайындап",
+          "дайындады",
+          "дайындау"
+        ]
+      }
+    },
+    {
+      "id": "terezeni-zhabynyzshy",
+      "topic": "home",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Терезені жабыңызшы.",
+      "means": "Please close the window.",
+      "words": [
+        [
+          "Терезені",
+          "терезе"
+        ],
+        [
+          "жабыңызшы",
+          "жабу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The window"
+        ],
+        [
+          "please close",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "жабыңызшы"
+      ],
+      "wrong": [
+        "Терезеге жабыңызшы.",
+        "Терезеде жабыңызшы."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Терезені",
+          "Терезеге",
+          "Терезеде"
+        ]
+      }
+    },
+    {
+      "id": "biz-qalanyn-ortalygynda-turamyz",
+      "topic": "home",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Біз қаланың орталығында тұрамыз.",
+      "means": "We live in the city center.",
+      "words": [
+        [
+          "Біз",
+          "біз"
+        ],
+        [
+          "қаланың",
+          "қала"
+        ],
+        [
+          "орталығында",
+          "орталық"
+        ],
+        [
+          "тұрамыз",
+          "тұру"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "in the city center"
+        ],
+        [
+          "live",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "тұрамыз"
+      ],
+      "wrong": [
+        "Біз қаланың орталығында тұрамын."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "тұрамыз",
+          "тұрамын",
+          "тұрады"
+        ]
+      }
+    },
+    {
+      "id": "men-uidemin",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "locative",
+        "vowel-harmony"
+      ],
+      "text": "Мен үйдемін.",
+      "means": "I'm at home.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "үйдемін",
+          "үй"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "at home I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мен үйдемын.",
+        "Мен үйгемін."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "үйдемін",
+          "үйгемін",
+          "үйденмін"
+        ]
+      }
+    },
+    {
+      "id": "kitaptar-sorede",
+      "topic": "home",
+      "concepts": [
+        "plural",
+        "vowel-harmony"
+      ],
+      "text": "Кітаптар сөреде.",
+      "means": "The books are on the shelf.",
+      "words": [
+        [
+          "Кітаптар",
+          "кітап"
+        ],
+        [
+          "сөреде",
+          "сөре"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The books"
+        ],
+        [
+          "on the shelf"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кітаптер сөреде.",
+        "Кітаптар сөреге."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Кітаптар",
+          "Кітаптер",
+          "Кітаптарды"
+        ]
+      }
+    },
+    {
+      "id": "bul-menin-uiim-emes",
+      "topic": "home",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Бұл менің үйім емес.",
+      "means": "This isn't my house.",
+      "words": [
+        [
+          "Бұл",
+          "бұл"
+        ],
+        [
+          "менің",
+          "мен"
+        ],
+        [
+          "үйім",
+          "үй"
+        ],
+        [
+          "емес",
+          "емес"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "house"
+        ],
+        [
+          "isn't",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "емес"
+      ],
+      "wrong": [
+        "Бұл менің үйім жоқ.",
+        "Бұл менің үйім емеспін."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "емес",
+          "жоқ",
+          "бар"
+        ]
+      }
+    },
+    {
+      "id": "keshe-men-qatty-sharshadym",
+      "topic": "home",
+      "concepts": [
+        "past"
+      ],
+      "text": "Кеше мен қатты шаршадым.",
+      "means": "I was really tired yesterday.",
+      "words": [
+        [
+          "Кеше",
+          "кеше"
+        ],
+        [
+          "мен",
+          "мен"
+        ],
+        [
+          "қатты",
+          "қатты"
+        ],
+        [
+          "шаршадым",
+          "шаршау"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I"
+        ],
+        [
+          "very"
+        ],
+        [
+          "got tired"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кеше мен қатты шаршаймын.",
+        "Кеше мен қатты шаршады."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "шаршадым",
+          "шаршаймын",
+          "шаршады"
+        ]
+      }
+    },
+    {
+      "id": "men-kunde-tanerten-shai-ishemin",
+      "topic": "home",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Мен күнде таңертең шай ішемін.",
+      "means": "I drink tea every morning.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "күнде",
+          "күн"
+        ],
+        [
+          "таңертең",
+          "таңертең"
+        ],
+        [
+          "шай",
+          "шай"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "every day"
+        ],
+        [
+          "in the morning"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "ішемін"
+      ],
+      "wrong": [
+        "Мен күнде таңертең шай ішеді.",
+        "Мен күнде таңертең шай ішімін."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ішемін",
+          "ішеді",
+          "ішесің"
+        ]
+      }
+    },
+    {
+      "id": "men-shaidy-qantsyz-ishemin",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Мен шайды қантсыз ішемін.",
+      "means": "I drink my tea without sugar.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "шайды",
+          "шай"
+        ],
+        [
+          "қантсыз",
+          "қант"
+        ],
+        [
+          "ішемін",
+          "ішу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "the tea"
+        ],
+        [
+          "without sugar"
+        ],
+        [
+          "drink",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "ішемін"
+      ],
+      "wrong": [
+        "Мен шайға қантсыз ішемін.",
+        "Мен шайда қантсыз ішемін."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "шайды",
+          "шайға",
+          "шайда"
+        ]
+      }
+    },
+    {
+      "id": "kofeni-sutpen-ishesiz-be",
+      "topic": "food",
+      "concepts": [
+        "instrumental",
+        "question",
+        "consonant-agreement"
+      ],
+      "text": "Кофені сүтпен ішесіз бе?",
+      "means": "Do you take your coffee with milk?",
+      "words": [
+        [
+          "Кофені",
+          "кофе"
+        ],
+        [
+          "сүтпен",
+          "сүт"
+        ],
+        [
+          "ішесіз",
+          "ішу"
+        ],
+        [
+          "бе",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The coffee"
+        ],
+        [
+          "with milk"
+        ],
+        [
+          "do you drink",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "ішесіз",
+        "бе"
+      ],
+      "wrong": [
+        "Кофені сүттен ішесіз бе?",
+        "Кофені сүтпен ішесіз ме?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "сүтпен",
+          "сүттен",
+          "сүтте"
+        ]
+      }
+    },
+    {
+      "id": "kartamen-tolei-alamyn-ba",
+      "topic": "food",
+      "concepts": [
+        "ability",
+        "vowel-harmony"
+      ],
+      "text": "Картамен төлей аламын ба?",
+      "means": "Can I pay by card?",
+      "words": [
+        [
+          "Картамен",
+          "карта"
+        ],
+        [
+          "төлей",
+          "төлеу"
+        ],
+        [
+          "аламын",
+          "алу"
+        ],
+        [
+          "ба",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "By card"
+        ],
+        [
+          "pay"
+        ],
+        [
+          "can I",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "аламын",
+        "ба"
+      ],
+      "wrong": [
+        "Картамен төлеу аламын ба?",
+        "Картамен төлей аламын бе?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "төлей",
+          "төлеу",
+          "төледі"
+        ]
+      }
+    },
+    {
+      "id": "men-et-zhemeimin",
+      "topic": "food",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Мен ет жемеймін.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "ет",
+          "ет"
+        ],
+        [
+          "жемеймін",
+          "жеу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "meat"
+        ],
+        [
+          "don't eat",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "жемеймін"
+      ],
+      "wrong": [
+        "Мен ет жеймін.",
+        "Мен ет жеймін емес."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "жемеймін",
+          "жеймін",
+          "жемейді"
+        ]
+      }
+    },
+    {
+      "id": "sizde-su-bar-ma",
+      "topic": "food",
+      "concepts": [
+        "bar-zhoq",
+        "question",
+        "consonant-agreement",
+        "vowel-harmony"
+      ],
+      "text": "Сізде су бар ма?",
+      "means": "Do you have water?",
+      "words": [
+        [
+          "Сізде",
+          "сіз"
+        ],
+        [
+          "су",
+          "су"
+        ],
+        [
+          "бар",
+          "бар"
+        ],
+        [
+          "ма",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "At you"
+        ],
+        [
+          "water"
+        ],
+        [
+          "is there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сізде су бар ба?",
+        "Сізде су бар ме?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "бар",
+          "емес",
+          "барасыз"
+        ]
+      }
+    },
+    {
+      "id": "keshe-biz-meiramkhanada-tamaqtandyq",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "locative"
+      ],
+      "text": "Кеше біз мейрамханада тамақтандық.",
+      "means": "Yesterday we ate at a restaurant.",
+      "words": [
+        [
+          "Кеше",
+          "кеше"
+        ],
+        [
+          "біз",
+          "біз"
+        ],
+        [
+          "мейрамханада",
+          "мейрамхана"
+        ],
+        [
+          "тамақтандық",
+          "тамақтану"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we"
+        ],
+        [
+          "at a restaurant"
+        ],
+        [
+          "ate",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "тамақтандық"
+      ],
+      "wrong": [
+        "Кеше біз мейрамханада тамақтанамыз.",
+        "Кеше біз мейрамханаға тамақтандық."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "тамақтандық",
+          "тамақтанамыз",
+          "тамақтандым"
+        ]
+      }
+    },
+    {
+      "id": "dukende-nan-bolmady",
+      "topic": "food",
+      "concepts": [
+        "past"
+      ],
+      "text": "Дүкенде нан болмады.",
+      "means": "There was no bread at the store.",
+      "words": [
+        [
+          "Дүкенде",
+          "дүкен"
+        ],
+        [
+          "нан",
+          "нан"
+        ],
+        [
+          "болмады",
+          "болу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the store"
+        ],
+        [
+          "bread"
+        ],
+        [
+          "there wasn't",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "болмады"
+      ],
+      "wrong": [
+        "Дүкенде нан болмайды.",
+        "Дүкенде нан болмадым."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "болмады",
+          "болмайды",
+          "болды"
+        ]
+      }
+    },
+    {
+      "id": "shai-ishkim-keledi",
+      "topic": "food",
+      "concepts": [
+        "want"
+      ],
+      "text": "Шай ішкім келеді.",
+      "means": "I'd like to drink some tea.",
+      "words": [
+        [
+          "Шай",
+          "шай"
+        ],
+        [
+          "ішкім",
+          "ішу"
+        ],
+        [
+          "келеді",
+          "келу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "I want to drink",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "ішкім",
+        "келеді"
+      ],
+      "wrong": [
+        "Шай ішкің келеді.",
+        "Шай ішу келеді."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ішкім",
+          "ішемін",
+          "ішу"
+        ]
+      }
+    },
+    {
+      "id": "magan-bir-staqan-su-berinizshi",
+      "topic": "food",
+      "concepts": [
+        "dative"
+      ],
+      "text": "Маған бір стақан су беріңізші.",
+      "means": "Could I have a glass of water, please?",
+      "words": [
+        [
+          "Маған",
+          "мен"
+        ],
+        [
+          "бір",
+          "бір"
+        ],
+        [
+          "стақан",
+          "стақан"
+        ],
+        [
+          "су",
+          "су"
+        ],
+        [
+          "беріңізші",
+          "беру"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "glass"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please give",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "беріңізші"
+      ],
+      "wrong": [
+        "Мен бір стақан су беріңізші.",
+        "Мені бір стақан су беріңізші."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Маған",
+          "Мен",
+          "Мені"
+        ]
+      }
+    },
+    {
+      "id": "men-palaudy-zhaqsy-koremin",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Мен палауды жақсы көремін.",
+      "means": "I love plov.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "палауды",
+          "палау"
+        ],
+        [
+          "жақсы",
+          "жақсы көру"
+        ],
+        [
+          "көремін",
+          "жақсы көру"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "plov"
+        ],
+        [
+          "love",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "жақсы",
+        "көремін"
+      ],
+      "wrong": [
+        "Мен палауға жақсы көремін.",
+        "Мен палауда жақсы көремін."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "палауды",
+          "палауға",
+          "палауда"
+        ]
+      }
+    },
+    {
+      "id": "vokzal-qaida",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Вокзал қайда?",
+      "means": "Where's the train station?",
+      "words": [
+        [
+          "Вокзал",
+          "вокзал"
+        ],
+        [
+          "қайда",
+          "қайда"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The station"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Вокзал қайда ма?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "қайда",
+          "қашан",
+          "не"
+        ]
+      }
+    },
+    {
+      "id": "men-zhumysqa-avtobuspen-baramyn",
+      "topic": "out",
+      "concepts": [
+        "dative",
+        "instrumental"
+      ],
+      "text": "Мен жұмысқа автобуспен барамын.",
+      "means": "I go to work by bus.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "жұмысқа",
+          "жұмыс"
+        ],
+        [
+          "автобуспен",
+          "автобус"
+        ],
+        [
+          "барамын",
+          "бару"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ],
+        [
+          "go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "барамын"
+      ],
+      "wrong": [
+        "Мен жұмыста автобуспен барамын.",
+        "Мен жұмысқа автобустан барамын."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "жұмысқа",
+          "жұмыста",
+          "жұмыстан"
+        ]
+      }
+    },
+    {
+      "id": "zhaqyn-zherde-bank-bar-ma",
+      "topic": "out",
+      "concepts": [
+        "bar-zhoq",
+        "question",
+        "consonant-agreement"
+      ],
+      "text": "Жақын жерде банк бар ма?",
+      "means": "Is there a bank nearby?",
+      "words": [
+        [
+          "Жақын",
+          "жақын"
+        ],
+        [
+          "жерде",
+          "жер"
+        ],
+        [
+          "банк",
+          "банк"
+        ],
+        [
+          "бар",
+          "бар"
+        ],
+        [
+          "ма",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Nearby"
+        ],
+        [
+          "a bank"
+        ],
+        [
+          "is there",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "бар",
+        "ма"
+      ],
+      "wrong": [
+        "Жақын жерде банк бар ба?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "бар",
+          "емес",
+          "барады"
+        ]
+      }
+    },
+    {
+      "id": "ne-istep-zhatyrsyn",
+      "topic": "out",
+      "concepts": [
+        "present-continuous"
+      ],
+      "text": "Не істеп жатырсың?",
+      "means": "What are you doing?",
+      "words": [
+        [
+          "Не",
+          "не"
+        ],
+        [
+          "істеп",
+          "істеу"
+        ],
+        [
+          "жатырсың",
+          "жату"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are you doing"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Не істеп жатырмын?",
+        "Не істе жатырсың?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "істеп",
+          "істеді",
+          "істеу"
+        ]
+      }
+    },
+    {
+      "id": "auezhai-bul-zherden-alys",
+      "topic": "out",
+      "concepts": [
+        "ablative",
+        "vowel-harmony"
+      ],
+      "text": "Әуежай бұл жерден алыс.",
+      "means": "The airport is far from here.",
+      "words": [
+        [
+          "Әуежай",
+          "әуежай"
+        ],
+        [
+          "бұл",
+          "бұл"
+        ],
+        [
+          "жерден",
+          "жер"
+        ],
+        [
+          "алыс",
+          "алыс"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The airport"
+        ],
+        [
+          "from here"
+        ],
+        [
+          "far"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Әуежай бұл жерде алыс.",
+        "Әуежай бұл жердан алыс."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "жерден",
+          "жерде",
+          "жердан"
+        ]
+      }
+    },
+    {
+      "id": "keshiriniz-bilmeimin",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Кешіріңіз, білмеймін.",
+      "means": "Sorry, I don't know.",
+      "words": [
+        [
+          "Кешіріңіз,",
+          "кешіру"
+        ],
+        [
+          "білмеймін",
+          "білу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sorry"
+        ],
+        [
+          "I don't know"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кешіріңіз, білемін.",
+        "Кешіріңіз, білемін емес."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "білмеймін",
+          "білемін",
+          "білмейді"
+        ]
+      }
+    },
+    {
+      "id": "erten-taksimen-auezhaiga-baramyn",
+      "topic": "out",
+      "concepts": [
+        "dative",
+        "present-future"
+      ],
+      "text": "Ертең таксимен әуежайға барамын.",
+      "means": "Tomorrow I'll take a taxi to the airport.",
+      "words": [
+        [
+          "Ертең",
+          "ертең"
+        ],
+        [
+          "таксимен",
+          "такси"
+        ],
+        [
+          "әуежайға",
+          "әуежай"
+        ],
+        [
+          "барамын",
+          "бару"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "by taxi"
+        ],
+        [
+          "to the airport"
+        ],
+        [
+          "I'll go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "барамын"
+      ],
+      "wrong": [
+        "Ертең таксимен әуежайға бардым.",
+        "Ертең таксимен әуежайда барамын."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "әуежайға",
+          "әуежайда",
+          "әуежайдан"
+        ]
+      }
+    },
+    {
+      "id": "bilet-qansha-turady",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Билет қанша тұрады?",
+      "means": "How much is the ticket?",
+      "words": [
+        [
+          "Билет",
+          "билет"
+        ],
+        [
+          "қанша",
+          "қанша"
+        ],
+        [
+          "тұрады",
+          "тұру"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The ticket"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Билет қанша тұрады ма?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "қанша",
+          "қайда",
+          "кім"
+        ]
+      }
+    },
+    {
+      "id": "keshe-zhana-ayaq-kiim-satyp-aldym",
+      "topic": "out",
+      "concepts": [
+        "past"
+      ],
+      "text": "Кеше жаңа аяқ киім сатып алдым.",
+      "means": "Yesterday I bought new shoes.",
+      "words": [
+        [
+          "Кеше",
+          "кеше"
+        ],
+        [
+          "жаңа",
+          "жаңа"
+        ],
+        [
+          "аяқ",
+          "аяқ киім"
+        ],
+        [
+          "киім",
+          "аяқ киім"
+        ],
+        [
+          "сатып",
+          "сатып алу"
+        ],
+        [
+          "алдым",
+          "сатып алу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "new shoes"
+        ],
+        [
+          "I bought",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "сатып",
+        "алдым"
+      ],
+      "wrong": [
+        "Кеше жаңа аяқ киім сатып аламын."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "алдым",
+          "аламын",
+          "алды"
+        ]
+      }
+    },
+    {
+      "id": "darikhana-banktin-zhanynda",
+      "topic": "out",
+      "concepts": [
+        "genitive",
+        "vowel-harmony"
+      ],
+      "text": "Дәріхана банктің жанында.",
+      "means": "The pharmacy is next to the bank.",
+      "words": [
+        [
+          "Дәріхана",
+          "дәріхана"
+        ],
+        [
+          "банктің",
+          "банк"
+        ],
+        [
+          "жанында",
+          "жан"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The pharmacy"
+        ],
+        [
+          "the bank's"
+        ],
+        [
+          "at the side"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Дәріхана банктың жанында.",
+        "Дәріхана банкке жанында."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "банктің",
+          "банктың",
+          "банкте"
+        ]
+      }
+    },
+    {
+      "id": "komektese-alasyz-ba",
+      "topic": "out",
+      "concepts": [
+        "ability",
+        "question",
+        "vowel-harmony"
+      ],
+      "text": "Көмектесе аласыз ба?",
+      "means": "Can you help?",
+      "words": [
+        [
+          "Көмектесе",
+          "көмектесу"
+        ],
+        [
+          "аласыз",
+          "алу"
+        ],
+        [
+          "ба",
+          "ма"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Help"
+        ],
+        [
+          "can you",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "аласыз",
+        "ба"
+      ],
+      "wrong": [
+        "Көмектесу аласыз ба?",
+        "Көмектесе аласыз бе?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Көмектесе",
+          "Көмектесу",
+          "Көмектесті"
+        ]
+      }
+    },
+    {
+      "id": "dosymmen-kinoga-baramyn",
+      "topic": "plans",
+      "concepts": [
+        "instrumental",
+        "dative"
+      ],
+      "text": "Досыммен киноға барамын.",
+      "means": "I'm going to the movies with my friend.",
+      "words": [
+        [
+          "Досыммен",
+          "дос"
+        ],
+        [
+          "киноға",
+          "кино"
+        ],
+        [
+          "барамын",
+          "бару"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With my friend"
+        ],
+        [
+          "to the movies"
+        ],
+        [
+          "I go",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "барамын"
+      ],
+      "wrong": [
+        "Досымнан киноға барамын.",
+        "Досыммен кинода барамын."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Досыммен",
+          "Досымнан",
+          "Досымды"
+        ]
+      }
+    },
+    {
+      "id": "erten-sagan-qonyrau-shalamyn",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "present-future"
+      ],
+      "text": "Ертең саған қоңырау шаламын.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Ертең",
+          "ертең"
+        ],
+        [
+          "саған",
+          "сен"
+        ],
+        [
+          "қоңырау",
+          "қоңырау шалу"
+        ],
+        [
+          "шаламын",
+          "қоңырау шалу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I'll call",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "қоңырау",
+        "шаламын"
+      ],
+      "wrong": [
+        "Ертең сені қоңырау шаламын.",
+        "Ертең саған қоңырау шалдым."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "саған",
+          "сені",
+          "сен"
+        ]
+      }
+    },
+    {
+      "id": "senbide-shymkentke-baramyz",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "vowel-harmony"
+      ],
+      "text": "Сенбіде Шымкентке барамыз.",
+      "means": "On Saturday we'll go to Shymkent.",
+      "words": [
+        [
+          "Сенбіде",
+          "сенбі"
+        ],
+        [
+          "Шымкентке"
+        ],
+        [
+          "барамыз",
+          "бару"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "to Shymkent"
+        ],
+        [
+          "we'll go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "барамыз"
+      ],
+      "wrong": [
+        "Сенбіде Шымкентте барамыз.",
+        "Сенбіде Шымкентка барамыз."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Шымкентке",
+          "Шымкентте",
+          "Шымкенттен"
+        ]
+      }
+    },
+    {
+      "id": "otken-zhazda-biz-alakolde-boldyq",
+      "topic": "plans",
+      "concepts": [
+        "past",
+        "locative"
+      ],
+      "text": "Өткен жазда біз Алакөлде болдық.",
+      "means": "We were at Lake Alakol last summer.",
+      "words": [
+        [
+          "Өткен",
+          "өткен"
+        ],
+        [
+          "жазда",
+          "жаз"
+        ],
+        [
+          "біз",
+          "біз"
+        ],
+        [
+          "Алакөлде"
+        ],
+        [
+          "болдық",
+          "болу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Last summer"
+        ],
+        [
+          "we"
+        ],
+        [
+          "at Alakol"
+        ],
+        [
+          "were",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "moved": [
+        "болдық"
+      ],
+      "wrong": [
+        "Өткен жазда біз Алакөлде боламыз.",
+        "Өткен жазда біз Алакөлге болдық."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "болдық",
+          "боламыз",
+          "болдым"
+        ]
+      }
+    },
+    {
+      "id": "bugin-zhanbyr-zhauyp-zhatyr",
+      "topic": "plans",
+      "concepts": [
+        "present-continuous"
+      ],
+      "text": "Бүгін жаңбыр жауып жатыр.",
+      "means": "It's raining today.",
+      "words": [
+        [
+          "Бүгін",
+          "бүгін"
+        ],
+        [
+          "жаңбыр",
+          "жаңбыр"
+        ],
+        [
+          "жауып",
+          "жауу"
+        ],
+        [
+          "жатыр",
+          "жату"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "is falling"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Бүгін жаңбыр жау жатыр.",
+        "Бүгін жаңбыр жауып жатырмын."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "жауып",
+          "жауды",
+          "жауу"
+        ]
+      }
+    },
+    {
+      "id": "erten-uaqytym-zhoq",
+      "topic": "plans",
+      "concepts": [
+        "bar-zhoq",
+        "possessive"
+      ],
+      "text": "Ертең уақытым жоқ.",
+      "means": "I don't have time tomorrow.",
+      "words": [
+        [
+          "Ертең",
+          "ертең"
+        ],
+        [
+          "уақытым",
+          "уақыт"
+        ],
+        [
+          "жоқ",
+          "жоқ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "my time"
+        ],
+        [
+          "there isn't"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ертең уақытым емес.",
+        "Ертең уақытың жоқ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "уақытым",
+          "уақытың",
+          "уақыты"
+        ]
+      }
+    },
+    {
+      "id": "qazaq-tilin-uirengim-keledi",
+      "topic": "plans",
+      "concepts": [
+        "want",
+        "accusative"
+      ],
+      "text": "Қазақ тілін үйренгім келеді.",
+      "means": "I want to learn Kazakh.",
+      "words": [
+        [
+          "Қазақ",
+          "қазақ"
+        ],
+        [
+          "тілін",
+          "тіл"
+        ],
+        [
+          "үйренгім",
+          "үйрену"
+        ],
+        [
+          "келеді",
+          "келу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The Kazakh language"
+        ],
+        [
+          "I want to learn",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "үйренгім",
+        "келеді"
+      ],
+      "wrong": [
+        "Қазақ тілін үйренемін келеді.",
+        "Қазақ тілі үйренгім келеді."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "үйренгім",
+          "үйренемін",
+          "үйрену"
+        ]
+      }
+    },
+    {
+      "id": "men-uiden-zhumys-isteimin",
+      "topic": "plans",
+      "concepts": [
+        "ablative",
+        "vowel-harmony"
+      ],
+      "text": "Мен үйден жұмыс істеймін.",
+      "means": "I work from home.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "үйден",
+          "үй"
+        ],
+        [
+          "жұмыс",
+          "жұмыс істеу"
+        ],
+        [
+          "істеймін",
+          "жұмыс істеу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "from home"
+        ],
+        [
+          "work",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "жұмыс",
+        "істеймін"
+      ],
+      "wrong": [
+        "Мен үйдан жұмыс істеймін.",
+        "Мен үйге жұмыс істеймін."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "үйден",
+          "үйдан",
+          "үйге"
+        ]
+      }
+    },
+    {
+      "id": "men-zhuze-alamyn",
+      "topic": "plans",
+      "concepts": [
+        "ability"
+      ],
+      "text": "Мен жүзе аламын.",
+      "means": "I can swim.",
+      "words": [
+        [
+          "Мен",
+          "мен"
+        ],
+        [
+          "жүзе",
+          "жүзу"
+        ],
+        [
+          "аламын",
+          "алу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "swim"
+        ],
+        [
+          "can",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "аламын"
+      ],
+      "wrong": [
+        "Мен жүзу аламын.",
+        "Мен жүзе алады."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "аламын",
+          "алады",
+          "алдым"
+        ]
+      }
+    },
+    {
+      "id": "demalgym-keledi",
+      "topic": "plans",
+      "concepts": [
+        "want"
+      ],
+      "text": "Демалғым келеді.",
+      "means": "I want to rest.",
+      "words": [
+        [
+          "Демалғым",
+          "демалу"
+        ],
+        [
+          "келеді",
+          "келу"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want to rest"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Демалу келеді.",
+        "Демалғым келемін."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Демалғым",
+          "Демаламын",
+          "Демалу"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "кофе",
+          "forms": [
+            "кофе"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "шай",
+          "forms": [
+            "шай"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "су",
+          "forms": [
+            "су"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "мен",
+          "forms": [
+            "мен"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "ішу",
+          "forms": [
+            "ішемін"
+          ],
+          "picture": "drink",
+          "means": "ішемін = I drink"
+        },
+        {
+          "lemma": "және",
+          "forms": [
+            "және"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present-future",
+        "line": "-а, -е or -й with the person's ending says what you usually do, or will do: Мен шай ішемін (I tea drink), Ертең барамыз (tomorrow we-go)."
+      },
+      "items": [
+        "item",
+        "item-2",
+        "item-3",
+        "item-4",
+        "item-5",
+        "item-6"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "бір",
+          "forms": [
+            "бір"
+          ],
+          "means": "one, a"
+        },
+        {
+          "lemma": "сүт",
+          "forms": [
+            "сүт"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please-give-me",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "item-7",
+        "item-8",
+        "item-9",
+        "item-10",
+        "item-11",
+        "item-12"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "жақсы",
+          "forms": [
+            "жақсымын",
+            "жақсысыз"
+          ],
+          "means": "жақсымын = I am fine; жақсысыз = you are fine"
+        },
+        {
+          "lemma": "сіз",
+          "forms": [
+            "сіз"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ма",
+          "forms": [
+            "ба"
+          ],
+          "means": "ба = question particle"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "copula",
+        "line": "Am and are are endings on the word (Мен дәрігермін: I doctor-am, Сен студентсің: you student-are), and is has none: Ол мұғалім (he or she teacher)."
+      },
+      "items": [
+        "item-13",
+        "item-14",
+        "item-15",
+        "item-16",
+        "item-17",
+        "item-18",
+        "item-19"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "сен",
+          "forms": [
+            "сен"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "емес",
+          "forms": [
+            "емеспін"
+          ],
+          "means": "емеспін = I am not"
+        },
+        {
+          "lemma": "мұғалім",
+          "forms": [
+            "мұғаліммін",
+            "мұғалімсің",
+            "мұғалім"
+          ],
+          "means": "мұғаліммін = I am a teacher; мұғалімсің = you are a teacher; мұғалім = teacher"
+        },
+        {
+          "lemma": "студент",
+          "forms": [
+            "студентсің"
+          ],
+          "means": "студентсің = you are a student"
+        },
+        {
+          "lemma": "ма",
+          "forms": [
+            "бе"
+          ],
+          "means": "бе = question particle"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "item-20",
+        "item-21",
+        "senin-atyn-kim",
+        "item-22",
+        "item-23",
+        "sen-studentsin-be",
+        "item-24"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ана",
+          "forms": [
+            "анам"
+          ],
+          "picture": "mother",
+          "means": "анам = my mother"
+        },
+        {
+          "lemma": "әке",
+          "forms": [
+            "әкем"
+          ],
+          "picture": "father",
+          "means": "әкем = my father"
+        },
+        {
+          "lemma": "аға",
+          "forms": [
+            "ағам"
+          ],
+          "picture": "brother",
+          "means": "ағам = my older brother"
+        },
+        {
+          "lemma": "әпке",
+          "forms": [
+            "әпкем"
+          ],
+          "picture": "sister",
+          "means": "әпкем = my older sister"
+        },
+        {
+          "lemma": "мен",
+          "forms": [
+            "менің"
+          ],
+          "means": "менің = my"
+        },
+        {
+          "lemma": "бұл",
+          "forms": [
+            "бұл"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "студент",
+          "forms": [
+            "студент"
+          ],
+          "means": "student"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "My and your are endings, often with менің or сенің before the noun: менің атым (my name-my), сенің үйің (your house-your), оның қызы (his or her daughter-his or hers)."
+      },
+      "items": [
+        "anam-mugalim",
+        "item-25",
+        "item-26",
+        "item-27",
+        "item-28",
+        "item-29"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "бар",
+          "forms": [
+            "бар"
+          ],
+          "means": "there is"
+        },
+        {
+          "lemma": "дос",
+          "forms": [
+            "доссың",
+            "досымның"
+          ],
+          "picture": "friend",
+          "means": "доссың = you are a friend; досымның = my friend's"
+        },
+        {
+          "lemma": "дәрігер",
+          "forms": [
+            "дәрігер"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "кілт",
+          "forms": [
+            "кілт"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "телефон",
+          "forms": [
+            "телефоным"
+          ],
+          "picture": "phone",
+          "means": "телефоным = my phone"
+        },
+        {
+          "lemma": "кітап",
+          "forms": [
+            "кітабым",
+            "кітабы"
+          ],
+          "picture": "book",
+          "means": "кітабым = my book; кітабы = their book"
+        },
+        {
+          "lemma": "жоқ",
+          "forms": [
+            "жоқ"
+          ],
+          "means": "there isn't"
+        },
+        {
+          "lemma": "сіз",
+          "forms": [
+            "сізде"
+          ],
+          "means": "сізде = in your possession"
+        },
+        {
+          "lemma": "ма",
+          "forms": [
+            "ма"
+          ],
+          "means": "question particle"
+        },
+        {
+          "lemma": "жақсы",
+          "forms": [
+            "жақсы"
+          ],
+          "means": "good, fine"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "item-30",
+        "item-31",
+        "menin-bir-agam-zhane-bir-apkem-bar",
+        "item-32",
+        "item-33",
+        "item-34",
+        "sizde-su-bar-ma",
+        "bul-menin-dosymnyn-kitaby"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "қайда",
+          "forms": [
+            "қайда"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "осында",
+          "forms": [
+            "осында"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "сонда",
+          "forms": [
+            "сонда"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "дәретхана",
+          "forms": [
+            "дәретхана"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "кілт",
+          "forms": [
+            "кілтім"
+          ],
+          "means": "кілтім = my key"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "genitive",
+        "line": "-ның, -нің, -дың, -дің, -тың or -тің marks the owner, and the owned noun takes the matching possessive ending: менің досым (my friend-my), әкемнің көлігі (my-father's car-his)."
+      },
+      "items": [
+        "item-35",
+        "item-36",
+        "item-37",
+        "item-38",
+        "item-39",
+        "item-40"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "екі",
+          "forms": [
+            "екі"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "үш",
+          "forms": [
+            "үш"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "ақша",
+          "forms": [
+            "ақшам"
+          ],
+          "picture": "money",
+          "means": "ақшам = my money"
+        },
+        {
+          "lemma": "кітап",
+          "forms": [
+            "кітап",
+            "кітабым"
+          ],
+          "means": "кітап = book; кітабым = my book"
+        }
+      ],
+      "phrases": [
+        "how-much-does-it-cost",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "item-41",
+        "item-42",
+        "item-43",
+        "item-44",
+        "item-45",
+        "item-46"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "сөйлеу",
+          "forms": [
+            "сөйлейсіз",
+            "сөйлеймін",
+            "сөйлемейді"
+          ],
+          "means": "сөйлейсіз = you speak; сөйлеймін = I speak; сөйлемейді = does not speak"
+        },
+        {
+          "lemma": "ағылшынша",
+          "forms": [
+            "ағылшынша"
+          ],
+          "means": "in English"
+        },
+        {
+          "lemma": "қазақша",
+          "forms": [
+            "қазақша"
+          ],
+          "means": "in Kazakh"
+        },
+        {
+          "lemma": "түсіну",
+          "forms": [
+            "түсінбеймін",
+            "түсінесіз"
+          ],
+          "means": "түсінбеймін = I do not understand; түсінесіз = you understand"
+        },
+        {
+          "lemma": "аздап",
+          "forms": [
+            "аздап"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "келу",
+          "forms": [
+            "келеді"
+          ],
+          "means": "келеді = to come (келеді: comes / will come; ішкім келеді: I want to drink)"
+        },
+        {
+          "lemma": "ішу",
+          "forms": [
+            "ішкім"
+          ],
+          "means": "ішкім = my wish to drink"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question",
+        "line": "ма, ме, ба, бе, па or пе after a word makes a yes-or-no question (Ағылшынша сөйлейсің бе?: English-ly you-speak?), and after a third-person -а, -е or -й verb the -ды, -ді goes (Ол барады → Ол бара ма?); a question word stays where its answer goes: Сен қайда тұрасың?"
+      },
+      "items": [
+        "agylshynsha-soileisiz-be",
+        "item-47",
+        "item-48",
+        "item-49",
+        "shai-ishkim-keledi",
+        "item-50",
+        "item-51",
+        "apkem-agylshynsha-soilemeidi"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "үй",
+          "forms": [
+            "үйде",
+            "үй",
+            "үйдемін",
+            "үйім"
+          ],
+          "picture": "house",
+          "means": "үйде = in a house; үй = house; үйдемін = I am at home; үйім = my house"
+        },
+        {
+          "lemma": "бөлме",
+          "forms": [
+            "бөлмем"
+          ],
+          "picture": "room",
+          "means": "бөлмем = my room"
+        },
+        {
+          "lemma": "үлкен",
+          "forms": [
+            "үлкен"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "кішкентай",
+          "forms": [
+            "кішкентай"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "тұру",
+          "forms": [
+            "тұрамын",
+            "тұрасың",
+            "тұрады"
+          ],
+          "means": "тұрамын = I live; тұрасың = you live; тұрады = lives"
+        },
+        {
+          "lemma": "емес",
+          "forms": [
+            "емес"
+          ],
+          "means": "not"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "men-uidemin",
+        "item-52",
+        "item-53",
+        "item-54",
+        "sen-qaida-turasyn",
+        "item-55",
+        "bul-menin-uiim-emes"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "бару",
+          "forms": [
+            "барамын",
+            "барасың",
+            "барады"
+          ],
+          "means": "барамын = I go; барасың = you are going; барады = goes"
+        },
+        {
+          "lemma": "мектеп",
+          "forms": [
+            "мектепке"
+          ],
+          "picture": "school",
+          "means": "мектепке = to school"
+        },
+        {
+          "lemma": "қала",
+          "forms": [
+            "қалаға"
+          ],
+          "picture": "city",
+          "means": "қалаға = to the city"
+        },
+        {
+          "lemma": "вокзал",
+          "forms": [
+            "вокзал"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "көлік",
+          "forms": [
+            "көлік",
+            "көлігім",
+            "көлігі"
+          ],
+          "picture": "car",
+          "means": "көлік = car; көлігім = my car; көлігі = their car"
+        },
+        {
+          "lemma": "әке",
+          "forms": [
+            "әкемнің"
+          ],
+          "means": "әкемнің = my father's"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "vowel-harmony",
+        "line": "An ending takes back vowels (а, о, ұ, ы) after a word with them and front vowels (ә, ө, ү, і, е) after one with those: Алматыда (in Almaty), үйде (at home)."
+      },
+      "items": [
+        "vokzal-qaida",
+        "item-56",
+        "item-57",
+        "item-58",
+        "item-59",
+        "item-60",
+        "item-61",
+        "bul-akemnin-koligi"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "бүгін",
+          "forms": [
+            "бүгін"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "ертең",
+          "forms": [
+            "ертең"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "қазір",
+          "forms": [
+            "қазір"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "жұмыс істеу",
+          "forms": [
+            "жұмыс",
+            "істеймін",
+            "істеуім"
+          ],
+          "picture": "work",
+          "means": "жұмыс = work; істеймін = I do; істеуім = my doing"
+        },
+        {
+          "lemma": "керек",
+          "forms": [
+            "керек"
+          ],
+          "means": "must"
+        },
+        {
+          "lemma": "алу",
+          "forms": [
+            "алмаймын"
+          ],
+          "means": "алмаймын = to take (алмаймын: I don't/won't take; бара алмаймын: I cannot go)"
+        },
+        {
+          "lemma": "бару",
+          "forms": [
+            "баруым",
+            "бара"
+          ],
+          "means": "баруым = my going; бара = go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "item-62",
+        "item-63",
+        "item-64",
+        "item-65",
+        "item-66",
+        "item-67"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

@@ -1,0 +1,8043 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-el",
+  "name": "Starter: Greek",
+  "about": "Greek word order in real, everyday sentences.",
+  "language": "el",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "καφές": "coffee",
+    "τσάι": "tea",
+    "νερό": "water",
+    "εγώ": "I",
+    "πίνω": "to drink",
+    "και": "and",
+    "ένας": "a",
+    "γάλα": "milk",
+    "καλά": "well",
+    "είμαι": "to be",
+    "εσύ": "you",
+    "δεν": "not",
+    "δάσκαλος": "teacher",
+    "φοιτητής": "student (a man; a woman is φοιτήτρια)",
+    "ο": "the",
+    "μητέρα": "mother",
+    "πατέρας": "father",
+    "αδερφός": "brother",
+    "αδερφή": "sister",
+    "μου": "my",
+    "αυτός": "this",
+    "καλός": "good",
+    "έχω": "to have",
+    "φίλος": "friend",
+    "γιατρός": "doctor",
+    "κλειδί": "key",
+    "τηλέφωνο": "phone",
+    "βιβλίο": "book",
+    "πού": "where",
+    "εδώ": "here",
+    "εκεί": "there",
+    "τουαλέτα": "bathroom",
+    "δύο": "two",
+    "τρεις": "three",
+    "χρήματα": "money",
+    "μιλάω": "to speak",
+    "αγγλικά": "English (the language)",
+    "ελληνικά": "Greek (the language)",
+    "καταλαβαίνω": "to understand",
+    "λίγος": "a little",
+    "θέλω": "to want (θα ήθελα: I'd like)",
+    "να": "to",
+    "σπίτι": "house, home",
+    "δωμάτιο": "room",
+    "μεγάλος": "big",
+    "μικρός": "small",
+    "μένω": "to live, to stay",
+    "σε": "in",
+    "πηγαίνω": "to go (πάω: I go)",
+    "σχολείο": "school",
+    "πόλη": "city",
+    "σταθμός": "station",
+    "αυτοκίνητο": "car",
+    "σήμερα": "today",
+    "αύριο": "tomorrow",
+    "τώρα": "now",
+    "δουλεύω": "to work",
+    "πρέπει": "must, have to",
+    "μπορώ": "can, to be able to",
+    "κάνω": "to do, to make",
+    "λέω": "to say, to tell (με λένε: my name is)",
+    "ξέρω": "to know",
+    "αρέσω": "to please, to appeal to (μου αρέσει: I like it)",
+    "ταινία": "movie",
+    "αγαπώ": "to love",
+    "διαμέρισμα": "apartment",
+    "τραπέζι": "table",
+    "υπάρχω": "to exist (υπάρχει: there is)",
+    "κλείνω": "to close",
+    "παράθυρο": "window",
+    "κουζίνα": "kitchen",
+    "γυρίζω": "to come back, to return",
+    "μαγειρεύω": "to cook",
+    "πόρτα": "door",
+    "έρχομαι": "to come (έλα: come)",
+    "ζάχαρη": "sugar",
+    "ποτήρι": "glass",
+    "παρακαλώ": "please",
+    "τρώω": "to eat",
+    "γλυκός": "sweet",
+    "χτες": "yesterday",
+    "πίτσα": "pizza",
+    "ψυγείο": "fridge",
+    "ωραία": "nicely, well",
+    "λογαριασμός": "check, bill",
+    "ελληνικός": "Greek",
+    "φαγητό": "food",
+    "ζώο": "animal",
+    "ψωμί": "bread",
+    "δουλειά": "work, job",
+    "λεωφορείο": "bus",
+    "αγοράζω": "to buy",
+    "καινούργιος": "new",
+    "μπουφάν": "jacket",
+    "τρένο": "train",
+    "αργώ": "to be late",
+    "λεπτό": "minute",
+    "ποτέ": "never, ever",
+    "παπούτσι": "shoe",
+    "χάνω": "to lose",
+    "μπλούζα": "top, shirt",
+    "παίρνω": "to take (παίρνω τηλέφωνο: to call)",
+    "ταξί": "taxi",
+    "γιαγιά": "grandma",
+    "βρέχω": "to rain (βρέχει: it's raining)",
+    "φεύγω": "to leave",
+    "σινεμά": "movies, movie theater",
+    "παραλία": "beach",
+    "μαθαίνω": "to learn",
+    "χρόνος": "year; time",
+    "κρύο": "cold",
+    "ελπίζω": "to hope",
+    "καιρός": "weather"
+  },
+  "chunks": {
+    "γεια-σου": {
+      "text": "Γεια σου",
+      "en": "Hi",
+      "about": "An informal hello (or bye) to one person; to several people or politely, Γεια σας."
+    },
+    "εδώ-και": {
+      "text": "εδώ και",
+      "en": "for (so far)",
+      "about": "With the present, how long something has been going on: εδώ και έναν χρόνο (for a year now)."
+    },
+    "τι-κάνεις": {
+      "text": "Τι κάνεις;",
+      "en": "How are you?",
+      "about": "Literally, what are you doing? Politely, or to several people: Τι κάνετε;"
+    },
+    "πώς-σε-λένε": {
+      "text": "Πώς σε λένε;",
+      "en": "What's your name?",
+      "about": "Literally, how do they call you? Answer with Με λένε and your name."
+    },
+    "συγγνώμη": {
+      "text": "Συγγνώμη",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention, or to say sorry."
+    },
+    "σε-παρακαλώ": {
+      "text": "σε παρακαλώ",
+      "en": "please",
+      "about": "Literally, I ask you; politely, or to several people: σας παρακαλώ."
+    },
+    "θα-ήθελα": {
+      "text": "Θα ήθελα",
+      "en": "I'd like",
+      "about": "A polite way to ask for something: literally, I would want."
+    },
+    "παίρνω-τηλέφωνο": {
+      "text": "παίρνω τηλέφωνο",
+      "en": "to call (on the phone)",
+      "about": "Literally, I take phone: Θα σε πάρω τηλέφωνο (I'll call you)."
+    },
+    "please": {
+      "text": "παρακαλώ",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "ευχαριστώ",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "Αντίο",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "ναι",
+      "en": "yes"
+    },
+    "no": {
+      "text": "όχι",
+      "en": "no"
+    },
+    "nice-to-meet-you": {
+      "text": "Χάρηκα",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Πόσο κάνει;",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Τον λογαριασμό, παρακαλώ",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Τα λέμε αύριο",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "item",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "accusative"
+      ],
+      "text": "Πίνω καφέ.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Πίνω",
+          "πίνω"
+        ],
+        [
+          "καφέ",
+          "καφές"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ πίνεις καφέ.",
+        "Πίνω καφές."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "καφέ",
+          "τσάι",
+          "νερό"
+        ]
+      }
+    },
+    {
+      "id": "item-2",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "text": "Πίνω τσάι.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Πίνω",
+          "πίνω"
+        ],
+        [
+          "τσάι",
+          "τσάι"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ πίνεις τσάι.",
+        "Εγώ πίνει τσάι."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "τσάι",
+          "καφέ",
+          "νερό"
+        ]
+      }
+    },
+    {
+      "id": "item-3",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Εγώ πίνω νερό.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Εγώ",
+          "εγώ"
+        ],
+        [
+          "πίνω",
+          "πίνω"
+        ],
+        [
+          "νερό",
+          "νερό"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ πίνεις νερό.",
+        "Εγώ πίνει νερό."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "νερό",
+          "καφέ",
+          "τσάι"
+        ]
+      }
+    },
+    {
+      "id": "item-4",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "accusative"
+      ],
+      "text": "Πίνω καφέ και τσάι.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Πίνω",
+          "πίνω"
+        ],
+        [
+          "καφέ",
+          "καφές"
+        ],
+        [
+          "και",
+          "και"
+        ],
+        [
+          "τσάι",
+          "τσάι"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πίνω καφές και τσάι.",
+        "Εγώ πίνεις καφέ και τσάι."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "καφέ",
+          "νερό",
+          "τσάι"
+        ]
+      }
+    },
+    {
+      "id": "item-5",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "text": "Πίνω τσάι και νερό.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Πίνω",
+          "πίνω"
+        ],
+        [
+          "τσάι",
+          "τσάι"
+        ],
+        [
+          "και",
+          "και"
+        ],
+        [
+          "νερό",
+          "νερό"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ πίνεις τσάι και νερό.",
+        "Εγώ πίνει τσάι και νερό."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "τσάι",
+          "καφέ",
+          "νερό"
+        ]
+      }
+    },
+    {
+      "id": "item-6",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "accusative"
+      ],
+      "text": "Πίνω νερό και καφέ.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Πίνω",
+          "πίνω"
+        ],
+        [
+          "νερό",
+          "νερό"
+        ],
+        [
+          "και",
+          "και"
+        ],
+        [
+          "καφέ",
+          "καφές"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πίνω νερό και καφές.",
+        "Εγώ πίνεις νερό και καφέ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "νερό",
+          "τσάι",
+          "καφέ"
+        ]
+      }
+    },
+    {
+      "id": "item-7",
+      "topic": "food",
+      "concepts": [
+        "indefinite",
+        "accusative"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Έναν καφέ, ευχαριστώ.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Έναν",
+          "ένας"
+        ],
+        [
+          "καφέ,",
+          "καφές"
+        ],
+        [
+          "ευχαριστώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ένα καφέ, ευχαριστώ.",
+        "Έναν καφές, ευχαριστώ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Έναν",
+          "Ένα",
+          "Ένας"
+        ]
+      }
+    },
+    {
+      "id": "item-8",
+      "topic": "food",
+      "concepts": [
+        "indefinite",
+        "accusative"
+      ],
+      "chunks": [
+        "γεια-σου",
+        "please"
+      ],
+      "text": "Γεια σου! Έναν καφέ, παρακαλώ.",
+      "means": "Hello! A coffee, please.",
+      "words": [
+        [
+          "Γεια"
+        ],
+        [
+          "σου!"
+        ],
+        [
+          "Έναν",
+          "ένας"
+        ],
+        [
+          "καφέ,",
+          "καφές"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Γεια σου! Ένα καφέ, παρακαλώ.",
+        "Γεια σου! Έναν καφές, παρακαλώ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "καφέ,",
+          "τσάι,",
+          "γάλα,"
+        ]
+      }
+    },
+    {
+      "id": "item-9",
+      "topic": "food",
+      "concepts": [
+        "indefinite",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ένα τσάι και ένα νερό, παρακαλώ.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Ένα",
+          "ένας"
+        ],
+        [
+          "τσάι",
+          "τσάι"
+        ],
+        [
+          "και",
+          "και"
+        ],
+        [
+          "ένα",
+          "ένας"
+        ],
+        [
+          "νερό,",
+          "νερό"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Έναν τσάι και ένα νερό, παρακαλώ.",
+        "Ένα τσάι και έναν νερό, παρακαλώ."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "νερό,",
+          "γάλα,",
+          "τσάι,"
+        ]
+      }
+    },
+    {
+      "id": "item-10",
+      "topic": "food",
+      "concepts": [
+        "indefinite",
+        "accusative"
+      ],
+      "chunks": [
+        "γεια-σου",
+        "please"
+      ],
+      "text": "Γεια σου! Ένα τσάι, παρακαλώ.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Γεια"
+        ],
+        [
+          "σου!"
+        ],
+        [
+          "Ένα",
+          "ένας"
+        ],
+        [
+          "τσάι,",
+          "τσάι"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Γεια σου! Έναν τσάι, παρακαλώ.",
+        "Γεια σου! Ένας τσάι, παρακαλώ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "τσάι,",
+          "γάλα,",
+          "νερό,"
+        ]
+      }
+    },
+    {
+      "id": "item-11",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "text": "Πίνω γάλα.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Πίνω",
+          "πίνω"
+        ],
+        [
+          "γάλα",
+          "γάλα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ πίνεις γάλα.",
+        "Εγώ πίνει γάλα."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "γάλα",
+          "καφέ",
+          "νερό"
+        ]
+      }
+    },
+    {
+      "id": "item-12",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Είμαι καλά, ευχαριστώ.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Είμαι",
+          "είμαι"
+        ],
+        [
+          "καλά,",
+          "καλά"
+        ],
+        [
+          "ευχαριστώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ είσαι καλά, ευχαριστώ.",
+        "Εγώ είναι καλά, ευχαριστώ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Είμαι",
+          "Πίνω",
+          "Εγώ"
+        ]
+      }
+    },
+    {
+      "id": "item-13",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Ναι, παρακαλώ.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ναι,"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ναι είμαι παρακαλώ.",
+        "Ναι πίνω παρακαλώ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ναι,",
+          "Όχι,",
+          "Αντίο,"
+        ]
+      }
+    },
+    {
+      "id": "item-14",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Όχι, ευχαριστώ.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Όχι,"
+        ],
+        [
+          "ευχαριστώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Όχι είμαι ευχαριστώ.",
+        "Όχι πίνω ευχαριστώ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Όχι,",
+          "Ναι,",
+          "Αντίο,"
+        ]
+      }
+    },
+    {
+      "id": "item-15",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Ναι, ευχαριστώ. Αντίο!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ναι,"
+        ],
+        [
+          "ευχαριστώ."
+        ],
+        [
+          "Αντίο"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ναι είμαι ευχαριστώ. Αντίο!",
+        "Ναι πίνω ευχαριστώ. Αντίο!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ναι,",
+          "Όχι,",
+          "Παρακαλώ,"
+        ]
+      }
+    },
+    {
+      "id": "item-16",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Όχι, ευχαριστώ. Αντίο!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Όχι,"
+        ],
+        [
+          "ευχαριστώ."
+        ],
+        [
+          "Αντίο"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Όχι είμαι ευχαριστώ. Αντίο!",
+        "Όχι πίνω ευχαριστώ. Αντίο!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Όχι,",
+          "Ναι,",
+          "Παρακαλώ,"
+        ]
+      }
+    },
+    {
+      "id": "item-17",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "γεια-σου",
+        "nice-to-meet-you"
+      ],
+      "text": "Γεια σου! Χάρηκα.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Γεια"
+        ],
+        [
+          "σου!"
+        ],
+        [
+          "Χάρηκα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Γεια εγώ! Χάρηκα.",
+        "Γεια εσύ! Χάρηκα."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Χάρηκα",
+          "Αντίο",
+          "Ευχαριστώ"
+        ]
+      }
+    },
+    {
+      "id": "item-18",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "text": "Είμαι δάσκαλος.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Είμαι",
+          "είμαι"
+        ],
+        [
+          "δάσκαλος",
+          "δάσκαλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ είσαι δάσκαλος.",
+        "Εγώ είναι δάσκαλος."
+      ],
+      "otherGender": {
+        "text": "Είμαι δασκάλα.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "δάσκαλος",
+          "φοιτητής",
+          "καφέ"
+        ]
+      }
+    },
+    {
+      "id": "item-19",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Εσύ είσαι φοιτητής.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Εσύ",
+          "εσύ"
+        ],
+        [
+          "είσαι",
+          "είμαι"
+        ],
+        [
+          "φοιτητής",
+          "φοιτητής"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εσύ είμαι φοιτητής.",
+        "Εσύ είναι φοιτητής."
+      ],
+      "otherGender": {
+        "text": "Εσύ είσαι φοιτήτρια.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "είσαι",
+          "είμαι",
+          "είναι"
+        ]
+      }
+    },
+    {
+      "id": "item-20",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "pro-drop"
+      ],
+      "text": "Είσαι δάσκαλος;",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Είσαι",
+          "είμαι"
+        ],
+        [
+          "δάσκαλος",
+          "δάσκαλος"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Are you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εσύ είμαι δάσκαλος;",
+        "Εσύ είναι δάσκαλος;"
+      ],
+      "otherGender": {
+        "text": "Είσαι δασκάλα;",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "δάσκαλος",
+          "φοιτητής",
+          "καφέ"
+        ]
+      }
+    },
+    {
+      "id": "item-21",
+      "topic": "people",
+      "concepts": [
+        "den",
+        "present",
+        "pro-drop"
+      ],
+      "text": "Δεν είμαι δάσκαλος.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Δεν",
+          "δεν"
+        ],
+        [
+          "είμαι",
+          "είμαι"
+        ],
+        [
+          "δάσκαλος",
+          "δάσκαλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Είμαι δεν δάσκαλος.",
+        "Δεν εγώ είσαι δάσκαλος."
+      ],
+      "otherGender": {
+        "text": "Δεν είμαι δασκάλα.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "είμαι",
+          "είσαι",
+          "είναι"
+        ]
+      }
+    },
+    {
+      "id": "item-22",
+      "topic": "people",
+      "concepts": [
+        "article",
+        "present",
+        "den"
+      ],
+      "text": "Ο φοιτητής δεν είναι δάσκαλος.",
+      "means": "The student isn't a teacher.",
+      "words": [
+        [
+          "Ο",
+          "ο"
+        ],
+        [
+          "φοιτητής",
+          "φοιτητής"
+        ],
+        [
+          "δεν",
+          "δεν"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "δάσκαλος",
+          "δάσκαλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "student"
+        ],
+        [
+          "not"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ο φοιτητής δεν είμαι δάσκαλος.",
+        "Ο φοιτητής είναι δεν δάσκαλος."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "είναι",
+          "είμαι",
+          "είσαι"
+        ]
+      }
+    },
+    {
+      "id": "item-23",
+      "topic": "people",
+      "concepts": [
+        "article",
+        "possessive",
+        "present",
+        "adjective"
+      ],
+      "text": "Η μητέρα μου είναι καλή.",
+      "means": "My mother is good.",
+      "words": [
+        [
+          "Η",
+          "ο"
+        ],
+        [
+          "μητέρα",
+          "μητέρα"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "καλή",
+          "καλός"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Η μητέρα μου είμαι καλή.",
+        "Ο μητέρα μου είναι καλή."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "μητέρα",
+          "πατέρας",
+          "αδερφός"
+        ]
+      }
+    },
+    {
+      "id": "item-24",
+      "topic": "people",
+      "concepts": [
+        "demonstrative",
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Αυτή είναι η μητέρα μου.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Αυτή",
+          "αυτός"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "η",
+          "ο"
+        ],
+        [
+          "μητέρα",
+          "μητέρα"
+        ],
+        [
+          "μου",
+          "μου"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Αυτός είναι η μητέρα μου.",
+        "Αυτή είσαι η μητέρα μου."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Αυτή",
+          "Αυτός",
+          "Εσύ"
+        ]
+      }
+    },
+    {
+      "id": "item-25",
+      "topic": "people",
+      "concepts": [
+        "demonstrative",
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Αυτός είναι ο πατέρας μου.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Αυτός",
+          "αυτός"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "ο",
+          "ο"
+        ],
+        [
+          "πατέρας",
+          "πατέρας"
+        ],
+        [
+          "μου",
+          "μου"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "father"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Αυτή είναι ο πατέρας μου.",
+        "Αυτός είναι η πατέρας μου."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "πατέρας",
+          "μητέρα",
+          "αδερφή"
+        ]
+      }
+    },
+    {
+      "id": "item-26",
+      "topic": "people",
+      "concepts": [
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Ο πατέρας μου είναι δάσκαλος.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Ο",
+          "ο"
+        ],
+        [
+          "πατέρας",
+          "πατέρας"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "δάσκαλος",
+          "δάσκαλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "father"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ο πατέρας μου είμαι δάσκαλος.",
+        "Η πατέρας μου είναι δάσκαλος."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "πατέρας",
+          "αδερφός",
+          "μητέρα"
+        ]
+      }
+    },
+    {
+      "id": "item-27",
+      "topic": "people",
+      "concepts": [
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Ο αδερφός μου είναι φοιτητής.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Ο",
+          "ο"
+        ],
+        [
+          "αδερφός",
+          "αδερφός"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "φοιτητής",
+          "φοιτητής"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ο αδερφός μου είσαι φοιτητής.",
+        "Η αδερφός μου είναι φοιτητής."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "φοιτητής",
+          "δάσκαλος",
+          "πατέρας"
+        ]
+      }
+    },
+    {
+      "id": "item-28",
+      "topic": "people",
+      "concepts": [
+        "demonstrative",
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Αυτή είναι η αδερφή μου.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Αυτή",
+          "αυτός"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "η",
+          "ο"
+        ],
+        [
+          "αδερφή",
+          "αδερφή"
+        ],
+        [
+          "μου",
+          "μου"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Αυτός είναι η αδερφή μου.",
+        "Αυτή είναι ο αδερφή μου."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "αδερφή",
+          "αδερφός",
+          "πατέρας"
+        ]
+      }
+    },
+    {
+      "id": "item-29",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "indefinite",
+        "accusative"
+      ],
+      "text": "Έχω ένα τηλέφωνο.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Έχω",
+          "έχω"
+        ],
+        [
+          "ένα",
+          "ένας"
+        ],
+        [
+          "τηλέφωνο",
+          "τηλέφωνο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ έχεις ένα τηλέφωνο.",
+        "Έχω έναν τηλέφωνο."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "τηλέφωνο",
+          "βιβλίο",
+          "κλειδί"
+        ]
+      }
+    },
+    {
+      "id": "item-30",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "indefinite",
+        "accusative"
+      ],
+      "text": "Έχεις ένα κλειδί;",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Έχεις",
+          "έχω"
+        ],
+        [
+          "ένα",
+          "ένας"
+        ],
+        [
+          "κλειδί",
+          "κλειδί"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Do you have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εσύ έχω ένα κλειδί;",
+        "Έχεις έναν κλειδί;"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "κλειδί",
+          "τηλέφωνο",
+          "βιβλίο"
+        ]
+      }
+    },
+    {
+      "id": "item-31",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "indefinite",
+        "accusative"
+      ],
+      "text": "Έχω έναν αδερφό και μία αδερφή.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Έχω",
+          "έχω"
+        ],
+        [
+          "έναν",
+          "ένας"
+        ],
+        [
+          "αδερφό",
+          "αδερφός"
+        ],
+        [
+          "και",
+          "και"
+        ],
+        [
+          "μία",
+          "ένας"
+        ],
+        [
+          "αδερφή",
+          "αδερφή"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Έχω έναν αδερφός και μία αδερφή.",
+        "Έχω έναν αδερφό και ένα αδερφή."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "μία",
+          "ένα",
+          "έναν"
+        ]
+      }
+    },
+    {
+      "id": "item-32",
+      "topic": "people",
+      "concepts": [
+        "den",
+        "present",
+        "pro-drop"
+      ],
+      "text": "Δεν έχω βιβλίο.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Δεν",
+          "δεν"
+        ],
+        [
+          "έχω",
+          "έχω"
+        ],
+        [
+          "βιβλίο",
+          "βιβλίο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Έχω δεν βιβλίο.",
+        "Εγώ δεν έχεις βιβλίο."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "βιβλίο",
+          "κλειδί",
+          "τηλέφωνο"
+        ]
+      }
+    },
+    {
+      "id": "item-33",
+      "topic": "people",
+      "concepts": [
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Η αδερφή μου είναι γιατρός.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Η",
+          "ο"
+        ],
+        [
+          "αδερφή",
+          "αδερφή"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "γιατρός",
+          "γιατρός"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Η αδερφή μου είμαι γιατρός.",
+        "Ο αδερφή μου είναι γιατρός."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "γιατρός",
+          "δάσκαλος",
+          "φοιτητής"
+        ]
+      }
+    },
+    {
+      "id": "item-34",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "adjective"
+      ],
+      "text": "Είσαι καλός φίλος.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Είσαι",
+          "είμαι"
+        ],
+        [
+          "καλός",
+          "καλός"
+        ],
+        [
+          "φίλος",
+          "φίλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Είσαι καλή φίλος.",
+        "Εσύ είμαι καλός φίλος."
+      ],
+      "otherGender": {
+        "text": "Είσαι καλή φίλη.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "καλός",
+          "καλή",
+          "καλά"
+        ]
+      }
+    },
+    {
+      "id": "item-35",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Πού είναι η μητέρα μου;",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Πού",
+          "πού"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "η",
+          "ο"
+        ],
+        [
+          "μητέρα",
+          "μητέρα"
+        ],
+        [
+          "μου",
+          "μου"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πού είσαι η μητέρα μου;",
+        "Πού είναι ο μητέρα μου;"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Πού",
+          "Εδώ",
+          "Εκεί"
+        ]
+      }
+    },
+    {
+      "id": "item-36",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Η αδερφή μου είναι εδώ.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Η",
+          "ο"
+        ],
+        [
+          "αδερφή",
+          "αδερφή"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "εδώ",
+          "εδώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Η αδερφή μου είσαι εδώ.",
+        "Ο αδερφή μου είναι εδώ."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "εδώ",
+          "εκεί",
+          "πού"
+        ]
+      }
+    },
+    {
+      "id": "item-37",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "present"
+      ],
+      "text": "Το κλειδί είναι εκεί.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Το",
+          "ο"
+        ],
+        [
+          "κλειδί",
+          "κλειδί"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "εκεί",
+          "εκεί"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ο κλειδί είναι εκεί.",
+        "Το κλειδί είμαι εκεί."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "εκεί",
+          "εδώ",
+          "πού"
+        ]
+      }
+    },
+    {
+      "id": "item-38",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "article",
+        "present"
+      ],
+      "chunks": [
+        "συγγνώμη"
+      ],
+      "text": "Συγγνώμη, πού είναι η τουαλέτα;",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Συγγνώμη,"
+        ],
+        [
+          "πού",
+          "πού"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "η",
+          "ο"
+        ],
+        [
+          "τουαλέτα",
+          "τουαλέτα"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Συγγνώμη, πού είναι ο τουαλέτα;",
+        "Συγγνώμη, πού είσαι η τουαλέτα;"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "τουαλέτα",
+          "μητέρα",
+          "αδερφή"
+        ]
+      }
+    },
+    {
+      "id": "item-39",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Πού είναι το κλειδί μου;",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Πού",
+          "πού"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "το",
+          "ο"
+        ],
+        [
+          "κλειδί",
+          "κλειδί"
+        ],
+        [
+          "μου",
+          "μου"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "key"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πού είναι η κλειδί μου;",
+        "Πού είμαι το κλειδί μου;"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "κλειδί",
+          "τηλέφωνο",
+          "βιβλίο"
+        ]
+      }
+    },
+    {
+      "id": "item-40",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Το τηλέφωνό μου είναι εδώ.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Το",
+          "ο"
+        ],
+        [
+          "τηλέφωνό",
+          "τηλέφωνο"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "εδώ",
+          "εδώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Η τηλέφωνό μου είναι εδώ.",
+        "Το τηλέφωνό μου είσαι εδώ."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "εδώ",
+          "εκεί",
+          "πού"
+        ]
+      }
+    },
+    {
+      "id": "item-41",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "συγγνώμη"
+      ],
+      "text": "Συγγνώμη, πόσο κάνει;",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Συγγνώμη,"
+        ],
+        [
+          "πόσο"
+        ],
+        [
+          "κάνει"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much is it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Συγγνώμη, πόσο εγώ κάνει;",
+        "Συγγνώμη, πόσο εσύ κάνει;"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Συγγνώμη,",
+          "Ευχαριστώ,",
+          "Αντίο,"
+        ]
+      }
+    },
+    {
+      "id": "item-42",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Δύο καφέδες, παρακαλώ.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Δύο",
+          "δύο"
+        ],
+        [
+          "καφέδες,",
+          "καφές"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Δύο καφέ, παρακαλώ.",
+        "Έναν καφέδες, παρακαλώ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Δύο",
+          "Έναν",
+          "Ένα"
+        ]
+      }
+    },
+    {
+      "id": "item-43",
+      "topic": "out",
+      "concepts": [
+        "indefinite",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ένα βιβλίο, παρακαλώ.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Ένα",
+          "ένας"
+        ],
+        [
+          "βιβλίο,",
+          "βιβλίο"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Έναν βιβλίο, παρακαλώ.",
+        "Ένα βιβλία, παρακαλώ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ένα",
+          "Δύο",
+          "Τρία"
+        ]
+      }
+    },
+    {
+      "id": "item-44",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "plural",
+        "accusative"
+      ],
+      "text": "Έχω τρία βιβλία.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Έχω",
+          "έχω"
+        ],
+        [
+          "τρία",
+          "τρεις"
+        ],
+        [
+          "βιβλία",
+          "βιβλίο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Έχω τρία βιβλίο.",
+        "Εγώ έχεις τρία βιβλία."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "τρία",
+          "δύο",
+          "ένα"
+        ]
+      }
+    },
+    {
+      "id": "item-45",
+      "topic": "out",
+      "concepts": [
+        "den",
+        "present",
+        "pro-drop",
+        "plural"
+      ],
+      "text": "Δεν έχω χρήματα.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Δεν",
+          "δεν"
+        ],
+        [
+          "έχω",
+          "έχω"
+        ],
+        [
+          "χρήματα",
+          "χρήματα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Έχω δεν χρήματα.",
+        "Εγώ δεν έχεις χρήματα."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "χρήματα",
+          "βιβλία",
+          "κλειδιά"
+        ]
+      }
+    },
+    {
+      "id": "item-46",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "adjective"
+      ],
+      "text": "Μιλάω λίγα ελληνικά.",
+      "means": "I speak a little Greek.",
+      "words": [
+        [
+          "Μιλάω",
+          "μιλάω"
+        ],
+        [
+          "λίγα",
+          "λίγος"
+        ],
+        [
+          "ελληνικά",
+          "ελληνικά"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Greek"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ μιλάς λίγα ελληνικά.",
+        "Μιλάω λίγος ελληνικά."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ελληνικά",
+          "αγγλικά",
+          "χρήματα"
+        ]
+      }
+    },
+    {
+      "id": "item-47",
+      "topic": "people",
+      "concepts": [
+        "den",
+        "present",
+        "pro-drop"
+      ],
+      "text": "Δεν καταλαβαίνω.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Δεν",
+          "δεν"
+        ],
+        [
+          "καταλαβαίνω",
+          "καταλαβαίνω"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Καταλαβαίνω δεν.",
+        "Εγώ δεν καταλαβαίνεις."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "καταλαβαίνω",
+          "καταλαβαίνεις",
+          "μιλάω"
+        ]
+      }
+    },
+    {
+      "id": "item-48",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Εσύ καταλαβαίνεις;",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Εσύ",
+          "εσύ"
+        ],
+        [
+          "καταλαβαίνεις",
+          "καταλαβαίνω"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εσύ καταλαβαίνω;",
+        "Εγώ καταλαβαίνεις;"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "καταλαβαίνεις",
+          "καταλαβαίνω",
+          "μιλάς"
+        ]
+      }
+    },
+    {
+      "id": "item-49",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "indefinite",
+        "accusative"
+      ],
+      "text": "Θέλω έναν καφέ.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Θέλω",
+          "θέλω"
+        ],
+        [
+          "έναν",
+          "ένας"
+        ],
+        [
+          "καφέ",
+          "καφές"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Θέλω ένα καφέ.",
+        "Θέλω έναν καφές."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Θέλω",
+          "Έχω",
+          "Πίνω"
+        ]
+      }
+    },
+    {
+      "id": "item-50",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Θέλω νερό, παρακαλώ.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Θέλω",
+          "θέλω"
+        ],
+        [
+          "νερό,",
+          "νερό"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ θέλεις νερό, παρακαλώ.",
+        "Εγώ θέλει νερό, παρακαλώ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "νερό,",
+          "γάλα,",
+          "τσάι,"
+        ]
+      }
+    },
+    {
+      "id": "item-51",
+      "topic": "people",
+      "concepts": [
+        "na",
+        "present",
+        "pro-drop"
+      ],
+      "text": "Θέλω να μιλάω ελληνικά.",
+      "means": "I want to speak Greek.",
+      "words": [
+        [
+          "Θέλω",
+          "θέλω"
+        ],
+        [
+          "να",
+          "να"
+        ],
+        [
+          "μιλάω",
+          "μιλάω"
+        ],
+        [
+          "ελληνικά",
+          "ελληνικά"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "Greek"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Θέλω μιλάω ελληνικά.",
+        "Θέλω να εγώ μιλάς ελληνικά."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ελληνικά",
+          "αγγλικά",
+          "χρήματα"
+        ]
+      }
+    },
+    {
+      "id": "item-52",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present",
+        "pro-drop"
+      ],
+      "text": "Πού μένεις;",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Πού",
+          "πού"
+        ],
+        [
+          "μένεις",
+          "μένω"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πού εσύ μένω;",
+        "Πού εσύ μένει;"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "μένεις",
+          "μένω",
+          "μένει"
+        ]
+      }
+    },
+    {
+      "id": "item-53",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "possessive",
+        "present"
+      ],
+      "text": "Η μητέρα μου μένει εδώ.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Η",
+          "ο"
+        ],
+        [
+          "μητέρα",
+          "μητέρα"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "μένει",
+          "μένω"
+        ],
+        [
+          "εδώ",
+          "εδώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Η μητέρα μου μένω εδώ.",
+        "Η μητέρα μου μένεις εδώ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "μένει",
+          "μένω",
+          "μένεις"
+        ]
+      }
+    },
+    {
+      "id": "item-54",
+      "topic": "home",
+      "concepts": [
+        "demonstrative",
+        "article",
+        "adjective",
+        "present"
+      ],
+      "text": "Αυτό το σπίτι είναι μεγάλο.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Αυτό",
+          "αυτός"
+        ],
+        [
+          "το",
+          "ο"
+        ],
+        [
+          "σπίτι",
+          "σπίτι"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "μεγάλο",
+          "μεγάλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "the"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Αυτό το σπίτι είναι μεγάλος.",
+        "Αυτό ο σπίτι είναι μεγάλο."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "μεγάλο",
+          "μικρό",
+          "καλή"
+        ]
+      }
+    },
+    {
+      "id": "item-55",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "possessive",
+        "adjective",
+        "present"
+      ],
+      "text": "Το δωμάτιό μου είναι μικρό.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Το",
+          "ο"
+        ],
+        [
+          "δωμάτιό",
+          "δωμάτιο"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "μικρό",
+          "μικρός"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "room"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Το δωμάτιό μου είναι μικρός.",
+        "Η δωμάτιό μου είναι μικρό."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "μικρό",
+          "μεγάλο",
+          "καλός"
+        ]
+      }
+    },
+    {
+      "id": "item-56",
+      "topic": "home",
+      "concepts": [
+        "se",
+        "indefinite",
+        "adjective",
+        "present"
+      ],
+      "text": "Μένω σε ένα μικρό σπίτι.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Μένω",
+          "μένω"
+        ],
+        [
+          "σε",
+          "σε"
+        ],
+        [
+          "ένα",
+          "ένας"
+        ],
+        [
+          "μικρό",
+          "μικρός"
+        ],
+        [
+          "σπίτι",
+          "σπίτι"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a"
+        ],
+        [
+          "small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Μένω σε έναν μικρό σπίτι.",
+        "Μένω σε ένα μικρός σπίτι."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "μικρό",
+          "μεγάλο",
+          "καλή"
+        ]
+      }
+    },
+    {
+      "id": "item-57",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "pro-drop"
+      ],
+      "text": "Πού πας;",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Πού",
+          "πού"
+        ],
+        [
+          "πας",
+          "πηγαίνω"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πού εσύ πάω;",
+        "Πού εσύ πάει;"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "πας",
+          "πάω",
+          "πάει"
+        ]
+      }
+    },
+    {
+      "id": "item-58",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "se"
+      ],
+      "text": "Πάω στο σχολείο.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Πάω",
+          "πηγαίνω"
+        ],
+        [
+          "στο",
+          "σε"
+        ],
+        [
+          "σχολείο",
+          "σχολείο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πάω στην σχολείο.",
+        "Πάω σε το σχολείο."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "σχολείο",
+          "σπίτι",
+          "αυτοκίνητο"
+        ]
+      }
+    },
+    {
+      "id": "item-59",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "present",
+        "se",
+        "article"
+      ],
+      "text": "Η μητέρα μου πάει στην πόλη.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Η",
+          "ο"
+        ],
+        [
+          "μητέρα",
+          "μητέρα"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "πάει",
+          "πηγαίνω"
+        ],
+        [
+          "στην",
+          "σε"
+        ],
+        [
+          "πόλη",
+          "πόλη"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Η μητέρα μου πάω στην πόλη.",
+        "Η μητέρα μου πάει στο πόλη."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "πάει",
+          "πάω",
+          "πας"
+        ]
+      }
+    },
+    {
+      "id": "item-60",
+      "topic": "out",
+      "concepts": [
+        "demonstrative",
+        "article",
+        "adjective",
+        "present"
+      ],
+      "text": "Αυτό το αυτοκίνητο είναι μικρό.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Αυτό",
+          "αυτός"
+        ],
+        [
+          "το",
+          "ο"
+        ],
+        [
+          "αυτοκίνητο",
+          "αυτοκίνητο"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "μικρό",
+          "μικρός"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "the"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Αυτή το αυτοκίνητο είναι μικρό.",
+        "Αυτό το αυτοκίνητο είναι μικρός."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "αυτοκίνητο",
+          "σπίτι",
+          "σχολείο"
+        ]
+      }
+    },
+    {
+      "id": "item-61",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "indefinite",
+        "accusative"
+      ],
+      "text": "Έχω ένα αυτοκίνητο.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Έχω",
+          "έχω"
+        ],
+        [
+          "ένα",
+          "ένας"
+        ],
+        [
+          "αυτοκίνητο",
+          "αυτοκίνητο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Έχω έναν αυτοκίνητο.",
+        "Εγώ έχεις ένα αυτοκίνητο."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "αυτοκίνητο",
+          "βιβλίο",
+          "τηλέφωνο"
+        ]
+      }
+    },
+    {
+      "id": "item-62",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Ευχαριστώ. Τα λέμε αύριο!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Ευχαριστώ."
+        ],
+        [
+          "Τα"
+        ],
+        [
+          "λέμε"
+        ],
+        [
+          "αύριο"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ευχαριστώ. Εσύ τα λέμε αύριο!",
+        "Ευχαριστώ. Τα εγώ λέμε αύριο!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ευχαριστώ.",
+          "Παρακαλώ.",
+          "Συγγνώμη."
+        ]
+      }
+    },
+    {
+      "id": "item-63",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "text": "Δουλεύω σήμερα.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Δουλεύω",
+          "δουλεύω"
+        ],
+        [
+          "σήμερα",
+          "σήμερα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ δουλεύεις σήμερα.",
+        "Εγώ δουλεύει σήμερα."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "σήμερα",
+          "αύριο",
+          "τώρα"
+        ]
+      }
+    },
+    {
+      "id": "item-64",
+      "topic": "plans",
+      "concepts": [
+        "na",
+        "pro-drop"
+      ],
+      "text": "Πρέπει να πάω τώρα.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Πρέπει",
+          "πρέπει"
+        ],
+        [
+          "να",
+          "να"
+        ],
+        [
+          "πάω",
+          "πηγαίνω"
+        ],
+        [
+          "τώρα",
+          "τώρα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It is necessary"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πρέπει πάω τώρα.",
+        "Πρέπει να εγώ πας τώρα."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "τώρα",
+          "σήμερα",
+          "αύριο"
+        ]
+      }
+    },
+    {
+      "id": "item-65",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "se"
+      ],
+      "text": "Αύριο πάω στην πόλη.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Αύριο",
+          "αύριο"
+        ],
+        [
+          "πάω",
+          "πηγαίνω"
+        ],
+        [
+          "στην",
+          "σε"
+        ],
+        [
+          "πόλη",
+          "πόλη"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Αύριο πάω στο πόλη.",
+        "Αύριο εγώ πας στην πόλη."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Αύριο",
+          "Σήμερα",
+          "Τώρα"
+        ]
+      }
+    },
+    {
+      "id": "item-66",
+      "topic": "plans",
+      "concepts": [
+        "den",
+        "na",
+        "pro-drop"
+      ],
+      "text": "Δεν μπορώ να πάω σήμερα.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Δεν",
+          "δεν"
+        ],
+        [
+          "μπορώ",
+          "μπορώ"
+        ],
+        [
+          "να",
+          "να"
+        ],
+        [
+          "πάω",
+          "πηγαίνω"
+        ],
+        [
+          "σήμερα",
+          "σήμερα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Δεν μπορώ πάω σήμερα.",
+        "Μπορώ δεν να πάω σήμερα."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "μπορώ",
+          "θέλω",
+          "πρέπει"
+        ]
+      }
+    },
+    {
+      "id": "item-67",
+      "topic": "plans",
+      "concepts": [
+        "na",
+        "aspect",
+        "pro-drop"
+      ],
+      "text": "Πρέπει να δουλέψω αύριο.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Πρέπει",
+          "πρέπει"
+        ],
+        [
+          "να",
+          "να"
+        ],
+        [
+          "δουλέψω",
+          "δουλεύω"
+        ],
+        [
+          "αύριο",
+          "αύριο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It is necessary"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Πρέπει δουλέψω αύριο.",
+        "Πρέπει να εγώ δουλέψεις αύριο."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "αύριο",
+          "σήμερα",
+          "τώρα"
+        ]
+      }
+    },
+    {
+      "id": "ti-kaneis",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "pro-drop"
+      ],
+      "chunks": [
+        "τι-κάνεις",
+        "γεια-σου"
+      ],
+      "text": "Γεια σου, τι κάνεις;",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Γεια"
+        ],
+        [
+          "σου,"
+        ],
+        [
+          "τι"
+        ],
+        [
+          "κάνεις"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "what"
+        ],
+        [
+          "are you doing"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Γεια σου, τι κάνει εσύ;"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "κάνεις",
+          "κάνω",
+          "κάνουν"
+        ]
+      }
+    },
+    {
+      "id": "pos-se-lene",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "clitic"
+      ],
+      "chunks": [
+        "πώς-σε-λένε"
+      ],
+      "text": "Πώς σε λένε;",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Πώς"
+        ],
+        [
+          "σε"
+        ],
+        [
+          "λένε"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "they call"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "σε"
+      ],
+      "wrong": [
+        "Πώς σου λένε;",
+        "Πώς εσύ λένε;"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "σε",
+          "σου",
+          "εσύ"
+        ]
+      }
+    },
+    {
+      "id": "milas-agglika",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "pro-drop",
+        "present"
+      ],
+      "text": "Μιλάς αγγλικά;",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Μιλάς",
+          "μιλάω"
+        ],
+        [
+          "αγγλικά",
+          "αγγλικά"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Μιλάς αγγλικός;",
+        "Μιλάει εσύ αγγλικά;"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Μιλάς",
+          "Μιλάω",
+          "Μιλάει"
+        ]
+      }
+    },
+    {
+      "id": "aderfos-mou-daskalos",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article",
+        "indefinite"
+      ],
+      "text": "Ο αδερφός μου είναι δάσκαλος.",
+      "means": "My brother is a teacher.",
+      "words": [
+        [
+          "Ο",
+          "ο"
+        ],
+        [
+          "αδερφός",
+          "αδερφός"
+        ],
+        [
+          "μου",
+          "μου"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "δάσκαλος",
+          "δάσκαλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The brother"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "μου"
+      ],
+      "wrong": [
+        "Ο μου αδερφός είναι δάσκαλος.",
+        "Μου ο αδερφός είναι δάσκαλος."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "μου",
+          "εμένα",
+          "εγώ"
+        ]
+      }
+    },
+    {
+      "id": "aderfi-mou-thessaloniki",
+      "topic": "people",
+      "concepts": [
+        "se",
+        "possessive"
+      ],
+      "text": "Η αδερφή μου μένει στη Θεσσαλονίκη.",
+      "means": "My sister lives in Thessaloniki.",
+      "words": [
+        [
+          "Η"
+        ],
+        [
+          "αδερφή",
+          "αδερφή"
+        ],
+        [
+          "μου"
+        ],
+        [
+          "μένει",
+          "μένω"
+        ],
+        [
+          "στη"
+        ],
+        [
+          "Θεσσαλονίκη"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The sister"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "lives"
+        ],
+        [
+          "in Thessaloniki"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "μου"
+      ],
+      "wrong": [
+        "Η αδερφή μου μένει σε Θεσσαλονίκη.",
+        "Η αδερφή μου μένει η Θεσσαλονίκη."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "στη",
+          "σε",
+          "η"
+        ]
+      }
+    },
+    {
+      "id": "aftokinito-tou-patera",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "Αυτό είναι το αυτοκίνητο του πατέρα μου.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Αυτό"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "το"
+        ],
+        [
+          "αυτοκίνητο",
+          "αυτοκίνητο"
+        ],
+        [
+          "του"
+        ],
+        [
+          "πατέρα",
+          "πατέρας"
+        ],
+        [
+          "μου"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "the car"
+        ],
+        [
+          "of the father",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "του",
+        "πατέρα",
+        "μου"
+      ],
+      "wrong": [
+        "Αυτό είναι το αυτοκίνητο ο πατέρας μου.",
+        "Αυτό είναι το αυτοκίνητο του πατέρας μου."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "πατέρα",
+          "πατέρας",
+          "πατέρες"
+        ]
+      }
+    },
+    {
+      "id": "den-xero-pou",
+      "topic": "people",
+      "concepts": [
+        "den",
+        "pro-drop"
+      ],
+      "text": "Δεν ξέρω πού μένει.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Δεν"
+        ],
+        [
+          "ξέρω",
+          "ξέρω"
+        ],
+        [
+          "πού"
+        ],
+        [
+          "μένει",
+          "μένω"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ξέρω δεν πού μένει.",
+        "Μη ξέρω πού μένει."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ξέρω",
+          "ξέρεις",
+          "ξέρει"
+        ]
+      }
+    },
+    {
+      "id": "eimai-foititis",
+      "topic": "people",
+      "concepts": [
+        "pro-drop",
+        "present",
+        "indefinite"
+      ],
+      "text": "Είμαι φοιτητής.",
+      "means": "I'm a student.",
+      "words": [
+        [
+          "Είμαι",
+          "είμαι"
+        ],
+        [
+          "φοιτητής",
+          "φοιτητής"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Είμαι φοιτητή.",
+        "Είναι φοιτητής εγώ."
+      ],
+      "otherGender": {
+        "text": "Είμαι φοιτήτρια.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "φοιτητής",
+          "φοιτητή",
+          "φοιτητές"
+        ]
+      }
+    },
+    {
+      "id": "mou-aresei-tainia",
+      "topic": "people",
+      "concepts": [
+        "like",
+        "clitic",
+        "demonstrative"
+      ],
+      "text": "Μου αρέσει αυτή η ταινία.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Μου"
+        ],
+        [
+          "αρέσει",
+          "αρέσω"
+        ],
+        [
+          "αυτή"
+        ],
+        [
+          "η"
+        ],
+        [
+          "ταινία",
+          "ταινία"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "pleases"
+        ],
+        [
+          "this movie"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εγώ αρέσει αυτή η ταινία.",
+        "Μου αρέσει αυτή ταινία."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "αρέσει",
+          "αρέσω",
+          "αρέσουν"
+        ]
+      }
+    },
+    {
+      "id": "se-agapo",
+      "topic": "people",
+      "concepts": [
+        "clitic",
+        "pro-drop"
+      ],
+      "text": "Σε αγαπώ.",
+      "means": "I love you.",
+      "words": [
+        [
+          "Σε"
+        ],
+        [
+          "αγαπώ",
+          "αγαπώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You",
+          true
+        ],
+        [
+          "I love"
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Σε"
+      ],
+      "wrong": [
+        "Αγαπώ σε.",
+        "Σου αγαπώ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "αγαπώ",
+          "αγαπάς",
+          "αγαπάει"
+        ]
+      }
+    },
+    {
+      "id": "ton-xero",
+      "topic": "people",
+      "concepts": [
+        "clitic",
+        "pro-drop"
+      ],
+      "text": "Τον ξέρω.",
+      "means": "I know him.",
+      "words": [
+        [
+          "Τον"
+        ],
+        [
+          "ξέρω",
+          "ξέρω"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Him",
+          true
+        ],
+        [
+          "I know"
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Τον"
+      ],
+      "wrong": [
+        "Ξέρω τον.",
+        "Αυτός ξέρω."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Τον",
+          "Του",
+          "Αυτός"
+        ]
+      }
+    },
+    {
+      "id": "auto-to-spiti",
+      "topic": "home",
+      "concepts": [
+        "demonstrative",
+        "adjective"
+      ],
+      "text": "Αυτό το σπίτι είναι πολύ μεγάλο.",
+      "means": "This house is very big.",
+      "words": [
+        [
+          "Αυτό"
+        ],
+        [
+          "το"
+        ],
+        [
+          "σπίτι",
+          "σπίτι"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "πολύ"
+        ],
+        [
+          "μεγάλο",
+          "μεγάλος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "very big"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Αυτό σπίτι είναι πολύ μεγάλο.",
+        "Αυτός το σπίτι είναι πολύ μεγάλο."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "το",
+          "ο",
+          "η"
+        ]
+      }
+    },
+    {
+      "id": "echo-chasei-ta-kleidia",
+      "topic": "home",
+      "concepts": [
+        "perfect",
+        "possessive",
+        "plural"
+      ],
+      "text": "Έχω χάσει τα κλειδιά μου.",
+      "means": "I've lost my keys.",
+      "words": [
+        [
+          "Έχω",
+          "έχω"
+        ],
+        [
+          "χάσει",
+          "χάνω"
+        ],
+        [
+          "τα"
+        ],
+        [
+          "κλειδιά",
+          "κλειδί"
+        ],
+        [
+          "μου"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "lost"
+        ],
+        [
+          "the keys"
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "μου"
+      ],
+      "wrong": [
+        "Έχω χάσω τα κλειδιά μου.",
+        "Έχω χάσει μου τα κλειδιά."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "χάσει",
+          "χάνω",
+          "έχασα"
+        ]
+      }
+    },
+    {
+      "id": "mikro-diamerisma",
+      "topic": "home",
+      "concepts": [
+        "se",
+        "adjective",
+        "pro-drop",
+        "indefinite"
+      ],
+      "text": "Μένω σε ένα μικρό διαμέρισμα.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Μένω",
+          "μένω"
+        ],
+        [
+          "σε"
+        ],
+        [
+          "ένα"
+        ],
+        [
+          "μικρό",
+          "μικρός"
+        ],
+        [
+          "διαμέρισμα",
+          "διαμέρισμα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Μένω σε ένα μικρός διαμέρισμα.",
+        "Μένω ένα μικρό διαμέρισμα."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "μικρό",
+          "μικρός",
+          "μικρή"
+        ]
+      }
+    },
+    {
+      "id": "vivlio-sto-trapezi",
+      "topic": "home",
+      "concepts": [
+        "se",
+        "article",
+        "indefinite"
+      ],
+      "text": "Στο τραπέζι υπάρχει ένα βιβλίο.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Στο"
+        ],
+        [
+          "τραπέζι",
+          "τραπέζι"
+        ],
+        [
+          "υπάρχει",
+          "υπάρχω"
+        ],
+        [
+          "ένα"
+        ],
+        [
+          "βιβλίο",
+          "βιβλίο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Στο τραπέζι υπάρχουν ένα βιβλίο.",
+        "Στο τραπέζι υπάρχει ένας βιβλίο."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "υπάρχει",
+          "υπάρχω",
+          "υπάρχουν"
+        ]
+      }
+    },
+    {
+      "id": "den-echoume-gala",
+      "topic": "home",
+      "concepts": [
+        "den",
+        "pro-drop"
+      ],
+      "text": "Δεν έχουμε γάλα.",
+      "means": "We don't have any milk.",
+      "words": [
+        [
+          "Δεν"
+        ],
+        [
+          "έχουμε",
+          "έχω"
+        ],
+        [
+          "γάλα",
+          "γάλα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We don't have"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Έχουμε δεν γάλα.",
+        "Δεν έχουμε ο γάλα."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "έχουμε",
+          "έχω",
+          "έχουν"
+        ]
+      }
+    },
+    {
+      "id": "kleiseis-to-parathyro",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "na",
+        "aspect"
+      ],
+      "text": "Μπορείς να κλείσεις το παράθυρο;",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Μπορείς",
+          "μπορώ"
+        ],
+        [
+          "να"
+        ],
+        [
+          "κλείσεις",
+          "κλείνω"
+        ],
+        [
+          "το"
+        ],
+        [
+          "παράθυρο",
+          "παράθυρο"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Can you"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Μπορείς κλείσεις το παράθυρο;",
+        "Μπορείς να κλείσεις ο παράθυρο;"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "κλείσεις",
+          "κλείσω",
+          "έκλεισες"
+        ]
+      }
+    },
+    {
+      "id": "megali-kouzina",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "adjective"
+      ],
+      "text": "Το σπίτι μας έχει μεγάλη κουζίνα.",
+      "means": "Our house has a big kitchen.",
+      "words": [
+        [
+          "Το"
+        ],
+        [
+          "σπίτι",
+          "σπίτι"
+        ],
+        [
+          "μας"
+        ],
+        [
+          "έχει",
+          "έχω"
+        ],
+        [
+          "μεγάλη",
+          "μεγάλος"
+        ],
+        [
+          "κουζίνα",
+          "κουζίνα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The house"
+        ],
+        [
+          "our",
+          true
+        ],
+        [
+          "has"
+        ],
+        [
+          "a big kitchen"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "μας"
+      ],
+      "wrong": [
+        "Το σπίτι μας έχει μεγάλο κουζίνα.",
+        "Το μας σπίτι έχει μεγάλη κουζίνα."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "μεγάλη",
+          "μεγάλος",
+          "μεγάλο"
+        ]
+      }
+    },
+    {
+      "id": "gyrizo-spiti",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "pro-drop"
+      ],
+      "text": "Όταν γυρίζω σπίτι, μαγειρεύω.",
+      "means": "When I get home, I cook.",
+      "words": [
+        [
+          "Όταν"
+        ],
+        [
+          "γυρίζω",
+          "γυρίζω"
+        ],
+        [
+          "σπίτι,",
+          "σπίτι"
+        ],
+        [
+          "μαγειρεύω",
+          "μαγειρεύω"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I come back"
+        ],
+        [
+          "home,"
+        ],
+        [
+          "I cook"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Όταν γυρίζω σπίτι, μαγειρέψω."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "γυρίζω",
+          "γυρίζεις",
+          "γύρισε"
+        ]
+      }
+    },
+    {
+      "id": "kleise-tin-porta",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "accusative"
+      ],
+      "chunks": [
+        "σε-παρακαλώ"
+      ],
+      "text": "Κλείσε την πόρτα, σε παρακαλώ.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Κλείσε",
+          "κλείνω"
+        ],
+        [
+          "την"
+        ],
+        [
+          "πόρτα,",
+          "πόρτα"
+        ],
+        [
+          "σε"
+        ],
+        [
+          "παρακαλώ",
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Κλείσε η πόρτα, σε παρακαλώ.",
+        "Κλείσε το πόρτα, σε παρακαλώ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "την",
+          "η",
+          "το"
+        ]
+      }
+    },
+    {
+      "id": "pou-einai-ta-kleidia",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "possessive",
+        "plural"
+      ],
+      "text": "Πού είναι τα κλειδιά μου;",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Πού",
+          "πού"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "τα",
+          "ο"
+        ],
+        [
+          "κλειδιά",
+          "κλειδί"
+        ],
+        [
+          "μου",
+          "μου"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "the keys"
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "μου"
+      ],
+      "wrong": [
+        "Πού είναι μου τα κλειδιά;",
+        "Πού είναι τα μου κλειδιά;"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "κλειδιά",
+          "κλειδί",
+          "κλειδιού"
+        ]
+      }
+    },
+    {
+      "id": "ela-edo",
+      "topic": "home",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Έλα εδώ!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Έλα",
+          "έρχομαι"
+        ],
+        [
+          "εδώ",
+          "εδώ"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Να έλα εδώ!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "εδώ",
+          "εκεί",
+          "πού"
+        ]
+      }
+    },
+    {
+      "id": "echeis-fagei",
+      "topic": "food",
+      "concepts": [
+        "perfect",
+        "question"
+      ],
+      "text": "Έχεις φάει;",
+      "means": "Have you eaten?",
+      "words": [
+        [
+          "Έχεις",
+          "έχω"
+        ],
+        [
+          "φάει",
+          "τρώω"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Have you"
+        ],
+        [
+          "eaten"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Έχεις φας;",
+        "Έχει φάει εσύ;"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "φάει",
+          "φας",
+          "έφαγες"
+        ]
+      }
+    },
+    {
+      "id": "kafe-xoris-zachari",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "article",
+        "possessive"
+      ],
+      "text": "Πίνω τον καφέ μου χωρίς ζάχαρη.",
+      "means": "I take my coffee without sugar.",
+      "words": [
+        [
+          "Πίνω",
+          "πίνω"
+        ],
+        [
+          "τον"
+        ],
+        [
+          "καφέ",
+          "καφές"
+        ],
+        [
+          "μου"
+        ],
+        [
+          "χωρίς"
+        ],
+        [
+          "ζάχαρη",
+          "ζάχαρη"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "the coffee"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "μου"
+      ],
+      "wrong": [
+        "Πίνω ο καφές μου χωρίς ζάχαρη.",
+        "Πίνω τον καφές μου χωρίς ζάχαρη."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "καφέ",
+          "καφές",
+          "καφέδες"
+        ]
+      }
+    },
+    {
+      "id": "den-pino-kafe",
+      "topic": "food",
+      "concepts": [
+        "den",
+        "accusative"
+      ],
+      "text": "Δεν πίνω καφέ.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Δεν"
+        ],
+        [
+          "πίνω",
+          "πίνω"
+        ],
+        [
+          "καφέ",
+          "καφές"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Πίνω δεν καφέ.",
+        "Μην πίνω καφέ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Δεν",
+          "Μην",
+          "Όχι"
+        ]
+      }
+    },
+    {
+      "id": "potiri-nero",
+      "topic": "food",
+      "concepts": [
+        "indefinite"
+      ],
+      "chunks": [
+        "θα-ήθελα"
+      ],
+      "text": "Θα ήθελα ένα ποτήρι νερό, παρακαλώ.",
+      "means": "I'd like a glass of water, please.",
+      "words": [
+        [
+          "Θα"
+        ],
+        [
+          "ήθελα",
+          "θέλω"
+        ],
+        [
+          "ένα"
+        ],
+        [
+          "ποτήρι",
+          "ποτήρι"
+        ],
+        [
+          "νερό,",
+          "νερό"
+        ],
+        [
+          "παρακαλώ",
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I would like"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "water,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Θα ήθελα ένας ποτήρι νερό, παρακαλώ.",
+        "Θα ήθελα ένα ποτήρια νερό, παρακαλώ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ποτήρι",
+          "ποτήρια",
+          "ποτηριού"
+        ]
+      }
+    },
+    {
+      "id": "thelo-na-fao",
+      "topic": "food",
+      "concepts": [
+        "na",
+        "aspect"
+      ],
+      "text": "Θέλω να φάω κάτι γλυκό.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Θέλω",
+          "θέλω"
+        ],
+        [
+          "να"
+        ],
+        [
+          "φάω",
+          "τρώω"
+        ],
+        [
+          "κάτι"
+        ],
+        [
+          "γλυκό",
+          "γλυκός"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Θέλω φάω κάτι γλυκό.",
+        "Θέλω να φάω κάτι γλυκός."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "φάω",
+          "έφαγα",
+          "φαγητό"
+        ]
+      }
+    },
+    {
+      "id": "fagame-pitsa",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "pro-drop",
+        "aspect"
+      ],
+      "text": "Χτες φάγαμε πίτσα.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Χτες",
+          "χτες"
+        ],
+        [
+          "φάγαμε",
+          "τρώω"
+        ],
+        [
+          "πίτσα",
+          "πίτσα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Χτες φάμε πίτσα.",
+        "Χτες φάγαμε η πίτσα."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "φάγαμε",
+          "φάγατε",
+          "φάμε"
+        ]
+      }
+    },
+    {
+      "id": "gala-sto-psygeio",
+      "topic": "food",
+      "concepts": [
+        "se",
+        "article"
+      ],
+      "text": "Το γάλα είναι στο ψυγείο.",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "Το"
+        ],
+        [
+          "γάλα",
+          "γάλα"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "στο"
+        ],
+        [
+          "ψυγείο",
+          "ψυγείο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "is"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Το γάλα είναι στον ψυγείο.",
+        "Το γάλα είναι το ψυγείο."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "στο",
+          "στον",
+          "το"
+        ]
+      }
+    },
+    {
+      "id": "mitera-mageirevei",
+      "topic": "food",
+      "concepts": [
+        "possessive",
+        "present"
+      ],
+      "text": "Η μητέρα μου μαγειρεύει πολύ ωραία.",
+      "means": "My mother cooks really well.",
+      "words": [
+        [
+          "Η"
+        ],
+        [
+          "μητέρα",
+          "μητέρα"
+        ],
+        [
+          "μου"
+        ],
+        [
+          "μαγειρεύει",
+          "μαγειρεύω"
+        ],
+        [
+          "πολύ"
+        ],
+        [
+          "ωραία",
+          "ωραία"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The mother"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "cooks"
+        ],
+        [
+          "really well"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "μου"
+      ],
+      "wrong": [
+        "Η μου μητέρα μαγειρεύει πολύ ωραία.",
+        "Η μητέρα μου μαγειρεύω πολύ ωραία."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "μαγειρεύει",
+          "μαγειρεύω",
+          "μαγειρεύουν"
+        ]
+      }
+    },
+    {
+      "id": "logariasmo-parakalo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "article"
+      ],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "Τον λογαριασμό, παρακαλώ.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Τον"
+        ],
+        [
+          "λογαριασμό,"
+        ],
+        [
+          "παρακαλώ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Τη λογαριασμό, παρακαλώ.",
+        "Τον λογαριασμός, παρακαλώ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Τον",
+          "Ο",
+          "Τη"
+        ]
+      }
+    },
+    {
+      "id": "sou-aresei-to-fagito",
+      "topic": "food",
+      "concepts": [
+        "like",
+        "question",
+        "adjective",
+        "article"
+      ],
+      "text": "Σου αρέσει το ελληνικό φαγητό;",
+      "means": "Do you like Greek food?",
+      "words": [
+        [
+          "Σου"
+        ],
+        [
+          "αρέσει",
+          "αρέσω"
+        ],
+        [
+          "το"
+        ],
+        [
+          "ελληνικό",
+          "ελληνικός"
+        ],
+        [
+          "φαγητό",
+          "φαγητό"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "To you"
+        ],
+        [
+          "pleases"
+        ],
+        [
+          "the Greek food"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Εσύ αρέσει το ελληνικό φαγητό;",
+        "Σου αρέσεις το ελληνικό φαγητό;"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "αρέσει",
+          "αρέσεις",
+          "αρέσω"
+        ]
+      }
+    },
+    {
+      "id": "mou-aresoun-ta-zoa",
+      "topic": "people",
+      "concepts": [
+        "like",
+        "article",
+        "plural"
+      ],
+      "text": "Μου αρέσουν τα ζώα.",
+      "means": "I like animals.",
+      "words": [
+        [
+          "Μου"
+        ],
+        [
+          "αρέσουν",
+          "αρέσω"
+        ],
+        [
+          "τα"
+        ],
+        [
+          "ζώα",
+          "ζώο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "please"
+        ],
+        [
+          "the animals"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Μου αρέσει τα ζώα.",
+        "Εγώ αρέσουν τα ζώα."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "αρέσουν",
+          "αρέσει",
+          "αρέσω"
+        ]
+      }
+    },
+    {
+      "id": "auti-tin-blouza",
+      "topic": "out",
+      "concepts": [
+        "demonstrative",
+        "accusative"
+      ],
+      "text": "Θέλω αυτή την μπλούζα.",
+      "means": "I want this top.",
+      "words": [
+        [
+          "Θέλω",
+          "θέλω"
+        ],
+        [
+          "αυτή"
+        ],
+        [
+          "την"
+        ],
+        [
+          "μπλούζα",
+          "μπλούζα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "this top"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Θέλω αυτή μπλούζα.",
+        "Θέλω αυτή η μπλούζα."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "την",
+          "η",
+          "το"
+        ]
+      }
+    },
+    {
+      "id": "pou-einai-o-stathmos",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "article"
+      ],
+      "chunks": [
+        "συγγνώμη"
+      ],
+      "text": "Συγγνώμη, πού είναι ο σταθμός;",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Συγγνώμη,"
+        ],
+        [
+          "πού",
+          "πού"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "ο",
+          "ο"
+        ],
+        [
+          "σταθμός",
+          "σταθμός"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Συγγνώμη, πού είναι η σταθμός;",
+        "Συγγνώμη, πού είναι τον σταθμό;"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ο",
+          "η",
+          "το"
+        ]
+      }
+    },
+    {
+      "id": "pao-sto-souper-market",
+      "topic": "out",
+      "concepts": [
+        "se"
+      ],
+      "text": "Πάω στο σούπερ μάρκετ για ψωμί.",
+      "means": "I'm going to the supermarket for bread.",
+      "words": [
+        [
+          "Πάω",
+          "πηγαίνω"
+        ],
+        [
+          "στο"
+        ],
+        [
+          "σούπερ"
+        ],
+        [
+          "μάρκετ"
+        ],
+        [
+          "για"
+        ],
+        [
+          "ψωμί",
+          "ψωμί"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the supermarket"
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Πάω το σούπερ μάρκετ για ψωμί.",
+        "Πάω στη σούπερ μάρκετ για ψωμί."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "στο",
+          "το",
+          "στη"
+        ]
+      }
+    },
+    {
+      "id": "me-to-leoforeio",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "se",
+        "aspect"
+      ],
+      "text": "Αύριο θα πάω στη δουλειά με το λεωφορείο.",
+      "means": "Tomorrow I'll take the bus to work.",
+      "words": [
+        [
+          "Αύριο",
+          "αύριο"
+        ],
+        [
+          "θα"
+        ],
+        [
+          "πάω",
+          "πηγαίνω"
+        ],
+        [
+          "στη"
+        ],
+        [
+          "δουλειά",
+          "δουλειά"
+        ],
+        [
+          "με"
+        ],
+        [
+          "το"
+        ],
+        [
+          "λεωφορείο",
+          "λεωφορείο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I will go"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Αύριο θα πάω στη δουλειά με ο λεωφορείο.",
+        "Αύριο θα πήγα στη δουλειά με το λεωφορείο."
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "λεωφορείο",
+          "λεωφορεία",
+          "λεωφορείου"
+        ]
+      }
+    },
+    {
+      "id": "agorasa-mpoufan",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "adjective",
+        "indefinite",
+        "aspect"
+      ],
+      "text": "Χτες αγόρασα ένα καινούργιο μπουφάν.",
+      "means": "Yesterday I bought a new jacket.",
+      "words": [
+        [
+          "Χτες",
+          "χτες"
+        ],
+        [
+          "αγόρασα",
+          "αγοράζω"
+        ],
+        [
+          "ένα"
+        ],
+        [
+          "καινούργιο",
+          "καινούργιος"
+        ],
+        [
+          "μπουφάν",
+          "μπουφάν"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I bought"
+        ],
+        [
+          "a new jacket"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Χτες αγοράσω ένα καινούργιο μπουφάν.",
+        "Χτες αγόρασα ένα καινούργιος μπουφάν."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "αγόρασα",
+          "αγόρασε",
+          "αγοράσω"
+        ]
+      }
+    },
+    {
+      "id": "to-treno-argise",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "article",
+        "plural",
+        "aspect"
+      ],
+      "text": "Το τρένο άργησε δέκα λεπτά.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Το"
+        ],
+        [
+          "τρένο",
+          "τρένο"
+        ],
+        [
+          "άργησε",
+          "αργώ"
+        ],
+        [
+          "δέκα"
+        ],
+        [
+          "λεπτά",
+          "λεπτό"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was late"
+        ],
+        [
+          "ten minutes",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "δέκα",
+        "λεπτά"
+      ],
+      "wrong": [
+        "Το τρένο άργησε δέκα λεπτό.",
+        "Ο τρένο άργησε δέκα λεπτά."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "άργησε",
+          "αργεί",
+          "αργήσει"
+        ]
+      }
+    },
+    {
+      "id": "den-echo-pai-pote",
+      "topic": "out",
+      "concepts": [
+        "den",
+        "se",
+        "perfect"
+      ],
+      "text": "Δεν έχω πάει ποτέ στην Ελλάδα.",
+      "means": "I've never been to Greece.",
+      "words": [
+        [
+          "Δεν"
+        ],
+        [
+          "έχω",
+          "έχω"
+        ],
+        [
+          "πάει",
+          "πηγαίνω"
+        ],
+        [
+          "ποτέ",
+          "ποτέ"
+        ],
+        [
+          "στην"
+        ],
+        [
+          "Ελλάδα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "I have"
+        ],
+        [
+          "gone"
+        ],
+        [
+          "ever",
+          true
+        ],
+        [
+          "to Greece"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "moved": [
+        "Δεν",
+        "ποτέ"
+      ],
+      "wrong": [
+        "Έχω πάει ποτέ στην Ελλάδα.",
+        "Δεν έχω πάει ποτέ στη Ελλάδα."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ποτέ",
+          "πότε",
+          "πάντα"
+        ]
+      }
+    },
+    {
+      "id": "kainourgia-papoutsia",
+      "topic": "out",
+      "concepts": [
+        "adjective",
+        "article",
+        "plural"
+      ],
+      "text": "Τα καινούργια παπούτσια είναι πολύ μικρά.",
+      "means": "The new shoes are very small.",
+      "words": [
+        [
+          "Τα"
+        ],
+        [
+          "καινούργια",
+          "καινούργιος"
+        ],
+        [
+          "παπούτσια",
+          "παπούτσι"
+        ],
+        [
+          "είναι",
+          "είμαι"
+        ],
+        [
+          "πολύ"
+        ],
+        [
+          "μικρά",
+          "μικρός"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The new shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "very small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Τα καινούργια παπούτσια είναι πολύ μικρός.",
+        "Τα καινούργιος παπούτσια είναι πολύ μικρά."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "μικρά",
+          "μικρός",
+          "μικρή"
+        ]
+      }
+    },
+    {
+      "id": "na-paroume-taxi",
+      "topic": "out",
+      "concepts": [
+        "na",
+        "if",
+        "aspect"
+      ],
+      "text": "Αν θέλεις, μπορούμε να πάρουμε ταξί.",
+      "means": "If you want, we can take a taxi.",
+      "words": [
+        [
+          "Αν"
+        ],
+        [
+          "θέλεις,",
+          "θέλω"
+        ],
+        [
+          "μπορούμε",
+          "μπορώ"
+        ],
+        [
+          "να"
+        ],
+        [
+          "πάρουμε",
+          "παίρνω"
+        ],
+        [
+          "ταξί",
+          "ταξί"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you want,"
+        ],
+        [
+          "we can"
+        ],
+        [
+          "take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Αν θέλεις, μπορούμε πάρουμε ταξί.",
+        "Αν θέλεις, μπορούμε να πήραμε ταξί."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "πάρουμε",
+          "πήραμε",
+          "πάρει"
+        ]
+      }
+    },
+    {
+      "id": "an-theleis-ela",
+      "topic": "plans",
+      "concepts": [
+        "if",
+        "imperative"
+      ],
+      "text": "Αν θέλεις, έλα μαζί μας.",
+      "means": "If you want, come with us.",
+      "words": [
+        [
+          "Αν"
+        ],
+        [
+          "θέλεις,",
+          "θέλω"
+        ],
+        [
+          "έλα",
+          "έρχομαι"
+        ],
+        [
+          "μαζί"
+        ],
+        [
+          "μας"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you want,"
+        ],
+        [
+          "come"
+        ],
+        [
+          "with us"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Αν θέλεις, έλα μαζί εμείς."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "έλα",
+          "έρχομαι",
+          "ήρθα"
+        ]
+      }
+    },
+    {
+      "id": "vrechei-poly",
+      "topic": "plans",
+      "concepts": [
+        "weather",
+        "present"
+      ],
+      "text": "Βρέχει πολύ σήμερα.",
+      "means": "It's raining a lot today.",
+      "words": [
+        [
+          "Βρέχει",
+          "βρέχω"
+        ],
+        [
+          "πολύ"
+        ],
+        [
+          "σήμερα",
+          "σήμερα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It's raining"
+        ],
+        [
+          "a lot"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Βροχή πολύ σήμερα.",
+        "Βρέχουν πολύ σήμερα."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Βρέχει",
+          "Βροχή",
+          "Βρέχουν"
+        ]
+      }
+    },
+    {
+      "id": "pame-sti-giagia",
+      "topic": "plans",
+      "concepts": [
+        "se",
+        "accusative"
+      ],
+      "text": "Το Σάββατο πάμε στη γιαγιά.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "Το"
+        ],
+        [
+          "Σάββατο"
+        ],
+        [
+          "πάμε",
+          "πηγαίνω"
+        ],
+        [
+          "στη"
+        ],
+        [
+          "γιαγιά",
+          "γιαγιά"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Το Σάββατο πάμε σε γιαγιά.",
+        "Το Σάββατο πάμε η γιαγιά."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "στη",
+          "σε",
+          "η"
+        ]
+      }
+    },
+    {
+      "id": "avrio-tha-vrechei",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "weather",
+        "aspect"
+      ],
+      "text": "Αύριο θα βρέξει.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Αύριο",
+          "αύριο"
+        ],
+        [
+          "θα"
+        ],
+        [
+          "βρέξει",
+          "βρέχω"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "it will rain"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Αύριο θα βροχή.",
+        "Αύριο βρέξει θα."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "βρέξει",
+          "βροχή",
+          "βρεγμένος"
+        ]
+      }
+    },
+    {
+      "id": "tha-se-paro-tilefono",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "clitic",
+        "aspect"
+      ],
+      "chunks": [
+        "παίρνω-τηλέφωνο"
+      ],
+      "text": "Θα σε πάρω τηλέφωνο αύριο.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Θα"
+        ],
+        [
+          "σε"
+        ],
+        [
+          "πάρω",
+          "παίρνω"
+        ],
+        [
+          "τηλέφωνο",
+          "τηλέφωνο"
+        ],
+        [
+          "αύριο",
+          "αύριο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'll"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "call"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "σε"
+      ],
+      "wrong": [
+        "Θα πάρω σε τηλέφωνο αύριο.",
+        "Θα εσύ πάρω τηλέφωνο αύριο."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "σε",
+          "εσύ",
+          "σένα"
+        ]
+      }
+    },
+    {
+      "id": "prepei-na-fygo",
+      "topic": "plans",
+      "concepts": [
+        "na",
+        "aspect"
+      ],
+      "text": "Πρέπει να φύγω τώρα.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Πρέπει",
+          "πρέπει"
+        ],
+        [
+          "να"
+        ],
+        [
+          "φύγω",
+          "φεύγω"
+        ],
+        [
+          "τώρα",
+          "τώρα"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I must"
+        ],
+        [
+          "leave"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Πρέπω να φύγω τώρα.",
+        "Πρέπει φύγω τώρα."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "φύγω",
+          "έφυγα",
+          "φυγή"
+        ]
+      }
+    },
+    {
+      "id": "tha-ertheis-sinema",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "question",
+        "se",
+        "aspect"
+      ],
+      "text": "Θα έρθεις μαζί μας στο σινεμά;",
+      "means": "Will you come to the movies with us?",
+      "words": [
+        [
+          "Θα"
+        ],
+        [
+          "έρθεις",
+          "έρχομαι"
+        ],
+        [
+          "μαζί"
+        ],
+        [
+          "μας"
+        ],
+        [
+          "στο"
+        ],
+        [
+          "σινεμά",
+          "σινεμά"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "Will you come"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Θα έρθεις μαζί εμείς στο σινεμά;",
+        "Θα έρθεις μαζί μας στη σινεμά;"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "έρθεις",
+          "ήρθες",
+          "έλα"
+        ]
+      }
+    },
+    {
+      "id": "an-den-vrechei",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "den",
+        "if",
+        "weather"
+      ],
+      "text": "Αν δεν βρέχει, θα πάμε στην παραλία.",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "Αν"
+        ],
+        [
+          "δεν"
+        ],
+        [
+          "βρέχει,",
+          "βρέχω"
+        ],
+        [
+          "θα"
+        ],
+        [
+          "πάμε",
+          "πηγαίνω"
+        ],
+        [
+          "στην"
+        ],
+        [
+          "παραλία",
+          "παραλία"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "it doesn't rain,"
+        ],
+        [
+          "we will go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Αν μη βρέχει, θα πάμε στην παραλία.",
+        "Αν δεν βρέχει, θα πάμε στη παραλία."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "παραλία",
+          "παραλίες",
+          "παραλίας"
+        ]
+      }
+    },
+    {
+      "id": "mathaino-ellinika",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "pro-drop",
+        "indefinite"
+      ],
+      "chunks": [
+        "εδώ-και"
+      ],
+      "text": "Μαθαίνω ελληνικά εδώ και έναν χρόνο.",
+      "means": "I've been learning Greek for a year.",
+      "words": [
+        [
+          "Μαθαίνω",
+          "μαθαίνω"
+        ],
+        [
+          "ελληνικά",
+          "ελληνικά"
+        ],
+        [
+          "εδώ"
+        ],
+        [
+          "και"
+        ],
+        [
+          "έναν"
+        ],
+        [
+          "χρόνο",
+          "χρόνος"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I learn"
+        ],
+        [
+          "Greek"
+        ],
+        [
+          "for a year now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Μαθαίνω ελληνικά εδώ και ένας χρόνος.",
+        "Μάθω ελληνικά εδώ και έναν χρόνο."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Μαθαίνω",
+          "Μάθω",
+          "Έμαθα"
+        ]
+      }
+    },
+    {
+      "id": "ti-tha-kaneis",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "question"
+      ],
+      "text": "Τι θα κάνεις το Σαββατοκύριακο;",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Τι"
+        ],
+        [
+          "θα"
+        ],
+        [
+          "κάνεις",
+          "κάνω"
+        ],
+        [
+          "το"
+        ],
+        [
+          "Σαββατοκύριακο"
+        ]
+      ],
+      "punct": ";",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "will you do"
+        ],
+        [
+          "on the weekend"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Τι θα κάνεις ο Σαββατοκύριακο;",
+        "Τι θα κάνει εσύ το Σαββατοκύριακο;"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "κάνεις",
+          "κάνω",
+          "κάνει"
+        ]
+      }
+    },
+    {
+      "id": "kanei-kryo",
+      "topic": "plans",
+      "concepts": [
+        "weather"
+      ],
+      "text": "Σήμερα κάνει κρύο.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Σήμερα",
+          "σήμερα"
+        ],
+        [
+          "κάνει",
+          "κάνω"
+        ],
+        [
+          "κρύο",
+          "κρύο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "it makes"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Σήμερα κάνει κρύος."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "κρύο",
+          "κρύος",
+          "κρύα"
+        ]
+      }
+    },
+    {
+      "id": "elpizo-kalo-kairo",
+      "topic": "plans",
+      "concepts": [
+        "na",
+        "adjective",
+        "accusative",
+        "weather"
+      ],
+      "text": "Ελπίζω να έχει καλό καιρό αύριο.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Ελπίζω",
+          "ελπίζω"
+        ],
+        [
+          "να"
+        ],
+        [
+          "έχει",
+          "έχω"
+        ],
+        [
+          "καλό",
+          "καλός"
+        ],
+        [
+          "καιρό",
+          "καιρός"
+        ],
+        [
+          "αύριο",
+          "αύριο"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "it has"
+        ],
+        [
+          "good weather"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ελπίζω να έχει καλός καιρός αύριο.",
+        "Ελπίζω έχει καλό καιρό αύριο."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "καλό",
+          "καλός",
+          "καλή"
+        ]
+      }
+    },
+    {
+      "id": "pes-mou",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "clitic"
+      ],
+      "text": "Πες μου!",
+      "means": "Tell me!",
+      "words": [
+        [
+          "Πες",
+          "λέω"
+        ],
+        [
+          "μου"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Tell"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Πες εγώ!",
+        "Λες μου!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Πες",
+          "Λέω",
+          "Λες"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "καφές",
+          "forms": [
+            "καφέ"
+          ],
+          "article": "ο",
+          "picture": "coffee",
+          "means": "the coffee"
+        },
+        {
+          "lemma": "τσάι",
+          "forms": [
+            "τσάι"
+          ],
+          "article": "το",
+          "picture": "tea",
+          "means": "the tea"
+        },
+        {
+          "lemma": "νερό",
+          "forms": [
+            "νερό"
+          ],
+          "article": "το",
+          "picture": "water",
+          "means": "the water"
+        },
+        {
+          "lemma": "εγώ",
+          "forms": [
+            "εγώ"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "πίνω",
+          "forms": [
+            "πίνω"
+          ],
+          "picture": "drink",
+          "means": "to drink"
+        },
+        {
+          "lemma": "και",
+          "forms": [
+            "και"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb changes for each person (μένω, μένεις, μένει, μένουμε), its dictionary form is the I form μένω, and with εδώ και the present says how long something has been going on (Μαθαίνω ελληνικά εδώ και έναν χρόνο)."
+      },
+      "items": [
+        "item",
+        "item-2",
+        "item-3",
+        "item-4",
+        "item-5",
+        "item-6"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "ένας",
+          "forms": [
+            "έναν",
+            "ένα"
+          ],
+          "means": "έναν = a; one; ένα = a; one"
+        },
+        {
+          "lemma": "γάλα",
+          "forms": [
+            "γάλα"
+          ],
+          "article": "το",
+          "picture": "milk",
+          "means": "the milk"
+        }
+      ],
+      "phrases": [
+        "γεια-σου",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "item-7",
+        "item-8",
+        "item-9",
+        "item-10",
+        "item-11"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "καλά",
+          "forms": [
+            "καλά"
+          ],
+          "means": "well; fine"
+        },
+        {
+          "lemma": "είμαι",
+          "forms": [
+            "είμαι"
+          ],
+          "means": "to be"
+        }
+      ],
+      "phrases": [
+        "τι-κάνεις",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "pro-drop",
+        "line": "The verb's ending already says who, so εγώ, εσύ and εμείς are usually left out: Μένω στην Αθήνα (I live in Athens)."
+      },
+      "items": [
+        "ti-kaneis",
+        "item-12",
+        "item-13",
+        "item-14",
+        "item-15",
+        "item-16"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "εσύ",
+          "forms": [
+            "εσύ"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "δεν",
+          "forms": [
+            "δεν"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "δάσκαλος",
+          "forms": [
+            "δάσκαλος"
+          ],
+          "article": "ο",
+          "means": "the teacher"
+        },
+        {
+          "lemma": "φοιτητής",
+          "forms": [
+            "φοιτητής"
+          ],
+          "article": "ο",
+          "means": "the university student"
+        },
+        {
+          "lemma": "ο",
+          "forms": [
+            "ο"
+          ],
+          "means": "the"
+        },
+        {
+          "lemma": "είμαι",
+          "forms": [
+            "είσαι",
+            "είναι"
+          ],
+          "means": "είσαι = you are; είναι = is"
+        }
+      ],
+      "phrases": [
+        "πώς-σε-λένε",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "pos-se-lene",
+        "item-17",
+        "item-18",
+        "item-19",
+        "item-20",
+        "item-21",
+        "eimai-foititis",
+        "item-22"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "μητέρα",
+          "forms": [
+            "μητέρα"
+          ],
+          "article": "η",
+          "picture": "mother",
+          "means": "the mother"
+        },
+        {
+          "lemma": "πατέρας",
+          "forms": [
+            "πατέρας"
+          ],
+          "article": "ο",
+          "picture": "father",
+          "means": "the father"
+        },
+        {
+          "lemma": "αδερφός",
+          "forms": [
+            "αδερφός"
+          ],
+          "article": "ο",
+          "picture": "brother",
+          "means": "the brother"
+        },
+        {
+          "lemma": "αδερφή",
+          "forms": [
+            "αδερφή"
+          ],
+          "article": "η",
+          "picture": "sister",
+          "means": "the sister"
+        },
+        {
+          "lemma": "μου",
+          "forms": [
+            "μου"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "αυτός",
+          "forms": [
+            "αυτή",
+            "αυτός"
+          ],
+          "means": "αυτή = this; αυτός = this"
+        },
+        {
+          "lemma": "καλός",
+          "forms": [
+            "καλή"
+          ],
+          "means": "καλή = good"
+        },
+        {
+          "lemma": "ο",
+          "forms": [
+            "η"
+          ],
+          "means": "η = the"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "article",
+        "line": "Greek nouns have a gender, often shown by ο, η or το, and Greek uses the article more often than English does, even with place names (η Ελλάδα)."
+      },
+      "items": [
+        "item-23",
+        "item-24",
+        "item-25",
+        "item-26",
+        "item-27",
+        "item-28",
+        "aderfos-mou-daskalos"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "έχω",
+          "forms": [
+            "έχω",
+            "έχεις"
+          ],
+          "means": "έχω = I have; έχεις = you have"
+        },
+        {
+          "lemma": "φίλος",
+          "forms": [
+            "φίλος"
+          ],
+          "article": "ο",
+          "picture": "friend",
+          "means": "the friend"
+        },
+        {
+          "lemma": "γιατρός",
+          "forms": [
+            "γιατρός"
+          ],
+          "article": "ο / η",
+          "picture": "doctor",
+          "means": "the doctor"
+        },
+        {
+          "lemma": "κλειδί",
+          "forms": [
+            "κλειδί"
+          ],
+          "article": "το",
+          "picture": "key",
+          "means": "the key"
+        },
+        {
+          "lemma": "τηλέφωνο",
+          "forms": [
+            "τηλέφωνο"
+          ],
+          "article": "το",
+          "picture": "phone",
+          "means": "the phone"
+        },
+        {
+          "lemma": "βιβλίο",
+          "forms": [
+            "βιβλίο"
+          ],
+          "article": "το",
+          "picture": "book",
+          "means": "the book"
+        },
+        {
+          "lemma": "ένας",
+          "forms": [
+            "μία"
+          ],
+          "means": "μία = a; one"
+        },
+        {
+          "lemma": "αδερφός",
+          "forms": [
+            "αδερφό"
+          ],
+          "article": "ο",
+          "means": "the brother"
+        },
+        {
+          "lemma": "καλός",
+          "forms": [
+            "καλός"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "item-29",
+        "item-30",
+        "item-31",
+        "item-32",
+        "item-33",
+        "item-34"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "πού",
+          "forms": [
+            "πού"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "εδώ",
+          "forms": [
+            "εδώ"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "εκεί",
+          "forms": [
+            "εκεί"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "τουαλέτα",
+          "forms": [
+            "τουαλέτα"
+          ],
+          "article": "η",
+          "means": "the bathroom"
+        },
+        {
+          "lemma": "ο",
+          "forms": [
+            "το",
+            "τα"
+          ],
+          "means": "το = the; τα = the"
+        },
+        {
+          "lemma": "κλειδί",
+          "forms": [
+            "κλειδιά"
+          ],
+          "article": "το",
+          "means": "the key"
+        },
+        {
+          "lemma": "τηλέφωνο",
+          "forms": [
+            "τηλέφωνό"
+          ],
+          "article": "το",
+          "means": "the phone"
+        }
+      ],
+      "phrases": [
+        "συγγνώμη"
+      ],
+      "concept": {
+        "pattern": "possessive",
+        "line": "The short words for my, your and our usually follow the noun, with the article in front (το σπίτι μου, η αδερφή μου), but follow an adjective that comes first (το μεγάλο μου σπίτι); του πατέρα μου is of my father."
+      },
+      "items": [
+        "item-35",
+        "item-36",
+        "item-37",
+        "item-38",
+        "item-39",
+        "item-40",
+        "pou-einai-ta-kleidia"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "δύο",
+          "forms": [
+            "δύο"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "τρεις",
+          "forms": [
+            "τρία"
+          ],
+          "picture": "three",
+          "means": "τρία = three"
+        },
+        {
+          "lemma": "χρήματα",
+          "forms": [
+            "χρήματα"
+          ],
+          "article": "τα",
+          "picture": "money",
+          "means": "the money"
+        },
+        {
+          "lemma": "καφές",
+          "forms": [
+            "καφέδες"
+          ],
+          "article": "ο",
+          "means": "the coffee"
+        },
+        {
+          "lemma": "βιβλίο",
+          "forms": [
+            "βιβλία"
+          ],
+          "article": "το",
+          "means": "the book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "item-41",
+        "logariasmo-parakalo",
+        "item-42",
+        "item-43",
+        "item-44",
+        "item-45"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "μιλάω",
+          "forms": [
+            "μιλάς",
+            "μιλάω"
+          ],
+          "means": "μιλάς = you speak; μιλάω = I speak"
+        },
+        {
+          "lemma": "αγγλικά",
+          "forms": [
+            "αγγλικά"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "ελληνικά",
+          "forms": [
+            "ελληνικά"
+          ],
+          "means": "Greek"
+        },
+        {
+          "lemma": "καταλαβαίνω",
+          "forms": [
+            "καταλαβαίνω",
+            "καταλαβαίνεις"
+          ],
+          "means": "καταλαβαίνω = I understand; καταλαβαίνεις = you understand"
+        },
+        {
+          "lemma": "λίγος",
+          "forms": [
+            "λίγα"
+          ],
+          "means": "λίγα = a little"
+        },
+        {
+          "lemma": "θέλω",
+          "forms": [
+            "θέλω"
+          ],
+          "means": "to want"
+        },
+        {
+          "lemma": "να",
+          "forms": [
+            "να"
+          ],
+          "means": "to"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "A direct object, and a noun after most prepositions, take the accusative, which changes the article and often the ending: ο καφές, Πίνω τον καφέ."
+      },
+      "items": [
+        "milas-agglika",
+        "item-46",
+        "item-47",
+        "item-48",
+        "item-49",
+        "item-50",
+        "item-51"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "σπίτι",
+          "forms": [
+            "σπίτι"
+          ],
+          "article": "το",
+          "picture": "house",
+          "means": "the house"
+        },
+        {
+          "lemma": "δωμάτιο",
+          "forms": [
+            "δωμάτιό"
+          ],
+          "article": "το",
+          "picture": "room",
+          "means": "the room"
+        },
+        {
+          "lemma": "μεγάλος",
+          "forms": [
+            "μεγάλο"
+          ],
+          "picture": "big",
+          "means": "μεγάλο = big"
+        },
+        {
+          "lemma": "μικρός",
+          "forms": [
+            "μικρό"
+          ],
+          "picture": "small",
+          "means": "μικρό = small"
+        },
+        {
+          "lemma": "μένω",
+          "forms": [
+            "μένω",
+            "μένεις",
+            "μένει"
+          ],
+          "means": "μένω = I live; μένεις = you live; μένει = lives"
+        },
+        {
+          "lemma": "σε",
+          "forms": [
+            "σε"
+          ],
+          "picture": "in",
+          "means": "in; to"
+        },
+        {
+          "lemma": "αυτός",
+          "forms": [
+            "αυτό"
+          ],
+          "means": "αυτό = this"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "item-52",
+        "item-53",
+        "item-54",
+        "item-55",
+        "item-56"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "πηγαίνω",
+          "forms": [
+            "πάω",
+            "πας",
+            "πάει"
+          ],
+          "means": "πάω = I go; I am going; πας = you go; you are going; πάει = goes"
+        },
+        {
+          "lemma": "σχολείο",
+          "forms": [
+            "σχολείο"
+          ],
+          "article": "το",
+          "picture": "school",
+          "means": "the school"
+        },
+        {
+          "lemma": "πόλη",
+          "forms": [
+            "πόλη"
+          ],
+          "article": "η",
+          "picture": "city",
+          "means": "the city"
+        },
+        {
+          "lemma": "σταθμός",
+          "forms": [
+            "σταθμός"
+          ],
+          "article": "ο",
+          "means": "the station"
+        },
+        {
+          "lemma": "αυτοκίνητο",
+          "forms": [
+            "αυτοκίνητο"
+          ],
+          "article": "το",
+          "picture": "car",
+          "means": "the car"
+        },
+        {
+          "lemma": "σε",
+          "forms": [
+            "στην"
+          ],
+          "means": "στην = to the"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question",
+        "line": "Questions end with ; in Greek; a yes/no question keeps the order of a statement and rises in pitch (Μιλάς αγγλικά;), and a question word like τι, πώς or πού normally comes first."
+      },
+      "items": [
+        "item-57",
+        "item-58",
+        "pou-einai-o-stathmos",
+        "item-59",
+        "item-60",
+        "item-61"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "σήμερα",
+          "forms": [
+            "σήμερα"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "αύριο",
+          "forms": [
+            "αύριο"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "τώρα",
+          "forms": [
+            "τώρα"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "δουλεύω",
+          "forms": [
+            "δουλεύω",
+            "δουλέψω"
+          ],
+          "picture": "work",
+          "means": "δουλεύω = I work; δουλέψω = work"
+        },
+        {
+          "lemma": "πρέπει",
+          "forms": [
+            "πρέπει"
+          ],
+          "means": "must; have to"
+        },
+        {
+          "lemma": "μπορώ",
+          "forms": [
+            "μπορώ"
+          ],
+          "means": "can; to be able to"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "item-62",
+        "item-63",
+        "item-64",
+        "item-65",
+        "item-66",
+        "item-67"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

@@ -1,0 +1,521 @@
+{
+ "books": [
+  {
+   "id": "carroll-alice-wonderland-opening",
+   "version": "d6dba2b5a24f054f",
+   "title": "Alice’s Adventures in Wonderland: the opening",
+   "authors": [
+    {
+     "name": "Lewis Carroll",
+     "died": 1898,
+     "role": "author"
+    }
+   ],
+   "lang": "en",
+   "rights": {
+    "us": true,
+    "eu": true,
+    "asOf": "2026-01-01",
+    "basis": "first published 1865; Lewis Carroll died 1898, John Tenniel died 1914",
+    "licence": "Public domain; Standard Ebooks' production is dedicated to the public domain (CC0 1.0)"
+   },
+   "source": {
+    "kind": "standard-ebooks",
+    "ref": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel@9ecdf2ffa23098e7cb3c72157d7c3031b6f59903",
+    "url": "https://github.com/standardebooks/lewis-carroll_alices-adventures-in-wonderland_john-tenniel/tree/9ecdf2ffa23098e7cb3c72157d7c3031b6f59903",
+    "excerpt": {
+     "paras": [
+      0,
+      9
+     ]
+    }
+   },
+   "words": 639,
+   "sentences": 22,
+   "chapters": 1,
+   "book": "/library/books/carroll-alice-wonderland-opening/d6dba2b5a24f054f/book.json",
+   "layers": {
+    "nl": {
+     "kind": "weave",
+     "url": "/library/books/carroll-alice-wonderland-opening/d6dba2b5a24f054f/weave.nl.eadf6e578bf6.json",
+     "licence": "CC BY-SA 4.0",
+     "credit": "Translated for Lexicommons",
+     "sentences": 22,
+     "made": {
+      "pipeline": "lexicommons-books 1",
+      "model": "gpt-6-astra",
+      "run": "pilot-nl-5",
+      "at": "2026-10-26T20:51:12.252Z"
+     }
+    }
+   },
+   "publishedAt": "2026-10-26T21:46:54.019Z"
+  },
+  {
+   "id": "storyweaver-137265-de-rode-regenjas",
+   "version": "345514991ccfc29a",
+   "title": "De rode regenjas",
+   "authors": [
+    {
+     "name": "Kiran Kasturia",
+     "role": "author"
+    },
+    {
+     "name": "Ralph Vermeulen",
+     "role": "translator"
+    },
+    {
+     "name": "Zainab Tambawalla",
+     "role": "illustrator"
+    }
+   ],
+   "lang": "nl",
+   "rights": {
+    "us": false,
+    "eu": false,
+    "spdx": "CC-BY-4.0",
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "basis": "StoryWeaver's attribution file, in the download, gives the licence and the credits below; each picture's credit is from the book's attribution page.",
+    "attributionText": "De rode regenjas (Dutch), translated by Ralph Vermeulen (© Ralph Vermeulen, 2015), based on original story The Red Raincoat (English), written by Kiran Kasturia, illustrated by Zainab Tambawalla, published by Pratham Books (© Pratham Books, 2015) under a CC BY 4.0 license on StoryWeaver. Read, create and translate stories for free on www.storyweaver.org.in",
+    "attribution": [
+     {
+      "role": "translator",
+      "name": "Ralph Vermeulen",
+      "rights": "© Ralph Vermeulen, 2015"
+     },
+     {
+      "role": "author",
+      "name": "Kiran Kasturia",
+      "of": "The Red Raincoat (English)"
+     },
+     {
+      "role": "illustrator",
+      "name": "Zainab Tambawalla"
+     },
+     {
+      "role": "publisher",
+      "name": "Pratham Books",
+      "rights": "© Pratham Books, 2015"
+     },
+     {
+      "role": "platform",
+      "name": "StoryWeaver",
+      "url": "https://storyweaver.org.in/"
+     }
+    ]
+   },
+   "source": {
+    "kind": "storyweaver",
+    "ref": "https://storyweaver.org.in/en/stories/137265-de-rode-regenjas",
+    "level": 1,
+    "file": "137265-de-rode-regenjas.zip",
+    "sha256": "5ef777153461816fd7517577be765323a2eb4b97974922adb98a606a0a5ba707"
+   },
+   "words": 243,
+   "sentences": 31,
+   "chapters": 0,
+   "book": "/library/books/storyweaver-137265-de-rode-regenjas/345514991ccfc29a/book.json",
+   "level": 1,
+   "cover": "/library/pictures/f9fcb924a1cf5bf6.jpg",
+   "coverSize": [
+    1073,
+    513
+   ],
+   "pictures": 10,
+   "layers": {
+    "en": {
+     "kind": "help",
+     "url": "/library/books/storyweaver-137265-de-rode-regenjas/345514991ccfc29a/help.en.99e6ebb76f75.json",
+     "licence": "CC BY-SA 4.0",
+     "credit": "Translated for Lexicommons",
+     "sentences": 31,
+     "made": {
+      "pipeline": "lexicommons-books 1",
+      "model": "gpt-6-astra",
+      "run": "help-en-2",
+      "at": "2026-10-27T08:37:14.416Z"
+     }
+    }
+   },
+   "publishedAt": "2026-10-27T11:47:55.419Z"
+  },
+  {
+   "id": "storyweaver-1471-het-is-de-schuld-van-de-kat",
+   "version": "3f399e4d001851e7",
+   "title": "Het is de schuld van de kat",
+   "authors": [
+    {
+     "name": "Anushka Ravishankar",
+     "role": "author"
+    },
+    {
+     "name": "Chris Sterkens",
+     "role": "translator"
+    },
+    {
+     "name": "Priya Kuriyan",
+     "role": "illustrator"
+    }
+   ],
+   "lang": "nl",
+   "rights": {
+    "us": false,
+    "eu": false,
+    "spdx": "CC-BY-4.0",
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "basis": "StoryWeaver's attribution file, in the download, gives the licence and the credits below; each picture's credit is from the book's attribution page.",
+    "attributionText": "Het is de schuld van de kat (Dutch), translated by Chris Sterkens (© Chris Sterkens, 2015), based on original story It's All the Cat's Fault! (English), written by Anushka Ravishankar, illustrated by Priya Kuriyan, published by StoryWeaver (© StoryWeaver, 2015) under a CC BY 4.0 license on StoryWeaver. Read, create and translate stories for free on www.storyweaver.org.in",
+    "attribution": [
+     {
+      "role": "translator",
+      "name": "Chris Sterkens",
+      "rights": "© Chris Sterkens, 2015"
+     },
+     {
+      "role": "author",
+      "name": "Anushka Ravishankar",
+      "of": "It's All the Cat's Fault! (English)"
+     },
+     {
+      "role": "illustrator",
+      "name": "Priya Kuriyan"
+     },
+     {
+      "role": "publisher",
+      "name": "StoryWeaver",
+      "rights": "© StoryWeaver, 2015"
+     },
+     {
+      "role": "platform",
+      "name": "StoryWeaver",
+      "url": "https://storyweaver.org.in/"
+     }
+    ]
+   },
+   "source": {
+    "kind": "storyweaver",
+    "ref": "https://storyweaver.org.in/en/stories/1471-het-is-de-schuld-van-de-kat",
+    "level": 2,
+    "file": "1471-het-is-de-schuld-van-de-kat.zip",
+    "sha256": "d0a8193dd1e4f42b298f561084ff5fb9d02a702d10692cecbacd1cab95bfda04"
+   },
+   "words": 198,
+   "sentences": 15,
+   "chapters": 0,
+   "book": "/library/books/storyweaver-1471-het-is-de-schuld-van-de-kat/3f399e4d001851e7/book.json",
+   "level": 2,
+   "cover": "/library/pictures/e504cd8f8e36bca4.jpg",
+   "coverSize": [
+    1073,
+    513
+   ],
+   "pictures": 10,
+   "layers": {
+    "en": {
+     "kind": "help",
+     "url": "/library/books/storyweaver-1471-het-is-de-schuld-van-de-kat/3f399e4d001851e7/help.en.4e172b09ed98.json",
+     "licence": "CC BY-SA 4.0",
+     "credit": "Translated for Lexicommons",
+     "sentences": 15,
+     "made": {
+      "pipeline": "lexicommons-books 1",
+      "model": "gpt-6-astra",
+      "run": "help-en-2",
+      "at": "2026-10-27T08:39:57.955Z"
+     }
+    }
+   },
+   "publishedAt": "2026-10-27T11:48:05.664Z"
+  }
+ ],
+ "lists": {
+  "frequency": {
+   "nl": {
+    "url": "/library/lists/frequency.nl.d5c772c488b2.json",
+    "licence": "CC-BY-SA-4.0",
+    "attribution": [
+     {
+      "what": "word counts",
+      "name": "FrequencyWords",
+      "by": "Hermit Dave",
+      "url": "https://github.com/hermitdave/FrequencyWords",
+      "licence": "CC BY-SA 4.0"
+     },
+     {
+      "what": "the subtitles counted",
+      "name": "OpenSubtitles",
+      "url": "http://www.opensubtitles.org/",
+      "via": "OPUS, OpenSubtitles2018 (https://opus.nlpl.eu/)",
+      "cite": "P. Lison and J. Tiedemann, 2016, OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles. In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)."
+     },
+     {
+      "what": "word forms and lemmas",
+      "name": "Wiktionary",
+      "by": "Wiktionary contributors",
+      "url": "https://en.wiktionary.org/",
+      "via": "kaikki.org (Wiktextract)",
+      "cite": "Tatu Ylonen, 2022, Wiktextract: Wiktionary as Machine-Readable Structured Data. In Proceedings of the 13th Conference on Language Resources and Evaluation (LREC 2022), pp. 1317–1325.",
+      "licence": "CC BY-SA 4.0"
+     },
+     {
+      "what": "which lemma a form that can be two is",
+      "name": "UD Dutch Alpino 2.18",
+      "by": "Gosse Bouma, Gertjan van Noord and the Universal Dependencies contributors",
+      "url": "https://universaldependencies.org/",
+      "cite": "Gosse Bouma and Gertjan van Noord, 2017, Increasing return on annotation investment: the automatic construction of a Universal Dependency treebank for Dutch. In Proceedings of the NoDaLiDa 2017 Workshop on Universal Dependencies (UDW 2017).",
+      "licence": "CC BY-SA 4.0"
+     }
+    ],
+    "corpus": {
+     "name": "OpenSubtitles 2018 (Dutch)",
+     "tokens": 263017508,
+     "counted": 246358297,
+     "dropped": 16659211,
+     "note": "counted: the running words that are a word of the language; a share of everyday words is out of counted."
+    },
+    "lemmas": 20000,
+    "made": {
+     "pipeline": "lexicommons books pipeline: frequency.ts",
+     "at": "2026-10-27T06:46:30.755Z"
+    },
+    "publishedAt": "2026-10-27T08:05:08.820Z"
+   }
+  }
+ },
+ "shelf": [
+  {
+   "id": "picture-books",
+   "title": "Picture books",
+   "books": [
+    "storyweaver-137265-de-rode-regenjas",
+    "storyweaver-1471-het-is-de-schuld-van-de-kat"
+   ]
+  },
+  {
+   "id": "classics-woven-into-dutch",
+   "title": "Classics, woven into Dutch",
+   "books": [
+    "carroll-alice-wonderland-opening"
+   ]
+  }
+ ],
+ "grammar": {
+  "nl": {
+   "revision": 8,
+   "version": "0d106b5656dc",
+   "url": "/library/grammar/nl/0d106b5656dc.json",
+   "patterns": 44,
+   "more": {
+    "version": "5e13ddad80f1",
+    "url": "/library/grammar/nl/more.5e13ddad80f1.json"
+   }
+  },
+  "es": {
+   "revision": 7,
+   "version": "6ef7afe79c8e",
+   "url": "/library/grammar/es/6ef7afe79c8e.json",
+   "patterns": 53,
+   "more": {
+    "version": "1e4e2f198ba2",
+    "url": "/library/grammar/es/more.1e4e2f198ba2.json"
+   }
+  },
+  "fr": {
+   "revision": 7,
+   "version": "45ade4808994",
+   "url": "/library/grammar/fr/45ade4808994.json",
+   "patterns": 56,
+   "more": {
+    "version": "9b173ee1b4fe",
+    "url": "/library/grammar/fr/more.9b173ee1b4fe.json"
+   }
+  },
+  "de": {
+   "revision": 7,
+   "version": "1f072344a3e2",
+   "url": "/library/grammar/de/1f072344a3e2.json",
+   "patterns": 55,
+   "more": {
+    "version": "8ad0fb4302e0",
+    "url": "/library/grammar/de/more.8ad0fb4302e0.json"
+   }
+  },
+  "pt": {
+   "revision": 7,
+   "version": "f8f65c709fec",
+   "url": "/library/grammar/pt/f8f65c709fec.json",
+   "patterns": 53,
+   "more": {
+    "version": "da8f319ea1d8",
+    "url": "/library/grammar/pt/more.da8f319ea1d8.json"
+   }
+  },
+  "it": {
+   "revision": 7,
+   "version": "2339e49ce085",
+   "url": "/library/grammar/it/2339e49ce085.json",
+   "patterns": 52,
+   "more": {
+    "version": "4f51f1daefdc",
+    "url": "/library/grammar/it/more.4f51f1daefdc.json"
+   }
+  },
+  "ru": {
+   "revision": 7,
+   "version": "7034d4d13b69",
+   "url": "/library/grammar/ru/7034d4d13b69.json",
+   "patterns": 50,
+   "more": {
+    "version": "ed622487a312",
+    "url": "/library/grammar/ru/more.ed622487a312.json"
+   }
+  },
+  "ja": {
+   "revision": 8,
+   "version": "870a9278060e",
+   "url": "/library/grammar/ja/870a9278060e.json",
+   "patterns": 57,
+   "more": {
+    "version": "9d00dc7cc11a",
+    "url": "/library/grammar/ja/more.9d00dc7cc11a.json"
+   }
+  }
+ },
+ "seed": {
+  "inApp": {
+   "starter-word-order": "public/js/packs/starter-word-order.js"
+  },
+  "order": {
+   "nl": [
+    "starter-word-order",
+    "words-nl-01",
+    "words-nl-02",
+    "words-nl-03",
+    "words-nl-04",
+    "words-nl-05",
+    "words-nl-06",
+    "words-nl-07",
+    "words-nl-strong",
+    "words-nl-08",
+    "path-nl"
+   ]
+  },
+  "optIn": [
+   "words-nl-strong",
+   "nl-culture-1",
+   "nl-culture-2",
+   "nl-everyday-1",
+   "nl-everyday-2",
+   "nl-family-1",
+   "nl-family-2",
+   "nl-feelings-1",
+   "nl-feelings-2",
+   "nl-food-1",
+   "nl-food-2",
+   "nl-health-1",
+   "nl-health-2",
+   "nl-home-1",
+   "nl-home-2",
+   "nl-numbers-1",
+   "nl-school-1",
+   "nl-school-2",
+   "nl-shopping-1",
+   "nl-shopping-2",
+   "nl-time-1",
+   "nl-time-2",
+   "nl-travel-1",
+   "nl-travel-2",
+   "nl-weather-1",
+   "nl-weather-2",
+   "nl-work-1",
+   "nl-work-2",
+   "starter-es",
+   "starter-fr",
+   "starter-de",
+   "starter-pt",
+   "starter-it",
+   "starter-ru",
+   "starter-ja"
+  ],
+  "suggest": [
+   "nl-culture-1",
+   "nl-culture-2",
+   "nl-everyday-1",
+   "nl-everyday-2",
+   "nl-family-1",
+   "nl-family-2",
+   "nl-feelings-1",
+   "nl-feelings-2",
+   "nl-food-1",
+   "nl-food-2",
+   "nl-health-1",
+   "nl-health-2",
+   "nl-home-1",
+   "nl-home-2",
+   "nl-numbers-1",
+   "nl-school-1",
+   "nl-school-2",
+   "nl-shopping-1",
+   "nl-shopping-2",
+   "nl-time-1",
+   "nl-time-2",
+   "nl-travel-1",
+   "nl-travel-2",
+   "nl-weather-1",
+   "nl-weather-2",
+   "nl-work-1",
+   "nl-work-2"
+  ],
+  "audio": {
+   "starter-word-order": {
+    "folder": "public/audio/starter-word-order",
+    "license": "CC BY 4.0",
+    "credit": "{name}, a synthetic voice made with ElevenLabs for Lexicommons"
+   }
+  }
+ },
+ "notes": {
+  "path-nl": {
+   "version": "84e2f047da95",
+   "url": "/library/notes/path-nl/84e2f047da95.json",
+   "sentences": 1654
+  },
+  "path-es": {
+   "version": "dc46ef1bcfcd",
+   "url": "/library/notes/path-es/dc46ef1bcfcd.json",
+   "sentences": 1818
+  },
+  "path-fr": {
+   "version": "9e80fc20861b",
+   "url": "/library/notes/path-fr/9e80fc20861b.json",
+   "sentences": 2093
+  },
+  "path-de": {
+   "version": "80bb49f71669",
+   "url": "/library/notes/path-de/80bb49f71669.json",
+   "sentences": 2108
+  },
+  "path-pt": {
+   "version": "249e88fd9833",
+   "url": "/library/notes/path-pt/249e88fd9833.json",
+   "sentences": 1973
+  },
+  "path-it": {
+   "version": "d272c5bd9ec2",
+   "url": "/library/notes/path-it/d272c5bd9ec2.json",
+   "sentences": 1904
+  },
+  "path-ru": {
+   "version": "47a451f08056",
+   "url": "/library/notes/path-ru/47a451f08056.json",
+   "sentences": 1780
+  },
+  "path-ja": {
+   "version": "f57d9308b70c",
+   "url": "/library/notes/path-ja/f57d9308b70c.json",
+   "sentences": 1788
+  }
+ }
+}

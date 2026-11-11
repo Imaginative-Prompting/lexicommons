@@ -1,0 +1,37 @@
+// Tagalog (lang/index.js has what each field means), the base of Filipino. Devices tag Filipino voices fil-PH, so
+// they need fil read as tl to be found. Words are headworded by their root, as Tagalog dictionaries list them: kumain,
+// kinakain and kakain are all under kain.
+
+export default {
+  name: "Tagalog",
+  locale: "tl-PH",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["g.", "gng.", "bb.", "dr.", "dra.", "blg.", "hal.", "sto.", "sta."],
+  stray: ["kanino"],
+  patterns: {
+    question: { name: "Questions: a question word first", about: "A question word like ano, saan, nasaan or magkano comes first (Ano ang pangalan mo?), and a yes/no question can be a statement in a question's voice; Tagalog adds no do.", after: [] },
+    "predicate-first": { name: "What's said comes first", about: "Tagalog usually puts the description or the action first and its topic after, often with no word for is, am or are: Guro ako (I'm a teacher); Masyadong maliit ang sapatos (the shoes are too small).", after: [] },
+    ang: { name: "ang: the one it's about", about: "ang marks the sentence's topic, often a noun English would give the (ang pinto, ang tren), and si does the same before a person's name.", after: ["predicate-first"] },
+    ng: { name: "ng and ni: the other one, and whose", about: "ng marks an object or doer that isn't the topic, and whose (Umiinom ako ng kape; ang kotse ng tatay ko); before a person's name, ni marks a doer or whose: Hinihintay tayo ni Lola; ang kotse ni Lola.", after: ["ang"] },
+    sa: { name: "sa: where, to, from, with", about: "sa says where, to or from (sa Maynila, sa mesa, sa ospital), nasa is at (Nasa bahay ako), and kay does the same for a person: kay Lola. After sumama, sa marks who someone goes with: Sasama ka ba sa amin?", after: [] },
+    linker: { name: "Linking words: na and -ng", about: "A linker joins a describing word to what it describes: add -ng after a vowel (malaking kusina, bagong sapatos), add -g after a final n (ngayong Sabado), and use na otherwise (maliit na apartment); it also links words like gusto ko to the next verb: Gusto kong kumain.", after: [] },
+    "actor-focus": { name: "um- and mag-: the doer is the topic", about: "A verb with -um- or mag- makes the one doing it what the sentence is about (ako, kami), and the thing done takes ng: Kumain kami ng pizza; Umiinom ako ng kape.", after: ["ang", "ng"] },
+    "object-focus": { name: "-in, i-, -an: the action's target is the topic", about: "A verb with -in, i- or -an makes the person or thing the action is directed at the topic; the doer takes ng or ko, mo: Isara mo ang bintana; Hintayin mo ako; Sabihan mo ako.", after: ["actor-focus"] },
+    completed: { name: "Done: kumain, nagluto", about: "A finished action has -um- or -in- inside it, or nag-, na-: kumain (ate), bumili (bought), nagluto (cooked), nahuli (was late).", after: ["actor-focus", "object-focus"] },
+    ongoing: { name: "Going on: kumakain", about: "Something going on or usual often repeats part of the root inside the completed form: kumakain, umiinom, nag-aaral, hinihintay; ability forms repeat ka instead: nakakapunta.", after: ["completed"] },
+    contemplated: { name: "Not yet begun: kakain", about: "Something still to happen repeats the root's first syllable: -um- drops out (kakain: will eat; pupunta: will go), mag- stays (magluluto: will cook), and -in or -an stays on the end (gagawin, tatawagan).", after: ["ongoing"] },
+    "pronoun-forms": { name: "Pronoun forms: ako, ko, akin", about: "A pronoun changes with its role: ako is the topic, ko is my or by me, and sa akin is to or for me; ikaw or ka, mo, and sa iyo work the same way: Hindi ko alam; Ano ang pangalan mo?", after: [] },
+    "pronoun-second": { name: "Short words go second", about: "Short pronouns and little words like ba, po and na go together just after the clause's first word or phrase, in their own order: Hindi ko alam; Nagsasalita ka ba ng Ingles?; Puwede mo bang isara…?", after: ["pronoun-forms"] },
+    hindi: { name: "Not: hindi", about: "hindi (not) comes first, and the short words follow it: Hindi ako umiinom ng kape; Hindi ko alam; Hindi pa ako nakakapunta sa Cebu (I haven't been to Cebu yet).", after: ["pronoun-second"] },
+    "na-pa": { name: "Already and still: na and pa", about: "na is already or now, and pa is still or yet; both go with the short words near the start: Kailangan ko nang umalis (I need to leave now); Hindi pa ako nakakapunta sa Cebu (I haven't been to Cebu yet).", after: ["pronoun-second"] },
+    nang: { name: "nang: manner, measure, and linked na", about: "nang marks how an action is done or by how much (nang walang asukal; nang sampung minuto); the same spelling can also be na plus the -ng linker, because na ends in a vowel: Kailangan ko nang umalis.", after: ["ng", "linker", "na-pa"] },
+    "may-wala": { name: "There is, have: may and wala", about: "may with a noun says there is or have (May libro sa mesa; May dalawa akong kapatid), mayroon, said meron, with a linked pronoun does too (Mayroon akong libro), and wala says there isn't or don't have: Walang gatas; Wala akong oras.", after: [] },
+    ba: { name: "A yes/no question: ba", about: "ba makes a yes/no question; it goes with the short words after the first one, usually after a short pronoun: Nagsasalita ka ba ng Ingles?; Puwede mo bang isara ang bintana?", after: ["pronoun-second"] },
+    po: { name: "Respect: po", about: "po, among the short words near the start, shows respect to someone older or a stranger (Magkano po ang kape?; Salamat po!); kayo or ninyo also say you respectfully, and opo is a respectful yes.", after: ["pronoun-second"] },
+    mga: { name: "More than one: mga", about: "mga, said roughly ma-NGA (ng as in sing), before a noun makes it plural, and the noun itself doesn't change: ang mga susi ko (my keys), mga libro.", after: [] },
+    "kami-tayo": { name: "Two kinds of we: kami and tayo", about: "kami is we without the one you're talking to, and tayo is we with them: Kumain kami ng pizza (we, not you); Puwede tayong sumakay ng taxi (you and I).", after: [] },
+    imperative: { name: "Asking someone to do something", about: "A request is often the -in, i- or -an verb with mo (Isara mo ang pinto; Hintayin mo ako; Sabihan mo ako), and paki- makes it polite: Pakisara ang pinto.", after: ["object-focus"] },
+  },
+};

@@ -1,0 +1,2410 @@
+/* Lexicommons design system: components.
+ *
+ * Every component is selected by its data-part name and varied by data-state / data-meaning / data-variant. Those
+ * names are the theming surface: they're documented, versioned, and kept stable, so a user's custom CSS keeps
+ * working when the app's markup changes underneath (registry: public/js/lx/parts.js, shown on /design). */
+@layer lx.components {
+  /* ============ app shell ============ */
+
+  [data-part="app"] {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 var(--space-4) calc(var(--space-7) + 64px);
+  }
+
+  /* Every control answers a tap over 44 × 44 px at least (Apple's minimum hit region; Material asks 48). One drawn
+     smaller, to sit in the header, a sentence or a row of chips, reaches past its edges with an invisible ::before, as
+     far as it's short on each axis and no further. Two of them sit at least their two reaches apart (44 px less their heights), or the later
+     one's reach takes the other's taps: lines of a row that wraps them are kept apart at this file's end ("rows of small controls"). :where
+     keeps this from overriding a part's own position. component-check.mjs holds every control and every such row on every page to it. */
+  :where([data-part="settings-button"], [data-part="header-language"], [data-part="app-back"], .lx-back, [data-part="section-link"],
+    [data-part="subnav-link"], [data-part="button"][data-size="sm"], [data-part="segment"], [data-part="order-toggle"],
+    [data-part="switch"], [data-part="radio"], [data-part="tile"]) {
+    position: relative;
+  }
+  :where([data-part="settings-button"], [data-part="header-language"], [data-part="app-back"], .lx-back, [data-part="section-link"],
+    [data-part="subnav-link"], [data-part="button"][data-size="sm"], [data-part="segment"], [data-part="order-toggle"],
+    [data-part="switch"], [data-part="radio"], [data-part="tile"])::before {
+    content: "";
+    position: absolute;
+    inset: min(0px, calc((100% - 44px) / 2));
+  }
+
+  [data-part="app-header"] {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+    background: var(--canvas);
+  }
+
+  [data-part="app-title"] {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font: 500 var(--size-20) / 1.2 var(--type-head);
+    letter-spacing: var(--track-head);
+  }
+
+  /* The mark is a theme's image slot: it only shows when a look supplies one (theme.js sets data-has-mark). */
+  :root:not([data-has-mark]) [data-part="app-mark"] { display: none; }
+  [data-part="app-mark"] {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-8);
+    background: var(--image-mark) center / cover no-repeat;
+    background-size: cover;
+  }
+
+  [data-part="settings-button"] {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--edge);
+    background: var(--fill);
+    color: var(--ink-2);
+    font: 600 var(--size-14) / 1 var(--type-ui);
+  }
+  @media (hover: hover) { [data-part="settings-button"]:hover { color: var(--ink-1); background: var(--fill-hover); } }
+  /* The header's end: the language you're learning, then the settings button. The title gives way first. */
+  [data-part="app-title"] { min-width: 0; }
+  [data-part="app-title"] > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lx-header-end { display: flex; flex: none; align-items: center; gap: var(--space-2); }
+  /* As tall as a page's back link (app-back), so the header is the same height on every page and nothing under it moves
+     between a tab and a page inside it. */
+  .lx-header-end { min-height: 40px; }
+  [data-part="header-language"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 32px;
+    padding: 0 10px 0 8px;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-full);
+    background: var(--fill);
+    color: var(--ink-2);
+    font: 600 var(--size-12) / 1 var(--type-ui);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  [data-part="header-language"] [data-part="language-flag"] { margin: 0; }
+  /* Your initials, or a gear where the header has no room for them; a tab's header giving up room before its title (shell/main.js fitTitle):
+     1 the language's code (its flag stays), 2 your initials (the gear), 3 the language itself. */
+  [data-part="settings-button"] > .lx-icon { display: none; width: 20px; height: 20px; }
+  [data-part="app-header"]:is([data-shed="2"], [data-shed="3"]) [data-part="settings-button"] > .lx-initials { display: none; }
+  [data-part="app-header"]:is([data-shed="2"], [data-shed="3"]) [data-part="settings-button"] > .lx-icon { display: block; }
+  [data-part="app-header"][data-shed] [data-part="header-language"] { padding: 0 8px; }
+  [data-part="app-header"][data-shed] [data-part="header-language"] > span[aria-hidden] { display: none; }
+  [data-part="app-header"][data-shed="3"] [data-part="header-language"] { display: none; }
+  [data-part="header-language"]:active { background: var(--fill-active); }
+  @media (hover: hover) { [data-part="header-language"]:hover { color: var(--ink-1); background: var(--fill-hover); } }
+
+  /* The tab bar sits at the bottom on a phone; inside [data-part="app"] it's fixed to the screen. */
+  [data-part="tab-bar"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: var(--space-1);
+    padding: var(--space-1) var(--space-2) calc(var(--space-1) + env(safe-area-inset-bottom));
+    background: var(--chrome);
+    border-top: 1px solid var(--hair);
+  }
+  [data-part="app"] > [data-part="tab-bar"] { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; }
+
+  [data-part="tab"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    min-height: 52px;
+    padding: var(--space-1) 0;
+    border: 0;
+    border-radius: var(--radius-12);
+    background: transparent;
+    color: var(--ink-3);
+    font: 500 var(--size-12) / 1.2 var(--type-ui);
+    text-decoration: none;
+    transition: color var(--dur-150) var(--ease-standard);
+  }
+  [data-part="tab"] .lx-icon { width: 24px; height: 24px; }
+  [data-part="tab"][data-state="active"] { position: relative; }
+  @media (hover: hover) { [data-part="tab"]:hover { color: var(--ink-2); } }
+  [data-part="tab"][data-state="active"] { color: var(--ink-1); }
+  [data-part="tab"][data-variant="settings"] { display: none; }
+
+  /* A wide screen: the tabs become a sidebar, with Settings at its foot instead of in the header. */
+  @media (min-width: 1024px) {
+    [data-part="app"]:has(> [data-part="tab-bar"]) { max-width: none; padding-left: calc(232px + var(--space-6)); padding-right: var(--space-6); }
+    /* The page column, not the layers over the whole screen (a session, a sheet, the reader): those cover the window edge to edge. */
+    [data-part="app"]:has(> [data-part="tab-bar"]) > :not([data-part="tab-bar"], [data-part="session"], [data-part="sheet"], [data-part="reader"]) { max-width: var(--page-width); margin-inline: auto; }
+    [data-part="app"] > [data-part="tab-bar"] {
+      top: 0;
+      right: auto;
+      width: 232px;
+      grid-auto-flow: row;
+      grid-auto-rows: max-content;
+      align-content: start;
+      gap: 2px;
+      padding: var(--space-5) var(--space-3);
+      border-top: 0;
+      border-right: 1px solid var(--hair);
+    }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"] { flex-direction: row; justify-content: flex-start; gap: var(--space-3); min-height: 44px; padding: 0 var(--space-3); font-size: var(--size-14); }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] { background: var(--fill-active); }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-variant="settings"] { display: flex; position: absolute; left: var(--space-3); right: var(--space-3); bottom: var(--space-5); }
+    [data-part="app"]:has(> [data-part="tab-bar"]) [data-part="app-header"] [data-part="settings-button"] { display: none; }
+  }
+
+  [data-part="page"] { display: flex; flex-direction: column; gap: var(--space-5); }
+  /* A page's own host (the shell keeps each tab's page in one while you're elsewhere): laid out as the page is. */
+  [data-part="page"] > .lx-view { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
+  /* A page built now, unseen (its place kept) until what it shows from this device is in: then it comes in whole. */
+  [data-part="page"] > .lx-view[data-waiting] { visibility: hidden; }
+  /* A motif theme's scene (lx/theme-presets.js sceneTokens): after the page's content, the screen's width (a wide screen's 900 px at most),
+     its own bottom edge its foot, nothing of the page ever over it. On a page shorter than the screen the page's view grows to fill it
+     (--scene-grow) and the scene takes the screen's foot, above the tab bar's room (the page's spacer, shell.css). Its box is its ratio's from
+     the first frame; its picture fades in once decoded (theme.js holdPicture: --scene-opacity). From tokens, so a slide's picture of a page has
+     it too. None on Translate's page; a session, the reader and a sheet aren't a page's view. */
+  [data-part="page"] > .lx-view { flex-grow: var(--scene-grow, 0); }
+  [data-part="page"] > .lx-view::after {
+    content: var(--scene-content, none);
+    display: block;
+    flex: none;
+    align-self: center;
+    width: min(100vw, 900px);
+    margin-top: auto;
+    aspect-ratio: var(--scene-ratio, auto);
+    background: var(--scene, none) 50% 100% / 100% auto no-repeat;
+    opacity: var(--scene-opacity, 1);
+    transition: opacity var(--dur-320) var(--ease-standard);
+    pointer-events: none;
+  }
+  :root[data-scene-waiting] { --scene-opacity: 0; }
+  :root[data-scene-waiting] [data-part="page"] > .lx-view::after { transition: none; }
+  :root[data-translate] [data-part="page"] > .lx-view::after { content: none; }
+  [data-part="section"] { display: flex; flex-direction: column; gap: var(--space-3); padding-top: var(--space-5); border-top: 1px solid var(--hair); }
+  [data-part="section-title"] { font: 500 var(--size-20) / 1.25 var(--type-head); letter-spacing: var(--track-head); }
+
+  /* ============ controls ============ */
+
+  [data-part="button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-height: var(--control);
+    padding: 0 var(--space-4);
+    border: 1px solid transparent;
+    border-radius: var(--radius-12);
+    font: 600 var(--size-14) / 20px var(--type-ui);
+    white-space: nowrap;
+    text-decoration: none;
+    user-select: none;
+    transition: background-color var(--dur-150) var(--ease-standard), border-color var(--dur-150) var(--ease-standard),
+      color var(--dur-150) var(--ease-standard), opacity var(--dur-150) var(--ease-standard);
+  }
+  [data-part="button"][data-variant="white"] { background: var(--solid); color: var(--on-solid); }
+  @media (hover: hover) { [data-part="button"][data-variant="white"]:not(:disabled):hover { background: var(--solid-hover); } }
+  [data-part="button"][data-variant="gray"] { background: var(--fill); border-color: var(--edge); color: var(--ink-2); font-weight: 500; }
+  @media (hover: hover) { [data-part="button"][data-variant="gray"]:not(:disabled):hover { background: var(--fill-hover); color: var(--ink-1); } }
+  [data-part="button"][data-variant="gray"][aria-pressed="true"] { background: var(--fill-active); color: var(--ink-1); }
+  [data-part="button"][data-variant="fade"] { background: transparent; color: var(--ink-2); }
+  @media (hover: hover) { [data-part="button"][data-variant="fade"]:not(:disabled):hover { color: var(--ink-1); background: var(--fill); } }
+  [data-part="button"][data-variant="danger"] { background: var(--m-wrong-bg); border-color: var(--m-wrong-edge); color: var(--m-wrong); }
+  [data-part="button"][data-size="sm"] { min-height: var(--control-32); padding: 0 var(--space-3); border-radius: var(--radius-8); font-size: var(--size-14); }
+  [data-part="button"][data-size="lg"] { min-height: 52px; padding: 0 var(--space-5); border-radius: var(--radius-16); font-size: var(--size-16); }
+  [data-part="button"][data-block] { display: flex; width: 100%; }
+  [data-part="button"]:disabled { opacity: 0.45; cursor: default; }
+
+  /* A way to sign in (variant google · github · passkey; brands.js builds it for the server's pages and the app): all
+     three the same size and weight, the mark at the start, the words centered. Google's follows its sign-in branding
+     guidelines: its color G, its light or dark fill and stroke (whichever matches the page's color scheme), and
+     Google Sans Medium 14/20. Older browsers without light-dark() get its dark theme, which the guidelines allow
+     anywhere. */
+  [data-part="sign-in-button"] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 0 52px;
+    border: 1px solid var(--edge-strong);
+    border-radius: var(--radius-12);
+    background: var(--fill);
+    color: var(--ink-1);
+    font: 500 15px / 20px var(--type-ui);
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    transition: background-color var(--dur-150) var(--ease-standard), border-color var(--dur-150) var(--ease-standard);
+  }
+  [data-part="sign-in-button"] .lx-sign-in-mark {
+    position: absolute;
+    inset-inline-start: 15px;
+    top: 50%;
+    translate: 0 -50%;
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+  }
+  :is([data-part="sign-in-button"], .lx-sign-in-mark) :is(.lx-brand-mark, .lx-icon) { display: block; width: 20px; height: 20px; }
+  [data-part="sign-in-button"] .lx-icon { stroke-width: 2.1; }
+  [data-part="sign-in-button"][data-variant="google"] {
+    background: #131314;
+    border-color: #8e918f;
+    color: #e3e3e3;
+    background: light-dark(#ffffff, #131314);
+    border-color: light-dark(#747775, #8e918f);
+    color: light-dark(#1f1f1f, #e3e3e3);
+    font: 500 14px / 20px "Google Sans", var(--type-ui);
+  }
+  /* Apple's own colors, as its Sign in with Apple guidelines show them: white with black on a dark page, black with white on a light
+     one, its logo in the button's ink. The sign-in pages draw it like the others instead (signin.css; decided 6 Nov 2026: Apple's white
+     was the loudest thing on a dark page, against one way forward), which is outside Apple's listed styles on a dark page. Adding
+     [data-variant="apple"] to signin.css's two :not() lists beside Google's brings these colors back. */
+  [data-part="sign-in-button"][data-variant="apple"] {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
+    background: light-dark(#000000, #ffffff);
+    border-color: light-dark(#000000, #ffffff);
+    color: light-dark(#ffffff, #000000);
+  }
+  @media (hover: hover) {
+    [data-part="sign-in-button"]:not(:disabled):hover { background: var(--fill-hover); border-color: var(--ink-3); }
+    [data-part="sign-in-button"][data-variant="apple"]:not(:disabled):hover {
+      background: #e8e8ed;
+      background: light-dark(#1d1d1f, #e8e8ed);
+      border-color: light-dark(#1d1d1f, #e8e8ed);
+    }
+    [data-part="sign-in-button"][data-variant="google"]:not(:disabled):hover {
+      background: #1f1f20;
+      background: light-dark(#f7f8f8, #1f1f20);
+      border-color: light-dark(#747775, #8e918f);
+    }
+  }
+  [data-part="sign-in-button"]:not(:disabled):active { background: var(--fill-active); }
+  [data-part="sign-in-button"][data-variant="google"]:not(:disabled):active { background: #2a2a2b; background: light-dark(#eceded, #2a2a2b); }
+  [data-part="sign-in-button"][data-variant="apple"]:not(:disabled):active { background: #d2d2d7; background: light-dark(#333336, #d2d2d7); }
+  [data-part="sign-in-button"]:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+  [data-part="sign-in-button"]:disabled { opacity: 0.45; cursor: default; }
+  [data-part="sign-in-button"] { -webkit-tap-highlight-color: transparent; }
+
+  [data-part="icon-button"] {
+    display: inline-grid;
+    place-items: center;
+    width: var(--control);
+    height: var(--control);
+    flex: none;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-12);
+    background: var(--fill);
+    color: var(--ink-2);
+  }
+  @media (hover: hover) { [data-part="icon-button"]:hover { background: var(--fill-hover); color: var(--ink-1); } }
+  [data-part="icon-button"][data-state="playing"] { color: var(--ink-1); border-color: var(--edge-strong); }
+
+  /* The word-order toggle: a small switch with NL and EN in it; the thumb slides under the order shown. The whole
+     switch is one button (press anywhere to flip); only the thumb inside it moves. */
+  [data-part="order-toggle"] {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 76px;
+    height: var(--control-32);
+    flex: none;
+    padding: 3px;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-full);
+    background: var(--fill);
+    color: var(--ink-3);
+    font: 600 var(--size-12) / 1 var(--type-ui);
+    letter-spacing: 0.02em;
+  }
+  [data-part="order-toggle"] .lx-order-thumb {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    width: calc(50% - 3px);
+    border-radius: var(--radius-full);
+    background: var(--solid);
+    transition: transform var(--dur-200) var(--ease-out);
+  }
+  [data-part="order-toggle"][aria-pressed="true"] .lx-order-thumb { transform: translateX(100%); }
+  [data-part="order-toggle"] .lx-order-label { position: relative; text-align: center; transition: color var(--dur-150) var(--ease-standard); }
+  [data-part="order-toggle"][aria-pressed="false"] .lx-order-label:first-of-type,
+  [data-part="order-toggle"][aria-pressed="true"] .lx-order-label:last-of-type { color: var(--on-solid); }
+  @media (hover: hover) { [data-part="order-toggle"]:hover { border-color: var(--edge-strong); } }
+
+  /* Plays Dutch aloud. While playing it turns solid, with a ring breathing out from it (the ring is a pseudo-element
+     that takes no presses; the button itself never moves). */
+  [data-part="speak-button"] {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-width: var(--control);
+    height: var(--control);
+    flex: none;
+    padding: 0;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-full);
+    background: var(--fill);
+    color: var(--ink-1);
+    font: 500 var(--size-14) / 1 var(--type-ui);
+    transition: background-color var(--dur-150) var(--ease-standard), color var(--dur-150) var(--ease-standard);
+  }
+  [data-part="speak-button"]:has(> span) { padding: 0 var(--space-4) 0 var(--space-3); }
+  @media (hover: hover) { [data-part="speak-button"]:not([data-state="playing"]):hover { background: var(--fill-hover); } }
+  [data-part="speak-button"][data-state="playing"] { background: var(--solid); border-color: var(--solid); color: var(--on-solid); }
+  [data-part="speak-button"][data-state="playing"]::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 2px solid var(--solid);
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    animation: lx-speaking calc(var(--dur-640) * 2) var(--ease-out) infinite;
+  }
+  @keyframes lx-speaking {
+    from { opacity: 0.55; transform: scale(0.94); }
+    to { opacity: 0; transform: scale(1.14); }
+  }
+
+  /* The speaking game's button: wide, within reach, solid when ready. While it listens it empties and a row of bars
+     inside it follows your voice (--h, 0 to 1, set from the microphone's loudness); while it works out what you said,
+     the bars breathe. The bars take no presses and the button never moves. */
+  [data-part="mic-button"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    width: 100%;
+    max-width: 420px;
+    min-height: 96px;
+    padding: var(--space-3) var(--space-5);
+    border: 2px solid var(--solid);
+    border-radius: var(--radius-24);
+    background: var(--solid);
+    color: var(--on-solid);
+    font: 600 var(--size-20) / 1.1 var(--type-ui);
+    box-shadow: 0 4px 0 var(--edge-strong);
+    transition: background-color var(--dur-200) var(--ease-standard), color var(--dur-200) var(--ease-standard);
+  }
+  [data-part="mic-button"] > .lx-icon { width: 34px; height: 34px; flex: none; }
+  /* The words can wrap, so the button's narrowest is a word's width and a box that sizes to it never grows past the screen; ui.fitLine keeps
+     them to one line (a test of their lines, not of their width). */
+  [data-part="mic-button"] .lx-mic-label { flex: 0 1 auto; }
+  /* In a row the words never give up width (any at all wraps them); the bars take all of it. Short even so, the row turns to a column (1). */
+  [data-part="mic-button"]:not([data-fit]) .lx-mic-label { flex-shrink: 0; }
+  /* The bars give up room long before the words do: the oldest go, the newest stay at the right. */
+  [data-part="mic-button"] .lx-mic-bars { display: none; flex: 0 1000 auto; min-width: 0; overflow: hidden; justify-content: flex-end; align-items: center; gap: 3px; height: 52px; }
+  [data-part="mic-button"] .lx-mic-bars > i { flex: none; }
+  [data-part="mic-button"] .lx-mic-bars > i {
+    --h: 0;
+    display: block;
+    width: 4px;
+    height: calc(6px + var(--h) * 46px);
+    border-radius: 2px;
+    background: currentColor;
+    opacity: calc(0.35 + var(--h) * 0.65);
+    transition: height 80ms linear, opacity 80ms linear;
+  }
+  [data-part="mic-button"]:is([data-state="asking"], [data-state="loading"], [data-state="listening"], [data-state="hearing"], [data-state="thinking"]) {
+    background: var(--fill-active);
+    color: var(--ink-1);
+  }
+  [data-part="mic-button"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) .lx-mic-bars { display: flex; }
+  [data-part="mic-button"]:is([data-state="thinking"], [data-state="loading"]) .lx-mic-bars > i {
+    height: 14px;
+    animation: lx-mic-think calc(var(--dur-640) * 1.6) var(--ease-standard) infinite;
+  }
+  [data-part="mic-button"] .lx-mic-bars > i:nth-child(3n + 2) { animation-delay: calc(var(--dur-640) * 0.2); }
+  [data-part="mic-button"] .lx-mic-bars > i:nth-child(3n) { animation-delay: calc(var(--dur-640) * 0.4); }
+  @keyframes lx-mic-think {
+    0%, 100% { opacity: 0.25; }
+    50% { opacity: 0.9; }
+  }
+  /* Its words on one line in any language (ui.fitLine): 1 the bars under the words, the microphone out of their way while they show (as the
+     compact one does), the button's size unchanged; 2–5 the words a size smaller each time (12px the last), its sides tighter from 3; wrap only
+     when even that won't do, at 14px. */
+  [data-part="mic-button"][data-fit] { flex-direction: column; gap: 6px; }
+  [data-part="mic-button"][data-fit]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) > .lx-icon { display: none; }
+  [data-part="mic-button"][data-fit] .lx-mic-bars { flex: none; height: 28px; overflow: visible; }
+  [data-part="mic-button"][data-fit] .lx-mic-bars > i { height: calc(4px + var(--h) * 22px); }
+  [data-part="mic-button"][data-fit]:is([data-state="thinking"], [data-state="loading"]) .lx-mic-bars > i { height: 12px; }
+  [data-part="mic-button"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"], [data-fit="5"], [data-fit="wrap"]) { font-size: 18px; }
+  [data-part="mic-button"]:is([data-fit="3"], [data-fit="4"], [data-fit="5"], [data-fit="wrap"]) { padding-inline: var(--space-3); font-size: var(--size-16); }
+  [data-part="mic-button"]:is([data-fit="4"], [data-fit="wrap"]) { font-size: var(--size-14); }
+  [data-part="mic-button"][data-fit="5"] { font-size: var(--size-12); }
+  [data-part="mic-button"][data-fit="wrap"] .lx-mic-label { text-align: center; }
+  /* Compact (data-size sm): round, the microphone alone; while listening, a few bars take its place. */
+  [data-part="mic-button"][data-size="sm"] { width: 56px; min-height: 0; height: 56px; padding: 0; gap: 0; border-radius: 50%; box-shadow: none; }
+  [data-part="mic-button"][data-size="sm"] .lx-mic-label { display: none; }
+  [data-part="mic-button"][data-size="sm"] > .lx-icon { width: 26px; height: 26px; }
+  [data-part="mic-button"][data-size="sm"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) > .lx-icon { display: none; }
+  [data-part="mic-button"][data-size="sm"] .lx-mic-bars { height: 28px; gap: 2px; }
+  [data-part="mic-button"][data-size="sm"] .lx-mic-bars > i { width: 3px; height: calc(4px + var(--h) * 22px); }
+  [data-part="mic-button"][data-size="sm"] .lx-mic-bars > i:nth-child(-n + 15) { display: none; }
+
+  /* A step, top to bottom: the instruction in one bold line; what it's about (the English, a sentence, the audio), with
+     room around it; then what you do, centered in the space that's left, within reach. The answer bar under it holds
+     Check or Continue and the quieter choices. */
+  [data-part="activity"] > .lx-step { flex: 1 0 auto; gap: var(--space-5); }
+  .lx-stimulus { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+  .lx-step > .lx-reach { flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; gap: var(--space-4); padding: var(--space-3) 0; }
+  /* Typing: the field under what it's about, clear of where the keys land, so nothing has to move when they come up. */
+  .lx-step:has([data-part="type-answer"]) > .lx-reach { justify-content: flex-start; }
+  /* A speaking step's middle: what's happening, the wide speak button, then what you said. */
+  .lx-say-zone { align-items: center; }
+  /* Room for two lines, so what it says changing doesn't move the speak button under your finger. */
+  /* Two lines' room from the first frame (the longest a speaking game says, at 320 wide), so the microphone under it never moves as it changes. */
+  .lx-say-zone .lx-say-status { margin: 0; line-height: 1.5; min-height: 3em; color: var(--ink-2); text-align: center; }
+  .lx-say-zone > .lx-said { align-self: stretch; }
+  /* Under Say the word's and Repeat the word's microphone: the room its said lines take once the answer is settled (the word, the lines' gap,
+     what was heard), held from the start, so neither a wrong try nor the answer moves the microphone. A centered step doesn't recenter for them. */
+  .lx-said[data-holds="said-lines"] { min-height: calc(var(--size-20) * 1.6 + var(--space-2) + 20px); }
+
+  /* What you said, word by word. Meaning is never color alone: each result has its own line. */
+  [data-part="said-line"] { margin: 0; font: 500 var(--size-20) / 1.6 var(--type-read); }
+  [data-part="said-word"] { text-decoration-thickness: 2px; text-underline-offset: 6px; border-radius: 4px; }
+  [data-part="said-word"][data-state="right"] { color: var(--m-right); text-decoration-line: underline; text-decoration-color: var(--m-right-edge, currentColor); }
+  [data-part="said-word"][data-state="close"] { color: var(--m-slipping); text-decoration-line: underline; text-decoration-style: dotted; }
+  [data-part="said-word"][data-state="order"] { background: var(--m-moved-mark); box-shadow: 0 0 0 2px var(--m-moved-mark); }
+  [data-part="said-word"][data-state="wrong"] { color: var(--m-wrong); text-decoration-line: underline; text-decoration-style: wavy; }
+  /* Quiet by its ink and its mark, never by opacity (which takes contrast from whatever's under it). */
+  [data-part="said-word"][data-state="missing"] { color: var(--m-wrong); text-decoration-line: line-through; }
+  /* Typed (ui.typedLine): a word of the sentence you left out, at its place: quiet, dashed under, never struck through (it's the right word). */
+  [data-part="said-word"][data-state="left-out"] { color: var(--ink-3); text-decoration-line: underline; text-decoration-style: dashed; }
+
+  /* A Dutch sentence you can hear: the speak button, then the words, each lighting up as it's spoken. */
+  [data-part="spoken-line"] { display: flex; align-items: center; gap: var(--space-3); margin: 0; font: 500 var(--size-20) / 1.35 var(--type-read); }
+  [data-part="spoken-word"] { border-radius: 5px; transition: background-color var(--dur-150) var(--ease-standard), box-shadow var(--dur-150) var(--ease-standard); }
+  :is([data-part="spoken-word"], [data-part="target-word"])[data-speaking] { background: var(--fill-active); box-shadow: 0 0 0 2px var(--fill-active); }
+  [data-part="target-word"][data-state="missed"][data-speaking] { box-shadow: 0 0 0 2px var(--m-wrong-edge); }
+
+  [data-part="field"] { display: flex; flex-direction: column; gap: var(--space-1); font-size: var(--size-14); color: var(--ink-2); }
+  [data-part="text-field"] {
+    min-height: var(--control);
+    width: 100%;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-12);
+    background: var(--well);
+    color: var(--ink-1);
+    font: 400 var(--size-16) var(--type-ui);
+  }
+  textarea[data-part="text-field"] { padding: var(--space-3); min-height: 120px; font-family: var(--type-ui); font-size: var(--size-14); line-height: 1.5; resize: vertical; }
+  /* What someone writes in a language, not code: in the page's own type. */
+  textarea[data-part="text-field"][data-writing] { min-height: 76px; font-family: var(--type-ui); resize: none; overflow: hidden; }
+  /* Focus on the field's own edge, never round it: a ring outside was cut off by the scrolling page above it (Explore's search) and
+     by a sheet's body. The edge thickens to 2 px in the ring's color, inside the field. */
+  [data-part="text-field"]:focus-visible { outline: none; border-color: var(--ring); box-shadow: inset 0 0 0 1px var(--ring); }
+  [data-part="text-field"]::placeholder { color: var(--ink-4); }
+  @media (pointer: coarse) { [data-part="text-field"] { font-size: max(16px, 1em); } textarea[data-part="text-field"] { font-size: 16px; } }
+
+  [data-part="segmented"] {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-12);
+    background: var(--well);
+  }
+  [data-part="segment"] {
+    min-width: 44px;
+    min-height: calc(var(--control) - 6px);
+    padding: 0 var(--space-3);
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--ink-2);
+    font: 500 var(--size-14) / 1 var(--type-ui);
+  }
+  [data-part="segment"][aria-pressed="true"] { background: var(--fill-active); color: var(--ink-1); box-shadow: inset 0 0 0 1px var(--edge); }
+
+  [data-part="switch"] {
+    appearance: none;
+    position: relative;
+    width: 44px;
+    height: 26px;
+    flex: none;
+    margin: 0;
+    border-radius: var(--radius-full);
+    background: var(--fill-active);
+    border: 1px solid var(--edge);
+    transition: background-color var(--dur-150) var(--ease-standard);
+  }
+  [data-part="switch"]::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--ink-2);
+    transition: transform var(--dur-200) var(--ease-spring), background-color var(--dur-150) var(--ease-standard);
+  }
+  [data-part="switch"]:checked { background: var(--solid); }
+  [data-part="switch"]:checked::after { transform: translateX(18px); background: var(--on-solid); }
+
+  [data-part="radio"] {
+    appearance: none;
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    flex: none;
+    margin: 0;
+    border: 2px solid var(--edge-strong);
+    border-radius: 50%;
+    background: transparent;
+    transition: border-color var(--dur-150) var(--ease-standard);
+  }
+  [data-part="radio"]::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--solid);
+    transform: scale(0);
+    transition: transform var(--dur-200) var(--ease-spring);
+  }
+  [data-part="radio"]:checked { border-color: var(--solid); }
+  [data-part="radio"]:checked::after { transform: scale(1); }
+
+  /* ============ meaning: badges and concept tags ============ */
+
+  [data-part="badge"],
+  [data-part="concept-tag"] {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    min-height: 24px;
+    padding: 0 var(--space-2);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-8);
+    background: var(--fill);
+    color: var(--ink-2);
+    font: 500 var(--size-12) / 1 var(--type-ui);
+    white-space: nowrap;
+  }
+  /* A tag naming a word with its gloss can be long (a word's forms and phrases): it wraps within its place, never past
+     it. One line is as tall as before. */
+  [data-part="concept-tag"] { max-width: 100%; font-family: var(--type-read); font-size: var(--size-14); line-height: 1.3; padding-block: 1px; white-space: normal; overflow-wrap: break-word; }
+  /* A right-to-left run quoted in English (bidiText: a chip's or a Match gloss's words) is a few words, never split across
+     lines, so a phrase like پٙه … کې keeps its last word with it. The longest in any pack fits a Match tile on a phone. */
+  :is([data-part="concept-tag"], [data-part="match-item"]) bdi { white-space: nowrap; }
+  :is([data-part="badge"], [data-part="concept-tag"])[data-meaning="right"] { color: var(--m-right); background: var(--m-right-bg); border-color: var(--m-right-edge); }
+  :is([data-part="badge"], [data-part="concept-tag"])[data-meaning="wrong"] { color: var(--m-wrong); background: var(--m-wrong-bg); border-color: var(--m-wrong-edge); }
+  :is([data-part="badge"], [data-part="concept-tag"])[data-meaning="slipping"] { color: var(--m-slipping); background: var(--m-slipping-bg); border-color: var(--m-slipping-edge); }
+  :is([data-part="badge"], [data-part="concept-tag"])[data-meaning="new"] { color: var(--m-new); background: var(--m-new-bg); border-color: var(--m-new-edge); }
+  :is([data-part="badge"], [data-part="concept-tag"])[data-meaning="hint"] { color: var(--m-hint); background: var(--m-hint-bg); border: 1px dashed var(--m-hint-edge); }
+  :is([data-part="badge"], [data-part="concept-tag"])[data-meaning="moved"] {
+    color: var(--m-moved-ink);
+    background: var(--m-moved-mark);
+    border-color: transparent;
+    text-decoration: underline dotted var(--m-moved-line) 2px;
+    text-underline-offset: 3px;
+  }
+
+  /* ============ study card ============ */
+
+  [data-part="study-card"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-24);
+    background: var(--well);
+    transition: border-color var(--dur-200) var(--ease-standard), box-shadow var(--dur-200) var(--ease-standard);
+  }
+  [data-part="study-card"][data-state="right"] { border-color: var(--m-right-edge); box-shadow: inset 0 0 0 1px var(--m-right-edge); }
+  [data-part="study-card"][data-state="wrong"] { border-color: var(--m-wrong-edge); box-shadow: inset 0 0 0 1px var(--m-wrong-edge); }
+
+  [data-part="card-meta"] { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); }
+  [data-part="card-meta"] > div { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+
+  /* Its words sit on one baseline: a word with a reading over it is taller, and the line's default (stretch) would
+     put its characters lower than a neighbor's without one (Japanese's kana words). */
+  [data-part="target-line"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.28em;
+    row-gap: var(--space-1);
+    font: 500 var(--size-target) / 1.3 var(--type-read);
+    letter-spacing: -0.01em;
+  }
+
+  [data-part="target-word"] {
+    /* One long word (a plain card can hold any) breaks rather than leaving the screen. */
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    padding: 0 2px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-decoration: underline transparent 2px;
+    text-underline-offset: 6px;
+    transition: background-color var(--dur-150) var(--ease-standard), text-decoration-color var(--dur-150) var(--ease-standard);
+  }
+  @media (hover: hover) { button[data-part="target-word"]:hover { background: var(--fill-hover); } }
+  [data-part="target-word"][data-state="missed"] { background: var(--m-wrong-bg); color: var(--m-wrong); text-decoration-color: var(--m-wrong); text-decoration-style: wavy; }
+  [data-part="target-word"][data-state="new"] { text-decoration: underline dashed var(--m-new-edge) 2px; text-underline-offset: 6px; }
+  /* The one word a card or a question is about: boxed, not only tinted. */
+  [data-part="target-word"][data-state="target"] { background: var(--m-new-bg); box-shadow: 0 0 0 2px var(--ink-2); font-weight: 600; }
+  [data-part="word-meaning"] { overflow-wrap: anywhere; margin: 0; color: var(--ink-1); font-size: var(--size-16); line-height: 1.35; overflow-wrap: anywhere; }
+  [data-part="word-meaning"] strong { font-weight: 600; }
+  [data-part="word-meaning"][data-state="hidden"] { display: none; }
+  /* A tapped form's line under its meaning: which form it is (heeft: hebben with u, hij, zij or het). Quieter than the meaning, and as readable. */
+  [data-part="word-popover"] > .lx-word-form { margin: var(--space-1) 0 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.35; overflow-wrap: anywhere; }
+  /* A word's meaning by the word: it takes no presses, so what's under it still answers. */
+  [data-part="session"] > [data-part="word-popover"] { position: absolute; z-index: 5; width: max-content; max-width: min(320px, calc(100% - 24px)); pointer-events: none; }
+  [data-part="word-popover"] > [data-part="word-meaning"] strong { font: inherit; font-weight: 600; }
+  [data-part="target-word"][data-state="slipping"] { text-decoration: underline var(--m-slipping) 2px; text-underline-offset: 6px; }
+  [data-part="target-word"][data-state="right"] { color: var(--m-right); }
+
+  /* A word's reading over it (Japanese kana, Chinese pinyin), small and dim, over the characters it reads: half its
+   * word, as furigana is. A word you know keeps its reading's place, hidden, so a tap that shows it again never moves
+   * the line. */
+  ruby { ruby-position: over; ruby-align: center; }
+  [data-part="reading"] { color: var(--ink-3); font: 500 0.5em / 1.1 var(--type-ui); letter-spacing: 0.01em; }
+  [data-part="reading"][data-state="hidden"] { visibility: hidden; }
+  /* The language quoted inside English (a rule's words: ui.quotedText) stays on one line where it fits, as a quoted word does: a line
+   * never ends inside it (飲みま / す), unless it's longer than the line. Before a reading, Chromium needs the word joiner quotedText puts there. */
+  .lx-quote { word-break: keep-all; overflow-wrap: break-word; }
+  /* Thai stacks its vowels and tone marks over its letters, higher than the font's ascent: its reading (the whole
+   * word's) sits clear of them, and words written together keep a little room between them so their readings don't
+   * run into each other. */
+  rt[data-part="reading"]:lang(th) { padding-bottom: 0.7em; }
+  /* Sorani's letters with a mark above (ڵ ێ ۆ) reach into the room a reading over them takes: its romanization sits
+   * clear of them. */
+  rt[data-part="reading"]:lang(ckb) { padding-bottom: 0.5em; }
+  /* Gurmukhi's vowel signs above the headline (ਿ ੀ ੇ ੈ ੋ ੌ) rise into the room a reading over them takes, and Punjabi's
+   * romanization has letters with a dot below (ṇ ḍ ṭ ṛ): it sits clear of them. */
+  rt[data-part="reading"]:lang(pa) { padding-bottom: 0.5em; }
+  ruby:has(> rt[data-part="reading"]):lang(th) { margin-inline: 0.125em; }
+  /* A word with a reading over it is never under 24px, so its reading is 12px (the reader's text has its own default,
+   * reader.css). A fixed floor on the reading instead would spread a word's characters to fit it (pinyin is wider than
+   * its character). One size for a set: when any tile in Arrange's rows (or the right order) carries a reading, every
+   * tile is 24px, a decoy too (a smaller one would give it away), and so is every word on Match's side of the language;
+   * Place's word and a line you hear go by their own. */
+  :is([data-part="arrange"], [data-part="arrange-key"]):has(rt[data-part="reading"]) [data-part="tile"],
+  [data-part="match-grid"]:has(rt[data-part="reading"]) [data-part="match-item"][data-side="nl"],
+  :is([data-part="place-word"], [data-part="spoken-line"]):has(rt[data-part="reading"]) { font-size: 24px; }
+  /* So is a word with its reading in a chip or a list's row (content.js shownName), and a sentence drawn from its words
+     (sentenceRow's words): each smaller than 24px there. A word you know comes as written, its usual size. */
+  :is([data-part="concept-tag"], .lx-row-title) .lx-word:has(rt[data-part="reading"]),
+  [data-part="sentence-row"] .lx-sentence-nl:has(rt[data-part="reading"]) { font-size: 24px; }
+  /* Arabic and Hebrew: the word itself with its vowel marks, in the word's own type; a word you know shows as written,
+   * and a tap brings the marks back in the same place. */
+  [data-part="reading"][data-variant="vowels"] { color: inherit; font: inherit; letter-spacing: inherit; }
+  [data-part="reading"][data-variant="vowels"][data-state="hidden"] { display: none; }
+  [data-part="reading"][data-variant="vowels"]:not([data-state="hidden"]) + .lx-bare { display: none; }
+  /* A language written without spaces: a line of its words joins them with nothing. */
+  [data-part="target-line"][data-variant="joined"] { column-gap: 0; }
+
+  [data-part="literal-line"] {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.3em;
+    row-gap: 2px;
+    color: var(--ink-2);
+    font: 400 calc(var(--size-read) * 0.95) / 1.45 var(--type-read);
+  }
+  [data-part="literal-chunk"] { border-radius: 5px; }
+  /* The clue Tinta is pointing at (a hint: character.js pointAt), ringed in the ink while it points. */
+  [data-part="literal-chunk"][data-pointed] { outline: 2px solid var(--ink-2); outline-offset: 2px; }
+  [data-part="literal-line"] > .lx-punct { margin-inline-start: -0.3em; }
+  /* In English order the moved words are where English puts them, so they lose their marks. */
+  [data-part="literal-line"][data-order="english"] [data-part="literal-chunk"][data-state="moved"] { background-size: 0% 100%; text-decoration-color: transparent; color: inherit; }
+  /* Where the line sits on a study card (Settings → Study → Study cards). */
+  [data-part="study-card"] [data-part="card-meta"] { order: -2; }
+  [data-part="study-card"][data-literal="above"] [data-part="literal-line"] { order: -1; }
+  [data-part="study-card"][data-literal="off"] [data-part="literal-line"] { display: none; }
+  [data-part="literal-line"][data-state="hidden"] { display: none; }
+  /* A gradient rather than a color, so the mark can be drawn on as a moved word lands (motion.morphToDutch). */
+  [data-part="literal-chunk"][data-state="moved"] {
+    /* Padded for the mark, with the padding taken back out of the gap, so words stay evenly spaced. */
+    margin-inline: -3px;
+    padding-inline: 3px;
+    background: linear-gradient(var(--m-moved-mark), var(--m-moved-mark)) no-repeat 0 0 / 100% 100%;
+    color: var(--m-moved-ink);
+    text-decoration: underline dotted var(--m-moved-line) 2px;
+    text-underline-offset: 4px;
+  }
+
+  [data-part="natural-line"] { overflow-wrap: anywhere; color: var(--ink-3); font: 400 var(--size-16) / 1.45 var(--type-ui); }
+  [data-part="natural-line"][data-state="hidden"] { display: none; }
+
+  [data-part="card-actions"] { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+  /* A button here keeps to the card (its words fitted by ui.fitLine): 1 its icon out of the way, 2 its padding tighter, 3 a size smaller. */
+  [data-part="card-actions"] > [data-part="button"] { max-width: 100%; min-width: 0; }
+  [data-part="button"][data-fit] > .lx-icon { display: none; }
+  [data-part="button"]:is([data-fit="2"], [data-fit="3"], [data-fit="wrap"]) { padding-inline: var(--space-2); }
+  [data-part="button"]:is([data-fit="3"], [data-fit="wrap"]) { font-size: var(--size-12); }
+  [data-part="button"][data-fit="wrap"] { white-space: normal; text-align: center; }
+
+  /* ============ feedback ============ */
+
+  [data-part="feedback"] {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2px var(--space-3);
+    align-items: start;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--fill);
+  }
+  [data-part="feedback"] .lx-icon { width: 22px; height: 22px; grid-row: span 2; margin-top: 1px; }
+  [data-part="feedback-title"] { font-weight: 600; }
+  [data-part="feedback-text"] { overflow-wrap: anywhere; color: var(--ink-2); font-size: var(--size-14); grid-column: 2; }
+  /* More (study/session.js: the rest of a cut explanation) under the explanation, in its column: placed by itself it took the mark's column,
+     which grew to its width and pushed the title and the explanation over. */
+  [data-part="feedback"] > [data-part="button"] { grid-column: 2; justify-self: start; }
+  [data-part="feedback"][data-meaning="right"] { background: var(--m-right-bg); border-color: var(--m-right-edge); }
+  [data-part="feedback"][data-meaning="right"] :is(.lx-icon, [data-part="feedback-title"]) { color: var(--m-right); }
+  [data-part="feedback"][data-meaning="wrong"] { background: var(--m-wrong-bg); border-color: var(--m-wrong-edge); }
+  [data-part="feedback"][data-meaning="wrong"] :is(.lx-icon, [data-part="feedback-title"]) { color: var(--m-wrong); }
+  [data-part="feedback"][data-meaning="slipping"] { background: var(--m-slipping-bg); border-color: var(--m-slipping-edge); }
+  [data-part="feedback"][data-meaning="slipping"] :is(.lx-icon, [data-part="feedback-title"]) { color: var(--m-slipping); }
+  [data-part="feedback"][data-meaning="hint"] { background: transparent; border-style: dashed; border-color: var(--m-hint-edge); }
+  [data-part="feedback"][data-meaning="new"] { background: var(--m-new-bg); border-color: var(--m-new-edge); }
+
+  [data-part="attribution-prompt"] { display: flex; align-items: center; gap: var(--space-2); color: var(--ink-2); font-size: var(--size-14); }
+
+  /* ============ games ============ */
+
+  [data-part="picture-choices"] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); max-width: 100%; margin-inline: auto; align-self: center; width: 100%; }
+  [data-part="picture-choice"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 88px;
+    padding: 0;
+    overflow: hidden;
+    color: var(--ink-1);
+    background: var(--fill);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-12);
+    cursor: pointer;
+    font: inherit;
+    text-align: center;
+  }
+  @media (hover: hover) { [data-part="picture-choice"]:hover { background: var(--fill-hover); } }
+  [data-part="picture-choice"]:active { background: var(--fill-active); }
+  [data-part="picture-choice-art"] { display: block; width: 100%; }
+  [data-part="picture-choice-label"] { display: block; padding: var(--space-2) var(--space-2); font-size: 16px; font-weight: 500; line-height: 1.25; }
+  [data-part="picture-choice"] .lx-icon { position: absolute; top: 8px; right: 8px; opacity: 0; }
+  [data-part="picture-choice"][data-state="right"] { background: var(--m-right-bg); border-color: var(--m-right-edge); color: var(--m-right); box-shadow: inset 0 0 0 1px var(--m-right-edge); }
+  [data-part="picture-choice"][data-state="wrong"] { background: var(--m-wrong-bg); border-color: var(--m-wrong-edge); color: var(--m-wrong); box-shadow: inset 0 0 0 1px var(--m-wrong-edge); }
+  [data-part="picture-choice"]:is([data-state="right"], [data-state="wrong"]) .lx-icon { opacity: 1; }
+  [data-part="picture-choice"][data-state="dimmed"] { color: var(--ink-3); }
+  [data-part="picture-choice"][data-state="dimmed"] [data-part="picture-choice-art"] { opacity: 0.45; }
+  [data-part="see-word"] { display: flex; align-items: center; gap: var(--space-2); font-size: 24px; font-weight: 600; }
+  [data-part="step-tag"] { display: inline-flex; align-self: flex-start; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--m-new-edge); background: var(--m-new-bg); color: var(--m-new); font-size: 13px; font-weight: 600; }
+  /* On a question it takes no room: over the top edge of the question's card, at its start (its fill opaque, so the card's line doesn't run through it),
+     or beside the title when there's no card. The question and its answers stand where they do without it. */
+  /* A step's tags (New word or Once more, and Not word for word) together: on its card's top edge, or beside the title with no card. */
+  :is([data-part="see-word"], [data-part="translate-line"], [data-part="spoken-line"], [data-part="activity-prompt"] > p, [data-part="study-card"]):has(> [data-part="step-tags"][data-on="card"]) { position: relative; }
+  [data-part="step-tags"] { display: inline-flex; align-items: center; gap: 6px; max-width: calc(100% - 2 * var(--space-4)); }
+  [data-part="step-tags"][data-on="card"] { position: absolute; z-index: 1; top: -1px; inset-inline-start: var(--space-4); transform: translateY(-50%); pointer-events: none; }
+  [data-part="step-tags"][data-on="title"] { margin-inline-start: var(--space-2); vertical-align: 0.3em; }
+  [data-part="step-tags"] [data-part="step-tag"] { padding: 1px 7px; font-size: 12px; line-height: 18px; white-space: nowrap; }
+  [data-part="step-tags"][data-on="card"] [data-part="step-tag"] { background: linear-gradient(var(--m-new-bg), var(--m-new-bg)), var(--canvas); }
+  /* Not word for word: the hint's look (dim ink, a dashed edge, no hue): it's about the English, not a grade. */
+  [data-part="step-tag"][data-variant="reword"] { border-style: dashed; border-color: var(--m-hint-edge); color: var(--m-hint); font-weight: 500; }
+  [data-part="step-tags"][data-on="card"] [data-part="step-tag"][data-variant="reword"] { background: var(--canvas); }
+  [data-part="translate-line"] { display: flex; align-items: flex-start; gap: var(--space-2); }
+  [data-part="choice-list"] { display: grid; gap: var(--space-2); }
+  [data-part="choice"] {
+    overflow-wrap: anywhere;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    min-height: calc(var(--control) + 8px);
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--fill);
+    color: var(--ink-1);
+    font: 500 var(--size-16) / 1.3 var(--type-read);
+    text-align: start;
+    transition: background-color var(--dur-150) var(--ease-standard), border-color var(--dur-150) var(--ease-standard);
+  }
+  @media (hover: hover) { [data-part="choice"]:hover { background: var(--fill-hover); } }
+  [data-part="choice"] .lx-icon { opacity: 0; }
+  [data-part="choice"][data-state="selected"] { background: var(--fill-active); border-color: var(--edge-strong); }
+  [data-part="choice"][data-state="right"] { background: var(--m-right-bg); border-color: var(--m-right-edge); color: var(--m-right); }
+  [data-part="choice"][data-state="wrong"] { background: var(--m-wrong-bg); border-color: var(--m-wrong-edge); color: var(--m-wrong); }
+  [data-part="choice"]:is([data-state="right"], [data-state="wrong"]) .lx-icon { opacity: 1; }
+  [data-part="choice"][data-state="dimmed"] { opacity: 0.45; }
+
+  [data-part="arrange"] { display: flex; flex-direction: column; gap: var(--space-3); }
+  [data-part="arrange-answer"],
+  [data-part="arrange-bank"] {
+    display: flex;
+    flex-wrap: wrap;
+    /* A row keeps its tile's height, however tall the tray is held. */
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-2);
+    min-height: calc(var(--control) + var(--space-3));
+    padding: var(--space-2);
+    border-radius: var(--radius-16);
+  }
+  [data-part="arrange-answer"] { border: 1px dashed var(--edge-strong); }
+  /* The tray's border matches your order's (unseen), so the two lay their tiles out alike and your order's held height is
+     the tray's. */
+  [data-part="arrange-bank"] { border: 1px solid transparent; background: var(--fill); }
+  [data-part="tile"] {
+    min-width: 44px;
+    min-height: var(--control);
+    padding: 0 var(--space-3);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-12);
+    background: var(--chrome);
+    color: var(--ink-1);
+    font: 500 var(--size-16) / 1 var(--type-read);
+    box-shadow: 0 1px 0 var(--edge);
+  }
+  [data-part="tile"][data-state="right"] { border-color: var(--m-right-edge); color: var(--m-right); background: var(--m-right-bg); }
+  [data-part="tile"][data-state="wrong"] { border-color: var(--m-wrong-edge); color: var(--m-wrong); background: var(--m-wrong-bg); }
+  [data-part="tile"][data-state="moved"] { background: var(--m-moved-mark); color: var(--m-moved-ink); border-color: transparent; text-decoration: underline dotted var(--m-moved-line) 2px; text-underline-offset: 4px; }
+  /* A placed tile leaves its outline behind, so the bank keeps its shape and you can see what's been used. */
+  [data-part="tile"][data-state="used"] { border-style: dashed; border-color: var(--edge); background: transparent; color: transparent; pointer-events: none; }
+  /* A used tile's slot is empty: its reading (which has its own color) goes too, keeping its place. */
+  [data-part="tile"][data-state="used"] [data-part="reading"] { visibility: hidden; }
+  /* Dragging: a copy of the tile follows the finger (lifted); the tile itself waits where it was (dragging), and a bank
+     tile's landing place shows in your order (drop). Tiles take the finger's drag instead of scrolling the page. */
+  [data-part="arrange"] [data-part="tile"] { touch-action: none; }
+  @media (hover: hover) { [data-part="arrange"] button[data-part="tile"]:not([data-state]) { cursor: grab; } }
+  [data-part="tile"][data-state="dragging"] { opacity: 0.3; }
+  [data-part="tile"][data-state="drop"] { display: inline-flex; align-items: center; border-style: dashed; border-color: var(--edge-strong); background: transparent; color: var(--ink-4); box-shadow: none; }
+  [data-part="tile"][data-state="lifted"] { box-shadow: var(--shadow-pop); cursor: grabbing; }
+
+  /* Where does it go: the word to place, and the sentence with a gap between every two words. */
+  [data-part="place"] { display: flex; flex-direction: column; gap: var(--space-4); }
+  .lx-place-ask { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin: 0; color: var(--ink-2); }
+  [data-part="place-word"] {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--control);
+    padding: 0 var(--space-3);
+    border: 1px solid var(--edge-strong);
+    border-radius: var(--radius-12);
+    background: var(--fill);
+    color: var(--ink-1);
+    font: 500 var(--size-20) / 1 var(--type-read);
+  }
+  [data-part="place-word"][data-state="used"] { border-style: dashed; border-color: var(--edge); background: transparent; color: transparent; }
+  [data-part="place-sentence"] { display: flex; flex-wrap: wrap; align-items: center; row-gap: var(--space-2); margin: 0; font: 500 var(--size-target) / 1.3 var(--type-read); }
+  [data-part="place-gap"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 1.5em;
+    margin: 0 1px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-8);
+    background: transparent;
+    color: var(--ink-1);
+    font: inherit;
+  }
+  [data-part="place-gap"]:not([data-state])::before { content: ""; width: 3px; height: 1.05em; border-radius: 2px; background: var(--edge-strong); }
+  /* An open gap answers a tap over 44 × 44 px (its ::before is the caret, so its reach is the ::after; an answered gap
+     has its mark there instead, and takes no more taps). */
+  [data-part="place-gap"] { position: relative; }
+  [data-part="place-gap"]:not([data-state])::after { content: ""; position: absolute; inset: min(0px, calc((100% - 44px) / 2)); }
+  /* Once answered, the unused gaps close up into plain spaces. */
+  [data-part="place-sentence"]:has([data-part="place-gap"][data-state]) [data-part="place-gap"]:not([data-state]) { min-width: 0.28em; pointer-events: none; }
+  [data-part="place-sentence"]:has([data-part="place-gap"][data-state]) [data-part="place-gap"]:not([data-state])::before { display: none; }
+  @media (hover: hover) { [data-part="place-gap"]:not([data-state]):hover { background: var(--fill-hover); } }
+  [data-part="place-gap"]:not([data-state]):active { background: var(--fill-active); }
+  [data-part="place-gap"][data-state] { padding: 0 var(--space-2); }
+  [data-part="place-gap"][data-state="right"] { color: var(--m-right); background: var(--m-right-bg); box-shadow: inset 0 0 0 1px var(--m-right-edge); }
+  [data-part="place-gap"][data-state="wrong"] { color: var(--m-wrong); background: var(--m-wrong-bg); box-shadow: inset 0 0 0 1px var(--m-wrong-edge); text-decoration: line-through; }
+  /* After a wrong pick: where it really goes, in the moved-word highlight. */
+  [data-part="place-gap"][data-state="answer"] { background: var(--m-moved-mark); color: var(--m-moved-ink); text-decoration: underline dotted var(--m-moved-line) 2px; text-underline-offset: 5px; }
+
+  [data-part="fill-sentence"] { font: 500 var(--size-target) / 1.5 var(--type-read); }
+  /* Its choices are the language's words: in its reading face, as the sentence and a game's tiles are (Urdu's Nastaliq). */
+  /* At least 16px and in the full ink: two choices can differ by one letter (Yiddish's הײסטו and הײססטו), and a
+     word's marks need the room. */
+  [data-part="fill-sentence"] + .lx-row > [data-part="button"] { color: var(--ink-1); font-family: var(--type-read); font-size: max(16px, var(--size-16)); line-height: 1.4; }
+  [data-part="blank"] {
+    display: inline-block;
+    min-width: 3.5em;
+    padding: 0 var(--space-2);
+    border-bottom: 2px solid var(--edge-strong);
+    color: var(--ink-1);
+    text-align: center;
+  }
+  [data-part="blank"][data-state="empty"] { color: transparent; }
+  [data-part="blank"][data-state="filled"] { border-bottom-style: dashed; color: var(--ink-1); }
+  [data-part="blank"][data-state="right"] { border-color: var(--m-right); color: var(--m-right); }
+  [data-part="blank"][data-state="wrong"] { border-color: var(--m-wrong); color: var(--m-wrong); text-decoration: line-through; }
+  /* Type in the gap (ui.typeInGap): the field is the gap, a line as Fill's blank is, in the sentence's own face and size; its room is set
+     in the sentence's letters (--gap-room). The focus is the line itself turning the ring's color, never a ring round it. */
+  [data-part="gap-field"] {
+    box-sizing: content-box;
+    width: var(--gap-room, 5ch);
+    max-width: calc(100% - 2 * var(--space-2));
+    margin: 0;
+    padding: 0 var(--space-2);
+    border: 0;
+    border-bottom: 2px solid var(--edge-strong);
+    border-radius: 0;
+    background: none;
+    color: var(--ink-1);
+    font: inherit;
+    text-align: center;
+    caret-color: var(--ring);
+  }
+  [data-part="gap-field"]:focus-visible { outline: none; border-bottom-color: var(--ring); }
+  [data-part="gap-field"][data-state="right"] { border-color: var(--m-right); color: var(--m-right); }
+  [data-part="gap-field"][data-state="wrong"] { border-color: var(--m-wrong); color: var(--m-wrong); text-decoration: line-through; }
+  @media (pointer: coarse) { [data-part="gap-field"] { font-size: max(16px, 1em); } }
+
+  [data-part="match-grid"] { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); }
+  [data-part="match-item"] {
+    overflow-wrap: anywhere;
+    min-height: var(--control);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-12);
+    background: var(--fill);
+    color: var(--ink-1);
+    font: 500 var(--size-16) / 1.2 var(--type-read);
+  }
+  [data-part="match-item"][data-state="selected"] { border-color: var(--edge-strong); background: var(--fill-active); }
+  [data-part="match-item"][data-state="matched"] { border-color: var(--m-right-edge); background: var(--m-right-bg); color: var(--m-right); }
+  [data-part="match-item"][data-state="wrong"] { border-color: var(--m-wrong-edge); background: var(--m-wrong-bg); color: var(--m-wrong); }
+
+  [data-part="type-answer"] { display: flex; gap: var(--space-2); }
+  [data-part="type-answer"] [data-part="text-field"] { font-family: var(--type-read); font-size: var(--size-read); }
+  [data-part="type-answer"][data-state="right"] [data-part="text-field"] { border-color: var(--m-right-edge); color: var(--m-right); }
+  [data-part="type-answer"][data-state="wrong"] [data-part="text-field"] { border-color: var(--m-wrong-edge); color: var(--m-wrong); }
+
+  /* The reader's parts are in reader.css. */
+
+  /* ============ progress ============ */
+
+  [data-part="session-progress"] { display: flex; gap: 3px; }
+  [data-part="progress-step"] { flex: 1; height: 6px; border-radius: var(--radius-full); background: var(--strength-0); }
+  [data-part="progress-step"][data-state="right"] { background: linear-gradient(var(--m-right), var(--m-right)); }
+  /* A missed step is striped as well as colored. */
+  [data-part="progress-step"][data-state="wrong"] { background: repeating-linear-gradient(-45deg, var(--m-wrong) 0 3px, var(--m-wrong-bg) 3px 5px); }
+  [data-part="progress-step"][data-state="current"] { background: var(--ink-2); }
+
+  [data-part="strength-meter"] { display: inline-flex; gap: 2px; align-items: flex-end; }
+  [data-part="strength-meter"] > i { width: 5px; border-radius: 2px; background: var(--strength-0); }
+  [data-part="strength-meter"] > i:nth-child(1) { height: 6px; }
+  [data-part="strength-meter"] > i:nth-child(2) { height: 9px; }
+  [data-part="strength-meter"] > i:nth-child(3) { height: 12px; }
+  [data-part="strength-meter"] > i:nth-child(4) { height: 15px; }
+  [data-part="strength-meter"][data-level="1"] > i:nth-child(-n + 1),
+  [data-part="strength-meter"][data-level="2"] > i:nth-child(-n + 2),
+  [data-part="strength-meter"][data-level="3"] > i:nth-child(-n + 3),
+  [data-part="strength-meter"][data-level="4"] > i:nth-child(-n + 4) { background: var(--strength-4); }
+  [data-part="strength-meter"][data-meaning="slipping"] > i:nth-child(-n + 4) { box-shadow: inset 0 0 0 1px var(--m-slipping-edge); }
+
+  [data-part="streak"] { display: inline-flex; align-items: center; gap: var(--space-1); font: 600 var(--size-14) / 1 var(--type-mono); color: var(--ink-1); }
+
+  /* ============ lists and surfaces ============ */
+
+  [data-part="card"] { padding: var(--space-4); border: 1px solid var(--hair); border-radius: var(--radius-16); background: var(--well); }
+  /* Lists: rows separated by space, not lines. A row that opens something highlights as a whole, rounded, reaching
+   * past the text on both sides (its padding is taken back out of the page's gutter). */
+  [data-part="list"] { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
+  .lx-row-item { list-style: none; }
+  [data-part="list-row"] {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 56px;
+    margin-inline: calc(-1 * var(--space-3));
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-12);
+  }
+  :is(a, button)[data-part="list-row"] {
+    width: calc(100% + 2 * var(--space-3));
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color var(--dur-150) var(--ease-standard);
+  }
+  @media (hover: hover) { :is(a, button)[data-part="list-row"]:hover { background: var(--fill-hover); } }
+  :is(a, button)[data-part="list-row"]:active { background: var(--fill-active); }
+  /* The leading icon sits on a small tile; the trailing chevron is quiet. */
+  .lx-row-icon { display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: var(--radius-8); background: var(--fill); color: var(--ink-1); }
+  .lx-row-icon .lx-icon { width: 19px; height: 19px; }
+  [data-part="list-row"] > .lx-icon:last-child { flex: none; width: 18px; height: 18px; color: var(--ink-4); }
+  /* A row that opens a sheet over the page is a button, not a way to another page: a border with a hard edge under it (something you
+   * press, among other things, docs/design-bible.md), the page's width, and no chevron. Pressing pushes it down onto its edge. */
+  :is(a, button)[data-part="list-row"][data-opens="sheet"] { width: 100%; margin: var(--space-1) 0 calc(var(--space-1) + 3px); border: 2px solid var(--line-strong); border-radius: var(--radius-16); box-shadow: 0 3px 0 var(--line-strong); transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard), background-color var(--dur-150) var(--ease-standard); }
+  :is(a, button)[data-part="list-row"][data-opens="sheet"]:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); }
+  .lx-row-text { display: flex; flex: 1; flex-direction: column; gap: 1px; min-width: 0; }
+  .lx-row-title { color: var(--ink-1); }
+  .lx-row-sub { color: var(--ink-3); font-size: var(--size-14); line-height: 1.35; }
+  /* Reading text at most ~68 characters a line (--measure, tokens.css), each on its own text so its own size sets it, left where its column
+     starts: a row's lines, a page head's line under its title, a pack's About, a page's quiet line (Study's packs, Everyday's ink), a folded
+     explanation, a source's credit, a book's credits. A phone's column is narrower than the measure, so nothing changes there. (Not a block
+     of words like Everyday's hundreds: a run of single words, not lines to read.) */
+  :is(.lx-row-title, .lx-row-sub, .lx-page-head > p, .lx-pack-about > p, .lx-packs-line, .lx-know-caption, .lx-quiet-body > p, [data-part="credit"], [data-part="reader-credits"] p) { max-width: var(--measure); }
+  .lx-row-end { display: flex; flex: none; align-items: center; gap: var(--space-2); color: var(--ink-3); font-size: var(--size-14); }
+  .lx-row-value { display: block; flex: 0 1 auto; min-width: 0; max-width: 50%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; }
+  [data-part="list-row"][data-state="soon"] .lx-row-title { color: var(--ink-3); }
+  [data-part="list-row"][data-state="soon"] .lx-row-icon { color: var(--ink-4); }
+
+  [data-part="empty-state"] { padding: var(--space-6) var(--space-4); text-align: center; color: var(--ink-3); border: 1px dashed var(--edge); border-radius: var(--radius-16); }
+  /* Tinta above an empty state's words (ui.emptyState), in the pose its words call for */
+  [data-part="empty-state"] > [data-part="character"] { display: block; margin: 0 auto var(--space-3); }
+  /* Tinta in a drawing's box, when the drawing can't be had (ui.emptyState art): in its middle. */
+  [data-part="empty-state"] > .lx-empty-art:has(> [data-part="character"]) { display: grid; place-items: center; }
+  /* Something loading (ui.loadingState): Tinta writing, shown once the wait has lasted 0.4 s, so a quick load never
+     flashes it (animations off: there at once). Its line of loops runs to its right, past its box. */
+  [data-part="empty-state"][data-state="loading"] > [data-part="character"] { animation: lx-loading-tinta 240ms 400ms both; }
+  @keyframes lx-loading-tinta { from { opacity: 0; } }
+  /* Something being looked up (ui.lookingUp): Tinta beside its words, never over them (its magnifier stays inside its
+     box); in with a quick fade, gone with the words (animations off: there at once). */
+  [data-part="looking-up"] { display: flex; align-items: center; gap: var(--space-2); margin: 0; color: var(--ink-2); }
+  [data-part="looking-up"] > [data-part="character"] { flex: none; animation: lx-looking-up-in 160ms var(--ease-standard, ease-out) both; }
+  @keyframes lx-looking-up-in { from { opacity: 0; transform: scale(0.9); } }
+  /* A row's art in its icon's place (listRow art: Tinta, small): no tile under it */
+  .lx-row-icon[data-art] { background: none; overflow: visible; }
+  /* A brand's mark in a row's place (Settings → About's Source code: GitHub's), at a quiet symbol's weight, in the row's ink. */
+  .lx-row-icon[data-art] > .lx-brand-mark { width: 24px; height: 24px; }
+
+  /* A place held for what's on its way (ui.skeleton): as tall as it was last time (--skeleton-height, lx/shapes.js), so
+     nothing moves when it comes, with a slow pulse that says it's coming (still when animations are off: the duration
+     tokens are 0 then). */
+  [data-part="skeleton"] {
+    display: block;
+    width: var(--skeleton-width, auto);
+    min-height: var(--skeleton-height, 120px);
+    border-radius: var(--skeleton-radius, var(--radius-16));
+    background: var(--fill);
+    animation: lx-skeleton calc(var(--dur-640) * 2) ease-in-out infinite alternate;
+  }
+  /* Inside a line (a value at a row's end, a count): a short bar on the text's middle, as tall as the text it holds. */
+  [data-part="skeleton"][data-inline] { display: inline-block; min-height: 0; height: var(--skeleton-height, 1em); vertical-align: -0.12em; border-radius: var(--skeleton-radius, var(--radius-8)); }
+  @keyframes lx-skeleton { from { opacity: 1; } to { opacity: 0.45; } }
+
+  /* Tinta, the character (ui.character): its box is its size from the first draw (the drop at rest fills it; a hop, a
+     splash or thrown ink draws past it), and it takes no presses. Loading's box runs on to the right for its ellipsis,
+     with the drop where it was. */
+  [data-part="character"] {
+    display: inline-block;
+    flex: none;
+    vertical-align: middle;
+    height: var(--character-size, 72px);
+    width: calc(var(--character-size, 72px) * 128 / 130);
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  [data-part="character"][data-state="loading"] { width: calc(var(--character-size, 72px) * 164 / 130); }
+  [data-part="character"] > svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  /* Idle on the compositor (character.js startMotion): its breath and sway a transform about its ground point, VIEW's (0, 0) in
+     [-64, -124, 128, 130]: 64 / 128 across, 124 / 130 down. */
+  [data-part="character"][data-breathing] > svg { transform-origin: 50% 95.3846%; }
+  /* Where he stands on a tab he can be poked (data-pokeable; character.js): his box takes the tap, his drawing (which a move draws past
+     the box) never does. A tap on his ink is his alone: the link around him doesn't open (character.js), nor look pressed while it's
+     down (data-poking: redesign.css and know.css, by each link's own pressed look). A tap beside his ink goes on to the link. */
+  [data-part="character"][data-pokeable] { pointer-events: auto; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  [data-part="character"][data-pokeable] > svg { pointer-events: none; }
+
+  /* A download's bar (ui.downloadBar): its track fills with --progress (0 to 1) in the quiet ink, and Tinta stands on
+   * its near end, its ground on the track (its box's foot is 6/130 of its size below its ground). While it downloads,
+   * Tinta pours itself in as the fill (the rig's pour, through perform); once it's done it stands on the far end. */
+  [data-part="download-bar"] {
+    --download-track: 8px;
+    position: relative;
+    display: block;
+    padding-top: calc(var(--character-size, 32px) * 124 / 130);
+  }
+  [data-part="download-bar"] .lx-download-track { display: block; height: var(--download-track); border-radius: calc(var(--download-track) / 2); background: var(--edge); overflow: hidden; }
+  [data-part="download-bar"] .lx-download-fill { display: block; height: 100%; width: calc(var(--progress, 0) * 100%); border-radius: inherit; background: var(--ink-2); }
+  [data-part="download-bar"] > [data-part="character"] { position: absolute; left: 0; bottom: calc(var(--download-track) - var(--character-size, 32px) * 6 / 130); }
+  [data-part="download-bar"][data-state="done"] > [data-part="character"] { left: auto; right: 0; }
+  [data-part="download-bar"][data-variant="plain"] { padding-top: 0; }
+  .lx-row-sub > [data-part="download-bar"] { margin-top: var(--space-2); }
+  /* A row with a part under it (ui.listRow below: a download's bar): the part on a line of its own at the row's whole
+   * width, the trailing control centered on the text above it, and space under it before whatever follows (its own
+   * margin, since a page may make its rows' padding smaller: Settings' is 4 px). */
+  .lx-row-has-below { flex-wrap: wrap; row-gap: var(--space-2); }
+  .lx-row-below { display: block; flex: 1 0 100%; min-width: 0; margin-bottom: var(--space-2); }
+  /* A book from the shelf on its way (read/shelf.js): its download's bar over the foot of its cover, the flag aside. */
+  [data-part="book-cover"] > [data-part="download-bar"] { position: absolute; left: 10px; right: 10px; bottom: 12px; }
+  [data-part="book-cover"]:has(> [data-part="download-bar"]) > [data-part="language-flag"] { visibility: hidden; }
+
+  [data-part="toast"] {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-full);
+    background: var(--chrome);
+    box-shadow: var(--shadow-pop);
+    font-size: var(--size-14);
+  }
+  [data-part="toast"][data-meaning="right"] .lx-icon { color: var(--m-right); }
+  [data-part="toast"][data-meaning="wrong"] .lx-icon { color: var(--m-wrong); }
+  [data-part="toast"][data-meaning="slipping"] .lx-icon { color: var(--m-slipping); }
+
+  /* A panel that rises from the bottom (ui.sheet): its grab handle on top, its content under it, scrolling. It runs off
+   * the bottom of the screen: no border there, and its background carries on below it, so pulling it up never shows
+   * a gap. */
+  [data-part="sheet"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--space-4);
+    border: 1px solid var(--edge);
+    border-bottom: 0;
+    border-radius: var(--radius-24) var(--radius-24) 0 0;
+    background: var(--chrome);
+    box-shadow: var(--shadow-pop);
+  }
+  [data-part="sheet"][hidden] { display: none; }
+  /* A sheet takes focus when it opens, and with a field focused just before that's focus-visible: no ring round all of it. Its handle has its own. */
+  [data-part="sheet"]:focus-visible { outline: none; }
+  /* Going away (ui.sheet's lxHide), it takes no presses: what's under it is already the page's. */
+  [data-part="sheet"][data-state="closing"] { pointer-events: none; }
+  [data-part="sheet"]::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    height: 100vh;
+    border: 1px solid var(--edge);
+    border-block: 0;
+    background: var(--chrome);
+  }
+  /* Its content scrolls, and only it: no rubber band of its own, so a pull at its top is the sheet's (ui.sheet decides
+   * which, at the first move), and nothing scrolls the page behind. */
+  .lx-sheet-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-3);
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    touch-action: pan-y;
+    padding-bottom: var(--space-5);
+  }
+  /* The handle: the whole top strip is the grab area, the bar is the picture of it. */
+  [data-part="sheet-handle"] {
+    display: grid;
+    flex: none;
+    place-items: center;
+    height: 44px;
+    margin: 0 calc(-1 * var(--space-4));
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: grab;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  [data-part="sheet-handle"]::before { content: ""; width: 36px; height: 4px; border-radius: var(--radius-full); background: var(--edge-strong); }
+  [data-part="sheet-handle"]:active::before,
+  [data-part="sheet"][data-state="dragging"] [data-part="sheet-handle"]::before { background: var(--ink-3); }
+  [data-part="sheet"][data-state="dragging"] [data-part="sheet-handle"] { cursor: grabbing; }
+  [data-part="sheet-handle"]:focus-visible { outline: 2px solid var(--ring); outline-offset: -4px; border-radius: var(--radius-12); }
+
+
+  /* ============ sub-navigation ============ */
+  /* Room inside the scroller (it clips what reaches past it) for each link's reach to 44 px, taken back by the margin
+     so the row sits where it did. */
+  [data-part="subnav"] { display: flex; gap: var(--space-1); overflow-x: auto; scrollbar-width: none; padding-block: 6px; margin-block: -6px -4px; }
+  [data-part="subnav-link"] {
+    flex: none;
+    padding: 6px 12px;
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-full);
+    color: var(--ink-2);
+    font-size: var(--size-14);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  @media (hover: hover) { [data-part="subnav-link"]:hover { color: var(--ink-1); border-color: var(--edge); } }
+  [data-part="subnav-link"][data-state="active"] { color: var(--ink-1); border-color: var(--edge-strong); background: var(--fill-active); }
+
+  /* ============ games: the key and the typing diff ============ */
+  [data-part="arrange-key"] { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: var(--space-2); border: 1px solid var(--m-right-edge); border-radius: var(--radius-16); }
+  [data-part="arrange-key"] [data-part="tile"] { display: inline-flex; align-items: center; }
+  [data-part="type-diff"] { margin: 0; font: 500 var(--size-read) / 1.5 var(--type-read); letter-spacing: 0.02em; white-space: pre-wrap; }
+  [data-part="type-diff"]::before { content: attr(data-label); display: block; margin-bottom: 2px; color: var(--ink-3); font: 500 var(--size-14) / 1.3 var(--type-ui); }
+  /* Under a gap you type in (Type in the gap, Type what it says): the room your typing against the word takes, held from the start (its label's
+     line, 2 px, one line of the word), so a wrong answer moves nothing above it. A centered step doesn't recenter for it. */
+  .lx-said[data-holds="type-diff"] { min-height: calc(var(--size-14) * 1.3 + 2px + var(--size-read) * 1.5); }
+  [data-part="diff-char"][data-state="right"] { color: var(--m-right); }
+  [data-part="diff-char"][data-state="wrong"] { color: var(--m-wrong); text-decoration: line-through; }
+  [data-part="diff-char"][data-state="missing"] { color: var(--m-wrong); background: var(--m-wrong-bg); text-decoration: underline wavy var(--m-wrong) 1.5px; text-underline-offset: 4px; border-radius: 3px; }
+
+  /* ============ session ============ */
+
+  [data-part="session"] {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    /* One column the screen's width, whatever is in it: an auto column would grow to its widest line (a long
+       language name in Hint's words made a session 411 px wide on a 375 px phone). */
+    grid-template-columns: minmax(0, 1fr);
+    background: var(--canvas);
+  }
+  /* The theme's background image, the same layer as the page's (base.css), with the session's own background where
+   * the look has one. Out of the grid's flow. */
+  [data-part="session"]::before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--lx-bg-blur) * -2);
+    z-index: -1;
+    background: var(--lx-backdrop);
+    filter: blur(var(--lx-bg-blur));
+    pointer-events: none;
+  }
+  /* The session's header: a solid band from edge to edge (the bar keeps the page's width; its band reaches the window's
+   * edges), taking the status bar's strip too, with a hairline under it. A look's background shows only between it and
+   * the answer bar. */
+  [data-part="session-bar"] {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: calc(var(--space-3) + env(safe-area-inset-top)) max(var(--space-4), env(safe-area-inset-right)) var(--space-3) max(var(--space-4), env(safe-area-inset-left));
+    background: var(--canvas);
+    box-shadow: 0 0 0 100vmax var(--canvas), 0 1px 0 100vmax var(--hair);
+    clip-path: inset(0 -100vmax -1px);
+  }
+  [data-part="session-bar"] [data-part="session-progress"] { flex: 1; }
+  /* The lesson's idea again: a small pill in the bar, its symbol and one word, reaching 44 px. */
+  [data-part="session-idea"] {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex: none;
+    height: 34px;
+    padding: 0 12px 0 6px;
+    border: 1px solid var(--edge);
+    border-radius: 999px;
+    background: var(--fill);
+    color: var(--ink-1);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  [data-part="session-idea"][hidden] { display: none; }
+  [data-part="session-idea"]::before { content: ""; position: absolute; inset: min(0px, calc((100% - 44px) / 2)); }
+  [data-part="session-idea"] > svg, [data-part="session-idea"] > img, [data-part="session-idea"] > span:first-child { flex: none; }
+  @media (hover: hover) { [data-part="session-idea"]:hover { background: var(--fill-hover); } }
+  [data-part="session-idea"]:active { background: var(--fill-active); }
+  /* On a short screen it's tighter for the whole session: the close button and the progress never move between one step and the next. */
+  @media (max-height: 700px) {
+    [data-part="session-bar"] { padding-top: calc(var(--space-2) + env(safe-area-inset-top)); padding-bottom: var(--space-2); }
+    /* What the step's about keeps one size too: on a short screen the smaller one from the start, not changing as an answer comes. */
+    [data-part="session"] [data-part="activity-prompt"] > p { padding: var(--space-2) var(--space-3); font-size: 18px; }
+  }
+  [data-part="activity"] {
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+    max-width: var(--page-width);
+    min-height: 0;
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-4) var(--space-6);
+    overflow-y: auto;
+  }
+  /* A scroller cuts whatever is drawn past its start, and Tinta on a question stands right at the step's top: its hop
+     on a right answer rises 20 px past that edge. So a session's step starts under the bar, by --step-room, with the
+     same again in padding: nothing in it moves, and what fits still fits. The bar lies over that room, solid and taking
+     its own presses, and what scrolls goes under it; only Tinta is over the bar (below), and only at the step's start.
+     Held by scripts/tinta-whole-check.mjs. (A practice room's chat keeps its own edge: no Tinta rises from its top.) */
+  [data-part="session"] > [data-part="session-bar"] { position: relative; z-index: 1; }
+  /* A session's own toast (Practice this): under its bar, clear of the answer bar, and it takes no presses. */
+  [data-part="session"] > .lx-session-toasts { position: absolute; top: calc(env(safe-area-inset-top) + 64px); bottom: auto; z-index: 6; }
+  [data-part="session"] > .lx-session-toasts > * { pointer-events: none; }
+  [data-part="session"] > [data-part="activity"]:not(.lx-room-chat) {
+    --step-room: 24px;
+    margin-top: calc(-1 * var(--step-room));
+    padding-top: calc(var(--space-3) + var(--step-room));
+    scroll-padding-top: var(--step-room);
+  }
+  /* The instruction: one bold line. Under it, the English the step is about, in a quiet card with room around it. */
+  [data-part="activity-prompt"] { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-5); }
+  [data-part="activity-prompt"] > span { color: var(--ink-1); font: 700 calc(var(--size-20) * 1.2) / 1.2 var(--type-head); letter-spacing: var(--track-head); }
+  /* Tinta on a question (study/session.js): beside the instruction, top right, the same spot in every game; the
+     instruction keeps clear of it, so it never covers a word. It takes no presses. */
+  [data-part="activity-prompt"]:has(> [data-part="character"]) { position: relative; }
+  [data-part="activity-prompt"]:has(> [data-part="character"]) > span { padding-inline-end: calc(var(--character-size, 64px) + var(--space-2)); }
+  /* At rest it stands just under the bar's line; its hop goes over the bar, clear of the bar's words. Over the bar only
+     at the step's start: scrolled on (data-scrolled, set by character.js), it goes under it with everything else. */
+  [data-part="activity-prompt"] > [data-part="character"] { position: absolute; z-index: 2; inset-inline-end: 0; top: calc((1.2em - var(--character-size, 64px)) / 2 + 5px); font-size: calc(var(--size-20) * 1.2); }
+  [data-part="activity"][data-scrolled] [data-part="activity-prompt"] > [data-part="character"] { z-index: 0; }
+  /* A step drawn tighter (fit 2–4): less room for it, so a smaller Tinta, clear of the words under it and of the bar's as
+     it hops (the instruction keeps its 64 px of clearance: its words wrap as they did). Past that (fit 5–7) it's not drawn. */
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"]) [data-part="activity-prompt"] > [data-part="character"] { --character-size: 44px !important; top: -8px; }
+  /* A short screen (an iPhone SE or mini in a browser): a step there tightens the moment an answer bar needs the room, so it's
+     the smaller Tinta from the step's start, one size through the question and no jump at the press. */
+  @media (max-height: 640px) {
+    [data-part="activity-prompt"] > [data-part="character"] { --character-size: 44px !important; top: -8px; }
+  }
+  [data-part="activity-prompt"] > p,
+  .lx-stimulus > [data-part="spoken-line"] {
+    max-width: 100%;
+    margin: 0;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--well);
+    font: 500 var(--size-20) / 1.35 var(--type-read);
+  }
+  /* A step drawn tighter until it fits the screen (study/session.js fit), a level at a time; tiles keep their 44 px
+     reach (the shared ::before) at every level.
+     1: the bar's actions closer. A row of quiet actions alone is laid out by measuring at every level (study/session.js layActions,
+     data-lay, below); a row with a main button in it (Show meaning and Can't listen now) sits on one line, closer, and on the
+     narrowest phones (under 375) its quiet one goes without its icon. */
+  [data-part="session"][data-fit] .lx-answer-actions:not([data-lay]) { flex-wrap: nowrap; gap: var(--space-1); }
+  [data-part="session"][data-fit] .lx-answer-actions:not([data-lay]) > [data-variant="fade"] { flex-shrink: 0; padding-inline: var(--space-2); }
+  @media (max-width: 430px) {
+    [data-part="session"][data-fit] .lx-answer-actions:not([data-lay]) > [data-variant="fade"] { gap: var(--space-1); padding-inline: var(--space-1); }
+  }
+  @media (max-width: 374px) {
+    [data-part="session"][data-fit] .lx-answer-actions:not([data-lay]) > [data-variant="fade"] { padding-inline: 6px; }
+    [data-part="session"][data-fit] .lx-answer-actions:not([data-lay]) > [data-variant="fade"] > .lx-icon { display: none; }
+  }
+  [data-part="session"][data-fit] [data-part="answer-bar"] > div { gap: var(--space-2); padding-top: var(--space-2); }
+  /* 2: the step's spacing, its instruction and its English, tighter. */
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"]) [data-part="activity"] { gap: var(--space-3); padding-top: calc(var(--space-2) + var(--step-room, 0px)); padding-bottom: var(--space-3); }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"]) [data-part="activity-prompt"] { gap: var(--space-3); }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"]) [data-part="activity-prompt"] > span { font-size: var(--size-20); }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"]) [data-part="activity-prompt"] > p { padding: var(--space-2) var(--space-3); font-size: 18px; }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"]) [data-part="arrange"] { gap: var(--space-2); }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"], [data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="activity"] > .lx-step { gap: var(--space-3); }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"], [data-fit="5"], [data-fit="6"], [data-fit="7"]) .lx-step > .lx-reach { padding: 0; }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"], [data-fit="5"], [data-fit="6"], [data-fit="7"]) .lx-stimulus:not(:has(> :not([data-state="hidden"]))) { display: none; }
+  /* 3: tiles 40 px tall. 4: 36, a tile's word 15 px (never one with a reading over it: its word stays at its size, so
+     the reading keeps 12 px), the header, Check and the step's foot tighter. */
+  [data-part="session"]:is([data-fit="3"], [data-fit="4"]) [data-part="tile"] { min-height: 40px; }
+  [data-part="session"][data-fit="4"] [data-part="tile"] { min-height: 36px; padding-inline: var(--space-2); }
+  /* A set of tiles with a reading anywhere in it keeps its one size (24 px: the reading over it 12). */
+  [data-part="session"][data-fit="4"] :is([data-part="arrange"], [data-part="arrange-key"]):not(:has(rt)) [data-part="tile"] { font-size: 15px; }
+  [data-part="session"][data-fit="4"] :is([data-part="arrange-answer"], [data-part="arrange-bank"]) { padding: 6px; }
+  [data-part="session"][data-fit="4"] [data-part="answer-bar"] [data-part="button"][data-size="lg"] { min-height: var(--control); }
+  [data-part="session"][data-fit="4"] [data-part="activity"] { padding-bottom: var(--space-2); }
+  /* An order step (Put it in order, Listening's order, What does it say?) still too tall at level 4, before it's answered (session.js fit: data-order-fit): its
+     instruction's short words, on one line; Hint shown as "Hint", so the quiet actions share a row (its name stays whole); its tiles' words a
+     step smaller, 20 px with a reading over them (the reading 10: the one place a reading goes under 12, a step that otherwise isn't asked
+     here at all) and 14 px without, at level 4's height. Still too tall, it isn't asked this way: session.js askAnotherWay. */
+  [data-part="session"][data-order-fit] :is([data-part="arrange"], [data-part="arrange-key"]):has(rt[data-part="reading"]) [data-part="tile"] { font-size: 20px; }
+  [data-part="session"][data-order-fit] :is([data-part="arrange"], [data-part="arrange-key"]):not(:has(rt)) [data-part="tile"] { font-size: 14px; }
+  /* 5 to 7, once a step is answered: its instruction has done its job (the answer bar says how it went). Levels 2–4
+     hold. */
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="activity"] { gap: var(--space-3); padding-top: calc(var(--space-2) + var(--step-room, 0px)); padding-bottom: var(--space-2); }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="activity-prompt"] { gap: var(--space-3); }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="activity-prompt"] > span { display: none; }
+  /* Fitted tightest, with the instruction left out, Tinta steps aside too: nothing it could sit beside. */
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="activity-prompt"] > [data-part="character"] { display: none; }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="activity-prompt"] > p { padding: var(--space-2) var(--space-3); font-size: 18px; }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="tile"] { min-height: 36px; padding-inline: var(--space-2); }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) :is([data-part="arrange"], [data-part="arrange-key"]):not(:has(rt)) [data-part="tile"] { font-size: 15px; }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) :is([data-part="arrange-answer"], [data-part="arrange-bank"]) { padding: 6px; }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="answer-bar"] [data-part="button"][data-size="lg"] { min-height: var(--control); }
+  /* 6: the right order under yours is left out (the answer bar shows the right sentence, and plays it). */
+  [data-part="session"]:is([data-fit="6"], [data-fit="7"]) [data-part="arrange-key"] { display: none; }
+  /* 7, the last: your order's readings are left out (the heard line just below shows every one, in the right order).
+     Its words keep their 24 px, as a set with a reading does, so its rows are 36 px. Thai's longest sentence needs it
+     at 375 × 667: its readings sit higher than others, clear of its stacked marks. */
+  [data-part="session"][data-fit="7"] [data-part="arrange-answer"] rt[data-part="reading"] { display: none; }
+  /* And at 7 your checked order, whose tiles no longer take a press, is set closer: rows of 30 px, 6 px apart, in the step's
+     tighter gaps. The answer under it is the taller one (its word for word, its why and its ideas), and a ten-word sentence's
+     three rows ran 19–23 px past the step at 375 × 667 (Hawaiian's, Icelandic's). A set with readings keeps its 24 px words. */
+  [data-part="session"][data-fit="7"] [data-part="activity"], [data-part="session"][data-fit="7"] [data-part="activity"] > .lx-step { gap: var(--space-2); }
+  [data-part="session"][data-fit="7"] [data-part="arrange-answer"] { gap: 6px; padding: 4px; }
+  [data-part="session"][data-fit="7"] [data-part="arrange-answer"] [data-part="tile"] { min-height: 30px; }
+  [data-part="session"][data-fit="7"] [data-part="arrange-answer"]:not(:has(rt)) [data-part="tile"] { font-size: 14px; }
+  /* A choice of sentences answered at the last level (Which is right? asked in place of a long sentence's Put it in order at 320 × 568, 9 Nov):
+     its choices, done with, a step tighter and wider, so the step and the result under it both fit. (A letter's choices keep their size.) */
+  [data-part="session"][data-fit="7"] [data-part="choice-list"]:not([data-letters]) { gap: var(--space-1); }
+  [data-part="session"][data-fit="7"] [data-part="choice-list"]:not([data-letters]) > [data-part="choice"] { min-height: 0; padding: var(--space-1) var(--space-3); font-size: 15px; line-height: 1.25; }
+  /* The answer's explanation in three lines, More opening the rest (study/session.js adds More only when it's cut). */
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="answer-bar"] [data-part="feedback-text"]:not([data-state="open"]) { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; }
+  /* And at the last, in two: on a small phone a language's longest sentence can still run past the step by a line (More opens the rest). */
+  [data-part="session"][data-fit="7"] [data-part="answer-bar"] [data-part="feedback-text"]:not([data-state="open"]) { -webkit-line-clamp: 2; }
+  /* Opened (More, or text set large: study/session.js), the explanation is whole; past a height it scrolls inside the bar, so Continue stays
+     on the screen. */
+  [data-part="answer-bar"] [data-part="feedback-text"][data-state="open"] { max-height: 38dvh; overflow-y: auto; overscroll-behavior: contain; }
+  /* A result's body (session.js setBar): its parts in the bar's own column, Continue after it. An answered step its result leaves no room
+   * at the last fit level (a reworded sentence's wrong answer on a 320 × 568 phone; session.js fit) first folds away what the result says
+   * again, then holds the body to the room left: it scrolls, fading out at its foot so no line is cut mid-letter, and Continue stays below. */
+  [data-part="answer-bar"] .lx-answer-body { display: flex; flex-direction: column; gap: inherit; min-height: 0; }
+  /* Held to its room, the body scrolls; nothing in it is squeezed to fit. A part that clips (the way in, an explanation cut to its lines) could
+     shrink to nothing while keeping the margins that take up the bar's gap, and drew the next part over the one before (8 Nov: Fill's wrong
+     answer at 320, the word for word over the answer's second line). */
+  [data-part="answer-bar"] .lx-answer-body > * { flex-shrink: 0; }
+  /* (The fold's rule itself is in study-screens.css: the parts it folds are drawn in the page layer, shell.css, which a rule here can't override.) */
+  [data-part="answer-bar"][data-capped] .lx-answer-body {
+    max-height: var(--answer-cap);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    /* (Room under its last line as deep as the fade, so scrolled to its end nothing is faded.) */
+    padding-bottom: var(--space-5);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - var(--space-5)), transparent);
+  }
+  /* Held to its room, the body puts the right sentence first (study/session.js answerFirst): the explanation comes after the sentence and its
+     English, in the column it had under the title (--hang), cut to its lines still, More under it. */
+  [data-part="answer-bar"] .lx-answer-why { display: flex; flex-direction: column; gap: 2px; padding-inline-start: var(--hang, 0px); }
+  [data-part="answer-bar"] .lx-answer-why > [data-part="button"] { align-self: flex-start; }
+
+  /* The session's footer: a solid band from edge to edge; after an answer it carries the result's color. */
+  [data-part="answer-bar"] { position: relative; z-index: 1; border-top: 1px solid var(--hair); background: var(--chrome); padding-inline: env(safe-area-inset-left) env(safe-area-inset-right); }
+  [data-part="answer-bar"] > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-4) calc(var(--space-3) + env(safe-area-inset-bottom));
+  }
+  [data-part="answer-bar"][data-meaning="right"] { border-top-color: var(--m-right-edge); background: linear-gradient(var(--m-right-bg), var(--m-right-bg)), var(--chrome); }
+  [data-part="answer-bar"][data-meaning="wrong"] { border-top-color: var(--m-wrong-edge); background: linear-gradient(var(--m-wrong-bg), var(--m-wrong-bg)), var(--chrome); }
+  [data-part="answer-bar"][data-meaning="hint"] { border-top-style: dashed; border-top-color: var(--m-hint-edge); }
+  [data-part="answer-bar"] [data-part="feedback"] { background: transparent; border: 0; padding: 0; }
+  /* A session on a tablet or a computer: 700 px wide and 640 tall at least, so never a phone, upright or on its side (docs/design-system.md,
+   * "Tablets and computers"). The step and its bar are one block in the screen's middle: the game right under what it's about (not centered
+   * in the room left), the bar right under the game, a result in it a panel the column's width rather than a band across the screen's foot.
+   * study/session.js sets the room over the block (--stage-top) as a step is first fitted and keeps it for the step, so a result filling the
+   * bar never moves the step: the room under the block takes it. */
+  @media (min-width: 700px) and (min-height: 640px) {
+    [data-part="session"]:has(> [data-part="activity"]:not(.lx-room-chat)) { grid-template-rows: auto minmax(0, max-content) auto minmax(0, 1fr); }
+    [data-part="session"]:not([data-fit]) > [data-part="activity"]:not(.lx-room-chat) { padding-top: calc(var(--space-3) + var(--step-room) + var(--stage-top, 0px)); }
+    [data-part="session"] .lx-step > .lx-reach { flex: none; justify-content: flex-start; }
+    [data-part="session"] > [data-part="answer-bar"] {
+      justify-self: center;
+      width: calc(min(100%, var(--page-width)) - 2 * var(--space-4));
+      padding-inline: 0;
+      border: 1px solid transparent;
+      border-radius: var(--radius-16);
+      background: none;
+    }
+    [data-part="session"] > [data-part="answer-bar"] > div { padding: var(--space-3) var(--space-4); }
+    [data-part="session"] > [data-part="answer-bar"][data-meaning="right"] { border-color: var(--m-right-edge); background: linear-gradient(var(--m-right-bg), var(--m-right-bg)), var(--chrome); }
+    [data-part="session"] > [data-part="answer-bar"][data-meaning="wrong"] { border-color: var(--m-wrong-edge); background: linear-gradient(var(--m-wrong-bg), var(--m-wrong-bg)), var(--chrome); }
+    [data-part="session"] > [data-part="answer-bar"][data-meaning="hint"] { border-style: dashed; border-color: var(--m-hint-edge); background: var(--chrome); }
+  }
+  /* With a mouse (and from 700 px), each choice a number key answers (study/session.js: 1–9 pick; ui.js data-keys) shows its number in its
+   * corner until the step is answered. On ::after: a small button's ::before is its reach to 44 px (this file's top). */
+  @media (min-width: 700px) and (hover: hover) and (pointer: fine) {
+    [data-keys] { counter-reset: lx-key; }
+    [data-keys] > button { position: relative; counter-increment: lx-key; }
+    /* A keycap on the choice's top corner, half outside it, clear of its words; a picture's card clips its edges, so there it sits just
+       inside that corner (the right answer's mark takes it only once the numbers have gone). */
+    [data-keys] > button:not([data-state])::after {
+      content: counter(lx-key);
+      position: absolute;
+      top: -8px;
+      inset-inline-end: -8px;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      min-width: 20px;
+      height: 20px;
+      padding-inline: 5px;
+      border: 1px solid var(--edge);
+      border-radius: 6px;
+      background: var(--chrome);
+      color: var(--ink-2);
+      font: 600 var(--size-12) / 1 var(--type-ui);
+      font-variant-numeric: tabular-nums;
+      pointer-events: none;
+    }
+    [data-part="picture-choices"][data-keys] > button:not([data-state])::after { top: 6px; inset-inline-end: 6px; }
+    [data-part="session"]:has(> [data-part="answer-bar"][data-meaning]) [data-keys] > button::after { content: none; }
+  }
+  .lx-answer-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-2) var(--space-5); }
+  .lx-answer-actions > [data-variant="white"] { flex: 1 1 140px; }
+  /* A row of quiet actions (Hint, Words, I don't know, Can't speak now, Can't listen now) on one line wherever they fit, else wrapped
+     with its lines alike (7 Nov). study/session.js layActions tries each layout in turn, at every fit level, and keeps the first that
+     takes one line with every word showing: loose (as drawn), close, tight, bare (no icons: the words say it all). Else wrap: close,
+     the row given the least width that keeps its lines (set by layActions), so four go 2 + 2, not 3 + 1. Each keeps its 44 px. Only a
+     Hint wider than the whole row (a long language name) gives way, its words ending in an ellipsis, its name still all there to hear.
+     (Each rule here scores the same, one class and two attributes, so the later one wins: a :not() beside them outscored the tight
+     padding once.) */
+  .lx-answer-actions:is([data-lay="close"], [data-lay="tight"], [data-lay="bare"], [data-lay="wrap"]) { column-gap: var(--space-1); }
+  .lx-answer-actions:is([data-lay="close"], [data-lay="tight"], [data-lay="bare"], [data-lay="wrap"]) > [data-variant="fade"] { flex-shrink: 0; min-width: var(--control); gap: var(--space-1); padding-inline: var(--space-2); }
+  .lx-answer-actions:is([data-lay="tight"], [data-lay="bare"]) > [data-variant="fade"] { padding-inline: var(--space-1); }
+  .lx-answer-actions[data-lay="bare"] > [data-variant="fade"] > .lx-icon { display: none; }
+  .lx-answer-actions[data-lay] > [data-variant="fade"]:has(> span[data-gives]) { flex-shrink: 1; min-width: 0; }
+  .lx-answer-actions[data-lay] > [data-variant="fade"] > span[data-gives] { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lx-answer-actions[data-lay="wrap"] { max-width: 100%; margin-inline: auto; }
+  /* The result, with its "…" (ask your AI about the sentence) at the end of the line. */
+  .lx-answer-head { display: flex; align-items: flex-start; gap: var(--space-3); }
+  .lx-answer-head > [data-part="feedback"] { flex: 1; min-width: 0; }
+
+  [data-part="session-summary"] { display: flex; flex-direction: column; gap: var(--space-5); }
+  :is([data-part="session-summary"], [data-part="reminder-step"]) h2 { margin: 0; font: 500 var(--size-28) / 1.1 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+  .lx-stat { display: flex; flex-direction: column; gap: 2px; padding: var(--space-3); border: 1px solid var(--hair); border-radius: var(--radius-16); background: var(--well); }
+  .lx-stat strong { font: 600 var(--size-28) / 1 var(--type-mono); letter-spacing: -0.02em; }
+  .lx-stat span { color: var(--ink-3); font-size: var(--size-12); }
+  .lx-moved-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: var(--space-3); padding: var(--space-2) 0; border-bottom: 1px solid var(--hair); }
+  .lx-moved-row:last-child { border-bottom: 0; }
+  .lx-moved-row .lx-tally { font: 500 var(--size-12) / 1 var(--type-mono); color: var(--ink-3); }
+
+
+  /* ============ pages, groups and settings rows ============ */
+  /* A page inside Settings: a back link in the header, a large title, then groups of rows. Space and quiet labels,
+   * not boxes. */
+  /* The way back, everywhere (ui.backButton: the header's, a sheet's, the reader's): a floating pill of the tabs' own glass
+   * (tokens.css, --bar-*), a chevron and where it goes back to, or the chevron alone, round. Solid where the glass is. */
+  .lx-back {
+    display: inline-flex;
+    flex: none;
+    align-self: flex-start;
+    align-items: center;
+    gap: 2px;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 0;
+    padding: 0 14px 0 8px;
+    border: 1px solid var(--bar-edge);
+    border-radius: var(--radius-full);
+    background: var(--bar-glass);
+    -webkit-backdrop-filter: var(--bar-filter);
+    backdrop-filter: var(--bar-filter);
+    box-shadow: var(--bar-rim), 0 4px 14px -6px rgba(0, 0, 0, 0.35);
+    color: var(--bar-ink);
+    font: 500 var(--size-16) / 1 var(--type-ui);
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lx-back:not(:has(> span)) { justify-content: center; width: 40px; padding: 0; }
+  /* A page's title in the header, centered (ui.appHeader; shell/main.js followBar): as its large title goes under the header it comes in, its
+     opacity how far that title has gone (--bar-shown, 0 at rest), so it follows the scroll both ways. Never over the pill: its room
+     (--bar-title-room) is what's left between the pill and the header's end, mirrored; a title longer than that ends in "…". Its own name:
+     until the header is fitted it takes half the header, never the tab bar's --bar-room (tokens.css, 100 px), which cut a title short for a frame. */
+  [data-part="app-header"] > [data-part="bar-title"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: var(--bar-title-room, 50%);
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    color: var(--ink-1);
+    font: 700 var(--size-16) / 1.25 var(--type-head);
+    letter-spacing: var(--track-head);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: var(--bar-shown, 0);
+  }
+  [data-part="app-header"] > [data-part="bar-title"][data-fixed] { opacity: 1; }
+  /* Where the title and the pill would meet: the pill is its chevron alone (its name still said: ui.backButton's aria). */
+  [data-part="app-header"][data-pill="chevron"] > .lx-back > span { display: none; }
+  [data-part="app-header"][data-pill="chevron"] > .lx-back { justify-content: center; width: 40px; padding: 0; }
+  .lx-back .lx-icon { flex: none; width: 22px; height: 22px; }
+  @media (hover: hover) { .lx-back:hover { background: color-mix(in srgb, var(--bar-ink) 9%, var(--bar-glass)); } }
+  .lx-back:active { background: color-mix(in srgb, var(--bar-ink) 16%, var(--bar-glass)); }
+  .lx-page-head { display: flex; flex-direction: column; gap: var(--space-1); }
+  /* Where a language's lessons run out: Tinta over the words, the rows under them. */
+  .lx-more-lessons { display: grid; gap: var(--space-3); justify-items: start; margin-block: var(--space-4); }
+  .lx-path-foot { margin-block-start: var(--space-4); }
+  [data-part="page-title"] { margin: 0; font: 500 var(--size-28) / 1.15 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-group { display: flex; flex-direction: column; gap: var(--space-1); }
+  [data-part="group-label"] { margin: 0 0 2px; color: var(--ink-3); font: 500 var(--size-14) / 1.3 var(--type-ui); }
+  [data-part="group-note"] { margin: 2px 0 0; color: var(--ink-3); font-size: var(--size-12); line-height: 1.45; }
+  [data-part="list-row"][data-variant="danger"] .lx-row-title,
+  [data-part="list-row"][data-variant="danger"] .lx-row-icon { color: var(--m-wrong); }
+  /* A row that is a switch: the whole row toggles it. */
+  label.lx-row-control { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  @media (hover: hover) { label.lx-row-control:hover { background: var(--fill-hover); } }
+  label.lx-row-control:active { background: var(--fill-active); }
+  /* A row that opens something and has its own switch beside it (never inside it): the text opens, the switch toggles. */
+  [data-part="switch-link-row"] { display: flex; align-items: stretch; gap: var(--space-1); list-style: none; }
+  [data-part="switch-link-row"] > [data-part="list-row"] { flex: 1; min-width: 0; width: auto; margin-inline-end: 0; }
+  [data-part="switch-link-row"] > .lx-row-switch {
+    display: flex;
+    align-items: center;
+    margin-inline-end: calc(-1 * var(--space-3));
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-12);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (hover: hover) { [data-part="switch-link-row"] > .lx-row-switch:hover { background: var(--fill-hover); } }
+  [data-part="switch-link-row"] > .lx-row-switch:active { background: var(--fill-active); }
+  /* A row with a choice: the options sit under its title, full width on a phone. */
+  .lx-row-choice { align-items: flex-start; }
+  .lx-row-choice .lx-row-text { gap: var(--space-2); }
+  .lx-row-choice [data-part="segmented"] { align-self: flex-start; max-width: 100%; }
+  /* Long options stack, a full-width list with the chosen one marked. */
+  .lx-row-choice .lx-segmented-stack { display: flex; flex-direction: column; align-self: stretch; }
+  .lx-segmented-stack [data-part="segment"] { display: flex; align-items: center; justify-content: flex-start; min-height: 44px; padding: 0 var(--space-3); text-align: left; }
+
+  [data-part="avatar"] {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--fill-active);
+    color: var(--ink-1);
+    font: 600 var(--size-14) / 1 var(--type-ui);
+  }
+  [data-part="avatar"][data-size="lg"] { width: 56px; height: 56px; font-size: var(--size-20); }
+  /* On a row lit as the page you're on (Settings' pane on a wide screen: shell.css) or pressed, both --fill-active, the circle's own fill: a
+     hairline ring in the labels' ink keeps it there (3:1 at least on that fill in every ready-made theme: test-themes). */
+  [data-part="list-row"]:is([aria-current="page"], :active) [data-part="avatar"] { box-shadow: inset 0 0 0 1px var(--ink-2); }
+
+  /* A theme, drawn in its own colors (the theme's tokens apply to [data-theme-preview]). */
+  .lx-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: var(--space-2); }
+  /* Settings → Appearance: the Theme label, and Tinta standing at its far end over the swatches. */
+  .lx-theme-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-3); }
+  .lx-theme-head > [data-part="group-label"] { margin-bottom: 0; }
+  .lx-theme-head > [data-part="character"] { flex: none; margin-inline-end: var(--space-2); }
+  [data-part="theme-swatch"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-16);
+    background: transparent;
+    color: var(--ink-1);
+    font: 500 var(--size-14) / 1.2 var(--type-ui);
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (hover: hover) { [data-part="theme-swatch"]:hover { border-color: var(--edge); } }
+  [data-part="theme-swatch"][aria-pressed="true"] { border-color: var(--edge-strong); box-shadow: inset 0 0 0 1px var(--edge-strong); }
+  .lx-swatch-screen { display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: var(--radius-8); background: var(--canvas); border: 1px solid var(--hair); }
+  .lx-swatch-card { display: flex; flex-direction: column; gap: 4px; padding: 6px; border-radius: 6px; background: var(--well); }
+  .lx-swatch-line { display: block; height: 4px; border-radius: 2px; background: var(--ink-1); }
+  .lx-swatch-short { width: 60%; background: var(--ink-3); }
+  .lx-swatch-dots { display: flex; gap: 4px; }
+  .lx-swatch-dots i { width: 14px; height: 6px; border-radius: 3px; }
+  .lx-swatch-dots [data-swatch="right"] { background: var(--m-right); }
+  .lx-swatch-dots [data-swatch="wrong"] { background: var(--m-wrong); }
+  .lx-swatch-dots [data-swatch="moved"] { background: var(--m-moved-mark); }
+  /* The name is drawn in the page's colors, under the preview. */
+  /* A name breaks between its words, never inside one (North Macedonia on two lines): every tile is wide enough for its longest word at its own
+     size (Settings' grid goes two a row under 360 px; swatch-fit measures every name at 320, 360, 375 and 390). */
+  /* A name breaks only between its words at the usual size (every name's longest word fits its tile at 320 to 430); text made large (a
+     phone's text size) can make one word wider than its tile, and then it breaks inside, never past the tile. */
+  [data-part="theme-swatch"] .lx-swatch-name { color: var(--ink-1); overflow-wrap: break-word; }
+  /* One of yours: its background behind the little screen, under as much of its page color as it dims by. */
+  [data-part="theme-swatch"] .lx-swatch-screen[data-image] {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--canvas) var(--swatch-dim), transparent), color-mix(in srgb, var(--canvas) var(--swatch-dim), transparent)),
+      var(--swatch-image);
+    background-size: auto, var(--swatch-size);
+    background-repeat: no-repeat, var(--swatch-repeat);
+    background-position: center;
+  }
+  .lx-swatch-label { margin: var(--space-3) 0 var(--space-2); font-size: var(--size-14); color: var(--ink-3); }
+  /* A theme's tile, built in or ready-made (lx/appearance.js homeSwatch): a small Home in it, at Home's own proportions. Drawn from the
+     theme's colors (and a ready-made one's backdrop) until its picture is here; the picture lies over that once it has decoded, at the same
+     size, so nothing moves. */
+  .lx-swatch-screen[data-home-tile] { position: relative; overflow: hidden; aspect-ratio: 390 / 420; justify-content: flex-end; background: var(--swatch-backdrop, none), var(--canvas); }
+  /* The tile's picture, in a place held over the stand-in (lx/appearance.js homeSwatch): the place draws nothing; the picture shows once it's
+     decoded, ui.arriveIn fading it in. */
+  .lx-swatch-picture-place[data-part="skeleton"] { position: absolute; inset: 0; min-height: 0; border-radius: 0; background: none; animation: none; }
+  .lx-swatch-picture { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0; }
+  .lx-swatch-picture[data-loaded] { opacity: 1; }
+  /* A flag theme's mark (lx/appearance.js homeSwatch): its flag in the tile's corner, where Home has the flag of the language you're learning,
+     at the tile's own scale. Its place is the flag's exact shape in a quiet fill from the first frame; the flag fades in over it once decoded,
+     ringed so a white or a black flag keeps its edge on its own canvas. */
+  .lx-swatch-flag-place[data-part="skeleton"] {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    min-height: 0;
+    height: 15px;
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--canvas) 84%, #808080);
+    animation: none;
+  }
+  .lx-swatch-flag-place > .lx-swatch-flag { display: block; width: 20px; height: 15px; margin: 0; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); opacity: 0; }
+  .lx-swatch-flag-place[data-scheme="dark"] > .lx-swatch-flag { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22); }
+  .lx-swatch-flag-place > .lx-swatch-flag[data-loaded] { opacity: 1; }
+  .lx-theme-flags-row { margin: 0 0 var(--space-4); }
+  .lx-theme-more > .lx-choice-title { margin: 0 0 var(--space-2); }
+  /* A theme's preview in a list row, where the icon goes. */
+  .lx-row-swatch { width: 44px; height: auto; flex: none; background: none; }
+  .lx-row-swatch .lx-swatch-screen { width: 44px; gap: 3px; padding: 4px; }
+  .lx-row-swatch .lx-swatch-card { gap: 2px; padding: 3px; border-radius: 3px; }
+  .lx-row-swatch .lx-swatch-line { height: 2px; }
+  .lx-row-swatch .lx-swatch-dots i { width: 8px; height: 3px; }
+
+  /* ============ a session's preview (Home's card: know/ui.js nextStep) ============ */
+  [data-part="session-preview"] { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  [data-part="preview-step"] {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-8);
+    background: var(--fill);
+    color: var(--ink-2);
+  }
+  [data-part="preview-step"] .lx-icon { width: 17px; height: 17px; }
+  [data-part="preview-step"][data-meaning="new"] { border-style: dashed; border-color: var(--m-new-edge); color: var(--m-new); background: var(--m-new-bg); }
+  [data-part="preview-step"][data-meaning="slipping"] { border-color: var(--m-slipping-edge); color: var(--m-slipping); background: var(--m-slipping-bg); }
+  .lx-qs-focus { display: flex; flex-wrap: wrap; gap: var(--space-1); margin: 0; }
+
+  /* ============ pressing ============ */
+  /* What a press looks like while the finger is down: it clears on release, unlike a sticky hover. */
+  [data-part="button"][data-variant="white"]:not(:disabled):active { background: var(--solid-hover); }
+  [data-part="button"]:is([data-variant="gray"], [data-variant="fade"]):not(:disabled):active,
+  :is([data-part="icon-button"], [data-part="settings-button"], [data-part="segment"]):active,
+  :is([data-part="choice"], [data-part="match-item"], [data-part="tile"]):not([data-state]):active { background: var(--fill-active); }
+  /* Every control shows it's pressed (component-check holds it). One on a plain surface takes the press fill; one that's
+     filled already (selected, on, playing, a solid or a meaning color) or a picture darkens a little, as a book's cover
+     does; a link in a line takes the full ink. */
+  :is([data-part="tab"], [data-part="order-toggle"], [data-part="radio"], [data-part="subnav-link"]:not([data-state="active"]), [data-part="speak-button"]:not([data-state="playing"])):active,
+  :is([data-part="section-head"], [data-part="sentence-row"]) [data-part="icon-button"]:active,
+  [data-part="request-row"] .lx-request-main:active { background: var(--fill-active); color: var(--ink-1); }
+  :is([data-part="segment"][aria-pressed="true"], [data-part="subnav-link"][data-state="active"], :is([data-part="choice"], [data-part="match-item"])[data-state="selected"], [data-part="language-choice"][data-state="selected"], [data-part="speak-button"][data-state="playing"], [data-part="switch"], [data-part="theme-swatch"], [data-part="mic-button"], [data-part="button"][data-variant="danger"]:not(:disabled)):active,
+  [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"]:active { filter: brightness(0.88); }
+  [data-part="section-link"]:active { color: var(--ink-1); }
+  /* The browser's own tap flash: never. Every control has its own pressed state (below), and the flash paints a press in another
+     color for a frame on whatever it missed (Where does it go's gaps, a row). */
+  * { -webkit-tap-highlight-color: transparent; }
+
+  /* ============ right and wrong marks ============ */
+  /* Parts without an icon of their own carry a small check or cross with their meaning color (tokens.css). */
+  :is([data-part="tile"], [data-part="blank"], [data-part="place-gap"])[data-state="right"]::after,
+  [data-part="match-item"][data-state="matched"]::after,
+  [data-part="target-word"][data-state="right"]::after,
+  :is([data-part="tile"], [data-part="blank"], [data-part="match-item"], [data-part="place-gap"])[data-state="wrong"]::after {
+    content: "";
+    display: inline-block;
+    width: 0.62em;
+    height: 0.62em;
+    margin-inline-start: 0.32em;
+    vertical-align: 0.02em;
+    background: currentColor;
+    -webkit-mask: var(--mark-right) center / contain no-repeat;
+    mask: var(--mark-right) center / contain no-repeat;
+  }
+  :is([data-part="tile"], [data-part="blank"], [data-part="match-item"], [data-part="place-gap"])[data-state="wrong"]::after {
+    -webkit-mask-image: var(--mark-wrong);
+    mask-image: var(--mark-wrong);
+  }
+  /* On a tile or a Match item the mark sits in its corner: on the words' line it widened the tile, or moved the words, in one
+     frame as the answer came. */
+  :is([data-part="tile"], [data-part="match-item"]):is([data-state="right"], [data-state="matched"], [data-state="wrong"]) { position: relative; }
+  :is([data-part="tile"], [data-part="match-item"]):is([data-state="right"], [data-state="matched"], [data-state="wrong"])::after {
+    position: absolute;
+    top: 4px;
+    inset-inline-end: 4px;
+    margin: 0;
+    width: 0.56em;
+    height: 0.56em;
+  }
+
+  /* ============ the library: sections, covers, books, asking your AI ============ */
+  /* A section's heading row: the title, and "See all ›" or an info button on the right. */
+  [data-part="section-head"] { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); min-height: 32px; }
+  [data-part="section-head"] [data-part="section-title"] { margin: 0; }
+  /* Its info button is a quiet one: the icon alone, the press area still full size. */
+  [data-part="section-head"] [data-part="icon-button"] { margin-right: calc(-1 * var(--space-3)); border-color: transparent; background: transparent; color: var(--ink-3); }
+  @media (hover: hover) { [data-part="section-head"] [data-part="icon-button"]:hover { color: var(--ink-1); } }
+  [data-part="section-title"][data-variant="sub"] { color: var(--ink-2); font: 600 var(--size-14) / 1.25 var(--type-ui); letter-spacing: 0; }
+  [data-part="section-link"] { display: inline-flex; align-items: center; gap: 2px; color: var(--ink-2); font: 500 var(--size-14) / 1 var(--type-ui); text-decoration: none; white-space: nowrap; }
+  [data-part="section-link"] .lx-icon { width: 16px; height: 16px; }
+  @media (hover: hover) { [data-part="section-link"]:hover { color: var(--ink-1); } }
+
+  /* Books: a grid (your library) or a row that scrolls sideways, running to the screen's edges (a shelf). */
+  [data-part="book-list"][data-variant="grid"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: var(--space-4) var(--space-3); }
+  [data-part="book-list"][data-variant="row"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 116px;
+    gap: var(--space-3);
+    margin-inline: calc(-1 * var(--space-4));
+    padding: 0 var(--space-4) var(--space-1);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: var(--space-4);
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+  [data-part="book-list"][data-variant="row"]::-webkit-scrollbar { display: none; }
+  [data-part="book-list"][data-variant="row"] > [data-part="book-tile"] { scroll-snap-align: start; }
+  [data-part="book-tile"] { display: flex; min-width: 0; flex-direction: column; gap: 6px; padding: 0; border: 0; background: none; color: var(--ink-1); font: inherit; text-align: left; text-decoration: none; cursor: pointer; }
+  [data-part="book-tile"]:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; border-radius: var(--radius-12); }
+  [data-part="book-tile"]:active [data-part="book-cover"] { filter: brightness(0.85); }
+  .lx-tile-title { display: -webkit-box; overflow: hidden; font: 500 var(--size-14) / 1.25 var(--type-ui); -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .lx-tile-sub { color: var(--ink-3); font-size: var(--size-12); line-height: 1.3; }
+  [data-part="book-tile"] [data-part="book-progress"] { margin-top: 2px; }
+  /* The language a book teaches, on its cover's bottom corner, clear of a designed cover's title and author. */
+  [data-part="book-cover"] > [data-part="language-flag"] { position: absolute; right: 8px; bottom: 8px; width: 24px; height: 18px; margin: 0; border-radius: 3px; object-fit: cover; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.35); }
+
+  /* A cover: always one. A picture, art made for it, or its title on a plain cover. */
+  /* A cover's picture fades in once it's loaded (ui.bookCover's data-loaded), so one arriving after the page never pops. */
+  [data-part="book-cover"]:is([data-variant="picture"], [data-variant="art"]) > img { transition: opacity var(--dur-150) ease-out; }
+  [data-part="book-cover"]:is([data-variant="picture"], [data-variant="art"]):not([data-loaded]) > img { opacity: 0; }
+  [data-part="book-cover"] { position: relative; display: block; overflow: hidden; aspect-ratio: 2 / 3; border: 1px solid var(--edge); border-radius: var(--radius-12); background: var(--fill); }
+  [data-part="book-cover"] img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  /* A picture with a size (ui.bookCover: the catalog's coverSize, or the picture books' usual shape when it says none) keeps that shape from
+     the first frame and once it comes, its aspect-ratio set on it; one of another shape sits whole inside, on the cover's color. (A row's
+     picture keeps its crop: read.css.) */
+  [data-part="book-cover"][data-variant="picture"][data-shape] > img { object-fit: contain; }
+  /* A title cover, for a book with no picture: the book drawn in hard light, as Home's card draws it. Its paint is the art's (violet, clay or
+   * sun, from its id: ui.coverPaint), split lit and deep as the symbols are, its title in the app's own face, a short rule, its author small.
+   * Monochrome and custom themes draw it in their own ink through the art tokens. */
+  [data-part="book-cover"][data-variant="type"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: 12% 12% 10%;
+    box-sizing: border-box;
+    container-type: inline-size;
+    border: 0;
+    border-radius: 6px 10px 10px 6px;
+    background: var(--paint);
+    color: var(--on-paint);
+  }
+  /* Its words cross the split, so they read at 4.5:1 on both tones (Home's book, know.css .lx-hb-tile, takes the same): violet a touch deeper
+   * than the art's (paper on the art's violet is 4.3:1), clay's deep a softer step (--art-ink on the art's clay-deep is 3.5:1). In a theme's
+   * ink the art's clay is a middle gray neither ink reads on: there a clay book is the darkest step, its words paper, and sun's deep is lighter. */
+  [data-part="book-cover"][data-variant="type"][data-paint="violet"] { --paint: color-mix(in oklab, var(--art-violet) 78%, var(--art-violet-deep)); --paint-deep: var(--art-violet-deep); --on-paint: var(--art-paper); }
+  [data-part="book-cover"][data-variant="type"][data-paint="clay"] { --paint: var(--art-clay); --paint-deep: color-mix(in oklab, var(--art-clay) 62%, var(--art-clay-deep)); --on-paint: var(--art-ink); }
+  [data-part="book-cover"][data-variant="type"][data-paint="sun"] { --paint: var(--art-sun); --paint-deep: var(--art-sun-deep); --on-paint: var(--art-ink); }
+  [data-art="theme"] [data-part="book-cover"][data-variant="type"][data-paint="violet"] { --paint: var(--art-violet); }
+  [data-art="theme"] [data-part="book-cover"][data-variant="type"][data-paint="clay"] { --paint: var(--art-clay-deeper); --paint-deep: var(--art-ink); --on-paint: var(--art-paper); }
+  [data-art="theme"] [data-part="book-cover"][data-variant="type"][data-paint="sun"] { --paint-deep: color-mix(in oklab, var(--art-sun) 50%, var(--art-sun-deep)); }
+  .lx-cover-split { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; fill: var(--paint-deep); pointer-events: none; }
+  [data-part="book-cover"][data-variant="type"] > :not(.lx-cover-split) { position: relative; }
+  .lx-cover-title { display: -webkit-box; overflow: hidden; font: 700 clamp(12px, 15cqi, 24px) / 1.12 var(--type-head); letter-spacing: var(--track-head); -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
+  /* Its own start: a right-to-left title at the right (the tile it's on aligns left, being a button). */
+  .lx-cover-head { display: flex; min-height: 0; flex-direction: column; gap: 9cqi; text-align: start; }
+  .lx-cover-rule { display: block; width: 26%; height: 2px; background: currentColor; opacity: 0.5; }
+  .lx-cover-by { font: 500 clamp(9px, 8.5cqi, 12px) / 1.25 var(--type-ui); }
+
+  /* How far into a book you are. */
+  [data-part="book-progress"] { display: block; height: 3px; border-radius: var(--radius-full); background: var(--edge); overflow: hidden; }
+  [data-part="book-progress"] > span { display: block; width: calc(var(--progress, 0) * 100%); height: 100%; border-radius: inherit; background: var(--ink-1); }
+
+  /* The book you're reading, to carry on: the way back in at the card's foot. */
+  [data-part="continue-card"] { display: grid; gap: var(--space-4); padding: var(--space-5); border: 1px solid var(--edge); border-radius: var(--radius-24); background: var(--well); }
+  .lx-continue-top { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: var(--space-4); align-items: start; }
+  .lx-continue-text { display: flex; min-width: 0; flex-direction: column; gap: 4px; }
+  .lx-continue-kicker { color: var(--ink-2); font: 500 var(--size-14) / 1.2 var(--type-ui); }
+  [data-part="continue-card"] h2 { margin: 0; font: 500 var(--size-20) / 1.2 var(--type-head); letter-spacing: var(--track-head); overflow-wrap: anywhere; }
+  .lx-continue-meta, .lx-continue-note { margin: 0; color: var(--ink-2); font-size: var(--size-14); }
+  [data-part="continue-card"] [data-part="book-progress"] { margin-top: var(--space-2); }
+
+  /* A way in through your AI: prompts to copy. */
+  [data-part="ask-ai"] { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4); border-radius: var(--radius-16); background: var(--fill); }
+  .lx-ask-head { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: var(--space-3); align-items: start; }
+  .lx-ask-head > .lx-icon { width: 20px; height: 20px; margin-top: 1px; color: var(--ink-2); }
+  .lx-ask-text { display: flex; flex-direction: column; gap: 2px; }
+  .lx-ask-title { font: 500 var(--size-16) / 1.3 var(--type-ui); }
+  .lx-ask-sub { color: var(--ink-2); font-size: var(--size-14); line-height: 1.4; }
+  .lx-ask-prompts { display: flex; flex-direction: column; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  /* Copy beside the words while they have room for lines of 12em; on a narrower box it goes under them, at the end, and the words take the width. */
+  [data-part="ask-prompt"] { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-3); border-radius: var(--radius-12); background: var(--well); }
+  .lx-ask-prompt-text { flex: 1 1 12em; min-width: 0; font: 400 var(--size-16) / 1.4 var(--type-ui); }
+  [data-part="ask-prompt"] [data-part="button"] { flex: none; margin-inline-start: auto; }
+  .lx-ask-note { margin: 0; color: var(--ink-3); font-size: var(--size-14); line-height: 1.45; }
+
+  /* A sheet over a page: the shade behind it closes it. */
+  /* A sheet over a page (ui.sheetLayer): over everything, the tabs too, on the keyboard when there is one (--lx-kb), and
+   * never taller than the screen above it allows: clear of the status bar and the keyboard, its foot clear of the home
+   * indicator. While it goes it takes no presses. */
+  .lx-sheet-layer { position: fixed; inset: 0; z-index: 35; display: flex; flex-direction: column; justify-content: flex-end; }
+  .lx-sheet-layer[hidden] { display: none; }
+  .lx-sheet-layer[data-state="closing"] { pointer-events: none; }
+  .lx-sheet-layer > [data-part="sheet"] {
+    width: 100%;
+    max-width: var(--page-width);
+    max-height: calc(100dvh - max(env(safe-area-inset-top, 0px), var(--space-3)) - var(--space-5));
+    margin-inline: auto;
+    box-sizing: border-box;
+    will-change: transform;
+  }
+  /* The keyboard rides over the sheet, which keeps its height and its place (a sheet that shrank above the keys would
+     be a sliver, and one that moved would move under the finger): its content makes room at its foot as tall as the
+     keyboard (--lx-kb), so every field and button in it can scroll up clear of the keys. */
+  .lx-sheet-layer .lx-sheet-body { padding-bottom: calc(var(--space-5) + max(env(safe-area-inset-bottom, 0px), var(--lx-kb, 0px))); }
+  /* The page shows through it, shaded. */
+  [data-part="sheet-scrim"] { position: absolute; inset: 0; background: var(--backdrop); touch-action: none; }
+
+  /* ============ menus: a "…" and what it opens ============ */
+  /* Over everything (sessions, the reader, sheets and toasts), placed by its "…" (ui.moreMenu). */
+  .lx-menu-layer { position: fixed; z-index: 45; }
+  [data-part="menu"] {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    min-width: 220px;
+    max-width: min(320px, calc(100vw - 24px));
+    padding: var(--space-1);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--chrome);
+    box-shadow: var(--shadow-pop);
+  }
+  [data-part="menu-item"] {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border: 0;
+    border-radius: var(--radius-12);
+    background: transparent;
+    color: var(--ink-1);
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+  }
+  [data-part="menu-item"] > .lx-icon { width: 20px; height: 20px; flex: none; margin-top: 2px; color: var(--ink-2); }
+  [data-part="menu-item"] .lx-menu-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  [data-part="menu-item"] .lx-menu-title { font-weight: 600; line-height: 1.3; }
+  [data-part="menu-item"] .lx-menu-sub { color: var(--ink-3); font-size: var(--size-14); line-height: 1.35; }
+  [data-part="menu-item"]:focus-visible { outline: 2px solid var(--ring); outline-offset: -2px; }
+  [data-part="menu-item"]:active { background: var(--fill); }
+  @media (hover: hover) { [data-part="menu-item"]:hover { background: var(--fill-hover); } }
+
+  /* ============ asking your AI about something ============ */
+  [data-part="ask-about"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-16);
+    background: var(--well);
+  }
+  [data-part="ask-about"] .lx-ask-about-label { color: var(--ink-3); font-size: var(--size-14); }
+  [data-part="ask-about"] .lx-ask-about-text { color: var(--ink-1); font: 500 var(--size-read) / 1.35 var(--type-read); }
+  [data-part="ask-about"] .lx-ask-about-meta { color: var(--ink-2); font-size: var(--size-14); }
+  [data-part="ask-status"] { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-2); margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.4; }
+  [data-part="ask-status"][hidden] { display: none; }
+  [data-part="ask-status"] > .lx-icon { width: 16px; height: 16px; flex: none; }
+  [data-part="ask-status"] > span { flex: 1 1 12em; }
+  [data-part="ask-status"][data-meaning="right"] > .lx-icon { color: var(--m-right); }
+  [data-part="ask-status"][data-meaning="wrong"] > .lx-icon { color: var(--m-wrong); }
+  [data-part="ask-status"] [data-part="button"] { margin-block: -4px; }
+  /* Something that didn't go (ui.retryLine): Tinta, the app's words, Retry; on one line while they fit. */
+  [data-part="retry-line"] { display: flex; flex: 1 1 100%; align-items: center; gap: var(--space-2); min-width: 0; }
+  [data-part="retry-line"] > .lx-retry-words { flex: 1 1 auto; min-width: 0; }
+  [data-part="retry-line"] > [data-part="character"] { flex: none; }
+  .lx-ask-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .lx-ask-actions > [data-part="button"] { flex: 1 1 12em; }
+
+  /* ============ Explore: finding packs ============ */
+  /* A language's flag: a mark beside its name, with a hairline so a white field holds on a light page. */
+  [data-part="language-flag"] { display: inline-block; flex: none; width: 20px; height: 15px; margin-inline-end: 0.4em; border-radius: 2px; object-fit: cover; box-shadow: 0 0 0 1px var(--hair); vertical-align: -2px; }
+  [data-part="language-flag"][data-size="lg"] { width: 28px; height: 21px; border-radius: 3px; vertical-align: -4px; }
+  /* A flag after words on its line ("Dutch, from [flag] English"): as far from them as from its name. */
+  [data-part="language-flag"].lx-flag-mid { margin-inline-start: 0.4em; }
+  [data-part="search-field"] { position: relative; display: flex; align-items: center; }
+  [data-part="search-field"] > .lx-icon { position: absolute; left: var(--space-3); width: 18px; height: 18px; color: var(--ink-3); pointer-events: none; }
+  [data-part="search-field"] [data-part="text-field"] { width: 100%; padding-left: calc(var(--space-3) + 28px); }
+
+  /* The languages: a row that scrolls sideways to the screen's edges; the one shown is filled. */
+  [data-part="language-row"] {
+    display: flex;
+    gap: var(--space-2);
+    margin-inline: calc(-1 * var(--space-4));
+    padding: 0 var(--space-4) var(--space-1);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  [data-part="language-row"]::-webkit-scrollbar { display: none; }
+  [data-part="language-choice"] {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 96px;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--well);
+    color: var(--ink-1);
+    text-decoration: none;
+  }
+  [data-part="language-choice"] { font: inherit; text-align: left; cursor: pointer; }
+  [data-part="language-choice"] .lx-choice-name { display: flex; align-items: center; font: 500 var(--size-16) / 1.2 var(--type-ui); white-space: nowrap; }
+  [data-part="language-choice"] .lx-choice-sub { color: var(--ink-3); font-size: var(--size-12); line-height: 1.3; }
+  [data-part="language-choice"][data-state="selected"] { border-color: var(--ink-1); background: var(--ink-1); color: var(--canvas); }
+  [data-part="language-choice"][data-state="selected"] .lx-choice-sub { color: var(--canvas); }
+  @media (hover: hover) { [data-part="language-choice"]:not([data-state="selected"]):hover { border-color: var(--edge-strong); } }
+  [data-part="language-choice"]:not([data-state="selected"]):active { background: var(--fill-active); }
+
+  /* One pack to start with. */
+  [data-part="featured-pack"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-24);
+    background: var(--well);
+    color: var(--ink-1);
+    text-decoration: none;
+  }
+  [data-part="featured-pack"] .lx-feature-kicker { color: var(--ink-2); font: 500 var(--size-14) / 1.2 var(--type-ui); }
+  /* Tinta presenting the pack, in its top corner, its curl over the title; the kicker and title keep clear of it. */
+  [data-part="featured-pack"]:has(> [data-part="character"]) { position: relative; }
+  [data-part="featured-pack"] > [data-part="character"] { position: absolute; top: var(--space-3); inset-inline-end: var(--space-3); }
+  [data-part="featured-pack"]:has(> [data-part="character"]) > :is(.lx-feature-kicker, h2) { padding-inline-end: calc(var(--character-size, 64px) + var(--space-2)); }
+  [data-part="featured-pack"] h2 { margin: 0; font: 500 var(--size-28) / 1.1 var(--type-head); letter-spacing: var(--track-head); overflow-wrap: anywhere; }
+  [data-part="featured-pack"] .lx-feature-about { margin: 0; color: var(--ink-2); line-height: 1.45; }
+  [data-part="featured-pack"] .lx-feature-meta { margin: 0; color: var(--ink-3); font-size: var(--size-14); }
+  [data-part="featured-pack"] [data-part="sentence-row"] { margin-top: var(--space-2); }
+  @media (hover: hover) { [data-part="featured-pack"]:hover { border-color: var(--edge-strong); } }
+  [data-part="featured-pack"]:active { background: var(--fill-active); }
+
+  /* A sentence from a pack, with its literal line and its English. */
+  [data-part="sentence-row"] { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: var(--space-2); padding: var(--space-4); border-radius: var(--radius-16); background: var(--fill); }
+  [data-part="sentence-row"] .lx-sentence-text { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+  [data-part="sentence-row"] .lx-sentence-nl { margin: 0; color: var(--ink-1); font: 500 var(--size-20) / 1.3 var(--type-ui); overflow-wrap: anywhere; }
+  [data-part="sentence-row"] .lx-sentence-en { margin: 0; color: var(--ink-3); font-size: var(--size-14); line-height: 1.4; }
+  [data-part="sentence-row"] > [data-part="icon-button"] { margin: calc(-1 * var(--space-2)) calc(-1 * var(--space-2)) 0 0; border-color: transparent; background: transparent; color: var(--ink-3); }
+  @media (hover: hover) { [data-part="sentence-row"] > [data-part="icon-button"]:hover { color: var(--ink-1); } }
+
+  /* Topics as tiles. */
+  [data-part="topic-grid"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-2); }
+  [data-part="topic-tile"] {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 56px;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-16);
+    background: var(--well);
+    color: var(--ink-1);
+    font: 500 var(--size-14) / 1.25 var(--type-ui);
+    text-decoration: none;
+  }
+  [data-part="topic-tile"] .lx-icon { flex: none; width: 18px; height: 18px; color: var(--ink-2); }
+  @media (hover: hover) { [data-part="topic-tile"]:hover { border-color: var(--edge); } }
+  [data-part="topic-tile"]:active { background: var(--fill-active); }
+
+  /* Packs on a shelf: a row that scrolls sideways to the screen's edges. */
+  [data-part="pack-shelf"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(220px, 72%);
+    gap: var(--space-3);
+    margin-inline: calc(-1 * var(--space-4));
+    padding: 0 var(--space-4) var(--space-1);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: var(--space-4);
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+  [data-part="pack-shelf"]::-webkit-scrollbar { display: none; }
+  [data-part="pack-shelf"] > [data-part="pack-card"] { scroll-snap-align: start; }
+  [data-part="pack-card"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+    padding: var(--space-4);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-16);
+    background: var(--well);
+    color: var(--ink-1);
+    text-decoration: none;
+  }
+  [data-part="pack-card"] .lx-pack-title { font: 500 var(--size-16) / 1.3 var(--type-ui); overflow-wrap: anywhere; }
+  [data-part="pack-card"] .lx-pack-about { display: -webkit-box; overflow: hidden; color: var(--ink-2); font-size: var(--size-14); line-height: 1.4; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  [data-part="pack-card"] .lx-pack-meta { margin-top: auto; padding-top: var(--space-2); color: var(--ink-3); font-size: var(--size-12); }
+  @media (hover: hover) { [data-part="pack-card"]:hover { border-color: var(--edge); } }
+  [data-part="pack-card"]:active { background: var(--fill-active); }
+
+  /* A page's main action, pinned low within reach; the page scrolls under it. A sticky box stops at the scroller's
+   * padding, and the app's page keeps --space-7 of it beyond the tab bar's own room: so it pins that much lower, and a
+   * little more, running under the tab bar (or off the screen's foot), so nothing shows beneath it. */
+  [data-part="pinned-actions"] {
+    position: sticky;
+    bottom: calc(-1 * (var(--space-7) + var(--space-3)));
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-inline: calc(-1 * var(--space-4));
+    padding: var(--space-6) var(--space-4) calc(var(--space-3) * 2);
+    background: linear-gradient(to bottom, transparent, var(--canvas) var(--space-6));
+  }
+  [data-part="pinned-actions"] .lx-pinned-note { margin: 0; color: var(--ink-3); font-size: var(--size-12); text-align: center; }
+  /* What the last press said, by the button; nothing takes room until it says something. */
+  [data-part="pinned-actions"] > [role="status"] { margin: 0; text-align: center; }
+  [data-part="pinned-actions"] > [role="status"]:empty { display: none; }
+  /* In a sheet: at the foot of its body as it scrolls, on the sheet's own surface, and above the keys while they're up (the
+     body makes room for them, --lx-kb) and clear of the home bar; a field brought into view comes clear of it too (ui.js
+     sheetLayer's reveal). The body scrolls only up and down, so no reach past its sides. */
+  .lx-sheet-body [data-part="pinned-actions"] {
+    bottom: 0;
+    margin-inline: 0;
+    padding: var(--space-5) 0 calc(var(--space-2) + max(env(safe-area-inset-bottom, 0px), var(--lx-kb, 0px)));
+    background: linear-gradient(to bottom, transparent, var(--chrome) var(--space-5));
+  }
+  .lx-sheet-layer .lx-sheet-body:has([data-part="pinned-actions"]:not([hidden] *)) { padding-bottom: 0; }
+  [data-part="pinned-actions"] .lx-pinned-buttons { display: grid; grid-template-columns: minmax(0, 1fr); grid-auto-columns: auto; grid-auto-flow: column; gap: var(--space-2); }
+  /* Tinta at the start of the actions (a request's page): its own column, the main action still the wide one. */
+  [data-part="pinned-actions"] .lx-pinned-buttons:has(> [data-part="character"]:first-child) { grid-template-columns: auto minmax(0, 1fr); }
+  /* Over the buttons after it, so what it throws onto one (Me too's seal) lands on top of it. */
+  [data-part="pinned-actions"] .lx-pinned-buttons > [data-part="character"] { align-self: center; position: relative; z-index: 1; }
+  /* A Tinta about to arrive as a paper plane (ui.planeCharacter "in"): unseen until the plane is on its way. */
+  [data-part="character"][data-arriving] { visibility: hidden; }
+
+  /* ============ the AI tab ============ */
+  [data-part="ai-card"] { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); border: 1px solid var(--edge); border-radius: var(--radius-24); background: var(--well); }
+  [data-part="ai-card"] p { margin: 0; }
+  /* Tinta beside your AI, in the card's top corner; its words keep clear of it (with no AI yet, the note starts beside it). */
+  [data-part="ai-card"]:has(> [data-part="character"]) { position: relative; }
+  /* (6 px lower than the card's padding: the stack it catches rides high on its curl, and the page's top edge would cut it.) */
+  [data-part="ai-card"] > [data-part="character"] { position: absolute; top: calc(var(--space-3) + 6px); inset-inline-end: var(--space-4); }
+  [data-part="ai-card"]:has(> [data-part="character"]) > p { padding-inline-end: calc(var(--character-size, 56px) + var(--space-3)); }
+  [data-part="ai-card"] .lx-ai-who { display: flex; align-items: center; justify-content: flex-start; gap: var(--space-2); color: var(--ink-2); font-size: var(--size-16); line-height: 1.4; text-align: left; }
+  [data-part="ai-card"] .lx-ai-who strong { color: var(--ink-1); font-weight: 600; }
+  /* Its lines balanced, and the note's wrapped with care, so neither leaves its last word alone on a line ("it.", "us." on a phone). */
+  [data-part="ai-card"] .lx-ai-who > span { text-wrap: balance; }
+  [data-part="ai-card"] .lx-ai-note { text-wrap: pretty; }
+  [data-part="ai-card"] .lx-ai-who .lx-icon { flex: none; width: 18px; height: 18px; }
+  [data-part="ai-card"][data-state="on"] .lx-ai-who .lx-icon { color: var(--m-right); }
+  [data-part="ai-card"] .lx-ai-note { color: var(--ink-2); font-size: var(--size-14); line-height: 1.5; text-align: left; }
+
+  [data-part="request-kinds"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--space-2); }
+  [data-part="request-kind"] {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    align-items: start;
+    gap: var(--space-3);
+    min-height: 72px;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-16);
+    background: var(--well);
+    color: var(--ink-1);
+    text-decoration: none;
+  }
+  [data-part="request-kind"] > .lx-icon { width: 20px; height: 20px; margin-top: 1px; color: var(--ink-2); }
+  [data-part="request-kind"] .lx-kind-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  [data-part="request-kind"] .lx-kind-title { font: 500 var(--size-14) / 1.25 var(--type-ui); }
+  [data-part="request-kind"] .lx-kind-sub { color: var(--ink-3); font-size: var(--size-12); line-height: 1.35; }
+  @media (hover: hover) { [data-part="request-kind"]:hover { border-color: var(--edge); } }
+  [data-part="request-kind"]:active { background: var(--fill-active); }
+
+  /* A request: its state is an icon and words; the colors only follow them. */
+  .lx-requests { display: flex; flex-direction: column; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  [data-part="request-row"] { display: flex; align-items: center; gap: var(--space-2); padding-right: var(--space-2); border: 1px solid var(--hair); border-radius: var(--radius-16); background: var(--well); }
+  [data-part="request-row"] .lx-request-main { display: grid; flex: 1; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--space-3); min-width: 0; padding: var(--space-3) var(--space-3) var(--space-3) var(--space-4); color: var(--ink-1); text-decoration: none; }
+  [data-part="request-row"] .lx-request-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  [data-part="request-row"] .lx-request-title { font: 500 var(--size-16) / 1.3 var(--type-ui); overflow-wrap: anywhere; }
+  [data-part="request-row"] .lx-request-status { display: inline-flex; align-items: center; gap: var(--space-1); color: var(--ink-2); font-size: var(--size-14); }
+  [data-part="request-row"] .lx-request-status .lx-icon { flex: none; width: 15px; height: 15px; }
+  [data-part="request-row"][data-state="done"] .lx-request-status .lx-icon { color: var(--m-right); }
+  [data-part="request-row"][data-state="failed"] .lx-request-status .lx-icon { color: var(--m-wrong); }
+  [data-part="request-row"] .lx-request-main > .lx-icon { color: var(--ink-3); }
+  /* Canceled: a step quieter, by its ink (never by opacity). */
+  [data-part="request-row"][data-state="canceled"] .lx-request-title { color: var(--ink-2); }
+  [data-part="request-row"][data-state="canceled"] .lx-request-status { color: var(--ink-3); }
+  [data-part="request-row"][data-state="canceled"] .lx-request-main > .lx-icon { color: var(--ink-4); }
+  @media (hover: hover) { [data-part="request-row"] a.lx-request-main:hover .lx-request-title { text-decoration: underline; } }
+
+  /* ============ Study's page ============ */
+  /* The games, three to a row: thick, solid buttons with a hard edge under them, which a press pushes down onto (filled, as the path's stops are:
+     the director's call, 5 Nov). */
+  /* Three to a row, fewer as their names grow: a column is at least 6.2 of its names' em (the grid takes their size), so with large text a name
+     keeps its words whole (one to a row at 320 at twice the size, two at 390) instead of breaking inside one. */
+  [data-part="way-tiles"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(max(6.2em, calc((100% - 2 * var(--space-2)) / 3)), 1fr)); gap: var(--space-2); padding-bottom: 5px; font-size: var(--size-14); }
+  /* Study's wide column (1280 and up: shell.css): four to a row, the same 6.2em floor (a group of four games, one row). */
+  @media (min-width: 1280px) { [data-part="app"][data-column="wide"] [data-part="way-tiles"] { grid-template-columns: repeat(auto-fill, minmax(max(6.2em, calc((100% - 3 * var(--space-2)) / 4)), 1fr)); } }
+  [data-part="way-tile"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--space-2);
+    min-width: 0;
+    min-height: 116px;
+    margin: 0 0 5px;
+    padding: var(--space-3) var(--space-2) var(--space-2);
+    border: 2px solid var(--line-strong);
+    border-radius: var(--radius-16);
+    background: var(--fill);
+    box-shadow: 0 5px 0 var(--line-strong);
+    color: var(--ink-1);
+    font: 600 var(--size-14) / 1.2 var(--type-ui);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  [data-part="way-tile"] .lx-way-art { display: grid; place-items: center; width: 56px; height: 56px; color: var(--ink-1); }
+  [data-part="way-tile"] .lx-way-art > svg { width: 56px; height: 56px; }
+  [data-part="way-tile"] .lx-way-art > .lx-icon { width: 36px; height: 36px; }
+  [data-part="way-tile"] .lx-way-art-held { width: 100%; height: 100%; }
+  /* Long names may break, never short words: WebKit hyphenated "Tap the picture" as "pic-ture" on a 390-wide tile (7 Nov 2026). */
+  [data-part="way-tile"] .lx-way-name { min-width: 0; max-width: 100%; overflow-wrap: anywhere; hyphens: auto; hyphenate-limit-chars: 9 4 4; -webkit-hyphenate-limit-before: 4; -webkit-hyphenate-limit-after: 4; }
+  [data-part="way-tile"]:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--line-strong); }
+  @media (hover: hover) { [data-part="way-tile"]:hover { border-color: var(--edge); } }
+  /* Can't play here, or not before your first words (later): quieter by its ink, still pressable, to say why or start the first lesson. */
+  [data-part="way-tile"]:is([data-state="unavailable"], [data-state="later"]) { border-color: var(--line); background: none; box-shadow: 0 5px 0 var(--line); color: var(--ink-2); }
+  [data-part="way-tile"]:is([data-state="unavailable"], [data-state="later"]) .lx-way-art { color: var(--ink-3); }
+  [data-part="way-tile"]:is([data-state="unavailable"], [data-state="later"]):active { box-shadow: 0 2px 0 var(--line); }
+  @media (max-width: 359px) {
+    [data-part="way-tile"] { min-height: 92px; padding: 6px var(--space-1); gap: 6px; font-size: var(--size-13, 13px); }
+    [data-part="way-tile"] .lx-way-art, [data-part="way-tile"] .lx-way-art > svg { width: 44px; height: 44px; }
+    [data-part="way-tile"] .lx-way-art > .lx-icon { width: 30px; height: 30px; }
+  }
+
+  /* Add to Home Screen (shell/settings-install.js): a device's steps, numbered; a button a step names drawn as its glyph
+     and its name, never the glyph alone. */
+  [data-part="install-steps"] { display: flex; flex-direction: column; gap: var(--space-3); margin: 0 0 var(--space-4); padding: 0; list-style: none; }
+  [data-part="install-step"] { display: flex; align-items: flex-start; gap: var(--space-3); color: var(--ink-1); font-size: var(--size-16); line-height: 1.5; }
+  [data-part="install-step"] .lx-step-n {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--edge);
+    border-radius: 50%;
+    color: var(--ink-2);
+    font: 600 var(--size-14) / 1 var(--type-mono);
+  }
+  [data-part="install-step"] .lx-step-text { min-width: 0; padding-top: 1px; }
+  [data-part="install-key"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 var(--space-2) 0 6px;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-8);
+    background: var(--well);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  [data-part="install-key"] .lx-icon { width: 16px; height: 16px; }
+  .lx-install-find > summary { list-style: none; }
+  .lx-install-find > summary::-webkit-details-marker { display: none; }
+  .lx-install-find[open] > summary > .lx-icon:last-child { transform: rotate(90deg); }
+  .lx-install-done { display: flex; align-items: center; gap: var(--space-2); }
+  /* Reminders (shell/settings-reminders.js): "Reminders are paused" (the ask after a first finished session is a session step: below) */
+  [data-part="reminder-ask"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+    padding: var(--space-4);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--well);
+  }
+  [data-part="reminder-ask"] h3 { margin: 0; font: 600 var(--size-16) / 1.3 var(--type-ui); color: var(--ink-1); }
+  [data-part="reminder-ask"] p { margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.45; }
+  [data-part="reminder-ask"][data-state="paused"] { margin: 0 0 var(--space-4); }
+  /* Tinta up in the top corner (shell/settings-reminders.js cardHead), floating: the title and the line's start beside him, the
+     rest of the line under him at the card's width. His box ends above the line's second row, so that row is already a full one. */
+  [data-part="reminder-ask"] .lx-ask-head { display: flow-root; }
+  [data-part="reminder-ask"] .lx-ask-head > [data-part="character"] { float: right; margin: calc(-1 * var(--space-3)) calc(-1 * var(--space-1)) 0 var(--space-3); }
+  [data-part="reminder-ask"] .lx-ask-text { display: block; min-width: 0; }
+  [data-part="reminder-ask"] .lx-ask-text > h3 + p { margin-top: var(--space-1); }
+  /* The ask after a first finished session: a step of its own after the summary's Done (study/session.js finish), one job and one Tinta.
+     Its title and line beside Tinta, as the day's moment stands on the summary before it; the time under them; its buttons in the bar. */
+  [data-part="reminder-step"] { display: flex; flex-direction: column; gap: var(--space-5); }
+  [data-part="reminder-step"] .lx-remind-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-3); align-items: center; }
+  [data-part="reminder-step"] .lx-remind-head > h2 { grid-column: 1; grid-row: 1; }
+  [data-part="reminder-step"] .lx-remind-head > p { grid-column: 1; grid-row: 2; margin: 0; color: var(--ink-2); font-size: var(--size-16); line-height: 1.45; }
+  /* Room at its side, as the moment's Tinta has. */
+  [data-part="reminder-step"] .lx-remind-head > [data-part="character"] { grid-column: 2; grid-row: 1 / span 2; margin-right: var(--space-4); }
+  /* "At" beside its time, on one line. */
+  [data-part="reminder-step"] [data-part="field"] { flex-direction: row; align-items: center; align-self: flex-start; gap: var(--space-3); font-size: var(--size-16); }
+  [data-part="reminder-step"] [data-part="field"] > [data-part="text-field"] { width: auto; min-width: 0; }
+  [data-part="reminder-step"] .lx-ask-status { margin: 0; color: var(--ink-2); }
+  [data-part="reminder-step"] .lx-ask-status:empty { display: none; }
+  .lx-reminder-fields { display: grid; grid-template-columns: minmax(7rem, 1fr) 2fr; gap: var(--space-3); padding: var(--space-2) var(--space-3) var(--space-3); }
+
+  /* A finished session's moment (know/celebration-ui.js): the number, its line; a milestone's bigger, with Share */
+  [data-part="celebration"] { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); padding: var(--space-4) 0; text-align: center; }
+  [data-part="celebration"] .lx-moment-character { display: flex; justify-content: center; margin-bottom: var(--space-2); }
+  [data-part="celebration"] .lx-moment-head { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: var(--space-2); color: var(--ink-1); }
+  [data-part="celebration"] .lx-moment-head .lx-icon { width: 28px; height: 28px; align-self: center; }
+  [data-part="celebration"] .lx-moment-count { font: 600 var(--size-28) / 1 var(--type-mono); font-variant-numeric: tabular-nums; }
+  [data-part="celebration"] .lx-moment-unit { color: var(--ink-2); font-size: var(--size-16); }
+  [data-part="celebration"] .lx-moment-line { margin: var(--space-2) 0 0; color: var(--ink-2); font-size: var(--size-16); }
+  [data-part="celebration"][data-state="milestone"] .lx-moment-count { font-size: calc(var(--size-28) * 2); }
+  [data-part="celebration"][data-state="milestone"] [data-part="button"] { margin-top: var(--space-3); }
+
+  /* ============ rows of small controls ============ */
+  /* A row whose lines hold controls that reach past their edges (the rule at the top: (44 px − height) / 2 each way) keeps its lines that far
+     apart, so no line's reach crosses the next: 12 px for 32 px controls (a small button, the order switch), 6 px for a segmented control's
+     38 px segments. At 8 and 2 the lower line's reach took the upper's taps (40 px at 320 on 7 Nov: the answer bar's Hint over I don't
+     know, Tinta's buttons on /design). Here at the layer's end, after the rows' own gaps (a fitted session's answer bar too); the inline
+     form's is in shell.css, a later layer. component-check holds every row to it, wrapped or not. */
+  :is(.lx-row, .lx-answer-actions, .lx-card-actions, [data-part="card-actions"]):has(> :is([data-part="button"][data-size="sm"], [data-part="order-toggle"])) { row-gap: 12px; }
+  [data-part="segmented"]:not(.lx-segmented-stack) { row-gap: 6px; }
+
+  /* The wide column (1280 and up: shell.css, data-column="wide"): no button grows past its width in the 720 one (the director, 9 Nov 2026). A
+     button in a box wider than 720 (one that spans the column, so it grew with it) gives back the 240 px the column grew, left where its box's
+     text starts: Explore's Continue 684 wide as before, not 924. In a box no wider than 720 (a grid's cell) it's as it is: the second term is
+     then the whole box. Rows and lists span the 960 as fields, cards and grids do (capped, Explore's All packs and its language row stopped
+     short of the search field and the topics above them). Low (:where), so a part's own narrower cap stands; desk-check's wide stage measures
+     every button against the 720 column and every row against the column's edge. */
+  @media (min-width: 1280px) {
+    :where([data-part="app"][data-column="wide"] > [data-part="page"]) [data-part="button"] {
+      max-width: max(calc(100% - (var(--page-width-wide) - var(--page-width))), min(100%, calc((var(--page-width) + 1px - 100%) * 1000)));
+    }
+  }
+}

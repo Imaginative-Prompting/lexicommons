@@ -1,0 +1,753 @@
+/* The reader (public/js/read/): the reading screen over the Read tab, and the woven text's parts. In lx.components,
+ * so a person's own CSS still wins. Style it by data-part; the .lx-* classes are internal. */
+
+@layer lx.components {
+  /* ============ the reading screen ============ */
+
+  /* A solid page you read (the section's background stays behind the Read tab). The bars lie over the text, so
+   * putting them away never moves a word. */
+  [data-part="reader"] {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    /* Clipped, never scrolled: what hangs below the screen (a sheet's backing) can't be scrolled to by anything. */
+    overflow: clip;
+    background: var(--canvas);
+    color: var(--ink-1);
+    --reader-gutter: 22px;
+  }
+
+  /* The reading type, wherever a text is shown. */
+  [data-part="reader-text"] { color: var(--ink-1); font: 400 var(--reader-size, var(--reader-default, var(--size-read))) / 1.75 var(--type-read); }
+  /* On the reading screen it's the page that scrolls. */
+  [data-part="reader"] > [data-part="reader-text"] {
+    position: absolute;
+    inset: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    padding:
+      calc(72px + env(safe-area-inset-top)) max(var(--reader-gutter), env(safe-area-inset-right)) 40vh
+      max(var(--reader-gutter), env(safe-area-inset-left));
+    outline: none;
+    /* Taps are the reader's own (a word, a turn, the bars), so no text selection, no callout, no double-tap zoom. */
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: pan-y;
+    scrollbar-width: none;
+  }
+  [data-part="reader"] > [data-part="reader-text"]::-webkit-scrollbar { display: none; }
+  /* Pinch zoom scales the page about its top left; zoomed in, the reader's own gestures move it (nothing scrolls). */
+  [data-part="reader"] > [data-part="reader-text"] { transform-origin: 0 0; }
+  [data-part="reader"][data-zoomed] > [data-part="reader-text"] { touch-action: none; }
+  /* Its own box (flow-root) so a heading's margin can't collapse through it. */
+  .lx-reader-flow { position: relative; display: flow-root; max-width: 36em; margin-inline: auto; }
+  /* A tablet's single page (700 px and up, not a spread): the text at most the reading measure (--measure: 640 px at the reader's type, ~60
+     characters), centered, so its gutters widen; a picture keeps the page's whole width. Edge to edge at 820, its lines ran ~70 characters
+     between 22 px gutters (8 Nov 2026). */
+  @media (min-width: 700px) {
+    [data-part="reader"]:not([data-variant="spread"]) .lx-reader-flow > :not([data-part="reader-picture"], .lx-reader-cover) { max-width: var(--measure); margin-inline: auto; }
+  }
+  [data-part="reader-text"] p { margin: 0 0 1.1em; }
+  .lx-it { font-style: italic; }
+  .lx-reader-note { color: var(--ink-3); font: 400 var(--size-16) / 1.5 var(--type-ui); text-align: center; }
+
+  [data-part="reader-heading"] {
+    margin: 4em 0 2em;
+    color: var(--ink-1);
+    font: 500 1.4em / 1.3 var(--type-read);
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-wrap: balance;
+  }
+  /* "Chapter 3" over the chapter's own title. */
+  [data-part="reader-heading"]:has(+ [data-part="reader-heading"][data-variant="title"]) { margin-bottom: 0.5em; color: var(--ink-3); font-size: 0.9em; letter-spacing: 0.14em; }
+  [data-part="reader-heading"][data-variant="title"] { margin-top: 0; font-size: 1.6em; letter-spacing: 0; }
+  /* A chapter's number alone over its title ("I", "12"), between two short rules, as a book sets it: a lone "I" read as a stray bar. */
+  [data-part="reader-heading"][data-variant="number"] { display: flex; align-items: center; justify-content: center; gap: 0.75em; font-weight: 600; }
+  [data-part="reader-heading"][data-variant="number"]::before, [data-part="reader-heading"][data-variant="number"]::after { content: ""; width: 1.75em; height: 1px; background: currentColor; opacity: 0.55; }
+
+  /* Not scoped to the text: a turning page's copy lies outside it and must lay out the same. */
+  [data-part="reader-verse"] { margin: 0 0 0.15em; padding-inline-start: 2em; text-indent: -1em; }
+  [data-part="reader-verse"]:not(:has(+ [data-part="reader-verse"])) { margin-bottom: 1.1em; }
+  :not([data-part="reader-verse"]) + [data-part="reader-verse"] { margin-top: 0.4em; }
+  [data-part="reader-scene"] { margin: 1.6em 0; color: var(--ink-3); letter-spacing: 0.6em; text-align: center; }
+  /* A person's translation beside a picture book (a parallel layer): a line of its own under its sentence, or its page, a size down
+     in the interface's type and a step quieter, set close under what it translates. Not scoped to the text either. */
+  p:has(+ p[data-part="reader-parallel"]) { margin-bottom: 0.3em; }
+  p[data-part="reader-parallel"] { margin: 0 0 1.1em; color: var(--ink-2); font: 400 0.8em / 1.45 var(--type-ui); }
+  /* Under a heading (a picture book's title on its first page): close under it, centered as it is. */
+  [data-part="reader-heading"]:has(+ p[data-part="reader-parallel"]) { margin-bottom: 0.5em; }
+  [data-part="reader-heading"] + p[data-part="reader-parallel"] { text-align: center; text-wrap: balance; }
+
+  /* The way to the chapter before and after, in scroll mode. */
+  [data-part="reader-chapter-nav"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    width: 100%;
+    min-height: 44px;
+    padding: var(--space-5) 0;
+    border: 0;
+    background: transparent;
+    color: var(--ink-3);
+    font: 600 var(--size-12) / 1.3 var(--type-ui);
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  [data-part="reader-chapter-nav"] .lx-icon { width: 16px; height: 16px; }
+  [data-part="reader-chapter-nav"]:active { color: var(--ink-1); }
+  @media (hover: hover) { [data-part="reader-chapter-nav"]:hover { color: var(--ink-1); } }
+
+  /* ---------- pages ---------- */
+
+  /* The page is near the full height, the same with the bars up or away (they lie over the top line, like other
+   * readers). A drag here turns the page, so the browser doesn't scroll or zoom it. */
+  [data-part="reader"][data-mode="pages"] > [data-part="reader-text"] {
+    overflow: hidden;
+    padding-top: calc(14px + env(safe-area-inset-top));
+    padding-bottom: calc(34px + env(safe-area-inset-bottom));
+    touch-action: none;
+  }
+  /* A chapter's first page, in pages: the room the top bar takes, so a text doesn't open with its first lines under it.
+   * (The other pages stay near the full height, the bars lying over their top line once brought back.) */
+  .lx-reader-top-room { display: none; }
+  [data-part="reader"][data-mode="pages"]:not([data-variant="spread"]) .lx-reader-top-room { display: block; height: calc(var(--reader-bar-h, 61px) - 5px - env(safe-area-inset-top)); }
+  /* The covers hide the lines above and below the page. A tap on one lands on the empty page. */
+  .lx-reader-cover { display: none; }
+  [data-part="reader"][data-mode="pages"] .lx-reader-cover {
+    position: absolute;
+    left: calc(-1 * var(--reader-gutter));
+    right: calc(-1 * var(--reader-gutter));
+    z-index: 1;
+    display: block;
+    background: var(--canvas);
+  }
+  [data-part="reader"][data-mode="pages"] [data-part="reader-chapter-nav"] { display: none; }
+
+  /* Two pages side by side (a spread, on a landscape or wide screen): the chapter set in two columns of the page's
+   * height, the columns past the spread lying to the right, outside the text's box, which clips them. The gap is two
+   * side margins (more by a notch), so the next spread starts a whole margin past the edge. On a big screen the
+   * spread keeps to a book's width. */
+  [data-part="reader"][data-variant="spread"] > [data-part="reader-text"] {
+    left: max(0px, calc((100% - 1100px) / 2));
+    right: max(0px, calc((100% - 1100px) / 2));
+  }
+  [data-part="reader"][data-variant="spread"] .lx-reader-flow {
+    max-width: none;
+    column-count: 2;
+    column-gap: calc(2 * max(var(--reader-gutter), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px)));
+    column-fill: auto;
+  }
+  [data-part="reader"][data-variant="spread"] .lx-reader-cover { display: none; }
+  /* A heading's room adapts to the shorter page. */
+  [data-part="reader"][data-variant="spread"] [data-part="reader-heading"] { break-after: avoid; }
+  [data-part="reader"][data-variant="spread"] [data-part="reader-heading"]:not([data-variant="title"]) { margin-top: 1.2em; }
+  [data-part="reader"][data-variant="spread"] [data-part="reader-heading"]:not(:has(+ [data-part="reader-heading"])) { margin-bottom: 1em; }
+
+  /* The page number, small, bottom left. */
+  [data-part="reader-status"] { display: none; }
+  [data-part="reader"][data-mode="pages"] > [data-part="reader-status"] {
+    position: absolute;
+    left: max(18px, env(safe-area-inset-left));
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    z-index: 1;
+    display: block;
+    color: var(--ink-3);
+    font: 500 12px / 1 var(--type-ui);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+    pointer-events: none;
+  }
+
+  /* The turning sheet: the page cut along the fold, and its back mirrored and faded, with a crease. The pointer
+   * passes through it to the real page underneath. */
+  [data-part="reader-turn"] { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; --reader-turn-back: color-mix(in srgb, var(--canvas) 90%, var(--ink-1)); }
+  [data-part="reader-turn"][hidden] { display: none; }
+  .lx-turn-front { position: absolute; inset: 0; background: var(--canvas); }
+  .lx-turn-back { position: absolute; inset: 0; display: none; background: var(--reader-turn-back); transform-origin: 0 0; filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.5)); }
+  .lx-turn-back .lx-turn-band { opacity: 0.15; }
+  .lx-turn-band { position: absolute; left: 0; right: 0; overflow: hidden; }
+  .lx-turn-inner { position: absolute; color: var(--ink-1); font-family: var(--type-read); line-height: 1.75; }
+  .lx-turn-shade { position: absolute; inset: 0; }
+
+  /* ---------- the bars ---------- */
+
+  [data-part="reader-bar"][data-variant="top"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "back end" "title title";
+    align-items: center;
+    gap: var(--space-1) var(--space-2);
+    /* The right side clears the chevron, which stays put. */
+    padding: calc(var(--space-2) + env(safe-area-inset-top)) calc(var(--space-2) + 48px) var(--space-3) max(var(--space-3), env(safe-area-inset-left));
+    border-bottom: 1px solid var(--hair);
+    background: color-mix(in srgb, var(--canvas) 88%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+  [data-part="reader-bar"][data-variant="top"] > .lx-back { grid-area: back; }
+  .lx-reader-bar-end { grid-area: end; display: flex; align-items: center; justify-content: flex-end; gap: var(--space-1); }
+  .lx-reader-action { min-width: 44px; min-height: 44px; padding: 0 var(--space-3); border: 0; border-radius: var(--radius-full); background: none; color: var(--ink-1); font: 600 var(--size-16) / 1 var(--type-ui); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .lx-reader-action:active, .lx-reader-action[aria-expanded="true"] { background: var(--fill-active); }
+  /* A press shows on one that's already on too (its sheet open: the same fill), as a press in. */
+  .lx-reader-action:active { transform: scale(0.96); }
+  @media (hover: hover) { .lx-reader-action:hover { background: var(--fill); } }
+  /* The book's title, whole: two lines at most, under the controls. */
+  [data-part="reader-title"] {
+    grid-area: title;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    padding-inline: var(--space-1);
+    color: var(--ink-2);
+    font: 500 var(--size-14) / 1.3 var(--type-read);
+    text-align: start;
+    text-wrap: balance;
+  }
+
+  /* The chevron: up puts the bars away, down brings them back. It stays, dim, while they're away. */
+  [data-part="reader-collapse"] {
+    position: absolute;
+    top: calc(var(--space-2) + env(safe-area-inset-top));
+    right: max(var(--space-2), env(safe-area-inset-right));
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--ink-3);
+    cursor: pointer;
+    transition: opacity var(--dur-320) var(--ease-standard);
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* In a right-to-left book it sits top left, over the end of the first line there, as it does top right in a
+     left-to-right one. */
+  [data-part="reader"][data-rtl] > [data-part="reader-collapse"] { right: auto; left: max(var(--space-2), env(safe-area-inset-left)); }
+  [data-part="reader-collapse"] .lx-icon { transform: rotate(-90deg); transition: transform var(--dur-320) var(--ease-standard); }
+  [data-part="reader-collapse"][aria-pressed="true"] .lx-icon { transform: rotate(90deg); }
+  [data-part="reader-collapse"]:active { color: var(--ink-1); }
+  @media (hover: hover) { [data-part="reader-collapse"]:hover { color: var(--ink-1); } }
+
+  /* Weaving a text of yours with your AI (reader.js offerWeave): offered once at the reader's foot, over the page and the gear. It steps
+     aside while a sheet (a note, Contents, Highlights, Settings, a word's card) or a word's meaning is up: they'd lie under it otherwise. */
+  [data-part="reader"]:has(> [data-part="sheet"]:not([hidden]), > [data-part="word-popover"]) > [data-part="reader-offer"] { visibility: hidden; opacity: 0; transition: none; }
+  [data-part="reader-offer"] { position: absolute; left: max(var(--space-3), env(safe-area-inset-left)); right: max(var(--space-3), env(safe-area-inset-right)); bottom: calc(var(--space-3) + env(safe-area-inset-bottom)); z-index: 6; display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--edge-strong); border-radius: 20px; background: var(--well); box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.7); transition: opacity var(--dur-150) var(--ease-out); }
+  .lx-offer-top { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: var(--space-3); }
+  .lx-offer-top > svg { margin-top: 2px; }
+  .lx-offer-text { display: flex; flex-direction: column; gap: 4px; }
+  .lx-offer-text > strong { color: var(--ink-1); font: 600 var(--size-16) / 1.3 var(--type-ui); }
+  .lx-offer-text > span { color: var(--ink-2); font: 400 var(--size-14) / 1.4 var(--type-ui); }
+  .lx-offer-top > [data-part="icon-button"] { margin: -10px -10px 0 0; }
+  /* Contents' weave row stands apart from the chapters under it. */
+  .lx-reader-weave { margin-bottom: var(--space-5); }
+  /* While the offer is up, the page count under it steps aside (it showed a sliver below the card). */
+  [data-part="reader"]:has(> [data-part="reader-offer"]) > [data-part="reader-status"] { visibility: hidden; }
+  [data-part="reader-settings-button"] {
+    position: absolute;
+    right: max(var(--space-3), env(safe-area-inset-right));
+    bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-full);
+    background: var(--chrome);
+    color: var(--ink-2);
+    box-shadow: var(--shadow-pop);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* A finger that lands just off the circle still presses it (not the sheet under it). */
+  [data-part="reader-settings-button"]::after { content: ""; position: absolute; inset: -8px; border-radius: var(--radius-full); }
+  [data-part="reader-settings-button"][aria-expanded="true"],
+  [data-part="reader-settings-button"]:active { color: var(--ink-1); border-color: var(--edge-strong); background: var(--fill-active); }
+  [data-part="reader-settings-button"][aria-expanded="true"]:active { filter: brightness(0.88); }
+
+  /* Zen: the bars are away (their slide is drawn by ghosts), and the chevron dims. */
+  [data-part="reader"][data-state="zen"] > :is([data-part="reader-bar"], [data-part="reader-settings-button"]) { visibility: hidden; }
+  [data-part="reader"][data-state="zen"] > [data-part="reader-collapse"] { opacity: 0.3; }
+
+  /* ---------- sheets: settings rise from behind their button, with no shade ---------- */
+
+  [data-part="reader"] > [data-part="sheet"] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    max-width: 560px;
+    max-height: 75%;
+    margin-inline: auto;
+  }
+  /* The content scrolls under the handle and ends above the settings button: the sheet keeps a strip of its own at its
+     foot for the button (and the home indicator), so no row is ever under it, at any scroll. */
+  [data-part="reader"] > [data-part="sheet"] { padding-bottom: calc(44px + var(--space-4) + var(--space-2) + env(safe-area-inset-bottom)); }
+  [data-part="reader"] > [data-part="sheet"] > .lx-sheet-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: var(--space-3);
+  }
+  [data-part="reader"] > [data-part="sheet"][hidden] { display: none; }
+  [data-part="reader"] > [data-part="sheet"] [data-part="list-row"][data-state="current"] .lx-row-title { font-weight: 600; }
+
+  /* The text-size slider: a small A, the slider, a big A. */
+  .lx-reader-size-row { min-height: 52px; }
+  [data-part="reader-size"] { display: flex; flex: 1; align-items: center; gap: var(--space-3); min-width: 0; }
+  .lx-reader-a { flex: none; color: var(--ink-3); font-family: var(--type-read); line-height: 1; }
+  .lx-reader-a[data-size="sm"] { font-size: 13px; }
+  .lx-reader-a[data-size="lg"] { font-size: 23px; }
+  [data-part="reader-size"] input {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    margin: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: none;
+    cursor: pointer;
+  }
+  [data-part="reader-size"] input::-webkit-slider-runnable-track { height: 4px; border-radius: var(--radius-full); background: var(--edge); }
+  [data-part="reader-size"] input::-moz-range-track { height: 4px; border-radius: var(--radius-full); background: var(--edge); }
+  [data-part="reader-size"] input::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: var(--solid);
+    box-shadow: var(--shadow-pop);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  [data-part="reader-size"] input::-moz-range-thumb { width: 24px; height: 24px; border: 0; border-radius: var(--radius-full); background: var(--solid); }
+  [data-part="reader-size"] input:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; border-radius: var(--radius-8); }
+
+  /* ============ the Read tab ============ */
+
+  .lx-paste-text { min-height: 40vh; font-family: var(--type-read); font-size: var(--size-16); }
+
+  /* A file dragged over the Read tab: the whole page says it can be dropped. The pointer passes through it, so the
+   * drop lands on the page. */
+  [data-part="read-drop"] {
+    display: grid;
+    place-items: center;
+    min-height: 120px;
+    padding: var(--space-5);
+    border: 2px dashed var(--edge-strong);
+    border-radius: var(--radius-24);
+    background: color-mix(in srgb, var(--canvas) 88%, transparent);
+    color: var(--ink-1);
+    font: 600 var(--size-20) / 1.3 var(--type-ui);
+    text-align: center;
+  }
+  :is([data-part="page"], [data-part="page"] > .lx-view) > [data-part="read-drop"] { position: fixed; inset: var(--space-4); z-index: 20; pointer-events: none; }
+  [data-part="read-drop"][hidden] { display: none; }
+
+
+  /* ============ the weave ============ */
+
+  /* The words you know, in the language you're learning: a dotted underline (and a tint, if you like). The tint is the theme's own way-forward
+   * color (--go: violet in Graphite) taken 30% toward the text's ink, which keeps it at 4.5:1 or more on the canvas in every ready-made theme
+   * (worst 4.99, Desert dawn; scripts/test-woven-tint.mjs). */
+  [data-part="reader"] { --reader-woven: color-mix(in oklab, var(--go) 70%, var(--ink-1)); }
+  [data-part="reader"][data-tint] [data-part="woven-word"] { color: var(--reader-woven); }
+  /* Tinted, a word's dotted underline is its own color, softer: one mark with its word (gray dots under violet read as a layer apart). A looked-up
+   * or new word keeps its own line. */
+  [data-part="reader"][data-tint][data-underline] [data-part="woven-word"]:not([data-state]) { text-decoration-color: color-mix(in oklab, var(--reader-woven) 55%, transparent); }
+  [data-part="reader"] [data-part="woven-word"] { padding: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  /* A sentence in Dutch order (inline), or flipped whole: on its own line, its Dutch-order line under it (or, with the
+   * line on tap, a small button at its end that opens it by the sentence). It's one piece of the page: it never splits
+   * across two. */
+  [data-part="reader"] [data-part="reader-sentence"][data-state="flipped"] { display: inline-flex; flex-direction: column; width: 100%; vertical-align: top; font-weight: inherit; }
+  /* A verse line's hanging indent (reader-verse's text-indent) belongs to its own first line, where this column already stands. Inside, the line
+     and the literal line are boxes of their own and each literal chunk a flex item, so each began a first line of its own and took the -1em
+     again: a flipped verse line back at the verse's edge, its literal chunks drawn over each other ("and Peter" as "anRdeter"). */
+  [data-part="reader"] [data-part="reader-sentence"][data-state="flipped"] * { text-indent: 0; }
+  [data-part="reader-literal-toggle"] {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    width: 1.5em;
+    height: 1.2em;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--ink-3);
+    vertical-align: -0.2em;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* A finger-sized target around a text-sized mark. */
+  [data-part="reader-literal-toggle"]::after { content: ""; position: absolute; inset: min(0px, calc((100% - 44px) / 2)); }
+  /* Above the words around it, so its whole reach takes the tap. */
+  [data-part="reader-literal-toggle"] { z-index: 1; }
+  [data-part="reader-literal-toggle"] .lx-icon { width: 0.95em; height: 0.95em; }
+  [data-part="reader-literal-toggle"]:is([aria-expanded="true"], :active) { background: var(--fill-active); color: var(--ink-1); }
+  @media (hover: hover) { [data-part="reader-literal-toggle"]:hover { color: var(--ink-1); } }
+  [data-part="word-popover"] > [data-part="reader-literal"] { margin: var(--space-1) 0 0; font-size: var(--size-16); }
+  /* The Dutch-order line itself, laid out like a study card's (spaced, wrapping, the moved words marked). */
+  p[data-part="reader-literal"][data-order] { display: flex; flex-wrap: wrap; column-gap: 0.3em; row-gap: 2px; margin: 2px 0 8px; }
+  p[data-part="reader-literal"] > .lx-punct { margin-left: -0.3em; }
+  /* A word you've just added: its English, small, over it. Not scoped to the text: a turning page's copy shows it too. */
+  [data-part="reader-gloss"] { color: var(--ink-3); font: 500 0.48em / 1 var(--type-ui); letter-spacing: 0.02em; }
+  [data-part="woven-word"][data-state="new"] { text-decoration-style: dashed; }
+
+  /* A word to learn next (suggested): a wash behind it, so the page never moves when one lights up or goes. */
+  [data-part="reader-suggestion"] { border-radius: 3px; background: var(--m-new-bg); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+
+  /* Words you already know: a grid of words to tap, each with × to pass it over. */
+  .lx-known-row { list-style: none; padding: var(--space-3) var(--space-4); }
+  .lx-known-row > p { margin: 0; font-size: var(--size-14); }
+  [data-part="known-grid"] { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3) var(--space-2); margin: var(--space-4) 0 var(--space-3); }
+  [data-part="known-word"] { position: relative; display: flex; }
+  .lx-known-yes {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 56px;
+    padding: var(--space-3) var(--space-2);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-12);
+    background: var(--fill);
+    color: var(--ink-1);
+    font: 400 var(--size-16) / 1.2 var(--type-read);
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lx-known-yes:active { background: var(--fill-active); }
+  [data-part="known-word"][data-state="known"] .lx-known-yes:active { filter: brightness(0.88); }
+  @media (hover: hover) { .lx-known-yes:hover { border-color: var(--edge-strong); } }
+  /* The check shows only as a known word goes (on its ghost): a mark as well as a color. */
+  .lx-known-yes .lx-icon { display: none; width: 16px; height: 16px; margin-left: var(--space-1); }
+  [data-part="known-word"][data-state="known"] .lx-known-yes { border-color: var(--m-right-edge); background: var(--m-right-bg); color: var(--m-right); }
+  [data-part="known-word"][data-state="known"] .lx-known-yes .lx-icon { display: block; }
+  .lx-known-no {
+    position: absolute;
+    top: -8px;
+    right: -6px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-full);
+    background: var(--chrome);
+    color: var(--ink-3);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lx-known-no::after { content: ""; position: absolute; inset: min(0px, calc((100% - 44px) / 2)); }
+  /* Its reach (44 × 44) sits over the next card's corner: above it, so the whole reach takes the tap. */
+  .lx-known-no { z-index: 1; }
+  .lx-known-no .lx-icon { width: 13px; height: 13px; }
+  .lx-known-no:active { color: var(--ink-1); }
+
+  /* ---------- a picture book, and a book in the language with help ---------- */
+
+  /* A page's picture, over its text: sized before it arrives (its width and height), never taller than a good part of
+   * the screen. On a spread each book page starts a column, so two face each other like an open picture book. */
+  [data-part="reader-picture"] { margin: 0 0 1.1em; break-inside: avoid; }
+  [data-part="reader-picture"] img { display: block; width: 100%; height: auto; max-height: 45vh; object-fit: contain; border-radius: var(--radius-12); background: var(--fill); }
+  /* In pages the reader sizes it for the page (fitPictures): at its top, as large as fits over its text (with-text),
+   * or a page to itself (alone). Measuring, the pictures are out of the way. */
+  [data-part="reader-picture"][data-fit] img { width: var(--fit-w); height: var(--fit-h); max-height: none; margin-inline: auto; }
+  [data-part="reader-picture"][data-fit="measure"] img { display: none; }
+  /* A book's line break put away (reflowBreaks): its line didn't fit whole, so the paragraph flows on. */
+  [data-part="reader"] br[data-flow] { display: none; }
+  /* A blank page before a picture that would land on a spread's right (its text then faces it). */
+  .lx-reader-blank { break-inside: avoid; }
+  /* A picture book (data-pictures): its text a size up where the page is tall (a phone on its side keeps the room for
+   * its pictures), its lines never ending on one word where that can be helped, and in pages its pages start below
+   * the top bar, so the bars never lie over a picture (a text book's pages keep the bars over their first line). */
+  @media (min-height: 600px) {
+    [data-part="reader"][data-pictures] { --reader-scale: 1.2; }
+  }
+  [data-part="reader"][data-pictures] > [data-part="reader-text"] { font-size: calc(var(--reader-size, var(--reader-default, var(--size-read))) * var(--reader-scale, 1)); }
+  [data-part="reader"][data-pictures] :is(.lx-reader-flow, .lx-turn-inner) p { text-wrap: pretty; }
+  [data-part="reader"][data-mode="pages"][data-pictures] > [data-part="reader-text"] { padding-top: calc(var(--reader-bar-h, 61px) + 11px); }
+  [data-part="reader-picture"] + [data-part="reader-heading"] { margin-top: 0.6em; }
+  [data-part="reader"][data-variant="spread"] [data-page-start] { break-before: column; }
+  /* A word of a book in the language you're learning: as written; tapped when you knew it, marked like a woven one. */
+  [data-part="reader-word"] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  [data-part="reader-word"][data-state="looked-up"] { border-radius: 4px; background: var(--m-wrong-bg); text-decoration: underline wavy var(--m-wrong) 1.5px; text-underline-offset: 5px; }
+  /* Its help in place: your language, in the book's word order, marked as help. */
+  [data-part="reader-help"] { color: var(--ink-2); text-decoration: underline dotted var(--ink-4) 1.5px; text-underline-offset: 5px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  /* About this book: the credits its license asks for. */
+  [data-part="reader-credits"] { margin-top: 2.5em; color: var(--ink-2); font: 400 var(--size-14) / 1.55 var(--type-ui); }
+  [data-part="reader-credits"] h2 { margin: 0 0 0.8em; color: var(--ink-1); font: 600 var(--size-16) / 1.3 var(--type-ui); }
+  [data-part="reader-credits"] p { margin: 0 0 0.7em; }
+  [data-part="reader-credits"] a { color: var(--ink-1); }
+  [data-part="sheet"] [data-part="reader-credits"] { margin-top: 0; padding: 0 var(--space-2); }
+
+  /* ---------- holding words ---------- */
+
+  /* Words a search found, lit up for a moment where they are (fading: on their way back). */
+  [data-part="reader-text"] [data-found] { background-color: var(--selection); }
+  [data-part="reader-text"] [data-found="fading"] { background-color: transparent; transition: background-color var(--dur-320) var(--ease-standard); }
+  /* Words you've highlighted: a wash with a line under it. Before the selection's rules, so words you're holding show
+   * as held. */
+  [data-part="reader-text"] [data-highlight] { background-color: var(--highlight); box-shadow: inset 0 -1px 0 var(--highlight-edge); }
+  [data-part="reader-text"] [data-selected] { border-radius: 0; background: var(--selection); }
+  [data-part="reader-text"] [data-selected~="start"] { border-start-start-radius: 3px; border-end-start-radius: 3px; }
+  [data-part="reader-text"] [data-selected~="end"] { border-start-end-radius: 3px; border-end-end-radius: 3px; }
+  [data-part="reader-handle"] { position: absolute; z-index: 3; width: 44px; touch-action: none; cursor: grab; }
+  [data-part="reader-handle"]::before { content: ""; position: absolute; left: 21px; top: 8px; bottom: 8px; width: 2px; border-radius: 1px; background: var(--solid); }
+  [data-part="reader-handle"]::after { content: ""; position: absolute; left: 15px; width: 14px; height: 14px; border-radius: var(--radius-full); background: var(--solid); }
+  [data-part="reader-handle"][data-variant="start"]::after { top: -4px; }
+  [data-part="reader-handle"][data-variant="end"]::after { bottom: -4px; }
+  [data-part="reader-handle"][data-state="landing"] { opacity: 0.45; pointer-events: none; }
+  [data-part="reader-hold"] {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+    width: max-content;
+    max-width: min(340px, calc(100% - 16px));
+    padding: var(--space-2);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--chrome);
+    color: var(--ink-1);
+    box-shadow: var(--shadow-pop);
+    font: 400 var(--size-14) / 1.35 var(--type-ui);
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  [data-part="reader-hold"][data-below] { flex-direction: column-reverse; }
+  :is([data-part="reader-handle"], [data-part="reader-hold"])[hidden] { display: none; }
+  [data-part="reader-preview"] { display: flex; flex-direction: column; gap: 2px; padding: var(--space-1) var(--space-2); font: 400 var(--size-16) / 1.35 var(--type-read); text-align: center; }
+  .lx-preview-label { color: var(--ink-3); font: 500 var(--size-12) / 1.2 var(--type-ui); }
+  .lx-preview-lemma { color: var(--ink-3); font-size: var(--size-14); font-style: italic; }
+  .lx-hold-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px; }
+  .lx-hold-actions button {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 var(--space-3);
+    border: 0;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--ink-1);
+    font: 600 var(--size-14) / 1 var(--type-ui);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lx-hold-actions button:active { background: var(--fill-active); }
+  @media (hover: hover) { .lx-hold-actions button:hover { background: var(--fill-hover); } }
+  .lx-hold-actions .lx-icon { width: 18px; height: 18px; }
+
+  /* A page of the settings sheet (your words): the way back first. */
+  .lx-reader-sheet-back { display: flex; margin-bottom: var(--space-2); }
+  [data-part="reader"] > [data-part="word-popover"] { position: absolute; z-index: 5; width: max-content; max-width: min(320px, calc(100% - 32px)); }
+  /* On a phone, a word's meaning spans the text's column (16px gutters, reader.js placePopover): narrower, the page's words showed in pieces
+     beside it and its row of buttons wrapped. Grown to clear a line (min-height), its words stay in its middle. */
+  @media (max-width: 600px) { [data-part="reader"] > [data-part="word-popover"] { width: calc(100% - 32px); max-width: none; } }
+  [data-part="reader"] > [data-part="word-popover"] { justify-content: center; }
+  [data-part="word-popover"] .lx-row { margin-top: var(--space-1); gap: var(--space-2); }
+  /* The "…" (ask your AI about the word) at the row's far end. */
+  [data-part="word-popover"] .lx-row > [aria-haspopup="menu"] { margin-inline-start: auto; }
+
+  [data-part="woven-word"] {
+    padding: 0 1px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline dotted var(--ink-4) 1.5px;
+    text-underline-offset: 5px;
+  }
+  @media (hover: hover) { [data-part="woven-word"]:hover { background: var(--fill-hover); } }
+  [data-part="woven-word"][data-state="looked-up"] { background: var(--m-wrong-bg); text-decoration: underline wavy var(--m-wrong) 1.5px; }
+  [data-part="woven-word"][data-state="new"] { text-decoration: underline dashed var(--m-new-edge) 1.5px; }
+  /* The underline switched off (the weave's settings): the plain dotted line goes; a word's own mark stays. */
+  [data-part="reader"]:not([data-underline]) [data-part="woven-word"]:not([data-state="looked-up"]):not([data-state="new"]) { text-decoration: none; }
+
+  /* ---------- a language written in characters (Japanese, Chinese, Cantonese) ---------- */
+  /* Its own face after the reading one: Latin letters keep the reading type, its characters take the system's. */
+  [data-part="reader"] :lang(ja):not(rt) { font-family: var(--type-read), "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif; }
+  [data-part="reader"] :lang(zh):not(rt) { font-family: var(--type-read), "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+  /* Traditional Mandarin (zh-Hant: Taiwan) in Taiwan's forms: :lang(zh) above matches it too, so this comes after.
+   * Cantonese (yue) needs none of its own: the system draws it in Hong Kong's forms. */
+  [data-part="reader"] :lang(zh-Hant):not(rt) { font-family: var(--type-read), "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif; }
+  /* A book woven into, or helped in, a language with readings starts at 24px, whether they show or not (a size you pick
+   * stays), so a reading, half its word, is 12px; the English under a word is half its word too. Room over each line
+   * for a reading, while they show. */
+  [data-part="reader"][data-lang-readings] { --reader-default: 24px; }
+  [data-part="reader"][data-readings] :is([data-part="reader-text"], .lx-turn-inner) { line-height: 2.15; }
+  [data-part="reader-gloss"][data-state="under"] { font-size: 0.5em; }
+  /* A book in the language with help: most words carry a reading over them and their English under them. */
+  [data-part="reader"][data-readings="help"] :is([data-part="reader-text"], .lx-turn-inner) { line-height: 2.6; }
+  /* A word never breaks across lines; a line breaks between two (<wbr>). */
+  [data-part="reader"] :is([data-part="woven-word"], [data-part="reader-word"], .lx-sentence-line > span):is(:lang(ja), :lang(zh), :lang(yue)) { white-space: nowrap; }
+  /* English among the words of a line written without spaces: a narrow gap either side, as Japanese typesetting puts
+     between its letters and Latin ones. */
+  [data-part="reader"] .lx-in-line { margin-inline: 0.25em; }
+  [data-part="reader"] .lx-sentence-line > .lx-in-line:first-child { margin-inline-start: 0; }
+  /* A just-added word's English under it, where its reading has the space over it: the English is its mark then. */
+  ruby:has(> [data-part="reader-gloss"][data-state="under"]) { ruby-position: under; }
+  [data-part="woven-word"]:has([data-part="reader-gloss"][data-state="under"]) { text-decoration: none; }
+  [data-part="reader-sentence"][data-state="flipped"] { font-weight: 500; }
+  [data-part="reader-literal"] {
+    display: block;
+    margin: 2px 0 6px;
+    padding-left: var(--space-3);
+    border-left: 2px solid var(--edge);
+    color: var(--ink-2);
+    font-size: 0.82em;
+    line-height: 1.5;
+  }
+  [data-part="word-popover"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    max-width: 320px;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-16);
+    background: var(--chrome);
+    box-shadow: var(--shadow-pop);
+    font-size: var(--size-14);
+  }
+  [data-part="word-popover"] strong { font: 600 var(--size-20) / 1.2 var(--type-read); }
+
+  /* ============ the Read tab: your library ============ */
+  .lx-library { display: flex; flex-direction: column; gap: var(--space-6); padding-bottom: var(--space-6); }
+  .lx-library-section, .lx-shelf-sections, .lx-shelf-section { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-shelf-sections { gap: var(--space-5); }
+  .lx-library-add { display: flex; flex-direction: column; gap: var(--space-2); }
+  .lx-library-add .lx-read-message:empty { display: none; }
+  .lx-library-lede { margin: calc(-1 * var(--space-2)) 0 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.45; }
+  .lx-library-continue:empty { display: none; }
+  .lx-sheet-title { margin: 0; font: 500 var(--size-20) / 1.2 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-sheet-text { margin: 0; color: var(--ink-2); line-height: 1.5; }
+
+  /* ---------- full screen, on a computer ---------- */
+
+  /* Faint, bottom right, only while the bars are away (the settings button has that place while they're up). */
+  [data-part="reader-fullscreen"] {
+    position: absolute;
+    right: max(14px, env(safe-area-inset-right));
+    bottom: calc(30px + env(safe-area-inset-bottom));
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--ink-3);
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    transition: opacity var(--dur-320) var(--ease-standard);
+  }
+  [data-part="reader"][data-state="zen"] > [data-part="reader-fullscreen"] { opacity: 0.35; pointer-events: auto; }
+  @media (hover: hover) { [data-part="reader"][data-state="zen"] > [data-part="reader-fullscreen"]:hover { opacity: 0.85; } }
+  [data-part="reader-fullscreen"]:active { background: var(--fill-active); }
+  [data-part="reader-fullscreen"] .lx-icon { width: 20px; height: 20px; }
+  /* Its two icons: into full screen, and out (while the reader's in it). */
+  [data-part="reader-fullscreen"] .lx-icon + .lx-icon,
+  [data-part="reader"][data-fullscreen] > [data-part="reader-fullscreen"] .lx-icon:first-child { display: none; }
+  [data-part="reader"][data-fullscreen] > [data-part="reader-fullscreen"] .lx-icon + .lx-icon { display: block; }
+
+  /* ---------- highlights and notes ---------- */
+
+  /* A highlight's ✦, in the margin by its last word (the reader places it, in the flow, so it moves with the page and
+   * hides under the covers as the text does). Faint until the highlight has a note. */
+  [data-part="reader-note-mark"] {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: transparent;
+    /* Faint by its ink until the highlight has a note (then the highlight's own mark color): never by opacity. */
+    color: var(--ink-3);
+    font: 400 13px / 1 var(--type-ui);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  [data-part="reader-note-mark"][data-state="noted"] { color: var(--highlight-mark, var(--ink-2)); }
+  [data-part="reader-note-mark"][hidden] { display: none; }
+  [data-part="reader-note-mark"]:active { background: var(--fill-active); }
+  @media (hover: hover) { [data-part="reader-note-mark"]:hover { color: var(--highlight-mark, var(--ink-2)); } }
+  /* The note: the highlighted words, your note, Remove highlight and Save. */
+  [data-part="reader-note"] { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-2) 0; }
+  [data-part="reader-note"] blockquote { margin: 0; padding-left: var(--space-3); border-left: 2px solid var(--highlight-edge); color: var(--ink-2); font: 400 var(--size-16) / 1.5 var(--type-read); }
+  [data-part="reader-note"] textarea[data-part="text-field"] { min-height: 96px; font: 400 var(--size-16) / 1.5 var(--type-ui); }
+  .lx-reader-note-actions { display: flex; justify-content: space-between; gap: var(--space-2); }
+  .lx-reader-noted { color: var(--highlight-mark, var(--ink-2)); }
+  .lx-reader-sheet-intro { margin: 0 0 var(--space-3); }
+
+  /* ---------- a word's card and a sentence's card ---------- */
+
+  :is([data-part="word-card"], [data-part="sentence-card"]) { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-2) 0; }
+  .lx-card-head { display: flex; align-items: center; gap: var(--space-3); }
+  .lx-card-head strong { font: 500 var(--size-28) / 1.2 var(--type-read); }
+  .lx-card-lemma { margin: calc(-1 * var(--space-2)) 0 0; color: var(--ink-3); font: italic 400 var(--size-16) / 1.3 var(--type-read); }
+  .lx-card-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--space-1) var(--space-3); margin: 0; }
+  .lx-card-facts dt { color: var(--ink-3); font: 400 var(--size-14) / 1.5 var(--type-ui); }
+  .lx-card-facts dd { margin: 0; font: 400 var(--size-16) / 1.4 var(--type-read); }
+  .lx-card-sentence { display: flex; flex-direction: column; gap: var(--space-2); }
+  .lx-card-literal-label { margin: 0; }
+  .lx-card-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  /* A word's meanings, from the book's definitions: each its part of speech, its definition and an example. */
+  [data-part="word-senses"] { display: flex; flex-direction: column; gap: var(--space-3); margin: 0; padding: 0; list-style: none; counter-reset: sense; }
+  [data-part="word-senses"] > li { display: grid; grid-template-columns: 1.4em minmax(0, 1fr); column-gap: var(--space-2); counter-increment: sense; }
+  [data-part="word-senses"] > li::before { content: counter(sense) "."; grid-row: span 3; color: var(--ink-3); font: 400 var(--size-14) / 1.5 var(--type-ui); }
+  .lx-sense-pos { color: var(--ink-3); font: 500 var(--size-12) / 1.5 var(--type-ui); }
+  .lx-sense-def { font: 400 var(--size-16) / 1.45 var(--type-read); }
+  .lx-sense-example { display: flex; flex-direction: column; margin-top: 2px; font: italic 400 var(--size-14) / 1.45 var(--type-read); }
+  .lx-popover-sense { max-width: 18em; }
+  /* The held words' preview opens their card. */
+  [data-part="reader-preview"][role="button"] { position: relative; padding-inline-end: calc(var(--space-2) + 18px); border-radius: var(--radius-12); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  [data-part="reader-preview"][role="button"]:active { background: var(--fill-active); }
+  @media (hover: hover) { [data-part="reader-preview"][role="button"]:hover { background: var(--fill-hover); } }
+  .lx-preview-more { position: absolute; top: 50%; right: var(--space-1); display: grid; color: var(--ink-3); transform: translateY(-50%); }
+  .lx-preview-more .lx-icon { width: 16px; height: 16px; }
+  /* Your words: the word opens its card, the ✕ beside it takes it out. */
+  .lx-reader-word-row { display: flex; align-items: stretch; gap: var(--space-1); list-style: none; }
+  .lx-reader-word-row > [data-part="list-row"] { flex: 1; min-width: 0; width: auto; }
+  .lx-reader-word-row > [data-part="icon-button"] { align-self: center; }
+
+  /* ---------- search in the text ---------- */
+
+  /* Contents' search field, over the chapters (or what it found). */
+  [data-part="reader"] [data-part="sheet"] [data-part="search-field"] { margin: 0 0 var(--space-3); }
+  /* The words a search found, in a place's snippet. */
+  [data-part="reader-search-hit"] { padding: 0 1px; border-radius: 3px; background: var(--selection); color: var(--ink-1); font-weight: 600; }
+}

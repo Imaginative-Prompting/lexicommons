@@ -1,0 +1,214 @@
+/* A lesson's colors as typed properties, so lighting up fades them; the art tokens it draws with take them (path-page.css .lx-ps). */
+@property --lx-stop-face { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --lx-stop-wall { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --lx-stop-wall-dark { syntax: "<color>"; inherits: true; initial-value: transparent; }
+/* Where you are (study/path-page.js): a quiet, dark page; every lesson a large solid icon that is its own button, wandering slowly from side to side, in
+   its unit's color when it's done, gray ahead; no line, no glow. */
+@layer lx.page {
+  /* ---------- the ground: each unit a faint tint, drifting from one to the next as you scroll; it runs up under the floating header ---------- */
+  .lx-path-page {
+    --paper-0: color-mix(in oklab, var(--art-violet) 6%, var(--canvas));
+    --paper-1: color-mix(in oklab, var(--art-teal) 5%, var(--canvas));
+    --paper-2: color-mix(in oklab, var(--art-sky) 5%, var(--canvas));
+    position: relative;
+    margin-inline: calc(-1 * var(--page-gutter, var(--space-4)));
+    margin-top: calc(-1 * var(--header-room));
+    padding-top: var(--header-room);
+    background: var(--paper-0);
+  }
+  /* Each unit its own ground, blending in from the unit before it over a band at its top; the foot on the last unit's. Painted once: nothing about the
+     ground is written as you scroll (written per step, it blanked the path on a fling). */
+  .lx-pu { --band: 420px; background: linear-gradient(to bottom, var(--paper-from) 0, var(--paper) var(--band)); }
+  .lx-pu[data-from="0"] { --paper-from: var(--paper-0); }
+  .lx-pu[data-from="1"] { --paper-from: var(--paper-1); }
+  .lx-pu[data-from="2"] { --paper-from: var(--paper-2); }
+  .lx-path-foot-ground { background: var(--paper-0); }
+  .lx-path-foot-ground[data-hue="1"] { background: var(--paper-1); }
+  .lx-path-foot-ground[data-hue="2"] { background: var(--paper-2); }
+  :root:is([data-theme="paper"], [data-theme="sepia"]) .lx-path-page {
+    --paper-0: color-mix(in oklab, var(--art-violet) 6%, var(--canvas));
+    --paper-1: color-mix(in oklab, var(--art-teal) 6%, var(--canvas));
+    --paper-2: color-mix(in oklab, var(--art-sky) 6%, var(--canvas));
+  }
+  .lx-path { position: relative; }
+
+  /* ---------- a unit, in its color ---------- */
+  .lx-pu { --u: var(--art-violet); --u-deep: var(--art-violet-deep); --u-lit: var(--art-violet-lit); --paper: var(--paper-0); position: absolute; left: 0; right: 0; }
+  /* A unit off the screen isn't styled, laid out or painted (its height is set, so nothing moves): the path's solid stops are thousands of nodes, and
+     every change on :root (the ground for the fades) restyled them all, 23 ms a time. */
+  .lx-pu { content-visibility: auto; }
+  .lx-pu[data-hue="1"] { --u: var(--art-teal); --u-deep: var(--art-teal-deep); --u-lit: var(--art-teal-lit); --paper: var(--paper-1); }
+  .lx-pu[data-hue="2"] { --u: var(--art-sky); --u-deep: var(--art-sky-deep); --u-lit: var(--art-sky-lit); --paper: var(--paper-2); }
+  /* A lesson's colors (the art tokens its drawing takes): gray ahead, set apart from the ground by a few steps of ink; its unit's hue once it's done. */
+  .lx-pu {
+    --gray-face: color-mix(in srgb, var(--ink-1) 27%, var(--paper));
+    --gray-wall: color-mix(in srgb, var(--ink-1) 19%, var(--paper));
+    --gray-wall-dark: color-mix(in srgb, var(--ink-1) 13%, var(--paper));
+    --gray-mark: color-mix(in srgb, var(--ink-1) 56%, var(--paper));
+  }
+  :root:is([data-theme="paper"], [data-theme="sepia"]) .lx-pu {
+    --gray-face: color-mix(in srgb, var(--ink-1) 15%, var(--paper));
+    --gray-wall: color-mix(in srgb, var(--ink-1) 26%, var(--paper));
+    --gray-wall-dark: color-mix(in srgb, var(--ink-1) 36%, var(--paper));
+    --gray-mark: color-mix(in srgb, var(--ink-1) 46%, var(--paper));
+  }
+
+  /* Its header: the unit's number in its color, its name you can read. */
+  .lx-pu-head { position: absolute; left: var(--space-5); right: var(--space-5); display: grid; justify-items: center; gap: 4px; text-align: center; }
+  .lx-pu-kicker { color: var(--u-lit); font: 700 var(--size-14) / 1.2 var(--type-ui); letter-spacing: 0.02em; }
+  :root:is([data-theme="paper"], [data-theme="sepia"]) .lx-pu-kicker { color: var(--u-deep); }
+  .lx-pu-title { margin: 0; color: var(--ink-1); font: 700 30px / 1.12 var(--type-head); letter-spacing: -0.015em; text-wrap: balance; overflow-wrap: anywhere; }
+  .lx-pu .lx-path-note, .lx-path-probe > .lx-path-note { margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.35; text-align: center; text-wrap: pretty; }
+  .lx-pu .lx-path-note { position: absolute; left: var(--space-6); right: var(--space-6); }
+  .lx-pu .lx-path-note a { position: relative; color: var(--ink-1); }
+  .lx-pu .lx-path-note a::before { content: ""; position: absolute; inset: -12px -6px; }
+  /* What a unit's header is measured in, before it's placed. */
+  .lx-path-probe { position: absolute; left: 0; top: 0; visibility: hidden; pointer-events: none; }
+  .lx-path-probe > .lx-pu-head { position: static; margin-inline: var(--space-5); }
+  .lx-path-probe > .lx-path-note { margin-inline: var(--space-6); }
+
+  /* ---------- a lesson: its icon is the button, standing on a lip it presses down onto ---------- */
+  .lx-ps {
+    --lx-stop-face: var(--gray-face);
+    --lx-stop-wall: var(--gray-wall);
+    --lx-stop-wall-dark: var(--gray-wall-dark);
+    --art-stop-face: var(--lx-stop-face);
+    --art-stop-wall: var(--lx-stop-wall);
+    --art-stop-wall-dark: var(--lx-stop-wall-dark);
+    --art-stop-mark: var(--gray-mark);
+    transition: --lx-stop-face 360ms var(--ease-out), --lx-stop-wall 360ms var(--ease-out), --lx-stop-wall-dark 360ms var(--ease-out);
+    position: absolute;
+    display: grid;
+    place-items: start center;
+    width: var(--s, 84px);
+    height: calc(var(--s, 84px) + var(--lip));
+    margin: calc(var(--s, 84px) / -2) 0 0 calc(var(--s, 84px) / -2);
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lx-ps:is([data-state="done"], [data-state="here"]):not(.lx-unlit) {
+    --lx-stop-face: var(--u);
+    --lx-stop-wall: var(--u-deep);
+    --lx-stop-wall-dark: color-mix(in srgb, var(--art-ink, #1b1a20) 30%, var(--u-deep));
+    --art-stop-mark: #fff;
+  }
+  /* (A placeholder until the solid drawings are in: the theme's flat symbol at the icon's size, in the face's color, pressing in a little.) */
+  .lx-ps-face { display: block; width: var(--s, 84px); height: var(--s, 84px); line-height: 0; color: var(--art-stop-face); transition: color 360ms var(--ease-out), transform 90ms var(--ease-standard); }
+  .lx-ps-face > svg { display: block; width: 100%; height: 100%; }
+  .lx-ps:active .lx-ps-face:not([data-art="solid"]) { transform: translateY(2px) scale(0.94); }
+  /* A solid one: pressed, its face and the near half of its walls go down and right onto the far half, which stays (user units of its 96 box). */
+  .lx-ps-face[data-art="solid"] { color: inherit; }
+  .lx-ps-face[data-art="solid"] .lx-stop-top { transition: transform 70ms var(--ease-standard); }
+  /* (Half the solid's depth is only about 1.5 px at 84, so the press also takes it in a little and darkens it, as a pressed filled control does.) */
+  .lx-ps-face[data-art="solid"] { transition: color 360ms var(--ease-out), transform 90ms var(--ease-standard), filter 90ms var(--ease-standard); }
+  .lx-ps:active .lx-ps-face[data-art="solid"] { transform: scale(0.95); filter: brightness(0.9); }
+  .lx-ps:active .lx-ps-face[data-art="solid"] .lx-stop-top { transform: translate(1.13px, 1.3px); }
+  .lx-ps:focus-visible { outline: 2px solid var(--ring); outline-offset: 6px; border-radius: 16px; }
+
+  /* Your place is alive in a small way: its drawing bobs slowly (the button stays where it is under a finger), and Tinta, standing on it, with it. */
+  /* As a transform on a layer of its own, so the compositor moves it, smooth and between pixels: as the `translate` property, WebKit moved it on
+     the page's own thread, the one that draws Tinta's every frame, and an iPhone showed it stepping under Tinta's smooth bob. */
+  .lx-ps[data-state="here"]:not(.lx-unlit) .lx-ps-face > svg, .lx-full[data-state="here"]:not(.lx-unlit) .lx-full-face > svg, .lx-ps-tinta-here { animation: lx-path-bob 2.8s var(--ease-standard) infinite; will-change: transform; }
+  @keyframes lx-path-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  @media (prefers-reduced-motion: reduce) { :root:not([data-motion="on"]) :is(.lx-ps .lx-ps-face > svg, .lx-full .lx-full-face > svg, .lx-ps-tinta-here) { animation: none; } }
+  .lx-ps-tinta { position: absolute; pointer-events: none; }
+
+  /* Its words: its title at real size, its words and its idea under it, on the inner side. */
+  .lx-ps-label { position: absolute; display: grid; justify-items: start; gap: 2px; cursor: pointer; }
+  .lx-ps-label[data-side="left"] { justify-items: end; text-align: end; }
+  .lx-ps-title { color: var(--ink-1); font: 600 17px / 22px var(--type-ui); text-wrap: pretty; overflow-wrap: anywhere; }
+  .lx-ps-label:is([data-state="ahead"], [data-state="open"], [data-state="skipped"]) .lx-ps-title { color: var(--ink-2); font-weight: 500; }
+  .lx-ps-words { max-width: 100%; overflow: hidden; color: var(--ink-2); font: 400 15px / 20px var(--type-read); white-space: nowrap; text-overflow: ellipsis; }
+  .lx-ps-idea { color: var(--ink-2); font: italic 400 14px / 19px var(--type-ui); text-wrap: pretty; }
+  .lx-ps-sub { color: var(--ink-2); font-size: 15px; line-height: 20px; }
+
+  /* Your place: its title and Start. */
+  .lx-here { gap: 0; }
+  .lx-here-title { color: var(--ink-1); font: 700 21px / 26px var(--type-head); letter-spacing: -0.01em; text-wrap: balance; }
+  .lx-here > [data-part="button"] { margin-top: 12px; }
+  @media (max-width: 359.98px) { .lx-here-title { font-size: 18px; line-height: 23px; } }
+  .lx-here-skip { display: flex; align-items: center; justify-self: stretch; gap: var(--space-2); min-height: 44px; margin-top: 8px; padding: 0; border: 0; background: none; color: var(--ink-1); font: 600 var(--size-14) / 1.25 var(--type-ui); text-align: start; }
+  .lx-here-skip:active { opacity: 0.7; }
+  .lx-here-skip-words { display: grid; flex: 1; min-width: 0; }
+  .lx-here-skip-sub { color: var(--ink-2); font-size: 13px; font-weight: 400; }
+  .lx-here-skip > .lx-icon { flex: none; width: 18px; height: 18px; color: var(--ink-3); }
+
+  /* ---------- the unit's grand stop: a gold medal, the crown on its face in the unit's color, larger than any lesson ---------- */
+  .lx-full {
+    --lx-stop-face: var(--gray-face);
+    --lx-stop-wall: var(--gray-wall);
+    --lx-stop-wall-dark: var(--gray-wall-dark);
+    --art-stop-face: var(--lx-stop-face);
+    --art-stop-wall: var(--lx-stop-wall);
+    --art-stop-wall-dark: var(--lx-stop-wall-dark);
+    --art-stop-mark: var(--gray-mark);
+    --art-stop-rim: var(--gray-face);
+    --art-stop-rim-wall: var(--gray-wall);
+    --art-stop-rim-wall-dark: var(--gray-wall-dark);
+    position: absolute;
+    display: grid;
+    place-items: start center;
+    width: var(--piece, 132px);
+    height: var(--piece, 132px);
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: --lx-stop-face 360ms var(--ease-out), --lx-stop-wall 360ms var(--ease-out), --lx-stop-wall-dark 360ms var(--ease-out);
+  }
+  .lx-full:is([data-state="done"], [data-state="here"]):not(.lx-unlit) {
+    --lx-stop-face: var(--u);
+    --lx-stop-wall: var(--u-deep);
+    --lx-stop-wall-dark: color-mix(in srgb, var(--art-ink, #1b1a20) 30%, var(--u-deep));
+    --art-stop-mark: #fff;
+    --art-stop-rim: var(--art-sun);
+    --art-stop-rim-wall: var(--art-sun-deep);
+    --art-stop-rim-wall-dark: color-mix(in srgb, var(--art-ink, #1b1a20) 25%, var(--art-sun-deep));
+  }
+  .lx-full-face { position: relative; display: block; line-height: 0; }
+  .lx-full-face > svg { display: block; }
+  .lx-full-face .lx-stop-top { transition: transform 70ms var(--ease-standard); }
+  .lx-full-face { transition: transform 90ms var(--ease-standard), filter 90ms var(--ease-standard); }
+  .lx-full:active .lx-full-face { transform: scale(0.96); filter: brightness(0.9); }
+  .lx-full:active .lx-full-face .lx-stop-top { transform: translate(1.13px, 1.3px); }
+  .lx-full:focus-visible { outline: 2px solid var(--ring); outline-offset: 6px; border-radius: 50%; }
+  .lx-full-burst { position: absolute; width: var(--piece, 132px); height: var(--piece, 132px); margin: calc(var(--piece, 132px) / -2) 0 0 calc(var(--piece, 132px) / -2); border: 4px solid var(--art-sun); border-radius: 50%; opacity: 0; pointer-events: none; }
+  .lx-full-burst.lx-bursting { animation: lx-path-burst 900ms var(--ease-out) 1; }
+  @keyframes lx-path-burst { 0% { transform: scale(0.85); opacity: 0.9; } 100% { transform: scale(1.7); opacity: 0; } }
+  .lx-full-words { position: absolute; left: var(--space-5); right: var(--space-5); display: grid; justify-items: center; gap: 2px; margin-top: 24px; text-align: center; cursor: pointer; }
+  .lx-full-kicker { color: var(--ink-1); font: 700 18px / 1.2 var(--type-head); }
+  .lx-full-here { cursor: auto; }
+  .lx-full-here .lx-full-kicker { font-size: 21px; }
+  .lx-full-here > [data-part="button"] { width: min(240px, 100%); margin-top: 12px; }
+
+  /* ---------- the bubble out of a stop ---------- */
+  /* (Over the path: a soft shadow under it, so what it covers reads as under it.) */
+  .lx-path-bubble { position: absolute; z-index: 4; padding: var(--space-4); border: 2px solid var(--line-strong); border-radius: 20px; background: var(--chrome); box-shadow: 0 4px 0 var(--line-strong), 0 18px 44px color-mix(in srgb, #000 60%, transparent); }
+  :root:is([data-theme="paper"], [data-theme="sepia"]) .lx-path-bubble { box-shadow: 0 4px 0 var(--line-strong), 0 16px 40px color-mix(in srgb, #000 16%, transparent); }
+  .lx-bubble-arrow { position: absolute; top: -9px; left: calc(var(--arrow, 50%) - 8px); width: 16px; height: 16px; border-top: 2px solid var(--line-strong); border-left: 2px solid var(--line-strong); background: var(--chrome); transform: rotate(45deg); }
+  /* Above its lesson, pointing down at it: the arrow under the bubble, with the bubble's hard edge under the arrow too. */
+  .lx-path-bubble[data-side="above"] .lx-bubble-arrow { top: auto; bottom: -9px; border: 0; border-right: 2px solid var(--line-strong); border-bottom: 2px solid var(--line-strong); box-shadow: 3px 3px 0 var(--line-strong); }
+  .lx-bubble-body { display: grid; }
+  .lx-bubble-kicker { margin: 0; color: var(--ink-2); font: 600 13px / 1.3 var(--type-ui); }
+  .lx-bubble-title { margin: 2px 0 0; color: var(--ink-1); font: 700 20px / 1.2 var(--type-head); letter-spacing: -0.01em; text-wrap: balance; }
+  .lx-bubble-words { margin: 6px 0 0; color: var(--ink-2); font-size: 15px; line-height: 1.35; }
+  .lx-bubble-words:empty { display: none; }
+  .lx-bubble-state { margin: 2px 0 0; color: var(--ink-2); font-size: var(--size-14); }
+  .lx-bubble-actions { display: grid; gap: var(--space-2); margin-top: var(--space-4); }
+
+  /* ---------- the page's foot, and the way back to your place ---------- */
+  .lx-path-more { display: block; margin: var(--space-5) var(--space-4) var(--space-6); padding: 14px; border: 2px solid var(--line-strong); border-radius: var(--radius-16); background: none; color: var(--ink-1); font: 600 var(--size-16) / 1 var(--type-ui); text-align: center; }
+  .lx-path-more:active { background: var(--fill-active); }
+  .lx-path-foot { margin: var(--space-5) var(--space-4) var(--space-6); }
+  /* The way back to your place: the same glass as the header's buttons, at its height, on the right. */
+  .lx-path-back { position: fixed; top: calc(env(safe-area-inset-top) + var(--space-3)); right: var(--space-4); z-index: 60; min-height: 40px; padding: 0 16px; border: 1px solid var(--bar-edge); border-radius: 999px; background: var(--bar-glass); -webkit-backdrop-filter: var(--bar-filter); backdrop-filter: var(--bar-filter); box-shadow: var(--bar-rim), 0 4px 14px -6px rgba(0, 0, 0, 0.35); color: var(--bar-ink); font: 600 14px / 1 var(--type-ui); }
+  .lx-path-back::before { content: ""; position: absolute; inset: -4px 0; }
+  .lx-path-back:active { background: color-mix(in srgb, var(--bar-ink) 16%, var(--bar-glass)); }
+  .lx-path-back[hidden] { display: none; }
+
+  .lx-lesson-words-sheet .lx-lesson-words .lx-row-title { font: 600 var(--size-16) / 1.3 var(--type-read); }
+}

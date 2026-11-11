@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="A free, open-source language app: read real books with English when you need it, play short games and watch what you know grow." data-t-content="site.description">
+<title data-t="site.title">Lexicommons: learn a language for free</title>
+<link rel="canonical" href="https://lexicommons.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lexicommons">
+<meta property="og:url" content="https://lexicommons.com/">
+<meta property="og:title" content="Lexicommons: learn a language for free">
+<meta property="og:description" content="A free, open-source language app: read real books with English when you need it, play short games and watch what you know grow.">
+<meta property="og:image" content="https://lexicommons.com/icons/share-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tinta, the Lexicommons ink drop, smiling beside the words: Learn a language for free.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<!-- launch images: written by scripts/build-icons.mjs from src/startup-images.ts -->
+<link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1320x2868.png">
+<link rel="apple-touch-startup-image" media="(device-width: 440px) and (max-device-height: 955px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1320x2868.png">
+<link rel="apple-touch-startup-image" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1206x2622.png">
+<link rel="apple-touch-startup-image" media="(device-width: 402px) and (max-device-height: 873px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1206x2622.png">
+<link rel="apple-touch-startup-image" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1260x2736.png">
+<link rel="apple-touch-startup-image" media="(device-width: 420px) and (max-device-height: 911px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1260x2736.png">
+<link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1290x2796.png">
+<link rel="apple-touch-startup-image" media="(device-width: 430px) and (max-device-height: 931px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1290x2796.png">
+<link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1179x2556.png">
+<link rel="apple-touch-startup-image" media="(device-width: 393px) and (max-device-height: 851px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1179x2556.png">
+<link rel="apple-touch-startup-image" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1284x2778.png">
+<link rel="apple-touch-startup-image" media="(device-width: 428px) and (max-device-height: 925px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1284x2778.png">
+<link rel="apple-touch-startup-image" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1170x2532.png">
+<link rel="apple-touch-startup-image" media="(device-width: 390px) and (max-device-height: 843px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1170x2532.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1125x2436.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1125x2436.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1242x2688.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (min-device-height: 737px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1242x2688.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/828x1792.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/828x1792.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1242x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/startup/1242x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/750x1334.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (max-device-height: 666px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/750x1334.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/640x1136.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (max-device-height: 567px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/640x1136.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/2064x2752.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1032px) and (max-device-height: 1375px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/2064x2752.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2752x2064.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1032px) and (max-device-height: 1375px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2752x2064.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/2048x2732.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/2048x2732.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2732x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2732x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1668x2420.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (min-device-height: 1195px) and (max-device-height: 1209px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1668x2420.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2420x1668.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (min-device-height: 1195px) and (max-device-height: 1209px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2420x1668.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1668x2388.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (min-device-height: 1113px) and (max-device-height: 1193px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1668x2388.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2388x1668.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (min-device-height: 1113px) and (max-device-height: 1193px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2388x1668.png">
+<link rel="apple-touch-startup-image" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1640x2360.png">
+<link rel="apple-touch-startup-image" media="(device-width: 820px) and (max-device-height: 1179px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1640x2360.png">
+<link rel="apple-touch-startup-image" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2360x1640.png">
+<link rel="apple-touch-startup-image" media="(device-width: 820px) and (max-device-height: 1179px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2360x1640.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1668x2224.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (max-device-height: 1111px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1668x2224.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2224x1668.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (max-device-height: 1111px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2224x1668.png">
+<link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1620x2160.png">
+<link rel="apple-touch-startup-image" media="(device-width: 810px) and (max-device-height: 1079px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1620x2160.png">
+<link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2160x1620.png">
+<link rel="apple-touch-startup-image" media="(device-width: 810px) and (max-device-height: 1079px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2160x1620.png">
+<link rel="apple-touch-startup-image" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1488x2266.png">
+<link rel="apple-touch-startup-image" media="(device-width: 744px) and (max-device-height: 1132px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1488x2266.png">
+<link rel="apple-touch-startup-image" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2266x1488.png">
+<link rel="apple-touch-startup-image" media="(device-width: 744px) and (max-device-height: 1132px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2266x1488.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1536x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/startup/1536x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2048x1536.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons/startup/2048x1536.png">
+<!-- /launch images -->
+<link rel="stylesheet" href="/css/site.css?v=3">
+</head>
+<body>
+<div class="site">
+  <header class="site-bar">
+    <a class="site-brand" href="/"><img class="site-mark" src="/icons/mark.svg" alt="" aria-hidden="true">Lexicommons</a>
+    <nav aria-label="Lexicommons"><a class="site-button" href="/login" data-t="site.signIn">Sign in</a></nav>
+  </header>
+
+  <main>
+    <section class="site-beat site-hero">
+      <div class="site-beat-words">
+        <h1 data-t="site.hero.title">Learn a language for free.</h1>
+        <p data-t="site.hero.sub">Read real books, with English when you need it. Play short games, keep a streak, and watch what you know grow.</p>
+        <a class="site-button" data-variant="go" href="/login?new=1" data-t="site.start">Start learning</a>
+        <p class="site-note" data-t="site.startNote">On your phone or your computer.</p>
+      </div>
+      <figure class="site-phone">
+        <div class="site-screen"><video class="site-clip" muted loop playsinline preload="none" poster="/icons/site/clips/lesson.webp" width="640" height="1384" aria-label="A lesson in Lexicommons: de thee answered with its picture, the teapot pouring, then the Dutch sentence Ik drink koffie put together from its words." data-t-label="site.hero.clip" data-start="4.5" data-src="/icons/site/clips/lesson.mp4"></video></div>
+        <button class="site-pause" type="button" aria-pressed="false" aria-label="Pause the videos" data-t-label="site.pause" hidden></button>
+      </figure>
+    </section>
+
+    <section class="site-beat" aria-labelledby="site-pictures-title">
+      <div class="site-beat-words">
+        <h2 id="site-pictures-title" data-t="site.pictures.title">Learn words with pictures</h2>
+        <p data-t="site.pictures.text">Over 700 Claude-drawn SVGs, and about 170 of them move when you’re right and when you’re wrong.</p>
+      </div>
+      <figure class="site-phone">
+        <div class="site-screen"><video class="site-clip" muted loop playsinline preload="none" poster="/icons/site/clips/pictures.webp" width="640" height="1384" aria-label="Picture questions in Lexicommons: de auto, the car, which drives off once it’s picked, then vandaag, today." data-t-label="site.pictures.clip" data-start="2.7" data-src="/icons/site/clips/pictures.mp4"></video></div>
+        <button class="site-pause" type="button" aria-pressed="false" aria-label="Pause the videos" data-t-label="site.pause" hidden></button>
+      </figure>
+    </section>
+
+    <section class="site-beat" aria-labelledby="site-review-title">
+      <div class="site-beat-words">
+        <h2 id="site-review-title" data-t="site.review.title">What you miss comes back</h2>
+        <p data-t="site.review.text">Everything you learn comes back just before you’d forget it. What you miss comes back sooner, until it sticks.</p>
+      </div>
+      <figure class="site-phone">
+        <div class="site-screen"><video class="site-clip" muted loop playsinline preload="none" poster="/icons/site/clips/review.webp" width="640" height="1384" aria-label="Reviewing in Lexicommons: Dutch sentences to read, each one’s meaning shown, then marked as known." data-t-label="site.review.clip" data-start="2.2" data-src="/icons/site/clips/review.mp4"></video></div>
+        <button class="site-pause" type="button" aria-pressed="false" aria-label="Pause the videos" data-t-label="site.pause" hidden></button>
+      </figure>
+    </section>
+
+    <section class="site-beat" aria-labelledby="site-books-title">
+      <div class="site-beat-words">
+        <h2 id="site-books-title" data-t="site.books.title">Read real books</h2>
+        <p data-t="site.books.text">Picture books with English help, a few classics with the words you know woven in, or a book of your own. Tap a word for its meaning.</p>
+      </div>
+      <figure class="site-phone">
+        <div class="site-screen"><video class="site-clip" muted loop playsinline preload="none" poster="/icons/site/clips/books.webp" width="640" height="1384" aria-label="Alice in Wonderland in Lexicommons, the Dutch the reader knows woven in, in violet, and a word tapped for its meaning." data-t-label="site.books.clip" data-start="2.4" data-src="/icons/site/clips/books.mp4"></video></div>
+        <button class="site-pause" type="button" aria-pressed="false" aria-label="Pause the videos" data-t-label="site.pause" hidden></button>
+      </figure>
+    </section>
+
+    <section class="site-beat" aria-labelledby="site-progress-title">
+      <div class="site-beat-words">
+        <h2 id="site-progress-title" data-t="site.progress.title">Watch what you know grow</h2>
+        <p data-t="site.progress.text">A day counts once you finish one thing, and rest days and pauses are part of your streak. Every word you know and how well, at a glance.</p>
+      </div>
+      <figure class="site-phone">
+        <div class="site-screen"><video class="site-clip" muted loop playsinline preload="none" poster="/icons/site/clips/progress.webp" width="640" height="1384" aria-label="A session finished in Lexicommons on a 41-day streak, then 659 words known well falling into a pile of colored tiles." data-t-label="site.progress.clip" data-start="1.5" data-src="/icons/site/clips/progress.mp4"></video></div>
+        <button class="site-pause" type="button" aria-pressed="false" aria-label="Pause the videos" data-t-label="site.pause" hidden></button>
+      </figure>
+    </section>
+
+    <section class="site-beat" aria-labelledby="site-talk-title">
+      <div class="site-beat-words">
+        <h2 id="site-talk-title" data-t="site.talk.title">Practice a conversation</h2>
+        <p data-t="site.talk.text">With your own AI, at your level, from the sentences you know. It corrects you as you go, and everything else works without it.</p>
+      </div>
+      <figure class="site-phone">
+        <div class="site-screen"><video class="site-clip" muted loop playsinline preload="none" poster="/icons/site/clips/talk.webp" width="640" height="1384" aria-label="A conversation in Dutch with your own AI in Lexicommons, a sentence corrected along the way." data-t-label="site.talk.clip" data-start="6.0" data-src="/icons/site/clips/talk.mp4"></video></div>
+        <button class="site-pause" type="button" aria-pressed="false" aria-label="Pause the videos" data-t-label="site.pause" hidden></button>
+      </figure>
+    </section>
+
+    <section class="site-beat" aria-labelledby="site-languages-title">
+      <div class="site-beat-words">
+        <h2 id="site-languages-title" data-t="site.languages.title">8 full courses, and 75 languages to start in</h2>
+        <p data-t="site.languages.lessons">200 lessons in each of 8 languages.</p>
+        <p data-t="site.languages.text">Every other language has a starter pack. Make packs of your own too: by hand, from an Anki deck, or with your AI.</p>
+      </div>
+      <figure class="site-phone">
+        <div class="site-screen"><video class="site-clip" muted loop playsinline preload="none" poster="/icons/site/clips/path.webp" width="640" height="1384" aria-label="Dutch’s lessons in Lexicommons, one after another in units, each with its drawing." data-t-label="site.languages.clip" data-start="0.6" data-src="/icons/site/clips/path.mp4"></video></div>
+        <button class="site-pause" type="button" aria-pressed="false" aria-label="Pause the videos" data-t-label="site.pause" hidden></button>
+      </figure>
+    </section>
+
+    <section class="site-why" aria-labelledby="site-why-title">
+      <h2 id="site-why-title" data-t="site.why.title">What it stands for</h2>
+      <div class="site-facts">
+        <div><h3 data-t="site.why.free.title">Free, with no ads</h3>
+        <p data-t="site.why.free.text">Every lesson, game and book costs nothing, and nothing gets between you and them.</p></div>
+        <div><h3 data-t="site.why.open.title">Open source</h3>
+        <p data-t="site.why.open.text">The code is open under AGPL-3.0, and the lessons and packs under CC BY-SA 4.0.</p>
+        <a class="site-code" href="https://github.com/Imaginative-Prompting/lexicommons" rel="noopener"><svg class="site-github" viewBox="0 0 16 16" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span data-t="site.why.open.link">Lexicommons on GitHub</span></a></div>
+        <div><h3 data-t="site.why.yours.title">Your progress is yours</h3>
+        <p data-t="site.why.yours.text" data-no-plan>It stays on your device, or in your own Google Drive, Dropbox or OneDrive. No trackers.</p>
+        <p data-t="site.why.yours.textPlan" data-plan>It stays on your device, in your own Google Drive, Dropbox or OneDrive, or in Lexicommons’ own storage with the plan. No trackers.</p></div>
+        <div><h3 data-t="site.why.ai.title">Your own AI, if you want one</h3>
+        <p data-t="site.why.ai.text">Connect Claude, Codex or any app that speaks MCP and it can practice with you and make packs. It’s optional, and everything else works without it.</p></div>
+      </div>
+    </section>
+
+
+    <section class="site-end">
+      <img class="site-end-tinta" src="/icons/mark.svg" alt="" aria-hidden="true" width="96" height="96">
+      <h2 data-t="site.end.title">Ready when you are</h2>
+      <a class="site-button" data-variant="go" href="/login?new=1" data-t="site.start">Start learning</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <a href="/privacy" data-t="site.foot.privacy">Privacy</a>
+    <a href="/terms" data-t="site.foot.terms">Terms</a>
+    <a class="site-code" href="https://github.com/Imaginative-Prompting/lexicommons" rel="noopener"><svg class="site-github" viewBox="0 0 16 16" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span data-t="site.foot.code">Source code</span></a>
+    <span data-t="site.foot.from">Lexicommons, from Imaginative Prompting</span>
+  </footer>
+</div>
+<script type="module" src="/js/site.js"></script>
+</body>
+</html>

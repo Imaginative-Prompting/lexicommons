@@ -1,0 +1,7406 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-eo",
+  "name": "Starter: Esperanto",
+  "about": "Esperanto in real, everyday sentences, with each one's words in Esperanto order.",
+  "language": "eo",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kafo": "coffee",
+    "teo": "tea",
+    "akvo": "water",
+    "mi": "I (min: me)",
+    "trinki": "drink",
+    "kaj": "and",
+    "unu": "one",
+    "lakto": "milk",
+    "bone": "well, fine",
+    "farti": "to be doing, to feel (in health or well-being)",
+    "ĉu": "whether (starts a yes-or-no question)",
+    "vi": "you",
+    "ne": "not",
+    "instruisto": "teacher",
+    "studento": "student (at a university or college)",
+    "esti": "be",
+    "patrino": "mother",
+    "patro": "father",
+    "frato": "brother",
+    "fratino": "sister",
+    "mia": "my",
+    "instruistino": "teacher (a woman)",
+    "havi": "have",
+    "amiko": "friend",
+    "kuracisto": "doctor",
+    "ŝlosilo": "key",
+    "telefono": "phone",
+    "libro": "book",
+    "bona": "good",
+    "kie": "where",
+    "tie": "there",
+    "la": "the",
+    "banĉambro": "bathroom",
+    "du": "two",
+    "tri": "three",
+    "mono": "money",
+    "paroli": "speak",
+    "angle": "in English",
+    "esperanto": "Esperanto",
+    "kompreni": "understand",
+    "iom": "a little",
+    "voli": "want",
+    "domo": "house",
+    "ĉambro": "room",
+    "granda": "big",
+    "malgranda": "small",
+    "loĝi": "live",
+    "en": "in",
+    "iri": "go (iru: go!, let's go)",
+    "al": "to",
+    "lernejo": "school",
+    "urbo": "city",
+    "stacidomo": "train station",
+    "aŭto": "car",
+    "hodiaŭ": "today",
+    "morgaŭ": "tomorrow",
+    "nun": "now",
+    "labori": "to work",
+    "devi": "must, have to",
+    "povi": "can, be able to",
+    "kiel": "how",
+    "nomiĝi": "be called",
+    "el": "out of, from",
+    "ŝi": "she (ŝin: her)",
+    "plej": "most",
+    "amikino": "friend (a woman)",
+    "ĉi": "nearby (ĉi tie: here; ĉi tiu: this)",
+    "infano": "child",
+    "dormi": "sleep",
+    "sur": "on",
+    "tablo": "table",
+    "fridujo": "fridge",
+    "kuiri": "cook",
+    "vespermanĝo": "dinner",
+    "legi": "read",
+    "tiu": "that one, that (tiun: that, as the object)",
+    "hieraŭ": "yesterday",
+    "ni": "we",
+    "bela": "beautiful",
+    "ĝardeno": "garden",
+    "ŝati": "like",
+    "manĝi": "eat",
+    "viando": "meat",
+    "malsati": "be hungry",
+    "supo": "soup",
+    "tre": "very",
+    "bongusta": "tasty",
+    "pico": "pizza",
+    "bonvoli": "be so kind (bonvolu: please)",
+    "doni": "give",
+    "salo": "salt",
+    "kun": "with",
+    "restoracio": "restaurant",
+    "pardoni": "forgive (pardonu: excuse me)",
+    "kiom": "how much, how many",
+    "kosti": "cost",
+    "tio": "that (thing)",
+    "hejme": "at home (hejmen: homeward, going home)",
+    "buso": "bus",
+    "veni": "come",
+    "post": "after; in (time)",
+    "dek": "ten",
+    "minuto": "minute",
+    "helpi": "help",
+    "viziti": "visit",
+    "gepatroj": "parents",
+    "kio": "what (kion: what, as the object)",
+    "fari": "do, make",
+    "dum": "during, over",
+    "semajnfino": "weekend",
+    "pluvi": "rain",
+    "varme": "warm (as in it's warm)",
+    "esperi": "hope",
+    "ke": "that (joining two sentences)",
+    "renkontiĝi": "meet up",
+    "sabate": "on Saturday",
+    "lerni": "learn",
+    "rekte": "straight",
+    "poste": "then, afterward",
+    "maldekstre": "on the left (maldekstren: to the left)",
+    "ĉiu": "each, everyone (ĉiuj: everyone, all)",
+    "nenio": "nothing",
+    "pli": "more",
+    "ol": "than",
+    "malproksime": "far away",
+    "hundo": "dog",
+    "pano": "bread",
+    "ili": "they",
+    "parko": "park",
+    "laca": "tired",
+    "malvarma": "cold"
+  },
+  "chunks": {
+    "bonvolu": {
+      "text": "bonvolu",
+      "en": "please",
+      "about": "Literally be so kind; bonvolu + a verb ending in -i is a polite request."
+    },
+    "hello": {
+      "text": "Saluton",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "Dankon",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Kiel vi fartas",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Ĝis revido",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Jes",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Ne",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Kiel vi nomiĝas",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Estas plezuro konatiĝi",
+      "en": "nice to meet you"
+    },
+    "this": {
+      "text": "ĉi tiu",
+      "en": "this"
+    },
+    "excuse-me": {
+      "text": "Pardonu",
+      "en": "excuse me"
+    },
+    "here": {
+      "text": "ĉi tie",
+      "en": "here"
+    },
+    "how-much-does-that-cost": {
+      "text": "Kiom kostas tio",
+      "en": "how much does that cost?"
+    },
+    "the-check-please": {
+      "text": "La kalkulon, bonvolu",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Ĝis morgaŭ",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "mi-trinkas-kafon",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi trinkas kafon.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "kafon",
+          "kafo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas kafo.",
+        "Mi trinki kafon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafon",
+          "teon",
+          "akvon"
+        ]
+      }
+    },
+    {
+      "id": "mi-trinkas-teon",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi trinkas teon.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "teon",
+          "teo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas teo.",
+        "Mi trinki teon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teon",
+          "kafon",
+          "akvon"
+        ]
+      }
+    },
+    {
+      "id": "mi-trinkas-akvon",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi trinkas akvon.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "akvon",
+          "akvo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas akvo.",
+        "Mi trinki akvon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "akvon",
+          "teon",
+          "kafon"
+        ]
+      }
+    },
+    {
+      "id": "mi-trinkas-kafon-kaj-teon",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi trinkas kafon kaj teon.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "kafon",
+          "kafo"
+        ],
+        [
+          "kaj",
+          "kaj"
+        ],
+        [
+          "teon",
+          "teo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas kafo kaj teon.",
+        "Mi trinkas kafon kaj teo."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafon",
+          "teon",
+          "akvon"
+        ]
+      }
+    },
+    {
+      "id": "mi-trinkas-teon-kaj-akvon",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi trinkas teon kaj akvon.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "teon",
+          "teo"
+        ],
+        [
+          "kaj",
+          "kaj"
+        ],
+        [
+          "akvon",
+          "akvo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas teo kaj akvon.",
+        "Mi trinkas teon kaj akvo."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "akvon",
+          "kafon",
+          "teon"
+        ]
+      }
+    },
+    {
+      "id": "mi-trinkas-akvon-kaj-kafon",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi trinkas akvon kaj kafon.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "akvon",
+          "akvo"
+        ],
+        [
+          "kaj",
+          "kaj"
+        ],
+        [
+          "kafon",
+          "kafo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas akvo kaj kafon.",
+        "Mi trinkas akvon kaj kafo."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kafon",
+          "teon",
+          "akvon"
+        ]
+      }
+    },
+    {
+      "id": "unu-kafon-bonvolu",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "bonvolu"
+      ],
+      "text": "Unu kafon, bonvolu.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Unu",
+          "unu"
+        ],
+        [
+          "kafon,",
+          "kafo"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unun kafon, bonvolu.",
+        "Unu kafonas, bonvolu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafon,",
+          "teon,",
+          "akvon,"
+        ]
+      }
+    },
+    {
+      "id": "saluton-unu-teon-bonvolu",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "hello",
+        "bonvolu"
+      ],
+      "text": "Saluton! Unu teon, bonvolu.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Saluton!"
+        ],
+        [
+          "Unu",
+          "unu"
+        ],
+        [
+          "teon,",
+          "teo"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Saluton! Unun teon, bonvolu.",
+        "Saluton! Unu teonas, bonvolu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teon,",
+          "kafon,",
+          "lakton,"
+        ]
+      }
+    },
+    {
+      "id": "unu-teon-kaj-unu-akvon-bonvolu",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "bonvolu"
+      ],
+      "text": "Unu teon kaj unu akvon, bonvolu.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Unu",
+          "unu"
+        ],
+        [
+          "teon",
+          "teo"
+        ],
+        [
+          "kaj",
+          "kaj"
+        ],
+        [
+          "unu",
+          "unu"
+        ],
+        [
+          "akvon,",
+          "akvo"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unun teon kaj unu akvon, bonvolu.",
+        "Unu teon kaj unun akvon, bonvolu."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "akvon,",
+          "kafon,",
+          "lakton,"
+        ]
+      }
+    },
+    {
+      "id": "unu-kafon-dankon",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Unu kafon, dankon.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Unu",
+          "unu"
+        ],
+        [
+          "kafon,",
+          "kafo"
+        ],
+        [
+          "dankon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unun kafon, dankon.",
+        "Unu kafonas, dankon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafon,",
+          "teon,",
+          "lakton,"
+        ]
+      }
+    },
+    {
+      "id": "mi-trinkas-lakton",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi trinkas lakton.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "lakton",
+          "lakto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas lakto.",
+        "Mi trinki lakton."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "lakton",
+          "akvon",
+          "teon"
+        ]
+      }
+    },
+    {
+      "id": "saluton-kiel-vi-fartas",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Saluton! Kiel vi fartas?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Saluton!"
+        ],
+        [
+          "Kiel"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "fartas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are doing"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Saluton! Kiel vi farti?",
+        "Saluton! Kiel vin fartas?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Saluton!",
+          "Jes!",
+          "Ne!"
+        ]
+      }
+    },
+    {
+      "id": "mi-fartas-bone-dankon",
+      "topic": "people",
+      "concepts": [
+        "tenses"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Mi fartas bone, dankon.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "fartas",
+          "farti"
+        ],
+        [
+          "bone,",
+          "bone"
+        ],
+        [
+          "dankon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am doing"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi farti bone, dankon.",
+        "Min fartas bone, dankon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fartas",
+          "trinkas",
+          "farti"
+        ]
+      }
+    },
+    {
+      "id": "jes-bonvolu",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "bonvolu",
+        "yes"
+      ],
+      "text": "Jes, bonvolu.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Jes,"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jes, bonvolas.",
+        "Jes, bonvoli."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jes,",
+          "Ne,",
+          "Saluton,"
+        ]
+      }
+    },
+    {
+      "id": "ne-dankon",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, dankon.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "dankon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nen, dankon.",
+        "Ne, dankonas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ne,",
+          "Jes,",
+          "Saluton,"
+        ]
+      }
+    },
+    {
+      "id": "jes-dankon-gis-revido",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Jes, dankon. Ĝis revido!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Jes,"
+        ],
+        [
+          "dankon."
+        ],
+        [
+          "Ĝis"
+        ],
+        [
+          "revido"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "until"
+        ],
+        [
+          "seeing you again"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jes, dankon. Ĝis revidon!",
+        "Jes, dankonas. Ĝis revido!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jes,",
+          "Ne,",
+          "Saluton,"
+        ]
+      }
+    },
+    {
+      "id": "ne-dankon-gis-revido",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, dankon. Ĝis revido!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "dankon."
+        ],
+        [
+          "Ĝis"
+        ],
+        [
+          "revido"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "until"
+        ],
+        [
+          "seeing you again"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne, dankon. Ĝis revidon!",
+        "Ne, dankonas. Ĝis revido!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ne,",
+          "Jes,",
+          "Saluton,"
+        ]
+      }
+    },
+    {
+      "id": "cu-mi-fartas-bone",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "tenses"
+      ],
+      "text": "Ĉu mi fartas bone?",
+      "means": "Am I doing well?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "mi",
+          "mi"
+        ],
+        [
+          "fartas",
+          "farti"
+        ],
+        [
+          "bone",
+          "bone"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "I"
+        ],
+        [
+          "am doing"
+        ],
+        [
+          "well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉu mi farti bone?",
+        "Ĉu min fartas bone?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fartas",
+          "trinkas",
+          "farti"
+        ]
+      }
+    },
+    {
+      "id": "mi-estas-instruisto",
+      "topic": "people",
+      "concepts": [
+        "esti"
+      ],
+      "text": "Mi estas instruisto.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "instruisto",
+          "instruisto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi esti instruisto.",
+        "Mi estas instruiston."
+      ],
+      "otherGender": {
+        "text": "Mi estas instruistino.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "estas",
+          "trinkas",
+          "fartas"
+        ]
+      }
+    },
+    {
+      "id": "vi-estas-studento",
+      "topic": "people",
+      "concepts": [
+        "esti"
+      ],
+      "text": "Vi estas studento.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Vi",
+          "vi"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "studento",
+          "studento"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vi esti studento.",
+        "Vi estas studenton."
+      ],
+      "otherGender": {
+        "text": "Vi estas studentino.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "studento",
+          "instruisto",
+          "lakto"
+        ]
+      }
+    },
+    {
+      "id": "cu-vi-estas-instruisto",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "esti"
+      ],
+      "text": "Ĉu vi estas instruisto?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "instruisto",
+          "instruisto"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉu vi esti instruisto?",
+        "Ĉu vi estas instruiston?"
+      ],
+      "otherGender": {
+        "text": "Ĉu vi estas instruistino?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "instruisto",
+          "studento",
+          "kafo"
+        ]
+      }
+    },
+    {
+      "id": "mi-ne-estas-instruisto",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "esti"
+      ],
+      "text": "Mi ne estas instruisto.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "instruisto",
+          "instruisto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi ne esti instruisto.",
+        "Mi ne estas instruiston."
+      ],
+      "otherGender": {
+        "text": "Mi ne estas instruistino.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "instruisto",
+          "studento",
+          "teo"
+        ]
+      }
+    },
+    {
+      "id": "saluton-estas-plezuro-konatigi",
+      "topic": "people",
+      "concepts": [
+        "esti"
+      ],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Saluton! Estas plezuro konatiĝi!",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Saluton!"
+        ],
+        [
+          "Estas"
+        ],
+        [
+          "plezuro"
+        ],
+        [
+          "konatiĝi"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "it is"
+        ],
+        [
+          "a pleasure"
+        ],
+        [
+          "to get acquainted"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Saluton! Esti plezuro konatiĝi!",
+        "Saluton! Estas plezuron konatiĝi!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Saluton!",
+          "Jes!",
+          "Ne!"
+        ]
+      }
+    },
+    {
+      "id": "mia-patro-estas-instruisto",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "esti"
+      ],
+      "text": "Mia patro estas instruisto.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "patro",
+          "patro"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "instruisto",
+          "instruisto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia patro esti instruisto.",
+        "Mia patron estas instruisto."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "patro",
+          "frato",
+          "patrino"
+        ]
+      }
+    },
+    {
+      "id": "ci-tiu-estas-mia-patrino",
+      "topic": "people",
+      "concepts": [
+        "correlatives",
+        "possessive",
+        "esti"
+      ],
+      "chunks": [
+        "this"
+      ],
+      "text": "Ĉi tiu estas mia patrino.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Ĉi"
+        ],
+        [
+          "tiu"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "mia",
+          "mia"
+        ],
+        [
+          "patrino",
+          "patrino"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉi tiu estas mian patrinon.",
+        "Ĉi tiun estas mia patrino."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "patrino",
+          "patro",
+          "fratino"
+        ]
+      }
+    },
+    {
+      "id": "ci-tiu-estas-mia-patro",
+      "topic": "people",
+      "concepts": [
+        "correlatives",
+        "possessive",
+        "esti"
+      ],
+      "chunks": [
+        "this"
+      ],
+      "text": "Ĉi tiu estas mia patro.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Ĉi"
+        ],
+        [
+          "tiu"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "mia",
+          "mia"
+        ],
+        [
+          "patro",
+          "patro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉi tiu estas mian patron.",
+        "Ĉi tiun estas mia patro."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "patro",
+          "patrino",
+          "frato"
+        ]
+      }
+    },
+    {
+      "id": "mia-frato-estas-studento",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "esti"
+      ],
+      "text": "Mia frato estas studento.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "frato",
+          "frato"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "studento",
+          "studento"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia fraton estas studento.",
+        "Mia frato estas studenton."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "frato",
+          "fratino",
+          "patro"
+        ]
+      }
+    },
+    {
+      "id": "ci-tiu-estas-mia-fratino",
+      "topic": "people",
+      "concepts": [
+        "correlatives",
+        "possessive",
+        "esti"
+      ],
+      "chunks": [
+        "this"
+      ],
+      "text": "Ĉi tiu estas mia fratino.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Ĉi"
+        ],
+        [
+          "tiu"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "mia",
+          "mia"
+        ],
+        [
+          "fratino",
+          "fratino"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉi tiu estas mian fratinon.",
+        "Ĉi tiun estas mia fratino."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "fratino",
+          "frato",
+          "patrino"
+        ]
+      }
+    },
+    {
+      "id": "mia-patrino-fartas-bone",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "tenses"
+      ],
+      "text": "Mia patrino fartas bone.",
+      "means": "My mother is doing well.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "patrino",
+          "patrino"
+        ],
+        [
+          "fartas",
+          "farti"
+        ],
+        [
+          "bone",
+          "bone"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is doing"
+        ],
+        [
+          "well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia patrinon fartas bone.",
+        "Mia patrino farti bone."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "patrino",
+          "fratino",
+          "patro"
+        ]
+      }
+    },
+    {
+      "id": "mi-havas-telefonon",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi havas telefonon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "telefonon",
+          "telefono"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi havas telefono.",
+        "Mi havi telefonon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "telefonon",
+          "ŝlosilon",
+          "libron"
+        ]
+      }
+    },
+    {
+      "id": "cu-vi-havas-slosilon",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "accusative"
+      ],
+      "text": "Ĉu vi havas ŝlosilon?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "ŝlosilon",
+          "ŝlosilo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉu vi havas ŝlosilo?",
+        "Ĉu vi havi ŝlosilon?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ŝlosilon",
+          "telefonon",
+          "libron"
+        ]
+      }
+    },
+    {
+      "id": "mi-havas-fraton-kaj-fratinon",
+      "topic": "people",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Mi havas fraton kaj fratinon.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "fraton",
+          "frato"
+        ],
+        [
+          "kaj",
+          "kaj"
+        ],
+        [
+          "fratinon",
+          "fratino"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi havas frato kaj fratinon.",
+        "Mi havas fraton kaj fratino."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "fratinon",
+          "fraton",
+          "libron"
+        ]
+      }
+    },
+    {
+      "id": "mi-ne-havas-libron",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "accusative"
+      ],
+      "text": "Mi ne havas libron.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "libron",
+          "libro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi ne havas libro.",
+        "Mi ne havi libron."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "libron",
+          "telefonon",
+          "ŝlosilon"
+        ]
+      }
+    },
+    {
+      "id": "mia-fratino-estas-kuracisto",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "esti"
+      ],
+      "text": "Mia fratino estas kuracisto.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "fratino",
+          "fratino"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "kuracisto",
+          "kuracisto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia fratino estas kuraciston.",
+        "Mia fratinon estas kuracisto."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kuracisto",
+          "instruisto",
+          "studento"
+        ]
+      }
+    },
+    {
+      "id": "vi-estas-bona-amiko",
+      "topic": "people",
+      "concepts": [
+        "esti",
+        "endings"
+      ],
+      "text": "Vi estas bona amiko.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Vi",
+          "vi"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "bona",
+          "bona"
+        ],
+        [
+          "amiko",
+          "amiko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vi estas bonan amikon.",
+        "Vi estas bona amikon."
+      ],
+      "otherGender": {
+        "text": "Vi estas bona amikino.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "amiko",
+          "studento",
+          "kuracisto"
+        ]
+      }
+    },
+    {
+      "id": "mia-telefono-estas-ci-tie",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "esti",
+        "correlatives"
+      ],
+      "chunks": [
+        "here"
+      ],
+      "text": "Mia telefono estas ĉi tie.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "telefono",
+          "telefono"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "ĉi"
+        ],
+        [
+          "tie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia telefonon estas ĉi tie.",
+        "Mia telefono esti ĉi tie."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefono",
+          "ŝlosilo",
+          "banĉambro"
+        ]
+      }
+    },
+    {
+      "id": "la-slosilo-estas-tie",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "esti",
+        "correlatives"
+      ],
+      "text": "La ŝlosilo estas tie.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "ŝlosilo",
+          "ŝlosilo"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "tie",
+          "tie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "La ŝlosilon estas tie.",
+        "La ŝlosilo esti tie."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ŝlosilo",
+          "telefono",
+          "banĉambro"
+        ]
+      }
+    },
+    {
+      "id": "pardonu-kie-estas-mia-slosilo",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "esti"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Pardonu, kie estas mia ŝlosilo?",
+      "means": "Excuse me, where is my key?",
+      "words": [
+        [
+          "Pardonu,"
+        ],
+        [
+          "kie",
+          "kie"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "mia",
+          "mia"
+        ],
+        [
+          "ŝlosilo",
+          "ŝlosilo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pardonu, kie estas mian ŝlosilon?",
+        "Pardonu, kie esti mia ŝlosilo?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ŝlosilo",
+          "telefono",
+          "patrino"
+        ]
+      }
+    },
+    {
+      "id": "kie-estas-mia-patrino",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "esti"
+      ],
+      "text": "Kie estas mia patrino?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Kie",
+          "kie"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "mia",
+          "mia"
+        ],
+        [
+          "patrino",
+          "patrino"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kie estas mian patrinon?",
+        "Kie esti mia patrino?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "patrino",
+          "patro",
+          "fratino"
+        ]
+      }
+    },
+    {
+      "id": "mia-fratino-estas-ci-tie",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "esti",
+        "correlatives"
+      ],
+      "chunks": [
+        "here"
+      ],
+      "text": "Mia fratino estas ĉi tie.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "fratino",
+          "fratino"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "ĉi"
+        ],
+        [
+          "tie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia fratinon estas ĉi tie.",
+        "Mia fratino esti ĉi tie."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fratino",
+          "frato",
+          "patrino"
+        ]
+      }
+    },
+    {
+      "id": "du-kafojn-bonvolu",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "accusative"
+      ],
+      "chunks": [
+        "bonvolu"
+      ],
+      "text": "Du kafojn, bonvolu.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Du",
+          "du"
+        ],
+        [
+          "kafojn,",
+          "kafo"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dun kafojn, bonvolu.",
+        "Du kafon, bonvolu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Du",
+          "Tri",
+          "Unu"
+        ]
+      }
+    },
+    {
+      "id": "mi-havas-tri-librojn",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "accusative"
+      ],
+      "text": "Mi havas tri librojn.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "tri",
+          "tri"
+        ],
+        [
+          "librojn",
+          "libro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi havas tri libroj.",
+        "Mi havas tri libron."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tri",
+          "du",
+          "unu"
+        ]
+      }
+    },
+    {
+      "id": "mi-ne-havas-monon",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "accusative"
+      ],
+      "text": "Mi ne havas monon.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "monon",
+          "mono"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi ne havas mono.",
+        "Mi ne havi monon."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "monon",
+          "libron",
+          "telefonon"
+        ]
+      }
+    },
+    {
+      "id": "saluton-la-kalkulon-bonvolu",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "accusative"
+      ],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Saluton! La kalkulon, bonvolu.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Saluton!"
+        ],
+        [
+          "La"
+        ],
+        [
+          "kalkulon,"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the"
+        ],
+        [
+          "check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Saluton! Lan kalkulon, bonvolu.",
+        "Saluton! La kalkulon, bonvolas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Saluton!",
+          "Jes!",
+          "Ne!"
+        ]
+      }
+    },
+    {
+      "id": "unu-libron-bonvolu",
+      "topic": "out",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "bonvolu"
+      ],
+      "text": "Unu libron, bonvolu.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Unu",
+          "unu"
+        ],
+        [
+          "libron,",
+          "libro"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unun libron, bonvolu.",
+        "Unu libron, bonvolas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Unu",
+          "Du",
+          "Tri"
+        ]
+      }
+    },
+    {
+      "id": "cu-vi-komprenas",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "tenses"
+      ],
+      "text": "Ĉu vi komprenas?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "komprenas",
+          "kompreni"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉu vi kompreni?",
+        "Ĉu vin komprenas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "komprenas",
+          "parolas",
+          "volas"
+        ]
+      }
+    },
+    {
+      "id": "mi-iom-parolas-esperanton",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi iom parolas Esperanton.",
+      "means": "I speak a little Esperanto.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "iom",
+          "iom"
+        ],
+        [
+          "parolas",
+          "paroli"
+        ],
+        [
+          "Esperanton",
+          "esperanto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "Esperanto"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi iom paroli Esperanton.",
+        "Mi iom parolas Esperantonn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "parolas",
+          "trinkas",
+          "havas"
+        ]
+      }
+    },
+    {
+      "id": "mi-volas-kafon",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi volas kafon.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "volas",
+          "voli"
+        ],
+        [
+          "kafon",
+          "kafo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi volas kafo.",
+        "Mi voli kafon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "volas",
+          "trinkas",
+          "havas"
+        ]
+      }
+    },
+    {
+      "id": "mi-volas-akvon-bonvolu",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "chunks": [
+        "bonvolu"
+      ],
+      "text": "Mi volas akvon, bonvolu.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "volas",
+          "voli"
+        ],
+        [
+          "akvon,",
+          "akvo"
+        ],
+        [
+          "bonvolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi volas akvo, bonvolu.",
+        "Mi voli akvon, bonvolu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "akvon,",
+          "kafon,",
+          "teon,"
+        ]
+      }
+    },
+    {
+      "id": "mia-cambro-estas-malgranda",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "esti",
+        "mal"
+      ],
+      "text": "Mia ĉambro estas malgranda.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "ĉambro",
+          "ĉambro"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "malgranda",
+          "malgranda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia ĉambro estas malgrandan.",
+        "Mia ĉambron estas malgranda."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "malgranda",
+          "granda",
+          "bona"
+        ]
+      }
+    },
+    {
+      "id": "ci-tiu-domo-estas-granda",
+      "topic": "home",
+      "concepts": [
+        "correlatives",
+        "esti",
+        "endings"
+      ],
+      "chunks": [
+        "this"
+      ],
+      "text": "Ĉi tiu domo estas granda.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Ĉi"
+        ],
+        [
+          "tiu"
+        ],
+        [
+          "domo",
+          "domo"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "granda",
+          "granda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉi tiu domo estas grandan.",
+        "Ĉi tiu domon estas granda."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "granda",
+          "malgranda",
+          "bona"
+        ]
+      }
+    },
+    {
+      "id": "mia-patrino-logas-ci-tie",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "tenses",
+        "correlatives"
+      ],
+      "chunks": [
+        "here"
+      ],
+      "text": "Mia patrino loĝas ĉi tie.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "patrino",
+          "patrino"
+        ],
+        [
+          "loĝas",
+          "loĝi"
+        ],
+        [
+          "ĉi"
+        ],
+        [
+          "tie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia patrino loĝi ĉi tie.",
+        "Mia patrinon loĝas ĉi tie."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "loĝas",
+          "estas",
+          "fartas"
+        ]
+      }
+    },
+    {
+      "id": "kien-vi-iras",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "direction",
+        "tenses"
+      ],
+      "text": "Kien vi iras?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Kien",
+          "kie"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "iras",
+          "iri"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where to"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kien vi iri?",
+        "Kien vin iras?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "iras",
+          "loĝas",
+          "estas"
+        ]
+      }
+    },
+    {
+      "id": "mi-iras-al-lernejo",
+      "topic": "out",
+      "concepts": [
+        "direction",
+        "tenses"
+      ],
+      "text": "Mi iras al lernejo.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "iras",
+          "iri"
+        ],
+        [
+          "al",
+          "al"
+        ],
+        [
+          "lernejo",
+          "lernejo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi iras al lernejon.",
+        "Mi iri al lernejo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lernejo",
+          "urbo",
+          "stacidomo"
+        ]
+      }
+    },
+    {
+      "id": "mia-patrino-iras-al-la-urbo",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "direction",
+        "article",
+        "tenses"
+      ],
+      "text": "Mia patrino iras al la urbo.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "patrino",
+          "patrino"
+        ],
+        [
+          "iras",
+          "iri"
+        ],
+        [
+          "al",
+          "al"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "urbo",
+          "urbo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia patrino iras al la urbon.",
+        "Mia patrino iri al la urbo."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "urbo",
+          "lernejo",
+          "stacidomo"
+        ]
+      }
+    },
+    {
+      "id": "ci-tiu-auto-estas-malgranda",
+      "topic": "out",
+      "concepts": [
+        "correlatives",
+        "esti",
+        "mal"
+      ],
+      "chunks": [
+        "this"
+      ],
+      "text": "Ĉi tiu aŭto estas malgranda.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Ĉi"
+        ],
+        [
+          "tiu"
+        ],
+        [
+          "aŭto",
+          "aŭto"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "malgranda",
+          "malgranda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉi tiu aŭton estas malgranda.",
+        "Ĉi tiu aŭto estas malgrandan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "aŭto",
+          "domo",
+          "ĉambro"
+        ]
+      }
+    },
+    {
+      "id": "mi-havas-auton",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "tenses"
+      ],
+      "text": "Mi havas aŭton.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "aŭton",
+          "aŭto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi havas aŭto.",
+        "Mi havi aŭton."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "aŭton",
+          "telefonon",
+          "libron"
+        ]
+      }
+    },
+    {
+      "id": "dankon-gis-morgau",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Dankon. Ĝis morgaŭ!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Dankon."
+        ],
+        [
+          "Ĝis"
+        ],
+        [
+          "morgaŭ"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "until"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dankonas. Ĝis morgaŭ!",
+        "Dankon. Ĝis morgaŭn!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "morgaŭ",
+          "hodiaŭ",
+          "nun"
+        ]
+      }
+    },
+    {
+      "id": "mi-laboras-hodiau",
+      "topic": "plans",
+      "concepts": [
+        "tenses"
+      ],
+      "text": "Mi laboras hodiaŭ.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "laboras",
+          "labori"
+        ],
+        [
+          "hodiaŭ",
+          "hodiaŭ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi labori hodiaŭ.",
+        "Min laboras hodiaŭ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hodiaŭ",
+          "morgaŭ",
+          "nun"
+        ]
+      }
+    },
+    {
+      "id": "morgau-mi-iras-al-la-urbo",
+      "topic": "plans",
+      "concepts": [
+        "tenses",
+        "direction",
+        "article"
+      ],
+      "text": "Morgaŭ mi iras al la urbo.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Morgaŭ",
+          "morgaŭ"
+        ],
+        [
+          "mi",
+          "mi"
+        ],
+        [
+          "iras",
+          "iri"
+        ],
+        [
+          "al",
+          "al"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "urbo",
+          "urbo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "am going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Morgaŭ mi iri al la urbo.",
+        "Morgaŭ mi iras al la urbon."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Morgaŭ",
+          "Hodiaŭ",
+          "Nun"
+        ]
+      }
+    },
+    {
+      "id": "mi-ne-povas-iri-hodiau",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "modal"
+      ],
+      "text": "Mi ne povas iri hodiaŭ.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "povas",
+          "povi"
+        ],
+        [
+          "iri",
+          "iri"
+        ],
+        [
+          "hodiaŭ",
+          "hodiaŭ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi ne povas iras hodiaŭ.",
+        "Mi ne povi iri hodiaŭ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "povas",
+          "devas",
+          "volas"
+        ]
+      }
+    },
+    {
+      "id": "mi-devas-labori-morgau",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "tenses"
+      ],
+      "text": "Mi devas labori morgaŭ.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "devas",
+          "devi"
+        ],
+        [
+          "labori",
+          "labori"
+        ],
+        [
+          "morgaŭ",
+          "morgaŭ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "must"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi devas laboras morgaŭ.",
+        "Mi devi labori morgaŭ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "devas",
+          "povas",
+          "volas"
+        ]
+      }
+    },
+    {
+      "id": "kiel-vi-nomigxas",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Kiel vi nomiĝas?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Kiel"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "nomiĝas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are called"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kie vi nomiĝas?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kiel",
+          "Kie",
+          "Kiam"
+        ]
+      }
+    },
+    {
+      "id": "mi-estas-el-usono",
+      "topic": "people",
+      "concepts": [
+        "esti"
+      ],
+      "text": "Mi estas el Usono.",
+      "means": "I'm from the United States.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "el",
+          "el"
+        ],
+        [
+          "Usono"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "from"
+        ],
+        [
+          "the United States"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi esti el Usono."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "estas",
+          "esti",
+          "estus"
+        ]
+      }
+    },
+    {
+      "id": "mia-patrino-instruistino",
+      "topic": "people",
+      "concepts": [
+        "word-building",
+        "possessive"
+      ],
+      "text": "Mia patrino estas instruistino.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "patrino",
+          "patrino"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "instruistino",
+          "instruistino"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Miaj patrino estas instruistino."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "patrino",
+          "patro",
+          "gepatroj"
+        ]
+      }
+    },
+    {
+      "id": "du-fratojn-unu-fratinon",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "plural"
+      ],
+      "text": "Mi havas du fratojn kaj unu fratinon.",
+      "means": "I have two brothers and one sister.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "du",
+          "du"
+        ],
+        [
+          "fratojn",
+          "frato"
+        ],
+        [
+          "kaj",
+          "kaj"
+        ],
+        [
+          "unu",
+          "unu"
+        ],
+        [
+          "fratinon",
+          "fratino"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "two"
+        ],
+        [
+          "brothers"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi havas du fraton kaj unu fratinon."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "fratojn",
+          "frato",
+          "fraton"
+        ]
+      }
+    },
+    {
+      "id": "cxu-vi-parolas-angle",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "endings"
+      ],
+      "text": "Ĉu vi parolas angle?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "parolas",
+          "paroli"
+        ],
+        [
+          "angle",
+          "angle"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "in English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉu vi parolas angla?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ĉu",
+          "Kio",
+          "Kiu"
+        ]
+      }
+    },
+    {
+      "id": "plej-bona-amikino",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "accusative"
+      ],
+      "text": "Ŝi estas mia plej bona amikino.",
+      "means": "She's my best friend.",
+      "words": [
+        [
+          "Ŝi",
+          "ŝi"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "mia",
+          "mia"
+        ],
+        [
+          "plej",
+          "plej"
+        ],
+        [
+          "bona",
+          "bona"
+        ],
+        [
+          "amikino",
+          "amikino"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "She"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "most"
+        ],
+        [
+          "good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ŝi estas mian plej bonan amikinon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mia",
+          "miaj",
+          "mian"
+        ]
+      }
+    },
+    {
+      "id": "frato-ne-logxas-cxi-tie",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "chunks": [
+        "here"
+      ],
+      "text": "Mia frato ne loĝas ĉi tie.",
+      "means": "My brother doesn't live here.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "frato",
+          "frato"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "loĝas",
+          "loĝi"
+        ],
+        [
+          "ĉi"
+        ],
+        [
+          "tie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "not"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia frato ne loĝi ĉi tie."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ne",
+          "nek",
+          "neniu"
+        ]
+      }
+    },
+    {
+      "id": "la-infanoj-dormas",
+      "topic": "people",
+      "concepts": [
+        "plural",
+        "article"
+      ],
+      "text": "La infanoj dormas.",
+      "means": "The kids are sleeping.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "infanoj",
+          "infano"
+        ],
+        [
+          "dormas",
+          "dormi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "children"
+        ],
+        [
+          "sleep"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Infanoj dormas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "infanoj",
+          "infano",
+          "infanojn"
+        ]
+      }
+    },
+    {
+      "id": "malgranda-domo",
+      "topic": "home",
+      "concepts": [
+        "mal",
+        "endings"
+      ],
+      "text": "Mi loĝas en malgranda domo.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "loĝas",
+          "loĝi"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "malgranda",
+          "malgranda"
+        ],
+        [
+          "domo",
+          "domo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi loĝas en malgrande domo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "malgranda",
+          "granda",
+          "malgrandan"
+        ]
+      }
+    },
+    {
+      "id": "sxlosiloj-sur-la-tablo",
+      "topic": "home",
+      "concepts": [
+        "plural",
+        "direction"
+      ],
+      "text": "La ŝlosiloj estas sur la tablo.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "ŝlosiloj",
+          "ŝlosilo"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "sur",
+          "sur"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "tablo",
+          "tablo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "keys"
+        ],
+        [
+          "are"
+        ],
+        [
+          "on"
+        ],
+        [
+          "the"
+        ],
+        [
+          "table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "La ŝlosiloj estas sur la tablon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ŝlosiloj",
+          "ŝlosilo",
+          "ŝlosilojn"
+        ]
+      }
+    },
+    {
+      "id": "ne-estas-lakto",
+      "topic": "home",
+      "concepts": [
+        "negation",
+        "word-building"
+      ],
+      "text": "Ne estas lakto en la fridujo.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "lakto",
+          "lakto"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "fridujo",
+          "fridujo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "there is"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in"
+        ],
+        [
+          "the"
+        ],
+        [
+          "fridge"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "moved": [
+        "Ne"
+      ],
+      "wrong": [
+        "Estas lakto en la fridujo."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "fridujo",
+          "fridisto",
+          "frideco"
+        ]
+      }
+    },
+    {
+      "id": "patro-kuiras-vespermangxon",
+      "topic": "home",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Mia patro kuiras la vespermanĝon.",
+      "means": "My dad is cooking dinner.",
+      "words": [
+        [
+          "Mia",
+          "mia"
+        ],
+        [
+          "patro",
+          "patro"
+        ],
+        [
+          "kuiras",
+          "kuiri"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "vespermanĝon",
+          "vespermanĝo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "cooks"
+        ],
+        [
+          "the"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mia patro kuiras la vespermanĝo."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vespermanĝon",
+          "vespermanĝo",
+          "vespermanĝojn"
+        ]
+      }
+    },
+    {
+      "id": "legis-tiun-libron",
+      "topic": "home",
+      "concepts": [
+        "tenses"
+      ],
+      "text": "Mi legis tiun libron hieraŭ.",
+      "means": "I read that book yesterday.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "legis",
+          "legi"
+        ],
+        [
+          "tiun",
+          "tiu"
+        ],
+        [
+          "libron",
+          "libro"
+        ],
+        [
+          "hieraŭ",
+          "hieraŭ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "read"
+        ],
+        [
+          "that"
+        ],
+        [
+          "book"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi legos tiun libron hieraŭ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "legis",
+          "legas",
+          "legos"
+        ]
+      }
+    },
+    {
+      "id": "kie-estas-la-bancxambro",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "correlatives"
+      ],
+      "text": "Kie estas la banĉambro?",
+      "means": "Where's the bathroom?",
+      "words": [
+        [
+          "Kie",
+          "kie"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "banĉambro",
+          "banĉambro"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kien estas la banĉambro?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kie",
+          "Kio",
+          "Kiam"
+        ]
+      }
+    },
+    {
+      "id": "belan-gxardenon",
+      "topic": "home",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Ni havas belan ĝardenon.",
+      "means": "We have a beautiful garden.",
+      "words": [
+        [
+          "Ni",
+          "ni"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "belan",
+          "bela"
+        ],
+        [
+          "ĝardenon",
+          "ĝardeno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "have"
+        ],
+        [
+          "beautiful"
+        ],
+        [
+          "garden"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni havas belajn ĝardenon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "belan",
+          "belajn",
+          "bele"
+        ]
+      }
+    },
+    {
+      "id": "mi-havas-hundon",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "accusative"
+      ],
+      "text": "Mi havas hundon.",
+      "means": "I have a dog.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "havas",
+          "havi"
+        ],
+        [
+          "hundon",
+          "hundo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "dog"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi havas la hundon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hundon",
+          "hundo",
+          "hundojn"
+        ]
+      }
+    },
+    {
+      "id": "la-pano-sur-la-tablo",
+      "topic": "home",
+      "concepts": [
+        "article"
+      ],
+      "text": "La pano estas sur la tablo.",
+      "means": "The bread is on the table.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "pano",
+          "pano"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "sur",
+          "sur"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "tablo",
+          "tablo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "bread"
+        ],
+        [
+          "is"
+        ],
+        [
+          "on"
+        ],
+        [
+          "the"
+        ],
+        [
+          "table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pano estas sur la tablo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "La",
+          "Unu",
+          "Iu"
+        ]
+      }
+    },
+    {
+      "id": "mi-sxatas-kafon",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Mi ŝatas kafon.",
+      "means": "I like coffee.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "ŝatas",
+          "ŝati"
+        ],
+        [
+          "kafon",
+          "kafo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "like"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi ŝatas kafo."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafon",
+          "kafo",
+          "kafa"
+        ]
+      }
+    },
+    {
+      "id": "ne-mangxas-viandon",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "accusative"
+      ],
+      "text": "Mi ne manĝas viandon.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "manĝas",
+          "manĝi"
+        ],
+        [
+          "viandon",
+          "viando"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "meat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi ne manĝas viando."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ne",
+          "nek",
+          "neniu"
+        ]
+      }
+    },
+    {
+      "id": "volas-trinki-akvon",
+      "topic": "food",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Mi volas trinki akvon.",
+      "means": "I want to drink some water.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "volas",
+          "voli"
+        ],
+        [
+          "trinki",
+          "trinki"
+        ],
+        [
+          "akvon",
+          "akvo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi volas trinkas akvon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "trinki",
+          "trinkas",
+          "trinku"
+        ]
+      }
+    },
+    {
+      "id": "cxu-vi-malsatas",
+      "topic": "food",
+      "concepts": [
+        "mal"
+      ],
+      "text": "Ĉu vi malsatas?",
+      "means": "Are you hungry?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "malsatas",
+          "malsati"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are hungry"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉu vi estas malsatas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "malsatas",
+          "satas",
+          "malsate"
+        ]
+      }
+    },
+    {
+      "id": "supo-tre-bongusta",
+      "topic": "food",
+      "concepts": [
+        "endings"
+      ],
+      "text": "La supo estas tre bongusta.",
+      "means": "The soup is really tasty.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "supo",
+          "supo"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "tre",
+          "tre"
+        ],
+        [
+          "bongusta",
+          "bongusta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "soup"
+        ],
+        [
+          "is"
+        ],
+        [
+          "very"
+        ],
+        [
+          "tasty"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "La supo estas tre bongusto."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "bongusta",
+          "bongusto",
+          "bonguste"
+        ]
+      }
+    },
+    {
+      "id": "hieraux-mangxis-picon",
+      "topic": "food",
+      "concepts": [
+        "tenses"
+      ],
+      "text": "Hieraŭ ni manĝis picon.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Hieraŭ",
+          "hieraŭ"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "manĝis",
+          "manĝi"
+        ],
+        [
+          "picon",
+          "pico"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we"
+        ],
+        [
+          "ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hieraŭ ni manĝos picon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "manĝis",
+          "manĝas",
+          "manĝos"
+        ]
+      }
+    },
+    {
+      "id": "bonvolu-doni-la-salon",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "accusative"
+      ],
+      "chunks": [
+        "bonvolu"
+      ],
+      "text": "Bonvolu doni al mi la salon.",
+      "means": "Please pass me the salt.",
+      "words": [
+        [
+          "Bonvolu",
+          "bonvoli"
+        ],
+        [
+          "doni",
+          "doni"
+        ],
+        [
+          "al",
+          "al"
+        ],
+        [
+          "mi",
+          "mi"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "salon",
+          "salo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Be so kind"
+        ],
+        [
+          "give"
+        ],
+        [
+          "to"
+        ],
+        [
+          "me"
+        ],
+        [
+          "the"
+        ],
+        [
+          "salt"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonvolu doni al mi la salo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "doni",
+          "donu",
+          "donas"
+        ]
+      }
+    },
+    {
+      "id": "teon-kun-lakto",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Mi trinkas teon kun lakto.",
+      "means": "I drink tea with milk.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "trinkas",
+          "trinki"
+        ],
+        [
+          "teon",
+          "teo"
+        ],
+        [
+          "kun",
+          "kun"
+        ],
+        [
+          "lakto",
+          "lakto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "with"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi trinkas teon kun lakton."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teon",
+          "teo",
+          "tea"
+        ]
+      }
+    },
+    {
+      "id": "ni-iru-al-restoracio",
+      "topic": "food",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Ni iru al restoracio!",
+      "means": "Let's go to a restaurant!",
+      "words": [
+        [
+          "Ni",
+          "ni"
+        ],
+        [
+          "iru",
+          "iri"
+        ],
+        [
+          "al",
+          "al"
+        ],
+        [
+          "restoracio",
+          "restoracio"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "go (let's)"
+        ],
+        [
+          "to"
+        ],
+        [
+          "restaurant"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni iri al restoracio!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "iru",
+          "iras",
+          "iri"
+        ]
+      }
+    },
+    {
+      "id": "kie-estas-la-stacidomo",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Pardonu, kie estas la stacidomo?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Pardonu,"
+        ],
+        [
+          "kie",
+          "kie"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "stacidomo",
+          "stacidomo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Forgive,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "train station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pardonu, kien estas la stacidomo?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kie",
+          "kio",
+          "kiam"
+        ]
+      }
+    },
+    {
+      "id": "kiom-kostas-tio",
+      "topic": "out",
+      "concepts": [
+        "correlatives",
+        "question"
+      ],
+      "chunks": [
+        "how-much-does-that-cost"
+      ],
+      "text": "Kiom kostas tio?",
+      "means": "How much does that cost?",
+      "words": [
+        [
+          "Kiom"
+        ],
+        [
+          "kostas"
+        ],
+        [
+          "tio"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "costs",
+          true
+        ],
+        [
+          "that"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "kostas"
+      ],
+      "wrong": [
+        "Kiom kostas tion?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kiom",
+          "Kiel",
+          "Kie"
+        ]
+      }
+    },
+    {
+      "id": "mi-iras-hejmen",
+      "topic": "out",
+      "concepts": [
+        "direction"
+      ],
+      "text": "Mi iras hejmen.",
+      "means": "I'm going home.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "iras",
+          "iri"
+        ],
+        [
+          "hejmen",
+          "hejme"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "home-ward"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi iras hejme."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hejmen",
+          "hejme",
+          "hejmo"
+        ]
+      }
+    },
+    {
+      "id": "buso-venos",
+      "topic": "out",
+      "concepts": [
+        "tenses"
+      ],
+      "text": "La buso venos post dek minutoj.",
+      "means": "The bus will come in ten minutes.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "buso",
+          "buso"
+        ],
+        [
+          "venos",
+          "veni"
+        ],
+        [
+          "post",
+          "post"
+        ],
+        [
+          "dek",
+          "dek"
+        ],
+        [
+          "minutoj",
+          "minuto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "bus"
+        ],
+        [
+          "will come"
+        ],
+        [
+          "after"
+        ],
+        [
+          "ten"
+        ],
+        [
+          "minutes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "La buso venis post dek minutoj."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "venos",
+          "venis",
+          "venu"
+        ]
+      }
+    },
+    {
+      "id": "mi-ne-komprenas",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Mi ne komprenas.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "komprenas",
+          "kompreni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi ne kompreni."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ne",
+          "nek",
+          "neniu"
+        ]
+      }
+    },
+    {
+      "id": "povas-helpi-min",
+      "topic": "out",
+      "concepts": [
+        "modal",
+        "accusative"
+      ],
+      "text": "Ĉu vi povas helpi min?",
+      "means": "Can you help me?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "povas",
+          "povi"
+        ],
+        [
+          "helpi",
+          "helpi"
+        ],
+        [
+          "min",
+          "mi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "can"
+        ],
+        [
+          "help"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉu vi povas helpi mi?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "helpi",
+          "helpas",
+          "helpu"
+        ]
+      }
+    },
+    {
+      "id": "devas-iri-nun",
+      "topic": "out",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Mi devas iri nun.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "devas",
+          "devi"
+        ],
+        [
+          "iri",
+          "iri"
+        ],
+        [
+          "nun",
+          "nun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "must"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi devas iras nun."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "devas",
+          "devi",
+          "devu"
+        ]
+      }
+    },
+    {
+      "id": "kie-vi-logxas",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "correlatives"
+      ],
+      "text": "Kie vi loĝas?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Kie",
+          "kie"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "loĝas",
+          "loĝi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kie vi loĝi?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kie",
+          "Kien",
+          "Kio"
+        ]
+      }
+    },
+    {
+      "id": "iru-maldekstren",
+      "topic": "out",
+      "concepts": [
+        "imperative",
+        "direction"
+      ],
+      "text": "Iru rekte kaj poste maldekstren.",
+      "means": "Go straight and then left.",
+      "words": [
+        [
+          "Iru",
+          "iri"
+        ],
+        [
+          "rekte",
+          "rekte"
+        ],
+        [
+          "kaj",
+          "kaj"
+        ],
+        [
+          "poste",
+          "poste"
+        ],
+        [
+          "maldekstren",
+          "maldekstre"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "straight"
+        ],
+        [
+          "and"
+        ],
+        [
+          "then"
+        ],
+        [
+          "to the left"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vi iris rekte kaj poste maldekstren."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "maldekstren",
+          "maldekstre",
+          "dekstren"
+        ]
+      }
+    },
+    {
+      "id": "ili-estas-en-la-parko",
+      "topic": "out",
+      "concepts": [
+        "esti"
+      ],
+      "text": "Ili estas en la parko.",
+      "means": "They're in the park.",
+      "words": [
+        [
+          "Ili",
+          "ili"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "parko",
+          "parko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "They"
+        ],
+        [
+          "are"
+        ],
+        [
+          "in"
+        ],
+        [
+          "the"
+        ],
+        [
+          "park"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ili esti en la parko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "estas",
+          "esti",
+          "estis"
+        ]
+      }
+    },
+    {
+      "id": "lernejo-malproksime",
+      "topic": "out",
+      "concepts": [
+        "word-building"
+      ],
+      "text": "La lernejo estas malproksime.",
+      "means": "The school is far away.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "lernejo",
+          "lernejo"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "malproksime",
+          "malproksime"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "school"
+        ],
+        [
+          "is"
+        ],
+        [
+          "far away"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "La lernejon estas malproksime."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lernejo",
+          "lernanto",
+          "lernisto"
+        ]
+      }
+    },
+    {
+      "id": "vizitos-miajn-gepatrojn",
+      "topic": "plans",
+      "concepts": [
+        "possessive",
+        "accusative"
+      ],
+      "text": "Morgaŭ mi vizitos miajn gepatrojn.",
+      "means": "Tomorrow I'll visit my parents.",
+      "words": [
+        [
+          "Morgaŭ",
+          "morgaŭ"
+        ],
+        [
+          "mi",
+          "mi"
+        ],
+        [
+          "vizitos",
+          "viziti"
+        ],
+        [
+          "miajn",
+          "mia"
+        ],
+        [
+          "gepatrojn",
+          "gepatroj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "will visit"
+        ],
+        [
+          "my"
+        ],
+        [
+          "parents"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Morgaŭ mi vizitos mian gepatrojn."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "miajn",
+          "mian",
+          "mia"
+        ]
+      }
+    },
+    {
+      "id": "kion-vi-faros",
+      "topic": "plans",
+      "concepts": [
+        "correlatives",
+        "accusative"
+      ],
+      "text": "Kion vi faros dum la semajnfino?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Kion",
+          "kio"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "faros",
+          "fari"
+        ],
+        [
+          "dum",
+          "dum"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "semajnfino",
+          "semajnfino"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you"
+        ],
+        [
+          "will do"
+        ],
+        [
+          "during"
+        ],
+        [
+          "the"
+        ],
+        [
+          "weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kio vi faros dum la semajnfino?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kion",
+          "Kio",
+          "Kiel"
+        ]
+      }
+    },
+    {
+      "id": "morgaux-pluvos",
+      "topic": "plans",
+      "concepts": [
+        "tenses",
+        "weather"
+      ],
+      "text": "Morgaŭ pluvos.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Morgaŭ",
+          "morgaŭ"
+        ],
+        [
+          "pluvos",
+          "pluvi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Morgaŭ pluvis.",
+        "Morgaŭ ĝi pluvos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pluvos",
+          "pluvis",
+          "pluvu"
+        ]
+      }
+    },
+    {
+      "id": "hodiaux-estas-varme",
+      "topic": "plans",
+      "concepts": [
+        "endings",
+        "weather"
+      ],
+      "text": "Hodiaŭ estas tre varme.",
+      "means": "It's very warm today.",
+      "words": [
+        [
+          "Hodiaŭ",
+          "hodiaŭ"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "tre",
+          "tre"
+        ],
+        [
+          "varme",
+          "varme"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "very"
+        ],
+        [
+          "warm"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hodiaŭ estas tre varman.",
+        "Hodiaŭ ĝi estas tre varme."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "varme",
+          "varman",
+          "varmo"
+        ]
+      }
+    },
+    {
+      "id": "nun-pluvas",
+      "topic": "plans",
+      "concepts": [
+        "weather",
+        "tenses"
+      ],
+      "text": "Nun pluvas.",
+      "means": "It's raining now.",
+      "words": [
+        [
+          "Nun",
+          "nun"
+        ],
+        [
+          "pluvas",
+          "pluvi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "rains"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nun pluvi.",
+        "Nun ĝi pluvas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pluvas",
+          "pluvis",
+          "pluvos"
+        ]
+      }
+    },
+    {
+      "id": "esperas-ke-vi-venos",
+      "topic": "plans",
+      "concepts": [
+        "tenses"
+      ],
+      "text": "Mi esperas, ke vi venos.",
+      "means": "I hope you'll come.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "esperas,",
+          "esperi"
+        ],
+        [
+          "ke",
+          "ke"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "venos",
+          "veni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "hope,"
+        ],
+        [
+          "that"
+        ],
+        [
+          "you"
+        ],
+        [
+          "will come"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi esperas, ke vi veni."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "venos",
+          "venis",
+          "veni"
+        ]
+      }
+    },
+    {
+      "id": "ni-renkontigxu-sabate",
+      "topic": "plans",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Ni renkontiĝu sabate!",
+      "means": "Let's meet up on Saturday!",
+      "words": [
+        [
+          "Ni",
+          "ni"
+        ],
+        [
+          "renkontiĝu",
+          "renkontiĝi"
+        ],
+        [
+          "sabate",
+          "sabate"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "meet up (let's)"
+        ],
+        [
+          "on Saturday"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni renkontiĝi sabate!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "renkontiĝu",
+          "renkontiĝas",
+          "renkontiĝi"
+        ]
+      }
+    },
+    {
+      "id": "volas-lerni-esperanton",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "accusative"
+      ],
+      "text": "Mi volas lerni Esperanton.",
+      "means": "I want to learn Esperanto.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "volas",
+          "voli"
+        ],
+        [
+          "lerni",
+          "lerni"
+        ],
+        [
+          "Esperanton"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "learn"
+        ],
+        [
+          "Esperanto"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi volas lerni Esperanto."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "lerni",
+          "lernas",
+          "lernu"
+        ]
+      }
+    },
+    {
+      "id": "cxiuj-sxatas-sxin",
+      "topic": "plans",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Ĉiuj ŝatas ŝin.",
+      "means": "Everyone likes her.",
+      "words": [
+        [
+          "Ĉiuj",
+          "ĉiu"
+        ],
+        [
+          "ŝatas",
+          "ŝati"
+        ],
+        [
+          "ŝin",
+          "ŝi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Everyone"
+        ],
+        [
+          "likes"
+        ],
+        [
+          "her"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ĉiuj ŝatas ŝi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ŝin",
+          "ŝi",
+          "ŝia"
+        ]
+      }
+    },
+    {
+      "id": "nenio-pli-bona",
+      "topic": "plans",
+      "concepts": [
+        "correlatives"
+      ],
+      "text": "Nenio estas pli bona ol tio.",
+      "means": "Nothing is better than that.",
+      "words": [
+        [
+          "Nenio",
+          "nenio"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "pli",
+          "pli"
+        ],
+        [
+          "bona",
+          "bona"
+        ],
+        [
+          "ol",
+          "ol"
+        ],
+        [
+          "tio",
+          "tio"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Nothing"
+        ],
+        [
+          "is"
+        ],
+        [
+          "more"
+        ],
+        [
+          "good"
+        ],
+        [
+          "than"
+        ],
+        [
+          "that"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nenion estas pli bona ol tio."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nenio",
+          "Neniu",
+          "Nenie"
+        ]
+      }
+    },
+    {
+      "id": "cxu-vi-estas-laca",
+      "topic": "plans",
+      "concepts": [
+        "esti",
+        "question"
+      ],
+      "text": "Ĉu vi estas laca?",
+      "means": "Are you tired?",
+      "words": [
+        [
+          "Ĉu",
+          "ĉu"
+        ],
+        [
+          "vi",
+          "vi"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "laca",
+          "laca"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "tired"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kial vi estas laca?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "estas",
+          "esti",
+          "estu"
+        ]
+      }
+    },
+    {
+      "id": "kafo-malvarma",
+      "topic": "plans",
+      "concepts": [
+        "mal",
+        "endings"
+      ],
+      "text": "La kafo estas malvarma.",
+      "means": "The coffee is cold.",
+      "words": [
+        [
+          "La",
+          "la"
+        ],
+        [
+          "kafo",
+          "kafo"
+        ],
+        [
+          "estas",
+          "esti"
+        ],
+        [
+          "malvarma",
+          "malvarma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "La kafo estas malvarme."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "malvarma",
+          "varma",
+          "malvarme"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kafo",
+          "forms": [
+            "kafon"
+          ],
+          "picture": "coffee",
+          "means": "kafon = coffee"
+        },
+        {
+          "lemma": "teo",
+          "forms": [
+            "teon"
+          ],
+          "picture": "tea",
+          "means": "teon = tea"
+        },
+        {
+          "lemma": "akvo",
+          "forms": [
+            "akvon"
+          ],
+          "picture": "water",
+          "means": "akvon = water"
+        },
+        {
+          "lemma": "mi",
+          "forms": [
+            "mi"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "trinki",
+          "forms": [
+            "trinkas"
+          ],
+          "picture": "drink",
+          "means": "trinkas = drink"
+        },
+        {
+          "lemma": "kaj",
+          "forms": [
+            "kaj"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "-n marks what a verb acts on, on the noun and its describing words, so the order can change: Mi legas libron (I read book-n), Libron mi legas (book-n I read)."
+      },
+      "items": [
+        "mi-trinkas-kafon",
+        "mi-trinkas-teon",
+        "mi-trinkas-akvon",
+        "mi-trinkas-kafon-kaj-teon",
+        "mi-trinkas-teon-kaj-akvon",
+        "mi-trinkas-akvon-kaj-kafon"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "unu",
+          "forms": [
+            "unu"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "lakto",
+          "forms": [
+            "lakton"
+          ],
+          "picture": "milk",
+          "means": "lakton = milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "bonvolu",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "unu-kafon-bonvolu",
+        "saluton-unu-teon-bonvolu",
+        "unu-teon-kaj-unu-akvon-bonvolu",
+        "unu-kafon-dankon",
+        "mi-trinkas-lakton"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "bone",
+          "forms": [
+            "bone"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "farti",
+          "forms": [
+            "fartas"
+          ],
+          "means": "fartas = to be doing, to feel (in health or well-being)"
+        },
+        {
+          "lemma": "ĉu",
+          "forms": [
+            "ĉu"
+          ],
+          "means": "introduces a yes/no question; whether"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "tenses",
+        "line": "A verb ends in -as now, -is in the past and -os in the future, the same for everyone: mi manĝas (I eat), vi manĝis (you ate), ili manĝos (they will eat)."
+      },
+      "items": [
+        "saluton-kiel-vi-fartas",
+        "mi-fartas-bone-dankon",
+        "jes-bonvolu",
+        "ne-dankon",
+        "jes-dankon-gis-revido",
+        "ne-dankon-gis-revido",
+        "cu-mi-fartas-bone"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "vi",
+          "forms": [
+            "vi"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ne",
+          "forms": [
+            "ne"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "instruisto",
+          "forms": [
+            "instruisto"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "studento",
+          "forms": [
+            "studento"
+          ],
+          "means": "student (at a university or college)"
+        },
+        {
+          "lemma": "esti",
+          "forms": [
+            "estas"
+          ],
+          "means": "estas = am, is, are"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "kiel-vi-nomigxas",
+        "mi-estas-instruisto",
+        "vi-estas-studento",
+        "cu-vi-estas-instruisto",
+        "mi-ne-estas-instruisto",
+        "saluton-estas-plezuro-konatigi"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "patrino",
+          "forms": [
+            "patrino"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "patro",
+          "forms": [
+            "patro"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "frato",
+          "forms": [
+            "frato"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "fratino",
+          "forms": [
+            "fratino"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "mia",
+          "forms": [
+            "mia"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "instruistino",
+          "forms": [
+            "instruistino"
+          ],
+          "means": "teacher (a woman)"
+        }
+      ],
+      "phrases": [
+        "this"
+      ],
+      "concept": {
+        "pattern": "esti",
+        "line": "estas (am, is, are) never changes with who: Mi estas laca (I am tired), Ili estas hejme (they are at-home)."
+      },
+      "items": [
+        "mia-patro-estas-instruisto",
+        "mia-patrino-instruistino",
+        "ci-tiu-estas-mia-patrino",
+        "ci-tiu-estas-mia-patro",
+        "mia-frato-estas-studento",
+        "ci-tiu-estas-mia-fratino",
+        "mia-patrino-fartas-bone"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "havi",
+          "forms": [
+            "havas"
+          ],
+          "means": "havas = have, has"
+        },
+        {
+          "lemma": "amiko",
+          "forms": [
+            "amiko"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "kuracisto",
+          "forms": [
+            "kuracisto"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "ŝlosilo",
+          "forms": [
+            "ŝlosilon"
+          ],
+          "picture": "key",
+          "means": "ŝlosilon = key"
+        },
+        {
+          "lemma": "telefono",
+          "forms": [
+            "telefonon"
+          ],
+          "picture": "phone",
+          "means": "telefonon = phone"
+        },
+        {
+          "lemma": "libro",
+          "forms": [
+            "libron"
+          ],
+          "picture": "book",
+          "means": "libron = book"
+        },
+        {
+          "lemma": "bona",
+          "forms": [
+            "bona"
+          ],
+          "means": "good"
+        },
+        {
+          "lemma": "frato",
+          "forms": [
+            "fraton"
+          ],
+          "means": "fraton = brother"
+        },
+        {
+          "lemma": "fratino",
+          "forms": [
+            "fratinon"
+          ],
+          "means": "fratinon = sister"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mi-havas-telefonon",
+        "cu-vi-havas-slosilon",
+        "mi-havas-fraton-kaj-fratinon",
+        "mi-ne-havas-libron",
+        "mia-fratino-estas-kuracisto",
+        "vi-estas-bona-amiko"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "kie",
+          "forms": [
+            "kie"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "tie",
+          "forms": [
+            "tie"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "la",
+          "forms": [
+            "la"
+          ],
+          "means": "the"
+        },
+        {
+          "lemma": "banĉambro",
+          "forms": [
+            "banĉambro"
+          ],
+          "means": "bathroom (room for bathing)"
+        },
+        {
+          "lemma": "telefono",
+          "forms": [
+            "telefono"
+          ],
+          "means": "phone"
+        },
+        {
+          "lemma": "ŝlosilo",
+          "forms": [
+            "ŝlosilo"
+          ],
+          "means": "key"
+        }
+      ],
+      "phrases": [
+        "excuse-me",
+        "here"
+      ],
+      "concept": {
+        "pattern": "possessive",
+        "line": "mia (my), via (your), lia (his), ŝia (her) end in -a and take -j and -n like describing words: miaj amikoj (my-s friends), mian libron (my-n book-n)."
+      },
+      "items": [
+        "mia-telefono-estas-ci-tie",
+        "la-slosilo-estas-tie",
+        "kie-estas-la-bancxambro",
+        "pardonu-kie-estas-mia-slosilo",
+        "kie-estas-mia-patrino",
+        "mia-fratino-estas-ci-tie"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "du",
+          "forms": [
+            "du"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "tri",
+          "forms": [
+            "tri"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "mono",
+          "forms": [
+            "monon"
+          ],
+          "picture": "money",
+          "means": "monon = money"
+        },
+        {
+          "lemma": "kafo",
+          "forms": [
+            "kafojn"
+          ],
+          "means": "kafojn = coffees"
+        },
+        {
+          "lemma": "libro",
+          "forms": [
+            "librojn"
+          ],
+          "means": "librojn = books"
+        },
+        {
+          "lemma": "frato",
+          "forms": [
+            "fratojn"
+          ],
+          "means": "fratojn = brothers"
+        }
+      ],
+      "phrases": [
+        "how-much-does-that-cost",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "kiom-kostas-tio",
+        "du-kafojn-bonvolu",
+        "mi-havas-tri-librojn",
+        "mi-ne-havas-monon",
+        "saluton-la-kalkulon-bonvolu",
+        "unu-libron-bonvolu",
+        "du-fratojn-unu-fratinon"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "paroli",
+          "forms": [
+            "parolas"
+          ],
+          "means": "parolas = speak"
+        },
+        {
+          "lemma": "angle",
+          "forms": [
+            "angle"
+          ],
+          "means": "in English"
+        },
+        {
+          "lemma": "esperanto",
+          "forms": [
+            "Esperanton"
+          ],
+          "means": "Esperanton = Esperanto"
+        },
+        {
+          "lemma": "kompreni",
+          "forms": [
+            "komprenas"
+          ],
+          "means": "komprenas = understand"
+        },
+        {
+          "lemma": "iom",
+          "forms": [
+            "iom"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "voli",
+          "forms": [
+            "volas"
+          ],
+          "means": "volas = want"
+        },
+        {
+          "lemma": "trinki",
+          "forms": [
+            "trinki"
+          ],
+          "means": "to drink"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question",
+        "line": "ĉu (whether) marks a yes-or-no question: Ĉu vi parolas angle?"
+      },
+      "items": [
+        "cxu-vi-parolas-angle",
+        "mi-ne-komprenas",
+        "cu-vi-komprenas",
+        "mi-iom-parolas-esperanton",
+        "mi-volas-kafon",
+        "mi-volas-akvon-bonvolu",
+        "volas-trinki-akvon"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "domo",
+          "forms": [
+            "domo"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "ĉambro",
+          "forms": [
+            "ĉambro"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "granda",
+          "forms": [
+            "granda"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "malgranda",
+          "forms": [
+            "malgranda"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "loĝi",
+          "forms": [
+            "loĝas"
+          ],
+          "means": "loĝas = live, lives"
+        },
+        {
+          "lemma": "en",
+          "forms": [
+            "en"
+          ],
+          "picture": "in",
+          "means": "in"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "kie-vi-logxas",
+        "mia-cambro-estas-malgranda",
+        "ci-tiu-domo-estas-granda",
+        "malgranda-domo",
+        "mia-patrino-logas-ci-tie",
+        "frato-ne-logxas-cxi-tie"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "iri",
+          "forms": [
+            "iras"
+          ],
+          "means": "iras = go, goes"
+        },
+        {
+          "lemma": "al",
+          "forms": [
+            "al"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "lernejo",
+          "forms": [
+            "lernejo"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "urbo",
+          "forms": [
+            "urbo"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "stacidomo",
+          "forms": [
+            "stacidomo"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "aŭto",
+          "forms": [
+            "aŭto",
+            "aŭton"
+          ],
+          "picture": "car",
+          "means": "aŭto = car; aŭton = car"
+        },
+        {
+          "lemma": "kie",
+          "forms": [
+            "kien"
+          ],
+          "means": "kien = where to"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "correlatives",
+        "line": "Words for questions, that, some, every and no come in families: kie (where), tie (there), ie (somewhere), ĉie (everywhere), nenie (nowhere); the separate ĉi in ĉi tie means nearby."
+      },
+      "items": [
+        "kien-vi-iras",
+        "mi-iras-al-lernejo",
+        "kie-estas-la-stacidomo",
+        "mia-patrino-iras-al-la-urbo",
+        "ci-tiu-auto-estas-malgranda",
+        "mi-havas-auton"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "hodiaŭ",
+          "forms": [
+            "hodiaŭ"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "morgaŭ",
+          "forms": [
+            "morgaŭ"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "nun",
+          "forms": [
+            "nun"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "labori",
+          "forms": [
+            "laboras",
+            "labori"
+          ],
+          "picture": "work",
+          "means": "laboras = work; labori = to work"
+        },
+        {
+          "lemma": "devi",
+          "forms": [
+            "devas"
+          ],
+          "means": "devas = must"
+        },
+        {
+          "lemma": "povi",
+          "forms": [
+            "povas"
+          ],
+          "means": "povas = can"
+        },
+        {
+          "lemma": "iri",
+          "forms": [
+            "iri"
+          ],
+          "means": "to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "dankon-gis-morgau",
+        "mi-laboras-hodiau",
+        "devas-iri-nun",
+        "morgau-mi-iras-al-la-urbo",
+        "mi-ne-povas-iri-hodiau",
+        "mi-devas-labori-morgau"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

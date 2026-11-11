@@ -1,0 +1,104 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lexicommons",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-20",
+  // global_fetch_strictly_public is required for Client ID Metadata Documents (workers-oauth-provider).
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "account_id": "3eab77e293bf5fdf0baadff8d90377a5",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "lexicommons.com", "custom_domain": true },
+    // .app and www only redirect to lexicommons.com (one origin keeps passkeys, cookies and the MCP URL in one place).
+    { "pattern": "lexicommons.app", "custom_domain": true },
+    { "pattern": "www.lexicommons.com", "custom_domain": true }
+  ],
+  // run_worker_first: every request passes the site gate before any static file is served, except /models/: the
+  // on-device speech models (public Whisper weights, MIT), served straight from static assets so a download never
+  // runs the Worker (static asset requests are free and unlimited; no per-use cost). public/js/speech/store.js.
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/*", "!/models/*"] },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lexicommons",
+      "database_id": "674f1a98-515f-4362-8ef7-bcd451622928",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "kv_namespaces": [{ "binding": "OAUTH_KV", "id": "ee204039dd0b41ba89058184d7a89cb8" }],
+  // UPLOADS: what people and their AIs upload. LIBRARY: the open library's shared books and weaves (src/books.ts),
+  // kept apart so shared and personal files never mix.
+  "r2_buckets": [
+    { "binding": "UPLOADS", "bucket_name": "lexicommons-uploads" },
+    { "binding": "LIBRARY", "bucket_name": "lexicommons-library" }
+  ],
+  // Practice with your AI: one room per account, where the app and the person's own AI meet (src/practice.ts). Its
+  // practices live in the room's own SQLite storage until a device collects them.
+  "durable_objects": { "bindings": [{ "name": "PRACTICE", "class_name": "PracticeRoom" }] },
+  "migrations": [{ "tag": "v1-practice", "new_sqlite_classes": ["PracticeRoom"] }],
+  "ratelimits": [
+    // The shared site password: a small bucket per IP.
+    { "name": "GATE_LIMITER", "namespace_id": "8101", "simple": { "limit": 10, "period": 60 } },
+    // Per connection: a passkey ceremony's start (sign-up or sign-in; its verify needs that start's challenge), a sign-in through
+    // Google, GitHub or Apple, getting back in by email, an AI app registering, a storage token. 60 a minute, so 60 people behind one
+    // address (a school, an office) can sign up in a minute.
+    { "name": "AUTH_LIMITER", "namespace_id": "8102", "simple": { "limit": 60, "period": 60 } },
+    // Token-authed traffic (MCP and the REST API), keyed per user.
+    { "name": "API_LIMITER", "namespace_id": "8103", "simple": { "limit": 240, "period": 60 } },
+    // Per connection, every request that looks a session cookie up in D1 (src/sessions.ts sessionOf): /api/*, the pages that read one, and
+    // an admin's preview cookie on any path. Before the lookup, so made-up cookies can't spend D1 (the launch's security pass, 7 Nov 2026).
+    // 1,200 a minute: a school's class behind one address (120 learners starting and polling) stays well under it.
+    { "name": "SESSION_LIMITER", "namespace_id": "8104", "simple": { "limit": 1200, "period": 60 } },
+    // Per connection, the app's error reports (POST /api/errors, written to D1): past it they're dropped, still answered 204.
+    { "name": "ERRORS_LIMITER", "namespace_id": "8105", "simple": { "limit": 30, "period": 60 } },
+    // A bug report (POST /api/bug-reports, src/bug-reports.ts): per account, or per connection when signed out. Past it, a 429 in words.
+    { "name": "BUGS_LIMITER", "namespace_id": "8106", "simple": { "limit": 5, "period": 60 } }
+  ],
+  // An email on the account (src/account-email.ts): Cloudflare's Email Sending, enabled for lexicommons.com (its records on cf-bounce and
+  // _dmarc). It sends only codes and notices, to an account's own address, from EMAIL_FROM. Under wrangler dev it's simulated: each email
+  // is written to a file and none goes out.
+  "send_email": [{ "name": "EMAIL" }],
+  "vars": {
+    "PUBLIC_ORIGIN": "https://lexicommons.com",
+    "RP_ID": "lexicommons.com",
+    // The address account email comes from (src/account-email.ts); empty turns account email off.
+    "EMAIL_FROM": "account@lexicommons.com",
+    "RP_NAME": "Lexicommons",
+    "GATE_ENABLED": "true",
+    // "true" opens only the home page, the privacy policy and the terms while the gate is on, still out of search (src/gate.ts).
+    "GATE_PUBLIC_PAGES": "false",
+    // The paid plan and the in-app AI are off at launch (src/offered.ts planOffered; a key of your own, OWN_KEY_ENABLED): no screen, public
+    // page or MCP tool names payments, a plan or the in-app AI (app.ts serves the pages without their data-plan parts). Switching the plan
+    // on is "true" here with its prices (STRIPE_PRICE_MONTHLY, STRIPE_PRICE_YEARLY) and Stripe's secrets, then a deploy.
+    "PLAN_ENABLED": "false",
+    "OWN_KEY_ENABLED": "false",
+    // Bring-your-own-storage apps (public identifiers; Google's client secret is a secret).
+    // Google project "lexicommons" + Dropbox app "Lexicommons", both owned by imaginativeprompting@gmail.com.
+    "GOOGLE_CLIENT_ID": "712370136069-iqqqkj735fgogj0j5dv249s5i24ldo08.apps.googleusercontent.com",
+    "DROPBOX_APP_KEY": "orjc5sbwlct9zh1",
+    // Entra app "Lexicommons" (any Entra tenant + personal accounts, SPA redirect) in imaginativeprompting's Default Directory.
+    "ONEDRIVE_CLIENT_ID": "12fe23ca-4ac3-4792-9110-db5c9aef779c",
+    "STORAGE_REDIRECT_URI": "https://lexicommons.com/app/storage/callback",
+    // Sign in with Google and GitHub (public client IDs; the secrets are GOOGLE_SIGNIN_CLIENT_SECRET and GITHUB_CLIENT_SECRET).
+    // Google: its own project "lexicommons-sign-in", apart from Drive's. GitHub: OAuth app "Lexicommons" (Imaginative-Prompting).
+    "GOOGLE_SIGNIN_CLIENT_ID": "623602778828-2lc6iq4unmeavj62or5m555peobfg797.apps.googleusercontent.com",
+    "GITHUB_CLIENT_ID": "Ov23liQv2PmuoRuGhP3X",
+    // Sign in with Apple: the Services ID, team and key id (public), once the Apple Developer account has them
+    // (Certificates, Identifiers & Profiles); the key itself is the secret APPLE_PRIVATE_KEY. Empty: no Apple.
+    "APPLE_SERVICES_ID": "",
+    "APPLE_TEAM_ID": "",
+    "APPLE_KEY_ID": "",
+    // Who can put anything in front of other people in Explore (src/community.ts sharingOpenFor): sharing packs and books,
+    // requests and their "me too", corrections and flags, grammar suggestions. "admins" at launch: learners make packs, texts and
+    // themes for themselves, add Lexicommons' own packs and read Explore; "everyone" opens it all (the app reads /api/me's mayShare).
+    "COMMUNITY_SHARING": "admins",
+    // New accounts (src/signups.ts; the SIGNUPS switch, flags.ts): "open", or "paused" when D1 can't keep up (launch day's SHED step 1,
+    // docs/launch-day-site.md). Paused, nobody can make an account; everyone who has one signs in and studies. The switch is set over MCP
+    // and REST; this is its deploy value, and the backstop if D1 is too busy to read the switch.
+    "SIGNUPS": "open"
+  },
+  // Reminders (src/reminders.ts): the cron looks at accounts whose next look has come.
+  "triggers": { "crons": ["*/15 * * * *"] },
+  "observability": { "enabled": true }
+}

@@ -1,0 +1,32 @@
+// Romanian (lang/index.js has what each field means).
+
+export default {
+  name: "Romanian",
+  locale: "ro-RO",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["dl.", "dna.", "d-na.", "dra.", "dr.", "prof.", "str.", "nr.", "bd.", "etc.", "ex.", "pag.", "tel.", "dvs."],
+  stray: ["nu", "pe", "să", "că", "de", "mai"],
+  patterns: {
+    present: { name: "Present-tense endings", about: "The verb's ending changes with who does it: vorbesc (I speak), vorbești (you speak), vorbește (he or she speaks).", after: [] },
+    "no-subject": { name: "No subject needed", about: "Romanian usually leaves out eu, tu and the other subject words, because the verb's ending shows who: Vorbesc (I speak), Plouă (rains).", after: ["present"] },
+    gender: { name: "Gender and agreement", about: "Nouns are masculine, feminine or neuter, and the words with them match: un băiat înalt (a boy tall), o fată înaltă (a girl tall).", after: [] },
+    "article-suffix": { name: "the on the end", about: "The word for the is joined to the end of the noun, while a or an comes before it: casa (house-the), o casă (a house).", after: ["gender"] },
+    "adjective-after": { name: "Adjectives after the noun", about: "Most describing words come after the noun: o casă mică (a house small), casa mică (house-the small).", after: ["article-suffix"] },
+    possessive: { name: "my after the noun", about: "My, your and the rest come after the noun, which takes the: fratele meu (brother-the my), sora mea (sister-the my).", after: ["article-suffix"] },
+    genitive: { name: "Whose: the owner's ending", about: "To say whose, the owner comes after the thing, with an ending of its own: mașina tatălui meu (car-the father-the's my).", after: ["possessive"] },
+    negation: { name: "nu before the verb", about: "nu goes before the verb and any little pronoun in front of it: Nu știu (not I-know), Nu-l cunosc (not-him I-know).", after: [] },
+    question: { name: "Questions", about: "A yes-or-no question can keep the order of a statement, with your voice going up, while a question word normally comes first, often with the verb right after it: Unde este gara? (where is station-the?).", after: [] },
+    "object-pronoun": { name: "Pronouns before the verb", about: "Little words for me, you, him and her (mă, te, îl, o) usually go before the verb: Te văd (you I-see).", after: ["no-subject"] },
+    reflexive: { name: "Reflexive verbs", about: "Some verbs come with mă, te, se or ne before the verb, pointing back to whoever does it, or meaning each other: Mă trezesc (myself I-wake: I wake up), Ne vedem (each other we-see).", after: ["object-pronoun"] },
+    pe: { name: "pe before a specific person", about: "When a specific person is the object of the verb, pe (literally on) goes before them, and a matching pronoun usually goes before the verb: Îl aștept pe tata (him I-wait on dad).", after: ["object-pronoun"] },
+    place: { name: "a plăcea: liking", about: "To like something, you say it pleases you: Îmi place cafeaua (to-me pleases coffee-the), so the verb matches the thing you like.", after: ["object-pronoun"] },
+    perfect: { name: "Past with am, ai, a", about: "The everyday past is a form of a avea (to have) and the verb's past form: Am mâncat (I-have eaten: I ate).", after: [] },
+    sa: { name: "să + verb", about: "After vreau (I want) and trebuie (must), the next verb comes after să (that), with its own ending, and pot (I can) takes either that or the infinitive: Vreau să mănânc (I-want that I-eat), Pot să plătesc or Pot plăti (I can pay).", after: ["present"] },
+    "o-sa": { name: "o să: going to", about: "o să and the verb's să form say what's going to happen: O să plouă (will that it-rains: it's going to rain).", after: ["sa"] },
+    age: { name: "Age with a avea", about: "Romanian says someone has a number of years: Fratele meu are douăzeci de ani (brother-the my has twenty of years).", after: ["present"] },
+    existential: { name: "este, sunt: there is, there are", about: "Use este (is) for one thing or something you don't count and sunt (are) for more than one: Este o bancă pe aici? (is a bank around here?), În casă sunt două băi (in house are two bathrooms).", after: ["present"] },
+    "mi-e": { name: "Mi-e foame: I'm hungry", about: "For hunger, thirst, heat and cold, Romanian says it is to me: Mi-e foame (to-me-is hunger), Ți-e sete? (to-you-is thirst?).", after: [] },
+  },
+};

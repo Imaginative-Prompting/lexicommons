@@ -1,0 +1,18 @@
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+!.env.example
+*.local
+.DS_Store
+public/models/
+
+# Local check states and harness folders
+.state*/
+.claude/
+
+# a check run from app/ with a relative --persist-to once wrote a local state here (6 Nov); never commit one
+/08-lexicommons/
+.state-*/

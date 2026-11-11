@@ -1,0 +1,38 @@
+// Hindi (lang/index.js has what each field means).
+// Written in Devanagari with spaces between words; a sentence ends in । (a question in ?). Devanagari has no capitals,
+// so lemmas are "any". A word's vowel signs are combining marks (\p{M}), part of the word wherever words are compared.
+
+export default {
+  name: "Hindi",
+  locale: "hi-IN",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "any",
+  abbreviations: ["डॉ.", "प्रो."],
+  stray: ["क्योंकि", "ताकि", "जबकि", "यद्यपि"],
+  ends: ["।"],
+  patterns: {
+    "verb-last": { name: "The verb goes last", about: "In a plain Hindi sentence the verb comes at the end, after the object and the place: मैं चाय पीता हूँ (I tea drink).", after: [] },
+    copula: { name: "Am, is, are: हूँ, हो, है, हैं", about: "होना (to be) changes for the person: मैं हूँ (I am), वह है (he, she, it is), हम, आप and वे हैं (we, you, they are), तुम हो (you are, to a friend); था, थी and थे are was and were.", after: [] },
+    postposition: { name: "Postpositions come after the word", about: "Hindi puts words like में, पर, से, के साथ and को after the noun: घर में (in the house), मेज़ पर (on the table), बस से (by bus), माँ के साथ (with Mom), शनिवार को (on Saturday).", after: [] },
+    gender: { name: "Masculine and feminine", about: "Every noun is masculine or feminine, and adjectives in -आ, and the verb forms that agree, change to match: अच्छा खाना, बड़ी रसोई; वह रहता है or रहती है; मैं करूँगा or करूँगी (a man or a woman).", after: [] },
+    plural: { name: "More than one", about: "A masculine noun in -आ often changes to -ए (जूता, जूते), a feminine one in -ई to -इयाँ (चाबी, चाबियाँ), and some like भाई stay the same; in the present, plural nouns and हम, आप and वे take हैं, while तुम takes हो.", after: ["gender", "copula"] },
+    oblique: { name: "The form before postpositions", about: "Before a postposition, a masculine noun in -आ and the words that agree with it usually change -आ to -ए (छोटा फ़्लैट, छोटे फ़्लैट में), and some pronouns have their own form there and in time phrases (यह becomes इस: इस वीकेंड).", after: ["postposition", "gender"] },
+    present: { name: "Habits and general states: -ता है", about: "For habits and general states, use the verb's stem with -ता, -ती or -ते and होना: मैं चाय पीता हूँ (I drink tea); मेरी बहन दिल्ली में रहती है (my sister lives in Delhi).", after: ["copula", "gender"] },
+    progressive: { name: "Right now: रहा है", about: "रहा, रही or रहे after the stem says what's going on now, or a plan: मैं जा रहा हूँ (I'm going); शनिवार को हम जा रहे हैं (on Saturday we're going). With से it's how long so far: एक साल से सीख रहा हूँ (I've been learning for a year).", after: ["present"] },
+    past: { name: "Completed actions and था", about: "A completed action often ends in -आ, -ई or -ए (गया, हुई), and the past of होना is था, थी or थे: खाना स्वादिष्ट था; ट्रेन लेट थी.", after: ["gender"] },
+    ne: { name: "Completed actions with an object: ने", about: "With most completed actions that take an object, the subject takes ने, and the verb matches an object without को (हमने पिज़्ज़ा खाया; मैंने जैकेट खरीदी: jacket is feminine), or stays masculine singular when the object has को; an action with no object normally takes no ने: मैं भारत नहीं गया.", after: ["past", "gender"] },
+    future: { name: "Future: -गा, -गी, -गे", about: "A future form ends in -गा, -गी or -गे, and the part before it changes for the person: मैं फ़ोन करूँगी (I'll call), तुम चलोगे (you'll go), हम चलेंगे (we'll go), बारिश होगी (it'll rain).", after: ["gender"] },
+    "question-kya": { name: "Yes/no questions: क्या", about: "क्या at the start makes a yes/no question, with the order unchanged: क्या आप अंग्रेज़ी बोलते हैं? (do you speak English?).", after: ["verb-last"] },
+    "question-word": { name: "Question words stay in place", about: "A question word goes where its answer would, usually just before the verb: आपका नाम क्या है? (your name is what?); स्टेशन कहाँ है? (the station is where?).", after: ["verb-last"] },
+    nahin: { name: "Not: नहीं before the verb", about: "नहीं normally goes right before the verb, and in a negative habit the final है or हूँ often drops (मैं कॉफ़ी नहीं पीती: I don't drink coffee); a command takes मत instead.", after: ["present"] },
+    possessive: { name: "Of and my: का, के, की", about: "का, के or की means of or 's, and matches the thing owned, not the owner: पापा की गाड़ी (Dad's car; गाड़ी is feminine). My, our and your work the same way: मेरा, मेरी, मेरे; हमारा; आपका.", after: ["gender"] },
+    have: { name: "Having: मेरे पास, मेरे … हैं", about: "Hindi has no general verb for have: possessions use मेरे पास … है (near me … is: मेरे पास गाड़ी नहीं है), family uses मेरे दो भाई हैं (my two brothers are), and a home's rooms use हमारे घर में … है (in our house … is).", after: ["possessive", "copula"] },
+    mujhe: { name: "To me, to you: मुझे, तुम्हें, आपको", about: "मैं, तुम and आप become मुझे, तुम्हें and आपको when they mean me or you, to me or to you, and these forms also mark who likes, feels, knows or has to do something: मुझे यह फ़िल्म पसंद है; आपको भूख लगी है; मुझे जाना है.", after: ["copula"] },
+    infinitive: { name: "The to-form: -ना", about: "The dictionary form ends in -ना and works as to or -ing: खाना चाहती हूँ (I want to eat). To say what you're going for, it ends in -ने: दूध खरीदने जा रहा हूँ (I'm going to buy milk).", after: ["oblique"] },
+    imperative: { name: "Asking and telling", about: "To a friend a command ends in -ओ (आओ, करो), politely in -इए (कीजिए, दीजिए), and the -ना form asks for later: मुझे बताना! (let me know).", after: ["address"] },
+    address: { name: "You: तुम and आप", about: "तुम is you to a friend or family, with हो and -ओ; आप is polite, for strangers and elders, with हैं and -इए. Respect uses the plural for one person too: मेरी माँ खाना बनाती हैं.", after: ["copula"] },
+    conditional: { name: "If … then: अगर … तो", about: "अगर starts a condition and तो starts what follows from it: अगर बारिश नहीं हुई, तो हम बीच पर जाएँगे (if it doesn't rain, we'll go to the beach).", after: ["future"] },
+    karna: { name: "Verbs made with करना", about: "Many verbs are a word and करना (to do): बंद करना (to close), फ़ोन करना (to call), इंतज़ार करना (to wait). Only करना changes: बंद करो, फ़ोन करूँगी.", after: [] },
+  },
+};

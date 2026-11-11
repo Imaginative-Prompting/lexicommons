@@ -1,0 +1,30 @@
+// Malay, as Malaysia speaks and writes it (lang/index.js has what each field means). Dictionary forms are root words,
+// as Malay dictionaries list them (membaca under baca, berjumpa under jumpa).
+
+export default {
+  name: "Malay",
+  locale: "ms-MY",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["en.", "pn.", "tn.", "hj.", "dr.", "prof.", "jln.", "kg.", "no.", "ms.", "dll.", "dsb.", "sdn.", "bhd."],
+  stray: ["tidak", "yang", "ini", "itu", "di", "akan"],
+  patterns: {
+    "no-copula": { name: "Descriptions without is", about: "Before a describing word, Malay needs no is: Saya lapar (I hungry), Rumah itu besar (house that big); ialah links two nouns in careful speech, never a describing word.", after: [] },
+    "adjective-after": { name: "Describing words after the noun", about: "A describing word, or a noun that describes, comes after the noun: rumah kecil (house small), kopi susu (coffee milk).", after: [] },
+    possessive: { name: "Whose: after the noun", about: "The owner comes after the thing, and saya (I, me) also means my: rumah saya (house my), kereta ayah saya (car father my: my father's car).", after: ["adjective-after"] },
+    "ini-itu": { name: "ini, itu: this, that", about: "When ini (this) and itu (that) point out a noun, they follow it: buku ini (book this), hari ini (day this: today).", after: ["adjective-after"] },
+    "tidak-bukan": { name: "tidak and bukan: not", about: "Use tidak before a verb or a describing word (Saya tidak tahu: I not know) and bukan before a noun (Ayah saya bukan doktor: father my not doctor).", after: [] },
+    aspect: { name: "Time words, not tenses", about: "A verb doesn't change for past or future; words like sudah (already), sedang (in the middle of), akan (will) and semalam (yesterday) say when: Saya sudah makan (I already eat: I've eaten).", after: [] },
+    question: { name: "Question words", about: "A question word can sit where its answer would go, as in Awak tinggal di mana? (you live at where?), and a yes-or-no question can keep a statement's order: Awak dahaga? (you thirsty?).", after: [] },
+    ada: { name: "ada: there is, have", about: "ada says there is or there are, and after someone, they have: Ada roti (exist bread), Saya ada kereta (I have car); tidak ada is there isn't.", after: [] },
+    "di-ke-dari": { name: "di, ke, dari: at, to, from", about: "di is at or in, ke is to and dari is from: di rumah (at home), ke pasar (to market), dari pejabat (from office).", after: [] },
+    modal: { name: "mahu, boleh, perlu, kena + verb", about: "To say want, can, need or have to do something, put the next verb right after mahu, boleh, perlu or kena: Saya mahu makan (I want eat).", after: [] },
+    yang: { name: "yang: the one that", about: "yang (that, which) joins a describing word to a noun, or stands for the noun: hotel yang murah (hotel that cheap), yang besar (the big one).", after: ["adjective-after"] },
+    reduplication: { name: "Doubling nouns for more than one", about: "Malay nouns need not change for plural; doubling can make more than one explicit when it matters: kawan-kawan (friends), while a number or banyak normally takes the plain noun, and fixed words such as kanak-kanak stay doubled.", after: [] },
+    "kami-kita": { name: "kami and kita: two kinds of we", about: "kami is we without the person you're talking to, and kita is we with them: Kami tinggal di sini (we, not you, live here), Jom kita makan (come on, we, you too, eat: let's eat).", after: [] },
+    "ber-verbs": { name: "Verbs with ber-", about: "ber- makes a verb from a root, often for doing something or having something: jumpa → berjumpa (meet), main → bermain (play), umur → berumur (be … years old).", after: [] },
+    "men-verbs": { name: "Action verbs with a changing me- beginning", about: "Many action verbs are built from a root with a beginning that changes with the root's first sound: masak → memasak (cook), baca → membaca (read), cuci → mencuci (wash).", after: [] },
+    classifier: { name: "Counting words", about: "A number comes before a counting word and noun, while se- (one) joins the counting word: dua orang guru (two person teacher), seekor kucing (one-animal cat); orang is for people, ekor for animals and buah for many objects.", after: [] },
+  },
+};

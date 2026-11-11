@@ -1,0 +1,220 @@
+/* The public pages: the home page (/), the privacy policy (/privacy), the terms (/terms), and the pricing page (/pricing) where the
+ * plan is offered. They're open past the site gate, so they load only what's open with them: this file, /fonts/ and /icons/
+ * (src/gate.ts). The app's look
+ * (docs/design-bible.md): a quiet page, color in the art and the one way forward, Instrument Sans and Onest; light when the device asks for it. */
+
+@font-face { font-family: "Instrument Sans"; src: url("/fonts/instrument-sans-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Onest"; src: url("/fonts/onest-var-latin.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0000-00FF, U+0100-017F, U+018F, U+01A0-01A1, U+01AF-01B0, U+0218-021B, U+0259, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0304, U+0306-0309, U+030B-030C, U+0323, U+0326-0328, U+1E00-1EFF, U+2000-206F, U+20AC, U+20B4, U+20BA, U+20BD, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Onest"; src: url("/fonts/onest-var-cyrillic.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0400-052F, U+1C80-1C88, U+2116; }
+
+:root {
+  color-scheme: dark;
+  --type-ui: "Instrument Sans", ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --type-head: "Onest", "Instrument Sans", ui-sans-serif, sans-serif;
+  /* The app's reading measure (tokens.css --measure, which these pages can't load past the gate): ~68 characters a line, at most 640 px. */
+  --measure: min(31em, 640px);
+  --canvas: #000000;
+  --chrome: #0b0b0a;
+  --well: #151513;
+  --hair: rgba(234, 228, 214, 0.09);
+  --edge: rgba(234, 228, 214, 0.14);
+  --ink-1: #f1efea;
+  --ink-2: #a7a49c;
+  --ink-3: #78756d;
+  --solid: #f7f6f2;
+  --solid-hover: #dedcd6;
+  --on-solid: #0b0b0a;
+  --ring: rgba(247, 246, 242, 0.6);
+  --go: #7c5ce6;
+  --go-deep: #5e40c4;
+  --on-go: #ffffff;
+  --line-strong: rgba(234, 228, 214, 0.34);
+  /* The phones on the home page: a dark body on either theme, its edge a line on dark and the body's own darker side on light. */
+  --phone-body: #121211;
+  --phone-edge: rgba(234, 228, 214, 0.34);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --canvas: #fdfdfc;
+    --chrome: #f6f5f2;
+    --well: #f6f5f2;
+    --hair: rgba(38, 33, 20, 0.08);
+    --edge: rgba(38, 33, 20, 0.14);
+    --ink-1: #1b1a17;
+    --ink-2: #57544d;
+    --ink-3: #77746c;
+    --solid: #1b1a17;
+    --solid-hover: #35342f;
+    --on-solid: #fdfdfc;
+    --ring: rgba(27, 26, 23, 0.5);
+    --line-strong: rgba(38, 33, 20, 0.32);
+    --phone-edge: #3a3934;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink-1);
+  font: 400 16px / 1.6 var(--type-ui);
+  -webkit-font-smoothing: antialiased;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+::selection { background: rgba(247, 246, 242, 0.18); }
+a { color: var(--ink-1); text-underline-offset: 3px; text-decoration-color: var(--ink-3); }
+a:focus-visible, .site-button:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
+
+.site { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+/* The bar: the mark and name, and the way in. */
+.site-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+.site-brand { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-1); font: 700 20px / 1 var(--type-head); letter-spacing: -0.02em; text-decoration: none; }
+.site-mark { width: 40px; height: 40px; }
+.site-bar nav { display: flex; align-items: center; gap: 8px; }
+
+.site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 2px solid var(--edge);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink-1);
+  font: 600 15px / 20px var(--type-ui);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-bar .site-button { border-color: var(--line-strong); box-shadow: 0 3px 0 var(--line-strong); margin-bottom: 3px; }
+.site-button:active { background: var(--well); }
+/* The one way forward. */
+.site-button[data-variant="go"] { min-height: 56px; margin-bottom: 4px; padding: 0 40px; border: 0; border-radius: 16px; background: var(--go); color: var(--on-go); font: 700 18px / 1 var(--type-head); letter-spacing: -0.01em; box-shadow: 0 4px 0 var(--go-deep); }
+.site-button[data-variant="go"]:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--go-deep); background: var(--go); }
+@media (hover: hover) {
+  .site-button:hover { background: var(--well); }
+  .site-button[data-variant="go"]:hover { background: var(--go); filter: brightness(1.06); }
+}
+
+/* The home page (index.html): one point a section, its heading and line beside a phone playing a few seconds of the app showing it
+ * (icons/site/clips/: a muted loop and its poster; js/site.js plays a clip only while it's in view, never under reduced motion). The phone
+ * never cuts what it shows: the screen's corners fall on its top and bottom strips, never on the app, and the clip is whole. From 900 px
+ * the words and the phone stand side by side, alternating; under that, the words, then the phone. */
+.site-beat { display: grid; justify-items: center; gap: 32px; padding: 40px 0 56px; }
+.site-beat-words { justify-self: stretch; max-width: 32em; }
+.site-beat h2 { margin: 0 0 14px; font: 750 clamp(30px, 8vw, 44px) / 1.08 var(--type-head); letter-spacing: -0.03em; text-wrap: balance; }
+.site-beat-words > p { margin: 0 0 12px; color: var(--ink-2); font-size: 18px; line-height: 1.5; text-wrap: pretty; }
+.site-beat-words > p:last-child { margin-bottom: 0; }
+.site-hero { padding: 24px 0 56px; }
+.site-hero h1 { margin: 0 0 16px; font: 750 clamp(44px, 12.5vw, 76px) / 1 var(--type-head); letter-spacing: -0.035em; text-wrap: balance; }
+.site-hero .site-beat-words > p { max-width: 30em; margin: 0 0 28px; font-size: 19px; line-height: 1.45; }
+.site-hero .site-button[data-variant="go"] { width: 100%; }
+.site-note { margin: 12px 0 0 !important; color: var(--ink-3) !important; font-size: 15px !important; }
+
+/* A phone: a dark body on either theme (the app in it is Graphite, as it opens), its screen inset with a strip at the top (the camera's
+ * pill) and the foot (the home bar), each at least as tall as the screen's corner is round, and the clip between them. */
+.site-phone {
+  --phone: min(280px, 74vw);
+  --pad: calc(var(--phone) * 0.034);
+  --screen: calc(var(--phone) - 2 * var(--pad) - 4px);
+  position: relative;
+  width: var(--phone);
+  margin: 0;
+  padding: var(--pad);
+  border: 2px solid var(--phone-edge);
+  border-radius: calc(var(--phone) * 0.16);
+  background: var(--phone-body);
+  box-shadow: 0 6px 0 var(--phone-edge);
+}
+.site-screen { position: relative; overflow: hidden; padding: calc(var(--screen) * 0.115) 0 calc(var(--screen) * 0.115); border-radius: calc(var(--screen) * 0.115); background: #000; }
+.site-screen::before { content: ""; position: absolute; top: calc(var(--screen) * 0.03); left: 50%; width: calc(var(--screen) * 0.28); height: calc(var(--screen) * 0.06); transform: translateX(-50%); border-radius: 999px; background: #1b1b1a; }
+.site-screen::after { content: ""; position: absolute; bottom: calc(var(--screen) * 0.045); left: 50%; width: calc(var(--screen) * 0.34); height: 4px; transform: translateX(-50%); border-radius: 999px; background: rgba(241, 239, 234, 0.55); }
+.site-clip { display: block; width: 100%; height: auto; aspect-ratio: 640 / 1384; background: #000; }
+/* Pause: one quiet round button on each phone's lower corner, over its body and never its screen; it pauses (or plays) every clip. */
+.site-pause { position: absolute; right: -20px; bottom: -20px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 999px; background: transparent; color: var(--ink-2); cursor: pointer; }
+.site-pause[hidden] { display: none; }
+.site-pause::before { content: ""; width: 34px; height: 34px; grid-area: 1 / 1; border: 2px solid var(--line-strong); border-radius: 999px; background: var(--canvas); box-sizing: border-box; }
+.site-pause::after { content: ""; grid-area: 1 / 1; width: 10px; height: 12px; border-inline: 3px solid currentColor; box-sizing: border-box; }
+.site-pause[aria-pressed="true"]::after { width: 0; height: 0; margin-left: 3px; border-block: 6px solid transparent; border-inline: 10px solid currentColor; border-inline-end: 0; }
+.site-pause:hover { color: var(--ink-1); }
+.site-pause:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+.site-why { padding: 40px 0 48px; }
+.site-why > h2, .site-end h2 { margin: 0 0 28px; font: 750 clamp(30px, 8vw, 44px) / 1.08 var(--type-head); letter-spacing: -0.03em; text-wrap: balance; }
+
+.site-facts { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.site-facts h3 { margin: 0 0 6px; font: 700 20px / 1.25 var(--type-head); letter-spacing: -0.015em; text-wrap: balance; }
+.site-facts p { margin: 0; color: var(--ink-2); font-size: 16px; line-height: 1.5; text-wrap: pretty; }
+
+.site-end { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 8px 0 72px; text-align: center; }
+.site-end-tinta { width: 96px; height: 96px; margin-bottom: 8px; }
+.site-end .site-button[data-variant="go"] { width: 100%; max-width: 360px; }
+
+@media (min-width: 760px) {
+  .site { max-width: 1080px; padding: 0 32px; }
+  .site-facts { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .site-why { padding-bottom: 88px; }
+}
+@media (min-width: 900px) {
+  /* Each pair centered, its words beside its phone; the top keeps the whole width for the headline. */
+  .site-beat { grid-template-columns: minmax(0, 26em) auto; justify-content: center; align-items: center; justify-items: start; gap: 72px; padding: 28px 0; }
+  .site-beat:nth-of-type(even) { grid-template-columns: auto minmax(0, 26em); }
+  .site-beat:nth-of-type(even) .site-beat-words { order: 2; }
+  .site-beat h2 { font-size: 46px; }
+  .site-beat-words > p { font-size: 19px; }
+  .site-hero { grid-template-columns: minmax(0, 1fr) auto; justify-content: stretch; padding: 40px 0 72px; }
+  .site-hero .site-button[data-variant="go"] { width: auto; }
+  /* As large as the window shows whole: a phone stands about 2.3 times its width (body, strips and its edge), so it fits the window's
+   * height with 32 px over and under, between 300 and 360 px wide. */
+  .site-phone { --phone: clamp(300px, calc((100svh - 64px) * 0.435), 360px); }
+}
+@media (min-width: 1100px) {
+  .site-beat { gap: 104px; }
+}
+
+/* The privacy policy and the terms. */
+.site-doc { max-width: 720px; padding: 32px 0 48px; }
+/* Its paragraphs and lists at most ~68 characters a line, left where the page's column starts (89–104 characters a line at 720, 8 Nov 2026). */
+.site-doc :is(p, li) { max-width: var(--measure); }
+.site-doc h1 { margin: 0 0 8px; font: 700 36px / 1.1 var(--type-head); letter-spacing: -0.03em; }
+.site-doc .site-updated { margin: 0 0 32px; color: var(--ink-3); font-size: 14px; }
+.site-doc h2 { margin: 40px 0 10px; font: 700 22px / 1.25 var(--type-head); letter-spacing: -0.02em; }
+.site-doc h3 { margin: 24px 0 6px; font: 600 16px / 1.4 var(--type-ui); }
+.site-doc p, .site-doc li { color: var(--ink-2); }
+.site-doc p { margin: 0 0 12px; }
+.site-doc ul { margin: 0 0 12px; padding-left: 22px; }
+.site-doc li { margin: 4px 0; }
+.site-doc strong { color: var(--ink-1); font-weight: 600; }
+.site-summary { margin: 0 0 8px; }
+.site-summary ul { margin: 0; }
+.site-doc table { width: 100%; margin: 0 0 16px; border-collapse: collapse; font-size: 14px; }
+.site-doc th { padding: 8px 10px 8px 0; color: var(--ink-3); font-weight: 600; text-align: left; vertical-align: top; }
+.site-doc tbody th { border-top: 1px solid var(--hair); }
+.site-doc td { padding: 8px 10px 8px 0; border-top: 1px solid var(--hair); color: var(--ink-2); vertical-align: top; }
+.site-doc code { font: 400 0.9em ui-monospace, "SF Mono", Menlo, monospace; color: var(--ink-1); }
+.site-doc .site-table-scroll { overflow-x: auto; }
+/* The pricing page's comparison (pricing.html), in a card like the home page's facts. On a phone each row's label goes above its two
+ * values, under the columns' names; the privacy page's cookie table stays a table. */
+.site-compare-card { margin: 0 0 16px; padding: 8px 20px; border: 1px solid var(--hair); border-radius: 22px; background: var(--well); }
+.site-doc .site-compare { margin: 0; }
+.site-doc .site-compare thead td { border-top: 0; }
+@media (max-width: 599px) {
+  .site-compare, .site-compare thead, .site-compare tbody { display: block; }
+  .site-compare tr { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16px; border-top: 1px solid var(--hair); }
+  .site-compare thead tr { border-top: 0; }
+  .site-compare thead tr > :first-child { display: none; }
+  .site-compare th[scope="row"] { grid-column: 1 / -1; padding-bottom: 0; border-top: 0; }
+  .site-compare td { border-top: 0; }
+}
+
+.site-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 24px 0 40px; color: var(--ink-3); font-size: 14px; }
+.site-foot a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-2); }
+
+/* The code on GitHub, with GitHub's own mark (Octicons' mark-github): under the open-source fact, and in the footer. */
+.site-code { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--ink-1); font-weight: 600; text-decoration: none; }
+.site-why .site-code { margin-top: 8px; }
+.site-code:hover span { text-decoration: underline; }
+.site-github { flex: none; }

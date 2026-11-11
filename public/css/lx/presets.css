@@ -1,0 +1,29 @@
+/* Lexicommons design system: layout presets. Each is a data attribute on <html>, set by the theme engine from the
+ * user's settings, and each only changes tokens or a few layout rules, so themes and custom CSS keep working. */
+@layer lx.presets {
+  /* Density: how much space and how big the controls are. */
+  :root[data-density="compact"] { --density: 0.8; --control: var(--control-32); }
+  :root[data-density="comfortable"] { --density: 1; --control: var(--control-44); }
+  :root[data-density="spacious"] { --density: 1.25; --control: 52px; }
+
+  /* Text size: scales reading text and the sentence you're studying, plus UI text a little. */
+  :root[data-text="s"] { --size-read: 17px; --size-target: 22px; }
+  :root[data-text="m"] { --size-read: 19px; --size-target: 26px; }
+  :root[data-text="l"] { --size-read: 22px; --size-target: 30px; --size-14: 15px; --size-16: 17px; }
+  :root[data-text="xl"] { --size-read: 26px; --size-target: 36px; --size-14: 16px; --size-16: 18px; --size-20: 22px; }
+
+  /* Card style: filled (default), outlined, or flat. A card showing a result keeps its right/wrong edge. */
+  :root[data-card="outlined"] :is([data-part="study-card"], [data-part="card"]) { background: transparent; }
+  :root[data-card="outlined"] :is([data-part="study-card"], [data-part="card"]):not([data-state]) { border-color: var(--edge); }
+  :root[data-card="flat"] :is([data-part="study-card"], [data-part="card"]) { background: transparent; }
+  :root[data-card="flat"] :is([data-part="study-card"], [data-part="card"]):not([data-state]) { border-color: transparent; padding-inline: 0; }
+
+  /* data-reader (scroll or pages) is read by the reader itself (js/read/reader.js): it lays out its own pages. */
+
+  /* Animations: "off" stops every animation and transition, so everything is instant; "on" animates even when the
+   * device asks for reduced motion; "system" (the default) follows the device (base.css). */
+  :root[data-motion="off"] { --dur-150: 0ms; --dur-200: 0ms; --dur-320: 0ms; --dur-640: 0ms; }
+  :root[data-motion="off"] *,
+  :root[data-motion="off"] *::before,
+  :root[data-motion="off"] *::after { transition-duration: 0s !important; animation-duration: 0s !important; animation-delay: 0s !important; }
+}

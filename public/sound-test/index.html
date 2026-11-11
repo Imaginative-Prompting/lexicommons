@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sound test</title>
+<link rel="stylesheet" href="/sound-test/style.css">
+</head>
+<body>
+<main>
+  <h1>Sound test</h1>
+  <p>This finds out which of the app's sounds an iPhone plays with its silent switch on. Open it from the app on your Home Screen, not in Safari.</p>
+  <ol class="setup">
+    <li>Turn the silent switch on (or the Action button's Silent mode), and turn the volume up.</li>
+    <li>If you can, start some music in another app first: it tells us which sounds stop it.</li>
+  </ol>
+  <p><label class="music"><input type="checkbox" id="music"> Music is playing in another app</label></p>
+  <ol id="tests"></ol>
+  <p id="sent" role="status"></p>
+  <p><a href="/app/#settings/about">Back to Settings</a></p>
+</main>
+<script type="module" src="/sound-test/run.js"></script>
+</body>
+</html>

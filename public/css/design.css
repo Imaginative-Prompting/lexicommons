@@ -1,0 +1,214 @@
+/* The /design page's own layout. In the lx.page layer (the last of the app's layers), so a person's custom CSS
+ * still wins over it, and it only arranges the demos: the components inside are untouched. */
+
+@layer lx.page {
+  .ds { max-width: 1320px; margin: 0 auto; padding: 0 var(--space-4); }
+
+  .ds-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--hair); }
+  .ds-brand { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--ink-1); font: 500 var(--size-16) / 1 var(--type-head); text-decoration: none; }
+  .ds-brand img { width: 24px; height: 24px; border-radius: 6px; }
+
+  .ds-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .ds-main { min-width: 0; padding: var(--space-5) 0 calc(var(--space-7) * 2); }
+  .ds-intro { display: flex; flex-direction: column; gap: var(--space-3); max-width: 72ch; }
+  .ds-intro-text { max-width: 72ch; }
+  .ds-toc { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+  .ds-toc-link { padding: 4px 10px; border: 1px solid var(--hair); border-radius: var(--radius-full); color: var(--ink-2); font-size: var(--size-12); text-decoration: none; }
+  @media (hover: hover) { .ds-toc-link:hover { color: var(--ink-1); border-color: var(--edge); } }
+  .ds-section { margin-top: var(--space-6); scroll-margin-top: var(--space-4); }
+
+  /* ---- the Appearance panel: a bottom sheet on a phone, a sticky column on a wide screen ---- */
+  .ds-panel {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 20;
+    max-height: 84dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: var(--space-4) var(--space-4) calc(var(--space-5) + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--edge);
+    border-radius: var(--radius-24) var(--radius-24) 0 0;
+    background: var(--chrome);
+    box-shadow: var(--shadow-pop);
+    transform: translateY(105%);
+    visibility: hidden;
+    transition: transform var(--dur-320) var(--ease-standard), visibility 0s linear var(--dur-320);
+  }
+  .ds-panel[data-open] { transform: none; visibility: visible; transition: transform var(--dur-320) var(--ease-standard); }
+  .ds-panel-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+  .ds-panel-open { position: fixed; right: var(--space-4); bottom: calc(var(--space-4) + env(safe-area-inset-bottom)); z-index: 15; box-shadow: var(--shadow-pop); }
+
+  @media (min-width: 1024px) {
+    .ds-layout { grid-template-columns: 340px minmax(0, 1fr); }
+    .ds-panel {
+      position: sticky;
+      inset: 0 auto auto; /* top: 0, and undoes the sheet's bottom/left/right */
+      align-self: start;
+      max-height: 100dvh;
+      padding: var(--space-4) var(--space-2) var(--space-6) 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      transform: none;
+      visibility: visible;
+      transition: none;
+    }
+    .ds-panel-open,
+    .ds-panel-close { display: none; }
+  }
+
+  /* ---- demos ---- */
+  .ds-demo { display: flex; flex-direction: column; gap: var(--space-2); }
+  .ds-demo-label { color: var(--ink-3); font-weight: 500; }
+  .ds-demo-body { display: flex; flex-direction: column; gap: var(--space-3); min-width: 0; }
+  .ds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: var(--space-4); align-items: start; }
+  .ds-state { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; max-width: 100%; margin: 0; }
+  /* A demo never wider than the screen gives it (its box sizes to it): a field takes the width, as it does in the app. */
+  .ds-state > * { max-width: 100%; }
+  .ds-state > [data-part="translate-field"] { align-self: stretch; }
+  .ds-state [data-part="session-progress"] { width: 96px; }
+  .ds-state [data-part="download-bar"] { width: 168px; }
+  /* A word with its reading, at the size the app shows one (24px: components.css, reader.css), so the reading is too. */
+  .ds-reading-word { font-size: 24px; }
+  .ds-lookup { display: flex; }
+  /* The reading screen in a phone-sized frame: the transform makes the frame the screen's fixed-position box. */
+  .ds-reader-frames { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+  .ds-reader-frame { position: relative; width: 100%; max-width: 390px; height: 620px; overflow: hidden; border: 1px solid var(--edge); border-radius: var(--radius-24); transform: translateZ(0); }
+  .ds-reader-frame-wide { max-width: 780px; height: 440px; }
+  .ds-known-grid { max-width: 360px; }
+  .ds-picture-page { max-width: 390px; }
+  .ds-sheet-frame { position: relative; display: grid; place-items: center; height: 320px; overflow: hidden; border: 1px solid var(--edge); border-radius: var(--radius-24); }
+  .ds-sheet-frame > [data-part="sheet"] { position: absolute; left: 0; right: 0; bottom: 0; }
+  .ds-woven { display: flex; flex-direction: column; gap: var(--space-4); }
+
+  .ds-meanings { display: flex; flex-direction: column; gap: var(--space-3); }
+  .ds-meaning { display: grid; grid-template-columns: 44px 120px minmax(0, 1fr); align-items: center; gap: var(--space-3); }
+  .ds-meaning p { margin: 0; }
+  .ds-meaning-swatch { width: 44px; height: 28px; border-radius: var(--radius-8); border: 1px solid transparent; }
+  /* The tint a meaning fills with, over the ink it's written in: both halves of how it shows. */
+  .ds-meaning-swatch[data-swatch="right"] { background: linear-gradient(var(--m-right-bg) 0 58%, var(--m-right) 58%); border-color: var(--m-right-edge); }
+  .ds-meaning-swatch[data-swatch="wrong"] { background: linear-gradient(var(--m-wrong-bg) 0 58%, var(--m-wrong) 58%); border-color: var(--m-wrong-edge); }
+  .ds-meaning-swatch[data-swatch="slipping"] { background: linear-gradient(var(--m-slipping-bg) 0 58%, var(--m-slipping) 58%); border-color: var(--m-slipping-edge); }
+  .ds-meaning-swatch { overflow: hidden; }
+  .ds-meaning-swatch[data-swatch="new"] { background: var(--m-new-bg); border-color: var(--m-new-edge); }
+  .ds-meaning-swatch[data-swatch="hint"] { background: var(--m-hint-bg); border: 1px dashed var(--m-hint-edge); }
+  .ds-meaning-swatch[data-swatch="moved"] { background: var(--m-moved-mark); border-bottom: 2px dotted var(--m-moved-line); border-radius: 4px; }
+  @media (max-width: 560px) {
+    .ds-meaning { grid-template-columns: 44px minmax(0, 1fr); }
+    .ds-meaning p { grid-column: 1 / -1; }
+  }
+
+  /* A phone-sized frame for the app shell. Inside it the tab bar sticks to the frame instead of the screen. */
+  .ds-phone { width: min(390px, 100%); height: 620px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--edge); border-radius: 36px; background: var(--canvas); }
+  .ds-phone [data-part="app"] { display: flex; flex-direction: column; min-height: 100%; padding: 0 var(--space-4); }
+  .ds-phone [data-part="page"] { flex: 1; padding-bottom: var(--space-5); }
+  .ds-phone [data-part="app"] > [data-part="tab-bar"] { position: sticky; bottom: var(--space-3); margin: 0 calc(-1 * var(--space-2)) var(--space-3); }
+  /* The frame is a phone even on a wide screen: undo the sidebar layout inside it. */
+  .ds-phone [data-part="app"]:has(> [data-part="tab-bar"]) { max-width: none; padding: 0 var(--space-4); }
+  .ds-phone [data-part="app"]:has(> [data-part="tab-bar"]) > :not([data-part="tab-bar"]) { max-width: none; margin-inline: 0; }
+  /* The floating bar, as on a phone (redesign.css), at any width. */
+  .ds-phone [data-part="app"] > [data-part="tab-bar"] {
+    top: auto;
+    width: auto;
+    height: var(--bar-height);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 0;
+    padding: 4px;
+    border: 1px solid var(--bar-edge);
+    border-radius: 32px;
+    background: var(--bar-glass);
+    box-shadow: var(--bar-shadow);
+    -webkit-backdrop-filter: blur(22px) saturate(1.6);
+    backdrop-filter: blur(22px) saturate(1.6);
+  }
+  .ds-phone [data-part="app"] > [data-part="tab-bar"] [data-part="tab"] { position: relative; z-index: 1; flex-direction: column; justify-content: center; gap: 2px; min-height: 0; padding: 0; border-radius: 26px; color: var(--ink-2); font: 600 var(--size-12) / 1.1 var(--type-ui); background: transparent; }
+  .ds-phone [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] { color: var(--ink-2); background: transparent; }
+  .ds-phone [data-part="app"] > [data-part="tab-bar"] [data-part="tab"]:active { background: color-mix(in srgb, var(--ink-1) 10%, transparent); }
+  .ds-phone .lx-tab-bubble { display: block; position: absolute; left: 0; top: 0; z-index: 0; border-radius: 999px; background: var(--tab-bubble); box-shadow: inset 0 0 0 1px var(--tab-bubble-edge); pointer-events: none; }
+  .ds-phone .lx-tab-lens { display: grid; position: absolute; inset: 0; z-index: 2; grid-auto-flow: column; grid-auto-columns: 1fr; padding: 4px; color: var(--tab-on); pointer-events: none; }
+  .ds-phone .lx-tab-lens-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font: 600 var(--size-12) / 1.1 var(--type-ui); }
+  .ds-phone .lx-tab-lens-item > svg { width: 28px; height: 28px; flex: none; }
+  .ds-phone [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-variant="settings"] { display: none; }
+  .ds-phone [data-part="app-header"] [data-part="settings-button"] { display: grid; }
+
+  /* A session, framed as a phone screen instead of covering this page. */
+  .ds-session-frame { position: relative; width: min(390px, 100%); height: 620px; overflow: hidden; border: 1px solid var(--edge); border-radius: 36px; background: var(--canvas); }
+  .ds-session-frame [data-part="session"] { position: absolute; inset: 0; z-index: auto; }
+
+  .ds-settings-demo { display: flex; flex-direction: column; gap: var(--space-5); padding: var(--space-4); border: 1px solid var(--hair); border-radius: var(--radius-24); }
+  .ds-settings-demo [data-part="app-header"] { position: static; padding: 0; }
+  .ds-demo-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+  .ds-rules { display: flex; flex-direction: column; gap: var(--space-1); max-width: 72ch; margin: 0; padding-left: 1.2em; color: var(--ink-2); }
+  .ds-slots { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); max-width: 520px; }
+  .ds-slot { display: grid; place-items: center; min-height: 72px; border: 1px dashed var(--edge); border-radius: var(--radius-16); }
+
+  .ds-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: var(--space-2); }
+  .ds-swatch { display: grid; grid-template-columns: 40px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: var(--space-2); align-items: center; }
+  .ds-swatch i {
+    grid-row: 1 / 3;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-8);
+    /* A checkerboard under the color shows how transparent it is. */
+    background: linear-gradient(var(--swatch), var(--swatch)), repeating-conic-gradient(rgba(128, 128, 128, 0.35) 0 25%, transparent 0 50%) 50% / 10px 10px;
+  }
+  .ds-swatch code, .ds-value { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .ds-type { display: flex; flex-direction: column; }
+  .ds-type-row { display: grid; grid-template-columns: 190px minmax(0, 1fr); align-items: center; gap: var(--space-4); padding: var(--space-2) 0; border-bottom: 1px solid var(--hair); }
+  .ds-type-sample { font-family: var(--sample-font); font-size: var(--sample-size); line-height: 1.3; overflow-wrap: anywhere; }
+  @media (max-width: 560px) { .ds-type-row { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); } }
+  .ds-radius { width: 56px; height: 56px; border: 1px solid var(--edge-strong); border-radius: var(--sample-radius); background: var(--fill); }
+  .ds-spaces { display: flex; flex-direction: column; gap: var(--space-1); }
+  .ds-space { display: grid; grid-template-columns: 80px auto 1fr; align-items: center; gap: var(--space-3); }
+  .ds-space i { width: var(--sample-space); height: 12px; border-radius: 2px; background: var(--ink-2); }
+  .ds-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: var(--space-2); }
+  .ds-icon { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0; padding: var(--space-3) var(--space-1); border: 1px solid var(--hair); border-radius: var(--radius-12); }
+  .ds-icon .lx-icon { width: 24px; height: 24px; }
+
+  .ds-attrs { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--space-1) var(--space-4); margin: 0; }
+  .ds-attrs dd { margin: 0; }
+  .ds-table-wrap { overflow-x: auto; border: 1px solid var(--hair); border-radius: var(--radius-16); }
+  .ds-table { width: 100%; border-collapse: collapse; font-size: var(--size-14); }
+  .ds-table th { padding: var(--space-2) var(--space-3); color: var(--ink-3); font: 600 var(--size-12) / 1.2 var(--type-ui); text-align: left; }
+  .ds-table td { padding: var(--space-2) var(--space-3); border-top: 1px solid var(--hair); vertical-align: top; }
+  .ds-table code, .ds-attrs code, .ds-type-row code { font: 400 var(--size-12) / 1.4 var(--type-mono); }
+  /* The sign-in buttons at the width the sign-in page gives them. */
+  .ds-sign-in { max-width: 400px; }
+
+  /* The library's demos (design-library.js). */
+  .ds-cover { width: 104px; }
+  .ds-progress { width: 160px; }
+  .ds-scrim-frame { position: relative; display: flex; flex-direction: column; justify-content: flex-end; height: 420px; overflow: hidden; border: 1px solid var(--edge); border-radius: var(--radius-16); }
+  /* Pinned actions in a frame of their own: on a pack's page they sit over the page as it scrolls. */
+  .ds-pinned-frame { position: relative; overflow: hidden; padding: var(--space-6) var(--space-4) 0; border-radius: var(--radius-16); background: var(--canvas); }
+  .ds-pinned-frame [data-part="pinned-actions"] { position: static; }
+  .ds-scrim-frame > [data-part="sheet-scrim"] { position: absolute; inset: 0; background: var(--backdrop); }
+
+  /* The AI section's "…" demo: a sentence with its "…" at the end of the line. */
+  .ds-ask-row { display: flex; align-items: center; gap: var(--space-3); }
+  .ds-ask-row p { flex: 1; margin: 0; font: 500 var(--size-read) / 1.35 var(--type-read); }
+
+  /* Me too's demo: a page's pinned actions, shown in place (not pinned to the demo's foot). */
+  .ds-art-tiles { display: grid; grid-template-columns: repeat(auto-fill, 96px); gap: var(--space-2); }
+  .ds-art-tiles [data-part="picture"] { border-radius: 14px; overflow: hidden; }
+  .ds-art-symbols { display: flex; flex-wrap: wrap; gap: var(--space-2); padding-block: var(--space-3); color: var(--ink-2); }
+  .ds-stamp [data-part="pinned-actions"], .ds-plane [data-part="pinned-actions"] { position: static; margin: 0; padding: var(--space-4) 0 0; background: none; }
+  /* Tinta's peek (the rig's state peek) over a card's top edge: no screen draws it now, so its card is this page's own. The rig clips it at its
+     edge, 16 of its 130 units up from its ground, which is 124 units down its box; so its box starts 108/130 of its height above the card's edge
+     (and the border's pixel), and the card leaves room above it for all of its box. */
+  .ds-peek-card {
+    position: relative;
+    display: grid;
+    margin-top: calc(var(--character-size, 56px) * 108 / 130 + 4px);
+    padding: var(--space-5);
+    border: 1px solid var(--edge);
+    border-radius: var(--radius-24);
+    background: var(--well);
+  }
+  .ds-peek-card h2 { margin: 0; font: 500 var(--size-28) / 1.1 var(--type-head); letter-spacing: var(--track-head); }
+  .ds-peek-card > [data-part="character"] { position: absolute; top: calc(var(--character-size, 56px) * -108 / 130 - 1px); inset-inline-end: calc(var(--space-5) + 44px + var(--space-3)); }
+}

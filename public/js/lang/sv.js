@@ -1,0 +1,33 @@
+// Swedish (lang/index.js has what each field means).
+
+export default {
+  name: "Swedish",
+  locale: "sv-SE",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["t.ex.", "bl.a.", "d.v.s.", "dvs.", "o.s.v.", "osv.", "m.m.", "m.fl.", "m.a.o.", "p.g.a.", "pga.", "s.k.", "e.d.", "o.d.", "etc.", "obs.", "anm.", "f.ö.", "ev.", "inkl.", "exkl.", "ca.", "kl.", "nr.", "s.", "jfr.", "resp.", "f.d.", "fr.o.m.", "t.o.m.", "st.", "tel."],
+  stray: ["att", "som", "fastän", "medan"],
+  patterns: {
+    v2: { name: "Verb second", about: "In a main-clause statement the verb that shows the tense comes second (not always the second word): when a time, a place or a whole clause comes first, the subject follows that verb.", after: ["present"] },
+    question: { name: "Questions: verb first or after the question word", about: "In a yes/no question the verb that shows the tense comes first; after a question word it comes before the subject (unless the question word is the subject). Swedish adds no English-style do.", after: ["v2"] },
+    inte: { name: "Where inte goes", about: "In a main clause, inte (not) normally comes after the verb that shows the tense, and after the subject too when the subject follows that verb.", after: ["v2"] },
+    present: { name: "Present tense", about: "The present is the same for every person and usually ends in -r (jag bor, hon bor); it means both I live and I'm living.", after: [] },
+    modal: { name: "Modal + infinitive", about: "After vill, kan, måste, ska and får, the next verb is a plain infinitive, with no att.", after: [] },
+    future: { name: "Future: ska or kommer att", about: "Swedish uses ska for plans, kommer att for what's going to happen, and often just the present when a time makes it clear (I morgon åker vi).", after: ["modal", "present"] },
+    past: { name: "Past tense", about: "The past tense adds -de, -te or -dde, or changes the vowel (köpte, bodde, åt), and it's the same for every person.", after: ["present"] },
+    perfect: { name: "Perfect: har + supine", about: "har and the supine (ätit, varit, sett) make the perfect, in the same order as English.", after: ["past"] },
+    imperative: { name: "Telling someone to do something", about: "The command form normally has no subject: many verbs drop the infinitive's -a (stänga, stäng; ringa, ring), and -ar verbs keep it (öppna, öppna): Stäng dörren!", after: ["present"] },
+    gender: { name: "En or ett", about: "Every noun is an en word or an ett word, and the words with it match: en stor bil, ett stort kök.", after: [] },
+    definite: { name: "The article on the end", about: "The word for the is an ending on the noun: bil, bilen (the car); hus, huset (the house).", after: ["gender"] },
+    plural: { name: "Plurals", about: "Plurals have several endings, and some none, so learn each with its noun: nyckel, nycklar; sko, skor; år, år.", after: ["gender"] },
+    adjective: { name: "Adjective endings", about: "Adjectives match what they describe: en stor bil, ett stort kök, stora hus, den stora bilen; det counts as an ett word, so det är kallt.", after: ["gender"] },
+    "double-definite": { name: "Adjective + the: den nya bilen", about: "With an adjective, the shows twice: den, det or de in front, and the ending on the noun.", after: ["definite", "adjective"] },
+    possessive: { name: "My, your, our", about: "min, din and vår match the noun: min pappa (an en word), vårt hus (an ett word), mina nycklar (plural).", after: ["gender"] },
+    direction: { name: "Where you are, where you go", about: "Some place words change when you're moving: hemma (at home), hem (home, going there); där (there), dit (to there).", after: [] },
+    particle: { name: "Particle verbs", about: "Some verbs take a stressed little word that changes what they mean (tycka om, to like; komma ihåg, to remember), and it comes before the object.", after: [] },
+    "att-infinitive": { name: "att + infinitive", about: "att before a verb's infinitive is often English to (Jag tycker om att laga mat), and för att is in order to.", after: ["modal"] },
+    "clause-inte": { name: "Clauses: inte before the verb", about: "In a clause after att, om, när or eftersom, the subject normally comes first, then inte, then the verb that shows the tense: att han inte kommer.", after: ["inte"] },
+    "clause-first": { name: "A clause first, then the verb", about: "When a clause like När jag kommer hem comes first, the main clause's verb that shows the tense follows it, before the subject.", after: ["v2"] },
+  },
+};

@@ -1,0 +1,6887 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-az",
+  "name": "Starter: Azerbaijani",
+  "about": "Azerbaijani in real, everyday sentences, with each one's words in Azerbaijani order.",
+  "language": "az",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "qəhvə": "coffee",
+    "çay": "tea",
+    "su": "water",
+    "mən": "I (mənə: to me)",
+    "içmək": "drink",
+    "və": "and",
+    "bir": "one, a",
+    "süd": "milk",
+    "yaxşı": "good, fine",
+    "sən": "you (to a friend; sənə: to you)",
+    "deyil": "not (with a noun or describing word)",
+    "müəllim": "teacher",
+    "tələbə": "student",
+    "ana": "mother, mom",
+    "ata": "father, dad",
+    "qardaş": "brother",
+    "bacı": "sister",
+    "bu": "this",
+    "var": "there is; with a possessed noun: have",
+    "dost": "friend",
+    "həkim": "doctor",
+    "açar": "key",
+    "telefon": "phone",
+    "kitab": "book",
+    "yox": "there isn't (yoxdur)",
+    "hara": "where (haradadır: where is)",
+    "bura": "here, this place",
+    "ora": "there",
+    "tualet": "bathroom, toilet",
+    "iki": "two",
+    "üç": "three",
+    "pul": "money",
+    "danışmaq": "speak, talk",
+    "ingiliscə": "English, in English",
+    "azərbaycanca": "Azerbaijani",
+    "anlamaq": "to understand",
+    "istəmək": "want",
+    "ev": "house, home",
+    "otaq": "room",
+    "böyük": "big",
+    "kiçik": "small, little",
+    "yaşamaq": "live",
+    "getmək": "go",
+    "məktəb": "school",
+    "şəhər": "city",
+    "stansiya": "station",
+    "maşın": "car",
+    "sabah": "tomorrow",
+    "indi": "now",
+    "işləmək": "work",
+    "bilmək": "know; be able to (-a bilər: can)",
+    "ad": "name",
+    "nə": "what",
+    "uşaq": "child (uşaqlar: children)",
+    "masa": "table",
+    "üst": "top (üstündə: on top of)",
+    "soyuducu": "fridge",
+    "mətbəx": "kitchen",
+    "nahar": "lunch (nahar etmək: have lunch)",
+    "hazırlamaq": "prepare, make",
+    "pəncərə": "window",
+    "bağlamaq": "close",
+    "hər": "every",
+    "səhər": "morning",
+    "mənzil": "apartment",
+    "park": "park",
+    "oynamaq": "play",
+    "stəkan": "glass",
+    "vermək": "give",
+    "zəhmət": "trouble (zəhmət olmasa: please)",
+    "olmaq": "be, become",
+    "ət": "meat",
+    "yemək": "eat",
+    "dünən": "yesterday",
+    "restoran": "restaurant",
+    "etmək": "do, make",
+    "neçə": "how many (neçəyə: for how much)",
+    "çörək": "bread",
+    "almaq": "buy; take",
+    "üçün": "for (almaq üçün: to buy)",
+    "mağaza": "store",
+    "balıq": "fish",
+    "sevmək": "love, like",
+    "amma": "but",
+    "bazar": "market",
+    "bağışlamaq": "forgive (bağışlayın: excuse me)",
+    "avtobus": "bus",
+    "iş": "work, job",
+    "qatar": "train",
+    "on": "ten",
+    "dəqiqə": "minute",
+    "gecikmək": "be late",
+    "biz": "we",
+    "tanımaq": "know (a person or place)",
+    "mərkəz": "center",
+    "bilet": "ticket",
+    "kart": "card",
+    "ödəmək": "pay",
+    "gec": "late",
+    "gəlmək": "come",
+    "yağış": "rain",
+    "yağmaq": "fall (of rain or snow)",
+    "zəng": "call (zəng etmək: phone)",
+    "hava": "weather; air",
+    "gün": "day (bu gün: today)",
+    "soyuq": "cold",
+    "həftəsonu": "weekend",
+    "öyrənmək": "learn",
+    "dil": "language",
+    "tez": "early",
+    "durmaq": "get up; stand",
+    "oxumaq": "read",
+    "üzmək": "swim",
+    "yeni": "new",
+    "gözəl": "beautiful, lovely"
+  },
+  "chunks": {
+    "zehmet-olmasa": {
+      "text": "zəhmət olmasa",
+      "en": "please",
+      "about": "Literally if it's no trouble; the same to anyone."
+    },
+    "hello": {
+      "text": "Salam",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "təşəkkür edirəm",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Necəsən",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Hələlik",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Bəli",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Xeyr",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Adın nədir",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Tanış olduğuma şadam",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Bağışlayın",
+      "en": "excuse me"
+    },
+    "how-much-is-it": {
+      "text": "neçəyədir",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Hesab, zəhmət olmasa",
+      "en": "the check, please"
+    },
+    "a-little": {
+      "text": "bir az",
+      "en": "a little"
+    },
+    "see-you-tomorrow": {
+      "text": "Sabah görüşərik",
+      "en": "see you tomorrow"
+    },
+    "today": {
+      "text": "bu gün",
+      "en": "today"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "q-hv-icir-m",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Qəhvə içirəm.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Qəhvə",
+          "qəhvə"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Qəhvə içirəmsən.",
+        "Qəhvə içirəməm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "içirəm",
+          "içirəmsən",
+          "içirəməm"
+        ]
+      }
+    },
+    {
+      "id": "m-n-cay-icir-m",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Mən çay içirəm.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "çay",
+          "çay"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən çay içirsən.",
+        "Mən çay içir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "içirəm",
+          "içirsən",
+          "içir"
+        ]
+      }
+    },
+    {
+      "id": "m-n-su-icir-m",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Mən su içirəm.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "su",
+          "su"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən su içirsən.",
+        "Mən su içirəməm."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "içirəm",
+          "içirsən",
+          "içirəməm"
+        ]
+      }
+    },
+    {
+      "id": "m-n-q-hv-v-cay-icir-m",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Mən qəhvə və çay içirəm.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "qəhvə",
+          "qəhvə"
+        ],
+        [
+          "və",
+          "və"
+        ],
+        [
+          "çay",
+          "çay"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən qəhvə və çay içirsən.",
+        "Mən qəhvə və çay içir."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "içirəm",
+          "içirsən",
+          "içir"
+        ]
+      }
+    },
+    {
+      "id": "m-n-cay-v-su-icir-m",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Mən çay və su içirəm.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "çay",
+          "çay"
+        ],
+        [
+          "və",
+          "və"
+        ],
+        [
+          "su",
+          "su"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən çay və su içirsən.",
+        "Mən çay və su içirəməm."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "içirəm",
+          "içirsən",
+          "içirəməm"
+        ]
+      }
+    },
+    {
+      "id": "m-n-su-v-q-hv-icir-m",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Mən su və qəhvə içirəm.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "su",
+          "su"
+        ],
+        [
+          "və",
+          "və"
+        ],
+        [
+          "qəhvə",
+          "qəhvə"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən su və qəhvə içirsən.",
+        "Mən su və qəhvə içir."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "içirəm",
+          "içirsən",
+          "içir"
+        ]
+      }
+    },
+    {
+      "id": "bir-q-hv-z-hm-t-olmasa",
+      "topic": "food",
+      "concepts": [
+        "adjective-bir"
+      ],
+      "chunks": [
+        "zehmet-olmasa"
+      ],
+      "text": "Bir qəhvə, zəhmət olmasa.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Bir",
+          "bir"
+        ],
+        [
+          "qəhvə,",
+          "qəhvə"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bir qəhvələr, zəhmət olmasa.",
+        "Bir qəhvəlar, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qəhvə,",
+          "qəhvələr,",
+          "qəhvəlar,"
+        ]
+      }
+    },
+    {
+      "id": "salam-bir-q-hv-z-hm-t-olmasa",
+      "topic": "food",
+      "concepts": [
+        "adjective-bir"
+      ],
+      "chunks": [
+        "zehmet-olmasa",
+        "hello"
+      ],
+      "text": "Salam, bir qəhvə, zəhmət olmasa.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Salam,"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "qəhvə,",
+          "qəhvə"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salam, bir qəhvələr, zəhmət olmasa.",
+        "Salam, bir qəhvəlar, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "qəhvə,",
+          "qəhvələr,",
+          "qəhvəlar,"
+        ]
+      }
+    },
+    {
+      "id": "bir-cay-v-bir-su-z-hm-t-olmasa",
+      "topic": "food",
+      "concepts": [
+        "adjective-bir"
+      ],
+      "chunks": [
+        "zehmet-olmasa"
+      ],
+      "text": "Bir çay və bir su, zəhmət olmasa.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Bir",
+          "bir"
+        ],
+        [
+          "çay",
+          "çay"
+        ],
+        [
+          "və",
+          "və"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "su,",
+          "su"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bir çaylar və bir su, zəhmət olmasa.",
+        "Bir çay və bir sular, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "çay",
+          "çaylar",
+          "çaylər"
+        ]
+      }
+    },
+    {
+      "id": "bir-q-hv-t-s-kkur-edir-m",
+      "topic": "food",
+      "concepts": [
+        "adjective-bir"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Bir qəhvə, təşəkkür edirəm.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Bir",
+          "bir"
+        ],
+        [
+          "qəhvə,",
+          "qəhvə"
+        ],
+        [
+          "təşəkkür"
+        ],
+        [
+          "edirəm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bir qəhvələr, təşəkkür edirəm.",
+        "Bir qəhvəlar, təşəkkür edirəm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qəhvə,",
+          "qəhvələr,",
+          "qəhvəlar,"
+        ]
+      }
+    },
+    {
+      "id": "salam-bir-cay-z-hm-t-olmasa",
+      "topic": "food",
+      "concepts": [
+        "adjective-bir"
+      ],
+      "chunks": [
+        "zehmet-olmasa",
+        "hello"
+      ],
+      "text": "Salam! Bir çay, zəhmət olmasa.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Salam!"
+        ],
+        [
+          "Bir",
+          "bir"
+        ],
+        [
+          "çay,",
+          "çay"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salam! Bir çaylar, zəhmət olmasa.",
+        "Salam! Bir çaylər, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "çay,",
+          "çaylar,",
+          "çaylər,"
+        ]
+      }
+    },
+    {
+      "id": "m-n-sud-icir-m",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Mən süd içirəm.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "süd",
+          "süd"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən süd içirsən.",
+        "Mən süd içir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "içirəm",
+          "içirsən",
+          "içir"
+        ]
+      }
+    },
+    {
+      "id": "salam-nec-s-n",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "question-word"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Salam! Necəsən?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Salam!"
+        ],
+        [
+          "Necəsən"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salam! Necəyəm sən?",
+        "Salam! Necədir sən?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Necəsən",
+          "Necəyəm",
+          "Necədir"
+        ]
+      }
+    },
+    {
+      "id": "yaxs-yam-t-s-kkur-edir-m",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "vowel-harmony"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Yaxşıyam, təşəkkür edirəm.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Yaxşıyam,",
+          "yaxşı"
+        ],
+        [
+          "təşəkkür"
+        ],
+        [
+          "edirəm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yaxşıyəm, təşəkkür edirəm.",
+        "Yaxşıam, təşəkkür edirəm."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Yaxşıyam,",
+          "Yaxşıyəm,",
+          "Yaxşıam,"
+        ]
+      }
+    },
+    {
+      "id": "b-li-z-hm-t-olmasa",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "zehmet-olmasa",
+        "yes"
+      ],
+      "text": "Bəli, zəhmət olmasa.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Bəli,"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bəli, zəhmət olmasam.",
+        "Bəli, zəhmət olmasan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "olmasa",
+          "olmasam",
+          "olmasan"
+        ]
+      }
+    },
+    {
+      "id": "xeyr-t-s-kkur-edir-m",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Xeyr, təşəkkür edirəm.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Xeyr,"
+        ],
+        [
+          "təşəkkür"
+        ],
+        [
+          "edirəm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xeyr, təşəkkür edirəmsən.",
+        "Xeyr, təşəkkür edirəməm."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "edirəm",
+          "edirəmsən",
+          "edirəməm"
+        ]
+      }
+    },
+    {
+      "id": "b-li-t-s-kkur-edir-m-h-l-lik",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Bəli, təşəkkür edirəm. Hələlik!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Bəli,"
+        ],
+        [
+          "təşəkkür"
+        ],
+        [
+          "edirəm."
+        ],
+        [
+          "Hələlik"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bəli, təşəkkür edirəmsən. Hələlik!",
+        "Bəli, təşəkkür edirəməm. Hələlik!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "edirəm.",
+          "edirəmsən.",
+          "edirəməm."
+        ]
+      }
+    },
+    {
+      "id": "xeyr-t-s-kkur-edir-m-h-l-lik",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Xeyr, təşəkkür edirəm. Hələlik!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Xeyr,"
+        ],
+        [
+          "təşəkkür"
+        ],
+        [
+          "edirəm."
+        ],
+        [
+          "Hələlik"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xeyr, təşəkkür edirəmsən. Hələlik!",
+        "Xeyr, təşəkkür edirəməm. Hələlik!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "edirəm.",
+          "edirəmsən.",
+          "edirəməm."
+        ]
+      }
+    },
+    {
+      "id": "m-n-mu-llim-m",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "endings"
+      ],
+      "text": "Mən müəlliməm.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "müəlliməm",
+          "müəllim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən müəllimsən.",
+        "Mən müəllimdir."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "müəlliməm",
+          "müəllimsən",
+          "müəllimdir"
+        ]
+      }
+    },
+    {
+      "id": "s-n-t-l-b-s-n",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "endings"
+      ],
+      "text": "Sən tələbəsən.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Sən",
+          "sən"
+        ],
+        [
+          "tələbəsən",
+          "tələbə"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sən tələbəyəm.",
+        "Sən tələbədir."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tələbəsən",
+          "tələbəyəm",
+          "tələbədir"
+        ]
+      }
+    },
+    {
+      "id": "salam-tan-s-olduguma-sadam",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Salam! Tanış olduğuma şadam.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Salam!"
+        ],
+        [
+          "Tanış"
+        ],
+        [
+          "olduğuma"
+        ],
+        [
+          "şadam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "to have met you"
+        ],
+        [
+          "I am glad"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salam! Tanış olduğuma şadamam.",
+        "Salam! Tanış olduğuma şadəm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "şadam",
+          "şadsan",
+          "şadəm"
+        ]
+      }
+    },
+    {
+      "id": "s-n-mu-llims-n",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "endings"
+      ],
+      "text": "Sən müəllimsən?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Sən",
+          "sən"
+        ],
+        [
+          "müəllimsən",
+          "müəllim"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sən müəlliməm?",
+        "Sən müəllimdir?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "müəllimsən",
+          "müəlliməm",
+          "müəllimdir"
+        ]
+      }
+    },
+    {
+      "id": "m-n-mu-llim-deyil-m",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "copula"
+      ],
+      "text": "Mən müəllim deyiləm.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "müəllim",
+          "müəllim"
+        ],
+        [
+          "deyiləm",
+          "deyil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "am not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən müəllim deyilsən.",
+        "Mən müəllim deyildir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "deyiləm",
+          "deyilsən",
+          "deyildir"
+        ]
+      }
+    },
+    {
+      "id": "atam-mu-llimdir",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Atam müəllimdir.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Atam",
+          "ata"
+        ],
+        [
+          "müəllimdir",
+          "müəllim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My father"
+        ],
+        [
+          "is a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Atam müəlliməm.",
+        "Atam müəllimsən."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "müəllimdir",
+          "müəlliməm",
+          "müəllimsən"
+        ]
+      }
+    },
+    {
+      "id": "bu-m-nim-anamd-r",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Bu mənim anamdır.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "mənim",
+          "mən"
+        ],
+        [
+          "anamdır",
+          "ana"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu mənim anandır.",
+        "Bu mənim anasıdır."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "anamdır",
+          "anandır",
+          "anasıdır"
+        ]
+      }
+    },
+    {
+      "id": "bu-m-nim-atamd-r",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Bu mənim atamdır.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "mənim",
+          "mən"
+        ],
+        [
+          "atamdır",
+          "ata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu mənim atandır.",
+        "Bu mənim atasıdır."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "atamdır",
+          "atandır",
+          "atasıdır"
+        ]
+      }
+    },
+    {
+      "id": "qardas-m-t-l-b-dir",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Qardaşım tələbədir.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Qardaşım",
+          "qardaş"
+        ],
+        [
+          "tələbədir",
+          "tələbə"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "is a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Qardaşım tələbəyəm.",
+        "Qardaşım tələbəsən."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tələbədir",
+          "tələbəyəm",
+          "tələbəsən"
+        ]
+      }
+    },
+    {
+      "id": "bu-m-nim-bac-md-r",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Bu mənim bacımdır.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "mənim",
+          "mən"
+        ],
+        [
+          "bacımdır",
+          "bacı"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is my sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu mənim bacındır.",
+        "Bu mənim bacısıdır."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bacımdır",
+          "bacındır",
+          "bacısıdır"
+        ]
+      }
+    },
+    {
+      "id": "m-nim-anam-yaxs-d-r",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Mənim anam yaxşıdır.",
+      "means": "My mother is well.",
+      "words": [
+        [
+          "Mənim",
+          "mən"
+        ],
+        [
+          "anam",
+          "ana"
+        ],
+        [
+          "yaxşıdır",
+          "yaxşı"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mənim anan yaxşıdır.",
+        "Mənim anam yaxşıyam."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "anam",
+          "anan",
+          "anası"
+        ]
+      }
+    },
+    {
+      "id": "telefonum-var",
+      "topic": "people",
+      "concepts": [
+        "var-yox",
+        "possessive",
+        "vowel-harmony"
+      ],
+      "text": "Telefonum var.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Telefonum",
+          "telefon"
+        ],
+        [
+          "var",
+          "var"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My phone"
+        ],
+        [
+          "exists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telefonım var.",
+        "Telefonumlar var."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Telefonum",
+          "Telefonım",
+          "Telefonumlar"
+        ]
+      }
+    },
+    {
+      "id": "acar-n-var",
+      "topic": "people",
+      "concepts": [
+        "var-yox",
+        "possessive",
+        "vowel-harmony"
+      ],
+      "text": "Açarın var?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Açarın",
+          "açar"
+        ],
+        [
+          "var",
+          "var"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Your key"
+        ],
+        [
+          "exists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Açarin var?",
+        "Açarınlar var?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Açarın",
+          "Açarin",
+          "Açarınlar"
+        ]
+      }
+    },
+    {
+      "id": "kitab-m-yoxdur",
+      "topic": "people",
+      "concepts": [
+        "var-yox",
+        "negation",
+        "possessive"
+      ],
+      "text": "Kitabım yoxdur.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Kitabım",
+          "kitab"
+        ],
+        [
+          "yoxdur",
+          "yox"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My book"
+        ],
+        [
+          "does not exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kitabim yoxdur.",
+        "Kitabım yoxdür."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "yoxdur",
+          "yoxdür",
+          "yoxdir"
+        ]
+      }
+    },
+    {
+      "id": "bac-m-h-kimdir",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Bacım həkimdir.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Bacım",
+          "bacı"
+        ],
+        [
+          "həkimdir",
+          "həkim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bacım həkiməm.",
+        "Bacım həkimsən."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "həkimdir",
+          "həkiməm",
+          "həkimsən"
+        ]
+      }
+    },
+    {
+      "id": "s-n-yaxs-dostsan",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "endings"
+      ],
+      "text": "Sən yaxşı dostsan.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Sən",
+          "sən"
+        ],
+        [
+          "yaxşı",
+          "yaxşı"
+        ],
+        [
+          "dostsan",
+          "dost"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "good"
+        ],
+        [
+          "are a friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sən yaxşı dostam.",
+        "Sən yaxşı dostdur."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dostsan",
+          "dostam",
+          "dostdur"
+        ]
+      }
+    },
+    {
+      "id": "telefonum-buradad-r",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative",
+        "copula"
+      ],
+      "text": "Telefonum buradadır.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Telefonum",
+          "telefon"
+        ],
+        [
+          "buradadır",
+          "bura"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My phone"
+        ],
+        [
+          "is here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telefonum buradayam.",
+        "Telefonum buradasan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "buradadır",
+          "buradayam",
+          "buradasan"
+        ]
+      }
+    },
+    {
+      "id": "acar-oradad-r",
+      "topic": "out",
+      "concepts": [
+        "locative",
+        "copula"
+      ],
+      "text": "Açar oradadır.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Açar",
+          "açar"
+        ],
+        [
+          "oradadır",
+          "ora"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Açar oradayam.",
+        "Açar oradasan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "oradadır",
+          "oradayam",
+          "oradasan"
+        ]
+      }
+    },
+    {
+      "id": "bag-slay-n-tualet-haradad-r",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "locative",
+        "copula"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Bağışlayın, tualet haradadır?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Bağışlayın,"
+        ],
+        [
+          "tualet",
+          "tualet"
+        ],
+        [
+          "haradadır",
+          "hara"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "the bathroom"
+        ],
+        [
+          "where is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bağışlayın, tualet haradayam?",
+        "Bağışlayın, tualet haradasan?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "haradadır",
+          "haradayam",
+          "haradasan"
+        ]
+      }
+    },
+    {
+      "id": "acar-m-haradad-r",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "question-word",
+        "locative",
+        "copula"
+      ],
+      "text": "Açarım haradadır?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Açarım",
+          "açar"
+        ],
+        [
+          "haradadır",
+          "hara"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My key"
+        ],
+        [
+          "where is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Açarım haradayam?",
+        "Açarım haradasan?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "haradadır",
+          "haradayam",
+          "haradasan"
+        ]
+      }
+    },
+    {
+      "id": "anam-haradad-r",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "question-word",
+        "locative",
+        "copula"
+      ],
+      "text": "Anam haradadır?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Anam",
+          "ana"
+        ],
+        [
+          "haradadır",
+          "hara"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "where is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Anam haradayam?",
+        "Anam haradasan?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "haradadır",
+          "haradayam",
+          "haradasan"
+        ]
+      }
+    },
+    {
+      "id": "bac-m-buradad-r",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative",
+        "copula"
+      ],
+      "text": "Bacım buradadır.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Bacım",
+          "bacı"
+        ],
+        [
+          "buradadır",
+          "bura"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bacım buradayam.",
+        "Bacım buradasan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "buradadır",
+          "buradayam",
+          "buradasan"
+        ]
+      }
+    },
+    {
+      "id": "iki-q-hv-z-hm-t-olmasa",
+      "topic": "out",
+      "concepts": [
+        "endings"
+      ],
+      "chunks": [
+        "zehmet-olmasa"
+      ],
+      "text": "İki qəhvə, zəhmət olmasa.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "İki",
+          "iki"
+        ],
+        [
+          "qəhvə,",
+          "qəhvə"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "İki qəhvələr, zəhmət olmasa.",
+        "İki qəhvəlar, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qəhvə,",
+          "qəhvələr,",
+          "qəhvəlar,"
+        ]
+      }
+    },
+    {
+      "id": "salam-hesab-z-hm-t-olmasa",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Salam! Hesab, zəhmət olmasa.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Salam!"
+        ],
+        [
+          "Hesab,"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salam! Hesab, zəhmət olmasam.",
+        "Salam! Hesab, zəhmət olmasan."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "olmasa",
+          "olmasam",
+          "olmasan"
+        ]
+      }
+    },
+    {
+      "id": "bir-kitab-z-hm-t-olmasa",
+      "topic": "out",
+      "concepts": [
+        "adjective-bir"
+      ],
+      "chunks": [
+        "zehmet-olmasa"
+      ],
+      "text": "Bir kitab, zəhmət olmasa.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Bir",
+          "bir"
+        ],
+        [
+          "kitab,",
+          "kitab"
+        ],
+        [
+          "zəhmət"
+        ],
+        [
+          "olmasa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bir kitablar, zəhmət olmasa.",
+        "Bir kitablər, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kitab,",
+          "kitablar,",
+          "kitablər,"
+        ]
+      }
+    },
+    {
+      "id": "uc-kitab-m-var",
+      "topic": "out",
+      "concepts": [
+        "var-yox",
+        "possessive",
+        "endings"
+      ],
+      "text": "Üç kitabım var.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Üç",
+          "üç"
+        ],
+        [
+          "kitabım",
+          "kitab"
+        ],
+        [
+          "var",
+          "var"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Three"
+        ],
+        [
+          "my books"
+        ],
+        [
+          "exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Üç kitablarım var.",
+        "Üç kitabim var."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kitabım",
+          "kitablarım",
+          "kitabim"
+        ]
+      }
+    },
+    {
+      "id": "pulum-yoxdur",
+      "topic": "out",
+      "concepts": [
+        "var-yox",
+        "negation",
+        "possessive",
+        "vowel-harmony"
+      ],
+      "text": "Pulum yoxdur.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Pulum",
+          "pul"
+        ],
+        [
+          "yoxdur",
+          "yox"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My money"
+        ],
+        [
+          "does not exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pulım yoxdur.",
+        "Pulum yoxdir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pulum",
+          "Pulım",
+          "Pulim"
+        ]
+      }
+    },
+    {
+      "id": "m-n-bir-az-az-rbaycanca-dan-s-ram",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "chunks": [
+        "a-little"
+      ],
+      "text": "Mən bir az azərbaycanca danışıram.",
+      "means": "I speak a little Azerbaijani.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "bir"
+        ],
+        [
+          "az"
+        ],
+        [
+          "azərbaycanca",
+          "azərbaycanca"
+        ],
+        [
+          "danışıram",
+          "danışmaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Azerbaijani"
+        ],
+        [
+          "speak"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən bir az azərbaycanca danışırsan.",
+        "Mən bir az azərbaycanca danışır."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "danışıram",
+          "danışırsan",
+          "danışır"
+        ]
+      }
+    },
+    {
+      "id": "m-n-anlam-ram",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "negation",
+        "endings"
+      ],
+      "text": "Mən anlamıram.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "anlamıram",
+          "anlamaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən anlamırsan.",
+        "Mən anlamır."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "anlamıram",
+          "anlamırsan",
+          "anlamır"
+        ]
+      }
+    },
+    {
+      "id": "s-n-anlay-rsan",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "text": "Sən anlayırsan?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Sən",
+          "sən"
+        ],
+        [
+          "anlayırsan",
+          "anlamaq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sən anlayıram?",
+        "Sən anlayır?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "anlayırsan",
+          "anlayıram",
+          "anlayır"
+        ]
+      }
+    },
+    {
+      "id": "m-n-bir-q-hv-ist-yir-m",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "endings",
+        "adjective-bir"
+      ],
+      "text": "Mən bir qəhvə istəyirəm.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "qəhvə",
+          "qəhvə"
+        ],
+        [
+          "istəyirəm",
+          "istəmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "want"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən bir qəhvə istəyirsən.",
+        "Mən bir qəhvə istəyir."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "istəyirəm",
+          "istəyirsən",
+          "istəyir"
+        ]
+      }
+    },
+    {
+      "id": "z-hm-t-olmasa-su-ist-yir-m",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "chunks": [
+        "zehmet-olmasa"
+      ],
+      "text": "Zəhmət olmasa, su istəyirəm.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Zəhmət"
+        ],
+        [
+          "olmasa,"
+        ],
+        [
+          "su",
+          "su"
+        ],
+        [
+          "istəyirəm",
+          "istəmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Please"
+        ],
+        [
+          "water"
+        ],
+        [
+          "I want"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zəhmət olmasa, su istəyirəmsən.",
+        "Zəhmət olmasa, su istəyirəməm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "istəyirəm",
+          "istəyirəmsən",
+          "istəyirəməm"
+        ]
+      }
+    },
+    {
+      "id": "otag-m-kicikdir",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Otağım kiçikdir.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Otağım",
+          "otaq"
+        ],
+        [
+          "kiçikdir",
+          "kiçik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My room"
+        ],
+        [
+          "is small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Otağım kiçikəm.",
+        "Otağım kiçiksən."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kiçikdir",
+          "kiçikəm",
+          "kiçiksən"
+        ]
+      }
+    },
+    {
+      "id": "bu-ev-boyukdur",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "vowel-harmony"
+      ],
+      "text": "Bu ev böyükdür.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "ev",
+          "ev"
+        ],
+        [
+          "böyükdür",
+          "böyük"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu ev böyükəm.",
+        "Bu ev böyüksən."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "böyükdür",
+          "böyükəm",
+          "böyüksən"
+        ]
+      }
+    },
+    {
+      "id": "m-n-kicik-bir-evd-yasay-ram",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "present",
+        "adjective-bir",
+        "vowel-harmony"
+      ],
+      "text": "Mən kiçik bir evdə yaşayıram.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "kiçik",
+          "kiçik"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "evdə",
+          "ev"
+        ],
+        [
+          "yaşayıram",
+          "yaşamaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "small"
+        ],
+        [
+          "a"
+        ],
+        [
+          "in a house"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən kiçik bir evdə yaşayırsan.",
+        "Mən kiçik bir evda yaşayıram."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "evdə",
+          "evda",
+          "evə"
+        ]
+      }
+    },
+    {
+      "id": "s-n-harada-yasay-rsan",
+      "topic": "home",
+      "concepts": [
+        "question-word",
+        "locative",
+        "present",
+        "endings"
+      ],
+      "text": "Sən harada yaşayırsan?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Sən",
+          "sən"
+        ],
+        [
+          "harada",
+          "hara"
+        ],
+        [
+          "yaşayırsan",
+          "yaşamaq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "where"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sən harada yaşayıram?",
+        "Sən harada yaşayır?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yaşayırsan",
+          "yaşayıram",
+          "yaşayır"
+        ]
+      }
+    },
+    {
+      "id": "anam-burada-yasay-r",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "locative",
+        "present"
+      ],
+      "text": "Anam burada yaşayır.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Anam",
+          "ana"
+        ],
+        [
+          "burada",
+          "bura"
+        ],
+        [
+          "yaşayır",
+          "yaşamaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "here"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Anam burada yaşayıram.",
+        "Anam burada yaşayırsan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yaşayır",
+          "yaşayıram",
+          "yaşayırsan"
+        ]
+      }
+    },
+    {
+      "id": "m-kt-b-gedir-m",
+      "topic": "out",
+      "concepts": [
+        "dative",
+        "present",
+        "vowel-harmony"
+      ],
+      "text": "Məktəbə gedirəm.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Məktəbə",
+          "məktəb"
+        ],
+        [
+          "gedirəm",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To school"
+        ],
+        [
+          "I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Məktəba gedirəm.",
+        "Məktəbə gedirəmsən."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Məktəbə",
+          "Məktəba",
+          "Məktəbi"
+        ]
+      }
+    },
+    {
+      "id": "s-n-hara-gedirs-n",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "present",
+        "endings"
+      ],
+      "text": "Sən hara gedirsən?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Sən",
+          "sən"
+        ],
+        [
+          "hara",
+          "hara"
+        ],
+        [
+          "gedirsən",
+          "getmək"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "where"
+        ],
+        [
+          "are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sən hara gedirəm?",
+        "Sən hara gedir?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gedirsən",
+          "gedirəm",
+          "gedir"
+        ]
+      }
+    },
+    {
+      "id": "anam-s-h-r-gedir",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "dative",
+        "present"
+      ],
+      "text": "Anam şəhərə gedir.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Anam",
+          "ana"
+        ],
+        [
+          "şəhərə",
+          "şəhər"
+        ],
+        [
+          "gedir",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Anam şəhərə gedirəm.",
+        "Anam şəhərə gedirsən."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gedir",
+          "gedirəm",
+          "gedirsən"
+        ]
+      }
+    },
+    {
+      "id": "bu-mas-n-kicikdir",
+      "topic": "out",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Bu maşın kiçikdir.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "maşın",
+          "maşın"
+        ],
+        [
+          "kiçikdir",
+          "kiçik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu maşın kiçikəm.",
+        "Bu maşın kiçiksən."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kiçikdir",
+          "kiçikəm",
+          "kiçiksən"
+        ]
+      }
+    },
+    {
+      "id": "mas-n-m-var",
+      "topic": "out",
+      "concepts": [
+        "var-yox",
+        "possessive",
+        "vowel-harmony"
+      ],
+      "text": "Maşınım var.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Maşınım",
+          "maşın"
+        ],
+        [
+          "var",
+          "var"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My car"
+        ],
+        [
+          "exists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Maşınim var.",
+        "Maşınımlar var."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Maşınım",
+          "Maşınim",
+          "Maşınımlar"
+        ]
+      }
+    },
+    {
+      "id": "bu-gun-isl-yir-m",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "endings"
+      ],
+      "chunks": [
+        "today"
+      ],
+      "text": "Bu gün işləyirəm.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Bu"
+        ],
+        [
+          "gün"
+        ],
+        [
+          "işləyirəm",
+          "işləmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu gün işləyirəmsən.",
+        "Bu gün işləyirəməm."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "işləyirəm",
+          "işləyirəmsən",
+          "işləyirəməm"
+        ]
+      }
+    },
+    {
+      "id": "sabah-s-h-r-gedir-m",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "present"
+      ],
+      "text": "Sabah şəhərə gedirəm.",
+      "means": "Tomorrow I go to the city.",
+      "words": [
+        [
+          "Sabah",
+          "sabah"
+        ],
+        [
+          "şəhərə",
+          "şəhər"
+        ],
+        [
+          "gedirəm",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sabah şəhəra gedirəm.",
+        "Sabah şəhərə gedirəmsən."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "şəhərə",
+          "şəhəra",
+          "şəhəri"
+        ]
+      }
+    },
+    {
+      "id": "bu-gun-ged-bilmir-m",
+      "topic": "plans",
+      "concepts": [
+        "ability",
+        "negation",
+        "present"
+      ],
+      "chunks": [
+        "today"
+      ],
+      "text": "Bu gün gedə bilmirəm.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Bu"
+        ],
+        [
+          "gün"
+        ],
+        [
+          "gedə",
+          "getmək"
+        ],
+        [
+          "bilmirəm",
+          "bilmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "go"
+        ],
+        [
+          "I cannot"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu gün gedirəm bilmirəm.",
+        "Bu gün getmək bilmirəm."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gedə",
+          "gedirəm",
+          "getmək"
+        ]
+      }
+    },
+    {
+      "id": "sabah-isl-m-liy-m",
+      "topic": "plans",
+      "concepts": [
+        "necessity",
+        "endings"
+      ],
+      "text": "Sabah işləməliyəm.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Sabah",
+          "sabah"
+        ],
+        [
+          "işləməliyəm",
+          "işləmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I have to work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sabah işləməliyəməm.",
+        "Sabah işləməliyamsan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "işləməliyəm",
+          "işləməliyəməm",
+          "işləməliyamsan"
+        ]
+      }
+    },
+    {
+      "id": "t-s-kkur-edir-m-sabah-gorus-rik",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "see-you-tomorrow"
+      ],
+      "text": "Təşəkkür edirəm. Sabah görüşərik!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Təşəkkür"
+        ],
+        [
+          "edirəm."
+        ],
+        [
+          "Sabah"
+        ],
+        [
+          "görüşərik"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Təşəkkür edirəmsən. Sabah görüşərik!",
+        "Təşəkkür edirəməm. Sabah görüşərik!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "edirəm.",
+          "edirəmsən.",
+          "edirəməm."
+        ]
+      }
+    },
+    {
+      "id": "adin-nedir",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "question-word"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Adın nədir?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Adın"
+        ],
+        [
+          "nədir"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Your name"
+        ],
+        [
+          "what is",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "nədir"
+      ],
+      "wrong": [
+        "Adın nədirsən?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Adın",
+          "Adım",
+          "Adı"
+        ]
+      }
+    },
+    {
+      "id": "men-amerikadanam",
+      "topic": "people",
+      "concepts": [
+        "ablative",
+        "copula"
+      ],
+      "text": "Mən Amerikadanam.",
+      "means": "I'm from America.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "Amerikadanam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "from America I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən Amerikadandır."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Amerikadanam",
+          "Amerikadayam",
+          "Amerikayam"
+        ]
+      }
+    },
+    {
+      "id": "anam-muellimdir",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Anam müəllimdir.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Anam",
+          "ana"
+        ],
+        [
+          "müəllimdir",
+          "müəllim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "teacher is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Anam müəlliməm."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Anam",
+          "Anan",
+          "Anası"
+        ]
+      }
+    },
+    {
+      "id": "bir-qardasim-ve-bir-bacim-var",
+      "topic": "people",
+      "concepts": [
+        "var-yox",
+        "possessive"
+      ],
+      "text": "Bir qardaşım və bir bacım var.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Bir",
+          "bir"
+        ],
+        [
+          "qardaşım",
+          "qardaş"
+        ],
+        [
+          "və",
+          "və"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "bacım",
+          "bacı"
+        ],
+        [
+          "var",
+          "var"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "my brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "my sister"
+        ],
+        [
+          "there is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "var"
+      ],
+      "wrong": [
+        "Mən bir qardaş və bir bacı var."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "var",
+          "yox",
+          "deyil"
+        ]
+      }
+    },
+    {
+      "id": "atam-bakida-isleyir",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "present"
+      ],
+      "text": "Atam Bakıda işləyir.",
+      "means": "My dad works in Baku.",
+      "words": [
+        [
+          "Atam",
+          "ata"
+        ],
+        [
+          "Bakıda"
+        ],
+        [
+          "işləyir",
+          "işləmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My dad"
+        ],
+        [
+          "in Baku"
+        ],
+        [
+          "works",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "işləyir"
+      ],
+      "wrong": [
+        "Atam Bakıda işləyirəm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Bakıda",
+          "Bakıya",
+          "Bakıdan"
+        ]
+      }
+    },
+    {
+      "id": "usaqlariniz-var",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "var-yox"
+      ],
+      "text": "Uşaqlarınız var?",
+      "means": "Do you have children?",
+      "words": [
+        [
+          "Uşaqlarınız",
+          "uşaq"
+        ],
+        [
+          "var",
+          "var"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Your children"
+        ],
+        [
+          "there are",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "var"
+      ],
+      "wrong": [
+        "Uşaqlarınız varsınız?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Uşaqlarınız",
+          "Uşaqlarım",
+          "Uşaqlar"
+        ]
+      }
+    },
+    {
+      "id": "qardasim-ingilisce-danismir",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Qardaşım ingiliscə danışmır.",
+      "means": "My brother doesn't speak English.",
+      "words": [
+        [
+          "Qardaşım",
+          "qardaş"
+        ],
+        [
+          "ingiliscə",
+          "ingiliscə"
+        ],
+        [
+          "danışmır",
+          "danışmaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "in English"
+        ],
+        [
+          "doesn't speak",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "danışmır"
+      ],
+      "wrong": [
+        "Qardaşım ingiliscə danışır deyil."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "danışmır",
+          "danışır",
+          "danışmıram"
+        ]
+      }
+    },
+    {
+      "id": "men-hekim-deyilem",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "copula"
+      ],
+      "text": "Mən həkim deyiləm.",
+      "means": "I'm not a doctor.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "həkim",
+          "həkim"
+        ],
+        [
+          "deyiləm",
+          "deyil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "doctor"
+        ],
+        [
+          "not I am",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "deyiləm"
+      ],
+      "wrong": [
+        "Mən həkim yoxam."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "deyiləm",
+          "deyil",
+          "yoxam"
+        ]
+      }
+    },
+    {
+      "id": "evimiz-boyukdur",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "vowel-harmony"
+      ],
+      "text": "Evimiz böyükdür.",
+      "means": "Our house is big.",
+      "words": [
+        [
+          "Evimiz",
+          "ev"
+        ],
+        [
+          "böyükdür",
+          "böyük"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Our house"
+        ],
+        [
+          "big is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Evimiz böyükdir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Evimiz",
+          "Evim",
+          "Eviniz"
+        ]
+      }
+    },
+    {
+      "id": "acarlar-masanin-ustundedir",
+      "topic": "home",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Açarlar masanın üstündədir.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Açarlar",
+          "açar"
+        ],
+        [
+          "masanın",
+          "masa"
+        ],
+        [
+          "üstündədir",
+          "üst"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The keys"
+        ],
+        [
+          "the table's"
+        ],
+        [
+          "on its top is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Açarlar masanın üstünədir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "üstündədir",
+          "üstünə",
+          "üstündən"
+        ]
+      }
+    },
+    {
+      "id": "soyuducuda-sud-yoxdur",
+      "topic": "home",
+      "concepts": [
+        "var-yox",
+        "locative"
+      ],
+      "text": "Soyuducuda süd yoxdur.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Soyuducuda",
+          "soyuducu"
+        ],
+        [
+          "süd",
+          "süd"
+        ],
+        [
+          "yoxdur",
+          "yox"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "there isn't",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "yoxdur"
+      ],
+      "wrong": [
+        "Soyuducuda süd deyil."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yoxdur",
+          "vardır",
+          "deyil"
+        ]
+      }
+    },
+    {
+      "id": "anam-metbexde-nahar-hazirlayir",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "locative"
+      ],
+      "text": "Anam mətbəxdə nahar hazırlayır.",
+      "means": "My mom is making lunch in the kitchen.",
+      "words": [
+        [
+          "Anam",
+          "ana"
+        ],
+        [
+          "mətbəxdə",
+          "mətbəx"
+        ],
+        [
+          "nahar",
+          "nahar"
+        ],
+        [
+          "hazırlayır",
+          "hazırlamaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "in the kitchen"
+        ],
+        [
+          "lunch"
+        ],
+        [
+          "is making",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "hazırlayır"
+      ],
+      "wrong": [
+        "Anam mətbəxdə nahar hazırlayıram."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hazırlayır",
+          "hazırladı",
+          "hazırlayacaq"
+        ]
+      }
+    },
+    {
+      "id": "penceren-baglaya-bilersen",
+      "topic": "home",
+      "concepts": [
+        "ability",
+        "accusative"
+      ],
+      "text": "Pəncərəni bağlaya bilərsən?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Pəncərəni",
+          "pəncərə"
+        ],
+        [
+          "bağlaya",
+          "bağlamaq"
+        ],
+        [
+          "bilərsən",
+          "bilmək"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The window"
+        ],
+        [
+          "close"
+        ],
+        [
+          "can you",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "bilərsən"
+      ],
+      "wrong": [
+        "Pəncərəni bağlamaq bilərsən?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bilərsən",
+          "bilərəm",
+          "bilər"
+        ]
+      }
+    },
+    {
+      "id": "men-her-seher-qehve-icirem",
+      "topic": "home",
+      "concepts": [
+        "endings",
+        "present"
+      ],
+      "text": "Mən hər səhər qəhvə içirəm.",
+      "means": "I drink coffee every morning.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "hər",
+          "hər"
+        ],
+        [
+          "səhər",
+          "səhər"
+        ],
+        [
+          "qəhvə",
+          "qəhvə"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "every morning"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "drink",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "içirəm"
+      ],
+      "wrong": [
+        "Mən hər səhər qəhvə içir."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "içirəm",
+          "içir",
+          "içirsən"
+        ]
+      }
+    },
+    {
+      "id": "kicik-bir-menzilde-yasayiriq",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "endings",
+        "adjective-bir"
+      ],
+      "text": "Kiçik bir mənzildə yaşayırıq.",
+      "means": "We live in a small apartment.",
+      "words": [
+        [
+          "Kiçik",
+          "kiçik"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "mənzildə",
+          "mənzil"
+        ],
+        [
+          "yaşayırıq",
+          "yaşamaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small"
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "in apartment"
+        ],
+        [
+          "we live",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bir",
+        "yaşayırıq"
+      ],
+      "wrong": [
+        "Kiçik bir mənzildə yaşayırıqlar."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mənzildə",
+          "mənzilə",
+          "mənzildən"
+        ]
+      }
+    },
+    {
+      "id": "acarlarim-haradadir",
+      "topic": "home",
+      "concepts": [
+        "plural",
+        "possessive"
+      ],
+      "text": "Açarlarım haradadır?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Açarlarım",
+          "açar"
+        ],
+        [
+          "haradadır",
+          "hara"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My keys"
+        ],
+        [
+          "where are",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "haradadır"
+      ],
+      "wrong": [
+        "Açarlarım haradayam?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Açarlarım",
+          "Açarım",
+          "Açarlar"
+        ]
+      }
+    },
+    {
+      "id": "usaqlar-parkda-oynayirlar",
+      "topic": "home",
+      "concepts": [
+        "vowel-harmony",
+        "locative",
+        "endings"
+      ],
+      "text": "Uşaqlar parkda oynayırlar.",
+      "means": "The kids are playing in the park.",
+      "words": [
+        [
+          "Uşaqlar",
+          "uşaq"
+        ],
+        [
+          "parkda",
+          "park"
+        ],
+        [
+          "oynayırlar",
+          "oynamaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The children"
+        ],
+        [
+          "in the park"
+        ],
+        [
+          "are playing",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "oynayırlar"
+      ],
+      "wrong": [
+        "Uşaqlar parkda oynayıram."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "parkda",
+          "parkdə",
+          "parkdan"
+        ]
+      }
+    },
+    {
+      "id": "cay-icmek-isteyirem",
+      "topic": "food",
+      "concepts": [
+        "infinitive",
+        "endings"
+      ],
+      "text": "Çay içmək istəyirəm.",
+      "means": "I want to drink tea.",
+      "words": [
+        [
+          "Çay",
+          "çay"
+        ],
+        [
+          "içmək",
+          "içmək"
+        ],
+        [
+          "istəyirəm",
+          "istəmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "to drink"
+        ],
+        [
+          "I want",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "istəyirəm"
+      ],
+      "wrong": [
+        "Çay içirəm istəyirəm."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "istəyirəm",
+          "istəyir",
+          "istəyirsən"
+        ]
+      }
+    },
+    {
+      "id": "mene-bir-stekan-su-verin",
+      "topic": "food",
+      "concepts": [
+        "dative"
+      ],
+      "chunks": [
+        "zehmet-olmasa"
+      ],
+      "text": "Mənə bir stəkan su verin, zəhmət olmasa.",
+      "means": "Please give me a glass of water.",
+      "words": [
+        [
+          "Mənə",
+          "mən"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "stəkan",
+          "stəkan"
+        ],
+        [
+          "su",
+          "su"
+        ],
+        [
+          "verin,",
+          "vermək"
+        ],
+        [
+          "zəhmət",
+          "zəhmət"
+        ],
+        [
+          "olmasa",
+          "olmaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "water"
+        ],
+        [
+          "give",
+          true
+        ],
+        [
+          "if no trouble"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "verin,"
+      ],
+      "wrong": [
+        "Mən bir stəkan su verin, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mənə",
+          "Məni",
+          "Məndən"
+        ]
+      }
+    },
+    {
+      "id": "et-yemirem",
+      "topic": "food",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Ət yemirəm.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Ət",
+          "ət"
+        ],
+        [
+          "yemirəm",
+          "yemək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Meat"
+        ],
+        [
+          "I don't eat",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "yemirəm"
+      ],
+      "wrong": [
+        "Ət yeyirəm deyil."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "yemirəm",
+          "yeyirəm",
+          "yemir"
+        ]
+      }
+    },
+    {
+      "id": "dunen-restoranda-nahar-etdik",
+      "topic": "food",
+      "concepts": [
+        "past"
+      ],
+      "text": "Dünən restoranda nahar etdik.",
+      "means": "We had lunch at a restaurant yesterday.",
+      "words": [
+        [
+          "Dünən",
+          "dünən"
+        ],
+        [
+          "restoranda",
+          "restoran"
+        ],
+        [
+          "nahar",
+          "nahar"
+        ],
+        [
+          "etdik",
+          "etmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "at a restaurant"
+        ],
+        [
+          "lunch"
+        ],
+        [
+          "we did",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "etdik"
+      ],
+      "wrong": [
+        "Dünən restoranda nahar etdiklər."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "etdik",
+          "edirik",
+          "edəcəyik"
+        ]
+      }
+    },
+    {
+      "id": "bu-neceyedir",
+      "topic": "food",
+      "concepts": [
+        "question-word"
+      ],
+      "chunks": [
+        "how-much-is-it"
+      ],
+      "text": "Bu neçəyədir?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "neçəyədir"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "for how much is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "neçəyədir"
+      ],
+      "wrong": [
+        "Bu neçəyədirsən?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "neçəyədir",
+          "haradadır",
+          "kimdir"
+        ]
+      }
+    },
+    {
+      "id": "qehveni-sudle-icirem",
+      "topic": "food",
+      "concepts": [
+        "postposition"
+      ],
+      "text": "Qəhvəni südlə içirəm.",
+      "means": "I drink my coffee with milk.",
+      "words": [
+        [
+          "Qəhvəni",
+          "qəhvə"
+        ],
+        [
+          "südlə",
+          "süd"
+        ],
+        [
+          "içirəm",
+          "içmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The coffee"
+        ],
+        [
+          "with milk"
+        ],
+        [
+          "I drink",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "içirəm"
+      ],
+      "wrong": [
+        "Qəhvəni südə içirəm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "südlə",
+          "südə",
+          "süddən"
+        ]
+      }
+    },
+    {
+      "id": "corek-almaq-ucun-magazaya-gedirem",
+      "topic": "food",
+      "concepts": [
+        "dative",
+        "infinitive"
+      ],
+      "text": "Çörək almaq üçün mağazaya gedirəm.",
+      "means": "I'm going to the store to buy bread.",
+      "words": [
+        [
+          "Çörək",
+          "çörək"
+        ],
+        [
+          "almaq",
+          "almaq"
+        ],
+        [
+          "üçün",
+          "üçün"
+        ],
+        [
+          "mağazaya",
+          "mağaza"
+        ],
+        [
+          "gedirəm",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bread"
+        ],
+        [
+          "to buy"
+        ],
+        [
+          "for"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "I'm going",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gedirəm"
+      ],
+      "wrong": [
+        "Çörək alıram üçün mağazaya gedirəm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mağazaya",
+          "mağazada",
+          "mağazadan"
+        ]
+      }
+    },
+    {
+      "id": "baligi-sevirem-amma-eti-sevmirem",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "negation"
+      ],
+      "text": "Balığı sevirəm, amma əti sevmirəm.",
+      "means": "I like fish, but I don't like meat.",
+      "words": [
+        [
+          "Balığı",
+          "balıq"
+        ],
+        [
+          "sevirəm,",
+          "sevmək"
+        ],
+        [
+          "amma",
+          "amma"
+        ],
+        [
+          "əti",
+          "ət"
+        ],
+        [
+          "sevmirəm",
+          "sevmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The fish"
+        ],
+        [
+          "I like",
+          true
+        ],
+        [
+          "but"
+        ],
+        [
+          "the meat"
+        ],
+        [
+          "I don't like",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "sevirəm,",
+        "sevmirəm"
+      ],
+      "wrong": [
+        "Balığı sevirəm, amma əti sevirəm deyil."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Balığı",
+          "Balığa",
+          "Balıqdan"
+        ]
+      }
+    },
+    {
+      "id": "sabah-bazara-gedeceyik",
+      "topic": "food",
+      "concepts": [
+        "future"
+      ],
+      "text": "Sabah bazara gedəcəyik.",
+      "means": "We're going to the market tomorrow.",
+      "words": [
+        [
+          "Sabah",
+          "sabah"
+        ],
+        [
+          "bazara",
+          "bazar"
+        ],
+        [
+          "gedəcəyik",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to the market"
+        ],
+        [
+          "we'll go",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gedəcəyik"
+      ],
+      "wrong": [
+        "Sabah bazara getdik."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gedəcəyik",
+          "getdik",
+          "gedəcəklər"
+        ]
+      }
+    },
+    {
+      "id": "bagislayin-stansiya-haradadir",
+      "topic": "out",
+      "concepts": [
+        "question-word"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Bağışlayın, stansiya haradadır?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Bağışlayın,"
+        ],
+        [
+          "stansiya",
+          "stansiya"
+        ],
+        [
+          "haradadır",
+          "hara"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "the station"
+        ],
+        [
+          "where is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "haradadır"
+      ],
+      "wrong": [
+        "Bağışlayın, stansiya haraya?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "haradadır",
+          "nədir",
+          "kimdir"
+        ]
+      }
+    },
+    {
+      "id": "avtobusla-ise-gedirem",
+      "topic": "out",
+      "concepts": [
+        "postposition",
+        "dative"
+      ],
+      "text": "Avtobusla işə gedirəm.",
+      "means": "I go to work by bus.",
+      "words": [
+        [
+          "Avtobusla",
+          "avtobus"
+        ],
+        [
+          "işə",
+          "iş"
+        ],
+        [
+          "gedirəm",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "By bus"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "I go",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "gedirəm"
+      ],
+      "wrong": [
+        "Avtobusla işdə gedirəm."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Avtobusla",
+          "Avtobusa",
+          "Avtobusdan"
+        ]
+      }
+    },
+    {
+      "id": "qatar-on-deqiqe-gecikir",
+      "topic": "out",
+      "concepts": [
+        "plural"
+      ],
+      "text": "Qatar on dəqiqə gecikir.",
+      "means": "The train is ten minutes late.",
+      "words": [
+        [
+          "Qatar",
+          "qatar"
+        ],
+        [
+          "on",
+          "on"
+        ],
+        [
+          "dəqiqə",
+          "dəqiqə"
+        ],
+        [
+          "gecikir",
+          "gecikmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "ten"
+        ],
+        [
+          "minute"
+        ],
+        [
+          "is late",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gecikir"
+      ],
+      "wrong": [
+        "Qatar on dəqiqələr gecikir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dəqiqə",
+          "dəqiqələr",
+          "dəqiqəni"
+        ]
+      }
+    },
+    {
+      "id": "biz-bakiya-qatarla-getdik",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "dative"
+      ],
+      "text": "Biz Bakıya qatarla getdik.",
+      "means": "We went to Baku by train.",
+      "words": [
+        [
+          "Biz",
+          "biz"
+        ],
+        [
+          "Bakıya"
+        ],
+        [
+          "qatarla",
+          "qatar"
+        ],
+        [
+          "getdik",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "to Baku"
+        ],
+        [
+          "by train"
+        ],
+        [
+          "went",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "getdik"
+      ],
+      "wrong": [
+        "Biz Bakıda qatarla getdik."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "getdik",
+          "gedirik",
+          "gedəcəyik"
+        ]
+      }
+    },
+    {
+      "id": "men-burani-tanimiram",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "negation"
+      ],
+      "text": "Mən buranı tanımıram.",
+      "means": "I don't know this place.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "buranı",
+          "bura"
+        ],
+        [
+          "tanımıram",
+          "tanımaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "this place"
+        ],
+        [
+          "don't know",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "tanımıram"
+      ],
+      "wrong": [
+        "Mən buranı tanıyıram deyil."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "buranı",
+          "buraya",
+          "buradan"
+        ]
+      }
+    },
+    {
+      "id": "sen-ingilisce-danisirsan",
+      "topic": "out",
+      "concepts": [
+        "endings"
+      ],
+      "text": "Sən ingiliscə danışırsan?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Sən",
+          "sən"
+        ],
+        [
+          "ingiliscə",
+          "ingiliscə"
+        ],
+        [
+          "danışırsan",
+          "danışmaq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "in English"
+        ],
+        [
+          "speak",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "danışırsan"
+      ],
+      "wrong": [
+        "Sən ingiliscə danışırsınız?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "danışırsan",
+          "danışıram",
+          "danışır"
+        ]
+      }
+    },
+    {
+      "id": "bu-avtobus-merkeze-gedir",
+      "topic": "out",
+      "concepts": [
+        "dative"
+      ],
+      "text": "Bu avtobus mərkəzə gedir?",
+      "means": "Does this bus go to the center?",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "avtobus",
+          "avtobus"
+        ],
+        [
+          "mərkəzə",
+          "mərkəz"
+        ],
+        [
+          "gedir",
+          "getmək"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "bus"
+        ],
+        [
+          "to the center"
+        ],
+        [
+          "goes",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "gedir"
+      ],
+      "wrong": [
+        "Bu avtobus mərkəzdə gedir?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mərkəzə",
+          "mərkəzdə",
+          "mərkəzdən"
+        ]
+      }
+    },
+    {
+      "id": "iki-bilet-zehmet-olmasa",
+      "topic": "out",
+      "concepts": [
+        "plural"
+      ],
+      "chunks": [
+        "zehmet-olmasa"
+      ],
+      "text": "İki bilet, zəhmət olmasa.",
+      "means": "Two tickets, please.",
+      "words": [
+        [
+          "İki",
+          "iki"
+        ],
+        [
+          "bilet,",
+          "bilet"
+        ],
+        [
+          "zəhmət",
+          "zəhmət"
+        ],
+        [
+          "olmasa",
+          "olmaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "ticket"
+        ],
+        [
+          "if no trouble"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "İki biletlər, zəhmət olmasa."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bilet,",
+          "biletlər,",
+          "biletə,"
+        ]
+      }
+    },
+    {
+      "id": "kartla-odeye-bilerem",
+      "topic": "out",
+      "concepts": [
+        "ability",
+        "postposition"
+      ],
+      "text": "Kartla ödəyə bilərəm?",
+      "means": "Can I pay by card?",
+      "words": [
+        [
+          "Kartla",
+          "kart"
+        ],
+        [
+          "ödəyə",
+          "ödəmək"
+        ],
+        [
+          "bilərəm",
+          "bilmək"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "By card"
+        ],
+        [
+          "pay"
+        ],
+        [
+          "can I",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "bilərəm"
+      ],
+      "wrong": [
+        "Kartla ödəmək bilərəm?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kartla",
+          "Karta",
+          "Kartdan"
+        ]
+      }
+    },
+    {
+      "id": "isden-gec-geldim",
+      "topic": "out",
+      "concepts": [
+        "ablative",
+        "past"
+      ],
+      "text": "İşdən gec gəldim.",
+      "means": "I came home late from work.",
+      "words": [
+        [
+          "İşdən",
+          "iş"
+        ],
+        [
+          "gec",
+          "gec"
+        ],
+        [
+          "gəldim",
+          "gəlmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "From work"
+        ],
+        [
+          "late"
+        ],
+        [
+          "I came",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "gəldim"
+      ],
+      "wrong": [
+        "İşə gec gəldim."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "İşdən",
+          "İşə",
+          "İşdə"
+        ]
+      }
+    },
+    {
+      "id": "sabah-yagis-yagacaq",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Sabah yağış yağacaq.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Sabah",
+          "sabah"
+        ],
+        [
+          "yağış",
+          "yağış"
+        ],
+        [
+          "yağacaq",
+          "yağmaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "will fall"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sabah yağış yağdı."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yağacaq",
+          "yağdı",
+          "yağmadı"
+        ]
+      }
+    },
+    {
+      "id": "sene-sabah-zeng-edeceyem",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "dative"
+      ],
+      "text": "Sənə sabah zəng edəcəyəm.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Sənə",
+          "sən"
+        ],
+        [
+          "sabah",
+          "sabah"
+        ],
+        [
+          "zəng",
+          "zəng"
+        ],
+        [
+          "edəcəyəm",
+          "etmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To you"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "a call"
+        ],
+        [
+          "I'll make",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "edəcəyəm"
+      ],
+      "wrong": [
+        "Səni sabah zəng edəcəyəm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "edəcəyəm",
+          "edəcək",
+          "etdim"
+        ]
+      }
+    },
+    {
+      "id": "indi-getmeliyem",
+      "topic": "plans",
+      "concepts": [
+        "necessity"
+      ],
+      "text": "İndi getməliyəm.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "İndi",
+          "indi"
+        ],
+        [
+          "getməliyəm",
+          "getmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I have to go"
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [],
+      "wrong": [
+        "İndi getməkliyəm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "getməliyəm",
+          "getməlisən",
+          "getməlidir"
+        ]
+      }
+    },
+    {
+      "id": "hava-bu-gun-soyuqdur",
+      "topic": "plans",
+      "concepts": [
+        "vowel-harmony",
+        "copula"
+      ],
+      "text": "Hava bu gün soyuqdur.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Hava",
+          "hava"
+        ],
+        [
+          "bu",
+          "bu"
+        ],
+        [
+          "gün",
+          "gün"
+        ],
+        [
+          "soyuqdur",
+          "soyuq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The weather"
+        ],
+        [
+          "this day"
+        ],
+        [
+          "cold is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hava bu gün soyuqam."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "soyuqdur",
+          "soyuqdır",
+          "soyuqdür"
+        ]
+      }
+    },
+    {
+      "id": "hefte-sonu-ne-edirsen",
+      "topic": "plans",
+      "concepts": [
+        "endings"
+      ],
+      "text": "Həftəsonu nə edirsən?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Həftəsonu",
+          "həftəsonu"
+        ],
+        [
+          "nə",
+          "nə"
+        ],
+        [
+          "edirsən",
+          "etmək"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "At the weekend"
+        ],
+        [
+          "what"
+        ],
+        [
+          "you do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sən həftəsonu nə edirsiniz?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "edirsən",
+          "edirəm",
+          "edir"
+        ]
+      }
+    },
+    {
+      "id": "dunen-bakidan-geldim",
+      "topic": "plans",
+      "concepts": [
+        "ablative"
+      ],
+      "text": "Dünən Bakıdan gəldim.",
+      "means": "I came from Baku yesterday.",
+      "words": [
+        [
+          "Dünən",
+          "dünən"
+        ],
+        [
+          "Bakıdan"
+        ],
+        [
+          "gəldim",
+          "gəlmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "from Baku"
+        ],
+        [
+          "I came",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gəldim"
+      ],
+      "wrong": [
+        "Dünən Bakıda gəldim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Bakıdan",
+          "Bakıya",
+          "Bakıda"
+        ]
+      }
+    },
+    {
+      "id": "azerbaycan-dilini-oyrenmek-isteyirem",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "accusative"
+      ],
+      "text": "Azərbaycan dilini öyrənmək istəyirəm.",
+      "means": "I want to learn Azerbaijani.",
+      "words": [
+        [
+          "Azərbaycan"
+        ],
+        [
+          "dilini",
+          "dil"
+        ],
+        [
+          "öyrənmək",
+          "öyrənmək"
+        ],
+        [
+          "istəyirəm",
+          "istəmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Azerbaijani"
+        ],
+        [
+          "language"
+        ],
+        [
+          "to learn"
+        ],
+        [
+          "I want",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "istəyirəm"
+      ],
+      "wrong": [
+        "Azərbaycan dilini öyrənirəm istəyirəm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dilini",
+          "dilinə",
+          "dilindən"
+        ]
+      }
+    },
+    {
+      "id": "sabah-tez-durmaliyam",
+      "topic": "plans",
+      "concepts": [
+        "necessity"
+      ],
+      "text": "Sabah tez durmalıyam.",
+      "means": "I have to get up early tomorrow.",
+      "words": [
+        [
+          "Sabah",
+          "sabah"
+        ],
+        [
+          "tez",
+          "tez"
+        ],
+        [
+          "durmalıyam",
+          "durmaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "early"
+        ],
+        [
+          "I have to get up"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sabah tez durmaqlıyam."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "durmalıyam",
+          "durmalısan",
+          "durmalıdır"
+        ]
+      }
+    },
+    {
+      "id": "bu-kitabi-oxumalisan",
+      "topic": "plans",
+      "concepts": [
+        "necessity",
+        "accusative"
+      ],
+      "text": "Bu kitabı oxumalısan.",
+      "means": "You should read this book.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "kitabı",
+          "kitab"
+        ],
+        [
+          "oxumalısan",
+          "oxumaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "book"
+        ],
+        [
+          "you should read",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "oxumalısan"
+      ],
+      "wrong": [
+        "Bu kitab oxumalısan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "oxumalısan",
+          "oxumalıyam",
+          "oxuyursan"
+        ]
+      }
+    },
+    {
+      "id": "men-bilmirem",
+      "topic": "plans",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Mən bilmirəm.",
+      "means": "I don't know.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "bilmirəm",
+          "bilmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "don't know"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mən bilirəm deyil."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bilmirəm",
+          "bilirəm",
+          "bilmir"
+        ]
+      }
+    },
+    {
+      "id": "men-uze-bilerem",
+      "topic": "plans",
+      "concepts": [
+        "ability"
+      ],
+      "text": "Mən üzə bilərəm.",
+      "means": "I can swim.",
+      "words": [
+        [
+          "Mən",
+          "mən"
+        ],
+        [
+          "üzə",
+          "üzmək"
+        ],
+        [
+          "bilərəm",
+          "bilmək"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "swim"
+        ],
+        [
+          "can",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "bilərəm"
+      ],
+      "wrong": [
+        "Mən üzmək bilərəm."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bilərəm",
+          "bilər",
+          "bilərsən"
+        ]
+      }
+    },
+    {
+      "id": "yeni-bir-masin-aldiq",
+      "topic": "plans",
+      "concepts": [
+        "adjective-bir",
+        "past"
+      ],
+      "text": "Yeni bir maşın aldıq.",
+      "means": "We bought a new car.",
+      "words": [
+        [
+          "Yeni",
+          "yeni"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "maşın",
+          "maşın"
+        ],
+        [
+          "aldıq",
+          "almaq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "New"
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "car"
+        ],
+        [
+          "we bought",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bir",
+        "aldıq"
+      ],
+      "wrong": [
+        "Yeni bir maşın aldıqlar."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "aldıq",
+          "alırıq",
+          "alacağıq"
+        ]
+      }
+    },
+    {
+      "id": "gozel-bir-gundur",
+      "topic": "plans",
+      "concepts": [
+        "adjective-bir",
+        "vowel-harmony"
+      ],
+      "text": "Gözəl bir gündür.",
+      "means": "It's a beautiful day.",
+      "words": [
+        [
+          "Gözəl",
+          "gözəl"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "gündür",
+          "gün"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Beautiful"
+        ],
+        [
+          "a",
+          true
+        ],
+        [
+          "day is"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bir"
+      ],
+      "wrong": [
+        "Gözəl bir gündir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gündür",
+          "gündir",
+          "gündur"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "qəhvə",
+          "forms": [
+            "qəhvə"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "çay",
+          "forms": [
+            "çay"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "su",
+          "forms": [
+            "su"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "mən",
+          "forms": [
+            "mən"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "içmək",
+          "forms": [
+            "içirəm"
+          ],
+          "picture": "drink",
+          "means": "içirəm = I drink"
+        },
+        {
+          "lemma": "və",
+          "forms": [
+            "və"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "endings",
+        "line": "A verb's ending says who does it, so mən (I), sən (you) and biz (we) are often left out: içirəm (I drink), içirsən (you drink), içirik (we drink)."
+      },
+      "items": [
+        "q-hv-icir-m",
+        "m-n-cay-icir-m",
+        "m-n-su-icir-m",
+        "m-n-q-hv-v-cay-icir-m",
+        "m-n-cay-v-su-icir-m",
+        "m-n-su-v-q-hv-icir-m"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "bir",
+          "forms": [
+            "bir"
+          ],
+          "means": "one, a"
+        },
+        {
+          "lemma": "süd",
+          "forms": [
+            "süd"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "zehmet-olmasa",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "bir-q-hv-z-hm-t-olmasa",
+        "salam-bir-q-hv-z-hm-t-olmasa",
+        "bir-cay-v-bir-su-z-hm-t-olmasa",
+        "bir-q-hv-t-s-kkur-edir-m",
+        "salam-bir-cay-z-hm-t-olmasa",
+        "m-n-sud-icir-m"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "yaxşı",
+          "forms": [
+            "yaxşıyam"
+          ],
+          "means": "yaxşıyam = I am fine"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "copula",
+        "line": "Is is the ending -dır or -dir (and its harmony forms), and I am is -am or -əm: Anam müəllimdir (my-mom teacher-is), Mən Amerikadanam (I from-America-am)."
+      },
+      "items": [
+        "salam-nec-s-n",
+        "yaxs-yam-t-s-kkur-edir-m",
+        "b-li-z-hm-t-olmasa",
+        "xeyr-t-s-kkur-edir-m",
+        "b-li-t-s-kkur-edir-m-h-l-lik",
+        "xeyr-t-s-kkur-edir-m-h-l-lik"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "sən",
+          "forms": [
+            "sən"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "deyil",
+          "forms": [
+            "deyiləm"
+          ],
+          "means": "deyiləm = I am not"
+        },
+        {
+          "lemma": "müəllim",
+          "forms": [
+            "müəlliməm",
+            "müəllimsən",
+            "müəllim"
+          ],
+          "means": "müəlliməm = I am a teacher; müəllimsən = you are a teacher; müəllim = teacher"
+        },
+        {
+          "lemma": "tələbə",
+          "forms": [
+            "tələbəsən"
+          ],
+          "means": "tələbəsən = you are a student"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "m-n-mu-llim-m",
+        "s-n-t-l-b-s-n",
+        "adin-nedir",
+        "salam-tan-s-olduguma-sadam",
+        "s-n-mu-llims-n",
+        "m-n-mu-llim-deyil-m"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ana",
+          "forms": [
+            "anam",
+            "anamdır"
+          ],
+          "picture": "mother",
+          "means": "anam = my mother; anamdır = is my mother"
+        },
+        {
+          "lemma": "ata",
+          "forms": [
+            "atam",
+            "atamdır"
+          ],
+          "picture": "father",
+          "means": "atam = my father; atamdır = is my father"
+        },
+        {
+          "lemma": "qardaş",
+          "forms": [
+            "qardaşım"
+          ],
+          "picture": "brother",
+          "means": "qardaşım = my brother"
+        },
+        {
+          "lemma": "bacı",
+          "forms": [
+            "bacımdır"
+          ],
+          "picture": "sister",
+          "means": "bacımdır = is my sister"
+        },
+        {
+          "lemma": "mən",
+          "forms": [
+            "mənim"
+          ],
+          "means": "mənim = my"
+        },
+        {
+          "lemma": "bu",
+          "forms": [
+            "bu"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "müəllim",
+          "forms": [
+            "müəllimdir"
+          ],
+          "means": "müəllimdir = is a teacher"
+        },
+        {
+          "lemma": "tələbə",
+          "forms": [
+            "tələbədir"
+          ],
+          "means": "tələbədir = is a student"
+        },
+        {
+          "lemma": "yaxşı",
+          "forms": [
+            "yaxşıdır"
+          ],
+          "means": "yaxşıdır = is well"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "Whose something is is an ending: anam (my mom), adın (your name), evimiz (our house), uşaqlarınız (your children)."
+      },
+      "items": [
+        "anam-muellimdir",
+        "atam-mu-llimdir",
+        "bu-m-nim-anamd-r",
+        "bu-m-nim-atamd-r",
+        "qardas-m-t-l-b-dir",
+        "bu-m-nim-bac-md-r",
+        "m-nim-anam-yaxs-d-r"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "var",
+          "forms": [
+            "var"
+          ],
+          "means": "there is; have"
+        },
+        {
+          "lemma": "dost",
+          "forms": [
+            "dostsan"
+          ],
+          "picture": "friend",
+          "means": "dostsan = you are a friend"
+        },
+        {
+          "lemma": "həkim",
+          "forms": [
+            "həkimdir"
+          ],
+          "picture": "doctor",
+          "means": "həkimdir = is a doctor"
+        },
+        {
+          "lemma": "açar",
+          "forms": [
+            "açarın"
+          ],
+          "picture": "key",
+          "means": "açarın = your key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefonum"
+          ],
+          "picture": "phone",
+          "means": "telefonum = my phone"
+        },
+        {
+          "lemma": "kitab",
+          "forms": [
+            "kitabım"
+          ],
+          "picture": "book",
+          "means": "kitabım = my book"
+        },
+        {
+          "lemma": "yox",
+          "forms": [
+            "yoxdur"
+          ],
+          "means": "yoxdur = there is not; do not have"
+        },
+        {
+          "lemma": "bacı",
+          "forms": [
+            "bacım"
+          ],
+          "means": "bacım = my sister"
+        },
+        {
+          "lemma": "yaxşı",
+          "forms": [
+            "yaxşı"
+          ],
+          "means": "good, fine"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "telefonum-var",
+        "acar-n-var",
+        "bir-qardasim-ve-bir-bacim-var",
+        "kitab-m-yoxdur",
+        "bac-m-h-kimdir",
+        "s-n-yaxs-dostsan"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "hara",
+          "forms": [
+            "haradadır"
+          ],
+          "means": "haradadır = where is"
+        },
+        {
+          "lemma": "bura",
+          "forms": [
+            "buradadır"
+          ],
+          "means": "buradadır = is here"
+        },
+        {
+          "lemma": "ora",
+          "forms": [
+            "oradadır"
+          ],
+          "means": "oradadır = is there"
+        },
+        {
+          "lemma": "tualet",
+          "forms": [
+            "tualet"
+          ],
+          "means": "bathroom, toilet"
+        },
+        {
+          "lemma": "açar",
+          "forms": [
+            "açar",
+            "açarım"
+          ],
+          "means": "açar = key; açarım = my key"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "locative",
+        "line": "-da or -də is in or at: evdə (at home), Bakıda (in Baku), soyuducuda (in the fridge)."
+      },
+      "items": [
+        "telefonum-buradad-r",
+        "acar-oradad-r",
+        "bag-slay-n-tualet-haradad-r",
+        "acar-m-haradad-r",
+        "anam-haradad-r",
+        "bac-m-buradad-r"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "iki",
+          "forms": [
+            "İki"
+          ],
+          "picture": "two",
+          "means": "İki = two"
+        },
+        {
+          "lemma": "üç",
+          "forms": [
+            "üç"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "pul",
+          "forms": [
+            "pulum"
+          ],
+          "picture": "money",
+          "means": "pulum = my money"
+        },
+        {
+          "lemma": "kitab",
+          "forms": [
+            "kitab",
+            "kitabım"
+          ],
+          "means": "kitab = book; kitabım = my book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "bu-neceyedir",
+        "iki-q-hv-z-hm-t-olmasa",
+        "salam-hesab-z-hm-t-olmasa",
+        "bir-kitab-z-hm-t-olmasa",
+        "uc-kitab-m-var",
+        "pulum-yoxdur"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "danışmaq",
+          "forms": [
+            "danışırsan",
+            "danışıram"
+          ],
+          "means": "danışırsan = you speak; danışıram = I speak"
+        },
+        {
+          "lemma": "ingiliscə",
+          "forms": [
+            "ingiliscə"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "azərbaycanca",
+          "forms": [
+            "azərbaycanca"
+          ],
+          "means": "Azerbaijani"
+        },
+        {
+          "lemma": "anlamaq",
+          "forms": [
+            "anlamıram",
+            "anlayırsan"
+          ],
+          "means": "anlamıram = I do not understand; anlayırsan = you understand"
+        },
+        {
+          "lemma": "istəmək",
+          "forms": [
+            "istəyirəm"
+          ],
+          "means": "istəyirəm = I want"
+        },
+        {
+          "lemma": "içmək",
+          "forms": [
+            "içmək"
+          ],
+          "means": "to drink"
+        }
+      ],
+      "phrases": [
+        "a-little"
+      ],
+      "concept": {
+        "pattern": "present",
+        "line": "-ır, -ir, -ur or -ür marks what's happening now or usually, with a person ending where needed: işləyir (works), içirəm (I drink), oynayırlar (they play)."
+      },
+      "items": [
+        "sen-ingilisce-danisirsan",
+        "m-n-bir-az-az-rbaycanca-dan-s-ram",
+        "m-n-anlam-ram",
+        "s-n-anlay-rsan",
+        "m-n-bir-q-hv-ist-yir-m",
+        "z-hm-t-olmasa-su-ist-yir-m",
+        "cay-icmek-isteyirem"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "ev",
+          "forms": [
+            "ev",
+            "evdə"
+          ],
+          "picture": "house",
+          "means": "ev = house; evdə = in a house"
+        },
+        {
+          "lemma": "otaq",
+          "forms": [
+            "otağım"
+          ],
+          "picture": "room",
+          "means": "otağım = my room"
+        },
+        {
+          "lemma": "böyük",
+          "forms": [
+            "böyükdür"
+          ],
+          "picture": "big",
+          "means": "böyükdür = is big"
+        },
+        {
+          "lemma": "kiçik",
+          "forms": [
+            "kiçikdir",
+            "kiçik"
+          ],
+          "picture": "small",
+          "means": "kiçikdir = is small; kiçik = small"
+        },
+        {
+          "lemma": "yaşamaq",
+          "forms": [
+            "yaşayıram",
+            "yaşayırsan",
+            "yaşayır"
+          ],
+          "means": "yaşayıram = I live; yaşayırsan = you live; yaşayır = lives"
+        },
+        {
+          "lemma": "hara",
+          "forms": [
+            "harada"
+          ],
+          "means": "harada = where"
+        },
+        {
+          "lemma": "bura",
+          "forms": [
+            "burada"
+          ],
+          "means": "burada = here"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "otag-m-kicikdir",
+        "bu-ev-boyukdur",
+        "m-n-kicik-bir-evd-yasay-ram",
+        "s-n-harada-yasay-rsan",
+        "anam-burada-yasay-r"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "getmək",
+          "forms": [
+            "gedirəm",
+            "gedirsən",
+            "gedir"
+          ],
+          "means": "gedirəm = I go; I am going; gedirsən = you go; you are going; gedir = goes; is going"
+        },
+        {
+          "lemma": "məktəb",
+          "forms": [
+            "məktəbə"
+          ],
+          "picture": "school",
+          "means": "məktəbə = to school"
+        },
+        {
+          "lemma": "şəhər",
+          "forms": [
+            "şəhərə"
+          ],
+          "picture": "city",
+          "means": "şəhərə = to the city"
+        },
+        {
+          "lemma": "stansiya",
+          "forms": [
+            "stansiya"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "maşın",
+          "forms": [
+            "maşın",
+            "maşınım"
+          ],
+          "picture": "car",
+          "means": "maşın = car; maşınım = my car"
+        },
+        {
+          "lemma": "hara",
+          "forms": [
+            "hara"
+          ],
+          "means": "where"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question-word",
+        "line": "A question word stays where its answer would go, and a yes-or-no question can keep a statement's order with the voice rising: Adın nədir?"
+      },
+      "items": [
+        "m-kt-b-gedir-m",
+        "s-n-hara-gedirs-n",
+        "bagislayin-stansiya-haradadir",
+        "anam-s-h-r-gedir",
+        "bu-mas-n-kicikdir",
+        "mas-n-m-var"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "sabah",
+          "forms": [
+            "sabah"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "indi",
+          "forms": [
+            "İndi"
+          ],
+          "means": "İndi = now"
+        },
+        {
+          "lemma": "işləmək",
+          "forms": [
+            "işləyirəm",
+            "işləməliyəm"
+          ],
+          "picture": "work",
+          "means": "işləyirəm = I work; işləməliyəm = I have to work"
+        },
+        {
+          "lemma": "bilmək",
+          "forms": [
+            "bilmirəm"
+          ],
+          "means": "bilmirəm = to know; as an auxiliary after a verb in -a/-ə: to be able to"
+        },
+        {
+          "lemma": "getmək",
+          "forms": [
+            "getməliyəm",
+            "gedə"
+          ],
+          "means": "getməliyəm = I have to go; gedə = go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow",
+        "today"
+      ],
+      "concept": null,
+      "items": [
+        "bu-gun-isl-yir-m",
+        "indi-getmeliyem",
+        "sabah-s-h-r-gedir-m",
+        "bu-gun-ged-bilmir-m",
+        "sabah-isl-m-liy-m",
+        "t-s-kkur-edir-m-sabah-gorus-rik"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

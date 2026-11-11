@@ -1,0 +1,126 @@
+/* Lexicommons — styles for the bones. Tokens follow NeedWright's design system (app/ds/tokens.css on its
+ * design-system branch): monochrome, white ink is the only emphasis, color only for state and always with a word;
+ * Graphite neutrals on black; Instrument Sans UI, Onest headings, Geist Mono for ids and code;
+ * sizes 12/14/16/20/28; radii 8/12/16/24/full; one 32px control height (44px on touch). */
+
+@font-face { font-family: "Instrument Sans"; src: url("/fonts/instrument-sans-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Onest"; src: url("/fonts/onest-var-latin.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0000-00FF, U+0100-017F, U+018F, U+01A0-01A1, U+01AF-01B0, U+0218-021B, U+0259, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0304, U+0306-0309, U+030B-030C, U+0323, U+0326-0328, U+1E00-1EFF, U+2000-206F, U+20AC, U+20B4, U+20BA, U+20BD, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Onest"; src: url("/fonts/onest-var-cyrillic.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0400-052F, U+1C80-1C88, U+2116; }
+@font-face { font-family: "Geist Mono"; src: url("/fonts/geist-mono-var-latin.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; }
+
+:root {
+  --type-ui: "Instrument Sans", ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --type-head: "Onest", "Instrument Sans", ui-sans-serif, sans-serif;
+  --type-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --radius-8: 8px; --radius-12: 12px; --radius-16: 16px; --radius-24: 24px; --radius-full: 999px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --canvas: #000000; --chrome: #0b0b0a; --well: #151513;
+  --fill: rgba(30, 29, 26, 0.88); --fill-hover: rgba(46, 44, 40, 0.92);
+  --hair: rgba(234, 228, 214, 0.09); --edge: rgba(234, 228, 214, 0.14); --edge-strong: rgba(234, 228, 214, 0.26);
+  --ink-1: #f1efea; --ink-2: #a7a49c; --ink-3: #78756d;
+  --solid: #f7f6f2; --solid-hover: #dedcd6; --on-solid: #0b0b0a; --ring: rgba(247, 246, 242, 0.6);
+  --positive: #52e3a4; --negative: #ff9592; --negative-bg: rgba(255, 30, 60, 0.16);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --canvas: #fdfdfc; --chrome: #f6f5f2; --well: #f6f5f2;
+    --fill: rgba(250, 249, 246, 0.94); --fill-hover: rgba(236, 234, 229, 0.96);
+    --hair: rgba(38, 33, 20, 0.08); --edge: rgba(38, 33, 20, 0.14); --edge-strong: rgba(38, 33, 20, 0.26);
+    --ink-1: #1b1a17; --ink-2: #57544d; --ink-3: #77746c;
+    --solid: #1b1a17; --solid-hover: #35342f; --on-solid: #fdfdfc; --ring: rgba(27, 26, 23, 0.5);
+    --positive: #0f7a4f; --negative: #b4232a; --negative-bg: rgba(220, 40, 50, 0.1);
+    color-scheme: light;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; min-height: 100dvh; background: var(--canvas); color: var(--ink-1);
+  font: 400 16px/1.5 var(--type-ui);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+::selection { background: rgba(247, 246, 242, 0.18); }
+
+main.narrow { max-width: 440px; margin: 0 auto; padding: 72px 20px 48px; }
+main.app { max-width: 720px; margin: 0 auto; padding: 24px 20px 64px; }
+
+.head { font: 500 28px/1.2 var(--type-head); letter-spacing: -0.02em; margin: 0 0 12px; }
+h2 { font: 500 20px/1.3 var(--type-head); letter-spacing: -0.02em; margin: 0 0 8px; }
+p { margin: 0 0 12px; }
+.muted { color: var(--ink-2); }
+.small { font-size: 14px; }
+.tiny { font-size: 12px; color: var(--ink-3); }
+.mono { font-family: var(--type-mono); font-size: 0.92em; font-variant-numeric: tabular-nums; }
+a { color: var(--ink-1); text-underline-offset: 3px; }
+
+.stack { display: flex; flex-direction: column; gap: 12px; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.spread { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--ink-2); }
+/* No double-tap zoom on the gate either (its viewport turns pinching off). */
+* { touch-action: manipulation; }
+input {
+  height: 44px; padding: 0 14px; border-radius: var(--radius-12); border: 1px solid var(--edge);
+  background: var(--well); color: var(--ink-1); font: 400 16px var(--type-ui);
+}
+input:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 0 18px; border-radius: var(--radius-12); border: 1px solid transparent;
+  font: 500 15px var(--type-ui); cursor: pointer; text-decoration: none;
+  transition: background-color 150ms var(--ease), border-color 150ms var(--ease);
+}
+.button.white { background: var(--solid); color: var(--on-solid); }
+.button.white:hover { background: var(--solid-hover); }
+.button.gray { background: var(--fill); color: var(--ink-1); border-color: var(--edge); }
+.button.gray:hover { background: var(--fill-hover); }
+.button.fade { background: transparent; color: var(--ink-2); }
+.button.fade:hover { color: var(--ink-1); background: var(--fill); }
+.button.small { min-height: 32px; padding: 0 12px; font-size: 14px; border-radius: var(--radius-8); }
+.button[disabled] { opacity: 0.5; cursor: default; }
+
+.state { font-size: 14px; margin: 0; }
+.state.negative { color: var(--negative); }
+.state.positive { color: var(--positive); }
+
+details > summary { cursor: pointer; color: var(--ink-2); font-size: 15px; list-style: none; }
+details > summary::before { content: "+ "; color: var(--ink-3); }
+details[open] > summary::before { content: "– "; }
+
+.list { margin: 0 0 12px; padding-left: 20px; }
+.list li { margin: 4px 0; }
+
+/* The app shell */
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 8px 0 24px; }
+.brand { display: flex; align-items: center; gap: 10px; font: 500 20px var(--type-head); letter-spacing: -0.02em; }
+.brand img { width: 28px; height: 28px; border-radius: var(--radius-8); }
+section { padding: 24px 0; border-top: 1px solid var(--hair); }
+.items { list-style: none; margin: 0; padding: 0; }
+.items li { padding: 12px 0; border-bottom: 1px solid var(--hair); display: flex; flex-direction: column; gap: 4px; }
+.items li:last-child { border-bottom: 0; }
+.empty { color: var(--ink-3); font-size: 14px; padding: 8px 0; }
+.code {
+  font-family: var(--type-mono); font-size: 13px; background: var(--well); border: 1px solid var(--hair);
+  border-radius: var(--radius-12); padding: 10px 12px; overflow-x: auto; white-space: pre; color: var(--ink-1);
+}
+.copyline { display: flex; gap: 8px; align-items: stretch; }
+.copyline .code { flex: 1; }
+.secret { border-color: var(--edge-strong); }
+audio { width: 100%; height: 36px; margin-top: 4px; }
+[hidden] { display: none !important; }
+
+/* The gate: the drop, its name, one field and the one way forward. */
+.gate-mark { display: block; width: 96px; height: 96px; margin: 0 0 12px -8px; }
+main.narrow .head { font-weight: 700; font-size: 32px; margin-bottom: 4px; }
+.button.go {
+  min-height: 56px; margin-bottom: 4px; border: 0; border-radius: var(--radius-16); background: #7c5ce6; color: #fff;
+  font: 700 18px/1 var(--type-head); letter-spacing: -0.01em; box-shadow: 0 4px 0 #5e40c4;
+  transition: transform 70ms var(--ease), box-shadow 70ms var(--ease);
+}
+.button.go:active { transform: translateY(3px); box-shadow: 0 1px 0 #5e40c4; }

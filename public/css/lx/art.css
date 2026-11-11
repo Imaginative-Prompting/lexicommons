@@ -1,0 +1,41 @@
+/* The art's palette: every word picture and symbol takes its colors from these. Designed in color; data-art="theme" on the
+   root, or on any part of the page, draws the same pictures in the theme's own ink instead, from its lightest to its darkest, so a monochrome or custom
+   theme's art is its own. A tile is always the light end, so a dark shape reads the same on any theme. */
+@layer lx.tokens {
+  :root {
+    --art-tile: #E9E3D4;
+    --art-paper: #FBF7EC; --art-paper-mid: #EDE6D5; --art-paper-deep: #DAD1BC; --art-paper-deeper: #BDB19A; --art-ground: #D3CAB5;
+    --art-ink: #231F3B; --art-ink-lit: #3A3460; --art-steel: #A9B0BF; --art-steel-deep: #6B687A;
+    --art-sky: #58ADEB; --art-sky-lit: #8FCDF4; --art-sky-pale: #C9E7F9; --art-sky-deep: #3488C9;
+    --art-sun: #F7BE45; --art-sun-lit: #FAD57E; --art-sun-deep: #DB9A22;
+    --art-clay: #E8743B; --art-clay-lit: #F6A06F; --art-clay-deep: #C25626; --art-clay-deeper: #9C4219;
+    --art-violet: #7C5CE6; --art-violet-lit: #A68CFF; --art-violet-deep: #5E40C4;
+    --art-teal: #37B39B; --art-teal-lit: #6FD0BD; --art-teal-deep: #25907B;
+    --art-skin: #E9B48A; --art-skin-deep: #CF9468;
+    --art-wood: #DCA063; --art-wood-deep: #B97F45; --art-bark: #7A4E2D; --art-bark-deep: #4B2F24;
+    /* The path's stops: the path sets these on each button per state (done, your place, ahead); these are done, in violet. */
+    --art-stop-face: #7C5CE6; --art-stop-wall: #5E40C4; --art-stop-wall-dark: #45309A; --art-stop-mark: #FFFFFF; --art-stop-rim: #F7BE45; --art-stop-rim-wall: #DB9A22; --art-stop-rim-wall-dark: #B47A12;
+  }
+  /* Which end of the theme is which. A custom theme whose base doesn't tell can set these two itself. */
+  /* (On a dark page the dark end stops short of the page's own color, or a symbol's far side would vanish into it.) */
+  [data-art="theme"] { --art-light: var(--canvas); --art-dark: var(--ink-1); --art-dark-on-dark: color-mix(in oklab, var(--ink-1) 24%, var(--canvas)); }
+  :root:is([data-theme="graphite"], [data-theme="contrast"]) [data-art="theme"], :root:is([data-theme="graphite"], [data-theme="contrast"])[data-art="theme"] { --art-light: var(--ink-1); --art-dark: var(--art-dark-on-dark); }
+  @media (prefers-color-scheme: dark) { :root[data-theme="auto"] [data-art="theme"], :root[data-theme="auto"][data-art="theme"] { --art-light: var(--ink-1); --art-dark: var(--art-dark-on-dark); } }
+  [data-art="theme"] {
+    --art-tile: color-mix(in oklab, var(--art-dark) 9%, var(--art-light));
+    --art-paper: var(--art-light); --art-paper-mid: color-mix(in oklab, var(--art-dark) 7%, var(--art-light)); --art-paper-deep: color-mix(in oklab, var(--art-dark) 20%, var(--art-light)); --art-paper-deeper: color-mix(in oklab, var(--art-dark) 34%, var(--art-light)); --art-ground: color-mix(in oklab, var(--art-dark) 18%, var(--art-light));
+    --art-ink: color-mix(in oklab, var(--art-dark) 94%, var(--art-light)); --art-ink-lit: color-mix(in oklab, var(--art-dark) 78%, var(--art-light)); --art-steel: color-mix(in oklab, var(--art-dark) 36%, var(--art-light)); --art-steel-deep: color-mix(in oklab, var(--art-dark) 58%, var(--art-light));
+    --art-sky: color-mix(in oklab, var(--art-dark) 44%, var(--art-light)); --art-sky-lit: color-mix(in oklab, var(--art-dark) 28%, var(--art-light)); --art-sky-pale: color-mix(in oklab, var(--art-dark) 14%, var(--art-light)); --art-sky-deep: color-mix(in oklab, var(--art-dark) 62%, var(--art-light));
+    --art-sun: color-mix(in oklab, var(--art-dark) 30%, var(--art-light)); --art-sun-lit: color-mix(in oklab, var(--art-dark) 14%, var(--art-light)); --art-sun-deep: color-mix(in oklab, var(--art-dark) 50%, var(--art-light));
+    --art-clay: color-mix(in oklab, var(--art-dark) 54%, var(--art-light)); --art-clay-lit: color-mix(in oklab, var(--art-dark) 34%, var(--art-light)); --art-clay-deep: color-mix(in oklab, var(--art-dark) 72%, var(--art-light)); --art-clay-deeper: color-mix(in oklab, var(--art-dark) 84%, var(--art-light));
+    --art-violet: color-mix(in oklab, var(--art-dark) 62%, var(--art-light)); --art-violet-lit: color-mix(in oklab, var(--art-dark) 40%, var(--art-light)); --art-violet-deep: color-mix(in oklab, var(--art-dark) 78%, var(--art-light));
+    --art-teal: color-mix(in oklab, var(--art-dark) 48%, var(--art-light)); --art-teal-lit: color-mix(in oklab, var(--art-dark) 28%, var(--art-light)); --art-teal-deep: color-mix(in oklab, var(--art-dark) 66%, var(--art-light));
+    --art-skin: color-mix(in oklab, var(--art-dark) 20%, var(--art-light)); --art-skin-deep: color-mix(in oklab, var(--art-dark) 38%, var(--art-light));
+    --art-wood: color-mix(in oklab, var(--art-dark) 32%, var(--art-light)); --art-wood-deep: color-mix(in oklab, var(--art-dark) 52%, var(--art-light)); --art-bark: color-mix(in oklab, var(--art-dark) 72%, var(--art-light)); --art-bark-deep: color-mix(in oklab, var(--art-dark) 90%, var(--art-light));
+    --art-stop-face: color-mix(in oklab, var(--art-dark) 62%, var(--art-light)); --art-stop-wall: color-mix(in oklab, var(--art-dark) 78%, var(--art-light)); --art-stop-wall-dark: color-mix(in oklab, var(--art-dark) 88%, var(--art-light)); --art-stop-rim: color-mix(in oklab, var(--art-dark) 30%, var(--art-light)); --art-stop-rim-wall: color-mix(in oklab, var(--art-dark) 50%, var(--art-light)); --art-stop-rim-wall-dark: color-mix(in oklab, var(--art-dark) 64%, var(--art-light)); --art-stop-mark: var(--art-light);
+  }
+}
+@layer lx.components {
+  [data-part="picture"] { display: block; width: 100%; aspect-ratio: 1; background: var(--art-tile); }
+  [data-part="picture"] > svg { display: block; width: 100%; height: 100%; }
+}

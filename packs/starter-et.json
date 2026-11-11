@@ -1,0 +1,7856 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-et",
+  "name": "Starter: Estonian",
+  "about": "Estonian cases and word order in real, everyday sentences.",
+  "language": "et",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kohv": "coffee",
+    "tee": "tea",
+    "vesi": "water",
+    "mina": "I (ma; mu: my; mul: at me, for having, feeling; mulle: to me; mind: me)",
+    "jooma": "to drink",
+    "ja": "and",
+    "üks": "one",
+    "piim": "milk",
+    "hea": "good",
+    "olema": "to be (on: is, are; ei ole: isn't)",
+    "sina": "you, informal singular (sa; su: your; sul: at you; sulle: to you; sind: you)",
+    "ei": "not (ma ei tea: I don't know)",
+    "õpetaja": "teacher",
+    "õpilane": "student",
+    "kas": "yes/no question marker",
+    "ema": "mother, mom",
+    "isa": "father, dad",
+    "vend": "brother",
+    "õde": "sister",
+    "see": "this, that (need: these)",
+    "sõber": "friend",
+    "arst": "doctor",
+    "võti": "key",
+    "telefon": "phone",
+    "raamat": "book",
+    "kus": "where",
+    "siin": "here",
+    "seal": "there",
+    "tualett": "bathroom",
+    "kaks": "two",
+    "kolm": "three",
+    "raha": "money",
+    "maksma": "to cost; to pay",
+    "rääkima": "to speak, to talk",
+    "inglise": "English (inglise keel: the English language)",
+    "eesti": "Estonian (eesti keel: the Estonian language)",
+    "mõistma": "to understand",
+    "natuke": "a little",
+    "tahtma": "to want",
+    "keel": "language",
+    "maja": "house",
+    "tuba": "room",
+    "suur": "big",
+    "väike": "small",
+    "elama": "to live",
+    "minema": "to go (kuidas läheb: how's it going)",
+    "kuhu": "where to",
+    "kool": "school",
+    "linn": "city",
+    "jaam": "station",
+    "auto": "car",
+    "täna": "today",
+    "homme": "tomorrow",
+    "nüüd": "now",
+    "töötama": "to work",
+    "pidama": "to have to, must",
+    "saama": "can, to be able to; to get",
+    "tere": "hi, hello",
+    "nimi": "name",
+    "õppima": "to study, to learn",
+    "teadma": "to know (teada andma: to let know)",
+    "meeldima": "to please (mulle meeldib: I like it)",
+    "film": "movie",
+    "eile": "yesterday",
+    "kodu": "home (kodus: at home; koju: home, going home)",
+    "haigla": "hospital",
+    "korter": "apartment",
+    "laud": "table",
+    "külmkapp": "fridge",
+    "aken": "window",
+    "sulgema": "to close",
+    "meie": "we (me; meil: at us, for having; meid: us; meiega: with us)",
+    "köök": "kitchen",
+    "rõdu": "balcony",
+    "kui": "when; if",
+    "tulema": "to come (sisse tulema: to come in)",
+    "tegema": "to do, to make",
+    "õhtusöök": "dinner",
+    "panema": "to put (kinni panema: to close)",
+    "uks": "door",
+    "kinni": "shut, closed",
+    "palun": "please",
+    "ootama": "to wait (for)",
+    "sisse": "in, into",
+    "suhkur": "sugar",
+    "klaas": "glass",
+    "miski": "something (midagi: something, anything)",
+    "magus": "sweet",
+    "sööma": "to eat",
+    "pitsa": "pizza",
+    "arve": "check, bill",
+    "hommik": "morning (hommikul: in the morning)",
+    "muna": "egg",
+    "pood": "store, shop",
+    "leib": "bread",
+    "ostma": "to buy",
+    "töö": "work, job",
+    "buss": "bus",
+    "uus": "new",
+    "king": "shoe",
+    "rong": "train",
+    "hilinema": "to be late",
+    "kümme": "ten",
+    "minut": "minute",
+    "kunagi": "ever (ei … kunagi: never)",
+    "käima": "to go, to visit (käinud: been)",
+    "liiga": "too",
+    "võima": "can, may",
+    "takso": "taxi",
+    "võtma": "to take",
+    "vanaema": "grandma",
+    "laupäev": "Saturday",
+    "sõitma": "to go (by car, bus or train), to ride",
+    "juurde": "to someone's (vanaema juurde: to grandma's)",
+    "pilet": "ticket",
+    "kakskümmend": "twenty",
+    "euro": "euro",
+    "sadama": "to fall, of rain or snow (sajab vihma: it's raining)",
+    "vihm": "rain",
+    "helistama": "to call",
+    "kino": "movie theater (kinno: to the movies)",
+    "nädalavahetus": "weekend",
+    "rand": "beach",
+    "juba": "already",
+    "aasta": "year",
+    "aeg": "time (aasta aega: for a year)",
+    "mis": "what (mida: what, as an object)",
+    "külm": "cold",
+    "andma": "to give (teada andma: to let know)",
+    "lootma": "to hope",
+    "et": "that",
+    "ilus": "nice, beautiful",
+    "ilm": "weather",
+    "kohtuma": "to meet (kohtume: see you)"
+  },
+  "chunks": {
+    "sooviksin": {
+      "text": "Ma sooviksin",
+      "en": "I'd like",
+      "about": "A polite way to order or ask for something: Ma sooviksin kohvi."
+    },
+    "kuidas-laheb": {
+      "text": "kuidas läheb",
+      "en": "how's it going",
+      "about": "The everyday how are you; with sul (at you) in it: Kuidas sul läheb?"
+    },
+    "suua-teha": {
+      "text": "süüa teha",
+      "en": "to cook",
+      "about": "süüa tegema, literally to make something to eat, is to cook; after a verb like meeldib it's süüa teha."
+    },
+    "vabandage": {
+      "text": "Vabandage",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention or say sorry, politely or to more than one; one friend gets Vabanda."
+    },
+    "hello": {
+      "text": "Tere",
+      "en": "hello"
+    },
+    "please": {
+      "text": "palun",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "aitäh",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "kuidas sul läheb",
+      "en": "how are you"
+    },
+    "goodbye": {
+      "text": "Head aega",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Jah",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Ei",
+      "en": "no"
+    },
+    "is-going-well": {
+      "text": "läheb hästi",
+      "en": "is going well"
+    },
+    "what-s-your-name": {
+      "text": "Mis su nimi on",
+      "en": "what's your name"
+    },
+    "nice-to-meet-you": {
+      "text": "Meeldiv tutvuda",
+      "en": "nice to meet you"
+    },
+    "i-have": {
+      "text": "Mul on",
+      "en": "I have"
+    },
+    "how-much": {
+      "text": "kui palju",
+      "en": "how much"
+    },
+    "the-check-please": {
+      "text": "Arve, palun",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Kohtume homme",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "ma-joon-kohvi",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive",
+        "no-articles"
+      ],
+      "text": "Ma joon kohvi.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "kohvi",
+          "kohv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma jooma kohvi.",
+        "Ma joon kohv."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kohvi",
+          "teed",
+          "vett"
+        ]
+      }
+    },
+    {
+      "id": "ma-joon-teed",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Ma joon teed.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "teed",
+          "tee"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma jooma teed.",
+        "Ma joob teed."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teed",
+          "kohvi",
+          "vett"
+        ]
+      }
+    },
+    {
+      "id": "ma-joon-vett",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive",
+        "stem-changes"
+      ],
+      "text": "Ma joon vett.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "vett",
+          "vesi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma jooma vett.",
+        "Ma joon vesi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vett",
+          "kohvi",
+          "teed"
+        ]
+      }
+    },
+    {
+      "id": "ma-joon-kohvi-ja-teed",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Ma joon kohvi ja teed.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "kohvi",
+          "kohv"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "teed",
+          "tee"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma jooma kohvi ja teed.",
+        "Ma joob kohvi ja teed."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "teed",
+          "tee",
+          "vett"
+        ]
+      }
+    },
+    {
+      "id": "ma-joon-teed-ja-vett",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Ma joon teed ja vett.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "teed",
+          "tee"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "vett",
+          "vesi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma jooma teed ja vett.",
+        "Ma joon teed ja vesi."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vett",
+          "vesi",
+          "kohvi"
+        ]
+      }
+    },
+    {
+      "id": "ma-joon-vett-ja-kohvi",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Ma joon vett ja kohvi.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "vett",
+          "vesi"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "kohvi",
+          "kohv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma jooma vett ja kohvi.",
+        "Ma joon vett ja kohv."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kohvi",
+          "kohv",
+          "teed"
+        ]
+      }
+    },
+    {
+      "id": "uks-tee-ja-uks-vesi-palun",
+      "topic": "food",
+      "concepts": [
+        "numbers",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Üks tee ja üks vesi, palun.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Üks",
+          "üks"
+        ],
+        [
+          "tee",
+          "tee"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "üks",
+          "üks"
+        ],
+        [
+          "vesi,",
+          "vesi"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Üks teed ja üks vesi, palun.",
+        "Üks tee ja üks vett, palun."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vesi,",
+          "vett,",
+          "piim,"
+        ]
+      }
+    },
+    {
+      "id": "tere-uks-kohv-palun",
+      "topic": "food",
+      "concepts": [
+        "numbers",
+        "no-articles"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Tere, üks kohv, palun.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Tere,"
+        ],
+        [
+          "üks",
+          "üks"
+        ],
+        [
+          "kohv,",
+          "kohv"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tere, üks kohvi, palun.",
+        "Tere, üks kohv ja, palun."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kohv,",
+          "kohvi,",
+          "piim,"
+        ]
+      }
+    },
+    {
+      "id": "uks-kohv-aitah",
+      "topic": "food",
+      "concepts": [
+        "numbers",
+        "no-articles"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Üks kohv, aitäh.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Üks",
+          "üks"
+        ],
+        [
+          "kohv,",
+          "kohv"
+        ],
+        [
+          "aitäh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Üks kohvi, aitäh.",
+        "Üks kohv ja, aitäh."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "aitäh",
+          "palun",
+          "Tere"
+        ]
+      }
+    },
+    {
+      "id": "tere-uks-tee-palun",
+      "topic": "food",
+      "concepts": [
+        "numbers",
+        "no-articles"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Tere! Üks tee, palun.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Tere!"
+        ],
+        [
+          "Üks",
+          "üks"
+        ],
+        [
+          "tee,",
+          "tee"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tere! Üks teed, palun.",
+        "Tere! Üks tee ja, palun."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tee,",
+          "teed,",
+          "kohv,"
+        ]
+      }
+    },
+    {
+      "id": "ma-joon-piima",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Ma joon piima.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "piima",
+          "piim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma joon piim.",
+        "Ma jooma piima."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "piima",
+          "piim",
+          "vett"
+        ]
+      }
+    },
+    {
+      "id": "mul-laheb-hasti-aitah",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "outer-cases"
+      ],
+      "chunks": [
+        "is-going-well",
+        "thank-you"
+      ],
+      "text": "Mul läheb hästi, aitäh.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Mul",
+          "mina"
+        ],
+        [
+          "läheb"
+        ],
+        [
+          "hästi,"
+        ],
+        [
+          "aitäh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For me"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma läheb hästi, aitäh.",
+        "Mul läheb hea, aitäh."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hästi,",
+          "hea,",
+          "palun,"
+        ]
+      }
+    },
+    {
+      "id": "tee-on-hea",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "adjective",
+        "no-articles"
+      ],
+      "text": "Tee on hea.",
+      "means": "The tea is good.",
+      "words": [
+        [
+          "Tee",
+          "tee"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "hea",
+          "hea"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "is"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tee olema hea.",
+        "Tee on hästi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hea",
+          "hästi",
+          "üks"
+        ]
+      }
+    },
+    {
+      "id": "jah-palun",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Jah, palun.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Jah,"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jah, olema palun.",
+        "Jah, ma on palun."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jah,",
+          "Ei,",
+          "Tere,"
+        ]
+      }
+    },
+    {
+      "id": "ei-aitah",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Ei, aitäh.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Ei,"
+        ],
+        [
+          "aitäh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ei, olema aitäh.",
+        "Ei, ma on aitäh."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ei,",
+          "Jah,",
+          "Tere,"
+        ]
+      }
+    },
+    {
+      "id": "jah-aitah-head-aega",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Jah, aitäh. Head aega!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Jah,"
+        ],
+        [
+          "aitäh."
+        ],
+        [
+          "Head"
+        ],
+        [
+          "aega"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jah, olema aitäh. Head aega!",
+        "Jah, ma on aitäh. Head aega!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jah,",
+          "Ei,",
+          "Tere,"
+        ]
+      }
+    },
+    {
+      "id": "ei-aitah-head-aega",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Ei, aitäh. Head aega!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Ei,"
+        ],
+        [
+          "aitäh."
+        ],
+        [
+          "Head"
+        ],
+        [
+          "aega"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ei, olema aitäh. Head aega!",
+        "Ei, ma on aitäh. Head aega!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ei,",
+          "Jah,",
+          "Tere,"
+        ]
+      }
+    },
+    {
+      "id": "sa-oled-opilane",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Sa oled õpilane.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Sa",
+          "sina"
+        ],
+        [
+          "oled",
+          "olema"
+        ],
+        [
+          "õpilane",
+          "õpilane"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sa olen õpilane.",
+        "Sa on õpilane."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "oled",
+          "olen",
+          "on"
+        ]
+      }
+    },
+    {
+      "id": "kas-sa-oled-opetaja",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "text": "Kas sa oled õpetaja?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Kas",
+          "kas"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "oled",
+          "olema"
+        ],
+        [
+          "õpetaja",
+          "õpetaja"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kas sa olen õpetaja?",
+        "Kas sa on õpetaja?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "õpetaja",
+          "õpilane",
+          "kohv"
+        ]
+      }
+    },
+    {
+      "id": "ma-ei-ole-opetaja",
+      "topic": "people",
+      "concepts": [
+        "ei",
+        "present",
+        "no-articles"
+      ],
+      "text": "Ma ei ole õpetaja.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olema"
+        ],
+        [
+          "õpetaja",
+          "õpetaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "be"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma ei olen õpetaja.",
+        "Ma ei on õpetaja."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ole",
+          "olen",
+          "oled"
+        ]
+      }
+    },
+    {
+      "id": "tere-meeldiv-tutvuda",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Tere! Meeldiv tutvuda!",
+      "means": "Hello! Nice to meet you!",
+      "words": [
+        [
+          "Tere!"
+        ],
+        [
+          "Meeldiv"
+        ],
+        [
+          "tutvuda"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tere! Ma olen meeldiv tutvuda!",
+        "Tere! Sa oled meeldiv tutvuda!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tere!",
+          "Jah!",
+          "Ei!"
+        ]
+      }
+    },
+    {
+      "id": "see-on-mu-ema",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "See on mu ema.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "See",
+          "see"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "mu",
+          "mina"
+        ],
+        [
+          "ema",
+          "ema"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "See on ma ema.",
+        "See olen mu ema."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ema",
+          "isa",
+          "õde"
+        ]
+      }
+    },
+    {
+      "id": "see-on-mu-isa",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "See on mu isa.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "See",
+          "see"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "mu",
+          "mina"
+        ],
+        [
+          "isa",
+          "isa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "See on ma isa.",
+        "See oled mu isa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "isa",
+          "ema",
+          "vend"
+        ]
+      }
+    },
+    {
+      "id": "mu-isa-on-opetaja",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mu isa on õpetaja.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "isa",
+          "isa"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "õpetaja",
+          "õpetaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma isa on õpetaja.",
+        "Mu isa olen õpetaja."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mu",
+          "Ma",
+          "Mul"
+        ]
+      }
+    },
+    {
+      "id": "mu-vend-on-opilane",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mu vend on õpilane.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "vend",
+          "vend"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "õpilane",
+          "õpilane"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma vend on õpilane.",
+        "Mu vend oled õpilane."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vend",
+          "isa",
+          "õde"
+        ]
+      }
+    },
+    {
+      "id": "see-on-mu-ode",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "See on mu õde.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "See",
+          "see"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "mu",
+          "mina"
+        ],
+        [
+          "õde",
+          "õde"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "See on ma õde.",
+        "See olen mu õde."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "õde",
+          "ema",
+          "vend"
+        ]
+      }
+    },
+    {
+      "id": "mu-ema-on-opetaja",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mu ema on õpetaja.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "ema",
+          "ema"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "õpetaja",
+          "õpetaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma ema on õpetaja.",
+        "Mu ema oled õpetaja."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ema",
+          "isa",
+          "vend"
+        ]
+      }
+    },
+    {
+      "id": "mul-on-telefon",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "outer-cases",
+        "present"
+      ],
+      "chunks": [
+        "i-have"
+      ],
+      "text": "Mul on telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Mul"
+        ],
+        [
+          "on"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma on telefon.",
+        "Mul olen telefon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "telefon",
+          "võti",
+          "raamat"
+        ]
+      }
+    },
+    {
+      "id": "kas-sul-on-voti",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "have",
+        "outer-cases"
+      ],
+      "text": "Kas sul on võti?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Kas",
+          "kas"
+        ],
+        [
+          "sul",
+          "sina"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "võti",
+          "võti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "at you"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kas sa on võti?",
+        "Kas sul oled võti?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sul",
+          "sa",
+          "mu"
+        ]
+      }
+    },
+    {
+      "id": "mul-on-vend-ja-ode",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "outer-cases"
+      ],
+      "chunks": [
+        "i-have"
+      ],
+      "text": "Mul on vend ja õde.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Mul"
+        ],
+        [
+          "on"
+        ],
+        [
+          "vend",
+          "vend"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "õde",
+          "õde"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma on vend ja õde.",
+        "Mul olen vend ja õde."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mul",
+          "Ma",
+          "Mu"
+        ]
+      }
+    },
+    {
+      "id": "mul-ei-ole-raamatut",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "ei",
+        "partitive"
+      ],
+      "text": "Mul ei ole raamatut.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Mul",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olema"
+        ],
+        [
+          "raamatut",
+          "raamat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "not"
+        ],
+        [
+          "be"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mul ei olen raamatut.",
+        "Mul ei ole raamat."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "raamatut",
+          "raamat",
+          "telefon"
+        ]
+      }
+    },
+    {
+      "id": "mu-ode-on-arst",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mu õde on arst.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "õde",
+          "õde"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "arst",
+          "arst"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma õde on arst.",
+        "Mu õde olen arst."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "arst",
+          "õpetaja",
+          "õpilane"
+        ]
+      }
+    },
+    {
+      "id": "sa-oled-hea-sober",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "adjective",
+        "no-articles"
+      ],
+      "text": "Sa oled hea sõber.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Sa",
+          "sina"
+        ],
+        [
+          "oled",
+          "olema"
+        ],
+        [
+          "hea",
+          "hea"
+        ],
+        [
+          "sõber",
+          "sõber"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sa on hea sõber.",
+        "Sa oled hästi sõber."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "sõber",
+          "arst",
+          "õpetaja"
+        ]
+      }
+    },
+    {
+      "id": "kus-on-mu-voti",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "genitive",
+        "present"
+      ],
+      "text": "Kus on mu võti?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Kus",
+          "kus"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "mu",
+          "mina"
+        ],
+        [
+          "võti",
+          "võti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kus on ma võti?",
+        "Kus olen mu võti?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kus",
+          "Siin",
+          "Seal"
+        ]
+      }
+    },
+    {
+      "id": "mu-telefon-on-siin",
+      "topic": "out",
+      "concepts": [
+        "genitive",
+        "present"
+      ],
+      "text": "Mu telefon on siin.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "siin",
+          "siin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma telefon on siin.",
+        "Mu telefon olen siin."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "siin",
+          "seal",
+          "kus"
+        ]
+      }
+    },
+    {
+      "id": "voti-on-seal",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Võti on seal.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Võti",
+          "võti"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "seal",
+          "seal"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Võti olen seal.",
+        "Võti olema seal."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "seal",
+          "siin",
+          "kus"
+        ]
+      }
+    },
+    {
+      "id": "vabandage-kus-on-tualett",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "chunks": [
+        "vabandage"
+      ],
+      "text": "Vabandage, kus on tualett?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Vabandage,"
+        ],
+        [
+          "kus",
+          "kus"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "tualett",
+          "tualett"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vabandage, kus olen tualett?",
+        "Vabandage, kus olema tualett?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tualett",
+          "telefon",
+          "võti"
+        ]
+      }
+    },
+    {
+      "id": "kus-on-mu-ema",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "genitive",
+        "present"
+      ],
+      "text": "Kus on mu ema?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Kus",
+          "kus"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "mu",
+          "mina"
+        ],
+        [
+          "ema",
+          "ema"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kus on ma ema?",
+        "Kus oled mu ema?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mu",
+          "ma",
+          "mul"
+        ]
+      }
+    },
+    {
+      "id": "mu-ode-on-siin",
+      "topic": "out",
+      "concepts": [
+        "genitive",
+        "present"
+      ],
+      "text": "Mu õde on siin.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "õde",
+          "õde"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "siin",
+          "siin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma õde on siin.",
+        "Mu õde olen siin."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "siin",
+          "seal",
+          "kus"
+        ]
+      }
+    },
+    {
+      "id": "vabandage-kui-palju-see-maksab",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "vabandage",
+        "how-much"
+      ],
+      "text": "Vabandage, kui palju see maksab?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Vabandage,"
+        ],
+        [
+          "kui"
+        ],
+        [
+          "palju"
+        ],
+        [
+          "see",
+          "see"
+        ],
+        [
+          "maksab",
+          "maksma"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "this"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vabandage, kui palju see maksab on?",
+        "Vabandage, kui palju see on maksab?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "see",
+          "ma",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "kaks-kohvi-palun",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "partitive"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kaks kohvi, palun.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Kaks",
+          "kaks"
+        ],
+        [
+          "kohvi,",
+          "kohv"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaks kohv, palun.",
+        "Kaks kohvid, palun."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kaks",
+          "Üks",
+          "Kolm"
+        ]
+      }
+    },
+    {
+      "id": "uks-raamat-palun",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Üks raamat, palun.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Üks",
+          "üks"
+        ],
+        [
+          "raamat,",
+          "raamat"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Üks raamatut, palun.",
+        "Üks raamatud, palun."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "raamat,",
+          "raamatut,",
+          "võti,"
+        ]
+      }
+    },
+    {
+      "id": "mul-on-kolm-raamatut",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "numbers",
+        "partitive"
+      ],
+      "chunks": [
+        "i-have"
+      ],
+      "text": "Mul on kolm raamatut.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Mul"
+        ],
+        [
+          "on"
+        ],
+        [
+          "kolm",
+          "kolm"
+        ],
+        [
+          "raamatut",
+          "raamat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mul on kolm raamat.",
+        "Mul on kolm raamatud."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kolm",
+          "kaks",
+          "üks"
+        ]
+      }
+    },
+    {
+      "id": "mul-ei-ole-raha",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "ei",
+        "partitive"
+      ],
+      "text": "Mul ei ole raha.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Mul",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olema"
+        ],
+        [
+          "raha",
+          "raha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "not"
+        ],
+        [
+          "be"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mul ei olen raha.",
+        "Mul ei on raha."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "raha",
+          "raamatut",
+          "piima"
+        ]
+      }
+    },
+    {
+      "id": "ma-ei-moista",
+      "topic": "people",
+      "concepts": [
+        "ei",
+        "present"
+      ],
+      "text": "Ma ei mõista.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "mõista",
+          "mõistma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma ei mõistan.",
+        "Ma ei mõistad."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mõista",
+          "mõistad",
+          "räägin"
+        ]
+      }
+    },
+    {
+      "id": "kas-sa-moistad",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Kas sa mõistad?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Kas",
+          "kas"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "mõistad",
+          "mõistma"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kas sa mõistan?",
+        "Kas sa mõistma?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mõistad",
+          "mõista",
+          "räägid"
+        ]
+      }
+    },
+    {
+      "id": "ma-raagin-natuke-eesti-keelt",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Ma räägin natuke eesti keelt.",
+      "means": "I speak a little Estonian.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "räägin",
+          "rääkima"
+        ],
+        [
+          "natuke",
+          "natuke"
+        ],
+        [
+          "eesti",
+          "eesti"
+        ],
+        [
+          "keelt",
+          "keel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Estonian"
+        ],
+        [
+          "language"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma räägid natuke eesti keelt.",
+        "Ma räägin natuke eesti keel."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "eesti",
+          "inglise",
+          "hea"
+        ]
+      }
+    },
+    {
+      "id": "ma-tahan-kohvi",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive",
+        "no-articles"
+      ],
+      "text": "Ma tahan kohvi.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "tahan",
+          "tahtma"
+        ],
+        [
+          "kohvi",
+          "kohv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma tahtma kohvi.",
+        "Ma tahan kohv."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tahan",
+          "joon",
+          "räägin"
+        ]
+      }
+    },
+    {
+      "id": "ma-tahan-vett-palun",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive",
+        "stem-changes"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ma tahan vett, palun.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "tahan",
+          "tahtma"
+        ],
+        [
+          "vett,",
+          "vesi"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma tahtma vett, palun.",
+        "Ma tahan vesi, palun."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vett,",
+          "vesi,",
+          "piima,"
+        ]
+      }
+    },
+    {
+      "id": "mu-tuba-on-vaike",
+      "topic": "home",
+      "concepts": [
+        "genitive",
+        "adjective",
+        "present"
+      ],
+      "text": "Mu tuba on väike.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "tuba",
+          "tuba"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "väike",
+          "väike"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma tuba on väike.",
+        "Mu tuba olen väike."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "väike",
+          "suur",
+          "hea"
+        ]
+      }
+    },
+    {
+      "id": "see-maja-on-suur",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "present",
+        "no-articles"
+      ],
+      "text": "See maja on suur.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "See",
+          "see"
+        ],
+        [
+          "maja",
+          "maja"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "suur",
+          "suur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "See maja olen suur.",
+        "See maja on suures."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "suur",
+          "väike",
+          "hea"
+        ]
+      }
+    },
+    {
+      "id": "ma-elan-vaikeses-majas",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "inner-cases",
+        "adjective"
+      ],
+      "text": "Ma elan väikeses majas.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "elan",
+          "elama"
+        ],
+        [
+          "väikeses",
+          "väike"
+        ],
+        [
+          "majas",
+          "maja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma elan väike majas.",
+        "Ma elad väikeses majas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "väikeses",
+          "väike",
+          "suur"
+        ]
+      }
+    },
+    {
+      "id": "kus-sa-elad",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Kus sa elad?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Kus",
+          "kus"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "elad",
+          "elama"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kus sa elan?",
+        "Kus sa elab?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "elad",
+          "elan",
+          "elab"
+        ]
+      }
+    },
+    {
+      "id": "mu-ema-elab-siin",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "Mu ema elab siin.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "ema",
+          "ema"
+        ],
+        [
+          "elab",
+          "elama"
+        ],
+        [
+          "siin",
+          "siin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mu ema elan siin.",
+        "Ma ema elab siin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "elab",
+          "elan",
+          "elad"
+        ]
+      }
+    },
+    {
+      "id": "ma-lahen-kooli",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "inner-cases",
+        "stem-changes"
+      ],
+      "text": "Ma lähen kooli.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "lähen",
+          "minema"
+        ],
+        [
+          "kooli",
+          "kool"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma lähed kooli.",
+        "Ma lähen kool."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kooli",
+          "linna",
+          "majas"
+        ]
+      }
+    },
+    {
+      "id": "kuhu-sa-lahed",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Kuhu sa lähed?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Kuhu",
+          "kuhu"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "lähed",
+          "minema"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where to"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kuhu sa lähen?",
+        "Kuhu sa läheb?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kuhu",
+          "Kus",
+          "Siin"
+        ]
+      }
+    },
+    {
+      "id": "mu-ema-laheb-linna",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "inner-cases",
+        "genitive"
+      ],
+      "text": "Mu ema läheb linna.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "ema",
+          "ema"
+        ],
+        [
+          "läheb",
+          "minema"
+        ],
+        [
+          "linna",
+          "linn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mu ema lähen linna.",
+        "Mu ema läheb linn."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "linna",
+          "kooli",
+          "majas"
+        ]
+      }
+    },
+    {
+      "id": "see-auto-on-vaike",
+      "topic": "out",
+      "concepts": [
+        "adjective",
+        "present",
+        "no-articles"
+      ],
+      "text": "See auto on väike.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "See",
+          "see"
+        ],
+        [
+          "auto",
+          "auto"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "väike",
+          "väike"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "See auto olen väike.",
+        "See auto on väikeses."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "auto",
+          "maja",
+          "tuba"
+        ]
+      }
+    },
+    {
+      "id": "mul-on-auto",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "outer-cases",
+        "no-articles"
+      ],
+      "chunks": [
+        "i-have"
+      ],
+      "text": "Mul on auto.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Mul"
+        ],
+        [
+          "on"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma on auto.",
+        "Mul olen auto."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "auto",
+          "telefon",
+          "võti"
+        ]
+      }
+    },
+    {
+      "id": "ma-tootan-tana",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ma töötan täna.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "töötan",
+          "töötama"
+        ],
+        [
+          "täna",
+          "täna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma töötama täna.",
+        "Ma töötab täna."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "täna",
+          "homme",
+          "nüüd"
+        ]
+      }
+    },
+    {
+      "id": "homme-lahen-ma-linna",
+      "topic": "plans",
+      "concepts": [
+        "no-future",
+        "verb-second",
+        "inner-cases",
+        "present"
+      ],
+      "text": "Homme lähen ma linna.",
+      "means": "Tomorrow I go to the city.",
+      "words": [
+        [
+          "Homme",
+          "homme"
+        ],
+        [
+          "lähen",
+          "minema"
+        ],
+        [
+          "ma",
+          "mina"
+        ],
+        [
+          "linna",
+          "linn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go"
+        ],
+        [
+          "I"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Homme lähed ma linna.",
+        "Homme lähen ma linn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Homme",
+          "Täna",
+          "Nüüd"
+        ]
+      }
+    },
+    {
+      "id": "ma-ei-saa-tana-minna",
+      "topic": "plans",
+      "concepts": [
+        "ei",
+        "infinitives",
+        "present"
+      ],
+      "text": "Ma ei saa täna minna.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "saa",
+          "saama"
+        ],
+        [
+          "täna",
+          "täna"
+        ],
+        [
+          "minna",
+          "minema"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "can"
+        ],
+        [
+          "today"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma ei saan täna minna.",
+        "Ma ei saa täna minema."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "minna",
+          "minema",
+          "lähen"
+        ]
+      }
+    },
+    {
+      "id": "ma-pean-homme-tootama",
+      "topic": "plans",
+      "concepts": [
+        "infinitives",
+        "no-future",
+        "present"
+      ],
+      "text": "Ma pean homme töötama.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "pean",
+          "pidama"
+        ],
+        [
+          "homme",
+          "homme"
+        ],
+        [
+          "töötama",
+          "töötama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma pean homme töötada.",
+        "Ma pean homme töötan."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "töötama",
+          "töötan",
+          "minema"
+        ]
+      }
+    },
+    {
+      "id": "tere-kuidas-sul-laheb",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "outer-cases",
+        "present"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Tere, kuidas sul läheb?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Tere,"
+        ],
+        [
+          "kuidas"
+        ],
+        [
+          "sul"
+        ],
+        [
+          "läheb"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "at you"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tere, kuidas sa läheb?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sul",
+          "sa",
+          "sind"
+        ]
+      }
+    },
+    {
+      "id": "mis-su-nimi-on",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "genitive",
+        "present"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Mis su nimi on?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Mis"
+        ],
+        [
+          "su"
+        ],
+        [
+          "nimi"
+        ],
+        [
+          "on"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "your"
+        ],
+        [
+          "name"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "on"
+      ],
+      "wrong": [
+        "Mis sa nimi on?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "su",
+          "sa",
+          "sind"
+        ]
+      }
+    },
+    {
+      "id": "kas-sa-raagid-inglise-keelt",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "partitive",
+        "present"
+      ],
+      "text": "Kas sa räägid inglise keelt?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Kas",
+          "kas"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "räägid",
+          "rääkima"
+        ],
+        [
+          "inglise",
+          "inglise"
+        ],
+        [
+          "keelt",
+          "keel"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "the English language"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kas sa räägid inglise keel?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "keelt",
+          "keel",
+          "keele"
+        ]
+      }
+    },
+    {
+      "id": "vend-opib-tartus",
+      "topic": "people",
+      "concepts": [
+        "inner-cases",
+        "present",
+        "genitive",
+        "stem-changes"
+      ],
+      "text": "Mu vend õpib Tartus.",
+      "means": "My brother studies in Tartu.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "vend",
+          "vend"
+        ],
+        [
+          "õpib",
+          "õppima"
+        ],
+        [
+          "Tartus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "studies"
+        ],
+        [
+          "in Tartu"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mu vend õpib Tartu.",
+        "Mu vend õpin Tartus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "Tartus",
+          "Tartu",
+          "Tartusse"
+        ]
+      }
+    },
+    {
+      "id": "mul-on-ode",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "numbers",
+        "partitive"
+      ],
+      "chunks": [
+        "i-have"
+      ],
+      "text": "Mul on üks õde ja kaks venda.",
+      "means": "I have one sister and two brothers.",
+      "words": [
+        [
+          "Mul"
+        ],
+        [
+          "on"
+        ],
+        [
+          "üks",
+          "üks"
+        ],
+        [
+          "õde",
+          "õde"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "kaks",
+          "kaks"
+        ],
+        [
+          "venda",
+          "vend"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "one sister"
+        ],
+        [
+          "and"
+        ],
+        [
+          "two brothers"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mul on üks õde ja kaks vend.",
+        "Ma on üks õde ja kaks venda."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "venda",
+          "vend",
+          "vennad"
+        ]
+      }
+    },
+    {
+      "id": "see-on-isa-auto",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "present"
+      ],
+      "text": "See on mu isa auto.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "See",
+          "see"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "mu",
+          "mina"
+        ],
+        [
+          "isa",
+          "isa"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "dad's"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "See on mu isa autot."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mu",
+          "ma",
+          "mind"
+        ]
+      }
+    },
+    {
+      "id": "ma-ei-tea-kus-ta-elab",
+      "topic": "people",
+      "concepts": [
+        "ei",
+        "present"
+      ],
+      "text": "Ma ei tea, kus ta elab.",
+      "means": "I don't know where they live.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "tea,",
+          "teadma"
+        ],
+        [
+          "kus"
+        ],
+        [
+          "ta"
+        ],
+        [
+          "elab",
+          "elama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "don't"
+        ],
+        [
+          "know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he or she"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma ei tean, kus ta elab."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tea,",
+          "tean,",
+          "teadma,"
+        ]
+      }
+    },
+    {
+      "id": "ma-olen-opetaja",
+      "topic": "people",
+      "concepts": [
+        "no-articles",
+        "present"
+      ],
+      "text": "Ma olen õpetaja.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "olen",
+          "olema"
+        ],
+        [
+          "õpetaja",
+          "õpetaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma on õpetaja."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "olen",
+          "on",
+          "oled"
+        ]
+      }
+    },
+    {
+      "id": "mulle-meeldib-see-film",
+      "topic": "people",
+      "concepts": [
+        "outer-cases",
+        "present"
+      ],
+      "text": "Mulle meeldib see film.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Mulle",
+          "mina"
+        ],
+        [
+          "meeldib",
+          "meeldima"
+        ],
+        [
+          "see",
+          "see"
+        ],
+        [
+          "film",
+          "film"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing"
+        ],
+        [
+          "this movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Mulle",
+        "see",
+        "film"
+      ],
+      "wrong": [
+        "Ma meeldib see film."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mulle",
+          "Ma",
+          "Mul"
+        ]
+      }
+    },
+    {
+      "id": "eile-olin-ma-kodus",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "verb-second",
+        "inner-cases"
+      ],
+      "text": "Eile olin ma kodus.",
+      "means": "Yesterday I was at home.",
+      "words": [
+        [
+          "Eile",
+          "eile"
+        ],
+        [
+          "olin",
+          "olema"
+        ],
+        [
+          "ma",
+          "mina"
+        ],
+        [
+          "kodus",
+          "kodu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "was",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "olin",
+        "ma"
+      ],
+      "wrong": [
+        "Eile olin ma kodu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kodus",
+          "koju",
+          "kodu"
+        ]
+      }
+    },
+    {
+      "id": "ema-tootab-haiglas",
+      "topic": "people",
+      "concepts": [
+        "inner-cases",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mu ema töötab haiglas.",
+      "means": "My mom works at a hospital.",
+      "words": [
+        [
+          "Mu",
+          "mina"
+        ],
+        [
+          "ema",
+          "ema"
+        ],
+        [
+          "töötab",
+          "töötama"
+        ],
+        [
+          "haiglas",
+          "haigla"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "works"
+        ],
+        [
+          "at a hospital"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mu ema töötab haigla."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "haiglas",
+          "haigla",
+          "haiglasse"
+        ]
+      }
+    },
+    {
+      "id": "elan-vaikeses-korteris",
+      "topic": "home",
+      "concepts": [
+        "inner-cases",
+        "adjective",
+        "present"
+      ],
+      "text": "Ma elan väikeses korteris.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "elan",
+          "elama"
+        ],
+        [
+          "väikeses",
+          "väike"
+        ],
+        [
+          "korteris",
+          "korter"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma elan väike korteris."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "väikeses",
+          "väike",
+          "väikese"
+        ]
+      }
+    },
+    {
+      "id": "laual-on-raamat",
+      "topic": "home",
+      "concepts": [
+        "outer-cases",
+        "no-articles",
+        "dummy-subject"
+      ],
+      "text": "Laual on raamat.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Laual",
+          "laud"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "raamat",
+          "raamat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Laual",
+        "raamat"
+      ],
+      "wrong": [
+        "Lauale on raamat."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Laual",
+          "Lauale",
+          "Laud"
+        ]
+      }
+    },
+    {
+      "id": "kulmkapis-ei-ole-piima",
+      "topic": "home",
+      "concepts": [
+        "ei",
+        "partitive",
+        "inner-cases",
+        "dummy-subject"
+      ],
+      "text": "Külmkapis ei ole piima.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Külmkapis",
+          "külmkapp"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olema"
+        ],
+        [
+          "piima",
+          "piim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge",
+          true
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Külmkapis"
+      ],
+      "wrong": [
+        "Külmkapis ei ole piim."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "piima",
+          "piim",
+          "piimas"
+        ]
+      }
+    },
+    {
+      "id": "kas-saad-akna-sulgeda",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "infinitives",
+        "genitive",
+        "stem-changes"
+      ],
+      "text": "Kas sa saad akna sulgeda?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Kas"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "saad",
+          "saama"
+        ],
+        [
+          "akna",
+          "aken"
+        ],
+        [
+          "sulgeda",
+          "sulgema"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "can"
+        ],
+        [
+          "the window"
+        ],
+        [
+          "close"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kas sa saad akna sulgema?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "sulgeda",
+          "sulgema",
+          "sulgen"
+        ]
+      }
+    },
+    {
+      "id": "meil-on-suur-kook",
+      "topic": "home",
+      "concepts": [
+        "have",
+        "adjective",
+        "no-articles"
+      ],
+      "text": "Meil on suur köök ja väike rõdu.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Meil",
+          "meie"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "suur",
+          "suur"
+        ],
+        [
+          "köök",
+          "köök"
+        ],
+        [
+          "ja"
+        ],
+        [
+          "väike",
+          "väike"
+        ],
+        [
+          "rõdu",
+          "rõdu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At us"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Meil on suurt köök ja väike rõdu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "suur",
+          "suurt",
+          "suure"
+        ]
+      }
+    },
+    {
+      "id": "kui-ma-koju-tulen",
+      "topic": "home",
+      "concepts": [
+        "no-future",
+        "inner-cases",
+        "genitive"
+      ],
+      "text": "Kui ma koju tulen, teen õhtusöögi.",
+      "means": "When I get home, I'll make dinner.",
+      "words": [
+        [
+          "Kui",
+          "kui"
+        ],
+        [
+          "ma",
+          "mina"
+        ],
+        [
+          "koju",
+          "kodu"
+        ],
+        [
+          "tulen,",
+          "tulema"
+        ],
+        [
+          "teen",
+          "tegema"
+        ],
+        [
+          "õhtusöögi",
+          "õhtusöök"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When"
+        ],
+        [
+          "I"
+        ],
+        [
+          "home"
+        ],
+        [
+          "come,"
+        ],
+        [
+          "I make"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kui ma koju tulen, teen õhtusöök."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "koju",
+          "kodus",
+          "kodu"
+        ]
+      }
+    },
+    {
+      "id": "pane-uks-kinni",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "particle-verbs",
+        "genitive"
+      ],
+      "text": "Pane uks kinni, palun.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Pane",
+          "panema"
+        ],
+        [
+          "uks",
+          "uks"
+        ],
+        [
+          "kinni,",
+          "kinni"
+        ],
+        [
+          "palun",
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Put"
+        ],
+        [
+          "the door"
+        ],
+        [
+          "shut,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Pane ukse kinni, palun."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uks",
+          "ukse",
+          "uksel"
+        ]
+      }
+    },
+    {
+      "id": "kus-on-mu-votmed",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "plural",
+        "genitive"
+      ],
+      "text": "Kus on mu võtmed?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Kus",
+          "kus"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "mu",
+          "mina"
+        ],
+        [
+          "võtmed",
+          "võti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Kus on mu võtme?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "võtmed",
+          "võtme",
+          "võtit"
+        ]
+      }
+    },
+    {
+      "id": "oota-mind",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "partitive"
+      ],
+      "text": "Oota mind!",
+      "means": "Wait for me!",
+      "words": [
+        [
+          "Oota",
+          "ootama"
+        ],
+        [
+          "mind",
+          "mina"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait for"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Oota mina!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mind",
+          "mina",
+          "mulle"
+        ]
+      }
+    },
+    {
+      "id": "tule-sisse",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "particle-verbs"
+      ],
+      "text": "Tule sisse!",
+      "means": "Come in!",
+      "words": [
+        [
+          "Tule",
+          "tulema"
+        ],
+        [
+          "sisse",
+          "sisse"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "in"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Tulles sisse!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tule",
+          "Tulles",
+          "Tulnud"
+        ]
+      }
+    },
+    {
+      "id": "joon-kohvi-suhkruta",
+      "topic": "food",
+      "concepts": [
+        "partitive",
+        "with-without",
+        "present"
+      ],
+      "text": "Ma joon kohvi suhkruta.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "joon",
+          "jooma"
+        ],
+        [
+          "kohvi",
+          "kohv"
+        ],
+        [
+          "suhkruta",
+          "suhkur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma joon kohv suhkruta."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "suhkruta",
+          "suhkur",
+          "suhkrut"
+        ]
+      }
+    },
+    {
+      "id": "ma-ei-joo-kohvi",
+      "topic": "food",
+      "concepts": [
+        "ei",
+        "partitive"
+      ],
+      "text": "Ma ei joo kohvi.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "joo",
+          "jooma"
+        ],
+        [
+          "kohvi",
+          "kohv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "don't"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma ei joon kohvi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "joo",
+          "joon",
+          "jooma"
+        ]
+      }
+    },
+    {
+      "id": "sooviksin-klaasi-vett",
+      "topic": "food",
+      "concepts": [
+        "partitive"
+      ],
+      "chunks": [
+        "sooviksin"
+      ],
+      "text": "Ma sooviksin klaasi vett.",
+      "means": "I'd like a glass of water.",
+      "words": [
+        [
+          "Ma"
+        ],
+        [
+          "sooviksin"
+        ],
+        [
+          "klaasi",
+          "klaas"
+        ],
+        [
+          "vett",
+          "vesi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of water"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma sooviksin klaasi vesi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vett",
+          "vesi",
+          "vee"
+        ]
+      }
+    },
+    {
+      "id": "tahan-midagi-magusat",
+      "topic": "food",
+      "concepts": [
+        "infinitives",
+        "partitive"
+      ],
+      "text": "Ma tahan midagi magusat süüa.",
+      "means": "I want something sweet to eat.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "tahan",
+          "tahtma"
+        ],
+        [
+          "midagi",
+          "miski"
+        ],
+        [
+          "magusat",
+          "magus"
+        ],
+        [
+          "süüa",
+          "sööma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "something"
+        ],
+        [
+          "sweet"
+        ],
+        [
+          "to eat"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma tahan midagi magusat süüma."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "süüa",
+          "süüma",
+          "söön"
+        ]
+      }
+    },
+    {
+      "id": "eile-soime-pitsat",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "partitive"
+      ],
+      "text": "Eile sõime pitsat.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Eile",
+          "eile"
+        ],
+        [
+          "sõime",
+          "sööma"
+        ],
+        [
+          "pitsat",
+          "pitsa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Eile sööma pitsat."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sõime",
+          "sööma",
+          "süüa"
+        ]
+      }
+    },
+    {
+      "id": "emaga-suua-teha",
+      "topic": "food",
+      "concepts": [
+        "with-without",
+        "infinitives",
+        "outer-cases"
+      ],
+      "chunks": [
+        "suua-teha"
+      ],
+      "text": "Mulle meeldib emaga süüa teha.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Mulle",
+          "mina"
+        ],
+        [
+          "meeldib",
+          "meeldima"
+        ],
+        [
+          "emaga",
+          "ema"
+        ],
+        [
+          "süüa"
+        ],
+        [
+          "teha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing",
+          true
+        ],
+        [
+          "with mom",
+          true
+        ],
+        [
+          "to cook",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Mulle",
+        "meeldib",
+        "emaga",
+        "süüa",
+        "teha"
+      ],
+      "wrong": [
+        "Mulle meeldib emaga süüa tegema."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "emaga",
+          "ema",
+          "emas"
+        ]
+      }
+    },
+    {
+      "id": "arve-palun",
+      "topic": "food",
+      "concepts": [
+        "no-articles"
+      ],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "Arve, palun.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Arve,"
+        ],
+        [
+          "palun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Arves, palun."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Arve,",
+          "Arves,",
+          "Arvele,"
+        ]
+      }
+    },
+    {
+      "id": "hommikul-soon-mune",
+      "topic": "food",
+      "concepts": [
+        "partitive",
+        "plural",
+        "verb-second",
+        "outer-cases"
+      ],
+      "text": "Hommikul söön ma mune.",
+      "means": "I eat eggs in the morning.",
+      "words": [
+        [
+          "Hommikul",
+          "hommik"
+        ],
+        [
+          "söön",
+          "sööma"
+        ],
+        [
+          "ma",
+          "mina"
+        ],
+        [
+          "mune",
+          "muna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the morning"
+        ],
+        [
+          "eat",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "eggs"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "söön",
+        "ma"
+      ],
+      "wrong": [
+        "Hommikul söön ma munades."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mune",
+          "munades",
+          "munale"
+        ]
+      }
+    },
+    {
+      "id": "kui-palju-kohv-maksab",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "how-much"
+      ],
+      "text": "Kui palju kohv maksab?",
+      "means": "How much is a coffee?",
+      "words": [
+        [
+          "Kui"
+        ],
+        [
+          "palju"
+        ],
+        [
+          "kohv",
+          "kohv"
+        ],
+        [
+          "maksab",
+          "maksma"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kui palju kohv maksavad?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maksab",
+          "maksma",
+          "maksan"
+        ]
+      }
+    },
+    {
+      "id": "vabandage-kus-on-jaam",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "imperative"
+      ],
+      "chunks": [
+        "vabandage"
+      ],
+      "text": "Vabandage, kus on jaam?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Vabandage,"
+        ],
+        [
+          "kus",
+          "kus"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "jaam",
+          "jaam"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Vabandage, kus on jaamas?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "jaam",
+          "jaamas",
+          "jaama"
+        ]
+      }
+    },
+    {
+      "id": "lahen-poodi-leiba-ostma",
+      "topic": "out",
+      "concepts": [
+        "inner-cases",
+        "infinitives",
+        "partitive",
+        "present"
+      ],
+      "text": "Ma lähen poodi leiba ostma.",
+      "means": "I'm going to the store to buy bread.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "lähen",
+          "minema"
+        ],
+        [
+          "poodi",
+          "pood"
+        ],
+        [
+          "leiba",
+          "leib"
+        ],
+        [
+          "ostma",
+          "ostma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am going"
+        ],
+        [
+          "into the store"
+        ],
+        [
+          "bread",
+          true
+        ],
+        [
+          "to buy",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ],
+      "moved": [
+        "leiba",
+        "ostma"
+      ],
+      "wrong": [
+        "Ma lähen poodi leiba osta."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "poodi",
+          "poes",
+          "pood"
+        ]
+      }
+    },
+    {
+      "id": "homme-lahen-bussiga",
+      "topic": "out",
+      "concepts": [
+        "no-future",
+        "verb-second",
+        "with-without",
+        "outer-cases"
+      ],
+      "text": "Homme lähen ma tööle bussiga.",
+      "means": "Tomorrow I'm going to work by bus.",
+      "words": [
+        [
+          "Homme",
+          "homme"
+        ],
+        [
+          "lähen",
+          "minema"
+        ],
+        [
+          "ma",
+          "mina"
+        ],
+        [
+          "tööle",
+          "töö"
+        ],
+        [
+          "bussiga",
+          "buss"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ],
+      "moved": [
+        "lähen",
+        "ma"
+      ],
+      "wrong": [
+        "Homme lähen ma tööle buss."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "bussiga",
+          "buss",
+          "bussile"
+        ]
+      }
+    },
+    {
+      "id": "ostsin-uued-kingad",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "plural",
+        "adjective"
+      ],
+      "text": "Ma ostsin uued kingad.",
+      "means": "I bought new shoes.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "ostsin",
+          "ostma"
+        ],
+        [
+          "uued",
+          "uus"
+        ],
+        [
+          "kingad",
+          "king"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "bought"
+        ],
+        [
+          "new shoes"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ma ostsin uus kingad."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "uued",
+          "uus",
+          "uute"
+        ]
+      }
+    },
+    {
+      "id": "rong-hilines",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "numbers",
+        "partitive"
+      ],
+      "text": "Rong hilines kümme minutit.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Rong",
+          "rong"
+        ],
+        [
+          "hilines",
+          "hilinema"
+        ],
+        [
+          "kümme",
+          "kümme"
+        ],
+        [
+          "minutit",
+          "minut"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was late"
+        ],
+        [
+          "by ten minutes"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Rong hilines kümme minutid."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "minutit",
+          "minut",
+          "minuti"
+        ]
+      }
+    },
+    {
+      "id": "pole-kunagi-parnus-kainud",
+      "topic": "out",
+      "concepts": [
+        "ei",
+        "past",
+        "inner-cases"
+      ],
+      "text": "Ma ei ole kunagi Pärnus käinud.",
+      "means": "I've never been to Pärnu.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olema"
+        ],
+        [
+          "kunagi",
+          "kunagi"
+        ],
+        [
+          "Pärnus"
+        ],
+        [
+          "käinud",
+          "käima"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "haven't"
+        ],
+        [
+          "ever"
+        ],
+        [
+          "in Pärnu",
+          true
+        ],
+        [
+          "been",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ],
+      "moved": [
+        "Pärnus",
+        "käinud"
+      ],
+      "wrong": [
+        "Ma ei ole kunagi Pärnus käin."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "käinud",
+          "käima",
+          "käin"
+        ]
+      }
+    },
+    {
+      "id": "kingad-liiga-vaikesed",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "adjective",
+        "present"
+      ],
+      "text": "Need kingad on liiga väikesed.",
+      "means": "These shoes are too small.",
+      "words": [
+        [
+          "Need",
+          "see"
+        ],
+        [
+          "kingad",
+          "king"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "liiga",
+          "liiga"
+        ],
+        [
+          "väikesed",
+          "väike"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "These shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Need kingad on liiga väike."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "väikesed",
+          "väike",
+          "väikest"
+        ]
+      }
+    },
+    {
+      "id": "voime-takso-votta",
+      "topic": "out",
+      "concepts": [
+        "infinitives",
+        "genitive",
+        "stem-changes"
+      ],
+      "text": "Me võime takso võtta.",
+      "means": "We can take a taxi.",
+      "words": [
+        [
+          "Me",
+          "meie"
+        ],
+        [
+          "võime",
+          "võima"
+        ],
+        [
+          "takso",
+          "takso"
+        ],
+        [
+          "võtta",
+          "võtma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "can"
+        ],
+        [
+          "a taxi",
+          true
+        ],
+        [
+          "take",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "takso",
+        "võtta"
+      ],
+      "wrong": [
+        "Me võime takso võtma."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "võtta",
+          "võtma",
+          "võtan"
+        ]
+      }
+    },
+    {
+      "id": "jaamas-ootab-vanaema",
+      "topic": "out",
+      "concepts": [
+        "verb-second",
+        "partitive",
+        "inner-cases"
+      ],
+      "text": "Jaamas ootab meid vanaema.",
+      "means": "Grandma's waiting for us at the station.",
+      "words": [
+        [
+          "Jaamas",
+          "jaam"
+        ],
+        [
+          "ootab",
+          "ootama"
+        ],
+        [
+          "meid",
+          "meie"
+        ],
+        [
+          "vanaema",
+          "vanaema"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "is waiting for"
+        ],
+        [
+          "us"
+        ],
+        [
+          "grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Jaamas",
+        "vanaema"
+      ],
+      "wrong": [
+        "Jaamas ootab meile vanaema."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "meid",
+          "meile",
+          "meilt"
+        ]
+      }
+    },
+    {
+      "id": "laupaeval-vanaema-juurde",
+      "topic": "out",
+      "concepts": [
+        "no-future",
+        "genitive",
+        "outer-cases"
+      ],
+      "text": "Laupäeval sõidame vanaema juurde.",
+      "means": "On Saturday we're going to grandma's.",
+      "words": [
+        [
+          "Laupäeval",
+          "laupäev"
+        ],
+        [
+          "sõidame",
+          "sõitma"
+        ],
+        [
+          "vanaema",
+          "vanaema"
+        ],
+        [
+          "juurde",
+          "juurde"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "grandma's",
+          true
+        ],
+        [
+          "to",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "vanaema",
+        "juurde"
+      ],
+      "wrong": [
+        "Laupäeval sõidame vanaemas juurde."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Laupäeval",
+          "Laupäev",
+          "Laupäevale"
+        ]
+      }
+    },
+    {
+      "id": "pilet-maksab",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "partitive",
+        "present"
+      ],
+      "text": "Pilet maksab kakskümmend eurot.",
+      "means": "The ticket costs twenty euros.",
+      "words": [
+        [
+          "Pilet",
+          "pilet"
+        ],
+        [
+          "maksab",
+          "maksma"
+        ],
+        [
+          "kakskümmend",
+          "kakskümmend"
+        ],
+        [
+          "eurot",
+          "euro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The ticket"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "twenty euros"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Pilet maksab kakskümmend eurod."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "eurot",
+          "euro",
+          "eurod"
+        ]
+      }
+    },
+    {
+      "id": "homme-sajab-vihma",
+      "topic": "plans",
+      "concepts": [
+        "no-future",
+        "dummy-subject",
+        "partitive"
+      ],
+      "text": "Homme sajab vihma.",
+      "means": "It'll rain tomorrow.",
+      "words": [
+        [
+          "Homme",
+          "homme"
+        ],
+        [
+          "sajab",
+          "sadama"
+        ],
+        [
+          "vihma",
+          "vihm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "falls"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Homme sajavad vihma."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vihma",
+          "vihmas",
+          "vihmale"
+        ]
+      }
+    },
+    {
+      "id": "helistan-sulle-homme",
+      "topic": "plans",
+      "concepts": [
+        "no-future",
+        "outer-cases",
+        "present"
+      ],
+      "text": "Ma helistan sulle homme.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "helistan",
+          "helistama"
+        ],
+        [
+          "sulle",
+          "sina"
+        ],
+        [
+          "homme",
+          "homme"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "call"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma helistan sind homme."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sulle",
+          "sind",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "nuud-pean-ma-minema",
+      "topic": "plans",
+      "concepts": [
+        "infinitives",
+        "verb-second"
+      ],
+      "text": "Nüüd pean ma minema.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Nüüd",
+          "nüüd"
+        ],
+        [
+          "pean",
+          "pidama"
+        ],
+        [
+          "ma",
+          "mina"
+        ],
+        [
+          "minema",
+          "minema"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "have to",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "pean",
+        "ma"
+      ],
+      "wrong": [
+        "Nüüd pean ma minna."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "minema",
+          "minna",
+          "lähen"
+        ]
+      }
+    },
+    {
+      "id": "kas-tuled-meiega-kinno",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "with-without",
+        "inner-cases",
+        "no-future"
+      ],
+      "text": "Kas sa tuled meiega kinno?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Kas"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "tuled",
+          "tulema"
+        ],
+        [
+          "meiega",
+          "meie"
+        ],
+        [
+          "kinno",
+          "kino"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "come"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kas sa tuled meiega kinos?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kinno",
+          "kinos",
+          "kino"
+        ]
+      }
+    },
+    {
+      "id": "nadalavahetusel-randa",
+      "topic": "plans",
+      "concepts": [
+        "no-future",
+        "outer-cases",
+        "inner-cases"
+      ],
+      "text": "Nädalavahetusel lähme randa.",
+      "means": "We're going to the beach this weekend.",
+      "words": [
+        [
+          "Nädalavahetusel",
+          "nädalavahetus"
+        ],
+        [
+          "lähme",
+          "minema"
+        ],
+        [
+          "randa",
+          "rand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the weekend"
+        ],
+        [
+          "we go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Nädalavahetusel lähme rannas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "randa",
+          "rannas",
+          "rand"
+        ]
+      }
+    },
+    {
+      "id": "opin-eesti-keelt",
+      "topic": "plans",
+      "concepts": [
+        "partitive",
+        "present",
+        "stem-changes"
+      ],
+      "text": "Ma õpin eesti keelt juba aasta aega.",
+      "means": "I've been learning Estonian for a year now.",
+      "words": [
+        [
+          "Ma",
+          "mina"
+        ],
+        [
+          "õpin",
+          "õppima"
+        ],
+        [
+          "eesti",
+          "eesti"
+        ],
+        [
+          "keelt",
+          "keel"
+        ],
+        [
+          "juba",
+          "juba"
+        ],
+        [
+          "aasta",
+          "aasta"
+        ],
+        [
+          "aega",
+          "aeg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am learning"
+        ],
+        [
+          "the Estonian language"
+        ],
+        [
+          "for a year now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma õpin eesti keel juba aasta aega."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "keelt",
+          "keel",
+          "keelele"
+        ]
+      }
+    },
+    {
+      "id": "mida-teed-nadalavahetusel",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "partitive",
+        "outer-cases",
+        "no-future"
+      ],
+      "text": "Mida sa nädalavahetusel teed?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Mida",
+          "mis"
+        ],
+        [
+          "sa",
+          "sina"
+        ],
+        [
+          "nädalavahetusel",
+          "nädalavahetus"
+        ],
+        [
+          "teed",
+          "tegema"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you"
+        ],
+        [
+          "on the weekend"
+        ],
+        [
+          "do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mida sa nädalavahetusel teeb?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "teed",
+          "teeb",
+          "tegema"
+        ]
+      }
+    },
+    {
+      "id": "tana-on-kulm",
+      "topic": "plans",
+      "concepts": [
+        "dummy-subject",
+        "present"
+      ],
+      "text": "Täna on külm.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Täna",
+          "täna"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "külm",
+          "külm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Täna on külmas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "külm",
+          "külmas",
+          "külmale"
+        ]
+      }
+    },
+    {
+      "id": "mul-on-kulm",
+      "topic": "plans",
+      "concepts": [
+        "have",
+        "outer-cases"
+      ],
+      "text": "Mul on külm.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Mul",
+          "mina"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "külm",
+          "külm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma on külm."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mul",
+          "Ma",
+          "Mulle"
+        ]
+      }
+    },
+    {
+      "id": "anna-mulle-teada",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "particle-verbs",
+        "outer-cases"
+      ],
+      "text": "Anna mulle teada!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Anna",
+          "andma"
+        ],
+        [
+          "mulle",
+          "mina"
+        ],
+        [
+          "teada",
+          "teadma"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "know"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Anna mind teada!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mulle",
+          "mind",
+          "mul"
+        ]
+      }
+    },
+    {
+      "id": "loodan-ilus-ilm",
+      "topic": "plans",
+      "concepts": [
+        "no-future",
+        "adjective"
+      ],
+      "text": "Loodan, et homme on ilus ilm.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Loodan,",
+          "lootma"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "homme",
+          "homme"
+        ],
+        [
+          "on",
+          "olema"
+        ],
+        [
+          "ilus",
+          "ilus"
+        ],
+        [
+          "ilm",
+          "ilm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "is"
+        ],
+        [
+          "nice weather"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Loodan, et homme on ilusat ilm."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ilus",
+          "ilusat",
+          "ilusa"
+        ]
+      }
+    },
+    {
+      "id": "mul-ei-ole-tana-aega",
+      "topic": "plans",
+      "concepts": [
+        "have",
+        "ei",
+        "partitive"
+      ],
+      "text": "Mul ei ole täna aega.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Mul",
+          "mina"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olema"
+        ],
+        [
+          "täna",
+          "täna"
+        ],
+        [
+          "aega",
+          "aeg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "isn't"
+        ],
+        [
+          "today"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mul ei ole täna aeg."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "aega",
+          "aeg",
+          "ajal"
+        ]
+      }
+    },
+    {
+      "id": "kohtume-homme",
+      "topic": "plans",
+      "concepts": [
+        "no-future",
+        "present"
+      ],
+      "chunks": [
+        "see-you-tomorrow"
+      ],
+      "text": "Kohtume homme!",
+      "means": "See you tomorrow!",
+      "words": [
+        [
+          "Kohtume"
+        ],
+        [
+          "homme"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We meet"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Kohtume eile!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kohtume",
+          "Kohtusime",
+          "Kohtuma"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kohv",
+          "forms": [
+            "kohvi"
+          ],
+          "picture": "coffee",
+          "means": "kohvi = coffee"
+        },
+        {
+          "lemma": "tee",
+          "forms": [
+            "teed"
+          ],
+          "picture": "tea",
+          "means": "teed = tea"
+        },
+        {
+          "lemma": "vesi",
+          "forms": [
+            "vett"
+          ],
+          "picture": "water",
+          "means": "vett = water"
+        },
+        {
+          "lemma": "mina",
+          "forms": [
+            "ma"
+          ],
+          "means": "ma = I"
+        },
+        {
+          "lemma": "jooma",
+          "forms": [
+            "joon"
+          ],
+          "picture": "drink",
+          "means": "joon = drink"
+        },
+        {
+          "lemma": "ja",
+          "forms": [
+            "ja"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending marks the person, so ma, sa and me are often left out: (ma) elan, (sa) elad, (ta) elab, (me) elame, (te) elate, (nad) elavad; ta is he and she alike, and to be is olen, oled, on, oleme, olete, on."
+      },
+      "items": [
+        "ma-joon-kohvi",
+        "ma-joon-teed",
+        "ma-joon-vett",
+        "ma-joon-kohvi-ja-teed",
+        "ma-joon-teed-ja-vett",
+        "ma-joon-vett-ja-kohvi"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "üks",
+          "forms": [
+            "üks"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "piim",
+          "forms": [
+            "piima"
+          ],
+          "picture": "milk",
+          "means": "piima = milk"
+        },
+        {
+          "lemma": "kohv",
+          "forms": [
+            "kohv"
+          ],
+          "means": "coffee"
+        },
+        {
+          "lemma": "tee",
+          "forms": [
+            "tee"
+          ],
+          "means": "tea"
+        },
+        {
+          "lemma": "vesi",
+          "forms": [
+            "vesi"
+          ],
+          "means": "water"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "uks-tee-ja-uks-vesi-palun",
+        "tere-uks-kohv-palun",
+        "uks-kohv-aitah",
+        "tere-uks-tee-palun",
+        "ma-joon-piima"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "hea",
+          "forms": [
+            "hea"
+          ],
+          "picture": "good",
+          "means": "good"
+        },
+        {
+          "lemma": "olema",
+          "forms": [
+            "on"
+          ],
+          "means": "on = is"
+        },
+        {
+          "lemma": "mina",
+          "forms": [
+            "mul"
+          ],
+          "means": "mul = for me"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no",
+        "is-going-well"
+      ],
+      "concept": {
+        "pattern": "no-articles",
+        "line": "Estonian has no words for a, an or the; context does their work: Ma olen õpetaja; Laual on raamat."
+      },
+      "items": [
+        "tere-kuidas-sul-laheb",
+        "mul-laheb-hasti-aitah",
+        "tee-on-hea",
+        "jah-palun",
+        "ei-aitah",
+        "jah-aitah-head-aega",
+        "ei-aitah-head-aega"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "sina",
+          "forms": [
+            "sa"
+          ],
+          "means": "sa = you"
+        },
+        {
+          "lemma": "ei",
+          "forms": [
+            "ei"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "õpetaja",
+          "forms": [
+            "õpetaja"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "õpilane",
+          "forms": [
+            "õpilane"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "kas",
+          "forms": [
+            "kas"
+          ],
+          "means": "yes/no question marker; whether"
+        },
+        {
+          "lemma": "olema",
+          "forms": [
+            "olen",
+            "oled",
+            "ole"
+          ],
+          "means": "olen = am; oled = are; ole = be"
+        },
+        {
+          "lemma": "jooma",
+          "forms": [
+            "joo"
+          ],
+          "means": "joo = drink"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "ma-olen-opetaja",
+        "sa-oled-opilane",
+        "kas-sa-oled-opetaja",
+        "ma-ei-ole-opetaja",
+        "mis-su-nimi-on",
+        "tere-meeldiv-tutvuda",
+        "ma-ei-joo-kohvi"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ema",
+          "forms": [
+            "ema"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "isa",
+          "forms": [
+            "isa"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "vend",
+          "forms": [
+            "vend"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "õde",
+          "forms": [
+            "õde"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "mina",
+          "forms": [
+            "mu"
+          ],
+          "means": "mu = my"
+        },
+        {
+          "lemma": "see",
+          "forms": [
+            "see"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "genitive",
+        "line": "The genitive means of and comes first (isa auto: Dad's car; mu nimi), goes before words like juurde (vanaema juurde: to grandma's), and often marks a whole, finished object in an affirmative clause (Ma teen õhtusöögi; Kas sa saad akna sulgeda?); an affirmative command normally uses the nominative for a whole noun object instead: Pane uks kinni."
+      },
+      "items": [
+        "see-on-mu-ema",
+        "see-on-mu-isa",
+        "mu-isa-on-opetaja",
+        "mu-vend-on-opilane",
+        "see-on-mu-ode",
+        "mu-ema-on-opetaja"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "sõber",
+          "forms": [
+            "sõber"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "arst",
+          "forms": [
+            "arst"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "võti",
+          "forms": [
+            "võti"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "raamat",
+          "forms": [
+            "raamatut"
+          ],
+          "picture": "book",
+          "means": "raamatut = book"
+        },
+        {
+          "lemma": "sina",
+          "forms": [
+            "sul"
+          ],
+          "means": "sul = you have"
+        }
+      ],
+      "phrases": [
+        "i-have"
+      ],
+      "concept": null,
+      "items": [
+        "mul-on-telefon",
+        "kas-sul-on-voti",
+        "mul-on-vend-ja-ode",
+        "mul-ei-ole-raamatut",
+        "mu-ode-on-arst",
+        "sa-oled-hea-sober"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "kus",
+          "forms": [
+            "kus"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "siin",
+          "forms": [
+            "siin"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "seal",
+          "forms": [
+            "seal"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "tualett",
+          "forms": [
+            "tualett"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "võti",
+          "forms": [
+            "võtmed"
+          ],
+          "means": "võtmed = keys"
+        }
+      ],
+      "phrases": [
+        "vabandage"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A plain yes/no question usually starts with kas (Kas sa räägid inglise keelt?), and a question word like kus, mis or kuidas comes first; Estonian adds no do."
+      },
+      "items": [
+        "kus-on-mu-voti",
+        "mu-telefon-on-siin",
+        "voti-on-seal",
+        "vabandage-kus-on-tualett",
+        "kus-on-mu-ema",
+        "mu-ode-on-siin",
+        "kus-on-mu-votmed"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "kaks",
+          "forms": [
+            "kaks"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "kolm",
+          "forms": [
+            "kolm"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "raha",
+          "forms": [
+            "raha"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "maksma",
+          "forms": [
+            "maksab"
+          ],
+          "means": "maksab = costs"
+        },
+        {
+          "lemma": "raamat",
+          "forms": [
+            "raamat"
+          ],
+          "means": "book"
+        },
+        {
+          "lemma": "vend",
+          "forms": [
+            "venda"
+          ],
+          "means": "venda = brothers"
+        }
+      ],
+      "phrases": [
+        "how-much",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "vabandage-kui-palju-see-maksab",
+        "arve-palun",
+        "kaks-kohvi-palun",
+        "uks-raamat-palun",
+        "mul-on-kolm-raamatut",
+        "mul-ei-ole-raha",
+        "kui-palju-kohv-maksab",
+        "mul-on-ode"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "rääkima",
+          "forms": [
+            "räägid",
+            "räägin"
+          ],
+          "means": "räägid = speak; räägin = speak"
+        },
+        {
+          "lemma": "inglise",
+          "forms": [
+            "inglise"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "eesti",
+          "forms": [
+            "eesti"
+          ],
+          "means": "Estonian"
+        },
+        {
+          "lemma": "mõistma",
+          "forms": [
+            "mõista",
+            "mõistad"
+          ],
+          "means": "mõista = understand; mõistad = understand"
+        },
+        {
+          "lemma": "natuke",
+          "forms": [
+            "natuke"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "tahtma",
+          "forms": [
+            "tahan"
+          ],
+          "means": "tahan = want"
+        },
+        {
+          "lemma": "keel",
+          "forms": [
+            "keelt"
+          ],
+          "means": "keelt = language"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "partitive",
+        "line": "The partitive (kohvi, vett, keelt) is used with verbs that take a partitive object (Ma joon kohvi; Oota mind), for a negated object (Ma ei joo kohvi), for an indefinite amount or none (klaas vett; Külmkapis ei ole piima), and after a basic-form number other than one (kaks venda)."
+      },
+      "items": [
+        "ma-ei-moista",
+        "kas-sa-moistad",
+        "kas-sa-raagid-inglise-keelt",
+        "ma-raagin-natuke-eesti-keelt",
+        "ma-tahan-kohvi",
+        "ma-tahan-vett-palun"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "maja",
+          "forms": [
+            "maja",
+            "majas"
+          ],
+          "picture": "house",
+          "means": "maja = house; majas = in a house"
+        },
+        {
+          "lemma": "tuba",
+          "forms": [
+            "tuba"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "suur",
+          "forms": [
+            "suur"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "väike",
+          "forms": [
+            "väike",
+            "väikeses"
+          ],
+          "picture": "small",
+          "means": "väike = small; väikeses = in a small"
+        },
+        {
+          "lemma": "elama",
+          "forms": [
+            "elan",
+            "elad",
+            "elab"
+          ],
+          "means": "elan = live; elad = live; elab = lives"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mu-tuba-on-vaike",
+        "see-maja-on-suur",
+        "ma-elan-vaikeses-majas",
+        "kus-sa-elad",
+        "mu-ema-elab-siin"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "minema",
+          "forms": [
+            "lähen",
+            "lähed",
+            "läheb"
+          ],
+          "means": "lähen = go; lähed = are going; läheb = goes"
+        },
+        {
+          "lemma": "kuhu",
+          "forms": [
+            "kuhu"
+          ],
+          "means": "where to"
+        },
+        {
+          "lemma": "kool",
+          "forms": [
+            "kooli"
+          ],
+          "picture": "school",
+          "means": "kooli = to school"
+        },
+        {
+          "lemma": "linn",
+          "forms": [
+            "linna"
+          ],
+          "picture": "city",
+          "means": "linna = to the city"
+        },
+        {
+          "lemma": "jaam",
+          "forms": [
+            "jaam"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "auto",
+          "forms": [
+            "auto"
+          ],
+          "picture": "car",
+          "means": "car"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "have",
+        "line": "Estonian says having with -l and on: Mul on õde (I have a sister, literally at me is a sister); Meil on suur köök; and how you feel: Mul on külm (I'm cold)."
+      },
+      "items": [
+        "ma-lahen-kooli",
+        "kuhu-sa-lahed",
+        "vabandage-kus-on-jaam",
+        "mu-ema-laheb-linna",
+        "see-auto-on-vaike",
+        "mul-on-auto",
+        "see-on-isa-auto"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "täna",
+          "forms": [
+            "täna"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "homme",
+          "forms": [
+            "homme"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "nüüd",
+          "forms": [
+            "nüüd"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "töötama",
+          "forms": [
+            "töötan",
+            "töötama"
+          ],
+          "picture": "work",
+          "means": "töötan = work; töötama = to work"
+        },
+        {
+          "lemma": "pidama",
+          "forms": [
+            "pean"
+          ],
+          "means": "pean = have to"
+        },
+        {
+          "lemma": "saama",
+          "forms": [
+            "saa"
+          ],
+          "means": "saa = can"
+        },
+        {
+          "lemma": "minema",
+          "forms": [
+            "minema",
+            "minna"
+          ],
+          "means": "minema = to go; minna = to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "ma-tootan-tana",
+        "kohtume-homme",
+        "nuud-pean-ma-minema",
+        "homme-lahen-ma-linna",
+        "ma-ei-saa-tana-minna",
+        "ma-pean-homme-tootama"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

@@ -1,0 +1,7684 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-pl",
+  "name": "Starter: Polish",
+  "about": "Polish word order and cases in real, everyday sentences.",
+  "language": "pl",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kawa": "coffee",
+    "herbata": "tea",
+    "woda": "water",
+    "ja": "I",
+    "pić": "to drink",
+    "i": "and",
+    "jeden": "one",
+    "mleko": "milk",
+    "dobrze": "well, fine",
+    "mieć się": "to be doing, to feel (Jak się masz?: How are you?)",
+    "być": "to be",
+    "ty": "you",
+    "nie": "not",
+    "nauczyciel": "teacher",
+    "student": "university student",
+    "czy": "introduces a yes/no question",
+    "mama": "mom",
+    "ojciec": "father",
+    "brat": "brother",
+    "siostra": "sister",
+    "mój": "my",
+    "to": "this",
+    "nauczycielka": "female teacher",
+    "mieć": "to have",
+    "przyjaciel": "friend",
+    "lekarka": "female doctor",
+    "klucz": "key",
+    "telefon": "phone",
+    "książka": "book",
+    "dobry": "good",
+    "gdzie": "where",
+    "tutaj": "here",
+    "tam": "there",
+    "toaleta": "bathroom, toilet",
+    "dwa": "two",
+    "trzy": "three",
+    "pieniądze": "money",
+    "mówić": "to speak, to say",
+    "angielski": "English",
+    "polski": "Polish",
+    "rozumieć": "to understand",
+    "trochę": "a little",
+    "chcieć": "to want",
+    "po": "in (with languages, as in po polsku: in Polish)",
+    "dom": "house, home",
+    "pokój": "room",
+    "duży": "big",
+    "mały": "small",
+    "mieszkać": "to live (somewhere)",
+    "w": "in",
+    "ten": "this",
+    "iść": "to go (on foot)",
+    "do": "to",
+    "szkoła": "school",
+    "miasto": "city",
+    "dworzec": "station (train or bus)",
+    "samochód": "car",
+    "dzisiaj": "today",
+    "jutro": "tomorrow",
+    "już": "now, already",
+    "pracować": "to work",
+    "musieć": "must, to have to",
+    "móc": "can, to be able to",
+    "cześć": "hi; bye",
+    "nazywać się": "to be called",
+    "rok": "year (1 rok; numbers ending in 2–4 take lata, except 12–14; otherwise lat)",
+    "tata": "dad",
+    "wiedzieć": "to know (a fact)",
+    "podobać się": "to appeal to, to please (podoba mi się: I like it)",
+    "film": "movie",
+    "mieszkanie": "apartment",
+    "stół": "table",
+    "leżeć": "to lie (be lying somewhere)",
+    "lodówka": "fridge",
+    "pani": "Ms. or Mrs. before a name; ma'am; you (polite, to a woman)",
+    "pomóc": "to help",
+    "zamknąć": "to close (and be done)",
+    "okno": "window",
+    "balkon": "balcony",
+    "wracać": "to come back",
+    "gotować": "to cook",
+    "obiad": "the main meal; lunch or dinner",
+    "drzwi": "door (always plural)",
+    "prosić": "to ask (proszę: please)",
+    "cukier": "sugar",
+    "poprosić": "to ask for (poproszę: I'd like…, please)",
+    "filiżanka": "cup",
+    "zjeść": "to eat (up)",
+    "słodki": "sweet",
+    "wczoraj": "yesterday",
+    "jeść": "to eat",
+    "pizza": "pizza",
+    "świetnie": "great, really well",
+    "rachunek": "check, bill",
+    "lubić": "to like",
+    "sklep": "store, shop",
+    "chleb": "bread",
+    "jechać": "to go (by car, bus or train)",
+    "praca": "work, job",
+    "autobus": "bus",
+    "kupić": "to buy",
+    "nowy": "new",
+    "kurtka": "jacket",
+    "pociąg": "train",
+    "spóźnić się": "to be late",
+    "minuta": "minute",
+    "nigdy": "never",
+    "but": "shoe",
+    "zmęczony": "tired",
+    "wziąć": "to take",
+    "taksówka": "taxi",
+    "czekać": "to wait",
+    "babcia": "grandma",
+    "sobota": "Saturday",
+    "padać": "to rain; to fall (of rain or snow)",
+    "zadzwonić": "to call, to phone",
+    "kino": "movie theater",
+    "pójść": "to go (one trip; the perfective partner of iść)",
+    "plaża": "beach",
+    "uczyć się": "to learn, to study",
+    "robić": "to do, to make",
+    "weekend": "weekend",
+    "zimno": "cold (it's cold)",
+    "ładny": "nice, pretty",
+    "pogoda": "weather",
+    "czas": "time",
+    "dać": "to give",
+    "znać": "to know, to be familiar with (dać znać: to let someone know)",
+    "chodzić": "to walk; to go regularly (chodź: come)",
+    "pomagać": "to help",
+    "kuchnia": "kitchen"
+  },
+  "chunks": {
+    "jak-się-masz": {
+      "text": "Jak się masz?",
+      "en": "How are you?",
+      "about": "A greeting you learn whole: literally, how yourself you have?"
+    },
+    "jak-się-nazywasz": {
+      "text": "Jak się nazywasz?",
+      "en": "What's your name?",
+      "about": "Literally, how do you call yourself? Answer with Nazywam się and your name."
+    },
+    "po-angielsku": {
+      "text": "po angielsku",
+      "en": "in English",
+      "about": "po polsku is in Polish."
+    },
+    "przepraszam": {
+      "text": "Przepraszam",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention, or to say sorry."
+    },
+    "nie-ma": {
+      "text": "nie ma",
+      "en": "there isn't, there's no",
+      "about": "What there isn't goes into the genitive: Nie ma mleka."
+    },
+    "poproszę": {
+      "text": "poproszę",
+      "en": "I'd like…, please",
+      "about": "To ask for something in a shop or café: Kawę, poproszę."
+    },
+    "daj-mi-znać": {
+      "text": "Daj mi znać!",
+      "en": "Let me know!",
+      "about": "A fixed request: tell me, keep me posted."
+    },
+    "mieć-lat": {
+      "text": "mieć … lat",
+      "en": "to be … years old",
+      "about": "Polish has years for an age: Mam dwadzieścia lat (I'm twenty)."
+    },
+    "mam-nadzieję": {
+      "text": "mam nadzieję",
+      "en": "I hope",
+      "about": "Literally, I have hope."
+    },
+    "hi": {
+      "text": "Cześć",
+      "en": "hi"
+    },
+    "please": {
+      "text": "proszę",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "dziękuję",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "Do widzenia",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "tak",
+      "en": "yes"
+    },
+    "no": {
+      "text": "nie",
+      "en": "no"
+    },
+    "nice-to-meet-you": {
+      "text": "Miło cię poznać",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Ile to kosztuje",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Rachunek, poproszę",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Do jutra",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "ja-pije",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ja piję.",
+      "means": "I drink.",
+      "words": [
+        [
+          "Ja",
+          "ja"
+        ],
+        [
+          "piję",
+          "pić"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja pić.",
+        "Ja pijesz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "piję",
+          "pijesz",
+          "pije"
+        ]
+      }
+    },
+    {
+      "id": "pije-kawe",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piję kawę.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "kawę",
+          "kawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piję kawa.",
+        "Ja pić kawę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kawę",
+          "kawa",
+          "kawy"
+        ]
+      }
+    },
+    {
+      "id": "pije-herbate",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piję herbatę.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "herbatę",
+          "herbata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piję herbata.",
+        "Ja pić herbatę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "herbatę",
+          "herbata",
+          "herbaty"
+        ]
+      }
+    },
+    {
+      "id": "pije-wode",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piję wodę.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "wodę",
+          "woda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piję woda.",
+        "Ja pić wodę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "wodę",
+          "woda",
+          "wody"
+        ]
+      }
+    },
+    {
+      "id": "pije-kawe-i-herbate",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piję kawę i herbatę.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "kawę",
+          "kawa"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "herbatę",
+          "herbata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piję kawa i herbatę.",
+        "Piję kawę i herbata."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "herbatę",
+          "herbata",
+          "herbaty"
+        ]
+      }
+    },
+    {
+      "id": "pije-herbate-i-wode",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piję herbatę i wodę.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "herbatę",
+          "herbata"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "wodę",
+          "woda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piję herbata i wodę.",
+        "Piję herbatę i woda."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "wodę",
+          "woda",
+          "wody"
+        ]
+      }
+    },
+    {
+      "id": "pije-wode-i-kawe",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piję wodę i kawę.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "wodę",
+          "woda"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "kawę",
+          "kawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piję woda i kawę.",
+        "Piję wodę i kawa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kawę",
+          "kawa",
+          "kawy"
+        ]
+      }
+    },
+    {
+      "id": "kawe-prosze",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kawę, proszę.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Kawę,",
+          "kawa"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kawą, proszę.",
+        "Kawie, proszę."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kawę,",
+          "Kawą,",
+          "Kawie,"
+        ]
+      }
+    },
+    {
+      "id": "czesc-jedna-kawe-prosze",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please",
+        "hi"
+      ],
+      "text": "Cześć, jedną kawę, proszę.",
+      "means": "Hi, one coffee, please.",
+      "words": [
+        [
+          "Cześć,"
+        ],
+        [
+          "jedną",
+          "jeden"
+        ],
+        [
+          "kawę,",
+          "kawa"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hi"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cześć, jeden kawę, proszę.",
+        "Cześć, jedną kawa, proszę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jedną",
+          "jeden",
+          "jedno"
+        ]
+      }
+    },
+    {
+      "id": "herbate-i-wode-prosze",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Herbatę i wodę, proszę.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Herbatę",
+          "herbata"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "wodę,",
+          "woda"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Herbata i wodę, proszę.",
+        "Herbatę i woda, proszę."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Herbatę",
+          "Herbata",
+          "Herbaty"
+        ]
+      }
+    },
+    {
+      "id": "kawe-dziekuje",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "no-articles"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Kawę, dziękuję.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Kawę,",
+          "kawa"
+        ],
+        [
+          "dziękuję"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kawą, dziękuję.",
+        "Kawie, dziękuję."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kawę,",
+          "Kawą,",
+          "Kawie,"
+        ]
+      }
+    },
+    {
+      "id": "czesc-herbate-prosze",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "no-articles"
+      ],
+      "chunks": [
+        "please",
+        "hi"
+      ],
+      "text": "Cześć! Herbatę, proszę.",
+      "means": "Hi! A tea, please.",
+      "words": [
+        [
+          "Cześć!"
+        ],
+        [
+          "Herbatę,",
+          "herbata"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hi"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cześć! Herbatą, proszę.",
+        "Cześć! Herbacie, proszę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Herbatę,",
+          "Herbatą,",
+          "Herbacie,"
+        ]
+      }
+    },
+    {
+      "id": "pije-mleko",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piję mleko.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "mleko",
+          "mleko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piję mlekiem.",
+        "Ja pić mleko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mleko",
+          "mleka",
+          "mlekiem"
+        ]
+      }
+    },
+    {
+      "id": "mam-sie-dobrze-dziekuje",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "sie"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Mam się dobrze, dziękuję.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Mam",
+          "mieć się"
+        ],
+        [
+          "się",
+          "mieć się"
+        ],
+        [
+          "dobrze,",
+          "dobrze"
+        ],
+        [
+          "dziękuję"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am doing"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja masz się dobrze, dziękuję.",
+        "Mam się dobry, dziękuję."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mam",
+          "Masz",
+          "Mają"
+        ]
+      }
+    },
+    {
+      "id": "tak-prosze",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Tak, proszę.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Tak,"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tak, ja prosisz.",
+        "Tak, ja prosić."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "proszę",
+          "prosisz",
+          "prosi"
+        ]
+      }
+    },
+    {
+      "id": "nie-dziekuje",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Nie, dziękuję.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nie,"
+        ],
+        [
+          "dziękuję"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nie, ja dziękować.",
+        "Nie, ja dziękujesz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dziękuję",
+          "dziękujesz",
+          "dziękują"
+        ]
+      }
+    },
+    {
+      "id": "tak-dziekuje-do-widzenia",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Tak, dziękuję. Do widzenia!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Tak,"
+        ],
+        [
+          "dziękuję."
+        ],
+        [
+          "Do"
+        ],
+        [
+          "widzenia"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tak, dziękuję. Do widzenie!",
+        "Tak, ja dziękujesz. Do widzenia!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "widzenia",
+          "widzenie",
+          "widzeniu"
+        ]
+      }
+    },
+    {
+      "id": "nie-dziekuje-do-widzenia",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Nie, dziękuję. Do widzenia!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nie,"
+        ],
+        [
+          "dziękuję."
+        ],
+        [
+          "Do"
+        ],
+        [
+          "widzenia"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nie, dziękuję. Do widzenie!",
+        "Nie, ja dziękować. Do widzenia!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "widzenia",
+          "widzenie",
+          "widzeniu"
+        ]
+      }
+    },
+    {
+      "id": "tak-jestem",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present"
+      ],
+      "chunks": [
+        "yes"
+      ],
+      "text": "Tak, jestem.",
+      "means": "Yes, I am.",
+      "words": [
+        [
+          "Tak,"
+        ],
+        [
+          "jestem",
+          "być"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tak, być.",
+        "Tak, ja jesteś."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jestem",
+          "jesteś",
+          "być"
+        ]
+      }
+    },
+    {
+      "id": "czesc-mi-o-cie-poznac",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hi"
+      ],
+      "text": "Cześć! Miło cię poznać.",
+      "means": "Hi! Nice to meet you.",
+      "words": [
+        [
+          "Cześć!"
+        ],
+        [
+          "Miło"
+        ],
+        [
+          "cię"
+        ],
+        [
+          "poznać"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hi"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cześć! Miło cię poznasz.",
+        "Cześć! Miło cię poznaję."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "poznać",
+          "poznasz",
+          "poznaję"
+        ]
+      }
+    },
+    {
+      "id": "ty-jestes-studentem",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "instrumental",
+        "no-articles"
+      ],
+      "text": "Ty jesteś studentem.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Ty",
+          "ty"
+        ],
+        [
+          "jesteś",
+          "być"
+        ],
+        [
+          "studentem",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ty jestem studentem.",
+        "Ty jesteś student."
+      ],
+      "otherGender": {
+        "text": "Ty jesteś studentką.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "studentem",
+          "student",
+          "studenta"
+        ]
+      }
+    },
+    {
+      "id": "czy-jestes-nauczycielem",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "instrumental"
+      ],
+      "text": "Czy jesteś nauczycielem?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Czy",
+          "czy"
+        ],
+        [
+          "jesteś",
+          "być"
+        ],
+        [
+          "nauczycielem",
+          "nauczyciel"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Czy ty jestem nauczycielem?",
+        "Czy jesteś nauczyciel?"
+      ],
+      "otherGender": {
+        "text": "Czy jesteś nauczycielką?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "nauczycielem",
+          "nauczyciel",
+          "nauczyciela"
+        ]
+      }
+    },
+    {
+      "id": "nie-jestem-nauczycielem",
+      "topic": "people",
+      "concepts": [
+        "nie",
+        "no-pronoun",
+        "instrumental"
+      ],
+      "text": "Nie jestem nauczycielem.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Nie",
+          "nie"
+        ],
+        [
+          "jestem",
+          "być"
+        ],
+        [
+          "nauczycielem",
+          "nauczyciel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nie jestem nauczyciel.",
+        "Ja nie jesteś nauczycielem."
+      ],
+      "otherGender": {
+        "text": "Nie jestem nauczycielką.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "nauczycielem",
+          "nauczyciel",
+          "nauczyciela"
+        ]
+      }
+    },
+    {
+      "id": "to-jest-mama",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "To jest mama.",
+      "means": "This is Mom.",
+      "words": [
+        [
+          "To",
+          "to"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "mama",
+          "mama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "Mom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "To jestem mama.",
+        "To jest mamą."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mama",
+          "mamą",
+          "mamę"
+        ]
+      }
+    },
+    {
+      "id": "to-jest-moja-mama",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "To jest moja mama.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "To",
+          "to"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "moja",
+          "mój"
+        ],
+        [
+          "mama",
+          "mama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "To jest mój mama.",
+        "To jest moja mamą."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moja",
+          "mój",
+          "moje"
+        ]
+      }
+    },
+    {
+      "id": "to-jest-moj-ojciec",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "To jest mój ojciec.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "To",
+          "to"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "mój",
+          "mój"
+        ],
+        [
+          "ojciec",
+          "ojciec"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "To jest moja ojciec.",
+        "To jest mój ojcem."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mój",
+          "moja",
+          "moje"
+        ]
+      }
+    },
+    {
+      "id": "moj-ojciec-jest-nauczycielem",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "instrumental"
+      ],
+      "text": "Mój ojciec jest nauczycielem.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Mój",
+          "mój"
+        ],
+        [
+          "ojciec",
+          "ojciec"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "nauczycielem",
+          "nauczyciel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja ojciec jest nauczycielem.",
+        "Mój ojciec jest nauczyciel."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nauczycielem",
+          "nauczyciel",
+          "nauczyciela"
+        ]
+      }
+    },
+    {
+      "id": "moj-brat-jest-studentem",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "instrumental"
+      ],
+      "text": "Mój brat jest studentem.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Mój",
+          "mój"
+        ],
+        [
+          "brat",
+          "brat"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "studentem",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja brat jest studentem.",
+        "Mój brat jest student."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "studentem",
+          "student",
+          "studenta"
+        ]
+      }
+    },
+    {
+      "id": "to-jest-moja-siostra",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "To jest moja siostra.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "To",
+          "to"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "moja",
+          "mój"
+        ],
+        [
+          "siostra",
+          "siostra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "To jest mój siostra.",
+        "To jest moja siostrą."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moja",
+          "mój",
+          "moje"
+        ]
+      }
+    },
+    {
+      "id": "moja-mama-jest-nauczycielka",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "instrumental"
+      ],
+      "text": "Moja mama jest nauczycielką.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Moja",
+          "mój"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "nauczycielką",
+          "nauczycielka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mój mama jest nauczycielką.",
+        "Moja mama jest nauczycielka."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nauczycielką",
+          "nauczycielka",
+          "nauczycielkę"
+        ]
+      }
+    },
+    {
+      "id": "mam-telefon",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Mam telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Mam",
+          "mieć"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mam telefonu.",
+        "Ja masz telefon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefon",
+          "telefonu",
+          "telefonem"
+        ]
+      }
+    },
+    {
+      "id": "czy-masz-klucz",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Czy masz klucz?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Czy",
+          "czy"
+        ],
+        [
+          "masz",
+          "mieć"
+        ],
+        [
+          "klucz",
+          "klucz"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do you have"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Czy masz klucza?",
+        "Czy ty mam klucz?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "klucz",
+          "klucza",
+          "kluczem"
+        ]
+      }
+    },
+    {
+      "id": "mam-brata-i-siostre",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Mam brata i siostrę.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Mam",
+          "mieć"
+        ],
+        [
+          "brata",
+          "brat"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "siostrę",
+          "siostra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mam brat i siostrę.",
+        "Mam brata i siostra."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "siostrę",
+          "siostra",
+          "siostrą"
+        ]
+      }
+    },
+    {
+      "id": "nie-mam-ksiazki",
+      "topic": "people",
+      "concepts": [
+        "nie",
+        "no-pronoun",
+        "genitive-negation"
+      ],
+      "text": "Nie mam książki.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Nie",
+          "nie"
+        ],
+        [
+          "mam",
+          "mieć"
+        ],
+        [
+          "książki",
+          "książka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nie mam książkę.",
+        "Nie mam książka."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "książki",
+          "książkę",
+          "książka"
+        ]
+      }
+    },
+    {
+      "id": "moja-siostra-jest-lekarka",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "instrumental"
+      ],
+      "text": "Moja siostra jest lekarką.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Moja",
+          "mój"
+        ],
+        [
+          "siostra",
+          "siostra"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "lekarką",
+          "lekarka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja siostra jest lekarka.",
+        "Mój siostra jest lekarką."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lekarką",
+          "lekarka",
+          "lekarkę"
+        ]
+      }
+    },
+    {
+      "id": "jestes-dobrym-przyjacielem",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "adjective",
+        "instrumental"
+      ],
+      "text": "Jesteś dobrym przyjacielem.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Jesteś",
+          "być"
+        ],
+        [
+          "dobrym",
+          "dobry"
+        ],
+        [
+          "przyjacielem",
+          "przyjaciel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jesteś dobry przyjacielem.",
+        "Jesteś dobrym przyjaciel."
+      ],
+      "otherGender": {
+        "text": "Jesteś dobrą przyjaciółką.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "dobrym",
+          "dobry",
+          "dobrą"
+        ]
+      }
+    },
+    {
+      "id": "klucz-jest-tutaj",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Klucz jest tutaj.",
+      "means": "The key is here.",
+      "words": [
+        [
+          "Klucz",
+          "klucz"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "tutaj",
+          "tutaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Klucza jest tutaj.",
+        "Klucz jestem tutaj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jest",
+          "jestem",
+          "jesteś"
+        ]
+      }
+    },
+    {
+      "id": "gdzie-jest-moj-klucz",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Gdzie jest mój klucz?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Gdzie",
+          "gdzie"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "mój",
+          "mój"
+        ],
+        [
+          "klucz",
+          "klucz"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdzie jest moja klucz?",
+        "Gdzie jest mój klucza?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mój",
+          "moja",
+          "moje"
+        ]
+      }
+    },
+    {
+      "id": "przepraszam-gdzie-jest-toaleta",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "chunks": [
+        "przepraszam"
+      ],
+      "text": "Przepraszam, gdzie jest toaleta?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Przepraszam,"
+        ],
+        [
+          "gdzie",
+          "gdzie"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "toaleta",
+          "toaleta"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Przepraszam, gdzie jest toaletę?",
+        "Przepraszam, gdzie jestem toaleta?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "toaleta",
+          "toaletę",
+          "toalety"
+        ]
+      }
+    },
+    {
+      "id": "moj-telefon-jest-tutaj",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Mój telefon jest tutaj.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Mój",
+          "mój"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "tutaj",
+          "tutaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja telefon jest tutaj.",
+        "Mój telefonu jest tutaj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefon",
+          "telefonu",
+          "telefonem"
+        ]
+      }
+    },
+    {
+      "id": "klucz-jest-tam",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Klucz jest tam.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Klucz",
+          "klucz"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "tam",
+          "tam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Klucza jest tam.",
+        "Klucz jesteś tam."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jest",
+          "jestem",
+          "jesteś"
+        ]
+      }
+    },
+    {
+      "id": "gdzie-jest-moja-mama",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Gdzie jest moja mama?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Gdzie",
+          "gdzie"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "moja",
+          "mój"
+        ],
+        [
+          "mama",
+          "mama"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdzie jest mój mama?",
+        "Gdzie jest moja mamę?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moja",
+          "mój",
+          "moje"
+        ]
+      }
+    },
+    {
+      "id": "moja-siostra-jest-tutaj",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Moja siostra jest tutaj.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Moja",
+          "mój"
+        ],
+        [
+          "siostra",
+          "siostra"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "tutaj",
+          "tutaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mój siostra jest tutaj.",
+        "Moja siostrę jest tutaj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "siostra",
+          "siostrę",
+          "siostrą"
+        ]
+      }
+    },
+    {
+      "id": "przepraszam-ile-to-kosztuje",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "przepraszam"
+      ],
+      "text": "Przepraszam, ile to kosztuje?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Przepraszam,"
+        ],
+        [
+          "ile"
+        ],
+        [
+          "to"
+        ],
+        [
+          "kosztuje"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much does it cost"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Przepraszam, ile to kosztujesz?",
+        "Przepraszam, ile to kosztować?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kosztuje",
+          "kosztujesz",
+          "kosztować"
+        ]
+      }
+    },
+    {
+      "id": "dwie-kawy-prosze",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Dwie kawy, proszę.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dwie",
+          "dwa"
+        ],
+        [
+          "kawy,",
+          "kawa"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dwa kawy, proszę.",
+        "Dwie kawę, proszę."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dwie",
+          "Dwa",
+          "Dwóch"
+        ]
+      }
+    },
+    {
+      "id": "jedna-ksiazke-prosze",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Jedną książkę, proszę.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Jedną",
+          "jeden"
+        ],
+        [
+          "książkę,",
+          "książka"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeden książkę, proszę.",
+        "Jedną książka, proszę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "książkę,",
+          "książka,",
+          "książki,"
+        ]
+      }
+    },
+    {
+      "id": "mam-trzy-ksiazki",
+      "topic": "out",
+      "concepts": [
+        "no-pronoun",
+        "plural",
+        "accusative"
+      ],
+      "text": "Mam trzy książki.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Mam",
+          "mieć"
+        ],
+        [
+          "trzy",
+          "trzy"
+        ],
+        [
+          "książki",
+          "książka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mam trzy książkę.",
+        "Mam trzy książka."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "książki",
+          "książkę",
+          "książka"
+        ]
+      }
+    },
+    {
+      "id": "nie-mam-pieniedzy",
+      "topic": "out",
+      "concepts": [
+        "nie",
+        "no-pronoun",
+        "genitive-negation"
+      ],
+      "text": "Nie mam pieniędzy.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Nie",
+          "nie"
+        ],
+        [
+          "mam",
+          "mieć"
+        ],
+        [
+          "pieniędzy",
+          "pieniądze"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nie mam pieniądze.",
+        "Nie mam pieniądz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pieniędzy",
+          "pieniądze",
+          "pieniądz"
+        ]
+      }
+    },
+    {
+      "id": "mowie-troche",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Mówię trochę.",
+      "means": "I speak a little.",
+      "words": [
+        [
+          "Mówię",
+          "mówić"
+        ],
+        [
+          "trochę",
+          "trochę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja mówisz trochę.",
+        "Ja mówić trochę."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mówię",
+          "Mówisz",
+          "Mówić"
+        ]
+      }
+    },
+    {
+      "id": "mowie-troche-po-polsku",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Mówię trochę po polsku.",
+      "means": "I speak a little Polish.",
+      "words": [
+        [
+          "Mówię",
+          "mówić"
+        ],
+        [
+          "trochę",
+          "trochę"
+        ],
+        [
+          "po",
+          "po"
+        ],
+        [
+          "polsku",
+          "polski"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "in"
+        ],
+        [
+          "Polish"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mówię trochę po polski.",
+        "Mówię trochę po polskiego."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "polsku",
+          "polski",
+          "polskiego"
+        ]
+      }
+    },
+    {
+      "id": "nie-rozumiem",
+      "topic": "people",
+      "concepts": [
+        "nie",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Nie rozumiem.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Nie",
+          "nie"
+        ],
+        [
+          "rozumiem",
+          "rozumieć"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja nie rozumiesz.",
+        "Ja nie rozumieć."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "rozumiem",
+          "rozumiesz",
+          "rozumieć"
+        ]
+      }
+    },
+    {
+      "id": "czy-rozumiesz",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Czy rozumiesz?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Czy",
+          "czy"
+        ],
+        [
+          "rozumiesz",
+          "rozumieć"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do you understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Czy ty rozumiem?",
+        "Czy ty rozumieć?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "rozumiesz",
+          "rozumiem",
+          "rozumieć"
+        ]
+      }
+    },
+    {
+      "id": "chce-kawe",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Chcę kawę.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Chcę",
+          "chcieć"
+        ],
+        [
+          "kawę",
+          "kawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chcę kawa.",
+        "Ja chcesz kawę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kawę",
+          "kawa",
+          "kawą"
+        ]
+      }
+    },
+    {
+      "id": "chce-wode-prosze",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Chcę wodę, proszę.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Chcę",
+          "chcieć"
+        ],
+        [
+          "wodę,",
+          "woda"
+        ],
+        [
+          "proszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chcę woda, proszę.",
+        "Ja chcesz wodę, proszę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "wodę,",
+          "woda,",
+          "wodą,"
+        ]
+      }
+    },
+    {
+      "id": "moj-pokoj-jest-ma-y",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Mój pokój jest mały.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Mój",
+          "mój"
+        ],
+        [
+          "pokój",
+          "pokój"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "mały",
+          "mały"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja pokój jest mały.",
+        "Mój pokój jest mała."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mały",
+          "mała",
+          "małe"
+        ]
+      }
+    },
+    {
+      "id": "mam-duzy-dom",
+      "topic": "home",
+      "concepts": [
+        "no-pronoun",
+        "adjective",
+        "accusative"
+      ],
+      "text": "Mam duży dom.",
+      "means": "I have a big house.",
+      "words": [
+        [
+          "Mam",
+          "mieć"
+        ],
+        [
+          "duży",
+          "duży"
+        ],
+        [
+          "dom",
+          "dom"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a big"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mam duża dom.",
+        "Mam duży domu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "duży",
+          "duża",
+          "duże"
+        ]
+      }
+    },
+    {
+      "id": "mieszkam-w-ma-ym-domu",
+      "topic": "home",
+      "concepts": [
+        "no-pronoun",
+        "adjective",
+        "locative"
+      ],
+      "text": "Mieszkam w małym domu.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Mieszkam",
+          "mieszkać"
+        ],
+        [
+          "w",
+          "w"
+        ],
+        [
+          "małym",
+          "mały"
+        ],
+        [
+          "domu",
+          "dom"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mieszkam w mały domu.",
+        "Mieszkam w małym dom."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "małym",
+          "mały",
+          "małego"
+        ]
+      }
+    },
+    {
+      "id": "gdzie-mieszkasz",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Gdzie mieszkasz?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Gdzie",
+          "gdzie"
+        ],
+        [
+          "mieszkasz",
+          "mieszkać"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdzie ty mieszkam?",
+        "Gdzie ty mieszkać?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mieszkasz",
+          "mieszkam",
+          "mieszkać"
+        ]
+      }
+    },
+    {
+      "id": "ten-dom-jest-duzy",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Ten dom jest duży.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Ten",
+          "ten"
+        ],
+        [
+          "dom",
+          "dom"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "duży",
+          "duży"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ten dom jest duża.",
+        "Ta dom jest duży."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ten",
+          "Ta",
+          "Te"
+        ]
+      }
+    },
+    {
+      "id": "moja-mama-mieszka-tutaj",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Moja mama mieszka tutaj.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Moja",
+          "mój"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "mieszka",
+          "mieszkać"
+        ],
+        [
+          "tutaj",
+          "tutaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja mama mieszkam tutaj.",
+        "Moja mama mieszkasz tutaj."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mieszka",
+          "mieszkam",
+          "mieszkasz"
+        ]
+      }
+    },
+    {
+      "id": "mam-samochod",
+      "topic": "out",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Mam samochód.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Mam",
+          "mieć"
+        ],
+        [
+          "samochód",
+          "samochód"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mam samochodu.",
+        "Mam samochodem."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "samochód",
+          "samochodu",
+          "samochodem"
+        ]
+      }
+    },
+    {
+      "id": "gdzie-idziesz",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "go-verbs"
+      ],
+      "text": "Gdzie idziesz?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Gdzie",
+          "gdzie"
+        ],
+        [
+          "idziesz",
+          "iść"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdzie ty idę?",
+        "Gdzie iść ty?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "idziesz",
+          "idę",
+          "iść"
+        ]
+      }
+    },
+    {
+      "id": "ide-do-szko-y",
+      "topic": "out",
+      "concepts": [
+        "no-pronoun",
+        "genitive",
+        "go-verbs"
+      ],
+      "text": "Idę do szkoły.",
+      "means": "I'm going to school.",
+      "words": [
+        [
+          "Idę",
+          "iść"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "szkoły",
+          "szkoła"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Idę do szkoła.",
+        "Idę do szkołę."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "szkoły",
+          "szkoła",
+          "szkołę"
+        ]
+      }
+    },
+    {
+      "id": "moja-mama-idzie-do-miasta",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "genitive",
+        "go-verbs"
+      ],
+      "text": "Moja mama idzie do miasta.",
+      "means": "My mother is going to the city.",
+      "words": [
+        [
+          "Moja",
+          "mój"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "idzie",
+          "iść"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "miasta",
+          "miasto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja mama idę do miasta.",
+        "Moja mama idzie do miasto."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "miasta",
+          "miasto",
+          "miastem"
+        ]
+      }
+    },
+    {
+      "id": "ten-samochod-jest-ma-y",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Ten samochód jest mały.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Ten",
+          "ten"
+        ],
+        [
+          "samochód",
+          "samochód"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "mały",
+          "mały"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ta samochód jest mały.",
+        "Ten samochód jest mała."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mały",
+          "mała",
+          "małe"
+        ]
+      }
+    },
+    {
+      "id": "pracuje-dzisiaj",
+      "topic": "plans",
+      "concepts": [
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Pracuję dzisiaj.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Pracuję",
+          "pracować"
+        ],
+        [
+          "dzisiaj",
+          "dzisiaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja pracujesz dzisiaj.",
+        "Ja pracować dzisiaj."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pracuję",
+          "Pracujesz",
+          "Pracować"
+        ]
+      }
+    },
+    {
+      "id": "jutro-ide-do-miasta",
+      "topic": "plans",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "genitive",
+        "go-verbs"
+      ],
+      "text": "Jutro idę do miasta.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Jutro",
+          "jutro"
+        ],
+        [
+          "idę",
+          "iść"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "miasta",
+          "miasto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I am going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jutro idę do miasto.",
+        "Jutro ja idziesz do miasta."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "miasta",
+          "miasto",
+          "miastem"
+        ]
+      }
+    },
+    {
+      "id": "nie-moge-dzisiaj-isc",
+      "topic": "plans",
+      "concepts": [
+        "nie",
+        "no-pronoun",
+        "modal",
+        "go-verbs"
+      ],
+      "text": "Nie mogę dzisiaj iść.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Nie",
+          "nie"
+        ],
+        [
+          "mogę",
+          "móc"
+        ],
+        [
+          "dzisiaj",
+          "dzisiaj"
+        ],
+        [
+          "iść",
+          "iść"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "today"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nie mogę dzisiaj idę.",
+        "Nie mogę dzisiaj idziesz."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "iść",
+          "idę",
+          "idziesz"
+        ]
+      }
+    },
+    {
+      "id": "musze-jutro-pracowac",
+      "topic": "plans",
+      "concepts": [
+        "no-pronoun",
+        "modal"
+      ],
+      "text": "Muszę jutro pracować.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Muszę",
+          "musieć"
+        ],
+        [
+          "jutro",
+          "jutro"
+        ],
+        [
+          "pracować",
+          "pracować"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have to"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Muszę jutro pracuję.",
+        "Muszę jutro pracujesz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pracować",
+          "pracuję",
+          "pracujesz"
+        ]
+      }
+    },
+    {
+      "id": "dziekuje-do-jutra",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "see-you-tomorrow"
+      ],
+      "text": "Dziękuję. Do jutra!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Dziękuję."
+        ],
+        [
+          "Do"
+        ],
+        [
+          "jutra"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dziękuję. Do jutro!",
+        "Dziękuję. Do jutrem!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jutra",
+          "jutro",
+          "jutrem"
+        ]
+      }
+    },
+    {
+      "id": "jak-sie-masz",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "sie"
+      ],
+      "chunks": [
+        "jak-się-masz",
+        "hi"
+      ],
+      "text": "Cześć, jak się masz?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Cześć,"
+        ],
+        [
+          "jak"
+        ],
+        [
+          "się"
+        ],
+        [
+          "masz"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you have"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "się"
+      ],
+      "wrong": [
+        "Cześć, się jak masz?",
+        "Cześć, jak się mieć?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "masz",
+          "mam",
+          "ma"
+        ]
+      }
+    },
+    {
+      "id": "jak-sie-nazywasz",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "sie",
+        "address"
+      ],
+      "chunks": [
+        "jak-się-nazywasz"
+      ],
+      "text": "Jak się nazywasz?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Jak"
+        ],
+        [
+          "się"
+        ],
+        [
+          "nazywasz"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you call"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "się"
+      ],
+      "wrong": [
+        "Się jak nazywasz?",
+        "Jak się nazywać?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nazywasz",
+          "nazywam",
+          "nazywa"
+        ]
+      }
+    },
+    {
+      "id": "mowisz-po-angielsku",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Czy mówisz po angielsku?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Czy",
+          "czy"
+        ],
+        [
+          "mówisz",
+          "mówić"
+        ],
+        [
+          "po",
+          "po"
+        ],
+        [
+          "angielsku",
+          "angielski"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do"
+        ],
+        [
+          "you speak"
+        ],
+        [
+          "in English"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Czy mówić po angielsku?",
+        "Czy mówisz angielsku po?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mówisz",
+          "mówię",
+          "mówi"
+        ]
+      }
+    },
+    {
+      "id": "brat-dwadziescia-lat",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "chunks": [
+        "mieć-lat"
+      ],
+      "text": "Mój brat ma dwadzieścia lat.",
+      "means": "My brother is twenty.",
+      "words": [
+        [
+          "Mój",
+          "mój"
+        ],
+        [
+          "brat",
+          "brat"
+        ],
+        [
+          "ma",
+          "mieć"
+        ],
+        [
+          "dwadzieścia"
+        ],
+        [
+          "lat",
+          "rok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "has"
+        ],
+        [
+          "twenty years"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mój brat jest dwadzieścia lat.",
+        "Mój brat ma dwadzieścia roku."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ma",
+          "jest",
+          "mam"
+        ]
+      }
+    },
+    {
+      "id": "siostra-w-krakowie",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "present"
+      ],
+      "text": "Moja siostra mieszka w Krakowie.",
+      "means": "My sister lives in Kraków.",
+      "words": [
+        [
+          "Moja",
+          "mój"
+        ],
+        [
+          "siostra",
+          "siostra"
+        ],
+        [
+          "mieszka",
+          "mieszkać"
+        ],
+        [
+          "w"
+        ],
+        [
+          "Krakowie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "in Kraków"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Moja siostra mieszka w Kraków.",
+        "Moja siostra mieszka na Krakowie."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mieszka",
+          "mieszkam",
+          "mieszkają"
+        ]
+      }
+    },
+    {
+      "id": "samochod-taty",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "To jest samochód mojego taty.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "To"
+        ],
+        [
+          "jest"
+        ],
+        [
+          "samochód",
+          "samochód"
+        ],
+        [
+          "mojego",
+          "mój"
+        ],
+        [
+          "taty",
+          "tata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "car"
+        ],
+        [
+          "my dad's",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "mojego",
+        "taty"
+      ],
+      "wrong": [
+        "To jest samochód mój tata.",
+        "To jest samochód mojego tata."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "taty",
+          "tata",
+          "tatę"
+        ]
+      }
+    },
+    {
+      "id": "nie-wiem-gdzie",
+      "topic": "people",
+      "concepts": [
+        "nie",
+        "no-pronoun"
+      ],
+      "text": "Nie wiem, gdzie on mieszka.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Nie"
+        ],
+        [
+          "wiem,",
+          "wiedzieć"
+        ],
+        [
+          "gdzie"
+        ],
+        [
+          "on"
+        ],
+        [
+          "mieszka",
+          "mieszkać"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Wiem nie, gdzie on mieszka.",
+        "Nie wiedzieć, gdzie on mieszka."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "mieszka",
+          "mieszkam",
+          "mieszkasz"
+        ]
+      }
+    },
+    {
+      "id": "jestem-nauczycielem",
+      "topic": "people",
+      "concepts": [
+        "instrumental",
+        "no-pronoun",
+        "no-articles"
+      ],
+      "text": "Jestem nauczycielem.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Jestem",
+          "być"
+        ],
+        [
+          "nauczycielem",
+          "nauczyciel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Jestem nauczyciel.",
+        "Jestem nauczyciela."
+      ],
+      "otherGender": {
+        "text": "Jestem nauczycielką.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "nauczycielem",
+          "nauczyciel",
+          "nauczyciela"
+        ]
+      }
+    },
+    {
+      "id": "podoba-mi-sie",
+      "topic": "people",
+      "concepts": [
+        "sie",
+        "new-last",
+        "dative"
+      ],
+      "text": "Podoba mi się ten film.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Podoba",
+          "podobać się"
+        ],
+        [
+          "mi"
+        ],
+        [
+          "się"
+        ],
+        [
+          "ten"
+        ],
+        [
+          "film",
+          "film"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Pleases"
+        ],
+        [
+          "me"
+        ],
+        [
+          "this movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "ten",
+        "film"
+      ],
+      "wrong": [
+        "Ten film podoba mi.",
+        "Podobam mi się ten film."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Podoba",
+          "Podobam",
+          "Podobają"
+        ]
+      }
+    },
+    {
+      "id": "male-mieszkanie",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "adjective",
+        "no-pronoun",
+        "gender"
+      ],
+      "text": "Mieszkam w małym mieszkaniu.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Mieszkam",
+          "mieszkać"
+        ],
+        [
+          "w"
+        ],
+        [
+          "małym",
+          "mały"
+        ],
+        [
+          "mieszkaniu",
+          "mieszkanie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Mieszkam w mały mieszkanie.",
+        "Mieszkam w małym mieszkanie."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mieszkaniu",
+          "mieszkanie",
+          "mieszkania"
+        ]
+      }
+    },
+    {
+      "id": "na-stole-ksiazka",
+      "topic": "home",
+      "concepts": [
+        "new-last",
+        "locative",
+        "no-articles"
+      ],
+      "text": "Na stole leży książka.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Na"
+        ],
+        [
+          "stole",
+          "stół"
+        ],
+        [
+          "leży",
+          "leżeć"
+        ],
+        [
+          "książka",
+          "książka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "lies"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Na",
+        "stole",
+        "książka"
+      ],
+      "wrong": [
+        "Na stół leży książka.",
+        "Na stole leży książkę."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "stole",
+          "stół",
+          "stołu"
+        ]
+      }
+    },
+    {
+      "id": "nie-ma-mleka",
+      "topic": "home",
+      "concepts": [
+        "genitive-negation",
+        "locative",
+        "nie",
+        "no-pronoun"
+      ],
+      "chunks": [
+        "nie-ma"
+      ],
+      "text": "W lodówce nie ma mleka.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "W"
+        ],
+        [
+          "lodówce",
+          "lodówka"
+        ],
+        [
+          "nie"
+        ],
+        [
+          "ma"
+        ],
+        [
+          "mleka",
+          "mleko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "W lodówce nie ma mleko.",
+        "W lodówce nie jest mleka."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "mleka",
+          "mleko",
+          "mlekiem"
+        ]
+      }
+    },
+    {
+      "id": "zamknac-okno",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "modal",
+        "accusative",
+        "address"
+      ],
+      "text": "Czy możesz zamknąć okno?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Czy"
+        ],
+        [
+          "możesz",
+          "móc"
+        ],
+        [
+          "zamknąć",
+          "zamknąć"
+        ],
+        [
+          "okno",
+          "okno"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can you"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Czy możesz zamknij okno?",
+        "Czy możesz zamknąć oknem?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zamknąć",
+          "zamknij",
+          "zamknęła"
+        ]
+      }
+    },
+    {
+      "id": "duzy-pokoj",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "gender",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Mam duży pokój i mały balkon.",
+      "means": "I have a big room and a small balcony.",
+      "words": [
+        [
+          "Mam",
+          "mieć"
+        ],
+        [
+          "duży",
+          "duży"
+        ],
+        [
+          "pokój",
+          "pokój"
+        ],
+        [
+          "i"
+        ],
+        [
+          "mały",
+          "mały"
+        ],
+        [
+          "balkon",
+          "balkon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a big room"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Mam duża pokój i mały balkon.",
+        "Mam duże pokój i mały balkon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "duży",
+          "duża",
+          "duże"
+        ]
+      }
+    },
+    {
+      "id": "wracam-do-domu",
+      "topic": "home",
+      "concepts": [
+        "genitive",
+        "present"
+      ],
+      "text": "Kiedy wracam do domu, gotuję obiad.",
+      "means": "When I get home, I cook dinner.",
+      "words": [
+        [
+          "Kiedy"
+        ],
+        [
+          "wracam",
+          "wracać"
+        ],
+        [
+          "do"
+        ],
+        [
+          "domu,",
+          "dom"
+        ],
+        [
+          "gotuję",
+          "gotować"
+        ],
+        [
+          "obiad",
+          "obiad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I come back"
+        ],
+        [
+          "home,"
+        ],
+        [
+          "I cook"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Kiedy wracam do dom, gotuję obiad.",
+        "Kiedy wracam do domu, gotować obiad."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "gotuję",
+          "gotować",
+          "gotuje"
+        ]
+      }
+    },
+    {
+      "id": "zamknij-drzwi",
+      "topic": "home",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Zamknij drzwi, proszę.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Zamknij",
+          "zamknąć"
+        ],
+        [
+          "drzwi,",
+          "drzwi"
+        ],
+        [
+          "proszę",
+          "prosić"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Zamknij drzwiami, proszę.",
+        "Zamknij drzwi, prosić."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Zamknij",
+          "Zamykam",
+          "Zamknęła"
+        ]
+      }
+    },
+    {
+      "id": "gdzie-klucze",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "plural"
+      ],
+      "text": "Gdzie są moje klucze?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Gdzie"
+        ],
+        [
+          "są",
+          "być"
+        ],
+        [
+          "moje",
+          "mój"
+        ],
+        [
+          "klucze",
+          "klucz"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Gdzie jest moje klucze?",
+        "Gdzie są moich klucze?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "są",
+          "jest",
+          "jestem"
+        ]
+      }
+    },
+    {
+      "id": "pomagam-mamie",
+      "topic": "home",
+      "concepts": [
+        "dative",
+        "locative",
+        "no-pronoun"
+      ],
+      "text": "Pomagam mamie w kuchni.",
+      "means": "I help my mom in the kitchen.",
+      "words": [
+        [
+          "Pomagam",
+          "pomagać"
+        ],
+        [
+          "mamie",
+          "mama"
+        ],
+        [
+          "w"
+        ],
+        [
+          "kuchni",
+          "kuchnia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I help"
+        ],
+        [
+          "Mom"
+        ],
+        [
+          "in the kitchen"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Pomagam mamę w kuchni.",
+        "Pomagam mamie w kuchnia."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mamie",
+          "mamę",
+          "mama"
+        ]
+      }
+    },
+    {
+      "id": "chodz-tutaj",
+      "topic": "home",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Chodź tutaj!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Chodź",
+          "chodzić"
+        ],
+        [
+          "tutaj",
+          "tutaj"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Chodzisz tutaj!",
+        "Chodź do tutaj!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Chodź",
+          "Chodzisz",
+          "Chodzi"
+        ]
+      }
+    },
+    {
+      "id": "kawa-bez-cukru",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "genitive",
+        "no-pronoun"
+      ],
+      "text": "Piję kawę bez cukru.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Piję",
+          "pić"
+        ],
+        [
+          "kawę",
+          "kawa"
+        ],
+        [
+          "bez"
+        ],
+        [
+          "cukru",
+          "cukier"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Piję kawa bez cukru.",
+        "Piję kawę bez cukier."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kawę",
+          "kawa",
+          "kawą"
+        ]
+      }
+    },
+    {
+      "id": "nie-pije-kawy",
+      "topic": "food",
+      "concepts": [
+        "genitive-negation",
+        "nie"
+      ],
+      "text": "Nie piję kawy.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Nie",
+          "nie"
+        ],
+        [
+          "piję",
+          "pić"
+        ],
+        [
+          "kawy",
+          "kawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Nie piję kawę.",
+        "Piję nie kawy."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kawy",
+          "kawę",
+          "kawa"
+        ]
+      }
+    },
+    {
+      "id": "filizanke-herbaty",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "genitive"
+      ],
+      "chunks": [
+        "poproszę"
+      ],
+      "text": "Poproszę filiżankę herbaty.",
+      "means": "I'd like a cup of tea, please.",
+      "words": [
+        [
+          "Poproszę",
+          "poprosić"
+        ],
+        [
+          "filiżankę",
+          "filiżanka"
+        ],
+        [
+          "herbaty",
+          "herbata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "a cup"
+        ],
+        [
+          "of tea"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Poproszę filiżanka herbaty.",
+        "Poproszę filiżankę herbatę."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "herbaty",
+          "herbata",
+          "herbatę"
+        ]
+      }
+    },
+    {
+      "id": "cos-slodkiego",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "aspect",
+        "genitive"
+      ],
+      "text": "Chcę zjeść coś słodkiego.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Chcę",
+          "chcieć"
+        ],
+        [
+          "zjeść",
+          "zjeść"
+        ],
+        [
+          "coś"
+        ],
+        [
+          "słodkiego",
+          "słodki"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Chcę zjem coś słodkiego.",
+        "Chcę zjeść coś słodki."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "zjeść",
+          "zjem",
+          "zjadł"
+        ]
+      }
+    },
+    {
+      "id": "jedlismy-pizze",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "accusative",
+        "plural"
+      ],
+      "text": "Wczoraj jedliśmy pizzę.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Wczoraj",
+          "wczoraj"
+        ],
+        [
+          "jedliśmy",
+          "jeść"
+        ],
+        [
+          "pizzę",
+          "pizza"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Wczoraj jadłem pizzę.",
+        "Wczoraj jedliśmy pizza."
+      ],
+      "otherGender": {
+        "text": "Wczoraj jadłyśmy pizzę.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "jedliśmy",
+          "jadłeś",
+          "jadła"
+        ]
+      }
+    },
+    {
+      "id": "mleko-w-lodowce",
+      "topic": "food",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Mleko jest w lodówce.",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "Mleko",
+          "mleko"
+        ],
+        [
+          "jest"
+        ],
+        [
+          "w"
+        ],
+        [
+          "lodówce",
+          "lodówka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "is"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mleko jest w lodówka.",
+        "Mleko jest w lodówkę."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lodówce",
+          "lodówka",
+          "lodówkę"
+        ]
+      }
+    },
+    {
+      "id": "mama-swietnie-gotuje",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Moja mama świetnie gotuje.",
+      "means": "My mom cooks really well.",
+      "words": [
+        [
+          "Moja",
+          "mój"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "świetnie",
+          "świetnie"
+        ],
+        [
+          "gotuje",
+          "gotować"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "really well",
+          true
+        ],
+        [
+          "cooks"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "świetnie"
+      ],
+      "wrong": [
+        "Moja mama gotować świetnie.",
+        "Moja mama świetny gotuje."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gotuje",
+          "gotuję",
+          "gotować"
+        ]
+      }
+    },
+    {
+      "id": "rachunek-poprosze",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "Rachunek, poproszę.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Rachunek,"
+        ],
+        [
+          "poproszę"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Rachunku, poproszę.",
+        "Rachunek, prosić."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "poproszę",
+          "poprosić",
+          "poprosił"
+        ]
+      }
+    },
+    {
+      "id": "gotowac-z-mama",
+      "topic": "food",
+      "concepts": [
+        "instrumental"
+      ],
+      "text": "Lubię gotować z mamą.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Lubię",
+          "lubić"
+        ],
+        [
+          "gotować",
+          "gotować"
+        ],
+        [
+          "z"
+        ],
+        [
+          "mamą",
+          "mama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "to cook"
+        ],
+        [
+          "with Mom"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Lubię gotować z mama.",
+        "Lubię gotuję z mamą."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mamą",
+          "mama",
+          "mamę"
+        ]
+      }
+    },
+    {
+      "id": "nie-mam-czasu",
+      "topic": "plans",
+      "concepts": [
+        "genitive-negation",
+        "nie"
+      ],
+      "text": "Dzisiaj nie mam czasu.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Dzisiaj",
+          "dzisiaj"
+        ],
+        [
+          "nie"
+        ],
+        [
+          "mam",
+          "mieć"
+        ],
+        [
+          "czasu",
+          "czas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I don't have"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Dzisiaj nie mam czas.",
+        "Dzisiaj mam nie czasu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "czasu",
+          "czas",
+          "czasem"
+        ]
+      }
+    },
+    {
+      "id": "gdzie-jest-dworzec",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "no-articles"
+      ],
+      "chunks": [
+        "przepraszam"
+      ],
+      "text": "Przepraszam, gdzie jest dworzec?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Przepraszam,"
+        ],
+        [
+          "gdzie",
+          "gdzie"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "dworzec",
+          "dworzec"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the train station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Przepraszam, gdzie są dworzec?",
+        "Przepraszam, gdzie jest dworca?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jest",
+          "są",
+          "być"
+        ]
+      }
+    },
+    {
+      "id": "moze-mi-pani-pomoc",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "modal",
+        "dative",
+        "address"
+      ],
+      "text": "Czy może mi pani pomóc?",
+      "means": "Could you help me?",
+      "words": [
+        [
+          "Czy"
+        ],
+        [
+          "może",
+          "móc"
+        ],
+        [
+          "mi"
+        ],
+        [
+          "pani",
+          "pani"
+        ],
+        [
+          "pomóc",
+          "pomóc"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can"
+        ],
+        [
+          "me",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "help"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "moved": [
+        "mi"
+      ],
+      "wrong": [
+        "Czy możesz mi pani pomóc?",
+        "Czy może mną pani pomóc?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "może",
+          "możesz",
+          "mogę"
+        ]
+      }
+    },
+    {
+      "id": "ide-do-sklepu",
+      "topic": "out",
+      "concepts": [
+        "go-verbs",
+        "genitive"
+      ],
+      "text": "Idę do sklepu po chleb.",
+      "means": "I'm going to the store for bread.",
+      "words": [
+        [
+          "Idę",
+          "iść"
+        ],
+        [
+          "do"
+        ],
+        [
+          "sklepu",
+          "sklep"
+        ],
+        [
+          "po"
+        ],
+        [
+          "chleb",
+          "chleb"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Idę do sklep po chleb.",
+        "Idę w sklepu po chleb."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sklepu",
+          "sklep",
+          "sklepie"
+        ]
+      }
+    },
+    {
+      "id": "jade-autobusem",
+      "topic": "out",
+      "concepts": [
+        "go-verbs",
+        "instrumental",
+        "future",
+        "genitive"
+      ],
+      "text": "Jutro jadę do pracy autobusem.",
+      "means": "Tomorrow I'm taking the bus to work.",
+      "words": [
+        [
+          "Jutro",
+          "jutro"
+        ],
+        [
+          "jadę",
+          "jechać"
+        ],
+        [
+          "do"
+        ],
+        [
+          "pracy",
+          "praca"
+        ],
+        [
+          "autobusem",
+          "autobus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'm going"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jutro jadę do pracy autobus.",
+        "Jutro idę do pracy autobusem."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "autobusem",
+          "autobus",
+          "autobusie"
+        ]
+      }
+    },
+    {
+      "id": "nowa-kurtka",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "accusative",
+        "adjective",
+        "aspect"
+      ],
+      "text": "Wczoraj kupiłam nową kurtkę.",
+      "means": "Yesterday I bought a new jacket.",
+      "words": [
+        [
+          "Wczoraj",
+          "wczoraj"
+        ],
+        [
+          "kupiłam",
+          "kupić"
+        ],
+        [
+          "nową",
+          "nowy"
+        ],
+        [
+          "kurtkę",
+          "kurtka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I bought"
+        ],
+        [
+          "a new jacket"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Wczoraj kupiłam nowa kurtka.",
+        "Wczoraj kupiłam nową kurtka."
+      ],
+      "otherGender": {
+        "text": "Wczoraj kupiłem nową kurtkę.",
+        "gender": "m",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "nową",
+          "nowa",
+          "nowy"
+        ]
+      }
+    },
+    {
+      "id": "pociag-sie-spoznil",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "sie",
+        "genitive"
+      ],
+      "text": "Pociąg spóźnił się dziesięć minut.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Pociąg",
+          "pociąg"
+        ],
+        [
+          "spóźnił",
+          "spóźnić się"
+        ],
+        [
+          "się"
+        ],
+        [
+          "dziesięć"
+        ],
+        [
+          "minut",
+          "minuta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was late"
+        ],
+        [
+          "ten minutes",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dziesięć",
+        "minut"
+      ],
+      "wrong": [
+        "Pociąg spóźnił dziesięć minut.",
+        "Pociąg spóźnił się dziesięć minuty."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "spóźnił",
+          "spóźniła",
+          "spóźnić"
+        ]
+      }
+    },
+    {
+      "id": "nigdy-nie-bylem",
+      "topic": "out",
+      "concepts": [
+        "nie",
+        "past",
+        "locative"
+      ],
+      "text": "Nigdy nie byłem w Polsce.",
+      "means": "I've never been to Poland.",
+      "words": [
+        [
+          "Nigdy",
+          "nigdy"
+        ],
+        [
+          "nie"
+        ],
+        [
+          "byłem",
+          "być"
+        ],
+        [
+          "w"
+        ],
+        [
+          "Polsce"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Never",
+          true
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "I was"
+        ],
+        [
+          "in Poland"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nigdy",
+        "nie"
+      ],
+      "wrong": [
+        "Nigdy byłem w Polsce.",
+        "Nigdy nie byłem w Polska."
+      ],
+      "otherGender": {
+        "text": "Nigdy nie byłam w Polsce.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "byłem",
+          "jestem",
+          "będę"
+        ]
+      }
+    },
+    {
+      "id": "nowe-buty",
+      "topic": "out",
+      "concepts": [
+        "adjective",
+        "plural"
+      ],
+      "text": "Te nowe buty są za małe.",
+      "means": "These new shoes are too small.",
+      "words": [
+        [
+          "Te"
+        ],
+        [
+          "nowe",
+          "nowy"
+        ],
+        [
+          "buty",
+          "but"
+        ],
+        [
+          "są",
+          "być"
+        ],
+        [
+          "za"
+        ],
+        [
+          "małe",
+          "mały"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "These new shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Te nowe buty są za mały.",
+        "Ten nowe buty są za małe."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "małe",
+          "mały",
+          "mała"
+        ]
+      }
+    },
+    {
+      "id": "wziac-taksowke",
+      "topic": "out",
+      "concepts": [
+        "modal",
+        "accusative",
+        "aspect",
+        "gender"
+      ],
+      "text": "Jeśli jesteś zmęczony, możemy wziąć taksówkę.",
+      "means": "If you're tired, we can take a taxi.",
+      "words": [
+        [
+          "Jeśli"
+        ],
+        [
+          "jesteś",
+          "być"
+        ],
+        [
+          "zmęczony,",
+          "zmęczony"
+        ],
+        [
+          "możemy",
+          "móc"
+        ],
+        [
+          "wziąć",
+          "wziąć"
+        ],
+        [
+          "taksówkę",
+          "taksówka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you are tired,"
+        ],
+        [
+          "we can"
+        ],
+        [
+          "take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeśli jesteś zmęczony, możemy wziąć taksówka.",
+        "Jeśli jesteś zmęczony, możemy weźmiemy taksówkę."
+      ],
+      "otherGender": {
+        "text": "Jeśli jesteś zmęczona, możemy wziąć taksówkę.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 5,
+        "options": [
+          "taksówkę",
+          "taksówka",
+          "taksówki"
+        ]
+      }
+    },
+    {
+      "id": "czeka-babcia",
+      "topic": "out",
+      "concepts": [
+        "new-last",
+        "locative"
+      ],
+      "text": "Na dworcu czeka na nas babcia.",
+      "means": "Grandma is waiting for us at the station.",
+      "words": [
+        [
+          "Na"
+        ],
+        [
+          "dworcu",
+          "dworzec"
+        ],
+        [
+          "czeka",
+          "czekać"
+        ],
+        [
+          "na"
+        ],
+        [
+          "nas"
+        ],
+        [
+          "babcia",
+          "babcia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "waits"
+        ],
+        [
+          "for us"
+        ],
+        [
+          "Grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Na",
+        "dworcu",
+        "babcia"
+      ],
+      "wrong": [
+        "Na dworzec czeka na nas babcia.",
+        "Na dworcu czeka na my babcia."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dworcu",
+          "dworzec",
+          "dworca"
+        ]
+      }
+    },
+    {
+      "id": "w-sobote-do-babci",
+      "topic": "plans",
+      "concepts": [
+        "go-verbs",
+        "genitive",
+        "accusative",
+        "future"
+      ],
+      "text": "W sobotę jedziemy do babci.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "W"
+        ],
+        [
+          "sobotę",
+          "sobota"
+        ],
+        [
+          "jedziemy",
+          "jechać"
+        ],
+        [
+          "do"
+        ],
+        [
+          "babci",
+          "babcia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "W sobotę jedziemy do babcia.",
+        "W sobota jedziemy do babci."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jedziemy",
+          "jadę",
+          "jechać"
+        ]
+      }
+    },
+    {
+      "id": "jutro-bedzie-padac",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "no-pronoun"
+      ],
+      "text": "Jutro będzie padać.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Jutro",
+          "jutro"
+        ],
+        [
+          "będzie",
+          "być"
+        ],
+        [
+          "padać",
+          "padać"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "it will"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Jutro będzie pada.",
+        "Jutro będę padać."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "padać",
+          "pada",
+          "padał"
+        ]
+      }
+    },
+    {
+      "id": "zadzwonie-jutro",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "aspect",
+        "genitive"
+      ],
+      "text": "Zadzwonię do ciebie jutro.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Zadzwonię",
+          "zadzwonić"
+        ],
+        [
+          "do"
+        ],
+        [
+          "ciebie"
+        ],
+        [
+          "jutro",
+          "jutro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'll call"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Zadzwonię ciebie jutro.",
+        "Zadzwonić do ciebie jutro."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Zadzwonię",
+          "Zadzwonisz",
+          "Zadzwonić"
+        ]
+      }
+    },
+    {
+      "id": "musze-juz-isc",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "go-verbs"
+      ],
+      "text": "Muszę już iść.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Muszę",
+          "musieć"
+        ],
+        [
+          "już",
+          "już"
+        ],
+        [
+          "iść",
+          "iść"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have to"
+        ],
+        [
+          "now",
+          true
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "już"
+      ],
+      "wrong": [
+        "Muszę już idę.",
+        "Musi już iść."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "iść",
+          "idę",
+          "szedł"
+        ]
+      }
+    },
+    {
+      "id": "idziesz-do-kina",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "go-verbs",
+        "instrumental",
+        "genitive"
+      ],
+      "text": "Czy idziesz z nami do kina?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Czy"
+        ],
+        [
+          "idziesz",
+          "iść"
+        ],
+        [
+          "z"
+        ],
+        [
+          "nami"
+        ],
+        [
+          "do"
+        ],
+        [
+          "kina",
+          "kino"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you going"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Czy idziesz z my do kina?",
+        "Czy idziesz z nami do kino?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "idziesz",
+          "idę",
+          "iść"
+        ]
+      }
+    },
+    {
+      "id": "jesli-nie-bedzie-padac",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "aspect",
+        "nie",
+        "accusative"
+      ],
+      "text": "Jeśli nie będzie padać, pójdziemy na plażę.",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "Jeśli"
+        ],
+        [
+          "nie"
+        ],
+        [
+          "będzie",
+          "być"
+        ],
+        [
+          "padać,",
+          "padać"
+        ],
+        [
+          "pójdziemy",
+          "pójść"
+        ],
+        [
+          "na"
+        ],
+        [
+          "plażę",
+          "plaża"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "it won't rain,"
+        ],
+        [
+          "we'll go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeśli nie będzie padać, pójdziemy na plaża.",
+        "Jeśli nie będzie padać, pójść na plażę."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pójdziemy",
+          "pójdę",
+          "pójść"
+        ]
+      }
+    },
+    {
+      "id": "ucze-sie-polskiego",
+      "topic": "people",
+      "concepts": [
+        "sie",
+        "genitive",
+        "present"
+      ],
+      "text": "Uczę się polskiego od roku.",
+      "means": "I've been learning Polish for a year.",
+      "words": [
+        [
+          "Uczę",
+          "uczyć się"
+        ],
+        [
+          "się"
+        ],
+        [
+          "polskiego",
+          "polski"
+        ],
+        [
+          "od"
+        ],
+        [
+          "roku",
+          "rok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm learning"
+        ],
+        [
+          "Polish"
+        ],
+        [
+          "for a year"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Uczę się polski od roku.",
+        "Uczę polskiego od roku."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "polskiego",
+          "polski",
+          "polskim"
+        ]
+      }
+    },
+    {
+      "id": "co-robisz-w-weekend",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "accusative",
+        "future"
+      ],
+      "text": "Co robisz w weekend?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Co"
+        ],
+        [
+          "robisz",
+          "robić"
+        ],
+        [
+          "w"
+        ],
+        [
+          "weekend",
+          "weekend"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are you doing"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Co robisz weekend w?",
+        "Co robisz w weekendem?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "robisz",
+          "robię",
+          "robi"
+        ]
+      }
+    },
+    {
+      "id": "dzisiaj-jest-zimno",
+      "topic": "plans",
+      "concepts": [
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Dzisiaj jest zimno.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Dzisiaj",
+          "dzisiaj"
+        ],
+        [
+          "jest",
+          "być"
+        ],
+        [
+          "zimno",
+          "zimno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dzisiaj jest zimny.",
+        "Dzisiaj jestem zimno."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zimno",
+          "zimny",
+          "zimna"
+        ]
+      }
+    },
+    {
+      "id": "ladna-pogoda",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "adjective",
+        "new-last",
+        "gender"
+      ],
+      "chunks": [
+        "mam-nadzieję"
+      ],
+      "text": "Mam nadzieję, że jutro będzie ładna pogoda.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Mam"
+        ],
+        [
+          "nadzieję,"
+        ],
+        [
+          "że"
+        ],
+        [
+          "jutro",
+          "jutro"
+        ],
+        [
+          "będzie",
+          "być"
+        ],
+        [
+          "ładna",
+          "ładny"
+        ],
+        [
+          "pogoda",
+          "pogoda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "nice weather",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ładna",
+        "pogoda"
+      ],
+      "wrong": [
+        "Mam nadzieję, że jutro będzie ładny pogoda.",
+        "Mam nadzieję, że jutro będzie ładna pogody."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ładna",
+          "ładny",
+          "ładne"
+        ]
+      }
+    },
+    {
+      "id": "daj-mi-znac",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "dative"
+      ],
+      "chunks": [
+        "daj-mi-znać"
+      ],
+      "text": "Daj mi znać!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Daj",
+          "dać"
+        ],
+        [
+          "mi"
+        ],
+        [
+          "znać",
+          "znać"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let"
+        ],
+        [
+          "me"
+        ],
+        [
+          "know"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Daj ja znać!",
+        "Daj mi znam!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Daj",
+          "Dam",
+          "Dawał"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kawa",
+          "forms": [
+            "kawę"
+          ],
+          "picture": "coffee",
+          "means": "kawę = coffee"
+        },
+        {
+          "lemma": "herbata",
+          "forms": [
+            "herbatę"
+          ],
+          "picture": "tea",
+          "means": "herbatę = tea"
+        },
+        {
+          "lemma": "woda",
+          "forms": [
+            "wodę"
+          ],
+          "picture": "water",
+          "means": "wodę = water"
+        },
+        {
+          "lemma": "ja",
+          "forms": [
+            "ja"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "pić",
+          "forms": [
+            "piję"
+          ],
+          "picture": "drink",
+          "means": "piję = I drink"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb changes for each person: (ja) mieszkam, (ty) mieszkasz, (on, ona) mieszka, (my) mieszkamy; and with od, something that began earlier and still goes on stays in the present: Uczę się polskiego od roku (I've been learning Polish for a year)."
+      },
+      "items": [
+        "ja-pije",
+        "pije-kawe",
+        "pije-herbate",
+        "pije-wode",
+        "pije-kawe-i-herbate",
+        "pije-herbate-i-wode",
+        "pije-wode-i-kawe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "jeden",
+          "forms": [
+            "jedną"
+          ],
+          "means": "jedną = one"
+        },
+        {
+          "lemma": "mleko",
+          "forms": [
+            "mleko"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hi",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "kawe-prosze",
+        "czesc-jedna-kawe-prosze",
+        "herbate-i-wode-prosze",
+        "kawe-dziekuje",
+        "czesc-herbate-prosze",
+        "pije-mleko"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "dobrze",
+          "forms": [
+            "dobrze"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "mieć się",
+          "forms": [
+            "mam",
+            "się"
+          ],
+          "means": "mam = I am doing; się = oneself"
+        },
+        {
+          "lemma": "być",
+          "forms": [
+            "jestem"
+          ],
+          "means": "jestem = I am"
+        }
+      ],
+      "phrases": [
+        "jak-się-masz",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "no-pronoun",
+        "line": "Polish usually leaves out a subject pronoun when the verb's ending or the context shows who (Mam kota: I have a cat), and has no it or there for the weather or for what there is: Jest zimno; Będzie padać; Nie ma mleka."
+      },
+      "items": [
+        "jak-sie-masz",
+        "mam-sie-dobrze-dziekuje",
+        "tak-prosze",
+        "nie-dziekuje",
+        "tak-dziekuje-do-widzenia",
+        "nie-dziekuje-do-widzenia",
+        "tak-jestem"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ty",
+          "forms": [
+            "ty"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "nie",
+          "forms": [
+            "nie"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "nauczyciel",
+          "forms": [
+            "nauczycielem"
+          ],
+          "means": "nauczycielem = a teacher"
+        },
+        {
+          "lemma": "student",
+          "forms": [
+            "studentem"
+          ],
+          "means": "studentem = a student"
+        },
+        {
+          "lemma": "czy",
+          "forms": [
+            "czy"
+          ],
+          "means": "introduces a yes/no question; whether"
+        },
+        {
+          "lemma": "być",
+          "forms": [
+            "jesteś"
+          ],
+          "means": "jesteś = you are"
+        },
+        {
+          "lemma": "kawa",
+          "forms": [
+            "kawy"
+          ],
+          "means": "kawy = coffee"
+        }
+      ],
+      "phrases": [
+        "jak-się-nazywasz",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "jak-sie-nazywasz",
+        "czesc-mi-o-cie-poznac",
+        "jestem-nauczycielem",
+        "ty-jestes-studentem",
+        "czy-jestes-nauczycielem",
+        "nie-jestem-nauczycielem",
+        "nie-pije-kawy"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mama",
+          "forms": [
+            "mama"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "ojciec",
+          "forms": [
+            "ojciec"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "brat",
+          "forms": [
+            "brat"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "siostra",
+          "forms": [
+            "siostra"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "mój",
+          "forms": [
+            "moja",
+            "mój"
+          ],
+          "means": "moja = my; mój = my"
+        },
+        {
+          "lemma": "to",
+          "forms": [
+            "to"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "nauczycielka",
+          "forms": [
+            "nauczycielką"
+          ],
+          "means": "nauczycielką = a teacher"
+        },
+        {
+          "lemma": "być",
+          "forms": [
+            "jest"
+          ],
+          "means": "jest = is"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Most nouns ending in -a are feminine, in a consonant masculine, and in -o, -e or -ę neuter; the words with them match."
+      },
+      "items": [
+        "to-jest-mama",
+        "to-jest-moja-mama",
+        "to-jest-moj-ojciec",
+        "moj-ojciec-jest-nauczycielem",
+        "moj-brat-jest-studentem",
+        "to-jest-moja-siostra",
+        "moja-mama-jest-nauczycielka"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "mieć",
+          "forms": [
+            "mam",
+            "masz"
+          ],
+          "means": "mam = I have; masz = you have"
+        },
+        {
+          "lemma": "przyjaciel",
+          "forms": [
+            "przyjacielem"
+          ],
+          "picture": "friend",
+          "means": "przyjacielem = a friend"
+        },
+        {
+          "lemma": "lekarka",
+          "forms": [
+            "lekarką"
+          ],
+          "picture": "doctor",
+          "means": "lekarką = a doctor"
+        },
+        {
+          "lemma": "klucz",
+          "forms": [
+            "klucz"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "książka",
+          "forms": [
+            "książki"
+          ],
+          "picture": "book",
+          "means": "książki = a book"
+        },
+        {
+          "lemma": "dobry",
+          "forms": [
+            "dobrym"
+          ],
+          "means": "dobrym = good"
+        },
+        {
+          "lemma": "brat",
+          "forms": [
+            "brata"
+          ],
+          "means": "brata = a brother"
+        },
+        {
+          "lemma": "siostra",
+          "forms": [
+            "siostrę"
+          ],
+          "means": "siostrę = a sister"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mam-telefon",
+        "czy-masz-klucz",
+        "mam-brata-i-siostre",
+        "nie-mam-ksiazki",
+        "moja-siostra-jest-lekarka",
+        "jestes-dobrym-przyjacielem"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "gdzie",
+          "forms": [
+            "gdzie"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "tutaj",
+          "forms": [
+            "tutaj"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "tam",
+          "forms": [
+            "tam"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "toaleta",
+          "forms": [
+            "toaleta"
+          ],
+          "means": "bathroom, toilet"
+        }
+      ],
+      "phrases": [
+        "przepraszam"
+      ],
+      "concept": {
+        "pattern": "no-articles",
+        "line": "Polish has no words for a, an or the; the situation, and words like ten (this, that), show which one is meant: Jestem nauczycielem (I'm a teacher)."
+      },
+      "items": [
+        "klucz-jest-tutaj",
+        "gdzie-jest-moj-klucz",
+        "przepraszam-gdzie-jest-toaleta",
+        "moj-telefon-jest-tutaj",
+        "klucz-jest-tam",
+        "gdzie-jest-moja-mama",
+        "moja-siostra-jest-tutaj"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "dwa",
+          "forms": [
+            "dwie"
+          ],
+          "picture": "two",
+          "means": "dwie = two"
+        },
+        {
+          "lemma": "trzy",
+          "forms": [
+            "trzy"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "pieniądze",
+          "forms": [
+            "pieniędzy"
+          ],
+          "picture": "money",
+          "means": "pieniędzy = money"
+        },
+        {
+          "lemma": "książka",
+          "forms": [
+            "książkę"
+          ],
+          "means": "książkę = a book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "rachunek-poprosze",
+        "przepraszam-ile-to-kosztuje",
+        "dwie-kawy-prosze",
+        "jedna-ksiazke-prosze",
+        "mam-trzy-ksiazki",
+        "nie-mam-pieniedzy"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "mówić",
+          "forms": [
+            "mówię",
+            "mówisz"
+          ],
+          "means": "mówię = I speak; mówisz = you speak"
+        },
+        {
+          "lemma": "angielski",
+          "forms": [
+            "angielsku"
+          ],
+          "means": "angielsku = English"
+        },
+        {
+          "lemma": "polski",
+          "forms": [
+            "polsku"
+          ],
+          "means": "polsku = Polish"
+        },
+        {
+          "lemma": "rozumieć",
+          "forms": [
+            "rozumiem",
+            "rozumiesz"
+          ],
+          "means": "rozumiem = I understand; rozumiesz = you understand"
+        },
+        {
+          "lemma": "trochę",
+          "forms": [
+            "trochę"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "chcieć",
+          "forms": [
+            "chcę"
+          ],
+          "means": "chcę = I want"
+        },
+        {
+          "lemma": "po",
+          "forms": [
+            "po"
+          ],
+          "means": "in (with languages, as in po polsku: in Polish)"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "A direct object usually takes the accusative."
+      },
+      "items": [
+        "mowie-troche",
+        "mowie-troche-po-polsku",
+        "mowisz-po-angielsku",
+        "nie-rozumiem",
+        "czy-rozumiesz",
+        "chce-kawe",
+        "chce-wode-prosze"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "dom",
+          "forms": [
+            "dom",
+            "domu"
+          ],
+          "picture": "house",
+          "means": "dom = a house; domu = a house"
+        },
+        {
+          "lemma": "pokój",
+          "forms": [
+            "pokój"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "duży",
+          "forms": [
+            "duży"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "mały",
+          "forms": [
+            "mały",
+            "małym"
+          ],
+          "picture": "small",
+          "means": "mały = small; małym = small"
+        },
+        {
+          "lemma": "mieszkać",
+          "forms": [
+            "mieszkam",
+            "mieszkasz",
+            "mieszka"
+          ],
+          "means": "mieszkam = I live; mieszkasz = you live; mieszka = lives"
+        },
+        {
+          "lemma": "w",
+          "forms": [
+            "w"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "ten",
+          "forms": [
+            "ten"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "moj-pokoj-jest-ma-y",
+        "mam-duzy-dom",
+        "mieszkam-w-ma-ym-domu",
+        "gdzie-mieszkasz",
+        "ten-dom-jest-duzy",
+        "moja-mama-mieszka-tutaj"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "iść",
+          "forms": [
+            "idziesz",
+            "idę",
+            "idzie"
+          ],
+          "means": "idziesz = you are going; idę = I am going; idzie = is going"
+        },
+        {
+          "lemma": "do",
+          "forms": [
+            "do"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "szkoła",
+          "forms": [
+            "szkoły"
+          ],
+          "picture": "school",
+          "means": "szkoły = school"
+        },
+        {
+          "lemma": "miasto",
+          "forms": [
+            "miasta"
+          ],
+          "picture": "city",
+          "means": "miasta = the city"
+        },
+        {
+          "lemma": "dworzec",
+          "forms": [
+            "dworzec"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "samochód",
+          "forms": [
+            "samochód"
+          ],
+          "picture": "car",
+          "means": "car"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes/no question often starts with czy (Czy mówisz po angielsku?); a question word like gdzie or co usually comes first (Gdzie jest dworzec?)."
+      },
+      "items": [
+        "mam-samochod",
+        "gdzie-idziesz",
+        "ide-do-szko-y",
+        "gdzie-jest-dworzec",
+        "moja-mama-idzie-do-miasta",
+        "ten-samochod-jest-ma-y"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "dzisiaj",
+          "forms": [
+            "dzisiaj"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "jutro",
+          "forms": [
+            "jutro"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "już",
+          "forms": [
+            "już"
+          ],
+          "means": "now, already"
+        },
+        {
+          "lemma": "pracować",
+          "forms": [
+            "pracuję",
+            "pracować"
+          ],
+          "picture": "work",
+          "means": "pracuję = I work; pracować = to work"
+        },
+        {
+          "lemma": "musieć",
+          "forms": [
+            "muszę"
+          ],
+          "means": "muszę = I have to"
+        },
+        {
+          "lemma": "móc",
+          "forms": [
+            "mogę"
+          ],
+          "means": "mogę = I can"
+        },
+        {
+          "lemma": "iść",
+          "forms": [
+            "iść"
+          ],
+          "means": "to go on foot"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "pracuje-dzisiaj",
+        "jutro-ide-do-miasta",
+        "musze-juz-isc",
+        "nie-moge-dzisiaj-isc",
+        "musze-jutro-pracowac",
+        "dziekuje-do-jutra"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

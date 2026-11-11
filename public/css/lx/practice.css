@@ -1,0 +1,146 @@
+/* Lexicommons design system: Practice with your AI. The room is a study session's frame (session, session-bar,
+ * activity, answer-bar in components.css); these are its own parts, selected by data-part like every component, so
+ * themes and custom CSS style them the same way (registry: the "Practice" group in public/js/lx/parts.js). */
+@layer lx.components {
+  /* ============ the conversation ============ */
+
+  [data-part="chat"] { display: flex; flex-direction: column; gap: var(--space-3); padding-bottom: var(--space-2); }
+
+  [data-part="chat-line"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: min(100%, 34rem);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-16);
+    background: var(--well);
+  }
+  [data-part="chat-line"] .lx-chat-row { display: flex; align-items: flex-start; gap: var(--space-2); }
+  /* Your AI's Dutch: on the left, big enough to read as the sentence you're studying. */
+  [data-part="chat-line"][data-variant="ai"] { align-self: flex-start; }
+  /* The Dutch's first line is centered on the buttons either side of it. */
+  [data-part="chat-line"] .lx-chat-nl { flex: 1; min-width: 0; margin: 0; padding-top: max(0px, (var(--control) - var(--size-20) * 1.4) / 2); font: 500 var(--size-20) / 1.4 var(--type-read); cursor: pointer; }
+  [data-part="chat-line"] .lx-chat-reveal { flex: none; color: var(--ink-3); }
+  [data-part="chat-line"] .lx-chat-reveal[aria-expanded="true"] { color: var(--ink-1); }
+  [data-part="chat-line"] .lx-chat-detail { display: flex; flex-direction: column; gap: var(--space-2); padding-top: var(--space-2); border-top: 1px solid var(--hair); }
+  [data-part="chat-line"] .lx-chat-detail[hidden] { display: none; }
+  [data-part="chat-line"] .lx-chat-literal { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+  /* Yours: on the right, on the fill. */
+  [data-part="chat-line"][data-variant="you"] { align-self: flex-end; background: var(--fill); }
+  /* On its way: a step quieter, by its ink (never by opacity). */
+  [data-part="chat-line"][data-variant="you"][data-state="sending"] { color: var(--ink-2); }
+  [data-part="chat-line"][data-variant="you"][data-state="failed"] { border-style: dashed; border-color: var(--m-wrong-edge); }
+  /* The microphone on a line you said: centered on its first line of text (one line tall). */
+  [data-part="chat-line"] .lx-chat-how { flex: none; display: flex; align-items: center; height: calc(var(--size-20) * 1.45); color: var(--ink-3); }
+  [data-part="chat-line"] .lx-chat-how .lx-icon { width: 16px; height: 16px; }
+  /* A sentence to put into Dutch. */
+  [data-part="chat-line"][data-variant="task"] { align-self: stretch; max-width: none; background: transparent; border-style: dashed; border-color: var(--edge); }
+  [data-part="chat-line"] .lx-chat-label { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-3); font: 500 var(--size-14) / 1.3 var(--type-ui); }
+  [data-part="chat-line"] .lx-chat-label .lx-icon { width: 16px; height: 16px; }
+  [data-part="chat-line"] .lx-chat-task { margin: 0; font: 500 var(--size-20) / 1.4 var(--type-read); }
+
+  [data-part="chat-said"] { flex: 1; min-width: 0; margin: 0; font: 500 var(--size-20) / 1.45 var(--type-read); }
+  /* What your AI marked: the wrong-word line (wavy), and the fix after it, with an arrow as well as its color. */
+  [data-part="chat-mark"] { color: var(--m-wrong); text-decoration: underline wavy var(--m-wrong); text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+  [data-part="chat-fix"] { margin-left: 0.3em; color: var(--m-right); font-weight: 600; text-decoration: none; }
+  [data-part="chat-fix"]::before { content: "→ "; color: var(--ink-3); font-weight: 400; }
+
+  [data-part="chat-note"] { align-self: flex-start; max-width: min(100%, 34rem); margin: 0; padding: var(--space-1) 0 var(--space-1) var(--space-3); border-left: 2px solid var(--edge); color: var(--ink-2); font: 400 var(--size-16) / 1.5 var(--type-ui); white-space: pre-line; }
+  [data-part="chat-event"] { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 0; color: var(--ink-3); font: 500 var(--size-12) / 1.4 var(--type-ui); text-align: center; }
+  [data-part="chat-event"] .lx-icon { width: 14px; height: 14px; flex: none; }
+
+  /* Your AI is working on its reply: three dots that rise in turn (still when animations are off). */
+  [data-part="chat-typing"] { align-self: flex-start; display: inline-flex; gap: 5px; padding: 14px 16px; border: 1px solid var(--hair); border-radius: var(--radius-full); background: var(--well); }
+  [data-part="chat-typing"] .lx-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-3); animation: lx-typing calc(var(--dur-640) * 1.8) var(--ease-standard) infinite; }
+  [data-part="chat-typing"] .lx-dot:nth-child(2) { animation-delay: calc(var(--dur-640) * 0.25); }
+  [data-part="chat-typing"] .lx-dot:nth-child(3) { animation-delay: calc(var(--dur-640) * 0.5); }
+  @keyframes lx-typing {
+    0%, 60%, 100% { transform: none; opacity: 0.45; }
+    30% { transform: translateY(-4px); opacity: 1; }
+  }
+
+  /* ============ your AI's grade ============ */
+
+  [data-part="correction"] { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-2) var(--space-3); border: 1px solid var(--hair); border-radius: var(--radius-12); background: var(--chrome); }
+  [data-part="correction"][data-meaning="right"] { border-color: var(--m-right-edge); background: linear-gradient(var(--m-right-bg), var(--m-right-bg)), var(--chrome); }
+  [data-part="correction"][data-meaning="wrong"] { border-color: var(--m-wrong-edge); background: linear-gradient(var(--m-wrong-bg), var(--m-wrong-bg)), var(--chrome); }
+  [data-part="correction"][data-meaning="hint"] { border-style: dashed; border-color: var(--m-hint-edge); }
+  [data-part="correction"] .lx-correction-title { display: inline-flex; align-items: center; gap: 6px; margin: 0; font: 600 var(--size-14) / 1.3 var(--type-ui); }
+  [data-part="correction"] .lx-correction-title .lx-icon { width: 18px; height: 18px; }
+  [data-part="correction"][data-meaning="right"] .lx-correction-title { color: var(--m-right); }
+  [data-part="correction"][data-meaning="wrong"] .lx-correction-title { color: var(--m-wrong); }
+  [data-part="correction"][data-meaning="hint"] .lx-correction-title { color: var(--m-hint); }
+  [data-part="correction"] .lx-correction-row { display: flex; align-items: center; gap: var(--space-2); }
+  [data-part="correction"] .lx-correction-better { margin: 0; font: 500 var(--size-16) / 1.45 var(--type-read); }
+  [data-part="correction"] .lx-correction-note { margin: 0; color: var(--ink-2); font: 400 var(--size-14) / 1.45 var(--type-ui); }
+  [data-part="correction"] .lx-correction-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  /* ============ scenes, cards ============ */
+
+  [data-part="practice-scene"] { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4); border: 1px solid var(--edge); border-radius: var(--radius-16); background: var(--chrome); }
+  [data-part="practice-scene"] h3 { margin: 0; font: 500 var(--size-20) / 1.2 var(--type-head); letter-spacing: var(--track-head); }
+  [data-part="practice-scene"] .lx-scene-goal { display: flex; align-items: flex-start; gap: 6px; margin: 0; color: var(--ink-2); }
+  [data-part="practice-scene"] .lx-scene-goal .lx-icon { width: 18px; height: 18px; margin-top: 2px; flex: none; }
+
+  [data-part="practice-card"] { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--hair); border-radius: var(--radius-24); background: var(--well); }
+  [data-part="practice-card"] .lx-card-result { display: flex; flex-direction: column; gap: var(--space-2); }
+  [data-part="practice-card"] .lx-card-result:empty { display: none; }
+  [data-part="practice-card"] .lx-card-result [data-part="chat-line"] { align-self: stretch; max-width: none; background: transparent; }
+  [data-part="practice-card"] .lx-say-mic { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; }
+
+  /* ============ answering ============ */
+
+  [data-part="composer"] { display: flex; flex-direction: column; gap: var(--space-2); }
+  [data-part="composer"] .lx-composer-row { display: flex; align-items: center; gap: var(--space-3); }
+  /* Speak only: the microphone is the way to answer, so it's big and centered. */
+  [data-part="composer"][data-answer="speak"] .lx-composer-row { justify-content: center; }
+  [data-part="composer"] .lx-composer-type { flex: 1; min-width: 0; display: flex; gap: var(--space-2); }
+  [data-part="composer"] .lx-composer-type [data-part="text-field"] { flex: 1; min-width: 0; }
+  [data-part="composer"] .lx-composer-status { margin: 0; min-height: 1.2em; }
+  [data-part="composer"] .lx-composer-status:empty { display: none; }
+  [data-part="composer"] .lx-composer-tools { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+
+  /* Where your AI is, in the room's bar. */
+  [data-part="ai-status"] { display: inline-flex; align-items: center; gap: 6px; min-width: 0; color: var(--ink-2); font: 500 var(--size-12) / 1.3 var(--type-ui); }
+  [data-part="ai-status"] > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  [data-part="ai-status"] .lx-icon { width: 14px; height: 14px; flex: none; }
+  [data-part="ai-status"][data-state="here"] { color: var(--ink-1); }
+  [data-part="ai-status"]:is([data-state="slow"], [data-state="away"], [data-state="offline"]) { color: var(--m-slipping); }
+  [data-part="ai-status"][data-state="ended"] { color: var(--ink-3); }
+
+  /* What to tell your AI. */
+  [data-part="ai-wait"] { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4); border: 1px dashed var(--edge); border-radius: var(--radius-16); background: var(--well); }
+  [data-part="ai-wait"][hidden] { display: none; }
+  [data-part="ai-wait"] h3 { margin: 0; font: 500 var(--size-20) / 1.2 var(--type-head); letter-spacing: var(--track-head); }
+  [data-part="ai-wait"] > p { margin: 0; }
+  [data-part="ai-wait"] .lx-wait-row { display: flex; flex-direction: column; gap: 4px; }
+  [data-part="ai-wait"] .lx-wait-copy { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3); border: 1px solid var(--hair); border-radius: var(--radius-12); background: var(--chrome); }
+  [data-part="ai-wait"] .lx-wait-phrase { margin: 0; min-width: 0; overflow-wrap: anywhere; font: 500 var(--size-16) / 1.4 var(--type-read); }
+  [data-part="ai-wait"] code.lx-wait-phrase { font: 500 var(--size-14) / 1.4 var(--type-mono); }
+
+  /* ============ the room and the section ============ */
+
+  .lx-practice-room .lx-room-head { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .lx-practice-room .lx-room-title { font: 600 var(--size-16) / 1.2 var(--type-ui); }
+  .lx-practice-room [data-part="session-bar"] [data-part="icon-button"][aria-pressed="false"] { color: var(--ink-3); }
+  /* Room under the last message, so a meaning opened on it has space to show (it scrolls into view too). */
+  .lx-practice-room .lx-room-chat { gap: var(--space-3); padding-bottom: calc(var(--space-7) + var(--space-4)); }
+
+  .lx-practice-open:empty { display: none; }
+  .lx-practice-open { margin-bottom: var(--space-5); }
+  .lx-today-practice { margin-top: var(--space-5); }
+  /* What a practice touched: each concept's tag, then its tally (wrapping under it when there's no room). */
+  .lx-touched-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-1) var(--space-3); padding: var(--space-2) 0; border-bottom: 1px solid var(--hair); }
+  .lx-touched-row:last-child { border-bottom: 0; }
+  .lx-touched-row [data-part="concept-tag"] { flex: none; max-width: 100%; }
+  .lx-touched-row .lx-tally { font: 500 var(--size-12) / 1.3 var(--type-mono); color: var(--ink-3); }
+  .lx-summary-text { margin: 0; font: 400 var(--size-16) / 1.55 var(--type-ui); }
+  .lx-summary-list { display: flex; flex-direction: column; gap: var(--space-1); margin: 0; padding-left: 1.2em; }
+  .lx-summary-list li { line-height: 1.45; }
+  .lx-summary-list li:has([data-part="speak-button"]) { display: flex; align-items: center; gap: var(--space-2); list-style: none; margin-left: -1.2em; }
+  /* A past practice's lines (practice/home.js pastPage) as a script, never boxed: your AI's at the left with its voice, yours set in from the
+     left in the second ink. The room keeps its bubbles. */
+  .lx-practice-past [data-part="chat-line"] { max-width: 100%; padding: 0; border: 0; border-radius: 0; background: none; }
+  .lx-practice-past [data-part="chat-line"][data-variant="you"] { align-self: stretch; padding-inline-start: 20%; color: var(--ink-2); }
+}

@@ -1,0 +1,7559 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-ga",
+  "name": "Starter: Irish",
+  "about": "Irish in real, everyday sentences, with each one's words in Irish order.",
+  "language": "ga",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "caife": "coffee",
+    "tae": "tea",
+    "uisce": "water",
+    "ól": "to drink",
+    "agus": "and",
+    "bainne": "milk",
+    "cupán": "cup",
+    "maith": "good (is maith liom: I like)",
+    "bí": "be (tá: is; bhí: was; beidh: will be; níl: isn't; an bhfuil: is?)",
+    "mé": "I, me",
+    "go": "adverb marker",
+    "tú": "you (thú when it is the object)",
+    "múinteoir": "teacher",
+    "mac léinn": "student (the complete expression mac léinn",
+    "is": "is (who or what someone is; is maith liom: I like)",
+    "ní": "not (softens what follows)",
+    "an": "the; whether (in a question)",
+    "máthair": "mother",
+    "deartháir": "brother",
+    "deirfiúr": "sister",
+    "mo": "my (softens what follows)",
+    "seo": "this, here",
+    "sí": "she, her (í after is)",
+    "ag": "at (agam: at me, I have; againn: at us); ag + a verb: …ing",
+    "cara": "friend",
+    "dochtúir": "doctor",
+    "eochair": "key (eochracha: keys)",
+    "fón": "phone",
+    "leabhar": "book",
+    "athair": "father",
+    "cá": "where (eclipses what follows)",
+    "anseo": "here",
+    "ansin": "there",
+    "leithreas": "toilet",
+    "amháin": "one",
+    "dhá": "two",
+    "trí": "three",
+    "airgead": "money",
+    "labhair": "to speak",
+    "béarla": "English",
+    "gaeilge": "Irish",
+    "tuig": "understand",
+    "beagán": "a little",
+    "teastaigh": "to be wanted",
+    "ó": "from",
+    "teach": "house",
+    "seomra": "room",
+    "mór": "big",
+    "beag": "small",
+    "cónaí": "living (i mo chónaí: living, where I live)",
+    "i": "in (eclipses what follows)",
+    "do": "to, for (duit: to you); your (softens what follows)",
+    "téigh": "go (chuaigh: went; rachaidh: will go)",
+    "scoil": "school",
+    "cathair": "city",
+    "stáisiún": "station",
+    "carr": "car",
+    "dul": "going",
+    "inniu": "today",
+    "amárach": "tomorrow",
+    "anois": "now",
+    "obair": "work",
+    "caith": "throw",
+    "féad": "to be able to",
+    "cad": "what",
+    "ainm": "name",
+    "as": "from, out of",
+    "aice": "nearness (in aice: near)",
+    "cé": "who (cé mhéad: how much, how many)",
+    "sé": "he, it (é after is)",
+    "a": "his (softens), her (no change), their (eclipses)",
+    "ár": "our (eclipses what follows)",
+    "farraige": "sea",
+    "ar": "on (orm: on me; ort: on you; air: on him or it)",
+    "bord": "table",
+    "aon": "any, one",
+    "cuisneoir": "fridge",
+    "cócaireacht": "cooking",
+    "páiste": "child (páistí: children)",
+    "codladh": "sleep (ina gcodladh: asleep, of more than one)",
+    "baile": "home (sa bhaile: at home)",
+    "aréir": "last night",
+    "le": "with (liom: with me; leat: with you)",
+    "ocras": "hunger (tá ocras orm: I'm hungry)",
+    "tart": "thirst",
+    "toil": "will (le do thoil: please)",
+    "ith": "eat",
+    "arán": "bread",
+    "im": "butter",
+    "fuar": "cold",
+    "bia": "food",
+    "blasta": "tasty (an-bhlasta: very tasty)",
+    "gabh": "take (gabh mo leithscéal: excuse me)",
+    "leithscéal": "excuse",
+    "traein": "train (traenach: of the train)",
+    "méad": "amount (cé mhéad: how much)",
+    "pictiúrlann": "movie theater",
+    "anocht": "tonight",
+    "abhaile": "home (going home)",
+    "bus": "bus",
+    "fan": "wait",
+    "foghlaim": "learning",
+    "feic": "see",
+    "cur": "putting (ag cur báistí: raining)",
+    "báisteach": "rain (báistí: of rain)",
+    "muid": "we, us",
+    "trá": "beach",
+    "breá": "fine (is breá liom: I love)",
+    "samhradh": "summer",
+    "súil": "eye; hope (tá súil agam: I hope)",
+    "am": "time",
+    "tuirse": "tiredness (tá tuirse orm: I'm tired)",
+    "ceol": "music",
+    "fuinneog": "window",
+    "oscailte": "open",
+    "fíon": "wine",
+    "dearg": "red",
+    "cat": "cat",
+    "dubh": "black",
+    "grianmhar": "sunny"
+  },
+  "chunks": {
+    "gabh-mo-leithsceal": {
+      "text": "Gabh mo leithscéal",
+      "en": "Excuse me",
+      "about": "Literally take my excuse; also sorry for a small slip."
+    },
+    "le-do-thoil": {
+      "text": "le do thoil",
+      "en": "please",
+      "about": "Literally with your will."
+    },
+    "hello": {
+      "text": "Dia duit",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "Go raibh maith agat",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Conas atá tú",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Slán",
+      "en": "goodbye"
+    },
+    "what-s-your-name": {
+      "text": "Cad is ainm duit",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Tá áthas orm bualadh leat",
+      "en": "nice to meet you"
+    },
+    "how-much-is-this": {
+      "text": "Cé mhéad atá air seo",
+      "en": "how much is this?"
+    },
+    "the-check-please": {
+      "text": "An bille, le do thoil",
+      "en": "the check, please"
+    },
+    "to": {
+      "text": "go dtí",
+      "en": "to"
+    },
+    "see-you-tomorrow": {
+      "text": "Feicfidh mé thú amárach",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "olaim-caife",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Ólaim caife.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Ólaim",
+          "ól"
+        ],
+        [
+          "caife",
+          "caife"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caife ólaim.",
+        "Ólaim agus caife."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "caife",
+          "tae",
+          "uisce"
+        ]
+      }
+    },
+    {
+      "id": "olaim-tae",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Ólaim tae.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Ólaim",
+          "ól"
+        ],
+        [
+          "tae",
+          "tae"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tae ólaim.",
+        "Ólaim agus tae."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tae",
+          "uisce",
+          "caife"
+        ]
+      }
+    },
+    {
+      "id": "olaim-uisce",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Ólaim uisce.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Ólaim",
+          "ól"
+        ],
+        [
+          "uisce",
+          "uisce"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Uisce ólaim.",
+        "Ólaim agus uisce."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uisce",
+          "caife",
+          "tae"
+        ]
+      }
+    },
+    {
+      "id": "olaim-caife-agus-tae",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Ólaim caife agus tae.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Ólaim",
+          "ól"
+        ],
+        [
+          "caife",
+          "caife"
+        ],
+        [
+          "agus",
+          "agus"
+        ],
+        [
+          "tae",
+          "tae"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caife agus tae ólaim.",
+        "Ólaim agus caife tae."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "caife",
+          "uisce",
+          "tae"
+        ]
+      }
+    },
+    {
+      "id": "olaim-tae-agus-uisce",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Ólaim tae agus uisce.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Ólaim",
+          "ól"
+        ],
+        [
+          "tae",
+          "tae"
+        ],
+        [
+          "agus",
+          "agus"
+        ],
+        [
+          "uisce",
+          "uisce"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tae agus uisce ólaim.",
+        "Ólaim agus tae uisce."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "uisce",
+          "tae",
+          "caife"
+        ]
+      }
+    },
+    {
+      "id": "olaim-uisce-agus-caife",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Ólaim uisce agus caife.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Ólaim",
+          "ól"
+        ],
+        [
+          "uisce",
+          "uisce"
+        ],
+        [
+          "agus",
+          "agus"
+        ],
+        [
+          "caife",
+          "caife"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Uisce agus caife ólaim.",
+        "Ólaim agus uisce caife."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uisce",
+          "caife",
+          "tae"
+        ]
+      }
+    },
+    {
+      "id": "dia-duit",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "hello"
+      ],
+      "text": "Dia duit!",
+      "means": "Hello!",
+      "words": [
+        [
+          "Dia"
+        ],
+        [
+          "duit"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Hello"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Duit Dia!",
+        "Dia agus duit!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "duit",
+          "agat",
+          "do"
+        ]
+      }
+    },
+    {
+      "id": "caife-le-do-thoil",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "le-do-thoil"
+      ],
+      "text": "Caife, le do thoil.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Caife,",
+          "caife"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caife, do le thoil.",
+        "Caife, le thoil do."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Caife,",
+          "Tae,",
+          "Uisce,"
+        ]
+      }
+    },
+    {
+      "id": "tae-agus-uisce-le-do-thoil",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "le-do-thoil"
+      ],
+      "text": "Tae agus uisce, le do thoil.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Tae",
+          "tae"
+        ],
+        [
+          "agus",
+          "agus"
+        ],
+        [
+          "uisce,",
+          "uisce"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tae agus uisce, do le thoil.",
+        "Tae agus uisce, le thoil do."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "uisce,",
+          "caife,",
+          "bainne,"
+        ]
+      }
+    },
+    {
+      "id": "cupan-bainne-le-do-thoil",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "le-do-thoil"
+      ],
+      "text": "Cupán bainne, le do thoil.",
+      "means": "A cup of milk, please.",
+      "words": [
+        [
+          "Cupán",
+          "cupán"
+        ],
+        [
+          "bainne,",
+          "bainne"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A cup"
+        ],
+        [
+          "of milk"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bainne cupán, le do thoil.",
+        "Cupán bainne, do le thoil."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bainne,",
+          "tae,",
+          "caife,"
+        ]
+      }
+    },
+    {
+      "id": "caife-go-raibh-maith-agat",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Caife, go raibh maith agat.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Caife,",
+          "caife"
+        ],
+        [
+          "go"
+        ],
+        [
+          "raibh"
+        ],
+        [
+          "maith"
+        ],
+        [
+          "agat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caife, go maith raibh agat.",
+        "Caife, go raibh agat maith."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Caife,",
+          "Tae,",
+          "Bainne,"
+        ]
+      }
+    },
+    {
+      "id": "dia-duit-tae-le-do-thoil",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "le-do-thoil",
+        "hello"
+      ],
+      "text": "Dia duit! Tae, le do thoil.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Dia"
+        ],
+        [
+          "duit!"
+        ],
+        [
+          "Tae,",
+          "tae"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dia duit! Tae, do le thoil.",
+        "Dia duit! Tae, le thoil do."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Tae,",
+          "Caife,",
+          "Uisce,"
+        ]
+      }
+    },
+    {
+      "id": "olaim-bainne",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Ólaim bainne.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Ólaim",
+          "ól"
+        ],
+        [
+          "bainne",
+          "bainne"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bainne ólaim.",
+        "Ólaim agus bainne."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bainne",
+          "caife",
+          "uisce"
+        ]
+      }
+    },
+    {
+      "id": "dia-duit-conas-ata-tu",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Dia duit! Conas atá tú?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Dia"
+        ],
+        [
+          "duit!"
+        ],
+        [
+          "Conas"
+        ],
+        [
+          "atá"
+        ],
+        [
+          "tú"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dia duit! Conas tú atá?",
+        "Dia duit! Atá conas tú?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "tú",
+          "duit",
+          "agat"
+        ]
+      }
+    },
+    {
+      "id": "ta-me-go-maith",
+      "topic": "people",
+      "concepts": [
+        "verb-first",
+        "ta-is"
+      ],
+      "text": "Tá mé go maith.",
+      "means": "I'm well.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "go",
+          "go"
+        ],
+        [
+          "maith",
+          "maith"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mé tá go maith.",
+        "Tá go mé maith."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mé",
+          "tú",
+          "duit"
+        ]
+      }
+    },
+    {
+      "id": "nil-me-go-maith",
+      "topic": "people",
+      "concepts": [
+        "verb-first",
+        "negation"
+      ],
+      "text": "Níl mé go maith.",
+      "means": "I'm not well.",
+      "words": [
+        [
+          "Níl",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "go",
+          "go"
+        ],
+        [
+          "maith",
+          "maith"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am not"
+        ],
+        [
+          "I"
+        ],
+        [
+          "well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mé níl go maith.",
+        "Níl go mé maith."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Níl",
+          "Tá",
+          "Ólaim"
+        ]
+      }
+    },
+    {
+      "id": "go-raibh-maith-agat-slan",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye"
+      ],
+      "text": "Go raibh maith agat. Slán!",
+      "means": "Thank you. Goodbye!",
+      "words": [
+        [
+          "Go"
+        ],
+        [
+          "raibh"
+        ],
+        [
+          "maith"
+        ],
+        [
+          "agat."
+        ],
+        [
+          "Slán"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Go maith raibh agat. Slán!",
+        "Go raibh agat maith. Slán!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "agat.",
+          "tú.",
+          "mé."
+        ]
+      }
+    },
+    {
+      "id": "ta-me-go-maith-agus-tu",
+      "topic": "people",
+      "concepts": [
+        "verb-first",
+        "ta-is",
+        "question"
+      ],
+      "text": "Tá mé go maith, agus tú?",
+      "means": "I'm well, and you?",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "go",
+          "go"
+        ],
+        [
+          "maith,",
+          "maith"
+        ],
+        [
+          "agus",
+          "agus"
+        ],
+        [
+          "tú",
+          "tú"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "well"
+        ],
+        [
+          "and"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mé tá go maith, agus tú?",
+        "Tá go mé maith, agus tú?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mé",
+          "tú",
+          "agat"
+        ]
+      }
+    },
+    {
+      "id": "dia-duit-ta-athas-orm-bualadh-leat",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Dia duit! Tá áthas orm bualadh leat.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Dia"
+        ],
+        [
+          "duit!"
+        ],
+        [
+          "Tá"
+        ],
+        [
+          "áthas"
+        ],
+        [
+          "orm"
+        ],
+        [
+          "bualadh"
+        ],
+        [
+          "leat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dia duit! Áthas tá orm bualadh leat.",
+        "Dia duit! Tá orm áthas bualadh leat."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "orm",
+          "mé",
+          "tú"
+        ]
+      }
+    },
+    {
+      "id": "is-muinteoir-me",
+      "topic": "people",
+      "concepts": [
+        "ta-is"
+      ],
+      "text": "Is múinteoir mé.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "múinteoir",
+          "múinteoir"
+        ],
+        [
+          "mé",
+          "mé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá múinteoir mé.",
+        "Is mé múinteoir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Is",
+          "Tá",
+          "Níl"
+        ]
+      }
+    },
+    {
+      "id": "is-mac-leinn-tu",
+      "topic": "people",
+      "concepts": [
+        "ta-is"
+      ],
+      "text": "Is mac léinn tú.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "mac",
+          "mac léinn"
+        ],
+        [
+          "léinn",
+          "mac léinn"
+        ],
+        [
+          "tú",
+          "tú"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mac léinn tú.",
+        "Is tú mac léinn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Is",
+          "Tá",
+          "Níl"
+        ]
+      }
+    },
+    {
+      "id": "an-muinteoir-tu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ta-is"
+      ],
+      "text": "An múinteoir tú?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "An",
+          "an"
+        ],
+        [
+          "múinteoir",
+          "múinteoir"
+        ],
+        [
+          "tú",
+          "tú"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An tú múinteoir?",
+        "An múinteoir duit?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tú",
+          "duit",
+          "agat"
+        ]
+      }
+    },
+    {
+      "id": "ni-muinteoir-me",
+      "topic": "people",
+      "concepts": [
+        "ta-is",
+        "negation"
+      ],
+      "text": "Ní múinteoir mé.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Ní",
+          "ní"
+        ],
+        [
+          "múinteoir",
+          "múinteoir"
+        ],
+        [
+          "mé",
+          "mé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am not"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Níl múinteoir mé.",
+        "Ní mé múinteoir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ní",
+          "Is",
+          "Níl"
+        ]
+      }
+    },
+    {
+      "id": "seo-mo-mhathair",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "lenition"
+      ],
+      "text": "Seo mo mháthair.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Seo",
+          "seo"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "mháthair",
+          "máthair"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Seo mháthair mo.",
+        "Mo seo mháthair."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mháthair",
+          "dheartháir",
+          "dheirfiúr"
+        ]
+      }
+    },
+    {
+      "id": "seo-mo-dhearthair",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "lenition"
+      ],
+      "text": "Seo mo dheartháir.",
+      "means": "This is my brother.",
+      "words": [
+        [
+          "Seo",
+          "seo"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "dheartháir",
+          "deartháir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "brother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Seo dheartháir mo.",
+        "Mo seo dheartháir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dheartháir",
+          "mháthair",
+          "dheirfiúr"
+        ]
+      }
+    },
+    {
+      "id": "seo-mo-dheirfiur",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "lenition"
+      ],
+      "text": "Seo mo dheirfiúr.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Seo",
+          "seo"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "dheirfiúr",
+          "deirfiúr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Seo dheirfiúr mo.",
+        "Mo seo dheirfiúr."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dheirfiúr",
+          "dheartháir",
+          "mháthair"
+        ]
+      }
+    },
+    {
+      "id": "is-mac-leinn-i-mo-dheirfiur",
+      "topic": "people",
+      "concepts": [
+        "ta-is",
+        "possessive",
+        "lenition"
+      ],
+      "text": "Is mac léinn í mo dheirfiúr.",
+      "means": "My sister is a student.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "mac",
+          "mac léinn"
+        ],
+        [
+          "léinn",
+          "mac léinn"
+        ],
+        [
+          "í",
+          "sí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "dheirfiúr",
+          "deirfiúr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "she"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mac léinn í mo dheirfiúr.",
+        "Is mac léinn mo dheirfiúr í."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "í",
+          "mé",
+          "tú"
+        ]
+      }
+    },
+    {
+      "id": "ta-fon-agam",
+      "topic": "people",
+      "concepts": [
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá fón agam.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "fón",
+          "fón"
+        ],
+        [
+          "agam",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "a phone"
+        ],
+        [
+          "at me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mé fón.",
+        "Is fón agam."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fón",
+          "leabhar",
+          "eochair"
+        ]
+      }
+    },
+    {
+      "id": "an-bhfuil-eochair-agat",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ag-have",
+        "eclipsis",
+        "prepositional-pronouns"
+      ],
+      "text": "An bhfuil eochair agat?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "An",
+          "an"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "eochair",
+          "eochair"
+        ],
+        [
+          "agat",
+          "ag"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "a key"
+        ],
+        [
+          "at you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An tá eochair agat?",
+        "An bhfuil tú eochair?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "eochair",
+          "fón",
+          "leabhar"
+        ]
+      }
+    },
+    {
+      "id": "nil-leabhar-agam",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Níl leabhar agam.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Níl",
+          "bí"
+        ],
+        [
+          "leabhar",
+          "leabhar"
+        ],
+        [
+          "agam",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is not"
+        ],
+        [
+          "a book"
+        ],
+        [
+          "at me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Níl mé leabhar.",
+        "Ní leabhar agam."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "leabhar",
+          "fón",
+          "eochair"
+        ]
+      }
+    },
+    {
+      "id": "is-dochtuir-i-mo-dheirfiur",
+      "topic": "people",
+      "concepts": [
+        "ta-is",
+        "possessive",
+        "lenition"
+      ],
+      "text": "Is dochtúir í mo dheirfiúr.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "dochtúir",
+          "dochtúir"
+        ],
+        [
+          "í",
+          "sí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "dheirfiúr",
+          "deirfiúr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "a doctor"
+        ],
+        [
+          "she"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá dochtúir í mo dheirfiúr.",
+        "Is dochtúir mo dheirfiúr í."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dochtúir",
+          "múinteoir",
+          "cara"
+        ]
+      }
+    },
+    {
+      "id": "is-cara-maith-tu",
+      "topic": "people",
+      "concepts": [
+        "ta-is",
+        "adjective-after"
+      ],
+      "text": "Is cara maith tú.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "cara",
+          "cara"
+        ],
+        [
+          "maith",
+          "maith"
+        ],
+        [
+          "tú",
+          "tú"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "a friend"
+        ],
+        [
+          "good"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá cara maith tú.",
+        "Is maith cara tú."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cara",
+          "múinteoir",
+          "dochtúir"
+        ]
+      }
+    },
+    {
+      "id": "is-athair-maith-tu",
+      "topic": "people",
+      "concepts": [
+        "ta-is",
+        "adjective-after"
+      ],
+      "text": "Is athair maith tú.",
+      "means": "You're a good father.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "athair",
+          "athair"
+        ],
+        [
+          "maith",
+          "maith"
+        ],
+        [
+          "tú",
+          "tú"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "a father"
+        ],
+        [
+          "good"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá athair maith tú.",
+        "Is maith athair tú."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "athair",
+          "múinteoir",
+          "dochtúir"
+        ]
+      }
+    },
+    {
+      "id": "ta-an-fon-anseo",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Tá an fón anseo.",
+      "means": "The phone is here.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "fón",
+          "fón"
+        ],
+        [
+          "anseo",
+          "anseo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An fón tá anseo.",
+        "Tá fón an anseo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "anseo",
+          "ansin",
+          "cá"
+        ]
+      }
+    },
+    {
+      "id": "ta-an-eochair-ansin",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Tá an eochair ansin.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "eochair",
+          "eochair"
+        ],
+        [
+          "ansin",
+          "ansin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "key"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An eochair tá ansin.",
+        "Tá eochair an ansin."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ansin",
+          "anseo",
+          "cá"
+        ]
+      }
+    },
+    {
+      "id": "gabh-mo-leithsceal-ca-bhfuil-an",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "eclipsis",
+        "article"
+      ],
+      "chunks": [
+        "gabh-mo-leithsceal"
+      ],
+      "text": "Gabh mo leithscéal, cá bhfuil an leithreas?",
+      "means": "Excuse me, where is the toilet?",
+      "words": [
+        [
+          "Gabh"
+        ],
+        [
+          "mo"
+        ],
+        [
+          "leithscéal,"
+        ],
+        [
+          "cá",
+          "cá"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "leithreas",
+          "leithreas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "toilet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gabh mo leithscéal, cá tá an leithreas?",
+        "Gabh mo leithscéal, cá bhfuil leithreas an?"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "leithreas",
+          "fón",
+          "leabhar"
+        ]
+      }
+    },
+    {
+      "id": "ca-bhfuil-mo-mhathair",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "eclipsis",
+        "possessive",
+        "lenition"
+      ],
+      "text": "Cá bhfuil mo mháthair?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Cá",
+          "cá"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "mháthair",
+          "máthair"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cá tá mo mháthair?",
+        "Cá bhfuil mháthair mo?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mháthair",
+          "dheirfiúr",
+          "athair"
+        ]
+      }
+    },
+    {
+      "id": "ta-mo-dheirfiur-anseo",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "possessive",
+        "lenition"
+      ],
+      "text": "Tá mo dheirfiúr anseo.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "dheirfiúr",
+          "deirfiúr"
+        ],
+        [
+          "anseo",
+          "anseo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mo dheirfiúr tá anseo.",
+        "Tá dheirfiúr mo anseo."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dheirfiúr",
+          "mháthair",
+          "dheartháir"
+        ]
+      }
+    },
+    {
+      "id": "dia-duit-an-bille-le-do-thoil",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Dia duit! An bille, le do thoil.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Dia"
+        ],
+        [
+          "duit!"
+        ],
+        [
+          "An"
+        ],
+        [
+          "bille,"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check, please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dia duit! Bille an, le do thoil.",
+        "Dia duit! An bille, do le thoil."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "An",
+          "Mo",
+          "Do"
+        ]
+      }
+    },
+    {
+      "id": "dha-chaife-le-do-thoil",
+      "topic": "out",
+      "concepts": [
+        "lenition"
+      ],
+      "chunks": [
+        "le-do-thoil"
+      ],
+      "text": "Dhá chaife, le do thoil.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dhá",
+          "dhá"
+        ],
+        [
+          "chaife,",
+          "caife"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dhá caife, le do thoil.",
+        "Chaife dhá, le do thoil."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dhá",
+          "Trí",
+          "Amháin"
+        ]
+      }
+    },
+    {
+      "id": "leabhar-amhain-le-do-thoil",
+      "topic": "out",
+      "concepts": [
+        "adjective-after"
+      ],
+      "chunks": [
+        "le-do-thoil"
+      ],
+      "text": "Leabhar amháin, le do thoil.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Leabhar",
+          "leabhar"
+        ],
+        [
+          "amháin,",
+          "amháin"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Book"
+        ],
+        [
+          "one"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Amháin leabhar, le do thoil.",
+        "Leabhar amháin, do le thoil."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "amháin,",
+          "dhá,",
+          "trí,"
+        ]
+      }
+    },
+    {
+      "id": "ta-tri-leabhar-agam",
+      "topic": "out",
+      "concepts": [
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá trí leabhar agam.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "trí",
+          "trí"
+        ],
+        [
+          "leabhar",
+          "leabhar"
+        ],
+        [
+          "agam",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ],
+        [
+          "at me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá trí leabhair agam.",
+        "Tá mé trí leabhar."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "trí",
+          "dhá",
+          "amháin"
+        ]
+      }
+    },
+    {
+      "id": "nil-airgead-agam",
+      "topic": "out",
+      "concepts": [
+        "ag-have",
+        "negation",
+        "prepositional-pronouns"
+      ],
+      "text": "Níl airgead agam.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Níl",
+          "bí"
+        ],
+        [
+          "airgead",
+          "airgead"
+        ],
+        [
+          "agam",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is not"
+        ],
+        [
+          "money"
+        ],
+        [
+          "at me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Níl mé airgead.",
+        "Ní airgead agam."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "airgead",
+          "leabhar",
+          "fón"
+        ]
+      }
+    },
+    {
+      "id": "an-labhraionn-tu-bearla",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "verb-first"
+      ],
+      "text": "An labhraíonn tú Béarla?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "An",
+          "an"
+        ],
+        [
+          "labhraíonn",
+          "labhair"
+        ],
+        [
+          "tú",
+          "tú"
+        ],
+        [
+          "Béarla",
+          "béarla"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "you"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An tú labhraíonn Béarla?",
+        "An labhraím tú Béarla?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "Béarla",
+          "Gaeilge",
+          "beagán"
+        ]
+      }
+    },
+    {
+      "id": "labhraim-beagan-gaeilge",
+      "topic": "people",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Labhraím beagán Gaeilge.",
+      "means": "I speak a little Irish.",
+      "words": [
+        [
+          "Labhraím",
+          "labhair"
+        ],
+        [
+          "beagán",
+          "beagán"
+        ],
+        [
+          "Gaeilge",
+          "gaeilge"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Irish"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Labhraím Gaeilge beagán.",
+        "Labhraíonn beagán Gaeilge."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Gaeilge",
+          "Béarla",
+          "beagán"
+        ]
+      }
+    },
+    {
+      "id": "an-dtuigeann-tu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "verb-first",
+        "eclipsis"
+      ],
+      "text": "An dtuigeann tú?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "An",
+          "an"
+        ],
+        [
+          "dtuigeann",
+          "tuig"
+        ],
+        [
+          "tú",
+          "tú"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An thuigim tú?",
+        "An tú dtuigeann?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dtuigeann",
+          "thuigim",
+          "labhraíonn"
+        ]
+      }
+    },
+    {
+      "id": "teastaionn-caife-uaim",
+      "topic": "people",
+      "concepts": [
+        "verb-first",
+        "prepositional-pronouns"
+      ],
+      "text": "Teastaíonn caife uaim.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Teastaíonn",
+          "teastaigh"
+        ],
+        [
+          "caife",
+          "caife"
+        ],
+        [
+          "uaim",
+          "ó"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is wanted"
+        ],
+        [
+          "a coffee"
+        ],
+        [
+          "from me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teastaíonn mé caife.",
+        "Teastaíonn caife mé."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "caife",
+          "tae",
+          "uisce"
+        ]
+      }
+    },
+    {
+      "id": "teastaionn-uisce-uaim-le-do-thoil",
+      "topic": "people",
+      "concepts": [
+        "verb-first",
+        "prepositional-pronouns"
+      ],
+      "chunks": [
+        "le-do-thoil"
+      ],
+      "text": "Teastaíonn uisce uaim, le do thoil.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Teastaíonn",
+          "teastaigh"
+        ],
+        [
+          "uisce",
+          "uisce"
+        ],
+        [
+          "uaim,",
+          "ó"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is wanted"
+        ],
+        [
+          "water"
+        ],
+        [
+          "from me"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teastaíonn uisce mé, le do thoil.",
+        "Teastaíonn uisce uaim, do le thoil."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uisce",
+          "caife",
+          "bainne"
+        ]
+      }
+    },
+    {
+      "id": "ta-mo-sheomra-beag",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "possessive",
+        "lenition"
+      ],
+      "text": "Tá mo sheomra beag.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "sheomra",
+          "seomra"
+        ],
+        [
+          "beag",
+          "beag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "room"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mo sheomra tá beag.",
+        "Tá sheomra mo beag."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "beag",
+          "mór",
+          "maith"
+        ]
+      }
+    },
+    {
+      "id": "ta-an-teach-seo-mor",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Tá an teach seo mór.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "teach",
+          "teach"
+        ],
+        [
+          "seo",
+          "seo"
+        ],
+        [
+          "mór",
+          "mór"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "house"
+        ],
+        [
+          "this"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá seo an teach mór.",
+        "An teach seo tá mór."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "mór",
+          "beag",
+          "maith"
+        ]
+      }
+    },
+    {
+      "id": "ta-me-i-mo-chonai-i-dteach-beag",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "lenition",
+        "eclipsis",
+        "adjective-after"
+      ],
+      "text": "Tá mé i mo chónaí i dteach beag.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "chónaí",
+          "cónaí"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "dteach",
+          "teach"
+        ],
+        [
+          "beag",
+          "beag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "living"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a house"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mé i mo chónaí i teach beag.",
+        "Tá mé i chónaí mo i dteach beag."
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "beag",
+          "mór",
+          "maith"
+        ]
+      }
+    },
+    {
+      "id": "ca-bhfuil-tu-i-do-chonai",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "eclipsis",
+        "possessive",
+        "lenition"
+      ],
+      "text": "Cá bhfuil tú i do chónaí?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Cá",
+          "cá"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "tú",
+          "tú"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "chónaí",
+          "cónaí"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "living"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cá tá tú i do chónaí?",
+        "Cá bhfuil tú i chónaí do?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "do",
+          "mo",
+          "an"
+        ]
+      }
+    },
+    {
+      "id": "ta-mo-mhathair-ina-conai-anseo",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "possessive",
+        "lenition"
+      ],
+      "text": "Tá mo mháthair ina cónaí anseo.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "mháthair",
+          "máthair"
+        ],
+        [
+          "ina",
+          "i"
+        ],
+        [
+          "cónaí",
+          "cónaí"
+        ],
+        [
+          "anseo",
+          "anseo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "living"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mo mháthair i mo chónaí anseo.",
+        "Mo mháthair tá ina cónaí anseo."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "anseo",
+          "ansin",
+          "cá"
+        ]
+      }
+    },
+    {
+      "id": "ta-carr-agam",
+      "topic": "out",
+      "concepts": [
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá carr agam.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "carr",
+          "carr"
+        ],
+        [
+          "agam",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "a car"
+        ],
+        [
+          "at me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mé carr.",
+        "Is carr agam."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "carr",
+          "fón",
+          "leabhar"
+        ]
+      }
+    },
+    {
+      "id": "ta-an-carr-seo-beag",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Tá an carr seo beag.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "carr",
+          "carr"
+        ],
+        [
+          "seo",
+          "seo"
+        ],
+        [
+          "beag",
+          "beag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "car"
+        ],
+        [
+          "this"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá seo an carr beag.",
+        "An carr seo tá beag."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "carr",
+          "teach",
+          "leabhar"
+        ]
+      }
+    },
+    {
+      "id": "teim-go-dti-an-scoil",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "chunks": [
+        "to"
+      ],
+      "text": "Téim go dtí an scoil.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Téim",
+          "téigh"
+        ],
+        [
+          "go"
+        ],
+        [
+          "dtí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "scoil",
+          "scoil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Téim dtí go an scoil.",
+        "Téann go dtí an scoil."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Téim",
+          "Téann",
+          "Tá"
+        ]
+      }
+    },
+    {
+      "id": "ca-bhfuil-tu-ag-dul",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "eclipsis",
+        "ag-ing"
+      ],
+      "text": "Cá bhfuil tú ag dul?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Cá",
+          "cá"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "tú",
+          "tú"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "dul",
+          "dul"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cá tá tú ag dul?",
+        "Cá bhfuil tú dul ag?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "dul",
+          "téim",
+          "téann"
+        ]
+      }
+    },
+    {
+      "id": "gabh-mo-leithsceal-ca-bhfuil-an-2",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "eclipsis",
+        "article"
+      ],
+      "chunks": [
+        "gabh-mo-leithsceal"
+      ],
+      "text": "Gabh mo leithscéal, cá bhfuil an stáisiún?",
+      "means": "Excuse me, where is the station?",
+      "words": [
+        [
+          "Gabh"
+        ],
+        [
+          "mo"
+        ],
+        [
+          "leithscéal,"
+        ],
+        [
+          "cá",
+          "cá"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "stáisiún",
+          "stáisiún"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gabh mo leithscéal, cá tá an stáisiún?",
+        "Gabh mo leithscéal, cá bhfuil stáisiún an?"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "stáisiún",
+          "leithreas",
+          "carr"
+        ]
+      }
+    },
+    {
+      "id": "teann-mo-mhathair-go-dti-an-chathair",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "possessive",
+        "lenition",
+        "article"
+      ],
+      "chunks": [
+        "to"
+      ],
+      "text": "Téann mo mháthair go dtí an chathair.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Téann",
+          "téigh"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "mháthair",
+          "máthair"
+        ],
+        [
+          "go"
+        ],
+        [
+          "dtí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "chathair",
+          "cathair"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Goes"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Téim mo mháthair go dtí an chathair.",
+        "Téann mo mháthair dtí go an chathair."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "chathair",
+          "scoil",
+          "stáisiún"
+        ]
+      }
+    },
+    {
+      "id": "go-raibh-maith-agat-feicfidh-me-thu",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Go raibh maith agat. Feicfidh mé thú amárach!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Go"
+        ],
+        [
+          "raibh"
+        ],
+        [
+          "maith"
+        ],
+        [
+          "agat."
+        ],
+        [
+          "Feicfidh"
+        ],
+        [
+          "mé"
+        ],
+        [
+          "thú"
+        ],
+        [
+          "amárach"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Go raibh maith agat. Feicfidh thú mé amárach!",
+        "Go maith raibh agat. Feicfidh mé thú amárach!"
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "amárach",
+          "inniu",
+          "anois"
+        ]
+      }
+    },
+    {
+      "id": "ta-me-ag-obair-inniu",
+      "topic": "plans",
+      "concepts": [
+        "verb-first",
+        "ag-ing"
+      ],
+      "text": "Tá mé ag obair inniu.",
+      "means": "I'm working today.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "obair",
+          "obair"
+        ],
+        [
+          "inniu",
+          "inniu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "working"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mé obair ag inniu.",
+        "Mé tá ag obair inniu."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "inniu",
+          "amárach",
+          "anois"
+        ]
+      }
+    },
+    {
+      "id": "caithfidh-me-dul-anois",
+      "topic": "plans",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Caithfidh mé dul anois.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Caithfidh",
+          "caith"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "dul",
+          "dul"
+        ],
+        [
+          "anois",
+          "anois"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Must"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mé caithfidh dul anois.",
+        "Caithfidh mé téim anois."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "anois",
+          "inniu",
+          "amárach"
+        ]
+      }
+    },
+    {
+      "id": "ta-me-ag-dul-go-dti-an-chathair",
+      "topic": "plans",
+      "concepts": [
+        "verb-first",
+        "article",
+        "lenition"
+      ],
+      "chunks": [
+        "to"
+      ],
+      "text": "Tá mé ag dul go dtí an chathair amárach.",
+      "means": "I'm going to the city tomorrow.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "dul",
+          "dul"
+        ],
+        [
+          "go"
+        ],
+        [
+          "dtí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "chathair",
+          "cathair"
+        ],
+        [
+          "amárach",
+          "amárach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the"
+        ],
+        [
+          "city"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tá mé dul ag go dtí an chathair amárach.",
+        "Tá mé ag dul dtí go an chathair amárach."
+      ],
+      "gap": {
+        "index": 8,
+        "options": [
+          "amárach",
+          "inniu",
+          "anois"
+        ]
+      }
+    },
+    {
+      "id": "ni-fheadaim-dul-inniu",
+      "topic": "plans",
+      "concepts": [
+        "verb-first",
+        "negation",
+        "lenition"
+      ],
+      "text": "Ní fhéadaim dul inniu.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ní",
+          "ní"
+        ],
+        [
+          "fhéadaim",
+          "féad"
+        ],
+        [
+          "dul",
+          "dul"
+        ],
+        [
+          "inniu",
+          "inniu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Níl fhéadaim dul inniu.",
+        "Ní fhéadaim téim inniu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "inniu",
+          "amárach",
+          "anois"
+        ]
+      }
+    },
+    {
+      "id": "caithfidh-me-dul-ag-obair-amarach",
+      "topic": "plans",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Caithfidh mé dul ag obair amárach.",
+      "means": "I have to go to work tomorrow.",
+      "words": [
+        [
+          "Caithfidh",
+          "caith"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "dul",
+          "dul"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "obair",
+          "obair"
+        ],
+        [
+          "amárach",
+          "amárach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Must"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mé caithfidh dul ag obair amárach.",
+        "Caithfidh mé téim ag obair amárach."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "amárach",
+          "inniu",
+          "anois"
+        ]
+      }
+    },
+    {
+      "id": "cad-is-ainm-duit",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Cad is ainm duit?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Cad"
+        ],
+        [
+          "is"
+        ],
+        [
+          "ainm"
+        ],
+        [
+          "duit"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "is"
+        ],
+        [
+          "name"
+        ],
+        [
+          "to you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cad is ainm tú?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Cad",
+          "Cá",
+          "Cathain"
+        ]
+      }
+    },
+    {
+      "id": "is-as-meirice-me",
+      "topic": "people",
+      "concepts": [
+        "ta-is"
+      ],
+      "text": "Is as Meiriceá mé.",
+      "means": "I'm from America.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "as",
+          "as"
+        ],
+        [
+          "Meiriceá"
+        ],
+        [
+          "mé",
+          "mé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "from America"
+        ],
+        [
+          "me",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Is",
+        "mé"
+      ],
+      "wrong": [
+        "Is mé as Meiriceá."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Is",
+          "Tá",
+          "Bhí"
+        ]
+      }
+    },
+    {
+      "id": "is-muinteoir-i-mo-mhathair",
+      "topic": "people",
+      "concepts": [
+        "ta-is",
+        "lenition"
+      ],
+      "text": "Is múinteoir í mo mháthair.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "múinteoir",
+          "múinteoir"
+        ],
+        [
+          "í",
+          "sí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "mháthair",
+          "máthair"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "she"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Is"
+      ],
+      "wrong": [
+        "Tá múinteoir mo mháthair."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "mháthair",
+          "máthair",
+          "máthar"
+        ]
+      }
+    },
+    {
+      "id": "is-dochtuir-e",
+      "topic": "people",
+      "concepts": [
+        "ta-is"
+      ],
+      "text": "Is dochtúir é.",
+      "means": "He's a doctor.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "dochtúir",
+          "dochtúir"
+        ],
+        [
+          "é",
+          "sé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "a doctor"
+        ],
+        [
+          "he"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Is"
+      ],
+      "wrong": [
+        "Tá sé dochtúir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Is",
+          "Tá",
+          "Bhí"
+        ]
+      }
+    },
+    {
+      "id": "dearthair-agus-deirfiur-agam",
+      "topic": "people",
+      "concepts": [
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá deartháir agus deirfiúr agam.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "deartháir",
+          "deartháir"
+        ],
+        [
+          "agus",
+          "agus"
+        ],
+        [
+          "deirfiúr",
+          "deirfiúr"
+        ],
+        [
+          "agam",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are",
+          true
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ],
+        [
+          "at me"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mé deartháir agus deirfiúr."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "agam",
+          "agat",
+          "aige"
+        ]
+      }
+    },
+    {
+      "id": "seo-e-a-theach",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "lenition"
+      ],
+      "text": "Seo é a theach.",
+      "means": "This is his house.",
+      "words": [
+        [
+          "Seo",
+          "seo"
+        ],
+        [
+          "é",
+          "sé"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "theach",
+          "teach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "it is"
+        ],
+        [
+          "his house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Seo é a dteach."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "theach",
+          "teach",
+          "dteach"
+        ]
+      }
+    },
+    {
+      "id": "seo-e-a-carr",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Seo é a carr.",
+      "means": "This is her car.",
+      "words": [
+        [
+          "Seo",
+          "seo"
+        ],
+        [
+          "é",
+          "sé"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "carr",
+          "carr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "it is"
+        ],
+        [
+          "her car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Seo é a charr."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "carr",
+          "charr",
+          "gcarr"
+        ]
+      }
+    },
+    {
+      "id": "seo-e-a-gcarr",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "eclipsis"
+      ],
+      "text": "Seo é a gcarr.",
+      "means": "This is their car.",
+      "words": [
+        [
+          "Seo",
+          "seo"
+        ],
+        [
+          "é",
+          "sé"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "gcarr",
+          "carr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "it is"
+        ],
+        [
+          "their car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Seo é a charr."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gcarr",
+          "charr",
+          "carr"
+        ]
+      }
+    },
+    {
+      "id": "nil-me-ag-obair",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Níl mé ag obair inniu.",
+      "means": "I'm not working today.",
+      "words": [
+        [
+          "Níl",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "obair",
+          "obair"
+        ],
+        [
+          "inniu",
+          "inniu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Isn't",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "at working"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Níl"
+      ],
+      "wrong": [
+        "Ní tá mé ag obair inniu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Níl",
+          "Tá",
+          "Ní"
+        ]
+      }
+    },
+    {
+      "id": "i-mo-chonai-i-ngaillimh",
+      "topic": "home",
+      "concepts": [
+        "eclipsis"
+      ],
+      "text": "Tá mé i mo chónaí i nGaillimh.",
+      "means": "I live in Galway.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "chónaí",
+          "cónaí"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "nGaillimh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "in my living"
+        ],
+        [
+          "in Galway"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mé i mo chónaí i Ghaillimh."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "nGaillimh",
+          "Ghaillimh",
+          "Gaillimhe"
+        ]
+      }
+    },
+    {
+      "id": "ta-teach-mor-againn",
+      "topic": "home",
+      "concepts": [
+        "adjective-after",
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá teach mór againn.",
+      "means": "We have a big house.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "teach",
+          "teach"
+        ],
+        [
+          "mór",
+          "mór"
+        ],
+        [
+          "againn",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "a house"
+        ],
+        [
+          "big",
+          true
+        ],
+        [
+          "at us"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá",
+        "mór"
+      ],
+      "wrong": [
+        "Tá mór teach againn."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "againn",
+          "agam",
+          "acu"
+        ]
+      }
+    },
+    {
+      "id": "ta-ar-dteach",
+      "topic": "home",
+      "concepts": [
+        "eclipsis",
+        "verb-first"
+      ],
+      "text": "Tá ár dteach in aice na farraige.",
+      "means": "Our house is near the sea.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "ár",
+          "ár"
+        ],
+        [
+          "dteach",
+          "teach"
+        ],
+        [
+          "in"
+        ],
+        [
+          "aice",
+          "aice"
+        ],
+        [
+          "na"
+        ],
+        [
+          "farraige",
+          "farraige"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "our house"
+        ],
+        [
+          "near"
+        ],
+        [
+          "the sea"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá ár theach in aice na farraige."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dteach",
+          "theach",
+          "teach"
+        ]
+      }
+    },
+    {
+      "id": "na-heochracha",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "verb-first"
+      ],
+      "text": "Tá na heochracha ar an mbord.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "na",
+          "an"
+        ],
+        [
+          "heochracha",
+          "eochair"
+        ],
+        [
+          "ar",
+          "ar"
+        ],
+        [
+          "an"
+        ],
+        [
+          "mbord",
+          "bord"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are",
+          true
+        ],
+        [
+          "the keys"
+        ],
+        [
+          "on the table"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá an eochracha ar an mbord."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "na",
+          "an",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "nil-aon-bhainne",
+      "topic": "home",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Níl aon bhainne sa chuisneoir.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Níl",
+          "bí"
+        ],
+        [
+          "aon",
+          "aon"
+        ],
+        [
+          "bhainne",
+          "bainne"
+        ],
+        [
+          "sa"
+        ],
+        [
+          "chuisneoir",
+          "cuisneoir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Isn't"
+        ],
+        [
+          "any"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ní aon bhainne sa chuisneoir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Níl",
+          "Tá",
+          "Ní"
+        ]
+      }
+    },
+    {
+      "id": "mathair-ag-cocaireacht",
+      "topic": "home",
+      "concepts": [
+        "ag-ing"
+      ],
+      "text": "Tá mo mháthair ag cócaireacht.",
+      "means": "My mom is cooking.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "mháthair",
+          "máthair"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "cócaireacht",
+          "cócaireacht"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "my mother"
+        ],
+        [
+          "at cooking"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mo mháthair cócaireacht."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ag",
+          "ar",
+          "ó"
+        ]
+      }
+    },
+    {
+      "id": "paisti-ina-gcodladh",
+      "topic": "home",
+      "concepts": [
+        "article"
+      ],
+      "text": "Tá na páistí ina gcodladh.",
+      "means": "The kids are asleep.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "na",
+          "an"
+        ],
+        [
+          "páistí",
+          "páiste"
+        ],
+        [
+          "ina"
+        ],
+        [
+          "gcodladh",
+          "codladh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are",
+          true
+        ],
+        [
+          "the children"
+        ],
+        [
+          "in their sleep"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá an páistí ina gcodladh."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "na",
+          "an",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "bhi-me-sa-bhaile",
+      "topic": "home",
+      "concepts": [
+        "past"
+      ],
+      "text": "Bhí mé sa bhaile aréir.",
+      "means": "I was at home last night.",
+      "words": [
+        [
+          "Bhí",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "sa"
+        ],
+        [
+          "bhaile",
+          "baile"
+        ],
+        [
+          "aréir",
+          "aréir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Was",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "at home"
+        ],
+        [
+          "last night"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Bhí"
+      ],
+      "wrong": [
+        "Beidh mé sa bhaile aréir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bhí",
+          "Beidh",
+          "Bí"
+        ]
+      }
+    },
+    {
+      "id": "fuinneog-oscailte",
+      "topic": "home",
+      "concepts": [
+        "article"
+      ],
+      "text": "Tá an fhuinneog oscailte.",
+      "means": "The window is open.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "fhuinneog",
+          "fuinneog"
+        ],
+        [
+          "oscailte",
+          "oscailte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "the window"
+        ],
+        [
+          "open"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá na fhuinneog oscailte."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "an",
+          "na",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "cat-dubh-againn",
+      "topic": "home",
+      "concepts": [
+        "adjective-after"
+      ],
+      "text": "Tá cat dubh againn.",
+      "means": "We have a black cat.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "cat",
+          "cat"
+        ],
+        [
+          "dubh",
+          "dubh"
+        ],
+        [
+          "againn",
+          "ag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "a cat"
+        ],
+        [
+          "black",
+          true
+        ],
+        [
+          "at us"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá",
+        "dubh"
+      ],
+      "wrong": [
+        "Tá dubh cat againn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dubh",
+          "dhubh",
+          "ndubh"
+        ]
+      }
+    },
+    {
+      "id": "is-maith-liom-tae",
+      "topic": "food",
+      "concepts": [
+        "liking",
+        "prepositional-pronouns"
+      ],
+      "text": "Is maith liom tae.",
+      "means": "I like tea.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "maith",
+          "maith"
+        ],
+        [
+          "liom",
+          "le"
+        ],
+        [
+          "tae",
+          "tae"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "good"
+        ],
+        [
+          "with me"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Is maith mé tae."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "liom",
+          "leat",
+          "leis"
+        ]
+      }
+    },
+    {
+      "id": "ni-maith-liom-caife",
+      "topic": "food",
+      "concepts": [
+        "ta-is",
+        "negation"
+      ],
+      "text": "Ní maith liom caife.",
+      "means": "I don't like coffee.",
+      "words": [
+        [
+          "Ní",
+          "is"
+        ],
+        [
+          "maith",
+          "maith"
+        ],
+        [
+          "liom",
+          "le"
+        ],
+        [
+          "caife",
+          "caife"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Isn't"
+        ],
+        [
+          "good"
+        ],
+        [
+          "with me"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Níl maith liom caife."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ní",
+          "Níl",
+          "Is"
+        ]
+      }
+    },
+    {
+      "id": "ta-ocras-orm",
+      "topic": "food",
+      "concepts": [
+        "feelings-on",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá ocras orm.",
+      "means": "I'm hungry.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "ocras",
+          "ocras"
+        ],
+        [
+          "orm",
+          "ar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "hunger"
+        ],
+        [
+          "on me"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mé ocras."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "orm",
+          "ort",
+          "air"
+        ]
+      }
+    },
+    {
+      "id": "an-bhfuil-tart-ort",
+      "topic": "food",
+      "concepts": [
+        "feelings-on",
+        "prepositional-pronouns"
+      ],
+      "text": "An bhfuil tart ort?",
+      "means": "Are you thirsty?",
+      "words": [
+        [
+          "An",
+          "an"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "tart",
+          "tart"
+        ],
+        [
+          "ort",
+          "ar"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "is"
+        ],
+        [
+          "thirst"
+        ],
+        [
+          "on you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An bhfuil tú tart?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ort",
+          "orm",
+          "uirthi"
+        ]
+      }
+    },
+    {
+      "id": "ba-mhaith-liom-cupan-tae",
+      "topic": "food",
+      "concepts": [
+        "liking",
+        "prepositional-pronouns"
+      ],
+      "chunks": [
+        "le-do-thoil"
+      ],
+      "text": "Ba mhaith liom cupán tae, le do thoil.",
+      "means": "I'd like a cup of tea, please.",
+      "words": [
+        [
+          "Ba",
+          "is"
+        ],
+        [
+          "mhaith",
+          "maith"
+        ],
+        [
+          "liom",
+          "le"
+        ],
+        [
+          "cupán",
+          "cupán"
+        ],
+        [
+          "tae,",
+          "tae"
+        ],
+        [
+          "le"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thoil",
+          "toil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Would be"
+        ],
+        [
+          "good"
+        ],
+        [
+          "with me"
+        ],
+        [
+          "a cup"
+        ],
+        [
+          "of tea,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Is maith liom cupán tae, le do thoil."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "liom",
+          "leat",
+          "léi"
+        ]
+      }
+    },
+    {
+      "id": "dith-me-aran",
+      "topic": "food",
+      "concepts": [
+        "past"
+      ],
+      "text": "D'ith mé arán agus im.",
+      "means": "I ate bread and butter.",
+      "words": [
+        [
+          "D'ith",
+          "ith"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "arán",
+          "arán"
+        ],
+        [
+          "agus",
+          "agus"
+        ],
+        [
+          "im",
+          "im"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Ate",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "bread"
+        ],
+        [
+          "and"
+        ],
+        [
+          "butter"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "moved": [
+        "D'ith"
+      ],
+      "wrong": [
+        "Ith mé arán agus im."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "D'ith",
+          "Íosfaidh",
+          "Ithim"
+        ]
+      }
+    },
+    {
+      "id": "ar-mhaith-leat-bainne",
+      "topic": "food",
+      "concepts": [
+        "liking",
+        "lenition",
+        "prepositional-pronouns"
+      ],
+      "text": "Ar mhaith leat bainne?",
+      "means": "Would you like some milk?",
+      "words": [
+        [
+          "Ar",
+          "is"
+        ],
+        [
+          "mhaith",
+          "maith"
+        ],
+        [
+          "leat",
+          "le"
+        ],
+        [
+          "bainne",
+          "bainne"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Would be"
+        ],
+        [
+          "good"
+        ],
+        [
+          "with you"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar maith leat bainne?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "leat",
+          "liom",
+          "leis"
+        ]
+      }
+    },
+    {
+      "id": "an-t-uisce-fuar",
+      "topic": "food",
+      "concepts": [
+        "article"
+      ],
+      "text": "Tá an t-uisce fuar.",
+      "means": "The water is cold.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "t-uisce",
+          "uisce"
+        ],
+        [
+          "fuar",
+          "fuar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "the water"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá na t-uisce fuar."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "an",
+          "na",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "an-bia-an-bhlasta",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Tá an bia an-bhlasta.",
+      "means": "The food is really tasty.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "bia",
+          "bia"
+        ],
+        [
+          "an-bhlasta",
+          "blasta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "the food"
+        ],
+        [
+          "very tasty"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "An bia tá an-bhlasta."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tá",
+          "Is",
+          "Bhí"
+        ]
+      }
+    },
+    {
+      "id": "fion-dearg",
+      "topic": "food",
+      "concepts": [
+        "adjective-after"
+      ],
+      "text": "Is maith liom fíon dearg.",
+      "means": "I like red wine.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "maith",
+          "maith"
+        ],
+        [
+          "liom",
+          "le"
+        ],
+        [
+          "fíon",
+          "fíon"
+        ],
+        [
+          "dearg",
+          "dearg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "good"
+        ],
+        [
+          "with me"
+        ],
+        [
+          "wine"
+        ],
+        [
+          "red",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dearg"
+      ],
+      "wrong": [
+        "Is maith liom dearg fíon."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "dearg",
+          "dhearg",
+          "ndearg"
+        ]
+      }
+    },
+    {
+      "id": "ca-bhfuil-an-staisiun",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "eclipsis"
+      ],
+      "chunks": [
+        "gabh-mo-leithsceal"
+      ],
+      "text": "Gabh mo leithscéal, cá bhfuil an stáisiún traenach?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Gabh",
+          "gabh"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "leithscéal,",
+          "leithscéal"
+        ],
+        [
+          "cá",
+          "cá"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "an"
+        ],
+        [
+          "stáisiún",
+          "stáisiún"
+        ],
+        [
+          "traenach",
+          "traein"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Take"
+        ],
+        [
+          "my"
+        ],
+        [
+          "excuse,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ],
+        [
+          "of train",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "traenach"
+      ],
+      "wrong": [
+        "Gabh mo leithscéal, cá tá an stáisiún traenach?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "bhfuil",
+          "fhuil",
+          "fuil"
+        ]
+      }
+    },
+    {
+      "id": "ce-mhead-ata-air-seo",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-this"
+      ],
+      "text": "Cé mhéad atá air seo?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Cé"
+        ],
+        [
+          "mhéad"
+        ],
+        [
+          "atá"
+        ],
+        [
+          "air"
+        ],
+        [
+          "seo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "that is"
+        ],
+        [
+          "on it"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Atá cé mhéad air seo?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Cé",
+          "Cén",
+          "Cad"
+        ]
+      }
+    },
+    {
+      "id": "ag-dul-go-dti-an-phictiurlann",
+      "topic": "out",
+      "concepts": [
+        "ag-ing"
+      ],
+      "text": "Tá mé ag dul go dtí an phictiúrlann anocht.",
+      "means": "I'm going to the movies tonight.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "dul",
+          "dul"
+        ],
+        [
+          "go"
+        ],
+        [
+          "dtí"
+        ],
+        [
+          "an"
+        ],
+        [
+          "phictiúrlann",
+          "pictiúrlann"
+        ],
+        [
+          "anocht",
+          "anocht"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "at going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the cinema"
+        ],
+        [
+          "tonight"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mé dul go dtí an phictiúrlann anocht."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ag",
+          "ar",
+          "ó"
+        ]
+      }
+    },
+    {
+      "id": "chuaigh-me-abhaile",
+      "topic": "out",
+      "concepts": [
+        "past"
+      ],
+      "text": "Chuaigh mé abhaile ar an mbus.",
+      "means": "I went home on the bus.",
+      "words": [
+        [
+          "Chuaigh",
+          "téigh"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "abhaile",
+          "abhaile"
+        ],
+        [
+          "ar",
+          "ar"
+        ],
+        [
+          "an"
+        ],
+        [
+          "mbus",
+          "bus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Went",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "home"
+        ],
+        [
+          "on the bus"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Chuaigh"
+      ],
+      "wrong": [
+        "Téann mé abhaile ar an mbus."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Chuaigh",
+          "Rachaidh",
+          "Téim"
+        ]
+      }
+    },
+    {
+      "id": "ni-thuigim",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "lenition"
+      ],
+      "text": "Ní thuigim.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ní",
+          "ní"
+        ],
+        [
+          "thuigim",
+          "tuig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Níl tuigim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "thuigim",
+          "dtuigim",
+          "thuig"
+        ]
+      }
+    },
+    {
+      "id": "beidh-me-ag-fanacht",
+      "topic": "out",
+      "concepts": [
+        "future"
+      ],
+      "text": "Beidh mé ag fanacht leat.",
+      "means": "I'll be waiting for you.",
+      "words": [
+        [
+          "Beidh",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "fanacht",
+          "fan"
+        ],
+        [
+          "leat",
+          "le"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will be",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "at waiting"
+        ],
+        [
+          "with you"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Beidh"
+      ],
+      "wrong": [
+        "Bhí mé ag fanacht leat."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Beidh",
+          "Bhí",
+          "Tá"
+        ]
+      }
+    },
+    {
+      "id": "an-bhfuil-tu-ag-foghlaim",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "eclipsis"
+      ],
+      "text": "An bhfuil tú ag foghlaim Gaeilge?",
+      "means": "Are you learning Irish?",
+      "words": [
+        [
+          "An",
+          "an"
+        ],
+        [
+          "bhfuil",
+          "bí"
+        ],
+        [
+          "tú",
+          "tú"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "foghlaim",
+          "foghlaim"
+        ],
+        [
+          "Gaeilge"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "is"
+        ],
+        [
+          "you"
+        ],
+        [
+          "at learning"
+        ],
+        [
+          "Irish"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "An tá tú ag foghlaim Gaeilge?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bhfuil",
+          "fhuil",
+          "fuil"
+        ]
+      }
+    },
+    {
+      "id": "feicfidh-me-thu",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Feicfidh mé thú amárach.",
+      "means": "I'll see you tomorrow.",
+      "words": [
+        [
+          "Feicfidh",
+          "feic"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "thú",
+          "tú"
+        ],
+        [
+          "amárach",
+          "amárach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will see",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Feicfidh"
+      ],
+      "wrong": [
+        "Chonaic mé thú amárach."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Feicfidh",
+          "Chonaic",
+          "Feicim"
+        ]
+      }
+    },
+    {
+      "id": "beidh-se-ag-cur-baisti",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Beidh sé ag cur báistí amárach.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Beidh",
+          "bí"
+        ],
+        [
+          "sé",
+          "sé"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "cur",
+          "cur"
+        ],
+        [
+          "báistí",
+          "báisteach"
+        ],
+        [
+          "amárach",
+          "amárach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will be",
+          true
+        ],
+        [
+          "it"
+        ],
+        [
+          "at putting"
+        ],
+        [
+          "of rain"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Beidh"
+      ],
+      "wrong": [
+        "Bhí sé ag cur báistí amárach."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Beidh",
+          "Bhí",
+          "Bíonn"
+        ]
+      }
+    },
+    {
+      "id": "ta-se-fuar-inniu",
+      "topic": "plans",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Tá sé fuar inniu.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "sé",
+          "sé"
+        ],
+        [
+          "fuar",
+          "fuar"
+        ],
+        [
+          "inniu",
+          "inniu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "it"
+        ],
+        [
+          "cold"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Sé tá fuar inniu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "inniu",
+          "inné",
+          "aréir"
+        ]
+      }
+    },
+    {
+      "id": "ta-me-ag-foghlaim-gaeilge",
+      "topic": "plans",
+      "concepts": [
+        "ag-ing"
+      ],
+      "text": "Tá mé ag foghlaim Gaeilge.",
+      "means": "I'm learning Irish.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "mé",
+          "mé"
+        ],
+        [
+          "ag",
+          "ag"
+        ],
+        [
+          "foghlaim",
+          "foghlaim"
+        ],
+        [
+          "Gaeilge"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "at learning"
+        ],
+        [
+          "Irish"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mé foghlaim Gaeilge."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ag",
+          "ar",
+          "ó"
+        ]
+      }
+    },
+    {
+      "id": "rachaidh-muid-go-dti-an-tra",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Rachaidh muid go dtí an trá Dé Sathairn.",
+      "means": "We'll go to the beach on Saturday.",
+      "words": [
+        [
+          "Rachaidh",
+          "téigh"
+        ],
+        [
+          "muid",
+          "muid"
+        ],
+        [
+          "go"
+        ],
+        [
+          "dtí"
+        ],
+        [
+          "an"
+        ],
+        [
+          "trá",
+          "trá"
+        ],
+        [
+          "Dé"
+        ],
+        [
+          "Sathairn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will go",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the beach"
+        ],
+        [
+          "on Saturday"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "moved": [
+        "Rachaidh"
+      ],
+      "wrong": [
+        "Chuaigh muid go dtí an trá Dé Sathairn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Rachaidh",
+          "Chuaigh",
+          "Téann"
+        ]
+      }
+    },
+    {
+      "id": "is-brea-liom-an-samhradh",
+      "topic": "plans",
+      "concepts": [
+        "liking",
+        "prepositional-pronouns"
+      ],
+      "text": "Is breá liom an samhradh.",
+      "means": "I love summer.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "breá",
+          "breá"
+        ],
+        [
+          "liom",
+          "le"
+        ],
+        [
+          "an"
+        ],
+        [
+          "samhradh",
+          "samhradh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "fine"
+        ],
+        [
+          "with me"
+        ],
+        [
+          "the summer"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Is breá mé an samhradh."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "liom",
+          "leat",
+          "léi"
+        ]
+      }
+    },
+    {
+      "id": "ta-suil-agam",
+      "topic": "plans",
+      "concepts": [
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá súil agam go mbeidh sé grianmhar.",
+      "means": "I hope it'll be sunny.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "súil",
+          "súil"
+        ],
+        [
+          "agam",
+          "ag"
+        ],
+        [
+          "go"
+        ],
+        [
+          "mbeidh",
+          "bí"
+        ],
+        [
+          "sé",
+          "sé"
+        ],
+        [
+          "grianmhar",
+          "grianmhar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "hope"
+        ],
+        [
+          "at me"
+        ],
+        [
+          "that"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "it"
+        ],
+        [
+          "sunny"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mé súil go mbeidh sé grianmhar."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "agam",
+          "orm",
+          "liom"
+        ]
+      }
+    },
+    {
+      "id": "nil-am-agam",
+      "topic": "plans",
+      "concepts": [
+        "ag-have",
+        "prepositional-pronouns"
+      ],
+      "text": "Níl am agam inniu.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Níl",
+          "bí"
+        ],
+        [
+          "am",
+          "am"
+        ],
+        [
+          "agam",
+          "ag"
+        ],
+        [
+          "inniu",
+          "inniu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Isn't"
+        ],
+        [
+          "time"
+        ],
+        [
+          "at me"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Níl mé am inniu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "agam",
+          "orm",
+          "liom"
+        ]
+      }
+    },
+    {
+      "id": "ta-tuirse-orm",
+      "topic": "plans",
+      "concepts": [
+        "feelings-on",
+        "prepositional-pronouns"
+      ],
+      "text": "Tá tuirse orm.",
+      "means": "I'm tired.",
+      "words": [
+        [
+          "Tá",
+          "bí"
+        ],
+        [
+          "tuirse",
+          "tuirse"
+        ],
+        [
+          "orm",
+          "ar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "tiredness"
+        ],
+        [
+          "on me"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tá"
+      ],
+      "wrong": [
+        "Tá mé tuirse."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "orm",
+          "ort",
+          "uirthi"
+        ]
+      }
+    },
+    {
+      "id": "is-brea-le-mo-chara-ceol",
+      "topic": "plans",
+      "concepts": [
+        "liking",
+        "lenition"
+      ],
+      "text": "Is breá le mo chara ceol.",
+      "means": "My friend loves music.",
+      "words": [
+        [
+          "Is",
+          "is"
+        ],
+        [
+          "breá",
+          "breá"
+        ],
+        [
+          "le",
+          "le"
+        ],
+        [
+          "mo",
+          "mo"
+        ],
+        [
+          "chara",
+          "cara"
+        ],
+        [
+          "ceol",
+          "ceol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "fine"
+        ],
+        [
+          "with"
+        ],
+        [
+          "my friend"
+        ],
+        [
+          "music"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Is breá mo chara ceol."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "chara",
+          "cara",
+          "gcara"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "caife",
+          "forms": [
+            "caife"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "tae",
+          "forms": [
+            "tae"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "uisce",
+          "forms": [
+            "uisce"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "ól",
+          "forms": [
+            "ólaim"
+          ],
+          "picture": "drink",
+          "means": "ólaim = I drink"
+        },
+        {
+          "lemma": "agus",
+          "forms": [
+            "agus"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "verb-first",
+        "line": "A plain Irish sentence starts with its verb, then who: Tá an t-uisce fuar (is the water cold)."
+      },
+      "items": [
+        "olaim-caife",
+        "olaim-tae",
+        "olaim-uisce",
+        "olaim-caife-agus-tae",
+        "olaim-tae-agus-uisce",
+        "olaim-uisce-agus-caife"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "bainne",
+          "forms": [
+            "bainne"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        },
+        {
+          "lemma": "cupán",
+          "forms": [
+            "cupán"
+          ],
+          "means": "cup"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "le-do-thoil",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "dia-duit",
+        "caife-le-do-thoil",
+        "tae-agus-uisce-le-do-thoil",
+        "cupan-bainne-le-do-thoil",
+        "caife-go-raibh-maith-agat",
+        "dia-duit-tae-le-do-thoil",
+        "olaim-bainne"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "maith",
+          "forms": [
+            "maith"
+          ],
+          "picture": "good",
+          "means": "good"
+        },
+        {
+          "lemma": "bí",
+          "forms": [
+            "tá",
+            "níl"
+          ],
+          "means": "tá = am; níl = am not"
+        },
+        {
+          "lemma": "mé",
+          "forms": [
+            "mé"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "go",
+          "forms": [
+            "go"
+          ],
+          "means": "adverb marker"
+        },
+        {
+          "lemma": "tú",
+          "forms": [
+            "tú"
+          ],
+          "means": "you"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "An starts many present and future yes-or-no questions and eclipses the verb (An bhfuil tú…?"
+      },
+      "items": [
+        "dia-duit-conas-ata-tu",
+        "ta-me-go-maith",
+        "nil-me-go-maith",
+        "go-raibh-maith-agat-slan",
+        "ta-me-go-maith-agus-tu"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "múinteoir",
+          "forms": [
+            "múinteoir"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "mac léinn",
+          "forms": [
+            "mac",
+            "léinn"
+          ],
+          "means": "mac = student; léinn = student"
+        },
+        {
+          "lemma": "is",
+          "forms": [
+            "is"
+          ],
+          "means": "to be"
+        },
+        {
+          "lemma": "ní",
+          "forms": [
+            "ní"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "an",
+          "forms": [
+            "an"
+          ],
+          "means": "yes/no question marker; interrogative copula ('am/is/are ...?')"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "cad-is-ainm-duit",
+        "dia-duit-ta-athas-orm-bualadh-leat",
+        "is-muinteoir-me",
+        "is-mac-leinn-tu",
+        "an-muinteoir-tu",
+        "ni-muinteoir-me"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "máthair",
+          "forms": [
+            "mháthair"
+          ],
+          "picture": "mother",
+          "means": "mháthair = mother"
+        },
+        {
+          "lemma": "deartháir",
+          "forms": [
+            "dheartháir"
+          ],
+          "picture": "brother",
+          "means": "dheartháir = brother"
+        },
+        {
+          "lemma": "deirfiúr",
+          "forms": [
+            "dheirfiúr"
+          ],
+          "picture": "sister",
+          "means": "dheirfiúr = sister"
+        },
+        {
+          "lemma": "mo",
+          "forms": [
+            "mo"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "seo",
+          "forms": [
+            "seo"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "sí",
+          "forms": [
+            "í"
+          ],
+          "means": "í = she"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "lenition",
+        "line": "After mo (my), do (your), a meaning his, ní and some other words, many first consonants soften, usually written with an h: máthair → mo mháthair (my mother), tuigim → ní thuigim (not I-understand)."
+      },
+      "items": [
+        "seo-mo-mhathair",
+        "seo-mo-dhearthair",
+        "seo-mo-dheirfiur",
+        "is-muinteoir-i-mo-mhathair",
+        "is-mac-leinn-i-mo-dheirfiur"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "ag",
+          "forms": [
+            "agam",
+            "agat"
+          ],
+          "means": "agam = I have; agat = you have"
+        },
+        {
+          "lemma": "cara",
+          "forms": [
+            "cara"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "dochtúir",
+          "forms": [
+            "dochtúir"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "eochair",
+          "forms": [
+            "eochair"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "fón",
+          "forms": [
+            "fón"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "leabhar",
+          "forms": [
+            "leabhar"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "athair",
+          "forms": [
+            "athair"
+          ],
+          "means": "father"
+        },
+        {
+          "lemma": "bí",
+          "forms": [
+            "bhfuil"
+          ],
+          "means": "bhfuil = is?"
+        },
+        {
+          "lemma": "deartháir",
+          "forms": [
+            "deartháir"
+          ],
+          "means": "brother"
+        },
+        {
+          "lemma": "deirfiúr",
+          "forms": [
+            "deirfiúr"
+          ],
+          "means": "sister"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ta-fon-agam",
+        "an-bhfuil-eochair-agat",
+        "dearthair-agus-deirfiur-agam",
+        "nil-leabhar-agam",
+        "is-dochtuir-i-mo-dheirfiur",
+        "is-cara-maith-tu",
+        "is-athair-maith-tu"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "cá",
+          "forms": [
+            "cá"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "anseo",
+          "forms": [
+            "anseo"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "ansin",
+          "forms": [
+            "ansin"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "an",
+          "forms": [
+            "an"
+          ],
+          "means": "the; also a yes/no question marker"
+        },
+        {
+          "lemma": "leithreas",
+          "forms": [
+            "leithreas"
+          ],
+          "means": "toilet"
+        }
+      ],
+      "phrases": [
+        "gabh-mo-leithsceal"
+      ],
+      "concept": {
+        "pattern": "possessive",
+        "line": "a means his, her or their, and only the change after it says which: a theach (his house), a teach (her house), a dteach (their house)."
+      },
+      "items": [
+        "ta-an-fon-anseo",
+        "ta-an-eochair-ansin",
+        "gabh-mo-leithsceal-ca-bhfuil-an",
+        "ca-bhfuil-mo-mhathair",
+        "ta-mo-dheirfiur-anseo"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "amháin",
+          "forms": [
+            "amháin"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "dhá",
+          "forms": [
+            "dhá"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "trí",
+          "forms": [
+            "trí"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "airgead",
+          "forms": [
+            "airgead"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "caife",
+          "forms": [
+            "chaife"
+          ],
+          "means": "chaife = coffee (chaife: lenited singular, as in dhá chaife, 'two coffees')"
+        }
+      ],
+      "phrases": [
+        "how-much-is-this",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "ce-mhead-ata-air-seo",
+        "dia-duit-an-bille-le-do-thoil",
+        "dha-chaife-le-do-thoil",
+        "leabhar-amhain-le-do-thoil",
+        "ta-tri-leabhar-agam",
+        "nil-airgead-agam"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "labhair",
+          "forms": [
+            "labhraíonn",
+            "labhraím"
+          ],
+          "means": "labhraíonn = speak; labhraím = I speak"
+        },
+        {
+          "lemma": "béarla",
+          "forms": [
+            "Béarla"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "gaeilge",
+          "forms": [
+            "Gaeilge"
+          ],
+          "means": "Irish"
+        },
+        {
+          "lemma": "tuig",
+          "forms": [
+            "thuigim",
+            "dtuigeann"
+          ],
+          "means": "thuigim = I understand; dtuigeann = understand"
+        },
+        {
+          "lemma": "beagán",
+          "forms": [
+            "beagán"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "teastaigh",
+          "forms": [
+            "teastaíonn"
+          ],
+          "means": "teastaíonn = is wanted"
+        },
+        {
+          "lemma": "ó",
+          "forms": [
+            "uaim"
+          ],
+          "means": "uaim = from me"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "prepositional-pronouns",
+        "line": "Many Irish prepositions join to a pronoun: ag + mé becomes agam (at me), ar + tú becomes ort (on you), and le + mé becomes liom (with me)."
+      },
+      "items": [
+        "an-labhraionn-tu-bearla",
+        "labhraim-beagan-gaeilge",
+        "ni-thuigim",
+        "an-dtuigeann-tu",
+        "teastaionn-caife-uaim",
+        "teastaionn-uisce-uaim-le-do-thoil"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "teach",
+          "forms": [
+            "dteach",
+            "teach"
+          ],
+          "picture": "house",
+          "means": "dteach = house; teach = house"
+        },
+        {
+          "lemma": "seomra",
+          "forms": [
+            "sheomra"
+          ],
+          "picture": "room",
+          "means": "sheomra = room"
+        },
+        {
+          "lemma": "mór",
+          "forms": [
+            "mór"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "beag",
+          "forms": [
+            "beag"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "cónaí",
+          "forms": [
+            "chónaí",
+            "cónaí"
+          ],
+          "means": "chónaí = living; cónaí = living"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i",
+            "ina"
+          ],
+          "picture": "in",
+          "means": "i = in; ina = in her"
+        },
+        {
+          "lemma": "do",
+          "forms": [
+            "do"
+          ],
+          "means": "your"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ta-mo-sheomra-beag",
+        "ta-an-teach-seo-mor",
+        "ta-me-i-mo-chonai-i-dteach-beag",
+        "ca-bhfuil-tu-i-do-chonai",
+        "ta-mo-mhathair-ina-conai-anseo"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "téigh",
+          "forms": [
+            "téim",
+            "téann"
+          ],
+          "means": "téim = I go; téann = goes"
+        },
+        {
+          "lemma": "scoil",
+          "forms": [
+            "scoil"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "cathair",
+          "forms": [
+            "chathair"
+          ],
+          "picture": "city",
+          "means": "chathair = city"
+        },
+        {
+          "lemma": "stáisiún",
+          "forms": [
+            "stáisiún"
+          ],
+          "means": "station"
+        },
+        {
+          "lemma": "carr",
+          "forms": [
+            "carr"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "dul",
+          "forms": [
+            "dul"
+          ],
+          "means": "going"
+        },
+        {
+          "lemma": "ag",
+          "forms": [
+            "ag"
+          ],
+          "means": "at"
+        }
+      ],
+      "phrases": [
+        "to"
+      ],
+      "concept": {
+        "pattern": "article",
+        "line": "an normally means the with one thing and na with more than one, but na is also used with some singular of-the phrases; the article changes some first sounds: an t-uisce (the water), an fhuinneog (the window), na heochracha (the keys)."
+      },
+      "items": [
+        "ta-carr-agam",
+        "ta-an-carr-seo-beag",
+        "teim-go-dti-an-scoil",
+        "ca-bhfuil-tu-ag-dul",
+        "gabh-mo-leithsceal-ca-bhfuil-an-2",
+        "teann-mo-mhathair-go-dti-an-chathair"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "inniu",
+          "forms": [
+            "inniu"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "amárach",
+          "forms": [
+            "amárach"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "anois",
+          "forms": [
+            "anois"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "obair",
+          "forms": [
+            "obair"
+          ],
+          "picture": "work",
+          "means": "work"
+        },
+        {
+          "lemma": "caith",
+          "forms": [
+            "caithfidh"
+          ],
+          "means": "caithfidh = throw; spend; wear (caithfidh ...: must/have to ...)"
+        },
+        {
+          "lemma": "féad",
+          "forms": [
+            "fhéadaim"
+          ],
+          "means": "fhéadaim = I can"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "go-raibh-maith-agat-feicfidh-me-thu",
+        "ta-me-ag-obair-inniu",
+        "caithfidh-me-dul-anois",
+        "ta-me-ag-dul-go-dti-an-chathair",
+        "ni-fheadaim-dul-inniu",
+        "caithfidh-me-dul-ag-obair-amarach",
+        "nil-me-ag-obair"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

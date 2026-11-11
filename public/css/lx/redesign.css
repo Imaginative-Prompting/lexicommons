@@ -1,0 +1,541 @@
+/* The look as it's been chosen, screen by screen: Home and the floating tab bar so far. The rules behind it: docs/design-bible.md; its tokens are in tokens.css. A card gets a border and
+ * no background, a background and a border, or neither, by what it does. Other screens keep their own rules until theirs are chosen. */
+@layer lx.page {
+  /* ---------- the one button that moves you forward ---------- */
+  [data-part="button"][data-variant="go"] {
+    position: relative;
+    min-height: 56px;
+    margin-bottom: 4px;
+    border: 0;
+    border-radius: var(--radius-16);
+    background: var(--go);
+    color: var(--on-go);
+    font: 700 18px / 1 var(--type-head);
+    letter-spacing: -0.01em;
+    box-shadow: 0 4px 0 var(--go-deep);
+    transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard);
+  }
+  [data-part="button"][data-variant="go"]:not(:disabled):active { transform: translateY(3px); box-shadow: 0 1px 0 var(--go-deep); background: var(--go); }
+  @media (hover: hover) { [data-part="button"][data-variant="go"]:not(:disabled):hover { background: var(--go); filter: brightness(1.06); } }
+
+  /* The day's already counted: the same action, nothing pushing it. A border, because it's a choice. */
+  [data-part="button"][data-variant="calm"] { min-height: 56px; border: 2px solid var(--line-strong); border-radius: var(--radius-16); background: none; color: var(--ink-1); font: 700 18px / 1 var(--type-head); letter-spacing: -0.01em; }
+  [data-part="button"][data-variant="calm"]:not(:disabled):active { background: var(--fill-active); }
+
+  [data-part="app-title"] { font-weight: 700; }
+
+  /* ---------- the floating tab bar: content runs under it to the foot of the screen. A row of gray links; a purple copy over them, shown only through the bubble. ---------- */
+  [data-part="tab"] > svg:not(.lx-icon) { width: 28px; height: 28px; flex: none; }
+  .lx-tab-bubble, .lx-tab-lens { display: none; }
+  @media (max-width: 1023.98px) {
+    /* The room at a page's foot (shell.css): a page's end comes to rest well clear of the bar, past the fade under it, not just above it. */
+    :root:not([data-translate]) [data-part="app"] > [data-part="page"] { --page-foot-now: calc(var(--bar-room) + var(--space-4)); }
+    /* Under the bar to the foot of the screen: the body keeps the safe area, and in an installed iPhone the page would otherwise stop 34 px short of the screen's foot. Not while typing. */
+    :root:not([data-keyboard], [data-translate]) [data-part="app"] > [data-part="page"] { margin-bottom: calc(-1 * env(safe-area-inset-bottom)); }
+    /* A page's main action pinned low stops above the bar, with the page's color down to the foot behind it. While typing there's no bar, and it sits on the keys as it did. */
+    :root[data-keyboard] [data-part="app"] > [data-part="page"] { --page-foot-now: calc(var(--space-7) + var(--space-3)); }
+    /* The spacer takes that room by inherit (shell.css); matched here too, one rule per state, so the keys or Translate changing it restyle
+     * the spacer itself. WebKit keeps a pseudo's style while the rules it matches are the same, whatever it inherits: with none of these it
+     * kept 92 px of room under the keys for 36, and with both states in one rule's list (matched already by the other) it did the same. */
+    :root:not([data-translate]) [data-part="app"] > [data-part="page"]::before { --page-foot-now: inherit; }
+    :root[data-keyboard] [data-part="app"] > [data-part="page"]::before { --page-foot-now: inherit; }
+    :root:not([data-keyboard]) [data-part="app"] > [data-part="page"] [data-part="pinned-actions"] { bottom: var(--bar-room); padding-bottom: 0; box-shadow: 0 40px 0 var(--canvas), 0 80px 0 var(--canvas), 0 120px 0 var(--canvas), 0 160px 0 var(--canvas); }
+    /* (Where shell.css's rule reads the room at the foot, the keys' room: written here, as --page-foot is the layout's alone.) */
+    :root[data-keyboard] [data-part="app"] > [data-part="page"] [data-part="pinned-actions"] { bottom: calc(var(--space-7) + var(--space-3) - var(--space-7) - var(--space-3)); }
+    [data-part="app"] > [data-part="tab-bar"] {
+      left: 0;
+      right: 0;
+      bottom: var(--bar-gap);
+      width: min(calc(100% - 24px), calc(var(--tabs, 4) * 84px + 8px));
+      height: var(--bar-height);
+      margin-inline: auto;
+      padding: 4px;
+      gap: 0;
+      border: 1px solid var(--bar-edge);
+      border-radius: 32px;
+      background: var(--bar-glass);
+      -webkit-backdrop-filter: var(--bar-filter);
+      backdrop-filter: var(--bar-filter);
+      box-shadow: var(--bar-rim), var(--bar-shadow);
+    }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"] { position: relative; z-index: 1; justify-content: center; gap: 2px; min-height: 0; padding: 0; border-radius: 26px; color: var(--bar-ink); font: 600 var(--size-12) / 1.1 var(--type-ui); }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] { color: var(--bar-ink); }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"]:active { background: color-mix(in srgb, var(--ink-1) 10%, transparent); }
+    .lx-tab-bubble { display: block; position: absolute; left: 0; top: 0; z-index: 0; border-radius: 999px; background: var(--tab-bubble); box-shadow: inset 0 0 0 1px var(--tab-bubble-edge); pointer-events: none; will-change: transform, width; }
+    .lx-tab-lens { display: grid; position: absolute; inset: 0; z-index: 2; grid-auto-flow: column; grid-auto-columns: 1fr; padding: 4px; color: var(--tab-on); pointer-events: none; will-change: clip-path; }
+    .lx-tab-lens-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font: 600 var(--size-12) / 1.1 var(--type-ui); }
+    .lx-tab-lens-item > svg { width: 28px; height: 28px; flex: none; }
+    [data-part="tab-bar"][data-no-lens] :is(.lx-tab-bubble, .lx-tab-lens) { visibility: hidden; }
+    /* Symbols only: the tabs show no names, so the bar stays quiet and each symbol reads at a glance; each name stays its link's accessible name, unseen. The sidebar shows them. */
+    [data-part="app"] > [data-part="tab-bar"] .lx-tab-label { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    /* Toasts clear the floating bar. */
+    .lx-toasts { bottom: calc(var(--bar-height) + var(--bar-gap) + var(--space-3)); }
+  }
+  /* The glass made solid: with Reduce Transparency on, or where a browser can't blur what's behind (the bar and the header's buttons
+   * alike, shell.css). */
+  @media (prefers-reduced-transparency: reduce) {
+    :root { --bar-glass: var(--chrome) !important; --bar-filter: none !important; }
+    /* The fades at the top and the foot (shell.css) stay fades, with nothing blurred behind them. */
+    [data-part="app"]::before, [data-part="app"] > [data-part="app-header"]::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  }
+  @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    :root { --bar-glass: var(--chrome) !important; --bar-filter: none !important; }
+  }
+  /* A wide screen keeps its sidebar: the tab you're on lit (--fill-active, components.css), its symbol in the same purple and its words in the
+     main ink. The purple on that fill holds as a graphic (3:1 at least) in every ready-made theme but not as words (4.5:1): under it in 105 of
+     144 (9 Nov 2026). test-themes reads both from here and measures them. */
+  @media (min-width: 1024px) {
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] { color: var(--ink-1); }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] > :not(.lx-tab-label) { color: var(--tab-on); }
+  }
+
+  /* ---------- Translate: a background and a border, because you type in it. Nothing boxed inside it. ---------- */
+  /* (Over the field: on iOS the textarea would paint over it.) */
+  [data-part="translate-field"] > svg:not(.lx-icon) { position: absolute; left: 14px; top: 16px; z-index: 1; width: 24px; height: 24px; color: var(--ink-3); pointer-events: none; }
+  [data-part="translate-field"] textarea[data-part="text-field"] { padding-left: 46px; }
+  [data-part="translate-field"] [data-part="mic-button"] > svg[data-symbol] { width: 22px; height: 22px; color: var(--ink-3); }
+  [data-part="translate-field"] [data-part="translate-direction"],
+  [data-part="translate-field"] [data-part="mic-button"][data-size="sm"] { background: none; }
+  [data-part="translate-field"] [data-part="mic-button"][data-size="sm"]:active,
+  [data-part="translate-field"] [data-part="translate-direction"]:active { background: var(--fill-active); }
+  /* With a mouse: the tint, and the ink darker (on the field's own --fill the tint alone is 1.07:1 in Paper, as the settings button's is). */
+  @media (hover: hover) {
+    [data-part="translate-field"] [data-part="mic-button"][data-size="sm"]:not(:active):hover,
+    [data-part="translate-field"] [data-part="translate-direction"]:not(:active):hover { background: var(--fill-hover); color: var(--ink-1); }
+    [data-part="translate-field"] [data-part="mic-button"][data-size="sm"]:not(:active):hover > svg[data-symbol] { color: var(--ink-1); }
+  }
+  /* While a small mic listens, its bars take the place of the drawn symbol. */
+  [data-part="mic-button"][data-size="sm"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) > svg[data-symbol] { display: none; }
+
+  /* ---------- the main card: an outline, because you press what's in it, with a hard edge under it ---------- */
+  [data-part="next-step"] { position: relative; padding: var(--space-4); border: 2px solid var(--line-strong); border-radius: var(--radius-24); background: none; box-shadow: 0 4px 0 var(--line-strong); margin-bottom: 4px; }
+  [data-part="next-step"] h2 { font-weight: 700; }
+  /* Home's held first lesson (know/today.js heldFirstLesson): what it says meanwhile, on the two lines the lesson's name takes. */
+  [data-part="next-step"] .lx-next-coming { display: block; min-height: 2lh; }
+  [data-part="next-step"] .lx-next-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+  [data-part="next-step"] .lx-next-art { flex: none; line-height: 0; }
+  [data-part="next-step"] .lx-next-art > svg { width: 88px; height: 88px; }
+  [data-part="next-step"] .lx-next-meta { display: grid; gap: 2px; line-height: 1.3; }
+
+  /* An outline drawn as one path (lx/edge.js) when a card isn't a plain box. Its card's border box (100% is the padding box; the border is
+     2px), never a size measured before: a page kept hidden through a rotation came back with it at its old width for a few frames, and
+     the page ran 54 px wider than the screen until it was drawn again (stretched meanwhile). base.css's max-width on every svg is off. */
+  .lx-edge { position: absolute; left: -2px; top: -2px; width: calc(100% + 4px); height: calc(100% + 4px + var(--edge-drop, 0px)); max-width: none; overflow: visible; pointer-events: none; }
+  .lx-edge-line { fill: none; stroke: var(--line-strong); stroke-width: 2; }
+  .lx-edge-tear { fill: none; stroke: var(--line-strong); stroke-width: 2; stroke-dasharray: 1 6; stroke-linecap: round; }
+
+  /* The other way forward comes out from under the card's foot: for a lesson, a ticket with its tear and bite, because a lesson is something you spend. The whole stub is the press. */
+  [data-part="next-step"][data-stub] { border-color: transparent; box-shadow: none; padding-bottom: 0; margin-bottom: 0; }
+  [data-part="next-step"] .lx-next-other { position: relative; display: flex; justify-self: stretch; align-items: center; gap: var(--space-3); min-height: 60px; margin: var(--space-1) 6px 0; padding: 8px 12px; border: 0; border-radius: 0 0 16px 16px; background: none; color: var(--ink-1); font-size: var(--size-16); }
+  [data-part="next-step"] .lx-next-other[data-learn] { gap: 26px; }
+  [data-part="next-step"] .lx-next-other:active { background: var(--fill-active); color: var(--ink-1); }
+  @media (hover: hover) { [data-part="next-step"] .lx-next-other:not(:active):hover { background: var(--fill-hover); color: var(--ink-1); } }
+  [data-part="next-step"] .lx-next-other > svg[data-symbol] { flex: none; width: 32px; height: 32px; color: var(--ink-2); }
+  [data-part="next-step"] .lx-next-other-words { display: grid; flex: 1; min-width: 0; gap: 1px; font-weight: 600; line-height: 1.25; }
+  /* One line, its end an ellipsis: the card is the same height whatever the lesson's words are. Two lines when they were long, one when they were
+     short: on a first start the words changed as the packs came, and everything under the card moved 12 px (7 Nov 2026). The lesson is a tap away. */
+  [data-part="next-step"] .lx-next-other-sub { color: var(--ink-2); font-size: var(--size-14); font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  [data-part="next-step"] .lx-next-other > .lx-icon { flex: none; width: 18px; height: 18px; color: var(--ink-3); }
+
+  /* A row's symbol stays quiet. */
+  [data-part="list-row"] svg[data-symbol] { color: var(--ink-2); }
+  /* The smallest phones: the art and the stub give up room before the words wrap. */
+  @media (max-width: 359.98px) {
+    [data-part="next-step"] .lx-next-top { gap: var(--space-2); }
+    [data-part="next-step"] .lx-next-art > svg { width: 72px; height: 72px; }
+    [data-part="next-step"] .lx-next-other { gap: var(--space-2); min-height: 52px; padding: 6px 8px; }
+    [data-part="next-step"] .lx-next-other[data-learn] { gap: 18px; }
+    [data-part="next-step"] .lx-next-other > svg[data-symbol] { width: 26px; height: 26px; }
+    [data-part="next-step"] .lx-next-other > .lx-icon { width: 16px; height: 16px; }
+    [data-part="next-step"] .lx-next-other-words { font-size: 14px; }
+    [data-part="next-step"] .lx-next-other-sub { font-size: 13px; }
+  }
+
+  /* ---------- your progress ---------- */
+  .lx-today-progress { gap: var(--space-5); }
+  .lx-today-progress [data-part="section-title"] { font-weight: 700; }
+  [data-part="section-title"] { font-weight: 700; }
+
+  /* The streak: a flame, a big number, one line that opens how it counts, and Tinta at the far end, apart from the flame so the two drops don't read alike. Then the week, the whole width.
+     To bring Tinta back beside the flame, take out the row-reverse; the same flame in yellow is the --art-violet override in the comment below. */
+  [data-part="streak-spot"] { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-3); }
+  [data-part="streak-spot"] .lx-streak-spot-top { display: flex; flex-direction: row-reverse; align-items: center; gap: var(--space-3); min-width: 0; }
+  [data-part="streak-spot"] .lx-streak-spot-top > [data-part="character"] { flex: none; }
+  [data-part="streak-spot"] .lx-streak-spot-body { flex: 1; min-width: 0; }
+  /* The flame in yellow: [data-part="streak"] > svg { --art-violet: var(--art-sun); --art-violet-deep: var(--art-sun-deep); --art-violet-lit: var(--art-sun-lit); } */
+  /* One Tinta on a screen: when the main card has it (back after days away), the streak's row goes without. */
+  [data-part="page"]:has([data-part="next-step"] [data-part="character"]) [data-part="streak-spot"] .lx-streak-spot-top > [data-part="character"] { display: none; }
+  :is(a[data-part="streak-summary"], [data-part="streak-summary"][data-in-link]) { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: var(--space-2); row-gap: 2px; margin: 0; padding: 0; min-height: 44px; background: none; }
+  a[data-part="streak-summary"]:active { background: none; opacity: 0.7; }
+  /* Today's streak spot as one link (know/ui.js streakSpot href): the number, the flame and the week row open the streak's page. */
+  a[data-part="streak-spot"] { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+  a[data-part="streak-spot"]:active { opacity: 0.7; }
+  /* With a mouse: the whole spot tinted, a little past its edges (a spread shadow of the same tint: it has no padding of its own, and nothing moves
+     or changes what Tinta's acts measure from). Not while the mouse is on Tinta: a tap there is his. */
+  @media (hover: hover) {
+    a[data-part="streak-spot"]:not(:active):hover:not(:has([data-part="character"]:hover)) { border-radius: var(--radius-8); background: var(--fill-hover); box-shadow: 0 0 0 var(--space-2) var(--fill-hover); }
+  }
+  /* A tap on Tinta's ink there is his (a poke, character.js data-poking): the link doesn't look pressed. Beside his ink it's the link's. */
+  a[data-part="streak-spot"]:active:has([data-part="character"][data-poking]) { opacity: 1; }
+  @media (hover: hover) { a[data-part="streak-summary"]:hover { background: none; } }
+  [data-part="streak-summary"] [data-part="streak"] { display: flex; align-items: baseline; gap: 6px; font: 500 var(--size-16) / 1 var(--type-ui); color: var(--ink-2); }
+  [data-part="streak-summary"] [data-part="streak"] > svg { align-self: center; width: 40px; height: 40px; margin-left: -4px; margin-right: -2px; }
+  [data-part="streak-summary"] [data-part="streak"][data-days="none"] > svg { filter: grayscale(1); opacity: 0.55; }
+  [data-part="streak-summary"] [data-part="streak"][data-days="none"] > :not(svg) { display: none; }
+  [data-part="streak-summary"] [data-part="streak"] strong { font: 700 var(--size-stat) / 1 var(--type-head); letter-spacing: -0.02em; color: var(--ink-1); font-variant-numeric: tabular-nums; }
+  :is(a[data-part="streak-summary"], [data-part="streak-summary"][data-in-link]) > .lx-icon { grid-column: 2; grid-row: 1; justify-self: start; margin: 0; }
+  :is(a[data-part="streak-summary"], [data-part="streak-summary"][data-in-link]) .lx-streak-note { grid-column: 1 / -1; font-size: var(--size-14); color: var(--ink-2); }
+  /* Nothing yet: the unlit flame beside its one line, no count. */
+  :is(a[data-part="streak-summary"], [data-part="streak-summary"][data-in-link]):has([data-days="none"]) { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: var(--space-3); }
+  :is(a[data-part="streak-summary"], [data-part="streak-summary"][data-in-link]):has([data-days="none"]) .lx-streak-note { grid-column: 2; grid-row: 1; }
+  :is(a[data-part="streak-summary"], [data-part="streak-summary"][data-in-link]):has([data-days="none"]) > .lx-icon { grid-column: 3; grid-row: 1; justify-self: end; }
+
+  /* The week: an ink splat on a day you studied (Tinta throws it there), a ring today, a dot on every other day. Nothing says "missed". */
+  [data-part="week-strip"] .lx-week-days { gap: 0; }
+  [data-part="week-day"] { gap: 6px; }
+  [data-part="week-day"] .lx-week-label { font-weight: 500; }
+  [data-part="week-day"] .lx-week-mark { position: relative; width: 40px; height: 40px; border: 0; border-radius: 50%; overflow: visible; }
+  [data-part="week-day"] .lx-week-mark > svg:not(.lx-icon) { position: absolute; inset: -3px; width: calc(100% + 6px); height: calc(100% + 6px); }
+  [data-part="week-day"][data-state="studied"] .lx-week-mark { border: 0; background: none; color: inherit; }
+  [data-part="week-day"][data-state="rested"] .lx-week-mark,
+  [data-part="week-day"][data-state="paused"] .lx-week-mark { border: 0; }
+  [data-part="week-day"]:not([data-state]) .lx-week-mark,
+  [data-part="week-day"][data-state="future"] .lx-week-mark { border: 0; box-shadow: none; background: radial-gradient(circle, var(--edge-strong) 0 4px, transparent 4.5px); }
+  [data-part="week-day"][aria-current="date"]:not([data-state="studied"]) .lx-week-mark { background: none; box-shadow: inset 0 0 0 2.5px var(--ink-2); }
+  [data-part="week-day"][data-state][data-ink] .lx-week-mark > svg { visibility: hidden; }
+  [data-part="week-day"][data-state][data-ink] .lx-week-mark { box-shadow: inset 0 0 0 2.5px var(--ink-2); }
+
+  /* A stat: its number leads, a quiet symbol on the same line, level with the digits; what it's made of under it. An outline, because it opens something. */
+  [data-part="stat-tile"] { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--space-2); row-gap: 2px; align-content: start; padding: var(--space-4) var(--space-3) var(--space-3); border: 2px solid var(--line); border-radius: var(--radius-16); background: none; box-shadow: 0 3px 0 var(--line); margin-bottom: 3px; }
+  a[data-part="stat-tile"]:active { background: var(--fill-active); }
+  @media (hover: hover) { a[data-part="stat-tile"]:not(:active):hover { background: var(--fill-hover); } }
+  [data-part="stat-tile"] .lx-tile-number { grid-column: 1; grid-row: 1; font: 700 var(--size-stat) / 1 var(--type-head); }
+  /* Each symbol's size and nudge make its ink the digits' height, top and bottom level. */
+  [data-part="stat-tile"] > svg[data-symbol] { grid-column: 2; grid-row: 1; align-self: center; width: var(--tile-symbol, 30px); height: var(--tile-symbol, 30px); color: var(--ink-3); transform: translateY(var(--tile-symbol-y, 0px)); }
+  [data-part="stat-tile"] > svg[data-symbol="recall-q"] { --tile-symbol: 30px; --tile-symbol-y: -0.5px; }
+  [data-part="stat-tile"] > svg[data-symbol="done-q"] { --tile-symbol: 29px; --tile-symbol-y: -0.25px; }
+  [data-part="stat-tile"] .lx-tile-label { grid-column: 1 / -1; font-size: var(--size-14); line-height: 1.25; }
+  [data-part="stat-tile"] .lx-tile-open { display: none; }
+  .lx-tile-words, .lx-tile-bars { grid-column: 1 / -1; }
+  .lx-tile-words { display: flex; gap: 8px; height: 22px; margin-top: var(--space-2); overflow: hidden; color: var(--ink-3); font: 500 var(--size-14) / 22px var(--type-read); white-space: nowrap; -webkit-mask-image: linear-gradient(to right, #000 72%, transparent); mask-image: linear-gradient(to right, #000 72%, transparent); }
+  .lx-tile-bars { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; align-items: end; height: 22px; margin-top: var(--space-2); }
+  .lx-tile-bar { height: max(5px, calc(var(--fill, 0) * 100%)); border-radius: 3px; background: var(--edge-strong); }
+  .lx-tile-bar[data-state="future"] { background: var(--hair); }
+  .lx-tile-bar[data-state="done"] { background: var(--art-violet); }
+
+  /* The chart: on the page, in Tinta's ink, today bright. */
+  [data-part="know-link-card"] { padding: 0; border: 0; border-radius: 0; background: none; }
+  [data-part="know-link-card"]:active { background: none; opacity: 0.7; }
+  [data-part="know-link-card"] h2 { font: 700 var(--size-20) / 1.2 var(--type-head); }
+  [data-part="know-link-card"] .lx-link-card-head { min-height: 0; }
+  [data-part="know-link-card"] [data-part="growth-day"] { background: var(--art-violet); }
+  [data-part="know-link-card"] [data-part="growth-day"][data-state="today"] { background: var(--ink-1); }
+  [data-part="know-link-card"] .lx-growth-plot { grid-template-columns: minmax(0, 1fr); grid-template-rows: 96px auto; }
+  [data-part="know-link-card"] .lx-growth-caption,
+  [data-part="know-link-card"] .lx-growth-scale { display: none; }
+
+  /* The first-time note: on the page, Tinta over it. */
+  .lx-today-progress [data-part="empty-state"] { border: 0; padding: 0; }
+
+  /* ---------- small movements, once, as Home first arrives. Decoration: nothing here is pressable, and each ends. ---------- */
+  @keyframes lx-card-fan { from { transform: rotate(var(--fan)); } to { transform: none; } }
+  [data-arrive] [data-part="streak"] > svg { transform-box: fill-box; transform-origin: 50% 100%; animation: lx-flame-lick 560ms var(--ease-out) both; }
+  @keyframes lx-flame-lick { 0% { transform: scale(0.84, 0.72); } 45% { transform: scale(0.96, 1.12); } 72% { transform: scale(1.03, 0.96); } 100% { transform: none; } }
+  [data-arrive] :is([data-symbol="practice"], [data-symbol="practice2"]) :is(.fan-left, .fan-right) { transform-box: fill-box; transform-origin: 50% 100%; animation: lx-card-fan 560ms var(--ease-spring) both; animation-delay: 120ms; }
+  [data-arrive] :is([data-symbol="practice"], [data-symbol="practice2"]) .fan-left { --fan: 14deg; }
+  [data-arrive] :is([data-symbol="practice"], [data-symbol="practice2"]) .fan-right { --fan: -14deg; }
+
+  /* ========== Study: two doors, and where you are drawn small ========== */
+  /* One column that never grows past the page: a grid's own auto column took its widest word, and with large text the first lesson's door
+     ran past a 320 screen. */
+  .lx-study-doors { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+  /* Study's settings in the Practice card's notch (edge.js "notch": its corner bitten by a circle 18 px in, radius 28): the gear at a
+     symbol's size in the bite, its reach 44 px, centered where the circle is. */
+  .lx-door-wrap { position: relative; }
+  [data-part="study-door"][data-door="practice"] { border-color: transparent; box-shadow: none; }
+  [data-part="study-door"][data-door="practice"]:active { background: var(--fill-active); transform: none; box-shadow: none; border-radius: 20px; }
+  .lx-door-gear { position: absolute; top: -3px; inset-inline-end: -3px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--ink-2); }
+  .lx-door-gear .lx-icon { width: 26px; height: 26px; }
+  /* Its reach 3 px further down, into the card's bite: at Study's top the page's header covers its top 3 px (it sits 3 px over the card's edge,
+     under the header), and a tap there must still be the gear's. Invisible; the press and hover circle stay the gear's own. */
+  .lx-door-gear::before { content: ""; position: absolute; inset: 0 0 -3px; border-radius: 50%; }
+  .lx-door-gear:active { background: var(--fill-active); }
+  @media (hover: hover) {
+    .lx-door-gear:not(:active):hover { background: var(--fill-hover); }
+    [data-part="study-door"]:is([data-door="practice"], [data-door="lesson"]):not([data-held], :active):hover { background: var(--fill-hover); border-radius: 20px; }
+    [data-part="study-door"]:not([data-door="practice"], [data-door="lesson"], [data-held], :active):hover { background: var(--fill-hover); }
+  }
+  [data-part="study-door"] { position: relative; display: flex; align-items: center; column-gap: var(--space-4); min-height: 112px; margin-bottom: 3px; padding: var(--space-3) var(--space-4) var(--space-3) var(--space-3); border: 2px solid var(--line-strong); border-radius: 20px; box-shadow: 0 3px 0 var(--line-strong); background: none; color: var(--ink-1); text-decoration: none; }
+  [data-part="study-door"]:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); }
+  [data-part="study-door"] > svg[data-symbol] { flex: none; width: 88px; height: 88px; }
+  .lx-door-words { display: grid; gap: 2px; min-width: 0; flex: 1; }
+  .lx-door-title { font: 700 24px / 1.15 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-door-sub { color: var(--ink-2); font-size: var(--size-14); line-height: 1.3; }
+  /* The first lesson's door with the app's starter in it (the language's lessons not here yet): why, on a line of its own under the lesson's name. */
+  .lx-door-note { display: block; }
+  /* Its door held while the lesson comes (shell/study.js heldDoor): no link yet, so a press shows nothing. */
+  [data-part="study-door"][data-held]:active { transform: none; box-shadow: 0 3px 0 var(--line-strong); }
+  [data-part="study-door"] > .lx-icon { flex: none; color: var(--ink-3); }
+  /* The ticket draws its own line. The stub holds the picture. */
+  [data-part="study-door"][data-door="lesson"] { border-color: transparent; box-shadow: none; column-gap: 30px; }
+  [data-part="study-door"][data-door="lesson"]:active { background: var(--fill-active); transform: none; box-shadow: none; border-radius: 20px; }
+  .lx-edge-drop { fill: var(--line-strong); }
+  /* The title and your place on a line, the path under them; when the two don't fit on one line (large text), your place takes a line of its own
+     at the end (in a grid of 1fr and auto, it squeezed the title round it: "you" ran into "Unit 1"). */
+  [data-part="path-strip"] { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-1) var(--space-2); align-items: center; min-height: 44px; padding-block: var(--space-2); color: var(--ink-1); text-decoration: none; }
+  [data-part="path-strip"]:active { background: var(--fill-active); }
+  /* Held while the lessons come (shell/study.js heldStrip): no link yet, so a press shows nothing. */
+  [data-part="path-strip"][data-held]:active { background: none; }
+  /* With a mouse: tinted a little past its edges (a spread shadow of the same tint, as the streak spot: the strip has no inline padding), never while
+     the mouse is on Tinta. */
+  @media (hover: hover) { [data-part="path-strip"]:not([data-held], :active):hover:not(:has([data-part="character"]:hover)) { border-radius: var(--radius-8); background: var(--fill-hover); box-shadow: 0 0 0 var(--space-2) var(--fill-hover); } }
+  [data-part="path-strip"]:active:has([data-part="character"][data-poking]) { background: none; }
+  .lx-path-strip-title { flex: 1 1 auto; min-width: 0; font: 700 var(--size-20) / 1.2 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-path-strip-at { display: inline-flex; flex: none; align-items: center; gap: 4px; margin-inline-start: auto; color: var(--ink-2); font-size: var(--size-14); }
+  .lx-path-strip-line { position: relative; display: block; flex: 0 0 100%; padding-top: 33px; }
+  .lx-path-strip-line > svg.lx-strip { display: block; width: 100%; height: auto; max-width: none; overflow: visible; }
+  .lx-path-strip-line > [data-part="character"] { position: absolute; bottom: 31px; left: calc(var(--at) * 100%); transform: translateX(-50%); }
+  .lx-strip-done { fill: none; stroke: var(--art-violet); stroke-width: 5; stroke-linecap: round; }
+  .lx-strip-ahead { fill: none; stroke: var(--line-strong); stroke-width: 2; stroke-dasharray: 1 7; stroke-linecap: round; }
+  .lx-strip-blot { fill: var(--art-violet); }
+  .lx-strip-next { fill: var(--canvas); stroke: var(--line-strong); stroke-width: 2; }
+  .lx-strip-here { fill: var(--canvas); stroke: var(--art-violet); stroke-width: 4; }
+  @media (max-width: 359.98px) {
+    [data-part="study-door"] { column-gap: var(--space-3); min-height: 92px; }
+    [data-part="study-door"] > svg[data-symbol] { width: 64px; height: 64px; }
+    .lx-door-title { font-size: 20px; }
+    [data-part="study-door"][data-door="lesson"] { column-gap: 24px; }
+  }
+
+  /* ========== A question ========== */
+  /* What you can press: an outline with a hard edge, as Home's cards. Border widths stay the same in every state, so an answer moves nothing. */
+  [data-part="tile"] { border-width: 2px; }
+  [data-part="tile"]:not([data-state]) { border-color: var(--line-strong); background: none; box-shadow: 0 3px 0 var(--line-strong); }
+  [data-part="tile"]:not([data-state]):active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); background: none; }
+  [data-part="tile"][data-state="right"] { box-shadow: 0 3px 0 var(--m-right-edge); }
+  [data-part="tile"][data-state="wrong"] { box-shadow: 0 3px 0 var(--m-wrong-edge); }
+  [data-part="arrange-answer"] { border: 2px dashed var(--line); }
+  [data-part="arrange-bank"] { border: 2px solid transparent; background: none; }
+  [data-part="fill-sentence"] + .lx-row > [data-part="button"] { min-height: var(--control); border: 2px solid var(--line-strong); border-radius: var(--radius-12); background: none; box-shadow: 0 3px 0 var(--line-strong); }
+  [data-part="fill-sentence"] + .lx-row > [data-part="button"]:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); background: none; }
+  :is([data-part="choice"], [data-part="match-item"]) { border-width: 2px; }
+  :is([data-part="choice"], [data-part="match-item"]):not([data-state]) { border-color: var(--line-strong); background: none; box-shadow: 0 3px 0 var(--line-strong); }
+  :is([data-part="choice"], [data-part="match-item"]):not([data-state]):active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); background: none; }
+  [data-part="choice"][data-state="right"], [data-part="match-item"][data-state="matched"] { box-shadow: 0 3px 0 var(--m-right-edge); }
+  :is([data-part="choice"], [data-part="match-item"])[data-state="wrong"] { box-shadow: 0 3px 0 var(--m-wrong-edge); }
+  :is([data-part="choice"], [data-part="match-item"])[data-state="selected"] { box-shadow: 0 3px 0 var(--line-strong); }
+  [data-part="choice"][data-state="dimmed"] { border-color: var(--line); background: none; }
+  /* A flash card you only read: its outline, nothing behind it. */
+  [data-part="study-card"] { border: 2px solid var(--line-strong); background: none; }
+
+  /* A picture: its Hard light tile fills the top of the card, the word bare under it. The pictures you didn't pick step back in color and light, rather than going see-through and muddy. */
+  [data-part="picture-choice"] { border-width: 2px; border-radius: var(--radius-16); }
+  [data-part="picture-choice"]:not([data-state]) { border-color: var(--line-strong); background: none; box-shadow: 0 3px 0 var(--line-strong); }
+  [data-part="picture-choice"]:not([data-state]):active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); background: none; }
+  [data-part="picture-choice"][data-state="right"] { background: none; box-shadow: 0 3px 0 var(--m-right-edge); }
+  [data-part="picture-choice"][data-state="wrong"] { background: none; box-shadow: 0 3px 0 var(--m-wrong-edge); }
+  [data-part="picture-choice"][data-state="dimmed"] { border-color: var(--line); }
+  [data-part="picture-choice"][data-state="dimmed"] [data-part="picture-choice-art"] { opacity: 1; filter: saturate(0.2) brightness(0.55); }
+  :root:is([data-theme="paper"], [data-theme="sepia"]) [data-part="picture-choice"][data-state="dimmed"] [data-part="picture-choice-art"] { filter: saturate(0.2) brightness(1.05) opacity(0.5); }
+  @media (max-height: 700px) { [data-part="picture-choices"] { width: min(100%, 318px); margin-inline: auto; } }
+  /* One thing's drawing under its English (Pick the word, Type the word): its Hard light tile alone, with a picture choice's outline and hard
+     edge, centered. Smaller as the step tightens to fit a short screen. */
+  [data-part="word-picture"] { align-self: center; flex: none; width: min(44%, 168px); margin-top: var(--space-2); overflow: hidden; border: 2px solid var(--line-strong); border-radius: var(--radius-16); box-shadow: 0 3px 0 var(--line-strong); }
+  [data-part="session"]:is([data-fit="3"], [data-fit="4"]) [data-part="word-picture"] { width: 120px; }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="word-picture"] { width: 88px; margin-top: 0; }
+  /* The keys up on a short screen (study/session.js fit, data-keys-fit): the drawing smaller, then not drawn, never under the session's bar. */
+  [data-part="session"][data-keys-fit="1"] [data-part="word-picture"] { width: 72px; margin-top: 0; }
+  [data-part="session"][data-keys-fit="2"] [data-part="word-picture"] { display: none; }
+
+  /* The mark: ink on a paper disc, so it holds on any picture tile and any theme. */
+  :is([data-part="picture-choice"], [data-part="choice"]) > .lx-icon,
+  [data-part="feedback"] > .lx-icon { box-sizing: border-box; flex: none; width: 28px; height: 28px; padding: 5px; border-radius: 50%; background: var(--art-paper); color: var(--art-ink); stroke-width: 3; box-shadow: 0 0 0 1px color-mix(in srgb, var(--art-ink) 18%, transparent); }
+  [data-part="picture-choice"] > .lx-icon { top: 8px; right: 8px; }
+  [data-part="choice"]:not(:is([data-state="right"], [data-state="wrong"])) > .lx-icon { opacity: 0; }
+
+  /* The top: quiet, no boxes, and one line of ink for how far you've come. */
+  [data-part="session-bar"] { box-shadow: 0 0 0 100vmax var(--canvas); }
+  [data-part="session-bar"] [data-part="icon-button"] { border-color: transparent; background: none; color: var(--ink-2); }
+  [data-part="session-bar"] [data-part="icon-button"]:active { background: var(--fill-active); }
+  .lx-session-count { font-family: var(--type-ui); font-variant-numeric: tabular-nums; font-weight: 600; }
+  [data-part="session-progress"] { gap: 0; }
+  [data-part="progress-step"] { height: 6px; border-radius: 0; background: var(--strength-0); }
+  [data-part="progress-step"]:first-child { border-radius: 3px 0 0 3px; }
+  [data-part="progress-step"]:last-child { border-radius: 0 3px 3px 0; }
+  [data-part="progress-step"]:is([data-state="right"], [data-state="wrong"]) { background: var(--art-violet); }
+  [data-part="progress-step"][data-state="current"] { background: var(--art-violet-lit); }
+
+  /* The sentence in question, on a flash card: its clipped corner is drawn (session.js), nothing behind it. */
+  :is([data-part="activity-prompt"] > p, [data-part="see-word"], [data-part="translate-line"], .lx-stimulus > [data-part="spoken-line"]) { position: relative; box-sizing: border-box; width: 100%; margin-top: var(--space-2); margin-bottom: 3px; padding: var(--space-4); border-radius: 16px; border: 2px solid transparent; background: none; font: 500 22px / 1.3 var(--type-read); }
+  /* Smaller as the rest of the step is: from the start on a short screen, and at the same fit levels as the step around it. */
+  @media (max-height: 700px) {
+    [data-part="session"] :is([data-part="activity-prompt"] > p, [data-part="see-word"], [data-part="translate-line"], .lx-stimulus > [data-part="spoken-line"]) { padding: var(--space-2) var(--space-3); font-size: 18px; }
+  }
+  [data-part="session"]:is([data-fit="2"], [data-fit="3"], [data-fit="4"], [data-fit="5"], [data-fit="6"], [data-fit="7"]) :is([data-part="activity-prompt"] > p, [data-part="see-word"], [data-part="translate-line"], .lx-stimulus > [data-part="spoken-line"]) { padding: var(--space-2) var(--space-3); font-size: 18px; }
+
+  /* The way forward: Continue and Check are the solid button, as on Home. */
+  [data-part="answer-bar"] [data-part="button"][data-variant="white"] { margin-bottom: 4px; border: 0; border-radius: var(--radius-16); background: var(--go); color: var(--on-go); font: 700 18px / 1 var(--type-head); letter-spacing: -0.01em; box-shadow: 0 4px 0 var(--go-deep); transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  [data-part="answer-bar"] [data-part="button"][data-variant="white"]:not(:disabled):active { transform: translateY(3px); box-shadow: 0 1px 0 var(--go-deep); background: var(--go); }
+  [data-part="answer-bar"] [data-part="button"][data-variant="white"]:disabled { background: none; color: var(--ink-3); box-shadow: inset 0 0 0 2px var(--line); opacity: 1; }
+  [data-part="answer-bar"] [data-part="button"][data-variant="gray"] { border: 2px solid var(--line-strong); background: none; box-shadow: 0 3px 0 var(--line-strong); margin-bottom: 3px; }
+  [data-part="answer-bar"] [data-part="button"][data-variant="gray"]:not(:disabled):active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); background: var(--fill-active); }
+  [data-part="feedback-title"] { font: 700 var(--size-20) / 1.2 var(--type-head); letter-spacing: var(--track-head); }
+  [data-part="feedback"] { align-items: flex-start; }
+
+  /* A sentence's new words, and the word being said: a line of ink under them, not a box round them. Nothing moves. */
+  [data-part="target-word"][data-state="target"] { padding-inline: 0; border-color: transparent; outline: 0; background: none; box-shadow: none; color: var(--ink-1); font-weight: 600; text-decoration: underline solid var(--art-violet-lit) 3px; text-underline-offset: 5px; }
+  :is([data-part="spoken-word"], [data-part="target-word"])[data-speaking] { background: none; box-shadow: none; text-decoration: underline solid var(--art-violet-lit) 3px; text-underline-offset: 5px; }
+
+  /* ---------- the way in, hanging off the words under the result ---------- */
+  [data-part="concept-row"] { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-3); padding-left: var(--hang, 0px); }
+  /* Under the sentence it's about: its reach takes up the bar's gap, not the room around the words. */
+  [data-part="answer-bar"] [data-part="concept-row"] { margin-block: calc(-1 * var(--space-3)) calc(-1 * var(--space-1)); }
+  [data-part="concept-chip"] { position: relative; display: inline-flex; align-items: center; gap: 2px; min-height: 44px; padding: 0; border: 0; border-radius: var(--radius-8, 8px); background: none; color: var(--ink-1); font: 600 var(--size-14) / 1.1 var(--type-ui); cursor: pointer; }
+  [data-part="concept-chip"] > .lx-icon { width: 16px; height: 16px; color: var(--ink-3); }
+  [data-part="concept-chip"]:active { background: var(--fill-active); }
+  [data-part="concept-row"][data-outcome="right"] [data-part="concept-chip"] { color: var(--ink-2); font-weight: 500; }
+
+  /* Fitted tightest, once answered: the way in keeps one line, and the sentence's card the least it can. */
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="concept-row"] { flex-wrap: nowrap; overflow: hidden; margin-block: calc(-1 * var(--space-3)) calc(-1 * var(--space-3)); padding-left: 0; }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) [data-part="concept-chip"] { flex: none; white-space: nowrap; }
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) :is([data-part="activity-prompt"] > p, [data-part="see-word"], [data-part="translate-line"], .lx-stimulus > [data-part="spoken-line"]) { margin-block: 0 3px; padding: 4px var(--space-3); }
+  /* A card with its tags on its top edge (Not word for word, New word: components.css step-tags) keeps room for them there: the tag's lower half
+     inside the card over its first line, its upper half inside the step. At 4 px the tag sat on the line's words (9 Nov 2026: l018-1's
+     "Today I'm looking for my key." answered at 320 × 568). */
+  [data-part="session"]:is([data-fit="5"], [data-fit="6"], [data-fit="7"]) :is([data-part="activity-prompt"] > p, [data-part="see-word"], [data-part="translate-line"], .lx-stimulus > [data-part="spoken-line"]):has(> [data-part="step-tags"][data-on="card"]) { margin-top: var(--space-1); padding-top: var(--space-3); }
+
+  /* ---------- its sheet: read as a page ---------- */
+  [data-part="concept-sheet"] { display: flex; flex-direction: column; gap: var(--space-5); padding-bottom: var(--space-3); }
+  .lx-concept-top { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-concept-name { margin: 0; font: 700 var(--size-28) / 1.1 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-concept-short { margin: 0; color: var(--ink-1); font-size: var(--size-16); line-height: 1.4; }
+  .lx-concept-this { display: flex; flex-direction: column; gap: var(--space-1); margin-top: var(--space-2); }
+  .lx-concept-line { margin: 0; font: 500 var(--size-20) / 1.3 var(--type-read); }
+  .lx-concept-means { margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.35; }
+  [data-part="concept-section"] { display: flex; flex-direction: column; gap: var(--space-2); }
+  [data-part="concept-section"] h3 { margin: 0; color: var(--ink-2); font: 600 var(--size-14) / 1.3 var(--type-ui); }
+  [data-part="concept-section"] p { margin: 0; line-height: 1.4; }
+  [data-part="concept-sheet"] .lx-concept-example { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: var(--space-2); align-items: center; padding: 0; border: 0; background: none; }
+  [data-part="concept-sheet"] .lx-concept-example .lx-concept-line { font-size: var(--size-16); }
+  /* A word the rule is about, lit: a wash of the art's violet behind it (it draws in left to right on the picture), the word in full ink. */
+  .lx-concept-mark, .lx-rule-word[data-lit] { padding: 0 3px; margin: 0 -1px; border-radius: 6px; background: linear-gradient(var(--rule-lit), var(--rule-lit)) no-repeat left / 100% 100%; color: var(--ink-1); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  /* The picture's colors on the picture itself, so it carries them wherever it's drawn (the sheet, a lesson's idea, Knowledge's ideas). */
+  [data-part="concept-sheet"], .lx-rule { --rule-lit: color-mix(in srgb, var(--art-violet) 30%, transparent); --rule-piece: color-mix(in srgb, var(--art-violet) 14%, transparent); --rule-ink: color-mix(in oklab, var(--art-violet) 72%, var(--ink-1)); }
+  /* A rule's picture (study/concept-picture.js): the sentence large, its words lit, the rule's shape drawn on them in the art's violet. */
+  .lx-rule { display: flex; flex-direction: column; gap: var(--space-2); margin: 0; }
+  .lx-rule-stage { position: relative; padding: var(--space-4) 0 var(--space-3); }
+  /* The sheet's scroller clips at its edge: room either side for a box or a bracket's tick on the line's first or last word. */
+  .lx-sheet-body:has(> [data-part="concept-sheet"]) { margin-inline: calc(-1 * var(--space-2)); padding-inline: var(--space-2); }
+  /* An article's box sits around it and its noun: room outside the pair only, so the sentence keeps its own word spacing. */
+  /* Words drawn together (a box, an arc between neighbors) stay on one line; a boxed run has room outside it so its box never touches the
+     words beside it, none at the line's start. A line with boxes sits a little further apart. */
+  .lx-rule-run { white-space: nowrap; }
+  .lx-rule-run[data-boxed] { margin-inline: 5px; }
+  .lx-rule-run[data-boxed]:first-child { margin-inline-start: 0; }
+  .lx-rule[data-boxes] .lx-rule-line { line-height: 1.95; }
+  .lx-rule-line { margin: 0; font: 500 calc(var(--size-20) * var(--rule-scale, 1.2)) / 1.7 var(--type-read); overflow-wrap: anywhere; }
+  /* Order pictures write under the words (a bracket, or each part's number): the lines sit further apart to leave it room. */
+  .lx-rule[data-under] .lx-rule-line { line-height: 2; }
+  /* A label over a word (a particle's job) needs room above every line. */
+  .lx-rule[data-tags] .lx-rule-line { line-height: 2.3; }
+  .lx-rule[data-tags] .lx-rule-stage { padding-top: var(--space-5); }
+  .lx-rule-shape .lx-rule-tag { fill: var(--rule-ink); font: 700 var(--size-12) / 1 var(--type-ui); letter-spacing: 0.02em; }
+  .lx-rule-word[data-piece] { padding: 0 3px; margin: 0 -1px; border-radius: 6px; background: linear-gradient(var(--rule-piece), var(--rule-piece)) no-repeat left / 100% 100%; box-shadow: inset 0 0 0 1.5px var(--rule-lit); }
+  /* An affix's letters, colored on a range of the word's own text (concept-picture.js, the Highlight API): the word is never split, so
+     joined letters keep joining. Without the API, an underline is drawn from the range's rects (lx-rule-affix-line). */
+  ::highlight(lx-rule-affix) { color: var(--art-violet); text-decoration: underline 2px var(--art-violet); text-underline-offset: 4px; }
+  .lx-rule-shape { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+  .lx-rule-shape path { stroke: var(--rule-ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .lx-rule-shape .lx-rule-ring { stroke-width: 1.5; }
+  .lx-rule-shape text { fill: var(--ink-3); font: 600 var(--size-12) / 1 var(--type-ui); font-variant-numeric: tabular-nums; }
+  .lx-rule-shape text[data-lit] { fill: var(--rule-ink); font-weight: 800; }
+  .lx-rule-means { margin: 0; color: var(--ink-1); font-size: var(--size-16); line-height: 1.4; }
+  .lx-rule-literal { margin: 0; color: var(--ink-3); font-size: var(--size-14); line-height: 1.6; }
+  .lx-rule-literal .lx-rule-word[data-lit] { color: var(--ink-1); }
+  .lx-rule-said { display: flex; flex-direction: column; gap: 2px; margin-top: var(--space-1); color: var(--ink-2); font-size: var(--size-14); line-height: 1.45; }
+  .lx-rule-said strong { color: var(--ink-1); }
+  /* The why's own Dutch words: in the language's violet, not lit, so the picture above stays the one thing lit. */
+  .lx-concept-why .lx-concept-mark { padding: 0; margin: 0; background: none; color: var(--rule-ink); font-weight: 600; }
+  /* A word, and beside it what's written for it. */
+  .lx-concept-word { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: var(--space-3); align-items: baseline; margin-top: var(--space-2); }
+  .lx-concept-word p { margin: 0; font-size: var(--size-14); line-height: 1.4; }
+  .lx-concept-word .lx-concept-mark { font-size: var(--size-14); font-weight: 600; }
+  .lx-concept-literal { margin: 0; color: var(--ink-3); font-size: var(--size-14); line-height: 1.35; }
+  .lx-concept-mistake { display: flex; flex-direction: column; gap: 2px; }
+  .lx-concept-said { display: flex; align-items: baseline; gap: var(--space-2); font: 500 var(--size-16) / 1.3 var(--type-read); }
+  .lx-concept-said > .lx-icon { flex: none; align-self: center; width: 16px; height: 16px; color: var(--ink-2); }
+  .lx-concept-said[data-said="wrong"] > span { color: var(--ink-2); text-decoration: line-through; }
+  .lx-concept-mistake > .lx-concept-means { margin-top: 2px; padding-left: 24px; }
+  .lx-concept-level { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); }
+  .lx-concept-more { display: flex; flex-direction: column; gap: var(--space-5); }
+  .lx-concept-more[hidden] { display: none; }
+
+  /* ---------- Learn more: the "?" on every result and its drawer (study/learn-more.js) ---------- */
+  /* The "?" at the end of the result's line, level with its mark: 28 px of drawing, 44 px to press, in the result's quiet ink. */
+  [data-part="learn-more"] { flex: none; display: grid; place-items: center; width: 44px; height: 44px; margin: -8px -10px -8px 0; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--ink-2); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  [data-part="learn-more"] > .lx-icon { width: 28px; height: 28px; stroke-width: 2; }
+  [data-part="learn-more"]:active { background: var(--fill-active); }
+  .lx-answer-head > [data-part="learn-more"] + [aria-haspopup="menu"] { margin-inline-start: 0; }
+  /* A card once shown (Study cards, a deck's card): the "?" leads the row of its grades. */
+  .lx-answer-actions > [data-part="learn-more"] { align-self: center; margin: 0 -4px 0 -6px; }
+  .lx-sheet-body:has(> [data-part="learn-sheet"]) { margin-inline: calc(-1 * var(--space-2)); padding-inline: var(--space-2); }
+  [data-part="learn-sheet"] { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-learn-back { display: flex; margin-bottom: var(--space-1); }
+  .lx-learn-top { display: flex; align-items: flex-start; gap: var(--space-4); }
+  .lx-learn-picture[data-part="word-picture"] { width: 96px; margin-top: 0; }
+  .lx-learn-head { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; flex: 1; }
+  .lx-learn-name { display: flex; align-items: center; gap: var(--space-2); }
+  .lx-learn-name > .lx-concept-name { min-width: 0; overflow-wrap: anywhere; }
+  .lx-learn-gloss { margin: 0; color: var(--ink-1); font: 500 var(--size-20) / 1.3 var(--type-read); }
+  .lx-learn-text { margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.4; }
+  .lx-learn-credit { margin: 0; color: var(--ink-3); font-size: var(--size-12); line-height: 1.4; }
+  .lx-learn-credit a { color: inherit; }
+  .lx-learn-note { margin: 2px 0 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.4; }
+  .lx-learn-note .lx-concept-mark { font-weight: 600; }
+  .lx-learn-forms { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--space-1) var(--space-4); margin: 0; }
+  .lx-learn-forms dt { font: 600 var(--size-16) / 1.35 var(--type-read); }
+  .lx-learn-forms dd { margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.4; align-self: center; }
+  /* A sentence's ideas and words: rows to press, a hairline between, each opening its own page in the drawer. */
+  :is(.lx-learn-idea-list, .lx-learn-words) { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+  :is(.lx-learn-idea-list, .lx-learn-words) > li + li { border-top: 1px solid var(--hair); }
+  .lx-learn-idea-row, .lx-learn-word-row { display: flex; align-items: center; gap: var(--space-3); width: 100%; min-height: 48px; padding: var(--space-2) 0; border: 0; background: none; color: var(--ink-1); text-align: start; font: inherit; }
+  button:is(.lx-learn-idea-row, .lx-learn-word-row) { cursor: pointer; }
+  button:is(.lx-learn-idea-row, .lx-learn-word-row):active { background: var(--fill-active); }
+  :is(.lx-learn-idea-row, .lx-learn-word-row) > .lx-icon { flex: none; width: 16px; height: 16px; margin-inline-start: auto; color: var(--ink-3); }
+  .lx-learn-idea-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .lx-learn-idea-name { font: 600 var(--size-16) / 1.3 var(--type-ui); }
+  .lx-learn-idea-line { color: var(--ink-2); font-size: var(--size-14); line-height: 1.4; }
+  .lx-learn-word-text { flex: 0 0 36%; min-width: 0; overflow-wrap: anywhere; font: 600 var(--size-16) / 1.3 var(--type-read); }
+  .lx-learn-word-lemma { color: var(--ink-2); font-weight: 400; font-size: var(--size-14); }
+  .lx-learn-word-means { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; font-size: var(--size-14); line-height: 1.35; }
+  .lx-learn-word-note { color: var(--ink-3); }
+  .lx-learn-missed { flex: none; display: inline-flex; align-items: center; gap: 2px; color: var(--m-wrong); font: 600 var(--size-12) / 1 var(--type-ui); }
+  .lx-learn-missed > .lx-icon { width: 14px; height: 14px; }
+  .lx-learn-also { color: var(--ink-1); font-weight: 600; }
+  /* A sentence's speaker level with its first line, not the middle of the block under it (its English, the word's note): the line's box
+     (16 px at 1.3) and the 44 px button share a middle. */
+  [data-part="concept-sheet"] :is(.lx-learn-used, .lx-learn-said) { align-items: start; }
+  :is(.lx-learn-used, .lx-learn-said) > [data-part="speak-button"] { margin-top: calc((var(--size-16) * 1.3 - var(--control)) / 2); }
+
+  /* ========== A session's end ========== */
+  :is([data-part="session-summary"], [data-part="reminder-step"]) h2 { font: 700 34px / 1.1 var(--type-head); letter-spacing: var(--track-head); }
+  [data-part="session-summary"] .lx-stats { display: flex; gap: var(--space-6); }
+  [data-part="session-summary"] .lx-stat { display: grid; gap: 2px; padding: 0; border: 0; background: none; }
+  [data-part="session-summary"] .lx-stat strong { font: 700 var(--size-stat) / 1 var(--type-head); }
+  /* The day it counted: the flame and the number on one line, Tinta at the far end, as on Home. */
+  [data-part="celebration"] { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--space-3); align-items: center; justify-items: start; padding: 0; text-align: start; }
+  /* Room at its side, whatever the density: a milestone's heart goes 15 px past Tinta's box, and the step clips at the screen's edge. */
+  [data-part="celebration"] .lx-moment-character { grid-column: 2; grid-row: 1 / span 2; margin: 0 16px 0 0; }
+  [data-part="celebration"] .lx-moment-head { grid-column: 1; grid-row: 1; justify-content: flex-start; gap: 6px; }
+  [data-part="celebration"] .lx-moment-head > svg[data-symbol] { align-self: center; width: 40px; height: 40px; margin-left: -4px; }
+  [data-part="celebration"] .lx-moment-count { font: 700 var(--size-stat) / 1 var(--type-head); }
+  [data-part="celebration"] .lx-moment-line { grid-column: 1; grid-row: 2; margin: 0; font-size: var(--size-14); }
+  /* What you learned: the word and its meaning, bare. It's something you read. */
+  .lx-moved-row [data-part="concept-tag"] { padding: 0; border: 0; background: none; color: var(--ink-1); font-size: var(--size-16); font-weight: 500; }
+  .lx-moved-row [data-part="concept-tag"] > .lx-icon { display: none; }
+  [data-part="reminder-ask"] { border: 2px solid var(--line); background: none; }
+  /* The tally on a till receipt: a list of what you did, torn off at the foot. */
+  [data-part="session-tally"] { position: relative; display: grid; gap: var(--space-4); padding: var(--space-4) var(--space-4) calc(var(--space-4) + 10px); border: 2px solid transparent; }
+  [data-part="session-tally"] .lx-moved-row { border-top: 2px dotted var(--line); }
+  [data-part="session-tally"] .lx-h3 { color: var(--ink-2); font: 600 var(--size-14) / 1.2 var(--type-ui); }
+}

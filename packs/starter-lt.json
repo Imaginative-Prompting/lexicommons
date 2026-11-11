@@ -1,0 +1,7263 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-lt",
+  "name": "Starter: Lithuanian",
+  "about": "Lithuanian cases and word order in real, everyday sentences.",
+  "language": "lt",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kava": "coffee",
+    "arbata": "tea",
+    "vanduo": "water",
+    "aš": "I (man: to me; manęs: me; mano: my)",
+    "gerti": "to drink",
+    "ir": "and",
+    "vienas": "one",
+    "pienas": "milk",
+    "gerai": "well, fine",
+    "sektis": "to go (well) (kaip sekasi: how's it going)",
+    "tu": "you, to one person, informally (tau: to you; tavo: your)",
+    "mokytojas": "teacher (male; female mokytoja)",
+    "studentas": "university or college student (male)",
+    "būti": "to be (yra: is, there is; nėra: isn't, there's no)",
+    "ar": "yes/no question particle",
+    "mama": "mom",
+    "tėtis": "dad",
+    "brolis": "brother",
+    "sesuo": "sister",
+    "tai": "this",
+    "turėti": "to have; to have to (turiu eiti: I have to go)",
+    "draugas": "friend",
+    "gydytojas": "doctor",
+    "raktas": "key",
+    "telefonas": "phone",
+    "knyga": "book",
+    "geras": "good",
+    "kur": "where",
+    "čia": "here",
+    "ten": "there",
+    "tualetas": "bathroom, toilet",
+    "du": "two",
+    "trys": "three",
+    "pinigai": "money",
+    "kiek": "how much",
+    "kainuoti": "to cost",
+    "kalbėti": "to speak, to talk",
+    "angliškai": "in English",
+    "lietuviškai": "in Lithuanian",
+    "suprasti": "to understand",
+    "truputį": "a little",
+    "norėti": "to want",
+    "namas": "house",
+    "kambarys": "room",
+    "didelis": "big",
+    "mažas": "small",
+    "gyventi": "to live",
+    "šis": "this (feminine ši; plural šie)",
+    "eiti": "to go, usually on foot; to leave (Dabar turiu eiti: I have to go)",
+    "į": "to",
+    "mokykla": "school",
+    "miestas": "city",
+    "stotis": "station",
+    "mašina": "car",
+    "važiuoti": "to go (by car, bus or train)",
+    "šiandien": "today",
+    "rytoj": "tomorrow",
+    "dabar": "now",
+    "dirbti": "to work",
+    "galėti": "can, to be able to",
+    "labas": "hi, hello",
+    "koks": "what, what kind of (masculine; feminine kokia)",
+    "mes": "we (mūsų: us, our; mumis: us)",
+    "vardas": "name, first name",
+    "studijuoti": "to study (at a university)",
+    "žinoti": "to know",
+    "patikti": "to please (man patinka: I like it)",
+    "filmas": "movie",
+    "vakar": "yesterday",
+    "namie": "at home",
+    "ligoninė": "hospital",
+    "butas": "apartment",
+    "stalas": "table",
+    "šaldytuvas": "fridge",
+    "uždaryti": "to close",
+    "langas": "window",
+    "virtuvė": "kitchen",
+    "balkonas": "balcony",
+    "grįžti": "to come back, to get back",
+    "namo": "home (going home)",
+    "pagaminti": "to make, to cook (and finish)",
+    "vakarienė": "dinner",
+    "durys": "door (only plural)",
+    "prašyti": "to ask (prašau: please)",
+    "palaukti": "to wait (a while)",
+    "be": "without",
+    "cukrus": "sugar",
+    "gauti": "to get",
+    "stiklinė": "glass (to drink from)",
+    "suvalgyti": "to eat (up)",
+    "saldus": "sweet",
+    "valgyti": "to eat",
+    "pica": "pizza",
+    "mėgti": "to like, to enjoy",
+    "gaminti": "to make, to cook",
+    "sąskaita": "check, bill",
+    "pusryčiai": "breakfast (only plural)",
+    "kiaušinis": "egg",
+    "parduotuvė": "store, shop",
+    "duona": "bread",
+    "darbas": "work, job",
+    "autobusas": "bus",
+    "nusipirkti": "to buy (for yourself)",
+    "naujas": "new",
+    "batas": "shoe (batai: shoes)",
+    "traukinys": "train",
+    "vėluoti": "to be late",
+    "dešimt": "ten",
+    "minutė": "minute",
+    "niekada": "never",
+    "per": "too (per mažas: too small)",
+    "taksi": "taxi (it never changes; važiuoti taksi: to go by taxi)",
+    "laukti": "to wait (for)",
+    "močiutė": "grandma",
+    "šeštadienis": "Saturday",
+    "pas": "to or at someone's (pas močiutę: to grandma's)",
+    "bilietas": "ticket",
+    "dvidešimt": "twenty",
+    "euras": "euro",
+    "lyti": "to rain",
+    "paskambinti": "to call",
+    "kinas": "movie theater (į kiną: to the movies)",
+    "savaitgalis": "weekend",
+    "paplūdimys": "beach",
+    "mokytis": "to learn, to study",
+    "kalba": "language; speech (lietuvių kalba: Lithuanian)",
+    "jau": "already; now",
+    "metai": "year (only plural)",
+    "veikti": "to do, to be up to (ką veiki: what are you up to)",
+    "šaltas": "cold",
+    "pranešti": "to let someone know, to tell",
+    "tikėtis": "to hope",
+    "gražus": "nice, beautiful",
+    "oras": "weather; air",
+    "laikas": "time"
+  },
+  "chunks": {
+    "noreciau": {
+      "text": "Norėčiau",
+      "en": "I'd like",
+      "about": "A polite way to order or ask for something, with the genitive after it: Norėčiau kavos (I'd like a coffee)."
+    },
+    "atsiprasau": {
+      "text": "Atsiprašau",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention or say sorry, to anyone."
+    },
+    "hello": {
+      "text": "Labas",
+      "en": "hello"
+    },
+    "please": {
+      "text": "prašau",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "ačiū",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Kaip tau sekasi",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Viso gero",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "taip",
+      "en": "yes"
+    },
+    "no": {
+      "text": "ne",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Koks tavo vardas",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Malonu susipažinti",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Kiek tai kainuoja",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Sąskaitą, prašau",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Iki rytojaus",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "geriu-kava",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Geriu kavą.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Geriu",
+          "gerti"
+        ],
+        [
+          "kavą",
+          "kava"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Geriu kava.",
+        "Gerti kavą."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kavą",
+          "kava",
+          "kavai"
+        ]
+      }
+    },
+    {
+      "id": "as-geriu-arbata",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Aš geriu arbatą.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Aš",
+          "aš"
+        ],
+        [
+          "geriu",
+          "gerti"
+        ],
+        [
+          "arbatą",
+          "arbata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aš gerti arbatą.",
+        "Aš geriu arbata."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "arbatą",
+          "arbata",
+          "arbatai"
+        ]
+      }
+    },
+    {
+      "id": "geriu-vandeni",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Geriu vandenį.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Geriu",
+          "gerti"
+        ],
+        [
+          "vandenį",
+          "vanduo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Geriu vanduo.",
+        "Gerti vandenį."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vandenį",
+          "vanduo",
+          "vandeniui"
+        ]
+      }
+    },
+    {
+      "id": "geriu-kava-ir-arbata",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Geriu kavą ir arbatą.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Geriu",
+          "gerti"
+        ],
+        [
+          "kavą",
+          "kava"
+        ],
+        [
+          "ir",
+          "ir"
+        ],
+        [
+          "arbatą",
+          "arbata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Geriu kava ir arbatą.",
+        "Geriu kavą ir arbata."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kavą",
+          "kava",
+          "kavai"
+        ]
+      }
+    },
+    {
+      "id": "geriu-arbata-ir-vandeni",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Geriu arbatą ir vandenį.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Geriu",
+          "gerti"
+        ],
+        [
+          "arbatą",
+          "arbata"
+        ],
+        [
+          "ir",
+          "ir"
+        ],
+        [
+          "vandenį",
+          "vanduo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Geriu arbata ir vandenį.",
+        "Geriu arbatą ir vanduo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vandenį",
+          "vanduo",
+          "vandeniui"
+        ]
+      }
+    },
+    {
+      "id": "geriu-vandeni-ir-kava",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Geriu vandenį ir kavą.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Geriu",
+          "gerti"
+        ],
+        [
+          "vandenį",
+          "vanduo"
+        ],
+        [
+          "ir",
+          "ir"
+        ],
+        [
+          "kavą",
+          "kava"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Geriu vanduo ir kavą.",
+        "Geriu vandenį ir kava."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kavą",
+          "kava",
+          "kavai"
+        ]
+      }
+    },
+    {
+      "id": "viena-kava-prasau",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "numbers",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Vieną kavą, prašau.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Vieną",
+          "vienas"
+        ],
+        [
+          "kavą,",
+          "kava"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vieną kava, prašau.",
+        "Vienas kavą, prašau."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vieną",
+          "vienas",
+          "viena"
+        ]
+      }
+    },
+    {
+      "id": "labas-viena-arbata-prasau",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "numbers"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Labas! Vieną arbatą, prašau.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Labas!"
+        ],
+        [
+          "Vieną",
+          "vienas"
+        ],
+        [
+          "arbatą,",
+          "arbata"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Labas! Vieną arbata, prašau.",
+        "Labas! Vienas arbatą, prašau."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "arbatą,",
+          "arbata,",
+          "arbatos,"
+        ]
+      }
+    },
+    {
+      "id": "viena-kava-aciu",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "numbers"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Vieną kavą, ačiū.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Vieną",
+          "vienas"
+        ],
+        [
+          "kavą,",
+          "kava"
+        ],
+        [
+          "ačiū"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vienas kavą, ačiū.",
+        "Vieną kava, ačiū."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kavą,",
+          "kava,",
+          "kavos,"
+        ]
+      }
+    },
+    {
+      "id": "pieno-prasau",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Pieno, prašau.",
+      "means": "Some milk, please.",
+      "words": [
+        [
+          "Pieno,",
+          "pienas"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Some milk"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pienas, prašau.",
+        "Pienui, prašau."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pieno,",
+          "pienas,",
+          "pienui,"
+        ]
+      }
+    },
+    {
+      "id": "viena-arbata-ir-viena-vandeni-prasau",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "numbers"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Vieną arbatą ir vieną vandenį, prašau.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Vieną",
+          "vienas"
+        ],
+        [
+          "arbatą",
+          "arbata"
+        ],
+        [
+          "ir",
+          "ir"
+        ],
+        [
+          "vieną",
+          "vienas"
+        ],
+        [
+          "vandenį,",
+          "vanduo"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vieną arbata ir vieną vandenį, prašau.",
+        "Vieną arbatą ir vienas vandenį, prašau."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vieną",
+          "vienas",
+          "viena"
+        ]
+      }
+    },
+    {
+      "id": "geriu-piena",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Geriu pieną.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Geriu",
+          "gerti"
+        ],
+        [
+          "pieną",
+          "pienas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Geriu pienas.",
+        "Gerti pieną."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pieną",
+          "pienas",
+          "pienui"
+        ]
+      }
+    },
+    {
+      "id": "man-sekasi-gerai-aciu",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "present",
+        "reflexive",
+        "dummy-subject"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Man sekasi gerai, ačiū.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Man",
+          "aš"
+        ],
+        [
+          "sekasi",
+          "sektis"
+        ],
+        [
+          "gerai,",
+          "gerai"
+        ],
+        [
+          "ačiū"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For me"
+        ],
+        [
+          "it is going"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aš sekasi gerai, ačiū.",
+        "Man sekasi gerai aš, ačiū."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "aš",
+          "tau"
+        ]
+      }
+    },
+    {
+      "id": "taip-prasau",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Taip, prašau.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Taip,"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Taip, aš prašau geriu.",
+        "Taip, prašau kavos geriu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Taip,",
+          "ne,",
+          "ačiū,"
+        ]
+      }
+    },
+    {
+      "id": "ne-aciu",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, ačiū.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "ačiū"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne, aš ačiū geriu.",
+        "Ne, ačiū kavos geriu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ne,",
+          "taip,",
+          "prašau,"
+        ]
+      }
+    },
+    {
+      "id": "taip-aciu-viso-gero",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Taip, ačiū. Viso gero!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Taip,"
+        ],
+        [
+          "ačiū."
+        ],
+        [
+          "Viso"
+        ],
+        [
+          "gero"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Taip, ačiū. Viso gerai!",
+        "Taip, ačiū. Gerai gero!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gero",
+          "gerai",
+          "viso"
+        ]
+      }
+    },
+    {
+      "id": "ne-aciu-viso-gero",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, ačiū. Viso gero!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "ačiū."
+        ],
+        [
+          "Viso"
+        ],
+        [
+          "gero"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne, ačiū. Viso gerai!",
+        "Ne, ačiū. Gerai gero!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gero",
+          "gerai",
+          "viso"
+        ]
+      }
+    },
+    {
+      "id": "labas-malonu-susipazinti",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Labas! Malonu susipažinti.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Labas!"
+        ],
+        [
+          "Malonu"
+        ],
+        [
+          "susipažinti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Labas! Malonu susipažinti tu.",
+        "Labas! Malonu susipažinti aš."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "susipažinti",
+          "gerti",
+          "būti"
+        ]
+      }
+    },
+    {
+      "id": "tu-esi-studentas",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Tu esi studentas.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "esi",
+          "būti"
+        ],
+        [
+          "studentas",
+          "studentas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu esu studentas.",
+        "Tu esi studentą."
+      ],
+      "otherGender": {
+        "text": "Tu esi studentė.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "esi",
+          "esu",
+          "nesu"
+        ]
+      }
+    },
+    {
+      "id": "ar-tu-mokytojas",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "text": "Ar tu mokytojas?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Ar",
+          "ar"
+        ],
+        [
+          "tu",
+          "tu"
+        ],
+        [
+          "mokytojas",
+          "mokytojas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar tu mokytoją?",
+        "Ar tu esu mokytojas?"
+      ],
+      "otherGender": {
+        "text": "Ar tu mokytoja?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "mokytojas",
+          "mokytoją",
+          "mokytojo"
+        ]
+      }
+    },
+    {
+      "id": "nesu-mokytojas",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "present",
+        "no-pronoun",
+        "no-articles"
+      ],
+      "text": "Nesu mokytojas.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Nesu",
+          "būti"
+        ],
+        [
+          "mokytojas",
+          "mokytojas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nesu mokytoją.",
+        "Aš nesi mokytojas."
+      ],
+      "otherGender": {
+        "text": "Nesu mokytoja.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nesu",
+          "nesi",
+          "nėra"
+        ]
+      }
+    },
+    {
+      "id": "mano-mama-mokytoja",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mano mama mokytoja.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "mokytoja",
+          "mokytojas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano mama mokytojas.",
+        "Mano mama mokytoją."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mokytoja",
+          "mokytojas",
+          "mokytoją"
+        ]
+      }
+    },
+    {
+      "id": "tai-mano-mama",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "Tai mano mama.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Tai",
+          "tai"
+        ],
+        [
+          "mano",
+          "aš"
+        ],
+        [
+          "mama",
+          "mama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tai man mama.",
+        "Tai mano mamą."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mama",
+          "mamą",
+          "mamos"
+        ]
+      }
+    },
+    {
+      "id": "tai-mano-tetis",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "Tai mano tėtis.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Tai",
+          "tai"
+        ],
+        [
+          "mano",
+          "aš"
+        ],
+        [
+          "tėtis",
+          "tėtis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tai man tėtis.",
+        "Tai mano tėtį."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tėtis",
+          "tėtį",
+          "tėčio"
+        ]
+      }
+    },
+    {
+      "id": "mano-tetis-mokytojas",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mano tėtis mokytojas.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "tėtis",
+          "tėtis"
+        ],
+        [
+          "mokytojas",
+          "mokytojas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano tėtis mokytoja.",
+        "Mano tėtis mokytoją."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mokytojas",
+          "mokytoja",
+          "mokytoją"
+        ]
+      }
+    },
+    {
+      "id": "mano-brolis-studentas",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-articles",
+        "genitive"
+      ],
+      "text": "Mano brolis studentas.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "brolis",
+          "brolis"
+        ],
+        [
+          "studentas",
+          "studentas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano brolis studentą.",
+        "Mano brolis esi studentas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "brolis",
+          "brolį",
+          "brolio"
+        ]
+      }
+    },
+    {
+      "id": "tai-mano-sesuo",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "Tai mano sesuo.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Tai",
+          "tai"
+        ],
+        [
+          "mano",
+          "aš"
+        ],
+        [
+          "sesuo",
+          "sesuo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tai man sesuo.",
+        "Tai mano seserį."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sesuo",
+          "seserį",
+          "sesers"
+        ]
+      }
+    },
+    {
+      "id": "turiu-telefona",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Turiu telefoną.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Turiu",
+          "turėti"
+        ],
+        [
+          "telefoną",
+          "telefonas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Turiu telefonas.",
+        "Turėti telefoną."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefoną",
+          "telefonas",
+          "telefono"
+        ]
+      }
+    },
+    {
+      "id": "ar-turi-rakta",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Ar turi raktą?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Ar",
+          "ar"
+        ],
+        [
+          "turi",
+          "turėti"
+        ],
+        [
+          "raktą",
+          "raktas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you have"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar tu turiu raktą?",
+        "Ar turi raktas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "raktą",
+          "raktas",
+          "rakto"
+        ]
+      }
+    },
+    {
+      "id": "turiu-broli-ir-seseri",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Turiu brolį ir seserį.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Turiu",
+          "turėti"
+        ],
+        [
+          "brolį",
+          "brolis"
+        ],
+        [
+          "ir",
+          "ir"
+        ],
+        [
+          "seserį",
+          "sesuo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Turiu brolis ir seserį.",
+        "Turiu brolį ir sesuo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "seserį",
+          "sesuo",
+          "sesers"
+        ]
+      }
+    },
+    {
+      "id": "neturiu-knygos",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "genitive-negation",
+        "no-pronoun"
+      ],
+      "text": "Neturiu knygos.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Neturiu",
+          "turėti"
+        ],
+        [
+          "knygos",
+          "knyga"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Neturiu knygą.",
+        "Neturiu knyga."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "knygos",
+          "knygą",
+          "knyga"
+        ]
+      }
+    },
+    {
+      "id": "mano-sesuo-gydytoja",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mano sesuo gydytoja.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "sesuo",
+          "sesuo"
+        ],
+        [
+          "gydytoja",
+          "gydytojas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano sesuo gydytojas.",
+        "Mano sesuo gydytoją."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gydytoja",
+          "gydytojas",
+          "gydytoją"
+        ]
+      }
+    },
+    {
+      "id": "tu-geras-draugas",
+      "topic": "people",
+      "concepts": [
+        "adjective",
+        "gender",
+        "present",
+        "no-articles"
+      ],
+      "text": "Tu geras draugas.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "geras",
+          "geras"
+        ],
+        [
+          "draugas",
+          "draugas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu gera draugas.",
+        "Tu gerą draugas."
+      ],
+      "otherGender": {
+        "text": "Tu gera draugė.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "geras",
+          "gera",
+          "gerą"
+        ]
+      }
+    },
+    {
+      "id": "atsiprasau-kur-yra-tualetas",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "chunks": [
+        "atsiprasau"
+      ],
+      "text": "Atsiprašau, kur yra tualetas?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Atsiprašau,"
+        ],
+        [
+          "kur",
+          "kur"
+        ],
+        [
+          "yra",
+          "būti"
+        ],
+        [
+          "tualetas",
+          "tualetas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Atsiprašau, kur yra tualetą?",
+        "Atsiprašau, kur esi tualetas?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tualetas",
+          "tualetą",
+          "tualeto"
+        ]
+      }
+    },
+    {
+      "id": "mano-telefonas-yra-cia",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "Mano telefonas yra čia.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "telefonas",
+          "telefonas"
+        ],
+        [
+          "yra",
+          "būti"
+        ],
+        [
+          "čia",
+          "čia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano telefoną yra čia.",
+        "Mano telefonas esi čia."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefonas",
+          "telefoną",
+          "telefono"
+        ]
+      }
+    },
+    {
+      "id": "raktas-yra-ten",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Raktas yra ten.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Raktas",
+          "raktas"
+        ],
+        [
+          "yra",
+          "būti"
+        ],
+        [
+          "ten",
+          "ten"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Raktą yra ten.",
+        "Raktas esi ten."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "yra",
+          "esi",
+          "esu"
+        ]
+      }
+    },
+    {
+      "id": "kur-mano-mama",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "genitive"
+      ],
+      "text": "Kur mano mama?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "mano",
+          "aš"
+        ],
+        [
+          "mama",
+          "mama"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur mano mamą?",
+        "Kur man mama?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mama",
+          "mamą",
+          "mamos"
+        ]
+      }
+    },
+    {
+      "id": "mano-sesuo-yra-cia",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "Mano sesuo yra čia.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "sesuo",
+          "sesuo"
+        ],
+        [
+          "yra",
+          "būti"
+        ],
+        [
+          "čia",
+          "čia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano seserį yra čia.",
+        "Mano sesuo esi čia."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sesuo",
+          "seserį",
+          "sesers"
+        ]
+      }
+    },
+    {
+      "id": "atsiprasau-kiek-tai-kainuoja",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "atsiprasau"
+      ],
+      "text": "Atsiprašau, kiek tai kainuoja?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Atsiprašau,"
+        ],
+        [
+          "kiek"
+        ],
+        [
+          "tai"
+        ],
+        [
+          "kainuoja"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "it"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Atsiprašau, kiek tai esi kainuoja?",
+        "Atsiprašau, kiek tai esu kainuoja?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tai",
+          "mano",
+          "man"
+        ]
+      }
+    },
+    {
+      "id": "dvi-kavas-prasau",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "plural",
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Dvi kavas, prašau.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dvi",
+          "du"
+        ],
+        [
+          "kavas,",
+          "kava"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Du kavas, prašau.",
+        "Dvi kavą, prašau."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dvi",
+          "du",
+          "dviejų"
+        ]
+      }
+    },
+    {
+      "id": "viena-knyga-prasau",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Vieną knygą, prašau.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Vieną",
+          "vienas"
+        ],
+        [
+          "knygą,",
+          "knyga"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vienas knygą, prašau.",
+        "Vieną knyga, prašau."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "knygą,",
+          "knyga,",
+          "knygų,"
+        ]
+      }
+    },
+    {
+      "id": "turiu-tris-knygas",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "plural",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Turiu tris knygas.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Turiu",
+          "turėti"
+        ],
+        [
+          "tris",
+          "trys"
+        ],
+        [
+          "knygas",
+          "knyga"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Turiu trys knygas.",
+        "Turiu tris knyga."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tris",
+          "trys",
+          "trijų"
+        ]
+      }
+    },
+    {
+      "id": "neturiu-pinigu",
+      "topic": "out",
+      "concepts": [
+        "genitive-negation",
+        "ne",
+        "plural",
+        "no-pronoun"
+      ],
+      "text": "Neturiu pinigų.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Neturiu",
+          "turėti"
+        ],
+        [
+          "pinigų",
+          "pinigai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Neturiu pinigus.",
+        "Neturiu pinigai."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pinigų",
+          "pinigus",
+          "pinigai"
+        ]
+      }
+    },
+    {
+      "id": "as-nesuprantu",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ne"
+      ],
+      "text": "Aš nesuprantu.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Aš",
+          "aš"
+        ],
+        [
+          "nesuprantu",
+          "suprasti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aš nesupranti.",
+        "Aš nesuprasti."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nesuprantu",
+          "nesupranti",
+          "nesupranta"
+        ]
+      }
+    },
+    {
+      "id": "ar-supranti",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Ar supranti?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ar",
+          "ar"
+        ],
+        [
+          "supranti",
+          "suprasti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar tu suprantu?",
+        "Ar tu suprasti?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "supranti",
+          "suprantu",
+          "suprasti"
+        ]
+      }
+    },
+    {
+      "id": "kalbu-truputi-lietuviskai",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Kalbu truputį lietuviškai.",
+      "means": "I speak a little Lithuanian.",
+      "words": [
+        [
+          "Kalbu",
+          "kalbėti"
+        ],
+        [
+          "truputį",
+          "truputį"
+        ],
+        [
+          "lietuviškai",
+          "lietuviškai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "in Lithuanian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aš kalbi truputį lietuviškai.",
+        "Kalbėti truputį lietuviškai."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kalbu",
+          "kalbi",
+          "kalbėti"
+        ]
+      }
+    },
+    {
+      "id": "noriu-kavos",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "no-pronoun"
+      ],
+      "text": "Noriu kavos.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Noriu",
+          "norėti"
+        ],
+        [
+          "kavos",
+          "kava"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "some coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Noriu kava.",
+        "Noriu kavai."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kavos",
+          "kava",
+          "kavai"
+        ]
+      }
+    },
+    {
+      "id": "noriu-vandens-prasau",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "no-pronoun"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Noriu vandens, prašau.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Noriu",
+          "norėti"
+        ],
+        [
+          "vandens,",
+          "vanduo"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "some water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Noriu vanduo, prašau.",
+        "Noriu vandeniui, prašau."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vandens,",
+          "vanduo,",
+          "vandeniui,"
+        ]
+      }
+    },
+    {
+      "id": "mano-kambarys-mazas",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "gender",
+        "present"
+      ],
+      "text": "Mano kambarys mažas.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "kambarys",
+          "kambarys"
+        ],
+        [
+          "mažas",
+          "mažas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano kambarys maža.",
+        "Mano kambarį mažas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mažas",
+          "maža",
+          "mažą"
+        ]
+      }
+    },
+    {
+      "id": "gyvenu-mazame-name",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "adjective",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Gyvenu mažame name.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Gyvenu",
+          "gyventi"
+        ],
+        [
+          "mažame",
+          "mažas"
+        ],
+        [
+          "name",
+          "namas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gyvenu mažas name.",
+        "Gyvenu mažame namas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "name",
+          "namas",
+          "namą"
+        ]
+      }
+    },
+    {
+      "id": "sis-namas-didelis",
+      "topic": "home",
+      "concepts": [
+        "gender",
+        "adjective",
+        "present"
+      ],
+      "text": "Šis namas didelis.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Šis",
+          "šis"
+        ],
+        [
+          "namas",
+          "namas"
+        ],
+        [
+          "didelis",
+          "didelis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ši namas didelis.",
+        "Šis namas didelė."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "didelis",
+          "didelė",
+          "didelį"
+        ]
+      }
+    },
+    {
+      "id": "kur-gyveni",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Kur gyveni?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "gyveni",
+          "gyventi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur tu gyvenu?",
+        "Kur tu gyventi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gyveni",
+          "gyvenu",
+          "gyventi"
+        ]
+      }
+    },
+    {
+      "id": "mano-mama-gyvena-cia",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "genitive"
+      ],
+      "text": "Mano mama gyvena čia.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "gyvena",
+          "gyventi"
+        ],
+        [
+          "čia",
+          "čia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano mama gyveni čia.",
+        "Mano mama gyvenu čia."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gyvena",
+          "gyveni",
+          "gyvenu"
+        ]
+      }
+    },
+    {
+      "id": "kur-eini",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Kur eini?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "eini",
+          "eiti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur tu einu?",
+        "Kur tu eiti?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "eini",
+          "einu",
+          "eiti"
+        ]
+      }
+    },
+    {
+      "id": "einu-i-mokykla",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Einu į mokyklą.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Einu",
+          "eiti"
+        ],
+        [
+          "į",
+          "į"
+        ],
+        [
+          "mokyklą",
+          "mokykla"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Einu į mokykla.",
+        "Einu į mokykloje."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mokyklą",
+          "mokykla",
+          "mokykloje"
+        ]
+      }
+    },
+    {
+      "id": "mano-mama-vaziuoja-i-miesta",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Mano mama važiuoja į miestą.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "važiuoja",
+          "važiuoti"
+        ],
+        [
+          "į",
+          "į"
+        ],
+        [
+          "miestą",
+          "miestas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mano mama važiuoja į miestas.",
+        "Mano mama važiuoju į miestą."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "miestą",
+          "miestas",
+          "mieste"
+        ]
+      }
+    },
+    {
+      "id": "si-masina-maza",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "adjective",
+        "present"
+      ],
+      "text": "Ši mašina maža.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Ši",
+          "šis"
+        ],
+        [
+          "mašina",
+          "mašina"
+        ],
+        [
+          "maža",
+          "mažas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šis mašina maža.",
+        "Ši mašina mažas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ši",
+          "šis",
+          "šį"
+        ]
+      }
+    },
+    {
+      "id": "turiu-masina",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Turiu mašiną.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Turiu",
+          "turėti"
+        ],
+        [
+          "mašiną",
+          "mašina"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Turiu mašina.",
+        "Turiu mašinos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mašiną",
+          "mašina",
+          "mašinos"
+        ]
+      }
+    },
+    {
+      "id": "siandien-dirbu",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "setting-first",
+        "no-pronoun"
+      ],
+      "text": "Šiandien dirbu.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Šiandien",
+          "šiandien"
+        ],
+        [
+          "dirbu",
+          "dirbti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šiandien aš dirbi.",
+        "Šiandien aš dirbti."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dirbu",
+          "dirbi",
+          "dirbti"
+        ]
+      }
+    },
+    {
+      "id": "aciu-iki-rytojaus",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Ačiū. Iki rytojaus!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Ačiū."
+        ],
+        [
+          "Iki"
+        ],
+        [
+          "rytojaus"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ačiū. Iki rytojų!",
+        "Ačiū. Iki rytojui!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "rytojaus",
+          "rytojų",
+          "rytojui"
+        ]
+      }
+    },
+    {
+      "id": "rytoj-vaziuoju-i-miesta",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "setting-first",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Rytoj važiuoju į miestą.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Rytoj",
+          "rytoj"
+        ],
+        [
+          "važiuoju",
+          "važiuoti"
+        ],
+        [
+          "į",
+          "į"
+        ],
+        [
+          "miestą",
+          "miestas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rytoj aš važiuoja į miestą.",
+        "Rytoj važiuoju į miestas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "važiuoju",
+          "važiuoja",
+          "važiuoti"
+        ]
+      }
+    },
+    {
+      "id": "siandien-negaliu-eiti",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "ne",
+        "setting-first",
+        "no-pronoun"
+      ],
+      "text": "Šiandien negaliu eiti.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Šiandien",
+          "šiandien"
+        ],
+        [
+          "negaliu",
+          "galėti"
+        ],
+        [
+          "eiti",
+          "eiti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I cannot"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šiandien aš negali eiti.",
+        "Šiandien negaliu einu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "eiti",
+          "einu",
+          "eini"
+        ]
+      }
+    },
+    {
+      "id": "rytoj-turiu-dirbti",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "setting-first",
+        "no-pronoun"
+      ],
+      "text": "Rytoj turiu dirbti.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Rytoj",
+          "rytoj"
+        ],
+        [
+          "turiu",
+          "turėti"
+        ],
+        [
+          "dirbti",
+          "dirbti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I have to"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rytoj turiu dirbu.",
+        "Rytoj aš turi dirbti."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dirbti",
+          "dirbu",
+          "dirbi"
+        ]
+      }
+    },
+    {
+      "id": "labas-kaip-sekasi",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "dative",
+        "reflexive",
+        "dummy-subject"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Labas, kaip tau sekasi?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Labas,"
+        ],
+        [
+          "kaip"
+        ],
+        [
+          "tau"
+        ],
+        [
+          "sekasi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "it goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Labas, kaip tu sekasi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tau",
+          "tave",
+          "tu"
+        ]
+      }
+    },
+    {
+      "id": "koks-tavo-vardas",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "gender",
+        "dummy-subject"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Koks tavo vardas?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Koks"
+        ],
+        [
+          "tavo"
+        ],
+        [
+          "vardas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "your"
+        ],
+        [
+          "name"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kokia tavo vardas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vardas",
+          "vardą",
+          "vardo"
+        ]
+      }
+    },
+    {
+      "id": "ar-kalbi-angliskai",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Ar kalbi angliškai?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Ar",
+          "ar"
+        ],
+        [
+          "kalbi",
+          "kalbėti"
+        ],
+        [
+          "angliškai",
+          "angliškai"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you speak"
+        ],
+        [
+          "in English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar kalbi angliškas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "angliškai",
+          "angliškas",
+          "anglas"
+        ]
+      }
+    },
+    {
+      "id": "brolis-studijuoja",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "present"
+      ],
+      "text": "Mano brolis studijuoja Vilniuje.",
+      "means": "My brother studies in Vilnius.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "brolis",
+          "brolis"
+        ],
+        [
+          "studijuoja",
+          "studijuoti"
+        ],
+        [
+          "Vilniuje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "studies"
+        ],
+        [
+          "in Vilnius"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mano brolis studijuoja Vilnius.",
+        "Mano brolis studijuoja Vilniaus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "Vilniuje",
+          "Vilnius",
+          "Vilniaus"
+        ]
+      }
+    },
+    {
+      "id": "turiu-seseri",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "numbers",
+        "plural",
+        "no-pronoun"
+      ],
+      "text": "Turiu vieną seserį ir du brolius.",
+      "means": "I have one sister and two brothers.",
+      "words": [
+        [
+          "Turiu",
+          "turėti"
+        ],
+        [
+          "vieną",
+          "vienas"
+        ],
+        [
+          "seserį",
+          "sesuo"
+        ],
+        [
+          "ir"
+        ],
+        [
+          "du",
+          "du"
+        ],
+        [
+          "brolius",
+          "brolis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "one sister"
+        ],
+        [
+          "and"
+        ],
+        [
+          "two brothers"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Turiu viena sesuo ir du brolius.",
+        "Turiu vieną seserį ir du broliai."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "seserį",
+          "sesuo",
+          "sesers"
+        ]
+      }
+    },
+    {
+      "id": "tecio-masina",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "dummy-subject"
+      ],
+      "text": "Tai mano tėčio mašina.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Tai",
+          "tai"
+        ],
+        [
+          "mano",
+          "aš"
+        ],
+        [
+          "tėčio",
+          "tėtis"
+        ],
+        [
+          "mašina",
+          "mašina"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my dad's"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tai mano tėtis mašina.",
+        "Tai mano tėčio mašiną."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tėčio",
+          "tėtis",
+          "tėtį"
+        ]
+      }
+    },
+    {
+      "id": "nezinau-kur-gyvena",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Nežinau, kur jis gyvena.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Nežinau,",
+          "žinoti"
+        ],
+        [
+          "kur"
+        ],
+        [
+          "jis"
+        ],
+        [
+          "gyvena",
+          "gyventi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Nežinau, kur jis gyvenu.",
+        "Ne žinau, kur jis gyvena."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gyvena",
+          "gyvenu",
+          "gyveni"
+        ]
+      }
+    },
+    {
+      "id": "esu-mokytojas",
+      "topic": "people",
+      "concepts": [
+        "no-articles",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Esu mokytojas.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Esu",
+          "būti"
+        ],
+        [
+          "mokytojas",
+          "mokytojas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Esu mokytoją."
+      ],
+      "otherGender": {
+        "text": "Esu mokytoja.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "mokytojas",
+          "mokytoją",
+          "mokytojai"
+        ]
+      }
+    },
+    {
+      "id": "man-patinka-filmas",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "present"
+      ],
+      "text": "Man patinka šis filmas.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Man",
+          "aš"
+        ],
+        [
+          "patinka",
+          "patikti"
+        ],
+        [
+          "šis",
+          "šis"
+        ],
+        [
+          "filmas",
+          "filmas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing"
+        ],
+        [
+          "this movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Man",
+        "šis",
+        "filmas"
+      ],
+      "wrong": [
+        "Aš patinka šis filmas.",
+        "Man patinka šį filmą."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Aš",
+          "Mane"
+        ]
+      }
+    },
+    {
+      "id": "vakar-buvau-namie",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "no-pronoun"
+      ],
+      "text": "Vakar buvau namie.",
+      "means": "Yesterday I was at home.",
+      "words": [
+        [
+          "Vakar",
+          "vakar"
+        ],
+        [
+          "buvau",
+          "būti"
+        ],
+        [
+          "namie",
+          "namie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I was"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Vakar buvau namo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "buvau",
+          "būsiu",
+          "būti"
+        ]
+      }
+    },
+    {
+      "id": "mama-dirba-ligonineje",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "present",
+        "no-articles"
+      ],
+      "text": "Mano mama dirba ligoninėje.",
+      "means": "My mom works at a hospital.",
+      "words": [
+        [
+          "Mano",
+          "aš"
+        ],
+        [
+          "mama",
+          "mama"
+        ],
+        [
+          "dirba",
+          "dirbti"
+        ],
+        [
+          "ligoninėje",
+          "ligoninė"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "works"
+        ],
+        [
+          "at a hospital"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mano mama dirba ligoninė.",
+        "Mano mama dirbu ligoninėje."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ligoninėje",
+          "ligoninė",
+          "ligoninę"
+        ]
+      }
+    },
+    {
+      "id": "gyvenu-mazame-bute",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "adjective",
+        "gender",
+        "no-pronoun"
+      ],
+      "text": "Gyvenu mažame bute.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Gyvenu",
+          "gyventi"
+        ],
+        [
+          "mažame",
+          "mažas"
+        ],
+        [
+          "bute",
+          "butas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Gyvenu mažas butas.",
+        "Gyvenu mažoje bute."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mažame",
+          "mažoje",
+          "mažas"
+        ]
+      }
+    },
+    {
+      "id": "ant-stalo-knyga",
+      "topic": "home",
+      "concepts": [
+        "genitive",
+        "no-articles",
+        "dummy-subject",
+        "setting-first"
+      ],
+      "text": "Ant stalo yra knyga.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Ant"
+        ],
+        [
+          "stalo",
+          "stalas"
+        ],
+        [
+          "yra",
+          "būti"
+        ],
+        [
+          "knyga",
+          "knyga"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Ant",
+        "stalo",
+        "knyga"
+      ],
+      "wrong": [
+        "Ant stalas yra knyga.",
+        "Ant stalo yra knygą."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "stalo",
+          "stalas",
+          "stale"
+        ]
+      }
+    },
+    {
+      "id": "saldytuve-nera-pieno",
+      "topic": "home",
+      "concepts": [
+        "genitive-negation",
+        "locative",
+        "ne",
+        "dummy-subject"
+      ],
+      "text": "Šaldytuve nėra pieno.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Šaldytuve",
+          "šaldytuvas"
+        ],
+        [
+          "nėra",
+          "būti"
+        ],
+        [
+          "pieno",
+          "pienas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge",
+          true
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Šaldytuve"
+      ],
+      "wrong": [
+        "Šaldytuve nėra pienas.",
+        "Šaldytuve ne yra pieno."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pieno",
+          "pienas",
+          "pieną"
+        ]
+      }
+    },
+    {
+      "id": "ar-gali-uzdaryti-langa",
+      "topic": "home",
+      "concepts": [
+        "modal",
+        "accusative",
+        "question",
+        "no-pronoun"
+      ],
+      "text": "Ar gali uždaryti langą?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Ar"
+        ],
+        [
+          "gali",
+          "galėti"
+        ],
+        [
+          "uždaryti",
+          "uždaryti"
+        ],
+        [
+          "langą",
+          "langas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you can"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar gali uždaro langą?",
+        "Ar gali uždaryti langas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "uždaryti",
+          "uždaro",
+          "uždarytas"
+        ]
+      }
+    },
+    {
+      "id": "turime-didele-virtuve",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "accusative",
+        "gender",
+        "no-pronoun"
+      ],
+      "text": "Turime didelę virtuvę ir mažą balkoną.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Turime",
+          "turėti"
+        ],
+        [
+          "didelę",
+          "didelis"
+        ],
+        [
+          "virtuvę",
+          "virtuvė"
+        ],
+        [
+          "ir"
+        ],
+        [
+          "mažą",
+          "mažas"
+        ],
+        [
+          "balkoną",
+          "balkonas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Turime didelį virtuvę ir mažą balkoną.",
+        "Turime didelė virtuvė ir mažas balkonas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "didelę",
+          "didelį",
+          "didelė"
+        ]
+      }
+    },
+    {
+      "id": "kai-grisiu-namo",
+      "topic": "home",
+      "concepts": [
+        "future",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Kai grįšiu namo, pagaminsiu vakarienę.",
+      "means": "When I get home, I'll make dinner.",
+      "words": [
+        [
+          "Kai"
+        ],
+        [
+          "grįšiu",
+          "grįžti"
+        ],
+        [
+          "namo,",
+          "namo"
+        ],
+        [
+          "pagaminsiu",
+          "pagaminti"
+        ],
+        [
+          "vakarienę",
+          "vakarienė"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When"
+        ],
+        [
+          "I'll get"
+        ],
+        [
+          "home,"
+        ],
+        [
+          "I'll make"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kai grįšiu namo, pagaminsiu vakarienė."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pagaminsiu",
+          "pagaminau",
+          "pagaminti"
+        ]
+      }
+    },
+    {
+      "id": "uzdaryk-duris",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "plural",
+        "accusative",
+        "no-articles"
+      ],
+      "text": "Uždaryk duris, prašau.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Uždaryk",
+          "uždaryti"
+        ],
+        [
+          "duris,",
+          "durys"
+        ],
+        [
+          "prašau",
+          "prašyti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Uždaryk durys, prašau."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "duris,",
+          "durys,",
+          "durų,"
+        ]
+      }
+    },
+    {
+      "id": "kur-mano-raktai",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "plural",
+        "dummy-subject"
+      ],
+      "text": "Kur mano raktai?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "mano",
+          "aš"
+        ],
+        [
+          "raktai",
+          "raktas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur mano raktus?",
+        "Kur mano raktų?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "raktai",
+          "raktus",
+          "raktų"
+        ]
+      }
+    },
+    {
+      "id": "palauk-manes",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "genitive"
+      ],
+      "text": "Palauk manęs!",
+      "means": "Wait for me!",
+      "words": [
+        [
+          "Palauk",
+          "palaukti"
+        ],
+        [
+          "manęs",
+          "aš"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait"
+        ],
+        [
+          "for me"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Palauk aš!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "manęs",
+          "aš",
+          "mano"
+        ]
+      }
+    },
+    {
+      "id": "geriu-kava-be-cukraus",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "genitive",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Geriu kavą be cukraus.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Geriu",
+          "gerti"
+        ],
+        [
+          "kavą",
+          "kava"
+        ],
+        [
+          "be",
+          "be"
+        ],
+        [
+          "cukraus",
+          "cukrus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Geriu kavą be cukrus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "cukraus",
+          "cukrų",
+          "cukrus"
+        ]
+      }
+    },
+    {
+      "id": "negeriu-kavos",
+      "topic": "food",
+      "concepts": [
+        "genitive-negation",
+        "ne",
+        "no-pronoun"
+      ],
+      "text": "Negeriu kavos.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Negeriu",
+          "gerti"
+        ],
+        [
+          "kavos",
+          "kava"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Ne geriu kavos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kavos",
+          "kavą",
+          "kava"
+        ]
+      }
+    },
+    {
+      "id": "stikline-vandens",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "genitive",
+        "question",
+        "accusative"
+      ],
+      "text": "Ar galiu gauti stiklinę vandens?",
+      "means": "Can I get a glass of water?",
+      "words": [
+        [
+          "Ar"
+        ],
+        [
+          "galiu",
+          "galėti"
+        ],
+        [
+          "gauti",
+          "gauti"
+        ],
+        [
+          "stiklinę",
+          "stiklinė"
+        ],
+        [
+          "vandens",
+          "vanduo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "get"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar galiu gauti stiklinę vanduo?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vandens",
+          "vanduo",
+          "vandenį"
+        ]
+      }
+    },
+    {
+      "id": "noriu-suvalgyti",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "no-pronoun",
+        "genitive"
+      ],
+      "text": "Noriu suvalgyti ką nors saldaus.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Noriu",
+          "norėti"
+        ],
+        [
+          "suvalgyti",
+          "suvalgyti"
+        ],
+        [
+          "ką"
+        ],
+        [
+          "nors"
+        ],
+        [
+          "saldaus",
+          "saldus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something"
+        ],
+        [
+          "sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Noriu suvalgau ką nors saldaus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "suvalgyti",
+          "suvalgau",
+          "suvalgys"
+        ]
+      }
+    },
+    {
+      "id": "vakar-valgeme-pica",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Vakar valgėme picą.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Vakar",
+          "vakar"
+        ],
+        [
+          "valgėme",
+          "valgyti"
+        ],
+        [
+          "picą",
+          "pica"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Vakar valgysime picą."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "valgėme",
+          "valgysime",
+          "valgyti"
+        ]
+      }
+    },
+    {
+      "id": "megstu-gaminti-su-mama",
+      "topic": "food",
+      "concepts": [
+        "instrumental",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Mėgstu gaminti su mama.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Mėgstu",
+          "mėgti"
+        ],
+        [
+          "gaminti",
+          "gaminti"
+        ],
+        [
+          "su"
+        ],
+        [
+          "mama",
+          "mama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "to cook"
+        ],
+        [
+          "with mom"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mėgstu gaminti su mamą."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mama",
+          "mamą",
+          "mamos"
+        ]
+      }
+    },
+    {
+      "id": "noreciau-kavos",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "instrumental"
+      ],
+      "chunks": [
+        "noreciau"
+      ],
+      "text": "Norėčiau kavos su pienu.",
+      "means": "I'd like a coffee with milk.",
+      "words": [
+        [
+          "Norėčiau"
+        ],
+        [
+          "kavos",
+          "kava"
+        ],
+        [
+          "su"
+        ],
+        [
+          "pienu",
+          "pienas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "with milk"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Norėčiau kavos su pienas.",
+        "Norėčiau kavos su pieną."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pienu",
+          "pienas",
+          "pieno"
+        ]
+      }
+    },
+    {
+      "id": "saskaita-prasau",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "no-articles"
+      ],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "Sąskaitą, prašau.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Sąskaitą,"
+        ],
+        [
+          "prašau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Sąskaitai, prašau."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sąskaitą,",
+          "Sąskaitai,",
+          "Sąskaitoje,"
+        ]
+      }
+    },
+    {
+      "id": "kiek-kainuoja-kava",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "text": "Kiek kainuoja kava?",
+      "means": "How much is a coffee?",
+      "words": [
+        [
+          "Kiek",
+          "kiek"
+        ],
+        [
+          "kainuoja",
+          "kainuoti"
+        ],
+        [
+          "kava",
+          "kava"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kiek kainuoja kavą?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kainuoja",
+          "kainuoti",
+          "kainuojant"
+        ]
+      }
+    },
+    {
+      "id": "pusryciams-kiausinius",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "plural",
+        "no-pronoun",
+        "dative"
+      ],
+      "text": "Pusryčiams valgau kiaušinius.",
+      "means": "I have eggs for breakfast.",
+      "words": [
+        [
+          "Pusryčiams",
+          "pusryčiai"
+        ],
+        [
+          "valgau",
+          "valgyti"
+        ],
+        [
+          "kiaušinius",
+          "kiaušinis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For breakfast"
+        ],
+        [
+          "I eat"
+        ],
+        [
+          "eggs"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Pusryčiams valgau kiaušiniai."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kiaušinius",
+          "kiaušiniai",
+          "kiaušiniais"
+        ]
+      }
+    },
+    {
+      "id": "kur-yra-stotis",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "no-articles"
+      ],
+      "chunks": [
+        "atsiprasau"
+      ],
+      "text": "Atsiprašau, kur yra stotis?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Atsiprašau,"
+        ],
+        [
+          "kur",
+          "kur"
+        ],
+        [
+          "yra",
+          "būti"
+        ],
+        [
+          "stotis",
+          "stotis"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Atsiprašau, kur yra stotį?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "stotis",
+          "stotį",
+          "stotyje"
+        ]
+      }
+    },
+    {
+      "id": "einu-i-parduotuve",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "genitive",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Einu į parduotuvę duonos.",
+      "means": "I'm going to the store for bread.",
+      "words": [
+        [
+          "Einu",
+          "eiti"
+        ],
+        [
+          "į"
+        ],
+        [
+          "parduotuvę",
+          "parduotuvė"
+        ],
+        [
+          "duonos",
+          "duona"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Einu į parduotuvėje duonos.",
+        "Einu į parduotuvė duonos."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "parduotuvę",
+          "parduotuvėje",
+          "parduotuvės"
+        ]
+      }
+    },
+    {
+      "id": "rytoj-autobusu",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "instrumental",
+        "accusative",
+        "setting-first"
+      ],
+      "text": "Rytoj į darbą važiuosiu autobusu.",
+      "means": "Tomorrow I'll go to work by bus.",
+      "words": [
+        [
+          "Rytoj",
+          "rytoj"
+        ],
+        [
+          "į"
+        ],
+        [
+          "darbą",
+          "darbas"
+        ],
+        [
+          "važiuosiu",
+          "važiuoti"
+        ],
+        [
+          "autobusu",
+          "autobusas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to work",
+          true
+        ],
+        [
+          "I'll go",
+          true
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "į",
+        "darbą",
+        "važiuosiu"
+      ],
+      "wrong": [
+        "Rytoj į darbą važiavau autobusu.",
+        "Rytoj į darbą važiuosiu autobusą."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "važiuosiu",
+          "važiavau",
+          "važiuoti"
+        ]
+      }
+    },
+    {
+      "id": "nusipirkau-batus",
+      "topic": "out",
+      "concepts": [
+        "reflexive",
+        "past",
+        "adjective",
+        "plural"
+      ],
+      "text": "Nusipirkau naujus batus.",
+      "means": "I bought myself new shoes.",
+      "words": [
+        [
+          "Nusipirkau",
+          "nusipirkti"
+        ],
+        [
+          "naujus",
+          "naujas"
+        ],
+        [
+          "batus",
+          "batas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I bought myself"
+        ],
+        [
+          "new shoes"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Nusipirkau nauji batai.",
+        "Nusipirkau naujas batus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "naujus",
+          "nauji",
+          "naujų"
+        ]
+      }
+    },
+    {
+      "id": "traukinys-velavo",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "numbers",
+        "no-articles"
+      ],
+      "text": "Traukinys vėlavo dešimt minučių.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Traukinys",
+          "traukinys"
+        ],
+        [
+          "vėlavo",
+          "vėluoti"
+        ],
+        [
+          "dešimt",
+          "dešimt"
+        ],
+        [
+          "minučių",
+          "minutė"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was late"
+        ],
+        [
+          "ten minutes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Traukinys vėlavo dešimt minutė."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "minučių",
+          "minutę",
+          "minutėmis"
+        ]
+      }
+    },
+    {
+      "id": "niekada-nebuvau",
+      "topic": "out",
+      "concepts": [
+        "ne",
+        "past",
+        "locative",
+        "no-pronoun"
+      ],
+      "text": "Niekada nebuvau Klaipėdoje.",
+      "means": "I've never been to Klaipėda.",
+      "words": [
+        [
+          "Niekada",
+          "niekada"
+        ],
+        [
+          "nebuvau",
+          "būti"
+        ],
+        [
+          "Klaipėdoje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Never"
+        ],
+        [
+          "I wasn't"
+        ],
+        [
+          "in Klaipėda"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Niekada buvau Klaipėdoje."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nebuvau",
+          "buvau",
+          "būsiu"
+        ]
+      }
+    },
+    {
+      "id": "batai-per-mazi",
+      "topic": "out",
+      "concepts": [
+        "adjective",
+        "plural",
+        "dummy-subject"
+      ],
+      "text": "Šie batai per maži.",
+      "means": "These shoes are too small.",
+      "words": [
+        [
+          "Šie",
+          "šis"
+        ],
+        [
+          "batai",
+          "batas"
+        ],
+        [
+          "per",
+          "per"
+        ],
+        [
+          "maži",
+          "mažas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "These shoes"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šie batai per mažas."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maži",
+          "mažas",
+          "mažos"
+        ]
+      }
+    },
+    {
+      "id": "galime-vaziuoti-taksi",
+      "topic": "out",
+      "concepts": [
+        "modal",
+        "no-pronoun",
+        "instrumental"
+      ],
+      "text": "Galime važiuoti taksi.",
+      "means": "We can take a taxi.",
+      "words": [
+        [
+          "Galime",
+          "galėti"
+        ],
+        [
+          "važiuoti",
+          "važiuoti"
+        ],
+        [
+          "taksi",
+          "taksi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "by taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Galime važiuojame taksi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "važiuoti",
+          "važiuojame",
+          "važiavome"
+        ]
+      }
+    },
+    {
+      "id": "stotyje-laukia-mociute",
+      "topic": "out",
+      "concepts": [
+        "genitive",
+        "locative",
+        "present",
+        "setting-first"
+      ],
+      "text": "Stotyje mūsų laukia močiutė.",
+      "means": "Grandma's waiting for us at the station.",
+      "words": [
+        [
+          "Stotyje",
+          "stotis"
+        ],
+        [
+          "mūsų",
+          "mes"
+        ],
+        [
+          "laukia",
+          "laukti"
+        ],
+        [
+          "močiutė",
+          "močiutė"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "for us",
+          true
+        ],
+        [
+          "is waiting",
+          true
+        ],
+        [
+          "grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Stotyje",
+        "mūsų",
+        "laukia",
+        "močiutė"
+      ],
+      "wrong": [
+        "Stotyje mes laukia močiutė."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mūsų",
+          "mes",
+          "mums"
+        ]
+      }
+    },
+    {
+      "id": "sestadieni-pas-mociute",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Šeštadienį važiuojame pas močiutę.",
+      "means": "On Saturday we're going to grandma's.",
+      "words": [
+        [
+          "Šeštadienį",
+          "šeštadienis"
+        ],
+        [
+          "važiuojame",
+          "važiuoti"
+        ],
+        [
+          "pas",
+          "pas"
+        ],
+        [
+          "močiutę",
+          "močiutė"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "to grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Šeštadienį važiuojame pas močiutė."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Šeštadienį",
+          "Šeštadienis",
+          "Šeštadienio"
+        ]
+      }
+    },
+    {
+      "id": "bilietas-kainuoja",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "no-articles",
+        "present"
+      ],
+      "text": "Bilietas kainuoja dvidešimt eurų.",
+      "means": "The ticket costs twenty euros.",
+      "words": [
+        [
+          "Bilietas",
+          "bilietas"
+        ],
+        [
+          "kainuoja",
+          "kainuoti"
+        ],
+        [
+          "dvidešimt",
+          "dvidešimt"
+        ],
+        [
+          "eurų",
+          "euras"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The ticket"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "twenty euros"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Bilietas kainuoja dvidešimt eurai.",
+        "Bilietas kainuoja dvidešimt eurus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "eurų",
+          "eurai",
+          "eurus"
+        ]
+      }
+    },
+    {
+      "id": "rytoj-lis",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "dummy-subject"
+      ],
+      "text": "Rytoj lis.",
+      "means": "It'll rain tomorrow.",
+      "words": [
+        [
+          "Rytoj",
+          "rytoj"
+        ],
+        [
+          "lis",
+          "lyti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rytoj lijo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lis",
+          "lijo",
+          "lyti"
+        ]
+      }
+    },
+    {
+      "id": "paskambinsiu-tau",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "dative",
+        "no-pronoun"
+      ],
+      "text": "Paskambinsiu tau rytoj.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Paskambinsiu",
+          "paskambinti"
+        ],
+        [
+          "tau",
+          "tu"
+        ],
+        [
+          "rytoj",
+          "rytoj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'll call"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Paskambinsiu tu rytoj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tau",
+          "tu",
+          "tavo"
+        ]
+      }
+    },
+    {
+      "id": "dabar-turiu-eiti",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "no-pronoun"
+      ],
+      "text": "Dabar turiu eiti.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Dabar",
+          "dabar"
+        ],
+        [
+          "turiu",
+          "turėti"
+        ],
+        [
+          "eiti",
+          "eiti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "to go"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Dabar turiu einu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "eiti",
+          "einu",
+          "ėjau"
+        ]
+      }
+    },
+    {
+      "id": "eisi-su-mumis-i-kina",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "future",
+        "instrumental",
+        "accusative"
+      ],
+      "text": "Ar eisi su mumis į kiną?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Ar"
+        ],
+        [
+          "eisi",
+          "eiti"
+        ],
+        [
+          "su"
+        ],
+        [
+          "mumis",
+          "mes"
+        ],
+        [
+          "į"
+        ],
+        [
+          "kiną",
+          "kinas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you'll go"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ar eisi su mes į kiną?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mumis",
+          "mes",
+          "mus"
+        ]
+      }
+    },
+    {
+      "id": "savaitgali-papludimi",
+      "topic": "plans",
+      "concepts": [
+        "accusative",
+        "future",
+        "no-pronoun",
+        "no-articles"
+      ],
+      "text": "Savaitgalį eisime į paplūdimį.",
+      "means": "We're going to the beach this weekend.",
+      "words": [
+        [
+          "Savaitgalį",
+          "savaitgalis"
+        ],
+        [
+          "eisime",
+          "eiti"
+        ],
+        [
+          "į"
+        ],
+        [
+          "paplūdimį",
+          "paplūdimys"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the weekend"
+        ],
+        [
+          "we'll go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Savaitgalį eisime į paplūdimyje."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "paplūdimį",
+          "paplūdimys",
+          "paplūdimyje"
+        ]
+      }
+    },
+    {
+      "id": "mokausi-lietuviu",
+      "topic": "plans",
+      "concepts": [
+        "reflexive",
+        "genitive",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Mokausi lietuvių kalbos jau metus.",
+      "means": "I've been learning Lithuanian for a year.",
+      "words": [
+        [
+          "Mokausi",
+          "mokytis"
+        ],
+        [
+          "lietuvių"
+        ],
+        [
+          "kalbos",
+          "kalba"
+        ],
+        [
+          "jau",
+          "jau"
+        ],
+        [
+          "metus",
+          "metai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm learning"
+        ],
+        [
+          "Lithuanian"
+        ],
+        [
+          "for a year now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mokausi lietuvių kalbos jau metais."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "metus",
+          "metais",
+          "metų"
+        ]
+      }
+    },
+    {
+      "id": "ka-veiki-savaitgali",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "accusative",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Ką veiki savaitgalį?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Ką"
+        ],
+        [
+          "veiki",
+          "veikti"
+        ],
+        [
+          "savaitgalį",
+          "savaitgalis"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you do"
+        ],
+        [
+          "on the weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kas veiki savaitgalį?",
+        "Ką veiki savaitgalis?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ką",
+          "Kas",
+          "Kokia"
+        ]
+      }
+    },
+    {
+      "id": "siandien-salta",
+      "topic": "plans",
+      "concepts": [
+        "dummy-subject",
+        "adjective"
+      ],
+      "text": "Šiandien šalta.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Šiandien",
+          "šiandien"
+        ],
+        [
+          "šalta",
+          "šaltas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šiandien šaltą."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "šalta",
+          "šaltą",
+          "šaltai"
+        ]
+      }
+    },
+    {
+      "id": "man-salta",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "dummy-subject",
+        "adjective"
+      ],
+      "text": "Man šalta.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Man",
+          "aš"
+        ],
+        [
+          "šalta",
+          "šaltas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mane šalta."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Mane",
+          "Mano"
+        ]
+      }
+    },
+    {
+      "id": "pranesk-man",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "dative"
+      ],
+      "text": "Pranešk man!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Pranešk",
+          "pranešti"
+        ],
+        [
+          "man",
+          "aš"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Tell"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Pranešk aš!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "man",
+          "aš",
+          "mano"
+        ]
+      }
+    },
+    {
+      "id": "tikiuosi-grazus-oras",
+      "topic": "plans",
+      "concepts": [
+        "reflexive",
+        "future",
+        "adjective",
+        "gender"
+      ],
+      "text": "Tikiuosi, kad rytoj bus gražus oras.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Tikiuosi,",
+          "tikėtis"
+        ],
+        [
+          "kad"
+        ],
+        [
+          "rytoj",
+          "rytoj"
+        ],
+        [
+          "bus",
+          "būti"
+        ],
+        [
+          "gražus",
+          "gražus"
+        ],
+        [
+          "oras",
+          "oras"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "nice weather"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tikiuosi, kad rytoj bus graži oras."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "gražus",
+          "graži",
+          "gražų"
+        ]
+      }
+    },
+    {
+      "id": "neturiu-laiko",
+      "topic": "plans",
+      "concepts": [
+        "genitive-negation",
+        "ne",
+        "no-pronoun"
+      ],
+      "text": "Šiandien neturiu laiko.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Šiandien",
+          "šiandien"
+        ],
+        [
+          "neturiu",
+          "turėti"
+        ],
+        [
+          "laiko",
+          "laikas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I don't have"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Šiandien neturiu laikas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "laiko",
+          "laikas",
+          "laike"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kava",
+          "forms": [
+            "kavą"
+          ],
+          "picture": "coffee",
+          "means": "kavą = coffee"
+        },
+        {
+          "lemma": "arbata",
+          "forms": [
+            "arbatą"
+          ],
+          "picture": "tea",
+          "means": "arbatą = tea"
+        },
+        {
+          "lemma": "vanduo",
+          "forms": [
+            "vandenį"
+          ],
+          "picture": "water",
+          "means": "vandenį = water"
+        },
+        {
+          "lemma": "aš",
+          "forms": [
+            "aš"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "gerti",
+          "forms": [
+            "geriu"
+          ],
+          "picture": "drink",
+          "means": "geriu = I drink"
+        },
+        {
+          "lemma": "ir",
+          "forms": [
+            "ir"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending marks the person: (aš) gyvenu, (tu) gyveni, (jis, ji) gyvena, (mes) gyvename, (jūs) gyvenate, (jie) gyvena."
+      },
+      "items": [
+        "geriu-kava",
+        "as-geriu-arbata",
+        "geriu-vandeni",
+        "geriu-kava-ir-arbata",
+        "geriu-arbata-ir-vandeni",
+        "geriu-vandeni-ir-kava"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "vienas",
+          "forms": [
+            "vieną"
+          ],
+          "means": "vieną = one"
+        },
+        {
+          "lemma": "pienas",
+          "forms": [
+            "pieno",
+            "pieną"
+          ],
+          "picture": "milk",
+          "means": "pieno = some milk; pieną = milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "viena-kava-prasau",
+        "labas-viena-arbata-prasau",
+        "viena-kava-aciu",
+        "pieno-prasau",
+        "viena-arbata-ir-viena-vandeni-prasau",
+        "geriu-piena"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "gerai",
+          "forms": [
+            "gerai"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "aš",
+          "forms": [
+            "man"
+          ],
+          "means": "man = to me"
+        },
+        {
+          "lemma": "sektis",
+          "forms": [
+            "sekasi"
+          ],
+          "means": "sekasi = it goes"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes/no question usually starts with ar (Ar kalbi angliškai?); otherwise a question word like kur, ką or koks usually starts the question; Lithuanian adds no do."
+      },
+      "items": [
+        "labas-kaip-sekasi",
+        "man-sekasi-gerai-aciu",
+        "taip-prasau",
+        "ne-aciu",
+        "taip-aciu-viso-gero",
+        "ne-aciu-viso-gero"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "tu",
+          "forms": [
+            "tu"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "mokytojas",
+          "forms": [
+            "mokytojas"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "studentas",
+          "forms": [
+            "studentas"
+          ],
+          "means": "university or college student (male)"
+        },
+        {
+          "lemma": "būti",
+          "forms": [
+            "esu",
+            "esi",
+            "nesu"
+          ],
+          "means": "esu = I am; esi = you are; nesu = I am not"
+        },
+        {
+          "lemma": "ar",
+          "forms": [
+            "ar"
+          ],
+          "means": "yes/no question particle; whether"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "labas-malonu-susipazinti",
+        "koks-tavo-vardas",
+        "esu-mokytojas",
+        "tu-esi-studentas",
+        "ar-tu-mokytojas",
+        "nesu-mokytojas"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mama",
+          "forms": [
+            "mama"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "tėtis",
+          "forms": [
+            "tėtis"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "brolis",
+          "forms": [
+            "brolis"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "sesuo",
+          "forms": [
+            "sesuo"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "aš",
+          "forms": [
+            "mano"
+          ],
+          "means": "mano = my"
+        },
+        {
+          "lemma": "tai",
+          "forms": [
+            "tai"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "mokytojas",
+          "forms": [
+            "mokytoja"
+          ],
+          "means": "mokytoja = female teacher"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "no-articles",
+        "line": "Lithuanian has no words for a, an or the; context does their work: Esu mokytojas; Ant stalo yra knyga."
+      },
+      "items": [
+        "mano-mama-mokytoja",
+        "tai-mano-mama",
+        "tai-mano-tetis",
+        "mano-tetis-mokytojas",
+        "mano-brolis-studentas",
+        "tai-mano-sesuo"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "turėti",
+          "forms": [
+            "turiu",
+            "turi",
+            "neturiu"
+          ],
+          "means": "turiu = I have; turi = you have; neturiu = I do not have"
+        },
+        {
+          "lemma": "draugas",
+          "forms": [
+            "draugas"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "gydytojas",
+          "forms": [
+            "gydytoja"
+          ],
+          "picture": "doctor",
+          "means": "gydytoja = female doctor"
+        },
+        {
+          "lemma": "raktas",
+          "forms": [
+            "raktą"
+          ],
+          "picture": "key",
+          "means": "raktą = a key"
+        },
+        {
+          "lemma": "telefonas",
+          "forms": [
+            "telefoną"
+          ],
+          "picture": "phone",
+          "means": "telefoną = a phone"
+        },
+        {
+          "lemma": "knyga",
+          "forms": [
+            "knygos"
+          ],
+          "picture": "book",
+          "means": "knygos = a book"
+        },
+        {
+          "lemma": "geras",
+          "forms": [
+            "geras"
+          ],
+          "means": "good"
+        },
+        {
+          "lemma": "brolis",
+          "forms": [
+            "brolį"
+          ],
+          "means": "brolį = a brother"
+        },
+        {
+          "lemma": "sesuo",
+          "forms": [
+            "seserį"
+          ],
+          "means": "seserį = a sister"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "turiu-telefona",
+        "ar-turi-rakta",
+        "turiu-broli-ir-seseri",
+        "neturiu-knygos",
+        "mano-sesuo-gydytoja",
+        "tu-geras-draugas"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "kur",
+          "forms": [
+            "kur"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "čia",
+          "forms": [
+            "čia"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "ten",
+          "forms": [
+            "ten"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "tualetas",
+          "forms": [
+            "tualetas"
+          ],
+          "means": "bathroom, toilet"
+        },
+        {
+          "lemma": "būti",
+          "forms": [
+            "yra"
+          ],
+          "means": "yra = is"
+        },
+        {
+          "lemma": "raktas",
+          "forms": [
+            "raktai",
+            "raktas"
+          ],
+          "means": "raktai = keys; raktas = key"
+        },
+        {
+          "lemma": "telefonas",
+          "forms": [
+            "telefonas"
+          ],
+          "means": "phone"
+        }
+      ],
+      "phrases": [
+        "atsiprasau"
+      ],
+      "concept": {
+        "pattern": "genitive",
+        "line": "The genitive means of (tėčio mašina: Dad's car; stiklinė vandens), says some of or what you want (Norėčiau kavos; ką nors saldaus: something sweet), follows be and ant (be cukraus, ant stalo), is the object of verbs like laukti, norėti and mokytis (Stotyje mūsų laukia močiutė), and says what you go for: Einu į parduotuvę duonos."
+      },
+      "items": [
+        "kur-mano-raktai",
+        "atsiprasau-kur-yra-tualetas",
+        "mano-telefonas-yra-cia",
+        "raktas-yra-ten",
+        "kur-mano-mama",
+        "mano-sesuo-yra-cia"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "du",
+          "forms": [
+            "dvi"
+          ],
+          "picture": "two",
+          "means": "dvi = two"
+        },
+        {
+          "lemma": "trys",
+          "forms": [
+            "tris"
+          ],
+          "picture": "three",
+          "means": "tris = three"
+        },
+        {
+          "lemma": "pinigai",
+          "forms": [
+            "pinigų"
+          ],
+          "picture": "money",
+          "means": "pinigų = money"
+        },
+        {
+          "lemma": "kava",
+          "forms": [
+            "kavas",
+            "kava"
+          ],
+          "means": "kavas = coffees; kava = coffee"
+        },
+        {
+          "lemma": "knyga",
+          "forms": [
+            "knygą",
+            "knygas"
+          ],
+          "means": "knygą = a book; knygas = books"
+        },
+        {
+          "lemma": "kiek",
+          "forms": [
+            "kiek"
+          ],
+          "means": "how much"
+        },
+        {
+          "lemma": "kainuoti",
+          "forms": [
+            "kainuoja"
+          ],
+          "means": "kainuoja = costs"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "atsiprasau-kiek-tai-kainuoja",
+        "saskaita-prasau",
+        "dvi-kavas-prasau",
+        "viena-knyga-prasau",
+        "turiu-tris-knygas",
+        "neturiu-pinigu",
+        "kiek-kainuoja-kava"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "kalbėti",
+          "forms": [
+            "kalbi",
+            "kalbu"
+          ],
+          "means": "kalbi = you speak; kalbu = I speak"
+        },
+        {
+          "lemma": "angliškai",
+          "forms": [
+            "angliškai"
+          ],
+          "means": "in English"
+        },
+        {
+          "lemma": "lietuviškai",
+          "forms": [
+            "lietuviškai"
+          ],
+          "means": "in Lithuanian"
+        },
+        {
+          "lemma": "suprasti",
+          "forms": [
+            "nesuprantu",
+            "supranti"
+          ],
+          "means": "nesuprantu = I do not understand; supranti = you understand"
+        },
+        {
+          "lemma": "truputį",
+          "forms": [
+            "truputį"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "norėti",
+          "forms": [
+            "noriu"
+          ],
+          "means": "noriu = I want"
+        },
+        {
+          "lemma": "kava",
+          "forms": [
+            "kavos"
+          ],
+          "means": "kavos = some coffee"
+        },
+        {
+          "lemma": "vanduo",
+          "forms": [
+            "vandens"
+          ],
+          "means": "vandens = some water"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "no-pronoun",
+        "line": "A Lithuanian verb marks the person, so aš (I), tu (you) and mes (we) are usually left out: Gyvenu mažame bute (I live in a small apartment)."
+      },
+      "items": [
+        "ar-kalbi-angliskai",
+        "as-nesuprantu",
+        "ar-supranti",
+        "kalbu-truputi-lietuviskai",
+        "noriu-kavos",
+        "noriu-vandens-prasau"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "namas",
+          "forms": [
+            "name",
+            "namas"
+          ],
+          "picture": "house",
+          "means": "name = in a house; namas = house"
+        },
+        {
+          "lemma": "kambarys",
+          "forms": [
+            "kambarys"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "didelis",
+          "forms": [
+            "didelis"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "mažas",
+          "forms": [
+            "mažas",
+            "mažame"
+          ],
+          "picture": "small",
+          "means": "mažas = small; mažame = in a small"
+        },
+        {
+          "lemma": "gyventi",
+          "forms": [
+            "gyvenu",
+            "gyveni",
+            "gyvena"
+          ],
+          "means": "gyvenu = I live; gyveni = you live; gyvena = lives"
+        },
+        {
+          "lemma": "šis",
+          "forms": [
+            "šis"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mano-kambarys-mazas",
+        "gyvenu-mazame-name",
+        "sis-namas-didelis",
+        "kur-gyveni",
+        "mano-mama-gyvena-cia"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "eiti",
+          "forms": [
+            "eini",
+            "einu"
+          ],
+          "means": "eini = you are going; einu = I go"
+        },
+        {
+          "lemma": "į",
+          "forms": [
+            "į"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "mokykla",
+          "forms": [
+            "mokyklą"
+          ],
+          "picture": "school",
+          "means": "mokyklą = school"
+        },
+        {
+          "lemma": "miestas",
+          "forms": [
+            "miestą"
+          ],
+          "picture": "city",
+          "means": "miestą = the city"
+        },
+        {
+          "lemma": "stotis",
+          "forms": [
+            "stotis"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "mašina",
+          "forms": [
+            "mašina",
+            "mašiną"
+          ],
+          "picture": "car",
+          "means": "mašina = car; mašiną = a car"
+        },
+        {
+          "lemma": "važiuoti",
+          "forms": [
+            "važiuoja"
+          ],
+          "means": "važiuoja = goes by vehicle"
+        },
+        {
+          "lemma": "šis",
+          "forms": [
+            "ši"
+          ],
+          "means": "ši = this"
+        },
+        {
+          "lemma": "mažas",
+          "forms": [
+            "maža"
+          ],
+          "means": "maža = small"
+        },
+        {
+          "lemma": "tėtis",
+          "forms": [
+            "tėčio"
+          ],
+          "means": "tėčio = dad's"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "The accusative marks the direct object (Geriu kavą), follows į and pas for where you're going (į parduotuvę, į kiną, pas močiutę), and says when or for how long: šeštadienį, savaitgalį, metus."
+      },
+      "items": [
+        "kur-eini",
+        "kur-yra-stotis",
+        "einu-i-mokykla",
+        "mano-mama-vaziuoja-i-miesta",
+        "si-masina-maza",
+        "turiu-masina",
+        "tecio-masina"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "šiandien",
+          "forms": [
+            "šiandien"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "rytoj",
+          "forms": [
+            "rytoj"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "dabar",
+          "forms": [
+            "dabar"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "dirbti",
+          "forms": [
+            "dirbu",
+            "dirbti"
+          ],
+          "picture": "work",
+          "means": "dirbu = I work; dirbti = to work"
+        },
+        {
+          "lemma": "galėti",
+          "forms": [
+            "negaliu"
+          ],
+          "means": "negaliu = I cannot"
+        },
+        {
+          "lemma": "eiti",
+          "forms": [
+            "eiti"
+          ],
+          "means": "to go"
+        },
+        {
+          "lemma": "važiuoti",
+          "forms": [
+            "važiuoju"
+          ],
+          "means": "važiuoju = I go by vehicle"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "siandien-dirbu",
+        "dabar-turiu-eiti",
+        "aciu-iki-rytojaus",
+        "rytoj-vaziuoju-i-miesta",
+        "siandien-negaliu-eiti",
+        "rytoj-turiu-dirbti"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

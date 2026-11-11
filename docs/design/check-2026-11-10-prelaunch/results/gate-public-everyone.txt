@@ -1,0 +1,20 @@
+[gpu 17:56:47] parallel lane, slot 1/4: lx-app:gate check public, sharing everyone (v645)
+gate check (public, sharing everyone): http://localhost:8987
+  ok    private data to go looking for: a note, an upload, a look, a live pack, a hidden pack: sharing everyone: an ordinary account's share answers 200
+  ok    every route in the code, with no account: only what's on the list answers, and nothing private comes back: 203 routes: 12 answer, the rest refuse or redirect
+  ok    a list's route that isn't in the code any more is a mistake in this check
+  ok    the people's own things by their ids: refused: 17 paths and /mcp
+  ok    the open library: public by design, and a hidden pack isn't in it: a live shared pack's file is readable with no account; the account's name in it: false
+  ok    nothing in public/ that shouldn't be served: 1700 files
+  ok    robots.txt: the public pages and what they load are open, everything private is asked to stay out: 17 paths asked to stay out
+  ok    search: exactly the 3 public pages may be indexed
+  ok    no pricing page: no spelling of it answers with the page: /pricing 404; /pricing/ 404; /pricing.html 404; /Pricing 404; /PRICING.HTML 404; //pricing 404; /pricing// 404; /pricing/index.html 404; /pric%69ng 404; /pricing%2ehtml 404
+  ok    the public pages say nothing of payments, a plan, prices, Stripe, a trial or the in-app AI: /, /privacy and /terms: none
+  ok    the share card: what a link shows, fetched as the card fetchers fetch it: 1200 × 630, 36 KB
+  ok    the gate is gone: its page answers nothing, and a visitor gets no cookie
+  ok    an address that isn't there: a browser asking for a page gets the not-found page (404, its words, not kept); the API JSON; a file the bare 404: /about 404; /home 404; /study 404; /app/nothing 404; /login/x/y 404; /privacy/x 404
+  ok    the cookie table is what the code sets: lc_chal, lc_oauth, lc_pending, lc_preview, lc_session
+  ok    a redirect can't be pointed off the site
+  ok    in Chrome: what a visitor can open loads only from this site, and shows no error: 8 pages: /, /privacy, /terms, /login, /login/recover, /report, /app/, /design/
+gate check (public): all 16 stages passed
+[gpu 17:56:55] parallel lane released after 8 s (exit 0)

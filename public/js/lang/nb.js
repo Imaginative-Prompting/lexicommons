@@ -1,0 +1,33 @@
+// Norwegian Bokmål (lang/index.js has what each field means).
+
+export default {
+  name: "Norwegian",
+  locale: "nb-NO",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["f.eks.", "bl.a.", "dvs.", "osv.", "m.m.", "o.l.", "pga.", "ca.", "kl.", "nr.", "s.", "jf.", "evt.", "mht.", "ift.", "f.o.m.", "t.o.m.", "st.", "tlf.", "dr.", "ev.", "ma.", "on.", "fr.", "lø.", "sø.", "jan.", "feb.", "apr.", "aug.", "sep.", "okt.", "nov.", "des.", "md.", "mill.", "mrd.", "kap.", "dir."],
+  stray: ["å", "at", "som", "enn", "mens"],
+  patterns: {
+    v2: { name: "Verb second", about: "In a main-clause statement the verb that shows the tense comes second (not always the second word): when a time, a place or a whole clause comes first, the subject follows that verb.", after: ["present"] },
+    question: { name: "Questions: verb first or after the question word", about: "In a yes/no question the verb that shows the tense comes first; after a question word it comes before the subject (unless the question word is the subject). Norwegian adds no English-style do.", after: ["v2"] },
+    ikke: { name: "Where ikke goes", about: "In a main clause, ikke (not) comes after the verb that shows the tense; when the subject follows that verb, ikke comes after a pronoun (I dag kommer han ikke) but usually before a noun (I dag kommer ikke Per).", after: ["v2"] },
+    present: { name: "Present tense", about: "The present is the same for every person and usually ends in -r (jeg jobber, hun jobber); it means both I work and I'm working.", after: [] },
+    modal: { name: "Modal + infinitive", about: "When vil, kan, må, skal or får comes with another verb, that verb is a plain infinitive, with no å.", after: [] },
+    future: { name: "Future: present, skal or kommer til å", about: "Norwegian often uses the present when the time is clear (I morgen drar vi; Hvis det ikke regner, drar vi), skal for plans, and kommer til å for what's going to happen.", after: ["modal", "present", "aa-infinitive"] },
+    past: { name: "Past tense", about: "The past is the same for every person: many verbs end in -et or -a, -te, -de or -dde (laget, kjøpte, bodde), and some change more (kom).", after: ["present"] },
+    perfect: { name: "Perfect: har + participle", about: "har and the past participle (spist, vært, sett) make the perfect, in the same order as English.", after: ["past"] },
+    imperative: { name: "Telling someone to do something", about: "A command has no å and no subject, and is often the infinitive without its final -e (husk, lukk, ring); verbs like åpne keep it.", after: ["aa-infinitive"] },
+    gender: { name: "En, ei or et", about: "Every noun is masculine (en), feminine (ei, or en) or neuter (et), and the words with it match: en stor bil, et stort kjøkken.", after: [] },
+    definite: { name: "The article on the end", about: "With a noun on its own, the is an ending: bil, bilen (the car); hus, huset (the house); jente, jenta (the girl).", after: ["gender"] },
+    plural: { name: "Plurals", about: "Many nouns take -er and -ene (nøkkel, nøkler, nøklene), but some have no plural ending or change (år, sko, foreldre).", after: ["definite"] },
+    adjective: { name: "Adjective endings", about: "Most adjectives take -t with an et word, and -e in the plural or after the: en stor bil, et stort kjøkken, store biler. A few, like liten, are irregular.", after: ["gender"] },
+    "double-definite": { name: "Adjective + the: den nye bilen", about: "With an adjective, everyday Norwegian normally shows the twice: den, det or de in front and the ending on the noun (den nye bilen); names and formal Bokmål can use the front word alone.", after: ["definite", "adjective"] },
+    possessive: { name: "Possessives: bilen min", about: "My, your and our match the noun and usually come after it, with the noun in its definite form (bilen min, huset mitt, nøklene mine); in front of a plain noun they add emphasis or sound more formal (min bror).", after: ["definite"] },
+    direction: { name: "Where you are, where you go", about: "Some place words change when you're moving: hjemme (at home), hjem (home, going there); der (there), dit (to there).", after: [] },
+    particle: { name: "Particle verbs", about: "Some verbs take a stressed little word that changes what they mean: stå opp (to get up), slå av (to turn off), bli med (to come along).", after: [] },
+    "aa-infinitive": { name: "å + infinitive", about: "å before a verb is English to (Jeg liker å lage mat), and for å is in order to.", after: ["modal"] },
+    "clause-ikke": { name: "Clauses: ikke before the verb", about: "After at, hvis, når or fordi, the subject comes first, then ikke, then the verb that shows the tense: at han ikke kommer.", after: ["ikke"] },
+    "clause-first": { name: "A clause first, then the verb", about: "When a clause like Når jeg kommer hjem comes first, the main clause's verb that shows the tense follows it, before the subject.", after: ["v2"] },
+  },
+};

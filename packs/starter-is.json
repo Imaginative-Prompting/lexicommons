@@ -1,0 +1,8654 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-is",
+  "name": "Starter: Icelandic",
+  "about": "Icelandic cases and word order in real, everyday sentences.",
+  "language": "is",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kaffi": "coffee",
+    "te": "tea",
+    "vatn": "water",
+    "ég": "I (mig: me; mér: to me)",
+    "drekka": "to drink",
+    "og": "and",
+    "einn": "one (ein, eitt)",
+    "mjólk": "milk",
+    "góður": "good (gott: good, neuter)",
+    "hafa": "to have (hef: I have)",
+    "það": "it, there",
+    "þú": "you, to one person (þig: you; þér: to you)",
+    "ekki": "not",
+    "kennari": "teacher",
+    "nemandi": "student",
+    "vera": "to be (er: is; var: was)",
+    "mamma": "mom",
+    "pabbi": "dad",
+    "bróðir": "brother (bræður: brothers)",
+    "systir": "sister",
+    "minn": "my (mín, mitt; mínir: my, plural)",
+    "þessi": "this (þetta: this, neuter; þessir: these)",
+    "eiga": "to have, to own",
+    "vinur": "friend",
+    "læknir": "doctor",
+    "lykill": "key",
+    "sími": "phone",
+    "bók": "book",
+    "hvar": "where",
+    "hér": "here",
+    "þar": "there",
+    "baðherbergi": "bathroom",
+    "tveir": "two (tvær feminine, tvö neuter)",
+    "þrír": "three",
+    "peningar": "money",
+    "kosta": "to cost",
+    "hvað": "what",
+    "tala": "to speak, to talk",
+    "enska": "English (the language)",
+    "íslenska": "Icelandic (the language)",
+    "skilja": "to understand",
+    "smá": "a little",
+    "vilja": "to want (viltu: do you want)",
+    "hús": "house",
+    "herbergi": "room",
+    "stór": "big",
+    "lítill": "small",
+    "búa": "to live (somewhere)",
+    "í": "in",
+    "að": "that; to (before a verb)",
+    "fara": "to go",
+    "til": "to (til ömmu: to grandma's)",
+    "skóli": "school",
+    "borg": "city",
+    "lestarstöð": "train station",
+    "bíll": "car",
+    "nú": "now",
+    "vinna": "to work; work, a job",
+    "þurfa": "to need, to have to",
+    "geta": "can, to be able to",
+    "hæ": "hi",
+    "segja": "to say (hvað segirðu: how are you)",
+    "heita": "to be called (hvað heitir þú: what's your name)",
+    "vita": "to know",
+    "hann": "he",
+    "líka": "to please (mér líkar: I like)",
+    "mynd": "movie; picture",
+    "heima": "at home",
+    "spítali": "hospital",
+    "borð": "table",
+    "enginn": "no, none",
+    "ísskápur": "fridge",
+    "loka": "to close",
+    "gluggi": "window",
+    "við": "we (okkur: us)",
+    "eldhús": "kitchen",
+    "svalir": "balcony (only plural)",
+    "þegar": "when",
+    "koma": "to come",
+    "heim": "home (going home)",
+    "ætla": "to mean to, to be going to",
+    "elda": "to cook",
+    "kvöldmatur": "dinner",
+    "dyr": "door (only plural)",
+    "takk": "thanks; please (when asking)",
+    "bíða": "to wait (bíða eftir: to wait for)",
+    "án": "without",
+    "sykur": "sugar",
+    "fá": "to get",
+    "vatnsglas": "glass of water",
+    "langa": "to want, to long (mig langar: I want)",
+    "eitthvað": "something",
+    "sætur": "sweet",
+    "borða": "to eat",
+    "pítsa": "pizza",
+    "finnast": "to seem, to think (mér finnst gaman: I enjoy it)",
+    "gaman": "fun",
+    "með": "with; by (með strætó: by bus)",
+    "reikningur": "check, bill",
+    "morgunmatur": "breakfast",
+    "egg": "egg",
+    "strætóstöð": "bus stop",
+    "búð": "store, shop",
+    "kaupa": "to buy",
+    "brauð": "bread",
+    "strætó": "bus",
+    "nýr": "new",
+    "úlpa": "jacket, coat",
+    "tíu": "ten",
+    "mínúta": "minute",
+    "of": "too",
+    "seinn": "late",
+    "aldrei": "never",
+    "skór": "shoe; shoes",
+    "leigubíll": "taxi",
+    "taka": "to take",
+    "íbúð": "apartment",
+    "stöð": "station",
+    "amma": "grandma",
+    "laugardagur": "Saturday",
+    "miði": "ticket",
+    "þúsund": "thousand",
+    "króna": "króna (Iceland's money)",
+    "rigna": "to rain",
+    "hringja": "to call (hringja í: to call someone)",
+    "bíó": "the movies, movie theater",
+    "helgi": "weekend",
+    "strönd": "beach",
+    "læra": "to learn, to study",
+    "ár": "year",
+    "gera": "to do, to make",
+    "kaldur": "cold (kalt: Það er kalt, Mér er kalt)",
+    "láta": "to let (láttu mig vita: let me know)",
+    "vona": "to hope",
+    "verða": "to become, to be (verði: will be)",
+    "veður": "weather",
+    "tími": "time",
+    "sjást": "to see each other (sjáumst: see you)"
+  },
+  "chunks": {
+    "hvad-segirdu": {
+      "text": "hvað segirðu",
+      "en": "how are you, what's up",
+      "about": "A friendly how are you, literally what do you say; the answer is often Allt gott (all good)."
+    },
+    "afsakid": {
+      "text": "Afsakið",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention or say sorry, politely or to more than one; one friend gets Afsakaðu."
+    },
+    "hello": {
+      "text": "Hæ",
+      "en": "hello"
+    },
+    "please": {
+      "text": "takk",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "Takk fyrir",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "Bless",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "já",
+      "en": "yes"
+    },
+    "no": {
+      "text": "nei",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Hvað heitir þú",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Gaman að kynnast þér",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Hvað kostar þetta",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Reikninginn, takk",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Sjáumst á morgun",
+      "en": "see you tomorrow"
+    },
+    "today": {
+      "text": "í dag",
+      "en": "today"
+    },
+    "tomorrow": {
+      "text": "á morgun",
+      "en": "tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "drekktu-kaffi",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "accusative"
+      ],
+      "text": "Drekktu kaffi.",
+      "means": "Have some coffee.",
+      "words": [
+        [
+          "Drekktu",
+          "drekka"
+        ],
+        [
+          "kaffi",
+          "kaffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Drekktu kaffis.",
+        "Drekktu kaffinu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Drekktu",
+          "Drekka",
+          "Drekkur"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-kaffi",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég drekk kaffi.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "kaffi",
+          "kaffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég drekka kaffi.",
+        "Ég drekkur kaffi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "drekk",
+          "drekka",
+          "drekkur"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-te",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég drekk te.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég drekka te.",
+        "Ég drekkur te."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "drekk",
+          "drekka",
+          "drekkur"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-vatn",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég drekk vatn.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "vatn",
+          "vatn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég drekka vatn.",
+        "Ég drekkur vatn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "drekk",
+          "drekka",
+          "drekkur"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-kaffi-og-te",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég drekk kaffi og te.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "kaffi",
+          "kaffi"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég drekka kaffi og te.",
+        "Ég drekkur kaffi og te."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaffi",
+          "te",
+          "vatn"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-te-og-vatn",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég drekk te og vatn.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "vatn",
+          "vatn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég drekka te og vatn.",
+        "Ég drekkur te og vatn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "kaffi",
+          "vatn"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-vatn-og-kaffi",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég drekk vatn og kaffi.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "vatn",
+          "vatn"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "kaffi",
+          "kaffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég drekka vatn og kaffi.",
+        "Ég drekkur vatn og kaffi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vatn",
+          "kaffi",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "kaffi-takk",
+      "topic": "food",
+      "concepts": [
+        "no-indefinite"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kaffi, takk.",
+      "means": "Coffee, please.",
+      "words": [
+        [
+          "Kaffi,",
+          "kaffi"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaffis, takk.",
+        "Kaffinu, takk."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kaffi,",
+          "Te,",
+          "Vatn,"
+        ]
+      }
+    },
+    {
+      "id": "h-eitt-kaffi-takk",
+      "topic": "food",
+      "concepts": [
+        "gender",
+        "numbers"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Hæ! Eitt kaffi, takk.",
+      "means": "Hello! A coffee, please.",
+      "words": [
+        [
+          "Hæ!"
+        ],
+        [
+          "Eitt",
+          "einn"
+        ],
+        [
+          "kaffi,",
+          "kaffi"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hæ! Eitt kaffis, takk.",
+        "Hæ! Eitt kaffinu, takk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Eitt",
+          "Ein",
+          "Eina"
+        ]
+      }
+    },
+    {
+      "id": "eitt-te-og-eitt-vatn-takk",
+      "topic": "food",
+      "concepts": [
+        "gender",
+        "numbers"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Eitt te og eitt vatn, takk.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Eitt",
+          "einn"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "eitt",
+          "einn"
+        ],
+        [
+          "vatn,",
+          "vatn"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Einn te og eitt vatn, takk.",
+        "Eitt te og einn vatn, takk."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Eitt",
+          "Einn",
+          "Ein"
+        ]
+      }
+    },
+    {
+      "id": "eitt-kaffi-takk-fyrir",
+      "topic": "food",
+      "concepts": [
+        "gender",
+        "numbers"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Eitt kaffi. Takk fyrir.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Eitt",
+          "einn"
+        ],
+        [
+          "kaffi.",
+          "kaffi"
+        ],
+        [
+          "Takk"
+        ],
+        [
+          "fyrir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Einn kaffi. Takk fyrir.",
+        "Ein kaffi. Takk fyrir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Eitt",
+          "Einn",
+          "Ein"
+        ]
+      }
+    },
+    {
+      "id": "h-eitt-te-takk",
+      "topic": "food",
+      "concepts": [
+        "gender",
+        "numbers"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Hæ! Eitt te, takk.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Hæ!"
+        ],
+        [
+          "Eitt",
+          "einn"
+        ],
+        [
+          "te,",
+          "te"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hæ! Einn te, takk.",
+        "Hæ! Ein te, takk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Eitt",
+          "Einn",
+          "Ein"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-mjolk",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég drekk mjólk.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "mjólk",
+          "mjólk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég drekk mjólkur.",
+        "Ég drekka mjólk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "drekk",
+          "drekka",
+          "drekkur"
+        ]
+      }
+    },
+    {
+      "id": "ja-takk",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Já, takk.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Já,"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já, fyrir takk.",
+        "Já, takk fyrir fyrir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Já,",
+          "Nei,",
+          "Bless,"
+        ]
+      }
+    },
+    {
+      "id": "nei-takk",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "no"
+      ],
+      "text": "Nei, takk.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nei,"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nei, fyrir takk.",
+        "Nei, takk fyrir fyrir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nei,",
+          "Já,",
+          "Hæ,"
+        ]
+      }
+    },
+    {
+      "id": "eg-hef-a-gott-takk",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ég hef það gott, takk.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "hef",
+          "hafa"
+        ],
+        [
+          "það",
+          "það"
+        ],
+        [
+          "gott,",
+          "góður"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "it"
+        ],
+        [
+          "good"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég hafa það gott, takk.",
+        "Ég hef það góður, takk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hef",
+          "hafa",
+          "hefur"
+        ]
+      }
+    },
+    {
+      "id": "ja-takk-bless",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "please",
+        "yes"
+      ],
+      "text": "Já, takk. Bless!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Já,"
+        ],
+        [
+          "takk."
+        ],
+        [
+          "Bless"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já, fyrir takk. Bless!",
+        "Já, takk fyrir fyrir. Bless!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Já,",
+          "Nei,",
+          "Hæ,"
+        ]
+      }
+    },
+    {
+      "id": "nei-takk-bless",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "please",
+        "no"
+      ],
+      "text": "Nei, takk. Bless!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nei,"
+        ],
+        [
+          "takk."
+        ],
+        [
+          "Bless"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nei, fyrir takk. Bless!",
+        "Nei, takk fyrir fyrir. Bless!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nei,",
+          "Já,",
+          "Hæ,"
+        ]
+      }
+    },
+    {
+      "id": "h-gaman-a-kynnast-er",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Hæ! Gaman að kynnast þér.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Hæ!"
+        ],
+        [
+          "Gaman"
+        ],
+        [
+          "að"
+        ],
+        [
+          "kynnast"
+        ],
+        [
+          "þér"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice"
+        ],
+        [
+          "to"
+        ],
+        [
+          "get acquainted"
+        ],
+        [
+          "with you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hæ! Gaman að kynnast þú.",
+        "Hæ! Gaman að kynnast ég."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "þér",
+          "þú",
+          "ég"
+        ]
+      }
+    },
+    {
+      "id": "u-ert-nemandi",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "nominative",
+        "no-indefinite"
+      ],
+      "text": "Þú ert nemandi.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Þú",
+          "þú"
+        ],
+        [
+          "ert",
+          "vera"
+        ],
+        [
+          "nemandi",
+          "nemandi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Þú er nemandi.",
+        "Þú ert nemanda."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ert",
+          "er",
+          "vera"
+        ]
+      }
+    },
+    {
+      "id": "ert-u-kennari",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "nominative"
+      ],
+      "text": "Ert þú kennari?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Ert",
+          "vera"
+        ],
+        [
+          "þú",
+          "þú"
+        ],
+        [
+          "kennari",
+          "kennari"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Er þú kennari?",
+        "Ert þú kennara?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ert",
+          "Er",
+          "Vera"
+        ]
+      }
+    },
+    {
+      "id": "eg-er-ekki-kennari",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ekki",
+        "nominative"
+      ],
+      "text": "Ég er ekki kennari.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ],
+        [
+          "kennari",
+          "kennari"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég ert ekki kennari.",
+        "Ég er ekki kennara."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "er",
+          "ert",
+          "vera"
+        ]
+      }
+    },
+    {
+      "id": "mamma-min-er-kennari",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "present"
+      ],
+      "text": "Mamma mín er kennari.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Mamma",
+          "mamma"
+        ],
+        [
+          "mín",
+          "minn"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "kennari",
+          "kennari"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mamma minn er kennari.",
+        "Mamma mín ert kennari."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mín",
+          "minn",
+          "mitt"
+        ]
+      }
+    },
+    {
+      "id": "etta-er-mamma-min",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "present"
+      ],
+      "text": "Þetta er mamma mín.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Þetta",
+          "þessi"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ],
+        [
+          "mín",
+          "minn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Þetta er mamma minn.",
+        "Þetta ert mamma mín."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mamma",
+          "pabbi",
+          "bróðir"
+        ]
+      }
+    },
+    {
+      "id": "etta-er-pabbi-minn",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "present"
+      ],
+      "text": "Þetta er pabbi minn.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Þetta",
+          "þessi"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "pabbi",
+          "pabbi"
+        ],
+        [
+          "minn",
+          "minn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "father"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Þetta er pabbi mín.",
+        "Þetta ert pabbi minn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pabbi",
+          "mamma",
+          "systir"
+        ]
+      }
+    },
+    {
+      "id": "pabbi-minn-er-kennari",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "present"
+      ],
+      "text": "Pabbi minn er kennari.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Pabbi",
+          "pabbi"
+        ],
+        [
+          "minn",
+          "minn"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "kennari",
+          "kennari"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Father"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pabbi mín er kennari.",
+        "Pabbi minn ert kennari."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "minn",
+          "mín",
+          "mitt"
+        ]
+      }
+    },
+    {
+      "id": "bro-ir-minn-er-nemandi",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "nominative"
+      ],
+      "text": "Bróðir minn er nemandi.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Bróðir",
+          "bróðir"
+        ],
+        [
+          "minn",
+          "minn"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "nemandi",
+          "nemandi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Brother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bróðir mín er nemandi.",
+        "Bróðir minn er nemanda."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "minn",
+          "mín",
+          "mitt"
+        ]
+      }
+    },
+    {
+      "id": "etta-er-systir-min",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "nominative"
+      ],
+      "text": "Þetta er systir mín.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Þetta",
+          "þessi"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "systir",
+          "systir"
+        ],
+        [
+          "mín",
+          "minn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Þetta er systir minn.",
+        "Þetta er systur mín."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "systir",
+          "bróðir",
+          "pabbi"
+        ]
+      }
+    },
+    {
+      "id": "eg-a-sima",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-indefinite"
+      ],
+      "text": "Ég á síma.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "á",
+          "eiga"
+        ],
+        [
+          "síma",
+          "sími"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég átt síma.",
+        "Ég á sími."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "á",
+          "átt",
+          "eiga"
+        ]
+      }
+    },
+    {
+      "id": "att-u-lykil",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "accusative"
+      ],
+      "text": "Átt þú lykil?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Átt",
+          "eiga"
+        ],
+        [
+          "þú",
+          "þú"
+        ],
+        [
+          "lykil",
+          "lykill"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Á þú lykil?",
+        "Átt þú lykill?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Átt",
+          "Á",
+          "Eiga"
+        ]
+      }
+    },
+    {
+      "id": "eg-a-bro-ur-og-systur",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-indefinite"
+      ],
+      "text": "Ég á bróður og systur.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "á",
+          "eiga"
+        ],
+        [
+          "bróður",
+          "bróðir"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "systur",
+          "systir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég á bróðir og systur.",
+        "Ég á bróður og systir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bróður",
+          "bróðir",
+          "bræðrum"
+        ]
+      }
+    },
+    {
+      "id": "eg-a-ekki-bok",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ekki",
+        "accusative"
+      ],
+      "text": "Ég á ekki bók.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "á",
+          "eiga"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ],
+        [
+          "bók",
+          "bók"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "not"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég átt ekki bók.",
+        "Ég á ekki bókar."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "á",
+          "átt",
+          "eiga"
+        ]
+      }
+    },
+    {
+      "id": "systir-min-er-l-knir",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "nominative",
+        "no-indefinite"
+      ],
+      "text": "Systir mín er læknir.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Systir",
+          "systir"
+        ],
+        [
+          "mín",
+          "minn"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "læknir",
+          "læknir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Systir minn er læknir.",
+        "Systir mín er lækni."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mín",
+          "minn",
+          "mitt"
+        ]
+      }
+    },
+    {
+      "id": "u-ert-go-ur-vinur",
+      "topic": "people",
+      "concepts": [
+        "adjective",
+        "gender",
+        "nominative"
+      ],
+      "text": "Þú ert góður vinur.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Þú",
+          "þú"
+        ],
+        [
+          "ert",
+          "vera"
+        ],
+        [
+          "góður",
+          "góður"
+        ],
+        [
+          "vinur",
+          "vinur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Þú ert gott vinur.",
+        "Þú ert góður vin."
+      ],
+      "otherGender": {
+        "text": "Þú ert góð vinkona.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "góður",
+          "góð",
+          "gott"
+        ]
+      }
+    },
+    {
+      "id": "hvar-er-lykill-minn",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "nominative"
+      ],
+      "text": "Hvar er lykill minn?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Hvar",
+          "hvar"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "lykill",
+          "lykill"
+        ],
+        [
+          "minn",
+          "minn"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "key"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hvar lykill minn er?",
+        "Hvar er lykill mín?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hvar",
+          "Hér",
+          "Þar"
+        ]
+      }
+    },
+    {
+      "id": "simi-minn-er-her",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "present",
+        "gender"
+      ],
+      "text": "Sími minn er hér.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Sími",
+          "sími"
+        ],
+        [
+          "minn",
+          "minn"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "hér",
+          "hér"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Phone"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sími mín er hér.",
+        "Sími minn ert hér."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "minn",
+          "mín",
+          "mitt"
+        ]
+      }
+    },
+    {
+      "id": "lykillinn-er-ar",
+      "topic": "out",
+      "concepts": [
+        "definite",
+        "present",
+        "nominative"
+      ],
+      "text": "Lykillinn er þar.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Lykillinn",
+          "lykill"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "þar",
+          "þar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Lykilinn er þar.",
+        "Lykillinn ert þar."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "er",
+          "ert",
+          "vera"
+        ]
+      }
+    },
+    {
+      "id": "afsaki-hvar-er-ba-herbergi",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "definite",
+        "present"
+      ],
+      "chunks": [
+        "afsakid"
+      ],
+      "text": "Afsakið, hvar er baðherbergið?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Afsakið,"
+        ],
+        [
+          "hvar",
+          "hvar"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "baðherbergið",
+          "baðherbergi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Afsakið, hvar baðherbergið er?",
+        "Afsakið, hvar ert baðherbergið?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "er",
+          "ert",
+          "vera"
+        ]
+      }
+    },
+    {
+      "id": "hvar-er-mamma-min",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "gender"
+      ],
+      "text": "Hvar er mamma mín?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Hvar",
+          "hvar"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ],
+        [
+          "mín",
+          "minn"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hvar mamma mín er?",
+        "Hvar er mamma minn?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mamma",
+          "pabbi",
+          "bróðir"
+        ]
+      }
+    },
+    {
+      "id": "systir-min-er-her",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "gender",
+        "nominative"
+      ],
+      "text": "Systir mín er hér.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Systir",
+          "systir"
+        ],
+        [
+          "mín",
+          "minn"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "hér",
+          "hér"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Systir minn er hér.",
+        "Systur mín er hér."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mín",
+          "minn",
+          "mitt"
+        ]
+      }
+    },
+    {
+      "id": "tvo-kaffi-takk",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "gender",
+        "plural"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Tvö kaffi, takk.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Tvö",
+          "tveir"
+        ],
+        [
+          "kaffi,",
+          "kaffi"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tveir kaffi, takk.",
+        "Tvær kaffi, takk."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tvö",
+          "Tveir",
+          "Tvær"
+        ]
+      }
+    },
+    {
+      "id": "eina-bok-takk",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Eina bók, takk.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Eina",
+          "einn"
+        ],
+        [
+          "bók,",
+          "bók"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Einn bók, takk.",
+        "Eitt bók, takk."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Eina",
+          "Einn",
+          "Eitt"
+        ]
+      }
+    },
+    {
+      "id": "eg-a-rjar-b-kur",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "plural",
+        "gender",
+        "accusative"
+      ],
+      "text": "Ég á þrjár bækur.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "á",
+          "eiga"
+        ],
+        [
+          "þrjár",
+          "þrír"
+        ],
+        [
+          "bækur",
+          "bók"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég á þrír bækur.",
+        "Ég á þrjú bækur."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "þrjár",
+          "þrír",
+          "þrjú"
+        ]
+      }
+    },
+    {
+      "id": "eg-a-ekki-peninga",
+      "topic": "out",
+      "concepts": [
+        "ekki",
+        "accusative",
+        "present"
+      ],
+      "text": "Ég á ekki peninga.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "á",
+          "eiga"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ],
+        [
+          "peninga",
+          "peningar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "not"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég á ekki peningar.",
+        "Ég átt ekki peninga."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "á",
+          "átt",
+          "eiga"
+        ]
+      }
+    },
+    {
+      "id": "afsaki-hva-kostar-etta",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "afsakid"
+      ],
+      "text": "Afsakið, hvað kostar þetta?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Afsakið,"
+        ],
+        [
+          "hvað"
+        ],
+        [
+          "kostar"
+        ],
+        [
+          "þetta"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "what"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Afsakið, hvað kosta þetta?",
+        "Afsakið, hvað þetta kostar?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kostar",
+          "kosta",
+          "kosta ég"
+        ]
+      }
+    },
+    {
+      "id": "h-reikninginn-takk",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "definite"
+      ],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Hæ! Reikninginn, takk.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Hæ!"
+        ],
+        [
+          "Reikninginn,"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hæ! Reikningurinn, takk.",
+        "Hæ! Reikningsins, takk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Reikninginn,",
+          "Reikningurinn,",
+          "Reikningsins,"
+        ]
+      }
+    },
+    {
+      "id": "eg-skil-ekki",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ekki"
+      ],
+      "text": "Ég skil ekki.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "skil",
+          "skilja"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég skilur ekki.",
+        "Ég skilja ekki."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "skil",
+          "skilur",
+          "skilja"
+        ]
+      }
+    },
+    {
+      "id": "skilur-u",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Skilur þú?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Skilur",
+          "skilja"
+        ],
+        [
+          "þú",
+          "þú"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Understand"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Skil þú?",
+        "Skilja þú?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Skilur",
+          "Skil",
+          "Skilja"
+        ]
+      }
+    },
+    {
+      "id": "eg-tala-sma-islensku",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ég tala smá íslensku.",
+      "means": "I speak a little Icelandic.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "tala",
+          "tala"
+        ],
+        [
+          "smá",
+          "smá"
+        ],
+        [
+          "íslensku",
+          "íslenska"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Icelandic"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég talar smá íslensku.",
+        "Ég tala smá íslenska."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tala",
+          "talar",
+          "talið"
+        ]
+      }
+    },
+    {
+      "id": "eg-vil-kaffi",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-indefinite"
+      ],
+      "text": "Ég vil kaffi.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "vil",
+          "vilja"
+        ],
+        [
+          "kaffi",
+          "kaffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég vilt kaffi.",
+        "Ég vilja kaffi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vil",
+          "vilt",
+          "vilja"
+        ]
+      }
+    },
+    {
+      "id": "eg-vil-vatn-takk",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ég vil vatn, takk.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "vil",
+          "vilja"
+        ],
+        [
+          "vatn,",
+          "vatn"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég vilt vatn, takk.",
+        "Ég vilja vatn, takk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vil",
+          "vilt",
+          "vilja"
+        ]
+      }
+    },
+    {
+      "id": "husi-er-her",
+      "topic": "home",
+      "concepts": [
+        "definite",
+        "present",
+        "nominative"
+      ],
+      "text": "Húsið er hér.",
+      "means": "The house is here.",
+      "words": [
+        [
+          "Húsið",
+          "hús"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "hér",
+          "hér"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Húsinu er hér.",
+        "Húsið ert hér."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "er",
+          "ert",
+          "eru"
+        ]
+      }
+    },
+    {
+      "id": "herbergi-mitt-er-liti",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "adjective",
+        "gender",
+        "definite"
+      ],
+      "text": "Herbergið mitt er lítið.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Herbergið",
+          "herbergi"
+        ],
+        [
+          "mitt",
+          "minn"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "lítið",
+          "lítill"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The room"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Herbergið minn er lítið.",
+        "Herbergið mitt er lítill."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mitt",
+          "minn",
+          "mín"
+        ]
+      }
+    },
+    {
+      "id": "eg-by-i-litlu-husi",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "dative",
+        "adjective",
+        "no-indefinite"
+      ],
+      "text": "Ég bý í litlu húsi.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "bý",
+          "búa"
+        ],
+        [
+          "í",
+          "í"
+        ],
+        [
+          "litlu",
+          "lítill"
+        ],
+        [
+          "húsi",
+          "hús"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég býr í litlu húsi.",
+        "Ég bý í lítið hús."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "litlu",
+          "lítið",
+          "lítill"
+        ]
+      }
+    },
+    {
+      "id": "hvar-byr-u",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Hvar býrð þú?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Hvar",
+          "hvar"
+        ],
+        [
+          "býrð",
+          "búa"
+        ],
+        [
+          "þú",
+          "þú"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "live"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hvar bý þú?",
+        "Hvar þú býrð?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "býrð",
+          "bý",
+          "búa"
+        ]
+      }
+    },
+    {
+      "id": "etta-hus-er-stort",
+      "topic": "home",
+      "concepts": [
+        "gender",
+        "adjective",
+        "present"
+      ],
+      "text": "Þetta hús er stórt.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Þetta",
+          "þessi"
+        ],
+        [
+          "hús",
+          "hús"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "stórt",
+          "stór"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Þessi hús er stórt.",
+        "Þetta hús er stór."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Þetta",
+          "Þessi",
+          "Þessir"
+        ]
+      }
+    },
+    {
+      "id": "mamma-min-byr-her",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Mamma mín býr hér.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mamma",
+          "mamma"
+        ],
+        [
+          "mín",
+          "minn"
+        ],
+        [
+          "býr",
+          "búa"
+        ],
+        [
+          "hér",
+          "hér"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mamma mín bý hér.",
+        "Mamma minn býr hér."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "býr",
+          "bý",
+          "búa"
+        ]
+      }
+    },
+    {
+      "id": "a-er-gott-a-bua-her",
+      "topic": "home",
+      "concepts": [
+        "infinitive",
+        "dummy-subject",
+        "gender"
+      ],
+      "text": "Það er gott að búa hér.",
+      "means": "It's good to live here.",
+      "words": [
+        [
+          "Það",
+          "það"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "gott",
+          "góður"
+        ],
+        [
+          "að",
+          "að"
+        ],
+        [
+          "búa",
+          "búa"
+        ],
+        [
+          "hér",
+          "hér"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "is"
+        ],
+        [
+          "good"
+        ],
+        [
+          "to"
+        ],
+        [
+          "live"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Það er gott að bý hér.",
+        "Það er góður að búa hér."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "búa",
+          "bý",
+          "býr"
+        ]
+      }
+    },
+    {
+      "id": "eg-fer-i-skola",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative",
+        "where-whereto"
+      ],
+      "text": "Ég fer í skóla.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "fer",
+          "fara"
+        ],
+        [
+          "í",
+          "í"
+        ],
+        [
+          "skóla",
+          "skóli"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég ferð í skóla.",
+        "Ég fer í skóli."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fer",
+          "ferð",
+          "fara"
+        ]
+      }
+    },
+    {
+      "id": "afsaki-hvar-er-lestarsto-in",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "definite",
+        "nominative"
+      ],
+      "chunks": [
+        "afsakid"
+      ],
+      "text": "Afsakið, hvar er lestarstöðin?",
+      "means": "Excuse me, where is the train station?",
+      "words": [
+        [
+          "Afsakið,"
+        ],
+        [
+          "hvar",
+          "hvar"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "lestarstöðin",
+          "lestarstöð"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the train station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Afsakið, hvar lestarstöðin er?",
+        "Afsakið, hvar er lestarstöðina?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "er",
+          "ert",
+          "eru"
+        ]
+      }
+    },
+    {
+      "id": "mamma-min-fer-til-borgarinnar",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive",
+        "where-whereto"
+      ],
+      "text": "Mamma mín fer til borgarinnar.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mamma",
+          "mamma"
+        ],
+        [
+          "mín",
+          "minn"
+        ],
+        [
+          "fer",
+          "fara"
+        ],
+        [
+          "til",
+          "til"
+        ],
+        [
+          "borgarinnar",
+          "borg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mamma mín fer til borgina.",
+        "Mamma mín ferð til borgarinnar."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fer",
+          "ferð",
+          "fara"
+        ]
+      }
+    },
+    {
+      "id": "essi-bill-er-litill",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "adjective",
+        "nominative"
+      ],
+      "text": "Þessi bíll er lítill.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Þessi",
+          "þessi"
+        ],
+        [
+          "bíll",
+          "bíll"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "lítill",
+          "lítill"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Þetta bíll er lítill.",
+        "Þessi bíll er lítið."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Þessi",
+          "Þetta",
+          "Þessir"
+        ]
+      }
+    },
+    {
+      "id": "eg-a-bil",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-indefinite"
+      ],
+      "text": "Ég á bíl.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "á",
+          "eiga"
+        ],
+        [
+          "bíl",
+          "bíll"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég á bíll.",
+        "Ég átt bíl."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "á",
+          "átt",
+          "eiga"
+        ]
+      }
+    },
+    {
+      "id": "eg-vinn-i-dag",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "today"
+      ],
+      "text": "Ég vinn í dag.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "vinn",
+          "vinna"
+        ],
+        [
+          "í"
+        ],
+        [
+          "dag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég vinnur í dag.",
+        "Ég vinna í dag."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vinn",
+          "vinnur",
+          "vinna"
+        ]
+      }
+    },
+    {
+      "id": "takk-fyrir-sjaumst-a-morgun",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Takk fyrir. Sjáumst á morgun!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Takk"
+        ],
+        [
+          "fyrir."
+        ],
+        [
+          "Sjáumst"
+        ],
+        [
+          "á"
+        ],
+        [
+          "morgun"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Takk fyrir. Sjáumst morgun á!",
+        "Fyrir takk. Sjáumst á morgun!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "á",
+          "til",
+          "að"
+        ]
+      }
+    },
+    {
+      "id": "a-morgun-fer-eg-til-borgarinnar",
+      "topic": "plans",
+      "concepts": [
+        "verb-second",
+        "future",
+        "genitive"
+      ],
+      "chunks": [
+        "tomorrow"
+      ],
+      "text": "Á morgun fer ég til borgarinnar.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Á"
+        ],
+        [
+          "morgun"
+        ],
+        [
+          "fer",
+          "fara"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "til",
+          "til"
+        ],
+        [
+          "borgarinnar",
+          "borg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go"
+        ],
+        [
+          "I"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Á morgun ég fer til borgarinnar.",
+        "Á morgun fer ég til borgina."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fer",
+          "ferð",
+          "fara"
+        ]
+      }
+    },
+    {
+      "id": "eg-get-ekki-fari-i-dag",
+      "topic": "plans",
+      "concepts": [
+        "geta",
+        "ekki",
+        "present"
+      ],
+      "chunks": [
+        "today"
+      ],
+      "text": "Ég get ekki farið í dag.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "get",
+          "geta"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ],
+        [
+          "farið",
+          "fara"
+        ],
+        [
+          "í"
+        ],
+        [
+          "dag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "can"
+        ],
+        [
+          "not"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég get ekki fara í dag.",
+        "Ég getur ekki farið í dag."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "farið",
+          "fara",
+          "fer"
+        ]
+      }
+    },
+    {
+      "id": "eg-arf-a-vinna-a-morgun",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "future",
+        "present"
+      ],
+      "chunks": [
+        "tomorrow"
+      ],
+      "text": "Ég þarf að vinna á morgun.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "þarf",
+          "þurfa"
+        ],
+        [
+          "að",
+          "að"
+        ],
+        [
+          "vinna",
+          "vinna"
+        ],
+        [
+          "á"
+        ],
+        [
+          "morgun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "need"
+        ],
+        [
+          "to"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég þarf að vinn á morgun.",
+        "Ég þurfa að vinna á morgun."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vinna",
+          "vinn",
+          "vinnur"
+        ]
+      }
+    },
+    {
+      "id": "hae-hvad-segirdu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "hvad-segirdu",
+        "hello"
+      ],
+      "text": "Hæ, hvað segirðu?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Hæ,"
+        ],
+        [
+          "hvað"
+        ],
+        [
+          "segirðu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "what"
+        ],
+        [
+          "say you",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "segirðu"
+      ],
+      "wrong": [
+        "Hæ, hvað segirðum?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "segirðu",
+          "segja",
+          "sagt"
+        ]
+      }
+    },
+    {
+      "id": "hvad-heitir-thu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Hvað heitir þú?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Hvað"
+        ],
+        [
+          "heitir"
+        ],
+        [
+          "þú"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are called",
+          true
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "heitir"
+      ],
+      "wrong": [
+        "Hvað heiti þú?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "heitir",
+          "heiti",
+          "heitum"
+        ]
+      }
+    },
+    {
+      "id": "talar-thu-ensku",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "accusative",
+        "present"
+      ],
+      "text": "Talar þú ensku?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Talar",
+          "tala"
+        ],
+        [
+          "þú",
+          "þú"
+        ],
+        [
+          "ensku",
+          "enska"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Speak",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Talar"
+      ],
+      "wrong": [
+        "Talar þú enska?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ensku",
+          "enska",
+          "enskur"
+        ]
+      }
+    },
+    {
+      "id": "brodir-minn-byr",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "dative",
+        "present",
+        "nominative"
+      ],
+      "text": "Bróðir minn býr í Reykjavík.",
+      "means": "My brother lives in Reykjavík.",
+      "words": [
+        [
+          "Bróðir",
+          "bróðir"
+        ],
+        [
+          "minn",
+          "minn"
+        ],
+        [
+          "býr",
+          "búa"
+        ],
+        [
+          "í"
+        ],
+        [
+          "Reykjavík"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Brother",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "lives"
+        ],
+        [
+          "in Reykjavík"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Bróðir",
+        "minn"
+      ],
+      "wrong": [
+        "Bróðir mín býr í Reykjavík."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "minn",
+          "mín",
+          "mitt"
+        ]
+      }
+    },
+    {
+      "id": "eg-a-eina-systur",
+      "topic": "people",
+      "concepts": [
+        "numbers",
+        "accusative",
+        "gender"
+      ],
+      "text": "Ég á eina systur og tvo bræður.",
+      "means": "I have one sister and two brothers.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "á",
+          "eiga"
+        ],
+        [
+          "eina",
+          "einn"
+        ],
+        [
+          "systur",
+          "systir"
+        ],
+        [
+          "og"
+        ],
+        [
+          "tvo",
+          "tveir"
+        ],
+        [
+          "bræður",
+          "bróðir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "one sister"
+        ],
+        [
+          "and"
+        ],
+        [
+          "two brothers"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég á ein systir og tvo bræður.",
+        "Ég á eina systur og tvær bræður."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "tvo",
+          "tveir",
+          "tvær"
+        ]
+      }
+    },
+    {
+      "id": "bill-pabba-mins",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "possessive",
+        "present"
+      ],
+      "text": "Þetta er bíll pabba míns.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Þetta",
+          "þessi"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "bíll",
+          "bíll"
+        ],
+        [
+          "pabba",
+          "pabbi"
+        ],
+        [
+          "míns",
+          "minn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the car",
+          true
+        ],
+        [
+          "of dad",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bíll",
+        "pabba",
+        "míns"
+      ],
+      "wrong": [
+        "Þetta er bíll pabbi míns."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pabba",
+          "pabbi",
+          "pabbinn"
+        ]
+      }
+    },
+    {
+      "id": "eg-veit-ekki-hvar",
+      "topic": "people",
+      "concepts": [
+        "ekki",
+        "present",
+        "verb-second"
+      ],
+      "text": "Ég veit ekki hvar hann býr.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "veit",
+          "vita"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ],
+        [
+          "hvar"
+        ],
+        [
+          "hann",
+          "hann"
+        ],
+        [
+          "býr",
+          "búa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "know",
+          true
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "where"
+        ],
+        [
+          "he"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "veit",
+        "ekki"
+      ],
+      "wrong": [
+        "Ég ekki veit hvar hann býr."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "veit",
+          "veist",
+          "vita"
+        ]
+      }
+    },
+    {
+      "id": "eg-er-kennari",
+      "topic": "people",
+      "concepts": [
+        "no-indefinite",
+        "present",
+        "nominative"
+      ],
+      "text": "Ég er kennari.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "kennari",
+          "kennari"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég ert kennari."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "er",
+          "ert",
+          "eru"
+        ]
+      }
+    },
+    {
+      "id": "mer-likar-myndin",
+      "topic": "people",
+      "concepts": [
+        "oblique-subject",
+        "definite",
+        "present",
+        "dative"
+      ],
+      "text": "Mér líkar myndin.",
+      "means": "I like the movie.",
+      "words": [
+        [
+          "Mér",
+          "ég"
+        ],
+        [
+          "líkar",
+          "líka"
+        ],
+        [
+          "myndin",
+          "mynd"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing"
+        ],
+        [
+          "the movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Mér",
+        "myndin"
+      ],
+      "wrong": [
+        "Ég líkar myndin."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mér",
+          "Ég",
+          "Mig"
+        ]
+      }
+    },
+    {
+      "id": "i-gaer-var-eg-heima",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "verb-second"
+      ],
+      "text": "Í gær var ég heima.",
+      "means": "Yesterday I was at home.",
+      "words": [
+        [
+          "Í"
+        ],
+        [
+          "gær"
+        ],
+        [
+          "var",
+          "vera"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "heima",
+          "heima"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "was",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "var",
+        "ég"
+      ],
+      "wrong": [
+        "Í gær var ég heim."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "heima",
+          "heim",
+          "heimili"
+        ]
+      }
+    },
+    {
+      "id": "mamma-min-vinnur",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "dative",
+        "present",
+        "nominative"
+      ],
+      "text": "Mamma mín vinnur á spítala.",
+      "means": "My mom works at a hospital.",
+      "words": [
+        [
+          "Mamma",
+          "mamma"
+        ],
+        [
+          "mín",
+          "minn"
+        ],
+        [
+          "vinnur",
+          "vinna"
+        ],
+        [
+          "á"
+        ],
+        [
+          "spítala",
+          "spítali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mom",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "works"
+        ],
+        [
+          "at a hospital"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Mamma",
+        "mín"
+      ],
+      "wrong": [
+        "Mamma minn vinnur á spítala."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "spítala",
+          "spítali",
+          "spítalinn"
+        ]
+      }
+    },
+    {
+      "id": "by-i-litilli-ibud",
+      "topic": "home",
+      "concepts": [
+        "dative",
+        "adjective",
+        "where-whereto",
+        "gender"
+      ],
+      "text": "Ég bý í lítilli íbúð.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "bý",
+          "búa"
+        ],
+        [
+          "í"
+        ],
+        [
+          "lítilli",
+          "lítill"
+        ],
+        [
+          "íbúð",
+          "íbúð"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég bý í lítill íbúð."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lítilli",
+          "lítill",
+          "litla"
+        ]
+      }
+    },
+    {
+      "id": "a-bordinu-er-bok",
+      "topic": "home",
+      "concepts": [
+        "dative",
+        "definite",
+        "verb-second",
+        "no-indefinite"
+      ],
+      "text": "Á borðinu er bók.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Á"
+        ],
+        [
+          "borðinu",
+          "borð"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "bók",
+          "bók"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Á",
+        "borðinu",
+        "bók"
+      ],
+      "wrong": [
+        "Á borðið er bók."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "borðinu",
+          "borðið",
+          "borðsins"
+        ]
+      }
+    },
+    {
+      "id": "engin-mjolk-i-isskapnum",
+      "topic": "home",
+      "concepts": [
+        "dummy-subject",
+        "dative",
+        "definite"
+      ],
+      "text": "Það er engin mjólk í ísskápnum.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Það",
+          "það"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "engin",
+          "enginn"
+        ],
+        [
+          "mjólk",
+          "mjólk"
+        ],
+        [
+          "í"
+        ],
+        [
+          "ísskápnum",
+          "ísskápur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "is"
+        ],
+        [
+          "no milk"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Það er engin mjólk í ísskápinn."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ísskápnum",
+          "ísskápinn",
+          "ísskápur"
+        ]
+      }
+    },
+    {
+      "id": "geturdu-lokad-glugganum",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "geta",
+        "dative",
+        "definite"
+      ],
+      "text": "Geturðu lokað glugganum?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Geturðu",
+          "geta"
+        ],
+        [
+          "lokað",
+          "loka"
+        ],
+        [
+          "glugganum",
+          "gluggi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can you"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Geturðu loka glugganum?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lokað",
+          "loka",
+          "lokar"
+        ]
+      }
+    },
+    {
+      "id": "vid-eigum-stort-eldhus",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "gender",
+        "plural",
+        "accusative"
+      ],
+      "text": "Við eigum stórt eldhús og litlar svalir.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Við",
+          "við"
+        ],
+        [
+          "eigum",
+          "eiga"
+        ],
+        [
+          "stórt",
+          "stór"
+        ],
+        [
+          "eldhús",
+          "eldhús"
+        ],
+        [
+          "og"
+        ],
+        [
+          "litlar",
+          "lítill"
+        ],
+        [
+          "svalir",
+          "svalir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Við eigum stóran eldhús og litlar svalir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "stórt",
+          "stóra",
+          "stóran"
+        ]
+      }
+    },
+    {
+      "id": "thegar-eg-kem-heim",
+      "topic": "home",
+      "concepts": [
+        "future",
+        "verb-second",
+        "infinitive",
+        "accusative"
+      ],
+      "text": "Þegar við komum heim ætla ég að elda kvöldmat.",
+      "means": "When we get home, I'll cook dinner.",
+      "words": [
+        [
+          "Þegar",
+          "þegar"
+        ],
+        [
+          "við",
+          "við"
+        ],
+        [
+          "komum",
+          "koma"
+        ],
+        [
+          "heim",
+          "heim"
+        ],
+        [
+          "ætla",
+          "ætla"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "að"
+        ],
+        [
+          "elda",
+          "elda"
+        ],
+        [
+          "kvöldmat",
+          "kvöldmatur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When"
+        ],
+        [
+          "we"
+        ],
+        [
+          "come"
+        ],
+        [
+          "home"
+        ],
+        [
+          "mean",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to cook"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4,
+        6,
+        7
+      ],
+      "moved": [
+        "ætla",
+        "ég"
+      ],
+      "wrong": [
+        "Þegar við komum heim ætla ég elda kvöldmat."
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "elda",
+          "eldaði",
+          "eldar"
+        ]
+      }
+    },
+    {
+      "id": "lokadu-dyrunum",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "plural",
+        "dative",
+        "definite"
+      ],
+      "text": "Lokaðu dyrunum, takk.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Lokaðu",
+          "loka"
+        ],
+        [
+          "dyrunum,",
+          "dyr"
+        ],
+        [
+          "takk",
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "thanks"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Lokaðu dyrnar, takk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dyrunum,",
+          "dyrnar,",
+          "dyranna,"
+        ]
+      }
+    },
+    {
+      "id": "hvar-eru-lyklarnir-minir",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "plural",
+        "possessive",
+        "definite"
+      ],
+      "text": "Hvar eru lyklarnir mínir?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Hvar",
+          "hvar"
+        ],
+        [
+          "eru",
+          "vera"
+        ],
+        [
+          "lyklarnir",
+          "lykill"
+        ],
+        [
+          "mínir",
+          "minn"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "the keys",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "lyklarnir",
+        "mínir"
+      ],
+      "wrong": [
+        "Hvar eru lyklarnir minn?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mínir",
+          "minn",
+          "mínar"
+        ]
+      }
+    },
+    {
+      "id": "biddu-eftir-mer",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "dative"
+      ],
+      "text": "Bíddu eftir mér!",
+      "means": "Wait for me!",
+      "words": [
+        [
+          "Bíddu",
+          "bíða"
+        ],
+        [
+          "eftir"
+        ],
+        [
+          "mér",
+          "ég"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait"
+        ],
+        [
+          "for"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Bíddu eftir ég!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mér",
+          "mig",
+          "ég"
+        ]
+      }
+    },
+    {
+      "id": "kaffi-an-sykurs",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "accusative",
+        "present"
+      ],
+      "text": "Ég drekk kaffi án sykurs.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "kaffi",
+          "kaffi"
+        ],
+        [
+          "án",
+          "án"
+        ],
+        [
+          "sykurs",
+          "sykur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég drekk kaffi án sykur."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "sykurs",
+          "sykur",
+          "sykri"
+        ]
+      }
+    },
+    {
+      "id": "eg-drekk-ekki-kaffi",
+      "topic": "food",
+      "concepts": [
+        "ekki",
+        "present"
+      ],
+      "text": "Ég drekk ekki kaffi.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "drekk",
+          "drekka"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ],
+        [
+          "kaffi",
+          "kaffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink",
+          true
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "drekk",
+        "ekki"
+      ],
+      "wrong": [
+        "Ég ekki drekk kaffi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "drekk",
+          "drekkur",
+          "drekka"
+        ]
+      }
+    },
+    {
+      "id": "gaeti-eg-fengid-vatnsglas",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "geta",
+        "no-indefinite"
+      ],
+      "text": "Gæti ég fengið vatnsglas?",
+      "means": "Could I get a glass of water?",
+      "words": [
+        [
+          "Gæti",
+          "geta"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "fengið",
+          "fá"
+        ],
+        [
+          "vatnsglas",
+          "vatnsglas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Could"
+        ],
+        [
+          "I"
+        ],
+        [
+          "get"
+        ],
+        [
+          "a glass of water"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Gæti ég fá vatnsglas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fengið",
+          "fá",
+          "fékk"
+        ]
+      }
+    },
+    {
+      "id": "mig-langar-i-eitthvad-saett",
+      "topic": "food",
+      "concepts": [
+        "oblique-subject",
+        "accusative"
+      ],
+      "text": "Mig langar í eitthvað sætt.",
+      "means": "I want something sweet.",
+      "words": [
+        [
+          "Mig",
+          "ég"
+        ],
+        [
+          "langar",
+          "langa"
+        ],
+        [
+          "í"
+        ],
+        [
+          "eitthvað",
+          "eitthvað"
+        ],
+        [
+          "sætt",
+          "sætur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Me"
+        ],
+        [
+          "longs"
+        ],
+        [
+          "for"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég langar í eitthvað sætt."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mig",
+          "Ég",
+          "Minn"
+        ]
+      }
+    },
+    {
+      "id": "i-gaer-bordudum-pitsu",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "verb-second",
+        "accusative"
+      ],
+      "text": "Í gær borðuðum við pítsu.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Í"
+        ],
+        [
+          "gær"
+        ],
+        [
+          "borðuðum",
+          "borða"
+        ],
+        [
+          "við",
+          "við"
+        ],
+        [
+          "pítsu",
+          "pítsa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "ate",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "borðuðum",
+        "við"
+      ],
+      "wrong": [
+        "Í gær borðuðum við pítsa."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pítsu",
+          "pítsa",
+          "pítsunni"
+        ]
+      }
+    },
+    {
+      "id": "gaman-ad-elda-med-mommu",
+      "topic": "food",
+      "concepts": [
+        "oblique-subject",
+        "dative",
+        "infinitive"
+      ],
+      "text": "Mér finnst gaman að elda með mömmu.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Mér",
+          "ég"
+        ],
+        [
+          "finnst",
+          "finnast"
+        ],
+        [
+          "gaman",
+          "gaman"
+        ],
+        [
+          "að"
+        ],
+        [
+          "elda",
+          "elda"
+        ],
+        [
+          "með",
+          "með"
+        ],
+        [
+          "mömmu",
+          "mamma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "seems",
+          true
+        ],
+        [
+          "fun",
+          true
+        ],
+        [
+          "to cook",
+          true
+        ],
+        [
+          "with mom",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        4,
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Mér",
+        "finnst",
+        "gaman",
+        "að",
+        "elda",
+        "með",
+        "mömmu"
+      ],
+      "wrong": [
+        "Mér finnst gaman að elda með mamma."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "mömmu",
+          "mamma",
+          "mömmur"
+        ]
+      }
+    },
+    {
+      "id": "reikninginn-takk",
+      "topic": "food",
+      "concepts": [
+        "definite",
+        "accusative"
+      ],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "Reikninginn, takk.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Reikninginn,"
+        ],
+        [
+          "takk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "thanks"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Reikningnum, takk."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Reikninginn,",
+          "Reikningnum,",
+          "Reikningsins,"
+        ]
+      }
+    },
+    {
+      "id": "vid-erum-ad-borda",
+      "topic": "food",
+      "concepts": [
+        "progressive",
+        "present",
+        "accusative",
+        "infinitive"
+      ],
+      "text": "Við erum að borða kvöldmat.",
+      "means": "We're eating dinner.",
+      "words": [
+        [
+          "Við",
+          "við"
+        ],
+        [
+          "erum",
+          "vera"
+        ],
+        [
+          "að",
+          "að"
+        ],
+        [
+          "borða",
+          "borða"
+        ],
+        [
+          "kvöldmat",
+          "kvöldmatur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "are"
+        ],
+        [
+          "eating"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Við erum að borðum kvöldmat."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "borða",
+          "borðum",
+          "borðað"
+        ]
+      }
+    },
+    {
+      "id": "i-morgunmat-borda-eg-egg",
+      "topic": "food",
+      "concepts": [
+        "verb-second",
+        "accusative",
+        "plural",
+        "present"
+      ],
+      "text": "Í morgunmat borða ég egg.",
+      "means": "I have eggs for breakfast.",
+      "words": [
+        [
+          "Í"
+        ],
+        [
+          "morgunmat",
+          "morgunmatur"
+        ],
+        [
+          "borða",
+          "borða"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "egg",
+          "egg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For breakfast"
+        ],
+        [
+          "eat",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "eggs"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "borða",
+        "ég"
+      ],
+      "wrong": [
+        "Í morgunmat borðar ég egg."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "borða",
+          "borðar",
+          "borðum"
+        ]
+      }
+    },
+    {
+      "id": "hvad-kostar-kaffid",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "definite",
+        "present"
+      ],
+      "text": "Hvað kostar kaffið?",
+      "means": "How much is the coffee?",
+      "words": [
+        [
+          "Hvað",
+          "hvað"
+        ],
+        [
+          "kostar",
+          "kosta"
+        ],
+        [
+          "kaffið",
+          "kaffi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "costs",
+          true
+        ],
+        [
+          "the coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "kostar"
+      ],
+      "wrong": [
+        "Hvað kosta kaffið?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kostar",
+          "kosta",
+          "kostað"
+        ]
+      }
+    },
+    {
+      "id": "hvar-er-straetostodin",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "definite",
+        "nominative"
+      ],
+      "chunks": [
+        "afsakid"
+      ],
+      "text": "Afsakið, hvar er strætóstöðin?",
+      "means": "Excuse me, where's the bus stop?",
+      "words": [
+        [
+          "Afsakið,"
+        ],
+        [
+          "hvar"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "strætóstöðin",
+          "strætóstöð"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bus stop"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Afsakið, hvar er strætóstöðina?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "strætóstöðin",
+          "strætóstöðina",
+          "strætóstöðinni"
+        ]
+      }
+    },
+    {
+      "id": "eg-fer-i-budina",
+      "topic": "out",
+      "concepts": [
+        "where-whereto",
+        "accusative",
+        "infinitive",
+        "definite"
+      ],
+      "text": "Ég fer í búðina að kaupa brauð.",
+      "means": "I'm going to the store to buy bread.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "fer",
+          "fara"
+        ],
+        [
+          "í"
+        ],
+        [
+          "búðina",
+          "búð"
+        ],
+        [
+          "að"
+        ],
+        [
+          "kaupa",
+          "kaupa"
+        ],
+        [
+          "brauð",
+          "brauð"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "to buy"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég fer í búðinni að kaupa brauð."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "búðina",
+          "búðinni",
+          "búðin"
+        ]
+      }
+    },
+    {
+      "id": "a-morgun-med-straeto",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "verb-second",
+        "where-whereto",
+        "accusative"
+      ],
+      "text": "Á morgun fer ég í vinnuna með strætó.",
+      "means": "Tomorrow I'm going to work by bus.",
+      "words": [
+        [
+          "Á"
+        ],
+        [
+          "morgun"
+        ],
+        [
+          "fer",
+          "fara"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "í"
+        ],
+        [
+          "vinnuna",
+          "vinna"
+        ],
+        [
+          "með",
+          "með"
+        ],
+        [
+          "strætó",
+          "strætó"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ],
+      "moved": [
+        "fer",
+        "ég"
+      ],
+      "wrong": [
+        "Á morgun fer ég í vinnunni með strætó."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "vinnuna",
+          "vinnunni",
+          "vinna"
+        ]
+      }
+    },
+    {
+      "id": "eg-keypti-nyja-ulpu",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "accusative",
+        "adjective",
+        "no-indefinite"
+      ],
+      "text": "Ég keypti nýja úlpu.",
+      "means": "I bought a new jacket.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "keypti",
+          "kaupa"
+        ],
+        [
+          "nýja",
+          "nýr"
+        ],
+        [
+          "úlpu",
+          "úlpa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "bought"
+        ],
+        [
+          "a new jacket"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég keypti ný úlpa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "úlpu",
+          "úlpa",
+          "úlpunni"
+        ]
+      }
+    },
+    {
+      "id": "straetoinn-var-seinn",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "numbers",
+        "dative",
+        "definite"
+      ],
+      "text": "Strætóinn var tíu mínútum of seinn.",
+      "means": "The bus was ten minutes late.",
+      "words": [
+        [
+          "Strætóinn",
+          "strætó"
+        ],
+        [
+          "var",
+          "vera"
+        ],
+        [
+          "tíu",
+          "tíu"
+        ],
+        [
+          "mínútum",
+          "mínúta"
+        ],
+        [
+          "of",
+          "of"
+        ],
+        [
+          "seinn",
+          "seinn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The bus"
+        ],
+        [
+          "was"
+        ],
+        [
+          "ten minutes"
+        ],
+        [
+          "too"
+        ],
+        [
+          "late"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Strætóinn var tíu mínútum of sein."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mínútum",
+          "mínúta",
+          "mínútna"
+        ]
+      }
+    },
+    {
+      "id": "aldrei-komid-til-akureyrar",
+      "topic": "out",
+      "concepts": [
+        "genitive",
+        "past"
+      ],
+      "text": "Ég hef aldrei komið til Akureyrar.",
+      "means": "I've never been to Akureyri.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "hef",
+          "hafa"
+        ],
+        [
+          "aldrei",
+          "aldrei"
+        ],
+        [
+          "komið",
+          "koma"
+        ],
+        [
+          "til",
+          "til"
+        ],
+        [
+          "Akureyrar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "never"
+        ],
+        [
+          "come"
+        ],
+        [
+          "to Akureyri"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég hef aldrei koma til Akureyrar."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "komið",
+          "koma",
+          "kom"
+        ]
+      }
+    },
+    {
+      "id": "skor-of-litlir",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "adjective",
+        "gender"
+      ],
+      "text": "Þessir skór eru of litlir.",
+      "means": "These shoes are too small.",
+      "words": [
+        [
+          "Þessir",
+          "þessi"
+        ],
+        [
+          "skór",
+          "skór"
+        ],
+        [
+          "eru",
+          "vera"
+        ],
+        [
+          "of",
+          "of"
+        ],
+        [
+          "litlir",
+          "lítill"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "These shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Þessir skór eru of lítill."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "litlir",
+          "lítill",
+          "litlar"
+        ]
+      }
+    },
+    {
+      "id": "getum-tekid-leigubil",
+      "topic": "out",
+      "concepts": [
+        "geta",
+        "accusative",
+        "no-indefinite"
+      ],
+      "text": "Við getum tekið leigubíl.",
+      "means": "We can take a taxi.",
+      "words": [
+        [
+          "Við",
+          "við"
+        ],
+        [
+          "getum",
+          "geta"
+        ],
+        [
+          "tekið",
+          "taka"
+        ],
+        [
+          "leigubíl",
+          "leigubíll"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "can"
+        ],
+        [
+          "take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Við getum taka leigubíl."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tekið",
+          "taka",
+          "tókum"
+        ]
+      }
+    },
+    {
+      "id": "a-stodinni-bidur-amma",
+      "topic": "out",
+      "concepts": [
+        "verb-second",
+        "dative",
+        "definite"
+      ],
+      "text": "Á stöðinni bíður amma eftir okkur.",
+      "means": "Grandma's waiting for us at the station.",
+      "words": [
+        [
+          "Á"
+        ],
+        [
+          "stöðinni",
+          "stöð"
+        ],
+        [
+          "bíður",
+          "bíða"
+        ],
+        [
+          "amma",
+          "amma"
+        ],
+        [
+          "eftir"
+        ],
+        [
+          "okkur",
+          "við"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "is waiting"
+        ],
+        [
+          "grandma",
+          true
+        ],
+        [
+          "for us",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "moved": [
+        "Á",
+        "stöðinni",
+        "amma",
+        "eftir",
+        "okkur"
+      ],
+      "wrong": [
+        "Á stöðinni bíður amma eftir við."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "okkur",
+          "við",
+          "okkar"
+        ]
+      }
+    },
+    {
+      "id": "a-laugardaginn-til-ommu",
+      "topic": "out",
+      "concepts": [
+        "verb-second",
+        "genitive",
+        "future",
+        "present"
+      ],
+      "text": "Á laugardaginn förum við til ömmu.",
+      "means": "On Saturday we're going to grandma's.",
+      "words": [
+        [
+          "Á"
+        ],
+        [
+          "laugardaginn",
+          "laugardagur"
+        ],
+        [
+          "förum",
+          "fara"
+        ],
+        [
+          "við",
+          "við"
+        ],
+        [
+          "til",
+          "til"
+        ],
+        [
+          "ömmu",
+          "amma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "go",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "to grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "förum",
+        "við"
+      ],
+      "wrong": [
+        "Á laugardaginn förum við til ömmur."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ömmu",
+          "ömmur",
+          "ömmum"
+        ]
+      }
+    },
+    {
+      "id": "midinn-kostar",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "definite",
+        "present"
+      ],
+      "text": "Miðinn kostar tvö þúsund krónur.",
+      "means": "The ticket costs two thousand krónur.",
+      "words": [
+        [
+          "Miðinn",
+          "miði"
+        ],
+        [
+          "kostar",
+          "kosta"
+        ],
+        [
+          "tvö",
+          "tveir"
+        ],
+        [
+          "þúsund",
+          "þúsund"
+        ],
+        [
+          "krónur",
+          "króna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The ticket"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "two thousand krónur"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Miðinn kostar tveir þúsund krónur."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tvö",
+          "tveir",
+          "tvær"
+        ]
+      }
+    },
+    {
+      "id": "thad-rignir-a-morgun",
+      "topic": "plans",
+      "concepts": [
+        "dummy-subject",
+        "future",
+        "present"
+      ],
+      "text": "Það rignir á morgun.",
+      "means": "It'll rain tomorrow.",
+      "words": [
+        [
+          "Það",
+          "það"
+        ],
+        [
+          "rignir",
+          "rigna"
+        ],
+        [
+          "á"
+        ],
+        [
+          "morgun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "rains"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Það rignir í gær."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "rignir",
+          "rigna",
+          "rigndi"
+        ]
+      }
+    },
+    {
+      "id": "a-morgun-rignir",
+      "topic": "plans",
+      "concepts": [
+        "dummy-subject",
+        "verb-second",
+        "future",
+        "present"
+      ],
+      "text": "Á morgun rignir.",
+      "means": "It'll rain tomorrow.",
+      "words": [
+        [
+          "Á"
+        ],
+        [
+          "morgun"
+        ],
+        [
+          "rignir",
+          "rigna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "rains",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "rignir"
+      ],
+      "wrong": [
+        "Á morgun það rignir."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "rignir",
+          "rigna",
+          "rignum"
+        ]
+      }
+    },
+    {
+      "id": "eg-hringi-i-thig",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "accusative",
+        "present"
+      ],
+      "text": "Ég hringi í þig á morgun.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "hringi",
+          "hringja"
+        ],
+        [
+          "í"
+        ],
+        [
+          "þig",
+          "þú"
+        ],
+        [
+          "á"
+        ],
+        [
+          "morgun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "call"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég hringi í þér á morgun."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "þig",
+          "þér",
+          "þú"
+        ]
+      }
+    },
+    {
+      "id": "nu-tharf-eg-ad-fara",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "verb-second"
+      ],
+      "text": "Nú þarf ég að fara.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Nú",
+          "nú"
+        ],
+        [
+          "þarf",
+          "þurfa"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "að",
+          "að"
+        ],
+        [
+          "fara",
+          "fara"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "need",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to go"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "þarf",
+        "ég"
+      ],
+      "wrong": [
+        "Nú þarf ég fara."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "fara",
+          "fer",
+          "farið"
+        ]
+      }
+    },
+    {
+      "id": "viltu-koma-i-bio",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "infinitive",
+        "dative",
+        "where-whereto"
+      ],
+      "text": "Viltu koma með okkur í bíó?",
+      "means": "Do you want to come to the movies with us?",
+      "words": [
+        [
+          "Viltu",
+          "vilja"
+        ],
+        [
+          "koma",
+          "koma"
+        ],
+        [
+          "með",
+          "með"
+        ],
+        [
+          "okkur",
+          "við"
+        ],
+        [
+          "í"
+        ],
+        [
+          "bíó",
+          "bíó"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Want you",
+          true
+        ],
+        [
+          "to come"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Viltu"
+      ],
+      "wrong": [
+        "Viltu að koma með okkur í bíó?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "koma",
+          "kemur",
+          "komið"
+        ]
+      }
+    },
+    {
+      "id": "um-helgina-a-strondina",
+      "topic": "plans",
+      "concepts": [
+        "verb-second",
+        "where-whereto",
+        "accusative",
+        "future"
+      ],
+      "text": "Um helgina förum við á ströndina.",
+      "means": "We're going to the beach this weekend.",
+      "words": [
+        [
+          "Um"
+        ],
+        [
+          "helgina",
+          "helgi"
+        ],
+        [
+          "förum",
+          "fara"
+        ],
+        [
+          "við",
+          "við"
+        ],
+        [
+          "á"
+        ],
+        [
+          "ströndina",
+          "strönd"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the weekend"
+        ],
+        [
+          "go",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "förum",
+        "við"
+      ],
+      "wrong": [
+        "Um helgina förum við á ströndinni."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ströndina",
+          "ströndinni",
+          "ströndin"
+        ]
+      }
+    },
+    {
+      "id": "hef-laert-islensku",
+      "topic": "plans",
+      "concepts": [
+        "past",
+        "accusative",
+        "numbers"
+      ],
+      "text": "Ég hef lært íslensku í eitt ár.",
+      "means": "I've been learning Icelandic for a year.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "hef",
+          "hafa"
+        ],
+        [
+          "lært",
+          "læra"
+        ],
+        [
+          "íslensku",
+          "íslenska"
+        ],
+        [
+          "í"
+        ],
+        [
+          "eitt",
+          "einn"
+        ],
+        [
+          "ár",
+          "ár"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "learned"
+        ],
+        [
+          "Icelandic"
+        ],
+        [
+          "for one year"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég hef lært íslenska í eitt ár."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "íslensku",
+          "íslenska",
+          "íslenskur"
+        ]
+      }
+    },
+    {
+      "id": "hvad-aetlardu-ad-gera",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "future",
+        "infinitive",
+        "accusative"
+      ],
+      "text": "Hvað ætlarðu að gera um helgina?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Hvað"
+        ],
+        [
+          "ætlarðu",
+          "ætla"
+        ],
+        [
+          "að"
+        ],
+        [
+          "gera",
+          "gera"
+        ],
+        [
+          "um"
+        ],
+        [
+          "helgina",
+          "helgi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "mean you",
+          true
+        ],
+        [
+          "to do"
+        ],
+        [
+          "on the weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ætlarðu"
+      ],
+      "wrong": [
+        "Hvað ætlarðu gera um helgina?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gera",
+          "gerir",
+          "gert"
+        ]
+      }
+    },
+    {
+      "id": "thad-er-kalt-i-dag",
+      "topic": "plans",
+      "concepts": [
+        "dummy-subject",
+        "present",
+        "adjective"
+      ],
+      "text": "Það er kalt í dag.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Það",
+          "það"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "kalt",
+          "kaldur"
+        ],
+        [
+          "í"
+        ],
+        [
+          "dag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Það er kaldur í dag."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kalt",
+          "kaldur",
+          "köld"
+        ]
+      }
+    },
+    {
+      "id": "mer-er-kalt",
+      "topic": "plans",
+      "concepts": [
+        "oblique-subject",
+        "present",
+        "dative"
+      ],
+      "text": "Mér er kalt.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Mér",
+          "ég"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "kalt",
+          "kaldur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ég er kalt."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mér",
+          "Ég",
+          "Mig"
+        ]
+      }
+    },
+    {
+      "id": "lattu-mig-vita",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "accusative",
+        "infinitive"
+      ],
+      "text": "Láttu mig vita!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Láttu",
+          "láta"
+        ],
+        [
+          "mig",
+          "ég"
+        ],
+        [
+          "vita",
+          "vita"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let"
+        ],
+        [
+          "me"
+        ],
+        [
+          "know"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Láttu mér vita!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mig",
+          "mér",
+          "ég"
+        ]
+      }
+    },
+    {
+      "id": "vona-gott-vedur",
+      "topic": "plans",
+      "concepts": [
+        "dummy-subject",
+        "verb-second",
+        "future",
+        "adjective"
+      ],
+      "text": "Ég vona að það verði gott veður á morgun.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "vona",
+          "vona"
+        ],
+        [
+          "að",
+          "að"
+        ],
+        [
+          "það",
+          "það"
+        ],
+        [
+          "verði",
+          "verða"
+        ],
+        [
+          "gott",
+          "góður"
+        ],
+        [
+          "veður",
+          "veður"
+        ],
+        [
+          "á"
+        ],
+        [
+          "morgun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "it"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "good weather"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég vona að það verði góður veður á morgun."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "gott",
+          "góður",
+          "góð"
+        ]
+      }
+    },
+    {
+      "id": "i-dag-hef-eg-ekki-tima",
+      "topic": "plans",
+      "concepts": [
+        "ekki",
+        "verb-second",
+        "accusative",
+        "present"
+      ],
+      "text": "Í dag hef ég ekki tíma.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Í"
+        ],
+        [
+          "dag"
+        ],
+        [
+          "hef",
+          "hafa"
+        ],
+        [
+          "ég",
+          "ég"
+        ],
+        [
+          "ekki",
+          "ekki"
+        ],
+        [
+          "tíma",
+          "tími"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "have",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "hef",
+        "ég",
+        "ekki"
+      ],
+      "wrong": [
+        "Í dag ég hef ekki tíma."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hef",
+          "hefur",
+          "hafa"
+        ]
+      }
+    },
+    {
+      "id": "eg-er-ad-laera-islensku",
+      "topic": "plans",
+      "concepts": [
+        "progressive",
+        "accusative",
+        "present",
+        "infinitive"
+      ],
+      "text": "Ég er að læra íslensku.",
+      "means": "I'm learning Icelandic.",
+      "words": [
+        [
+          "Ég",
+          "ég"
+        ],
+        [
+          "er",
+          "vera"
+        ],
+        [
+          "að",
+          "að"
+        ],
+        [
+          "læra",
+          "læra"
+        ],
+        [
+          "íslensku",
+          "íslenska"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "learning"
+        ],
+        [
+          "Icelandic"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ég er að lærir íslensku."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "læra",
+          "lærir",
+          "lært"
+        ]
+      }
+    },
+    {
+      "id": "hvad-ertu-ad-gera",
+      "topic": "plans",
+      "concepts": [
+        "progressive",
+        "question",
+        "present",
+        "infinitive"
+      ],
+      "text": "Hvað ertu að gera?",
+      "means": "What are you doing?",
+      "words": [
+        [
+          "Hvað"
+        ],
+        [
+          "ertu",
+          "vera"
+        ],
+        [
+          "að",
+          "að"
+        ],
+        [
+          "gera",
+          "gera"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are you"
+        ],
+        [
+          "doing"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Hvað ertu að gerir?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gera",
+          "gerir",
+          "gert"
+        ]
+      }
+    },
+    {
+      "id": "sjaumst-a-morgun",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "present"
+      ],
+      "chunks": [
+        "see-you-tomorrow"
+      ],
+      "text": "Sjáumst á morgun!",
+      "means": "See you tomorrow!",
+      "words": [
+        [
+          "Sjáumst"
+        ],
+        [
+          "á"
+        ],
+        [
+          "morgun"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We'll see each other"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Sjáumst í gær!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sjáumst",
+          "Sjást",
+          "Sáumst"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kaffi",
+          "forms": [
+            "kaffi"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "te",
+          "forms": [
+            "te"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "vatn",
+          "forms": [
+            "vatn"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "ég",
+          "forms": [
+            "ég"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "drekka",
+          "forms": [
+            "drekktu",
+            "drekk"
+          ],
+          "picture": "drink",
+          "means": "drekktu = drink; drekk = drink"
+        },
+        {
+          "lemma": "og",
+          "forms": [
+            "og"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending marks the person: (ég) tala, (þú) talar, (hann, hún) talar, (við) tölum, (þið) talið, (þeir) tala; to be is er, ert, er, erum, eruð, eru."
+      },
+      "items": [
+        "drekktu-kaffi",
+        "eg-drekk-kaffi",
+        "eg-drekk-te",
+        "eg-drekk-vatn",
+        "eg-drekk-kaffi-og-te",
+        "eg-drekk-te-og-vatn",
+        "eg-drekk-vatn-og-kaffi"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "einn",
+          "forms": [
+            "eitt"
+          ],
+          "means": "eitt = one"
+        },
+        {
+          "lemma": "mjólk",
+          "forms": [
+            "mjólk"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "kaffi-takk",
+        "h-eitt-kaffi-takk",
+        "eitt-te-og-eitt-vatn-takk",
+        "eitt-kaffi-takk-fyrir",
+        "h-eitt-te-takk",
+        "eg-drekk-mjolk"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "góður",
+          "forms": [
+            "gott"
+          ],
+          "picture": "good",
+          "means": "gott = good"
+        },
+        {
+          "lemma": "hafa",
+          "forms": [
+            "hef"
+          ],
+          "means": "hef = have"
+        },
+        {
+          "lemma": "það",
+          "forms": [
+            "það"
+          ],
+          "means": "it"
+        }
+      ],
+      "phrases": [
+        "hvad-segirdu",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "gender",
+        "line": "Every noun is masculine (bíll, bróðir), feminine (systir, íbúð) or neuter (hús, eldhús), and the words with it match: lítill bíll, lítil íbúð, lítið hús."
+      },
+      "items": [
+        "ja-takk",
+        "nei-takk",
+        "hae-hvad-segirdu",
+        "eg-hef-a-gott-takk",
+        "ja-takk-bless",
+        "nei-takk-bless"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "þú",
+          "forms": [
+            "þú"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ekki",
+          "forms": [
+            "ekki"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "kennari",
+          "forms": [
+            "kennari"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "nemandi",
+          "forms": [
+            "nemandi"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "vera",
+          "forms": [
+            "er",
+            "ert"
+          ],
+          "means": "er = am; ert = are"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "eg-er-kennari",
+        "hvad-heitir-thu",
+        "h-gaman-a-kynnast-er",
+        "u-ert-nemandi",
+        "ert-u-kennari",
+        "eg-er-ekki-kennari",
+        "eg-drekk-ekki-kaffi"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mamma",
+          "forms": [
+            "mamma"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "pabbi",
+          "forms": [
+            "pabbi"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "bróðir",
+          "forms": [
+            "bróðir"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "systir",
+          "forms": [
+            "systir"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "minn",
+          "forms": [
+            "mín",
+            "minn"
+          ],
+          "means": "mín = my; minn = my"
+        },
+        {
+          "lemma": "þessi",
+          "forms": [
+            "þetta"
+          ],
+          "means": "þetta = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "A word like minn (my) or þinn (your) comes after its noun and matches it: usually after a noun with its definite ending (bíllinn minn, lyklarnir mínir), and after close family words without one: mamma mín, bróðir minn."
+      },
+      "items": [
+        "mamma-min-er-kennari",
+        "etta-er-mamma-min",
+        "etta-er-pabbi-minn",
+        "pabbi-minn-er-kennari",
+        "bro-ir-minn-er-nemandi",
+        "etta-er-systir-min"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "eiga",
+          "forms": [
+            "á",
+            "átt"
+          ],
+          "means": "á = have; átt = have"
+        },
+        {
+          "lemma": "vinur",
+          "forms": [
+            "vinur"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "læknir",
+          "forms": [
+            "læknir"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "lykill",
+          "forms": [
+            "lykil"
+          ],
+          "picture": "key",
+          "means": "lykil = key"
+        },
+        {
+          "lemma": "sími",
+          "forms": [
+            "síma"
+          ],
+          "picture": "phone",
+          "means": "síma = phone"
+        },
+        {
+          "lemma": "bók",
+          "forms": [
+            "bók"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "bróðir",
+          "forms": [
+            "bróður"
+          ],
+          "means": "bróður = brother"
+        },
+        {
+          "lemma": "systir",
+          "forms": [
+            "systur"
+          ],
+          "means": "systur = sister"
+        },
+        {
+          "lemma": "góður",
+          "forms": [
+            "góður"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "eg-a-sima",
+        "att-u-lykil",
+        "eg-a-bro-ur-og-systur",
+        "eg-a-ekki-bok",
+        "systir-min-er-l-knir",
+        "u-ert-go-ur-vinur"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "hvar",
+          "forms": [
+            "hvar"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "hér",
+          "forms": [
+            "hér"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "þar",
+          "forms": [
+            "þar"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "baðherbergi",
+          "forms": [
+            "baðherbergið"
+          ],
+          "means": "baðherbergið = the bathroom"
+        },
+        {
+          "lemma": "lykill",
+          "forms": [
+            "lykill",
+            "lykillinn",
+            "lyklarnir"
+          ],
+          "means": "lykill = key; lykillinn = the key; lyklarnir = the keys"
+        },
+        {
+          "lemma": "sími",
+          "forms": [
+            "sími"
+          ],
+          "means": "phone"
+        },
+        {
+          "lemma": "minn",
+          "forms": [
+            "mínir"
+          ],
+          "means": "mínir = my"
+        },
+        {
+          "lemma": "vera",
+          "forms": [
+            "eru"
+          ],
+          "means": "eru = are"
+        }
+      ],
+      "phrases": [
+        "afsakid"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A direct yes/no question puts the verb first (Talar þú ensku?); a direct question with a question word or phrase puts it first, then the verb, and any separate subject after the verb (Hvar eru lyklarnir mínir?; Hvaða bók lestu?); Icelandic adds no do, and þú often joins the verb as -ðu, -tu or -stu: Geturðu?"
+      },
+      "items": [
+        "hvar-er-lykill-minn",
+        "simi-minn-er-her",
+        "lykillinn-er-ar",
+        "afsaki-hvar-er-ba-herbergi",
+        "hvar-er-mamma-min",
+        "systir-min-er-her",
+        "hvar-eru-lyklarnir-minir"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "einn",
+          "forms": [
+            "eina"
+          ],
+          "means": "eina = one"
+        },
+        {
+          "lemma": "tveir",
+          "forms": [
+            "tvö"
+          ],
+          "picture": "two",
+          "means": "tvö = two"
+        },
+        {
+          "lemma": "þrír",
+          "forms": [
+            "þrjár"
+          ],
+          "picture": "three",
+          "means": "þrjár = three"
+        },
+        {
+          "lemma": "peningar",
+          "forms": [
+            "peninga"
+          ],
+          "picture": "money",
+          "means": "peninga = money"
+        },
+        {
+          "lemma": "kosta",
+          "forms": [
+            "kostar"
+          ],
+          "means": "kostar = costs"
+        },
+        {
+          "lemma": "hvað",
+          "forms": [
+            "hvað"
+          ],
+          "means": "what"
+        },
+        {
+          "lemma": "bók",
+          "forms": [
+            "bækur"
+          ],
+          "means": "bækur = books"
+        },
+        {
+          "lemma": "kaffi",
+          "forms": [
+            "kaffið"
+          ],
+          "means": "kaffið = the coffee"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "tvo-kaffi-takk",
+        "eina-bok-takk",
+        "eg-a-rjar-b-kur",
+        "eg-a-ekki-peninga",
+        "afsaki-hva-kostar-etta",
+        "h-reikninginn-takk",
+        "reikninginn-takk",
+        "hvad-kostar-kaffid"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "tala",
+          "forms": [
+            "talar",
+            "tala"
+          ],
+          "means": "talar = speak; tala = speak"
+        },
+        {
+          "lemma": "enska",
+          "forms": [
+            "ensku"
+          ],
+          "means": "ensku = English"
+        },
+        {
+          "lemma": "íslenska",
+          "forms": [
+            "íslensku"
+          ],
+          "means": "íslensku = Icelandic"
+        },
+        {
+          "lemma": "skilja",
+          "forms": [
+            "skil",
+            "skilur"
+          ],
+          "means": "skil = understand; skilur = understand"
+        },
+        {
+          "lemma": "smá",
+          "forms": [
+            "smá"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "vilja",
+          "forms": [
+            "vil"
+          ],
+          "means": "vil = want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "Most verbs take their object in the accusative (Ég keypti nýja úlpu: I bought a new jacket), um always takes it (um helgina: on the weekend), and so do í and á for where you're going: í búðina, á ströndina."
+      },
+      "items": [
+        "eg-skil-ekki",
+        "skilur-u",
+        "talar-thu-ensku",
+        "eg-tala-sma-islensku",
+        "eg-vil-kaffi",
+        "eg-vil-vatn-takk"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "hús",
+          "forms": [
+            "húsið",
+            "húsi",
+            "hús"
+          ],
+          "picture": "house",
+          "means": "húsið = the house; húsi = a house; hús = house"
+        },
+        {
+          "lemma": "herbergi",
+          "forms": [
+            "herbergið"
+          ],
+          "picture": "room",
+          "means": "herbergið = the room"
+        },
+        {
+          "lemma": "stór",
+          "forms": [
+            "stórt"
+          ],
+          "picture": "big",
+          "means": "stórt = big"
+        },
+        {
+          "lemma": "lítill",
+          "forms": [
+            "lítið",
+            "litlu"
+          ],
+          "picture": "small",
+          "means": "lítið = small; litlu = small"
+        },
+        {
+          "lemma": "búa",
+          "forms": [
+            "bý",
+            "býrð",
+            "býr",
+            "búa"
+          ],
+          "means": "bý = live; býrð = live; býr = lives; búa = live"
+        },
+        {
+          "lemma": "í",
+          "forms": [
+            "í"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "að",
+          "forms": [
+            "að"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "minn",
+          "forms": [
+            "mitt"
+          ],
+          "means": "mitt = my"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "husi-er-her",
+        "herbergi-mitt-er-liti",
+        "eg-by-i-litlu-husi",
+        "hvar-byr-u",
+        "etta-hus-er-stort",
+        "mamma-min-byr-her",
+        "a-er-gott-a-bua-her"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "fara",
+          "forms": [
+            "fer"
+          ],
+          "means": "fer = go"
+        },
+        {
+          "lemma": "til",
+          "forms": [
+            "til"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "skóli",
+          "forms": [
+            "skóla"
+          ],
+          "picture": "school",
+          "means": "skóla = school"
+        },
+        {
+          "lemma": "borg",
+          "forms": [
+            "borgarinnar"
+          ],
+          "picture": "city",
+          "means": "borgarinnar = the city"
+        },
+        {
+          "lemma": "lestarstöð",
+          "forms": [
+            "lestarstöðin"
+          ],
+          "means": "lestarstöðin = the train station"
+        },
+        {
+          "lemma": "bíll",
+          "forms": [
+            "bíll",
+            "bíl"
+          ],
+          "picture": "car",
+          "means": "bíll = car; bíl = car"
+        },
+        {
+          "lemma": "þessi",
+          "forms": [
+            "þessi"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "lítill",
+          "forms": [
+            "lítill"
+          ],
+          "means": "small"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "nominative",
+        "line": "Most subjects, and what one is after vera (to be), take the nominative, the form a dictionary lists: Ég er kennari; Mamma mín vinnur á spítala."
+      },
+      "items": [
+        "eg-fer-i-skola",
+        "afsaki-hvar-er-lestarsto-in",
+        "mamma-min-fer-til-borgarinnar",
+        "essi-bill-er-litill",
+        "eg-a-bil"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "nú",
+          "forms": [
+            "nú"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "vinna",
+          "forms": [
+            "vinn",
+            "vinna"
+          ],
+          "picture": "work",
+          "means": "vinn = work; vinna = work"
+        },
+        {
+          "lemma": "þurfa",
+          "forms": [
+            "þarf"
+          ],
+          "means": "þarf = have to"
+        },
+        {
+          "lemma": "geta",
+          "forms": [
+            "get"
+          ],
+          "means": "get = can"
+        },
+        {
+          "lemma": "fara",
+          "forms": [
+            "fara",
+            "farið"
+          ],
+          "means": "fara = go; farið = go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow",
+        "today",
+        "tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "eg-vinn-i-dag",
+        "takk-fyrir-sjaumst-a-morgun",
+        "nu-tharf-eg-ad-fara",
+        "a-morgun-fer-eg-til-borgarinnar",
+        "eg-get-ekki-fari-i-dag",
+        "eg-arf-a-vinna-a-morgun",
+        "sjaumst-a-morgun"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

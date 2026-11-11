@@ -1,0 +1,7360 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-hu",
+  "name": "Starter: Hungarian",
+  "about": "Hungarian word order and endings in real, everyday sentences.",
+  "language": "hu",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kávé": "coffee",
+    "tea": "tea",
+    "víz": "water",
+    "én": "I",
+    "iszik": "to drink",
+    "és": "and",
+    "egy": "a",
+    "tej": "milk",
+    "jól": "well",
+    "van": "to be; there is",
+    "te": "you",
+    "nem": "not",
+    "tanár": "teacher",
+    "diák": "student",
+    "anya": "mother",
+    "apa": "father, dad",
+    "báty": "older brother",
+    "húg": "younger sister",
+    "ez": "this",
+    "a": "the",
+    "nincs": "there isn't; doesn't have",
+    "barát": "friend",
+    "orvos": "doctor",
+    "kulcs": "key",
+    "telefon": "phone",
+    "könyv": "book",
+    "jó": "good",
+    "hol": "where",
+    "itt": "here",
+    "ott": "there",
+    "mosdó": "bathroom",
+    "kettő": "two",
+    "három": "three",
+    "pénz": "money",
+    "beszél": "to speak",
+    "angolul": "in English",
+    "magyarul": "in Hungarian",
+    "ért": "to understand",
+    "kicsit": "a little",
+    "szeret": "to love, to like (szeretnék: I'd like)",
+    "ház": "house",
+    "szoba": "room",
+    "nagy": "big",
+    "kicsi": "small",
+    "lakik": "to live (somewhere)",
+    "megy": "to go",
+    "iskola": "school",
+    "város": "city",
+    "állomás": "station",
+    "autó": "car",
+    "hová": "where to",
+    "ma": "today",
+    "holnap": "tomorrow",
+    "most": "now",
+    "dolgozik": "to work",
+    "kell": "to be needed (mennem kell: I have to go)",
+    "tud": "to know; can",
+    "szia": "hi; bye",
+    "hív": "to call",
+    "nővér": "older sister",
+    "tetszik": "to please (nekem tetszik: I like it)",
+    "film": "movie",
+    "szülő": "parent",
+    "kis": "little, small",
+    "lakás": "apartment",
+    "asztal": "table",
+    "hűtő": "fridge",
+    "becsuk": "to close",
+    "ablak": "window",
+    "konyha": "kitchen",
+    "erkély": "balcony",
+    "hazaér": "to get home",
+    "vacsora": "dinner",
+    "főz": "to cook",
+    "ajtó": "door",
+    "kér": "to ask for (kérlek: please)",
+    "jön": "to come (gyere: come)",
+    "ide": "here (coming here)",
+    "valami": "something",
+    "segít": "to help",
+    "leül": "to sit down",
+    "cukor": "sugar",
+    "nélkül": "without",
+    "pohár": "glass",
+    "eszik": "to eat",
+    "édes": "sweet",
+    "tegnap": "yesterday",
+    "pizza": "pizza",
+    "anyuka": "mom",
+    "nagyon": "very",
+    "számla": "check, bill",
+    "bolt": "store, shop",
+    "kenyér": "bread",
+    "busz": "bus",
+    "vesz": "to buy; to take",
+    "új": "new",
+    "kabát": "coat",
+    "vonat": "train",
+    "perc": "minute",
+    "késik": "to be late",
+    "még": "still, yet",
+    "sosem": "never",
+    "cipő": "shoe, shoes",
+    "túl": "too",
+    "fáradt": "tired",
+    "fog": "to take, to catch; will",
+    "taxi": "taxi",
+    "vár": "to wait (for)",
+    "nagymama": "grandma",
+    "szombat": "Saturday",
+    "esik": "to fall (esik az eső: it's raining)",
+    "felhív": "to call (on the phone)",
+    "eljön": "to come along",
+    "mozi": "movies, movie theater",
+    "eső": "rain",
+    "kimegy": "to go out",
+    "strand": "beach",
+    "év": "year",
+    "tanul": "to learn, to study",
+    "csinál": "to do, to make",
+    "hétvége": "weekend",
+    "hideg": "cold",
+    "remél": "to hope",
+    "szép": "nice, beautiful",
+    "idő": "weather; time",
+    "lesz": "will be; to become",
+    "elmegy": "to leave, to go away",
+    "megcsinál": "to do (and finish), to fix",
+    "este": "evening (ma este: tonight)",
+    "alszik": "to sleep"
+  },
+  "chunks": {
+    "hogy-vagy": {
+      "text": "Hogy vagy?",
+      "en": "How are you?",
+      "about": "To a friend; politely, Hogy van?"
+    },
+    "hogy-hívnak": {
+      "text": "Hogy hívnak?",
+      "en": "What's your name?",
+      "about": "Literally, how do they call you? For example: Anna vagyok, or Engem Annának hívnak."
+    },
+    "elnézést": {
+      "text": "Elnézést",
+      "en": "Excuse me",
+      "about": "To get someone's attention, or to say sorry."
+    },
+    "legyen-szíves": {
+      "text": "legyen szíves",
+      "en": "please (polite)",
+      "about": "Literally, be kind; to a friend, kérlek."
+    },
+    "hello": {
+      "text": "Szia",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "Köszönöm",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "Viszlát",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Igen",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Nem",
+      "en": "no"
+    },
+    "nice-to-meet-you": {
+      "text": "Örülök, hogy megismertelek",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Mennyibe kerül",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "A számlát, legyen szíves",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Holnap találkozunk",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "kavet-iszom",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Kávét iszom.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Kávét",
+          "kávé"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kávé iszom.",
+        "Én kávét iszik."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kávét",
+          "Teát",
+          "Vizet"
+        ]
+      }
+    },
+    {
+      "id": "teat-iszom",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Teát iszom.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Teát",
+          "tea"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tea iszom.",
+        "Én teát iszik."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Teát",
+          "Kávét",
+          "Vizet"
+        ]
+      }
+    },
+    {
+      "id": "en-vizet-iszom",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Én vizet iszom.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Én",
+          "én"
+        ],
+        [
+          "vizet",
+          "víz"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én víz iszom.",
+        "Én vizet iszik."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vizet",
+          "kávét",
+          "teát"
+        ]
+      }
+    },
+    {
+      "id": "kavet-es-teat-iszom",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Kávét és teát iszom.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Kávét",
+          "kávé"
+        ],
+        [
+          "és",
+          "és"
+        ],
+        [
+          "teát",
+          "tea"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kávé és teát iszom.",
+        "Kávét és tea iszom."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teát",
+          "vizet",
+          "kávét"
+        ]
+      }
+    },
+    {
+      "id": "teat-es-vizet-iszom",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Teát és vizet iszom.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Teát",
+          "tea"
+        ],
+        [
+          "és",
+          "és"
+        ],
+        [
+          "vizet",
+          "víz"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tea és vizet iszom.",
+        "Teát és víz iszom."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vizet",
+          "teát",
+          "kávét"
+        ]
+      }
+    },
+    {
+      "id": "vizet-es-kavet-iszom",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Vizet és kávét iszom.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Vizet",
+          "víz"
+        ],
+        [
+          "és",
+          "és"
+        ],
+        [
+          "kávét",
+          "kávé"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Víz és kávét iszom.",
+        "Vizet és kávé iszom."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kávét",
+          "teát",
+          "vizet"
+        ]
+      }
+    },
+    {
+      "id": "egy-kavet-legyen-szives",
+      "topic": "food",
+      "concepts": [
+        "article",
+        "accusative"
+      ],
+      "chunks": [
+        "legyen-szíves"
+      ],
+      "text": "Egy kávét, legyen szíves.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Egy",
+          "egy"
+        ],
+        [
+          "kávét,",
+          "kávé"
+        ],
+        [
+          "legyen"
+        ],
+        [
+          "szíves"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Egy kávé, legyen szíves.",
+        "Egy kávét, legyen szívesek."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kávét,",
+          "teát,",
+          "vizet,"
+        ]
+      }
+    },
+    {
+      "id": "szia-egy-teat-koszonom",
+      "topic": "food",
+      "concepts": [
+        "article",
+        "accusative"
+      ],
+      "chunks": [
+        "thank-you",
+        "hello"
+      ],
+      "text": "Szia! Egy teát, köszönöm.",
+      "means": "Hello! A tea, thank you.",
+      "words": [
+        [
+          "Szia!"
+        ],
+        [
+          "Egy",
+          "egy"
+        ],
+        [
+          "teát,",
+          "tea"
+        ],
+        [
+          "köszönöm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Szia! Egy tea, köszönöm.",
+        "Szia! Egy teát, köszönöm vagyok."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teát,",
+          "kávét,",
+          "vizet,"
+        ]
+      }
+    },
+    {
+      "id": "egy-kavet-koszonom",
+      "topic": "food",
+      "concepts": [
+        "article",
+        "accusative"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Egy kávét, köszönöm.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Egy",
+          "egy"
+        ],
+        [
+          "kávét,",
+          "kávé"
+        ],
+        [
+          "köszönöm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Egy kávé, köszönöm.",
+        "Egy iszom, köszönöm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kávét,",
+          "teát,",
+          "vizet,"
+        ]
+      }
+    },
+    {
+      "id": "tejet-iszom",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Tejet iszom.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Tejet",
+          "tej"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Milk"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tej iszom.",
+        "Én tejet iszik."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tejet",
+          "Teát",
+          "Vizet"
+        ]
+      }
+    },
+    {
+      "id": "egy-teat-es-egy-vizet-legyen-szives",
+      "topic": "food",
+      "concepts": [
+        "article",
+        "accusative"
+      ],
+      "chunks": [
+        "legyen-szíves"
+      ],
+      "text": "Egy teát és egy vizet, legyen szíves.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Egy",
+          "egy"
+        ],
+        [
+          "teát",
+          "tea"
+        ],
+        [
+          "és",
+          "és"
+        ],
+        [
+          "egy",
+          "egy"
+        ],
+        [
+          "vizet,",
+          "víz"
+        ],
+        [
+          "legyen"
+        ],
+        [
+          "szíves"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Egy tea és egy vizet, legyen szíves.",
+        "Egy teát és egy víz, legyen szíves."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vizet,",
+          "tejet,",
+          "kávét,"
+        ]
+      }
+    },
+    {
+      "id": "jol-vagyok-koszonom",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Jól vagyok, köszönöm.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Jól",
+          "jól"
+        ],
+        [
+          "vagyok,",
+          "van"
+        ],
+        [
+          "köszönöm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Well"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én jól van, köszönöm.",
+        "Én jól vagy, köszönöm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vagyok,",
+          "vagy,",
+          "van,"
+        ]
+      }
+    },
+    {
+      "id": "igen-legyen-szives",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "legyen-szíves",
+        "yes"
+      ],
+      "text": "Igen, legyen szíves.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Igen,"
+        ],
+        [
+          "legyen"
+        ],
+        [
+          "szíves"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Igen, legyen szívesek.",
+        "Igen, legyen egy szíves."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Igen,",
+          "Nem,",
+          "Szia,"
+        ]
+      }
+    },
+    {
+      "id": "nem-koszonom",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Nem, köszönöm.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nem,"
+        ],
+        [
+          "köszönöm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nem, egy köszönöm.",
+        "Nem, én köszönöm vagyok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nem,",
+          "Igen,",
+          "Szia,"
+        ]
+      }
+    },
+    {
+      "id": "igen-koszonom-viszlat",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Igen, köszönöm. Viszlát!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Igen,"
+        ],
+        [
+          "köszönöm."
+        ],
+        [
+          "Viszlát"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Igen, egy köszönöm. Viszlát!",
+        "Igen, köszönöm vagyok. Viszlát!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Viszlát",
+          "Igen",
+          "Köszönöm"
+        ]
+      }
+    },
+    {
+      "id": "nem-koszonom-viszlat",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Nem, köszönöm. Viszlát!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nem,"
+        ],
+        [
+          "köszönöm."
+        ],
+        [
+          "Viszlát"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nem, egy köszönöm. Viszlát!",
+        "Nem, köszönöm vagyok. Viszlát!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nem,",
+          "Igen,",
+          "Szia,"
+        ]
+      }
+    },
+    {
+      "id": "te-diak-vagy",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Te diák vagy.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Te",
+          "te"
+        ],
+        [
+          "diák",
+          "diák"
+        ],
+        [
+          "vagy",
+          "van"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te diák vagyok.",
+        "Te diák van."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vagy",
+          "vagyok",
+          "van"
+        ]
+      }
+    },
+    {
+      "id": "tanar-vagy",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Tanár vagy?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Tanár",
+          "tanár"
+        ],
+        [
+          "vagy",
+          "van"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te tanár vagyok?",
+        "Te tanár van?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tanár",
+          "Diák",
+          "Kávé"
+        ]
+      }
+    },
+    {
+      "id": "nem-vagyok-tanar",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "present"
+      ],
+      "text": "Nem vagyok tanár.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Nem",
+          "nem"
+        ],
+        [
+          "vagyok",
+          "van"
+        ],
+        [
+          "tanár",
+          "tanár"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én nem vagy tanár.",
+        "Én nem van tanár."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vagyok",
+          "vagy",
+          "van"
+        ]
+      }
+    },
+    {
+      "id": "szia-orulok-hogy-megismertelek",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Szia! Örülök, hogy megismertelek.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Szia!"
+        ],
+        [
+          "Örülök,"
+        ],
+        [
+          "hogy"
+        ],
+        [
+          "megismertelek"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "I'm glad"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I've met you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Szia! Örülök, hogy egy megismertelek.",
+        "Szia! Örülök, hogy megismertelek vagyok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Szia!",
+          "Viszlát!",
+          "Köszönöm!"
+        ]
+      }
+    },
+    {
+      "id": "ez-az-anyam",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "Ez az anyám.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "az",
+          "a"
+        ],
+        [
+          "anyám",
+          "anya"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez az anyám van.",
+        "Ez a anyám."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "anyám",
+          "apám",
+          "bátyám"
+        ]
+      }
+    },
+    {
+      "id": "ez-az-apam",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "Ez az apám.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "az",
+          "a"
+        ],
+        [
+          "apám",
+          "apa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez az apám van.",
+        "Ez a apám."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "apám",
+          "anyám",
+          "húgom"
+        ]
+      }
+    },
+    {
+      "id": "az-apam-tanar",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "Az apám tanár.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Az",
+          "a"
+        ],
+        [
+          "apám",
+          "apa"
+        ],
+        [
+          "tanár",
+          "tanár"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My father"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Az apám tanár van.",
+        "Az apám tanár vagyok."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "apám",
+          "anyám",
+          "húgom"
+        ]
+      }
+    },
+    {
+      "id": "a-batyam-diak",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "A bátyám diák.",
+      "means": "My older brother is a student.",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "bátyám",
+          "báty"
+        ],
+        [
+          "diák",
+          "diák"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older brother"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A bátyám diák van.",
+        "A bátyám diák vagy."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bátyám",
+          "húgom",
+          "apám"
+        ]
+      }
+    },
+    {
+      "id": "ez-a-hugom",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "Ez a húgom.",
+      "means": "This is my younger sister.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "húgom",
+          "húg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my younger sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez a húgom van.",
+        "Ez az húgom."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "húgom",
+          "bátyám",
+          "anyám"
+        ]
+      }
+    },
+    {
+      "id": "az-anyam-tanar",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "Az anyám tanár.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Az",
+          "a"
+        ],
+        [
+          "anyám",
+          "anya"
+        ],
+        [
+          "tanár",
+          "tanár"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Az anyám tanár van.",
+        "Az anyám tanár vagyok."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "anyám",
+          "apám",
+          "húgom"
+        ]
+      }
+    },
+    {
+      "id": "van-egy-telefonom",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "possessive",
+        "van-nincs"
+      ],
+      "text": "Van egy telefonom.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Van",
+          "van"
+        ],
+        [
+          "egy",
+          "egy"
+        ],
+        [
+          "telefonom",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vagyok egy telefonom.",
+        "Van egy telefonomat."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "telefonom",
+          "könyvem",
+          "bátyám"
+        ]
+      }
+    },
+    {
+      "id": "van-kulcsod",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "possessive",
+        "question"
+      ],
+      "text": "Van kulcsod?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Van",
+          "van"
+        ],
+        [
+          "kulcsod",
+          "kulcs"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is there"
+        ],
+        [
+          "a key of yours"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vagy kulcsod?",
+        "Vagyok kulcsod?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Van",
+          "Vagy",
+          "Vagyok"
+        ]
+      }
+    },
+    {
+      "id": "nincs-konyvem",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "possessive",
+        "van-nincs",
+        "negation"
+      ],
+      "text": "Nincs könyvem.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Nincs",
+          "nincs"
+        ],
+        [
+          "könyvem",
+          "könyv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There isn't"
+        ],
+        [
+          "a book of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nem van könyvem.",
+        "Nem vagyok könyvem."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "könyvem",
+          "telefonom",
+          "bátyám"
+        ]
+      }
+    },
+    {
+      "id": "a-hugom-orvos",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "A húgom orvos.",
+      "means": "My younger sister is a doctor.",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "húgom",
+          "húg"
+        ],
+        [
+          "orvos",
+          "orvos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My younger sister"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A húgom orvos van.",
+        "A húgom orvos vagy."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "orvos",
+          "tanár",
+          "diák"
+        ]
+      }
+    },
+    {
+      "id": "jo-barat-vagy",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Jó barát vagy.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Jó",
+          "jó"
+        ],
+        [
+          "barát",
+          "barát"
+        ],
+        [
+          "vagy",
+          "van"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A good"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "you are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te jó barát vagyok.",
+        "Te jó barát van."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "barát",
+          "tanár",
+          "diák"
+        ]
+      }
+    },
+    {
+      "id": "hol-van-a-kulcsom",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "van-nincs"
+      ],
+      "text": "Hol van a kulcsom?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Hol",
+          "hol"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "kulcsom",
+          "kulcs"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hol vagy a kulcsom?",
+        "Hol van az kulcsom?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hol",
+          "Itt",
+          "Ott"
+        ]
+      }
+    },
+    {
+      "id": "itt-van-a-telefonom",
+      "topic": "out",
+      "concepts": [
+        "van-nincs",
+        "possessive"
+      ],
+      "text": "Itt van a telefonom.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Itt",
+          "itt"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "telefonom",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Here"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Itt vagy a telefonom.",
+        "Itt van az telefonom."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Itt",
+          "Ott",
+          "Hol"
+        ]
+      }
+    },
+    {
+      "id": "ott-van-a-kulcs",
+      "topic": "out",
+      "concepts": [
+        "van-nincs",
+        "article"
+      ],
+      "text": "Ott van a kulcs.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Ott",
+          "ott"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "kulcs",
+          "kulcs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ott vagy a kulcs.",
+        "Ott van az kulcs."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ott",
+          "Itt",
+          "Hol"
+        ]
+      }
+    },
+    {
+      "id": "elnezest-hol-van-a-mosdo",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "van-nincs",
+        "article"
+      ],
+      "chunks": [
+        "elnézést"
+      ],
+      "text": "Elnézést, hol van a mosdó?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Elnézést,"
+        ],
+        [
+          "hol",
+          "hol"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "mosdó",
+          "mosdó"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Elnézést, hol vagy a mosdó?",
+        "Elnézést, hol van az mosdó?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "mosdó",
+          "kulcs",
+          "telefonom"
+        ]
+      }
+    },
+    {
+      "id": "hol-van-az-anyam",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "van-nincs"
+      ],
+      "text": "Hol van az anyám?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Hol",
+          "hol"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "az",
+          "a"
+        ],
+        [
+          "anyám",
+          "anya"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hol vagy az anyám?",
+        "Hol van a anyám?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "anyám",
+          "apám",
+          "húgom"
+        ]
+      }
+    },
+    {
+      "id": "itt-van-a-hugom",
+      "topic": "out",
+      "concepts": [
+        "van-nincs",
+        "possessive"
+      ],
+      "text": "Itt van a húgom.",
+      "means": "My younger sister is here.",
+      "words": [
+        [
+          "Itt",
+          "itt"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "húgom",
+          "húg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Here"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my younger sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Itt vagy a húgom.",
+        "Itt van az húgom."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "húgom",
+          "bátyám",
+          "anyám"
+        ]
+      }
+    },
+    {
+      "id": "elnezest-mennyibe-kerul",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "how-much-is-it",
+        "elnézést"
+      ],
+      "text": "Elnézést, mennyibe kerül?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Elnézést,"
+        ],
+        [
+          "mennyibe"
+        ],
+        [
+          "kerül"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "does it cost"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Elnézést, mennyibe vagyok kerül?",
+        "Elnézést, mennyibe kerül egy van?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Elnézést,",
+          "Szia,",
+          "Köszönöm,"
+        ]
+      }
+    },
+    {
+      "id": "ket-kavet-legyen-szives",
+      "topic": "out",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "legyen-szíves"
+      ],
+      "text": "Két kávét, legyen szíves.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Két",
+          "kettő"
+        ],
+        [
+          "kávét,",
+          "kávé"
+        ],
+        [
+          "legyen"
+        ],
+        [
+          "szíves"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Két kávékat, legyen szíves.",
+        "Két kávé, legyen szíves."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Két",
+          "Egy",
+          "Három"
+        ]
+      }
+    },
+    {
+      "id": "egy-konyvet-legyen-szives",
+      "topic": "out",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "legyen-szíves"
+      ],
+      "text": "Egy könyvet, legyen szíves.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Egy",
+          "egy"
+        ],
+        [
+          "könyvet,",
+          "könyv"
+        ],
+        [
+          "legyen"
+        ],
+        [
+          "szíves"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Egy könyv, legyen szíves.",
+        "Egy könyvet, legyen szívesek."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "könyvet,",
+          "kávét,",
+          "teát,"
+        ]
+      }
+    },
+    {
+      "id": "van-harom-konyvem",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "possessive",
+        "van-nincs"
+      ],
+      "text": "Van három könyvem.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Van",
+          "van"
+        ],
+        [
+          "három",
+          "három"
+        ],
+        [
+          "könyvem",
+          "könyv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There are"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vagyok három könyvem.",
+        "Van három könyvet."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "három",
+          "két",
+          "egy"
+        ]
+      }
+    },
+    {
+      "id": "nincs-penzem",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "possessive",
+        "negation",
+        "van-nincs"
+      ],
+      "text": "Nincs pénzem.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Nincs",
+          "nincs"
+        ],
+        [
+          "pénzem",
+          "pénz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There isn't"
+        ],
+        [
+          "money of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nem van pénzem.",
+        "Nem vagyok pénzem."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pénzem",
+          "könyvem",
+          "telefonom"
+        ]
+      }
+    },
+    {
+      "id": "nem-ertem",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "definite",
+        "negation"
+      ],
+      "text": "Nem értem.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Nem",
+          "nem"
+        ],
+        [
+          "értem",
+          "ért"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én nem érted.",
+        "Én nem ért."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "értem",
+          "érted",
+          "ért"
+        ]
+      }
+    },
+    {
+      "id": "te-erted",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "definite",
+        "question"
+      ],
+      "text": "Te érted?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Te",
+          "te"
+        ],
+        [
+          "érted",
+          "ért"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te értem?",
+        "Te ért?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "érted",
+          "értem",
+          "ért"
+        ]
+      }
+    },
+    {
+      "id": "kicsit-beszelek-magyarul",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Kicsit beszélek magyarul.",
+      "means": "I speak a little Hungarian.",
+      "words": [
+        [
+          "Kicsit",
+          "kicsit"
+        ],
+        [
+          "beszélek",
+          "beszél"
+        ],
+        [
+          "magyarul",
+          "magyarul"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A little"
+        ],
+        [
+          "I speak"
+        ],
+        [
+          "in Hungarian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én kicsit beszélsz magyarul.",
+        "Én kicsit beszél magyarul."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "magyarul",
+          "angolul",
+          "jól"
+        ]
+      }
+    },
+    {
+      "id": "egy-kavet-szeretnek",
+      "topic": "people",
+      "concepts": [
+        "conditional",
+        "accusative"
+      ],
+      "text": "Egy kávét szeretnék.",
+      "means": "I'd like a coffee.",
+      "words": [
+        [
+          "Egy",
+          "egy"
+        ],
+        [
+          "kávét",
+          "kávé"
+        ],
+        [
+          "szeretnék",
+          "szeret"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "I would like"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Egy kávé szeretnék.",
+        "Én egy kávét szeret."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kávét",
+          "teát",
+          "tejet"
+        ]
+      }
+    },
+    {
+      "id": "vizet-szeretnek-legyen-szives",
+      "topic": "people",
+      "concepts": [
+        "conditional",
+        "accusative"
+      ],
+      "chunks": [
+        "legyen-szíves"
+      ],
+      "text": "Vizet szeretnék, legyen szíves.",
+      "means": "I'd like water, please.",
+      "words": [
+        [
+          "Vizet",
+          "víz"
+        ],
+        [
+          "szeretnék,",
+          "szeret"
+        ],
+        [
+          "legyen"
+        ],
+        [
+          "szíves"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "I would like"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Víz szeretnék, legyen szíves.",
+        "Vizet szeretnék, legyen szívesek."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vizet",
+          "Teát",
+          "Tejet"
+        ]
+      }
+    },
+    {
+      "id": "ez-a-haz-nagy",
+      "topic": "home",
+      "concepts": [
+        "article"
+      ],
+      "text": "Ez a ház nagy.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ház",
+          "ház"
+        ],
+        [
+          "nagy",
+          "nagy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez a ház nagy van.",
+        "Ez az ház nagy."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nagy",
+          "jó",
+          "kicsi"
+        ]
+      }
+    },
+    {
+      "id": "a-szobam-kicsi",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "article"
+      ],
+      "text": "A szobám kicsi.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "szobám",
+          "szoba"
+        ],
+        [
+          "kicsi",
+          "kicsi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My room"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A szobám kicsi van.",
+        "Az szobám kicsi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kicsi",
+          "nagy",
+          "jó"
+        ]
+      }
+    },
+    {
+      "id": "hol-laksz",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "question"
+      ],
+      "text": "Hol laksz?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Hol",
+          "hol"
+        ],
+        [
+          "laksz",
+          "lakik"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te hol lakom?",
+        "Te hol lakik?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "laksz",
+          "lakom",
+          "lakik"
+        ]
+      }
+    },
+    {
+      "id": "egy-kicsi-hazban-lakom",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "in-into-from",
+        "vowel-harmony"
+      ],
+      "text": "Egy kicsi házban lakom.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Egy",
+          "egy"
+        ],
+        [
+          "kicsi",
+          "kicsi"
+        ],
+        [
+          "házban",
+          "ház"
+        ],
+        [
+          "lakom",
+          "lakik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "small"
+        ],
+        [
+          "house in"
+        ],
+        [
+          "I live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Egy kicsi ház lakom.",
+        "Én egy kicsi házban laksz."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lakom",
+          "laksz",
+          "lakik"
+        ]
+      }
+    },
+    {
+      "id": "az-anyam-itt-lakik",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Az anyám itt lakik.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Az",
+          "a"
+        ],
+        [
+          "anyám",
+          "anya"
+        ],
+        [
+          "itt",
+          "itt"
+        ],
+        [
+          "lakik",
+          "lakik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "here"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Az anyám itt lakom.",
+        "Az anyám itt laksz."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lakik",
+          "lakom",
+          "laksz"
+        ]
+      }
+    },
+    {
+      "id": "iskolaba-megyek",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "in-into-from"
+      ],
+      "text": "Iskolába megyek.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Iskolába",
+          "iskola"
+        ],
+        [
+          "megyek",
+          "megy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To school"
+        ],
+        [
+          "I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én iskolába mész.",
+        "Én iskolába megy."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "megyek",
+          "mész",
+          "megy"
+        ]
+      }
+    },
+    {
+      "id": "hova-mesz",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "question"
+      ],
+      "text": "Hová mész?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Hová",
+          "hová"
+        ],
+        [
+          "mész",
+          "megy"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where to"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te hová megyek?",
+        "Te hová megy?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mész",
+          "megyek",
+          "megy"
+        ]
+      }
+    },
+    {
+      "id": "az-anyam-a-varosba-megy",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "in-into-from",
+        "possessive"
+      ],
+      "text": "Az anyám a városba megy.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Az",
+          "a"
+        ],
+        [
+          "anyám",
+          "anya"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "városba",
+          "város"
+        ],
+        [
+          "megy",
+          "megy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Az anyám a városba megyek.",
+        "Az anyám a városba mész."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "megy",
+          "megyek",
+          "mész"
+        ]
+      }
+    },
+    {
+      "id": "ez-az-auto-kicsi",
+      "topic": "out",
+      "concepts": [
+        "article"
+      ],
+      "text": "Ez az autó kicsi.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "az",
+          "a"
+        ],
+        [
+          "autó",
+          "autó"
+        ],
+        [
+          "kicsi",
+          "kicsi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez az autó kicsi van.",
+        "Ez a autó kicsi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "autó",
+          "ház",
+          "szobám"
+        ]
+      }
+    },
+    {
+      "id": "van-egy-autom",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "possessive",
+        "van-nincs"
+      ],
+      "text": "Van egy autóm.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Van",
+          "van"
+        ],
+        [
+          "egy",
+          "egy"
+        ],
+        [
+          "autóm",
+          "autó"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vagyok egy autóm.",
+        "Van egy autót."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "autóm",
+          "telefonom",
+          "könyvem"
+        ]
+      }
+    },
+    {
+      "id": "koszonom-holnap-talalkozunk",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Köszönöm. Holnap találkozunk!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Köszönöm."
+        ],
+        [
+          "Holnap"
+        ],
+        [
+          "találkozunk"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "we'll meet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Köszönöm. Holnap találkozunk vagyok!",
+        "Köszönöm. Holnap egy találkozunk!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Holnap",
+          "Ma",
+          "Most"
+        ]
+      }
+    },
+    {
+      "id": "ma-dolgozom",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ma dolgozom.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "dolgozom",
+          "dolgozik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én ma dolgozik.",
+        "Ma dolgozom vagyok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ma",
+          "Holnap",
+          "Most"
+        ]
+      }
+    },
+    {
+      "id": "holnap-a-varosba-megyek",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "future",
+        "in-into-from"
+      ],
+      "text": "Holnap a városba megyek.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Holnap",
+          "holnap"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "városba",
+          "város"
+        ],
+        [
+          "megyek",
+          "megy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én holnap a városba mész.",
+        "Én holnap a városba megy."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Holnap",
+          "Ma",
+          "Most"
+        ]
+      }
+    },
+    {
+      "id": "ma-nem-tudok-menni",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "infinitive",
+        "negation"
+      ],
+      "text": "Ma nem tudok menni.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "nem",
+          "nem"
+        ],
+        [
+          "tudok",
+          "tud"
+        ],
+        [
+          "menni",
+          "megy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma nem tudok megyek.",
+        "Én ma nem tud menni."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "menni",
+          "megyek",
+          "mész"
+        ]
+      }
+    },
+    {
+      "id": "holnap-dolgoznom-kell",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "future"
+      ],
+      "text": "Holnap dolgoznom kell.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Holnap",
+          "holnap"
+        ],
+        [
+          "dolgoznom",
+          "dolgozik"
+        ],
+        [
+          "kell",
+          "kell"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "for me to work"
+        ],
+        [
+          "is necessary"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Holnap dolgozom kell.",
+        "Holnap dolgozik kell."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dolgoznom",
+          "dolgozom",
+          "dolgozik"
+        ]
+      }
+    },
+    {
+      "id": "szia-hogy-vagy",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "hogy-vagy",
+        "hello"
+      ],
+      "text": "Szia, hogy vagy?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Szia,"
+        ],
+        [
+          "hogy"
+        ],
+        [
+          "vagy"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "are you"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Szia, hogy vagyok te?",
+        "Szia, vagy hogy?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vagy",
+          "vagyok",
+          "vagyunk"
+        ]
+      }
+    },
+    {
+      "id": "hogy-hivnak",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "definite"
+      ],
+      "chunks": [
+        "hogy-hívnak"
+      ],
+      "text": "Hogy hívnak?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Hogy"
+        ],
+        [
+          "hívnak"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "do they call you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hogy hívsz?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hívnak",
+          "hívni",
+          "hívnunk"
+        ]
+      }
+    },
+    {
+      "id": "beszelsz-angolul",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Beszélsz angolul?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Beszélsz",
+          "beszél"
+        ],
+        [
+          "angolul",
+          "angolul"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "in English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beszélni angolul?",
+        "Beszélsz angol?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Beszélsz",
+          "Beszélek",
+          "Beszélünk"
+        ]
+      }
+    },
+    {
+      "id": "van-egy-batyam",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "possessive"
+      ],
+      "text": "Van egy bátyám és egy húgom.",
+      "means": "I have an older brother and a younger sister.",
+      "words": [
+        [
+          "Van",
+          "van"
+        ],
+        [
+          "egy",
+          "egy"
+        ],
+        [
+          "bátyám",
+          "báty"
+        ],
+        [
+          "és",
+          "és"
+        ],
+        [
+          "egy",
+          "egy"
+        ],
+        [
+          "húgom",
+          "húg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "an older brother of mine"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a younger sister of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Van egy bátyámat és egy húgomat.",
+        "Van egy báty és egy húg."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bátyám",
+          "báty",
+          "bátyja"
+        ]
+      }
+    },
+    {
+      "id": "noverem-budapesten",
+      "topic": "people",
+      "concepts": [
+        "on-onto-off",
+        "possessive",
+        "vowel-harmony"
+      ],
+      "text": "A nővérem Budapesten lakik.",
+      "means": "My older sister lives in Budapest.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "nővérem",
+          "nővér"
+        ],
+        [
+          "Budapesten"
+        ],
+        [
+          "lakik",
+          "lakik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "in Budapest",
+          true
+        ],
+        [
+          "lives",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "Budapesten",
+        "lakik"
+      ],
+      "wrong": [
+        "A nővérem Budapestben lakik.",
+        "A nővérem Budapestre lakik."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Budapesten",
+          "Budapestben",
+          "Budapestre"
+        ]
+      }
+    },
+    {
+      "id": "szuleim-debrecenben",
+      "topic": "people",
+      "concepts": [
+        "in-into-from",
+        "possessive",
+        "plural",
+        "vowel-harmony"
+      ],
+      "text": "A szüleim Debrecenben laknak.",
+      "means": "My parents live in Debrecen.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "szüleim",
+          "szülő"
+        ],
+        [
+          "Debrecenben"
+        ],
+        [
+          "laknak",
+          "lakik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My parents"
+        ],
+        [
+          "in Debrecen",
+          true
+        ],
+        [
+          "live",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "Debrecenben",
+        "laknak"
+      ],
+      "wrong": [
+        "A szüleim Debrecenen laknak.",
+        "A szüleim Debrecenbe laknak."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Debrecenben",
+          "Debrecenen",
+          "Debrecenbe"
+        ]
+      }
+    },
+    {
+      "id": "apam-autoja",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "van-nincs"
+      ],
+      "text": "Ez az apám autója.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Ez"
+        ],
+        [
+          "az"
+        ],
+        [
+          "apám",
+          "apa"
+        ],
+        [
+          "autója",
+          "autó"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my dad's"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez az apám autó.",
+        "Ez van az apám autója."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "autója",
+          "autó",
+          "autóm"
+        ]
+      }
+    },
+    {
+      "id": "nem-tudom-hol",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "definite",
+        "present"
+      ],
+      "text": "Nem tudom, hol lakik.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Nem"
+        ],
+        [
+          "tudom,",
+          "tud"
+        ],
+        [
+          "hol"
+        ],
+        [
+          "lakik",
+          "lakik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Nem tudok, hol lakik.",
+        "Tudom nem, hol lakik."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lakik",
+          "lakom",
+          "lakni"
+        ]
+      }
+    },
+    {
+      "id": "tanar-vagyok",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Tanár vagyok.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Tanár",
+          "tanár"
+        ],
+        [
+          "vagyok",
+          "van"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher",
+          true
+        ],
+        [
+          "I am",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Tanár",
+        "vagyok"
+      ],
+      "wrong": [
+        "Tanár van.",
+        "Tanárt vagyok."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vagyok",
+          "van",
+          "vagy"
+        ]
+      }
+    },
+    {
+      "id": "nekem-tetszik",
+      "topic": "people",
+      "concepts": [
+        "focus"
+      ],
+      "text": "Nekem tetszik ez a film.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Nekem"
+        ],
+        [
+          "tetszik",
+          "tetszik"
+        ],
+        [
+          "ez"
+        ],
+        [
+          "a"
+        ],
+        [
+          "film",
+          "film"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing"
+        ],
+        [
+          "this movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Nekem",
+        "ez",
+        "a",
+        "film"
+      ],
+      "wrong": [
+        "Én tetszik ez a film.",
+        "Nekem tetszem ez a film."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tetszik",
+          "tetszem",
+          "tetszel"
+        ]
+      }
+    },
+    {
+      "id": "nincs-autom",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "van-nincs",
+        "negation",
+        "possessive"
+      ],
+      "text": "Nincs autóm.",
+      "means": "I don't have a car.",
+      "words": [
+        [
+          "Nincs",
+          "nincs"
+        ],
+        [
+          "autóm",
+          "autó"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There isn't"
+        ],
+        [
+          "a car of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nem van autóm.",
+        "Nincs autót."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "autóm",
+          "autó",
+          "autót"
+        ]
+      }
+    },
+    {
+      "id": "kis-lakasban",
+      "topic": "home",
+      "concepts": [
+        "in-into-from",
+        "present",
+        "vowel-harmony"
+      ],
+      "text": "Egy kis lakásban lakom.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Egy"
+        ],
+        [
+          "kis",
+          "kis"
+        ],
+        [
+          "lakásban",
+          "lakás"
+        ],
+        [
+          "lakom",
+          "lakik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In a small apartment",
+          true
+        ],
+        [
+          "I live",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Egy",
+        "kis",
+        "lakásban",
+        "lakom"
+      ],
+      "wrong": [
+        "Egy kis lakásba lakom.",
+        "Egy kis lakásból lakom."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "lakásban",
+          "lakásba",
+          "lakásból"
+        ]
+      }
+    },
+    {
+      "id": "asztalon-konyv",
+      "topic": "home",
+      "concepts": [
+        "van-nincs",
+        "on-onto-off",
+        "article"
+      ],
+      "text": "Az asztalon van egy könyv.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Az"
+        ],
+        [
+          "asztalon",
+          "asztal"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "egy"
+        ],
+        [
+          "könyv",
+          "könyv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "there is",
+          true
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Az",
+        "asztalon",
+        "van",
+        "egy",
+        "könyv"
+      ],
+      "wrong": [
+        "Az asztalra van egy könyv.",
+        "Az asztalban van egy könyv."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "asztalon",
+          "asztalra",
+          "asztalban"
+        ]
+      }
+    },
+    {
+      "id": "nincs-tej",
+      "topic": "home",
+      "concepts": [
+        "van-nincs",
+        "negation",
+        "in-into-from"
+      ],
+      "text": "Nincs tej a hűtőben.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Nincs",
+          "nincs"
+        ],
+        [
+          "tej",
+          "tej"
+        ],
+        [
+          "a"
+        ],
+        [
+          "hűtőben",
+          "hűtő"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There's no"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Nem van tej a hűtőben.",
+        "Nincs tej a hűtőbe."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nincs",
+          "Nem",
+          "Sem"
+        ]
+      }
+    },
+    {
+      "id": "becsuknad-az-ablakot",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "conditional",
+        "definite",
+        "accusative"
+      ],
+      "text": "Becsuknád az ablakot?",
+      "means": "Would you close the window?",
+      "words": [
+        [
+          "Becsuknád",
+          "becsuk"
+        ],
+        [
+          "az"
+        ],
+        [
+          "ablakot",
+          "ablak"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Would you close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Becsuknál az ablakot?",
+        "Becsuknád az ablak?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ablakot",
+          "ablak",
+          "ablakban"
+        ]
+      }
+    },
+    {
+      "id": "nagy-konyhank",
+      "topic": "home",
+      "concepts": [
+        "have",
+        "possessive"
+      ],
+      "text": "Nagy konyhánk és kis erkélyünk van.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Nagy",
+          "nagy"
+        ],
+        [
+          "konyhánk",
+          "konyha"
+        ],
+        [
+          "és"
+        ],
+        [
+          "kis",
+          "kis"
+        ],
+        [
+          "erkélyünk",
+          "erkély"
+        ],
+        [
+          "van",
+          "van"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A big kitchen of ours"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony of ours"
+        ],
+        [
+          "there is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "van"
+      ],
+      "wrong": [
+        "Nagy konyhánkat és kis erkélyünket van."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "konyhánk",
+          "konyha",
+          "konyhánkat"
+        ]
+      }
+    },
+    {
+      "id": "vacsorat-fozok",
+      "topic": "home",
+      "concepts": [
+        "focus",
+        "definite",
+        "accusative",
+        "present"
+      ],
+      "text": "Amikor hazaérek, vacsorát főzök.",
+      "means": "When I get home, I cook dinner.",
+      "words": [
+        [
+          "Amikor"
+        ],
+        [
+          "hazaérek,",
+          "hazaér"
+        ],
+        [
+          "vacsorát",
+          "vacsora"
+        ],
+        [
+          "főzök",
+          "főz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I get home,"
+        ],
+        [
+          "dinner",
+          true
+        ],
+        [
+          "I cook",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "vacsorát",
+        "főzök"
+      ],
+      "wrong": [
+        "Amikor hazaérek, vacsorát főzöm.",
+        "Amikor hazaérek, vacsora főzök."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "főzök",
+          "főzöm",
+          "főz"
+        ]
+      }
+    },
+    {
+      "id": "csukd-be-az-ajtot",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "prefix",
+        "definite",
+        "accusative"
+      ],
+      "text": "Csukd be az ajtót, kérlek!",
+      "means": "Close the door, please!",
+      "words": [
+        [
+          "Csukd",
+          "becsuk"
+        ],
+        [
+          "be",
+          "becsuk"
+        ],
+        [
+          "az"
+        ],
+        [
+          "ajtót,",
+          "ajtó"
+        ],
+        [
+          "kérlek",
+          "kér"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Csukd be az ajtó, kérlek!",
+        "Csukj be az ajtót, kérlek!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "be",
+          "ki",
+          "fel"
+        ]
+      }
+    },
+    {
+      "id": "hol-vannak-a-kulcsaim",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "possessive",
+        "plural",
+        "van-nincs"
+      ],
+      "text": "Hol vannak a kulcsaim?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Hol"
+        ],
+        [
+          "vannak",
+          "van"
+        ],
+        [
+          "a"
+        ],
+        [
+          "kulcsaim",
+          "kulcs"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Hol van a kulcsaim?",
+        "Hol vannak a kulcsom?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vannak",
+          "van",
+          "vagyok"
+        ]
+      }
+    },
+    {
+      "id": "gyere-ide",
+      "topic": "home",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Gyere ide!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Gyere",
+          "jön"
+        ],
+        [
+          "ide",
+          "ide"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Gyere itt!",
+        "Gyere innen!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ide",
+          "itt",
+          "innen"
+        ]
+      }
+    },
+    {
+      "id": "holnap-megcsinalom",
+      "topic": "home",
+      "concepts": [
+        "prefix",
+        "definite",
+        "future",
+        "present"
+      ],
+      "text": "Holnap megcsinálom.",
+      "means": "I'll do it tomorrow.",
+      "words": [
+        [
+          "Holnap",
+          "holnap"
+        ],
+        [
+          "megcsinálom",
+          "megcsinál"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'll do it"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Holnap megcsinálok.",
+        "Holnap megcsinálni."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "megcsinálom",
+          "megcsinálok",
+          "megcsinál"
+        ]
+      }
+    },
+    {
+      "id": "cukor-nelkul",
+      "topic": "food",
+      "concepts": [
+        "focus",
+        "definite",
+        "accusative",
+        "article"
+      ],
+      "text": "Cukor nélkül iszom a kávét.",
+      "means": "I drink my coffee without sugar.",
+      "words": [
+        [
+          "Cukor",
+          "cukor"
+        ],
+        [
+          "nélkül",
+          "nélkül"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ],
+        [
+          "a"
+        ],
+        [
+          "kávét",
+          "kávé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Without sugar",
+          true
+        ],
+        [
+          "I drink",
+          true
+        ],
+        [
+          "the coffee",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Cukor",
+        "nélkül",
+        "iszom",
+        "a",
+        "kávét"
+      ],
+      "wrong": [
+        "Cukor nélkül iszem a kávét.",
+        "Cukor nélkül iszom a kávé."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kávét",
+          "kávé",
+          "kávéval"
+        ]
+      }
+    },
+    {
+      "id": "nem-iszom-kavet",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "accusative",
+        "present"
+      ],
+      "text": "Nem iszom kávét.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Nem",
+          "nem"
+        ],
+        [
+          "iszom",
+          "iszik"
+        ],
+        [
+          "kávét",
+          "kávé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Nem iszom kávé.",
+        "Iszom nem kávét."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kávét",
+          "kávé",
+          "kávéban"
+        ]
+      }
+    },
+    {
+      "id": "kerek-egy-pohar-vizet",
+      "topic": "food",
+      "concepts": [
+        "definite",
+        "accusative",
+        "article",
+        "present"
+      ],
+      "text": "Kérek egy pohár vizet.",
+      "means": "I'd like a glass of water.",
+      "words": [
+        [
+          "Kérek",
+          "kér"
+        ],
+        [
+          "egy"
+        ],
+        [
+          "pohár",
+          "pohár"
+        ],
+        [
+          "vizet",
+          "víz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kérek egy poharat vizet.",
+        "Kérek egy pohár víz."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vizet",
+          "víz",
+          "vízet"
+        ]
+      }
+    },
+    {
+      "id": "valami-edeset",
+      "topic": "food",
+      "concepts": [
+        "conditional",
+        "infinitive",
+        "accusative"
+      ],
+      "text": "Szeretnék enni valami édeset.",
+      "means": "I'd like to eat something sweet.",
+      "words": [
+        [
+          "Szeretnék",
+          "szeret"
+        ],
+        [
+          "enni",
+          "eszik"
+        ],
+        [
+          "valami",
+          "valami"
+        ],
+        [
+          "édeset",
+          "édes"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Szeretnék eszem valami édeset.",
+        "Szeretnék enni valami édes."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "enni",
+          "eszem",
+          "evett"
+        ]
+      }
+    },
+    {
+      "id": "mit-innal",
+      "topic": "food",
+      "concepts": [
+        "conditional",
+        "question",
+        "accusative",
+        "definite"
+      ],
+      "text": "Mit innál?",
+      "means": "What would you like to drink?",
+      "words": [
+        [
+          "Mit"
+        ],
+        [
+          "innál",
+          "iszik"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "would you drink"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Mit innád?",
+        "Mi innál?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "innál",
+          "innád",
+          "innék"
+        ]
+      }
+    },
+    {
+      "id": "tegnap-pizzat-ettunk",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "focus",
+        "accusative",
+        "definite"
+      ],
+      "text": "Tegnap pizzát ettünk.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Tegnap",
+          "tegnap"
+        ],
+        [
+          "pizzát",
+          "pizza"
+        ],
+        [
+          "ettünk",
+          "eszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "pizza",
+          true
+        ],
+        [
+          "we ate",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "pizzát",
+        "ettünk"
+      ],
+      "wrong": [
+        "Tegnap pizzát ettem.",
+        "Tegnap pizza ettünk."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ettünk",
+          "ettetek",
+          "ettem"
+        ]
+      }
+    },
+    {
+      "id": "tej-a-hutoben",
+      "topic": "food",
+      "concepts": [
+        "in-into-from",
+        "van-nincs"
+      ],
+      "text": "A tej a hűtőben van.",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "tej",
+          "tej"
+        ],
+        [
+          "a"
+        ],
+        [
+          "hűtőben",
+          "hűtő"
+        ],
+        [
+          "van",
+          "van"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "in the fridge",
+          true
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "a",
+        "hűtőben",
+        "van"
+      ],
+      "wrong": [
+        "A tej a hűtőbe van.",
+        "A tej a hűtőből van."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hűtőben",
+          "hűtőbe",
+          "hűtőből"
+        ]
+      }
+    },
+    {
+      "id": "anyukam-jol-foz",
+      "topic": "food",
+      "concepts": [
+        "possessive",
+        "present"
+      ],
+      "text": "Anyukám nagyon jól főz.",
+      "means": "My mom cooks really well.",
+      "words": [
+        [
+          "Anyukám",
+          "anyuka"
+        ],
+        [
+          "nagyon",
+          "nagyon"
+        ],
+        [
+          "jól",
+          "jól"
+        ],
+        [
+          "főz",
+          "főz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "really well",
+          true
+        ],
+        [
+          "cooks",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "nagyon",
+        "jól",
+        "főz"
+      ],
+      "wrong": [
+        "Anyukám nagyon jól főzök.",
+        "Anyukám nagyon jó főz."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "főz",
+          "főzök",
+          "főzni"
+        ]
+      }
+    },
+    {
+      "id": "a-szamlat",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "imperative"
+      ],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "A számlát, legyen szíves!",
+      "means": "The check, please!",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "számlát,"
+        ],
+        [
+          "legyen"
+        ],
+        [
+          "szíves"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "A számlával, legyen szíves!",
+        "A számlát, legyen szívesen!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "legyen",
+          "van",
+          "lenni"
+        ]
+      }
+    },
+    {
+      "id": "anyukammal-fozni",
+      "topic": "food",
+      "concepts": [
+        "instrumental",
+        "infinitive",
+        "possessive"
+      ],
+      "text": "Szeretek anyukámmal főzni.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Szeretek",
+          "szeret"
+        ],
+        [
+          "anyukámmal",
+          "anyuka"
+        ],
+        [
+          "főzni",
+          "főz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "with my mom",
+          true
+        ],
+        [
+          "to cook",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "anyukámmal",
+        "főzni"
+      ],
+      "wrong": [
+        "Szeretek anyukámat főzni.",
+        "Szeretek anyukámmal főzök."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "anyukámmal",
+          "anyukámat",
+          "anyukámnak"
+        ]
+      }
+    },
+    {
+      "id": "hol-van-az-allomas",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "van-nincs",
+        "article"
+      ],
+      "chunks": [
+        "elnézést"
+      ],
+      "text": "Elnézést, hol van az állomás?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Elnézést,"
+        ],
+        [
+          "hol",
+          "hol"
+        ],
+        [
+          "van",
+          "van"
+        ],
+        [
+          "az",
+          "a"
+        ],
+        [
+          "állomás",
+          "állomás"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Elnézést, hol vagy az állomás?",
+        "Elnézést, hol az állomás van?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "van",
+          "vagy",
+          "vannak"
+        ]
+      }
+    },
+    {
+      "id": "segithetek",
+      "topic": "out",
+      "concepts": [
+        "potential",
+        "question"
+      ],
+      "text": "Segíthetek valamiben?",
+      "means": "Can I help you with anything?",
+      "words": [
+        [
+          "Segíthetek",
+          "segít"
+        ],
+        [
+          "valamiben",
+          "valami"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can I help"
+        ],
+        [
+          "with something"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Segíthetem valamiben?",
+        "Segíthetek valamibe?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "valamiben",
+          "valamibe",
+          "valamiről"
+        ]
+      }
+    },
+    {
+      "id": "leulhetek-ide",
+      "topic": "out",
+      "concepts": [
+        "potential",
+        "prefix",
+        "question"
+      ],
+      "text": "Leülhetek ide?",
+      "means": "Can I sit here?",
+      "words": [
+        [
+          "Leülhetek",
+          "leül"
+        ],
+        [
+          "ide",
+          "ide"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can I sit down"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Le ülhetek ide?",
+        "Leülhetek innen?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ide",
+          "innen",
+          "oda"
+        ]
+      }
+    },
+    {
+      "id": "boltba-megyek",
+      "topic": "out",
+      "concepts": [
+        "in-into-from",
+        "focus",
+        "present"
+      ],
+      "text": "A boltba megyek kenyérért.",
+      "means": "I'm going to the store for bread.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "boltba",
+          "bolt"
+        ],
+        [
+          "megyek",
+          "megy"
+        ],
+        [
+          "kenyérért",
+          "kenyér"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To the store",
+          true
+        ],
+        [
+          "I'm going",
+          true
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "A",
+        "boltba",
+        "megyek"
+      ],
+      "wrong": [
+        "A boltban megyek kenyérért.",
+        "A boltba megyek kenyér."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "boltba",
+          "boltban",
+          "boltból"
+        ]
+      }
+    },
+    {
+      "id": "busszal-megyek",
+      "topic": "out",
+      "concepts": [
+        "instrumental",
+        "focus",
+        "infinitive",
+        "future"
+      ],
+      "text": "Holnap busszal megyek dolgozni.",
+      "means": "Tomorrow I'm taking the bus to work.",
+      "words": [
+        [
+          "Holnap",
+          "holnap"
+        ],
+        [
+          "busszal",
+          "busz"
+        ],
+        [
+          "megyek",
+          "megy"
+        ],
+        [
+          "dolgozni",
+          "dolgozik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "by bus",
+          true
+        ],
+        [
+          "I'm going",
+          true
+        ],
+        [
+          "to work",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "moved": [
+        "busszal",
+        "megyek",
+        "dolgozni"
+      ],
+      "wrong": [
+        "Holnap buszal megyek dolgozni.",
+        "Holnap busszal megyek dolgozik."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "busszal",
+          "buszal",
+          "busszel"
+        ]
+      }
+    },
+    {
+      "id": "uj-kabatot",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "accusative"
+      ],
+      "text": "Tegnap vettem egy új kabátot.",
+      "means": "Yesterday I bought a new coat.",
+      "words": [
+        [
+          "Tegnap",
+          "tegnap"
+        ],
+        [
+          "vettem",
+          "vesz"
+        ],
+        [
+          "egy"
+        ],
+        [
+          "új",
+          "új"
+        ],
+        [
+          "kabátot",
+          "kabát"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I bought"
+        ],
+        [
+          "a new coat"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Tegnap vettem egy új kabát.",
+        "Tegnap vett egy új kabátot."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kabátot",
+          "kabát",
+          "kabátom"
+        ]
+      }
+    },
+    {
+      "id": "vonat-kesett",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "accusative",
+        "plural"
+      ],
+      "text": "A vonat tíz percet késett.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "vonat",
+          "vonat"
+        ],
+        [
+          "tíz"
+        ],
+        [
+          "percet",
+          "perc"
+        ],
+        [
+          "késett",
+          "késik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "ten minutes"
+        ],
+        [
+          "was late",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "késett"
+      ],
+      "wrong": [
+        "A vonat tíz perceket késett.",
+        "A vonat tíz perc késett."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "késett",
+          "késtem",
+          "késni"
+        ]
+      }
+    },
+    {
+      "id": "sosem-voltam",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "past",
+        "on-onto-off"
+      ],
+      "text": "Még sosem voltam Magyarországon.",
+      "means": "I've never been to Hungary.",
+      "words": [
+        [
+          "Még",
+          "még"
+        ],
+        [
+          "sosem",
+          "sosem"
+        ],
+        [
+          "voltam",
+          "van"
+        ],
+        [
+          "Magyarországon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yet",
+          true
+        ],
+        [
+          "never"
+        ],
+        [
+          "I was",
+          true
+        ],
+        [
+          "in Hungary"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Még",
+        "voltam"
+      ],
+      "wrong": [
+        "Még sosem voltam Magyarországban.",
+        "Még sosem voltam Magyarországra."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "Magyarországon",
+          "Magyarországban",
+          "Magyarországból"
+        ]
+      }
+    },
+    {
+      "id": "uj-cipo",
+      "topic": "out",
+      "concepts": [
+        "van-nincs"
+      ],
+      "text": "Az új cipő túl kicsi.",
+      "means": "The new shoes are too small.",
+      "words": [
+        [
+          "Az"
+        ],
+        [
+          "új",
+          "új"
+        ],
+        [
+          "cipő",
+          "cipő"
+        ],
+        [
+          "túl",
+          "túl"
+        ],
+        [
+          "kicsi",
+          "kicsi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The new shoes"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Az új cipő van túl kicsi.",
+        "Az új cipők túl kicsi."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kicsi",
+          "kicsit",
+          "kicsik"
+        ]
+      }
+    },
+    {
+      "id": "foghatunk-taxit",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "potential",
+        "article",
+        "definite"
+      ],
+      "text": "Ha fáradt vagy, foghatunk egy taxit.",
+      "means": "If you're tired, we can take a taxi.",
+      "words": [
+        [
+          "Ha"
+        ],
+        [
+          "fáradt",
+          "fáradt"
+        ],
+        [
+          "vagy,",
+          "van"
+        ],
+        [
+          "foghatunk",
+          "fog"
+        ],
+        [
+          "egy"
+        ],
+        [
+          "taxit",
+          "taxi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you're tired,"
+        ],
+        [
+          "we can take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ha fáradt vagy, foghatunk egy taxi.",
+        "Ha fáradt van, foghatunk egy taxit."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "taxit",
+          "taxi",
+          "taxival"
+        ]
+      }
+    },
+    {
+      "id": "allomason-var",
+      "topic": "out",
+      "concepts": [
+        "on-onto-off",
+        "focus",
+        "accusative",
+        "definite"
+      ],
+      "text": "Az állomáson vár minket a nagymama.",
+      "means": "Grandma is waiting for us at the station.",
+      "words": [
+        [
+          "Az"
+        ],
+        [
+          "állomáson",
+          "állomás"
+        ],
+        [
+          "vár",
+          "vár"
+        ],
+        [
+          "minket"
+        ],
+        [
+          "a"
+        ],
+        [
+          "nagymama",
+          "nagymama"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "waits"
+        ],
+        [
+          "for us"
+        ],
+        [
+          "Grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Az",
+        "állomáson",
+        "a",
+        "nagymama"
+      ],
+      "wrong": [
+        "Az állomásban vár minket a nagymama.",
+        "Az állomáson vár mi a nagymama."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "állomáson",
+          "állomásban",
+          "állomásra"
+        ]
+      }
+    },
+    {
+      "id": "orvoshoz-megyek",
+      "topic": "out",
+      "concepts": [
+        "at-to-from",
+        "focus",
+        "present",
+        "future"
+      ],
+      "text": "Holnap orvoshoz megyek.",
+      "means": "Tomorrow I'm going to the doctor.",
+      "words": [
+        [
+          "Holnap",
+          "holnap"
+        ],
+        [
+          "orvoshoz",
+          "orvos"
+        ],
+        [
+          "megyek",
+          "megy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to the doctor",
+          true
+        ],
+        [
+          "I'm going",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "orvoshoz",
+        "megyek"
+      ],
+      "wrong": [
+        "Holnap orvosba megyek.",
+        "Holnap orvosnál megyek."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "orvoshoz",
+          "orvosnál",
+          "orvosba"
+        ]
+      }
+    },
+    {
+      "id": "nagymamahoz-megyunk",
+      "topic": "plans",
+      "concepts": [
+        "at-to-from",
+        "focus",
+        "vowel-harmony",
+        "future"
+      ],
+      "text": "Szombaton a nagymamához megyünk.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "Szombaton",
+          "szombat"
+        ],
+        [
+          "a"
+        ],
+        [
+          "nagymamához",
+          "nagymama"
+        ],
+        [
+          "megyünk",
+          "megy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "to Grandma's",
+          true
+        ],
+        [
+          "we're going",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "a",
+        "nagymamához",
+        "megyünk"
+      ],
+      "wrong": [
+        "Szombaton a nagymamánál megyünk.",
+        "Szombaton a nagymamába megyünk."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nagymamához",
+          "nagymamánál",
+          "nagymamától"
+        ]
+      }
+    },
+    {
+      "id": "baratomnal-alszom",
+      "topic": "plans",
+      "concepts": [
+        "at-to-from",
+        "focus",
+        "possessive",
+        "future"
+      ],
+      "text": "Ma este a barátomnál alszom.",
+      "means": "Tonight I'm sleeping at my friend's.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "este",
+          "este"
+        ],
+        [
+          "a"
+        ],
+        [
+          "barátomnál",
+          "barát"
+        ],
+        [
+          "alszom",
+          "alszik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tonight"
+        ],
+        [
+          "at my friend's",
+          true
+        ],
+        [
+          "I'm sleeping",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "a",
+        "barátomnál",
+        "alszom"
+      ],
+      "wrong": [
+        "Ma este a barátomhoz alszom.",
+        "Ma este a barátomban alszom."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "barátomnál",
+          "barátomhoz",
+          "barátomtól"
+        ]
+      }
+    },
+    {
+      "id": "esni-fog",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "infinitive"
+      ],
+      "text": "Holnap esni fog.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Holnap",
+          "holnap"
+        ],
+        [
+          "esni",
+          "esik"
+        ],
+        [
+          "fog",
+          "fog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "rain",
+          true
+        ],
+        [
+          "it will",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "esni",
+        "fog"
+      ],
+      "wrong": [
+        "Holnap esik fog.",
+        "Holnap esni fogok."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fog",
+          "fogok",
+          "fogsz"
+        ]
+      }
+    },
+    {
+      "id": "holnap-felhivlak",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "prefix",
+        "definite",
+        "present"
+      ],
+      "text": "Holnap felhívlak.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Holnap",
+          "holnap"
+        ],
+        [
+          "felhívlak",
+          "felhív"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'll call you"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Holnap felhívok téged.",
+        "Holnap felhívlak te."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "felhívlak",
+          "felhívok",
+          "felhívni"
+        ]
+      }
+    },
+    {
+      "id": "mennem-kell",
+      "topic": "plans",
+      "concepts": [
+        "infinitive"
+      ],
+      "text": "Most mennem kell.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Most",
+          "most"
+        ],
+        [
+          "mennem",
+          "megy"
+        ],
+        [
+          "kell",
+          "kell"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "my going"
+        ],
+        [
+          "is needed"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Most megyek kell.",
+        "Most mennem kellek."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mennem",
+          "megyek",
+          "mentem"
+        ]
+      }
+    },
+    {
+      "id": "eljossz-moziba",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "prefix",
+        "instrumental",
+        "in-into-from"
+      ],
+      "text": "Eljössz velünk moziba?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Eljössz",
+          "eljön"
+        ],
+        [
+          "velünk"
+        ],
+        [
+          "moziba",
+          "mozi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Will you come along"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Eljössz velünk moziban?",
+        "Eljösz velünk moziba?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moziba",
+          "moziban",
+          "moziból"
+        ]
+      }
+    },
+    {
+      "id": "nem-megyek-el",
+      "topic": "plans",
+      "concepts": [
+        "prefix",
+        "negation",
+        "present"
+      ],
+      "text": "Nem megyek el.",
+      "means": "I'm not leaving.",
+      "words": [
+        [
+          "Nem"
+        ],
+        [
+          "megyek",
+          "elmegy"
+        ],
+        [
+          "el",
+          "elmegy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "I go"
+        ],
+        [
+          "away"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nem"
+      ],
+      "wrong": [
+        "Nem el megyek.",
+        "Nem megyek elmenni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "el",
+          "be",
+          "le"
+        ]
+      }
+    },
+    {
+      "id": "ha-nem-esik",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "prefix",
+        "on-onto-off",
+        "future"
+      ],
+      "text": "Ha nem esik az eső, kimegyünk a strandra.",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "Ha"
+        ],
+        [
+          "nem"
+        ],
+        [
+          "esik",
+          "esik"
+        ],
+        [
+          "az"
+        ],
+        [
+          "eső,",
+          "eső"
+        ],
+        [
+          "kimegyünk",
+          "kimegy"
+        ],
+        [
+          "a"
+        ],
+        [
+          "strandra",
+          "strand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "not"
+        ],
+        [
+          "falls the rain,"
+        ],
+        [
+          "we'll go out"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ha nem esik az eső, kimegyünk a strandon.",
+        "Ha nem esik az eső, ki megyünk a strandra."
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "strandra",
+          "strandon",
+          "strandról"
+        ]
+      }
+    },
+    {
+      "id": "egy-eve-tanulok",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Egy éve tanulok magyarul.",
+      "means": "I've been learning Hungarian for a year.",
+      "words": [
+        [
+          "Egy"
+        ],
+        [
+          "éve",
+          "év"
+        ],
+        [
+          "tanulok",
+          "tanul"
+        ],
+        [
+          "magyarul",
+          "magyarul"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For a year"
+        ],
+        [
+          "I've been learning"
+        ],
+        [
+          "Hungarian"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Egy év tanulok magyarul.",
+        "Egy éve tanulom magyarul."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tanulok",
+          "tanulom",
+          "tanul"
+        ]
+      }
+    },
+    {
+      "id": "mit-csinalsz",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "definite",
+        "accusative",
+        "future"
+      ],
+      "text": "Mit csinálsz a hétvégén?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Mit"
+        ],
+        [
+          "csinálsz",
+          "csinál"
+        ],
+        [
+          "a"
+        ],
+        [
+          "hétvégén",
+          "hétvége"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are you doing"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mit csinálod a hétvégén?",
+        "Mi csinálsz a hétvégén?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "csinálsz",
+          "csinálod",
+          "csinálni"
+        ]
+      }
+    },
+    {
+      "id": "ma-hideg-van",
+      "topic": "plans",
+      "concepts": [
+        "van-nincs"
+      ],
+      "text": "Ma hideg van.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "hideg",
+          "hideg"
+        ],
+        [
+          "van",
+          "van"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "cold",
+          true
+        ],
+        [
+          "it is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "hideg",
+        "van"
+      ],
+      "wrong": [
+        "Ma hidegek van."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hideg",
+          "hidegek",
+          "hideget"
+        ]
+      }
+    },
+    {
+      "id": "hivj-fel",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "prefix",
+        "definite"
+      ],
+      "text": "Hívj fel holnap!",
+      "means": "Call me tomorrow!",
+      "words": [
+        [
+          "Hívj",
+          "felhív"
+        ],
+        [
+          "fel",
+          "felhív"
+        ],
+        [
+          "holnap",
+          "holnap"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Call me"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Fel hívj holnap!",
+        "Hívj fel tegnap!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hívj",
+          "Hívni",
+          "Hívott"
+        ]
+      }
+    },
+    {
+      "id": "remelem-szep-ido",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "present"
+      ],
+      "text": "Remélem, holnap szép idő lesz.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Remélem,",
+          "remél"
+        ],
+        [
+          "holnap",
+          "holnap"
+        ],
+        [
+          "szép",
+          "szép"
+        ],
+        [
+          "idő",
+          "idő"
+        ],
+        [
+          "lesz",
+          "lesz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope,"
+        ],
+        [
+          "tomorrow",
+          true
+        ],
+        [
+          "nice",
+          true
+        ],
+        [
+          "the weather",
+          true
+        ],
+        [
+          "will be",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        4,
+        2,
+        1
+      ],
+      "moved": [
+        "holnap",
+        "szép",
+        "idő",
+        "lesz"
+      ],
+      "wrong": [
+        "Remélem, holnap szép idő volt.",
+        "Remélem, holnap szép időt lesz."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "lesz",
+          "volt",
+          "lenni"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kávé",
+          "forms": [
+            "kávét"
+          ],
+          "picture": "coffee",
+          "means": "kávét = coffee"
+        },
+        {
+          "lemma": "tea",
+          "forms": [
+            "teát"
+          ],
+          "picture": "tea",
+          "means": "teát = tea"
+        },
+        {
+          "lemma": "víz",
+          "forms": [
+            "vizet"
+          ],
+          "picture": "water",
+          "means": "vizet = water"
+        },
+        {
+          "lemma": "én",
+          "forms": [
+            "én"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "iszik",
+          "forms": [
+            "iszom"
+          ],
+          "picture": "drink",
+          "means": "iszom = I drink"
+        },
+        {
+          "lemma": "és",
+          "forms": [
+            "és"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending usually makes a subject pronoun unneeded: lakom (I live), laksz (you live), lakik (he or she lives); Hungarian also uses the present where English says I've been doing: Egy éve tanulok magyarul."
+      },
+      "items": [
+        "kavet-iszom",
+        "teat-iszom",
+        "en-vizet-iszom",
+        "kavet-es-teat-iszom",
+        "teat-es-vizet-iszom",
+        "vizet-es-kavet-iszom"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "egy",
+          "forms": [
+            "egy"
+          ],
+          "means": "a; one"
+        },
+        {
+          "lemma": "tej",
+          "forms": [
+            "tejet"
+          ],
+          "picture": "milk",
+          "means": "tejet = milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "legyen-szíves",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "egy-kavet-legyen-szives",
+        "szia-egy-teat-koszonom",
+        "egy-kavet-koszonom",
+        "tejet-iszom",
+        "egy-teat-es-egy-vizet-legyen-szives"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "jól",
+          "forms": [
+            "jól"
+          ],
+          "means": "well; fine"
+        },
+        {
+          "lemma": "van",
+          "forms": [
+            "vagyok"
+          ],
+          "means": "vagyok = I am"
+        }
+      ],
+      "phrases": [
+        "hogy-vagy",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes/no question keeps the order of a statement, with the voice rising then falling at the end; a question word goes right before the verb: Hol van az állomás?"
+      },
+      "items": [
+        "szia-hogy-vagy",
+        "jol-vagyok-koszonom",
+        "igen-legyen-szives",
+        "nem-koszonom",
+        "igen-koszonom-viszlat",
+        "nem-koszonom-viszlat"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "te",
+          "forms": [
+            "te"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "nem",
+          "forms": [
+            "nem"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "tanár",
+          "forms": [
+            "tanár"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "diák",
+          "forms": [
+            "diák"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "van",
+          "forms": [
+            "vagy"
+          ],
+          "means": "vagy = you are"
+        }
+      ],
+      "phrases": [
+        "hogy-hívnak",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "tanar-vagyok",
+        "te-diak-vagy",
+        "tanar-vagy",
+        "nem-vagyok-tanar",
+        "hogy-hivnak",
+        "szia-orulok-hogy-megismertelek",
+        "nem-iszom-kavet"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "anya",
+          "forms": [
+            "anyám"
+          ],
+          "picture": "mother",
+          "means": "anyám = my mother"
+        },
+        {
+          "lemma": "apa",
+          "forms": [
+            "apám"
+          ],
+          "picture": "father",
+          "means": "apám = my father"
+        },
+        {
+          "lemma": "báty",
+          "forms": [
+            "bátyám"
+          ],
+          "picture": "brother",
+          "means": "bátyám = my older brother"
+        },
+        {
+          "lemma": "húg",
+          "forms": [
+            "húgom"
+          ],
+          "picture": "sister",
+          "means": "húgom = my younger sister"
+        },
+        {
+          "lemma": "ez",
+          "forms": [
+            "ez"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "a",
+          "forms": [
+            "a",
+            "az"
+          ],
+          "means": "a = the; az = the"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "Possession is an ending: autóm (my car), apám (my dad), konyhánk (our kitchen); of someone: az apám autója (my dad's car)."
+      },
+      "items": [
+        "ez-az-anyam",
+        "ez-az-apam",
+        "az-apam-tanar",
+        "a-batyam-diak",
+        "ez-a-hugom",
+        "az-anyam-tanar"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "van",
+          "forms": [
+            "van"
+          ],
+          "means": "to be"
+        },
+        {
+          "lemma": "nincs",
+          "forms": [
+            "nincs"
+          ],
+          "means": "there isn't; doesn't have"
+        },
+        {
+          "lemma": "barát",
+          "forms": [
+            "barát"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "orvos",
+          "forms": [
+            "orvos"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "kulcs",
+          "forms": [
+            "kulcsod"
+          ],
+          "picture": "key",
+          "means": "kulcsod = your key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefonom"
+          ],
+          "picture": "phone",
+          "means": "telefonom = my phone"
+        },
+        {
+          "lemma": "könyv",
+          "forms": [
+            "könyvem"
+          ],
+          "picture": "book",
+          "means": "könyvem = my book"
+        },
+        {
+          "lemma": "jó",
+          "forms": [
+            "jó"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "van-egy-telefonom",
+        "van-kulcsod",
+        "van-egy-batyam",
+        "nincs-konyvem",
+        "a-hugom-orvos",
+        "jo-barat-vagy"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "hol",
+          "forms": [
+            "hol"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "itt",
+          "forms": [
+            "itt"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "ott",
+          "forms": [
+            "ott"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "mosdó",
+          "forms": [
+            "mosdó"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "kulcs",
+          "forms": [
+            "kulcsom",
+            "kulcs"
+          ],
+          "means": "kulcsom = my key; kulcs = key"
+        }
+      ],
+      "phrases": [
+        "elnézést"
+      ],
+      "concept": {
+        "pattern": "article",
+        "line": "a (az before a vowel) is the, and egy is a or an: a kávét, az ablakot, egy taxit."
+      },
+      "items": [
+        "hol-van-a-kulcsom",
+        "itt-van-a-telefonom",
+        "ott-van-a-kulcs",
+        "elnezest-hol-van-a-mosdo",
+        "hol-van-az-anyam",
+        "itt-van-a-hugom"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "kettő",
+          "forms": [
+            "két"
+          ],
+          "picture": "two",
+          "means": "két = two"
+        },
+        {
+          "lemma": "három",
+          "forms": [
+            "három"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "pénz",
+          "forms": [
+            "pénzem"
+          ],
+          "picture": "money",
+          "means": "pénzem = my money"
+        },
+        {
+          "lemma": "könyv",
+          "forms": [
+            "könyvet"
+          ],
+          "means": "könyvet = book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "elnezest-mennyibe-kerul",
+        "a-szamlat",
+        "ket-kavet-legyen-szives",
+        "egy-konyvet-legyen-szives",
+        "van-harom-konyvem",
+        "nincs-penzem"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "beszél",
+          "forms": [
+            "beszélsz",
+            "beszélek"
+          ],
+          "means": "beszélsz = you speak; beszélek = I speak"
+        },
+        {
+          "lemma": "angolul",
+          "forms": [
+            "angolul"
+          ],
+          "means": "in English"
+        },
+        {
+          "lemma": "magyarul",
+          "forms": [
+            "magyarul"
+          ],
+          "means": "in Hungarian"
+        },
+        {
+          "lemma": "ért",
+          "forms": [
+            "értem",
+            "érted"
+          ],
+          "means": "értem = I understand it; érted = you understand it"
+        },
+        {
+          "lemma": "kicsit",
+          "forms": [
+            "kicsit"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "szeret",
+          "forms": [
+            "szeretnék"
+          ],
+          "means": "szeretnék = I would like"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "A direct object takes -t, often with a vowel before it (kávét, pizzát, ablakot), and so can a length of time: tíz percet késett (it was ten minutes late)."
+      },
+      "items": [
+        "nem-ertem",
+        "te-erted",
+        "beszelsz-angolul",
+        "kicsit-beszelek-magyarul",
+        "egy-kavet-szeretnek",
+        "vizet-szeretnek-legyen-szives"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "ház",
+          "forms": [
+            "ház",
+            "házban"
+          ],
+          "picture": "house",
+          "means": "ház = house; házban = in a house"
+        },
+        {
+          "lemma": "szoba",
+          "forms": [
+            "szobám"
+          ],
+          "picture": "room",
+          "means": "szobám = my room"
+        },
+        {
+          "lemma": "nagy",
+          "forms": [
+            "nagy"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "kicsi",
+          "forms": [
+            "kicsi"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "lakik",
+          "forms": [
+            "lakom",
+            "laksz",
+            "lakik"
+          ],
+          "means": "lakom = I live; laksz = you live; lakik = lives"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ez-a-haz-nagy",
+        "a-szobam-kicsi",
+        "hol-laksz",
+        "egy-kicsi-hazban-lakom",
+        "az-anyam-itt-lakik"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "megy",
+          "forms": [
+            "megyek",
+            "mész",
+            "megy"
+          ],
+          "means": "megyek = I go; mész = you go; megy = goes"
+        },
+        {
+          "lemma": "iskola",
+          "forms": [
+            "iskolába"
+          ],
+          "picture": "school",
+          "means": "iskolába = to school"
+        },
+        {
+          "lemma": "város",
+          "forms": [
+            "városba"
+          ],
+          "picture": "city",
+          "means": "városba = to the city"
+        },
+        {
+          "lemma": "állomás",
+          "forms": [
+            "állomás"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "autó",
+          "forms": [
+            "autó",
+            "autóm"
+          ],
+          "picture": "car",
+          "means": "autó = car; autóm = my car"
+        },
+        {
+          "lemma": "hová",
+          "forms": [
+            "hová"
+          ],
+          "means": "where to"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "van-nincs",
+        "line": "van says something exists, is somewhere, or what the weather is (Hideg van), and nincs says it isn't; with a noun or adjective in the present, is or are is left out for he, she, it or they: Az új cipő túl kicsi."
+      },
+      "items": [
+        "iskolaba-megyek",
+        "hova-mesz",
+        "hol-van-az-allomas",
+        "az-anyam-a-varosba-megy",
+        "ez-az-auto-kicsi",
+        "van-egy-autom",
+        "nincs-autom"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "ma",
+          "forms": [
+            "ma"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "holnap",
+          "forms": [
+            "holnap"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "most",
+          "forms": [
+            "most"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "dolgozik",
+          "forms": [
+            "dolgozom",
+            "dolgoznom"
+          ],
+          "picture": "work",
+          "means": "dolgozom = I work; dolgoznom = for me to work"
+        },
+        {
+          "lemma": "kell",
+          "forms": [
+            "kell"
+          ],
+          "means": "to be needed"
+        },
+        {
+          "lemma": "tud",
+          "forms": [
+            "tudok"
+          ],
+          "means": "tudok = I can"
+        },
+        {
+          "lemma": "megy",
+          "forms": [
+            "mennem",
+            "menni"
+          ],
+          "means": "mennem = for me to go; menni = to go"
+        },
+        {
+          "lemma": "orvos",
+          "forms": [
+            "orvoshoz"
+          ],
+          "means": "orvoshoz = to the doctor"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "koszonom-holnap-talalkozunk",
+        "ma-dolgozom",
+        "mennem-kell",
+        "holnap-a-varosba-megyek",
+        "ma-nem-tudok-menni",
+        "holnap-dolgoznom-kell",
+        "orvoshoz-megyek"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+/* Lexicommons design system: base. Resets use :where() so they carry no specificity: a theme's custom CSS can
+ * override anything here without fighting selectors. */
+@layer lx.base {
+  *,
+  *::before,
+  *::after { box-sizing: border-box; }
+
+  /* No double-tap zoom anywhere: a tap is a tap. Pinching is off where the viewport says so (the app, signing in) and
+     refused on iOS by theme-boot.js. Parts with their own touch handling (dragged tiles, the reader's pages) set
+     their own touch-action in a later layer. */
+  * { touch-action: manipulation; }
+
+  /* Pages bounce at the top and bottom, like other apps, rather than stopping hard. The app scrolls its page in its own
+     area (shell.css), so the header and tabs stay put; a layer over the whole screen (a study session) turns scrolling
+     off with data-scroll-lock, so nothing behind it moves. */
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--canvas);
+    color: var(--ink-1);
+    font: 400 var(--size-16) / 1.5 var(--type-ui);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
+  /* A theme's background image sits on its own fixed layer (background-attachment: fixed would make phones repaint
+   * the whole page on every frame of a scroll), under a veil of the page color (--image-background-dim). The session
+   * screen draws the same layer (components.css). Blur spreads past the edges, so the layer reaches past them too.
+   *
+   * Each section can have its own: the app sets data-section on <html>, and a section's image
+   * (--image-background-<section>) and settings (--image-background-<section>-size, -repeat, -position, -dim, -blur)
+   * stand in for the main ones where they're set. A study session falls back to Study's, then the main ones. The
+   * session screen sets its own on itself, so a session closing over another section keeps its background. */
+  :root {
+    --lx-bg-image: var(--image-background);
+    --lx-bg-size: var(--image-background-size);
+    --lx-bg-repeat: var(--image-background-repeat);
+    --lx-bg-position: var(--image-background-position);
+    --lx-bg-dim: var(--image-background-dim);
+    --lx-bg-blur: var(--image-background-blur);
+  }
+  :root[data-section="today"] {
+    --lx-bg-image: var(--image-background-today, var(--image-background));
+    --lx-bg-size: var(--image-background-today-size, var(--image-background-size));
+    --lx-bg-repeat: var(--image-background-today-repeat, var(--image-background-repeat));
+    --lx-bg-position: var(--image-background-today-position, var(--image-background-position));
+    --lx-bg-dim: var(--image-background-today-dim, var(--image-background-dim));
+    --lx-bg-blur: var(--image-background-today-blur, var(--image-background-blur));
+  }
+  :root[data-section="study"] {
+    --lx-bg-image: var(--image-background-study, var(--image-background));
+    --lx-bg-size: var(--image-background-study-size, var(--image-background-size));
+    --lx-bg-repeat: var(--image-background-study-repeat, var(--image-background-repeat));
+    --lx-bg-position: var(--image-background-study-position, var(--image-background-position));
+    --lx-bg-dim: var(--image-background-study-dim, var(--image-background-dim));
+    --lx-bg-blur: var(--image-background-study-blur, var(--image-background-blur));
+  }
+  :root[data-section="read"] {
+    --lx-bg-image: var(--image-background-read, var(--image-background));
+    --lx-bg-size: var(--image-background-read-size, var(--image-background-size));
+    --lx-bg-repeat: var(--image-background-read-repeat, var(--image-background-repeat));
+    --lx-bg-position: var(--image-background-read-position, var(--image-background-position));
+    --lx-bg-dim: var(--image-background-read-dim, var(--image-background-dim));
+    --lx-bg-blur: var(--image-background-read-blur, var(--image-background-blur));
+  }
+  :root[data-section="know"] {
+    --lx-bg-image: var(--image-background-know, var(--image-background));
+    --lx-bg-size: var(--image-background-know-size, var(--image-background-size));
+    --lx-bg-repeat: var(--image-background-know-repeat, var(--image-background-repeat));
+    --lx-bg-position: var(--image-background-know-position, var(--image-background-position));
+    --lx-bg-dim: var(--image-background-know-dim, var(--image-background-dim));
+    --lx-bg-blur: var(--image-background-know-blur, var(--image-background-blur));
+  }
+  :root[data-section="explore"] {
+    --lx-bg-image: var(--image-background-explore, var(--image-background));
+    --lx-bg-size: var(--image-background-explore-size, var(--image-background-size));
+    --lx-bg-repeat: var(--image-background-explore-repeat, var(--image-background-repeat));
+    --lx-bg-position: var(--image-background-explore-position, var(--image-background-position));
+    --lx-bg-dim: var(--image-background-explore-dim, var(--image-background-dim));
+    --lx-bg-blur: var(--image-background-explore-blur, var(--image-background-blur));
+  }
+  :root[data-section="settings"] {
+    --lx-bg-image: var(--image-background-settings, var(--image-background));
+    --lx-bg-size: var(--image-background-settings-size, var(--image-background-size));
+    --lx-bg-repeat: var(--image-background-settings-repeat, var(--image-background-repeat));
+    --lx-bg-position: var(--image-background-settings-position, var(--image-background-position));
+    --lx-bg-dim: var(--image-background-settings-dim, var(--image-background-dim));
+    --lx-bg-blur: var(--image-background-settings-blur, var(--image-background-blur));
+  }
+  /* The session screen, and the page while Settings previews the session's background. */
+  :root[data-section="session"],
+  [data-part="session"] {
+    --lx-bg-image: var(--image-background-session, var(--image-background-study, var(--image-background)));
+    --lx-bg-size: var(--image-background-session-size, var(--image-background-study-size, var(--image-background-size)));
+    --lx-bg-repeat: var(--image-background-session-repeat, var(--image-background-study-repeat, var(--image-background-repeat)));
+    --lx-bg-position: var(--image-background-session-position, var(--image-background-study-position, var(--image-background-position)));
+    --lx-bg-dim: var(--image-background-session-dim, var(--image-background-study-dim, var(--image-background-dim)));
+    --lx-bg-blur: var(--image-background-session-blur, var(--image-background-study-blur, var(--image-background-blur)));
+  }
+  :root,
+  [data-part="session"] {
+    --lx-backdrop-veil: color-mix(in srgb, var(--canvas) var(--lx-bg-dim), transparent);
+    --lx-backdrop:
+      linear-gradient(var(--lx-backdrop-veil), var(--lx-backdrop-veil)),
+      var(--lx-bg-image) var(--lx-bg-position) / var(--lx-bg-size) var(--lx-bg-repeat);
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: calc(var(--lx-bg-blur) * -2);
+    z-index: -1;
+    background: var(--lx-backdrop);
+    filter: blur(var(--lx-bg-blur));
+    pointer-events: none;
+  }
+  /* The background the page had, fading out over the new one when the section changes (theme.setSection). Drawn
+   * after body::before, so it lies over it. */
+  .lx-backdrop-fade {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  /* While a session covers the screen, the page under it doesn't scroll (no stray scroll bar, nothing moving behind). */
+  :root[data-scroll-lock],
+  :root[data-scroll-lock] body { overflow: hidden; overscroll-behavior: none; }
+
+  ::selection { background: var(--selection); }
+
+  :where(:focus-visible) { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+  :where(h1, h2, h3, h4, p, ul, ol, figure, blockquote) { margin: 0; }
+  :where(ul, ol)[role="list"] { padding: 0; list-style: none; }
+  :where(a) { color: inherit; text-underline-offset: 3px; }
+  :where(button, input, select, textarea) { font: inherit; color: inherit; }
+  :where(img, svg) { display: block; max-width: 100%; }
+  :where(button) { cursor: pointer; }
+
+  /* Icons: 24px drawings, stroke-only, round caps (NeedWright's icon style). Size follows the parent's font size. */
+  .lx-icon {
+    width: 1.15em;
+    height: 1.15em;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ---------- type roles ---------- */
+  .lx-h1 { font: 460 var(--size-28) / 1.15 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-h2 { font: 500 var(--size-20) / 1.25 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-h3 { font: 600 var(--size-16) / 1.35 var(--type-ui); }
+  .lx-body { font-size: var(--size-16); }
+  .lx-small { font-size: var(--size-14); line-height: 20px; }
+  .lx-tiny { font-size: var(--size-12); line-height: 16px; color: var(--ink-3); }
+  .lx-muted { color: var(--ink-2); }
+  .lx-mono { font-family: var(--type-mono); font-variant-numeric: tabular-nums; font-size: 0.92em; }
+
+  /* ---------- layout helpers ---------- */
+  .lx-stack { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+  .lx-spread { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+  .lx-visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* Animations follow the device unless the person chose On or Off (presets.css). */
+  @media (prefers-reduced-motion: reduce) {
+    :root:not([data-motion="on"]) { --dur-150: 0ms; --dur-200: 0ms; --dur-320: 0ms; --dur-640: 0ms; }
+  }
+
+  /* Motion (js/lx/motion.js): moves are drawn by ghosts on a layer the pointer passes through, while the real element
+   * already sits where it ends up, pressable, unseen only until its ghost lands. */
+  [data-motion-layer] { position: fixed; inset: 0; z-index: 1000; pointer-events: none; overflow: hidden; }
+  [data-motion-layer] > * { pointer-events: none !important; }
+  /* The first frame's height while iOS's page is still a screen tall (lx/theme-boot.js). */
+.lx-splash { height: var(--lx-splash-height, auto); }
+
+[data-motion-hidden] { opacity: 0 !important; transition: none !important; }
+}

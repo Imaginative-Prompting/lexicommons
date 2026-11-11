@@ -1,0 +1,31 @@
+// Italian (lang/index.js has what each field means).
+
+export default {
+  name: "Italian",
+  locale: "it-IT",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["sig.", "sigg.", "dott.", "prof.", "ing.", "avv.", "ecc.", "p.es.", "pag.", "n.", "tel.", "ca.", "es."],
+  stray: ["non", "lo", "si", "che", "di", "ci"],
+  patterns: {
+    present: { name: "Present-tense verb endings", about: "The verb's ending changes with who does it: parlo (I speak), parli (you speak), parla (he or she speaks), parliamo (we speak).", after: [] },
+    "no-subject": { name: "No subject needed", about: "A verb's ending already says who, so Italian usually leaves out io, tu and the other subject words: Parlo (I speak), Piove (rains).", after: ["present"] },
+    gender: { name: "Gender and agreement", about: "Articles and adjectives match a noun's gender (la casa nuova: the house new), and so does a past form after essere or after lo, la, li or le: Lei è partita (she is gone), L'ho vista (her I-have seen).", after: [] },
+    "adjective-after": { name: "Adjectives after the noun", about: "Most describing words come after the noun: una macchina rossa (a car red).", after: ["gender"] },
+    negation: { name: "non before the verb", about: "non goes right before the verb, and before any little pronoun in front of it: Non lo so (not it I know).", after: [] },
+    question: { name: "Questions", about: "A yes-or-no question keeps the order of a statement, with your voice going up, and a question word comes first, often with the verb right after it: Dove abita tuo fratello (where lives your brother).", after: [] },
+    "c-e": { name: "c'è, ci sono: there is, there are", about: "c'è (there is) goes with one thing or something you don't count, ci sono (there are) with more: C'è pane (there is bread), Ci sono due bagni (there are two bathrooms).", after: [] },
+    "object-pronoun": { name: "Object pronouns with verbs", about: "Little words such as mi, ti, lo, la, ci, vi, li and le normally go before a verb with a person's ending (Lo vedo: him I see), but join the end of an infinitive (vederti: see-you) or an informal command (guardalo: look-at-it).", after: ["no-subject"] },
+    piacere: { name: "piacere: liking", about: "To like something, you say it pleases you: Mi piace il caffè (to me pleases the coffee), so the verb matches the thing you like.", after: ["object-pronoun"] },
+    reflexive: { name: "Reflexive and each-other verbs", about: "Some verbs use mi, ti, si, ci or vi when someone does something to themselves or people do it to each other: Mi alzo (myself I raise: I get up), Ci vediamo (each other we see: we meet).", after: ["object-pronoun"] },
+    modal: { name: "Verb + infinitive", about: "After volere, potere and dovere, the next verb is in its basic form, the infinitive, with no word for to: Voglio partire (I want leave).", after: [] },
+    perfect: { name: "Past events with avere", about: "For most past events, use avere and the verb's past form: Ho mangiato (I have eaten), for both I ate and I have eaten.", after: [] },
+    "essere-perfect": { name: "Past events with essere", about: "Some common verbs of going, coming and staying use essere instead, and the past form's ending matches who did it: Lei è partita (she is gone: she left).", after: ["perfect", "gender"] },
+    articulated: { name: "al, del, nella: preposition + the", about: "a, di, da, in and su join the word for the after them: al mare (to-the sea), nella borsa (in-the bag).", after: ["gender"] },
+    possessive: { name: "Articles with possessives", about: "Italian normally puts an article before mio, tuo and the rest (la mia casa: the my house), but drops it before one family member on their own (mia madre), except with loro (la loro madre).", after: ["gender"] },
+    di: { name: "di: of", about: "Italian joins nouns with di where English uses 's: la macchina di mio padre (the car of my father).", after: [] },
+    progressive: { name: "stare + -ando, -endo: right now", about: "stare with a verb ending in -ando or -endo says what's happening right now: Sto mangiando (I stay eating: I'm eating).", after: [] },
+    avere: { name: "avere: I have hunger", about: "Where English says I'm hungry or I'm twenty, Italian says I have: Ho fame (I have hunger), Ho venti anni (I have twenty years).", after: [] },
+  },
+};

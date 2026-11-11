@@ -1,0 +1,6 @@
+{
+  "about": "The check code PACK_CHECKS was set for (scripts/test-packs.mjs fingerprints it): change the check, bump PACK_CHECKS in public/js/study/pack-format.js and set both here.",
+  "checks": 15,
+  "fingerprint": "aa5bc122254b0045",
+  "changed": "10 Nov 2026 (no bump): an item whose words list the check refuses (too long, not a list, empty) is no longer also refused for its text and its gap against what was left of that list; it was refused before and is refused now, so nothing it accepts changed and every proof under 15 still holds. Before that, 9 Nov 2026 (no bump): the warning for one written word with two readings in a sentence taken out, since your AI's form now keeps each time's reading (pack-authoring.js); a warning never decided what's kept, so every proof under 15 still holds. Before that, 8 Nov 2026: a pack's teaches: \"script\" (a pack that teaches how a script is read, Japanese's kana: every item a card of a letter and how it's said, no sentences, gaps or lessons; its deck's games ask how it's said: study/deck.js). A pack checked under 14 can't have kept the field (it was left out with a warning), so a proof under 14 still holds (pack-format.js proofStillGood) and no stored pack is checked again for it."
+}

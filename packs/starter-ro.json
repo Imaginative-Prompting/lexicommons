@@ -1,0 +1,7669 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-ro",
+  "name": "Starter: Romanian",
+  "about": "Romanian in real, everyday sentences, with each one's words in Romanian order.",
+  "language": "ro",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "cafea": "coffee",
+    "ceai": "tea",
+    "apă": "water",
+    "eu": "I",
+    "bea": "to drink",
+    "și": "and",
+    "un": "a, an",
+    "lapte": "milk",
+    "bine": "well, good",
+    "fi": "to be",
+    "tu": "you",
+    "nu": "not; no",
+    "profesor": "teacher",
+    "student": "university student",
+    "mamă": "mother",
+    "tată": "father; tata: dad",
+    "frate": "brother",
+    "soră": "sister",
+    "meu": "my",
+    "acesta": "this (one)",
+    "avea": "to have",
+    "prieten": "friend",
+    "medic": "doctor",
+    "cheie": "key",
+    "telefon": "phone",
+    "carte": "book",
+    "bun": "good",
+    "unde": "where",
+    "aici": "here; pe aici: around here",
+    "acolo": "there",
+    "baie": "bathroom",
+    "unu": "one",
+    "doi": "two",
+    "trei": "three",
+    "ban": "coin",
+    "vorbi": "to speak",
+    "engleză": "English",
+    "română": "Romanian",
+    "înțelege": "to understand",
+    "puțin": "a little",
+    "vrea": "to want",
+    "să": "subjunctive marker, often translated as 'to' (as in 'want to drink')",
+    "casă": "house, home",
+    "cameră": "room",
+    "mare": "sea; big",
+    "mic": "small",
+    "locui": "to live",
+    "în": "in",
+    "merge": "to go",
+    "la": "to",
+    "școală": "school",
+    "oraș": "city",
+    "gară": "train station",
+    "mașină": "car",
+    "azi": "today",
+    "mâine": "tomorrow",
+    "acum": "now",
+    "lucra": "to work",
+    "trebui": "must, to have to",
+    "putea": "can, to be able to",
+    "chema": "to call; cum te cheamă: what's your name",
+    "cum": "how",
+    "ce": "what",
+    "când": "when",
+    "cât": "how much; câți: how many",
+    "optzeci": "eighty",
+    "mult": "much, many",
+    "magazin": "shop, store",
+    "stradă": "street",
+    "ăsta": "this (one)",
+    "părea": "to seem",
+    "înalt": "tall",
+    "douăzeci": "twenty",
+    "an": "year",
+    "aștepta": "to wait (for)",
+    "cunoaște": "to know (a person, a place)",
+    "vedea": "to see; se vedea: to see each other, to meet",
+    "ieri": "yesterday",
+    "părinte": "parent",
+    "pleca": "to leave",
+    "vacanță": "vacation",
+    "bunic": "grandfather; bunici: grandparents",
+    "țară": "country; la țară: in the countryside",
+    "copil": "child",
+    "mai": "more; nu mai: no more",
+    "pâine": "bread",
+    "trezi": "to wake; se trezi: to wake up",
+    "șapte": "seven",
+    "oră": "hour; time",
+    "culca": "to put to bed; se culca: to go to bed",
+    "găti": "to cook",
+    "cină": "dinner",
+    "masă": "table; meal",
+    "deschide": "to open",
+    "fereastră": "window",
+    "termina": "to finish",
+    "temă": "assignment; teme: homework",
+    "plăcea": "to please; îmi place: I like",
+    "căpșună": "strawberry",
+    "pește": "fish",
+    "foarte": "very",
+    "foame": "hunger",
+    "sete": "thirst",
+    "pahar": "glass",
+    "rece": "cold",
+    "aseară": "last night",
+    "mânca": "to eat",
+    "pizza": "pizza",
+    "diseară": "tonight",
+    "acasă": "at home, home",
+    "notă": "check, bill; grade",
+    "ruga": "to ask, to beg; vă rog: please",
+    "cumpăra": "to buy",
+    "roșie": "tomato",
+    "ceapă": "onion",
+    "mâncare": "food",
+    "bunică": "grandmother",
+    "bancă": "bank",
+    "tren": "train",
+    "pierde": "to lose; to miss (a train)",
+    "cinci": "five",
+    "minut": "minute",
+    "lua": "to take",
+    "taxi": "taxi",
+    "plăti": "to pay",
+    "card": "card",
+    "căuta": "to look for",
+    "hotel": "hotel",
+    "ieftin": "cheap",
+    "centru": "center, downtown",
+    "suna": "to call (on the phone)",
+    "târziu": "late; mai târziu: later",
+    "sâmbătă": "Saturday",
+    "crede": "to believe, to think",
+    "ploua": "to rain",
+    "curând": "soon",
+    "cald": "warm, hot",
+    "face": "to do, to make",
+    "weekend": "weekend",
+    "vară": "summer",
+    "trecut": "last, past",
+    "rău": "bad; îmi pare rău: I'm sorry",
+    "întârzia": "to be late"
+  },
+  "chunks": {
+    "imi-pare-bine": {
+      "text": "Îmi pare bine",
+      "en": "Nice to meet you",
+      "about": "Literally to-me it-seems good: what you say when you meet someone."
+    },
+    "va-rog": {
+      "text": "vă rog",
+      "en": "please",
+      "about": "Literally I ask you (polite); te rog to a friend."
+    },
+    "imi-pare-rau": {
+      "text": "Îmi pare rău",
+      "en": "I'm sorry",
+      "about": "Literally to-me it-seems bad."
+    },
+    "hello": {
+      "text": "Bună",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "mulțumesc",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Ce mai faci",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "La revedere",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Da",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Nu",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Cum te cheamă",
+      "en": "what's your name?"
+    },
+    "excuse-me": {
+      "text": "Scuzați-mă",
+      "en": "excuse me"
+    },
+    "how-much-is-it": {
+      "text": "Cât costă",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Nota, vă rog",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Ne vedem mâine",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "beau-cafea",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Beau cafea.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Beau",
+          "bea"
+        ],
+        [
+          "cafea",
+          "cafea"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beau cafea și.",
+        "Beau și și cafea."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cafea",
+          "ceai",
+          "apă"
+        ]
+      }
+    },
+    {
+      "id": "beau-ceai",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Beau ceai.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Beau",
+          "bea"
+        ],
+        [
+          "ceai",
+          "ceai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beau ceai și.",
+        "Beau și și ceai."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ceai",
+          "apă",
+          "cafea"
+        ]
+      }
+    },
+    {
+      "id": "eu-beau-apa",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Eu beau apă.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Eu",
+          "eu"
+        ],
+        [
+          "beau",
+          "bea"
+        ],
+        [
+          "apă",
+          "apă"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu beau apă și.",
+        "Eu beau și și apă."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "apă",
+          "cafea",
+          "ceai"
+        ]
+      }
+    },
+    {
+      "id": "beau-cafea-si-ceai",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Beau cafea și ceai.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Beau",
+          "bea"
+        ],
+        [
+          "cafea",
+          "cafea"
+        ],
+        [
+          "și",
+          "și"
+        ],
+        [
+          "ceai",
+          "ceai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beau cafea ceai și.",
+        "Beau cafea și și ceai."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cafea",
+          "apă",
+          "ceai"
+        ]
+      }
+    },
+    {
+      "id": "beau-ceai-si-apa",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Beau ceai și apă.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Beau",
+          "bea"
+        ],
+        [
+          "ceai",
+          "ceai"
+        ],
+        [
+          "și",
+          "și"
+        ],
+        [
+          "apă",
+          "apă"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beau ceai apă și.",
+        "Beau ceai și și apă."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ceai",
+          "cafea",
+          "apă"
+        ]
+      }
+    },
+    {
+      "id": "beau-apa-si-cafea",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Beau apă și cafea.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Beau",
+          "bea"
+        ],
+        [
+          "apă",
+          "apă"
+        ],
+        [
+          "și",
+          "și"
+        ],
+        [
+          "cafea",
+          "cafea"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beau apă cafea și.",
+        "Beau apă și și cafea."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "apă",
+          "ceai",
+          "cafea"
+        ]
+      }
+    },
+    {
+      "id": "o-cafea-multumesc",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "O cafea, mulțumesc.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "O",
+          "un"
+        ],
+        [
+          "cafea,",
+          "cafea"
+        ],
+        [
+          "mulțumesc"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Un cafea, mulțumesc.",
+        "O cafea, rog vă."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "O",
+          "Un",
+          "Eu"
+        ]
+      }
+    },
+    {
+      "id": "buna-o-cafea-va-rog",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "va-rog",
+        "hello"
+      ],
+      "text": "Bună, o cafea, vă rog.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Bună,"
+        ],
+        [
+          "o",
+          "un"
+        ],
+        [
+          "cafea,",
+          "cafea"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bună, un cafea, vă rog.",
+        "Bună, o cafea, rog vă."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "o",
+          "un",
+          "eu"
+        ]
+      }
+    },
+    {
+      "id": "un-ceai-si-o-apa-va-rog",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "va-rog"
+      ],
+      "text": "Un ceai și o apă, vă rog.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "ceai",
+          "ceai"
+        ],
+        [
+          "și",
+          "și"
+        ],
+        [
+          "o",
+          "un"
+        ],
+        [
+          "apă,",
+          "apă"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O ceai și o apă, vă rog.",
+        "Un ceai și un apă, vă rog."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Un",
+          "O",
+          "Eu"
+        ]
+      }
+    },
+    {
+      "id": "buna-un-ceai-va-rog",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "va-rog",
+        "hello"
+      ],
+      "text": "Bună! Un ceai, vă rog.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Bună!"
+        ],
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "ceai,",
+          "ceai"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bună! O ceai, vă rog.",
+        "Bună! Un ceai, rog vă."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ceai,",
+          "lapte,",
+          "apă,"
+        ]
+      }
+    },
+    {
+      "id": "beau-lapte",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Beau lapte.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Beau",
+          "bea"
+        ],
+        [
+          "lapte",
+          "lapte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beau o lapte.",
+        "Beau lapte și."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lapte",
+          "cafea",
+          "apă"
+        ]
+      }
+    },
+    {
+      "id": "da-va-rog",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "va-rog",
+        "yes"
+      ],
+      "text": "Da, vă rog.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Da,"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Da, rog vă.",
+        "Da, vă vă rog."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Da,",
+          "Nu,",
+          "Bună,"
+        ]
+      }
+    },
+    {
+      "id": "nu-multumesc",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Nu, mulțumesc.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nu,"
+        ],
+        [
+          "mulțumesc"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nu, vă mulțumesc rog.",
+        "Nu, rog mulțumesc."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nu,",
+          "Da,",
+          "Bună,"
+        ]
+      }
+    },
+    {
+      "id": "sunt-bine-multumesc",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Sunt bine, mulțumesc.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Sunt",
+          "fi"
+        ],
+        [
+          "bine,",
+          "bine"
+        ],
+        [
+          "mulțumesc"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu bine, mulțumesc.",
+        "Eu sunt un bine, mulțumesc."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sunt",
+          "Beau",
+          "Mulțumesc"
+        ]
+      }
+    },
+    {
+      "id": "buna-ce-mai-faci",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Bună! Ce mai faci?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Bună!"
+        ],
+        [
+          "Ce"
+        ],
+        [
+          "mai"
+        ],
+        [
+          "faci"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bună! Ce faci mai?",
+        "Bună! Mai ce faci?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "faci",
+          "beau",
+          "sunt"
+        ]
+      }
+    },
+    {
+      "id": "da-multumesc-la-revedere",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Da, mulțumesc. La revedere!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Da,"
+        ],
+        [
+          "mulțumesc."
+        ],
+        [
+          "La"
+        ],
+        [
+          "revedere"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Da, mulțumesc. Revedere la!",
+        "Da, rog mulțumesc. La revedere!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Da,",
+          "Nu,",
+          "Bună,"
+        ]
+      }
+    },
+    {
+      "id": "nu-multumesc-la-revedere",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Nu, mulțumesc. La revedere!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nu,"
+        ],
+        [
+          "mulțumesc."
+        ],
+        [
+          "La"
+        ],
+        [
+          "revedere"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nu, mulțumesc. Revedere la!",
+        "Nu, rog mulțumesc. La revedere!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nu,",
+          "Da,",
+          "Bună,"
+        ]
+      }
+    },
+    {
+      "id": "sunt-profesor",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Sunt profesor.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Sunt",
+          "fi"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu ești profesor.",
+        "Eu profesor sunt un."
+      ],
+      "otherGender": {
+        "text": "Sunt profesoară.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "profesor",
+          "student",
+          "cafea"
+        ]
+      }
+    },
+    {
+      "id": "tu-esti-student",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Tu ești student.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "ești",
+          "fi"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu sunt student.",
+        "Tu ești o student."
+      ],
+      "otherGender": {
+        "text": "Tu ești studentă.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "ești",
+          "sunt",
+          "beau"
+        ]
+      }
+    },
+    {
+      "id": "esti-profesor",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "question"
+      ],
+      "text": "Ești profesor?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Ești",
+          "fi"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu sunt profesor?",
+        "Ești o profesor?"
+      ],
+      "otherGender": {
+        "text": "Ești profesoară?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ești",
+          "Sunt",
+          "Beau"
+        ]
+      }
+    },
+    {
+      "id": "eu-nu-sunt-profesor",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "negation"
+      ],
+      "text": "Eu nu sunt profesor.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Eu",
+          "eu"
+        ],
+        [
+          "nu",
+          "nu"
+        ],
+        [
+          "sunt",
+          "fi"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu nu ești profesor.",
+        "Eu sunt profesor nu."
+      ],
+      "otherGender": {
+        "text": "Eu nu sunt profesoară.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "sunt",
+          "ești",
+          "beau"
+        ]
+      }
+    },
+    {
+      "id": "mama-mea-este-profesoara",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive",
+        "gender",
+        "article-suffix"
+      ],
+      "text": "Mama mea este profesoară.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Mama",
+          "mamă"
+        ],
+        [
+          "mea",
+          "meu"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "profesoară",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mama meu este profesoară.",
+        "Mama mea ești profesoară."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mea",
+          "meu",
+          "aceasta"
+        ]
+      }
+    },
+    {
+      "id": "aceasta-este-mama-mea",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "possessive"
+      ],
+      "text": "Aceasta este mama mea.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Aceasta",
+          "acesta"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "mama",
+          "mamă"
+        ],
+        [
+          "mea",
+          "meu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Acesta este mama mea.",
+        "Aceasta este mama meu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Aceasta",
+          "Acesta",
+          "Mea"
+        ]
+      }
+    },
+    {
+      "id": "acesta-este-tatal-meu",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "possessive",
+        "article-suffix"
+      ],
+      "text": "Acesta este tatăl meu.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Acesta",
+          "acesta"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "tatăl",
+          "tată"
+        ],
+        [
+          "meu",
+          "meu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the father"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aceasta este tatăl meu.",
+        "Acesta este tatăl mea."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "meu",
+          "mea",
+          "acesta"
+        ]
+      }
+    },
+    {
+      "id": "fratele-meu-este-student",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive",
+        "gender",
+        "article-suffix"
+      ],
+      "text": "Fratele meu este student.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Fratele",
+          "frate"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The brother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fratele mea este student.",
+        "Fratele meu sunt student."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Fratele",
+          "Sora",
+          "Mama"
+        ]
+      }
+    },
+    {
+      "id": "aceasta-este-sora-mea",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "possessive",
+        "article-suffix"
+      ],
+      "text": "Aceasta este sora mea.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Aceasta",
+          "acesta"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "sora",
+          "soră"
+        ],
+        [
+          "mea",
+          "meu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the sister"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Acesta este sora mea.",
+        "Aceasta este sora meu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sora",
+          "fratele",
+          "tatăl"
+        ]
+      }
+    },
+    {
+      "id": "tatal-meu-este-profesor",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive",
+        "gender",
+        "article-suffix"
+      ],
+      "text": "Tatăl meu este profesor.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Tatăl",
+          "tată"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The father"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tatăl mea este profesor.",
+        "Tatăl meu ești profesor."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "meu",
+          "mea",
+          "acesta"
+        ]
+      }
+    },
+    {
+      "id": "am-un-telefon",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "gender"
+      ],
+      "text": "Am un telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Am",
+          "avea"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu ai un telefon.",
+        "Am o telefon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "telefon",
+          "cheie",
+          "carte"
+        ]
+      }
+    },
+    {
+      "id": "ai-o-cheie",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "question",
+        "gender"
+      ],
+      "text": "Ai o cheie?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Ai",
+          "avea"
+        ],
+        [
+          "o",
+          "un"
+        ],
+        [
+          "cheie",
+          "cheie"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu am o cheie?",
+        "Ai un cheie?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "cheie",
+          "carte",
+          "telefon"
+        ]
+      }
+    },
+    {
+      "id": "am-un-frate-si-o-sora",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "gender"
+      ],
+      "text": "Am un frate și o soră.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Am",
+          "avea"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "frate",
+          "frate"
+        ],
+        [
+          "și",
+          "și"
+        ],
+        [
+          "o",
+          "un"
+        ],
+        [
+          "soră",
+          "soră"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Am o frate și o soră.",
+        "Am un frate și un soră."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "soră",
+          "frate",
+          "prieten"
+        ]
+      }
+    },
+    {
+      "id": "nu-am-o-carte",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "negation",
+        "gender"
+      ],
+      "text": "Nu am o carte.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Nu",
+          "nu"
+        ],
+        [
+          "am",
+          "avea"
+        ],
+        [
+          "o",
+          "un"
+        ],
+        [
+          "carte",
+          "carte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nu am un carte.",
+        "Eu nu ai o carte."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "carte",
+          "telefon",
+          "cheie"
+        ]
+      }
+    },
+    {
+      "id": "sora-mea-este-medic",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Sora mea este medic.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Sora",
+          "soră"
+        ],
+        [
+          "mea",
+          "meu"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "medic",
+          "medic"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sora meu este medic.",
+        "Sora mea ești medic."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "medic",
+          "profesoară",
+          "prieten"
+        ]
+      }
+    },
+    {
+      "id": "tu-esti-un-prieten-bun",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Tu ești un prieten bun.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "ești",
+          "fi"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "prieten",
+          "prieten"
+        ],
+        [
+          "bun",
+          "bun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu sunt un prieten bun.",
+        "Tu ești un prieten bine."
+      ],
+      "otherGender": {
+        "text": "Tu ești o prietenă bună.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "bun",
+          "bine",
+          "meu"
+        ]
+      }
+    },
+    {
+      "id": "telefonul-meu-este-aici",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "place",
+        "possessive",
+        "article-suffix"
+      ],
+      "text": "Telefonul meu este aici.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Telefonul",
+          "telefon"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "aici",
+          "aici"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The phone"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telefonul mea este aici.",
+        "Telefonul meu sunt aici."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "aici",
+          "acolo",
+          "unde"
+        ]
+      }
+    },
+    {
+      "id": "cheia-este-acolo",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "place",
+        "article-suffix"
+      ],
+      "text": "Cheia este acolo.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Cheia",
+          "cheie"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "acolo",
+          "acolo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cheia sunt acolo.",
+        "Cheia ești acolo."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "acolo",
+          "aici",
+          "unde"
+        ]
+      }
+    },
+    {
+      "id": "unde-este-mama-mea",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "place",
+        "possessive"
+      ],
+      "text": "Unde este mama mea?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Unde",
+          "unde"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "mama",
+          "mamă"
+        ],
+        [
+          "mea",
+          "meu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unde este mama meu?",
+        "Unde ești mama mea?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Unde",
+          "Aici",
+          "Acolo"
+        ]
+      }
+    },
+    {
+      "id": "scuzati-ma-unde-este-baia",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "place",
+        "article-suffix"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Scuzați-mă, unde este baia?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Scuzați-mă,"
+        ],
+        [
+          "unde",
+          "unde"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "baia",
+          "baie"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Scuzați-mă, unde sunt baia?",
+        "Scuzați-mă, unde ești baia?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "baia",
+          "cheia",
+          "telefonul"
+        ]
+      }
+    },
+    {
+      "id": "unde-este-cheia-mea",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "place",
+        "possessive",
+        "article-suffix"
+      ],
+      "text": "Unde este cheia mea?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Unde",
+          "unde"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "cheia",
+          "cheie"
+        ],
+        [
+          "mea",
+          "meu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the key"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unde este cheia meu?",
+        "Unde sunt cheia mea?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "cheia",
+          "telefonul",
+          "baia"
+        ]
+      }
+    },
+    {
+      "id": "sora-mea-este-aici",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "place",
+        "possessive"
+      ],
+      "text": "Sora mea este aici.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Sora",
+          "soră"
+        ],
+        [
+          "mea",
+          "meu"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "aici",
+          "aici"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sora meu este aici.",
+        "Sora mea ești aici."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "aici",
+          "acolo",
+          "unde"
+        ]
+      }
+    },
+    {
+      "id": "o-carte-va-rog",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "va-rog"
+      ],
+      "text": "O carte, vă rog.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "O",
+          "unu"
+        ],
+        [
+          "carte,",
+          "carte"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Un carte, vă rog.",
+        "O cărți, vă rog."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "O",
+          "Două",
+          "Trei"
+        ]
+      }
+    },
+    {
+      "id": "doua-cafele-va-rog",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "va-rog"
+      ],
+      "text": "Două cafele, vă rog.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Două",
+          "doi"
+        ],
+        [
+          "cafele,",
+          "cafea"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Două cafea, vă rog.",
+        "O cafele, vă rog."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Două",
+          "Trei",
+          "O"
+        ]
+      }
+    },
+    {
+      "id": "am-trei-carti",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Am trei cărți.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Am",
+          "avea"
+        ],
+        [
+          "trei",
+          "trei"
+        ],
+        [
+          "cărți",
+          "carte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Am trei carte.",
+        "Am o cărți."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "trei",
+          "două",
+          "o"
+        ]
+      }
+    },
+    {
+      "id": "nu-am-bani",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "negation",
+        "no-subject"
+      ],
+      "text": "Nu am bani.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Nu",
+          "nu"
+        ],
+        [
+          "am",
+          "avea"
+        ],
+        [
+          "bani",
+          "ban"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu nu ai bani.",
+        "Nu am o bani."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bani",
+          "cărți",
+          "cafele"
+        ]
+      }
+    },
+    {
+      "id": "scuzati-ma-cat-costa",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "excuse-me",
+        "how-much-is-it"
+      ],
+      "text": "Scuzați-mă, cât costă?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Scuzați-mă,"
+        ],
+        [
+          "cât"
+        ],
+        [
+          "costă"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much is it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Scuzați-mă, cât sunt costă?",
+        "Scuzați-mă, cât costă este?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "costă",
+          "am",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "vorbesti-engleza",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "question",
+        "no-subject"
+      ],
+      "text": "Vorbești engleză?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Vorbești",
+          "vorbi"
+        ],
+        [
+          "engleză",
+          "engleză"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do you speak"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu vorbesc engleză?",
+        "Tu sunt vorbești engleză?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vorbești",
+          "Vorbesc",
+          "Înțeleg"
+        ]
+      }
+    },
+    {
+      "id": "vorbesc-putina-romana",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "gender"
+      ],
+      "text": "Vorbesc puțină română.",
+      "means": "I speak a little Romanian.",
+      "words": [
+        [
+          "Vorbesc",
+          "vorbi"
+        ],
+        [
+          "puțină",
+          "puțin"
+        ],
+        [
+          "română",
+          "română"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Romanian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu vorbești puțină română.",
+        "Eu sunt vorbesc puțină română."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "română",
+          "engleză",
+          "cafea"
+        ]
+      }
+    },
+    {
+      "id": "nu-inteleg",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "negation",
+        "no-subject"
+      ],
+      "text": "Nu înțeleg.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Nu",
+          "nu"
+        ],
+        [
+          "înțeleg",
+          "înțelege"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu nu înțelegi.",
+        "Eu sunt nu înțeleg."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "înțeleg",
+          "înțelegi",
+          "vorbești"
+        ]
+      }
+    },
+    {
+      "id": "tu-intelegi",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "question"
+      ],
+      "text": "Tu înțelegi?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "înțelegi",
+          "înțelege"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu înțeleg?",
+        "Tu ești înțelegi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "înțelegi",
+          "înțeleg",
+          "vorbesc"
+        ]
+      }
+    },
+    {
+      "id": "vreau-o-cafea",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "gender"
+      ],
+      "text": "Vreau o cafea.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Vreau",
+          "vrea"
+        ],
+        [
+          "o",
+          "un"
+        ],
+        [
+          "cafea",
+          "cafea"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vreau un cafea.",
+        "Eu ești vreau o cafea."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vreau",
+          "Beau",
+          "Am"
+        ]
+      }
+    },
+    {
+      "id": "vreau-apa-va-rog",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "chunks": [
+        "va-rog"
+      ],
+      "text": "Vreau apă, vă rog.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Vreau",
+          "vrea"
+        ],
+        [
+          "apă,",
+          "apă"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vreau apă, rog vă.",
+        "Eu sunt vreau apă, vă rog."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vreau",
+          "Beau",
+          "Am"
+        ]
+      }
+    },
+    {
+      "id": "vreau-sa-beau-ceai",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-subject",
+        "sa"
+      ],
+      "text": "Vreau să beau ceai.",
+      "means": "I want to drink tea.",
+      "words": [
+        [
+          "Vreau",
+          "vrea"
+        ],
+        [
+          "să",
+          "să"
+        ],
+        [
+          "beau",
+          "bea"
+        ],
+        [
+          "ceai",
+          "ceai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vreau beau ceai.",
+        "Vreau să ceai beau un."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "să",
+          "și",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "camera-mea-este-mica",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "possessive",
+        "article-suffix"
+      ],
+      "text": "Camera mea este mică.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Camera",
+          "cameră"
+        ],
+        [
+          "mea",
+          "meu"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "mică",
+          "mic"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The room"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Camera meu este mică.",
+        "Camera mea ești mică."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mică",
+          "mare",
+          "bun"
+        ]
+      }
+    },
+    {
+      "id": "aceasta-casa-este-mare",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Această casă este mare.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Această",
+          "acesta"
+        ],
+        [
+          "casă",
+          "casă"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "mare",
+          "mare"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Acesta casă este mare.",
+        "Această casă sunt mare."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mare",
+          "mică",
+          "bun"
+        ]
+      }
+    },
+    {
+      "id": "locuiesc-intr-o-casa-mica",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "no-subject",
+        "place",
+        "adjective-after"
+      ],
+      "text": "Locuiesc într-o casă mică.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Locuiesc",
+          "locui"
+        ],
+        [
+          "într-o",
+          "în"
+        ],
+        [
+          "casă",
+          "casă"
+        ],
+        [
+          "mică",
+          "mic"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a"
+        ],
+        [
+          "house"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu locuiești într-o casă mică.",
+        "Locuiesc în o casă mică."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Locuiesc",
+          "Locuiești",
+          "Locuiește"
+        ]
+      }
+    },
+    {
+      "id": "unde-locuiesti",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "question",
+        "place",
+        "no-subject"
+      ],
+      "text": "Unde locuiești?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Unde",
+          "unde"
+        ],
+        [
+          "locuiești",
+          "locui"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unde tu locuiesc?",
+        "Unde tu este locuiești?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "locuiești",
+          "locuiesc",
+          "locuiește"
+        ]
+      }
+    },
+    {
+      "id": "mama-mea-locuieste-aici",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "place",
+        "possessive"
+      ],
+      "text": "Mama mea locuiește aici.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mama",
+          "mamă"
+        ],
+        [
+          "mea",
+          "meu"
+        ],
+        [
+          "locuiește",
+          "locui"
+        ],
+        [
+          "aici",
+          "aici"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mama mea locuiești aici.",
+        "Mama meu locuiește aici."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "locuiește",
+          "locuiești",
+          "locuiesc"
+        ]
+      }
+    },
+    {
+      "id": "am-o-masina",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-subject",
+        "gender"
+      ],
+      "text": "Am o mașină.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Am",
+          "avea"
+        ],
+        [
+          "o",
+          "un"
+        ],
+        [
+          "mașină",
+          "mașină"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Am un mașină.",
+        "Eu ai o mașină."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mașină",
+          "casă",
+          "telefon"
+        ]
+      }
+    },
+    {
+      "id": "aceasta-masina-este-mica",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Această mașină este mică.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Această",
+          "acesta"
+        ],
+        [
+          "mașină",
+          "mașină"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "mică",
+          "mic"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Acesta mașină este mică.",
+        "Această mașină sunt mică."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mașină",
+          "casă",
+          "oraș"
+        ]
+      }
+    },
+    {
+      "id": "unde-mergi",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "question",
+        "no-subject",
+        "place"
+      ],
+      "text": "Unde mergi?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Unde",
+          "unde"
+        ],
+        [
+          "mergi",
+          "merge"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unde tu merg?",
+        "Unde tu este mergi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mergi",
+          "merg",
+          "merge"
+        ]
+      }
+    },
+    {
+      "id": "merg-la-scoala",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-subject",
+        "place"
+      ],
+      "text": "Merg la școală.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Merg",
+          "merge"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "școală",
+          "școală"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu mergi la școală.",
+        "Merg școală la."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "școală",
+          "oraș",
+          "mașină"
+        ]
+      }
+    },
+    {
+      "id": "mama-mea-merge-la-oras",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "place",
+        "possessive"
+      ],
+      "text": "Mama mea merge la oraș.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mama",
+          "mamă"
+        ],
+        [
+          "mea",
+          "meu"
+        ],
+        [
+          "merge",
+          "merge"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "oraș",
+          "oraș"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mama mea mergi la oraș.",
+        "Mama meu merge la oraș."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "merge",
+          "mergi",
+          "merg"
+        ]
+      }
+    },
+    {
+      "id": "lucrez-azi",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "no-subject"
+      ],
+      "text": "Lucrez azi.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Lucrez",
+          "lucra"
+        ],
+        [
+          "azi",
+          "azi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu este lucrez azi.",
+        "Eu sunt lucrez azi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "azi",
+          "mâine",
+          "acum"
+        ]
+      }
+    },
+    {
+      "id": "maine-merg-la-oras",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "no-subject",
+        "place"
+      ],
+      "text": "Mâine merg la oraș.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Mâine",
+          "mâine"
+        ],
+        [
+          "merg",
+          "merge"
+        ],
+        [
+          "la",
+          "la"
+        ],
+        [
+          "oraș",
+          "oraș"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mâine eu mergi la oraș.",
+        "Mâine merg oraș la."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mâine",
+          "Azi",
+          "Acum"
+        ]
+      }
+    },
+    {
+      "id": "trebuie-sa-merg-acum",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "no-subject",
+        "sa"
+      ],
+      "text": "Trebuie să merg acum.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Trebuie",
+          "trebui"
+        ],
+        [
+          "să",
+          "să"
+        ],
+        [
+          "merg",
+          "merge"
+        ],
+        [
+          "acum",
+          "acum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Trebuie merg acum.",
+        "Trebuie să eu mergi acum."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "acum",
+          "azi",
+          "mâine"
+        ]
+      }
+    },
+    {
+      "id": "nu-pot-sa-merg-azi",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "no-subject",
+        "negation",
+        "sa"
+      ],
+      "text": "Nu pot să merg azi.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Nu",
+          "nu"
+        ],
+        [
+          "pot",
+          "putea"
+        ],
+        [
+          "să",
+          "să"
+        ],
+        [
+          "merg",
+          "merge"
+        ],
+        [
+          "azi",
+          "azi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nu pot să eu mergi azi.",
+        "Nu pot să merge azi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pot",
+          "trebuie",
+          "vreau"
+        ]
+      }
+    },
+    {
+      "id": "multumesc-ne-vedem-maine",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Mulțumesc. Ne vedem mâine!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Mulțumesc."
+        ],
+        [
+          "Ne"
+        ],
+        [
+          "vedem"
+        ],
+        [
+          "mâine"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mulțumesc. Ne mâine vedem să!",
+        "Mulțumesc. Ne sunt vedem mâine!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mâine",
+          "azi",
+          "acum"
+        ]
+      }
+    },
+    {
+      "id": "cum-te-cheama",
+      "topic": "people",
+      "concepts": [
+        "object-pronoun",
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Cum te cheamă?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Cum"
+        ],
+        [
+          "te"
+        ],
+        [
+          "cheamă"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "calls"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te"
+      ],
+      "wrong": [
+        "Cum cheamă te?",
+        "Cum tu cheamă?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "te",
+          "mă",
+          "îl"
+        ]
+      }
+    },
+    {
+      "id": "imi-pare-bine",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "imi-pare-bine"
+      ],
+      "text": "Îmi pare bine!",
+      "means": "Nice to meet you!",
+      "words": [
+        [
+          "Îmi"
+        ],
+        [
+          "pare"
+        ],
+        [
+          "bine"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "seems"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îmi"
+      ],
+      "wrong": [
+        "Îmi pare bun!",
+        "Mie pare bine!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bine",
+          "bun",
+          "bună"
+        ]
+      }
+    },
+    {
+      "id": "sora-inalta",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender"
+      ],
+      "text": "Sora mea este foarte înaltă.",
+      "means": "My sister is very tall.",
+      "words": [
+        [
+          "Sora",
+          "soră"
+        ],
+        [
+          "mea"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "foarte",
+          "foarte"
+        ],
+        [
+          "înaltă",
+          "înalt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sister-the"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "very tall"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mea"
+      ],
+      "wrong": [
+        "Mea sora este foarte înaltă.",
+        "Sora mea este foarte înalt."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "înaltă",
+          "înalt",
+          "înalți"
+        ]
+      }
+    },
+    {
+      "id": "fratele-meu-ani",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "article-suffix",
+        "age"
+      ],
+      "text": "Fratele meu are douăzeci de ani.",
+      "means": "My brother is twenty.",
+      "words": [
+        [
+          "Fratele",
+          "frate"
+        ],
+        [
+          "meu"
+        ],
+        [
+          "are",
+          "avea"
+        ],
+        [
+          "douăzeci",
+          "douăzeci"
+        ],
+        [
+          "de"
+        ],
+        [
+          "ani",
+          "an"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Brother-the"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "has"
+        ],
+        [
+          "twenty of years"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "meu"
+      ],
+      "wrong": [
+        "Fratele meu este douăzeci de ani.",
+        "Meu fratele are douăzeci de ani."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "are",
+          "este",
+          "am"
+        ]
+      }
+    },
+    {
+      "id": "cati-ani-ai",
+      "topic": "people",
+      "concepts": [
+        "age",
+        "question",
+        "gender",
+        "present"
+      ],
+      "text": "Câți ani ai?",
+      "means": "How old are you?",
+      "words": [
+        [
+          "Câți",
+          "cât"
+        ],
+        [
+          "ani",
+          "an"
+        ],
+        [
+          "ai",
+          "avea"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How many"
+        ],
+        [
+          "years"
+        ],
+        [
+          "you have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Câți ani ești?",
+        "Câte ani ai?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ai",
+          "ești",
+          "are"
+        ]
+      }
+    },
+    {
+      "id": "bunica-optzeci",
+      "topic": "people",
+      "concepts": [
+        "age",
+        "possessive"
+      ],
+      "text": "Bunica mea are optzeci de ani.",
+      "means": "My grandma is eighty.",
+      "words": [
+        [
+          "Bunica",
+          "bunică"
+        ],
+        [
+          "mea"
+        ],
+        [
+          "are",
+          "avea"
+        ],
+        [
+          "optzeci",
+          "optzeci"
+        ],
+        [
+          "de"
+        ],
+        [
+          "ani",
+          "an"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Grandma-the"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "has"
+        ],
+        [
+          "eighty of years"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mea"
+      ],
+      "wrong": [
+        "Bunica mea este optzeci de ani.",
+        "Bunica mea are optzeci ani."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "de",
+          "din",
+          "cu"
+        ]
+      }
+    },
+    {
+      "id": "il-astept-pe-tata",
+      "topic": "people",
+      "concepts": [
+        "pe",
+        "object-pronoun"
+      ],
+      "text": "Îl aștept pe tata la gară.",
+      "means": "I'm waiting for Dad at the station.",
+      "words": [
+        [
+          "Îl"
+        ],
+        [
+          "aștept",
+          "aștepta"
+        ],
+        [
+          "pe"
+        ],
+        [
+          "tata",
+          "tată"
+        ],
+        [
+          "la"
+        ],
+        [
+          "gară",
+          "gară"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Him",
+          true
+        ],
+        [
+          "I wait"
+        ],
+        [
+          "on"
+        ],
+        [
+          "dad"
+        ],
+        [
+          "at the station"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îl"
+      ],
+      "wrong": [
+        "Îl aștept tata la gară.",
+        "O aștept pe tata la gară."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pe",
+          "la",
+          "cu"
+        ]
+      }
+    },
+    {
+      "id": "il-cunosti-pe-fratele",
+      "topic": "people",
+      "concepts": [
+        "pe",
+        "question",
+        "object-pronoun"
+      ],
+      "text": "Îl cunoști pe fratele meu?",
+      "means": "Do you know my brother?",
+      "words": [
+        [
+          "Îl"
+        ],
+        [
+          "cunoști",
+          "cunoaște"
+        ],
+        [
+          "pe"
+        ],
+        [
+          "fratele",
+          "frate"
+        ],
+        [
+          "meu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Him",
+          true
+        ],
+        [
+          "you know"
+        ],
+        [
+          "on"
+        ],
+        [
+          "brother-the"
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îl",
+        "meu"
+      ],
+      "wrong": [
+        "Îl cunoști fratele meu?",
+        "O cunoști pe fratele meu?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pe",
+          "la",
+          "cu"
+        ]
+      }
+    },
+    {
+      "id": "masina-tatalui",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Aceasta este mașina tatălui meu.",
+      "means": "This is my father's car.",
+      "words": [
+        [
+          "Aceasta",
+          "acesta"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "mașina",
+          "mașină"
+        ],
+        [
+          "tatălui",
+          "tată"
+        ],
+        [
+          "meu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "car-the"
+        ],
+        [
+          "father-the's",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tatălui",
+        "meu"
+      ],
+      "wrong": [
+        "Aceasta este mașina tată meu.",
+        "Aceasta este tatălui meu mașina."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tatălui",
+          "tatăl",
+          "tată"
+        ]
+      }
+    },
+    {
+      "id": "casa-bunicilor",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "article-suffix"
+      ],
+      "text": "Casa bunicilor mei e la țară.",
+      "means": "My grandparents' house is in the countryside.",
+      "words": [
+        [
+          "Casa",
+          "casă"
+        ],
+        [
+          "bunicilor",
+          "bunic"
+        ],
+        [
+          "mei"
+        ],
+        [
+          "e",
+          "fi"
+        ],
+        [
+          "la"
+        ],
+        [
+          "țară",
+          "țară"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "House-the"
+        ],
+        [
+          "grandparents-the's",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "in the countryside"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bunicilor",
+        "mei"
+      ],
+      "wrong": [
+        "Casa bunicii mei e la țară.",
+        "Bunicilor mei casa e la țară."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bunicilor",
+          "bunicii",
+          "bunici"
+        ]
+      }
+    },
+    {
+      "id": "nu-l-cunosc",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "object-pronoun",
+        "present"
+      ],
+      "text": "Nu-l cunosc.",
+      "means": "I don't know him.",
+      "words": [
+        [
+          "Nu-l"
+        ],
+        [
+          "cunosc",
+          "cunoaște"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "him",
+          true
+        ],
+        [
+          "I know"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nu-l"
+      ],
+      "wrong": [
+        "Nu cunosc-l.",
+        "Îl nu cunosc."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cunosc",
+          "cunoaște",
+          "cunoști"
+        ]
+      }
+    },
+    {
+      "id": "am-vazut-o",
+      "topic": "people",
+      "concepts": [
+        "perfect",
+        "object-pronoun"
+      ],
+      "text": "Am văzut-o ieri.",
+      "means": "I saw her yesterday.",
+      "words": [
+        [
+          "Am"
+        ],
+        [
+          "văzut-o",
+          "vedea"
+        ],
+        [
+          "ieri",
+          "ieri"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "seen"
+        ],
+        [
+          "her"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O am văzut ieri.",
+        "Am o văzut ieri."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Am",
+          "Ai",
+          "Are"
+        ]
+      }
+    },
+    {
+      "id": "parintii-au-plecat",
+      "topic": "people",
+      "concepts": [
+        "perfect",
+        "possessive"
+      ],
+      "text": "Părinții mei au plecat în vacanță.",
+      "means": "My parents went on vacation.",
+      "words": [
+        [
+          "Părinții",
+          "părinte"
+        ],
+        [
+          "mei"
+        ],
+        [
+          "au"
+        ],
+        [
+          "plecat",
+          "pleca"
+        ],
+        [
+          "în"
+        ],
+        [
+          "vacanță",
+          "vacanță"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Parents-the"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "have"
+        ],
+        [
+          "left"
+        ],
+        [
+          "on vacation"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mei"
+      ],
+      "wrong": [
+        "Părinții mei a plecat în vacanță.",
+        "Mei părinții au plecat în vacanță."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "au",
+          "a",
+          "am"
+        ]
+      }
+    },
+    {
+      "id": "ii-astept-pe-copii",
+      "topic": "people",
+      "concepts": [
+        "pe",
+        "object-pronoun"
+      ],
+      "text": "Îi aștept pe copii la școală.",
+      "means": "I'm waiting for the kids at school.",
+      "words": [
+        [
+          "Îi"
+        ],
+        [
+          "aștept",
+          "aștepta"
+        ],
+        [
+          "pe"
+        ],
+        [
+          "copii",
+          "copil"
+        ],
+        [
+          "la"
+        ],
+        [
+          "școală",
+          "școală"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Them",
+          true
+        ],
+        [
+          "I wait"
+        ],
+        [
+          "on"
+        ],
+        [
+          "children"
+        ],
+        [
+          "at school"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îi"
+      ],
+      "wrong": [
+        "Îi aștept copii la școală.",
+        "Îl aștept pe copii la școală."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Îi",
+          "Îl",
+          "O"
+        ]
+      }
+    },
+    {
+      "id": "casa-mica",
+      "topic": "home",
+      "concepts": [
+        "adjective-after",
+        "gender",
+        "no-subject"
+      ],
+      "text": "Locuim într-o casă mică.",
+      "means": "We live in a small house.",
+      "words": [
+        [
+          "Locuim",
+          "locui"
+        ],
+        [
+          "într-o",
+          "în"
+        ],
+        [
+          "casă",
+          "casă"
+        ],
+        [
+          "mică",
+          "mic"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We live"
+        ],
+        [
+          "in a"
+        ],
+        [
+          "house"
+        ],
+        [
+          "small",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "mică"
+      ],
+      "wrong": [
+        "Locuim într-o casă mic.",
+        "Locuim într-un casă mică."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mică",
+          "mic",
+          "mici"
+        ]
+      }
+    },
+    {
+      "id": "nu-mai-avem-paine",
+      "topic": "home",
+      "concepts": [
+        "negation",
+        "no-subject",
+        "present"
+      ],
+      "text": "Nu mai avem pâine.",
+      "means": "We're out of bread.",
+      "words": [
+        [
+          "Nu",
+          "nu"
+        ],
+        [
+          "mai",
+          "mai"
+        ],
+        [
+          "avem",
+          "avea"
+        ],
+        [
+          "pâine",
+          "pâine"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "more",
+          true
+        ],
+        [
+          "we have"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nu",
+        "mai"
+      ],
+      "wrong": [
+        "Nu avem mai pâine.",
+        "Mai nu avem pâine."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "avem",
+          "are",
+          "am"
+        ]
+      }
+    },
+    {
+      "id": "doua-bai",
+      "topic": "home",
+      "concepts": [
+        "gender",
+        "existential"
+      ],
+      "text": "În casă sunt două băi.",
+      "means": "There are two bathrooms in the house.",
+      "words": [
+        [
+          "În",
+          "în"
+        ],
+        [
+          "casă",
+          "casă"
+        ],
+        [
+          "sunt",
+          "fi"
+        ],
+        [
+          "două",
+          "doi"
+        ],
+        [
+          "băi",
+          "baie"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In house"
+        ],
+        [
+          "are"
+        ],
+        [
+          "two bathrooms"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "În casă sunt doi băi.",
+        "În casă este două băi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "două",
+          "doi",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "ma-trezesc",
+      "topic": "home",
+      "concepts": [
+        "reflexive",
+        "present"
+      ],
+      "text": "Mă trezesc la șapte.",
+      "means": "I wake up at seven.",
+      "words": [
+        [
+          "Mă"
+        ],
+        [
+          "trezesc",
+          "trezi"
+        ],
+        [
+          "la"
+        ],
+        [
+          "șapte",
+          "șapte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Myself",
+          true
+        ],
+        [
+          "I wake"
+        ],
+        [
+          "at seven"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mă"
+      ],
+      "wrong": [
+        "Trezesc mă la șapte.",
+        "Se trezesc la șapte."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "trezesc",
+          "trezește",
+          "trezești"
+        ]
+      }
+    },
+    {
+      "id": "te-culci",
+      "topic": "home",
+      "concepts": [
+        "reflexive",
+        "question"
+      ],
+      "text": "La ce oră te culci?",
+      "means": "What time do you go to bed?",
+      "words": [
+        [
+          "La"
+        ],
+        [
+          "ce",
+          "ce"
+        ],
+        [
+          "oră",
+          "oră"
+        ],
+        [
+          "te"
+        ],
+        [
+          "culci",
+          "culca"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "At what hour"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you lay down"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te"
+      ],
+      "wrong": [
+        "La ce oră culci te?",
+        "La ce oră se culci?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "te",
+          "se",
+          "mă"
+        ]
+      }
+    },
+    {
+      "id": "gatesc-cina",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "article-suffix"
+      ],
+      "text": "Acum gătesc cina.",
+      "means": "I'm making dinner now.",
+      "words": [
+        [
+          "Acum",
+          "acum"
+        ],
+        [
+          "gătesc",
+          "găti"
+        ],
+        [
+          "cina",
+          "cină"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I cook"
+        ],
+        [
+          "dinner-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Acum gătesc a cină.",
+        "Acum gătești cina."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gătesc",
+          "gătește",
+          "gătești"
+        ]
+      }
+    },
+    {
+      "id": "cheile-pe-masa",
+      "topic": "home",
+      "concepts": [
+        "article-suffix"
+      ],
+      "text": "Cheile sunt pe masă.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Cheile",
+          "cheie"
+        ],
+        [
+          "sunt",
+          "fi"
+        ],
+        [
+          "pe"
+        ],
+        [
+          "masă",
+          "masă"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Keys-the"
+        ],
+        [
+          "are"
+        ],
+        [
+          "on table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chei sunt pe masă.",
+        "Cheile este pe masă."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Cheile",
+          "Chei",
+          "Cheia"
+        ]
+      }
+    },
+    {
+      "id": "poti-deschide",
+      "topic": "home",
+      "concepts": [
+        "sa",
+        "question"
+      ],
+      "text": "Poți să deschizi fereastra?",
+      "means": "Can you open the window?",
+      "words": [
+        [
+          "Poți",
+          "putea"
+        ],
+        [
+          "să"
+        ],
+        [
+          "deschizi",
+          "deschide"
+        ],
+        [
+          "fereastra",
+          "fereastră"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You can"
+        ],
+        [
+          "that"
+        ],
+        [
+          "you open"
+        ],
+        [
+          "window-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Poți deschizi fereastra?",
+        "Poți să deschid fereastra?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "deschizi",
+          "deschid",
+          "deschide"
+        ]
+      }
+    },
+    {
+      "id": "ai-terminat-temele",
+      "topic": "home",
+      "concepts": [
+        "perfect",
+        "question"
+      ],
+      "text": "Ai terminat temele?",
+      "means": "Have you finished your homework?",
+      "words": [
+        [
+          "Ai"
+        ],
+        [
+          "terminat",
+          "termina"
+        ],
+        [
+          "temele",
+          "temă"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You have"
+        ],
+        [
+          "finished"
+        ],
+        [
+          "homework-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ai termina temele?",
+        "Ești terminat temele?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "terminat",
+          "termini",
+          "termina"
+        ]
+      }
+    },
+    {
+      "id": "imi-place-cafeaua",
+      "topic": "food",
+      "concepts": [
+        "place",
+        "article-suffix"
+      ],
+      "text": "Îmi place cafeaua cu lapte.",
+      "means": "I like coffee with milk.",
+      "words": [
+        [
+          "Îmi"
+        ],
+        [
+          "place",
+          "plăcea"
+        ],
+        [
+          "cafeaua",
+          "cafea"
+        ],
+        [
+          "cu"
+        ],
+        [
+          "lapte",
+          "lapte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "pleases"
+        ],
+        [
+          "coffee-the"
+        ],
+        [
+          "with milk"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îmi"
+      ],
+      "wrong": [
+        "Eu plac cafeaua cu lapte.",
+        "Îmi plac cafeaua cu lapte."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "place",
+          "plac",
+          "placi"
+        ]
+      }
+    },
+    {
+      "id": "iti-plac-capsunile",
+      "topic": "food",
+      "concepts": [
+        "place",
+        "question"
+      ],
+      "text": "Îți plac căpșunile?",
+      "means": "Do you like strawberries?",
+      "words": [
+        [
+          "Îți"
+        ],
+        [
+          "plac",
+          "plăcea"
+        ],
+        [
+          "căpșunile",
+          "căpșună"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "To you",
+          true
+        ],
+        [
+          "please"
+        ],
+        [
+          "strawberries-the"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îți"
+      ],
+      "wrong": [
+        "Îți place căpșunile?",
+        "Îți placi căpșunile?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "plac",
+          "place",
+          "placi"
+        ]
+      }
+    },
+    {
+      "id": "nu-mi-place-pestele",
+      "topic": "food",
+      "concepts": [
+        "place",
+        "negation"
+      ],
+      "text": "Nu-mi place peștele.",
+      "means": "I don't like fish.",
+      "words": [
+        [
+          "Nu-mi"
+        ],
+        [
+          "place",
+          "plăcea"
+        ],
+        [
+          "peștele",
+          "pește"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "to me",
+          true
+        ],
+        [
+          "pleases"
+        ],
+        [
+          "fish-the"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nu-mi"
+      ],
+      "wrong": [
+        "Nu place-mi peștele.",
+        "Nu-mi plac peștele."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "peștele",
+          "pește",
+          "pești"
+        ]
+      }
+    },
+    {
+      "id": "mancarea-bunicii",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "place"
+      ],
+      "text": "Îmi place mâncarea bunicii mele.",
+      "means": "I like my grandma's cooking.",
+      "words": [
+        [
+          "Îmi"
+        ],
+        [
+          "place",
+          "plăcea"
+        ],
+        [
+          "mâncarea",
+          "mâncare"
+        ],
+        [
+          "bunicii",
+          "bunică"
+        ],
+        [
+          "mele"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "pleases"
+        ],
+        [
+          "food-the"
+        ],
+        [
+          "grandma-the's",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îmi",
+        "bunicii",
+        "mele"
+      ],
+      "wrong": [
+        "Îmi place mâncarea bunica mea.",
+        "Îmi place bunicii mele mâncarea."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bunicii",
+          "bunica",
+          "bunică"
+        ]
+      }
+    },
+    {
+      "id": "mi-e-foame",
+      "topic": "food",
+      "concepts": [
+        "mi-e"
+      ],
+      "text": "Mi-e foarte foame.",
+      "means": "I'm really hungry.",
+      "words": [
+        [
+          "Mi-e"
+        ],
+        [
+          "foarte",
+          "foarte"
+        ],
+        [
+          "foame",
+          "foame"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me is"
+        ],
+        [
+          "very"
+        ],
+        [
+          "hunger"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sunt foarte foame.",
+        "Mi-e foarte foamea."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "foame",
+          "foamea",
+          "flămând"
+        ]
+      }
+    },
+    {
+      "id": "ti-e-sete",
+      "topic": "food",
+      "concepts": [
+        "mi-e",
+        "question"
+      ],
+      "text": "Ți-e sete?",
+      "means": "Are you thirsty?",
+      "words": [
+        [
+          "Ți-e"
+        ],
+        [
+          "sete",
+          "sete"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "To you is"
+        ],
+        [
+          "thirst"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ești sete?",
+        "Ți-e setea?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sete",
+          "setea",
+          "însetat"
+        ]
+      }
+    },
+    {
+      "id": "apa-rece",
+      "topic": "food",
+      "concepts": [
+        "adjective-after",
+        "sa",
+        "gender"
+      ],
+      "text": "Vreau să beau un pahar de apă rece.",
+      "means": "I want to drink a glass of cold water.",
+      "words": [
+        [
+          "Vreau",
+          "vrea"
+        ],
+        [
+          "să"
+        ],
+        [
+          "beau",
+          "bea"
+        ],
+        [
+          "un"
+        ],
+        [
+          "pahar",
+          "pahar"
+        ],
+        [
+          "de"
+        ],
+        [
+          "apă",
+          "apă"
+        ],
+        [
+          "rece",
+          "rece"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "that I drink"
+        ],
+        [
+          "a glass of"
+        ],
+        [
+          "water"
+        ],
+        [
+          "cold",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "rece"
+      ],
+      "wrong": [
+        "Vreau să beau un pahar de apă reci.",
+        "Vreau beau un pahar de apă rece."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "beau",
+          "bea",
+          "bei"
+        ]
+      }
+    },
+    {
+      "id": "aseara-pizza",
+      "topic": "food",
+      "concepts": [
+        "perfect",
+        "no-subject"
+      ],
+      "text": "Aseară am mâncat pizza.",
+      "means": "I had pizza last night.",
+      "words": [
+        [
+          "Aseară",
+          "aseară"
+        ],
+        [
+          "am"
+        ],
+        [
+          "mâncat",
+          "mânca"
+        ],
+        [
+          "pizza",
+          "pizza"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Last night"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "eaten"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aseară am mânca pizza.",
+        "Aseară am mâncată pizza."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mâncat",
+          "mânca",
+          "mănânc"
+        ]
+      }
+    },
+    {
+      "id": "diseara-acasa",
+      "topic": "food",
+      "concepts": [
+        "o-sa"
+      ],
+      "text": "Diseară o să mâncăm acasă.",
+      "means": "Tonight we're eating at home.",
+      "words": [
+        [
+          "Diseară",
+          "diseară"
+        ],
+        [
+          "o"
+        ],
+        [
+          "să"
+        ],
+        [
+          "mâncăm",
+          "mânca"
+        ],
+        [
+          "acasă",
+          "acasă"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tonight"
+        ],
+        [
+          "will"
+        ],
+        [
+          "that we eat"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Diseară o să mânca acasă.",
+        "Diseară o să mâncăm la acasă."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "să",
+          "ca",
+          "că"
+        ]
+      }
+    },
+    {
+      "id": "nota-va-rog",
+      "topic": "food",
+      "concepts": [
+        "article-suffix",
+        "present"
+      ],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "Nota, vă rog.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Nota,"
+        ],
+        [
+          "vă"
+        ],
+        [
+          "rog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Check-the"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "I ask"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "vă"
+      ],
+      "wrong": [
+        "Notă, vă rog.",
+        "Nota, vă roagă."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "rog",
+          "roagă",
+          "rogi"
+        ]
+      }
+    },
+    {
+      "id": "trebuie-sa-cumpar",
+      "topic": "food",
+      "concepts": [
+        "sa",
+        "no-subject"
+      ],
+      "text": "Trebuie să cumpăr roșii și ceapă.",
+      "means": "I need to buy tomatoes and onions.",
+      "words": [
+        [
+          "Trebuie",
+          "trebui"
+        ],
+        [
+          "să"
+        ],
+        [
+          "cumpăr",
+          "cumpăra"
+        ],
+        [
+          "roșii",
+          "roșie"
+        ],
+        [
+          "și"
+        ],
+        [
+          "ceapă",
+          "ceapă"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Must"
+        ],
+        [
+          "that I buy"
+        ],
+        [
+          "tomatoes and onion"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Trebuie cumpăr roșii și ceapă.",
+        "Trebuie să cumpărat roșii și ceapă."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "cumpăr",
+          "cumpără",
+          "cumpărat"
+        ]
+      }
+    },
+    {
+      "id": "unde-este-gara",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "article-suffix"
+      ],
+      "text": "Unde este gara?",
+      "means": "Where's the train station?",
+      "words": [
+        [
+          "Unde",
+          "unde"
+        ],
+        [
+          "este",
+          "fi"
+        ],
+        [
+          "gara",
+          "gară"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "station-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unde este gară?",
+        "Unde sunt gara?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gara",
+          "gară",
+          "gări"
+        ]
+      }
+    },
+    {
+      "id": "o-banca-pe-aici",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "gender",
+        "existential"
+      ],
+      "text": "Este o bancă pe aici?",
+      "means": "Is there a bank around here?",
+      "words": [
+        [
+          "Este",
+          "fi"
+        ],
+        [
+          "o"
+        ],
+        [
+          "bancă",
+          "bancă"
+        ],
+        [
+          "pe"
+        ],
+        [
+          "aici",
+          "aici"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "a bank"
+        ],
+        [
+          "around here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Este un bancă pe aici?",
+        "Sunt o bancă pe aici?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "o",
+          "un",
+          "niște"
+        ]
+      }
+    },
+    {
+      "id": "multe-magazine",
+      "topic": "out",
+      "concepts": [
+        "existential",
+        "gender"
+      ],
+      "text": "Sunt multe magazine pe strada asta.",
+      "means": "There are lots of shops on this street.",
+      "words": [
+        [
+          "Sunt",
+          "fi"
+        ],
+        [
+          "multe",
+          "mult"
+        ],
+        [
+          "magazine",
+          "magazin"
+        ],
+        [
+          "pe"
+        ],
+        [
+          "strada",
+          "stradă"
+        ],
+        [
+          "asta",
+          "ăsta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "many shops"
+        ],
+        [
+          "on street-the"
+        ],
+        [
+          "this",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "asta"
+      ],
+      "wrong": [
+        "Este multe magazine pe strada asta.",
+        "Sunt mulți magazine pe strada asta."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sunt",
+          "Este",
+          "Are"
+        ]
+      }
+    },
+    {
+      "id": "cand-pleaca-trenul",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "article-suffix",
+        "present"
+      ],
+      "text": "Când pleacă trenul?",
+      "means": "When does the train leave?",
+      "words": [
+        [
+          "Când",
+          "când"
+        ],
+        [
+          "pleacă",
+          "pleca"
+        ],
+        [
+          "trenul",
+          "tren"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "When"
+        ],
+        [
+          "leaves",
+          true
+        ],
+        [
+          "train-the"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "pleacă"
+      ],
+      "wrong": [
+        "Când pleci trenul?",
+        "Când pleacă tren?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pleacă",
+          "pleci",
+          "pleca"
+        ]
+      }
+    },
+    {
+      "id": "am-pierdut-trenul",
+      "topic": "out",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Am pierdut trenul cu cinci minute.",
+      "means": "We missed the train by five minutes.",
+      "words": [
+        [
+          "Am"
+        ],
+        [
+          "pierdut",
+          "pierde"
+        ],
+        [
+          "trenul",
+          "tren"
+        ],
+        [
+          "cu"
+        ],
+        [
+          "cinci",
+          "cinci"
+        ],
+        [
+          "minute",
+          "minut"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "lost"
+        ],
+        [
+          "train-the"
+        ],
+        [
+          "by five minutes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Am pierde trenul cu cinci minute.",
+        "Am pierdut tren cu cinci minute."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pierdut",
+          "pierde",
+          "pierdem"
+        ]
+      }
+    },
+    {
+      "id": "o-sa-iau-un-taxi",
+      "topic": "out",
+      "concepts": [
+        "o-sa",
+        "gender"
+      ],
+      "text": "O să iau un taxi.",
+      "means": "I'm going to take a taxi.",
+      "words": [
+        [
+          "O"
+        ],
+        [
+          "să"
+        ],
+        [
+          "iau",
+          "lua"
+        ],
+        [
+          "un"
+        ],
+        [
+          "taxi",
+          "taxi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will"
+        ],
+        [
+          "that I take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O să luat un taxi.",
+        "O să iau o taxi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "iau",
+          "luat",
+          "lua"
+        ]
+      }
+    },
+    {
+      "id": "pot-sa-platesc",
+      "topic": "out",
+      "concepts": [
+        "sa",
+        "question"
+      ],
+      "text": "Pot să plătesc cu cardul?",
+      "means": "Can I pay by card?",
+      "words": [
+        [
+          "Pot",
+          "putea"
+        ],
+        [
+          "să"
+        ],
+        [
+          "plătesc",
+          "plăti"
+        ],
+        [
+          "cu"
+        ],
+        [
+          "cardul",
+          "card"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "I can"
+        ],
+        [
+          "that I pay"
+        ],
+        [
+          "with card-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pot plătesc cu cardul?",
+        "Pot să plătit cu cardul?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "plătesc",
+          "plătește",
+          "plătit"
+        ]
+      }
+    },
+    {
+      "id": "hotel-ieftin",
+      "topic": "out",
+      "concepts": [
+        "adjective-after",
+        "no-subject",
+        "gender"
+      ],
+      "text": "Caut un hotel ieftin în centru.",
+      "means": "I'm looking for a cheap hotel downtown.",
+      "words": [
+        [
+          "Caut",
+          "căuta"
+        ],
+        [
+          "un"
+        ],
+        [
+          "hotel",
+          "hotel"
+        ],
+        [
+          "ieftin",
+          "ieftin"
+        ],
+        [
+          "în"
+        ],
+        [
+          "centru",
+          "centru"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I look for"
+        ],
+        [
+          "a hotel"
+        ],
+        [
+          "cheap",
+          true
+        ],
+        [
+          "in center"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ieftin"
+      ],
+      "wrong": [
+        "Caut un hotel ieftină în centru.",
+        "Caut pentru un hotel ieftin în centru."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ieftin",
+          "ieftină",
+          "ieftini"
+        ]
+      }
+    },
+    {
+      "id": "te-sun-mai-tarziu",
+      "topic": "plans",
+      "concepts": [
+        "object-pronoun",
+        "present"
+      ],
+      "text": "Te sun mai târziu.",
+      "means": "I'll call you later.",
+      "words": [
+        [
+          "Te"
+        ],
+        [
+          "sun",
+          "suna"
+        ],
+        [
+          "mai"
+        ],
+        [
+          "târziu",
+          "târziu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You",
+          true
+        ],
+        [
+          "I call"
+        ],
+        [
+          "later"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Te"
+      ],
+      "wrong": [
+        "Sun te mai târziu.",
+        "Îl te sun mai târziu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sun",
+          "sună",
+          "suni"
+        ]
+      }
+    },
+    {
+      "id": "ne-vedem-sambata",
+      "topic": "plans",
+      "concepts": [
+        "reflexive",
+        "question",
+        "present"
+      ],
+      "text": "Ne vedem sâmbătă?",
+      "means": "Should we meet up on Saturday?",
+      "words": [
+        [
+          "Ne"
+        ],
+        [
+          "vedem",
+          "vedea"
+        ],
+        [
+          "sâmbătă",
+          "sâmbătă"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Each other",
+          true
+        ],
+        [
+          "we see"
+        ],
+        [
+          "Saturday"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Ne"
+      ],
+      "wrong": [
+        "Vedem ne sâmbătă?",
+        "Se vedem sâmbătă?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vedem",
+          "vede",
+          "văd"
+        ]
+      }
+    },
+    {
+      "id": "o-sa-ploua",
+      "topic": "plans",
+      "concepts": [
+        "o-sa"
+      ],
+      "text": "Cred că o să plouă mâine.",
+      "means": "I think it's going to rain tomorrow.",
+      "words": [
+        [
+          "Cred",
+          "crede"
+        ],
+        [
+          "că"
+        ],
+        [
+          "o"
+        ],
+        [
+          "să"
+        ],
+        [
+          "plouă",
+          "ploua"
+        ],
+        [
+          "mâine",
+          "mâine"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I believe"
+        ],
+        [
+          "that"
+        ],
+        [
+          "will"
+        ],
+        [
+          "that it rains"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cred că o să ploua mâine.",
+        "Cred că o plouă mâine."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "plouă",
+          "ploua",
+          "plouat"
+        ]
+      }
+    },
+    {
+      "id": "vreau-sa-te-vad",
+      "topic": "plans",
+      "concepts": [
+        "sa",
+        "object-pronoun"
+      ],
+      "text": "Vreau să te văd curând.",
+      "means": "I want to see you soon.",
+      "words": [
+        [
+          "Vreau",
+          "vrea"
+        ],
+        [
+          "să"
+        ],
+        [
+          "te"
+        ],
+        [
+          "văd",
+          "vedea"
+        ],
+        [
+          "curând",
+          "curând"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "that"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "I see"
+        ],
+        [
+          "soon"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te"
+      ],
+      "wrong": [
+        "Vreau să văd te curând.",
+        "Vreau te să văd curând."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "văd",
+          "vezi",
+          "vedea"
+        ]
+      }
+    },
+    {
+      "id": "trebuie-sa-lucrez",
+      "topic": "plans",
+      "concepts": [
+        "sa"
+      ],
+      "text": "Mâine trebuie să lucrez.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Mâine",
+          "mâine"
+        ],
+        [
+          "trebuie",
+          "trebui"
+        ],
+        [
+          "să",
+          "să"
+        ],
+        [
+          "lucrez",
+          "lucra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "must"
+        ],
+        [
+          "that I work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mâine trebuie lucrez.",
+        "Mâine trebuie să lucrat."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lucrez",
+          "lucrează",
+          "lucrat"
+        ]
+      }
+    },
+    {
+      "id": "mi-e-cald",
+      "topic": "plans",
+      "concepts": [
+        "mi-e"
+      ],
+      "text": "Mi-e cald în casă.",
+      "means": "I'm hot in the house.",
+      "words": [
+        [
+          "Mi-e"
+        ],
+        [
+          "cald",
+          "cald"
+        ],
+        [
+          "în"
+        ],
+        [
+          "casă",
+          "casă"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me is"
+        ],
+        [
+          "warm"
+        ],
+        [
+          "in house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sunt cald în casă.",
+        "Mi-e caldă în casă."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cald",
+          "caldă",
+          "calzi"
+        ]
+      }
+    },
+    {
+      "id": "e-foarte-cald",
+      "topic": "plans",
+      "concepts": [
+        "no-subject"
+      ],
+      "text": "Azi e foarte cald.",
+      "means": "It's really hot today.",
+      "words": [
+        [
+          "Azi",
+          "azi"
+        ],
+        [
+          "e",
+          "fi"
+        ],
+        [
+          "foarte",
+          "foarte"
+        ],
+        [
+          "cald",
+          "cald"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "very warm"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Azi foarte e cald.",
+        "Azi e foarte calzi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "cald",
+          "frig",
+          "calzi"
+        ]
+      }
+    },
+    {
+      "id": "ce-faci-in-weekend",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Ce faci în weekend?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Ce",
+          "ce"
+        ],
+        [
+          "faci",
+          "face"
+        ],
+        [
+          "în"
+        ],
+        [
+          "weekend",
+          "weekend"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you do"
+        ],
+        [
+          "in the weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ce face tu în weekend?",
+        "Ce faci în weekendul?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "faci",
+          "face",
+          "fac"
+        ]
+      }
+    },
+    {
+      "id": "vara-trecuta",
+      "topic": "plans",
+      "concepts": [
+        "perfect",
+        "adjective-after",
+        "article-suffix",
+        "gender"
+      ],
+      "text": "Vara trecută am fost la mare.",
+      "means": "Last summer I went to the beach.",
+      "words": [
+        [
+          "Vara",
+          "vară"
+        ],
+        [
+          "trecută",
+          "trecut"
+        ],
+        [
+          "am"
+        ],
+        [
+          "fost",
+          "fi"
+        ],
+        [
+          "la"
+        ],
+        [
+          "mare",
+          "mare"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Summer-the"
+        ],
+        [
+          "last",
+          true
+        ],
+        [
+          "I have been"
+        ],
+        [
+          "at the sea"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "trecută"
+      ],
+      "wrong": [
+        "Vara trecută am fi la mare.",
+        "Vara trecut am fost la mare."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "fost",
+          "fi",
+          "fiu"
+        ]
+      }
+    },
+    {
+      "id": "o-sa-intarzii",
+      "topic": "plans",
+      "concepts": [
+        "o-sa"
+      ],
+      "chunks": [
+        "imi-pare-rau"
+      ],
+      "text": "Îmi pare rău, o să întârzii.",
+      "means": "Sorry, I'm going to be late.",
+      "words": [
+        [
+          "Îmi"
+        ],
+        [
+          "pare",
+          "părea"
+        ],
+        [
+          "rău,",
+          "rău"
+        ],
+        [
+          "o"
+        ],
+        [
+          "să"
+        ],
+        [
+          "întârzii",
+          "întârzia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "seems"
+        ],
+        [
+          "bad"
+        ],
+        [
+          "will"
+        ],
+        [
+          "that I'm late"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Îmi"
+      ],
+      "wrong": [
+        "Îmi pare rău, o să întârzia.",
+        "Îmi pare rău, o să întârziat."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "întârzii",
+          "întârzie",
+          "întârziat"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "cafea",
+          "forms": [
+            "cafea"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "ceai",
+          "forms": [
+            "ceai"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "apă",
+          "forms": [
+            "apă"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "eu",
+          "forms": [
+            "eu"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "bea",
+          "forms": [
+            "beau"
+          ],
+          "picture": "drink",
+          "means": "beau = I drink"
+        },
+        {
+          "lemma": "și",
+          "forms": [
+            "și"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending changes with who does it: vorbesc (I speak), vorbești (you speak), vorbește (he or she speaks)."
+      },
+      "items": [
+        "beau-cafea",
+        "beau-ceai",
+        "eu-beau-apa",
+        "beau-cafea-si-ceai",
+        "beau-ceai-si-apa",
+        "beau-apa-si-cafea"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "un",
+          "forms": [
+            "o",
+            "un"
+          ],
+          "means": "o = a; un = a"
+        },
+        {
+          "lemma": "lapte",
+          "forms": [
+            "lapte"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "va-rog",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "o-cafea-multumesc",
+        "buna-o-cafea-va-rog",
+        "un-ceai-si-o-apa-va-rog",
+        "buna-un-ceai-va-rog",
+        "beau-lapte"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "bine",
+          "forms": [
+            "bine"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "fi",
+          "forms": [
+            "sunt"
+          ],
+          "means": "sunt = I am"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "no-subject",
+        "line": "Romanian usually leaves out eu, tu and the other subject words, because the verb's ending shows who: Vorbesc (I speak), Plouă (rains)."
+      },
+      "items": [
+        "da-va-rog",
+        "nu-multumesc",
+        "sunt-bine-multumesc",
+        "buna-ce-mai-faci",
+        "da-multumesc-la-revedere",
+        "nu-multumesc-la-revedere"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "tu",
+          "forms": [
+            "tu"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "nu",
+          "forms": [
+            "nu"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "profesor",
+          "forms": [
+            "profesor"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "student",
+          "forms": [
+            "student"
+          ],
+          "means": "university student"
+        },
+        {
+          "lemma": "fi",
+          "forms": [
+            "ești"
+          ],
+          "means": "ești = you are"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "imi-pare-bine"
+      ],
+      "concept": null,
+      "items": [
+        "cum-te-cheama",
+        "imi-pare-bine",
+        "sunt-profesor",
+        "tu-esti-student",
+        "esti-profesor",
+        "eu-nu-sunt-profesor"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mamă",
+          "forms": [
+            "mama"
+          ],
+          "picture": "mother",
+          "means": "mama = the mother"
+        },
+        {
+          "lemma": "tată",
+          "forms": [
+            "tatăl"
+          ],
+          "picture": "father",
+          "means": "tatăl = the father"
+        },
+        {
+          "lemma": "frate",
+          "forms": [
+            "fratele"
+          ],
+          "picture": "brother",
+          "means": "fratele = the brother"
+        },
+        {
+          "lemma": "soră",
+          "forms": [
+            "sora"
+          ],
+          "picture": "sister",
+          "means": "sora = the sister"
+        },
+        {
+          "lemma": "meu",
+          "forms": [
+            "mea",
+            "meu"
+          ],
+          "means": "mea = my; meu = my"
+        },
+        {
+          "lemma": "acesta",
+          "forms": [
+            "aceasta",
+            "acesta"
+          ],
+          "means": "aceasta = this; acesta = this"
+        },
+        {
+          "lemma": "fi",
+          "forms": [
+            "este"
+          ],
+          "means": "este = is"
+        },
+        {
+          "lemma": "profesor",
+          "forms": [
+            "profesoară"
+          ],
+          "means": "profesoară = teacher"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Nouns are masculine, feminine or neuter, and the words with them match: un băiat înalt (a boy tall), o fată înaltă (a girl tall)."
+      },
+      "items": [
+        "mama-mea-este-profesoara",
+        "aceasta-este-mama-mea",
+        "acesta-este-tatal-meu",
+        "fratele-meu-este-student",
+        "aceasta-este-sora-mea",
+        "tatal-meu-este-profesor"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "avea",
+          "forms": [
+            "am",
+            "ai"
+          ],
+          "means": "am = I have; ai = you have"
+        },
+        {
+          "lemma": "prieten",
+          "forms": [
+            "prieten"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "medic",
+          "forms": [
+            "medic"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "cheie",
+          "forms": [
+            "cheie"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "carte",
+          "forms": [
+            "carte"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "bun",
+          "forms": [
+            "bun"
+          ],
+          "means": "good"
+        },
+        {
+          "lemma": "frate",
+          "forms": [
+            "frate"
+          ],
+          "means": "brother"
+        },
+        {
+          "lemma": "soră",
+          "forms": [
+            "soră"
+          ],
+          "means": "sister"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "am-un-telefon",
+        "ai-o-cheie",
+        "am-un-frate-si-o-sora",
+        "nu-am-o-carte",
+        "sora-mea-este-medic",
+        "tu-esti-un-prieten-bun"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "unde",
+          "forms": [
+            "unde"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "aici",
+          "forms": [
+            "aici"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "acolo",
+          "forms": [
+            "acolo"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "baie",
+          "forms": [
+            "baia"
+          ],
+          "means": "baia = the bathroom"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefonul"
+          ],
+          "means": "telefonul = the phone"
+        },
+        {
+          "lemma": "cheie",
+          "forms": [
+            "cheia"
+          ],
+          "means": "cheia = the key"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "possessive",
+        "line": "My, your and the rest come after the noun, which takes the: fratele meu (brother-the my), sora mea (sister-the my)."
+      },
+      "items": [
+        "telefonul-meu-este-aici",
+        "cheia-este-acolo",
+        "unde-este-mama-mea",
+        "scuzati-ma-unde-este-baia",
+        "unde-este-cheia-mea",
+        "sora-mea-este-aici"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "unu",
+          "forms": [
+            "o"
+          ],
+          "means": "o = one"
+        },
+        {
+          "lemma": "doi",
+          "forms": [
+            "două"
+          ],
+          "picture": "two",
+          "means": "două = two"
+        },
+        {
+          "lemma": "trei",
+          "forms": [
+            "trei"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "ban",
+          "forms": [
+            "bani"
+          ],
+          "picture": "money",
+          "means": "bani = coin; ban (one hundredth of a leu); bani: money"
+        },
+        {
+          "lemma": "cafea",
+          "forms": [
+            "cafele"
+          ],
+          "means": "cafele = coffees"
+        },
+        {
+          "lemma": "carte",
+          "forms": [
+            "cărți"
+          ],
+          "means": "cărți = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "o-carte-va-rog",
+        "doua-cafele-va-rog",
+        "am-trei-carti",
+        "nu-am-bani",
+        "scuzati-ma-cat-costa",
+        "nota-va-rog"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "vorbi",
+          "forms": [
+            "vorbești",
+            "vorbesc"
+          ],
+          "means": "vorbești = you speak; vorbesc = I speak"
+        },
+        {
+          "lemma": "engleză",
+          "forms": [
+            "engleză"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "română",
+          "forms": [
+            "română"
+          ],
+          "means": "Romanian"
+        },
+        {
+          "lemma": "înțelege",
+          "forms": [
+            "înțeleg",
+            "înțelegi"
+          ],
+          "means": "înțeleg = I understand; înțelegi = you understand"
+        },
+        {
+          "lemma": "puțin",
+          "forms": [
+            "puțină"
+          ],
+          "means": "puțină = a little"
+        },
+        {
+          "lemma": "vrea",
+          "forms": [
+            "vreau"
+          ],
+          "means": "vreau = I want"
+        },
+        {
+          "lemma": "să",
+          "forms": [
+            "să"
+          ],
+          "means": "subjunctive marker, often translated as 'to' (as in 'want to drink')"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes-or-no question can keep the order of a statement, with your voice going up, while a question word normally comes first, often with the verb right after it: Unde este gara?"
+      },
+      "items": [
+        "vorbesti-engleza",
+        "vorbesc-putina-romana",
+        "nu-inteleg",
+        "tu-intelegi",
+        "vreau-o-cafea",
+        "vreau-apa-va-rog",
+        "vreau-sa-beau-ceai"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "casă",
+          "forms": [
+            "casă"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "cameră",
+          "forms": [
+            "camera"
+          ],
+          "picture": "room",
+          "means": "camera = the room"
+        },
+        {
+          "lemma": "mare",
+          "forms": [
+            "mare"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "mic",
+          "forms": [
+            "mică"
+          ],
+          "picture": "small",
+          "means": "mică = small"
+        },
+        {
+          "lemma": "locui",
+          "forms": [
+            "locuiesc",
+            "locuiești",
+            "locuiește",
+            "locuim"
+          ],
+          "means": "locuiesc = I live; locuiești = you live; locuiește = lives; locuim = we live"
+        },
+        {
+          "lemma": "în",
+          "forms": [
+            "într-o",
+            "în"
+          ],
+          "picture": "in",
+          "means": "într-o = in a; în = in"
+        },
+        {
+          "lemma": "acesta",
+          "forms": [
+            "această"
+          ],
+          "means": "această = this"
+        },
+        {
+          "lemma": "baie",
+          "forms": [
+            "băi"
+          ],
+          "means": "băi = bathrooms"
+        },
+        {
+          "lemma": "fi",
+          "forms": [
+            "sunt"
+          ],
+          "means": "sunt = are"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "camera-mea-este-mica",
+        "aceasta-casa-este-mare",
+        "locuiesc-intr-o-casa-mica",
+        "unde-locuiesti",
+        "mama-mea-locuieste-aici",
+        "casa-mica",
+        "doua-bai"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "merge",
+          "forms": [
+            "merg",
+            "mergi",
+            "merge"
+          ],
+          "means": "merg = I go; mergi = you go; merge = goes"
+        },
+        {
+          "lemma": "la",
+          "forms": [
+            "la"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "școală",
+          "forms": [
+            "școală"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "oraș",
+          "forms": [
+            "oraș"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "gară",
+          "forms": [
+            "gara"
+          ],
+          "means": "gara = the station"
+        },
+        {
+          "lemma": "mașină",
+          "forms": [
+            "mașină"
+          ],
+          "picture": "car",
+          "means": "car"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "place",
+        "line": "To like something, you say it pleases you: Îmi place cafeaua (to-me pleases coffee-the), so the verb matches the thing you like."
+      },
+      "items": [
+        "am-o-masina",
+        "aceasta-masina-este-mica",
+        "unde-mergi",
+        "merg-la-scoala",
+        "mama-mea-merge-la-oras",
+        "unde-este-gara"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "azi",
+          "forms": [
+            "azi"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "mâine",
+          "forms": [
+            "mâine"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "acum",
+          "forms": [
+            "acum"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "lucra",
+          "forms": [
+            "lucrez"
+          ],
+          "picture": "work",
+          "means": "lucrez = I work"
+        },
+        {
+          "lemma": "trebui",
+          "forms": [
+            "trebuie"
+          ],
+          "means": "trebuie = must"
+        },
+        {
+          "lemma": "putea",
+          "forms": [
+            "pot"
+          ],
+          "means": "pot = I can"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "lucrez-azi",
+        "maine-merg-la-oras",
+        "trebuie-sa-merg-acum",
+        "nu-pot-sa-merg-azi",
+        "trebuie-sa-lucrez",
+        "multumesc-ne-vedem-maine"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "check-nl",
+  "name": "A check pack (Dutch)",
+  "about": "Three Dutch sentences, as your AI might add them: a new pattern, a phrase, and a sentence for a pattern the catalogue has.",
+  "language": "nl",
+  "from": "en",
+  "topics": {
+    "food": "Food & drink"
+  },
+  "words": {
+    "meisje": "girl",
+    "spelen": "to play",
+    "bal": "ball",
+    "smakelijk": "tasty",
+    "bellen": "to call",
+    "oma": "grandmother"
+  },
+  "chunks": {
+    "eet-smakelijk": {"text":"Eet smakelijk!","en":"Enjoy your meal!","about":"What you say when a meal starts."}
+  },
+  "patterns": {
+    "verkleinwoord": {"name":"Diminutive -je","about":"Add -je (or -tje, -pje, -etje) to make something small. A diminutive is always a het-word.","after":[]}
+  },
+  "items": [
+    {
+      "id": "balletje",
+      "topic": "people",
+      "concepts": ["verkleinwoord"],
+      "text": "Het meisje speelt met een balletje.",
+      "means": "The girl is playing with a little ball.",
+      "words": [["Het"],["meisje","meisje"],["speelt","spelen"],["met"],["een"],["balletje","bal"]],
+      "punct": ".",
+      "literal": [["The girl"],["plays"],["with a little ball"]],
+      "english": [0,1,2],
+      "moved": [],
+      "wrong": ["Het meisje speelt met een balletjes.","Het meisje speelt een balletje met."],
+      "gap": {"index":5,"options":["balletje","balletjes","bal"]}
+    },
+    {
+      "id": "eet-smakelijk",
+      "topic": "food",
+      "concepts": [],
+      "chunks": ["eet-smakelijk"],
+      "text": "Eet smakelijk!",
+      "means": "Enjoy your meal!",
+      "words": [["Eet","eten"],["smakelijk","smakelijk"]],
+      "punct": "!",
+      "literal": [["Eat"],["tastily"]],
+      "english": null,
+      "moved": [],
+      "wrong": ["Smakelijk eet!"],
+      "gap": {"index":1,"options":["smakelijk","lekker","goed"]}
+    },
+    {
+      "id": "oma-gebeld",
+      "topic": "people",
+      "concepts": ["perfect"],
+      "text": "Ik heb gisteren mijn oma gebeld.",
+      "means": "I called my grandma yesterday.",
+      "words": [["Ik"],["heb"],["gisteren","gisteren"],["mijn"],["oma","oma"],["gebeld","bellen"]],
+      "punct": ".",
+      "literal": [["I have"],["yesterday",true],["my grandma"],["called",true]],
+      "english": [0,3,2,1],
+      "moved": ["gisteren","gebeld"],
+      "wrong": ["Ik heb gebeld gisteren mijn oma.","Ik gisteren heb mijn oma gebeld."],
+      "gap": {"index":5,"options":["gebeld","bellen","belt"]}
+    }
+  ]
+}

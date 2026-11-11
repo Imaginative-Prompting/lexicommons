@@ -1,0 +1,158 @@
+/* Study's other screens, and what you know, on the design bible's rules: one thing first, the rest quieter (docs/design-bible.md). */
+@layer lx.page {
+  /* An answered step its result leaves no room at the last fit level (session.js fit, data-fold): what the result says again folds away,
+   * Fill's choices, the said line and the listening controls. Type it's line is what you typed, marked word by word (ui.typedLine): the result
+   * doesn't say it, so it stays, and its field, which says nothing the line doesn't, folds away instead. In this layer, after shell.css's own
+   * display rules for them. */
+  [data-part="session"][data-fold] :is(.lx-game > .lx-row, .lx-said:not(.lx-said-typed), .lx-listen-row) { display: none; }
+  [data-part="session"][data-fold] [data-part="type-answer"]:has(~ .lx-said-typed) { display: none; }
+  /* The same for two more whose results say again what's over them: Which is right?'s choices (the right one is the result's sentence) and
+   * What does it say?'s sentence card (the result's own sentence, with its own play button), its tag with it. 9 Nov 2026: at 320 × 568,
+   * Which is right? missed and What does it say? answered either way held their word-for-word switch and idea row under Continue, the body
+   * scrolling behind its fade with nothing to say so. */
+  [data-part="session"][data-fold][data-step="choose"] .lx-game[data-part="choice-list"] { display: none; }
+  [data-part="session"][data-fold][data-step="translate"] .lx-stimulus { display: none; }
+  /* Still too tall (data-fold="2", session.js fit): What does it say?'s explanation, its lines and More, where the idea's row under the
+   * sentence opens it whole (the row is the sentence's ideas, the explanation its first's: content.js aboutOf). The tiles stay: on a miss,
+   * your own English marked is what shows what went wrong. */
+  [data-part="session"][data-fold="2"][data-step="translate"] [data-part="answer-bar"]:has([data-part="concept-row"]) :is([data-part="feedback-text"], [data-part="feedback-text"] + [data-part="button"]) { display: none; }
+
+  /* ---------- quiet rows, wherever they are ---------- */
+  .lx-study-rows [data-part="list-row"] { min-height: 56px; }
+  /* Study a topic's sheet: each topic pack's own drawing in the row's art place, its size held while it comes. */
+  .lx-topic-cover { display: block; width: 34px; height: 34px; border-radius: var(--radius-8); overflow: hidden; }
+  [data-part="page"] > :is(.lx-study-ways, .lx-study-packs) { display: grid; gap: var(--space-3); }
+  .lx-study-ways [data-part="section-head"] { margin-top: var(--space-4); }
+
+  /* The games on Study's page (study/quick-play.js): their buttons are components.css's way-tile; the rows under them, as the rows above. */
+  .lx-quick-play { display: grid; gap: var(--space-3); }
+  /* Its games in sections by how they're answered (Tapping, Typing, Speaking), each a small heading over its own grid. */
+  .lx-game-mode { display: grid; gap: var(--space-2); }
+  /* Their headings hold no button: no room kept for one. */
+  .lx-game-mode > [data-part="section-head"] { min-height: 0; }
+  /* What Study keeps to (study/concept-focus.js): a quiet state, not a thing to act on: the page's type, the names in full ink, Clear small. */
+  /* One line: the names past what fits end in an ellipsis (the drawer has them in full). */
+  .lx-focus-words { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  /* A small phone (320 wide): Study's top goes tighter, so a whole row of games shows above the bar with nothing scrolled.
+     (Each :has() names its element, the page's view, whose child Study's games are (shell/main.js puts each page in a .lx-view): a bare
+     :has() makes the browser test every element on every change, even inside a media query that doesn't apply, and slowed every animation
+     on the page to about a quarter of its frames. Named as the page itself, it matched nothing once pages were put in their views.) */
+  @media (max-width: 359.98px) {
+    [data-part="page"] > .lx-view:has(> .lx-quick-play) { gap: var(--space-3); }
+    [data-part="page"] > .lx-view:has(> .lx-quick-play) .lx-study-doors { gap: var(--space-2); }
+    [data-part="page"] > .lx-view:has(> .lx-quick-play) [data-part="study-door"] { min-height: 60px; padding-block: 6px; }
+    [data-part="page"] > .lx-view:has(> .lx-quick-play) [data-part="study-door"] > svg[data-symbol] { width: 48px; height: 48px; }
+    [data-part="page"] > .lx-view:has(> .lx-quick-play) .lx-door-title { font-size: 18px; }
+    [data-part="page"] > .lx-view:has(> .lx-quick-play) [data-part="path-strip"] { padding-block: 0; }
+    [data-part="page"] > .lx-view:has(> .lx-quick-play) .lx-path-strip-title { font-size: var(--size-18, 18px); }
+    .lx-quick-play { gap: var(--space-2); }
+  }
+
+  /* ---------- a lesson's page ---------- */
+  .lx-lesson-where { margin: 0 0 var(--space-1); color: var(--ink-2); font-size: var(--size-14); }
+  .lx-lesson-words [data-part="list-row"] { min-height: 52px; }
+  .lx-lesson-words .lx-row-title { font: 600 var(--size-18, 18px) / 1.25 var(--type-read); }
+
+  /* ---------- More lessons ---------- */
+  .lx-more-lessons { display: grid; justify-items: start; gap: var(--space-2); }
+
+  /* ---------- Choose the games ---------- */
+  .lx-games-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-3); }
+  .lx-games-all { display: flex; gap: var(--space-2); }
+  /* No word left alone on a last line (Study's "Games with whole sentences open after your first words." left "words." at 390). */
+  .lx-games-sub { margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.35; text-wrap: pretty; }
+  /* Choose your concepts: a plain list, what's chosen bold with a check at its end (All concepts while none is picked). */
+  .lx-concept-choices .lx-choice-check { flex: none; display: grid; place-items: center; width: 28px; height: 28px; color: var(--go); visibility: hidden; }
+  .lx-concept-choices .lx-choice-check > :is(svg, .lx-icon) { width: 24px; height: 24px; stroke-width: 2.6; }
+  .lx-concept-choices [aria-pressed="true"] .lx-choice-check { visibility: visible; }
+  .lx-concept-choices [aria-pressed="true"] .lx-row-title { font-weight: 700; }
+  .lx-concept-choices [data-state="thin"] .lx-row-title { color: var(--ink-3); }
+  /* Choose the games: each game a small copy of its button on Study, and a toggle. On: Study's button (filled, a hard edge, its drawing in
+     color) with a check in its corner, so it never says so by color alone; off: an outline with no fill, its drawing in the page's ink. */
+  [data-part="game-toggles"] { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-2); padding-bottom: 4px; }
+  @media (max-width: 359px) { [data-part="game-toggles"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  [data-part="game-toggle"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    min-height: 92px;
+    margin: 0 0 4px;
+    padding: var(--space-2) 4px 6px;
+    border: 2px solid var(--line);
+    border-radius: var(--radius-12, 12px);
+    background: none;
+    box-shadow: 0 4px 0 var(--line);
+    color: var(--ink-2);
+    font: 600 var(--size-12, 12px) / 1.2 var(--type-ui);
+    text-align: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  [data-part="game-toggle"][aria-pressed="true"] { border-color: var(--line-strong); background: var(--fill); box-shadow: 0 4px 0 var(--line-strong); color: var(--ink-1); }
+  [data-part="game-toggle"]:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--line); }
+  [data-part="game-toggle"][aria-pressed="true"]:active { box-shadow: 0 1px 0 var(--line-strong); }
+  [data-part="game-toggle"] .lx-toggle-art { display: grid; place-items: center; width: 40px; height: 40px; }
+  [data-part="game-toggle"] .lx-toggle-art > svg { width: 40px; height: 40px; }
+  [data-part="game-toggle"] .lx-toggle-art[data-art="theme"] { color: var(--ink-3); }
+  /* Long names may break, never short words: WebKit hyphenated "Tap the picture" as "pic-ture" on a 390-wide tile (7 Nov 2026). */
+  [data-part="game-toggle"] .lx-toggle-name { min-width: 0; max-width: 100%; overflow-wrap: anywhere; hyphens: auto; hyphenate-limit-chars: 9 4 4; -webkit-hyphenate-limit-before: 4; -webkit-hyphenate-limit-after: 4; }
+  [data-part="game-toggle"] .lx-toggle-now { color: var(--ink-2); font-weight: 500; }
+  /* One that can't play on this device (game-modes.js blockedBy): quieter, as Study's own button is, its drawing in the page's ink, and why in a word. */
+  [data-part="game-toggle"][data-unavailable] { color: var(--ink-2); }
+  [data-part="game-toggle"][data-unavailable] .lx-toggle-art { color: var(--ink-3); }
+  [data-part="game-toggle"] .lx-toggle-why { color: var(--ink-2); font-size: var(--size-12); line-height: 1.25; }
+  /* The check: on its own small disc in the corner, in the way forward's color, the tile's line around it. */
+  [data-part="game-toggle"] .lx-toggle-check { position: absolute; top: -7px; right: -7px; display: none; place-items: center; width: 22px; height: 22px; border: 2px solid var(--line-strong); border-radius: 50%; background: var(--go); color: var(--on-go); }
+  [data-part="game-toggle"] .lx-toggle-check .lx-icon, [data-part="game-toggle"] .lx-toggle-check svg { width: 14px; height: 14px; }
+  [data-part="game-toggle"][aria-pressed="true"] .lx-toggle-check { display: grid; }
+
+  /* ---------- Streak: the number first ---------- */
+  .lx-settings-streak { display: grid; gap: var(--space-4); }
+  .lx-settings-streak > [data-part="streak-summary"] { display: grid; gap: var(--space-2); margin: 0; padding: 0; border: 0; background: none; }
+  .lx-settings-streak > [data-part="streak-summary"] [data-part="streak"] { display: flex; align-items: center; gap: var(--space-2); font: 500 var(--size-20) / 1 var(--type-ui); color: var(--ink-2); }
+  .lx-settings-streak > [data-part="streak-summary"] [data-part="streak"] > svg { flex: none; width: 76px; height: 76px; margin-left: -8px; }
+  .lx-settings-streak > [data-part="streak-summary"] [data-part="streak"][data-days="none"] > svg { filter: grayscale(1); opacity: 0.55; }
+  .lx-settings-streak > [data-part="streak-summary"] [data-part="streak"] strong { font: 700 72px / 1 var(--type-head); letter-spacing: -0.02em; color: var(--ink-1); font-variant-numeric: tabular-nums; }
+  .lx-settings-streak .lx-streak-note { color: var(--ink-2); font-size: var(--size-16); }
+  .lx-streak-paused:empty, .lx-streak-said:empty { display: none; }
+  /* The two dates side by side where they fit, each inside the sheet: a date field won't shrink by itself. */
+  .lx-sheet-layer .lx-pause-dates { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-3); }
+  .lx-sheet-layer .lx-pause-dates [data-part="field"] { min-width: 0; }
+  .lx-sheet-layer .lx-pause-dates [data-part="text-field"] { box-sizing: border-box; width: 100%; min-width: 0; }
+  .lx-sheet-layer .lx-pause-dates > [data-part="button"] { grid-column: 1 / -1; }
+  .lx-streak-facts { margin: 0; color: var(--ink-2); font-size: var(--size-14); }
+
+  /* ---------- What you know: the number first, then what opens the rest ---------- */
+  .lx-know-top [data-part="empty-state"] { border: 0; padding-block: var(--space-2); }
+  [data-part="know-headline"] { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; gap: var(--space-3); }
+  [data-part="know-headline"] .lx-know-share-row { grid-template-columns: 120px minmax(0, 1fr); }
+  [data-part="know-headline"] [data-part="share-ring"] { width: 120px; height: 120px; }
+  [data-part="know-headline"] .lx-know-share { font: 700 var(--size-24, 24px) / 1.2 var(--type-head); }
+  [data-part="know-headline"] .lx-know-counts { color: var(--ink-2); font-size: var(--size-14); }
+  [data-part="skill-tile"] { border: 2px solid var(--line); border-radius: var(--radius-16); background: none; box-shadow: 0 3px 0 var(--line); }
+  [data-part="skill-tile"]:active { background: none; transform: translateY(2px); box-shadow: 0 1px 0 var(--line); }
+  [data-part="skill-tile"] .lx-icon { display: none; }
+  [data-part="skill-tile"] .lx-tile-number { font: 700 var(--size-28) / 1 var(--type-head); }
+  .lx-know-search [data-part="text-field"] { background: none; }
+  [data-part="know-highlight"] { border: 0; padding: 0; background: none; }
+  .lx-know-growth .lx-growth-plot { grid-template-rows: 88px auto; }
+  .lx-know-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+  [data-part="know-link-card"][data-rowed] { position: relative; display: grid; grid-template-columns: 24px minmax(0, 1fr); align-items: center; column-gap: var(--space-3); min-height: 60px; padding: var(--space-2) 26px var(--space-2) 0; border: 0; border-radius: 0; background: none; color: var(--ink-1); text-decoration: none; }
+  [data-part="know-link-card"][data-rowed] > svg { grid-row: 1 / span 2; color: var(--ink-2); }
+  [data-part="know-link-card"][data-rowed]:active { background: var(--fill-active); opacity: 1; }
+  [data-part="know-link-card"][data-rowed] h2 { font: 600 var(--size-16) / 1.25 var(--type-ui); letter-spacing: 0; }
+  [data-part="know-link-card"][data-rowed] .lx-link-card-head { grid-column: 2; }
+  [data-part="know-link-card"][data-rowed] .lx-link-card-head > .lx-icon { position: absolute; top: 50%; right: 0; width: 18px; height: 18px; transform: translateY(-50%); }
+  [data-part="know-link-card"][data-rowed] .lx-link-card-sub { grid-column: 2; }
+  .lx-know-body > [data-part="credit"] { margin-top: var(--space-3); }
+  /* A script's letter (a pack that teaches one: Japanese's kana; study/deck-steps.js data-letter): the letter is what's read, so it's large and
+   * in the middle, on its card and over Choose and Type; Listening's choices are letters, a size up. */
+  :is([data-part="study-card"][data-letter], .lx-stimulus[data-letter]) [data-part="target-line"] { font-size: 72px; line-height: 1.2; text-align: center; justify-content: center; align-self: stretch; }
+  .lx-stimulus[data-letter] { align-items: center; }
+  /* Its other side is how it's said: the answer, read under the letter, never a footnote. */
+  [data-part="study-card"][data-letter] [data-part="natural-line"] { font-size: 32px; line-height: 1.25; text-align: center; color: var(--ink-1); }
+  .lx-game[data-letters] [data-part="choice"] { font-size: 28px; }
+}

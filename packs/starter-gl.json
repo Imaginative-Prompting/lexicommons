@@ -1,0 +1,7094 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-gl",
+  "name": "Starter: Galician",
+  "about": "Galician in real, everyday sentences, with each one's words in Galician order.",
+  "language": "gl",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "café": "coffee",
+    "té": "tea",
+    "auga": "water",
+    "eu": "I",
+    "beber": "to drink",
+    "e": "and",
+    "un": "a, an",
+    "leite": "milk",
+    "ben": "well, fine",
+    "estar": "be (where or how: estou, estás, está…)",
+    "ti": "you",
+    "non": "not, no",
+    "profesor": "teacher",
+    "estudante": "student",
+    "ser": "be (who or what: son, es, é…)",
+    "nai": "mom, mother",
+    "pai": "dad, father",
+    "irmán": "brother; irmá: sister; irmáns: brothers and sisters",
+    "irmá": "sister",
+    "meu": "my (miña with a feminine noun)",
+    "este": "this",
+    "o": "the",
+    "ter": "have (teño, tes, ten…)",
+    "amigo": "friend",
+    "médico": "doctor (médica: a woman)",
+    "chave": "key",
+    "teléfono": "phone",
+    "libro": "book",
+    "bo": "good",
+    "onde": "where",
+    "aquí": "here",
+    "alí": "there",
+    "baño": "bathroom",
+    "dous": "two (dúas with a feminine noun)",
+    "tres": "three",
+    "diñeiro": "money",
+    "falar": "speak",
+    "inglés": "English",
+    "galego": "Galician",
+    "entender": "understand",
+    "pouco": "little",
+    "querer": "want",
+    "de": "of, from",
+    "casa": "house, home",
+    "cuarto": "room",
+    "grande": "big",
+    "pequeno": "small, little",
+    "vivir": "live",
+    "en": "in",
+    "ir": "go (vou, vas, vai, imos…)",
+    "a": "to",
+    "escola": "school",
+    "cidade": "city",
+    "estación": "station",
+    "coche": "car",
+    "tren": "train",
+    "hoxe": "today",
+    "mañá": "tomorrow; morning",
+    "agora": "now",
+    "traballar": "to work",
+    "que": "what; that",
+    "poder": "can, be able to",
+    "como": "how",
+    "te": "you, yourself",
+    "me": "me, to me, myself",
+    "chamar": "call (chamarse: to be called)",
+    "moito": "much, a lot (of); moito gusto: nice to meet you",
+    "gusto": "pleasure",
+    "avó": "grandparent; avós: grandparents",
+    "aldea": "village",
+    "dedicar": "devote (dedicarse a: to work as)",
+    "piso": "apartment",
+    "amarelo": "yellow",
+    "haber": "there is (hai)",
+    "neveira": "fridge",
+    "mesa": "table",
+    "ler": "read",
+    "cociñar": "cook",
+    "cuarto de baño": "bathroom",
+    "pechar": "close",
+    "fiestra": "window",
+    "gustar": "please (gústame: I like)",
+    "polbo": "octopus",
+    "fame": "hunger (ter fame: to be hungry)",
+    "sede": "thirst (ter sede: to be thirsty)",
+    "tomar": "have (a drink), take",
+    "xa": "already; now",
+    "comer": "eat",
+    "grazas": "thanks",
+    "onte": "yesterday",
+    "empanada": "empanada (a filled pie)",
+    "conta": "check, bill",
+    "pan": "bread",
+    "preferir": "prefer",
+    "viño": "wine",
+    "tinto": "red (wine)",
+    "fóra": "out, outside",
+    "desculpar": "excuse (desculpe: excuse me)",
+    "canto": "how much",
+    "custar": "cost",
+    "isto": "this",
+    "noite": "night (esta noite: tonight)",
+    "cine": "movie theater (ao cine: to the movies)",
+    "coller": "take, catch",
+    "taxi": "taxi",
+    "saír": "leave, go out",
+    "oito": "eight",
+    "pagar": "pay",
+    "tarxeta": "card",
+    "saber": "know",
+    "hotel": "hotel",
+    "sete": "seven",
+    "facer": "do, make",
+    "fin de semana": "weekend",
+    "chover": "rain",
+    "frío": "cold",
+    "ver": "see (verse: to see each other)",
+    "aprender": "learn",
+    "deber": "duty (deberes: homework)",
+    "semana": "week (a semana que vén: next week)",
+    "vir": "come",
+    "praia": "beach",
+    "esperar": "wait (for)",
+    "autobús": "bus",
+    "vermello": "red",
+    "froita": "fruit"
+  },
+  "chunks": {
+    "moito-gusto": {
+      "text": "Moito gusto",
+      "en": "Nice to meet you",
+      "about": "Literally much pleasure; the same for anyone saying it."
+    },
+    "a-conta": {
+      "text": "A conta, por favor",
+      "en": "The check, please",
+      "about": "por favor is please."
+    },
+    "hello": {
+      "text": "Ola",
+      "en": "hello"
+    },
+    "please": {
+      "text": "por favor",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "grazas",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Como estás",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Adeus",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "si",
+      "en": "yes"
+    },
+    "no": {
+      "text": "non",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Como te chamas",
+      "en": "what's your name?"
+    },
+    "excuse-me": {
+      "text": "Desculpe",
+      "en": "excuse me"
+    },
+    "how-much-is-this": {
+      "text": "Canto custa isto",
+      "en": "how much is this?"
+    },
+    "see-you-tomorrow": {
+      "text": "Vémonos mañá",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "bebo-cafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Bebo café.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Bebo",
+          "beber"
+        ],
+        [
+          "café",
+          "café"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beber café.",
+        "Bebo e café."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "café",
+          "té",
+          "auga"
+        ]
+      }
+    },
+    {
+      "id": "eu-bebo-te",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Eu bebo té.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Eu",
+          "eu"
+        ],
+        [
+          "bebo",
+          "beber"
+        ],
+        [
+          "té",
+          "té"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu beber té.",
+        "Eu bebo e té."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "té",
+          "café",
+          "auga"
+        ]
+      }
+    },
+    {
+      "id": "bebo-auga",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Bebo auga.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Bebo",
+          "beber"
+        ],
+        [
+          "auga",
+          "auga"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beber auga.",
+        "Bebo e auga."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "auga",
+          "café",
+          "té"
+        ]
+      }
+    },
+    {
+      "id": "bebo-cafe-e-te",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Bebo café e té.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Bebo",
+          "beber"
+        ],
+        [
+          "café",
+          "café"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "té",
+          "té"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beber café e té.",
+        "Bebo café té e."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "café",
+          "auga",
+          "té"
+        ]
+      }
+    },
+    {
+      "id": "bebo-te-e-auga",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Bebo té e auga.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Bebo",
+          "beber"
+        ],
+        [
+          "té",
+          "té"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "auga",
+          "auga"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beber té e auga.",
+        "Bebo té auga e."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "auga",
+          "café",
+          "té"
+        ]
+      }
+    },
+    {
+      "id": "bebo-auga-e-cafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Bebo auga e café.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Bebo",
+          "beber"
+        ],
+        [
+          "auga",
+          "auga"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "café",
+          "café"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beber auga e café.",
+        "Bebo auga café e."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "auga",
+          "té",
+          "café"
+        ]
+      }
+    },
+    {
+      "id": "un-cafe-grazas",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Un café, grazas.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "café,",
+          "café"
+        ],
+        [
+          "grazas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unha café, grazas.",
+        "Un café e, grazas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "café,",
+          "té,",
+          "leite,"
+        ]
+      }
+    },
+    {
+      "id": "ola-un-te-por-favor",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Ola! Un té, por favor.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Ola!"
+        ],
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "té,",
+          "té"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ola! Unha té, por favor.",
+        "Ola! Un té, favor por."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "té,",
+          "café,",
+          "leite,"
+        ]
+      }
+    },
+    {
+      "id": "ola-un-cafe-por-favor",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Ola, un café, por favor.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Ola,"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "café,",
+          "café"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ola, unha café, por favor.",
+        "Ola, un café, favor por."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "un",
+          "unha",
+          "eu"
+        ]
+      }
+    },
+    {
+      "id": "un-te-e-unha-auga-por-favor",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Un té e unha auga, por favor.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "té",
+          "té"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "unha",
+          "un"
+        ],
+        [
+          "auga,",
+          "auga"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unha té e unha auga, por favor.",
+        "Un té e un auga, por favor."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "auga,",
+          "café,",
+          "té,"
+        ]
+      }
+    },
+    {
+      "id": "bebo-leite",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Bebo leite.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Bebo",
+          "beber"
+        ],
+        [
+          "leite",
+          "leite"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beber leite.",
+        "Bebo e leite."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "leite",
+          "té",
+          "auga"
+        ]
+      }
+    },
+    {
+      "id": "si-por-favor",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Si, por favor.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Si,"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Si, favor por.",
+        "Si e, por favor."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Si,",
+          "Non,",
+          "Adeus,"
+        ]
+      }
+    },
+    {
+      "id": "non-grazas",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Non, grazas.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Non,"
+        ],
+        [
+          "grazas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non e, grazas.",
+        "Non, un grazas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Non,",
+          "Si,",
+          "Adeus,"
+        ]
+      }
+    },
+    {
+      "id": "ola-como-estas",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Ola! Como estás?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Ola!"
+        ],
+        [
+          "Como"
+        ],
+        [
+          "estás"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ola! Como eu estás?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "estás",
+          "estou",
+          "bebo"
+        ]
+      }
+    },
+    {
+      "id": "estou-ben-grazas",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ser-estar"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Estou ben, grazas.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Estou",
+          "estar"
+        ],
+        [
+          "ben,",
+          "ben"
+        ],
+        [
+          "grazas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu estás ben, grazas.",
+        "Estou un ben, grazas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Estou",
+          "Bebo",
+          "Estás"
+        ]
+      }
+    },
+    {
+      "id": "si-grazas-adeus",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Si, grazas. Adeus!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Si,"
+        ],
+        [
+          "grazas."
+        ],
+        [
+          "Adeus"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Si e, grazas. Adeus!",
+        "Si, un grazas. Adeus!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Si,",
+          "Non,",
+          "Ola,"
+        ]
+      }
+    },
+    {
+      "id": "non-grazas-adeus",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Non, grazas. Adeus!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Non,"
+        ],
+        [
+          "grazas."
+        ],
+        [
+          "Adeus"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non e, grazas. Adeus!",
+        "Non, un grazas. Adeus!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Non,",
+          "Si,",
+          "Ola,"
+        ]
+      }
+    },
+    {
+      "id": "ola-moito-gusto",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "moito-gusto",
+        "hello"
+      ],
+      "text": "Ola! Moito gusto.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Ola!"
+        ],
+        [
+          "Moito"
+        ],
+        [
+          "gusto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ola! Un moito gusto."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ola!",
+          "Adeus!",
+          "Grazas!"
+        ]
+      }
+    },
+    {
+      "id": "son-profesor",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ser-estar"
+      ],
+      "text": "Son profesor.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Son",
+          "ser"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu es profesor.",
+        "Estou profesor."
+      ],
+      "otherGender": {
+        "text": "Son profesora.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Son",
+          "Es",
+          "Estou"
+        ]
+      }
+    },
+    {
+      "id": "ti-es-estudante",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ser-estar"
+      ],
+      "text": "Ti es estudante.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Ti",
+          "ti"
+        ],
+        [
+          "es",
+          "ser"
+        ],
+        [
+          "estudante",
+          "estudante"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti son estudante.",
+        "Ti estou estudante."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "es",
+          "son",
+          "estou"
+        ]
+      }
+    },
+    {
+      "id": "es-profesor",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ser-estar"
+      ],
+      "text": "Es profesor?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Es",
+          "ser"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti son profesor?",
+        "Ti estou profesor?"
+      ],
+      "otherGender": {
+        "text": "Es profesora?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Es",
+          "Son",
+          "Estou"
+        ]
+      }
+    },
+    {
+      "id": "non-son-profesor",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "ser-estar"
+      ],
+      "text": "Non son profesor.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "son",
+          "ser"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Son non profesor.",
+        "Eu non es profesor."
+      ],
+      "otherGender": {
+        "text": "Non son profesora.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "son",
+          "es",
+          "estou"
+        ]
+      }
+    },
+    {
+      "id": "esta-e-a-mina-nai",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "Esta é a miña nai.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Esta",
+          "este"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "a",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "nai",
+          "nai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Este é a miña nai.",
+        "Esta é a meu nai."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "nai",
+          "pai",
+          "irmán"
+        ]
+      }
+    },
+    {
+      "id": "este-e-o-meu-pai",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "Este é o meu pai.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Este",
+          "este"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "o",
+          "o"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "pai",
+          "pai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Esta é o meu pai.",
+        "Este é o miña pai."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pai",
+          "nai",
+          "irmá"
+        ]
+      }
+    },
+    {
+      "id": "o-meu-pai-e-profesor",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "ser-estar"
+      ],
+      "text": "O meu pai é profesor.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "O",
+          "o"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "pai",
+          "pai"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "profesor",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O miña pai é profesor.",
+        "O meu pai es profesor."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "meu",
+          "miña",
+          "esta"
+        ]
+      }
+    },
+    {
+      "id": "o-meu-irman-e-estudante",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "O meu irmán é estudante.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "O",
+          "o"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "irmán",
+          "irmán"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "estudante",
+          "estudante"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O miña irmán é estudante.",
+        "O meu irmán son estudante."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "irmán",
+          "irmá",
+          "nai"
+        ]
+      }
+    },
+    {
+      "id": "esta-e-a-mina-irma",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "Esta é a miña irmá.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Esta",
+          "este"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "a",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "irmá",
+          "irmá"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Este é a miña irmá.",
+        "Esta é a meu irmá."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "irmá",
+          "irmán",
+          "pai"
+        ]
+      }
+    },
+    {
+      "id": "a-mina-nai-e-profesora",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "A miña nai é profesora.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "A",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "nai",
+          "nai"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "profesora",
+          "profesor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A meu nai é profesora.",
+        "A miña nai es profesora."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "miña",
+          "meu",
+          "este"
+        ]
+      }
+    },
+    {
+      "id": "teno-un-telefono",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Teño un teléfono.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "teléfono",
+          "teléfono"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu tes un teléfono.",
+        "Teño unha teléfono."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teléfono",
+          "libro",
+          "chave"
+        ]
+      }
+    },
+    {
+      "id": "tes-unha-chave",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "gender"
+      ],
+      "text": "Tes unha chave?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Tes",
+          "ter"
+        ],
+        [
+          "unha",
+          "un"
+        ],
+        [
+          "chave",
+          "chave"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do you have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti teño unha chave?",
+        "Tes un chave?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "chave",
+          "teléfono",
+          "libro"
+        ]
+      }
+    },
+    {
+      "id": "teno-un-irman-e-unha-irma",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Teño un irmán e unha irmá.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "irmán",
+          "irmán"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "unha",
+          "un"
+        ],
+        [
+          "irmá",
+          "irmá"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño unha irmán e unha irmá.",
+        "Teño un irmán e un irmá."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Teño",
+          "Tes",
+          "Son"
+        ]
+      }
+    },
+    {
+      "id": "non-teno-un-libro",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "present"
+      ],
+      "text": "Non teño un libro.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "teño",
+          "ter"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "libro",
+          "libro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño non un libro.",
+        "Non teño unha libro."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "libro",
+          "teléfono",
+          "chave"
+        ]
+      }
+    },
+    {
+      "id": "es-un-bo-amigo",
+      "topic": "people",
+      "concepts": [
+        "gender",
+        "ser-estar"
+      ],
+      "text": "Es un bo amigo.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Es",
+          "ser"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "bo",
+          "bo"
+        ],
+        [
+          "amigo",
+          "amigo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You are"
+        ],
+        [
+          "a"
+        ],
+        [
+          "good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti son un bo amigo.",
+        "Es unha bo amigo."
+      ],
+      "otherGender": {
+        "text": "Es unha boa amiga.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "amigo",
+          "profesor",
+          "estudante"
+        ]
+      }
+    },
+    {
+      "id": "onde-esta-a-mina-chave",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "Onde está a miña chave?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Onde",
+          "onde"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "a",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "chave",
+          "chave"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onde é a miña chave?",
+        "Onde está a meu chave?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "está",
+          "é",
+          "estou"
+        ]
+      }
+    },
+    {
+      "id": "o-meu-telefono-esta-aqui",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "O meu teléfono está aquí.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "O",
+          "o"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "teléfono",
+          "teléfono"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "aquí",
+          "aquí"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O meu teléfono é aquí.",
+        "O miña teléfono está aquí."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "aquí",
+          "alí",
+          "onde"
+        ]
+      }
+    },
+    {
+      "id": "a-chave-esta-ali",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "ser-estar"
+      ],
+      "text": "A chave está alí.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "A",
+          "o"
+        ],
+        [
+          "chave",
+          "chave"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "alí",
+          "alí"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A chave é alí.",
+        "O chave está alí."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "alí",
+          "aquí",
+          "onde"
+        ]
+      }
+    },
+    {
+      "id": "desculpe-onde-esta-o-bano",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "ser-estar"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Desculpe, onde está o baño?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Desculpe,"
+        ],
+        [
+          "onde",
+          "onde"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "o",
+          "o"
+        ],
+        [
+          "baño",
+          "baño"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Desculpe, onde está a baño?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "baño",
+          "teléfono",
+          "libro"
+        ]
+      }
+    },
+    {
+      "id": "onde-esta-a-mina-nai",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "Onde está a miña nai?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Onde",
+          "onde"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "a",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "nai",
+          "nai"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onde é a miña nai?",
+        "Onde está a meu nai?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "nai",
+          "pai",
+          "irmán"
+        ]
+      }
+    },
+    {
+      "id": "a-mina-irma-esta-aqui",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "A miña irmá está aquí.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "A",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "irmá",
+          "irmá"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "aquí",
+          "aquí"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A miña irmá é aquí.",
+        "A meu irmá está aquí."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "está",
+          "é",
+          "estou"
+        ]
+      }
+    },
+    {
+      "id": "dous-cafes-por-favor",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Dous cafés, por favor.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dous",
+          "dous"
+        ],
+        [
+          "cafés,",
+          "café"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dous café, por favor.",
+        "Dous cafés, favor por."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dous",
+          "Tres",
+          "Un"
+        ]
+      }
+    },
+    {
+      "id": "un-libro-por-favor",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Un libro, por favor.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "libro,",
+          "libro"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unha libro, por favor.",
+        "Un libros, por favor."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Un",
+          "Dous",
+          "Tres"
+        ]
+      }
+    },
+    {
+      "id": "teno-tres-libros",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "Teño tres libros.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "tres",
+          "tres"
+        ],
+        [
+          "libros",
+          "libro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño tres libro.",
+        "Eu tes tres libros."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tres",
+          "dous",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "non-teno-dineiro",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "present"
+      ],
+      "text": "Non teño diñeiro.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "teño",
+          "ter"
+        ],
+        [
+          "diñeiro",
+          "diñeiro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño non diñeiro.",
+        "Eu non tes diñeiro."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "diñeiro",
+          "leite",
+          "auga"
+        ]
+      }
+    },
+    {
+      "id": "ti-entendes",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Ti entendes?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ti",
+          "ti"
+        ],
+        [
+          "entendes",
+          "entender"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti entendo?",
+        "Ti entender?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "entendes",
+          "entendo",
+          "entender"
+        ]
+      }
+    },
+    {
+      "id": "falo-un-pouco-de-galego",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Falo un pouco de galego.",
+      "means": "I speak a little Galician.",
+      "words": [
+        [
+          "Falo",
+          "falar"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "pouco",
+          "pouco"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "galego",
+          "galego"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a"
+        ],
+        [
+          "little"
+        ],
+        [
+          "of"
+        ],
+        [
+          "Galician"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu falas un pouco de galego.",
+        "Falo unha pouco de galego."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "galego",
+          "inglés",
+          "café"
+        ]
+      }
+    },
+    {
+      "id": "quero-un-cafe",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Quero un café.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Quero",
+          "querer"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "café",
+          "café"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu querer un café.",
+        "Quero unha café."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "café",
+          "té",
+          "leite"
+        ]
+      }
+    },
+    {
+      "id": "quero-auga-por-favor",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Quero auga, por favor.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Quero",
+          "querer"
+        ],
+        [
+          "auga,",
+          "auga"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu querer auga, por favor.",
+        "Quero auga, favor por."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "auga,",
+          "té,",
+          "leite,"
+        ]
+      }
+    },
+    {
+      "id": "esta-casa-e-grande",
+      "topic": "home",
+      "concepts": [
+        "gender",
+        "ser-estar"
+      ],
+      "text": "Esta casa é grande.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Esta",
+          "este"
+        ],
+        [
+          "casa",
+          "casa"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "grande",
+          "grande"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Este casa é grande.",
+        "Esta casa son grande."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "grande",
+          "pequena",
+          "pequeno"
+        ]
+      }
+    },
+    {
+      "id": "o-meu-cuarto-e-pequeno",
+      "topic": "home",
+      "concepts": [
+        "gender",
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "O meu cuarto é pequeno.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "O",
+          "o"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "cuarto",
+          "cuarto"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "pequeno",
+          "pequeno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O meu cuarto é pequena.",
+        "O miña cuarto é pequeno."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pequeno",
+          "pequena",
+          "grande"
+        ]
+      }
+    },
+    {
+      "id": "onde-vives",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Onde vives?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Onde",
+          "onde"
+        ],
+        [
+          "vives",
+          "vivir"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onde ti vivo?",
+        "Onde ti vive?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vives",
+          "vivo",
+          "vive"
+        ]
+      }
+    },
+    {
+      "id": "vivo-nunha-casa-pequena",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective-after",
+        "contraction"
+      ],
+      "text": "Vivo nunha casa pequena.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Vivo",
+          "vivir"
+        ],
+        [
+          "nunha",
+          "en"
+        ],
+        [
+          "casa",
+          "casa"
+        ],
+        [
+          "pequena",
+          "pequeno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a"
+        ],
+        [
+          "house"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vivo nunha casa pequeno.",
+        "Eu vives nunha casa pequena."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pequena",
+          "pequeno",
+          "grande"
+        ]
+      }
+    },
+    {
+      "id": "a-mina-nai-vive-aqui",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "A miña nai vive aquí.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "A",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "nai",
+          "nai"
+        ],
+        [
+          "vive",
+          "vivir"
+        ],
+        [
+          "aquí",
+          "aquí"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A miña nai vivo aquí.",
+        "A meu nai vive aquí."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vive",
+          "vivo",
+          "vives"
+        ]
+      }
+    },
+    {
+      "id": "teno-un-coche",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Teño un coche.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "coche",
+          "coche"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño unha coche.",
+        "Eu tes un coche."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "coche",
+          "libro",
+          "teléfono"
+        ]
+      }
+    },
+    {
+      "id": "onde-vas",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Onde vas?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Onde",
+          "onde"
+        ],
+        [
+          "vas",
+          "ir"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onde ti vou?",
+        "Onde ti vai?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vas",
+          "vou",
+          "vai"
+        ]
+      }
+    },
+    {
+      "id": "vou-a-escola",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "contraction"
+      ],
+      "text": "Vou á escola.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Vou",
+          "ir"
+        ],
+        [
+          "á",
+          "a"
+        ],
+        [
+          "escola",
+          "escola"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu vas á escola.",
+        "Vou a escola."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vou",
+          "Vas",
+          "Vai"
+        ]
+      }
+    },
+    {
+      "id": "a-mina-nai-vai-a-cidade",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive",
+        "contraction"
+      ],
+      "text": "A miña nai vai á cidade.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "A",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "nai",
+          "nai"
+        ],
+        [
+          "vai",
+          "ir"
+        ],
+        [
+          "á",
+          "a"
+        ],
+        [
+          "cidade",
+          "cidade"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A miña nai vou á cidade.",
+        "A miña nai vai a cidade."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vai",
+          "vou",
+          "vas"
+        ]
+      }
+    },
+    {
+      "id": "este-coche-e-pequeno",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "ser-estar"
+      ],
+      "text": "Este coche é pequeno.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Este",
+          "este"
+        ],
+        [
+          "coche",
+          "coche"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "pequeno",
+          "pequeno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Esta coche é pequeno.",
+        "Este coche é pequena."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pequeno",
+          "pequena",
+          "grande"
+        ]
+      }
+    },
+    {
+      "id": "traballo-hoxe",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Traballo hoxe.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Traballo",
+          "traballar"
+        ],
+        [
+          "hoxe",
+          "hoxe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eu traballar hoxe.",
+        "Traballo un hoxe."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hoxe",
+          "mañá",
+          "agora"
+        ]
+      }
+    },
+    {
+      "id": "teno-que-ir-agora",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "present"
+      ],
+      "text": "Teño que ir agora.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "que",
+          "que"
+        ],
+        [
+          "ir",
+          "ir"
+        ],
+        [
+          "agora",
+          "agora"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño que vou agora.",
+        "Teño ir agora."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ir",
+          "vou",
+          "vas"
+        ]
+      }
+    },
+    {
+      "id": "mana-vou-a-cidade",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "contraction"
+      ],
+      "text": "Mañá vou á cidade.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Mañá",
+          "mañá"
+        ],
+        [
+          "vou",
+          "ir"
+        ],
+        [
+          "á",
+          "a"
+        ],
+        [
+          "cidade",
+          "cidade"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mañá eu vas á cidade.",
+        "Mañá vou a cidade."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mañá",
+          "Hoxe",
+          "Agora"
+        ]
+      }
+    },
+    {
+      "id": "non-podo-ir-hoxe",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "modal"
+      ],
+      "text": "Non podo ir hoxe.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "podo",
+          "poder"
+        ],
+        [
+          "ir",
+          "ir"
+        ],
+        [
+          "hoxe",
+          "hoxe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non podo vou hoxe."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ir",
+          "vou",
+          "vai"
+        ]
+      }
+    },
+    {
+      "id": "teno-que-traballar-mana",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "present"
+      ],
+      "text": "Teño que traballar mañá.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "que",
+          "que"
+        ],
+        [
+          "traballar",
+          "traballar"
+        ],
+        [
+          "mañá",
+          "mañá"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "to"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño que traballo mañá.",
+        "Teño traballar mañá."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "traballar",
+          "traballo",
+          "ir"
+        ]
+      }
+    },
+    {
+      "id": "como-te-chamas",
+      "topic": "people",
+      "concepts": [
+        "pronoun-after",
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Como te chamas?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Como"
+        ],
+        [
+          "te"
+        ],
+        [
+          "chamas"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you call"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te"
+      ],
+      "wrong": [
+        "Como chámaste?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "te",
+          "me",
+          "nos"
+        ]
+      }
+    },
+    {
+      "id": "moito-gusto",
+      "topic": "people",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "moito-gusto"
+      ],
+      "text": "Moito gusto!",
+      "means": "Nice to meet you!",
+      "words": [
+        [
+          "Moito",
+          "moito"
+        ],
+        [
+          "gusto",
+          "gusto"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Much"
+        ],
+        [
+          "pleasure"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moita gusto!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gusto",
+          "gustas",
+          "gustan"
+        ]
+      }
+    },
+    {
+      "id": "son-de-estados-unidos",
+      "topic": "people",
+      "concepts": [
+        "ser-estar"
+      ],
+      "text": "Son de Estados Unidos.",
+      "means": "I'm from the United States.",
+      "words": [
+        [
+          "Son",
+          "ser"
+        ],
+        [
+          "de"
+        ],
+        [
+          "Estados"
+        ],
+        [
+          "Unidos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "from"
+        ],
+        [
+          "United States"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Estou de Estados Unidos."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Son",
+          "Estou",
+          "Teño"
+        ]
+      }
+    },
+    {
+      "id": "a-mina-irma-e-medica",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "ser-estar"
+      ],
+      "text": "A miña irmá é médica.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "A",
+          "o"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "irmá",
+          "irmá"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "médica",
+          "médico"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The my sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A miña irmá está médica."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "miña",
+          "meu",
+          "mía"
+        ]
+      }
+    },
+    {
+      "id": "pai-non-fala-ingles",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "O meu pai non fala inglés.",
+      "means": "My dad doesn't speak English.",
+      "words": [
+        [
+          "O",
+          "o"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "pai",
+          "pai"
+        ],
+        [
+          "non",
+          "non"
+        ],
+        [
+          "fala",
+          "falar"
+        ],
+        [
+          "inglés",
+          "inglés"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The my dad"
+        ],
+        [
+          "not"
+        ],
+        [
+          "speaks"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O meu pai non falo inglés."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "non",
+          "nin",
+          "xa"
+        ]
+      }
+    },
+    {
+      "id": "tes-irmans",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Tes irmáns?",
+      "means": "Do you have any brothers or sisters?",
+      "words": [
+        [
+          "Tes",
+          "ter"
+        ],
+        [
+          "irmáns",
+          "irmán"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You have"
+        ],
+        [
+          "brothers and sisters"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño irmáns?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tes",
+          "Teño",
+          "Temos"
+        ]
+      }
+    },
+    {
+      "id": "avos-viven-nunha-aldea",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "contraction"
+      ],
+      "text": "Os meus avós viven nunha aldea.",
+      "means": "My grandparents live in a village.",
+      "words": [
+        [
+          "Os"
+        ],
+        [
+          "meus",
+          "meu"
+        ],
+        [
+          "avós",
+          "avó"
+        ],
+        [
+          "viven",
+          "vivir"
+        ],
+        [
+          "nunha"
+        ],
+        [
+          "aldea",
+          "aldea"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The my grandparents"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in-a"
+        ],
+        [
+          "village"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Meus os avós viven nunha aldea."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "nunha",
+          "nun",
+          "dunha"
+        ]
+      }
+    },
+    {
+      "id": "este-e-o-meu-irman",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Este é o meu irmán pequeno.",
+      "means": "This is my little brother.",
+      "words": [
+        [
+          "Este",
+          "este"
+        ],
+        [
+          "é",
+          "ser"
+        ],
+        [
+          "o"
+        ],
+        [
+          "meu",
+          "meu"
+        ],
+        [
+          "irmán",
+          "irmán"
+        ],
+        [
+          "pequeno",
+          "pequeno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the my brother"
+        ],
+        [
+          "little",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "pequeno"
+      ],
+      "wrong": [
+        "Este é meu o irmán pequeno."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "meu",
+          "miña",
+          "teu"
+        ]
+      }
+    },
+    {
+      "id": "a-que-te-dedicas",
+      "topic": "people",
+      "concepts": [
+        "pronoun-after",
+        "question"
+      ],
+      "text": "A que te dedicas?",
+      "means": "What do you do for a living?",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "que",
+          "que"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "dedicas",
+          "dedicar"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "To"
+        ],
+        [
+          "what"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you devote"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te"
+      ],
+      "wrong": [
+        "A que dedícaste?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "me",
+          "nos"
+        ]
+      }
+    },
+    {
+      "id": "falas-ingles",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "question"
+      ],
+      "text": "Falas inglés?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Falas",
+          "falar"
+        ],
+        [
+          "inglés",
+          "inglés"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Falo inglés?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Falas",
+          "Falo",
+          "Falamos"
+        ]
+      }
+    },
+    {
+      "id": "vivo-nun-piso-pequeno",
+      "topic": "home",
+      "concepts": [
+        "gender"
+      ],
+      "text": "Vivo nun piso pequeno.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Vivo",
+          "vivir"
+        ],
+        [
+          "nun"
+        ],
+        [
+          "piso",
+          "piso"
+        ],
+        [
+          "pequeno",
+          "pequeno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in-a"
+        ],
+        [
+          "apartment"
+        ],
+        [
+          "small",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "pequeno"
+      ],
+      "wrong": [
+        "Vivo nun piso pequena."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pequeno",
+          "pequena",
+          "pequenos"
+        ]
+      }
+    },
+    {
+      "id": "casa-amarela",
+      "topic": "home",
+      "concepts": [
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Vivimos nunha casa amarela.",
+      "means": "We live in a yellow house.",
+      "words": [
+        [
+          "Vivimos",
+          "vivir"
+        ],
+        [
+          "nunha"
+        ],
+        [
+          "casa",
+          "casa"
+        ],
+        [
+          "amarela",
+          "amarelo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We live"
+        ],
+        [
+          "in-a"
+        ],
+        [
+          "house"
+        ],
+        [
+          "yellow",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "amarela"
+      ],
+      "wrong": [
+        "Vivimos nunha casa amarelo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "amarela",
+          "amarelo",
+          "amarelas"
+        ]
+      }
+    },
+    {
+      "id": "non-hai-leite",
+      "topic": "home",
+      "concepts": [
+        "hai"
+      ],
+      "text": "Non hai leite na neveira.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "hai",
+          "haber"
+        ],
+        [
+          "leite",
+          "leite"
+        ],
+        [
+          "na"
+        ],
+        [
+          "neveira",
+          "neveira"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in-the"
+        ],
+        [
+          "fridge"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non está leite na neveira."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hai",
+          "ten",
+          "é"
+        ]
+      }
+    },
+    {
+      "id": "chaves-na-mesa",
+      "topic": "home",
+      "concepts": [
+        "ser-estar",
+        "contraction"
+      ],
+      "text": "As chaves están na mesa.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "As"
+        ],
+        [
+          "chaves",
+          "chave"
+        ],
+        [
+          "están",
+          "estar"
+        ],
+        [
+          "na"
+        ],
+        [
+          "mesa",
+          "mesa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The keys"
+        ],
+        [
+          "are"
+        ],
+        [
+          "on-the"
+        ],
+        [
+          "table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "As chaves son na mesa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "na",
+          "no",
+          "da"
+        ]
+      }
+    },
+    {
+      "id": "estou-lendo",
+      "topic": "home",
+      "concepts": [
+        "progressive"
+      ],
+      "text": "Estou lendo un libro.",
+      "means": "I'm reading a book.",
+      "words": [
+        [
+          "Estou",
+          "estar"
+        ],
+        [
+          "lendo",
+          "ler"
+        ],
+        [
+          "un"
+        ],
+        [
+          "libro",
+          "libro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "reading"
+        ],
+        [
+          "a"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Son lendo un libro."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lendo",
+          "ler",
+          "lin"
+        ]
+      }
+    },
+    {
+      "id": "nai-esta-cocinando",
+      "topic": "home",
+      "concepts": [
+        "progressive"
+      ],
+      "text": "A miña nai está cociñando.",
+      "means": "My mom is cooking.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "nai",
+          "nai"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "cociñando",
+          "cociñar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The my mom"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cooking"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A miña nai é cociñando."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "está",
+          "é",
+          "ten"
+        ]
+      }
+    },
+    {
+      "id": "dous-cuartos-de-bano",
+      "topic": "home",
+      "concepts": [
+        "hai",
+        "gender"
+      ],
+      "text": "Na miña casa hai dous cuartos de baño.",
+      "means": "There are two bathrooms in my house.",
+      "words": [
+        [
+          "Na"
+        ],
+        [
+          "miña",
+          "meu"
+        ],
+        [
+          "casa",
+          "casa"
+        ],
+        [
+          "hai",
+          "haber"
+        ],
+        [
+          "dous",
+          "dous"
+        ],
+        [
+          "cuartos",
+          "cuarto de baño"
+        ],
+        [
+          "de"
+        ],
+        [
+          "baño",
+          "cuarto de baño"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In-the my house"
+        ],
+        [
+          "there are"
+        ],
+        [
+          "two"
+        ],
+        [
+          "bathrooms"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Na miña casa hai dúas cuartos de baño."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hai",
+          "está",
+          "estás"
+        ]
+      }
+    },
+    {
+      "id": "podes-pechar-a-fiestra",
+      "topic": "home",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Podes pechar a fiestra?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Podes",
+          "poder"
+        ],
+        [
+          "pechar",
+          "pechar"
+        ],
+        [
+          "a"
+        ],
+        [
+          "fiestra",
+          "fiestra"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You can"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Podes a pechar a fiestra?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pechar",
+          "pechas",
+          "pecha"
+        ]
+      }
+    },
+    {
+      "id": "coche-vermello",
+      "topic": "home",
+      "concepts": [
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Teño un coche vermello.",
+      "means": "I have a red car.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "un"
+        ],
+        [
+          "coche",
+          "coche"
+        ],
+        [
+          "vermello",
+          "vermello"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ],
+        [
+          "red",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "vermello"
+      ],
+      "wrong": [
+        "Teño un coche vermella."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vermello",
+          "vermella",
+          "vermellos"
+        ]
+      }
+    },
+    {
+      "id": "gustame-o-polbo",
+      "topic": "food",
+      "concepts": [
+        "gustar"
+      ],
+      "text": "Gústame moito o polbo.",
+      "means": "I really like octopus.",
+      "words": [
+        [
+          "Gústame",
+          "gustar"
+        ],
+        [
+          "moito",
+          "moito"
+        ],
+        [
+          "o"
+        ],
+        [
+          "polbo",
+          "polbo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Pleases-to-me"
+        ],
+        [
+          "a lot"
+        ],
+        [
+          "the octopus",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "polbo"
+      ],
+      "wrong": [
+        "Gústanme moito o polbo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Gústame",
+          "Gústache",
+          "Gústalle"
+        ]
+      }
+    },
+    {
+      "id": "non-me-gusta-o-cafe",
+      "topic": "food",
+      "concepts": [
+        "pronoun-after",
+        "gustar"
+      ],
+      "text": "Non me gusta o café.",
+      "means": "I don't like coffee.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "me",
+          "me"
+        ],
+        [
+          "gusta",
+          "gustar"
+        ],
+        [
+          "o"
+        ],
+        [
+          "café",
+          "café"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "pleases"
+        ],
+        [
+          "the coffee",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "café"
+      ],
+      "wrong": [
+        "Non gústame o café."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "me",
+          "che",
+          "lle"
+        ]
+      }
+    },
+    {
+      "id": "gustanche-as-froitas",
+      "topic": "food",
+      "concepts": [
+        "gustar"
+      ],
+      "text": "Gústanche as froitas?",
+      "means": "Do you like fruit?",
+      "words": [
+        [
+          "Gústanche",
+          "gustar"
+        ],
+        [
+          "as"
+        ],
+        [
+          "froitas",
+          "froita"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Please-to-you"
+        ],
+        [
+          "the fruits",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "froitas"
+      ],
+      "wrong": [
+        "Gústache as froitas?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Gústanche",
+          "Gústanme",
+          "Gústanlle"
+        ]
+      }
+    },
+    {
+      "id": "teno-moita-fame",
+      "topic": "food",
+      "concepts": [
+        "ter-fame"
+      ],
+      "text": "Teño moita fame.",
+      "means": "I'm really hungry.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "moita",
+          "moito"
+        ],
+        [
+          "fame",
+          "fame"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "much"
+        ],
+        [
+          "hunger"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Estou moita fame."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Teño",
+          "Estou",
+          "Son"
+        ]
+      }
+    },
+    {
+      "id": "tes-sede",
+      "topic": "food",
+      "concepts": [
+        "ter-fame"
+      ],
+      "text": "Tes sede?",
+      "means": "Are you thirsty?",
+      "words": [
+        [
+          "Tes",
+          "ter"
+        ],
+        [
+          "sede",
+          "sede"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You have"
+        ],
+        [
+          "thirst"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Estás sede?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tes",
+          "Estás",
+          "Es"
+        ]
+      }
+    },
+    {
+      "id": "quero-tomar-un-cafe",
+      "topic": "food",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Quero tomar un café con leite.",
+      "means": "I'd like to have a coffee with milk.",
+      "words": [
+        [
+          "Quero",
+          "querer"
+        ],
+        [
+          "tomar",
+          "tomar"
+        ],
+        [
+          "un"
+        ],
+        [
+          "café",
+          "café"
+        ],
+        [
+          "con"
+        ],
+        [
+          "leite",
+          "leite"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "with"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Quero a tomar un café con leite."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tomar",
+          "tomo",
+          "tomei"
+        ]
+      }
+    },
+    {
+      "id": "xa-comin",
+      "topic": "food",
+      "concepts": [
+        "past"
+      ],
+      "text": "Xa comín, grazas.",
+      "means": "I've already eaten, thanks.",
+      "words": [
+        [
+          "Xa",
+          "xa"
+        ],
+        [
+          "comín,",
+          "comer"
+        ],
+        [
+          "grazas",
+          "grazas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Already"
+        ],
+        [
+          "I ate,"
+        ],
+        [
+          "thanks"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xa hei comido, grazas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Xa",
+          "Non",
+          "Mañá"
+        ]
+      }
+    },
+    {
+      "id": "onte-comemos-empanada",
+      "topic": "food",
+      "concepts": [
+        "past"
+      ],
+      "text": "Onte comemos empanada.",
+      "means": "Yesterday we had empanada.",
+      "words": [
+        [
+          "Onte",
+          "onte"
+        ],
+        [
+          "comemos",
+          "comer"
+        ],
+        [
+          "empanada",
+          "empanada"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "empanada"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onte comeremos empanada."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Onte",
+          "Mañá",
+          "Logo"
+        ]
+      }
+    },
+    {
+      "id": "a-conta",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "a-conta"
+      ],
+      "text": "A conta, por favor.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "conta,"
+        ],
+        [
+          "por"
+        ],
+        [
+          "favor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O conta, por favor."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "A",
+          "O",
+          "Un"
+        ]
+      }
+    },
+    {
+      "id": "hai-pan",
+      "topic": "food",
+      "concepts": [
+        "hai"
+      ],
+      "text": "Hai pan?",
+      "means": "Is there any bread?",
+      "words": [
+        [
+          "Hai",
+          "haber"
+        ],
+        [
+          "pan",
+          "pan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Está pan?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hai",
+          "Está",
+          "É"
+        ]
+      }
+    },
+    {
+      "id": "vino-tinto",
+      "topic": "food",
+      "concepts": [
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Prefiro o viño tinto.",
+      "means": "I prefer red wine.",
+      "words": [
+        [
+          "Prefiro",
+          "preferir"
+        ],
+        [
+          "o"
+        ],
+        [
+          "viño",
+          "viño"
+        ],
+        [
+          "tinto",
+          "tinto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I prefer"
+        ],
+        [
+          "the wine"
+        ],
+        [
+          "red",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tinto"
+      ],
+      "wrong": [
+        "Prefiro o viño tinta."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tinto",
+          "tinta",
+          "tintos"
+        ]
+      }
+    },
+    {
+      "id": "imos-comer-fora",
+      "topic": "food",
+      "concepts": [
+        "ir-inf"
+      ],
+      "text": "Hoxe imos comer fóra.",
+      "means": "We're going to eat out today.",
+      "words": [
+        [
+          "Hoxe",
+          "hoxe"
+        ],
+        [
+          "imos",
+          "ir"
+        ],
+        [
+          "comer",
+          "comer"
+        ],
+        [
+          "fóra",
+          "fóra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "we go"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "out"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hoxe imos comemos fóra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "imos",
+          "vou",
+          "van"
+        ]
+      }
+    },
+    {
+      "id": "onde-esta-a-estacion",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Desculpe, onde está a estación de tren?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Desculpe,"
+        ],
+        [
+          "onde",
+          "onde"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "a",
+          "o"
+        ],
+        [
+          "estación",
+          "estación"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "tren",
+          "tren"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ],
+        [
+          "of train",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tren"
+      ],
+      "wrong": [
+        "Desculpe, onde a estación de tren está?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "onde",
+          "cando",
+          "quen"
+        ]
+      }
+    },
+    {
+      "id": "canto-custa-isto",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-this"
+      ],
+      "text": "Canto custa isto?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Canto"
+        ],
+        [
+          "custa"
+        ],
+        [
+          "isto"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cantos custa isto?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Canto",
+          "Onde",
+          "Cando"
+        ]
+      }
+    },
+    {
+      "id": "vou-ao-cine",
+      "topic": "out",
+      "concepts": [
+        "contraction"
+      ],
+      "text": "Esta noite vou ao cine.",
+      "means": "I'm going to the movies tonight.",
+      "words": [
+        [
+          "Esta",
+          "este"
+        ],
+        [
+          "noite",
+          "noite"
+        ],
+        [
+          "vou",
+          "ir"
+        ],
+        [
+          "ao"
+        ],
+        [
+          "cine",
+          "cine"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This night"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to-the"
+        ],
+        [
+          "movie theater"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Esta noite vou a o cine."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ao",
+          "á",
+          "no"
+        ]
+      }
+    },
+    {
+      "id": "imos-coller-un-taxi",
+      "topic": "out",
+      "concepts": [
+        "ir-inf"
+      ],
+      "text": "Imos coller un taxi.",
+      "means": "We're going to take a taxi.",
+      "words": [
+        [
+          "Imos",
+          "ir"
+        ],
+        [
+          "coller",
+          "coller"
+        ],
+        [
+          "un"
+        ],
+        [
+          "taxi",
+          "taxi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We go"
+        ],
+        [
+          "take"
+        ],
+        [
+          "a"
+        ],
+        [
+          "taxi"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Imos collemos un taxi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "coller",
+          "collemos",
+          "collín"
+        ]
+      }
+    },
+    {
+      "id": "o-tren-sae-as-oito",
+      "topic": "out",
+      "concepts": [
+        "contraction"
+      ],
+      "text": "O tren sae ás oito.",
+      "means": "The train leaves at eight.",
+      "words": [
+        [
+          "O"
+        ],
+        [
+          "tren",
+          "tren"
+        ],
+        [
+          "sae",
+          "saír"
+        ],
+        [
+          "ás"
+        ],
+        [
+          "oito",
+          "oito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "leaves"
+        ],
+        [
+          "at-the"
+        ],
+        [
+          "eight"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "O tren sae a as oito."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ás",
+          "aos",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "podo-pagar-con-tarxeta",
+      "topic": "out",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Podo pagar con tarxeta?",
+      "means": "Can I pay by card?",
+      "words": [
+        [
+          "Podo",
+          "poder"
+        ],
+        [
+          "pagar",
+          "pagar"
+        ],
+        [
+          "con"
+        ],
+        [
+          "tarxeta",
+          "tarxeta"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "I can"
+        ],
+        [
+          "pay"
+        ],
+        [
+          "with"
+        ],
+        [
+          "card"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Podo pago con tarxeta?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pagar",
+          "pago",
+          "paguei"
+        ]
+      }
+    },
+    {
+      "id": "non-sei-onde-esta-o-hotel",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Non sei onde está o hotel.",
+      "means": "I don't know where the hotel is.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "sei",
+          "saber"
+        ],
+        [
+          "onde",
+          "onde"
+        ],
+        [
+          "está",
+          "estar"
+        ],
+        [
+          "o"
+        ],
+        [
+          "hotel",
+          "hotel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the hotel",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "hotel"
+      ],
+      "wrong": [
+        "Sei onde está o hotel."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Non",
+          "Nin",
+          "Xa"
+        ]
+      }
+    },
+    {
+      "id": "teno-que-coller-o-tren",
+      "topic": "out",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Teño que coller o tren das sete.",
+      "means": "I have to catch the seven o'clock train.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "que",
+          "que"
+        ],
+        [
+          "coller",
+          "coller"
+        ],
+        [
+          "o"
+        ],
+        [
+          "tren",
+          "tren"
+        ],
+        [
+          "das"
+        ],
+        [
+          "sete",
+          "sete"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "that"
+        ],
+        [
+          "catch"
+        ],
+        [
+          "the train"
+        ],
+        [
+          "of-the"
+        ],
+        [
+          "seven"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teño coller o tren das sete."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "que",
+          "para",
+          "en"
+        ]
+      }
+    },
+    {
+      "id": "non-entendo",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Non entendo.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "entendo",
+          "entender"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Entendo non."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Non",
+          "Nin",
+          "Xa"
+        ]
+      }
+    },
+    {
+      "id": "mana-vou-chamarte",
+      "topic": "plans",
+      "concepts": [
+        "ir-inf"
+      ],
+      "text": "Mañá vou chamarte.",
+      "means": "I'm going to call you tomorrow.",
+      "words": [
+        [
+          "Mañá",
+          "mañá"
+        ],
+        [
+          "vou",
+          "ir"
+        ],
+        [
+          "chamarte",
+          "chamar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "call-you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mañá vou chamo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vou",
+          "vas",
+          "imos"
+        ]
+      }
+    },
+    {
+      "id": "que-fas-esta-fin-de-semana",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Que fas esta fin de semana?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Que",
+          "que"
+        ],
+        [
+          "fas",
+          "facer"
+        ],
+        [
+          "esta",
+          "este"
+        ],
+        [
+          "fin",
+          "fin de semana"
+        ],
+        [
+          "de"
+        ],
+        [
+          "semana",
+          "fin de semana"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you do"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Que fago esta fin de semana?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fas",
+          "fago",
+          "facemos"
+        ]
+      }
+    },
+    {
+      "id": "mana-vai-chover",
+      "topic": "plans",
+      "concepts": [
+        "ir-inf"
+      ],
+      "text": "Mañá vai chover.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Mañá",
+          "mañá"
+        ],
+        [
+          "vai",
+          "ir"
+        ],
+        [
+          "chover",
+          "chover"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mañá vai chove."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "chover",
+          "chove",
+          "choveu"
+        ]
+      }
+    },
+    {
+      "id": "teno-frio",
+      "topic": "plans",
+      "concepts": [
+        "ter-fame"
+      ],
+      "text": "Teño frío.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Teño",
+          "ter"
+        ],
+        [
+          "frío",
+          "frío"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fai frío."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Teño",
+          "Fai",
+          "Tes"
+        ]
+      }
+    },
+    {
+      "id": "vemonos-mana",
+      "topic": "plans",
+      "concepts": [
+        "pronoun-after"
+      ],
+      "chunks": [
+        "see-you-tomorrow"
+      ],
+      "text": "Vémonos mañá!",
+      "means": "See you tomorrow!",
+      "words": [
+        [
+          "Vémonos"
+        ],
+        [
+          "mañá"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We see each other"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vemos mañá!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vémonos",
+          "Vemos",
+          "Vímonos"
+        ]
+      }
+    },
+    {
+      "id": "quero-aprender-galego",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Quero aprender galego.",
+      "means": "I want to learn Galician.",
+      "words": [
+        [
+          "Quero",
+          "querer"
+        ],
+        [
+          "aprender",
+          "aprender"
+        ],
+        [
+          "galego",
+          "galego"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "learn"
+        ],
+        [
+          "Galician"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Quero aprendo galego."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "aprender",
+          "aprendo",
+          "aprendín"
+        ]
+      }
+    },
+    {
+      "id": "xa-fixeches-os-deberes",
+      "topic": "plans",
+      "concepts": [
+        "past"
+      ],
+      "text": "Xa fixeches os deberes?",
+      "means": "Have you done your homework yet?",
+      "words": [
+        [
+          "Xa",
+          "xa"
+        ],
+        [
+          "fixeches",
+          "facer"
+        ],
+        [
+          "os"
+        ],
+        [
+          "deberes",
+          "deber"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Already"
+        ],
+        [
+          "you did"
+        ],
+        [
+          "the homework"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xa has feito os deberes?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fixeches",
+          "fas",
+          "farás"
+        ]
+      }
+    },
+    {
+      "id": "imos-a-praia",
+      "topic": "plans",
+      "concepts": [
+        "contraction"
+      ],
+      "text": "A semana que vén imos á praia.",
+      "means": "Next week we're going to the beach.",
+      "words": [
+        [
+          "A"
+        ],
+        [
+          "semana",
+          "semana"
+        ],
+        [
+          "que",
+          "que"
+        ],
+        [
+          "vén",
+          "vir"
+        ],
+        [
+          "imos",
+          "ir"
+        ],
+        [
+          "á"
+        ],
+        [
+          "praia",
+          "praia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The week"
+        ],
+        [
+          "that"
+        ],
+        [
+          "comes"
+        ],
+        [
+          "we go"
+        ],
+        [
+          "to-the"
+        ],
+        [
+          "beach"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A semana que vén imos a a praia."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "á",
+          "ao",
+          "na"
+        ]
+      }
+    },
+    {
+      "id": "estou-esperando-o-autobus",
+      "topic": "plans",
+      "concepts": [
+        "progressive"
+      ],
+      "text": "Estou esperando o autobús.",
+      "means": "I'm waiting for the bus.",
+      "words": [
+        [
+          "Estou",
+          "estar"
+        ],
+        [
+          "esperando",
+          "esperar"
+        ],
+        [
+          "o"
+        ],
+        [
+          "autobús",
+          "autobús"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "waiting for"
+        ],
+        [
+          "the bus"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Estou esperar o autobús."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Estou",
+          "Son",
+          "Teño"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "café",
+          "forms": [
+            "café"
+          ],
+          "article": "o",
+          "picture": "coffee",
+          "means": "the coffee"
+        },
+        {
+          "lemma": "té",
+          "forms": [
+            "té"
+          ],
+          "article": "o",
+          "picture": "tea",
+          "means": "the tea"
+        },
+        {
+          "lemma": "auga",
+          "forms": [
+            "auga"
+          ],
+          "article": "a",
+          "picture": "water",
+          "means": "the water"
+        },
+        {
+          "lemma": "eu",
+          "forms": [
+            "eu"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "beber",
+          "forms": [
+            "bebo"
+          ],
+          "picture": "drink",
+          "means": "bebo = I drink"
+        },
+        {
+          "lemma": "e",
+          "forms": [
+            "e"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending says who does it, so Galician usually leaves eu and ti out: falo (I speak), falas (you speak), falamos (we speak)."
+      },
+      "items": [
+        "bebo-cafe",
+        "eu-bebo-te",
+        "bebo-auga",
+        "bebo-cafe-e-te",
+        "bebo-te-e-auga",
+        "bebo-auga-e-cafe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "un",
+          "forms": [
+            "un",
+            "unha"
+          ],
+          "means": "un = a; unha = a"
+        },
+        {
+          "lemma": "leite",
+          "forms": [
+            "leite"
+          ],
+          "article": "o",
+          "picture": "milk",
+          "means": "the milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "un-cafe-grazas",
+        "ola-un-te-por-favor",
+        "ola-un-cafe-por-favor",
+        "un-te-e-unha-auga-por-favor",
+        "bebo-leite"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "ben",
+          "forms": [
+            "ben"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "estar",
+          "forms": [
+            "estou"
+          ],
+          "means": "estou = I am"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "ser-estar",
+        "line": "ser says who or what someone or something is, estar where it is and how it is just now: A miña irmá é médica (the my sister is doctor), Está na casa (is in-the house)."
+      },
+      "items": [
+        "si-por-favor",
+        "non-grazas",
+        "ola-como-estas",
+        "estou-ben-grazas",
+        "si-grazas-adeus",
+        "non-grazas-adeus"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ti",
+          "forms": [
+            "ti"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "non",
+          "forms": [
+            "non"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "profesor",
+          "forms": [
+            "profesor"
+          ],
+          "article": "o",
+          "means": "the teacher"
+        },
+        {
+          "lemma": "estudante",
+          "forms": [
+            "estudante"
+          ],
+          "article": "o / a",
+          "means": "the student"
+        },
+        {
+          "lemma": "ser",
+          "forms": [
+            "son",
+            "es"
+          ],
+          "means": "son = I am; es = you are"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "moito-gusto"
+      ],
+      "concept": null,
+      "items": [
+        "como-te-chamas",
+        "ola-moito-gusto",
+        "son-profesor",
+        "ti-es-estudante",
+        "es-profesor",
+        "non-son-profesor"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "nai",
+          "forms": [
+            "nai"
+          ],
+          "article": "a",
+          "picture": "mother",
+          "means": "the mother"
+        },
+        {
+          "lemma": "pai",
+          "forms": [
+            "pai"
+          ],
+          "article": "o",
+          "picture": "father",
+          "means": "the father"
+        },
+        {
+          "lemma": "irmán",
+          "forms": [
+            "irmán"
+          ],
+          "article": "o",
+          "picture": "brother",
+          "means": "the brother"
+        },
+        {
+          "lemma": "irmá",
+          "forms": [
+            "irmá"
+          ],
+          "article": "a",
+          "picture": "sister",
+          "means": "the sister"
+        },
+        {
+          "lemma": "meu",
+          "forms": [
+            "meu",
+            "miña"
+          ],
+          "means": "meu = my; miña = my"
+        },
+        {
+          "lemma": "este",
+          "forms": [
+            "este",
+            "esta"
+          ],
+          "means": "este = this; esta = this"
+        },
+        {
+          "lemma": "o",
+          "forms": [
+            "o",
+            "a"
+          ],
+          "means": "o = the; a = the"
+        },
+        {
+          "lemma": "ser",
+          "forms": [
+            "é"
+          ],
+          "means": "é = is"
+        },
+        {
+          "lemma": "profesor",
+          "forms": [
+            "profesora"
+          ],
+          "article": "o",
+          "means": "the teacher"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Every noun is masculine or feminine, and o or a, un or unha and the adjectives with it match it: o coche novo, a casa nova, as casas novas."
+      },
+      "items": [
+        "esta-e-a-mina-nai",
+        "este-e-o-meu-pai",
+        "o-meu-pai-e-profesor",
+        "o-meu-irman-e-estudante",
+        "esta-e-a-mina-irma",
+        "a-mina-nai-e-profesora"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "ter",
+          "forms": [
+            "teño",
+            "tes"
+          ],
+          "means": "teño = I have; tes = you have"
+        },
+        {
+          "lemma": "amigo",
+          "forms": [
+            "amigo"
+          ],
+          "article": "o",
+          "picture": "friend",
+          "means": "the friend"
+        },
+        {
+          "lemma": "médico",
+          "forms": [
+            "médica"
+          ],
+          "article": "o",
+          "picture": "doctor",
+          "means": "the doctor"
+        },
+        {
+          "lemma": "chave",
+          "forms": [
+            "chave"
+          ],
+          "article": "a",
+          "picture": "key",
+          "means": "the key"
+        },
+        {
+          "lemma": "teléfono",
+          "forms": [
+            "teléfono"
+          ],
+          "article": "o",
+          "picture": "phone",
+          "means": "the phone"
+        },
+        {
+          "lemma": "libro",
+          "forms": [
+            "libro"
+          ],
+          "article": "o",
+          "picture": "book",
+          "means": "the book"
+        },
+        {
+          "lemma": "bo",
+          "forms": [
+            "bo"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "teno-un-telefono",
+        "tes-unha-chave",
+        "teno-un-irman-e-unha-irma",
+        "non-teno-un-libro",
+        "a-mina-irma-e-medica",
+        "es-un-bo-amigo"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "onde",
+          "forms": [
+            "onde"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "aquí",
+          "forms": [
+            "aquí"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "alí",
+          "forms": [
+            "alí"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "baño",
+          "forms": [
+            "baño"
+          ],
+          "article": "o",
+          "means": "the bathroom"
+        },
+        {
+          "lemma": "estar",
+          "forms": [
+            "está"
+          ],
+          "means": "está = is"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "possessive",
+        "line": "meu, miña, teu, túa match the thing owned, and usually come after o or a: a miña irmá (the my sister), o teu móbil (the your phone)."
+      },
+      "items": [
+        "onde-esta-a-mina-chave",
+        "o-meu-telefono-esta-aqui",
+        "a-chave-esta-ali",
+        "desculpe-onde-esta-o-bano",
+        "onde-esta-a-mina-nai",
+        "a-mina-irma-esta-aqui"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "un",
+          "forms": [
+            "un"
+          ],
+          "means": "a, an; one"
+        },
+        {
+          "lemma": "dous",
+          "forms": [
+            "dous"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "tres",
+          "forms": [
+            "tres"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "diñeiro",
+          "forms": [
+            "diñeiro"
+          ],
+          "article": "o",
+          "picture": "money",
+          "means": "the money"
+        },
+        {
+          "lemma": "café",
+          "forms": [
+            "cafés"
+          ],
+          "article": "o",
+          "means": "the coffee"
+        },
+        {
+          "lemma": "libro",
+          "forms": [
+            "libros"
+          ],
+          "article": "o",
+          "means": "the book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-this",
+        "a-conta"
+      ],
+      "concept": null,
+      "items": [
+        "canto-custa-isto",
+        "a-conta",
+        "dous-cafes-por-favor",
+        "un-libro-por-favor",
+        "teno-tres-libros",
+        "non-teno-dineiro"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "falar",
+          "forms": [
+            "falas",
+            "falo",
+            "fala"
+          ],
+          "means": "falas = you speak; falo = I speak; fala = speaks"
+        },
+        {
+          "lemma": "inglés",
+          "forms": [
+            "inglés"
+          ],
+          "article": "o",
+          "means": "the English language"
+        },
+        {
+          "lemma": "galego",
+          "forms": [
+            "galego"
+          ],
+          "article": "o",
+          "means": "the Galician language"
+        },
+        {
+          "lemma": "entender",
+          "forms": [
+            "entendo",
+            "entendes"
+          ],
+          "means": "entendo = I understand; entendes = you understand"
+        },
+        {
+          "lemma": "pouco",
+          "forms": [
+            "pouco"
+          ],
+          "means": "little"
+        },
+        {
+          "lemma": "querer",
+          "forms": [
+            "quero"
+          ],
+          "means": "quero = I want"
+        },
+        {
+          "lemma": "de",
+          "forms": [
+            "de"
+          ],
+          "means": "of, from"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes-or-no question can keep a statement's order (Falas inglés?"
+      },
+      "items": [
+        "falas-ingles",
+        "non-entendo",
+        "ti-entendes",
+        "falo-un-pouco-de-galego",
+        "quero-un-cafe",
+        "quero-auga-por-favor",
+        "pai-non-fala-ingles"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "casa",
+          "forms": [
+            "casa"
+          ],
+          "article": "a",
+          "picture": "house",
+          "means": "the house"
+        },
+        {
+          "lemma": "cuarto",
+          "forms": [
+            "cuarto"
+          ],
+          "article": "o",
+          "picture": "room",
+          "means": "the room"
+        },
+        {
+          "lemma": "grande",
+          "forms": [
+            "grande"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "pequeno",
+          "forms": [
+            "pequeno",
+            "pequena"
+          ],
+          "picture": "small",
+          "means": "pequeno = small; pequena = small"
+        },
+        {
+          "lemma": "vivir",
+          "forms": [
+            "vivo",
+            "vives",
+            "vive"
+          ],
+          "means": "vivo = I live; vives = you live; vive = lives"
+        },
+        {
+          "lemma": "en",
+          "forms": [
+            "nunha"
+          ],
+          "picture": "in",
+          "means": "nunha = in a"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "esta-casa-e-grande",
+        "o-meu-cuarto-e-pequeno",
+        "onde-vives",
+        "vivo-nunha-casa-pequena",
+        "a-mina-nai-vive-aqui"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "ir",
+          "forms": [
+            "vou",
+            "vas",
+            "vai"
+          ],
+          "means": "vou = I go; vas = you go; vai = goes"
+        },
+        {
+          "lemma": "a",
+          "forms": [
+            "á"
+          ],
+          "means": "á = to the"
+        },
+        {
+          "lemma": "escola",
+          "forms": [
+            "escola"
+          ],
+          "article": "a",
+          "picture": "school",
+          "means": "the school"
+        },
+        {
+          "lemma": "cidade",
+          "forms": [
+            "cidade"
+          ],
+          "article": "a",
+          "picture": "city",
+          "means": "the city"
+        },
+        {
+          "lemma": "estación",
+          "forms": [
+            "estación"
+          ],
+          "article": "a",
+          "means": "the station"
+        },
+        {
+          "lemma": "coche",
+          "forms": [
+            "coche"
+          ],
+          "article": "o",
+          "picture": "car",
+          "means": "the car"
+        },
+        {
+          "lemma": "tren",
+          "forms": [
+            "tren"
+          ],
+          "article": "o",
+          "means": "the train"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "contraction",
+        "line": "en, de, a, con and por join the word for the after them: na casa (in-the house), do meu pai (of-the my father), ao cine (to-the movies), coa miña nai (with-the my mother)."
+      },
+      "items": [
+        "teno-un-coche",
+        "onde-vas",
+        "vou-a-escola",
+        "a-mina-nai-vai-a-cidade",
+        "onde-esta-a-estacion",
+        "este-coche-e-pequeno"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "hoxe",
+          "forms": [
+            "hoxe"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "mañá",
+          "forms": [
+            "mañá"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "agora",
+          "forms": [
+            "agora"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "traballar",
+          "forms": [
+            "traballo",
+            "traballar"
+          ],
+          "picture": "work",
+          "means": "traballo = I work; traballar = to work"
+        },
+        {
+          "lemma": "que",
+          "forms": [
+            "que"
+          ],
+          "means": "that"
+        },
+        {
+          "lemma": "poder",
+          "forms": [
+            "podo"
+          ],
+          "means": "podo = I can"
+        },
+        {
+          "lemma": "ir",
+          "forms": [
+            "ir"
+          ],
+          "means": "to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "vemonos-mana",
+        "traballo-hoxe",
+        "teno-que-ir-agora",
+        "mana-vou-a-cidade",
+        "non-podo-ir-hoxe",
+        "teno-que-traballar-mana"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

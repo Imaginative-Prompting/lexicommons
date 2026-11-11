@@ -1,0 +1,7760 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-la",
+  "name": "Starter: Latin",
+  "about": "Classical Latin in real, everyday sentences, with each one's words in Latin order and their long vowels marked until you know them.",
+  "language": "la",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "caffeum": "coffee",
+    "thea": "tea",
+    "aqua": "water",
+    "ego": "I (mihi: to me; mecum: with me)",
+    "bibo": "drink",
+    "et": "and",
+    "unus": "one",
+    "lac": "milk",
+    "bene": "well, fine",
+    "sum": "be (est: is, sunt: are)",
+    "tu": "you (tibi: to you)",
+    "non": "not",
+    "magister": "teacher",
+    "magistra": "teacher",
+    "discipulus": "student",
+    "mater": "mother",
+    "pater": "father",
+    "frater": "brother",
+    "soror": "sister",
+    "meus": "my",
+    "hic": "here",
+    "habeo": "have",
+    "amicus": "friend",
+    "medica": "doctor",
+    "clavis": "key",
+    "telephonum": "phone",
+    "liber": "book",
+    "bonus": "good",
+    "ubi": "where",
+    "illic": "there",
+    "latrina": "bathroom",
+    "quoque": "also",
+    "duo": "two",
+    "tres": "three",
+    "pecunia": "money",
+    "loquor": "to speak",
+    "anglicus": "English",
+    "latinus": "Latin",
+    "lingua": "language, tongue",
+    "intellego": "understand",
+    "paulum": "a little",
+    "volo": "want",
+    "domus": "house, home (domi: at home)",
+    "cubiculum": "room",
+    "magnus": "big",
+    "parvus": "small",
+    "habito": "live",
+    "in": "in, on (with where); into (with where to)",
+    "vado": "go",
+    "ad": "to",
+    "schola": "school",
+    "urbs": "city",
+    "statio": "station",
+    "autocinetum": "car",
+    "quo": "where to",
+    "hodie": "today",
+    "cras": "tomorrow",
+    "nunc": "now",
+    "laboro": "work",
+    "debeo": "to have to",
+    "possum": "can, be able",
+    "quis": "who, what (quid: what)",
+    "ago": "do, drive (quid agis?: how are you?; gratias ago: I thank)",
+    "nomen": "name",
+    "puer": "boy (pueri: boys, children)",
+    "hortus": "garden",
+    "ludo": "play",
+    "avia": "grandmother",
+    "fabula": "story",
+    "narro": "tell",
+    "puella": "girl",
+    "mensa": "table",
+    "noster": "our",
+    "feles": "cat",
+    "dormio": "sleep",
+    "cena": "dinner",
+    "paro": "prepare, make",
+    "maneo": "stay",
+    "claudo": "close",
+    "fenestra": "window",
+    "lego": "read",
+    "caveo": "beware",
+    "canis": "dog",
+    "epistula": "letter",
+    "scribo": "write",
+    "avus": "grandfather",
+    "vinum": "wine",
+    "panis": "bread",
+    "caseus": "cheese",
+    "emo": "buy",
+    "heri": "yesterday",
+    "caupona": "inn, tavern",
+    "ceno": "dine, have dinner",
+    "quantus": "how much (quanti: for how much)",
+    "consto": "cost",
+    "cibus": "food",
+    "amo": "love, like",
+    "do": "give",
+    "quaeso": "please (literally I ask)",
+    "templum": "temple",
+    "eo": "go (ibimus: we'll go)",
+    "venio": "come",
+    "ambulo": "walk",
+    "ex": "out of, from",
+    "via": "road, way",
+    "video": "see",
+    "exspecto": "wait for",
+    "forum": "forum, square",
+    "pluo": "rain (pluit: it rains)",
+    "valde": "very",
+    "frigidus": "cold",
+    "disco": "learn",
+    "cur": "why",
+    "gratia": "thanks (gratias ago: I thank)"
+  },
+  "readings": {
+    "caffeum": "caffēum",
+    "thea": "thēa",
+    "bibo": "bibō",
+    "unus": "ūnus",
+    "lac": "lāc",
+    "tu": "tū",
+    "non": "nōn",
+    "frater": "frāter",
+    "habeo": "habeō",
+    "amicus": "amīcus",
+    "clavis": "clāvis",
+    "telephonum": "tēlephōnum",
+    "illic": "illīc",
+    "latrina": "lātrīna",
+    "tres": "trēs",
+    "pecunia": "pecūnia",
+    "latinus": "latīnus",
+    "intellego": "intellegō",
+    "volo": "volō",
+    "habito": "habitō",
+    "vado": "vādō",
+    "statio": "statiō",
+    "autocinetum": "autocīnētum",
+    "quo": "quō",
+    "hodie": "hodiē",
+    "cras": "crās",
+    "laboro": "labōrō",
+    "debeo": "dēbeō",
+    "ago": "agō",
+    "mater": "māter",
+    "ludo": "lūdō",
+    "fabula": "fābula",
+    "narro": "nārrō",
+    "mensa": "mēnsa",
+    "feles": "fēlēs",
+    "dormio": "dormiō",
+    "cena": "cēna",
+    "paro": "parō",
+    "maneo": "maneō",
+    "claudo": "claudō",
+    "lego": "legō",
+    "caveo": "caveō",
+    "scribo": "scrībō",
+    "vinum": "vīnum",
+    "panis": "pānis",
+    "caseus": "cāseus",
+    "emo": "emō",
+    "heri": "herī",
+    "caupona": "caupōna",
+    "ceno": "cēnō",
+    "consto": "cōnstō",
+    "amo": "amō",
+    "do": "dō",
+    "quaeso": "quaesō",
+    "eo": "eō",
+    "venio": "veniō",
+    "ambulo": "ambulō",
+    "video": "videō",
+    "hic": "hīc",
+    "exspecto": "exspectō",
+    "valde": "valdē",
+    "frigidus": "frīgidus",
+    "disco": "discō",
+    "pluo": "pluō",
+    "cur": "cūr",
+    "gratia": "grātia",
+    "nomen": "nōmen"
+  },
+  "chunks": {
+    "hello": {
+      "text": "Salve",
+      "en": "hello"
+    },
+    "please": {
+      "text": "quaeso",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "gratias tibi ago",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Quid agis",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Vale",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "ita",
+      "en": "yes"
+    },
+    "no": {
+      "text": "minime",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Quid est nomen tibi",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Gaudeo te cognoscere",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Ignosce",
+      "en": "excuse me"
+    },
+    "how-much-is-it": {
+      "text": "Quanti constat",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Rationem, quaeso",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Cras te videbo",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "caffeum-bibo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Caffeum bibo.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Caffeum",
+          "caffeum",
+          "Caffēum"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caffeum bibis ego.",
+        "Caffeum bibere ego."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Caffeum",
+            "reading": "Caffēum"
+          },
+          {
+            "text": "Theam",
+            "reading": "Thēam"
+          },
+          "Aquam"
+        ]
+      }
+    },
+    {
+      "id": "theam-bibo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Theam bibo.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Theam",
+          "thea",
+          "Thēam"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Thea bibo.",
+        "Theam bibere ego."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Theam",
+            "reading": "Thēam"
+          },
+          {
+            "text": "Caffeum",
+            "reading": "Caffēum"
+          },
+          "Aquam"
+        ]
+      }
+    },
+    {
+      "id": "ego-aquam-bibo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Ego aquam bibo.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Ego",
+          "ego"
+        ],
+        [
+          "aquam",
+          "aqua"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ego aqua bibo.",
+        "Ego aquam bibis."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "aquam",
+          {
+            "text": "theam",
+            "reading": "thēam"
+          },
+          {
+            "text": "caffeum",
+            "reading": "caffēum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "caffeum-et-theam-bibo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Caffeum et theam bibo.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Caffeum",
+          "caffeum",
+          "Caffēum"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "theam",
+          "thea",
+          "thēam"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caffeum et thea bibo.",
+        "Ego caffeum et theam bibis."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          {
+            "text": "theam",
+            "reading": "thēam"
+          },
+          "aquam",
+          {
+            "text": "caffeum",
+            "reading": "caffēum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "theam-et-aquam-bibo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Theam et aquam bibo.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Theam",
+          "thea",
+          "Thēam"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "aquam",
+          "aqua"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Thea et aquam bibo.",
+        "Theam et aqua bibo."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "aquam",
+          {
+            "text": "theam",
+            "reading": "thēam"
+          },
+          {
+            "text": "caffeum",
+            "reading": "caffēum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "aquam-et-caffeum-bibo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Aquam et caffeum bibo.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Aquam",
+          "aqua"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "caffeum",
+          "caffeum",
+          "caffēum"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aqua et caffeum bibo.",
+        "Ego aquam et caffeum bibit."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          {
+            "text": "caffeum",
+            "reading": "caffēum"
+          },
+          {
+            "text": "theam",
+            "reading": "thēam"
+          },
+          "aquam"
+        ]
+      }
+    },
+    {
+      "id": "salve-caffeum-quaeso",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "hello",
+        "please"
+      ],
+      "text": "Salve! Caffeum, quaeso.",
+      "means": "Hello! A coffee, please.",
+      "words": [
+        [
+          "Salve!",
+          null,
+          "Salvē"
+        ],
+        [
+          "Caffeum,",
+          "caffeum",
+          "Caffēum"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salve! Caffei, quaeso.",
+        "Salve! Caffeum, quaesum."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "Caffeum,",
+            "reading": "Caffēum"
+          },
+          {
+            "text": "Theam,",
+            "reading": "Thēam"
+          },
+          "Aquam,"
+        ]
+      }
+    },
+    {
+      "id": "theam-unam-et-aquam-unam-quaeso",
+      "topic": "food",
+      "concepts": [
+        "agreement",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Theam unam et aquam unam, quaeso.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Theam",
+          "thea",
+          "Thēam"
+        ],
+        [
+          "unam",
+          "unus",
+          "ūnam"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "aquam",
+          "aqua"
+        ],
+        [
+          "unam,",
+          "unus",
+          "ūnam"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "one"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "one"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Theam unum et aquam unam, quaeso.",
+        "Theam unam et aquam unum, quaeso."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "unam",
+            "reading": "ūnam"
+          },
+          {
+            "text": "unum",
+            "reading": "ūnum"
+          },
+          {
+            "text": "unus",
+            "reading": "ūnus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unum-caffeum-gratias-tibi-ago",
+      "topic": "food",
+      "concepts": [
+        "agreement"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Unum caffeum. Gratias tibi ago.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Unum",
+          "unus",
+          "Ūnum"
+        ],
+        [
+          "caffeum.",
+          "caffeum",
+          "caffēum"
+        ],
+        [
+          "Gratias",
+          null,
+          "Grātiās"
+        ],
+        [
+          "tibi"
+        ],
+        [
+          "ago",
+          null,
+          "agō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thanks"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unam caffeum. Gratias tibi ago.",
+        "Unus caffeum. Gratias tibi ago."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Unum",
+            "reading": "Ūnum"
+          },
+          {
+            "text": "Unam",
+            "reading": "Ūnam"
+          },
+          {
+            "text": "Unus",
+            "reading": "Ūnus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "salve-theam-quaeso",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "hello",
+        "please"
+      ],
+      "text": "Salve! Theam, quaeso.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Salve!",
+          null,
+          "Salvē"
+        ],
+        [
+          "Theam,",
+          "thea",
+          "Thēam"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salve! Theae, quaeso.",
+        "Salve! Theam, quaesum."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "Theam,",
+            "reading": "Thēam"
+          },
+          {
+            "text": "Caffeum,",
+            "reading": "Caffēum"
+          },
+          {
+            "text": "Lac,",
+            "reading": "Lāc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lac-bibo",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Lac bibo.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Lac",
+          "lac",
+          "Lāc"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Milk"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Lactis bibo.",
+        "Ego lac bibis."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Lac",
+            "reading": "Lāc"
+          },
+          "Aquam",
+          {
+            "text": "Theam",
+            "reading": "Thēam"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bene-sum-gratias-tibi-ago",
+      "topic": "people",
+      "concepts": [
+        "esse",
+        "endings"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Bene sum, gratias tibi ago.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Bene",
+          "bene"
+        ],
+        [
+          "sum,",
+          "sum"
+        ],
+        [
+          "gratias",
+          null,
+          "grātiās"
+        ],
+        [
+          "tibi"
+        ],
+        [
+          "ago",
+          null,
+          "agō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Well"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "thanks"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ego bene es, gratias tibi ago.",
+        "Ego bene est, gratias tibi ago."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sum,",
+          "es,",
+          "est,"
+        ]
+      }
+    },
+    {
+      "id": "ita-quaeso",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Ita, quaeso.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ita,"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ita, quaesum.",
+        "Ita, quaesas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ita,",
+          {
+            "text": "Minime,",
+            "reading": "Minimē"
+          },
+          "Bene,"
+        ]
+      }
+    },
+    {
+      "id": "minime-gratias-tibi-ago",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Minime, gratias tibi ago.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Minime,",
+          null,
+          "Minimē"
+        ],
+        [
+          "gratias",
+          null,
+          "grātiās"
+        ],
+        [
+          "tibi"
+        ],
+        [
+          "ago",
+          null,
+          "agō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thanks"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minime, gratias tibi agos.",
+        "Minime, gratias tibis ago."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Minime,",
+            "reading": "Minimē"
+          },
+          "Ita,",
+          "Bene,"
+        ]
+      }
+    },
+    {
+      "id": "ita-gratias-tibi-ago-vale",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Ita, gratias tibi ago. Vale!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ita,"
+        ],
+        [
+          "gratias",
+          null,
+          "grātiās"
+        ],
+        [
+          "tibi"
+        ],
+        [
+          "ago.",
+          null,
+          "agō"
+        ],
+        [
+          "Vale",
+          null,
+          "Valē"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thanks"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I give"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ita, gratias tibi agos. Vale!",
+        "Ita, gratias tibis ago. Vale!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ita,",
+          {
+            "text": "Minime,",
+            "reading": "Minimē"
+          },
+          "Bene,"
+        ]
+      }
+    },
+    {
+      "id": "minime-gratias-tibi-ago-vale",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no",
+        "goodbye"
+      ],
+      "text": "Minime, gratias tibi ago. Vale!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Minime,",
+          null,
+          "Minimē"
+        ],
+        [
+          "gratias",
+          null,
+          "grātiās"
+        ],
+        [
+          "tibi"
+        ],
+        [
+          "ago.",
+          null,
+          "agō"
+        ],
+        [
+          "Vale",
+          null,
+          "Valē"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thanks"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I give"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minime, gratias tibi agos. Vale!",
+        "Minime, gratias tibis ago. Vale!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Minime,",
+            "reading": "Minimē"
+          },
+          "Ita,",
+          "Bene,"
+        ]
+      }
+    },
+    {
+      "id": "salve-gaudeo-te-cognoscere",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Salve! Gaudeo te cognoscere.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Salve!",
+          null,
+          "Salvē"
+        ],
+        [
+          "Gaudeo",
+          null,
+          "Gaudeō"
+        ],
+        [
+          "te",
+          null,
+          "tē"
+        ],
+        [
+          "cognoscere",
+          null,
+          "cognōscere"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "I am glad"
+        ],
+        [
+          "you"
+        ],
+        [
+          "to meet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salve! Gaudeo tu cognoscere.",
+        "Salve! Gaudeo te cognoscis."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          {
+            "text": "te",
+            "reading": "tē"
+          },
+          {
+            "text": "tu",
+            "reading": "tū"
+          },
+          "tibi"
+        ]
+      }
+    },
+    {
+      "id": "ego-magister-sum",
+      "topic": "people",
+      "concepts": [
+        "esse",
+        "endings"
+      ],
+      "text": "Ego magister sum.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Ego",
+          "ego"
+        ],
+        [
+          "magister",
+          "magister"
+        ],
+        [
+          "sum",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ego magistrum sum.",
+        "Ego magister es."
+      ],
+      "otherGender": {
+        "text": "Ego magistra sum.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "magister",
+          "magistrum",
+          {
+            "text": "magistri",
+            "reading": "magistrī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tu-discipulus-es",
+      "topic": "people",
+      "concepts": [
+        "esse",
+        "endings"
+      ],
+      "text": "Tu discipulus es.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Tu",
+          "tu",
+          "Tū"
+        ],
+        [
+          "discipulus",
+          "discipulus"
+        ],
+        [
+          "es",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu discipulum es.",
+        "Tu discipulus sum."
+      ],
+      "otherGender": {
+        "text": "Tu discipula es.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "es",
+          "sum",
+          "est"
+        ]
+      }
+    },
+    {
+      "id": "esne-magister",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "esse"
+      ],
+      "text": "Esne magister?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Esne",
+          "sum"
+        ],
+        [
+          "magister",
+          "magister"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Esne magistrum?",
+        "Tu sum magister?"
+      ],
+      "otherGender": {
+        "text": "Esne magistra?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "magister",
+          "magistrum",
+          {
+            "text": "magistri",
+            "reading": "magistrī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ego-non-magister-sum",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "esse"
+      ],
+      "text": "Ego non magister sum.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Ego",
+          "ego"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "magister",
+          "magister"
+        ],
+        [
+          "sum",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ego non magistrum sum.",
+        "Ego non magister es."
+      ],
+      "otherGender": {
+        "text": "Ego non magistra sum.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "sum",
+          "es",
+          "est"
+        ]
+      }
+    },
+    {
+      "id": "tu-magistra-es",
+      "topic": "people",
+      "concepts": [
+        "esse",
+        "endings"
+      ],
+      "text": "Tu magistra es.",
+      "means": "You're a teacher.",
+      "words": [
+        [
+          "Tu",
+          "tu",
+          "Tū"
+        ],
+        [
+          "magistra",
+          "magistra"
+        ],
+        [
+          "es",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu magistram es.",
+        "Tu magistra sum."
+      ],
+      "otherGender": {
+        "text": "Tu magister es.",
+        "gender": "m",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "magistra",
+          "magistram",
+          "magistrae"
+        ]
+      }
+    },
+    {
+      "id": "mater-mea-magistra-est",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Mater mea magistra est.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Mater",
+          "mater"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "magistra",
+          "magistra"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mater meus magistra est.",
+        "Mater mea magistram est."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mea",
+          "meus",
+          "meum"
+        ]
+      }
+    },
+    {
+      "id": "pater-meus-magister-est",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Pater meus magister est.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Pater",
+          "pater"
+        ],
+        [
+          "meus",
+          "meus"
+        ],
+        [
+          "magister",
+          "magister"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Father"
+        ],
+        [
+          "my"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pater mea magister est.",
+        "Pater meus magistrum est."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "meus",
+          "mea",
+          "meum"
+        ]
+      }
+    },
+    {
+      "id": "haec-est-mater-mea",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Haec est mater mea.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Haec",
+          "hic"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "mater",
+          "mater"
+        ],
+        [
+          "mea",
+          "meus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haec est mater meus.",
+        "Haec est matrem mea."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mea",
+          "meus",
+          "meum"
+        ]
+      }
+    },
+    {
+      "id": "hic-est-pater-meus",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Hic est pater meus.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Hic",
+          "hic"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "pater",
+          "pater"
+        ],
+        [
+          "meus",
+          "meus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "father"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hic est pater mea.",
+        "Hic est patrem meus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "meus",
+          "mea",
+          "meum"
+        ]
+      }
+    },
+    {
+      "id": "frater-meus-discipulus-est",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Frater meus discipulus est.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Frater",
+          "frater",
+          "Frāter"
+        ],
+        [
+          "meus",
+          "meus"
+        ],
+        [
+          "discipulus",
+          "discipulus"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Brother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Frater mea discipulus est.",
+        "Frater meus discipulum est."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Frater",
+            "reading": "Frāter"
+          },
+          "Pater",
+          "Magister"
+        ]
+      }
+    },
+    {
+      "id": "haec-est-soror-mea",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Haec est soror mea.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Haec",
+          "hic"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "soror",
+          "soror"
+        ],
+        [
+          "mea",
+          "meus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haec est soror meus.",
+        "Haec est sororem mea."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "soror",
+          "mater",
+          "magistra"
+        ]
+      }
+    },
+    {
+      "id": "telephonum-habeo",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Telephonum habeo.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Telephonum",
+          "telephonum",
+          "Tēlephōnum"
+        ],
+        [
+          "habeo",
+          "habeo",
+          "habeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A phone"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telephoni habeo.",
+        "Ego telephonum habes."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Telephonum",
+            "reading": "Tēlephōnum"
+          },
+          "Librum",
+          {
+            "text": "Clavem",
+            "reading": "Clāvem"
+          }
+        ]
+      }
+    },
+    {
+      "id": "clavem-habesne",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "accusative"
+      ],
+      "text": "Clavem habesne?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Clavem",
+          "clavis",
+          "Clāvem"
+        ],
+        [
+          "habesne",
+          "habeo",
+          "habēsne"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A key"
+        ],
+        [
+          "do you have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ego clavem habesne?",
+        "Tu clavem habeo?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Clavem",
+            "reading": "Clāvem"
+          },
+          {
+            "text": "Clavis",
+            "reading": "Clāvis"
+          },
+          {
+            "text": "Clavi",
+            "reading": "Clāvī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "librum-non-habeo",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "negation"
+      ],
+      "text": "Librum non habeo.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Librum",
+          "liber"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "habeo",
+          "habeo",
+          "habeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A book"
+        ],
+        [
+          "not"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Liber non habeo.",
+        "Ego librum non habes."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Librum",
+          "Liber",
+          {
+            "text": "Libri",
+            "reading": "Librī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "soror-mea-medica-est",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Soror mea medica est.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Soror",
+          "soror"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "medica",
+          "medica"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "a doctor"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Soror meus medica est.",
+        "Soror mea medicam est."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "medica",
+          "medicam",
+          "medicae"
+        ]
+      }
+    },
+    {
+      "id": "tu-bonus-amicus-es",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Tu bonus amicus es.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Tu",
+          "tu",
+          "Tū"
+        ],
+        [
+          "bonus",
+          "bonus"
+        ],
+        [
+          "amicus",
+          "amicus",
+          "amīcus"
+        ],
+        [
+          "es",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu bonum amicus es.",
+        "Tu bonus amicum es."
+      ],
+      "otherGender": {
+        "text": "Tu bona amica es.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "bonus",
+          "bonum",
+          "bona"
+        ]
+      }
+    },
+    {
+      "id": "telephonum-meum-hic-est",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Telephonum meum hic est.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Telephonum",
+          "telephonum",
+          "Tēlephōnum"
+        ],
+        [
+          "meum",
+          "meus"
+        ],
+        [
+          "hic",
+          "hic",
+          "hīc"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Phone"
+        ],
+        [
+          "my"
+        ],
+        [
+          "here"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telephonum meus hic est.",
+        "Telephonum meum hic sunt."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "meum",
+          "meus",
+          "mea"
+        ]
+      }
+    },
+    {
+      "id": "clavis-illic-est",
+      "topic": "out",
+      "concepts": [
+        "esse",
+        "endings"
+      ],
+      "text": "Clavis illic est.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Clavis",
+          "clavis",
+          "Clāvis"
+        ],
+        [
+          "illic",
+          "illic",
+          "illīc"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "there"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Clavem illic est.",
+        "Clavis illic sunt."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Clavis",
+            "reading": "Clāvis"
+          },
+          {
+            "text": "Clavem",
+            "reading": "Clāvem"
+          },
+          {
+            "text": "Clavi",
+            "reading": "Clāvī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ubi-est-mater-mea",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "agreement",
+        "esse"
+      ],
+      "text": "Ubi est mater mea?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Ubi",
+          "ubi"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "mater",
+          "mater"
+        ],
+        [
+          "mea",
+          "meus"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ubi est mater meus?",
+        "Ubi est matrem mea?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mea",
+          "meus",
+          "meum"
+        ]
+      }
+    },
+    {
+      "id": "ignosce-ubi-est-latrina",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "esse"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Ignosce, ubi est latrina?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Ignosce,",
+          null,
+          "Ignōsce"
+        ],
+        [
+          "ubi",
+          "ubi"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "latrina",
+          "latrina",
+          "lātrīna"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ignosce, ubi est latrinam?",
+        "Ignosce, ubi sunt latrina?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          {
+            "text": "latrina",
+            "reading": "lātrīna"
+          },
+          {
+            "text": "latrinam",
+            "reading": "lātrīnam"
+          },
+          {
+            "text": "latrinae",
+            "reading": "lātrīnae"
+          }
+        ]
+      }
+    },
+    {
+      "id": "soror-mea-hic-est",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Soror mea hic est.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Soror",
+          "soror"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "hic",
+          "hic",
+          "hīc"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "here"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Soror meus hic est.",
+        "Sororem mea hic est."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mea",
+          "meus",
+          "meum"
+        ]
+      }
+    },
+    {
+      "id": "ubi-est-clavis-mea",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "agreement",
+        "esse"
+      ],
+      "text": "Ubi est clavis mea?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Ubi",
+          "ubi"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "clavis",
+          "clavis",
+          "clāvis"
+        ],
+        [
+          "mea",
+          "meus"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "key"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ubi est clavem mea?",
+        "Ubi est clavis meus?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          {
+            "text": "clavis",
+            "reading": "clāvis"
+          },
+          {
+            "text": "clavem",
+            "reading": "clāvem"
+          },
+          {
+            "text": "clavi",
+            "reading": "clāvī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mater-mea-quoque-hic-est",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Mater mea quoque hic est.",
+      "means": "My mother is here too.",
+      "words": [
+        [
+          "Mater",
+          "mater"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "quoque",
+          "quoque"
+        ],
+        [
+          "hic",
+          "hic",
+          "hīc"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "also"
+        ],
+        [
+          "here"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mater meus quoque hic est.",
+        "Mater mea quoque hic sunt."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "quoque",
+          {
+            "text": "hic",
+            "reading": "hīc"
+          },
+          {
+            "text": "illic",
+            "reading": "illīc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "salve-rationem-quaeso",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Salve! Rationem, quaeso.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Salve!",
+          null,
+          "Salvē"
+        ],
+        [
+          "Rationem,",
+          null,
+          "Ratiōnem"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salve! Rationis, quaeso.",
+        "Salve! Rationem, quaesum."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "Rationem,",
+            "reading": "Ratiōnem"
+          },
+          {
+            "text": "Caffeum,",
+            "reading": "Caffēum"
+          },
+          {
+            "text": "Theam,",
+            "reading": "Thēam"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duo-caffea-quaeso",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "endings"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Duo caffea, quaeso.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Duo",
+          "duo"
+        ],
+        [
+          "caffea,",
+          "caffeum",
+          "caffēa"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Duas caffea, quaeso.",
+        "Duo caffeum, quaeso."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Duo",
+          {
+            "text": "Duas",
+            "reading": "Duās"
+          },
+          {
+            "text": "Unum",
+            "reading": "Ūnum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unum-librum-quaeso",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Unum librum, quaeso.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Unum",
+          "unus",
+          "Ūnum"
+        ],
+        [
+          "librum,",
+          "liber"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unam librum, quaeso.",
+        "Unus librum, quaeso."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Unum",
+            "reading": "Ūnum"
+          },
+          {
+            "text": "Unam",
+            "reading": "Ūnam"
+          },
+          {
+            "text": "Unus",
+            "reading": "Ūnus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tres-libros-habeo",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "accusative"
+      ],
+      "text": "Tres libros habeo.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Tres",
+          "tres",
+          "Trēs"
+        ],
+        [
+          "libros",
+          "liber",
+          "librōs"
+        ],
+        [
+          "habeo",
+          "habeo",
+          "habeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Three"
+        ],
+        [
+          "books"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tria libros habeo.",
+        "Tres liber habeo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Tres",
+            "reading": "Trēs"
+          },
+          "Tria",
+          {
+            "text": "Unum",
+            "reading": "Ūnum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pecuniam-non-habeo",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "negation"
+      ],
+      "text": "Pecuniam non habeo.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Pecuniam",
+          "pecunia",
+          "Pecūniam"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "habeo",
+          "habeo",
+          "habeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Money"
+        ],
+        [
+          "not"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pecunia non habeo.",
+        "Ego pecuniam non habes."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Pecuniam",
+            "reading": "Pecūniam"
+          },
+          {
+            "text": "Pecunia",
+            "reading": "Pecūnia"
+          },
+          {
+            "text": "Pecuniae",
+            "reading": "Pecūniae"
+          }
+        ]
+      }
+    },
+    {
+      "id": "linguam-anglicam-loquerisne",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "agreement",
+        "accusative"
+      ],
+      "text": "Linguam Anglicam loquerisne?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Linguam",
+          "lingua"
+        ],
+        [
+          "Anglicam",
+          "anglicus"
+        ],
+        [
+          "loquerisne",
+          "loquor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The language"
+        ],
+        [
+          "English"
+        ],
+        [
+          "do you speak"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ego linguam Anglicam loquerisne?",
+        "Linguam Anglicum loquerisne?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Anglicam",
+          "Anglicus",
+          "Anglicum"
+        ]
+      }
+    },
+    {
+      "id": "linguam-latinam-paulum-loquor",
+      "topic": "people",
+      "concepts": [
+        "agreement",
+        "accusative"
+      ],
+      "text": "Linguam Latinam paulum loquor.",
+      "means": "I speak a little Latin.",
+      "words": [
+        [
+          "Linguam",
+          "lingua"
+        ],
+        [
+          "Latinam",
+          "latinus",
+          "Latīnam"
+        ],
+        [
+          "paulum",
+          "paulum"
+        ],
+        [
+          "loquor",
+          "loquor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The language"
+        ],
+        [
+          "Latin"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "I speak"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu linguam Latinam paulum loquor.",
+        "Linguam Latinum paulum loquor."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "Latinam",
+            "reading": "Latīnam"
+          },
+          {
+            "text": "Latinus",
+            "reading": "Latīnus"
+          },
+          {
+            "text": "Latinum",
+            "reading": "Latīnum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tu-intellegisne",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "endings"
+      ],
+      "text": "Tu intellegisne?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Tu",
+          "tu",
+          "Tū"
+        ],
+        [
+          "intellegisne",
+          "intellego"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "do you understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu intellegone?",
+        "Tu intellegitne?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "intellegisne",
+          {
+            "text": "intellegone",
+            "reading": "intellegōne"
+          },
+          "intellegitne"
+        ]
+      }
+    },
+    {
+      "id": "caffeum-volo",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Caffeum volo.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Caffeum",
+          "caffeum",
+          "Caffēum"
+        ],
+        [
+          "volo",
+          "volo",
+          "volō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "I want"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caffei volo.",
+        "Ego caffeum vis."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Caffeum",
+            "reading": "Caffēum"
+          },
+          {
+            "text": "Theam",
+            "reading": "Thēam"
+          },
+          "Aquam"
+        ]
+      }
+    },
+    {
+      "id": "aquam-volo-quaeso",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Aquam volo, quaeso.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Aquam",
+          "aqua"
+        ],
+        [
+          "volo,",
+          "volo",
+          "volō"
+        ],
+        [
+          "quaeso",
+          null,
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "I want"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aqua volo, quaeso.",
+        "Ego aquam vis, quaeso."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Aquam",
+          "Aqua",
+          "Aquae"
+        ]
+      }
+    },
+    {
+      "id": "cubiculum-meum-parvum-est",
+      "topic": "home",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Cubiculum meum parvum est.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Cubiculum",
+          "cubiculum"
+        ],
+        [
+          "meum",
+          "meus"
+        ],
+        [
+          "parvum",
+          "parvus"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Room"
+        ],
+        [
+          "my"
+        ],
+        [
+          "small"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cubiculum meus parvum est.",
+        "Cubiculum meum parvus est."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "parvum",
+          "parvus",
+          "parva"
+        ]
+      }
+    },
+    {
+      "id": "haec-domus-magna-est",
+      "topic": "home",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Haec domus magna est.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Haec",
+          "hic"
+        ],
+        [
+          "domus",
+          "domus"
+        ],
+        [
+          "magna",
+          "magnus"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haec domus magnus est.",
+        "Haec domus magnum est."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "magna",
+          "magnus",
+          "magnum"
+        ]
+      }
+    },
+    {
+      "id": "mater-mea-hic-habitat",
+      "topic": "home",
+      "concepts": [
+        "endings",
+        "agreement"
+      ],
+      "text": "Mater mea hic habitat.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mater",
+          "mater"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "hic",
+          "hic",
+          "hīc"
+        ],
+        [
+          "habitat",
+          "habito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "here"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mater mea hic habito.",
+        "Mater meus hic habitat."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "habitat",
+          {
+            "text": "habito",
+            "reading": "habitō"
+          },
+          {
+            "text": "habitas",
+            "reading": "habitās"
+          }
+        ]
+      }
+    },
+    {
+      "id": "in-parva-domo-habito",
+      "topic": "home",
+      "concepts": [
+        "ablative",
+        "agreement"
+      ],
+      "text": "In parva domo habito.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "In",
+          "in"
+        ],
+        [
+          "parva",
+          "parvus",
+          "parvā"
+        ],
+        [
+          "domo",
+          "domus",
+          "domō"
+        ],
+        [
+          "habito",
+          "habito",
+          "habitō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house"
+        ],
+        [
+          "I live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "In parvam domo habito.",
+        "In parva domum habito."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          {
+            "text": "domo",
+            "reading": "domō"
+          },
+          "domum",
+          "domus"
+        ]
+      }
+    },
+    {
+      "id": "autocinetum-habeo",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "endings"
+      ],
+      "text": "Autocinetum habeo.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Autocinetum",
+          "autocinetum",
+          "Autocīnētum"
+        ],
+        [
+          "habeo",
+          "habeo",
+          "habeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A car"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Autocineti habeo.",
+        "Ego autocinetum habes."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          {
+            "text": "Autocinetum",
+            "reading": "Autocīnētum"
+          },
+          {
+            "text": "Telephonum",
+            "reading": "Tēlephōnum"
+          },
+          "Librum"
+        ]
+      }
+    },
+    {
+      "id": "hoc-autocinetum-parvum-est",
+      "topic": "out",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Hoc autocinetum parvum est.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Hoc",
+          "hic"
+        ],
+        [
+          "autocinetum",
+          "autocinetum",
+          "autocīnētum"
+        ],
+        [
+          "parvum",
+          "parvus"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "small"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hoc autocinetum parvus est.",
+        "Hoc autocinetum parva est."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "parvum",
+          "parvus",
+          "parva"
+        ]
+      }
+    },
+    {
+      "id": "ad-scholam-vado",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "accusative"
+      ],
+      "text": "Ad scholam vado.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Ad",
+          "ad"
+        ],
+        [
+          "scholam",
+          "schola"
+        ],
+        [
+          "vado",
+          "vado",
+          "vādō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To"
+        ],
+        [
+          "school"
+        ],
+        [
+          "I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ad schola vado.",
+        "Ad scholae vado."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "scholam",
+          "schola",
+          "scholae"
+        ]
+      }
+    },
+    {
+      "id": "ignosce-ubi-est-statio",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "esse"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Ignosce, ubi est statio?",
+      "means": "Excuse me, where is the station?",
+      "words": [
+        [
+          "Ignosce,",
+          null,
+          "Ignōsce"
+        ],
+        [
+          "ubi",
+          "ubi"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "statio",
+          "statio",
+          "statiō"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ignosce, ubi est stationem?",
+        "Ignosce, ubi sunt statio?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          {
+            "text": "statio",
+            "reading": "statiō"
+          },
+          {
+            "text": "stationem",
+            "reading": "statiōnem"
+          },
+          {
+            "text": "stationis",
+            "reading": "statiōnis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mater-mea-ad-urbem-vadit",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "accusative",
+        "endings"
+      ],
+      "text": "Mater mea ad urbem vadit.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mater",
+          "mater"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "ad",
+          "ad"
+        ],
+        [
+          "urbem",
+          "urbs"
+        ],
+        [
+          "vadit",
+          "vado",
+          "vādit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mater mea ad urbe vadit.",
+        "Mater mea ad urbem vado."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "urbem",
+          "urbe",
+          "urbs"
+        ]
+      }
+    },
+    {
+      "id": "hodie-laboro",
+      "topic": "plans",
+      "concepts": [
+        "endings"
+      ],
+      "text": "Hodie laboro.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Hodie",
+          "hodie",
+          "Hodiē"
+        ],
+        [
+          "laboro",
+          "laboro",
+          "labōrō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ego hodie laboras.",
+        "Ego hodie laborat."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "laboro",
+            "reading": "labōrō"
+          },
+          {
+            "text": "laboras",
+            "reading": "labōrās"
+          },
+          {
+            "text": "laborat",
+            "reading": "labōrat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cras-laborare-debeo",
+      "topic": "plans",
+      "concepts": [
+        "infinitive"
+      ],
+      "text": "Cras laborare debeo.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Cras",
+          "cras",
+          "Crās"
+        ],
+        [
+          "laborare",
+          "laboro",
+          "labōrāre"
+        ],
+        [
+          "debeo",
+          "debeo",
+          "dēbeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "I must"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cras laboro debeo.",
+        "Cras laborat debeo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "laborare",
+            "reading": "labōrāre"
+          },
+          {
+            "text": "laboro",
+            "reading": "labōrō"
+          },
+          {
+            "text": "laborat",
+            "reading": "labōrat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nunc-vadere-debeo",
+      "topic": "plans",
+      "concepts": [
+        "infinitive"
+      ],
+      "text": "Nunc vadere debeo.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Nunc",
+          "nunc"
+        ],
+        [
+          "vadere",
+          "vado",
+          "vādere"
+        ],
+        [
+          "debeo",
+          "debeo",
+          "dēbeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "to go"
+        ],
+        [
+          "I must"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nunc vado debeo.",
+        "Nunc vadit debeo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "vadere",
+            "reading": "vādere"
+          },
+          {
+            "text": "vado",
+            "reading": "vādō"
+          },
+          {
+            "text": "vadit",
+            "reading": "vādit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cras-ad-urbem-vado",
+      "topic": "plans",
+      "concepts": [
+        "motion",
+        "accusative"
+      ],
+      "text": "Cras ad urbem vado.",
+      "means": "Tomorrow I go to the city.",
+      "words": [
+        [
+          "Cras",
+          "cras",
+          "Crās"
+        ],
+        [
+          "ad",
+          "ad"
+        ],
+        [
+          "urbem",
+          "urbs"
+        ],
+        [
+          "vado",
+          "vado",
+          "vādō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ],
+        [
+          "I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cras ad urbe vado.",
+        "Cras ad urbs vado."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "urbem",
+          "urbe",
+          "urbs"
+        ]
+      }
+    },
+    {
+      "id": "hodie-vadere-non-possum",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "negation"
+      ],
+      "text": "Hodie vadere non possum.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Hodie",
+          "hodie",
+          "Hodiē"
+        ],
+        [
+          "vadere",
+          "vado",
+          "vādere"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "possum",
+          "possum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "to go"
+        ],
+        [
+          "not"
+        ],
+        [
+          "I can"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hodie vado non possum.",
+        "Hodie vadit non possum."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          {
+            "text": "vadere",
+            "reading": "vādere"
+          },
+          {
+            "text": "vado",
+            "reading": "vādō"
+          },
+          {
+            "text": "vadit",
+            "reading": "vādit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gratias-tibi-ago-cras-te-videbo",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "see-you-tomorrow"
+      ],
+      "text": "Gratias tibi ago. Cras te videbo!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Gratias",
+          null,
+          "Grātiās"
+        ],
+        [
+          "tibi"
+        ],
+        [
+          "ago.",
+          null,
+          "agō"
+        ],
+        [
+          "Cras",
+          null,
+          "Crās"
+        ],
+        [
+          "te",
+          null,
+          "tē"
+        ],
+        [
+          "videbo",
+          null,
+          "vidēbō"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thanks"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I give"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "you"
+        ],
+        [
+          "I will see"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gratias tibi ago. Cras tu videbo!",
+        "Gratias tibi ago. Cras tibi videbo!"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          {
+            "text": "te",
+            "reading": "tē"
+          },
+          {
+            "text": "tu",
+            "reading": "tū"
+          },
+          "tibi"
+        ]
+      }
+    },
+    {
+      "id": "quid-agis",
+      "topic": "people",
+      "concepts": [
+        "endings"
+      ],
+      "chunks": [
+        "how-are-you"
+      ],
+      "text": "Quid agis?",
+      "means": "How are you?",
+      "words": [
+        [
+          "Quid"
+        ],
+        [
+          "agis"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Quid ago?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "agis",
+          "ago",
+          "agit"
+        ]
+      }
+    },
+    {
+      "id": "quid-est-nomen-tibi",
+      "topic": "people",
+      "concepts": [
+        "dative"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Quid est nomen tibi?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Quid"
+        ],
+        [
+          "est"
+        ],
+        [
+          "nomen",
+          null,
+          "nōmen"
+        ],
+        [
+          "tibi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "is"
+        ],
+        [
+          "name"
+        ],
+        [
+          "to you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Quid est nomen tu?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tibi",
+          "te",
+          "tu"
+        ]
+      }
+    },
+    {
+      "id": "mater-mea-in-urbe-laborat",
+      "topic": "people",
+      "concepts": [
+        "ablative",
+        "agreement"
+      ],
+      "text": "Mater mea in urbe laborat.",
+      "means": "My mother works in the city.",
+      "words": [
+        [
+          "Mater",
+          "mater",
+          "Māter"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "urbe",
+          "urbs"
+        ],
+        [
+          "laborat",
+          "laboro",
+          "labōrat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "in the city"
+        ],
+        [
+          "works",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mea",
+        "laborat"
+      ],
+      "wrong": [
+        "Mater meus in urbe laborat."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "urbe",
+          "urbem",
+          "urbis"
+        ]
+      }
+    },
+    {
+      "id": "fratrem-et-sororem-habeo",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "word-order"
+      ],
+      "text": "Fratrem et sororem habeo.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Fratrem",
+          "frater",
+          "Frātrem"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "sororem",
+          "soror",
+          "sorōrem"
+        ],
+        [
+          "habeo",
+          "habeo",
+          "habeō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ],
+        [
+          "I have",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "moved": [
+        "habeo"
+      ],
+      "wrong": [
+        "Frater et soror habeo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Fratrem",
+          "Frater",
+          "Fratri"
+        ]
+      }
+    },
+    {
+      "id": "pater-meus-romae-habitat",
+      "topic": "people",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Pater meus Romae habitat.",
+      "means": "My father lives in Rome.",
+      "words": [
+        [
+          "Pater",
+          "pater"
+        ],
+        [
+          "meus",
+          "meus"
+        ],
+        [
+          "Romae"
+        ],
+        [
+          "habitat",
+          "habito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Father"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "in Rome"
+        ],
+        [
+          "lives",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "meus",
+        "habitat"
+      ],
+      "wrong": [
+        "Pater meus in Romam habitat."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Romae",
+          "Romam",
+          "Roma"
+        ]
+      }
+    },
+    {
+      "id": "frater-meus-linguam-latinam-non-intellegit",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "endings"
+      ],
+      "text": "Frater meus linguam Latinam non intellegit.",
+      "means": "My brother doesn't understand Latin.",
+      "words": [
+        [
+          "Frater",
+          "frater",
+          "Frāter"
+        ],
+        [
+          "meus",
+          "meus"
+        ],
+        [
+          "linguam",
+          "lingua"
+        ],
+        [
+          "Latinam",
+          "latinus",
+          "Latīnam"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "intellegit",
+          "intellego"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Brother"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "the language"
+        ],
+        [
+          "Latin"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understands",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "meus",
+        "intellegit"
+      ],
+      "wrong": [
+        "Frater meus linguam Latinam non intellego."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "non",
+          "ne",
+          "num"
+        ]
+      }
+    },
+    {
+      "id": "ubi-habitas",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "endings"
+      ],
+      "text": "Ubi habitas?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Ubi",
+          "ubi"
+        ],
+        [
+          "habitas",
+          "habito",
+          "habitās"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ubi habito?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ubi",
+          "Quis",
+          "Cur"
+        ]
+      }
+    },
+    {
+      "id": "pueri-in-horto-ludunt",
+      "topic": "people",
+      "concepts": [
+        "ablative",
+        "endings"
+      ],
+      "text": "Pueri in horto ludunt.",
+      "means": "The boys are playing in the garden.",
+      "words": [
+        [
+          "Pueri",
+          "puer",
+          "Puerī"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "horto",
+          "hortus",
+          "hortō"
+        ],
+        [
+          "ludunt",
+          "ludo",
+          "lūdunt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The boys"
+        ],
+        [
+          "in the garden"
+        ],
+        [
+          "play",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "ludunt"
+      ],
+      "wrong": [
+        "Pueri in horto ludit."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "horto",
+          "hortum",
+          "horti"
+        ]
+      }
+    },
+    {
+      "id": "avia-mea-fabulas-narrat",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "word-order"
+      ],
+      "text": "Avia mea fabulas narrat.",
+      "means": "My grandmother tells stories.",
+      "words": [
+        [
+          "Avia",
+          "avia"
+        ],
+        [
+          "mea",
+          "meus"
+        ],
+        [
+          "fabulas",
+          "fabula",
+          "fābulās"
+        ],
+        [
+          "narrat",
+          "narro",
+          "nārrat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Grandmother"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "stories"
+        ],
+        [
+          "tells",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mea",
+        "narrat"
+      ],
+      "wrong": [
+        "Avia mea fabulae narrat."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fabulas",
+          "fabulae",
+          "fabularum"
+        ]
+      }
+    },
+    {
+      "id": "liber-puellae-in-mensa-est",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Liber puellae in mensa est.",
+      "means": "The girl's book is on the table.",
+      "words": [
+        [
+          "Liber",
+          "liber"
+        ],
+        [
+          "puellae",
+          "puella"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "mensa",
+          "mensa",
+          "mēnsā"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The book"
+        ],
+        [
+          "of the girl",
+          true
+        ],
+        [
+          "on the table"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "puellae",
+        "est"
+      ],
+      "wrong": [
+        "Liber puella in mensa est."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "puellae",
+          "puella",
+          "puellam"
+        ]
+      }
+    },
+    {
+      "id": "domus-amici-mei-parva-est",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Domus amici mei parva est.",
+      "means": "My friend's house is small.",
+      "words": [
+        [
+          "Domus",
+          "domus"
+        ],
+        [
+          "amici",
+          "amicus",
+          "amīcī"
+        ],
+        [
+          "mei",
+          "meus",
+          "meī"
+        ],
+        [
+          "parva",
+          "parvus"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The house"
+        ],
+        [
+          "of friend",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "small"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "amici",
+        "mei",
+        "est"
+      ],
+      "wrong": [
+        "Domus amicus mei parva est."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "amici",
+          "amicus",
+          "amicum"
+        ]
+      }
+    },
+    {
+      "id": "nomen-patris-mei-est-marcus",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Nomen patris mei est Marcus.",
+      "means": "My father's name is Marcus.",
+      "words": [
+        [
+          "Nomen",
+          "nomen",
+          "Nōmen"
+        ],
+        [
+          "patris",
+          "pater"
+        ],
+        [
+          "mei",
+          "meus",
+          "meī"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "Marcus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The name"
+        ],
+        [
+          "of father",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "Marcus"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "patris",
+        "mei"
+      ],
+      "wrong": [
+        "Nomen pater mei est Marcus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "patris",
+          "pater",
+          "patrem"
+        ]
+      }
+    },
+    {
+      "id": "domus-nostra-magna-est",
+      "topic": "home",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Domus nostra magna est.",
+      "means": "Our house is big.",
+      "words": [
+        [
+          "Domus",
+          "domus"
+        ],
+        [
+          "nostra",
+          "noster"
+        ],
+        [
+          "magna",
+          "magnus"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "House"
+        ],
+        [
+          "our",
+          true
+        ],
+        [
+          "big"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nostra",
+        "est"
+      ],
+      "wrong": [
+        "Domus nostra magna sunt."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "magna",
+          "magnus",
+          "magnum"
+        ]
+      }
+    },
+    {
+      "id": "feles-in-mensa-dormit",
+      "topic": "home",
+      "concepts": [
+        "ablative"
+      ],
+      "text": "Feles in mensa dormit.",
+      "means": "The cat is sleeping on the table.",
+      "words": [
+        [
+          "Feles",
+          "feles",
+          "Fēlēs"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "mensa",
+          "mensa",
+          "mēnsā"
+        ],
+        [
+          "dormit",
+          "dormio"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The cat"
+        ],
+        [
+          "on the table"
+        ],
+        [
+          "sleeps",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "dormit"
+      ],
+      "wrong": [
+        "Feles in mensam dormit."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mensa",
+          "mensam",
+          "mensae"
+        ]
+      }
+    },
+    {
+      "id": "ubi-sunt-claves-meae",
+      "topic": "home",
+      "concepts": [
+        "esse",
+        "agreement"
+      ],
+      "text": "Ubi sunt claves meae?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Ubi",
+          "ubi"
+        ],
+        [
+          "sunt",
+          "sum"
+        ],
+        [
+          "claves",
+          "clavis",
+          "clāvēs"
+        ],
+        [
+          "meae",
+          "meus"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "keys"
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "meae"
+      ],
+      "wrong": [
+        "Ubi sunt claves mei?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sunt",
+          "est",
+          "es"
+        ]
+      }
+    },
+    {
+      "id": "mater-cenam-parat",
+      "topic": "home",
+      "concepts": [
+        "accusative",
+        "word-order"
+      ],
+      "text": "Mater cenam parat.",
+      "means": "Mom is making dinner.",
+      "words": [
+        [
+          "Mater",
+          "mater",
+          "Māter"
+        ],
+        [
+          "cenam",
+          "cena",
+          "cēnam"
+        ],
+        [
+          "parat",
+          "paro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "dinner"
+        ],
+        [
+          "makes",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "parat"
+      ],
+      "wrong": [
+        "Mater cena parat."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cenam",
+          "cena",
+          "cenae"
+        ]
+      }
+    },
+    {
+      "id": "hodie-domi-maneo",
+      "topic": "home",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Hodie domi maneo.",
+      "means": "I'm staying home today.",
+      "words": [
+        [
+          "Hodie",
+          "hodie",
+          "Hodiē"
+        ],
+        [
+          "domi",
+          "domus",
+          "domī"
+        ],
+        [
+          "maneo",
+          "maneo",
+          "maneō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "at home"
+        ],
+        [
+          "I stay"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hodie in domum maneo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "domi",
+          "domum",
+          "domo"
+        ]
+      }
+    },
+    {
+      "id": "claude-fenestram",
+      "topic": "home",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Claude fenestram!",
+      "means": "Close the window!",
+      "words": [
+        [
+          "Claude",
+          "claudo"
+        ],
+        [
+          "fenestram",
+          "fenestra"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Claudo fenestram."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Claude",
+          "Claudo",
+          "Claudit"
+        ]
+      }
+    },
+    {
+      "id": "librum-lego",
+      "topic": "home",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Librum lego.",
+      "means": "I'm reading a book.",
+      "words": [
+        [
+          "Librum",
+          "liber"
+        ],
+        [
+          "lego",
+          "lego",
+          "legō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A book"
+        ],
+        [
+          "I read",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "lego"
+      ],
+      "wrong": [
+        "Liber lego."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Librum",
+          "Liber",
+          "Libro"
+        ]
+      }
+    },
+    {
+      "id": "cave-canem",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "accusative"
+      ],
+      "text": "Cave canem!",
+      "means": "Beware of the dog!",
+      "words": [
+        [
+          "Cave",
+          "caveo",
+          "Cavē"
+        ],
+        [
+          "canem",
+          "canis"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Beware"
+        ],
+        [
+          "the dog"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Caveo canem."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "canem",
+          "canis",
+          "cani"
+        ]
+      }
+    },
+    {
+      "id": "puella-epistulam-scribit",
+      "topic": "home",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Puella epistulam scribit.",
+      "means": "The girl is writing a letter.",
+      "words": [
+        [
+          "Puella",
+          "puella"
+        ],
+        [
+          "epistulam",
+          "epistula"
+        ],
+        [
+          "scribit",
+          "scribo",
+          "scrībit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The girl"
+        ],
+        [
+          "a letter"
+        ],
+        [
+          "writes",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "scribit"
+      ],
+      "wrong": [
+        "Puellam epistulam scribit."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "epistulam",
+          "epistula",
+          "epistulae"
+        ]
+      }
+    },
+    {
+      "id": "avus-meus-domi-est",
+      "topic": "home",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Avus meus domi est.",
+      "means": "My grandfather is at home.",
+      "words": [
+        [
+          "Avus",
+          "avus"
+        ],
+        [
+          "meus",
+          "meus"
+        ],
+        [
+          "domi",
+          "domus",
+          "domī"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Grandfather"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "at home"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "meus",
+        "est"
+      ],
+      "wrong": [
+        "Avus meus in domum est."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "domi",
+          "domum",
+          "domo"
+        ]
+      }
+    },
+    {
+      "id": "aquam-bibere-volo",
+      "topic": "food",
+      "concepts": [
+        "infinitive"
+      ],
+      "text": "Aquam bibere volo.",
+      "means": "I want to drink water.",
+      "words": [
+        [
+          "Aquam",
+          "aqua"
+        ],
+        [
+          "bibere",
+          "bibo"
+        ],
+        [
+          "volo",
+          "volo",
+          "volō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "to drink"
+        ],
+        [
+          "I want",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "volo"
+      ],
+      "wrong": [
+        "Aquam bibo volo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bibere",
+          "bibo",
+          "bibit"
+        ]
+      }
+    },
+    {
+      "id": "vinum-non-bibo",
+      "topic": "food",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Vinum non bibo.",
+      "means": "I don't drink wine.",
+      "words": [
+        [
+          "Vinum",
+          "vinum",
+          "Vīnum"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "bibo",
+          "bibo",
+          "bibō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Wine"
+        ],
+        [
+          "not"
+        ],
+        [
+          "I drink",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bibo"
+      ],
+      "wrong": [
+        "Vinum bibo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "non",
+          "ne",
+          "num"
+        ]
+      }
+    },
+    {
+      "id": "panem-et-caseum-emo",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Panem et caseum emo.",
+      "means": "I'm buying bread and cheese.",
+      "words": [
+        [
+          "Panem",
+          "panis",
+          "Pānem"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "caseum",
+          "caseus",
+          "cāseum"
+        ],
+        [
+          "emo",
+          "emo",
+          "emō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bread"
+        ],
+        [
+          "and"
+        ],
+        [
+          "cheese"
+        ],
+        [
+          "I buy",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "moved": [
+        "emo"
+      ],
+      "wrong": [
+        "Panis et caseus emo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Panem",
+          "Panis",
+          "Pani"
+        ]
+      }
+    },
+    {
+      "id": "heri-in-caupona-cenavimus",
+      "topic": "food",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Heri in caupona cenavimus.",
+      "means": "We had dinner at an inn yesterday.",
+      "words": [
+        [
+          "Heri",
+          "heri",
+          "Herī"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "caupona",
+          "caupona",
+          "caupōnā"
+        ],
+        [
+          "cenavimus",
+          "ceno",
+          "cēnāvimus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "at an inn"
+        ],
+        [
+          "we dined"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Heri in caupona cenabimus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "cenavimus",
+          "cenavit",
+          "cenabimus"
+        ]
+      }
+    },
+    {
+      "id": "quanti-constat",
+      "topic": "food",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it"
+      ],
+      "text": "Quanti constat?",
+      "means": "How much does it cost?",
+      "words": [
+        [
+          "Quanti",
+          null,
+          "Quantī"
+        ],
+        [
+          "constat",
+          null,
+          "cōnstat"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "For how much"
+        ],
+        [
+          "it costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Quanti consto?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Quanti",
+          "Quis",
+          "Ubi"
+        ]
+      }
+    },
+    {
+      "id": "cibum-bonum-amamus",
+      "topic": "food",
+      "concepts": [
+        "agreement",
+        "endings"
+      ],
+      "text": "Cibum bonum amamus.",
+      "means": "We love good food.",
+      "words": [
+        [
+          "Cibum",
+          "cibus"
+        ],
+        [
+          "bonum",
+          "bonus"
+        ],
+        [
+          "amamus",
+          "amo",
+          "amāmus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Food"
+        ],
+        [
+          "good",
+          true
+        ],
+        [
+          "we love",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bonum",
+        "amamus"
+      ],
+      "wrong": [
+        "Cibum bonum amant."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bonum",
+          "bona",
+          "bonus"
+        ]
+      }
+    },
+    {
+      "id": "cras-cenabimus",
+      "topic": "food",
+      "concepts": [
+        "future"
+      ],
+      "text": "Cras cenabimus.",
+      "means": "We'll have dinner tomorrow.",
+      "words": [
+        [
+          "Cras",
+          "cras",
+          "Crās"
+        ],
+        [
+          "cenabimus",
+          "ceno",
+          "cēnābimus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "we'll dine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cras cenavimus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cenabimus",
+          "cenavimus",
+          "cenat"
+        ]
+      }
+    },
+    {
+      "id": "da-mihi-aquam-quaeso",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "dative"
+      ],
+      "text": "Da mihi aquam, quaeso.",
+      "means": "Give me some water, please.",
+      "words": [
+        [
+          "Da",
+          "do",
+          "Dā"
+        ],
+        [
+          "mihi",
+          "ego"
+        ],
+        [
+          "aquam,",
+          "aqua"
+        ],
+        [
+          "quaeso",
+          "quaeso",
+          "quaesō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "water"
+        ],
+        [
+          "I ask"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Da me aquam, quaeso."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Da",
+          "Do",
+          "Dat"
+        ]
+      }
+    },
+    {
+      "id": "ubi-est-templum",
+      "topic": "out",
+      "concepts": [
+        "esse"
+      ],
+      "text": "Ubi est templum?",
+      "means": "Where is the temple?",
+      "words": [
+        [
+          "Ubi",
+          "ubi"
+        ],
+        [
+          "est",
+          "sum"
+        ],
+        [
+          "templum",
+          "templum"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the temple"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ubi sunt templum?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "est",
+          "sunt",
+          "es"
+        ]
+      }
+    },
+    {
+      "id": "cras-romam-ibimus",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "motion"
+      ],
+      "text": "Cras Romam ibimus.",
+      "means": "We'll go to Rome tomorrow.",
+      "words": [
+        [
+          "Cras",
+          "cras",
+          "Crās"
+        ],
+        [
+          "Romam"
+        ],
+        [
+          "ibimus",
+          "eo",
+          "ībimus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to Rome"
+        ],
+        [
+          "we'll go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cras ad Roma ibimus."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ibimus",
+          "ibit",
+          "ivimus"
+        ]
+      }
+    },
+    {
+      "id": "heri-romam-veni",
+      "topic": "out",
+      "concepts": [
+        "perfect",
+        "motion"
+      ],
+      "text": "Heri Romam veni.",
+      "means": "I came to Rome yesterday.",
+      "words": [
+        [
+          "Heri",
+          "heri",
+          "Herī"
+        ],
+        [
+          "Romam"
+        ],
+        [
+          "veni",
+          "venio",
+          "vēnī"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "to Rome"
+        ],
+        [
+          "I came"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Heri in Roma veni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "veni",
+          "venit",
+          "veniam"
+        ]
+      }
+    },
+    {
+      "id": "in-urbem-ambulamus",
+      "topic": "out",
+      "concepts": [
+        "motion"
+      ],
+      "text": "In urbem ambulamus.",
+      "means": "We're walking into the city.",
+      "words": [
+        [
+          "In",
+          "in"
+        ],
+        [
+          "urbem",
+          "urbs"
+        ],
+        [
+          "ambulamus",
+          "ambulo",
+          "ambulāmus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Into the city"
+        ],
+        [
+          "we walk",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "ambulamus"
+      ],
+      "wrong": [
+        "In urbis ambulamus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "urbem",
+          "urbe",
+          "urbis"
+        ]
+      }
+    },
+    {
+      "id": "ex-urbe-venimus",
+      "topic": "out",
+      "concepts": [
+        "ablative"
+      ],
+      "text": "Ex urbe venimus.",
+      "means": "We're coming from the city.",
+      "words": [
+        [
+          "Ex",
+          "ex"
+        ],
+        [
+          "urbe",
+          "urbs"
+        ],
+        [
+          "venimus",
+          "venio",
+          "venīmus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "From the city"
+        ],
+        [
+          "we come",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "venimus"
+      ],
+      "wrong": [
+        "Ex urbem venimus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "urbe",
+          "urbem",
+          "urbi"
+        ]
+      }
+    },
+    {
+      "id": "viam-non-video",
+      "topic": "out",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Viam non video.",
+      "means": "I can't see the road.",
+      "words": [
+        [
+          "Viam",
+          "via"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "video",
+          "video",
+          "videō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The road"
+        ],
+        [
+          "not"
+        ],
+        [
+          "I see",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "video"
+      ],
+      "wrong": [
+        "Via non video."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Viam",
+          "Via",
+          "Viae"
+        ]
+      }
+    },
+    {
+      "id": "possumusne-hic-manere",
+      "topic": "out",
+      "concepts": [
+        "infinitive"
+      ],
+      "text": "Possumusne hic manere?",
+      "means": "Can we stay here?",
+      "words": [
+        [
+          "Possumusne",
+          "possum"
+        ],
+        [
+          "hic",
+          "hic",
+          "hīc"
+        ],
+        [
+          "manere",
+          "maneo",
+          "manēre"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can we"
+        ],
+        [
+          "here"
+        ],
+        [
+          "stay",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "manere"
+      ],
+      "wrong": [
+        "Possumusne hic manemus?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "manere",
+          "maneo",
+          "manemus"
+        ]
+      }
+    },
+    {
+      "id": "amicum-in-foro-exspecto",
+      "topic": "out",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Amicum in foro exspecto.",
+      "means": "I'm waiting for a friend in the forum.",
+      "words": [
+        [
+          "Amicum",
+          "amicus",
+          "Amīcum"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "foro",
+          "forum",
+          "forō"
+        ],
+        [
+          "exspecto",
+          "exspecto",
+          "exspectō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A friend"
+        ],
+        [
+          "in the forum"
+        ],
+        [
+          "I wait for",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "exspecto"
+      ],
+      "wrong": [
+        "Amicus in foro exspecto."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Amicum",
+          "Amicus",
+          "Amico"
+        ]
+      }
+    },
+    {
+      "id": "quo-vadis",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Quo vadis?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Quo",
+          "quo",
+          "Quō"
+        ],
+        [
+          "vadis",
+          "vado",
+          "vādis"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where to"
+        ],
+        [
+          "you go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Quo vadit?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Quo",
+          "Quis",
+          "Cur"
+        ]
+      }
+    },
+    {
+      "id": "hodie-pluit",
+      "topic": "plans",
+      "concepts": [
+        "endings"
+      ],
+      "text": "Hodie pluit.",
+      "means": "It's raining today.",
+      "words": [
+        [
+          "Hodie",
+          "hodie",
+          "Hodiē"
+        ],
+        [
+          "pluit",
+          "pluo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "it rains"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hodie pluo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pluit",
+          "pluunt",
+          "pluis"
+        ]
+      }
+    },
+    {
+      "id": "hodie-valde-frigidum-est",
+      "topic": "plans",
+      "concepts": [
+        "agreement",
+        "esse"
+      ],
+      "text": "Hodie valde frigidum est.",
+      "means": "It's very cold today.",
+      "words": [
+        [
+          "Hodie",
+          "hodie",
+          "Hodiē"
+        ],
+        [
+          "valde",
+          "valde",
+          "valdē"
+        ],
+        [
+          "frigidum",
+          "frigidus",
+          "frīgidum"
+        ],
+        [
+          "est",
+          "sum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "very"
+        ],
+        [
+          "cold"
+        ],
+        [
+          "it is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "est"
+      ],
+      "wrong": [
+        "Hodie valde frigidum sum."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "frigidum",
+          "frigidus",
+          "frigida"
+        ]
+      }
+    },
+    {
+      "id": "cras-laborabo",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Cras laborabo.",
+      "means": "I'll work tomorrow.",
+      "words": [
+        [
+          "Cras",
+          "cras",
+          "Crās"
+        ],
+        [
+          "laborabo",
+          "laboro",
+          "labōrābō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'll work"
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [],
+      "wrong": [
+        "Cras laboravi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "laborabo",
+          "laboravi",
+          "laborabit"
+        ]
+      }
+    },
+    {
+      "id": "linguam-latinam-discere-volo",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "accusative"
+      ],
+      "text": "Linguam Latinam discere volo.",
+      "means": "I want to learn Latin.",
+      "words": [
+        [
+          "Linguam",
+          "lingua"
+        ],
+        [
+          "Latinam",
+          "latinus",
+          "Latīnam"
+        ],
+        [
+          "discere",
+          "disco"
+        ],
+        [
+          "volo",
+          "volo",
+          "volō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The language"
+        ],
+        [
+          "Latin",
+          true
+        ],
+        [
+          "to learn"
+        ],
+        [
+          "I want",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Latinam",
+        "volo"
+      ],
+      "wrong": [
+        "Lingua Latina discere volo."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "discere",
+          "disco",
+          "discit"
+        ]
+      }
+    },
+    {
+      "id": "cur-non-venis",
+      "topic": "plans",
+      "concepts": [
+        "endings"
+      ],
+      "text": "Cur non venis?",
+      "means": "Why aren't you coming?",
+      "words": [
+        [
+          "Cur",
+          "cur",
+          "Cūr"
+        ],
+        [
+          "non",
+          "non",
+          "nōn"
+        ],
+        [
+          "venis",
+          "venio",
+          "venīs"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Why"
+        ],
+        [
+          "not"
+        ],
+        [
+          "you come"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cur non venit?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "venis",
+          "venit",
+          "venio"
+        ]
+      }
+    },
+    {
+      "id": "veni-mecum",
+      "topic": "plans",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Veni mecum!",
+      "means": "Come with me!",
+      "words": [
+        [
+          "Veni",
+          "venio",
+          "Venī"
+        ],
+        [
+          "mecum",
+          "ego",
+          "mēcum"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "with me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Venit mecum."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Veni",
+          "Venit",
+          "Veniet"
+        ]
+      }
+    },
+    {
+      "id": "gratias-tibi-ago",
+      "topic": "plans",
+      "concepts": [
+        "dative"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Gratias tibi ago.",
+      "means": "Thank you.",
+      "words": [
+        [
+          "Gratias",
+          null,
+          "Grātiās"
+        ],
+        [
+          "tibi"
+        ],
+        [
+          "ago",
+          null,
+          "agō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Thanks"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I do",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ago"
+      ],
+      "wrong": [
+        "Gratias te ago."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tibi",
+          "te",
+          "tu"
+        ]
+      }
+    },
+    {
+      "id": "non-intellego",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "endings"
+      ],
+      "text": "Non intellego.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Non",
+          "non",
+          "Nōn"
+        ],
+        [
+          "intellego",
+          "intellego",
+          "intellegō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non intellegit."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Non",
+          "Ne",
+          "Nec"
+        ]
+      }
+    },
+    {
+      "id": "amici-nostri-cras-venient",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "agreement"
+      ],
+      "text": "Amici nostri cras venient.",
+      "means": "Our friends will come tomorrow.",
+      "words": [
+        [
+          "Amici",
+          "amicus",
+          "Amīcī"
+        ],
+        [
+          "nostri",
+          "noster",
+          "nostrī"
+        ],
+        [
+          "cras",
+          "cras",
+          "crās"
+        ],
+        [
+          "venient",
+          "venio"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Friends"
+        ],
+        [
+          "our",
+          true
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "will come",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nostri",
+        "venient"
+      ],
+      "wrong": [
+        "Amici nostrae cras venient."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "venient",
+          "venerunt",
+          "venit"
+        ]
+      }
+    },
+    {
+      "id": "heri-librum-legi",
+      "topic": "plans",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Heri librum legi.",
+      "means": "I read a book yesterday.",
+      "words": [
+        [
+          "Heri",
+          "heri",
+          "Herī"
+        ],
+        [
+          "librum",
+          "liber"
+        ],
+        [
+          "legi",
+          "lego",
+          "lēgī"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "a book"
+        ],
+        [
+          "I read",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "legi"
+      ],
+      "wrong": [
+        "Heri librum legam."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "legi",
+          "legit",
+          "legam"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "caffeum",
+          "forms": [
+            "caffeum"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "thea",
+          "forms": [
+            "theam"
+          ],
+          "picture": "tea",
+          "means": "theam = tea"
+        },
+        {
+          "lemma": "aqua",
+          "forms": [
+            "aquam"
+          ],
+          "picture": "water",
+          "means": "aquam = water"
+        },
+        {
+          "lemma": "ego",
+          "forms": [
+            "ego"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "bibo",
+          "forms": [
+            "bibo"
+          ],
+          "picture": "drink",
+          "means": "to drink"
+        },
+        {
+          "lemma": "et",
+          "forms": [
+            "et"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "endings",
+        "line": "A verb's ending says who does it, so ego (I) and tu (you) are usually left out: amo (I love), amas (you love), amat (he or she loves), amamus (we love)."
+      },
+      "items": [
+        "caffeum-bibo",
+        "theam-bibo",
+        "ego-aquam-bibo",
+        "caffeum-et-theam-bibo",
+        "theam-et-aquam-bibo",
+        "aquam-et-caffeum-bibo"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "unus",
+          "forms": [
+            "unum",
+            "unam"
+          ],
+          "means": "unum = one; unam = one"
+        },
+        {
+          "lemma": "lac",
+          "forms": [
+            "lac"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "salve-caffeum-quaeso",
+        "gratias-tibi-ago",
+        "theam-unam-et-aquam-unam-quaeso",
+        "unum-caffeum-gratias-tibi-ago",
+        "salve-theam-quaeso",
+        "lac-bibo"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "bene",
+          "forms": [
+            "bene"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "sum",
+          "forms": [
+            "sum"
+          ],
+          "means": "to be"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "esse",
+        "line": "sum (I am), es (you are), est (is), sumus (we are), estis (you all are), sunt (they are); est usually comes last: Domus nostra magna est (house our big is)."
+      },
+      "items": [
+        "quid-agis",
+        "bene-sum-gratias-tibi-ago",
+        "ita-quaeso",
+        "minime-gratias-tibi-ago",
+        "ita-gratias-tibi-ago-vale",
+        "minime-gratias-tibi-ago-vale"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "tu",
+          "forms": [
+            "tu"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "non",
+          "forms": [
+            "non"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "magister",
+          "forms": [
+            "magister"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "magistra",
+          "forms": [
+            "magistra"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "discipulus",
+          "forms": [
+            "discipulus"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "sum",
+          "forms": [
+            "es",
+            "esne"
+          ],
+          "means": "es = you are; esne = are you?"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "quid-est-nomen-tibi",
+        "salve-gaudeo-te-cognoscere",
+        "ego-magister-sum",
+        "tu-discipulus-es",
+        "esne-magister",
+        "ego-non-magister-sum",
+        "tu-magistra-es"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mater",
+          "forms": [
+            "mater"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "pater",
+          "forms": [
+            "pater"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "frater",
+          "forms": [
+            "frater"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "soror",
+          "forms": [
+            "soror"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "meus",
+          "forms": [
+            "mea",
+            "meus"
+          ],
+          "means": "mea = my; meus = my"
+        },
+        {
+          "lemma": "hic",
+          "forms": [
+            "haec",
+            "hic"
+          ],
+          "means": "haec = this; hic = this"
+        },
+        {
+          "lemma": "sum",
+          "forms": [
+            "est"
+          ],
+          "means": "est = is"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "agreement",
+        "line": "A describing word takes its noun's gender, number and case: domus magna (house big), cibus bonus (food good), clavis mea (key my); with no person or thing named, it's neuter: frigidum est (cold it-is: it's cold)."
+      },
+      "items": [
+        "mater-mea-magistra-est",
+        "pater-meus-magister-est",
+        "haec-est-mater-mea",
+        "hic-est-pater-meus",
+        "frater-meus-discipulus-est",
+        "haec-est-soror-mea"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "habeo",
+          "forms": [
+            "habeo",
+            "habesne"
+          ],
+          "means": "habeo = I have; habesne = do you have?"
+        },
+        {
+          "lemma": "amicus",
+          "forms": [
+            "amicus"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "medica",
+          "forms": [
+            "medica"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "clavis",
+          "forms": [
+            "clavem"
+          ],
+          "picture": "key",
+          "means": "clavem = a key"
+        },
+        {
+          "lemma": "telephonum",
+          "forms": [
+            "telephonum"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "liber",
+          "forms": [
+            "librum"
+          ],
+          "picture": "book",
+          "means": "librum = a book"
+        },
+        {
+          "lemma": "bonus",
+          "forms": [
+            "bonus"
+          ],
+          "means": "good"
+        },
+        {
+          "lemma": "frater",
+          "forms": [
+            "fratrem"
+          ],
+          "means": "fratrem = a brother"
+        },
+        {
+          "lemma": "soror",
+          "forms": [
+            "sororem"
+          ],
+          "means": "sororem = a sister"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "telephonum-habeo",
+        "clavem-habesne",
+        "fratrem-et-sororem-habeo",
+        "librum-non-habeo",
+        "soror-mea-medica-est",
+        "tu-bonus-amicus-es"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "ubi",
+          "forms": [
+            "ubi"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "hic",
+          "forms": [
+            "hic"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "illic",
+          "forms": [
+            "illic"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "latrina",
+          "forms": [
+            "latrina"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "quoque",
+          "forms": [
+            "quoque"
+          ],
+          "means": "also"
+        },
+        {
+          "lemma": "meus",
+          "forms": [
+            "meum",
+            "meae"
+          ],
+          "means": "meum = my; meae = my"
+        },
+        {
+          "lemma": "clavis",
+          "forms": [
+            "clavis",
+            "claves"
+          ],
+          "means": "clavis = the key; claves = keys"
+        },
+        {
+          "lemma": "sum",
+          "forms": [
+            "sunt"
+          ],
+          "means": "sunt = are"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A question word usually comes first (Ubi habitas?"
+      },
+      "items": [
+        "telephonum-meum-hic-est",
+        "clavis-illic-est",
+        "ubi-est-mater-mea",
+        "ignosce-ubi-est-latrina",
+        "soror-mea-hic-est",
+        "ubi-est-clavis-mea",
+        "ubi-sunt-claves-meae",
+        "mater-mea-quoque-hic-est"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "duo",
+          "forms": [
+            "duo"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "tres",
+          "forms": [
+            "tres"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "pecunia",
+          "forms": [
+            "pecuniam"
+          ],
+          "picture": "money",
+          "means": "pecuniam = money"
+        },
+        {
+          "lemma": "caffeum",
+          "forms": [
+            "caffea"
+          ],
+          "means": "caffea = coffees"
+        },
+        {
+          "lemma": "liber",
+          "forms": [
+            "libros"
+          ],
+          "means": "libros = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "quanti-constat",
+        "salve-rationem-quaeso",
+        "duo-caffea-quaeso",
+        "unum-librum-quaeso",
+        "tres-libros-habeo",
+        "pecuniam-non-habeo"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "loquor",
+          "forms": [
+            "loquerisne",
+            "loquor"
+          ],
+          "means": "loquerisne = do you speak?; loquor = I speak"
+        },
+        {
+          "lemma": "anglicus",
+          "forms": [
+            "Anglicam"
+          ],
+          "means": "Anglicam = English"
+        },
+        {
+          "lemma": "latinus",
+          "forms": [
+            "Latinam"
+          ],
+          "means": "Latinam = Latin"
+        },
+        {
+          "lemma": "lingua",
+          "forms": [
+            "linguam"
+          ],
+          "means": "linguam = language"
+        },
+        {
+          "lemma": "intellego",
+          "forms": [
+            "intellego",
+            "intellegit",
+            "intellegisne"
+          ],
+          "means": "intellego = I understand; intellegit = understands; intellegisne = do you understand?"
+        },
+        {
+          "lemma": "paulum",
+          "forms": [
+            "paulum"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "volo",
+          "forms": [
+            "volo"
+          ],
+          "means": "to want"
+        },
+        {
+          "lemma": "bibo",
+          "forms": [
+            "bibere"
+          ],
+          "means": "bibere = to drink"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "What a verb acts on takes its object form, often ending in -m: puella → puellam, frater → fratrem, liber → librum (Librum lego: book I-read)."
+      },
+      "items": [
+        "non-intellego",
+        "frater-meus-linguam-latinam-non-intellegit",
+        "linguam-anglicam-loquerisne",
+        "linguam-latinam-paulum-loquor",
+        "tu-intellegisne",
+        "caffeum-volo",
+        "aquam-volo-quaeso",
+        "aquam-bibere-volo"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "domus",
+          "forms": [
+            "domus",
+            "domo"
+          ],
+          "picture": "house",
+          "means": "domus = house; domo = house"
+        },
+        {
+          "lemma": "cubiculum",
+          "forms": [
+            "cubiculum"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "magnus",
+          "forms": [
+            "magna"
+          ],
+          "picture": "big",
+          "means": "magna = big"
+        },
+        {
+          "lemma": "parvus",
+          "forms": [
+            "parvum",
+            "parva"
+          ],
+          "picture": "small",
+          "means": "parvum = small; parva = small"
+        },
+        {
+          "lemma": "habito",
+          "forms": [
+            "habitat",
+            "habito",
+            "habitas"
+          ],
+          "means": "habitat = lives; habito = I live; habitas = you live"
+        },
+        {
+          "lemma": "in",
+          "forms": [
+            "in"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "amicus",
+          "forms": [
+            "amici"
+          ],
+          "means": "amici = of a friend"
+        },
+        {
+          "lemma": "meus",
+          "forms": [
+            "mei"
+          ],
+          "means": "mei = of my"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "cubiculum-meum-parvum-est",
+        "haec-domus-magna-est",
+        "mater-mea-hic-habitat",
+        "in-parva-domo-habito",
+        "ubi-habitas",
+        "domus-amici-mei-parva-est"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "vado",
+          "forms": [
+            "vadis",
+            "vado",
+            "vadit"
+          ],
+          "means": "vadis = you go; vado = I go; vadit = goes"
+        },
+        {
+          "lemma": "ad",
+          "forms": [
+            "ad"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "schola",
+          "forms": [
+            "scholam"
+          ],
+          "picture": "school",
+          "means": "scholam = school"
+        },
+        {
+          "lemma": "urbs",
+          "forms": [
+            "urbem"
+          ],
+          "picture": "city",
+          "means": "urbem = the city"
+        },
+        {
+          "lemma": "statio",
+          "forms": [
+            "statio"
+          ],
+          "means": "station"
+        },
+        {
+          "lemma": "autocinetum",
+          "forms": [
+            "autocinetum"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "quo",
+          "forms": [
+            "quo"
+          ],
+          "means": "where to"
+        },
+        {
+          "lemma": "hic",
+          "forms": [
+            "hoc"
+          ],
+          "means": "hoc = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "motion",
+        "line": "Where you're going takes the accusative: in urbem (into the city), and a city's name alone with no in: Romam (to Rome)."
+      },
+      "items": [
+        "autocinetum-habeo",
+        "hoc-autocinetum-parvum-est",
+        "quo-vadis",
+        "ad-scholam-vado",
+        "ignosce-ubi-est-statio",
+        "mater-mea-ad-urbem-vadit"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "hodie",
+          "forms": [
+            "hodie"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "cras",
+          "forms": [
+            "cras"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "nunc",
+          "forms": [
+            "nunc"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "laboro",
+          "forms": [
+            "laboro",
+            "laborare",
+            "laborat",
+            "laborabo"
+          ],
+          "picture": "work",
+          "means": "laboro = I work; laborare = to work; laborat = works; laborabo = I will work"
+        },
+        {
+          "lemma": "debeo",
+          "forms": [
+            "debeo"
+          ],
+          "means": "to have to"
+        },
+        {
+          "lemma": "possum",
+          "forms": [
+            "possum"
+          ],
+          "means": "to be able"
+        },
+        {
+          "lemma": "vado",
+          "forms": [
+            "vadere"
+          ],
+          "means": "vadere = to go"
+        },
+        {
+          "lemma": "urbs",
+          "forms": [
+            "urbe"
+          ],
+          "means": "urbe = the city"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "hodie-laboro",
+        "cras-laborare-debeo",
+        "nunc-vadere-debeo",
+        "cras-ad-urbem-vado",
+        "hodie-vadere-non-possum",
+        "gratias-tibi-ago-cras-te-videbo",
+        "mater-mea-in-urbe-laborat",
+        "cras-laborabo"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

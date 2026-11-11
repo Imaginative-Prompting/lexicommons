@@ -1,0 +1,294 @@
+/* Explore: find a pack. A pack up front, covers on a shelf, and the rest a quiet row. */
+@layer lx.page {
+  /* A cover: square, the drawing's own, or a designed one with its title. */
+  [data-part="pack-cover"] { display: block; overflow: hidden; aspect-ratio: 1; border-radius: 16px; background: var(--well); }
+  [data-part="pack-cover"] > [data-part="picture"], [data-part="pack-cover"] > [data-part="picture"] > svg { display: block; width: 100%; height: 100%; }
+  [data-part="pack-cover"] > [data-part="book-cover"] { width: 100%; height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; }
+  [data-part="language-row"] { gap: var(--space-2); }
+  [data-part="language-choice"] { flex: none; flex-direction: row; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 22px; background: none; border: 1px solid var(--edge); }
+  [data-part="language-choice"] .lx-choice-sub { display: none; }
+  [data-part="language-choice"]:not([data-state="selected"]):active { background: var(--fill-active); }
+  [data-part="language-choice"][data-state="selected"] { border-color: var(--edge-strong); background: var(--tab-bubble); color: var(--ink-1); }
+  /* The pack up front: an outline holding it, as Home's main card. */
+  [data-part="featured-pack"] { display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: center; gap: var(--space-4); padding: var(--space-3); margin-bottom: 4px; border: 2px solid var(--edge-strong); border-radius: 22px; background: none; box-shadow: 0 4px 0 var(--edge-strong); color: var(--ink-1); text-decoration: none; }
+  [data-part="featured-pack"]:active { transform: translateY(4px); box-shadow: 0 0 0 var(--edge-strong); background: var(--fill-active); }
+  .lx-feature-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  [data-part="featured-pack"] h2 { margin: 0; font: 700 22px / 1.18 var(--type-head); letter-spacing: -0.01em; }
+  [data-part="featured-pack"] .lx-feature-kicker { color: var(--ink-2); font: 500 var(--size-14) / 1.2 var(--type-ui); }
+  [data-part="featured-pack"] .lx-feature-meta { display: block; color: var(--ink-2); font-size: var(--size-14); }
+  /* A shelf: covers, each its name and how much is in it. No boxes. */
+  [data-part="pack-shelf"] { display: grid; grid-auto-flow: column; grid-auto-columns: 136px; gap: var(--space-3); }
+  [data-part="pack-card"] { display: flex; flex-direction: column; gap: 6px; padding: 0; border: 0; border-radius: 16px; background: none; min-height: 0; width: auto; }
+  [data-part="pack-card"]:active { background: none; filter: brightness(0.88); }
+  [data-part="pack-card"] .lx-pack-title { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font: 600 var(--size-14) / 1.25 var(--type-ui); }
+  [data-part="pack-card"] .lx-pack-meta { color: var(--ink-2); font-size: var(--size-14); }
+  /* A pack's cover in a list's row: small, so a designed cover shows its color without its title (the title is beside it). */
+  [data-part="list-row"] .lx-row-icon > [data-part="pack-cover"] .lx-cover-head { display: none; }
+  /* Search: what was looked for, marked in a pack's sentence. */
+  .lx-search-teach b { color: var(--ink-1); font-weight: 700; }
+  .lx-share-part { gap: var(--space-2); }
+  /* The quiet rows at the foot, no boxes, no labels. */
+  .lx-explore-body > .lx-group + .lx-group { margin-top: calc(var(--space-3) * -1); }
+  .lx-explore-body [data-part="list-row"] { padding-inline: 0; background: none; }
+  /* A row that opens a sheet is drawn with its border: its words and value keep their room inside it. */
+  .lx-explore-body :is(a, button)[data-part="list-row"][data-opens="sheet"] { padding-inline: var(--space-3); }
+  .lx-explore-body :is(a, button)[data-part="list-row"]:active { background: var(--fill-active); }
+  @media (hover: hover) { :is(.lx-explore-body, .lx-ai-body) :is(a, button)[data-part="list-row"]:not(:active):hover { background: var(--fill-hover); } }
+  .lx-explore-body [data-part="list-row"] .lx-row-icon { border: 0; background: none; color: var(--ink-2); }
+  /* A list of packs: each its cover. */
+  [data-part="list-row"] .lx-row-icon:has(> [data-part="pack-cover"]) { width: 56px; height: 56px; padding: 0; border: 0; background: none; }
+  [data-part="list-row"] .lx-row-icon > [data-part="pack-cover"] { width: 56px; height: 56px; border-radius: 10px; }
+  /* A pack's page: its cover and name, its sentences; the rest a press away. */
+  .lx-pack-head { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; }
+  .lx-pack-head > [data-part="pack-cover"] { width: 168px; margin-bottom: var(--space-2); border-radius: 24px; }
+  .lx-pack-head [data-part="page-title"] { margin: 0; }
+  .lx-pack-actions { display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-1); }
+  .lx-explore-item .lx-explore-sentences [data-part="sentence-row"] { padding: 14px 0; border: 0; border-top: 1px solid var(--hair); border-radius: 0; background: none; }
+  .lx-quiet-more { border-top: 1px solid var(--hair); }
+  /* A report's reasons (terms.js reasonPicker): what the chosen one means, under them; nothing while none is chosen. */
+  .lx-report-reasons [data-part="group-note"]:empty { display: none; }
+  .lx-quiet-more > summary { display: flex; align-items: center; justify-content: space-between; min-height: 52px; color: var(--ink-1); font: 500 var(--size-16) / 1.2 var(--type-ui); cursor: pointer; list-style: none; }
+  .lx-quiet-more > summary::-webkit-details-marker { display: none; }
+  .lx-quiet-more > summary::after { content: ""; width: 8px; height: 8px; margin-inline-end: 4px; border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3); rotate: 45deg; translate: 0 -2px; }
+  .lx-quiet-more[open] > summary::after { rotate: 225deg; translate: 0 2px; }
+  .lx-quiet-more > summary:active { background: var(--fill-active); }
+  .lx-quiet-body { display: flex; flex-direction: column; gap: var(--space-3); padding-bottom: var(--space-4); }
+  .lx-quiet-body [data-part="section-title"] { display: none; }
+  /* A pack's units (Lessons on its page): each a row that opens its lessons in place, under it, so it ends in the mark the sections around it
+     have (down, up while open), never the page chevron. Its lessons sit in from it. */
+  .lx-unit-mark { flex: none; width: 8px; height: 8px; margin-inline: var(--space-2) 4px; border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3); rotate: 45deg; translate: 0 -2px; }
+  .lx-explore-units [aria-expanded="true"] > .lx-unit-mark { rotate: 225deg; translate: 0 2px; }
+  .lx-explore-unit-lessons { padding-inline-start: var(--space-4); }
+  .lx-explore-units .lx-row-sub { text-wrap: pretty; }
+  /* Add pack: the page's one way forward, the full width, over the page. */
+  .lx-explore-item [data-part="pinned-actions"] .lx-pinned-buttons > [data-part="button"] { flex: 1; }
+  /* The AI section: who's there, what to ask for; the rest a press away. */
+  .lx-ai-body [data-part="list-row"] { width: 100%; margin-inline: 0; padding-inline: 0; background: none; }
+  /* Everything you can press shows it. */
+  :is(.lx-explore-body, .lx-ai-body) :is(a, button)[data-part="list-row"]:active,
+  .lx-ai-kinds [data-part="request-kind"]:active,
+  [data-part="language-choice"]:active { background: var(--fill-active); }
+  .lx-ai-body [data-part="list-row"] .lx-row-icon { border: 0; background: none; color: var(--ink-2); }
+  [data-part="ai-card"] { padding: var(--space-4); border: 2px solid var(--edge-strong); border-radius: 22px; background: none; box-shadow: 0 4px 0 var(--edge-strong); margin-bottom: 4px; }
+  [data-part="ai-card"] > [data-part="button"] { margin-top: var(--space-3); }
+  /* An empty state with its own drawing: no box round it. */
+  [data-part="empty-state"]:has(> .lx-empty-art) { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-4) 0; border: 0; background: none; text-align: center; }
+  .lx-empty-art { display: grid; place-items: center; width: 168px; aspect-ratio: 1; overflow: hidden; border-radius: 24px; }
+  .lx-empty-art > [data-part="picture"], .lx-empty-art svg { display: block; width: 100%; height: 100%; }
+  .lx-explore-sentences > [data-part="sentence-row"]:first-child { border-top: 0; padding-top: 0; }
+  .lx-explore-yours [data-part="empty-state"] { border: 0; background: none; padding-block: var(--space-3); }
+  /* A row that scrolls sideways clips up and down too: 6 px each way (given back by the margins) hold the small buttons' 44 px reach
+     (each 32 px tall: its ::before reaches 6 px past it). */
+  .lx-explore-filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: -6px calc(var(--space-4) * -1); padding: 6px var(--space-4); }
+  .lx-explore-filters::-webkit-scrollbar { display: none; }
+  .lx-explore-filters > * { flex: none; }
+  [data-part="ai-card"][data-state="on"] { min-height: 72px; box-sizing: border-box; }
+  /* Connected: who's there is one quiet line, and practicing with it the one thing up front. */
+  [data-part="ai-card"][data-state="on"] { min-height: 56px; padding: 0; margin: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+  .lx-ai-focal [data-part="request-kinds"] { display: block; }
+  /* Practice with me (ai/tab.js practiceCard): the AI page's one card, a border and a hard edge as Home's main card; a conversation drawn in
+     hard light (Home's AI card's scene, small) at its left, what it is beside it, and Start. */
+  [data-part="ai-practice"] { display: grid; gap: var(--space-4); margin-bottom: 4px; padding: var(--space-4); border: 2px solid var(--line-strong); border-radius: var(--radius-24); box-shadow: 0 4px 0 var(--line-strong); }
+  /* The scene at the left and the words at the right, 44:56, so the words keep over half the card even at 320. */
+  .lx-ap-top { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 14fr); gap: var(--space-4); align-items: center; }
+  /* No pair of your sentences fits beside the title (tab.js practiceCard): the conversation across the card, over the title. */
+  [data-part="ai-practice"][data-fit="across"] .lx-ap-top { grid-template-columns: minmax(0, 1fr); }
+  [data-part="ai-practice"][data-fit="across"] .lx-hc-bubble[data-who] { max-width: 85%; }
+  .lx-ap-title { margin: 0; font: 700 28px / 1.1 var(--type-head); letter-spacing: var(--track-head); }
+  .lx-ap-sub { margin: 6px 0 0; color: var(--ink-2); font-size: var(--size-16); line-height: 1.35; }
+  [data-part="ai-practice"] .lx-hc-scene { gap: 10px; margin-bottom: 4px; padding: 12px 10px 8px; border-radius: 16px; }
+  [data-part="ai-practice"] .lx-hc-bubble { max-width: 100%; padding: 7px 10px 8px; border-radius: 14px; font-size: 13px; line-height: 1.25; }
+  [data-part="ai-practice"] .lx-hc-bubble[data-who="ai"] { border-bottom-left-radius: 4px; }
+  [data-part="ai-practice"] .lx-hc-bubble[data-who="you"] { align-self: flex-end; max-width: 100%; border-bottom-right-radius: 4px; }
+  [data-part="ai-practice"] .lx-hc-floor { min-height: 40px; padding-top: 0; }
+  @media (max-width: 359px) {
+    [data-part="ai-practice"] .lx-hc-scene { padding: 10px 6px 6px; }
+    [data-part="ai-practice"] .lx-hc-bubble { padding: 6px 8px 7px; font-size: 12px; }
+  }
+  /* Never connected: the apps that work, by their own marks, over the card's words. */
+  /* Your requests' page: each request a plain row, a hairline between them, its kind's mark with no well (no box around each). */
+  .lx-requests:has(> [data-part="request-row"]) { display: flex; flex-direction: column; gap: 0; }
+  .lx-requests > [data-part="request-row"] { border: 0; border-bottom: 1px solid var(--hair); border-radius: 0; background: none; }
+  .lx-requests > [data-part="request-row"] .lx-request-main > :first-child { background: none; }
+  .lx-ai-marks { display: flex; gap: var(--space-3); }
+  .lx-ai-mark { flex: none; display: block; }
+  [data-part="ai-practice"] .lx-ai-mark { color: var(--ink-1); }
+  .lx-ai-focal [data-part="request-kind"] { display: flex; align-items: center; gap: var(--space-3); min-height: 96px; padding: var(--space-4); margin-bottom: 4px; border: 2px solid var(--edge-strong); border-radius: 22px; background: none; box-shadow: 0 4px 0 var(--edge-strong); }
+  .lx-ai-focal [data-part="request-kind"]:active { transform: translateY(4px); box-shadow: 0 0 0 var(--edge-strong); background: var(--fill-active); }
+  .lx-ai-focal .lx-kind-title { font: 700 22px / 1.18 var(--type-head); letter-spacing: -0.01em; }
+  .lx-ai-focal .lx-kind-sub { color: var(--ink-2); font-size: var(--size-14); }
+  .lx-ai-kinds [data-part="request-kinds"] { display: flex; flex-direction: column; gap: 0; }
+  .lx-ai-kinds [data-part="request-kind"] { display: flex; align-items: center; gap: var(--space-3); min-height: 52px; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+  .lx-ai-kinds .lx-kind-sub { display: none; }
+  /* /design: a pack's cover at the size of a shelf. */
+  .lx-design-covers { display: flex; gap: var(--space-3); }
+  .lx-design-covers > [data-part="pack-cover"] { width: 136px; }
+
+  /* ---------- Explore's topics (explore.js topicCard): each its drawing large as the card, its name whole under it ----------
+     The drawing is the card (art as the card): no border, a hard edge in its ground's own deep tone, a press pushing it down onto that
+     edge. The name in the full ink at a reading size, how many packs at a label's. */
+  .lx-topics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5) var(--space-3); }
+  @media (min-width: 600px) { .lx-topics { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+  .lx-topic { display: flex; flex-direction: column; gap: 2px; min-width: 0; color: var(--ink-1); text-decoration: none; }
+  .lx-topic-art { --deep: var(--line-strong); display: block; aspect-ratio: 1; margin-bottom: calc(var(--space-2) + 4px); overflow: hidden; border-radius: 18px; background: var(--well); box-shadow: 0 4px 0 var(--deep); transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  .lx-topic-art[data-paint="teal"] { --deep: var(--art-teal-deep); }
+  .lx-topic-art[data-paint="sun"] { --deep: var(--art-sun-deep); }
+  .lx-topic-art[data-paint="violet"] { --deep: var(--art-violet-deep); }
+  .lx-topic-art > [data-part="picture"], .lx-topic-art svg { display: block; width: 100%; height: 100%; }
+  .lx-topic:active > .lx-topic-art { transform: translateY(4px); box-shadow: 0 0 0 var(--deep); }
+  /* With a mouse, the drawing lifts as its press sinks it (its edge as much deeper, so its foot stays put); the name underlines (below). Not a held
+     place (its drawing on its way: unpainted, no edge, below). */
+  @media (hover: hover) { .lx-topic:not(:active):hover > .lx-topic-art:not([data-held]) { transform: translateY(-2px); box-shadow: 0 6px 0 var(--deep); } }
+  .lx-topic-name { font: 600 var(--size-16) / 1.25 var(--type-ui); overflow-wrap: anywhere; text-wrap: balance; }
+  .lx-topic-count { color: var(--ink-2); font-size: var(--size-14); }
+  @media (hover: hover) { .lx-topic:hover .lx-topic-name { text-decoration: underline; } }
+
+  /* How much of a pack you know (explore.js knownBar), one look everywhere: a short bar (the track the theme's line, what's known in the way
+     forward's violet) with the share beside it in words, "20% known". Where there's no room for both on a line (a shelf's cover), the words go
+     under the bar. Its box is there from the first frame, empty, and it fades in once it's worked out ([hidden] can't hold a box: base.css). */
+  .lx-known { display: flex; flex-wrap: wrap; align-items: center; gap: 2px var(--space-2); margin-top: var(--space-2); }
+  .lx-known[data-state="waiting"] { opacity: 0; }
+  .lx-known-track { flex: none; width: 56px; height: 4px; overflow: hidden; border-radius: 2px; background: var(--line-strong); }
+  .lx-known-fill { display: block; width: calc(var(--known, 0) * 100%); height: 100%; border-radius: 2px; background: var(--go); }
+  .lx-known-label { color: var(--ink-2); font: 500 var(--size-14) / 1.25 var(--type-ui); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* A whole card opens the pack's page (explore.js linkWhole): its title's link reaches over the card; its own button sits above that and does
+     its own thing. A press pushes the card down onto its hard edge, as the art cards do. */
+  /* The press moves over 70 ms, as a sheet row's does: never a jump in one frame. */
+  .lx-card-whole { position: relative; transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  .lx-card-link { color: inherit; text-decoration: none; }
+  .lx-card-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+  .lx-card-whole > [data-part="button"], .lx-card-whole > .lx-next-other { position: relative; z-index: 1; }
+  .lx-card-whole:has(.lx-card-link:active) { transform: translateY(4px); box-shadow: 0 0 0 var(--line-strong); }
+  /* The link's own press, over the whole card it stands for: a light layer of ink (its fill would hide the card). */
+  .lx-card-link:active::after { background: color-mix(in oklab, var(--ink-1) 6%, transparent); }
+  .lx-card-link:focus-visible { outline: none; }
+  .lx-card-whole:has(.lx-card-link:focus-visible) { outline: 2px solid var(--ring); outline-offset: 2px; }
+  @media (hover: hover) { .lx-card-whole:has(.lx-card-link:hover) .lx-card-link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; } }
+
+  /* The one pack to add next (explore.js pickCard): its cover face-out, "Add next", its name and its size beside it. */
+  .lx-face { display: flex; align-items: flex-end; gap: var(--space-4); min-width: 0; color: inherit; text-decoration: none; }
+  .lx-face > [data-part="pack-cover"] { flex: none; width: 118px; border-radius: 18px; }
+  .lx-face:active > [data-part="pack-cover"] { filter: brightness(0.9); }
+  @media (hover: hover) {
+    .lx-face:not(:active):hover > [data-part="pack-cover"]:not([data-held]) { filter: brightness(1.06); }
+    .lx-face:not(:active):hover .lx-face-words > b { text-decoration: underline; text-underline-offset: 3px; }
+  }
+  .lx-face-words { display: flex; flex-direction: column; gap: 2px; min-width: 0; margin: 0 0 10px; }
+  .lx-face-words > span:first-child { color: var(--ink-2); font: 600 var(--size-14) / 1.2 var(--type-ui); }
+  .lx-face-words > b { color: var(--ink-1); font: 700 var(--size-20) / 1.15 var(--type-head); letter-spacing: -0.01em; }
+  .lx-face-words > .lx-face-size { color: var(--ink-2); font-size: var(--size-14); }
+  @media (max-width: 359.98px) { .lx-face > [data-part="pack-cover"] { width: 104px; } }
+
+  /* ---------- Every pack's cover in the app's art (explore.js packCover) ----------
+     A learner's pack: its paint (never its drawing's own ground) split hard down the spine; the drawing it picked, or one of its topic's,
+     or a book drawn in hard light; its title printed at its foot, never over the art. A container query measures the content box (the cover
+     less its padding, 74% of its width): 14 px from a cover of about 108 px, 12 px under that, and none under about 75 px (a row's icon, where
+     the name is beside it). */
+  [data-part="pack-cover"][data-generic] {
+    --paint: var(--art-teal); --deep: var(--art-teal-deep); --title-ink: var(--art-ink);
+    container-type: inline-size; display: grid; grid-template-rows: minmax(0, 1fr) auto; justify-items: center; align-items: center; gap: 8%;
+    box-sizing: border-box; padding: 10% 10% 9% 16%; background: linear-gradient(to right, var(--deep) 9%, var(--paint) 9%);
+  }
+  [data-part="pack-cover"][data-generic][data-paint="sun"] { --paint: var(--art-sun); --deep: var(--art-sun-deep); }
+  [data-part="pack-cover"][data-generic][data-paint="violet"] { --paint: var(--art-violet-deep); --deep: color-mix(in oklab, var(--art-violet-deep) 72%, var(--art-ink)); --title-ink: var(--art-paper); }
+  /* A drawn place while its drawing is on its way (explore.js drawnWhole): its own box, unpainted (no well, no edge), a held place filling it;
+     the place built whole takes its place once the drawing is here, its paint and drawing together. After the learner's cover's rules: a held one is a
+     learner's cover too (data-generic), unpainted. */
+  :is([data-part="pack-cover"], .lx-topic-art, .lx-cover-pick-art)[data-held] { position: relative; background: none; box-shadow: none; }
+  .lx-art-held[data-part="skeleton"] { position: absolute; inset: 0; min-height: 0; border-radius: inherit; }
+  /* A held place to the screen's foot (explore.js heldToFoot: Explore's first-visit home under the lessons' card, a topic page's two cards),
+     drawing nothing itself (the shapes in it are the held look), a stack as what comes is. */
+  .lx-held-to-foot[data-part="skeleton"] { display: flex; flex-direction: column; min-height: 100dvh; border-radius: 0; background: none; animation: none; }
+  /* Its lines take their column's width (with no words to size it, the pick's lines and the heading's line had none). */
+  .lx-home-held .lx-face-words, .lx-home-held [data-part="section-head"] > [data-part="skeleton"] { flex: 1 1 auto; }
+  .lx-generic-art { display: grid; place-items: center; height: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 14%; }
+  .lx-generic-art > [data-part="picture"], .lx-generic-art svg { display: block; width: 100%; height: 100%; }
+  .lx-generic-book { position: relative; height: 80%; aspect-ratio: 3 / 4; margin: 0 8% 8% 0; border-radius: 3px 8px 8px 3px; background: linear-gradient(to right, var(--art-paper) 55%, var(--art-paper-deep) 55%); box-shadow: 7px 7px 0 color-mix(in srgb, var(--deep) 80%, black); }
+  .lx-generic-book > span:first-child { position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: 18%; border-radius: 3px 0 0 3px; background: var(--art-ink); }
+  .lx-generic-book > span:last-child { position: absolute; inset-inline: 32% 14%; top: 22%; height: 18%; border-radius: 2px; background: var(--deep); }
+  .lx-generic-title { align-self: end; justify-self: stretch; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; color: var(--title-ink); font: 700 var(--size-14) / 1.2 var(--type-head); text-align: center; }
+  @container (max-width: 79px) { .lx-generic-title { font-size: var(--size-12); } }
+  @container (max-width: 55px) { .lx-generic-title { display: none; } }
+
+  /* Share (explore.js renderYours): its quiet rows with no tile behind their symbols, as Explore's home; what an AI made marked in the full
+     ink; the words to ask it to share a pack as a place you take from (background and border), Copy beside them. */
+  .lx-explore-yours [data-part="list-row"] .lx-row-icon:not([data-art]) { border: 0; background: none; color: var(--ink-2); }
+  .lx-yours-by { color: var(--ink-1); font-weight: 600; }
+  .lx-yours-ai { display: grid; gap: var(--space-2); }
+  .lx-yours-prompt { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px var(--space-3); padding: var(--space-3) 14px; border: 1px solid var(--edge); border-radius: 14px; background: var(--well); }
+  .lx-yours-prompt-label { grid-column: 1 / -1; margin: 0; color: var(--ink-2); font-size: var(--size-14); }
+  .lx-yours-prompt-words { margin: 0; color: var(--ink-1); font: 500 var(--size-16) / 1.35 var(--type-read); overflow-wrap: anywhere; user-select: text; }
+  .lx-yours-prompt [role="status"] { grid-column: 1 / -1; }
+  .lx-yours-prompt [role="status"]:empty { display: none; }
+  .lx-yours-more { margin-top: var(--space-2); }
+  /* Add your own pack's words to send your AI (explore/own.js): the words across the box, Copy under them, so a small phone keeps them whole. */
+  .lx-own-ai .lx-yours-prompt { grid-template-columns: 1fr; }
+  .lx-own-ai .lx-yours-prompt > [data-part="button"] { justify-self: start; }
+
+  /* Packs face-out (explore.js coverShelf): three a row, each its cover and who shared it. */
+  .lx-covers { display: flex; flex-direction: column; gap: var(--space-4); }
+  .lx-cover-row { display: flex; align-items: flex-start; gap: 10px; }
+  .lx-cover-card { display: flex; flex-direction: column; gap: 6px; flex: 0 1 calc((100% - 20px) / 3); min-width: 0; color: var(--ink-2); font-size: var(--size-14); text-decoration: none; }
+  .lx-cover-card > [data-part="pack-cover"] { width: 100%; }
+  .lx-cover-card:active > [data-part="pack-cover"] { filter: brightness(0.9); }
+  .lx-cover-by { overflow-wrap: anywhere; }
+
+  /* A topic's first pack (explore.js renderTopic): its first sentence leads its card, a reading size, in the language's face. */
+  .lx-topic-card h2 { font: 600 var(--size-20) / 1.3 var(--type-read); letter-spacing: 0; }
+  /* A pack's cover as a main card's art (a topic's first pack, the language's lessons): Home's art size, 88 px, 72 on a small phone. */
+  :is(.lx-topic-card, .lx-lessons-card) .lx-next-art { flex: none; width: 88px; }
+  :is(.lx-topic-card, .lx-lessons-card) .lx-next-art > [data-part="pack-cover"] { width: 100%; }
+  @media (max-width: 359.98px) { :is(.lx-topic-card, .lx-lessons-card) .lx-next-art { width: 72px; } }
+  /* Text made large (a phone's text size): the cover goes under the words rather than past the card's edge. At the usual size the words'
+     9em and the cover sit side by side even at 320, wrapped as before. */
+  :is(.lx-topic-card, .lx-lessons-card) .lx-next-top { flex-wrap: wrap; }
+  :is(.lx-topic-card, .lx-lessons-card) .lx-next-top > .lx-next-head { flex: 1 1 9em; }
+
+  /* Sharing: the cover beside its name; the level a row of toggles, the chosen one outlined and bold, no fill; its topics as chips, the same; the
+     drawings for its cover. The terms: four lines, each in bold and explained under it, nothing boxed. */
+  .lx-share-part { gap: var(--space-2); }
+  .lx-share-head { display: flex; align-items: flex-end; gap: var(--space-3); }
+  .lx-share-head > [part="field"], .lx-share-head > label { flex: 1 1 auto; min-width: 0; }
+  .lx-share-cover { flex: none; width: 96px; }
+  .lx-share-cover > [data-part="pack-cover"] { width: 100%; }
+  .lx-levels { display: flex; flex-wrap: wrap; gap: 6px; }
+  .lx-level { display: grid; place-items: center; min-width: 44px; height: 44px; padding: 0 10px; box-sizing: border-box; border: 1px solid var(--edge); border-radius: 12px; background: none; color: var(--ink-2); font: 500 var(--size-14) / 1 var(--type-ui); cursor: pointer; }
+  .lx-level:active { background: var(--fill-active); }
+  .lx-level[aria-pressed="true"] { border: 2px solid var(--line-strong); color: var(--ink-1); font-weight: 700; }
+  .lx-chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .lx-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; box-sizing: border-box; border: 1px solid var(--edge); border-radius: 22px; background: none; color: var(--ink-1); font: 500 var(--size-16) / 1.2 var(--type-ui); cursor: pointer; }
+  .lx-chip > .lx-icon { display: none; flex: none; width: 16px; height: 16px; }
+  .lx-chip:active { background: var(--fill-active); }
+  .lx-chip[aria-pressed="true"] { border: 2px solid var(--line-strong); padding-inline: 11px 13px; font-weight: 700; }
+  .lx-chip[aria-pressed="true"] > .lx-icon { display: block; }
+  .lx-cover-picks { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 10px; }
+  .lx-cover-pick { position: relative; display: grid; place-items: center; aspect-ratio: 1; padding: 2px; border: 2px solid transparent; border-radius: 18px; background: none; cursor: pointer; }
+  .lx-cover-pick[aria-pressed="true"] { border-color: var(--line-strong); }
+  .lx-cover-pick:active { filter: brightness(0.9); }
+  .lx-cover-pick-art { display: block; width: 100%; height: 100%; overflow: hidden; border-radius: 14px; }
+  .lx-cover-pick-art > [data-part="picture"], .lx-cover-pick-art svg { display: block; width: 100%; height: 100%; }
+  .lx-cover-pick-mark { position: absolute; inset-inline-end: -4px; top: -4px; display: none; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--ink-1); color: var(--canvas); }
+  .lx-cover-pick-mark .lx-icon { width: 14px; height: 14px; }
+  .lx-cover-pick[aria-pressed="true"] .lx-cover-pick-mark { display: grid; }
+  .lx-terms { display: flex; flex-direction: column; gap: var(--space-4); margin: 0; padding: 0; list-style: none; }
+  .lx-terms > li { display: flex; flex-direction: column; gap: 2px; }
+  .lx-terms b { color: var(--ink-1); font: 600 var(--size-16) / 1.3 var(--type-ui); }
+  .lx-terms span { color: var(--ink-2); font-size: var(--size-14); line-height: 1.45; text-wrap: pretty; }
+
+  /* A shared book (explore/books.js): on its page, its cover book-shaped over its title (the pack page's head); its first lines as they
+     read, in the reading face, the words woven in by the reader's own violet (reader.css --reader-woven); in a row, a small cover. */
+  .lx-book-head-cover { width: 132px; margin-bottom: var(--space-2); }
+  .lx-book-head-cover > [data-part="book-cover"] { width: 100%; border-radius: 10px; box-shadow: 0 16px 40px -14px rgba(0, 0, 0, 0.6); }
+  .lx-book-by { margin: 0; color: var(--ink-1); font: 500 var(--size-16) / 1.35 var(--type-ui); }
+  .lx-book-lines { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-book-line { margin: 0; color: var(--ink-1); font: 400 var(--size-18) / 1.55 var(--type-read); text-wrap: pretty; }
+  .lx-book-woven { color: color-mix(in oklab, var(--go) 70%, var(--ink-1)); }
+  .lx-book-source { color: var(--ink-1); font-weight: 600; }
+  .lx-book-mini { display: block; width: 28px; }
+  .lx-book-mini > [data-part="book-cover"] { width: 100%; border-radius: 4px; }
+  /* Too small for its words: the cover alone, its title beside it in the row or the field. */
+  .lx-book-mini :is(.lx-cover-head, .lx-cover-by) { display: none; }
+  .lx-share-head > .lx-share-book-cover { width: 64px; flex: none; }
+  .lx-share-head > .lx-share-book-cover > [data-part="book-cover"] { border-radius: 8px; }
+}

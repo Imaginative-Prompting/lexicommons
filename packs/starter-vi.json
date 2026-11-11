@@ -1,0 +1,9016 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-vi",
+  "name": "Starter: Vietnamese",
+  "about": "Vietnamese in real, everyday sentences, with each one's words in Vietnamese order.",
+  "language": "vi",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "cà phê": "coffee",
+    "trà": "tea",
+    "nước": "water",
+    "tôi": "I, me; my (after a noun)",
+    "uống": "to drink",
+    "và": "and",
+    "một": "one, a",
+    "sữa": "milk",
+    "cốc": "cup, glass",
+    "không": "not; or not (ending a question)",
+    "khỏe": "well, healthy",
+    "có": "have; there is; do (in a question)",
+    "bạn": "you (to someone your age); friend",
+    "phải": "must, have to; right (không phải là: isn't)",
+    "giáo viên": "teacher",
+    "sinh viên": "university student",
+    "là": "is, am, are (before a noun)",
+    "mẹ": "mom",
+    "bố": "dad",
+    "anh": "older brother; you (to a man a little older)",
+    "chị": "older sister; you (to a woman a little older)",
+    "của": "of, belonging to",
+    "đây": "this; here",
+    "bác sĩ": "doctor",
+    "chìa khóa": "key",
+    "điện thoại": "phone",
+    "sách": "book",
+    "quyển": "(counting word for books)",
+    "cái": "(counting word for things)",
+    "đâu": "where",
+    "ở": "at, in; to be (somewhere)",
+    "đó": "there",
+    "nhà vệ sinh": "restroom",
+    "ạ": "(makes what you say polite)",
+    "hai": "two",
+    "ba": "three",
+    "tiền": "money",
+    "này": "this",
+    "nói": "speak, say",
+    "tiếng anh": "English",
+    "tiếng việt": "Vietnamese",
+    "hiểu": "understand",
+    "một chút": "a little",
+    "muốn": "want",
+    "nhà": "house, home",
+    "phòng": "room",
+    "lớn": "big",
+    "nhỏ": "small",
+    "sống": "live",
+    "trong": "in, inside",
+    "ngôi": "(counting word for houses and temples)",
+    "đi": "go",
+    "đến": "to, towards",
+    "trường": "school",
+    "thành phố": "city",
+    "ga": "station",
+    "ô tô": "car",
+    "hôm nay": "today",
+    "ngày mai": "tomorrow",
+    "bây giờ": "now",
+    "làm": "work; do, make",
+    "có thể": "can, be able to",
+    "tên": "name",
+    "gì": "what",
+    "người": "person (người Mỹ: an American)",
+    "anh chị em": "brothers and sisters",
+    "gia đình": "family (có gia đình: married)",
+    "chưa": "not yet; …yet? (ending a question)",
+    "anh ấy": "he (a man your age or older)",
+    "các": "(makes a group plural)",
+    "con": "child; (counting word for animals)",
+    "đang": "(doing) right now",
+    "ngủ": "sleep",
+    "em": "younger brother or sister; I or you, said by or to the younger one",
+    "chào": "greet, say hello",
+    "nhưng": "but",
+    "đẹp": "beautiful, nice",
+    "trên": "on, above",
+    "bàn": "table",
+    "tủ lạnh": "fridge",
+    "trứng": "egg",
+    "bố mẹ": "parents",
+    "xem": "watch, look at",
+    "ti vi": "TV",
+    "nấu": "cook",
+    "cơm": "rice; a meal (ăn cơm: to eat)",
+    "áo": "shirt, top",
+    "ai": "who",
+    "quê": "home village, the countryside",
+    "mèo": "cat",
+    "những": "(plural marker; often some)",
+    "ăn": "eat",
+    "phở": "pho (rice noodle soup)",
+    "cho": "give; let; for",
+    "đá": "ice",
+    "ngon": "tasty, good",
+    "lắm": "very (after the word)",
+    "món": "dish",
+    "cay": "spicy",
+    "quá": "so, too",
+    "thịt": "meat",
+    "thích": "like",
+    "khát": "thirsty",
+    "sáng": "morning (ăn sáng: have breakfast)",
+    "đã": "(marks the past)",
+    "rồi": "already",
+    "ơi": "hey (calling someone)",
+    "thực đơn": "menu",
+    "thôi": "(let's: a friendly push)",
+    "hỏi": "ask",
+    "tàu": "train; ship",
+    "bằng": "by, with",
+    "xe máy": "motorbike",
+    "đấy": "(softens a question)",
+    "bao nhiêu": "how much, how many",
+    "ngồi": "sit",
+    "chậm": "slow",
+    "hơn": "more, -er",
+    "gần": "near",
+    "siêu thị": "supermarket",
+    "sẽ": "will",
+    "gọi": "call",
+    "cuối tuần": "weekend",
+    "trời": "sky; the weather",
+    "nóng": "hot",
+    "rảnh": "free (not busy)",
+    "tối nay": "tonight",
+    "học": "study, learn",
+    "tiếng": "language (tiếng Việt: Vietnamese)",
+    "dậy": "get up",
+    "sớm": "early",
+    "phim": "movie",
+    "bắt đầu": "start, begin",
+    "năm": "year",
+    "sau": "after, next",
+    "chúng ta": "we (you included)",
+    "biển": "sea, the beach",
+    "nhé": "(okay?: a friendly suggestion)"
+  },
+  "chunks": {
+    "cho-em-hoi": {
+      "text": "cho em hỏi",
+      "en": "excuse me (may I ask)",
+      "about": "Literally let younger-me ask; to someone your age or younger, cho tôi hỏi."
+    },
+    "xin-loi": {
+      "text": "xin lỗi",
+      "en": "sorry; excuse me",
+      "about": "Literally ask for forgiveness; also how you get someone's attention."
+    },
+    "bao-nhieu-tien": {
+      "text": "bao nhiêu tiền",
+      "en": "how much (does it cost)",
+      "about": "Literally how much money; it goes after the thing you're asking about."
+    },
+    "hello": {
+      "text": "xin chào",
+      "en": "hello"
+    },
+    "please-give-me": {
+      "text": "cho tôi",
+      "en": "please give me"
+    },
+    "thank-you": {
+      "text": "cảm ơn",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "bạn có khỏe không",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "tạm biệt",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "vâng",
+      "en": "yes"
+    },
+    "what-s-your-name": {
+      "text": "bạn tên là gì",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "rất vui được gặp bạn",
+      "en": "nice to meet you"
+    },
+    "the-check-please": {
+      "text": "cho tôi tính tiền",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "hẹn gặp bạn ngày mai",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "uong-nuoc",
+      "topic": "food",
+      "concepts": [
+        "no-copula"
+      ],
+      "text": "Uống nước.",
+      "means": "Drink some water.",
+      "words": [
+        [
+          "Uống",
+          "uống"
+        ],
+        [
+          "nước",
+          "nước"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Uống và nước.",
+        "Uống nước và."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nước",
+          "trà",
+          "cà phê"
+        ]
+      }
+    },
+    {
+      "id": "toi-uong-nuoc",
+      "topic": "food",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi uống nước.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "nước",
+          "nước"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi nước uống.",
+        "Uống tôi nước."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nước",
+          "trà",
+          "cà phê"
+        ]
+      }
+    },
+    {
+      "id": "toi-uong-ca-phe",
+      "topic": "food",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi uống cà phê.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi cà phê uống.",
+        "Uống tôi cà phê."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uống",
+          "nước",
+          "trà"
+        ]
+      }
+    },
+    {
+      "id": "toi-uong-tra",
+      "topic": "food",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi uống trà.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "trà",
+          "trà"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi trà uống.",
+        "Uống tôi trà."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "trà",
+          "nước",
+          "cà phê"
+        ]
+      }
+    },
+    {
+      "id": "toi-uong-ca-phe-va-tra",
+      "topic": "food",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi uống cà phê và trà.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ],
+        [
+          "và",
+          "và"
+        ],
+        [
+          "trà",
+          "trà"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi cà phê và trà uống.",
+        "Tôi uống và cà phê trà."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "trà",
+          "nước",
+          "cà phê"
+        ]
+      }
+    },
+    {
+      "id": "toi-uong-tra-va-nuoc",
+      "topic": "food",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi uống trà và nước.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "trà",
+          "trà"
+        ],
+        [
+          "và",
+          "và"
+        ],
+        [
+          "nước",
+          "nước"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi trà và nước uống.",
+        "Tôi uống và trà nước."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "nước",
+          "trà",
+          "cà phê"
+        ]
+      }
+    },
+    {
+      "id": "toi-uong-nuoc-va-ca-phe",
+      "topic": "food",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi uống nước và cà phê.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "nước",
+          "nước"
+        ],
+        [
+          "và",
+          "và"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi nước và cà phê uống.",
+        "Tôi uống và nước cà phê."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nước",
+          "trà",
+          "cà phê"
+        ]
+      }
+    },
+    {
+      "id": "toi-uong-sua",
+      "topic": "food",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi uống sữa.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "sữa",
+          "sữa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi sữa uống.",
+        "Uống tôi sữa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sữa",
+          "trà",
+          "nước"
+        ]
+      }
+    },
+    {
+      "id": "cho-toi-ca-phe",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Cho tôi cà phê.",
+      "means": "Coffee, please.",
+      "words": [
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cho cà phê tôi.",
+        "Cho tôi và cà phê."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tôi",
+          "trà",
+          "sữa"
+        ]
+      }
+    },
+    {
+      "id": "cho-toi-mot-coc-ca-phe",
+      "topic": "food",
+      "concepts": [
+        "classifier"
+      ],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Cho tôi một cốc cà phê.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "cup"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cho tôi cốc một cà phê.",
+        "Cho tôi một cà phê cốc."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "cốc",
+          "sữa",
+          "trà"
+        ]
+      }
+    },
+    {
+      "id": "xin-chao-cho-toi-mot-coc-tra",
+      "topic": "food",
+      "concepts": [
+        "classifier"
+      ],
+      "chunks": [
+        "hello",
+        "please-give-me"
+      ],
+      "text": "Xin chào! Cho tôi một cốc trà.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "chào!"
+        ],
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "trà",
+          "trà"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "cup"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin chào! Cho tôi cốc một trà.",
+        "Xin chào! Cho tôi một trà cốc."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "trà",
+          "nước",
+          "sữa"
+        ]
+      }
+    },
+    {
+      "id": "cho-toi-mot-coc-tra-va-mot-coc-nuoc",
+      "topic": "food",
+      "concepts": [
+        "classifier"
+      ],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Cho tôi một cốc trà và một cốc nước.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "trà",
+          "trà"
+        ],
+        [
+          "và",
+          "và"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "nước",
+          "nước"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "cup"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "glass"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cho tôi một trà cốc và một nước cốc.",
+        "Cho tôi cốc một trà và cốc một nước."
+      ],
+      "gap": {
+        "index": 8,
+        "options": [
+          "nước",
+          "trà",
+          "sữa"
+        ]
+      }
+    },
+    {
+      "id": "mot-coc-ca-phe-cam-on",
+      "topic": "food",
+      "concepts": [
+        "classifier"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Một cốc cà phê, cảm ơn.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê,",
+          "cà phê"
+        ],
+        [
+          "cảm"
+        ],
+        [
+          "ơn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "cup"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cốc một cà phê, cảm ơn.",
+        "Một cà phê cốc, cảm ơn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "cốc",
+          "trà",
+          "sữa"
+        ]
+      }
+    },
+    {
+      "id": "xin-chao-cho-toi-mot-coc-ca-phe",
+      "topic": "food",
+      "concepts": [
+        "classifier"
+      ],
+      "chunks": [
+        "hello",
+        "please-give-me"
+      ],
+      "text": "Xin chào! Cho tôi một cốc cà phê.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "chào!"
+        ],
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "cup"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin chào! Cho tôi cốc một cà phê.",
+        "Xin chào! Cho tôi một cà phê cốc."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "cốc",
+          "sữa",
+          "nước"
+        ]
+      }
+    },
+    {
+      "id": "toi-khoe-cam-on",
+      "topic": "people",
+      "concepts": [
+        "no-copula",
+        "pronouns"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Tôi khỏe, cảm ơn.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "khỏe,",
+          "khỏe"
+        ],
+        [
+          "cảm"
+        ],
+        [
+          "ơn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi cảm khỏe ơn.",
+        "Tôi khỏe ơn cảm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "khỏe,",
+          "uống,",
+          "chào,"
+        ]
+      }
+    },
+    {
+      "id": "vang-cam-on",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "yes"
+      ],
+      "text": "Vâng, cảm ơn.",
+      "means": "Yes, thank you.",
+      "words": [
+        [
+          "Vâng,"
+        ],
+        [
+          "cảm"
+        ],
+        [
+          "ơn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vâng, ơn cảm.",
+        "Cảm vâng ơn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vâng,",
+          "Không,",
+          "Uống,"
+        ]
+      }
+    },
+    {
+      "id": "xin-chao-ban-co-khoe-khong",
+      "topic": "people",
+      "concepts": [
+        "question-khong",
+        "no-copula"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Xin chào! Bạn có khỏe không?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "chào!"
+        ],
+        [
+          "Bạn"
+        ],
+        [
+          "có"
+        ],
+        [
+          "khỏe"
+        ],
+        [
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "well"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin chào! Bạn có không khỏe?",
+        "Xin chào! Bạn khỏe không có?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "khỏe",
+          "uống",
+          "chào"
+        ]
+      }
+    },
+    {
+      "id": "khong-cam-on",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Không, cảm ơn.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Không,",
+          "không"
+        ],
+        [
+          "cảm"
+        ],
+        [
+          "ơn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Không, ơn cảm.",
+        "Cảm không ơn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Không,",
+          "Vâng,",
+          "Có,"
+        ]
+      }
+    },
+    {
+      "id": "vang-cam-on-tam-biet",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Vâng, cảm ơn. Tạm biệt!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Vâng,"
+        ],
+        [
+          "cảm"
+        ],
+        [
+          "ơn."
+        ],
+        [
+          "Tạm"
+        ],
+        [
+          "biệt"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vâng, ơn cảm. Tạm biệt!",
+        "Vâng, cảm ơn. Biệt tạm!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vâng,",
+          "Không,",
+          "Uống,"
+        ]
+      }
+    },
+    {
+      "id": "khong-cam-on-tam-biet",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you"
+      ],
+      "text": "Không, cảm ơn. Tạm biệt!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Không,",
+          "không"
+        ],
+        [
+          "cảm"
+        ],
+        [
+          "ơn."
+        ],
+        [
+          "Tạm"
+        ],
+        [
+          "biệt"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Không, ơn cảm. Tạm biệt!",
+        "Không, cảm ơn. Biệt tạm!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Không,",
+          "Vâng,",
+          "Có,"
+        ]
+      }
+    },
+    {
+      "id": "vang-toi-co-uong-tra",
+      "topic": "people",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "chunks": [
+        "yes"
+      ],
+      "text": "Vâng, tôi có uống trà.",
+      "means": "Yes, I do drink tea.",
+      "words": [
+        [
+          "Vâng,"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "uống",
+          "uống"
+        ],
+        [
+          "trà",
+          "trà"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "I"
+        ],
+        [
+          "do"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vâng, tôi có và uống trà.",
+        "Vâng, tôi có uống trà và."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "trà",
+          "nước",
+          "sữa"
+        ]
+      }
+    },
+    {
+      "id": "toi-la-giao-vien",
+      "topic": "people",
+      "concepts": [
+        "la",
+        "pronouns"
+      ],
+      "text": "Tôi là giáo viên.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "giáo",
+          "giáo viên"
+        ],
+        [
+          "viên",
+          "giáo viên"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi giáo viên là.",
+        "Là tôi giáo viên."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "là",
+          "uống",
+          "khỏe"
+        ]
+      }
+    },
+    {
+      "id": "ban-la-sinh-vien",
+      "topic": "people",
+      "concepts": [
+        "la",
+        "pronouns"
+      ],
+      "text": "Bạn là sinh viên.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "sinh",
+          "sinh viên"
+        ],
+        [
+          "viên",
+          "sinh viên"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn sinh viên là.",
+        "Là bạn sinh viên."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bạn",
+          "Tôi",
+          "Một"
+        ]
+      }
+    },
+    {
+      "id": "toi-khong-phai-la-giao-vien",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "la"
+      ],
+      "text": "Tôi không phải là giáo viên.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "phải",
+          "phải"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "giáo",
+          "giáo viên"
+        ],
+        [
+          "viên",
+          "giáo viên"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi là không phải giáo viên.",
+        "Tôi không là phải giáo viên."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "là",
+          "uống",
+          "khỏe"
+        ]
+      }
+    },
+    {
+      "id": "xin-chao-ban-ten-la-gi",
+      "topic": "people",
+      "concepts": [
+        "question-word"
+      ],
+      "chunks": [
+        "what-s-your-name",
+        "hello"
+      ],
+      "text": "Xin chào! Bạn tên là gì?",
+      "means": "Hello! What's your name?",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "chào!"
+        ],
+        [
+          "Bạn"
+        ],
+        [
+          "tên"
+        ],
+        [
+          "là"
+        ],
+        [
+          "gì"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "you"
+        ],
+        [
+          "name"
+        ],
+        [
+          "is"
+        ],
+        [
+          "what"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin chào! Bạn là gì tên?",
+        "Xin chào! Bạn tên gì là?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "là",
+          "uống",
+          "khỏe"
+        ]
+      }
+    },
+    {
+      "id": "xin-chao-rat-vui-uoc-gap-ban",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Xin chào! Rất vui được gặp bạn.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "chào!"
+        ],
+        [
+          "Rất"
+        ],
+        [
+          "vui"
+        ],
+        [
+          "được"
+        ],
+        [
+          "gặp"
+        ],
+        [
+          "bạn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "very"
+        ],
+        [
+          "pleased"
+        ],
+        [
+          "to"
+        ],
+        [
+          "meet"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin chào! Rất được vui gặp bạn.",
+        "Xin chào! Rất vui gặp bạn được."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "bạn",
+          "tôi",
+          "một"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-phai-la-giao-vien-khong",
+      "topic": "people",
+      "concepts": [
+        "question-khong",
+        "la"
+      ],
+      "text": "Bạn có phải là giáo viên không?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "phải",
+          "phải"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "giáo",
+          "giáo viên"
+        ],
+        [
+          "viên",
+          "giáo viên"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "indeed"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn có là phải giáo viên không?",
+        "Bạn có phải giáo viên là không?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "là",
+          "uống",
+          "khỏe"
+        ]
+      }
+    },
+    {
+      "id": "ay-la-bo-toi",
+      "topic": "people",
+      "concepts": [
+        "la",
+        "possessive",
+        "demonstrative"
+      ],
+      "text": "Đây là bố tôi.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Đây",
+          "đây"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "bố",
+          "bố"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "father"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Đây là tôi bố.",
+        "Đây bố tôi là."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bố",
+          "mẹ",
+          "chị"
+        ]
+      }
+    },
+    {
+      "id": "bo-toi-la-giao-vien",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "la"
+      ],
+      "text": "Bố tôi là giáo viên.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Bố",
+          "bố"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "giáo",
+          "giáo viên"
+        ],
+        [
+          "viên",
+          "giáo viên"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Father"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi bố là giáo viên.",
+        "Bố tôi giáo viên là."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bố",
+          "Mẹ",
+          "Chị"
+        ]
+      }
+    },
+    {
+      "id": "anh-toi-la-sinh-vien",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "la"
+      ],
+      "text": "Anh tôi là sinh viên.",
+      "means": "My older brother is a student.",
+      "words": [
+        [
+          "Anh",
+          "anh"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "sinh",
+          "sinh viên"
+        ],
+        [
+          "viên",
+          "sinh viên"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Older brother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi anh là sinh viên.",
+        "Anh tôi sinh viên là."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Anh",
+          "Chị",
+          "Bố"
+        ]
+      }
+    },
+    {
+      "id": "ay-la-chi-toi",
+      "topic": "people",
+      "concepts": [
+        "demonstrative",
+        "possessive",
+        "la"
+      ],
+      "text": "Đây là chị tôi.",
+      "means": "This is my older sister.",
+      "words": [
+        [
+          "Đây",
+          "đây"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "chị",
+          "chị"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "older sister"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Đây là tôi chị.",
+        "Đây chị tôi là."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "chị",
+          "anh",
+          "mẹ"
+        ]
+      }
+    },
+    {
+      "id": "ay-la-ca-phe-cua-toi",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "la",
+        "demonstrative"
+      ],
+      "text": "Đây là cà phê của tôi.",
+      "means": "This is my coffee.",
+      "words": [
+        [
+          "Đây",
+          "đây"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ],
+        [
+          "của",
+          "của"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "of"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Đây là của cà phê tôi.",
+        "Đây là cà phê tôi của."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "của",
+          "và",
+          "là"
+        ]
+      }
+    },
+    {
+      "id": "toi-co-ien-thoai",
+      "topic": "people",
+      "concepts": [
+        "co",
+        "pronouns"
+      ],
+      "text": "Tôi có điện thoại.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "điện",
+          "điện thoại"
+        ],
+        [
+          "thoại",
+          "điện thoại"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi điện thoại có.",
+        "Có tôi điện thoại."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "có",
+          "là",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-chia-khoa-khong",
+      "topic": "people",
+      "concepts": [
+        "co",
+        "question-khong"
+      ],
+      "text": "Bạn có chìa khóa không?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "chìa",
+          "chìa khóa"
+        ],
+        [
+          "khóa",
+          "chìa khóa"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a key"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn chìa khóa có không?",
+        "Bạn có không chìa khóa?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "có",
+          "là",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "toi-co-mot-cai-chia-khoa",
+      "topic": "people",
+      "concepts": [
+        "co",
+        "classifier"
+      ],
+      "text": "Tôi có một cái chìa khóa.",
+      "means": "I have one key.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cái",
+          "cái"
+        ],
+        [
+          "chìa",
+          "chìa khóa"
+        ],
+        [
+          "khóa",
+          "chìa khóa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "one"
+        ],
+        [
+          "item"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi có cái một chìa khóa.",
+        "Tôi có một chìa khóa cái."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "cái",
+          "quyển",
+          "cốc"
+        ]
+      }
+    },
+    {
+      "id": "toi-co-mot-quyen-sach",
+      "topic": "people",
+      "concepts": [
+        "co",
+        "classifier"
+      ],
+      "text": "Tôi có một quyển sách.",
+      "means": "I have a book.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "quyển",
+          "quyển"
+        ],
+        [
+          "sách",
+          "sách"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "one"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi có quyển một sách.",
+        "Tôi có một sách quyển."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "quyển",
+          "cốc",
+          "cái"
+        ]
+      }
+    },
+    {
+      "id": "toi-co-mot-anh-va-mot-chi",
+      "topic": "people",
+      "concepts": [
+        "co"
+      ],
+      "text": "Tôi có một anh và một chị.",
+      "means": "I have an older brother and an older sister.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "anh",
+          "anh"
+        ],
+        [
+          "và",
+          "và"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "chị",
+          "chị"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "one"
+        ],
+        [
+          "older brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "older sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi một anh và một chị có.",
+        "Tôi có anh một và chị một."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "anh",
+          "chị",
+          "mẹ"
+        ]
+      }
+    },
+    {
+      "id": "chi-toi-la-bac-si",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "la"
+      ],
+      "text": "Chị tôi là bác sĩ.",
+      "means": "My older sister is a doctor.",
+      "words": [
+        [
+          "Chị",
+          "chị"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "bác",
+          "bác sĩ"
+        ],
+        [
+          "sĩ",
+          "bác sĩ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Older sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi chị là bác sĩ.",
+        "Chị tôi bác sĩ là."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Chị",
+          "Anh",
+          "Mẹ"
+        ]
+      }
+    },
+    {
+      "id": "chi-toi-o-ay",
+      "topic": "out",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "text": "Chị tôi ở đây.",
+      "means": "My older sister is here.",
+      "words": [
+        [
+          "Chị",
+          "chị"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đây",
+          "đây"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Older sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chị tôi đây ở.",
+        "Chị tôi ở và đây."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ở",
+          "là",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "chia-khoa-o-o",
+      "topic": "out",
+      "concepts": [
+        "o"
+      ],
+      "text": "Chìa khóa ở đó.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Chìa",
+          "chìa khóa"
+        ],
+        [
+          "khóa",
+          "chìa khóa"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đó",
+          "đó"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chìa khóa đó ở.",
+        "Chìa khóa ở và đó."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "đó",
+          "đây",
+          "đâu"
+        ]
+      }
+    },
+    {
+      "id": "chia-khoa-cua-toi-o-au",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "o",
+        "possessive"
+      ],
+      "text": "Chìa khóa của tôi ở đâu?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Chìa",
+          "chìa khóa"
+        ],
+        [
+          "khóa",
+          "chìa khóa"
+        ],
+        [
+          "của",
+          "của"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Key"
+        ],
+        [
+          "of"
+        ],
+        [
+          "me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chìa khóa của tôi đâu ở?",
+        "Chìa khóa tôi của ở đâu?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "đâu",
+          "đây",
+          "đó"
+        ]
+      }
+    },
+    {
+      "id": "xin-loi-nha-ve-sinh-o-au",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "o"
+      ],
+      "chunks": [
+        "xin-loi"
+      ],
+      "text": "Xin lỗi, nhà vệ sinh ở đâu?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "lỗi,"
+        ],
+        [
+          "nhà",
+          "nhà vệ sinh"
+        ],
+        [
+          "vệ",
+          "nhà vệ sinh"
+        ],
+        [
+          "sinh",
+          "nhà vệ sinh"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "the bathroom"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin lỗi, nhà vệ sinh đâu ở?",
+        "Xin lỗi, nhà vệ sinh ở và đâu?"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "đâu",
+          "đây",
+          "đó"
+        ]
+      }
+    },
+    {
+      "id": "ien-thoai-cua-toi-o-ay",
+      "topic": "out",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "text": "Điện thoại của tôi ở đây.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Điện",
+          "điện thoại"
+        ],
+        [
+          "thoại",
+          "điện thoại"
+        ],
+        [
+          "của",
+          "của"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đây",
+          "đây"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Phone"
+        ],
+        [
+          "of"
+        ],
+        [
+          "me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Điện thoại của tôi đây ở.",
+        "Điện thoại tôi của ở đây."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "đây",
+          "đó",
+          "đâu"
+        ]
+      }
+    },
+    {
+      "id": "me-toi-o-au",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "o",
+        "possessive"
+      ],
+      "text": "Mẹ tôi ở đâu?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Mẹ",
+          "mẹ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mẹ tôi đâu ở?",
+        "Tôi mẹ ở đâu?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "đâu",
+          "đây",
+          "đó"
+        ]
+      }
+    },
+    {
+      "id": "cho-toi-hai-coc-ca-phe",
+      "topic": "out",
+      "concepts": [
+        "classifier"
+      ],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Cho tôi hai cốc cà phê.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "hai",
+          "hai"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "two"
+        ],
+        [
+          "cups"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cho tôi cốc hai cà phê.",
+        "Cho tôi hai cà phê cốc."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hai",
+          "một",
+          "ba"
+        ]
+      }
+    },
+    {
+      "id": "toi-co-ba-quyen-sach",
+      "topic": "out",
+      "concepts": [
+        "co",
+        "classifier"
+      ],
+      "text": "Tôi có ba quyển sách.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "ba",
+          "ba"
+        ],
+        [
+          "quyển",
+          "quyển"
+        ],
+        [
+          "sách",
+          "sách"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi có quyển ba sách.",
+        "Tôi có ba sách quyển."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ba",
+          "hai",
+          "một"
+        ]
+      }
+    },
+    {
+      "id": "toi-khong-co-tien",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "co"
+      ],
+      "text": "Tôi không có tiền.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "tiền",
+          "tiền"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi có không tiền.",
+        "Tôi tiền không có là."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tiền",
+          "sách",
+          "sữa"
+        ]
+      }
+    },
+    {
+      "id": "xin-loi-cai-nay-bao-nhieu-tien",
+      "topic": "out",
+      "concepts": [
+        "demonstrative",
+        "question-word"
+      ],
+      "chunks": [
+        "bao-nhieu-tien",
+        "xin-loi"
+      ],
+      "text": "Xin lỗi, cái này bao nhiêu tiền?",
+      "means": "Excuse me, how much is this?",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "lỗi,"
+        ],
+        [
+          "cái",
+          "cái"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "bao"
+        ],
+        [
+          "nhiêu"
+        ],
+        [
+          "tiền"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "item"
+        ],
+        [
+          "this"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin lỗi, này cái bao nhiêu tiền?",
+        "Xin lỗi, cái này nhiêu bao tiền?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "này",
+          "đây",
+          "đó"
+        ]
+      }
+    },
+    {
+      "id": "xin-chao-cho-toi-tinh-tien",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Xin chào! Cho tôi tính tiền.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "chào!"
+        ],
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "tính"
+        ],
+        [
+          "tiền"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "let"
+        ],
+        [
+          "me"
+        ],
+        [
+          "settle"
+        ],
+        [
+          "the bill"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin chào! Cho tính tôi tiền.",
+        "Xin chào! Cho tôi tiền tính."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "tiền",
+          "sách",
+          "sữa"
+        ]
+      }
+    },
+    {
+      "id": "cho-toi-mot-quyen-sach",
+      "topic": "out",
+      "concepts": [
+        "classifier"
+      ],
+      "chunks": [
+        "please-give-me"
+      ],
+      "text": "Cho tôi một quyển sách.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Cho"
+        ],
+        [
+          "tôi"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "quyển",
+          "quyển"
+        ],
+        [
+          "sách",
+          "sách"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cho tôi quyển một sách.",
+        "Cho tôi một sách quyển."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "một",
+          "hai",
+          "ba"
+        ]
+      }
+    },
+    {
+      "id": "toi-khong-hieu",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Tôi không hiểu.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "hiểu",
+          "hiểu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi hiểu là không.",
+        "Tôi không là hiểu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hiểu",
+          "nói",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-hieu-khong",
+      "topic": "people",
+      "concepts": [
+        "question-khong"
+      ],
+      "text": "Bạn có hiểu không?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "hiểu",
+          "hiểu"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "do"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn hiểu không có?",
+        "Bạn có là hiểu không?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hiểu",
+          "nói",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-noi-tieng-anh-khong",
+      "topic": "people",
+      "concepts": [
+        "question-khong"
+      ],
+      "text": "Bạn có nói tiếng Anh không?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "nói",
+          "nói"
+        ],
+        [
+          "tiếng",
+          "tiếng anh"
+        ],
+        [
+          "Anh",
+          "tiếng anh"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "do"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "English"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn có tiếng Anh nói không?",
+        "Bạn có nói không tiếng Anh?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nói",
+          "uống",
+          "có"
+        ]
+      }
+    },
+    {
+      "id": "toi-noi-mot-chut-tieng-viet",
+      "topic": "people",
+      "concepts": [
+        "pronouns",
+        "no-copula"
+      ],
+      "text": "Tôi nói một chút tiếng Việt.",
+      "means": "I speak a little Vietnamese.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "nói",
+          "nói"
+        ],
+        [
+          "một",
+          "một chút"
+        ],
+        [
+          "chút",
+          "một chút"
+        ],
+        [
+          "tiếng",
+          "tiếng việt"
+        ],
+        [
+          "Việt",
+          "tiếng việt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Vietnamese"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi một chút tiếng Việt nói.",
+        "Tôi nói chút một tiếng Việt."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nói",
+          "uống",
+          "hiểu"
+        ]
+      }
+    },
+    {
+      "id": "toi-muon-mot-coc-ca-phe",
+      "topic": "people",
+      "concepts": [
+        "classifier",
+        "pronouns"
+      ],
+      "text": "Tôi muốn một cốc cà phê.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "muốn",
+          "muốn"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "one"
+        ],
+        [
+          "cup"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi một cốc cà phê muốn.",
+        "Tôi muốn cốc một cà phê."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "muốn",
+          "có",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "toi-muon-nuoc-cam-on",
+      "topic": "people",
+      "concepts": [
+        "modal"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Tôi muốn nước, cảm ơn.",
+      "means": "I'd like water, thank you.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "muốn",
+          "muốn"
+        ],
+        [
+          "nước,",
+          "nước"
+        ],
+        [
+          "cảm"
+        ],
+        [
+          "ơn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi nước muốn, cảm ơn.",
+        "Tôi muốn nước, ơn cảm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "muốn",
+          "hiểu",
+          "nói"
+        ]
+      }
+    },
+    {
+      "id": "phong-toi-nho",
+      "topic": "home",
+      "concepts": [
+        "no-copula",
+        "possessive"
+      ],
+      "text": "Phòng tôi nhỏ.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Phòng",
+          "phòng"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "nhỏ",
+          "nhỏ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Room"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Phòng tôi là nhỏ.",
+        "Tôi phòng nhỏ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nhỏ",
+          "lớn",
+          "khỏe"
+        ]
+      }
+    },
+    {
+      "id": "nha-nay-lon",
+      "topic": "home",
+      "concepts": [
+        "demonstrative",
+        "no-copula"
+      ],
+      "text": "Nhà này lớn.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Nhà",
+          "nhà"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "lớn",
+          "lớn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "House"
+        ],
+        [
+          "this"
+        ],
+        [
+          "is big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Này nhà lớn.",
+        "Nhà này là lớn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "lớn",
+          "nhỏ",
+          "khỏe"
+        ]
+      }
+    },
+    {
+      "id": "me-toi-song-o-ay",
+      "topic": "home",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "text": "Mẹ tôi sống ở đây.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mẹ",
+          "mẹ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "sống",
+          "sống"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đây",
+          "đây"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "at"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mẹ tôi ở sống đây.",
+        "Mẹ tôi sống đây ở."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sống",
+          "nói",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "ban-song-o-au",
+      "topic": "home",
+      "concepts": [
+        "question-word",
+        "o"
+      ],
+      "text": "Bạn sống ở đâu?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "sống",
+          "sống"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "live"
+        ],
+        [
+          "at"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn sống đâu ở?",
+        "Bạn ở sống đâu?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sống",
+          "nói",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "toi-song-trong-mot-ngoi-nha-nho",
+      "topic": "home",
+      "concepts": [
+        "classifier",
+        "adjective-after"
+      ],
+      "text": "Tôi sống trong một ngôi nhà nhỏ.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "sống",
+          "sống"
+        ],
+        [
+          "trong",
+          "trong"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "ngôi",
+          "ngôi"
+        ],
+        [
+          "nhà",
+          "nhà"
+        ],
+        [
+          "nhỏ",
+          "nhỏ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "one"
+        ],
+        [
+          "house"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi sống trong một ngôi nhỏ nhà.",
+        "Tôi sống trong ngôi một nhà nhỏ."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ngôi",
+          "quyển",
+          "cốc"
+        ]
+      }
+    },
+    {
+      "id": "ban-i-au",
+      "topic": "out",
+      "concepts": [
+        "di",
+        "question-word"
+      ],
+      "text": "Bạn đi đâu?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "go"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn đâu là đi?",
+        "Bạn đi là đâu?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "đi",
+          "uống",
+          "hiểu"
+        ]
+      }
+    },
+    {
+      "id": "toi-i-en-truong",
+      "topic": "out",
+      "concepts": [
+        "di"
+      ],
+      "text": "Tôi đi đến trường.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "đến",
+          "đến"
+        ],
+        [
+          "trường",
+          "trường"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi đi trường đến.",
+        "Tôi đến đi trường."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "đến",
+          "trong",
+          "của"
+        ]
+      }
+    },
+    {
+      "id": "xin-loi-ga-o-au",
+      "topic": "out",
+      "concepts": [
+        "o",
+        "question-word"
+      ],
+      "chunks": [
+        "xin-loi"
+      ],
+      "text": "Xin lỗi, ga ở đâu?",
+      "means": "Excuse me, where is the train station?",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "lỗi,"
+        ],
+        [
+          "ga",
+          "ga"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "the station"
+        ],
+        [
+          "is"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin lỗi, ga đâu ở?",
+        "Xin lỗi, ga ở và đâu?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ga",
+          "trường",
+          "nhà"
+        ]
+      }
+    },
+    {
+      "id": "me-toi-i-en-thanh-pho",
+      "topic": "out",
+      "concepts": [
+        "di",
+        "possessive"
+      ],
+      "text": "Mẹ tôi đi đến thành phố.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mẹ",
+          "mẹ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "đến",
+          "đến"
+        ],
+        [
+          "thành",
+          "thành phố"
+        ],
+        [
+          "phố",
+          "thành phố"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mẹ tôi đi thành phố đến.",
+        "Tôi mẹ đi đến thành phố."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "đến",
+          "trong",
+          "của"
+        ]
+      }
+    },
+    {
+      "id": "o-to-nay-nho",
+      "topic": "out",
+      "concepts": [
+        "demonstrative",
+        "no-copula"
+      ],
+      "text": "Ô tô này nhỏ.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Ô",
+          "ô tô"
+        ],
+        [
+          "tô",
+          "ô tô"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "nhỏ",
+          "nhỏ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Car"
+        ],
+        [
+          "this"
+        ],
+        [
+          "is small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Này ô tô nhỏ.",
+        "Ô tô này là nhỏ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nhỏ",
+          "lớn",
+          "khỏe"
+        ]
+      }
+    },
+    {
+      "id": "toi-co-o-to",
+      "topic": "out",
+      "concepts": [
+        "co",
+        "pronouns"
+      ],
+      "text": "Tôi có ô tô.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "ô",
+          "ô tô"
+        ],
+        [
+          "tô",
+          "ô tô"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi ô tô có.",
+        "Có tôi ô tô."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "có",
+          "là",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "hom-nay-toi-i-lam",
+      "topic": "plans",
+      "concepts": [
+        "di",
+        "pronouns"
+      ],
+      "text": "Hôm nay tôi đi làm.",
+      "means": "I'm working today.",
+      "words": [
+        [
+          "Hôm",
+          "hôm nay"
+        ],
+        [
+          "nay",
+          "hôm nay"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "làm",
+          "làm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hôm nay tôi làm là đi.",
+        "Hôm nay tôi đi là làm."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "làm",
+          "nói",
+          "uống"
+        ]
+      }
+    },
+    {
+      "id": "ngay-mai-toi-i-en-thanh-pho",
+      "topic": "plans",
+      "concepts": [
+        "di"
+      ],
+      "text": "Ngày mai tôi đi đến thành phố.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Ngày",
+          "ngày mai"
+        ],
+        [
+          "mai",
+          "ngày mai"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "đến",
+          "đến"
+        ],
+        [
+          "thành",
+          "thành phố"
+        ],
+        [
+          "phố",
+          "thành phố"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ngày mai tôi đi thành phố đến.",
+        "Ngày mai tôi đến đi thành phố."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "đến",
+          "trong",
+          "của"
+        ]
+      }
+    },
+    {
+      "id": "bay-gio-toi-phai-i",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "di"
+      ],
+      "text": "Bây giờ tôi phải đi.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Bây",
+          "bây giờ"
+        ],
+        [
+          "giờ",
+          "bây giờ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "phải",
+          "phải"
+        ],
+        [
+          "đi",
+          "đi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bây giờ tôi đi phải.",
+        "Bây giờ tôi phải là đi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "phải",
+          "muốn",
+          "hiểu"
+        ]
+      }
+    },
+    {
+      "id": "hom-nay-toi-khong-the-i",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "modal",
+        "di"
+      ],
+      "text": "Hôm nay tôi không thể đi.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Hôm",
+          "hôm nay"
+        ],
+        [
+          "nay",
+          "hôm nay"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "thể",
+          "có thể"
+        ],
+        [
+          "đi",
+          "đi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "can"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hôm nay tôi thể không đi.",
+        "Hôm nay tôi không đi thể."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "đi",
+          "làm",
+          "nói"
+        ]
+      }
+    },
+    {
+      "id": "ngay-mai-toi-phai-i-lam",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "di"
+      ],
+      "text": "Ngày mai tôi phải đi làm.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Ngày",
+          "ngày mai"
+        ],
+        [
+          "mai",
+          "ngày mai"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "phải",
+          "phải"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "làm",
+          "làm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ngày mai tôi đi phải làm.",
+        "Ngày mai tôi phải là đi làm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "phải",
+          "muốn",
+          "hiểu"
+        ]
+      }
+    },
+    {
+      "id": "cam-on-hen-gap-ban-ngay-mai",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Cảm ơn. Hẹn gặp bạn ngày mai!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Cảm"
+        ],
+        [
+          "ơn."
+        ],
+        [
+          "Hẹn"
+        ],
+        [
+          "gặp"
+        ],
+        [
+          "bạn"
+        ],
+        [
+          "ngày"
+        ],
+        [
+          "mai"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cảm ơn. Hẹn gặp ngày bạn mai!",
+        "Cảm ơn. Hẹn gặp bạn mai ngày!"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "bạn",
+          "tôi",
+          "một"
+        ]
+      }
+    },
+    {
+      "id": "ngay-mai-toi-co-the-i",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "di"
+      ],
+      "text": "Ngày mai tôi có thể đi.",
+      "means": "I can go tomorrow.",
+      "words": [
+        [
+          "Ngày",
+          "ngày mai"
+        ],
+        [
+          "mai",
+          "ngày mai"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có thể"
+        ],
+        [
+          "thể",
+          "có thể"
+        ],
+        [
+          "đi",
+          "đi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "can"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ngày mai tôi thể có đi.",
+        "Ngày mai tôi đi có thể."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "đi",
+          "làm",
+          "nói"
+        ]
+      }
+    },
+    {
+      "id": "ban-ten-la-gi",
+      "topic": "people",
+      "concepts": [
+        "question-word"
+      ],
+      "text": "Bạn tên là gì?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "tên",
+          "tên"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "gì",
+          "gì"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "name"
+        ],
+        [
+          "is"
+        ],
+        [
+          "what",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gì"
+      ],
+      "wrong": [
+        "Gì là tên bạn?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gì",
+          "đâu",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "day-la-me-toi",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Đây là mẹ tôi.",
+      "means": "This is my mom.",
+      "words": [
+        [
+          "Đây",
+          "đây"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "mẹ",
+          "mẹ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "tôi"
+      ],
+      "wrong": [
+        "Đây là tôi mẹ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tôi",
+          "bạn",
+          "nó"
+        ]
+      }
+    },
+    {
+      "id": "me-toi-la-giao-vien",
+      "topic": "people",
+      "concepts": [
+        "la",
+        "possessive"
+      ],
+      "text": "Mẹ tôi là giáo viên.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Mẹ",
+          "mẹ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "giáo",
+          "giáo viên"
+        ],
+        [
+          "viên",
+          "giáo viên"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mom"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tôi"
+      ],
+      "wrong": [
+        "Tôi mẹ là giáo viên."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "là",
+          "có",
+          "ở"
+        ]
+      }
+    },
+    {
+      "id": "bo-toi-khong-phai-la-bac-si",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "la"
+      ],
+      "text": "Bố tôi không phải là bác sĩ.",
+      "means": "My dad isn't a doctor.",
+      "words": [
+        [
+          "Bố",
+          "bố"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "phải",
+          "phải"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "bác",
+          "bác sĩ"
+        ],
+        [
+          "sĩ",
+          "bác sĩ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Dad"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "not"
+        ],
+        [
+          "is"
+        ],
+        [
+          "doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tôi"
+      ],
+      "wrong": [
+        "Bố tôi là không bác sĩ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "không",
+          "có",
+          "rất"
+        ]
+      }
+    },
+    {
+      "id": "toi-la-nguoi-my",
+      "topic": "people",
+      "concepts": [
+        "la",
+        "adjective-after"
+      ],
+      "text": "Tôi là người Mỹ.",
+      "means": "I'm American.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "người",
+          "người"
+        ],
+        [
+          "Mỹ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "person"
+        ],
+        [
+          "America",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mỹ"
+      ],
+      "wrong": [
+        "Tôi là Mỹ người."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "là",
+          "có",
+          "ở"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-anh-chi-em-khong",
+      "topic": "people",
+      "concepts": [
+        "co",
+        "question-khong"
+      ],
+      "text": "Bạn có anh chị em không?",
+      "means": "Do you have any brothers or sisters?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "anh",
+          "anh chị em"
+        ],
+        [
+          "chị",
+          "anh chị em"
+        ],
+        [
+          "em",
+          "anh chị em"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "have"
+        ],
+        [
+          "brothers and sisters"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn có không anh chị em?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "có",
+          "là",
+          "ở"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-gia-dinh-chua",
+      "topic": "people",
+      "concepts": [
+        "chua"
+      ],
+      "text": "Bạn có gia đình chưa?",
+      "means": "Are you married?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "gia",
+          "gia đình"
+        ],
+        [
+          "đình",
+          "gia đình"
+        ],
+        [
+          "chưa",
+          "chưa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "have"
+        ],
+        [
+          "family"
+        ],
+        [
+          "yet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chưa bạn có gia đình?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "chưa",
+          "đâu",
+          "gì"
+        ]
+      }
+    },
+    {
+      "id": "anh-ay-la-ban-cua-toi",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Anh ấy là bạn của tôi.",
+      "means": "He's my friend.",
+      "words": [
+        [
+          "Anh",
+          "anh ấy"
+        ],
+        [
+          "ấy",
+          "anh ấy"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "bạn",
+          "bạn"
+        ],
+        [
+          "của",
+          "của"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "He"
+        ],
+        [
+          "is"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "of me",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "của",
+        "tôi"
+      ],
+      "wrong": [
+        "Anh ấy là của tôi bạn."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "của",
+          "và",
+          "ở"
+        ]
+      }
+    },
+    {
+      "id": "cac-con-toi-dang-ngu",
+      "topic": "people",
+      "concepts": [
+        "plural"
+      ],
+      "text": "Các con tôi đang ngủ.",
+      "means": "My kids are sleeping.",
+      "words": [
+        [
+          "Các",
+          "các"
+        ],
+        [
+          "con",
+          "con"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "đang",
+          "đang"
+        ],
+        [
+          "ngủ",
+          "ngủ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "(plural)"
+        ],
+        [
+          "child"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "(right now)"
+        ],
+        [
+          "sleep"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tôi"
+      ],
+      "wrong": [
+        "Con các tôi đang ngủ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Các",
+          "Một",
+          "Này"
+        ]
+      }
+    },
+    {
+      "id": "em-chao-chi",
+      "topic": "people",
+      "concepts": [
+        "pronouns",
+        "particles"
+      ],
+      "text": "Em chào chị ạ.",
+      "means": "Hello! (to a woman a little older than you)",
+      "words": [
+        [
+          "Em",
+          "em"
+        ],
+        [
+          "chào",
+          "chào"
+        ],
+        [
+          "chị",
+          "chị"
+        ],
+        [
+          "ạ",
+          "ạ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I (younger)"
+        ],
+        [
+          "greet"
+        ],
+        [
+          "older sister"
+        ],
+        [
+          "(politely)"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chị chào em ạ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ạ",
+          "đấy",
+          "thôi"
+        ]
+      }
+    },
+    {
+      "id": "nha-toi-nho-nhung-dep",
+      "topic": "home",
+      "concepts": [
+        "no-copula"
+      ],
+      "text": "Nhà tôi nhỏ nhưng đẹp.",
+      "means": "My house is small but nice.",
+      "words": [
+        [
+          "Nhà",
+          "nhà"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "nhỏ",
+          "nhỏ"
+        ],
+        [
+          "nhưng",
+          "nhưng"
+        ],
+        [
+          "đẹp",
+          "đẹp"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "House"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "small"
+        ],
+        [
+          "but"
+        ],
+        [
+          "nice"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tôi"
+      ],
+      "wrong": [
+        "Nhà tôi ở nhỏ nhưng đẹp."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nhưng",
+          "hoặc",
+          "của"
+        ]
+      }
+    },
+    {
+      "id": "chia-khoa-o-tren-ban",
+      "topic": "home",
+      "concepts": [
+        "o"
+      ],
+      "text": "Chìa khóa ở trên bàn.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Chìa",
+          "chìa khóa"
+        ],
+        [
+          "khóa",
+          "chìa khóa"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "trên",
+          "trên"
+        ],
+        [
+          "bàn",
+          "bàn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Key"
+        ],
+        [
+          "is at"
+        ],
+        [
+          "on"
+        ],
+        [
+          "table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chìa khóa ở là trên bàn."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "trên",
+          "dưới",
+          "trong"
+        ]
+      }
+    },
+    {
+      "id": "trong-tu-lanh-co-trung",
+      "topic": "home",
+      "concepts": [
+        "co"
+      ],
+      "text": "Trong tủ lạnh có trứng.",
+      "means": "There are eggs in the fridge.",
+      "words": [
+        [
+          "Trong",
+          "trong"
+        ],
+        [
+          "tủ",
+          "tủ lạnh"
+        ],
+        [
+          "lạnh",
+          "tủ lạnh"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "trứng",
+          "trứng"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In"
+        ],
+        [
+          "fridge"
+        ],
+        [
+          "there are"
+        ],
+        [
+          "eggs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Trong tủ lạnh ở trứng."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "có",
+          "ở",
+          "đi"
+        ]
+      }
+    },
+    {
+      "id": "bo-me-toi-dang-xem-ti-vi",
+      "topic": "home",
+      "concepts": [
+        "tense-markers"
+      ],
+      "text": "Bố mẹ tôi đang xem ti vi.",
+      "means": "My parents are watching TV.",
+      "words": [
+        [
+          "Bố",
+          "bố mẹ"
+        ],
+        [
+          "mẹ",
+          "bố mẹ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "đang",
+          "đang"
+        ],
+        [
+          "xem",
+          "xem"
+        ],
+        [
+          "ti",
+          "ti vi"
+        ],
+        [
+          "vi",
+          "ti vi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Parents"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "(right now)"
+        ],
+        [
+          "watch"
+        ],
+        [
+          "TV"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tôi"
+      ],
+      "wrong": [
+        "Bố mẹ tôi xem đang ti vi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "đang",
+          "sẽ",
+          "đã"
+        ]
+      }
+    },
+    {
+      "id": "toi-dang-nau-com",
+      "topic": "home",
+      "concepts": [
+        "tense-markers"
+      ],
+      "text": "Tôi đang nấu cơm.",
+      "means": "I'm cooking a meal.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "đang",
+          "đang"
+        ],
+        [
+          "nấu",
+          "nấu"
+        ],
+        [
+          "cơm",
+          "cơm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "(right now)"
+        ],
+        [
+          "cook"
+        ],
+        [
+          "rice"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi nấu đang cơm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "đang",
+          "sẽ",
+          "đã"
+        ]
+      }
+    },
+    {
+      "id": "dien-thoai-cua-toi-o-dau",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "question-word"
+      ],
+      "text": "Điện thoại của tôi ở đâu?",
+      "means": "Where's my phone?",
+      "words": [
+        [
+          "Điện",
+          "điện thoại"
+        ],
+        [
+          "thoại",
+          "điện thoại"
+        ],
+        [
+          "của",
+          "của"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Phone"
+        ],
+        [
+          "of me",
+          true
+        ],
+        [
+          "is at"
+        ],
+        [
+          "where",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "của",
+        "tôi",
+        "đâu"
+      ],
+      "wrong": [
+        "Của tôi điện thoại ở đâu?",
+        "Đâu điện thoại của tôi ở?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "đâu",
+          "gì",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "cai-ao-nay-cua-ai",
+      "topic": "home",
+      "concepts": [
+        "demonstrative",
+        "question-word"
+      ],
+      "text": "Cái áo này của ai?",
+      "means": "Whose shirt is this?",
+      "words": [
+        [
+          "Cái",
+          "cái"
+        ],
+        [
+          "áo",
+          "áo"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "của",
+          "của"
+        ],
+        [
+          "ai",
+          "ai"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "(thing)"
+        ],
+        [
+          "shirt"
+        ],
+        [
+          "this",
+          true
+        ],
+        [
+          "of"
+        ],
+        [
+          "who",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "này",
+        "ai"
+      ],
+      "wrong": [
+        "Cái này áo của ai?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "này",
+          "kia",
+          "gì"
+        ]
+      }
+    },
+    {
+      "id": "nha-o-que",
+      "topic": "home",
+      "concepts": [
+        "classifier",
+        "adjective-after"
+      ],
+      "text": "Bố mẹ tôi có một ngôi nhà nhỏ ở quê.",
+      "means": "My parents have a small house in the countryside.",
+      "words": [
+        [
+          "Bố",
+          "bố mẹ"
+        ],
+        [
+          "mẹ",
+          "bố mẹ"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "ngôi",
+          "ngôi"
+        ],
+        [
+          "nhà",
+          "nhà"
+        ],
+        [
+          "nhỏ",
+          "nhỏ"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "quê",
+          "quê"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Parents"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "(building)"
+        ],
+        [
+          "house"
+        ],
+        [
+          "small",
+          true
+        ],
+        [
+          "in"
+        ],
+        [
+          "home village"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tôi",
+        "nhỏ"
+      ],
+      "wrong": [
+        "Bố mẹ tôi có một nhỏ ngôi nhà ở quê."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ngôi",
+          "con",
+          "quyển"
+        ]
+      }
+    },
+    {
+      "id": "toi-co-hai-con-meo",
+      "topic": "home",
+      "concepts": [
+        "classifier"
+      ],
+      "text": "Tôi có hai con mèo.",
+      "means": "I have two cats.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "hai",
+          "hai"
+        ],
+        [
+          "con",
+          "con"
+        ],
+        [
+          "mèo",
+          "mèo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "two"
+        ],
+        [
+          "(animal)"
+        ],
+        [
+          "cat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi có con hai mèo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "con",
+          "quyển",
+          "cái"
+        ]
+      }
+    },
+    {
+      "id": "nhung-quyen-sach-nay",
+      "topic": "home",
+      "concepts": [
+        "plural"
+      ],
+      "text": "Những quyển sách này là của tôi.",
+      "means": "These books are mine.",
+      "words": [
+        [
+          "Những",
+          "những"
+        ],
+        [
+          "quyển",
+          "quyển"
+        ],
+        [
+          "sách",
+          "sách"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "là",
+          "là"
+        ],
+        [
+          "của",
+          "của"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "(plural)"
+        ],
+        [
+          "(volume)"
+        ],
+        [
+          "book"
+        ],
+        [
+          "this",
+          true
+        ],
+        [
+          "are"
+        ],
+        [
+          "of me"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "này"
+      ],
+      "wrong": [
+        "Quyển sách những này là của tôi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Những",
+          "Một",
+          "Của"
+        ]
+      }
+    },
+    {
+      "id": "toi-muon-an-pho",
+      "topic": "food",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Tôi muốn ăn phở.",
+      "means": "I'd like some pho.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "muốn",
+          "muốn"
+        ],
+        [
+          "ăn",
+          "ăn"
+        ],
+        [
+          "phở",
+          "phở"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "pho"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi ăn muốn phở."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "muốn",
+          "phải",
+          "là"
+        ]
+      }
+    },
+    {
+      "id": "ca-phe-sua-da",
+      "topic": "food",
+      "concepts": [
+        "adjective-after",
+        "classifier"
+      ],
+      "text": "Cho tôi một cốc cà phê sữa đá.",
+      "means": "An iced coffee with milk, please.",
+      "words": [
+        [
+          "Cho",
+          "cho"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "một",
+          "một"
+        ],
+        [
+          "cốc",
+          "cốc"
+        ],
+        [
+          "cà",
+          "cà phê"
+        ],
+        [
+          "phê",
+          "cà phê"
+        ],
+        [
+          "sữa",
+          "sữa"
+        ],
+        [
+          "đá",
+          "đá"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "glass"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "milk",
+          true
+        ],
+        [
+          "ice",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "sữa",
+        "đá"
+      ],
+      "wrong": [
+        "Cho tôi một cốc đá sữa cà phê."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "cốc",
+          "con",
+          "quyển"
+        ]
+      }
+    },
+    {
+      "id": "pho-o-day-ngon-lam",
+      "topic": "food",
+      "concepts": [
+        "no-copula"
+      ],
+      "text": "Phở ở đây ngon lắm.",
+      "means": "The pho here is really good.",
+      "words": [
+        [
+          "Phở",
+          "phở"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đây",
+          "đây"
+        ],
+        [
+          "ngon",
+          "ngon"
+        ],
+        [
+          "lắm",
+          "lắm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Pho"
+        ],
+        [
+          "at"
+        ],
+        [
+          "here"
+        ],
+        [
+          "tasty"
+        ],
+        [
+          "very",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "lắm"
+      ],
+      "wrong": [
+        "Phở ở đây ở ngon lắm."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "lắm",
+          "là",
+          "có"
+        ]
+      }
+    },
+    {
+      "id": "mon-nay-cay-qua",
+      "topic": "food",
+      "concepts": [
+        "demonstrative",
+        "no-copula"
+      ],
+      "text": "Món này cay quá!",
+      "means": "This dish is so spicy!",
+      "words": [
+        [
+          "Món",
+          "món"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "cay",
+          "cay"
+        ],
+        [
+          "quá",
+          "quá"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Dish"
+        ],
+        [
+          "this",
+          true
+        ],
+        [
+          "spicy"
+        ],
+        [
+          "so",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "này",
+        "quá"
+      ],
+      "wrong": [
+        "Món này ở cay quá!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "này",
+          "kia",
+          "gì"
+        ]
+      }
+    },
+    {
+      "id": "toi-khong-an-thit",
+      "topic": "food",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Tôi không ăn thịt.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "ăn",
+          "ăn"
+        ],
+        [
+          "thịt",
+          "thịt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "meat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi ăn không thịt."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "không",
+          "đã",
+          "sẽ"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-thich-pho-khong",
+      "topic": "food",
+      "concepts": [
+        "question-khong"
+      ],
+      "text": "Bạn có thích phở không?",
+      "means": "Do you like pho?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "thích",
+          "thích"
+        ],
+        [
+          "phở",
+          "phở"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "do"
+        ],
+        [
+          "like"
+        ],
+        [
+          "pho"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn không thích phở có?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "không",
+          "đâu",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "ban-co-khat-khong",
+      "topic": "food",
+      "concepts": [
+        "question-khong",
+        "no-copula"
+      ],
+      "text": "Bạn có khát không?",
+      "means": "Are you thirsty?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "khát",
+          "khát"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "do"
+        ],
+        [
+          "thirsty"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn có là khát không?",
+        "Bạn không khát có?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "không",
+          "đâu",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "ban-an-com-chua",
+      "topic": "food",
+      "concepts": [
+        "chua"
+      ],
+      "text": "Bạn ăn cơm chưa?",
+      "means": "Have you eaten yet?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "ăn",
+          "ăn"
+        ],
+        [
+          "cơm",
+          "cơm"
+        ],
+        [
+          "chưa",
+          "chưa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "rice"
+        ],
+        [
+          "yet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chưa bạn ăn cơm?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "chưa",
+          "đâu",
+          "gì"
+        ]
+      }
+    },
+    {
+      "id": "toi-chua-an-sang",
+      "topic": "food",
+      "concepts": [
+        "chua"
+      ],
+      "text": "Tôi chưa ăn sáng.",
+      "means": "I haven't had breakfast yet.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "chưa",
+          "chưa"
+        ],
+        [
+          "ăn",
+          "ăn"
+        ],
+        [
+          "sáng",
+          "sáng"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not yet"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "morning"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi không chưa ăn sáng."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "chưa",
+          "đã",
+          "sẽ"
+        ]
+      }
+    },
+    {
+      "id": "toi-da-an-sang-roi",
+      "topic": "food",
+      "concepts": [
+        "tense-markers"
+      ],
+      "text": "Tôi đã ăn sáng rồi.",
+      "means": "I've already had breakfast.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "đã",
+          "đã"
+        ],
+        [
+          "ăn",
+          "ăn"
+        ],
+        [
+          "sáng",
+          "sáng"
+        ],
+        [
+          "rồi",
+          "rồi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "did"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "morning"
+        ],
+        [
+          "already"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi rồi đã ăn sáng."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "đã",
+          "đang",
+          "sẽ"
+        ]
+      }
+    },
+    {
+      "id": "chi-oi-xem-thuc-don",
+      "topic": "food",
+      "concepts": [
+        "pronouns"
+      ],
+      "text": "Chị ơi, cho em xem thực đơn.",
+      "means": "Excuse me, could I see the menu? (to a woman a little older than you)",
+      "words": [
+        [
+          "Chị",
+          "chị"
+        ],
+        [
+          "ơi,",
+          "ơi"
+        ],
+        [
+          "cho",
+          "cho"
+        ],
+        [
+          "em",
+          "em"
+        ],
+        [
+          "xem",
+          "xem"
+        ],
+        [
+          "thực",
+          "thực đơn"
+        ],
+        [
+          "đơn",
+          "thực đơn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sister"
+        ],
+        [
+          "hey"
+        ],
+        [
+          "let"
+        ],
+        [
+          "me (younger)"
+        ],
+        [
+          "see"
+        ],
+        [
+          "menu"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Em ơi, cho chị xem thực đơn."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "em",
+          "chị",
+          "anh"
+        ]
+      }
+    },
+    {
+      "id": "cac-ban-oi-an-com",
+      "topic": "food",
+      "concepts": [
+        "plural",
+        "particles"
+      ],
+      "text": "Các bạn ơi, ăn cơm thôi!",
+      "means": "Let's eat, everyone!",
+      "words": [
+        [
+          "Các",
+          "các"
+        ],
+        [
+          "bạn",
+          "bạn"
+        ],
+        [
+          "ơi,",
+          "ơi"
+        ],
+        [
+          "ăn",
+          "ăn"
+        ],
+        [
+          "cơm",
+          "cơm"
+        ],
+        [
+          "thôi",
+          "thôi"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "(plural)"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "hey"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "rice"
+        ],
+        [
+          "let's",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "thôi"
+      ],
+      "wrong": [
+        "Bạn các ơi, ăn cơm thôi!"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "thôi",
+          "ạ",
+          "đấy"
+        ]
+      }
+    },
+    {
+      "id": "nha-ve-sinh-o-dau",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "o"
+      ],
+      "chunks": [
+        "cho-em-hoi"
+      ],
+      "text": "Cho em hỏi, nhà vệ sinh ở đâu ạ?",
+      "means": "Excuse me, where's the restroom? (to someone older than you)",
+      "words": [
+        [
+          "Cho"
+        ],
+        [
+          "em"
+        ],
+        [
+          "hỏi,"
+        ],
+        [
+          "nhà",
+          "nhà vệ sinh"
+        ],
+        [
+          "vệ",
+          "nhà vệ sinh"
+        ],
+        [
+          "sinh",
+          "nhà vệ sinh"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ],
+        [
+          "ạ",
+          "ạ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Let"
+        ],
+        [
+          "me (younger)"
+        ],
+        [
+          "ask"
+        ],
+        [
+          "restroom"
+        ],
+        [
+          "is at"
+        ],
+        [
+          "where",
+          true
+        ],
+        [
+          "(politely)"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "đâu"
+      ],
+      "wrong": [
+        "Cho em hỏi, nhà vệ sinh đâu ở ạ?"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "ở",
+          "đi",
+          "của"
+        ]
+      }
+    },
+    {
+      "id": "toi-song-o-ha-noi",
+      "topic": "out",
+      "concepts": [
+        "o"
+      ],
+      "text": "Tôi sống ở Hà Nội.",
+      "means": "I live in Hanoi.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "sống",
+          "sống"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "Hà"
+        ],
+        [
+          "Nội"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "Hanoi"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi ở sống Hà Nội."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ở",
+          "đi",
+          "là"
+        ]
+      }
+    },
+    {
+      "id": "ga-tau-o-dau",
+      "topic": "out",
+      "concepts": [
+        "pronouns",
+        "question-word"
+      ],
+      "text": "Anh ơi, ga tàu ở đâu ạ?",
+      "means": "Excuse me, where's the train station? (to a man a little older than you)",
+      "words": [
+        [
+          "Anh",
+          "anh"
+        ],
+        [
+          "ơi,",
+          "ơi"
+        ],
+        [
+          "ga",
+          "ga"
+        ],
+        [
+          "tàu",
+          "tàu"
+        ],
+        [
+          "ở",
+          "ở"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ],
+        [
+          "ạ",
+          "ạ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Brother"
+        ],
+        [
+          "hey"
+        ],
+        [
+          "station"
+        ],
+        [
+          "train",
+          true
+        ],
+        [
+          "is at"
+        ],
+        [
+          "where",
+          true
+        ],
+        [
+          "(politely)"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tàu",
+        "đâu"
+      ],
+      "wrong": [
+        "Anh ơi, đâu ga tàu ở ạ?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Anh",
+          "Em",
+          "Tôi"
+        ]
+      }
+    },
+    {
+      "id": "di-lam-bang-xe-may",
+      "topic": "out",
+      "concepts": [
+        "di"
+      ],
+      "text": "Tôi đi làm bằng xe máy.",
+      "means": "I go to work by motorbike.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "làm",
+          "làm"
+        ],
+        [
+          "bằng",
+          "bằng"
+        ],
+        [
+          "xe",
+          "xe máy"
+        ],
+        [
+          "máy",
+          "xe máy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "work"
+        ],
+        [
+          "by"
+        ],
+        [
+          "motorbike"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi đi bằng xe máy làm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "đi",
+          "ở",
+          "là"
+        ]
+      }
+    },
+    {
+      "id": "ngay-mai-di-da-nang",
+      "topic": "out",
+      "concepts": [
+        "di"
+      ],
+      "text": "Ngày mai tôi đi Đà Nẵng.",
+      "means": "I'm going to Da Nang tomorrow.",
+      "words": [
+        [
+          "Ngày",
+          "ngày mai"
+        ],
+        [
+          "mai",
+          "ngày mai"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "Đà"
+        ],
+        [
+          "Nẵng"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "Da Nang"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ngày mai tôi Đà Nẵng đi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "đi",
+          "là",
+          "có"
+        ]
+      }
+    },
+    {
+      "id": "ban-di-dau-day",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "particles"
+      ],
+      "text": "Bạn đi đâu đấy?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "đâu",
+          "đâu"
+        ],
+        [
+          "đấy",
+          "đấy"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "go"
+        ],
+        [
+          "where",
+          true
+        ],
+        [
+          "(then)"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "đâu"
+      ],
+      "wrong": [
+        "Đâu bạn đi đấy?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "đấy",
+          "nhé",
+          "thôi"
+        ]
+      }
+    },
+    {
+      "id": "cai-nay-bao-nhieu-tien",
+      "topic": "out",
+      "concepts": [
+        "demonstrative"
+      ],
+      "chunks": [
+        "bao-nhieu-tien"
+      ],
+      "text": "Cái này bao nhiêu tiền?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Cái",
+          "cái"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "bao"
+        ],
+        [
+          "nhiêu"
+        ],
+        [
+          "tiền"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "(thing)"
+        ],
+        [
+          "this",
+          true
+        ],
+        [
+          "how much",
+          true
+        ],
+        [
+          "money",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "này",
+        "bao",
+        "nhiêu",
+        "tiền"
+      ],
+      "wrong": [
+        "Này cái bao nhiêu tiền?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "này",
+          "gì",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "toi-ngoi-day-duoc-khong",
+      "topic": "out",
+      "concepts": [
+        "question-khong"
+      ],
+      "text": "Tôi có thể ngồi đây không?",
+      "means": "Can I sit here?",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "có",
+          "có thể"
+        ],
+        [
+          "thể",
+          "có thể"
+        ],
+        [
+          "ngồi",
+          "ngồi"
+        ],
+        [
+          "đây",
+          "đây"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "can"
+        ],
+        [
+          "sit"
+        ],
+        [
+          "here"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tôi có thể ngồi đây có?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "không",
+          "đâu",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "noi-cham-hon",
+      "topic": "out",
+      "concepts": [
+        "modal",
+        "question-khong"
+      ],
+      "text": "Bạn có thể nói chậm hơn không?",
+      "means": "Could you speak more slowly?",
+      "words": [
+        [
+          "Bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có thể"
+        ],
+        [
+          "thể",
+          "có thể"
+        ],
+        [
+          "nói",
+          "nói"
+        ],
+        [
+          "chậm",
+          "chậm"
+        ],
+        [
+          "hơn",
+          "hơn"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "can"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "slow"
+        ],
+        [
+          "more"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bạn nói có thể chậm hơn không?"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "không",
+          "đâu",
+          "ai"
+        ]
+      }
+    },
+    {
+      "id": "xin-loi-toi-khong-hieu",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "chunks": [
+        "xin-loi"
+      ],
+      "text": "Xin lỗi, tôi không hiểu.",
+      "means": "Sorry, I don't understand.",
+      "words": [
+        [
+          "Xin"
+        ],
+        [
+          "lỗi,"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "hiểu",
+          "hiểu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sorry"
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xin lỗi, không tôi hiểu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "không",
+          "đã",
+          "sẽ"
+        ]
+      }
+    },
+    {
+      "id": "gan-day-co-sieu-thi",
+      "topic": "out",
+      "concepts": [
+        "co"
+      ],
+      "text": "Ở gần đây có siêu thị không?",
+      "means": "Is there a supermarket near here?",
+      "words": [
+        [
+          "Ở",
+          "ở"
+        ],
+        [
+          "gần",
+          "gần"
+        ],
+        [
+          "đây",
+          "đây"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "siêu",
+          "siêu thị"
+        ],
+        [
+          "thị",
+          "siêu thị"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "At"
+        ],
+        [
+          "near"
+        ],
+        [
+          "here"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "supermarket"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Có ở gần đây siêu thị không?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "có",
+          "là",
+          "đi"
+        ]
+      }
+    },
+    {
+      "id": "ngay-mai-toi-se-goi",
+      "topic": "plans",
+      "concepts": [
+        "tense-markers"
+      ],
+      "text": "Ngày mai tôi sẽ gọi cho bạn.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Ngày",
+          "ngày mai"
+        ],
+        [
+          "mai",
+          "ngày mai"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "sẽ",
+          "sẽ"
+        ],
+        [
+          "gọi",
+          "gọi"
+        ],
+        [
+          "cho",
+          "cho"
+        ],
+        [
+          "bạn",
+          "bạn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "will"
+        ],
+        [
+          "call"
+        ],
+        [
+          "for"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ngày mai tôi gọi sẽ cho bạn."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "sẽ",
+          "đã",
+          "đang"
+        ]
+      }
+    },
+    {
+      "id": "cuoi-tuan-nay-lam-gi",
+      "topic": "plans",
+      "concepts": [
+        "demonstrative",
+        "question-word"
+      ],
+      "text": "Cuối tuần này bạn làm gì?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Cuối",
+          "cuối tuần"
+        ],
+        [
+          "tuần",
+          "cuối tuần"
+        ],
+        [
+          "này",
+          "này"
+        ],
+        [
+          "bạn",
+          "bạn"
+        ],
+        [
+          "làm",
+          "làm"
+        ],
+        [
+          "gì",
+          "gì"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Weekend"
+        ],
+        [
+          "this",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "do"
+        ],
+        [
+          "what",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "này",
+        "gì"
+      ],
+      "wrong": [
+        "Cuối tuần này gì bạn làm?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "này",
+          "ai",
+          "của"
+        ]
+      }
+    },
+    {
+      "id": "hom-nay-troi-nong-qua",
+      "topic": "plans",
+      "concepts": [
+        "no-copula"
+      ],
+      "text": "Hôm nay trời nóng quá.",
+      "means": "It's so hot today.",
+      "words": [
+        [
+          "Hôm",
+          "hôm nay"
+        ],
+        [
+          "nay",
+          "hôm nay"
+        ],
+        [
+          "trời",
+          "trời"
+        ],
+        [
+          "nóng",
+          "nóng"
+        ],
+        [
+          "quá",
+          "quá"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "sky"
+        ],
+        [
+          "hot"
+        ],
+        [
+          "so",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "quá"
+      ],
+      "wrong": [
+        "Hôm nay trời ở nóng quá."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nóng",
+          "là",
+          "có"
+        ]
+      }
+    },
+    {
+      "id": "hom-nay-toi-khong-ranh",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "no-copula"
+      ],
+      "text": "Hôm nay tôi không rảnh.",
+      "means": "I'm not free today.",
+      "words": [
+        [
+          "Hôm",
+          "hôm nay"
+        ],
+        [
+          "nay",
+          "hôm nay"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "không",
+          "không"
+        ],
+        [
+          "rảnh",
+          "rảnh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "free"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hôm nay tôi không là rảnh.",
+        "Hôm nay không tôi rảnh."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "không",
+          "là",
+          "có"
+        ]
+      }
+    },
+    {
+      "id": "toi-nay-ban-co-ranh-khong",
+      "topic": "plans",
+      "concepts": [
+        "question-khong",
+        "no-copula"
+      ],
+      "text": "Tối nay bạn có rảnh không?",
+      "means": "Are you free tonight?",
+      "words": [
+        [
+          "Tối",
+          "tối nay"
+        ],
+        [
+          "nay",
+          "tối nay"
+        ],
+        [
+          "bạn",
+          "bạn"
+        ],
+        [
+          "có",
+          "có"
+        ],
+        [
+          "rảnh",
+          "rảnh"
+        ],
+        [
+          "không",
+          "không"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Tonight"
+        ],
+        [
+          "you"
+        ],
+        [
+          "do"
+        ],
+        [
+          "free"
+        ],
+        [
+          "or not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tối nay bạn không rảnh có?",
+        "Tối nay bạn là rảnh không?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "có",
+          "là",
+          "đi"
+        ]
+      }
+    },
+    {
+      "id": "toi-muon-hoc-tieng-viet",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Tôi muốn học tiếng Việt.",
+      "means": "I want to learn Vietnamese.",
+      "words": [
+        [
+          "Tôi",
+          "tôi"
+        ],
+        [
+          "muốn",
+          "muốn"
+        ],
+        [
+          "học",
+          "học"
+        ],
+        [
+          "tiếng",
+          "tiếng"
+        ],
+        [
+          "Việt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "learn"
+        ],
+        [
+          "language"
+        ],
+        [
+          "Viet",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Việt"
+      ],
+      "wrong": [
+        "Tôi học muốn tiếng Việt."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "muốn",
+          "là",
+          "của"
+        ]
+      }
+    },
+    {
+      "id": "ngay-mai-phai-day-som",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Ngày mai tôi phải dậy sớm.",
+      "means": "I have to get up early tomorrow.",
+      "words": [
+        [
+          "Ngày",
+          "ngày mai"
+        ],
+        [
+          "mai",
+          "ngày mai"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "phải",
+          "phải"
+        ],
+        [
+          "dậy",
+          "dậy"
+        ],
+        [
+          "sớm",
+          "sớm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "must"
+        ],
+        [
+          "get up"
+        ],
+        [
+          "early"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ngày mai phải tôi dậy sớm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "phải",
+          "muốn",
+          "đang"
+        ]
+      }
+    },
+    {
+      "id": "phim-bat-dau-chua",
+      "topic": "plans",
+      "concepts": [
+        "chua"
+      ],
+      "text": "Phim bắt đầu chưa?",
+      "means": "Has the movie started yet?",
+      "words": [
+        [
+          "Phim",
+          "phim"
+        ],
+        [
+          "bắt",
+          "bắt đầu"
+        ],
+        [
+          "đầu",
+          "bắt đầu"
+        ],
+        [
+          "chưa",
+          "chưa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Movie"
+        ],
+        [
+          "start"
+        ],
+        [
+          "yet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chưa phim bắt đầu?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "chưa",
+          "đâu",
+          "gì"
+        ]
+      }
+    },
+    {
+      "id": "nam-sau-di-viet-nam",
+      "topic": "plans",
+      "concepts": [
+        "tense-markers"
+      ],
+      "text": "Năm sau tôi sẽ đi Việt Nam.",
+      "means": "I'm going to Vietnam next year.",
+      "words": [
+        [
+          "Năm",
+          "năm"
+        ],
+        [
+          "sau",
+          "sau"
+        ],
+        [
+          "tôi",
+          "tôi"
+        ],
+        [
+          "sẽ",
+          "sẽ"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "Việt"
+        ],
+        [
+          "Nam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Year"
+        ],
+        [
+          "next",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "will"
+        ],
+        [
+          "go"
+        ],
+        [
+          "Vietnam"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "sau"
+      ],
+      "wrong": [
+        "Năm sau tôi đi sẽ Việt Nam."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "sẽ",
+          "đã",
+          "đang"
+        ]
+      }
+    },
+    {
+      "id": "cuoi-tuan-di-bien",
+      "topic": "plans",
+      "concepts": [
+        "di",
+        "particles"
+      ],
+      "text": "Cuối tuần chúng ta đi biển nhé?",
+      "means": "Shall we go to the beach this weekend?",
+      "words": [
+        [
+          "Cuối",
+          "cuối tuần"
+        ],
+        [
+          "tuần",
+          "cuối tuần"
+        ],
+        [
+          "chúng",
+          "chúng ta"
+        ],
+        [
+          "ta",
+          "chúng ta"
+        ],
+        [
+          "đi",
+          "đi"
+        ],
+        [
+          "biển",
+          "biển"
+        ],
+        [
+          "nhé",
+          "nhé"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Weekend"
+        ],
+        [
+          "we"
+        ],
+        [
+          "go"
+        ],
+        [
+          "beach"
+        ],
+        [
+          "okay"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cuối tuần chúng ta biển đi nhé?"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "nhé",
+          "ạ",
+          "đấy"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "cà phê",
+          "forms": [
+            "cà",
+            "phê"
+          ],
+          "picture": "coffee",
+          "means": "cà = coffee; phê = coffee"
+        },
+        {
+          "lemma": "trà",
+          "forms": [
+            "trà"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "nước",
+          "forms": [
+            "nước"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "tôi",
+          "forms": [
+            "tôi"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "uống",
+          "forms": [
+            "uống"
+          ],
+          "picture": "drink",
+          "means": "to drink"
+        },
+        {
+          "lemma": "và",
+          "forms": [
+            "và"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "pronouns",
+        "line": "Vietnamese says you and I with family words, by age: chị (older sister) for an older woman, anh (older brother) for an older man, em (younger sibling) for yourself when they're older: Chị ơi, cho em hỏi (sister, let younger-me ask)."
+      },
+      "items": [
+        "uong-nuoc",
+        "toi-uong-nuoc",
+        "toi-uong-ca-phe",
+        "toi-uong-tra",
+        "toi-uong-ca-phe-va-tra",
+        "toi-uong-tra-va-nuoc",
+        "toi-uong-nuoc-va-ca-phe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "một",
+          "forms": [
+            "một"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "sữa",
+          "forms": [
+            "sữa"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        },
+        {
+          "lemma": "cốc",
+          "forms": [
+            "cốc"
+          ],
+          "means": "cup, glass"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please-give-me",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "toi-uong-sua",
+        "cho-toi-ca-phe",
+        "cho-toi-mot-coc-ca-phe",
+        "xin-chao-cho-toi-mot-coc-tra",
+        "cho-toi-mot-coc-tra-va-mot-coc-nuoc",
+        "mot-coc-ca-phe-cam-on",
+        "xin-chao-cho-toi-mot-coc-ca-phe"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "không",
+          "forms": [
+            "không"
+          ],
+          "means": "no, not"
+        },
+        {
+          "lemma": "khỏe",
+          "forms": [
+            "khỏe"
+          ],
+          "means": "well, healthy"
+        },
+        {
+          "lemma": "có",
+          "forms": [
+            "có"
+          ],
+          "means": "have; affirmative marker ('do' for emphasis); used in có … không yes/no questions"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes"
+      ],
+      "concept": {
+        "pattern": "no-copula",
+        "line": "Before a describing word, Vietnamese uses no là: Tôi mệt (I tired), Nhà tôi nhỏ (house my small)."
+      },
+      "items": [
+        "toi-khoe-cam-on",
+        "vang-cam-on",
+        "xin-chao-ban-co-khoe-khong",
+        "khong-cam-on",
+        "vang-cam-on-tam-biet",
+        "khong-cam-on-tam-biet",
+        "vang-toi-co-uong-tra"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "bạn",
+          "forms": [
+            "bạn"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "phải",
+          "forms": [
+            "phải"
+          ],
+          "means": "right, must"
+        },
+        {
+          "lemma": "giáo viên",
+          "forms": [
+            "giáo",
+            "viên"
+          ],
+          "means": "giáo = teacher; viên = teacher"
+        },
+        {
+          "lemma": "sinh viên",
+          "forms": [
+            "sinh",
+            "viên"
+          ],
+          "means": "sinh = student; viên = student"
+        },
+        {
+          "lemma": "là",
+          "forms": [
+            "là"
+          ],
+          "means": "be (am, is, are before a noun or noun phrase)"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "toi-la-giao-vien",
+        "ban-la-sinh-vien",
+        "toi-khong-phai-la-giao-vien",
+        "xin-chao-ban-ten-la-gi",
+        "xin-chao-rat-vui-uoc-gap-ban",
+        "ban-co-phai-la-giao-vien-khong"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mẹ",
+          "forms": [
+            "mẹ"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "bố",
+          "forms": [
+            "bố"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "anh",
+          "forms": [
+            "anh"
+          ],
+          "picture": "brother",
+          "means": "older brother"
+        },
+        {
+          "lemma": "chị",
+          "forms": [
+            "chị"
+          ],
+          "picture": "sister",
+          "means": "older sister"
+        },
+        {
+          "lemma": "của",
+          "forms": [
+            "của"
+          ],
+          "means": "of, belonging to"
+        },
+        {
+          "lemma": "đây",
+          "forms": [
+            "đây"
+          ],
+          "means": "this, here"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "The owner comes after the thing, often with nothing between: mẹ tôi (mom my), and của (of) can stand between them: nhà của tôi (house of me)."
+      },
+      "items": [
+        "day-la-me-toi",
+        "ay-la-bo-toi",
+        "bo-toi-la-giao-vien",
+        "anh-toi-la-sinh-vien",
+        "ay-la-chi-toi",
+        "me-toi-la-giao-vien",
+        "ay-la-ca-phe-cua-toi"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "có",
+          "forms": [
+            "có"
+          ],
+          "means": "to have"
+        },
+        {
+          "lemma": "bác sĩ",
+          "forms": [
+            "bác",
+            "sĩ"
+          ],
+          "picture": "doctor",
+          "means": "bác = doctor; sĩ = doctor"
+        },
+        {
+          "lemma": "chìa khóa",
+          "forms": [
+            "chìa",
+            "khóa"
+          ],
+          "picture": "key",
+          "means": "chìa = key; khóa = key"
+        },
+        {
+          "lemma": "điện thoại",
+          "forms": [
+            "điện",
+            "thoại"
+          ],
+          "picture": "phone",
+          "means": "điện = phone; thoại = phone"
+        },
+        {
+          "lemma": "sách",
+          "forms": [
+            "sách"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "quyển",
+          "forms": [
+            "quyển"
+          ],
+          "means": "book classifier"
+        },
+        {
+          "lemma": "cái",
+          "forms": [
+            "cái"
+          ],
+          "means": "object classifier"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "toi-co-ien-thoai",
+        "ban-co-chia-khoa-khong",
+        "toi-co-mot-cai-chia-khoa",
+        "toi-co-mot-quyen-sach",
+        "toi-co-mot-anh-va-mot-chi",
+        "chi-toi-la-bac-si",
+        "bo-toi-khong-phai-la-bac-si"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "đâu",
+          "forms": [
+            "đâu"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "ở",
+          "forms": [
+            "ở"
+          ],
+          "means": "to be somewhere"
+        },
+        {
+          "lemma": "đó",
+          "forms": [
+            "đó"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "nhà vệ sinh",
+          "forms": [
+            "nhà",
+            "vệ",
+            "sinh"
+          ],
+          "means": "nhà = bathroom; vệ = bathroom; sinh = bathroom"
+        },
+        {
+          "lemma": "ạ",
+          "forms": [
+            "ạ"
+          ],
+          "means": "polite particle"
+        }
+      ],
+      "phrases": [
+        "xin-loi",
+        "cho-em-hoi"
+      ],
+      "concept": {
+        "pattern": "o",
+        "line": "ở means at or in, and on its own it means to be somewhere: ở nhà (at home), Chìa khóa ở trên bàn (key is-at on table)."
+      },
+      "items": [
+        "chi-toi-o-ay",
+        "chia-khoa-o-o",
+        "chia-khoa-cua-toi-o-au",
+        "xin-loi-nha-ve-sinh-o-au",
+        "ien-thoai-cua-toi-o-ay",
+        "me-toi-o-au",
+        "dien-thoai-cua-toi-o-dau",
+        "nha-ve-sinh-o-dau"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "hai",
+          "forms": [
+            "hai"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "ba",
+          "forms": [
+            "ba"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "tiền",
+          "forms": [
+            "tiền"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "này",
+          "forms": [
+            "này"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [
+        "bao-nhieu-tien",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "cho-toi-hai-coc-ca-phe",
+        "toi-co-ba-quyen-sach",
+        "toi-khong-co-tien",
+        "cai-nay-bao-nhieu-tien",
+        "xin-loi-cai-nay-bao-nhieu-tien",
+        "xin-chao-cho-toi-tinh-tien",
+        "cho-toi-mot-quyen-sach"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "nói",
+          "forms": [
+            "nói"
+          ],
+          "means": "to speak"
+        },
+        {
+          "lemma": "tiếng anh",
+          "forms": [
+            "tiếng",
+            "Anh"
+          ],
+          "means": "tiếng = English; Anh = English"
+        },
+        {
+          "lemma": "tiếng việt",
+          "forms": [
+            "tiếng",
+            "Việt"
+          ],
+          "means": "tiếng = Vietnamese; Việt = Vietnamese"
+        },
+        {
+          "lemma": "hiểu",
+          "forms": [
+            "hiểu"
+          ],
+          "means": "to understand"
+        },
+        {
+          "lemma": "một chút",
+          "forms": [
+            "một",
+            "chút"
+          ],
+          "means": "một = a little; chút = a little"
+        },
+        {
+          "lemma": "muốn",
+          "forms": [
+            "muốn"
+          ],
+          "means": "to want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "classifier",
+        "line": "After a number or một (a), a counting word comes before the noun: con for animals, quyển for books, ngôi for houses: hai con mèo (two cats)."
+      },
+      "items": [
+        "toi-khong-hieu",
+        "ban-co-hieu-khong",
+        "ban-co-noi-tieng-anh-khong",
+        "toi-noi-mot-chut-tieng-viet",
+        "toi-muon-mot-coc-ca-phe",
+        "toi-muon-nuoc-cam-on",
+        "xin-loi-toi-khong-hieu"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "nhà",
+          "forms": [
+            "nhà"
+          ],
+          "picture": "house",
+          "means": "house, home"
+        },
+        {
+          "lemma": "phòng",
+          "forms": [
+            "phòng"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "lớn",
+          "forms": [
+            "lớn"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "nhỏ",
+          "forms": [
+            "nhỏ"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "sống",
+          "forms": [
+            "sống"
+          ],
+          "means": "to live"
+        },
+        {
+          "lemma": "trong",
+          "forms": [
+            "trong"
+          ],
+          "picture": "in",
+          "means": "in, inside"
+        },
+        {
+          "lemma": "ngôi",
+          "forms": [
+            "ngôi"
+          ],
+          "means": "house classifier"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "phong-toi-nho",
+        "nha-nay-lon",
+        "me-toi-song-o-ay",
+        "ban-song-o-au",
+        "toi-song-trong-mot-ngoi-nha-nho"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "đi",
+          "forms": [
+            "đi"
+          ],
+          "means": "to go"
+        },
+        {
+          "lemma": "đến",
+          "forms": [
+            "đến"
+          ],
+          "means": "to, towards"
+        },
+        {
+          "lemma": "trường",
+          "forms": [
+            "trường"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "thành phố",
+          "forms": [
+            "thành",
+            "phố"
+          ],
+          "picture": "city",
+          "means": "thành = city; phố = city"
+        },
+        {
+          "lemma": "ga",
+          "forms": [
+            "ga"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "ô tô",
+          "forms": [
+            "ô",
+            "tô"
+          ],
+          "picture": "car",
+          "means": "ô = car; tô = car"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question-word",
+        "line": "A question word sits where its answer would go, often at the end: Bạn tên là gì?"
+      },
+      "items": [
+        "ban-i-au",
+        "toi-i-en-truong",
+        "xin-loi-ga-o-au",
+        "me-toi-i-en-thanh-pho",
+        "o-to-nay-nho",
+        "toi-co-o-to"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "hôm nay",
+          "forms": [
+            "hôm",
+            "nay"
+          ],
+          "means": "hôm = today; nay = today"
+        },
+        {
+          "lemma": "ngày mai",
+          "forms": [
+            "ngày",
+            "mai"
+          ],
+          "means": "ngày = tomorrow; mai = tomorrow"
+        },
+        {
+          "lemma": "bây giờ",
+          "forms": [
+            "bây",
+            "giờ"
+          ],
+          "means": "bây = now; giờ = now"
+        },
+        {
+          "lemma": "làm",
+          "forms": [
+            "làm"
+          ],
+          "picture": "work",
+          "means": "to work"
+        },
+        {
+          "lemma": "phải",
+          "forms": [
+            "phải"
+          ],
+          "means": "must, to have to"
+        },
+        {
+          "lemma": "có thể",
+          "forms": [
+            "có",
+            "thể"
+          ],
+          "means": "có = can; thể = can"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "hom-nay-toi-i-lam",
+        "ngay-mai-toi-i-en-thanh-pho",
+        "bay-gio-toi-phai-i",
+        "hom-nay-toi-khong-the-i",
+        "ngay-mai-toi-phai-i-lam",
+        "cam-on-hen-gap-ban-ngay-mai",
+        "ngay-mai-toi-co-the-i"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

@@ -1,0 +1,8741 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-hi",
+  "name": "Starter: Hindi",
+  "about": "Hindi word order and endings in real, everyday sentences.",
+  "language": "hi",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "कॉफ़ी": "coffee",
+    "चाय": "tea",
+    "पानी": "water",
+    "मैं": "I",
+    "पीना": "to drink",
+    "और": "and",
+    "होना": "to be",
+    "एक": "one",
+    "दूध": "milk",
+    "देना": "to give",
+    "अच्छा": "good, nice",
+    "आप": "you",
+    "नहीं": "not",
+    "शिक्षक": "teacher",
+    "विद्यार्थी": "student",
+    "क्या": "what",
+    "माँ": "mother, mom",
+    "पिता": "father",
+    "भाई": "brother",
+    "बहन": "sister",
+    "मेरा": "my",
+    "यह": "this; it, he, she (nearby)",
+    "पास": "near (मेरे पास: I have)",
+    "दोस्त": "friend",
+    "डॉक्टर": "doctor",
+    "चाबी": "key",
+    "फ़ोन": "phone (फ़ोन करना: to call)",
+    "किताब": "book",
+    "आपका": "your (polite)",
+    "कहाँ": "where",
+    "यहाँ": "here",
+    "वहाँ": "there",
+    "शौचालय": "bathroom, toilet",
+    "दो": "two",
+    "तीन": "three",
+    "पैसा": "money",
+    "बोलना": "to speak",
+    "अंग्रेज़ी": "English (the language)",
+    "हिंदी": "Hindi",
+    "समझना": "to understand",
+    "थोड़ा": "a little",
+    "चाहना": "to want",
+    "घर": "house, home",
+    "कमरा": "room",
+    "बड़ा": "big",
+    "छोटा": "small",
+    "रहना": "to live, to stay",
+    "में": "in",
+    "जाना": "to go",
+    "स्कूल": "school",
+    "शहर": "city",
+    "स्टेशन": "station",
+    "गाड़ी": "car",
+    "आज": "today",
+    "कल": "yesterday; tomorrow",
+    "अब": "now",
+    "काम": "work",
+    "करना": "to do, to make",
+    "सकना": "can, to be able to",
+    "नमस्ते": "hello; goodbye",
+    "कैसा": "how; what kind of",
+    "नाम": "name",
+    "पापा": "dad",
+    "का": "of, 's (का, के or की, by what's owned)",
+    "पता": "knowledge, information; address (मुझे पता है: I know)",
+    "फ़िल्म": "movie",
+    "पसंद": "liked (मुझे पसंद है: I like it)",
+    "साल": "year",
+    "सीखना": "to learn",
+    "फ़्लैट": "apartment",
+    "मेज़": "table",
+    "फ़्रिज": "fridge",
+    "कृपया": "please",
+    "खिड़की": "window",
+    "बंद": "closed (बंद करना: to close)",
+    "हमारा": "our",
+    "रसोई": "kitchen",
+    "रोज़": "every day",
+    "खाना": "food; to eat",
+    "बनाना": "to make (खाना बनाना: to cook)",
+    "दरवाज़ा": "door",
+    "इधर": "here, this way",
+    "आना": "to come",
+    "बिना": "without (बिना … के)",
+    "चीनी": "sugar",
+    "गिलास": "glass",
+    "कुछ": "something; some",
+    "मीठा": "sweet",
+    "पिज़्ज़ा": "pizza",
+    "बहुत": "very, really; a lot",
+    "स्वादिष्ट": "delicious",
+    "साथ": "with (के साथ)",
+    "खरीदना": "to buy",
+    "दुकान": "store, shop",
+    "बस": "bus",
+    "ऑफ़िस": "office",
+    "नया": "new",
+    "जैकेट": "jacket",
+    "ट्रेन": "train",
+    "मिनट": "minute",
+    "लेट": "late",
+    "कभी": "ever (कभी नहीं: never)",
+    "भारत": "India",
+    "जूता": "shoe",
+    "टैक्सी": "taxi",
+    "चलना": "to go, to walk",
+    "दादी": "grandma (Dad's mother)",
+    "इंतज़ार": "waiting (इंतज़ार करना: to wait)",
+    "शनिवार": "Saturday",
+    "बारिश": "rain",
+    "तुम": "you (to a friend)",
+    "देखना": "to see, to watch",
+    "अगर": "if",
+    "बीच": "beach; middle",
+    "वीकेंड": "weekend",
+    "ठंड": "cold (the cold)",
+    "लगना": "to be felt, to seem",
+    "बताना": "to tell",
+    "मौसम": "weather",
+    "पेन": "pen",
+    "भूख": "hunger (भूख लगना: to get hungry)",
+    "समय": "time"
+  },
+  "chunks": {
+    "maaf-kijiye": {
+      "text": "माफ़ कीजिए",
+      "en": "Excuse me, sorry",
+      "about": "Polite: to get someone's attention, or to say sorry."
+    },
+    "mujhe-nahin-pata": {
+      "text": "मुझे नहीं पता",
+      "en": "I don't know",
+      "about": "Literally, to me it's not known."
+    },
+    "ummeed-hai": {
+      "text": "उम्मीद है",
+      "en": "Hopefully, I hope",
+      "about": "Literally, there's hope."
+    },
+    "hello": {
+      "text": "नमस्ते",
+      "en": "hello"
+    },
+    "please": {
+      "text": "कृपया",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "धन्यवाद",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "आप कैसे हैं",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "अलविदा",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "हाँ",
+      "en": "yes"
+    },
+    "no": {
+      "text": "नहीं",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "आपका नाम क्या है",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "आपसे मिलकर अच्छा लगा",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "यह कितने का है",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "बिल दीजिए",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "कल मिलेंगे",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "item",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present"
+      ],
+      "text": "मैं कॉफ़ी पीता हूँ।",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं कॉफ़ी पीना हूँ।",
+        "मैं कॉफ़ी हूँ पीना।"
+      ],
+      "otherGender": {
+        "text": "मैं कॉफ़ी पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "कॉफ़ी",
+          "चाय",
+          "पानी"
+        ]
+      }
+    },
+    {
+      "id": "item-2",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present"
+      ],
+      "text": "मैं चाय पीता हूँ।",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "चाय",
+          "चाय"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं चाय पीना हूँ।",
+        "मैं चाय हूँ पीना।"
+      ],
+      "otherGender": {
+        "text": "मैं चाय पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "चाय",
+          "पानी",
+          "कॉफ़ी"
+        ]
+      }
+    },
+    {
+      "id": "item-3",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present"
+      ],
+      "text": "मैं पानी पीता हूँ।",
+      "means": "I drink water.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "पानी",
+          "पानी"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं पानी पीना हूँ।",
+        "मैं पानी हूँ पीना।"
+      ],
+      "otherGender": {
+        "text": "मैं पानी पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "पानी",
+          "कॉफ़ी",
+          "चाय"
+        ]
+      }
+    },
+    {
+      "id": "item-4",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present"
+      ],
+      "text": "मैं कॉफ़ी और चाय पीता हूँ।",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "और",
+          "और"
+        ],
+        [
+          "चाय",
+          "चाय"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "coffee and tea"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं कॉफ़ी और चाय पीना हूँ।",
+        "मैं कॉफ़ी और चाय हूँ पीना।"
+      ],
+      "otherGender": {
+        "text": "मैं कॉफ़ी और चाय पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "चाय",
+          "पानी",
+          "कॉफ़ी"
+        ]
+      }
+    },
+    {
+      "id": "item-5",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present"
+      ],
+      "text": "मैं चाय और पानी पीता हूँ।",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "चाय",
+          "चाय"
+        ],
+        [
+          "और",
+          "और"
+        ],
+        [
+          "पानी",
+          "पानी"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea and water"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं चाय और पानी पीना हूँ।",
+        "मैं चाय और पानी हूँ पीना।"
+      ],
+      "otherGender": {
+        "text": "मैं चाय और पानी पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "पानी",
+          "चाय",
+          "कॉफ़ी"
+        ]
+      }
+    },
+    {
+      "id": "item-6",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present"
+      ],
+      "text": "मैं पानी और कॉफ़ी पीता हूँ।",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "पानी",
+          "पानी"
+        ],
+        [
+          "और",
+          "और"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water and coffee"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं पानी और कॉफ़ी पीना हूँ।",
+        "मैं पानी और कॉफ़ी हूँ पीना।"
+      ],
+      "otherGender": {
+        "text": "मैं पानी और कॉफ़ी पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "कॉफ़ी",
+          "पानी",
+          "चाय"
+        ]
+      }
+    },
+    {
+      "id": "item-7",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "verb-last"
+      ],
+      "text": "एक कॉफ़ी दीजिए।",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "एक कॉफ़ी देना हूँ।",
+        "एक कॉफ़ी दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "कॉफ़ी",
+          "चाय",
+          "दूध"
+        ]
+      }
+    },
+    {
+      "id": "item-8",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "verb-last"
+      ],
+      "chunks": [
+        "hello",
+        "please"
+      ],
+      "text": "नमस्ते, कृपया एक कॉफ़ी दीजिए।",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "नमस्ते,"
+        ],
+        [
+          "कृपया"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "hello"
+        ],
+        [
+          "please"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "नमस्ते, कृपया एक कॉफ़ी देना हूँ।",
+        "नमस्ते, कृपया एक कॉफ़ी दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "कॉफ़ी",
+          "दूध",
+          "पानी"
+        ]
+      }
+    },
+    {
+      "id": "item-9",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "verb-last"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "कृपया एक चाय और पानी दीजिए।",
+      "means": "A tea and some water, please.",
+      "words": [
+        [
+          "कृपया"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "चाय",
+          "चाय"
+        ],
+        [
+          "और",
+          "और"
+        ],
+        [
+          "पानी",
+          "पानी"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "please"
+        ],
+        [
+          "one tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "कृपया एक चाय और पानी देना हूँ।",
+        "कृपया एक चाय और पानी दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "पानी",
+          "कॉफ़ी",
+          "दूध"
+        ]
+      }
+    },
+    {
+      "id": "item-10",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "verb-last"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "कृपया दूध दीजिए।",
+      "means": "Some milk, please.",
+      "words": [
+        [
+          "कृपया"
+        ],
+        [
+          "दूध",
+          "दूध"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "please"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "कृपया दूध देना हूँ।",
+        "कृपया दूध दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "दूध",
+          "चाय",
+          "कॉफ़ी"
+        ]
+      }
+    },
+    {
+      "id": "item-11",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "एक कॉफ़ी, धन्यवाद।",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "कॉफ़ी,",
+          "कॉफ़ी"
+        ],
+        [
+          "धन्यवाद"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "एक कॉफ़ी हूँ, धन्यवाद।",
+        "एक कॉफ़ी पीना हूँ, धन्यवाद।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "कॉफ़ी,",
+          "चाय,",
+          "पानी,"
+        ]
+      }
+    },
+    {
+      "id": "item-12",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "verb-last"
+      ],
+      "chunks": [
+        "hello",
+        "please"
+      ],
+      "text": "नमस्ते! कृपया एक चाय दीजिए।",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "नमस्ते!"
+        ],
+        [
+          "कृपया"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "चाय",
+          "चाय"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "hello"
+        ],
+        [
+          "please"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "नमस्ते! कृपया एक चाय देना हूँ।",
+        "नमस्ते! कृपया एक चाय दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "चाय",
+          "पानी",
+          "दूध"
+        ]
+      }
+    },
+    {
+      "id": "item-13",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present"
+      ],
+      "text": "मैं दूध पीता हूँ।",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "दूध",
+          "दूध"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं दूध पीना हूँ।",
+        "मैं दूध हूँ पीना।"
+      ],
+      "otherGender": {
+        "text": "मैं दूध पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "दूध",
+          "कॉफ़ी",
+          "चाय"
+        ]
+      }
+    },
+    {
+      "id": "item-14",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "yes"
+      ],
+      "text": "हाँ, दीजिए।",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "हाँ,"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "yes"
+        ],
+        [
+          "please give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "हाँ, देना हूँ।",
+        "हाँ, दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "हाँ,",
+          "नहीं,",
+          "अलविदा,"
+        ]
+      }
+    },
+    {
+      "id": "item-15",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "नहीं, धन्यवाद।",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "नहीं,"
+        ],
+        [
+          "धन्यवाद"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "no"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "नहीं हूँ हैं, धन्यवाद।",
+        "नहीं हैं हूँ, धन्यवाद।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "नहीं,",
+          "हाँ,",
+          "नमस्ते,"
+        ]
+      }
+    },
+    {
+      "id": "item-16",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "gender"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "मैं अच्छा हूँ, धन्यवाद।",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "अच्छा",
+          "अच्छा"
+        ],
+        [
+          "हूँ,",
+          "होना"
+        ],
+        [
+          "धन्यवाद"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "good"
+        ],
+        [
+          "am"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं अच्छा हैं, धन्यवाद।",
+        "मैं अच्छा होना, धन्यवाद।"
+      ],
+      "otherGender": {
+        "text": "मैं अच्छी हूँ, धन्यवाद।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "हूँ,",
+          "हैं,",
+          "होना,"
+        ]
+      }
+    },
+    {
+      "id": "item-17",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "हाँ, धन्यवाद। अलविदा!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "हाँ,"
+        ],
+        [
+          "धन्यवाद।"
+        ],
+        [
+          "अलविदा"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "हाँ हूँ हैं, धन्यवाद। अलविदा!",
+        "हाँ हैं हूँ, धन्यवाद। अलविदा!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "अलविदा",
+          "कृपया",
+          "हाँ"
+        ]
+      }
+    },
+    {
+      "id": "item-18",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "नहीं, धन्यवाद। अलविदा!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "नहीं,"
+        ],
+        [
+          "धन्यवाद।"
+        ],
+        [
+          "अलविदा"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "no"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "नहीं हूँ हैं, धन्यवाद। अलविदा!",
+        "नहीं हैं हूँ, धन्यवाद। अलविदा!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "नहीं,",
+          "हाँ,",
+          "नमस्ते,"
+        ]
+      }
+    },
+    {
+      "id": "item-19",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "मैं शिक्षक हूँ।",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "शिक्षक",
+          "शिक्षक"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "teacher"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं शिक्षक हैं।",
+        "मैं शिक्षक है।"
+      ],
+      "otherGender": {
+        "text": "मैं शिक्षिका हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "हूँ",
+          "हैं",
+          "है"
+        ]
+      }
+    },
+    {
+      "id": "item-20",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "address"
+      ],
+      "text": "आप विद्यार्थी हैं।",
+      "means": "You're a student.",
+      "words": [
+        [
+          "आप",
+          "आप"
+        ],
+        [
+          "विद्यार्थी",
+          "विद्यार्थी"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "student"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "आप विद्यार्थी हूँ।",
+        "आप विद्यार्थी है।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "हैं",
+          "हूँ",
+          "है"
+        ]
+      }
+    },
+    {
+      "id": "item-21",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "नमस्ते! आपसे मिलकर अच्छा लगा।",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "नमस्ते!"
+        ],
+        [
+          "आपसे"
+        ],
+        [
+          "मिलकर"
+        ],
+        [
+          "अच्छा"
+        ],
+        [
+          "लगा"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "hello"
+        ],
+        [
+          "meeting you"
+        ],
+        [
+          "good"
+        ],
+        [
+          "felt"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "नमस्ते! आपसे मिलकर अच्छा हूँ लगा।",
+        "नमस्ते! आपसे मिलकर अच्छा हैं लगा।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "नमस्ते!",
+          "अलविदा!",
+          "कृपया!"
+        ]
+      }
+    },
+    {
+      "id": "item-22",
+      "topic": "people",
+      "concepts": [
+        "question-kya",
+        "copula",
+        "address"
+      ],
+      "text": "क्या आप शिक्षक हैं?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "क्या",
+          "क्या"
+        ],
+        [
+          "आप",
+          "आप"
+        ],
+        [
+          "शिक्षक",
+          "शिक्षक"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "teacher"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "क्या आप शिक्षक हूँ?",
+        "क्या आप शिक्षक है?"
+      ],
+      "otherGender": {
+        "text": "क्या आप शिक्षिका हैं?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "हैं",
+          "हूँ",
+          "है"
+        ]
+      }
+    },
+    {
+      "id": "item-23",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "nahin"
+      ],
+      "text": "मैं शिक्षक नहीं हूँ।",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "शिक्षक",
+          "शिक्षक"
+        ],
+        [
+          "नहीं",
+          "नहीं"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "teacher"
+        ],
+        [
+          "not"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं शिक्षक नहीं हैं।",
+        "मैं शिक्षक नहीं है।"
+      ],
+      "otherGender": {
+        "text": "मैं शिक्षिका नहीं हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "हूँ",
+          "है",
+          "हैं"
+        ]
+      }
+    },
+    {
+      "id": "item-24",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula",
+        "address"
+      ],
+      "text": "मेरे पिता शिक्षक हैं।",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पिता",
+          "पिता"
+        ],
+        [
+          "शिक्षक",
+          "शिक्षक"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "father"
+        ],
+        [
+          "teacher"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरी पिता शिक्षक हैं।",
+        "मेरे पिता शिक्षक हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "पिता",
+          "भाई",
+          "शिक्षक"
+        ]
+      }
+    },
+    {
+      "id": "item-25",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula",
+        "address"
+      ],
+      "text": "यह मेरे पिता हैं।",
+      "means": "This is my father.",
+      "words": [
+        [
+          "यह",
+          "यह"
+        ],
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पिता",
+          "पिता"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "यह मेरी पिता हैं।",
+        "यह मेरे पिता हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "मेरे",
+          "मेरी",
+          "मेरा"
+        ]
+      }
+    },
+    {
+      "id": "item-26",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "copula",
+        "address"
+      ],
+      "text": "यह मेरी माँ हैं।",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "यह",
+          "यह"
+        ],
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "माँ",
+          "माँ"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "यह मेरे माँ हैं।",
+        "यह मेरी माँ हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "मेरी",
+          "मेरे",
+          "मेरा"
+        ]
+      }
+    },
+    {
+      "id": "item-27",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "मेरा भाई विद्यार्थी है।",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "मेरा",
+          "मेरा"
+        ],
+        [
+          "भाई",
+          "भाई"
+        ],
+        [
+          "विद्यार्थी",
+          "विद्यार्थी"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "student"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरी भाई विद्यार्थी है।",
+        "मेरा भाई विद्यार्थी हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "भाई",
+          "पिता",
+          "शिक्षक"
+        ]
+      }
+    },
+    {
+      "id": "item-28",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "copula"
+      ],
+      "text": "यह मेरी बहन है।",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "यह",
+          "यह"
+        ],
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "बहन",
+          "बहन"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "यह मेरा बहन है।",
+        "यह मेरी बहन हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "मेरी",
+          "मेरा",
+          "मेरे"
+        ]
+      }
+    },
+    {
+      "id": "item-29",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "copula",
+        "address"
+      ],
+      "text": "मेरी माँ शिक्षक हैं।",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "माँ",
+          "माँ"
+        ],
+        [
+          "शिक्षक",
+          "शिक्षक"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "teacher"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा माँ शिक्षक हैं।",
+        "मेरी माँ शिक्षक हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मेरी",
+          "मेरा",
+          "मेरे"
+        ]
+      }
+    },
+    {
+      "id": "item-30",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "postposition",
+        "oblique",
+        "copula"
+      ],
+      "text": "मेरे पास एक फ़ोन है।",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "फ़ोन",
+          "फ़ोन"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "near me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा पास एक फ़ोन है।",
+        "मेरे पास एक फ़ोन हूँ।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "फ़ोन",
+          "किताब",
+          "चाबी"
+        ]
+      }
+    },
+    {
+      "id": "item-31",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "question-kya",
+        "postposition",
+        "oblique"
+      ],
+      "text": "क्या आपके पास चाबी है?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "क्या",
+          "क्या"
+        ],
+        [
+          "आपके",
+          "आपका"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "चाबी",
+          "चाबी"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "near you"
+        ],
+        [
+          "key"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "क्या आपके पास चाबी हूँ?",
+        "क्या आपके पास चाबी होना?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "चाबी",
+          "किताब",
+          "फ़ोन"
+        ]
+      }
+    },
+    {
+      "id": "item-32",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "plural",
+        "copula"
+      ],
+      "text": "मेरे एक भाई और एक बहन हैं।",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "भाई",
+          "भाई"
+        ],
+        [
+          "और",
+          "और"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "बहन",
+          "बहन"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "one brother and one sister"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरी एक भाई और एक बहन हैं।",
+        "मेरे एक भाई और एक बहन हूँ।"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "हैं",
+          "हूँ",
+          "है"
+        ]
+      }
+    },
+    {
+      "id": "item-33",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "nahin",
+        "postposition",
+        "oblique"
+      ],
+      "text": "मेरे पास किताब नहीं है।",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "किताब",
+          "किताब"
+        ],
+        [
+          "नहीं",
+          "नहीं"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "near me"
+        ],
+        [
+          "book"
+        ],
+        [
+          "not"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा पास किताब नहीं है।",
+        "मेरे पास किताब नहीं हूँ।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "किताब",
+          "चाबी",
+          "फ़ोन"
+        ]
+      }
+    },
+    {
+      "id": "item-34",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "copula"
+      ],
+      "text": "मेरी बहन डॉक्टर है।",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "बहन",
+          "बहन"
+        ],
+        [
+          "डॉक्टर",
+          "डॉक्टर"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "doctor"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा बहन डॉक्टर है।",
+        "मेरी बहन डॉक्टर हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मेरी",
+          "मेरा",
+          "मेरे"
+        ]
+      }
+    },
+    {
+      "id": "item-35",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "gender",
+        "address"
+      ],
+      "text": "आप एक अच्छे दोस्त हैं।",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "आप",
+          "आप"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "अच्छे",
+          "अच्छा"
+        ],
+        [
+          "दोस्त",
+          "दोस्त"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "good"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "आप एक अच्छे दोस्त हूँ।",
+        "आप एक अच्छे दोस्त है।"
+      ],
+      "otherGender": {
+        "text": "आप एक अच्छी दोस्त हैं।",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "हैं",
+          "हूँ",
+          "है"
+        ]
+      }
+    },
+    {
+      "id": "item-36",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "possessive",
+        "copula"
+      ],
+      "text": "मेरी चाबी कहाँ है?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "चाबी",
+          "चाबी"
+        ],
+        [
+          "कहाँ",
+          "कहाँ"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "key"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा चाबी कहाँ है?",
+        "मेरी चाबी कहाँ हूँ?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मेरी",
+          "मेरा",
+          "मेरे"
+        ]
+      }
+    },
+    {
+      "id": "item-37",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "मेरा फ़ोन यहाँ है।",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "मेरा",
+          "मेरा"
+        ],
+        [
+          "फ़ोन",
+          "फ़ोन"
+        ],
+        [
+          "यहाँ",
+          "यहाँ"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "here"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरी फ़ोन यहाँ है।",
+        "मेरा फ़ोन यहाँ हूँ।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "यहाँ",
+          "वहाँ",
+          "कहाँ"
+        ]
+      }
+    },
+    {
+      "id": "item-38",
+      "topic": "out",
+      "concepts": [
+        "copula"
+      ],
+      "text": "चाबी वहाँ है।",
+      "means": "The key is there.",
+      "words": [
+        [
+          "चाबी",
+          "चाबी"
+        ],
+        [
+          "वहाँ",
+          "वहाँ"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "key"
+        ],
+        [
+          "there"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "चाबी वहाँ हूँ।",
+        "चाबी वहाँ होना।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "वहाँ",
+          "यहाँ",
+          "कहाँ"
+        ]
+      }
+    },
+    {
+      "id": "item-39",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "copula"
+      ],
+      "chunks": [
+        "maaf-kijiye"
+      ],
+      "text": "माफ़ कीजिए, शौचालय कहाँ है?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "माफ़"
+        ],
+        [
+          "कीजिए,"
+        ],
+        [
+          "शौचालय",
+          "शौचालय"
+        ],
+        [
+          "कहाँ",
+          "कहाँ"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "excuse me"
+        ],
+        [
+          "bathroom"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "माफ़ कीजिए, शौचालय कहाँ हूँ?",
+        "माफ़ कीजिए, शौचालय कहाँ होना?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "शौचालय",
+          "फ़ोन",
+          "किताब"
+        ]
+      }
+    },
+    {
+      "id": "item-40",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "possessive",
+        "copula",
+        "address"
+      ],
+      "text": "मेरी माँ कहाँ हैं?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "माँ",
+          "माँ"
+        ],
+        [
+          "कहाँ",
+          "कहाँ"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा माँ कहाँ हैं?",
+        "मेरी माँ कहाँ हूँ?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मेरी",
+          "मेरा",
+          "मेरे"
+        ]
+      }
+    },
+    {
+      "id": "item-41",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "मेरी बहन यहाँ है।",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "बहन",
+          "बहन"
+        ],
+        [
+          "यहाँ",
+          "यहाँ"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "here"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा बहन यहाँ है।",
+        "मेरी बहन यहाँ हूँ।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "यहाँ",
+          "वहाँ",
+          "कहाँ"
+        ]
+      }
+    },
+    {
+      "id": "item-42",
+      "topic": "out",
+      "concepts": [
+        "imperative",
+        "plural",
+        "verb-last"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "कृपया दो कॉफ़ी दीजिए।",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "कृपया"
+        ],
+        [
+          "दो",
+          "दो"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "please"
+        ],
+        [
+          "two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "कृपया दो कॉफ़ी दीजिए हूँ।",
+        "कृपया दो कॉफ़ी देना हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "दो",
+          "एक",
+          "तीन"
+        ]
+      }
+    },
+    {
+      "id": "item-43",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "copula"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "maaf-kijiye"
+      ],
+      "text": "माफ़ कीजिए, यह कितने का है?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "माफ़"
+        ],
+        [
+          "कीजिए,"
+        ],
+        [
+          "यह"
+        ],
+        [
+          "कितने"
+        ],
+        [
+          "का"
+        ],
+        [
+          "है"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "excuse me"
+        ],
+        [
+          "this"
+        ],
+        [
+          "of how much"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "माफ़ कीजिए, यह कितने का हूँ?",
+        "माफ़ कीजिए, यह कितने का होना?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "है",
+          "हूँ",
+          "हैं"
+        ]
+      }
+    },
+    {
+      "id": "item-44",
+      "topic": "out",
+      "concepts": [
+        "imperative",
+        "verb-last"
+      ],
+      "chunks": [
+        "the-check-please",
+        "hello",
+        "please"
+      ],
+      "text": "नमस्ते! कृपया बिल दीजिए।",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "नमस्ते!"
+        ],
+        [
+          "कृपया"
+        ],
+        [
+          "बिल"
+        ],
+        [
+          "दीजिए"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "hello"
+        ],
+        [
+          "please"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "नमस्ते! कृपया बिल दीजिए हूँ।",
+        "नमस्ते! कृपया बिल देना हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "नमस्ते!",
+          "अलविदा!",
+          "धन्यवाद!"
+        ]
+      }
+    },
+    {
+      "id": "item-45",
+      "topic": "out",
+      "concepts": [
+        "imperative",
+        "verb-last"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "कृपया एक किताब दीजिए।",
+      "means": "One book, please.",
+      "words": [
+        [
+          "कृपया"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "किताब",
+          "किताब"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "please"
+        ],
+        [
+          "one"
+        ],
+        [
+          "book"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "कृपया एक किताब दीजिए हूँ।",
+        "कृपया एक किताब देना हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "एक",
+          "दो",
+          "तीन"
+        ]
+      }
+    },
+    {
+      "id": "item-46",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "plural",
+        "postposition",
+        "oblique"
+      ],
+      "text": "मेरे पास तीन किताबें हैं।",
+      "means": "I have three books.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "तीन",
+          "तीन"
+        ],
+        [
+          "किताबें",
+          "किताब"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "near me"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरे पास तीन किताब हैं।",
+        "मेरे पास तीन किताबें है।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "तीन",
+          "दो",
+          "एक"
+        ]
+      }
+    },
+    {
+      "id": "item-47",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "nahin",
+        "plural",
+        "postposition"
+      ],
+      "text": "मेरे पास पैसे नहीं हैं।",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "पैसे",
+          "पैसा"
+        ],
+        [
+          "नहीं",
+          "नहीं"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "near me"
+        ],
+        [
+          "money"
+        ],
+        [
+          "not"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा पास पैसे नहीं हैं।",
+        "मेरे पास पैसे नहीं हूँ।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "पैसे",
+          "किताबें",
+          "चाबियाँ"
+        ]
+      }
+    },
+    {
+      "id": "item-48",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "verb-last",
+        "gender"
+      ],
+      "text": "मैं थोड़ी हिंदी बोलता हूँ।",
+      "means": "I speak a little Hindi.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "थोड़ी",
+          "थोड़ा"
+        ],
+        [
+          "हिंदी",
+          "हिंदी"
+        ],
+        [
+          "बोलता",
+          "बोलना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Hindi"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं थोड़ी हिंदी बोलता हैं।",
+        "मैं थोड़ी हिंदी बोलते हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं थोड़ी हिंदी बोलती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "हिंदी",
+          "अंग्रेज़ी",
+          "चाय"
+        ]
+      }
+    },
+    {
+      "id": "item-49",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "verb-last",
+        "nahin"
+      ],
+      "text": "मैं नहीं समझता हूँ।",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "नहीं",
+          "नहीं"
+        ],
+        [
+          "समझता",
+          "समझना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं नहीं समझता हैं।",
+        "मैं नहीं समझते हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं नहीं समझती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "समझता",
+          "बोलता",
+          "पीता"
+        ]
+      }
+    },
+    {
+      "id": "item-50",
+      "topic": "people",
+      "concepts": [
+        "question-kya",
+        "present",
+        "address",
+        "verb-last"
+      ],
+      "text": "क्या आप समझते हैं?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "क्या",
+          "क्या"
+        ],
+        [
+          "आप",
+          "आप"
+        ],
+        [
+          "समझते",
+          "समझना"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "क्या आप समझते हूँ?",
+        "क्या आप समझता हैं?"
+      ],
+      "otherGender": {
+        "text": "क्या आप समझती हैं?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "समझते",
+          "बोलते",
+          "समझता"
+        ]
+      }
+    },
+    {
+      "id": "item-51",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "verb-last"
+      ],
+      "text": "मैं एक कॉफ़ी चाहता हूँ।",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "चाहता",
+          "चाहना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "want"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं एक कॉफ़ी चाहता हैं।",
+        "मैं एक कॉफ़ी चाहना हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं एक कॉफ़ी चाहती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "चाहता",
+          "पीता",
+          "बोलता"
+        ]
+      }
+    },
+    {
+      "id": "item-52",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "verb-last"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "कृपया पानी दीजिए।",
+      "means": "Water, please.",
+      "words": [
+        [
+          "कृपया"
+        ],
+        [
+          "पानी",
+          "पानी"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "please"
+        ],
+        [
+          "water"
+        ],
+        [
+          "give"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "कृपया पानी देना हूँ।",
+        "कृपया पानी दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "पानी",
+          "दूध",
+          "चाय"
+        ]
+      }
+    },
+    {
+      "id": "item-53",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "gender",
+        "copula"
+      ],
+      "text": "मेरा कमरा छोटा है।",
+      "means": "My room is small.",
+      "words": [
+        [
+          "मेरा",
+          "मेरा"
+        ],
+        [
+          "कमरा",
+          "कमरा"
+        ],
+        [
+          "छोटा",
+          "छोटा"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "room"
+        ],
+        [
+          "small"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरी कमरा छोटा है।",
+        "मेरा कमरा छोटा हूँ।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "छोटा",
+          "बड़ा",
+          "अच्छा"
+        ]
+      }
+    },
+    {
+      "id": "item-54",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "gender"
+      ],
+      "text": "यह घर बड़ा है।",
+      "means": "This house is big.",
+      "words": [
+        [
+          "यह",
+          "यह"
+        ],
+        [
+          "घर",
+          "घर"
+        ],
+        [
+          "बड़ा",
+          "बड़ा"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "यह घर बड़ा हूँ।",
+        "यह घर बड़ा होना।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "बड़ा",
+          "छोटा",
+          "अच्छा"
+        ]
+      }
+    },
+    {
+      "id": "item-55",
+      "topic": "home",
+      "concepts": [
+        "postposition",
+        "oblique",
+        "present",
+        "verb-last"
+      ],
+      "text": "मैं एक छोटे घर में रहता हूँ।",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "छोटे",
+          "छोटा"
+        ],
+        [
+          "घर",
+          "घर"
+        ],
+        [
+          "में",
+          "में"
+        ],
+        [
+          "रहता",
+          "रहना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a small house"
+        ],
+        [
+          "in"
+        ],
+        [
+          "live"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं एक छोटा घर में रहता हूँ।",
+        "मैं एक छोटे घर में रहता हैं।"
+      ],
+      "otherGender": {
+        "text": "मैं एक छोटे घर में रहती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "छोटे",
+          "छोटा",
+          "अच्छे"
+        ]
+      }
+    },
+    {
+      "id": "item-56",
+      "topic": "home",
+      "concepts": [
+        "question-word",
+        "present",
+        "address",
+        "verb-last"
+      ],
+      "text": "आप कहाँ रहते हैं?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "आप",
+          "आप"
+        ],
+        [
+          "कहाँ",
+          "कहाँ"
+        ],
+        [
+          "रहते",
+          "रहना"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "where"
+        ],
+        [
+          "live"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "आप कहाँ रहता हैं?",
+        "आप कहाँ रहते हूँ?"
+      ],
+      "otherGender": {
+        "text": "आप कहाँ रहती हैं?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "रहते",
+          "रहता",
+          "रहना"
+        ]
+      }
+    },
+    {
+      "id": "item-57",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "address",
+        "possessive"
+      ],
+      "text": "मेरी माँ यहाँ रहती हैं।",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "माँ",
+          "माँ"
+        ],
+        [
+          "यहाँ",
+          "यहाँ"
+        ],
+        [
+          "रहती",
+          "रहना"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "here"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरी माँ यहाँ रहता हैं।",
+        "मेरी माँ यहाँ रहती हूँ।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "रहती",
+          "रहता",
+          "रहते"
+        ]
+      }
+    },
+    {
+      "id": "item-58",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "verb-last"
+      ],
+      "text": "मैं स्कूल जाता हूँ।",
+      "means": "I go to school.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "स्कूल",
+          "स्कूल"
+        ],
+        [
+          "जाता",
+          "जाना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "to school"
+        ],
+        [
+          "go"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं स्कूल जाता हैं।",
+        "मैं स्कूल जाती हैं।"
+      ],
+      "otherGender": {
+        "text": "मैं स्कूल जाती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "स्कूल",
+          "शहर",
+          "स्टेशन"
+        ]
+      }
+    },
+    {
+      "id": "item-59",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "progressive",
+        "address",
+        "verb-last"
+      ],
+      "text": "आप कहाँ जा रहे हैं?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "आप",
+          "आप"
+        ],
+        [
+          "कहाँ",
+          "कहाँ"
+        ],
+        [
+          "जा",
+          "जाना"
+        ],
+        [
+          "रहे",
+          "रहना"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "where"
+        ],
+        [
+          "going"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "आप कहाँ जा रहे हूँ?",
+        "आप कहाँ जा रहता हैं?"
+      ],
+      "otherGender": {
+        "text": "आप कहाँ जा रही हैं?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "रहे",
+          "रहता",
+          "रहते"
+        ]
+      }
+    },
+    {
+      "id": "item-60",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender",
+        "address",
+        "possessive"
+      ],
+      "text": "मेरी माँ शहर जाती हैं।",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "माँ",
+          "माँ"
+        ],
+        [
+          "शहर",
+          "शहर"
+        ],
+        [
+          "जाती",
+          "जाना"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरी माँ शहर जाता हैं।",
+        "मेरी माँ शहर जाती हूँ।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "जाती",
+          "जाता",
+          "जा"
+        ]
+      }
+    },
+    {
+      "id": "item-61",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "postposition",
+        "oblique",
+        "copula"
+      ],
+      "text": "मेरे पास एक गाड़ी है।",
+      "means": "I have a car.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "एक",
+          "एक"
+        ],
+        [
+          "गाड़ी",
+          "गाड़ी"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "near me"
+        ],
+        [
+          "one"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा पास एक गाड़ी है।",
+        "मेरे पास एक गाड़ी हूँ।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "गाड़ी",
+          "किताब",
+          "फ़ोन"
+        ]
+      }
+    },
+    {
+      "id": "item-62",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "copula"
+      ],
+      "text": "यह गाड़ी छोटी है।",
+      "means": "This car is small.",
+      "words": [
+        [
+          "यह",
+          "यह"
+        ],
+        [
+          "गाड़ी",
+          "गाड़ी"
+        ],
+        [
+          "छोटी",
+          "छोटा"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "car"
+        ],
+        [
+          "small"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "यह गाड़ी छोटा है।",
+        "यह गाड़ी छोटी हूँ।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "छोटी",
+          "छोटा",
+          "छोटे"
+        ]
+      }
+    },
+    {
+      "id": "item-63",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "धन्यवाद। कल मिलेंगे!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "धन्यवाद।"
+        ],
+        [
+          "कल"
+        ],
+        [
+          "मिलेंगे"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "thank you"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "we will meet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "धन्यवाद। कल मिलेंगे हूँ!",
+        "धन्यवाद। कल मिलेंगे है!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "कल",
+          "आज",
+          "अब"
+        ]
+      }
+    },
+    {
+      "id": "item-64",
+      "topic": "plans",
+      "concepts": [
+        "karna",
+        "progressive",
+        "verb-last"
+      ],
+      "text": "मैं आज काम कर रहा हूँ।",
+      "means": "I'm working today.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "आज",
+          "आज"
+        ],
+        [
+          "काम",
+          "काम"
+        ],
+        [
+          "कर",
+          "करना"
+        ],
+        [
+          "रहा",
+          "रहना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "work"
+        ],
+        [
+          "doing"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं आज काम कर रहा हैं।",
+        "मैं आज काम करना हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं आज काम कर रही हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "आज",
+          "कल",
+          "अब"
+        ]
+      }
+    },
+    {
+      "id": "item-65",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "verb-last"
+      ],
+      "text": "मैं कल शहर जाऊँगा।",
+      "means": "I'm going to the city tomorrow.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "शहर",
+          "शहर"
+        ],
+        [
+          "जाऊँगा",
+          "जाना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "will go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं कल शहर जाऊँगा हैं।",
+        "मैं कल शहर जाना हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं कल शहर जाऊँगी।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "शहर",
+          "स्कूल",
+          "स्टेशन"
+        ]
+      }
+    },
+    {
+      "id": "item-66",
+      "topic": "plans",
+      "concepts": [
+        "nahin",
+        "present",
+        "verb-last"
+      ],
+      "text": "मैं आज नहीं जा सकता हूँ।",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "आज",
+          "आज"
+        ],
+        [
+          "नहीं",
+          "नहीं"
+        ],
+        [
+          "जा",
+          "जाना"
+        ],
+        [
+          "सकता",
+          "सकना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "not"
+        ],
+        [
+          "go"
+        ],
+        [
+          "can"
+        ],
+        [
+          "am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं आज नहीं जा सकता हैं।",
+        "मैं आज नहीं जाना सकता हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं आज नहीं जा सकती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "आज",
+          "कल",
+          "अब"
+        ]
+      }
+    },
+    {
+      "id": "item-67",
+      "topic": "plans",
+      "concepts": [
+        "mujhe",
+        "infinitive",
+        "karna",
+        "verb-last"
+      ],
+      "text": "मुझे कल काम करना है।",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "मुझे",
+          "मैं"
+        ],
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "काम",
+          "काम"
+        ],
+        [
+          "करना",
+          "करना"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "to me"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "work"
+        ],
+        [
+          "to do"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मुझे कल काम करना हूँ।",
+        "मुझे कल काम कर है।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "करना",
+          "कर",
+          "जाना"
+        ]
+      }
+    },
+    {
+      "id": "aap-kaise-hain",
+      "topic": "people",
+      "concepts": [
+        "question-word",
+        "copula",
+        "address",
+        "gender"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "नमस्ते, आप कैसे हैं?",
+      "means": "Hello, how are you?",
+      "words": [
+        [
+          "नमस्ते,"
+        ],
+        [
+          "आप"
+        ],
+        [
+          "कैसे"
+        ],
+        [
+          "हैं"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello,"
+        ],
+        [
+          "you"
+        ],
+        [
+          "how",
+          true
+        ],
+        [
+          "are",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "moved": [
+        "कैसे",
+        "हैं"
+      ],
+      "wrong": [
+        "नमस्ते, आप कैसे हूँ?",
+        "नमस्ते, आप कैसा हैं?"
+      ],
+      "otherGender": {
+        "text": "नमस्ते, आप कैसी हैं?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "हैं",
+          "हूँ",
+          "था"
+        ]
+      }
+    },
+    {
+      "id": "aapka-naam",
+      "topic": "people",
+      "concepts": [
+        "question-word",
+        "possessive",
+        "address",
+        "copula"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "आपका नाम क्या है?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "आपका"
+        ],
+        [
+          "नाम"
+        ],
+        [
+          "क्या"
+        ],
+        [
+          "है"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Your name"
+        ],
+        [
+          "what",
+          true
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "क्या",
+        "है"
+      ],
+      "wrong": [
+        "आपकी नाम क्या है?",
+        "आपका नाम कौन है?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "आपका",
+          "आपकी",
+          "आपके"
+        ]
+      }
+    },
+    {
+      "id": "angrezi-bolte",
+      "topic": "people",
+      "concepts": [
+        "question-kya",
+        "present",
+        "address",
+        "verb-last"
+      ],
+      "text": "क्या आप अंग्रेज़ी बोलते हैं?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "क्या",
+          "क्या"
+        ],
+        [
+          "आप",
+          "आप"
+        ],
+        [
+          "अंग्रेज़ी",
+          "अंग्रेज़ी"
+        ],
+        [
+          "बोलते",
+          "बोलना"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do"
+        ],
+        [
+          "you"
+        ],
+        [
+          "English"
+        ],
+        [
+          "speak",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "बोलते",
+        "हैं"
+      ],
+      "wrong": [
+        "क्या आप अंग्रेज़ी बोलते हूँ?",
+        "क्या आप अंग्रेज़ी बोलना हैं?"
+      ],
+      "otherGender": {
+        "text": "क्या आप अंग्रेज़ी बोलती हैं?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "हैं",
+          "हूँ",
+          "है"
+        ]
+      }
+    },
+    {
+      "id": "do-bhai",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "possessive",
+        "copula",
+        "plural"
+      ],
+      "text": "मेरे दो भाई हैं।",
+      "means": "I have two brothers.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "दो",
+          "दो"
+        ],
+        [
+          "भाई",
+          "भाई"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "two brothers"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा दो भाई हैं।",
+        "मेरे दो भाई हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मेरे",
+          "मेरा",
+          "मेरी"
+        ]
+      }
+    },
+    {
+      "id": "behen-dilli-mein",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "postposition",
+        "present",
+        "gender"
+      ],
+      "text": "मेरी बहन दिल्ली में रहती है।",
+      "means": "My sister lives in Delhi.",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "बहन",
+          "बहन"
+        ],
+        [
+          "दिल्ली"
+        ],
+        [
+          "में"
+        ],
+        [
+          "रहती",
+          "रहना"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "in Delhi"
+        ],
+        [
+          "lives",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "रहती",
+        "है"
+      ],
+      "wrong": [
+        "मेरी बहन दिल्ली में रहता है।",
+        "मेरा बहन दिल्ली में रहती है।"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "रहती",
+          "रहता",
+          "रहते"
+        ]
+      }
+    },
+    {
+      "id": "papa-ki-gaadi",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender",
+        "copula",
+        "verb-last"
+      ],
+      "text": "यह मेरे पापा की गाड़ी है।",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "यह",
+          "यह"
+        ],
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पापा",
+          "पापा"
+        ],
+        [
+          "की",
+          "का"
+        ],
+        [
+          "गाड़ी",
+          "गाड़ी"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my dad's car"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "है"
+      ],
+      "wrong": [
+        "यह मेरे पापा का गाड़ी है।",
+        "यह मेरा पापा की गाड़ी है।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "की",
+          "का",
+          "के"
+        ]
+      }
+    },
+    {
+      "id": "pata-nahin",
+      "topic": "people",
+      "concepts": [
+        "mujhe",
+        "nahin",
+        "question-word"
+      ],
+      "chunks": [
+        "mujhe-nahin-pata"
+      ],
+      "text": "मुझे नहीं पता कि वह कहाँ रहता है।",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "मुझे"
+        ],
+        [
+          "नहीं"
+        ],
+        [
+          "पता",
+          "पता"
+        ],
+        [
+          "कि"
+        ],
+        [
+          "वह"
+        ],
+        [
+          "कहाँ"
+        ],
+        [
+          "रहता",
+          "रहना"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "not known"
+        ],
+        [
+          "that"
+        ],
+        [
+          "he"
+        ],
+        [
+          "where",
+          true
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "कहाँ"
+      ],
+      "wrong": [
+        "मैं नहीं पता कि वह कहाँ रहता है।",
+        "मुझे नहीं पता कि वह कहाँ रहते हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मुझे",
+          "मैं",
+          "मेरा"
+        ]
+      }
+    },
+    {
+      "id": "main-doctor-hoon",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "verb-last"
+      ],
+      "text": "मैं डॉक्टर हूँ।",
+      "means": "I'm a doctor.",
+      "words": [
+        [
+          "मैं",
+          "मैं"
+        ],
+        [
+          "डॉक्टर",
+          "डॉक्टर"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a doctor"
+        ],
+        [
+          "am",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "हूँ"
+      ],
+      "wrong": [
+        "मैं डॉक्टर है।",
+        "मैं डॉक्टर हैं।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "हूँ",
+          "है",
+          "हो"
+        ]
+      }
+    },
+    {
+      "id": "film-pasand",
+      "topic": "people",
+      "concepts": [
+        "mujhe",
+        "copula"
+      ],
+      "text": "मुझे यह फ़िल्म पसंद है।",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "मुझे"
+        ],
+        [
+          "यह",
+          "यह"
+        ],
+        [
+          "फ़िल्म",
+          "फ़िल्म"
+        ],
+        [
+          "पसंद",
+          "पसंद"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "this movie"
+        ],
+        [
+          "liked"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं यह फ़िल्म पसंद है।",
+        "मुझे यह फ़िल्म पसंद हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मुझे",
+          "मैं",
+          "मेरी"
+        ]
+      }
+    },
+    {
+      "id": "hindi-seekh-raha",
+      "topic": "people",
+      "concepts": [
+        "progressive",
+        "postposition",
+        "verb-last",
+        "gender"
+      ],
+      "text": "मैं एक साल से हिंदी सीख रहा हूँ।",
+      "means": "I've been learning Hindi for a year.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "एक"
+        ],
+        [
+          "साल",
+          "साल"
+        ],
+        [
+          "से"
+        ],
+        [
+          "हिंदी",
+          "हिंदी"
+        ],
+        [
+          "सीख",
+          "सीखना"
+        ],
+        [
+          "रहा"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "for a year",
+          true
+        ],
+        [
+          "Hindi"
+        ],
+        [
+          "have been learning",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "एक",
+        "साल",
+        "से",
+        "सीख",
+        "रहा",
+        "हूँ"
+      ],
+      "wrong": [
+        "मैं एक साल से हिंदी सीख रहा है।",
+        "मैं एक साल से हिंदी सीखना रहा हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं एक साल से हिंदी सीख रही हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "से",
+          "को",
+          "पर"
+        ]
+      }
+    },
+    {
+      "id": "gaadi-nahin",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "nahin",
+        "verb-last"
+      ],
+      "text": "मेरे पास गाड़ी नहीं है।",
+      "means": "I don't have a car.",
+      "words": [
+        [
+          "मेरे",
+          "मेरा"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "गाड़ी",
+          "गाड़ी"
+        ],
+        [
+          "नहीं",
+          "नहीं"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "Near me"
+        ],
+        [
+          "a car"
+        ],
+        [
+          "there isn't"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मेरा पास गाड़ी नहीं है।",
+        "मेरे पास गाड़ी नहीं हूँ।"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मेरे",
+          "मेरा",
+          "मेरी"
+        ]
+      }
+    },
+    {
+      "id": "chhote-flat-mein",
+      "topic": "home",
+      "concepts": [
+        "oblique",
+        "postposition",
+        "present",
+        "verb-last"
+      ],
+      "text": "मैं एक छोटे फ़्लैट में रहता हूँ।",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "एक"
+        ],
+        [
+          "छोटे",
+          "छोटा"
+        ],
+        [
+          "फ़्लैट",
+          "फ़्लैट"
+        ],
+        [
+          "में"
+        ],
+        [
+          "रहता",
+          "रहना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "in a small apartment"
+        ],
+        [
+          "live",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "रहता",
+        "हूँ"
+      ],
+      "wrong": [
+        "मैं एक छोटा फ़्लैट में रहता हूँ।",
+        "मैं एक छोटे फ़्लैट में रहता है।"
+      ],
+      "otherGender": {
+        "text": "मैं एक छोटे फ़्लैट में रहती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "छोटे",
+          "छोटा",
+          "छोटी"
+        ]
+      }
+    },
+    {
+      "id": "mez-par-kitaab",
+      "topic": "home",
+      "concepts": [
+        "postposition",
+        "copula",
+        "verb-last"
+      ],
+      "text": "मेज़ पर एक किताब है।",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "मेज़",
+          "मेज़"
+        ],
+        [
+          "पर"
+        ],
+        [
+          "एक"
+        ],
+        [
+          "किताब",
+          "किताब"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "On the table"
+        ],
+        [
+          "a book"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "है"
+      ],
+      "wrong": [
+        "मेज़ पर एक किताब हैं।",
+        "मेज़ को एक किताब है।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "पर",
+          "को",
+          "का"
+        ]
+      }
+    },
+    {
+      "id": "doodh-nahin",
+      "topic": "home",
+      "concepts": [
+        "nahin",
+        "postposition",
+        "verb-last"
+      ],
+      "text": "फ़्रिज में दूध नहीं है।",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "फ़्रिज",
+          "फ़्रिज"
+        ],
+        [
+          "में"
+        ],
+        [
+          "दूध",
+          "दूध"
+        ],
+        [
+          "नहीं"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "there's no",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "नहीं",
+        "है"
+      ],
+      "wrong": [
+        "फ़्रिज में दूध नहीं हूँ।",
+        "फ़्रिज में दूध मत है।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "में",
+          "को",
+          "का"
+        ]
+      }
+    },
+    {
+      "id": "khidki-band-kijiye",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "karna",
+        "address",
+        "verb-last"
+      ],
+      "text": "कृपया खिड़की बंद कीजिए।",
+      "means": "Please close the window.",
+      "words": [
+        [
+          "कृपया",
+          "कृपया"
+        ],
+        [
+          "खिड़की",
+          "खिड़की"
+        ],
+        [
+          "बंद",
+          "बंद"
+        ],
+        [
+          "कीजिए",
+          "करना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "Please"
+        ],
+        [
+          "the window"
+        ],
+        [
+          "close",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "बंद",
+        "कीजिए"
+      ],
+      "wrong": [
+        "कृपया खिड़की बंद करता।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "कीजिए",
+          "करता",
+          "करूँगा"
+        ]
+      }
+    },
+    {
+      "id": "badi-rasoi",
+      "topic": "home",
+      "concepts": [
+        "have",
+        "oblique",
+        "gender",
+        "postposition"
+      ],
+      "text": "हमारे घर में एक बड़ी रसोई है।",
+      "means": "We have a big kitchen.",
+      "words": [
+        [
+          "हमारे",
+          "हमारा"
+        ],
+        [
+          "घर",
+          "घर"
+        ],
+        [
+          "में"
+        ],
+        [
+          "एक"
+        ],
+        [
+          "बड़ी",
+          "बड़ा"
+        ],
+        [
+          "रसोई",
+          "रसोई"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "In our house"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "है"
+      ],
+      "wrong": [
+        "हमारे घर में एक बड़ा रसोई है।",
+        "हमारा घर में एक बड़ी रसोई है।"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "बड़ी",
+          "बड़ा",
+          "बड़े"
+        ]
+      }
+    },
+    {
+      "id": "roz-khana",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "verb-last"
+      ],
+      "text": "मैं रोज़ खाना बनाती हूँ।",
+      "means": "I cook every day.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "रोज़",
+          "रोज़"
+        ],
+        [
+          "खाना",
+          "खाना"
+        ],
+        [
+          "बनाती",
+          "बनाना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "every day",
+          true
+        ],
+        [
+          "food"
+        ],
+        [
+          "make",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "रोज़",
+        "बनाती",
+        "हूँ"
+      ],
+      "wrong": [
+        "मैं रोज़ खाना बनाती है।",
+        "मैं रोज़ खाना बनाना हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं रोज़ खाना बनाता हूँ।",
+        "gender": "m",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "हूँ",
+          "है",
+          "हैं"
+        ]
+      }
+    },
+    {
+      "id": "darwaza-band-karo",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "karna",
+        "address",
+        "verb-last"
+      ],
+      "text": "दरवाज़ा बंद करो!",
+      "means": "Close the door!",
+      "words": [
+        [
+          "दरवाज़ा",
+          "दरवाज़ा"
+        ],
+        [
+          "बंद",
+          "बंद"
+        ],
+        [
+          "करो",
+          "करना"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "The door"
+        ],
+        [
+          "close",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "बंद",
+        "करो"
+      ],
+      "wrong": [
+        "दरवाज़ा बंद करता!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "करो",
+          "करता",
+          "किया"
+        ]
+      }
+    },
+    {
+      "id": "chaabiyan-kahan",
+      "topic": "home",
+      "concepts": [
+        "question-word",
+        "possessive",
+        "gender",
+        "plural"
+      ],
+      "text": "मेरी चाबियाँ कहाँ हैं?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "चाबियाँ",
+          "चाबी"
+        ],
+        [
+          "कहाँ",
+          "कहाँ"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My keys"
+        ],
+        [
+          "where",
+          true
+        ],
+        [
+          "are",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "कहाँ",
+        "हैं"
+      ],
+      "wrong": [
+        "मेरे चाबियाँ कहाँ हैं?",
+        "मेरी चाबियाँ कहाँ हूँ?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "मेरी",
+          "मेरा",
+          "मेरे"
+        ]
+      }
+    },
+    {
+      "id": "idhar-aao",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "address",
+        "verb-last"
+      ],
+      "text": "इधर आओ!",
+      "means": "Come here!",
+      "words": [
+        [
+          "इधर",
+          "इधर"
+        ],
+        [
+          "आओ",
+          "आना"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Here"
+        ],
+        [
+          "come",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "आओ"
+      ],
+      "wrong": [
+        "इधर आता!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "आओ",
+          "आता",
+          "आया"
+        ]
+      }
+    },
+    {
+      "id": "bina-cheeni",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "postposition",
+        "verb-last",
+        "gender"
+      ],
+      "text": "मैं बिना चीनी के चाय पीता हूँ।",
+      "means": "I drink my tea without sugar.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "बिना",
+          "बिना"
+        ],
+        [
+          "चीनी",
+          "चीनी"
+        ],
+        [
+          "के"
+        ],
+        [
+          "चाय",
+          "चाय"
+        ],
+        [
+          "पीता",
+          "पीना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "without sugar",
+          true
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "बिना",
+        "चीनी",
+        "के",
+        "पीता",
+        "हूँ"
+      ],
+      "wrong": [
+        "मैं बिना चीनी के चाय पीता है।",
+        "मैं बिना चीनी का चाय पीता हूँ।"
+      ],
+      "otherGender": {
+        "text": "मैं बिना चीनी के चाय पीती हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "बिना",
+          "बहुत",
+          "कभी"
+        ]
+      }
+    },
+    {
+      "id": "coffee-nahin",
+      "topic": "food",
+      "concepts": [
+        "nahin",
+        "present",
+        "gender",
+        "verb-last"
+      ],
+      "text": "मैं कॉफ़ी नहीं पीती।",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "कॉफ़ी",
+          "कॉफ़ी"
+        ],
+        [
+          "नहीं"
+        ],
+        [
+          "पीती",
+          "पीना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "don't drink",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "नहीं",
+        "पीती"
+      ],
+      "wrong": [
+        "मैं कॉफ़ी मत पीती।"
+      ],
+      "otherGender": {
+        "text": "मैं कॉफ़ी नहीं पीता।",
+        "gender": "m",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "नहीं",
+          "मत"
+        ]
+      }
+    },
+    {
+      "id": "ek-glass-paani",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "address",
+        "verb-last"
+      ],
+      "text": "एक गिलास पानी दीजिए।",
+      "means": "A glass of water, please.",
+      "words": [
+        [
+          "एक"
+        ],
+        [
+          "गिलास",
+          "गिलास"
+        ],
+        [
+          "पानी",
+          "पानी"
+        ],
+        [
+          "दीजिए",
+          "देना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "A glass of water"
+        ],
+        [
+          "please give",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "दीजिए"
+      ],
+      "wrong": [
+        "एक गिलास पानी देता।",
+        "एक गिलास पानी दीजिए हूँ।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "दीजिए",
+          "देता",
+          "दिया"
+        ]
+      }
+    },
+    {
+      "id": "kuch-meetha",
+      "topic": "food",
+      "concepts": [
+        "infinitive",
+        "gender",
+        "verb-last"
+      ],
+      "text": "मैं कुछ मीठा खाना चाहती हूँ।",
+      "means": "I want something sweet to eat.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "कुछ",
+          "कुछ"
+        ],
+        [
+          "मीठा",
+          "मीठा"
+        ],
+        [
+          "खाना",
+          "खाना"
+        ],
+        [
+          "चाहती",
+          "चाहना"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "something sweet"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "want",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "चाहती",
+        "हूँ"
+      ],
+      "wrong": [
+        "मैं कुछ मीठा खाती चाहती हूँ।",
+        "मैं कुछ मीठा खाना चाहती है।"
+      ],
+      "otherGender": {
+        "text": "मैं कुछ मीठा खाना चाहता हूँ।",
+        "gender": "m",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "खाना",
+          "खाती",
+          "खाया"
+        ]
+      }
+    },
+    {
+      "id": "pizza-khaya",
+      "topic": "food",
+      "concepts": [
+        "ne",
+        "past",
+        "verb-last",
+        "gender"
+      ],
+      "text": "कल हमने पिज़्ज़ा खाया।",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "हमने"
+        ],
+        [
+          "पिज़्ज़ा",
+          "पिज़्ज़ा"
+        ],
+        [
+          "खाया",
+          "खाना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we"
+        ],
+        [
+          "pizza"
+        ],
+        [
+          "ate",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "खाया"
+      ],
+      "wrong": [
+        "कल हम पिज़्ज़ा खाया।",
+        "कल हमने पिज़्ज़ा खाएँगे।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "हमने",
+          "हम",
+          "हमें"
+        ]
+      }
+    },
+    {
+      "id": "doodh-fridge-mein",
+      "topic": "food",
+      "concepts": [
+        "postposition",
+        "copula",
+        "verb-last"
+      ],
+      "text": "दूध फ़्रिज में है।",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "दूध",
+          "दूध"
+        ],
+        [
+          "फ़्रिज",
+          "फ़्रिज"
+        ],
+        [
+          "में"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "in the fridge"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "है"
+      ],
+      "wrong": [
+        "दूध फ़्रिज में हूँ।",
+        "दूध फ़्रिज को है।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "में",
+          "को",
+          "ने"
+        ]
+      }
+    },
+    {
+      "id": "maa-khana",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "gender",
+        "address",
+        "possessive"
+      ],
+      "text": "मेरी माँ बहुत अच्छा खाना बनाती हैं।",
+      "means": "My mom makes really good food.",
+      "words": [
+        [
+          "मेरी",
+          "मेरा"
+        ],
+        [
+          "माँ",
+          "माँ"
+        ],
+        [
+          "बहुत",
+          "बहुत"
+        ],
+        [
+          "अच्छा",
+          "अच्छा"
+        ],
+        [
+          "खाना",
+          "खाना"
+        ],
+        [
+          "बनाती",
+          "बनाना"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "really good food"
+        ],
+        [
+          "makes",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "बनाती",
+        "हैं"
+      ],
+      "wrong": [
+        "मेरी माँ बहुत अच्छा खाना बनाता हैं।",
+        "मेरा माँ बहुत अच्छा खाना बनाती हैं।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "अच्छा",
+          "अच्छी",
+          "अच्छे"
+        ]
+      }
+    },
+    {
+      "id": "khana-swadisht",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "gender",
+        "verb-last"
+      ],
+      "text": "खाना बहुत स्वादिष्ट था।",
+      "means": "The food was really delicious.",
+      "words": [
+        [
+          "खाना",
+          "खाना"
+        ],
+        [
+          "बहुत",
+          "बहुत"
+        ],
+        [
+          "स्वादिष्ट",
+          "स्वादिष्ट"
+        ],
+        [
+          "था",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "The food"
+        ],
+        [
+          "really delicious"
+        ],
+        [
+          "was",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "था"
+      ],
+      "wrong": [
+        "खाना बहुत स्वादिष्ट थी।",
+        "खाना बहुत स्वादिष्ट थे।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "था",
+          "थी",
+          "थे"
+        ]
+      }
+    },
+    {
+      "id": "maa-ke-saath",
+      "topic": "food",
+      "concepts": [
+        "mujhe",
+        "postposition",
+        "infinitive"
+      ],
+      "text": "मुझे माँ के साथ खाना बनाना पसंद है।",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "मुझे"
+        ],
+        [
+          "माँ",
+          "माँ"
+        ],
+        [
+          "के"
+        ],
+        [
+          "साथ",
+          "साथ"
+        ],
+        [
+          "खाना",
+          "खाना"
+        ],
+        [
+          "बनाना",
+          "बनाना"
+        ],
+        [
+          "पसंद",
+          "पसंद"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "with Mom"
+        ],
+        [
+          "cooking"
+        ],
+        [
+          "liked"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मुझे माँ का साथ खाना बनाना पसंद है।",
+        "मैं माँ के साथ खाना बनाना पसंद है।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "के",
+          "का",
+          "की"
+        ]
+      }
+    },
+    {
+      "id": "station-kahan",
+      "topic": "out",
+      "concepts": [
+        "question-word",
+        "copula",
+        "address"
+      ],
+      "chunks": [
+        "maaf-kijiye"
+      ],
+      "text": "माफ़ कीजिए, स्टेशन कहाँ है?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "माफ़"
+        ],
+        [
+          "कीजिए,"
+        ],
+        [
+          "स्टेशन",
+          "स्टेशन"
+        ],
+        [
+          "कहाँ",
+          "कहाँ"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "the station"
+        ],
+        [
+          "where",
+          true
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "moved": [
+        "कहाँ",
+        "है"
+      ],
+      "wrong": [
+        "माफ़ कीजिए, स्टेशन कहाँ हूँ?",
+        "माफ़ कीजिए, स्टेशन कौन है?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "कहाँ",
+          "क्या",
+          "कौन"
+        ]
+      }
+    },
+    {
+      "id": "doodh-khareedne",
+      "topic": "out",
+      "concepts": [
+        "progressive",
+        "infinitive",
+        "oblique",
+        "verb-last"
+      ],
+      "text": "मैं दूध खरीदने दुकान जा रहा हूँ।",
+      "means": "I'm going to the store to buy milk.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "दूध",
+          "दूध"
+        ],
+        [
+          "खरीदने",
+          "खरीदना"
+        ],
+        [
+          "दुकान",
+          "दुकान"
+        ],
+        [
+          "जा",
+          "जाना"
+        ],
+        [
+          "रहा"
+        ],
+        [
+          "हूँ",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "milk",
+          true
+        ],
+        [
+          "to buy",
+          true
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "am going",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "दूध",
+        "खरीदने",
+        "जा",
+        "रहा",
+        "हूँ"
+      ],
+      "wrong": [
+        "मैं दूध खरीदना दुकान जा रहा हूँ।",
+        "मैं दूध खरीदने दुकान जा रहा है।"
+      ],
+      "otherGender": {
+        "text": "मैं दूध खरीदने दुकान जा रही हूँ।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "खरीदने",
+          "खरीदना",
+          "खरीदा"
+        ]
+      }
+    },
+    {
+      "id": "bus-se-office",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "postposition",
+        "verb-last",
+        "gender"
+      ],
+      "text": "कल मैं बस से ऑफ़िस जाऊँगा।",
+      "means": "Tomorrow I'm taking the bus to work.",
+      "words": [
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "मैं"
+        ],
+        [
+          "बस",
+          "बस"
+        ],
+        [
+          "से"
+        ],
+        [
+          "ऑफ़िस",
+          "ऑफ़िस"
+        ],
+        [
+          "जाऊँगा",
+          "जाना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "by bus"
+        ],
+        [
+          "to the office"
+        ],
+        [
+          "will go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "moved": [
+        "जाऊँगा"
+      ],
+      "wrong": [
+        "कल मैं बस से ऑफ़िस जाएगा।",
+        "कल मैं बस को ऑफ़िस जाऊँगा।"
+      ],
+      "otherGender": {
+        "text": "कल मैं बस से ऑफ़िस जाऊँगी।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "से",
+          "को",
+          "का"
+        ]
+      }
+    },
+    {
+      "id": "nayi-jacket",
+      "topic": "out",
+      "concepts": [
+        "ne",
+        "past",
+        "gender",
+        "verb-last"
+      ],
+      "text": "कल मैंने एक नई जैकेट खरीदी।",
+      "means": "Yesterday I bought a new jacket.",
+      "words": [
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "मैंने"
+        ],
+        [
+          "एक"
+        ],
+        [
+          "नई",
+          "नया"
+        ],
+        [
+          "जैकेट",
+          "जैकेट"
+        ],
+        [
+          "खरीदी",
+          "खरीदना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I"
+        ],
+        [
+          "a new jacket"
+        ],
+        [
+          "bought",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "खरीदी"
+      ],
+      "wrong": [
+        "कल मैंने एक नई जैकेट खरीदा।",
+        "कल मैं एक नई जैकेट खरीदी।"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "खरीदी",
+          "खरीदा",
+          "खरीदे"
+        ]
+      }
+    },
+    {
+      "id": "train-late",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "gender",
+        "verb-last"
+      ],
+      "text": "ट्रेन दस मिनट लेट थी।",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "ट्रेन",
+          "ट्रेन"
+        ],
+        [
+          "दस"
+        ],
+        [
+          "मिनट",
+          "मिनट"
+        ],
+        [
+          "लेट",
+          "लेट"
+        ],
+        [
+          "थी",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "ten minutes"
+        ],
+        [
+          "late"
+        ],
+        [
+          "was",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "थी"
+      ],
+      "wrong": [
+        "ट्रेन दस मिनट लेट था।",
+        "ट्रेन दस मिनट लेट थे।"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "थी",
+          "था",
+          "थे"
+        ]
+      }
+    },
+    {
+      "id": "kabhi-bharat-nahin",
+      "topic": "out",
+      "concepts": [
+        "nahin",
+        "past",
+        "ne",
+        "verb-last"
+      ],
+      "text": "मैं कभी भारत नहीं गया।",
+      "means": "I've never been to India.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "कभी",
+          "कभी"
+        ],
+        [
+          "भारत",
+          "भारत"
+        ],
+        [
+          "नहीं"
+        ],
+        [
+          "गया",
+          "जाना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "ever"
+        ],
+        [
+          "to India"
+        ],
+        [
+          "haven't gone",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "नहीं",
+        "गया"
+      ],
+      "wrong": [
+        "मैंने कभी भारत नहीं गया।",
+        "मैं कभी भारत मत गया।"
+      ],
+      "otherGender": {
+        "text": "मैं कभी भारत नहीं गई।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "मैं",
+          "मैंने",
+          "मुझे"
+        ]
+      }
+    },
+    {
+      "id": "naye-joote",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "copula",
+        "verb-last",
+        "plural"
+      ],
+      "text": "नए जूते बहुत छोटे हैं।",
+      "means": "The new shoes are too small.",
+      "words": [
+        [
+          "नए",
+          "नया"
+        ],
+        [
+          "जूते",
+          "जूता"
+        ],
+        [
+          "बहुत",
+          "बहुत"
+        ],
+        [
+          "छोटे",
+          "छोटा"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "The new shoes"
+        ],
+        [
+          "too small"
+        ],
+        [
+          "are",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "हैं"
+      ],
+      "wrong": [
+        "नए जूते बहुत छोटा हैं।",
+        "नया जूते बहुत छोटे हैं।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "छोटे",
+          "छोटा",
+          "छोटी"
+        ]
+      }
+    },
+    {
+      "id": "taxi-se-jayenge",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "postposition",
+        "verb-last"
+      ],
+      "text": "हम टैक्सी से जाएँगे।",
+      "means": "We'll take a taxi.",
+      "words": [
+        [
+          "हम"
+        ],
+        [
+          "टैक्सी",
+          "टैक्सी"
+        ],
+        [
+          "से"
+        ],
+        [
+          "जाएँगे",
+          "जाना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "by taxi"
+        ],
+        [
+          "will go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "जाएँगे"
+      ],
+      "wrong": [
+        "हम टैक्सी से जाऊँगा।",
+        "हम टैक्सी को जाएँगे।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "जाएँगे",
+          "जाऊँगा",
+          "जाएगा"
+        ]
+      }
+    },
+    {
+      "id": "dadi-intezaar",
+      "topic": "out",
+      "concepts": [
+        "progressive",
+        "karna",
+        "postposition",
+        "possessive"
+      ],
+      "text": "स्टेशन पर दादी हमारा इंतज़ार कर रही हैं।",
+      "means": "Grandma is waiting for us at the station.",
+      "words": [
+        [
+          "स्टेशन",
+          "स्टेशन"
+        ],
+        [
+          "पर"
+        ],
+        [
+          "दादी",
+          "दादी"
+        ],
+        [
+          "हमारा",
+          "हमारा"
+        ],
+        [
+          "इंतज़ार",
+          "इंतज़ार"
+        ],
+        [
+          "कर",
+          "करना"
+        ],
+        [
+          "रही"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "At the station"
+        ],
+        [
+          "Grandma"
+        ],
+        [
+          "for us"
+        ],
+        [
+          "is waiting",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "इंतज़ार",
+        "कर",
+        "रही",
+        "हैं"
+      ],
+      "wrong": [
+        "स्टेशन पर दादी हमारा इंतज़ार कर रहा हैं।",
+        "स्टेशन पर दादी हमें इंतज़ार कर रही हैं।"
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "रही",
+          "रहा",
+          "रहे"
+        ]
+      }
+    },
+    {
+      "id": "aapke-paas-pen",
+      "topic": "out",
+      "concepts": [
+        "question-kya",
+        "have",
+        "address",
+        "copula"
+      ],
+      "text": "क्या आपके पास पेन है?",
+      "means": "Do you have a pen?",
+      "words": [
+        [
+          "क्या"
+        ],
+        [
+          "आपके",
+          "आपका"
+        ],
+        [
+          "पास",
+          "पास"
+        ],
+        [
+          "पेन",
+          "पेन"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do"
+        ],
+        [
+          "near you"
+        ],
+        [
+          "a pen"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "क्या आपका पास पेन है?",
+        "क्या आपके पास पेन हूँ?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "आपके",
+          "आपका",
+          "आपकी"
+        ]
+      }
+    },
+    {
+      "id": "shanivaar-dadi",
+      "topic": "plans",
+      "concepts": [
+        "progressive",
+        "oblique",
+        "postposition",
+        "possessive"
+      ],
+      "text": "शनिवार को हम दादी के घर जा रहे हैं।",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "शनिवार",
+          "शनिवार"
+        ],
+        [
+          "को"
+        ],
+        [
+          "हम"
+        ],
+        [
+          "दादी",
+          "दादी"
+        ],
+        [
+          "के",
+          "का"
+        ],
+        [
+          "घर",
+          "घर"
+        ],
+        [
+          "जा",
+          "जाना"
+        ],
+        [
+          "रहे"
+        ],
+        [
+          "हैं",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we"
+        ],
+        [
+          "to Grandma's house"
+        ],
+        [
+          "are going",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "जा",
+        "रहे",
+        "हैं"
+      ],
+      "wrong": [
+        "शनिवार को हम दादी का घर जा रहे हैं।",
+        "शनिवार को हम दादी के घर जा रहा हैं।"
+      ],
+      "otherGender": {
+        "text": "शनिवार को हम दादी के घर जा रही हैं।",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "के",
+          "का",
+          "की"
+        ]
+      }
+    },
+    {
+      "id": "kal-baarish",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "gender",
+        "verb-last"
+      ],
+      "text": "कल बारिश होगी।",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "बारिश",
+          "बारिश"
+        ],
+        [
+          "होगी",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "will be"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "कल बारिश होगा।",
+        "कल बारिश होगे।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "होगी",
+          "होगा",
+          "होंगे"
+        ]
+      }
+    },
+    {
+      "id": "phone-karungi",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "karna",
+        "gender",
+        "mujhe"
+      ],
+      "text": "मैं तुम्हें कल फ़ोन करूँगी।",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "मैं"
+        ],
+        [
+          "तुम्हें",
+          "तुम"
+        ],
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "फ़ोन",
+          "फ़ोन"
+        ],
+        [
+          "करूँगी",
+          "करना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "will call",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "फ़ोन",
+        "करूँगी"
+      ],
+      "wrong": [
+        "मैं तुम्हें कल फ़ोन करेगी।",
+        "मैं तुम कल फ़ोन करूँगी।"
+      ],
+      "otherGender": {
+        "text": "मैं तुम्हें कल फ़ोन करूँगा।",
+        "gender": "m",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "तुम्हें",
+          "तुम",
+          "तुम्हारा"
+        ]
+      }
+    },
+    {
+      "id": "jaana-hai",
+      "topic": "plans",
+      "concepts": [
+        "mujhe",
+        "infinitive"
+      ],
+      "text": "मुझे अब जाना है।",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "मुझे",
+          "मैं"
+        ],
+        [
+          "अब",
+          "अब"
+        ],
+        [
+          "जाना",
+          "जाना"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "now"
+        ],
+        [
+          "to go"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं अब जाना है।",
+        "मुझे अब जाता है।"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "जाना",
+          "जाता",
+          "गया"
+        ]
+      }
+    },
+    {
+      "id": "film-chaloge",
+      "topic": "plans",
+      "concepts": [
+        "question-kya",
+        "future",
+        "address",
+        "infinitive"
+      ],
+      "text": "क्या तुम हमारे साथ फ़िल्म देखने चलोगे?",
+      "means": "Do you want to go see a movie with us?",
+      "words": [
+        [
+          "क्या"
+        ],
+        [
+          "तुम",
+          "तुम"
+        ],
+        [
+          "हमारे",
+          "हमारा"
+        ],
+        [
+          "साथ",
+          "साथ"
+        ],
+        [
+          "फ़िल्म",
+          "फ़िल्म"
+        ],
+        [
+          "देखने",
+          "देखना"
+        ],
+        [
+          "चलोगे",
+          "चलना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Will"
+        ],
+        [
+          "you"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to watch a movie"
+        ],
+        [
+          "go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "moved": [
+        "चलोगे"
+      ],
+      "wrong": [
+        "क्या तुम हमारा साथ फ़िल्म देखने चलोगे?",
+        "क्या तुम हमारे साथ फ़िल्म देखना चलोगे?"
+      ],
+      "otherGender": {
+        "text": "क्या तुम हमारे साथ फ़िल्म देखने चलोगी?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "हमारे",
+          "हमारा",
+          "हमारी"
+        ]
+      }
+    },
+    {
+      "id": "agar-baarish-nahin",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "nahin",
+        "postposition",
+        "conditional"
+      ],
+      "text": "अगर बारिश नहीं हुई, तो हम बीच पर जाएँगे।",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "अगर",
+          "अगर"
+        ],
+        [
+          "बारिश",
+          "बारिश"
+        ],
+        [
+          "नहीं"
+        ],
+        [
+          "हुई,",
+          "होना"
+        ],
+        [
+          "तो"
+        ],
+        [
+          "हम"
+        ],
+        [
+          "बीच",
+          "बीच"
+        ],
+        [
+          "पर"
+        ],
+        [
+          "जाएँगे",
+          "जाना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "doesn't happen,"
+        ],
+        [
+          "then"
+        ],
+        [
+          "we"
+        ],
+        [
+          "to the beach"
+        ],
+        [
+          "will go",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "जाएँगे"
+      ],
+      "wrong": [
+        "अगर बारिश नहीं हुआ, तो हम बीच पर जाएँगे।",
+        "अगर बारिश नहीं हुई, तो हम बीच पर जाऊँगा।"
+      ],
+      "gap": {
+        "index": 8,
+        "options": [
+          "जाएँगे",
+          "जाऊँगा",
+          "जाएगा"
+        ]
+      }
+    },
+    {
+      "id": "agar-bhookh",
+      "topic": "food",
+      "concepts": [
+        "conditional",
+        "mujhe",
+        "address",
+        "gender"
+      ],
+      "text": "अगर आपको भूख लगी है, तो फ़्रिज में खाना है।",
+      "means": "If you're hungry, there's food in the fridge.",
+      "words": [
+        [
+          "अगर",
+          "अगर"
+        ],
+        [
+          "आपको"
+        ],
+        [
+          "भूख",
+          "भूख"
+        ],
+        [
+          "लगी",
+          "लगना"
+        ],
+        [
+          "है,",
+          "होना"
+        ],
+        [
+          "तो"
+        ],
+        [
+          "फ़्रिज",
+          "फ़्रिज"
+        ],
+        [
+          "में"
+        ],
+        [
+          "खाना",
+          "खाना"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "hunger"
+        ],
+        [
+          "is felt,"
+        ],
+        [
+          "then"
+        ],
+        [
+          "in the fridge"
+        ],
+        [
+          "food"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "अगर आप भूख लगी है, तो फ़्रिज में खाना है।",
+        "अगर आपको भूख लगा है, तो फ़्रिज में खाना है।"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "आपको",
+          "आप",
+          "आपका"
+        ]
+      }
+    },
+    {
+      "id": "agar-samay-ho",
+      "topic": "plans",
+      "concepts": [
+        "conditional",
+        "imperative",
+        "address",
+        "oblique"
+      ],
+      "text": "अगर समय हो, तो हमारे घर आओ!",
+      "means": "If you have time, come over to our place!",
+      "words": [
+        [
+          "अगर",
+          "अगर"
+        ],
+        [
+          "समय",
+          "समय"
+        ],
+        [
+          "हो,",
+          "होना"
+        ],
+        [
+          "तो"
+        ],
+        [
+          "हमारे",
+          "हमारा"
+        ],
+        [
+          "घर",
+          "घर"
+        ],
+        [
+          "आओ",
+          "आना"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "time"
+        ],
+        [
+          "there is,"
+        ],
+        [
+          "then"
+        ],
+        [
+          "to our house"
+        ],
+        [
+          "come",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "आओ"
+      ],
+      "wrong": [
+        "अगर समय हो, तो हमारा घर आओ!",
+        "अगर समय हूँ, तो हमारे घर आओ!"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "हमारे",
+          "हमारा",
+          "हमारी"
+        ]
+      }
+    },
+    {
+      "id": "weekend-kya-kar",
+      "topic": "plans",
+      "concepts": [
+        "progressive",
+        "question-word",
+        "address",
+        "oblique"
+      ],
+      "text": "तुम इस वीकेंड क्या कर रहे हो?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "तुम",
+          "तुम"
+        ],
+        [
+          "इस",
+          "यह"
+        ],
+        [
+          "वीकेंड",
+          "वीकेंड"
+        ],
+        [
+          "क्या"
+        ],
+        [
+          "कर",
+          "करना"
+        ],
+        [
+          "रहे"
+        ],
+        [
+          "हो",
+          "होना"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "this weekend"
+        ],
+        [
+          "what",
+          true
+        ],
+        [
+          "are doing",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "क्या",
+        "कर",
+        "रहे",
+        "हो"
+      ],
+      "wrong": [
+        "तुम इस वीकेंड क्या कर रहे हूँ?",
+        "तुम इस वीकेंड क्या कर रहे हैं?"
+      ],
+      "otherGender": {
+        "text": "तुम इस वीकेंड क्या कर रही हो?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 6,
+        "options": [
+          "हो",
+          "हूँ",
+          "है"
+        ]
+      }
+    },
+    {
+      "id": "aaj-thand",
+      "topic": "plans",
+      "concepts": [
+        "copula",
+        "verb-last"
+      ],
+      "text": "आज बहुत ठंड है।",
+      "means": "It's really cold today.",
+      "words": [
+        [
+          "आज",
+          "आज"
+        ],
+        [
+          "बहुत",
+          "बहुत"
+        ],
+        [
+          "ठंड",
+          "ठंड"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "very cold"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "है"
+      ],
+      "wrong": [
+        "आज बहुत ठंड हूँ।",
+        "आज बहुत ठंड हैं।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "है",
+          "हूँ",
+          "हो"
+        ]
+      }
+    },
+    {
+      "id": "thand-lag-rahi",
+      "topic": "plans",
+      "concepts": [
+        "mujhe",
+        "progressive",
+        "gender"
+      ],
+      "text": "मुझे ठंड लग रही है।",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "मुझे"
+        ],
+        [
+          "ठंड",
+          "ठंड"
+        ],
+        [
+          "लग",
+          "लगना"
+        ],
+        [
+          "रही"
+        ],
+        [
+          "है",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "cold"
+        ],
+        [
+          "is being felt"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "मैं ठंड लग रही है।",
+        "मुझे ठंड लग रहा है।"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "रही",
+          "रहा",
+          "रहे"
+        ]
+      }
+    },
+    {
+      "id": "mujhe-batana",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "imperative",
+        "mujhe"
+      ],
+      "text": "मुझे बताना!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "मुझे"
+        ],
+        [
+          "बताना",
+          "बताना"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Me"
+        ],
+        [
+          "tell",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "बताना"
+      ],
+      "wrong": [
+        "मैं बताना!",
+        "मेरा बताना!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "बताना",
+          "बताता",
+          "बताया"
+        ]
+      }
+    },
+    {
+      "id": "mausam-accha",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "gender",
+        "verb-last"
+      ],
+      "chunks": [
+        "ummeed-hai"
+      ],
+      "text": "उम्मीद है कि कल मौसम अच्छा होगा।",
+      "means": "Hopefully the weather's nice tomorrow.",
+      "words": [
+        [
+          "उम्मीद"
+        ],
+        [
+          "है"
+        ],
+        [
+          "कि"
+        ],
+        [
+          "कल",
+          "कल"
+        ],
+        [
+          "मौसम",
+          "मौसम"
+        ],
+        [
+          "अच्छा",
+          "अच्छा"
+        ],
+        [
+          "होगा",
+          "होना"
+        ]
+      ],
+      "punct": "।",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "the weather"
+        ],
+        [
+          "nice"
+        ],
+        [
+          "will be",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "moved": [
+        "होगा"
+      ],
+      "wrong": [
+        "उम्मीद है कि कल मौसम अच्छी होगी।",
+        "उम्मीद है कि कल मौसम अच्छा होगी।"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "अच्छा",
+          "अच्छी",
+          "अच्छे"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "कॉफ़ी",
+          "forms": [
+            "कॉफ़ी"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "चाय",
+          "forms": [
+            "चाय"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "पानी",
+          "forms": [
+            "पानी"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "मैं",
+          "forms": [
+            "मैं"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "पीना",
+          "forms": [
+            "पीता"
+          ],
+          "picture": "drink",
+          "means": "पीता = drink"
+        },
+        {
+          "lemma": "और",
+          "forms": [
+            "और"
+          ],
+          "means": "and"
+        },
+        {
+          "lemma": "होना",
+          "forms": [
+            "हूँ"
+          ],
+          "means": "हूँ = am"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "verb-last",
+        "line": "In a plain Hindi sentence the verb comes at the end, after the object and the place: मैं चाय पीता हूँ (I tea drink)."
+      },
+      "items": [
+        "item",
+        "item-2",
+        "item-3",
+        "item-4",
+        "item-5",
+        "item-6"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "एक",
+          "forms": [
+            "एक"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "दूध",
+          "forms": [
+            "दूध"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        },
+        {
+          "lemma": "देना",
+          "forms": [
+            "दीजिए"
+          ],
+          "means": "दीजिए = please give"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "item-7",
+        "item-8",
+        "item-9",
+        "item-10",
+        "item-11",
+        "item-12",
+        "item-13"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "अच्छा",
+          "forms": [
+            "अच्छा"
+          ],
+          "picture": "good",
+          "means": "good, fine"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "copula",
+        "line": "होना (to be) changes for the person: मैं हूँ (I am), वह है (he, she, it is), हम, आप and वे हैं (we, you, they are), तुम हो (you are, to a friend); था, थी and थे are was and were."
+      },
+      "items": [
+        "item-14",
+        "item-15",
+        "aap-kaise-hain",
+        "item-16",
+        "item-17",
+        "item-18"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "आप",
+          "forms": [
+            "आप"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "नहीं",
+          "forms": [
+            "नहीं"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "शिक्षक",
+          "forms": [
+            "शिक्षक"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "विद्यार्थी",
+          "forms": [
+            "विद्यार्थी"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "होना",
+          "forms": [
+            "हैं"
+          ],
+          "means": "हैं = are"
+        },
+        {
+          "lemma": "क्या",
+          "forms": [
+            "क्या"
+          ],
+          "means": "what; marks a yes/no question"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "item-19",
+        "item-20",
+        "aapka-naam",
+        "item-21",
+        "item-22",
+        "item-23"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "माँ",
+          "forms": [
+            "माँ"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "पिता",
+          "forms": [
+            "पिता"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "भाई",
+          "forms": [
+            "भाई"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "बहन",
+          "forms": [
+            "बहन"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "मेरा",
+          "forms": [
+            "मेरी",
+            "मेरे",
+            "मेरा"
+          ],
+          "means": "मेरी = my; मेरे = my; मेरा = my"
+        },
+        {
+          "lemma": "यह",
+          "forms": [
+            "यह"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "होना",
+          "forms": [
+            "है"
+          ],
+          "means": "है = is"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "का, के or की means of or 's, and matches the thing owned, not the owner: पापा की गाड़ी (Dad's car; गाड़ी is feminine)."
+      },
+      "items": [
+        "item-24",
+        "item-25",
+        "item-26",
+        "item-27",
+        "item-28",
+        "item-29"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "पास",
+          "forms": [
+            "पास"
+          ],
+          "means": "near"
+        },
+        {
+          "lemma": "दोस्त",
+          "forms": [
+            "दोस्त"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "डॉक्टर",
+          "forms": [
+            "डॉक्टर"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "चाबी",
+          "forms": [
+            "चाबी"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "फ़ोन",
+          "forms": [
+            "फ़ोन"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "किताब",
+          "forms": [
+            "किताब"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "आपका",
+          "forms": [
+            "आपके"
+          ],
+          "means": "आपके = your"
+        },
+        {
+          "lemma": "अच्छा",
+          "forms": [
+            "अच्छे"
+          ],
+          "means": "अच्छे = good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "main-doctor-hoon",
+        "item-30",
+        "item-31",
+        "item-32",
+        "item-33",
+        "item-34",
+        "item-35"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "कहाँ",
+          "forms": [
+            "कहाँ"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "यहाँ",
+          "forms": [
+            "यहाँ"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "वहाँ",
+          "forms": [
+            "वहाँ"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "शौचालय",
+          "forms": [
+            "शौचालय"
+          ],
+          "means": "bathroom, toilet"
+        },
+        {
+          "lemma": "चाबी",
+          "forms": [
+            "चाबियाँ"
+          ],
+          "means": "चाबियाँ = keys"
+        },
+        {
+          "lemma": "मेरा",
+          "forms": [
+            "मेरा"
+          ],
+          "means": "my"
+        }
+      ],
+      "phrases": [
+        "maaf-kijiye"
+      ],
+      "concept": {
+        "pattern": "address",
+        "line": "तुम is you to a friend or family, with हो and -ओ; आप is polite, for strangers and elders, with हैं and -इए."
+      },
+      "items": [
+        "item-36",
+        "item-37",
+        "item-38",
+        "item-39",
+        "item-40",
+        "item-41",
+        "chaabiyan-kahan"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "दो",
+          "forms": [
+            "दो"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "तीन",
+          "forms": [
+            "तीन"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "पैसा",
+          "forms": [
+            "पैसे"
+          ],
+          "picture": "money",
+          "means": "पैसे = money"
+        },
+        {
+          "lemma": "किताब",
+          "forms": [
+            "किताबें"
+          ],
+          "means": "किताबें = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "item-42",
+        "item-43",
+        "item-44",
+        "item-45",
+        "item-46",
+        "item-47",
+        "do-bhai"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "बोलना",
+          "forms": [
+            "बोलते",
+            "बोलता"
+          ],
+          "means": "बोलते = speak; बोलता = speak"
+        },
+        {
+          "lemma": "अंग्रेज़ी",
+          "forms": [
+            "अंग्रेज़ी"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "हिंदी",
+          "forms": [
+            "हिंदी"
+          ],
+          "means": "Hindi"
+        },
+        {
+          "lemma": "समझना",
+          "forms": [
+            "समझता",
+            "समझते"
+          ],
+          "means": "समझता = understand; समझते = understand"
+        },
+        {
+          "lemma": "थोड़ा",
+          "forms": [
+            "थोड़ी"
+          ],
+          "means": "थोड़ी = a little"
+        },
+        {
+          "lemma": "चाहना",
+          "forms": [
+            "चाहता"
+          ],
+          "means": "चाहता = want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "For habits and general states, use the verb's stem with -ता, -ती or -ते and होना: मैं चाय पीता हूँ (I drink tea); मेरी बहन दिल्ली में रहती है (my sister lives in Delhi)."
+      },
+      "items": [
+        "angrezi-bolte",
+        "item-48",
+        "item-49",
+        "item-50",
+        "item-51",
+        "item-52"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "घर",
+          "forms": [
+            "घर"
+          ],
+          "picture": "house",
+          "means": "house, home"
+        },
+        {
+          "lemma": "कमरा",
+          "forms": [
+            "कमरा"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "बड़ा",
+          "forms": [
+            "बड़ा"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "छोटा",
+          "forms": [
+            "छोटा",
+            "छोटे"
+          ],
+          "picture": "small",
+          "means": "छोटा = small; छोटे = small"
+        },
+        {
+          "lemma": "रहना",
+          "forms": [
+            "रहता",
+            "रहते",
+            "रहती"
+          ],
+          "means": "रहता = live; रहते = live; रहती = lives"
+        },
+        {
+          "lemma": "में",
+          "forms": [
+            "में"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "मेरा",
+          "forms": [
+            "मेरा"
+          ],
+          "means": "my"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "item-53",
+        "item-54",
+        "item-55",
+        "item-56",
+        "item-57"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "जाना",
+          "forms": [
+            "जाता",
+            "जा",
+            "जाती"
+          ],
+          "means": "जाता = go; जा = going; जाती = goes"
+        },
+        {
+          "lemma": "स्कूल",
+          "forms": [
+            "स्कूल"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "शहर",
+          "forms": [
+            "शहर"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "स्टेशन",
+          "forms": [
+            "स्टेशन"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "गाड़ी",
+          "forms": [
+            "गाड़ी"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "रहना",
+          "forms": [
+            "रहे"
+          ],
+          "means": "रहे = to live, to stay; auxiliary marking an ongoing action"
+        },
+        {
+          "lemma": "छोटा",
+          "forms": [
+            "छोटी"
+          ],
+          "means": "छोटी = small"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Every noun is masculine or feminine, and adjectives in -आ, and the verb forms that agree, change to match: अच्छा खाना, बड़ी रसोई; वह रहता है or रहती है; मैं करूँगा or करूँगी (a man or a woman)."
+      },
+      "items": [
+        "station-kahan",
+        "item-58",
+        "item-59",
+        "item-60",
+        "item-61",
+        "item-62",
+        "gaadi-nahin"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "आज",
+          "forms": [
+            "आज"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "कल",
+          "forms": [
+            "कल"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "अब",
+          "forms": [
+            "अब"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "काम",
+          "forms": [
+            "काम"
+          ],
+          "picture": "work",
+          "means": "work"
+        },
+        {
+          "lemma": "करना",
+          "forms": [
+            "कर",
+            "करना"
+          ],
+          "means": "कर = do; करना = to do"
+        },
+        {
+          "lemma": "सकना",
+          "forms": [
+            "सकता"
+          ],
+          "means": "सकता = can"
+        },
+        {
+          "lemma": "मैं",
+          "forms": [
+            "मुझे"
+          ],
+          "means": "मुझे = to me"
+        },
+        {
+          "lemma": "जाना",
+          "forms": [
+            "जाना",
+            "जाऊँगा"
+          ],
+          "means": "जाना = to go; जाऊँगा = will go"
+        },
+        {
+          "lemma": "रहना",
+          "forms": [
+            "रहा"
+          ],
+          "means": "रहा = ongoing"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "item-63",
+        "item-64",
+        "jaana-hai",
+        "item-65",
+        "item-66",
+        "item-67"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

@@ -1,0 +1,7518 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-cs",
+  "name": "Starter: Czech",
+  "about": "Czech word order and cases in real, everyday sentences.",
+  "language": "cs",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "káva": "coffee",
+    "čaj": "tea",
+    "voda": "water",
+    "já": "I",
+    "pít": "to drink",
+    "a": "and",
+    "jeden": "one",
+    "mléko": "milk",
+    "dobře": "well",
+    "mít se": "to be doing, to fare (jak se máš: how are you)",
+    "se": "reflexive pronoun/particle",
+    "ty": "you",
+    "učitel": "teacher (male; female učitelka)",
+    "student": "student",
+    "být": "to be",
+    "máma": "mom",
+    "táta": "dad",
+    "bratr": "brother",
+    "sestra": "sister",
+    "můj": "my",
+    "tenhle": "this, this one",
+    "dobrý": "good",
+    "mít": "to have",
+    "kamarád": "friend",
+    "lékařka": "doctor",
+    "klíč": "key",
+    "telefon": "phone",
+    "kniha": "book",
+    "kde": "where",
+    "tady": "here",
+    "tam": "there",
+    "záchod": "bathroom",
+    "dva": "two",
+    "tři": "three",
+    "peníze": "money",
+    "mluvit": "to speak",
+    "anglicky": "in English",
+    "česky": "in Czech",
+    "rozumět": "to understand",
+    "trochu": "a little",
+    "chtít": "to want",
+    "dům": "house",
+    "pokoj": "room",
+    "velký": "big",
+    "malý": "small",
+    "bydlet": "to live (somewhere)",
+    "v": "in",
+    "jít": "to go, usually on foot; to go or attend somewhere (pojď: come)",
+    "do": "to",
+    "škola": "school",
+    "město": "city",
+    "nádraží": "train station",
+    "auto": "car",
+    "dnes": "today",
+    "zítra": "tomorrow",
+    "už": "now, already",
+    "pracovat": "to work",
+    "muset": "must, to have to",
+    "moct": "can, to be able to",
+    "ahoj": "hi; bye",
+    "jmenovat se": "to be called",
+    "studovat": "to study",
+    "deset": "ten",
+    "vědět": "to know (a fact)",
+    "líbit se": "to please (líbí se mi: I like it)",
+    "film": "movie",
+    "včera": "yesterday",
+    "doma": "at home",
+    "byt": "apartment",
+    "stůl": "table",
+    "ležet": "to lie (be lying somewhere)",
+    "lednice": "fridge",
+    "zavřít": "to close",
+    "okno": "window",
+    "kuchyň": "kitchen",
+    "balkon": "balcony",
+    "přijít": "to come, to arrive",
+    "domů": "home (going there)",
+    "uvařit": "to cook (and be done)",
+    "večeře": "dinner",
+    "dveře": "door (always plural)",
+    "prosit": "to ask (prosím: please)",
+    "sem": "here (coming here)",
+    "cukr": "sugar",
+    "sklenice": "glass",
+    "sníst": "to eat (up)",
+    "sladký": "sweet",
+    "jíst": "to eat",
+    "pizza": "pizza",
+    "vařit": "to cook",
+    "moc": "very, too; a lot",
+    "platit": "to pay",
+    "rád": "glad; likes to, gladly (masculine; feminine ráda; rád vařím: I like cooking)",
+    "obchod": "store, shop",
+    "chléb": "bread (here accusative chleba; chléb is also possible)",
+    "jet": "to go (by car, bus or train)",
+    "práce": "work, job",
+    "autobus": "bus",
+    "koupit": "to buy",
+    "nový": "new",
+    "bunda": "jacket",
+    "vlak": "train",
+    "minuta": "minute",
+    "zpoždění": "delay",
+    "nikdy": "never",
+    "bota": "shoe",
+    "unavený": "tired (masculine; feminine unavená)",
+    "vzít": "to take",
+    "taxi": "taxi",
+    "čekat": "to wait",
+    "babička": "grandma",
+    "sobota": "Saturday",
+    "pršet": "to rain",
+    "zavolat": "to call, to phone",
+    "kino": "movies, movie theater",
+    "pláž": "beach",
+    "učit se": "to learn, to study",
+    "rok": "year",
+    "dělat": "to do, to make",
+    "víkend": "weekend",
+    "zima": "cold; winter (je mi zima: I'm cold)",
+    "dát": "to give",
+    "doufat": "to hope",
+    "hezky": "nicely (bude hezky: it'll be nice out)"
+  },
+  "chunks": {
+    "jak-se-máš": {
+      "text": "Jak se máš?",
+      "en": "How are you?",
+      "about": "Literally, how do you have yourself? Answer with Dobře, díky (fine, thanks)."
+    },
+    "jak-se-jmenuješ": {
+      "text": "Jak se jmenuješ?",
+      "en": "What's your name?",
+      "about": "Literally, how do you call yourself? Answer with Jmenuju se and your name."
+    },
+    "promiňte": {
+      "text": "Promiňte",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention or say sorry: polite to one person, or to more than one; one friend gets Promiň."
+    },
+    "dal-bych-si": {
+      "text": "dal bych si",
+      "en": "I'd like (to have)",
+      "about": "Literally, I'd give myself; a woman says dala bych si."
+    },
+    "platit-prosím": {
+      "text": "Platit, prosím.",
+      "en": "The check, please.",
+      "about": "Literally, to pay, please: how you ask for the check."
+    },
+    "dej-mi-vědět": {
+      "text": "Dej mi vědět!",
+      "en": "Let me know!",
+      "about": "A fixed request: tell me, keep me posted."
+    },
+    "hello": {
+      "text": "Ahoj",
+      "en": "hello"
+    },
+    "please": {
+      "text": "prosím",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "děkuji",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "Na shledanou",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "ano",
+      "en": "yes"
+    },
+    "no": {
+      "text": "ne",
+      "en": "no"
+    },
+    "nice-to-meet-you": {
+      "text": "Těší mě",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Kolik to stojí",
+      "en": "how much is it?"
+    },
+    "see-you-tomorrow": {
+      "text": "Uvidíme se zítra",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "piju-kavu",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piju kávu.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "kávu",
+          "káva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pít kávu jsem.",
+        "Já pít kávu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kávu",
+          "káva",
+          "pít"
+        ]
+      }
+    },
+    {
+      "id": "piju-caj",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Piju čaj.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já pít čaj.",
+        "Piju já pít čaj."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Piju",
+          "Pít",
+          "Já"
+        ]
+      }
+    },
+    {
+      "id": "ja-piju-vodu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative",
+        "no-articles"
+      ],
+      "text": "Já piju vodu.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Já",
+          "já"
+        ],
+        [
+          "piju",
+          "pít"
+        ],
+        [
+          "vodu",
+          "voda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já piju voda.",
+        "Já pít vodu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vodu",
+          "voda",
+          "pít"
+        ]
+      }
+    },
+    {
+      "id": "piju-kavu-a-caj",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Piju kávu a čaj.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "kávu",
+          "káva"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piju káva a čaj.",
+        "Já pít kávu a čaj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kávu",
+          "káva",
+          "voda"
+        ]
+      }
+    },
+    {
+      "id": "piju-caj-a-vodu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Piju čaj a vodu.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "vodu",
+          "voda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piju čaj a voda.",
+        "Já pít čaj a vodu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vodu",
+          "voda",
+          "káva"
+        ]
+      }
+    },
+    {
+      "id": "piju-vodu-a-kavu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Piju vodu a kávu.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "vodu",
+          "voda"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "kávu",
+          "káva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piju voda a kávu.",
+        "Piju vodu a káva."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vodu",
+          "voda",
+          "káva"
+        ]
+      }
+    },
+    {
+      "id": "jednu-kavu-prosim",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Jednu kávu, prosím.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Jednu",
+          "jeden"
+        ],
+        [
+          "kávu,",
+          "káva"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeden kávu, prosím.",
+        "Jednu káva, prosím."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jednu",
+          "Jeden",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "ahoj-jednu-kavu-prosim",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Ahoj, jednu kávu, prosím.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Ahoj,"
+        ],
+        [
+          "jednu",
+          "jeden"
+        ],
+        [
+          "kávu,",
+          "káva"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ahoj, jeden kávu, prosím.",
+        "Ahoj, jednu káva, prosím."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jednu",
+          "jeden",
+          "jedno"
+        ]
+      }
+    },
+    {
+      "id": "jeden-caj-a-jednu-vodu-prosim",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Jeden čaj a jednu vodu, prosím.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Jeden",
+          "jeden"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "jednu",
+          "jeden"
+        ],
+        [
+          "vodu,",
+          "voda"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jednu čaj a jednu vodu, prosím.",
+        "Jeden čaj a jeden vodu, prosím."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jeden",
+          "Jednu",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "jednu-kavu-dekuji",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Jednu kávu, děkuji.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Jednu",
+          "jeden"
+        ],
+        [
+          "kávu,",
+          "káva"
+        ],
+        [
+          "děkuji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeden kávu, děkuji.",
+        "Jednu káva, děkuji."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jednu",
+          "Jeden",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "ahoj-jeden-caj-prosim",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Ahoj! Jeden čaj, prosím.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Ahoj!"
+        ],
+        [
+          "Jeden",
+          "jeden"
+        ],
+        [
+          "čaj,",
+          "čaj"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ahoj! Jednu čaj, prosím.",
+        "Ahoj! Jedno čaj, prosím."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Jeden",
+          "Jednu",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "piju-mleko",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Piju mléko.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "mléko",
+          "mléko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já pít mléko.",
+        "Piju jedno kávu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Piju",
+          "Pít",
+          "Já"
+        ]
+      }
+    },
+    {
+      "id": "mam-se-dobre-dekuji",
+      "topic": "people",
+      "concepts": [
+        "se",
+        "second-position",
+        "no-pronoun",
+        "present"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Mám se dobře, děkuji.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Mám",
+          "mít se"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "dobře,",
+          "dobře"
+        ],
+        [
+          "děkuji"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "myself"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mám dobře se, děkuji.",
+        "Se mám dobře, děkuji."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dobře,",
+          "jeden,",
+          "jednu,"
+        ]
+      }
+    },
+    {
+      "id": "ano-jednu-kavu-prosim",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Ano, jednu kávu, prosím.",
+      "means": "Yes, a coffee, please.",
+      "words": [
+        [
+          "Ano,"
+        ],
+        [
+          "jednu",
+          "jeden"
+        ],
+        [
+          "kávu,",
+          "káva"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ano, jeden kávu, prosím.",
+        "Ano, jednu káva, prosím."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jednu",
+          "jeden",
+          "jedno"
+        ]
+      }
+    },
+    {
+      "id": "ne-dekuji-piju-mleko",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, děkuji. Piju mléko.",
+      "means": "No, thank you. I drink milk.",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "děkuji."
+        ],
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "mléko",
+          "mléko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne, děkuji. Já pít mléko.",
+        "Ne, děkuji. Piju jeden mléko."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Piju",
+          "Pít",
+          "Já"
+        ]
+      }
+    },
+    {
+      "id": "ano-dekuji-na-shledanou",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Ano, děkuji. Na shledanou!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ano,"
+        ],
+        [
+          "děkuji."
+        ],
+        [
+          "Na"
+        ],
+        [
+          "shledanou"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ano, děkuji. Shledanou na!",
+        "Ano, na děkuji shledanou!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ano,",
+          "Ne,",
+          "Ahoj,"
+        ]
+      }
+    },
+    {
+      "id": "ne-dekuji-na-shledanou",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, děkuji. Na shledanou!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "děkuji."
+        ],
+        [
+          "Na"
+        ],
+        [
+          "shledanou"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne, děkuji. Shledanou na!",
+        "Ne, na děkuji shledanou!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ne,",
+          "Ano,",
+          "Ahoj,"
+        ]
+      }
+    },
+    {
+      "id": "ahoj-tesi-me",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Ahoj! Těší mě.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Ahoj!"
+        ],
+        [
+          "Těší"
+        ],
+        [
+          "mě"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ahoj! Těší ty.",
+        "Ahoj! Ty těší mě."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ahoj!",
+          "Ano!",
+          "Ne!"
+        ]
+      }
+    },
+    {
+      "id": "ty-jsi-student",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Ty jsi student.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Ty",
+          "ty"
+        ],
+        [
+          "jsi",
+          "být"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ty jsem student.",
+        "Já jsi student."
+      ],
+      "otherGender": {
+        "text": "Ty jsi studentka.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "jsi",
+          "jsem",
+          "nejsem"
+        ]
+      }
+    },
+    {
+      "id": "jsi-ucitel",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "no-pronoun",
+        "present",
+        "no-articles"
+      ],
+      "text": "Jsi učitel?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Jsi",
+          "být"
+        ],
+        [
+          "učitel",
+          "učitel"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ty jsem učitel?",
+        "Já jsi učitel?"
+      ],
+      "otherGender": {
+        "text": "Jsi učitelka?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jsi",
+          "Jsem",
+          "Nejsem"
+        ]
+      }
+    },
+    {
+      "id": "nejsem-ucitel",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Nejsem učitel.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Nejsem",
+          "být"
+        ],
+        [
+          "učitel",
+          "učitel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já nejsem jsi učitel.",
+        "Ty nejsem učitel."
+      ],
+      "otherGender": {
+        "text": "Nejsem učitelka.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nejsem",
+          "Jsem",
+          "Jsi"
+        ]
+      }
+    },
+    {
+      "id": "tohle-je-mama",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Tohle je máma.",
+      "means": "This is Mom.",
+      "words": [
+        [
+          "Tohle",
+          "tenhle"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "máma",
+          "máma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tohle jsem máma.",
+        "Tohle jsi máma."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "je",
+          "jsem",
+          "jsi"
+        ]
+      }
+    },
+    {
+      "id": "tohle-je-moje-mama",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Tohle je moje máma.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Tohle",
+          "tenhle"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "moje",
+          "můj"
+        ],
+        [
+          "máma",
+          "máma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tohle je můj máma.",
+        "Tohle jsem moje máma."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moje",
+          "můj",
+          "dobrá"
+        ]
+      }
+    },
+    {
+      "id": "tohle-je-muj-tata",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Tohle je můj táta.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Tohle",
+          "tenhle"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "můj",
+          "můj"
+        ],
+        [
+          "táta",
+          "táta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tohle je moje táta.",
+        "Tohle jsi můj táta."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "můj",
+          "moje",
+          "dobrá"
+        ]
+      }
+    },
+    {
+      "id": "muj-tata-je-ucitel",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Můj táta je učitel.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Můj",
+          "můj"
+        ],
+        [
+          "táta",
+          "táta"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "učitel",
+          "učitel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moje táta je učitel.",
+        "Můj táta jsem učitel."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Můj",
+          "Moje",
+          "Dobrá"
+        ]
+      }
+    },
+    {
+      "id": "muj-bratr-je-student",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Můj bratr je student.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Můj",
+          "můj"
+        ],
+        [
+          "bratr",
+          "bratr"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moje bratr je student.",
+        "Můj bratr jsi student."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Můj",
+          "Moje",
+          "Dobrá"
+        ]
+      }
+    },
+    {
+      "id": "tohle-je-moje-sestra",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Tohle je moje sestra.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Tohle",
+          "tenhle"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "moje",
+          "můj"
+        ],
+        [
+          "sestra",
+          "sestra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tohle je můj sestra.",
+        "Tohle jsem moje sestra."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moje",
+          "můj",
+          "dobrá"
+        ]
+      }
+    },
+    {
+      "id": "moje-mama-je-dobra",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Moje máma je dobrá.",
+      "means": "My mother is good.",
+      "words": [
+        [
+          "Moje",
+          "můj"
+        ],
+        [
+          "máma",
+          "máma"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "dobrá",
+          "dobrý"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Můj máma je dobrá.",
+        "Moje máma jsem dobrá."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dobrá",
+          "dobře",
+          "jedno"
+        ]
+      }
+    },
+    {
+      "id": "mam-telefon",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Mám telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Mám",
+          "mít"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já máš telefon.",
+        "Ty mám telefon."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mám",
+          "Máš",
+          "Nemám"
+        ]
+      }
+    },
+    {
+      "id": "mas-klic",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Máš klíč?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Máš",
+          "mít"
+        ],
+        [
+          "klíč",
+          "klíč"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do you have"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ty mám klíč?",
+        "Já máš klíč?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Máš",
+          "Mám",
+          "Nemám"
+        ]
+      }
+    },
+    {
+      "id": "nemam-knihu",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Nemám knihu.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Nemám",
+          "mít"
+        ],
+        [
+          "knihu",
+          "kniha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nemám kniha.",
+        "Ty nemám knihu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "knihu",
+          "kniha",
+          "sestra"
+        ]
+      }
+    },
+    {
+      "id": "mam-bratra-a-sestru",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Mám bratra a sestru.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Mám",
+          "mít"
+        ],
+        [
+          "bratra",
+          "bratr"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "sestru",
+          "sestra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mám bratr a sestru.",
+        "Mám bratra a sestra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bratra",
+          "bratr",
+          "sestra"
+        ]
+      }
+    },
+    {
+      "id": "moje-sestra-je-lekarka",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Moje sestra je lékařka.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Moje",
+          "můj"
+        ],
+        [
+          "sestra",
+          "sestra"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "lékařka",
+          "lékařka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Můj sestra je lékařka.",
+        "Moje sestru je lékařka."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sestra",
+          "sestru",
+          "bratra"
+        ]
+      }
+    },
+    {
+      "id": "jsi-dobry-kamarad",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "adjective",
+        "gender"
+      ],
+      "text": "Jsi dobrý kamarád.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Jsi",
+          "být"
+        ],
+        [
+          "dobrý",
+          "dobrý"
+        ],
+        [
+          "kamarád",
+          "kamarád"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jsi dobrá kamarád.",
+        "Jsi dobře kamarád."
+      ],
+      "otherGender": {
+        "text": "Jsi dobrá kamarádka.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "dobrý",
+          "dobrá",
+          "dobře"
+        ]
+      }
+    },
+    {
+      "id": "kde-je-muj-klic",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Kde je můj klíč?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Kde",
+          "kde"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "můj",
+          "můj"
+        ],
+        [
+          "klíč",
+          "klíč"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kde je moje klíč?",
+        "Kde jsou můj klíč?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "je",
+          "jsou",
+          "jsem"
+        ]
+      }
+    },
+    {
+      "id": "muj-telefon-je-tady",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Můj telefon je tady.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Můj",
+          "můj"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "tady",
+          "tady"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moje telefon je tady.",
+        "Můj telefon jsou tady."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tady",
+          "tam",
+          "kde"
+        ]
+      }
+    },
+    {
+      "id": "klic-je-tam",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Klíč je tam.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Klíč",
+          "klíč"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "tam",
+          "tam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Klíč jsou tam.",
+        "Klíč jsem tam."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tam",
+          "tady",
+          "kde"
+        ]
+      }
+    },
+    {
+      "id": "prominte-kde-je-zachod",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "chunks": [
+        "promiňte"
+      ],
+      "text": "Promiňte, kde je záchod?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Promiňte,"
+        ],
+        [
+          "kde",
+          "kde"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "záchod",
+          "záchod"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Promiňte, kde jsou záchod?",
+        "Promiňte, kde jsem záchod?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "je",
+          "jsou",
+          "jsem"
+        ]
+      }
+    },
+    {
+      "id": "kde-je-moje-mama",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Kde je moje máma?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Kde",
+          "kde"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "moje",
+          "můj"
+        ],
+        [
+          "máma",
+          "máma"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kde je můj máma?",
+        "Kde jsou moje máma?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moje",
+          "můj",
+          "dobrý"
+        ]
+      }
+    },
+    {
+      "id": "moje-sestra-je-tady",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Moje sestra je tady.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Moje",
+          "můj"
+        ],
+        [
+          "sestra",
+          "sestra"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "tady",
+          "tady"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Můj sestra je tady.",
+        "Moje sestru je tady."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sestra",
+          "sestru",
+          "bratra"
+        ]
+      }
+    },
+    {
+      "id": "prominte-kolik-to-stoji",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "promiňte"
+      ],
+      "text": "Promiňte, kolik to stojí?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Promiňte,"
+        ],
+        [
+          "kolik"
+        ],
+        [
+          "to"
+        ],
+        [
+          "stojí"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "it"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Promiňte, kolik to jsem stojí?",
+        "Promiňte, kolik to jsi stojí?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Promiňte,",
+          "Ahoj,",
+          "Děkuji,"
+        ]
+      }
+    },
+    {
+      "id": "dve-kavy-prosim",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Dvě kávy, prosím.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dvě",
+          "dva"
+        ],
+        [
+          "kávy,",
+          "káva"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dva kávy, prosím.",
+        "Dvě kávu, prosím."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dvě",
+          "Dva",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "jednu-knihu-prosim",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Jednu knihu, prosím.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Jednu",
+          "jeden"
+        ],
+        [
+          "knihu,",
+          "kniha"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeden knihu, prosím.",
+        "Jednu kniha, prosím."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jednu",
+          "Jeden",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "mam-tri-knihy",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "plural",
+        "accusative"
+      ],
+      "text": "Mám tři knihy.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Mám",
+          "mít"
+        ],
+        [
+          "tři",
+          "tři"
+        ],
+        [
+          "knihy",
+          "kniha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mám tři knihu.",
+        "Mám tři kniha."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "knihy",
+          "knihu",
+          "kniha"
+        ]
+      }
+    },
+    {
+      "id": "nemam-penize",
+      "topic": "out",
+      "concepts": [
+        "ne",
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Nemám peníze.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Nemám",
+          "mít"
+        ],
+        [
+          "peníze",
+          "peníze"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ty nemám peníze.",
+        "Já máš peníze."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nemám",
+          "Mám",
+          "Máš"
+        ]
+      }
+    },
+    {
+      "id": "mluvim-trochu-cesky",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Mluvím trochu česky.",
+      "means": "I speak a little Czech.",
+      "words": [
+        [
+          "Mluvím",
+          "mluvit"
+        ],
+        [
+          "trochu",
+          "trochu"
+        ],
+        [
+          "česky",
+          "česky"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Czech"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já mluvíš trochu česky.",
+        "Ty mluvím trochu česky."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mluvím",
+          "Mluvíš",
+          "Mluvit"
+        ]
+      }
+    },
+    {
+      "id": "prominte-nerozumim",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "present",
+        "no-pronoun"
+      ],
+      "chunks": [
+        "promiňte"
+      ],
+      "text": "Promiňte, nerozumím.",
+      "means": "Excuse me, I don't understand.",
+      "words": [
+        [
+          "Promiňte,"
+        ],
+        [
+          "nerozumím",
+          "rozumět"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "I don't understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Promiňte, já rozumíš.",
+        "Promiňte, ty nerozumím."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nerozumím",
+          "rozumíš",
+          "rozumět"
+        ]
+      }
+    },
+    {
+      "id": "ty-rozumis",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Ty rozumíš?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ty",
+          "ty"
+        ],
+        [
+          "rozumíš",
+          "rozumět"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ty nerozumím?",
+        "Já rozumíš?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "rozumíš",
+          "nerozumím",
+          "rozumět"
+        ]
+      }
+    },
+    {
+      "id": "chci-kavu",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Chci kávu.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Chci",
+          "chtít"
+        ],
+        [
+          "kávu",
+          "káva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chci káva.",
+        "Já chtít kávu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kávu",
+          "káva",
+          "kávy"
+        ]
+      }
+    },
+    {
+      "id": "chci-vodu-prosim",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Chci vodu, prosím.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Chci",
+          "chtít"
+        ],
+        [
+          "vodu,",
+          "voda"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chci voda, prosím.",
+        "Já chtít vodu, prosím."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vodu,",
+          "voda,",
+          "káva,"
+        ]
+      }
+    },
+    {
+      "id": "kde-bydlis",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Kde bydlíš?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Kde",
+          "kde"
+        ],
+        [
+          "bydlíš",
+          "bydlet"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kde ty bydlím?",
+        "Kde já bydlíš?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bydlíš",
+          "bydlím",
+          "bydlí"
+        ]
+      }
+    },
+    {
+      "id": "muj-pokoj-je-maly",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Můj pokoj je malý.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Můj",
+          "můj"
+        ],
+        [
+          "pokoj",
+          "pokoj"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "malý",
+          "malý"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moje pokoj je malý.",
+        "Můj pokoj je malém."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "malý",
+          "malém",
+          "dobrá"
+        ]
+      }
+    },
+    {
+      "id": "bydlim-v-malem-dome",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "locative",
+        "adjective"
+      ],
+      "text": "Bydlím v malém domě.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Bydlím",
+          "bydlet"
+        ],
+        [
+          "v",
+          "v"
+        ],
+        [
+          "malém",
+          "malý"
+        ],
+        [
+          "domě",
+          "dům"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bydlím v malý domě.",
+        "Bydlím v malém dům."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "malém",
+          "malý",
+          "velký"
+        ]
+      }
+    },
+    {
+      "id": "tenhle-dum-je-velky",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Tenhle dům je velký.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Tenhle",
+          "tenhle"
+        ],
+        [
+          "dům",
+          "dům"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "velký",
+          "velký"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tenhle domě je velký.",
+        "Tohle dům je velký."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tenhle",
+          "Tohle",
+          "Moje"
+        ]
+      }
+    },
+    {
+      "id": "moje-mama-bydli-tady",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Moje máma bydlí tady.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Moje",
+          "můj"
+        ],
+        [
+          "máma",
+          "máma"
+        ],
+        [
+          "bydlí",
+          "bydlet"
+        ],
+        [
+          "tady",
+          "tady"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moje máma bydlím tady.",
+        "Moje máma bydlíš tady."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bydlí",
+          "bydlím",
+          "bydlíš"
+        ]
+      }
+    },
+    {
+      "id": "kde-je-nadrazi-2",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "text": "Kde je nádraží?",
+      "means": "Where is the train station?",
+      "words": [
+        [
+          "Kde",
+          "kde"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "nádraží",
+          "nádraží"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the train station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kde je nádražím?",
+        "Kde jsem nádraží?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "je",
+          "jsou",
+          "jsem"
+        ]
+      }
+    },
+    {
+      "id": "jdu-do-skoly",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "genitive",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Jdu do školy.",
+      "means": "I'm going to school.",
+      "words": [
+        [
+          "Jdu",
+          "jít"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "školy",
+          "škola"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jdu do škola.",
+        "Já jdeš do školy."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "školy",
+          "škola",
+          "město"
+        ]
+      }
+    },
+    {
+      "id": "do-mesta-jdes",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "motion",
+        "genitive",
+        "no-pronoun"
+      ],
+      "text": "Do města jdeš?",
+      "means": "Are you going to the city?",
+      "words": [
+        [
+          "Do",
+          "do"
+        ],
+        [
+          "města",
+          "město"
+        ],
+        [
+          "jdeš",
+          "jít"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "To"
+        ],
+        [
+          "the city"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Do město jdeš?",
+        "Ty do města jdu?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "města",
+          "město",
+          "škola"
+        ]
+      }
+    },
+    {
+      "id": "moje-mama-jde-do-mesta",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "genitive",
+        "present"
+      ],
+      "text": "Moje máma jde do města.",
+      "means": "My mother is going to the city.",
+      "words": [
+        [
+          "Moje",
+          "můj"
+        ],
+        [
+          "máma",
+          "máma"
+        ],
+        [
+          "jde",
+          "jít"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "města",
+          "město"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moje máma jdu do města.",
+        "Moje máma jde do město."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jde",
+          "jdu",
+          "jdeš"
+        ]
+      }
+    },
+    {
+      "id": "tohle-auto-je-male",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Tohle auto je malé.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Tohle",
+          "tenhle"
+        ],
+        [
+          "auto",
+          "auto"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "malé",
+          "malý"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tenhle auto je malé.",
+        "Tohle auto je malý."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "malé",
+          "malý",
+          "malém"
+        ]
+      }
+    },
+    {
+      "id": "mam-auto",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Mám auto.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Mám",
+          "mít"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Já máš auto.",
+        "Ty mám auto."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mám",
+          "Máš",
+          "Nemám"
+        ]
+      }
+    },
+    {
+      "id": "dekuji-uvidime-se-zitra",
+      "topic": "plans",
+      "concepts": [
+        "se",
+        "second-position",
+        "future"
+      ],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Děkuji. Uvidíme se zítra!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Děkuji."
+        ],
+        [
+          "Uvidíme"
+        ],
+        [
+          "se"
+        ],
+        [
+          "zítra"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "we will see"
+        ],
+        [
+          "each other"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Děkuji. Se uvidíme zítra!",
+        "Děkuji. Uvidíme zítra se!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "zítra",
+          "dnes",
+          "už"
+        ]
+      }
+    },
+    {
+      "id": "dnes-pracuji",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Dnes pracuji.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Dnes",
+          "dnes"
+        ],
+        [
+          "pracuji",
+          "pracovat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dnes já pracovat.",
+        "Dnes ty pracuji."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pracuji",
+          "pracovat",
+          "jít"
+        ]
+      }
+    },
+    {
+      "id": "zitra-jdu-do-mesta",
+      "topic": "plans",
+      "concepts": [
+        "motion",
+        "genitive",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Zítra jdu do města.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Zítra",
+          "zítra"
+        ],
+        [
+          "jdu",
+          "jít"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "města",
+          "město"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zítra jdu do město.",
+        "Zítra já jdeš do města."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "města",
+          "město",
+          "škola"
+        ]
+      }
+    },
+    {
+      "id": "dnes-nemuzu-jit",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "ne",
+        "no-pronoun",
+        "motion"
+      ],
+      "text": "Dnes nemůžu jít.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Dnes",
+          "dnes"
+        ],
+        [
+          "nemůžu",
+          "moct"
+        ],
+        [
+          "jít",
+          "jít"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "I can't"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dnes nemůžu jdu.",
+        "Dnes nemůžu jdeš."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jít",
+          "jdu",
+          "jdeš"
+        ]
+      }
+    },
+    {
+      "id": "zitra-musim-pracovat",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Zítra musím pracovat.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Zítra",
+          "zítra"
+        ],
+        [
+          "musím",
+          "muset"
+        ],
+        [
+          "pracovat",
+          "pracovat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I have to"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zítra musím pracuji.",
+        "Zítra muset pracuji."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pracovat",
+          "pracuji",
+          "musím"
+        ]
+      }
+    },
+    {
+      "id": "jak-se-mas",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "se",
+        "second-position"
+      ],
+      "chunks": [
+        "jak-se-máš",
+        "hello"
+      ],
+      "text": "Ahoj, jak se máš?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Ahoj,"
+        ],
+        [
+          "jak"
+        ],
+        [
+          "se"
+        ],
+        [
+          "máš"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you have"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "se"
+      ],
+      "wrong": [
+        "Ahoj, jak máš se?",
+        "Ahoj, se jak máš?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "máš",
+          "mám",
+          "má"
+        ]
+      }
+    },
+    {
+      "id": "jak-se-jmenujes",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "se",
+        "second-position"
+      ],
+      "chunks": [
+        "jak-se-jmenuješ"
+      ],
+      "text": "Jak se jmenuješ?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Jak"
+        ],
+        [
+          "se"
+        ],
+        [
+          "jmenuješ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you call"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "se"
+      ],
+      "wrong": [
+        "Jak jmenuješ se?",
+        "Se jak jmenuješ?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jmenuješ",
+          "jmenuju",
+          "jmenuje"
+        ]
+      }
+    },
+    {
+      "id": "mluvis-anglicky",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Mluvíš anglicky?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Mluvíš",
+          "mluvit"
+        ],
+        [
+          "anglicky",
+          "anglicky"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "in English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mluvit anglicky?",
+        "Mluvíš anglický?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mluvíš",
+          "Mluvím",
+          "Mluví"
+        ]
+      }
+    },
+    {
+      "id": "bratr-studuje-v-praze",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "present"
+      ],
+      "text": "Můj bratr studuje v Praze.",
+      "means": "My brother studies in Prague.",
+      "words": [
+        [
+          "Můj",
+          "můj"
+        ],
+        [
+          "bratr",
+          "bratr"
+        ],
+        [
+          "studuje",
+          "studovat"
+        ],
+        [
+          "v"
+        ],
+        [
+          "Praze"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "studies"
+        ],
+        [
+          "in Prague"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Můj bratr studuje v Praha.",
+        "Můj bratr studuje na Praze."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "studuje",
+          "studuju",
+          "studujou"
+        ]
+      }
+    },
+    {
+      "id": "mam-sestru",
+      "topic": "people",
+      "concepts": [
+        "accusative",
+        "no-pronoun",
+        "plural"
+      ],
+      "text": "Mám jednu sestru a dva bratry.",
+      "means": "I have one sister and two brothers.",
+      "words": [
+        [
+          "Mám",
+          "mít"
+        ],
+        [
+          "jednu",
+          "jeden"
+        ],
+        [
+          "sestru",
+          "sestra"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "dva",
+          "dva"
+        ],
+        [
+          "bratry",
+          "bratr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "one sister"
+        ],
+        [
+          "and"
+        ],
+        [
+          "two brothers"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Mám jedna sestra a dva bratry.",
+        "Mám jednu sestru a dva bratři."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sestru",
+          "sestra",
+          "sestry"
+        ]
+      }
+    },
+    {
+      "id": "auto-meho-taty",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "To je auto mého táty.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "To"
+        ],
+        [
+          "je"
+        ],
+        [
+          "auto",
+          "auto"
+        ],
+        [
+          "mého",
+          "můj"
+        ],
+        [
+          "táty",
+          "táta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "car"
+        ],
+        [
+          "my dad's",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "mého",
+        "táty"
+      ],
+      "wrong": [
+        "To je auto můj táta.",
+        "To je auto mého táta."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "táty",
+          "táta",
+          "tátu"
+        ]
+      }
+    },
+    {
+      "id": "nevim-kde-bydli",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "no-pronoun"
+      ],
+      "text": "Nevím, kde bydlí.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Nevím,",
+          "vědět"
+        ],
+        [
+          "kde"
+        ],
+        [
+          "bydlí",
+          "bydlet"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ne vím, kde bydlí.",
+        "Vím ne, kde bydlí."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bydlí",
+          "bydlím",
+          "bydlet"
+        ]
+      }
+    },
+    {
+      "id": "jsem-ucitel",
+      "topic": "people",
+      "concepts": [
+        "no-pronoun",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Jsem učitel.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Jsem",
+          "být"
+        ],
+        [
+          "učitel",
+          "učitel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Jsem učitele.",
+        "Jsi učitel."
+      ],
+      "otherGender": {
+        "text": "Jsem učitelka.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "učitel",
+          "učitele",
+          "učiteli"
+        ]
+      }
+    },
+    {
+      "id": "libi-se-mi",
+      "topic": "people",
+      "concepts": [
+        "se",
+        "dative",
+        "new-last",
+        "second-position"
+      ],
+      "text": "Líbí se mi tenhle film.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Líbí",
+          "líbit se"
+        ],
+        [
+          "se"
+        ],
+        [
+          "mi"
+        ],
+        [
+          "tenhle",
+          "tenhle"
+        ],
+        [
+          "film",
+          "film"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is pleasing"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "this movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "tenhle",
+        "film"
+      ],
+      "wrong": [
+        "Líbí mi se tenhle film.",
+        "Já líbí se tenhle film."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Líbí",
+          "Líbím",
+          "Líbíš"
+        ]
+      }
+    },
+    {
+      "id": "vcera-jsem-byl-doma",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "second-position"
+      ],
+      "text": "Včera jsem byl doma.",
+      "means": "Yesterday I was at home.",
+      "words": [
+        [
+          "Včera",
+          "včera"
+        ],
+        [
+          "jsem"
+        ],
+        [
+          "byl",
+          "být"
+        ],
+        [
+          "doma",
+          "doma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I"
+        ],
+        [
+          "was"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Včera byl jsem doma.",
+        "Jsem včera byl doma."
+      ],
+      "otherGender": {
+        "text": "Včera jsem byla doma.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "byl",
+          "být",
+          "budu"
+        ]
+      }
+    },
+    {
+      "id": "maly-byt",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "adjective",
+        "no-pronoun",
+        "gender"
+      ],
+      "text": "Bydlím v malém bytě.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Bydlím",
+          "bydlet"
+        ],
+        [
+          "v"
+        ],
+        [
+          "malém",
+          "malý"
+        ],
+        [
+          "bytě",
+          "byt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Bydlím v malý byt.",
+        "Bydlím v malém byt."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bytě",
+          "byt",
+          "bytem"
+        ]
+      }
+    },
+    {
+      "id": "na-stole-kniha",
+      "topic": "home",
+      "concepts": [
+        "new-last",
+        "locative",
+        "no-articles",
+        "dummy-subject"
+      ],
+      "text": "Na stole leží kniha.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Na"
+        ],
+        [
+          "stole",
+          "stůl"
+        ],
+        [
+          "leží",
+          "ležet"
+        ],
+        [
+          "kniha",
+          "kniha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "lies"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Na",
+        "stole",
+        "kniha"
+      ],
+      "wrong": [
+        "Na stůl leží kniha.",
+        "Na stole leží knihu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "stole",
+          "stůl",
+          "stolem"
+        ]
+      }
+    },
+    {
+      "id": "neni-mleko",
+      "topic": "home",
+      "concepts": [
+        "ne",
+        "locative",
+        "dummy-subject"
+      ],
+      "text": "V lednici není mléko.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "V"
+        ],
+        [
+          "lednici",
+          "lednice"
+        ],
+        [
+          "není",
+          "být"
+        ],
+        [
+          "mléko",
+          "mléko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "there isn't"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "V lednice není mléko.",
+        "V lednici ne je mléko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lednici",
+          "lednice",
+          "lednicí"
+        ]
+      }
+    },
+    {
+      "id": "zavrit-okno",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "modal",
+        "aspect",
+        "accusative"
+      ],
+      "text": "Můžeš zavřít okno?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Můžeš",
+          "moct"
+        ],
+        [
+          "zavřít",
+          "zavřít"
+        ],
+        [
+          "okno",
+          "okno"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can you"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Můžeš zavři okno?",
+        "Můžeš zavřít oknem?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "zavřít",
+          "zavři",
+          "zavřel"
+        ]
+      }
+    },
+    {
+      "id": "velka-kuchyn",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "accusative",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Máme velkou kuchyň a malý balkon.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Máme",
+          "mít"
+        ],
+        [
+          "velkou",
+          "velký"
+        ],
+        [
+          "kuchyň",
+          "kuchyň"
+        ],
+        [
+          "a"
+        ],
+        [
+          "malý",
+          "malý"
+        ],
+        [
+          "balkon",
+          "balkon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Máme velká kuchyň a malý balkon.",
+        "Máme velký kuchyň a malý balkon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "velkou",
+          "velká",
+          "velký"
+        ]
+      }
+    },
+    {
+      "id": "kdyz-prijdu-domu",
+      "topic": "home",
+      "concepts": [
+        "aspect",
+        "future",
+        "accusative"
+      ],
+      "text": "Když přijdu domů, uvařím večeři.",
+      "means": "When I get home, I'll cook dinner.",
+      "words": [
+        [
+          "Když"
+        ],
+        [
+          "přijdu",
+          "přijít"
+        ],
+        [
+          "domů,",
+          "domů"
+        ],
+        [
+          "uvařím",
+          "uvařit"
+        ],
+        [
+          "večeři",
+          "večeře"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I come"
+        ],
+        [
+          "home,"
+        ],
+        [
+          "I'll cook"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Když přijdu domů, uvařit večeři.",
+        "Když přijdu doma, uvařím večeři."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "uvařím",
+          "uvařit",
+          "uvařil"
+        ]
+      }
+    },
+    {
+      "id": "zavri-dvere",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "plural"
+      ],
+      "text": "Zavři dveře, prosím.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Zavři",
+          "zavřít"
+        ],
+        [
+          "dveře,",
+          "dveře"
+        ],
+        [
+          "prosím",
+          "prosit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Zavřel dveře, prosím.",
+        "Zavři dveřmi, prosím."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Zavři",
+          "Zavřu",
+          "Zavřel"
+        ]
+      }
+    },
+    {
+      "id": "kde-jsou-klice",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "plural"
+      ],
+      "text": "Kde jsou moje klíče?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Kde",
+          "kde"
+        ],
+        [
+          "jsou",
+          "být"
+        ],
+        [
+          "moje",
+          "můj"
+        ],
+        [
+          "klíče",
+          "klíč"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Kde je moje klíče?",
+        "Kde jsou mého klíče?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jsou",
+          "je",
+          "jsem"
+        ]
+      }
+    },
+    {
+      "id": "pojd-sem",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "motion"
+      ],
+      "text": "Pojď sem!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Pojď",
+          "jít"
+        ],
+        [
+          "sem",
+          "sem"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Pojď jsem!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sem",
+          "jsem",
+          "tam"
+        ]
+      }
+    },
+    {
+      "id": "piju-kavu-bez-cukru",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "genitive",
+        "no-pronoun"
+      ],
+      "text": "Piju kávu bez cukru.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Piju",
+          "pít"
+        ],
+        [
+          "kávu",
+          "káva"
+        ],
+        [
+          "bez"
+        ],
+        [
+          "cukru",
+          "cukr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Piju káva bez cukru.",
+        "Piju kávu bez cukr."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kávu",
+          "káva",
+          "kávou"
+        ]
+      }
+    },
+    {
+      "id": "nepiju-kavu",
+      "topic": "food",
+      "concepts": [
+        "ne",
+        "accusative"
+      ],
+      "text": "Nepiju kávu.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Nepiju",
+          "pít"
+        ],
+        [
+          "kávu",
+          "káva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Ne piju kávu.",
+        "Piju ne kávu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nepiju",
+          "Ne piju",
+          "Nepije"
+        ]
+      }
+    },
+    {
+      "id": "sklenici-vody",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "second-position",
+        "se"
+      ],
+      "chunks": [
+        "dal-bych-si"
+      ],
+      "text": "Dal bych si sklenici vody.",
+      "means": "I'd like a glass of water.",
+      "words": [
+        [
+          "Dal"
+        ],
+        [
+          "bych"
+        ],
+        [
+          "si"
+        ],
+        [
+          "sklenici",
+          "sklenice"
+        ],
+        [
+          "vody",
+          "voda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of water"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Dal si bych sklenici vody.",
+        "Dal bych si sklenici voda."
+      ],
+      "otherGender": {
+        "text": "Dala bych si sklenici vody.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "vody",
+          "voda",
+          "vodu"
+        ]
+      }
+    },
+    {
+      "id": "neco-sladkeho",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "aspect",
+        "genitive"
+      ],
+      "text": "Chci sníst něco sladkého.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Chci",
+          "chtít"
+        ],
+        [
+          "sníst",
+          "sníst"
+        ],
+        [
+          "něco"
+        ],
+        [
+          "sladkého",
+          "sladký"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Chci sním něco sladkého.",
+        "Chci sníst něco sladký."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sníst",
+          "sním",
+          "snědl"
+        ]
+      }
+    },
+    {
+      "id": "jedli-jsme-pizzu",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "second-position",
+        "accusative"
+      ],
+      "text": "Včera jsme jedli pizzu.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Včera",
+          "včera"
+        ],
+        [
+          "jsme"
+        ],
+        [
+          "jedli",
+          "jíst"
+        ],
+        [
+          "pizzu",
+          "pizza"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we"
+        ],
+        [
+          "ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Včera jedli jsme pizzu.",
+        "Včera jsme jedli pizza."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jsme",
+          "jsem",
+          "jsou"
+        ]
+      }
+    },
+    {
+      "id": "mleko-v-lednici",
+      "topic": "food",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Mléko je v lednici.",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "Mléko",
+          "mléko"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "v"
+        ],
+        [
+          "lednici",
+          "lednice"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "is"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mléko je v lednice.",
+        "Mléko je v lednicí."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lednici",
+          "lednice",
+          "lednicí"
+        ]
+      }
+    },
+    {
+      "id": "mama-vari",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Moje máma vaří moc dobře.",
+      "means": "My mom cooks really well.",
+      "words": [
+        [
+          "Moje",
+          "můj"
+        ],
+        [
+          "máma",
+          "máma"
+        ],
+        [
+          "vaří",
+          "vařit"
+        ],
+        [
+          "moc",
+          "moc"
+        ],
+        [
+          "dobře",
+          "dobře"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "cooks"
+        ],
+        [
+          "really well"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Moje máma vařit moc dobře.",
+        "Moje máma vaří moc dobrá."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vaří",
+          "vařím",
+          "vařit"
+        ]
+      }
+    },
+    {
+      "id": "platit-prosim",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "platit-prosím"
+      ],
+      "text": "Platit, prosím.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Platit,"
+        ],
+        [
+          "prosím"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To pay,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Platit, prosit.",
+        "Platit, prosíš."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "prosím",
+          "prosíš",
+          "prosit"
+        ]
+      }
+    },
+    {
+      "id": "rad-varim-s-mamou",
+      "topic": "food",
+      "concepts": [
+        "instrumental",
+        "present",
+        "gender",
+        "no-pronoun"
+      ],
+      "text": "Rád vařím s mámou.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Rád",
+          "rád"
+        ],
+        [
+          "vařím",
+          "vařit"
+        ],
+        [
+          "s"
+        ],
+        [
+          "mámou",
+          "máma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Gladly"
+        ],
+        [
+          "I cook"
+        ],
+        [
+          "with Mom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rád vařím s máma.",
+        "Rád vařit s mámou."
+      ],
+      "otherGender": {
+        "text": "Ráda vařím s mámou.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "mámou",
+          "máma",
+          "mámu"
+        ]
+      }
+    },
+    {
+      "id": "kde-je-nadrazi",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "imperative"
+      ],
+      "chunks": [
+        "promiňte"
+      ],
+      "text": "Promiňte, kde je nádraží?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Promiňte,"
+        ],
+        [
+          "kde",
+          "kde"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "nádraží",
+          "nádraží"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the train station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Promiňte, kde jsem nádraží?",
+        "Promiňte, kde je nádražím?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "je",
+          "jsem",
+          "jsi"
+        ]
+      }
+    },
+    {
+      "id": "jdu-do-obchodu",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "genitive"
+      ],
+      "text": "Jdu do obchodu pro chleba.",
+      "means": "I'm going to the store for bread.",
+      "words": [
+        [
+          "Jdu",
+          "jít"
+        ],
+        [
+          "do"
+        ],
+        [
+          "obchodu",
+          "obchod"
+        ],
+        [
+          "pro"
+        ],
+        [
+          "chleba",
+          "chléb"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Jdu do obchod pro chleba.",
+        "Jdu v obchodu pro chleba."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "obchodu",
+          "obchod",
+          "obchodě"
+        ]
+      }
+    },
+    {
+      "id": "jedu-autobusem",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "instrumental",
+        "genitive",
+        "future"
+      ],
+      "text": "Zítra jedu do práce autobusem.",
+      "means": "Tomorrow I'm taking the bus to work.",
+      "words": [
+        [
+          "Zítra",
+          "zítra"
+        ],
+        [
+          "jedu",
+          "jet"
+        ],
+        [
+          "do"
+        ],
+        [
+          "práce",
+          "práce"
+        ],
+        [
+          "autobusem",
+          "autobus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'm going"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Zítra jedu do práce autobus.",
+        "Zítra jdu do práce autobusem."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "autobusem",
+          "autobus",
+          "autobusu"
+        ]
+      }
+    },
+    {
+      "id": "koupila-jsem-si-bundu",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "second-position",
+        "aspect",
+        "se"
+      ],
+      "text": "Včera jsem si koupila novou bundu.",
+      "means": "Yesterday I bought myself a new jacket.",
+      "words": [
+        [
+          "Včera",
+          "včera"
+        ],
+        [
+          "jsem"
+        ],
+        [
+          "si"
+        ],
+        [
+          "koupila",
+          "koupit"
+        ],
+        [
+          "novou",
+          "nový"
+        ],
+        [
+          "bundu",
+          "bunda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I"
+        ],
+        [
+          "myself",
+          true
+        ],
+        [
+          "bought"
+        ],
+        [
+          "a new jacket"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ],
+      "moved": [
+        "si"
+      ],
+      "wrong": [
+        "Včera si jsem koupila novou bundu.",
+        "Včera jsem si koupila nová bunda."
+      ],
+      "otherGender": {
+        "text": "Včera jsem si koupil novou bundu.",
+        "gender": "m",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "novou",
+          "nová",
+          "nový"
+        ]
+      }
+    },
+    {
+      "id": "vlak-mel-zpozdeni",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "genitive",
+        "plural"
+      ],
+      "text": "Vlak měl deset minut zpoždění.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Vlak",
+          "vlak"
+        ],
+        [
+          "měl",
+          "mít"
+        ],
+        [
+          "deset",
+          "deset"
+        ],
+        [
+          "minut",
+          "minuta"
+        ],
+        [
+          "zpoždění",
+          "zpoždění"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "had"
+        ],
+        [
+          "ten minutes"
+        ],
+        [
+          "of delay"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Vlak měl deset minuty zpoždění.",
+        "Vlak měla deset minut zpoždění."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "měl",
+          "měla",
+          "mít"
+        ]
+      }
+    },
+    {
+      "id": "nikdy-jsem-nebyl",
+      "topic": "out",
+      "concepts": [
+        "ne",
+        "past",
+        "second-position",
+        "locative"
+      ],
+      "text": "Nikdy jsem nebyl v Česku.",
+      "means": "I've never been to Czechia.",
+      "words": [
+        [
+          "Nikdy",
+          "nikdy"
+        ],
+        [
+          "jsem"
+        ],
+        [
+          "nebyl",
+          "být"
+        ],
+        [
+          "v"
+        ],
+        [
+          "Česku"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Never"
+        ],
+        [
+          "I"
+        ],
+        [
+          "wasn't"
+        ],
+        [
+          "in Czechia"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nikdy jsem byl v Česku.",
+        "Nikdy nebyl jsem v Česku."
+      ],
+      "otherGender": {
+        "text": "Nikdy jsem nebyla v Česku.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "nebyl",
+          "byl",
+          "nejsem"
+        ]
+      }
+    },
+    {
+      "id": "nove-boty",
+      "topic": "out",
+      "concepts": [
+        "adjective",
+        "gender",
+        "plural"
+      ],
+      "text": "Ty nové boty jsou moc malé.",
+      "means": "These new shoes are too small.",
+      "words": [
+        [
+          "Ty"
+        ],
+        [
+          "nové",
+          "nový"
+        ],
+        [
+          "boty",
+          "bota"
+        ],
+        [
+          "jsou",
+          "být"
+        ],
+        [
+          "moc",
+          "moc"
+        ],
+        [
+          "malé",
+          "malý"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "These new shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ty nové boty jsou moc malá.",
+        "Ten nové boty jsou moc malé."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "malé",
+          "malá",
+          "malou"
+        ]
+      }
+    },
+    {
+      "id": "vzit-si-taxi",
+      "topic": "out",
+      "concepts": [
+        "modal",
+        "aspect",
+        "second-position",
+        "se"
+      ],
+      "text": "Jestli jsi unavený, můžeme si vzít taxi.",
+      "means": "If you're tired, we can take a taxi.",
+      "words": [
+        [
+          "Jestli"
+        ],
+        [
+          "jsi",
+          "být"
+        ],
+        [
+          "unavený,",
+          "unavený"
+        ],
+        [
+          "můžeme",
+          "moct"
+        ],
+        [
+          "si"
+        ],
+        [
+          "vzít",
+          "vzít"
+        ],
+        [
+          "taxi",
+          "taxi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you are tired,"
+        ],
+        [
+          "we can"
+        ],
+        [
+          "take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jestli jsi unavený, můžeme si vezmeme taxi.",
+        "Jestli jsi unavený, můžeme si vzal taxi."
+      ],
+      "otherGender": {
+        "text": "Jestli jsi unavená, můžeme si vzít taxi.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 5,
+        "options": [
+          "vzít",
+          "vezmeme",
+          "vzal"
+        ]
+      }
+    },
+    {
+      "id": "ceka-babicka",
+      "topic": "out",
+      "concepts": [
+        "new-last",
+        "locative",
+        "accusative"
+      ],
+      "text": "Na nádraží na nás čeká babička.",
+      "means": "Grandma is waiting for us at the station.",
+      "words": [
+        [
+          "Na"
+        ],
+        [
+          "nádraží",
+          "nádraží"
+        ],
+        [
+          "na"
+        ],
+        [
+          "nás"
+        ],
+        [
+          "čeká",
+          "čekat"
+        ],
+        [
+          "babička",
+          "babička"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "for us",
+          true
+        ],
+        [
+          "waits"
+        ],
+        [
+          "Grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Na",
+        "nádraží",
+        "na",
+        "nás",
+        "babička"
+      ],
+      "wrong": [
+        "Na nádraží na my čeká babička.",
+        "Na nádraží na nás čekají babička."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "čeká",
+          "čekám",
+          "čekají"
+        ]
+      }
+    },
+    {
+      "id": "v-sobotu-k-babicce",
+      "topic": "plans",
+      "concepts": [
+        "motion",
+        "dative",
+        "accusative",
+        "future"
+      ],
+      "text": "V sobotu jedeme k babičce.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "V"
+        ],
+        [
+          "sobotu",
+          "sobota"
+        ],
+        [
+          "jedeme",
+          "jet"
+        ],
+        [
+          "k"
+        ],
+        [
+          "babičce",
+          "babička"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "V sobotu jedeme k babička.",
+        "V sobota jedeme k babičce."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "babičce",
+          "babička",
+          "babičku"
+        ]
+      }
+    },
+    {
+      "id": "zitra-bude-prset",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "dummy-subject"
+      ],
+      "text": "Zítra bude pršet.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Zítra",
+          "zítra"
+        ],
+        [
+          "bude",
+          "být"
+        ],
+        [
+          "pršet",
+          "pršet"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "it will"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Zítra bude prší.",
+        "Zítra budu pršet."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pršet",
+          "prší",
+          "pršelo"
+        ]
+      }
+    },
+    {
+      "id": "zavolam-ti",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "aspect",
+        "dative",
+        "second-position"
+      ],
+      "text": "Zavolám ti zítra.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Zavolám",
+          "zavolat"
+        ],
+        [
+          "ti"
+        ],
+        [
+          "zítra",
+          "zítra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'll call"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Zavolám tě zítra.",
+        "Ti zavolám zítra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ti",
+          "tě",
+          "ty"
+        ]
+      }
+    },
+    {
+      "id": "uz-musim-jit",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "motion"
+      ],
+      "text": "Už musím jít.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Už",
+          "už"
+        ],
+        [
+          "musím",
+          "muset"
+        ],
+        [
+          "jít",
+          "jít"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I have to"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Už musím jdu.",
+        "Už musí jít."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jít",
+          "jdu",
+          "šel"
+        ]
+      }
+    },
+    {
+      "id": "pujdes-do-kina",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "motion",
+        "instrumental",
+        "future"
+      ],
+      "text": "Půjdeš s námi do kina?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Půjdeš",
+          "jít"
+        ],
+        [
+          "s"
+        ],
+        [
+          "námi"
+        ],
+        [
+          "do"
+        ],
+        [
+          "kina",
+          "kino"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Will you go"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Půjdeš s my do kina?",
+        "Půjdeš s námi do kino?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Půjdeš",
+          "Půjdu",
+          "Jít"
+        ]
+      }
+    },
+    {
+      "id": "jestli-nebude-prset",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "ne",
+        "motion",
+        "accusative"
+      ],
+      "text": "Jestli nebude pršet, půjdeme na pláž.",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "Jestli"
+        ],
+        [
+          "nebude",
+          "být"
+        ],
+        [
+          "pršet,",
+          "pršet"
+        ],
+        [
+          "půjdeme",
+          "jít"
+        ],
+        [
+          "na"
+        ],
+        [
+          "pláž",
+          "pláž"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "it won't rain,"
+        ],
+        [
+          "we'll go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jestli ne bude pršet, půjdeme na pláž.",
+        "Jestli nebude pršet, půjdeme na pláži."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "půjdeme",
+          "půjdu",
+          "jít"
+        ]
+      }
+    },
+    {
+      "id": "ucim-se-cesky",
+      "topic": "people",
+      "concepts": [
+        "se",
+        "present",
+        "second-position",
+        "no-pronoun"
+      ],
+      "text": "Učím se česky už rok.",
+      "means": "I've been learning Czech for a year.",
+      "words": [
+        [
+          "Učím",
+          "učit se"
+        ],
+        [
+          "se"
+        ],
+        [
+          "česky",
+          "česky"
+        ],
+        [
+          "už",
+          "už"
+        ],
+        [
+          "rok",
+          "rok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm learning"
+        ],
+        [
+          "Czech"
+        ],
+        [
+          "already a year"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Se učím česky už rok.",
+        "Učím česky už rok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Učím",
+          "Učíš",
+          "Učit"
+        ]
+      }
+    },
+    {
+      "id": "co-delas-o-vikendu",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "present",
+        "no-pronoun",
+        "future"
+      ],
+      "text": "Co děláš o víkendu?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Co"
+        ],
+        [
+          "děláš",
+          "dělat"
+        ],
+        [
+          "o"
+        ],
+        [
+          "víkendu",
+          "víkend"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are you doing"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Co dělat o víkendu?",
+        "Co děláš o víkend?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "děláš",
+          "dělám",
+          "dělá"
+        ]
+      }
+    },
+    {
+      "id": "dnes-je-zima",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "dummy-subject"
+      ],
+      "text": "Dnes je zima.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Dnes",
+          "dnes"
+        ],
+        [
+          "je",
+          "být"
+        ],
+        [
+          "zima",
+          "zima"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Dnes je zimou.",
+        "Dnes jsem zima."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zima",
+          "zimou",
+          "zimy"
+        ]
+      }
+    },
+    {
+      "id": "je-mi-zima",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "second-position"
+      ],
+      "text": "Je mi zima.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Je",
+          "být"
+        ],
+        [
+          "mi"
+        ],
+        [
+          "zima",
+          "zima"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It is"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je já zima.",
+        "Mi je zima."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mi",
+          "já",
+          "mě"
+        ]
+      }
+    },
+    {
+      "id": "dej-mi-vedet",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "dative",
+        "second-position"
+      ],
+      "chunks": [
+        "dej-mi-vědět"
+      ],
+      "text": "Dej mi vědět!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Dej",
+          "dát"
+        ],
+        [
+          "mi"
+        ],
+        [
+          "vědět",
+          "vědět"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let"
+        ],
+        [
+          "me"
+        ],
+        [
+          "know"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Dej mě vědět!",
+        "Dej já vědět!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mi",
+          "mě",
+          "já"
+        ]
+      }
+    },
+    {
+      "id": "doufam-bude-hezky",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "dummy-subject"
+      ],
+      "text": "Doufám, že zítra bude hezky.",
+      "means": "I hope it's nice out tomorrow.",
+      "words": [
+        [
+          "Doufám,",
+          "doufat"
+        ],
+        [
+          "že"
+        ],
+        [
+          "zítra",
+          "zítra"
+        ],
+        [
+          "bude",
+          "být"
+        ],
+        [
+          "hezky",
+          "hezky"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "it will be"
+        ],
+        [
+          "nice"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Doufám, že zítra budu hezky.",
+        "Doufám, že zítra bude hezký."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bude",
+          "budu",
+          "byl"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "káva",
+          "forms": [
+            "kávu"
+          ],
+          "picture": "coffee",
+          "means": "kávu = coffee"
+        },
+        {
+          "lemma": "čaj",
+          "forms": [
+            "čaj"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "voda",
+          "forms": [
+            "vodu"
+          ],
+          "picture": "water",
+          "means": "vodu = water"
+        },
+        {
+          "lemma": "já",
+          "forms": [
+            "já"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "pít",
+          "forms": [
+            "piju"
+          ],
+          "picture": "drink",
+          "means": "piju = I drink"
+        },
+        {
+          "lemma": "a",
+          "forms": [
+            "a"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending marks person and number, though some forms are the same: (já) bydlím, (ty) bydlíš, (on, ona) bydlí, (my) bydlíme, (oni) bydlí."
+      },
+      "items": [
+        "piju-kavu",
+        "piju-caj",
+        "ja-piju-vodu",
+        "piju-kavu-a-caj",
+        "piju-caj-a-vodu",
+        "piju-vodu-a-kavu"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "jeden",
+          "forms": [
+            "jednu",
+            "jeden"
+          ],
+          "means": "jednu = one; jeden = one"
+        },
+        {
+          "lemma": "mléko",
+          "forms": [
+            "mléko"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "jednu-kavu-prosim",
+        "ahoj-jednu-kavu-prosim",
+        "jeden-caj-a-jednu-vodu-prosim",
+        "jednu-kavu-dekuji",
+        "ahoj-jeden-caj-prosim",
+        "piju-mleko"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "dobře",
+          "forms": [
+            "dobře"
+          ],
+          "means": "well"
+        },
+        {
+          "lemma": "mít se",
+          "forms": [
+            "mám"
+          ],
+          "means": "mám = I am doing"
+        },
+        {
+          "lemma": "se",
+          "forms": [
+            "se"
+          ],
+          "means": "reflexive pronoun/particle; often has no separate English translation"
+        }
+      ],
+      "phrases": [
+        "jak-se-máš",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "no-pronoun",
+        "line": "A Czech verb often marks person and number, so já (I), ty (you) and my (we) are usually left out when it's clear who: Bydlím v Praze (I live in Prague)."
+      },
+      "items": [
+        "jak-se-mas",
+        "mam-se-dobre-dekuji",
+        "ano-jednu-kavu-prosim",
+        "ne-dekuji-piju-mleko",
+        "ano-dekuji-na-shledanou",
+        "ne-dekuji-na-shledanou"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ty",
+          "forms": [
+            "ty"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "učitel",
+          "forms": [
+            "učitel"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "student",
+          "forms": [
+            "student"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "být",
+          "forms": [
+            "jsem",
+            "jsi",
+            "nejsem"
+          ],
+          "means": "jsem = I am; jsi = you are; nejsem = I am not"
+        },
+        {
+          "lemma": "pít",
+          "forms": [
+            "nepiju"
+          ],
+          "means": "nepiju = I don't drink"
+        }
+      ],
+      "phrases": [
+        "jak-se-jmenuješ",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "jak-se-jmenujes",
+        "ahoj-tesi-me",
+        "jsem-ucitel",
+        "ty-jsi-student",
+        "jsi-ucitel",
+        "nejsem-ucitel",
+        "nepiju-kavu"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "máma",
+          "forms": [
+            "máma"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "táta",
+          "forms": [
+            "táta"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "bratr",
+          "forms": [
+            "bratr"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "sestra",
+          "forms": [
+            "sestra"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "můj",
+          "forms": [
+            "moje",
+            "můj"
+          ],
+          "means": "moje = my; můj = my"
+        },
+        {
+          "lemma": "tenhle",
+          "forms": [
+            "tohle"
+          ],
+          "means": "tohle = this"
+        },
+        {
+          "lemma": "dobrý",
+          "forms": [
+            "dobrá"
+          ],
+          "means": "dobrá = good"
+        },
+        {
+          "lemma": "být",
+          "forms": [
+            "je"
+          ],
+          "means": "je = is"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Czech nouns are masculine, feminine or neuter."
+      },
+      "items": [
+        "tohle-je-mama",
+        "tohle-je-moje-mama",
+        "tohle-je-muj-tata",
+        "muj-tata-je-ucitel",
+        "muj-bratr-je-student",
+        "tohle-je-moje-sestra",
+        "moje-mama-je-dobra"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "mít",
+          "forms": [
+            "mám",
+            "máš",
+            "nemám"
+          ],
+          "means": "mám = I have; máš = you have; nemám = I don't have"
+        },
+        {
+          "lemma": "kamarád",
+          "forms": [
+            "kamarád"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "lékařka",
+          "forms": [
+            "lékařka"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "klíč",
+          "forms": [
+            "klíč"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "kniha",
+          "forms": [
+            "knihu"
+          ],
+          "picture": "book",
+          "means": "knihu = book"
+        },
+        {
+          "lemma": "bratr",
+          "forms": [
+            "bratra"
+          ],
+          "means": "bratra = brother"
+        },
+        {
+          "lemma": "sestra",
+          "forms": [
+            "sestru"
+          ],
+          "means": "sestru = sister"
+        },
+        {
+          "lemma": "dobrý",
+          "forms": [
+            "dobrý"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mam-telefon",
+        "mas-klic",
+        "nemam-knihu",
+        "mam-bratra-a-sestru",
+        "moje-sestra-je-lekarka",
+        "jsi-dobry-kamarad"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "kde",
+          "forms": [
+            "kde"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "tady",
+          "forms": [
+            "tady"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "tam",
+          "forms": [
+            "tam"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "záchod",
+          "forms": [
+            "záchod"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "být",
+          "forms": [
+            "jsou"
+          ],
+          "means": "jsou = are"
+        },
+        {
+          "lemma": "klíč",
+          "forms": [
+            "klíče"
+          ],
+          "means": "klíče = keys"
+        }
+      ],
+      "phrases": [
+        "promiňte"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes/no question often keeps the order of a statement and is signaled by question intonation; a question word like kde, co or jak usually comes first, and Czech adds no do."
+      },
+      "items": [
+        "kde-je-muj-klic",
+        "muj-telefon-je-tady",
+        "klic-je-tam",
+        "prominte-kde-je-zachod",
+        "kde-je-moje-mama",
+        "moje-sestra-je-tady",
+        "kde-jsou-klice"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "dva",
+          "forms": [
+            "dvě",
+            "dva"
+          ],
+          "picture": "two",
+          "means": "dvě = two; dva = two"
+        },
+        {
+          "lemma": "tři",
+          "forms": [
+            "tři"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "peníze",
+          "forms": [
+            "peníze"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "káva",
+          "forms": [
+            "kávy"
+          ],
+          "means": "kávy = coffees"
+        },
+        {
+          "lemma": "kniha",
+          "forms": [
+            "knihy"
+          ],
+          "means": "knihy = books"
+        },
+        {
+          "lemma": "bratr",
+          "forms": [
+            "bratry"
+          ],
+          "means": "bratry = brothers"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "platit-prosím"
+      ],
+      "concept": null,
+      "items": [
+        "prominte-kolik-to-stoji",
+        "platit-prosim",
+        "dve-kavy-prosim",
+        "jednu-knihu-prosim",
+        "mam-tri-knihy",
+        "nemam-penize",
+        "mam-sestru"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "mluvit",
+          "forms": [
+            "mluvíš",
+            "mluvím"
+          ],
+          "means": "mluvíš = you speak; mluvím = I speak"
+        },
+        {
+          "lemma": "anglicky",
+          "forms": [
+            "anglicky"
+          ],
+          "means": "in English"
+        },
+        {
+          "lemma": "česky",
+          "forms": [
+            "česky"
+          ],
+          "means": "in Czech"
+        },
+        {
+          "lemma": "rozumět",
+          "forms": [
+            "nerozumím",
+            "rozumíš"
+          ],
+          "means": "nerozumím = I don't understand; rozumíš = you understand"
+        },
+        {
+          "lemma": "trochu",
+          "forms": [
+            "trochu"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "chtít",
+          "forms": [
+            "chci"
+          ],
+          "means": "chci = I want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "The accusative marks many direct objects: káva becomes Piju kávu, and masculine nouns for people and animals change too."
+      },
+      "items": [
+        "mluvis-anglicky",
+        "mluvim-trochu-cesky",
+        "prominte-nerozumim",
+        "ty-rozumis",
+        "chci-kavu",
+        "chci-vodu-prosim"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "dům",
+          "forms": [
+            "domě",
+            "dům"
+          ],
+          "picture": "house",
+          "means": "domě = house; dům = house"
+        },
+        {
+          "lemma": "pokoj",
+          "forms": [
+            "pokoj"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "velký",
+          "forms": [
+            "velký"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "malý",
+          "forms": [
+            "malý",
+            "malém"
+          ],
+          "picture": "small",
+          "means": "malý = small; malém = small"
+        },
+        {
+          "lemma": "bydlet",
+          "forms": [
+            "bydlíš",
+            "bydlím",
+            "bydlí"
+          ],
+          "means": "bydlíš = you live; bydlím = I live; bydlí = lives"
+        },
+        {
+          "lemma": "v",
+          "forms": [
+            "v"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "tenhle",
+          "forms": [
+            "tenhle"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "kde-bydlis",
+        "muj-pokoj-je-maly",
+        "bydlim-v-malem-dome",
+        "tenhle-dum-je-velky",
+        "moje-mama-bydli-tady"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "jít",
+          "forms": [
+            "jdu",
+            "jdeš",
+            "jde"
+          ],
+          "means": "jdu = I go; jdeš = you are going; jde = goes"
+        },
+        {
+          "lemma": "do",
+          "forms": [
+            "do"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "škola",
+          "forms": [
+            "školy"
+          ],
+          "picture": "school",
+          "means": "školy = school"
+        },
+        {
+          "lemma": "město",
+          "forms": [
+            "města"
+          ],
+          "picture": "city",
+          "means": "města = city"
+        },
+        {
+          "lemma": "nádraží",
+          "forms": [
+            "nádraží"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "auto",
+          "forms": [
+            "auto"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "malý",
+          "forms": [
+            "malé"
+          ],
+          "means": "malé = small"
+        },
+        {
+          "lemma": "tenhle",
+          "forms": [
+            "tohle"
+          ],
+          "means": "tohle = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "no-articles",
+        "line": "Czech has no words for a, an or the; context and word order do their work: Jsem učitel; Na stole leží kniha."
+      },
+      "items": [
+        "kde-je-nadrazi-2",
+        "jdu-do-skoly",
+        "do-mesta-jdes",
+        "kde-je-nadrazi",
+        "moje-mama-jde-do-mesta",
+        "tohle-auto-je-male",
+        "mam-auto"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "dnes",
+          "forms": [
+            "dnes"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "zítra",
+          "forms": [
+            "zítra"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "už",
+          "forms": [
+            "už"
+          ],
+          "means": "already; now (as in 'I have to go now')"
+        },
+        {
+          "lemma": "pracovat",
+          "forms": [
+            "pracuji",
+            "pracovat"
+          ],
+          "picture": "work",
+          "means": "pracuji = I work; pracovat = to work"
+        },
+        {
+          "lemma": "muset",
+          "forms": [
+            "musím"
+          ],
+          "means": "musím = I have to"
+        },
+        {
+          "lemma": "moct",
+          "forms": [
+            "nemůžu"
+          ],
+          "means": "nemůžu = I can't"
+        },
+        {
+          "lemma": "jít",
+          "forms": [
+            "jít"
+          ],
+          "means": "to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "dekuji-uvidime-se-zitra",
+        "dnes-pracuji",
+        "uz-musim-jit",
+        "zitra-jdu-do-mesta",
+        "dnes-nemuzu-jit",
+        "zitra-musim-pracovat"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

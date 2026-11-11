@@ -1,0 +1,8008 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-fy",
+  "name": "Starter: West Frisian",
+  "about": "West Frisian in real, everyday sentences, with each one's words in Frisian order.",
+  "language": "fy",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kofje": "coffee",
+    "tee": "tea",
+    "wetter": "water",
+    "ik": "I (my: me)",
+    "drinke": "drink",
+    "en": "and",
+    "in": "a, an",
+    "molke": "milk",
+    "goed": "good, fine",
+    "wêze": "be (is: is, bin: am, binne: are)",
+    "it": "the (with some nouns); it",
+    "jo": "you (to a stranger)",
+    "net": "not",
+    "learaar": "teacher",
+    "studint": "student",
+    "gjin": "no, not a",
+    "mem": "mom",
+    "heit": "father",
+    "broer": "brother",
+    "suster": "sister",
+    "myn": "my",
+    "dit": "this",
+    "hawwe": "have (haw: I have, hat: has, hasto: have you)",
+    "freon": "friend",
+    "dokter": "doctor",
+    "kaai": "key",
+    "telefoan": "phone",
+    "boek": "book",
+    "wêr": "where",
+    "hjir": "here",
+    "dêr": "there",
+    "de": "the",
+    "húske": "toilet",
+    "wat": "what",
+    "kostje": "cost",
+    "ien": "one",
+    "twa": "two",
+    "trije": "three",
+    "jild": "money",
+    "prate": "speak, talk",
+    "ingelsk": "English",
+    "frysk": "Frisian",
+    "begripe": "understand",
+    "bytsje": "little bit",
+    "wolle": "want (woe graach: would like)",
+    "hûs": "house",
+    "keamer": "room",
+    "grut": "big",
+    "lyts": "small",
+    "wenje": "live",
+    "yn": "in",
+    "gean": "go (giet: goes, gien: gone)",
+    "nei": "to",
+    "skoalle": "school",
+    "stêd": "town, city",
+    "stasjon": "station",
+    "auto": "car",
+    "hjoed": "today",
+    "moarn": "morning; tomorrow",
+    "no": "now",
+    "wurkje": "work",
+    "moatte": "must, have to (moatsto: must you)",
+    "kinne": "can, be able to (kinsto: can you)",
+    "hoe": "how",
+    "hjitte": "be called (hjitsto: are you called)",
+    "komme": "come",
+    "út": "out of, from",
+    "sikehûs": "hospital",
+    "ús": "our",
+    "bern": "child, children",
+    "helpe": "help",
+    "hy": "he",
+    "sy": "she; they",
+    "spylje": "play",
+    "graach": "gladly (after a verb: like to)",
+    "fuotbal": "soccer",
+    "kat": "cat",
+    "sliepe": "sleep",
+    "op": "on; to",
+    "bêd": "bed",
+    "opstean": "get up",
+    "alle": "all, every",
+    "om": "at (a time); for",
+    "sân": "seven",
+    "oere": "o'clock, hour",
+    "iependwaan": "open",
+    "finster": "window",
+    "skjinmeitsje": "clean",
+    "keuken": "kitchen",
+    "der": "there (der is: there is)",
+    "mear": "more",
+    "wy": "we",
+    "ite": "eat (yt: eat, iten: eaten; te iten: to eat)",
+    "jûns": "in the evening",
+    "seis": "six",
+    "jûn": "tonight; evening",
+    "fisk": "fish",
+    "honger": "hunger",
+    "glês": "glass",
+    "asjebleaft": "please",
+    "koeke": "cake",
+    "bakke": "bake",
+    "fleis": "meat",
+    "juster": "yesterday",
+    "restaurant": "restaurant",
+    "koaitsje": "cook (kôkesto: are you cooking)",
+    "bus": "bus",
+    "fergees": "free (no cost)",
+    "mei": "with; along",
+    "trein": "train",
+    "fyts": "bike",
+    "wurk": "work, job",
+    "wannear": "when",
+    "wei": "way",
+    "wize": "show",
+    "ekskús": "excuse me",
+    "oanfange": "start, begin",
+    "film": "movie",
+    "acht": "eight",
+    "reine": "rain",
+    "leare": "learn (te learen: to learn)",
+    "besykje": "try",
+    "te": "to (before a verb with -n)",
+    "tiid": "time",
+    "winkel": "shop",
+    "doarp": "village",
+    "opbelje": "call (on the phone)",
+    "fakânsje": "vacation",
+    "meikomme": "come along",
+    "witte": "know",
+    "do": "you (to a friend; dy: you as the object)"
+  },
+  "chunks": {
+    "hello": {
+      "text": "Hallo",
+      "en": "hello"
+    },
+    "please": {
+      "text": "Asjebleaft",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "Tankewol",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Hoe is it mei jo",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Oant sjen",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Ja",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Nee",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Hoe hjitte jo",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Aangenaam",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Ekskús",
+      "en": "excuse me"
+    },
+    "the-check-please": {
+      "text": "De rekken, asjebleaft",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Oant moarn",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "ik-drink-kofje",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik drink kofje.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "kofje",
+          "kofje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik kofje drink.",
+        "Drink ik kofje."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kofje",
+          "tee",
+          "wetter"
+        ]
+      }
+    },
+    {
+      "id": "ik-drink-tee",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik drink tee.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "tee",
+          "tee"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik tee drink.",
+        "Drink ik tee."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tee",
+          "kofje",
+          "wetter"
+        ]
+      }
+    },
+    {
+      "id": "ik-drink-wetter",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik drink wetter.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "wetter",
+          "wetter"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik wetter drink.",
+        "Drink ik wetter."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wetter",
+          "kofje",
+          "tee"
+        ]
+      }
+    },
+    {
+      "id": "ik-drink-kofje-en-tee",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik drink kofje en tee.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "kofje",
+          "kofje"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "tee",
+          "tee"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik kofje en tee drink.",
+        "Ik drink en kofje tee."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kofje",
+          "tee",
+          "wetter"
+        ]
+      }
+    },
+    {
+      "id": "ik-drink-tee-en-wetter",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik drink tee en wetter.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "tee",
+          "tee"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "wetter",
+          "wetter"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik tee en wetter drink.",
+        "Ik drink en tee wetter."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "wetter",
+          "tee",
+          "kofje"
+        ]
+      }
+    },
+    {
+      "id": "ik-drink-wetter-en-kofje",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik drink wetter en kofje.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "wetter",
+          "wetter"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "kofje",
+          "kofje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik wetter en kofje drink.",
+        "Ik drink en wetter kofje."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kofje",
+          "wetter",
+          "tee"
+        ]
+      }
+    },
+    {
+      "id": "in-kofje-asjebleaft",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "In kofje, asjebleaft.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "In",
+          "in"
+        ],
+        [
+          "kofje,",
+          "kofje"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "In asjebleaft kofje.",
+        "Kofje in, asjebleaft."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kofje,",
+          "tee,",
+          "wetter,"
+        ]
+      }
+    },
+    {
+      "id": "hallo-in-kofje-tankewol",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "hello"
+      ],
+      "text": "Hallo, in kofje, tankewol.",
+      "means": "Hello, a coffee, thank you.",
+      "words": [
+        [
+          "Hallo,"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "kofje,",
+          "kofje"
+        ],
+        [
+          "tankewol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hallo, in tankewol kofje.",
+        "Hallo, kofje in, tankewol."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kofje,",
+          "tee,",
+          "molke,"
+        ]
+      }
+    },
+    {
+      "id": "in-tee-en-in-wetter-asjebleaft",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "In tee en in wetter, asjebleaft.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "In",
+          "in"
+        ],
+        [
+          "tee",
+          "tee"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "wetter,",
+          "wetter"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "In tee en wetter in, asjebleaft.",
+        "In en tee in wetter, asjebleaft."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "wetter,",
+          "kofje,",
+          "molke,"
+        ]
+      }
+    },
+    {
+      "id": "hallo-in-tee-asjebleaft",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Hallo! In tee, asjebleaft.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Hallo!"
+        ],
+        [
+          "In",
+          "in"
+        ],
+        [
+          "tee,",
+          "tee"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hallo! Tee in, asjebleaft.",
+        "Hallo! In asjebleaft tee."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tee,",
+          "kofje,",
+          "molke,"
+        ]
+      }
+    },
+    {
+      "id": "ik-drink-molke",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik drink molke.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "molke",
+          "molke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik molke drink.",
+        "Drink ik molke."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "molke",
+          "tee",
+          "wetter"
+        ]
+      }
+    },
+    {
+      "id": "hallo-hoe-is-it-mei-jo",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Hallo! Hoe is it mei jo?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Hallo!"
+        ],
+        [
+          "Hoe"
+        ],
+        [
+          "is"
+        ],
+        [
+          "it"
+        ],
+        [
+          "mei"
+        ],
+        [
+          "jo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how"
+        ],
+        [
+          "is"
+        ],
+        [
+          "it"
+        ],
+        [
+          "with"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hallo! Hoe it is mei jo?",
+        "Hallo! Hoe mei jo it is?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hallo!",
+          "Tankewol!",
+          "Asjebleaft!"
+        ]
+      }
+    },
+    {
+      "id": "goed-tankewol",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Goed, tankewol.",
+      "means": "Fine, thank you.",
+      "words": [
+        [
+          "Goed,",
+          "goed"
+        ],
+        [
+          "tankewol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "In goed, tankewol.",
+        "Goed in, tankewol."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tankewol",
+          "asjebleaft",
+          "Hallo"
+        ]
+      }
+    },
+    {
+      "id": "it-is-goed",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "It is goed.",
+      "means": "It's good.",
+      "words": [
+        [
+          "It",
+          "it"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "goed",
+          "goed"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "is"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "It goed is.",
+        "It is in goed."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "It",
+          "Ik",
+          "Jo"
+        ]
+      }
+    },
+    {
+      "id": "ja-asjebleaft",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Ja, asjebleaft.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ja,"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja, en asjebleaft.",
+        "Ja, in asjebleaft."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ja,",
+          "Nee,",
+          "Hallo,"
+        ]
+      }
+    },
+    {
+      "id": "nee-tankewol",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Nee, tankewol.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nee,"
+        ],
+        [
+          "tankewol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nee, en tankewol.",
+        "Nee, in tankewol."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nee,",
+          "Ja,",
+          "Hallo,"
+        ]
+      }
+    },
+    {
+      "id": "ja-tankewol-oant-sjen",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Ja, tankewol. Oant sjen!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ja,"
+        ],
+        [
+          "tankewol."
+        ],
+        [
+          "Oant"
+        ],
+        [
+          "sjen"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja, tankewol. Sjen oant!",
+        "Ja, tankewol. Oant in sjen!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ja,",
+          "Nee,",
+          "Hallo,"
+        ]
+      }
+    },
+    {
+      "id": "nee-tankewol-oant-sjen",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Nee, tankewol. Oant sjen!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nee,"
+        ],
+        [
+          "tankewol."
+        ],
+        [
+          "Oant"
+        ],
+        [
+          "sjen"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nee, tankewol. Sjen oant!",
+        "Nee, tankewol. Oant in sjen!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nee,",
+          "Ja,",
+          "Hallo,"
+        ]
+      }
+    },
+    {
+      "id": "ik-bin-in-learaar",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik bin in learaar.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "bin",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "learaar",
+          "learaar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik binne in learaar.",
+        "Ik in learaar bin."
+      ],
+      "otherGender": {
+        "text": "Ik bin in learares.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "learaar",
+          "studint",
+          "kofje"
+        ]
+      }
+    },
+    {
+      "id": "jo-binne-in-studint",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "jo"
+      ],
+      "text": "Jo binne in studint.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Jo",
+          "jo"
+        ],
+        [
+          "binne",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "studint",
+          "studint"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a"
+        ],
+        [
+          "student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jo bin in studint.",
+        "Jo in studint binne."
+      ],
+      "otherGender": {
+        "text": "Jo binne in studinte.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "binne",
+          "bin",
+          "is"
+        ]
+      }
+    },
+    {
+      "id": "hallo-hoe-hjitte-jo",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "jo"
+      ],
+      "chunks": [
+        "what-s-your-name",
+        "hello"
+      ],
+      "text": "Hallo! Hoe hjitte jo?",
+      "means": "Hello! What's your name?",
+      "words": [
+        [
+          "Hallo!"
+        ],
+        [
+          "Hoe"
+        ],
+        [
+          "hjitte"
+        ],
+        [
+          "jo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how"
+        ],
+        [
+          "are called"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hallo! Hoe jo hjitte?",
+        "Hallo! Hoe hjitte ik?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "jo",
+          "ik",
+          "my"
+        ]
+      }
+    },
+    {
+      "id": "hallo-aangenaam",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Hallo! Aangenaam.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Hallo!"
+        ],
+        [
+          "Aangenaam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hallo! In aangenaam.",
+        "Hallo! Aangenaam in."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Aangenaam",
+          "Tankewol",
+          "Asjebleaft"
+        ]
+      }
+    },
+    {
+      "id": "binne-jo-in-learaar",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "jo"
+      ],
+      "text": "Binne jo in learaar?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Binne",
+          "wêze"
+        ],
+        [
+          "jo",
+          "jo"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "learaar",
+          "learaar"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bin jo in learaar?",
+        "Jo in learaar binne?"
+      ],
+      "otherGender": {
+        "text": "Binne jo in learares?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Binne",
+          "Bin",
+          "Is"
+        ]
+      }
+    },
+    {
+      "id": "ik-bin-gjin-learaar",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gjin"
+      ],
+      "text": "Ik bin gjin learaar.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "bin",
+          "wêze"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "learaar",
+          "learaar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "not a"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik binne gjin learaar.",
+        "Ik bin gjin in learaar."
+      ],
+      "otherGender": {
+        "text": "Ik bin gjin learares.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "bin",
+          "binne",
+          "is"
+        ]
+      }
+    },
+    {
+      "id": "it-is-net-goed",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "net"
+      ],
+      "text": "It is net goed.",
+      "means": "It's not good.",
+      "words": [
+        [
+          "It",
+          "it"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "net",
+          "net"
+        ],
+        [
+          "goed",
+          "goed"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "is"
+        ],
+        [
+          "not"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "It binne net goed.",
+        "It net goed is."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "is",
+          "bin",
+          "binne"
+        ]
+      }
+    },
+    {
+      "id": "myn-mem-is-in-learaar",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn mem is in learaar.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "mem",
+          "mem"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "learaar",
+          "learaar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn mem bin in learaar.",
+        "Myn mem in learaar is."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mem",
+          "heit",
+          "broer"
+        ]
+      }
+    },
+    {
+      "id": "dit-is-myn-mem",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Dit is myn mem.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Dit",
+          "dit"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "myn",
+          "myn"
+        ],
+        [
+          "mem",
+          "mem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dit bin myn mem.",
+        "Dit myn mem is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mem",
+          "heit",
+          "suster"
+        ]
+      }
+    },
+    {
+      "id": "dit-is-myn-heit",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Dit is myn heit.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Dit",
+          "dit"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "myn",
+          "myn"
+        ],
+        [
+          "heit",
+          "heit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dit binne myn heit.",
+        "Dit myn heit is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "heit",
+          "mem",
+          "broer"
+        ]
+      }
+    },
+    {
+      "id": "myn-heit-is-in-learaar",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn heit is in learaar.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "heit",
+          "heit"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "learaar",
+          "learaar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn heit binne in learaar.",
+        "Myn heit in learaar is."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "heit",
+          "mem",
+          "suster"
+        ]
+      }
+    },
+    {
+      "id": "myn-broer-is-in-studint",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn broer is in studint.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "broer",
+          "broer"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "studint",
+          "studint"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a"
+        ],
+        [
+          "student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn broer bin in studint.",
+        "Myn broer in studint is."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "broer",
+          "heit",
+          "mem"
+        ]
+      }
+    },
+    {
+      "id": "dit-is-myn-suster",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Dit is myn suster.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Dit",
+          "dit"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "myn",
+          "myn"
+        ],
+        [
+          "suster",
+          "suster"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dit binne myn suster.",
+        "Dit myn suster is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "suster",
+          "broer",
+          "mem"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-in-telefoan",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik haw in telefoan.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "telefoan",
+          "telefoan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe in telefoan.",
+        "Ik in telefoan haw."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "telefoan",
+          "kaai",
+          "boek"
+        ]
+      }
+    },
+    {
+      "id": "hawwe-jo-in-kaai",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "jo"
+      ],
+      "text": "Hawwe jo in kaai?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Hawwe",
+          "hawwe"
+        ],
+        [
+          "jo",
+          "jo"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "kaai",
+          "kaai"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haw jo in kaai?",
+        "Jo in kaai hawwe?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kaai",
+          "telefoan",
+          "boek"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-in-broer-en-in-suster",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik haw in broer en in suster.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "broer",
+          "broer"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "suster",
+          "suster"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe in broer en in suster.",
+        "Ik in broer en in suster haw."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "suster",
+          "broer",
+          "freon"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-gjin-boek",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gjin"
+      ],
+      "text": "Ik haw gjin boek.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "boek",
+          "boek"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "no"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe gjin boek.",
+        "Ik haw gjin in boek."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "boek",
+          "kaai",
+          "telefoan"
+        ]
+      }
+    },
+    {
+      "id": "myn-suster-is-in-dokter",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn suster is in dokter.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "suster",
+          "suster"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "dokter",
+          "dokter"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a"
+        ],
+        [
+          "doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn suster binne in dokter.",
+        "Myn suster in dokter is."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "dokter",
+          "learaar",
+          "studint"
+        ]
+      }
+    },
+    {
+      "id": "jo-binne-in-goede-freon",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "jo"
+      ],
+      "text": "Jo binne in goede freon.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Jo",
+          "jo"
+        ],
+        [
+          "binne",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "goede",
+          "goed"
+        ],
+        [
+          "freon",
+          "freon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a"
+        ],
+        [
+          "good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jo bin in goede freon.",
+        "Jo in goede freon binne."
+      ],
+      "otherGender": {
+        "text": "Jo binne in goede freondinne.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 4,
+        "options": [
+          "freon",
+          "learaar",
+          "dokter"
+        ]
+      }
+    },
+    {
+      "id": "myn-telefoan-is-hjir",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn telefoan is hjir.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "telefoan",
+          "telefoan"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "hjir",
+          "hjir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn telefoan binne hjir.",
+        "Myn telefoan hjir is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hjir",
+          "dêr",
+          "wêr"
+        ]
+      }
+    },
+    {
+      "id": "de-kaai-is-der",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "De kaai is dêr.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "De",
+          "de"
+        ],
+        [
+          "kaai",
+          "kaai"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "dêr",
+          "dêr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "De kaai binne dêr.",
+        "De kaai dêr is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dêr",
+          "hjir",
+          "wêr"
+        ]
+      }
+    },
+    {
+      "id": "wer-is-myn-kaai",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive"
+      ],
+      "text": "Wêr is myn kaai?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Wêr",
+          "wêr"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "myn",
+          "myn"
+        ],
+        [
+          "kaai",
+          "kaai"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wêr myn kaai is?",
+        "Wêr binne myn kaai?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kaai",
+          "telefoan",
+          "boek"
+        ]
+      }
+    },
+    {
+      "id": "ekskus-wer-is-it-huske",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "gender"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Ekskús, wêr is it húske?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Ekskús,"
+        ],
+        [
+          "wêr",
+          "wêr"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "húske",
+          "húske"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the"
+        ],
+        [
+          "toilet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ekskús, wêr is de húske?",
+        "Ekskús, wêr it húske is?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "it",
+          "de",
+          "in"
+        ]
+      }
+    },
+    {
+      "id": "wer-is-myn-mem",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive"
+      ],
+      "text": "Wêr is myn mem?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Wêr",
+          "wêr"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "myn",
+          "myn"
+        ],
+        [
+          "mem",
+          "mem"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wêr myn mem is?",
+        "Wêr binne myn mem?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mem",
+          "heit",
+          "suster"
+        ]
+      }
+    },
+    {
+      "id": "myn-suster-is-hjir",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn suster is hjir.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "suster",
+          "suster"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "hjir",
+          "hjir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn suster binne hjir.",
+        "Myn suster hjir is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hjir",
+          "dêr",
+          "wêr"
+        ]
+      }
+    },
+    {
+      "id": "ekskus-wat-kostet-it",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Ekskús, wat kostet it?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Ekskús,"
+        ],
+        [
+          "wat",
+          "wat"
+        ],
+        [
+          "kostet",
+          "kostje"
+        ],
+        [
+          "it",
+          "it"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "what"
+        ],
+        [
+          "does it cost"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ekskús, wat it kostet?",
+        "Ekskús, wat kostet ik?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "it",
+          "ik",
+          "jo"
+        ]
+      }
+    },
+    {
+      "id": "hallo-de-rekken-asjebleaft",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Hallo! De rekken, asjebleaft.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Hallo!"
+        ],
+        [
+          "De"
+        ],
+        [
+          "rekken,"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the"
+        ],
+        [
+          "check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hallo! It rekken, asjebleaft.",
+        "Hallo! De asjebleaft rekken."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "De",
+          "It",
+          "In"
+        ]
+      }
+    },
+    {
+      "id": "twa-kofjes-asjebleaft",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Twa kofjes, asjebleaft.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Twa",
+          "twa"
+        ],
+        [
+          "kofjes,",
+          "kofje"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Twa in kofjes, asjebleaft.",
+        "Twa kofjes in, asjebleaft."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Twa",
+          "Trije",
+          "Ien"
+        ]
+      }
+    },
+    {
+      "id": "ien-boek-asjebleaft",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ien boek, asjebleaft.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Ien",
+          "ien"
+        ],
+        [
+          "boek,",
+          "boek"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ien boeken, asjebleaft.",
+        "Ien in boek, asjebleaft."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ien",
+          "Twa",
+          "Trije"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-trije-boeken",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik haw trije boeken.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "trije",
+          "trije"
+        ],
+        [
+          "boeken",
+          "boek"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe trije boeken.",
+        "Ik haw trije boek."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "trije",
+          "twa",
+          "ien"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-gjin-jild",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gjin"
+      ],
+      "text": "Ik haw gjin jild.",
+      "means": "I don't have any money.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "jild",
+          "jild"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "no"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe gjin jild.",
+        "Ik gjin jild haw."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "jild",
+          "boek",
+          "kaai"
+        ]
+      }
+    },
+    {
+      "id": "ik-praat-in-bytsje-frysk",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik praat in bytsje Frysk.",
+      "means": "I speak a little Frisian.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "praat",
+          "prate"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "bytsje",
+          "bytsje"
+        ],
+        [
+          "Frysk",
+          "frysk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "a"
+        ],
+        [
+          "little bit"
+        ],
+        [
+          "of Frisian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik prate in bytsje Frysk.",
+        "Ik in bytsje Frysk praat."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "Frysk",
+          "Ingelsk",
+          "wetter"
+        ]
+      }
+    },
+    {
+      "id": "begripe-jo-it",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "jo"
+      ],
+      "text": "Begripe jo it?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Begripe",
+          "begripe"
+        ],
+        [
+          "jo",
+          "jo"
+        ],
+        [
+          "it",
+          "it"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Understand"
+        ],
+        [
+          "you"
+        ],
+        [
+          "it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Begryp jo it?",
+        "Jo it begripe?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Begripe",
+          "Begryp",
+          "Prate"
+        ]
+      }
+    },
+    {
+      "id": "ik-wol-in-kofje",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik wol in kofje.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "wol",
+          "wolle"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "kofje",
+          "kofje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik in kofje wol.",
+        "Ik wol kofje in."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kofje",
+          "tee",
+          "molke"
+        ]
+      }
+    },
+    {
+      "id": "ik-wol-wetter-asjebleaft",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ik wol wetter, asjebleaft.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "wol",
+          "wolle"
+        ],
+        [
+          "wetter,",
+          "wetter"
+        ],
+        [
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik wetter wol, asjebleaft.",
+        "Ik wol asjebleaft in wetter in."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wetter,",
+          "tee,",
+          "molke,"
+        ]
+      }
+    },
+    {
+      "id": "myn-keamer-is-lyts",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn keamer is lyts.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "keamer",
+          "keamer"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "lyts",
+          "lyts"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn keamer binne lyts.",
+        "Myn keamer lyts is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lyts",
+          "grut",
+          "goed"
+        ]
+      }
+    },
+    {
+      "id": "ik-wenje-yn-in-lyts-hus",
+      "topic": "home",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik wenje yn in lyts hûs.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "wenje",
+          "wenje"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "lyts",
+          "lyts"
+        ],
+        [
+          "hûs",
+          "hûs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a"
+        ],
+        [
+          "small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik wennet yn in lyts hûs.",
+        "Ik yn in lyts hûs wenje."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "lyts",
+          "grut",
+          "goed"
+        ]
+      }
+    },
+    {
+      "id": "dit-hus-is-grut",
+      "topic": "home",
+      "concepts": [
+        "present"
+      ],
+      "text": "Dit hûs is grut.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Dit",
+          "dit"
+        ],
+        [
+          "hûs",
+          "hûs"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "grut",
+          "grut"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dit hûs binne grut.",
+        "Dit hûs grut is."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "grut",
+          "lyts",
+          "goed"
+        ]
+      }
+    },
+    {
+      "id": "myn-mem-wennet-hjir",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn mem wennet hjir.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "mem",
+          "mem"
+        ],
+        [
+          "wennet",
+          "wenje"
+        ],
+        [
+          "hjir",
+          "hjir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn mem wenje hjir.",
+        "Myn mem hjir wennet."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wennet",
+          "wenje",
+          "is"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-in-auto",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik haw in auto.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe in auto.",
+        "Ik in auto haw."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "auto",
+          "telefoan",
+          "boek"
+        ]
+      }
+    },
+    {
+      "id": "wer-geane-jo-nei",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "jo"
+      ],
+      "text": "Wêr geane jo nei?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Wêr",
+          "wêr"
+        ],
+        [
+          "geane",
+          "gean"
+        ],
+        [
+          "jo",
+          "jo"
+        ],
+        [
+          "nei",
+          "nei"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "go"
+        ],
+        [
+          "you"
+        ],
+        [
+          "to"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wêr giet jo nei?",
+        "Wêr jo geane nei?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "geane",
+          "gean",
+          "giet"
+        ]
+      }
+    },
+    {
+      "id": "ik-gean-nei-skoalle",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik gean nei skoalle.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "gean",
+          "gean"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "skoalle",
+          "skoalle"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik giet nei skoalle.",
+        "Ik nei skoalle gean."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gean",
+          "geane",
+          "giet"
+        ]
+      }
+    },
+    {
+      "id": "myn-mem-giet-nei-de-sted",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Myn mem giet nei de stêd.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "mem",
+          "mem"
+        ],
+        [
+          "giet",
+          "gean"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "stêd",
+          "stêd"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn mem gean nei de stêd.",
+        "Myn mem giet nei it stêd."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "giet",
+          "gean",
+          "geane"
+        ]
+      }
+    },
+    {
+      "id": "dit-is-in-lytse-auto",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Dit is in lytse auto.",
+      "means": "This is a small car.",
+      "words": [
+        [
+          "Dit",
+          "dit"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "lytse",
+          "lyts"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a"
+        ],
+        [
+          "small"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dit binne in lytse auto.",
+        "Dit is in lyts auto."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "auto",
+          "keamer",
+          "skoalle"
+        ]
+      }
+    },
+    {
+      "id": "tankewol-oant-moarn",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Tankewol. Oant moarn!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Tankewol."
+        ],
+        [
+          "Oant"
+        ],
+        [
+          "moarn"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tankewol. Moarn oant!",
+        "Tankewol. Oant in moarn!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moarn",
+          "hjoed",
+          "no"
+        ]
+      }
+    },
+    {
+      "id": "ik-wurkje-hjoed",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik wurkje hjoed.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "wurkje",
+          "wurkje"
+        ],
+        [
+          "hjoed",
+          "hjoed"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hjoed wurkje.",
+        "Ik binne wurkje hjoed."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hjoed",
+          "moarn",
+          "no"
+        ]
+      }
+    },
+    {
+      "id": "ik-moat-no-gean",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "modal"
+      ],
+      "text": "Ik moat no gean.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "moat",
+          "moatte"
+        ],
+        [
+          "no",
+          "no"
+        ],
+        [
+          "gean",
+          "gean"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "must"
+        ],
+        [
+          "now"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik moat no giet.",
+        "Ik no moat gean."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "no",
+          "hjoed",
+          "moarn"
+        ]
+      }
+    },
+    {
+      "id": "ik-kin-hjoed-net-gean",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "modal",
+        "net"
+      ],
+      "text": "Ik kin hjoed net gean.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "kin",
+          "kinne"
+        ],
+        [
+          "hjoed",
+          "hjoed"
+        ],
+        [
+          "net",
+          "net"
+        ],
+        [
+          "gean",
+          "gean"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "can"
+        ],
+        [
+          "today"
+        ],
+        [
+          "not"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik kin hjoed net giet.",
+        "Ik hjoed kin net gean."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kin",
+          "moat",
+          "wol"
+        ]
+      }
+    },
+    {
+      "id": "ik-moat-moarn-wurkje",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "modal"
+      ],
+      "text": "Ik moat moarn wurkje.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "moat",
+          "moatte"
+        ],
+        [
+          "moarn",
+          "moarn"
+        ],
+        [
+          "wurkje",
+          "wurkje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "must"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik moarn moat wurkje.",
+        "Ik moat wurkje moarn in."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moarn",
+          "hjoed",
+          "no"
+        ]
+      }
+    },
+    {
+      "id": "hoe-hjitsto",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "text": "Hoe hjitsto?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Hoe",
+          "hoe"
+        ],
+        [
+          "hjitsto",
+          "hjitte"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "are called you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hoe do hjitte?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hoe",
+          "Wêr",
+          "Wat"
+        ]
+      }
+    },
+    {
+      "id": "ik-kom-ut-amearika",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik kom út Amearika.",
+      "means": "I'm from America.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "kom",
+          "komme"
+        ],
+        [
+          "út",
+          "út"
+        ],
+        [
+          "Amearika"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "come"
+        ],
+        [
+          "from"
+        ],
+        [
+          "America"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik komt út Amearika."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kom",
+          "komt",
+          "komme"
+        ]
+      }
+    },
+    {
+      "id": "myn-mem-wurket-yn-it-sikehus",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present"
+      ],
+      "text": "Myn mem wurket yn it sikehûs.",
+      "means": "My mom works at the hospital.",
+      "words": [
+        [
+          "Myn",
+          "myn"
+        ],
+        [
+          "mem",
+          "mem"
+        ],
+        [
+          "wurket",
+          "wurkje"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "sikehûs",
+          "sikehûs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "works"
+        ],
+        [
+          "in"
+        ],
+        [
+          "the hospital"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Myn mem wurkje yn it sikehûs."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Myn",
+          "Dyn",
+          "Syn"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-twa-susters",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Ik haw twa susters.",
+      "means": "I have two sisters.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "twa",
+          "twa"
+        ],
+        [
+          "susters",
+          "suster"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "two"
+        ],
+        [
+          "sisters"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hat twa susters."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "haw",
+          "hat",
+          "hawwe"
+        ]
+      }
+    },
+    {
+      "id": "us-bern-wenje-yn-ljouwert",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Ús bern wenje yn Ljouwert.",
+      "means": "Our children live in Leeuwarden.",
+      "words": [
+        [
+          "Ús",
+          "ús"
+        ],
+        [
+          "bern",
+          "bern"
+        ],
+        [
+          "wenje",
+          "wenje"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "Ljouwert"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Our"
+        ],
+        [
+          "children"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "Leeuwarden"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ús bern wennet yn Ljouwert."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ús",
+          "Myn",
+          "Har"
+        ]
+      }
+    },
+    {
+      "id": "wer-wenje-jo",
+      "topic": "people",
+      "concepts": [
+        "jo",
+        "question"
+      ],
+      "text": "Wêr wenje jo?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Wêr",
+          "wêr"
+        ],
+        [
+          "wenje",
+          "wenje"
+        ],
+        [
+          "jo",
+          "jo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "live",
+          true
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "wenje"
+      ],
+      "wrong": [
+        "Wêr jo wennet?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "wenje",
+          "wennest",
+          "wennet"
+        ]
+      }
+    },
+    {
+      "id": "kinsto-my-helpe",
+      "topic": "people",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Kinsto my helpe?",
+      "means": "Can you help me?",
+      "words": [
+        [
+          "Kinsto",
+          "kinne"
+        ],
+        [
+          "my",
+          "ik"
+        ],
+        [
+          "helpe",
+          "helpe"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can you"
+        ],
+        [
+          "me"
+        ],
+        [
+          "help",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "helpe"
+      ],
+      "wrong": [
+        "Kinsto my helpst?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "helpe",
+          "helpst",
+          "holpen"
+        ]
+      }
+    },
+    {
+      "id": "hy-wurket-hjoed-net",
+      "topic": "people",
+      "concepts": [
+        "net"
+      ],
+      "text": "Hy wurket hjoed net.",
+      "means": "He's not working today.",
+      "words": [
+        [
+          "Hy",
+          "hy"
+        ],
+        [
+          "wurket",
+          "wurkje"
+        ],
+        [
+          "hjoed",
+          "hjoed"
+        ],
+        [
+          "net",
+          "net"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "He"
+        ],
+        [
+          "works"
+        ],
+        [
+          "today"
+        ],
+        [
+          "not",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "net"
+      ],
+      "wrong": [
+        "Hy net wurkje hjoed."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "net",
+          "gjin",
+          "nee"
+        ]
+      }
+    },
+    {
+      "id": "sy-spilet-graach-fuotbal",
+      "topic": "people",
+      "concepts": [
+        "graach",
+        "present"
+      ],
+      "text": "Sy spilet graach fuotbal.",
+      "means": "She likes playing soccer.",
+      "words": [
+        [
+          "Sy",
+          "sy"
+        ],
+        [
+          "spilet",
+          "spylje"
+        ],
+        [
+          "graach",
+          "graach"
+        ],
+        [
+          "fuotbal",
+          "fuotbal"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "She"
+        ],
+        [
+          "plays"
+        ],
+        [
+          "gladly",
+          true
+        ],
+        [
+          "soccer"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "graach"
+      ],
+      "wrong": [
+        "Sy graach spilest fuotbal."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "spilet",
+          "spylje",
+          "spilest"
+        ]
+      }
+    },
+    {
+      "id": "hasto-bern",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "text": "Hasto bern?",
+      "means": "Do you have children?",
+      "words": [
+        [
+          "Hasto",
+          "hawwe"
+        ],
+        [
+          "bern",
+          "bern"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have you"
+        ],
+        [
+          "children"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hawwe do bern?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hasto",
+          "Hat",
+          "Haw"
+        ]
+      }
+    },
+    {
+      "id": "it-hus-is-grut",
+      "topic": "home",
+      "concepts": [
+        "gender"
+      ],
+      "text": "It hûs is grut.",
+      "means": "The house is big.",
+      "words": [
+        [
+          "It",
+          "it"
+        ],
+        [
+          "hûs",
+          "hûs"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "grut",
+          "grut"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "De hûs is grut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "It",
+          "De",
+          "In"
+        ]
+      }
+    },
+    {
+      "id": "de-kat-sliept-op-myn-bed",
+      "topic": "home",
+      "concepts": [
+        "gender"
+      ],
+      "text": "De kat sliept op myn bêd.",
+      "means": "The cat sleeps on my bed.",
+      "words": [
+        [
+          "De",
+          "de"
+        ],
+        [
+          "kat",
+          "kat"
+        ],
+        [
+          "sliept",
+          "sliepe"
+        ],
+        [
+          "op",
+          "op"
+        ],
+        [
+          "myn",
+          "myn"
+        ],
+        [
+          "bêd",
+          "bêd"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "cat"
+        ],
+        [
+          "sleeps"
+        ],
+        [
+          "on"
+        ],
+        [
+          "my"
+        ],
+        [
+          "bed"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "It kat sliept op myn bêd."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "De",
+          "It",
+          "In"
+        ]
+      }
+    },
+    {
+      "id": "ik-stean-op",
+      "topic": "home",
+      "concepts": [
+        "separable"
+      ],
+      "text": "Ik stean alle moarnen om sân oere op.",
+      "means": "I get up at seven every morning.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "stean",
+          "opstean"
+        ],
+        [
+          "alle",
+          "alle"
+        ],
+        [
+          "moarnen",
+          "moarn"
+        ],
+        [
+          "om",
+          "om"
+        ],
+        [
+          "sân",
+          "sân"
+        ],
+        [
+          "oere",
+          "oere"
+        ],
+        [
+          "op",
+          "opstean"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "stand"
+        ],
+        [
+          "every morning"
+        ],
+        [
+          "at seven o'clock"
+        ],
+        [
+          "up",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "moved": [
+        "op"
+      ],
+      "wrong": [
+        "Ik opstean alle moarnen om sân oere."
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "op",
+          "út",
+          "oan"
+        ]
+      }
+    },
+    {
+      "id": "ik-doch-it-finster-iepen",
+      "topic": "home",
+      "concepts": [
+        "separable"
+      ],
+      "text": "Ik doch it finster iepen.",
+      "means": "I'm opening the window.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "doch",
+          "iependwaan"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "finster",
+          "finster"
+        ],
+        [
+          "iepen",
+          "iependwaan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do"
+        ],
+        [
+          "the window"
+        ],
+        [
+          "open",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "iepen"
+      ],
+      "wrong": [
+        "Ik iependoch it finster."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "iepen",
+          "ticht",
+          "út"
+        ]
+      }
+    },
+    {
+      "id": "wer-binne-myn-kaaien",
+      "topic": "home",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Wêr binne myn kaaien?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Wêr",
+          "wêr"
+        ],
+        [
+          "binne",
+          "wêze"
+        ],
+        [
+          "myn",
+          "myn"
+        ],
+        [
+          "kaaien",
+          "kaai"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "my"
+        ],
+        [
+          "keys"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wêr is myn kaaien?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "myn",
+          "dyn",
+          "syn"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-de-keuken-skjinmakke",
+      "topic": "home",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Ik haw de keuken skjinmakke.",
+      "means": "I cleaned the kitchen.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "keuken",
+          "keuken"
+        ],
+        [
+          "skjinmakke",
+          "skjinmeitsje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "the kitchen"
+        ],
+        [
+          "cleaned",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "skjinmakke"
+      ],
+      "wrong": [
+        "Ik haw de keuken skjinmeitsje."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "skjinmakke",
+          "skjinmeitsje",
+          "skjinmakket"
+        ]
+      }
+    },
+    {
+      "id": "der-is-gjin-molke-mear",
+      "topic": "home",
+      "concepts": [
+        "der",
+        "gjin"
+      ],
+      "text": "Der is gjin molke mear.",
+      "means": "There's no more milk.",
+      "words": [
+        [
+          "Der",
+          "der"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "molke",
+          "molke"
+        ],
+        [
+          "mear",
+          "mear"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "is"
+        ],
+        [
+          "no"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "more",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mear"
+      ],
+      "wrong": [
+        "Der is nee molke mear."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Der",
+          "It",
+          "Hy"
+        ]
+      }
+    },
+    {
+      "id": "wy-ite-jun-om-seis-oere",
+      "topic": "home",
+      "concepts": [
+        "present"
+      ],
+      "text": "Wy ite jûns om seis oere.",
+      "means": "We eat at six in the evening.",
+      "words": [
+        [
+          "Wy",
+          "wy"
+        ],
+        [
+          "ite",
+          "ite"
+        ],
+        [
+          "jûns",
+          "jûns"
+        ],
+        [
+          "om",
+          "om"
+        ],
+        [
+          "seis",
+          "seis"
+        ],
+        [
+          "oere",
+          "oere"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "in the evening"
+        ],
+        [
+          "at six o'clock"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wy yt jûns om seis oere."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ite",
+          "yt",
+          "itest"
+        ]
+      }
+    },
+    {
+      "id": "moatsto-hjoed-wurkje",
+      "topic": "home",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Moatsto hjoed wurkje?",
+      "means": "Do you have to work today?",
+      "words": [
+        [
+          "Moatsto",
+          "moatte"
+        ],
+        [
+          "hjoed",
+          "hjoed"
+        ],
+        [
+          "wurkje",
+          "wurkje"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Must you"
+        ],
+        [
+          "today"
+        ],
+        [
+          "work",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "wurkje"
+      ],
+      "wrong": [
+        "Moatsto hjoed wurkest?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wurkje",
+          "wurkest",
+          "wurke"
+        ]
+      }
+    },
+    {
+      "id": "dit-is-us-hus",
+      "topic": "home",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Dit is ús hûs.",
+      "means": "This is our house.",
+      "words": [
+        [
+          "Dit",
+          "dit"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "ús",
+          "ús"
+        ],
+        [
+          "hûs",
+          "hûs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "our"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dit is wy hûs."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ús",
+          "myn",
+          "harren"
+        ]
+      }
+    },
+    {
+      "id": "ik-drink-graach-kofje",
+      "topic": "food",
+      "concepts": [
+        "graach"
+      ],
+      "text": "Ik drink graach kofje.",
+      "means": "I like drinking coffee.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "drink",
+          "drinke"
+        ],
+        [
+          "graach",
+          "graach"
+        ],
+        [
+          "kofje",
+          "kofje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "gladly",
+          true
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "graach"
+      ],
+      "wrong": [
+        "Ik graach drinke kofje."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "graach",
+          "goed",
+          "folle"
+        ]
+      }
+    },
+    {
+      "id": "jun-ite-wy-fisk",
+      "topic": "food",
+      "concepts": [
+        "v2",
+        "present"
+      ],
+      "text": "Jûn ite wy fisk.",
+      "means": "We're having fish tonight.",
+      "words": [
+        [
+          "Jûn",
+          "jûn"
+        ],
+        [
+          "ite",
+          "ite"
+        ],
+        [
+          "wy",
+          "wy"
+        ],
+        [
+          "fisk",
+          "fisk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tonight"
+        ],
+        [
+          "eat",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "fish"
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "moved": [
+        "ite"
+      ],
+      "wrong": [
+        "Jûn wy yt fisk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ite",
+          "yt",
+          "itest"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-gjin-honger",
+      "topic": "food",
+      "concepts": [
+        "gjin"
+      ],
+      "text": "Ik haw gjin honger.",
+      "means": "I'm not hungry.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "honger",
+          "honger"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "no"
+        ],
+        [
+          "hunger"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe honger gjin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gjin",
+          "wol",
+          "nee"
+        ]
+      }
+    },
+    {
+      "id": "wat-kostet-in-kofje",
+      "topic": "food",
+      "concepts": [
+        "question"
+      ],
+      "text": "Wat kostet in kofje?",
+      "means": "How much is a coffee?",
+      "words": [
+        [
+          "Wat",
+          "wat"
+        ],
+        [
+          "kostet",
+          "kostje"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "kofje",
+          "kofje"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "costs",
+          true
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "kostet"
+      ],
+      "wrong": [
+        "Wat in kofje kostje?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Wat",
+          "Wêr",
+          "Wa"
+        ]
+      }
+    },
+    {
+      "id": "ik-woe-graach-in-gles-wetter",
+      "topic": "food",
+      "concepts": [
+        "graach"
+      ],
+      "text": "Ik woe graach in glês wetter, asjebleaft.",
+      "means": "I'd like a glass of water, please.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "woe",
+          "wolle"
+        ],
+        [
+          "graach",
+          "graach"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "glês",
+          "glês"
+        ],
+        [
+          "wetter,",
+          "wetter"
+        ],
+        [
+          "asjebleaft",
+          "asjebleaft"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "would"
+        ],
+        [
+          "gladly",
+          true
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "graach"
+      ],
+      "wrong": [
+        "Ik graach wolle in glês wetter, asjebleaft."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "graach",
+          "goed",
+          "folle"
+        ]
+      }
+    },
+    {
+      "id": "wy-hawwe-in-koeke-bakt",
+      "topic": "food",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Wy hawwe hjoed in koeke bakt.",
+      "means": "We baked a cake today.",
+      "words": [
+        [
+          "Wy",
+          "wy"
+        ],
+        [
+          "hawwe",
+          "hawwe"
+        ],
+        [
+          "hjoed",
+          "hjoed"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "koeke",
+          "koeke"
+        ],
+        [
+          "bakt",
+          "bakke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "have"
+        ],
+        [
+          "today"
+        ],
+        [
+          "a cake"
+        ],
+        [
+          "baked",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ],
+      "moved": [
+        "bakt"
+      ],
+      "wrong": [
+        "Wy hawwe hjoed in koeke bakke."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "bakt",
+          "bakke",
+          "bakken"
+        ]
+      }
+    },
+    {
+      "id": "ik-yt-gjin-fleis",
+      "topic": "food",
+      "concepts": [
+        "gjin"
+      ],
+      "text": "Ik yt gjin fleis.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "yt",
+          "ite"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "fleis",
+          "fleis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "no"
+        ],
+        [
+          "meat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik ite fleis gjin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gjin",
+          "wol",
+          "nee"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-juster-yn-in-restaurant-iten",
+      "topic": "food",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Ik haw juster yn in restaurant iten.",
+      "means": "I ate in a restaurant yesterday.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "juster",
+          "juster"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "restaurant",
+          "restaurant"
+        ],
+        [
+          "iten",
+          "ite"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "yesterday"
+        ],
+        [
+          "in a restaurant"
+        ],
+        [
+          "eaten",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "iten"
+      ],
+      "wrong": [
+        "Ik bin juster yn in restaurant iten."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "iten",
+          "ite",
+          "yt"
+        ]
+      }
+    },
+    {
+      "id": "kokesto-hjoed",
+      "topic": "food",
+      "concepts": [
+        "question"
+      ],
+      "text": "Kôkesto hjoed?",
+      "means": "Are you cooking today?",
+      "words": [
+        [
+          "Kôkesto",
+          "koaitsje"
+        ],
+        [
+          "hjoed",
+          "hjoed"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Cook you"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hjoed do koaitsje?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kôkesto",
+          "Kôket",
+          "Koaitsje"
+        ]
+      }
+    },
+    {
+      "id": "wer-is-it-stasjon",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Wêr is it stasjon?",
+      "means": "Where's the station?",
+      "words": [
+        [
+          "Wêr",
+          "wêr"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "stasjon",
+          "stasjon"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wêr it stasjon binne?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Wêr",
+          "Hoe",
+          "Wat"
+        ]
+      }
+    },
+    {
+      "id": "de-bus-is-fergees",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "text": "De bus is fergees.",
+      "means": "The bus is free.",
+      "words": [
+        [
+          "De",
+          "de"
+        ],
+        [
+          "bus",
+          "bus"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "fergees",
+          "fergees"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The"
+        ],
+        [
+          "bus"
+        ],
+        [
+          "is"
+        ],
+        [
+          "free"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "It bus is fergees."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "De",
+          "It",
+          "In"
+        ]
+      }
+    },
+    {
+      "id": "wy-geane-mei-de-trein",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "Wy geane mei de trein nei Grins.",
+      "means": "We're taking the train to Groningen.",
+      "words": [
+        [
+          "Wy",
+          "wy"
+        ],
+        [
+          "geane",
+          "gean"
+        ],
+        [
+          "mei",
+          "mei"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "trein",
+          "trein"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "Grins"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "go"
+        ],
+        [
+          "with"
+        ],
+        [
+          "the train"
+        ],
+        [
+          "to"
+        ],
+        [
+          "Groningen"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wy giet mei de trein nei Grins."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "geane",
+          "giet",
+          "giest"
+        ]
+      }
+    },
+    {
+      "id": "moarn-gean-ik-nei-de-sted",
+      "topic": "out",
+      "concepts": [
+        "v2",
+        "present"
+      ],
+      "text": "Moarn gean ik nei de stêd.",
+      "means": "I'm going into town tomorrow.",
+      "words": [
+        [
+          "Moarn",
+          "moarn"
+        ],
+        [
+          "gean",
+          "gean"
+        ],
+        [
+          "ik",
+          "ik"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "stêd",
+          "stêd"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the town"
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        3,
+        4,
+        0
+      ],
+      "moved": [
+        "gean"
+      ],
+      "wrong": [
+        "Moarn ik giet nei de stêd."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gean",
+          "giet",
+          "geane"
+        ]
+      }
+    },
+    {
+      "id": "ik-bin-mei-de-fyts-nei-it-wurk-gien",
+      "topic": "out",
+      "concepts": [
+        "weze-perfect"
+      ],
+      "text": "Ik bin mei de fyts nei it wurk gien.",
+      "means": "I rode my bike to work.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "bin",
+          "wêze"
+        ],
+        [
+          "mei",
+          "mei"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "fyts",
+          "fyts"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "wurk",
+          "wurk"
+        ],
+        [
+          "gien",
+          "gean"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "with the bike"
+        ],
+        [
+          "to the work"
+        ],
+        [
+          "gone",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gien"
+      ],
+      "wrong": [
+        "Ik bin mei de fyts nei it wurk gean."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bin",
+          "haw",
+          "is"
+        ]
+      }
+    },
+    {
+      "id": "wannear-giet-de-trein",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Wannear giet de trein?",
+      "means": "When does the train leave?",
+      "words": [
+        [
+          "Wannear",
+          "wannear"
+        ],
+        [
+          "giet",
+          "gean"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "trein",
+          "trein"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "When"
+        ],
+        [
+          "goes",
+          true
+        ],
+        [
+          "the train"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "giet"
+      ],
+      "wrong": [
+        "Wannear de trein gean?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Wannear",
+          "Hoe",
+          "Wêr"
+        ]
+      }
+    },
+    {
+      "id": "kinne-jo-my-de-wei-wize",
+      "topic": "out",
+      "concepts": [
+        "jo",
+        "modal"
+      ],
+      "text": "Kinne jo my de wei wize?",
+      "means": "Can you show me the way?",
+      "words": [
+        [
+          "Kinne",
+          "kinne"
+        ],
+        [
+          "jo",
+          "jo"
+        ],
+        [
+          "my",
+          "ik"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "wei",
+          "wei"
+        ],
+        [
+          "wize",
+          "wize"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can"
+        ],
+        [
+          "you"
+        ],
+        [
+          "me"
+        ],
+        [
+          "the way"
+        ],
+        [
+          "show",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "moved": [
+        "wize"
+      ],
+      "wrong": [
+        "Kinne jo my de wei wiist?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kinne",
+          "Kinsto",
+          "Kin"
+        ]
+      }
+    },
+    {
+      "id": "ekskus-prate-jo-ingelsk",
+      "topic": "out",
+      "concepts": [
+        "jo"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Ekskús, prate jo Ingelsk?",
+      "means": "Excuse me, do you speak English?",
+      "words": [
+        [
+          "Ekskús,"
+        ],
+        [
+          "prate",
+          "prate"
+        ],
+        [
+          "jo",
+          "jo"
+        ],
+        [
+          "Ingelsk",
+          "ingelsk"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "speak",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "prate"
+      ],
+      "wrong": [
+        "Ekskús, praatst jo Ingelsk?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "prate",
+          "praatst",
+          "praat"
+        ]
+      }
+    },
+    {
+      "id": "is-der-in-bus-nei-it-stasjon",
+      "topic": "out",
+      "concepts": [
+        "der"
+      ],
+      "text": "Is der in bus nei it stasjon?",
+      "means": "Is there a bus to the station?",
+      "words": [
+        [
+          "Is",
+          "wêze"
+        ],
+        [
+          "der",
+          "der"
+        ],
+        [
+          "in",
+          "in"
+        ],
+        [
+          "bus",
+          "bus"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "stasjon",
+          "stasjon"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "there"
+        ],
+        [
+          "a bus"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Is it in bus nei it stasjon?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "der",
+          "it",
+          "hy"
+        ]
+      }
+    },
+    {
+      "id": "wy-hawwe-gjin-auto",
+      "topic": "out",
+      "concepts": [
+        "gjin"
+      ],
+      "text": "Wy hawwe gjin auto.",
+      "means": "We don't have a car.",
+      "words": [
+        [
+          "Wy",
+          "wy"
+        ],
+        [
+          "hawwe",
+          "hawwe"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "have"
+        ],
+        [
+          "no"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wy hat auto gjin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gjin",
+          "net",
+          "nee"
+        ]
+      }
+    },
+    {
+      "id": "der-binne-trije-winkels",
+      "topic": "out",
+      "concepts": [
+        "der"
+      ],
+      "text": "Der binne trije winkels yn ús doarp.",
+      "means": "There are three shops in our village.",
+      "words": [
+        [
+          "Der",
+          "der"
+        ],
+        [
+          "binne",
+          "wêze"
+        ],
+        [
+          "trije",
+          "trije"
+        ],
+        [
+          "winkels",
+          "winkel"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "ús",
+          "ús"
+        ],
+        [
+          "doarp",
+          "doarp"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "are"
+        ],
+        [
+          "three"
+        ],
+        [
+          "shops"
+        ],
+        [
+          "in"
+        ],
+        [
+          "our"
+        ],
+        [
+          "village"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Der hawwe trije winkels yn ús doarp."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "binne",
+          "is",
+          "hawwe"
+        ]
+      }
+    },
+    {
+      "id": "de-film-fangt-oan",
+      "topic": "plans",
+      "concepts": [
+        "separable"
+      ],
+      "text": "De film fangt om acht oere oan.",
+      "means": "The movie starts at eight.",
+      "words": [
+        [
+          "De",
+          "de"
+        ],
+        [
+          "film",
+          "film"
+        ],
+        [
+          "fangt",
+          "oanfange"
+        ],
+        [
+          "om",
+          "om"
+        ],
+        [
+          "acht",
+          "acht"
+        ],
+        [
+          "oere",
+          "oere"
+        ],
+        [
+          "oan",
+          "oanfange"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The movie"
+        ],
+        [
+          "catches"
+        ],
+        [
+          "at eight o'clock"
+        ],
+        [
+          "on",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "oan"
+      ],
+      "wrong": [
+        "De film oanfangt om acht oere."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "oan",
+          "op",
+          "út"
+        ]
+      }
+    },
+    {
+      "id": "hjoed-reint-it",
+      "topic": "plans",
+      "concepts": [
+        "v2",
+        "present"
+      ],
+      "text": "Hjoed reint it.",
+      "means": "It's raining today.",
+      "words": [
+        [
+          "Hjoed",
+          "hjoed"
+        ],
+        [
+          "reint",
+          "reine"
+        ],
+        [
+          "it",
+          "it"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "rains",
+          true
+        ],
+        [
+          "it"
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "reint"
+      ],
+      "wrong": [
+        "Hjoed it reine."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "reint",
+          "reine",
+          "reinen"
+        ]
+      }
+    },
+    {
+      "id": "ik-wol-frysk-leare",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "te-en"
+      ],
+      "text": "Ik wol Frysk leare.",
+      "means": "I want to learn Frisian.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "wol",
+          "wolle"
+        ],
+        [
+          "Frysk"
+        ],
+        [
+          "leare",
+          "leare"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "Frisian"
+        ],
+        [
+          "learn",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "leare"
+      ],
+      "wrong": [
+        "Ik wol Frysk learst."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "leare",
+          "learen",
+          "leart"
+        ]
+      }
+    },
+    {
+      "id": "ik-besykje-frysk-te-learen",
+      "topic": "plans",
+      "concepts": [
+        "te-en"
+      ],
+      "text": "Ik besykje Frysk te learen.",
+      "means": "I'm trying to learn Frisian.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "besykje",
+          "besykje"
+        ],
+        [
+          "Frysk"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "learen",
+          "leare"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "try"
+        ],
+        [
+          "Frisian"
+        ],
+        [
+          "to",
+          true
+        ],
+        [
+          "learn",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te",
+        "learen"
+      ],
+      "wrong": [
+        "Ik besykje Frysk learst."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "learen",
+          "leare",
+          "leart"
+        ]
+      }
+    },
+    {
+      "id": "it-is-tiid-om-te-iten",
+      "topic": "plans",
+      "concepts": [
+        "te-en"
+      ],
+      "text": "It is tiid om te iten.",
+      "means": "It's time to eat.",
+      "words": [
+        [
+          "It",
+          "it"
+        ],
+        [
+          "is",
+          "wêze"
+        ],
+        [
+          "tiid",
+          "tiid"
+        ],
+        [
+          "om",
+          "om"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "iten",
+          "ite"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "is"
+        ],
+        [
+          "time"
+        ],
+        [
+          "for"
+        ],
+        [
+          "to"
+        ],
+        [
+          "eat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "It is tiid om te yt."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "iten",
+          "ite",
+          "yt"
+        ]
+      }
+    },
+    {
+      "id": "ik-haw-hjoed-gjin-tiid",
+      "topic": "plans",
+      "concepts": [
+        "gjin"
+      ],
+      "text": "Ik haw hjoed gjin tiid.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "haw",
+          "hawwe"
+        ],
+        [
+          "hjoed",
+          "hjoed"
+        ],
+        [
+          "gjin",
+          "gjin"
+        ],
+        [
+          "tiid",
+          "tiid"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "today"
+        ],
+        [
+          "no"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ik hawwe hjoed tiid gjin."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gjin",
+          "wol",
+          "nee"
+        ]
+      }
+    },
+    {
+      "id": "moarn-bel-ik-dy-op",
+      "topic": "plans",
+      "concepts": [
+        "separable",
+        "v2"
+      ],
+      "text": "Moarn belje ik dy op.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Moarn",
+          "moarn"
+        ],
+        [
+          "belje",
+          "opbelje"
+        ],
+        [
+          "ik",
+          "ik"
+        ],
+        [
+          "dy",
+          "do"
+        ],
+        [
+          "op",
+          "opbelje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "call",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "you"
+        ],
+        [
+          "up"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "belje"
+      ],
+      "wrong": [
+        "Moarn ik belt dy op."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "op",
+          "út",
+          "ticht"
+        ]
+      }
+    },
+    {
+      "id": "wy-binne-op-fakansje-gien",
+      "topic": "plans",
+      "concepts": [
+        "weze-perfect"
+      ],
+      "text": "Wy binne op fakânsje gien.",
+      "means": "We went on vacation.",
+      "words": [
+        [
+          "Wy",
+          "wy"
+        ],
+        [
+          "binne",
+          "wêze"
+        ],
+        [
+          "op",
+          "op"
+        ],
+        [
+          "fakânsje",
+          "fakânsje"
+        ],
+        [
+          "gien",
+          "gean"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "are"
+        ],
+        [
+          "on"
+        ],
+        [
+          "vacation"
+        ],
+        [
+          "gone",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gien"
+      ],
+      "wrong": [
+        "Wy binne op fakânsje gean."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "binne",
+          "hawwe",
+          "is"
+        ]
+      }
+    },
+    {
+      "id": "juster-binne-wy-nei-ljouwert-gien",
+      "topic": "plans",
+      "concepts": [
+        "weze-perfect",
+        "v2"
+      ],
+      "text": "Juster binne wy nei Ljouwert gien.",
+      "means": "We went to Leeuwarden yesterday.",
+      "words": [
+        [
+          "Juster",
+          "juster"
+        ],
+        [
+          "binne",
+          "wêze"
+        ],
+        [
+          "wy",
+          "wy"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "Ljouwert"
+        ],
+        [
+          "gien",
+          "gean"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "are",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "to Leeuwarden"
+        ],
+        [
+          "gone",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "binne",
+        "gien"
+      ],
+      "wrong": [
+        "Juster wy is nei Ljouwert gien."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "binne",
+          "hawwe",
+          "is"
+        ]
+      }
+    },
+    {
+      "id": "komsto-mei",
+      "topic": "plans",
+      "concepts": [
+        "separable"
+      ],
+      "text": "Komsto mei?",
+      "means": "Are you coming along?",
+      "words": [
+        [
+          "Komsto",
+          "meikomme"
+        ],
+        [
+          "mei",
+          "meikomme"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Come you"
+        ],
+        [
+          "along"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Meikomsto?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mei",
+          "oan",
+          "op"
+        ]
+      }
+    },
+    {
+      "id": "ik-begryp-it-net",
+      "topic": "plans",
+      "concepts": [
+        "net"
+      ],
+      "text": "Ik begryp it net.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ik",
+          "ik"
+        ],
+        [
+          "begryp",
+          "begripe"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "net",
+          "net"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "it"
+        ],
+        [
+          "not",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "net"
+      ],
+      "wrong": [
+        "Ik net begrypt it."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "net",
+          "gjin",
+          "nee"
+        ]
+      }
+    },
+    {
+      "id": "ik-wit-it-net",
+      "topic": "plans",
+      "concepts": [
+        "net",
+        "present"
+      ],
+      "text": "Ik wit it net.",
+      "means": "I don't know.",
+      "words": [
+        [
+          "Ik"
+        ],
+        [
+          "wit",
+          "witte"
+        ],
+        [
+          "it",
+          "it"
+        ],
+        [
+          "net",
+          "net"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "know"
+        ],
+        [
+          "it"
+        ],
+        [
+          "not",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "net"
+      ],
+      "wrong": [
+        "Ik net witte it."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "wit",
+          "witte",
+          "witst"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kofje",
+          "forms": [
+            "kofje"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "tee",
+          "forms": [
+            "tee"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "wetter",
+          "forms": [
+            "wetter"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "ik",
+          "forms": [
+            "ik"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "drinke",
+          "forms": [
+            "drink"
+          ],
+          "picture": "drink",
+          "means": "drink = drink"
+        },
+        {
+          "lemma": "en",
+          "forms": [
+            "en"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "A verb's ending changes with who does it: ik wurkje (I work), do wurkest (you work), hy wurket (he works), wy wurkje (we work)."
+      },
+      "items": [
+        "ik-drink-kofje",
+        "ik-drink-tee",
+        "ik-drink-wetter",
+        "ik-drink-kofje-en-tee",
+        "ik-drink-tee-en-wetter",
+        "ik-drink-wetter-en-kofje"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "in",
+          "forms": [
+            "in"
+          ],
+          "means": "a, an"
+        },
+        {
+          "lemma": "molke",
+          "forms": [
+            "molke"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "in-kofje-asjebleaft",
+        "hallo-in-kofje-tankewol",
+        "in-tee-en-in-wetter-asjebleaft",
+        "hallo-in-tee-asjebleaft",
+        "ik-drink-molke"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "goed",
+          "forms": [
+            "goed"
+          ],
+          "picture": "good",
+          "means": "good, fine"
+        },
+        {
+          "lemma": "wêze",
+          "forms": [
+            "is"
+          ],
+          "means": "is = is"
+        },
+        {
+          "lemma": "it",
+          "forms": [
+            "it"
+          ],
+          "means": "the; it"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes-or-no question starts with its verb, and after a question word the verb comes next; do can join the verb as -sto, -ste or -st: Hasto bern?"
+      },
+      "items": [
+        "hallo-hoe-is-it-mei-jo",
+        "goed-tankewol",
+        "it-is-goed",
+        "ja-asjebleaft",
+        "nee-tankewol",
+        "ja-tankewol-oant-sjen",
+        "nee-tankewol-oant-sjen"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "jo",
+          "forms": [
+            "jo"
+          ],
+          "means": "you (polite singular)"
+        },
+        {
+          "lemma": "net",
+          "forms": [
+            "net"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "learaar",
+          "forms": [
+            "learaar"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "studint",
+          "forms": [
+            "studint"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "gjin",
+          "forms": [
+            "gjin"
+          ],
+          "means": "no, not a"
+        },
+        {
+          "lemma": "wêze",
+          "forms": [
+            "bin",
+            "binne"
+          ],
+          "means": "bin = am; binne = are"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "ik-bin-in-learaar",
+        "jo-binne-in-studint",
+        "hallo-hoe-hjitte-jo",
+        "hallo-aangenaam",
+        "binne-jo-in-learaar",
+        "ik-bin-gjin-learaar",
+        "it-is-net-goed"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mem",
+          "forms": [
+            "mem"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "heit",
+          "forms": [
+            "heit"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "broer",
+          "forms": [
+            "broer"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "suster",
+          "forms": [
+            "suster"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "myn",
+          "forms": [
+            "myn"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "dit",
+          "forms": [
+            "dit"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "my is myn, your dyn and our ús, the same before every noun: myn mem (my mom), ús hûs (our house)."
+      },
+      "items": [
+        "myn-mem-is-in-learaar",
+        "dit-is-myn-mem",
+        "dit-is-myn-heit",
+        "myn-heit-is-in-learaar",
+        "myn-broer-is-in-studint",
+        "dit-is-myn-suster"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "hawwe",
+          "forms": [
+            "haw",
+            "hawwe"
+          ],
+          "means": "haw = have; hawwe = have"
+        },
+        {
+          "lemma": "freon",
+          "forms": [
+            "freon"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "dokter",
+          "forms": [
+            "dokter"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "kaai",
+          "forms": [
+            "kaai"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefoan",
+          "forms": [
+            "telefoan"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "boek",
+          "forms": [
+            "boek"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "goed",
+          "forms": [
+            "goede"
+          ],
+          "means": "goede = good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ik-haw-in-telefoan",
+        "hawwe-jo-in-kaai",
+        "ik-haw-in-broer-en-in-suster",
+        "ik-haw-gjin-boek",
+        "myn-suster-is-in-dokter",
+        "jo-binne-in-goede-freon"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "wêr",
+          "forms": [
+            "wêr"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "hjir",
+          "forms": [
+            "hjir"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "dêr",
+          "forms": [
+            "dêr"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "de",
+          "forms": [
+            "de"
+          ],
+          "means": "the"
+        },
+        {
+          "lemma": "it",
+          "forms": [
+            "it"
+          ],
+          "means": "the; it"
+        },
+        {
+          "lemma": "húske",
+          "forms": [
+            "húske"
+          ],
+          "means": "toilet"
+        },
+        {
+          "lemma": "kaai",
+          "forms": [
+            "kaaien"
+          ],
+          "means": "kaaien = keys"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "gender",
+        "line": "A singular noun takes de or it for the, every plural takes de, and a is in: de kat (the cat), it hûs (the house), in hûs (a house)."
+      },
+      "items": [
+        "myn-telefoan-is-hjir",
+        "de-kaai-is-der",
+        "wer-is-myn-kaai",
+        "ekskus-wer-is-it-huske",
+        "wer-is-myn-mem",
+        "myn-suster-is-hjir",
+        "wer-binne-myn-kaaien"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "wat",
+          "forms": [
+            "wat"
+          ],
+          "means": "what"
+        },
+        {
+          "lemma": "kostje",
+          "forms": [
+            "kostet"
+          ],
+          "means": "kostet = costs"
+        },
+        {
+          "lemma": "ien",
+          "forms": [
+            "ien"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "twa",
+          "forms": [
+            "twa"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "trije",
+          "forms": [
+            "trije"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "jild",
+          "forms": [
+            "jild"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "kofje",
+          "forms": [
+            "kofjes"
+          ],
+          "means": "kofjes = coffees"
+        },
+        {
+          "lemma": "boek",
+          "forms": [
+            "boeken"
+          ],
+          "means": "boeken = books"
+        },
+        {
+          "lemma": "suster",
+          "forms": [
+            "susters"
+          ],
+          "means": "susters = sisters"
+        }
+      ],
+      "phrases": [
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "ekskus-wat-kostet-it",
+        "hallo-de-rekken-asjebleaft",
+        "twa-kofjes-asjebleaft",
+        "ien-boek-asjebleaft",
+        "ik-haw-trije-boeken",
+        "ik-haw-gjin-jild",
+        "wat-kostet-in-kofje",
+        "ik-haw-twa-susters"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "prate",
+          "forms": [
+            "prate",
+            "praat"
+          ],
+          "means": "prate = speak; praat = speak"
+        },
+        {
+          "lemma": "ingelsk",
+          "forms": [
+            "Ingelsk"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "frysk",
+          "forms": [
+            "Frysk"
+          ],
+          "means": "Frisian"
+        },
+        {
+          "lemma": "begripe",
+          "forms": [
+            "begryp",
+            "begripe"
+          ],
+          "means": "begryp = understand; begripe = understand"
+        },
+        {
+          "lemma": "bytsje",
+          "forms": [
+            "bytsje"
+          ],
+          "means": "little bit"
+        },
+        {
+          "lemma": "wolle",
+          "forms": [
+            "wol"
+          ],
+          "means": "wol = want"
+        },
+        {
+          "lemma": "it",
+          "forms": [
+            "it"
+          ],
+          "means": "the; it"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "jo",
+        "line": "To someone you don't know, you is jo, with the verb's plural form: Wêr wenje jo?"
+      },
+      "items": [
+        "ekskus-prate-jo-ingelsk",
+        "ik-praat-in-bytsje-frysk",
+        "ik-begryp-it-net",
+        "begripe-jo-it",
+        "ik-wol-in-kofje",
+        "ik-wol-wetter-asjebleaft"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "hûs",
+          "forms": [
+            "hûs"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "keamer",
+          "forms": [
+            "keamer"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "grut",
+          "forms": [
+            "grut"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "lyts",
+          "forms": [
+            "lyts"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "wenje",
+          "forms": [
+            "wenje",
+            "wennet"
+          ],
+          "means": "wenje = live; wennet = lives"
+        },
+        {
+          "lemma": "yn",
+          "forms": [
+            "yn"
+          ],
+          "picture": "in",
+          "means": "in"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "myn-keamer-is-lyts",
+        "it-hus-is-grut",
+        "ik-wenje-yn-in-lyts-hus",
+        "wer-wenje-jo",
+        "dit-hus-is-grut",
+        "myn-mem-wennet-hjir"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "gean",
+          "forms": [
+            "gean",
+            "geane",
+            "giet"
+          ],
+          "means": "gean = go; geane = go; giet = goes"
+        },
+        {
+          "lemma": "nei",
+          "forms": [
+            "nei"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "skoalle",
+          "forms": [
+            "skoalle"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "stêd",
+          "forms": [
+            "stêd"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "stasjon",
+          "forms": [
+            "stasjon"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "auto",
+          "forms": [
+            "auto"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "lyts",
+          "forms": [
+            "lytse"
+          ],
+          "means": "lytse = small"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ik-haw-in-auto",
+        "wer-geane-jo-nei",
+        "ik-gean-nei-skoalle",
+        "wer-is-it-stasjon",
+        "myn-mem-giet-nei-de-sted",
+        "dit-is-in-lytse-auto"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "hjoed",
+          "forms": [
+            "hjoed"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "moarn",
+          "forms": [
+            "moarn"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "no",
+          "forms": [
+            "no"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "wurkje",
+          "forms": [
+            "wurkje"
+          ],
+          "picture": "work",
+          "means": "to work"
+        },
+        {
+          "lemma": "moatte",
+          "forms": [
+            "moat"
+          ],
+          "means": "moat = must"
+        },
+        {
+          "lemma": "kinne",
+          "forms": [
+            "kin"
+          ],
+          "means": "kin = can"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": {
+        "pattern": "modal",
+        "line": "With wolle (want), kinne (can) or moatte (must), the second verb goes to the end, with no word for to: Ik wol Frysk leare (I want Frisian learn)."
+      },
+      "items": [
+        "tankewol-oant-moarn",
+        "ik-wurkje-hjoed",
+        "ik-moat-no-gean",
+        "moarn-gean-ik-nei-de-sted",
+        "ik-kin-hjoed-net-gean",
+        "ik-moat-moarn-wurkje"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

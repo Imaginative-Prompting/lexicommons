@@ -1,0 +1,259 @@
+/* Translate's page: the box and its bite, the answer, the one wide button, the language bar and the picker. Its parts' builders are in know/ui.js and translate/picker.js. */
+@layer lx.page {
+  /* Home's box has no drawn edge: only the page does. */
+  [data-part="translate-field"] > svg.lx-edge { display: none; }
+  [data-part="translate-result"][data-state="best"] { gap: 6px; padding: 0; border: 0; border-radius: 0; background: none; }
+  [data-part="translate-result"][data-state="best"] .lx-tr-big :is(.lx-tr-said, .lx-tr-meaning) { font: 700 40px / 1.1 var(--type-head); letter-spacing: -0.02em; }
+  [data-part="translate-result"][data-state="best"][data-len="line"] .lx-tr-big :is(.lx-tr-said, .lx-tr-meaning) { font: 700 28px / 1.2 var(--type-head); letter-spacing: -0.015em; }
+  [data-part="translate-result"][data-state="best"][data-len="long"] .lx-tr-big :is(.lx-tr-said, .lx-tr-meaning) { font: 600 21px / 1.32 var(--type-head); letter-spacing: -0.005em; }
+  [data-part="translate-result"][data-state="best"] .lx-tr-small :is(.lx-tr-said, .lx-tr-meaning) { font: 400 var(--size-16) / 1.4 var(--type-ui); color: var(--ink-2); }
+  [data-part="translate-result"][data-state="best"] .lx-tr-line { align-items: start; gap: var(--space-4); }
+  [data-part="translate-result"][data-variant="two"] { gap: 20px; }
+  [data-part="translate-result"][data-variant="two"] .lx-tr-reading + .lx-tr-reading { padding-top: 20px; border-top: 1px solid var(--hair); }
+  .lx-tr-results h3 { margin: 0 0 -12px; color: var(--ink-1); font: 700 var(--size-16) / 1.3 var(--type-head); letter-spacing: -0.005em; }
+  [data-part="translate-result"] [data-part="speak-button"] > svg[data-symbol] { width: 30px; height: 30px; }
+  [data-part="translate-result"] .lx-tr-small + [data-part="speak-button"] > svg[data-symbol] { width: 22px; height: 22px; }
+  [data-part="speak-button"][data-state="playing"] svg [data-wave] { animation: lx-tr-wave 900ms var(--ease-standard) 3 both; }
+  [data-part="speak-button"][data-state="playing"] svg [data-wave="2"] { animation-delay: 120ms; }
+  .lx-tr-results [data-part="sentence-row"] { padding: 14px 0; border-top: 1px solid var(--hair); border-radius: 0; background: none; }
+  .lx-tr-results h3 + [data-part="sentence-row"] { border-top: 0; }
+  .lx-tr-results [data-part="sentence-row"] .lx-sentence-nl { color: var(--ink-2); font: 400 var(--size-16) / 1.4 var(--type-ui); }
+  .lx-tr-results [data-part="sentence-row"] mark { padding: 0; border-radius: 0; background: none; color: var(--ink-1); font-weight: 700; }
+  .lx-tr-results [data-part="sentence-row"] .lx-sentence-en mark { color: var(--ink-1); font-weight: 600; }
+  .lx-tr-studied { color: var(--ink-3); }
+  [data-part="translate-word"] { gap: 0; }
+  [data-part="translate-word"] + [data-part="translate-word"] { margin-top: 4px; }
+  .lx-tr-word-head { padding-bottom: 4px; }
+  .lx-tr-word-name { font: 700 var(--size-16) / 1.3 var(--type-head); }
+  .lx-tr-word-rows { gap: 0; }
+  .lx-tr-word-rows [data-part="sentence-row"] { padding: 10px 0; border-top: 1px solid var(--hair); }
+  .lx-tr-word-more { padding: 0; }
+  .lx-tr-results [data-part="credit"] { margin: 8px 0 0; color: var(--ink-3); font-size: var(--size-12); line-height: 1.45; }
+  .lx-tr-results > .lx-small.lx-muted { margin: -12px 0 0; color: var(--ink-3); font-size: var(--size-12); }
+  [data-part="looking-up"] { gap: var(--space-3); color: var(--ink-2); font-size: var(--size-16); }
+  /* Tinta leaving as an answer comes in (page.js sayWorking): out of the page's flow where it stood, the reverse of its way in. */
+  .lx-tr-scroll { position: relative; }
+  .lx-tr-scroll > [data-part="looking-up"][data-leaving] { position: absolute; z-index: 1; margin: 0; pointer-events: none; animation: lx-looking-up-out 180ms var(--ease-standard, ease-in) both; }
+  @keyframes lx-looking-up-out { to { opacity: 0; transform: scale(0.9); } }
+  [data-open] > [data-part="translate-field"] > svg:not(.lx-icon, .lx-edge) { display: none; }
+  .lx-way-bar { display: none; position: fixed; inset-inline: 0; bottom: var(--bar-gap); z-index: 5; grid-template-columns: 1fr 1fr 76px; width: min(calc(100% - 24px), 366px); height: var(--bar-height); margin-inline: auto; padding: 4px; border: 1px solid var(--bar-edge); border-radius: 32px; background: var(--bar-glass); -webkit-backdrop-filter: blur(22px) saturate(1.6); backdrop-filter: blur(22px) saturate(1.6); box-shadow: var(--bar-shadow); }
+  :root[data-keyboard] .lx-way-bar { bottom: 8px; }
+  .lx-way-tab { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-width: 0; padding: 0 6px; border: 0; border-radius: 26px; background: none; color: var(--ink-2); font: 600 var(--size-12) / 1.1 var(--type-ui); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .lx-way-tab > span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lx-way-tab:active { background: color-mix(in srgb, var(--ink-1) 10%, transparent); }
+  .lx-way-all { grid-column: 1 / span 2; grid-row: 1; pointer-events: none; }
+  .lx-way-tab[data-at="0"] { grid-column: 1; grid-row: 1; }
+  .lx-way-tab[data-at="1"] { grid-column: 2; grid-row: 1; }
+  .lx-way-bubble { position: absolute; left: 0; top: 0; z-index: 0; border-radius: 999px; background: var(--tab-bubble); box-shadow: inset 0 0 0 1px var(--tab-bubble-edge); pointer-events: none; will-change: transform, width; }
+  .lx-way-lens { position: absolute; inset: 0; z-index: 2; display: grid; grid-template-columns: 1fr 1fr 76px; padding: 4px; color: var(--tab-on); pointer-events: none; will-change: clip-path; }
+  .lx-way-lens-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-width: 0; padding: 0 6px; font: 600 var(--size-12) / 1.1 var(--type-ui); }
+  .lx-way-lens-item > span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lx-way-bar [data-part="mic-button"][data-size="sm"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) > svg[data-symbol] { display: none; }
+  .lx-way-bar [data-part="mic-button"][data-size="sm"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) { color: var(--tab-on); background: var(--tab-bubble); box-shadow: inset 0 0 0 1px var(--tab-bubble-edge); }
+  .lx-way-bar [data-part="mic-button"]:active { background: color-mix(in srgb, var(--ink-1) 10%, transparent); }
+  .lx-tr-lang { display: none; }
+  .lx-tr-swap { display: none; }
+  [data-part="speak-button"][data-state="playing"] svg :is(.wave-1, .wave-2) { animation: lx-tr-wave 900ms var(--ease-standard) 4 both; }
+  [data-part="speak-button"][data-state="playing"] svg .wave-2 { animation-delay: 120ms; }
+  .lx-way-bar[data-no-lens] :is(.lx-way-bubble, .lx-way-lens) { visibility: hidden; }
+  /* Under the answer a result's source isn't said (the credits are a tap away). What your packs have keeps its own rows' labels (a phrase's
+     other words "For “loopt”", the other language's reading "As English"), as its sheet had them. */
+  .lx-tr-results .lx-tr-from:not(.lx-tr-inline > [data-part="translate-result"] .lx-tr-from) { display: none; }
+  .lx-tr-results [data-part="empty-state"] { padding: 0; border: 0; background: none; align-items: center; padding-top: 28px; text-align: center; }
+  .lx-way-bar [data-part="mic-button"] .lx-mic-bars { height: 24px; }
+  .lx-way-bar [data-part="mic-button"] { min-width: 0; padding: 0 4px; }
+  .lx-tr-listening { display: flex; flex-direction: column; gap: 6px; }
+  .lx-tr-listening h2 { margin: 0; color: var(--ink-1); font: 700 40px / 1.1 var(--type-head); letter-spacing: -0.02em; }
+  .lx-tr-listening-line { margin: 0; color: var(--ink-2); font-size: var(--size-16); line-height: 1.4; }
+  .lx-tr-listening-bars { display: flex; align-items: center; justify-content: space-between; height: 84px; margin-top: 18px; }
+  .lx-tr-listening-bars > i { display: block; width: 4px; height: calc(4px + var(--h, 0) * 80px); border-radius: 2px; background: var(--tab-on); }
+  .lx-tr-voice > p:first-child { display: none; }
+  [data-part="mic-button"][data-size="sm"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) > svg[data-symbol] { display: none; }
+  .lx-way-arrow { display: none; position: absolute; left: calc(4px + (100% - 8px - 76px) / 2); top: 50%; z-index: 3; width: 16px; height: 16px; margin: -8px 0 0 -8px; color: var(--ink-3); pointer-events: none; transition: rotate 180ms var(--ease-standard); }
+  .lx-way-arrow > svg { display: block; width: 16px; height: 16px; }
+  .lx-way-bar[data-from] > .lx-way-arrow { display: block; }
+  .lx-way-bar [data-part="mic-button"]:is([data-state="listening"], [data-state="hearing"]) .lx-mic-bars { height: 24px; }
+  .lx-way-bar[data-from="0"] > .lx-way-arrow { margin-left: 8px; }
+  .lx-way-bar[data-from="1"] > .lx-way-arrow { rotate: 180deg; margin-left: -24px; }
+  .lx-tr-listening .lx-tr-listen-in { margin-top: 18px; }
+  .lx-tr-listening .lx-tr-listen-in:empty { display: none; }
+  .lx-tr-results [data-part="sentence-row"] .lx-sentence-en { font-size: var(--size-14); color: var(--ink-2); }
+  .lx-tr-rough { font-size: var(--size-14); color: var(--ink-2) !important; }
+  [data-part="speak-button"][data-state="playing"]::after { display: none; }
+  [data-part="translate-result"] [data-part="speak-button"][data-state="playing"] { color: var(--tab-on); background: none; }
+  [data-open] > [data-part="translate-field"] > svg.lx-edge[data-edge="hinge"] { display: block; left: 0; top: 0; width: 100%; height: 100%; z-index: -1; color: inherit; }
+  [data-open] > [data-part="translate-field"] .lx-edge-line { fill: var(--well); stroke: var(--edge); stroke-width: 1; }
+  [data-open] > [data-part="translate-field"]:focus-within .lx-edge-line { stroke: var(--ink-3); }
+  [data-open] > [data-part="translate-field"] .lx-tr-controls { display: contents; }
+  [data-open] > [data-part="translate-field"] [data-part="translate-direction"] { display: none; }
+  [data-open] > [data-part="translate-field"] [data-part="translate-clear"] { top: 4px; right: 4px; }
+  [data-open] > [data-part="translate-field"] > .lx-tr-swap:active { background: var(--fill-active); }
+  [data-open] > [data-part="translate-field"] > .lx-tr-swap > svg { width: 22px; height: 22px; transition: rotate 160ms var(--ease-standard); }
+  [data-open] > [data-part="translate-field"] > .lx-tr-swap[data-flip] > svg { rotate: 180deg; }
+  .lx-today-translate[data-open] .lx-tr-lang { position: relative; display: inline-flex; align-items: center; align-self: flex-start; gap: 6px; min-height: 28px; margin: 0 0 0 -6px; padding: 0 8px 0 6px; border: 0; border-radius: 10px; background: none; color: var(--ink-2); font: 500 var(--size-14) / 1.2 var(--type-ui); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .lx-today-translate[data-open] .lx-tr-lang::before { content: ""; position: absolute; inset: -8px -4px; }
+  .lx-today-translate[data-open] .lx-tr-lang:active { background: var(--fill-active); }
+  .lx-tr-lang [data-part="language-flag"] { width: 20px; height: 15px; margin: 0; }
+  .lx-today-translate[data-open] .lx-tr-lang-to:empty { display: none; }
+  .lx-tr-box-speak { display: none; }
+  [data-open] > [data-part="translate-field"] > .lx-tr-box-speak { position: absolute; right: 4px; bottom: 2px; display: block; }
+  .lx-tr-box-speak [data-part="speak-button"] { width: 44px; height: 44px; min-width: 0; border: 0; background: none; color: var(--ink-2); }
+  .lx-tr-box-speak [data-part="speak-button"] > svg[data-symbol] { width: 22px; height: 22px; }
+  .lx-tr-box-speak [data-part="speak-button"]:active { background: var(--fill-active); }
+  .lx-tr-box-speak [data-part="speak-button"][data-state="playing"] { background: none; color: var(--tab-on); }
+  .lx-today-translate[data-open] > .lx-tr-voice { padding-top: 26px; }
+  .lx-tr-results { gap: 18px; }
+  [data-part="translate-result"][data-state="best"] .lx-tr-small, [data-part="translate-result"][data-state="best"] .lx-tr-line:has(> .lx-tr-small), .lx-tr-notfound { display: none; }
+  [data-part="translate-result"][data-state="best"] .lx-tr-big + [data-part="speak-button"] { width: 52px; height: 52px; margin-bottom: 4px; border: 1px solid var(--edge-strong); background: none; color: var(--ink-1); box-shadow: 0 4px 0 var(--edge-strong); transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  [data-part="translate-result"][data-state="best"] .lx-tr-big + [data-part="speak-button"]:active { transform: translateY(4px); box-shadow: 0 0 0 var(--edge-strong); background: var(--fill-active); }
+  [data-part="translate-result"][data-variant="two"] .lx-tr-big + [data-part="speak-button"] { width: 44px; height: 44px; margin-bottom: 0; border: 0; color: var(--ink-2); box-shadow: none; }
+  .lx-tr-more { display: flex; gap: var(--space-3); }
+  /* Find a pack's sheet: its answer comes after it opens (looking, then packs or none), so its body holds one height from the first
+     frame and the drawer never grows under the finger while it slides (drawer-open-check). */
+  .lx-tr-found { min-height: min(50vh, 440px); align-content: start; }
+  [data-part="translate-more"] { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; margin-bottom: 3px; padding: 0 16px 0 12px; border: 1px solid var(--edge-strong); border-radius: 16px; background: none; color: var(--ink-1); box-shadow: 0 3px 0 var(--edge-strong); font: 600 var(--size-16) / 1 var(--type-ui); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  [data-part="translate-more"] > svg { width: 26px; height: 26px; flex: none; color: var(--ink-2); }
+  [data-part="translate-more"]:active { transform: translateY(3px); box-shadow: 0 0 0 var(--edge-strong); background: var(--fill-active); }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="translate-result"] { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: var(--space-2); padding: 10px 0; border: 0; border-top: 1px solid var(--hair); border-radius: 0; background: none; }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="translate-result"]:first-of-type { border-top: 0; }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="translate-result"] .lx-tr-said { font: 600 var(--size-20) / 1.25 var(--type-ui); letter-spacing: 0; }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="translate-result"] > .lx-icon { width: 18px; height: 18px; color: var(--ink-2); }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="speak-button"] { border: 0; background: none; color: var(--ink-2); }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="speak-button"]:not([data-state="playing"]):active { background: var(--fill-active); }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="speak-button"][data-state="playing"] { background: var(--solid); }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="speak-button"] > svg[data-symbol] { width: 24px; height: 24px; }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="speak-button"]:not([data-state="playing"]):active { background: var(--fill-active); }
+  .lx-tr-pick { display: flex; flex-direction: column; gap: 2px; width: 100%; min-height: 44px; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: start; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .lx-tr-pick:active { opacity: 0.7; }
+  :is(.lx-sheet-body, .lx-tr-inline) [data-part="credit"] { margin: 16px 0 8px; color: var(--ink-3); font-size: var(--size-12); line-height: 1.45; }
+  .lx-sheet-body .lx-tr-results { margin-top: 4px; }
+  .lx-tr-results [data-part="sentence-row"] + [data-part="sentence-row"] { margin-top: -18px; }
+  .lx-today-translate[data-open] > .lx-way-bar { display: grid; }
+  .lx-way-tab > span, .lx-way-lens-item > span { display: none; }
+  .lx-way-tab [data-part="language-flag"], .lx-way-lens-item [data-part="language-flag"] { width: 32px; height: 24px; margin: 0; border-radius: 4px; }
+  .lx-way-bar [data-part="mic-button"] > svg[data-symbol] { color: inherit; width: 28px; height: 28px; }
+  .lx-way-bar [data-part="mic-button"] .lx-mic-label { font: 600 var(--size-12) / 1.1 var(--type-ui); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: none; }
+  .lx-way-bar [data-part="mic-button"]:is([data-state="listening"], [data-state="hearing"]) .lx-mic-label { display: block; }
+  .lx-pick-layer { position: fixed; inset: 0; z-index: 40; }
+  :root:is([data-theme="paper"], [data-theme="sepia"]) [data-part="language-picker"] { box-shadow: 0 30px 70px -10px rgba(40, 30, 10, 0.3), 0 6px 18px rgba(40, 30, 10, 0.1); }
+  .lx-pick-wheel { position: relative; z-index: 1; height: 198px; padding-block: 81px; overflow-y: auto; overscroll-behavior: contain; scroll-snap-type: y mandatory; scrollbar-width: none; touch-action: pan-y; cursor: grab; outline: 0; -webkit-overflow-scrolling: touch; }
+  .lx-pick-wheel::-webkit-scrollbar { display: none; }
+  .lx-pick-wheel:active { cursor: grabbing; }
+  .lx-pick-row [data-part="language-flag"] { width: 26px; height: 19.5px; margin: 0; border-radius: 3px; }
+  .lx-pick-row[data-off] { color: var(--ink-3); }
+  .lx-pick-band { position: absolute; left: 8px; right: 8px; top: calc(16px + 81px); height: 36px; border-radius: 18px; background: var(--tab-bubble); box-shadow: inset 0 0 0 1px var(--tab-bubble-edge); pointer-events: none; }
+  .lx-pick-note { min-height: 0; margin: 0; color: var(--ink-2); font-size: var(--size-14); text-align: center; }
+  .lx-pick-note:empty { display: none; }
+  .lx-pick-reset { min-height: 44px; padding: 0 18px; border: 0; border-radius: 22px; background: var(--fill); color: var(--ink-1); font: 500 var(--size-16) / 1 var(--type-ui); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .lx-pick-reset:active { background: var(--fill-active); }
+  .lx-pick-done { display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 3px; padding: 0; border: 0; border-radius: 50%; background: var(--go); color: var(--on-go); box-shadow: 0 3px 0 var(--go-deep); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  .lx-pick-done > .lx-icon { width: 26px; height: 26px; stroke-width: 2.4; }
+  .lx-pick-done:active { transform: translateY(3px); box-shadow: 0 0 0 var(--go-deep); }
+  .lx-sheet-body .lx-sheet-title { color: var(--ink-1); font: 700 22px / 1.2 var(--type-head); letter-spacing: -0.01em; }
+  .lx-today-translate[data-tight] .lx-tr-more { display: none; }
+  .lx-pick-noflag { flex: none; width: 26px; }
+  [data-part="translate-field"] > svg:not(.lx-icon, .lx-edge) { z-index: 1; }
+  [data-open] > [data-part="translate-field"] > .lx-tr-swap { position: absolute; left: 50%; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; margin-left: -22px; padding: 0; border: 1px solid var(--edge-strong); border-radius: 50%; background: none; color: var(--ink-1); cursor: pointer; -webkit-tap-highlight-color: transparent; bottom: -21px; }
+  .lx-way-bar [data-part="mic-button"][data-size="sm"]::after { position: absolute; left: -2px; top: 12px; bottom: 12px; width: 1px; background: var(--bar-edge); content: none; }
+  .lx-way-bar [data-part="mic-button"][data-size="sm"] { grid-column: 3; grid-row: 1; position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: auto; height: auto; min-height: 0; border: 0; border-radius: 26px; background: none; color: var(--ink-2); box-shadow: none; margin-inline-start: 6px; }
+  /* A language as one row of a form: its flag and its name (picker.js languageRow). */
+  .lx-lang-value { display: inline-flex; align-items: center; gap: var(--space-2); }
+  .lx-pick-row > :is(img, svg, span:not(:last-child)) { opacity: var(--pick-flag, 1); }
+  .lx-pick-row { display: flex; align-items: center; gap: 12px; height: 36px; color: var(--ink-1); font: 500 19px / 1 var(--type-ui); white-space: nowrap; scroll-snap-align: center; user-select: none; -webkit-user-select: none; will-change: transform, opacity; padding-inline-start: 16%; transform-origin: 16% 50%; }
+  .lx-pick-scrim { position: absolute; inset: 0; background: color-mix(in srgb, var(--canvas) 62%, transparent); animation: lx-pick-scrim-in var(--dur-200, 200ms) var(--ease-standard) both; }
+  [data-part="language-picker"] { position: absolute; left: 50%; display: flex; flex-direction: column; width: min(calc(100% - 32px), 362px); margin: 0; padding: 16px 8px 12px; border: 1px solid var(--bar-edge); border-radius: 34px; background: color-mix(in srgb, var(--well) 84%, transparent); -webkit-backdrop-filter: blur(30px) saturate(1.5); backdrop-filter: blur(30px) saturate(1.5); box-shadow: 0 30px 70px -10px rgba(0, 0, 0, 0.7), 0 6px 18px rgba(0, 0, 0, 0.3); top: 0; translate: -50% 0; }
+  .lx-pick-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: 10px 8px 0 8px; padding-top: 2px; }
+  @media (max-width: 359px) {
+    .lx-pick-row { gap: 8px; padding-inline-start: 8%; font-size: 16px; transform-origin: 8% 50%; }
+    .lx-pick-row [data-part="language-flag"], .lx-pick-noflag { width: 24px; }
+  }
+  [data-part="translate-field"][data-ghost] { flex-direction: column; align-items: stretch; isolation: isolate; overflow: visible; }
+  [data-part="translate-field"][data-ghost] > svg.lx-edge[data-edge="hinge"] { display: block; left: 0; top: 0; width: 100%; height: 100%; z-index: -1; }
+  [data-part="translate-field"][data-ghost] .lx-edge-line { fill: var(--well); stroke: var(--edge); stroke-width: 1; }
+  [data-part="translate-field"][data-ghost] > svg:not(.lx-icon, .lx-edge) { display: none; }
+  .lx-today-translate[data-tight] .lx-tr-results [data-part="empty-state"] { padding-top: 0; }
+  .lx-today-translate[data-tight] .lx-tr-results [data-part="empty-state"] > [data-part="character"] { display: none; }
+  .lx-today-translate[data-open] { box-sizing: border-box; gap: 0; padding-top: var(--tr-drop, 8px); }
+  [data-open] > [data-part="translate-field"] { border-radius: var(--radius-16); isolation: isolate; border: 0; background: none; padding: 10px var(--space-4) 30px; flex: none; box-sizing: border-box; }
+  [data-open] > [data-part="translate-field"] textarea[data-part="text-field"] { font-size: 22px; overflow-y: auto; flex: 1; min-height: 0; max-height: none; padding: 4px 8px 4px 0; line-height: 1.25; background: none; border: 0; outline: 0; box-shadow: none; }
+  [data-open] > [data-part="translate-field"][data-len="s"] textarea[data-part="text-field"] { font-size: 30px; font-weight: 500; }
+  [data-open] > [data-part="translate-field"][data-len="m"] textarea[data-part="text-field"] { font-size: 24px; }
+  [data-open] > [data-part="translate-field"][data-len="l"] textarea[data-part="text-field"] { font-size: 20px; }
+  [data-open] > [data-part="translate-field"] .lx-tr-lang { margin-bottom: 4px; }
+  /* The box near its floor (translate/page.js data-floor, LINE_ROOM: the keys up on a small phone): the typed line gets the room from the box's own
+   * spacing, so one line of the largest text shows whole (the field 32 → 42 px; a 30 px line takes 41.5, 7 Nov 2026: an iPhone SE's cut the
+   * dot off the i and faded the rest), and the box, and the answer under it, stay where they are. */
+  .lx-today-translate[data-open] > [data-part="translate-field"] { transition: padding-top var(--dur-320, 260ms) var(--ease-standard, ease); }
+  .lx-today-translate[data-open][data-floor] > [data-part="translate-field"] { padding-top: 4px; }
+  .lx-today-translate[data-open][data-floor] > [data-part="translate-field"] .lx-tr-lang { margin-bottom: 0; }
+  .lx-today-translate[data-open][data-floor] > [data-part="translate-field"] textarea[data-part="text-field"] { padding-top: 2px; padding-bottom: 2px; }
+  .lx-today-translate[data-open] > .lx-tr-scroll > .lx-tr-results { flex: 1 0 auto; }
+  .lx-tr-results > .lx-tr-more { margin-top: auto; }
+  .lx-today-translate[data-open] > .lx-tr-scroll { gap: 12px; padding-top: 30px; padding-bottom: calc(var(--bar-height) + var(--bar-gap) + 24px); display: flex; flex-direction: column; position: relative; }
+  /* The keys up and no room for a one-line answer under the smallest box (translate/page.js SNUG): the answer comes up 30 px with the box's
+   * own move (the scroll's top padding 30 → 8, the gap under the answer's language 12 → 4), its language and where it's from level with
+   * the swap button, one each side of it. */
+  .lx-today-translate[data-open] > .lx-tr-scroll { transition: padding-top var(--dur-320, 260ms) var(--ease-standard, ease); }
+  .lx-today-translate[data-open][data-snug] > .lx-tr-scroll { padding-top: 8px; gap: 4px; }
+  .lx-tr-source { max-width: calc(100% - 96px); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: absolute; top: 30px; right: 0; display: flex; align-items: center; min-height: 28px; color: var(--ink-2); font-size: var(--size-14); }
+  .lx-tr-source[hidden] { display: none; }
+  /* The answer's language (.lx-tr-lang-to) and where the answer's from, one row, the second at the row's end; with no room beside the
+   * language (320 wide, text at twice its size: "From your packs" needed 213 px of 192, 7 Nov 2026), it goes onto a line of its own, still at
+   * the end, and wraps there rather than being cut. With no language shown, the row is no box, and where it's from sits as above. */
+  .lx-tr-head { display: contents; }
+  .lx-today-translate[data-open] .lx-tr-head:has(> .lx-tr-lang-to:not(:empty)) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 12px; }
+  .lx-today-translate[data-open] .lx-tr-head:has(> .lx-tr-lang-to:not(:empty)) > .lx-tr-source { position: static; max-width: 100%; margin-inline-start: auto; overflow: visible; white-space: normal; text-overflow: clip; text-align: end; text-wrap: balance; justify-content: flex-end; }
+  .lx-tr-none { margin: 0; color: var(--ink-2); font-size: 21px; font-weight: 500; }
+  .lx-tr-results > .lx-tr-foot { display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 18px; }
+  /* With what your packs have under it, the foot stays under the answer, not at the bottom (the sentences come after it). */
+  .lx-tr-results > .lx-tr-foot:has(+ .lx-tr-inline) { margin-top: 0; }
+  .lx-today-translate[data-tight] .lx-tr-foot { display: none; }
+  .lx-tr-status { display: grid; gap: 8px; color: var(--ink-2); font-size: var(--size-14); }
+  .lx-tr-status p { margin: 0; }
+  .lx-tr-status [data-part="download-bar"] { --download-track: 4px; }
+  /* The full translator's line, last in the foot (translate/page.js): its words wrap evenly, never leaving one word or a
+   * number's unit alone; downloading, the words at the start and Stop at the end of one row, the plain bar under it. */
+  .lx-tr-model { display: grid; gap: 8px; }
+  .lx-tr-model p { margin: 0; text-wrap: pretty; }
+  .lx-tr-model-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .lx-tr-model-row > p { flex: 1; min-width: 0; }
+  .lx-tr-model-row > [data-part="button"] { flex: none; }
+  .lx-tr-model [data-part="download-bar"] { --download-track: 4px; }
+  /* Waiting for the word packs: in the packs' own line's quiet ink, so the two status lines one above the other read as one weight. */
+  .lx-tr-model .lx-tr-model-quiet { color: var(--ink-2); }
+  [data-part="translate-more"][data-wide] { width: 100%; min-height: 52px; justify-content: flex-start; gap: 10px; padding-inline: 14px; }
+  .lx-tr-count { margin-left: auto; color: var(--ink-2); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .lx-tr-section { margin: 24px 0 0; color: var(--ink-2); font-size: var(--size-14); }
+  .lx-tr-found { display: grid; gap: 24px; padding-top: 4px; }
+  [data-part="translate-pack"] { display: grid; gap: 6px; }
+  .lx-tr-pack-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+  .lx-tr-pack-name { margin: 0; font-weight: 600; }
+  .lx-tr-pack-by { margin: 2px 0 0; color: var(--ink-2); font-size: var(--size-14); }
+  .lx-tr-pack-line { margin: 0; }
+  .lx-tr-pack-means { margin: 0; color: var(--ink-2); font-size: var(--size-14); }
+  :root[data-keyboard] .lx-today-translate[data-open] > .lx-tr-scroll { margin-bottom: calc(var(--bar-height) + 12px); padding-bottom: 4px; }
+  .lx-way-tab[data-noflag] > span, .lx-way-lens-item[data-noflag] > span { display: block; font: 600 var(--size-14) / 1.2 var(--type-body, inherit); }
+  .lx-tr-found [data-part="empty-state"] { border: 0; background: none; padding-block: 12px; }
+  .lx-tr-word-rows [data-part="sentence-row"] + [data-part="sentence-row"] { margin-top: 0; }
+  .lx-tr-pack-top > [data-part="button"] { flex: none; min-height: 44px; margin-bottom: 3px; padding-inline: 16px; border: 1px solid var(--edge-strong); border-radius: 14px; background: none; box-shadow: 0 3px 0 var(--edge-strong); color: var(--ink-1); }
+  .lx-tr-pack-top > [data-part="button"]:active { transform: translateY(3px); box-shadow: 0 0 0 var(--edge-strong); background: var(--fill-active); }
+  .lx-tr-pack-top > [data-part="button"][aria-pressed="true"] { background: var(--well); box-shadow: 0 0 0 var(--edge-strong); transform: translateY(3px); }
+  .lx-tr-pack-top > [data-part="button"] > svg { width: 18px; height: 18px; }
+  .lx-today-translate[data-open] > [data-part="translate-field"] { z-index: 1; }
+  .lx-pick-note, .lx-pick-note:empty { display: block; box-sizing: border-box; height: 22px; min-height: 0; padding-top: 2px; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  [data-open] > [data-part="translate-field"][data-more-below] textarea[data-part="text-field"] { -webkit-mask-image: linear-gradient(#000 calc(100% - 22px), transparent); mask-image: linear-gradient(#000 calc(100% - 22px), transparent); }
+  [data-open] > [data-part="translate-field"] > :not(textarea):not(svg) { z-index: 1; }
+  .lx-pick-inline { position: relative; height: 330px; }
+  .lx-pick-inline > [data-part="language-picker"] { top: 0; }
+  /* A wide screen (1024 px and up, the sidebar's; translate/page.js placeWide splits nothing there): the box as tall as its text, two lines at
+   * least and at most about half the screen (then it scrolls inside), and the language bar in the page under the answer, never over it. */
+  /* A tablet or wider: the box as tall as its text, two lines to 40% of the screen (translate/page.js placeWide); the language bar under the
+     answer from 1024 px, over the page's foot on a tablet as on a phone. */
+  @media (min-width: 700px) {
+    [data-open] > [data-part="translate-field"] textarea[data-part="text-field"] { flex: none; field-sizing: content; min-height: calc(2lh + 8px); max-height: 40vh; }
+  }
+  @media (min-width: 1024px) {
+    .lx-today-translate[data-open] > .lx-way-bar { position: static; flex: none; margin: var(--space-3) auto var(--space-5); }
+    .lx-today-translate[data-open] > .lx-tr-scroll { padding-bottom: var(--space-5); }
+  }
+}

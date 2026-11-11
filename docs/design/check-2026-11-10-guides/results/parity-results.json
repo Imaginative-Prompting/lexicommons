@@ -1,0 +1,396 @@
+{
+ "summary": {
+  "layers": 241,
+  "compared": 131,
+  "skipped": 110,
+  "sentences": 26612,
+  "byLang": {
+   "nl": 43,
+   "de": 6,
+   "es": 36,
+   "fr": 1,
+   "ar": 15,
+   "hi": 20,
+   "ja": 10
+  },
+  "mismatched": 0,
+  "plants": [
+   {
+    "to": "nl",
+    "same": true
+   },
+   {
+    "to": "ja",
+    "same": true
+   }
+  ]
+ },
+ "report": [
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/today-nl-opening/fixloop/round1/weave.nl.4594d559dad1.json",
+   "skipped": "fails today's check (3): Sentence 3: m must hold the literal line: one [target, english, sources, lemma] per word of text."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/today-nl-opening/fixloop/round2/weave.nl.2323e10bd5de.json",
+   "skipped": "fails today's check (4): Sentence 3: m must hold the literal line: one [target, english, sources, lemma] per word of text."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-B1-nl-opening/fixloop/round1/weave.nl.481a80911cc9.json",
+   "skipped": "fails today's check (23): Sentence 3: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-B1-nl-opening/fixloop/round2/weave.nl.57910cfe2e34.json",
+   "skipped": "fails today's check (24): Sentence 3: m must hold the literal line: one [target, english, sources, lemma] per word of text."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-B1-nl-opening/weave.nl.23268832c713.json",
+   "skipped": "fails today's check (21): Sentence 3: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-B1-nl-teaparty/fixloop/round1/weave.nl.fe70f789eade.json",
+   "skipped": "fails today's check (39): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-B1-nl-teaparty/fixloop/round2/weave.nl.a2cad1dcf6c8.json",
+   "skipped": "fails today's check (39): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-B1-nl-teaparty/weave.nl.9d4fd032b488.json",
+   "skipped": "fails today's check (37): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-B2-nl-teaparty/weave.nl.84ca08775077.json",
+   "skipped": "fails today's check (41): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-C1-nl-opening/fixloop/round1/weave.nl.d8646173befb.json",
+   "skipped": "fails today's check (20): Sentence 3: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-C1-nl-opening/fixloop/round2/weave.nl.676b7091bdc3.json",
+   "skipped": "fails today's check (21): Sentence 3: m must hold the literal line: one [target, english, sources, lemma] per word of text."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-C1-nl-opening/weave.nl.7037bfbde66b.json",
+   "skipped": "fails today's check (20): Sentence 3: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-C1-nl-teaparty/fixloop/round1/weave.nl.0fd234095c7f.json",
+   "skipped": "fails today's check (35): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-C1-nl-teaparty/fixloop/round2/weave.nl.ece8aae87473.json",
+   "skipped": "fails today's check (35): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-C1-nl-teaparty/weave.nl.aa60601f3cf1.json",
+   "skipped": "fails today's check (35): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-nl-ofcourse/weave.nl.639de9c104f5.json",
+   "skipped": "fails today's check (9): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-nl-opening/weave.nl.ee9bfbe4f928.json",
+   "skipped": "fails today's check (26): Sentence 3: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two-nl-teaparty/weave.nl.db10dea72998.json",
+   "skipped": "fails today's check (35): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two2-nl-ofcourse/weave.nl.cffe25c5ece7.json",
+   "skipped": "fails today's check (13): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two2-nl-opening/weave.nl.5002845afbcf.json",
+   "skipped": "fails today's check (26): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two2-nl-teaparty/weave.nl.0f5068a47117.json",
+   "skipped": "fails today's check (31): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3a-nl-opening/fixloop/round1/weave.nl.8a4f8867cd05.json",
+   "skipped": "fails today's check (33): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3a-nl-opening/fixloop/round2/weave.nl.5f4cdb2e945c.json",
+   "skipped": "fails today's check (34): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3a-nl-opening/weave.nl.967c2546b965.json",
+   "skipped": "fails today's check (32): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3a-nl-teaparty/fixloop/round1/weave.nl.909e618e3610.json",
+   "skipped": "fails today's check (33): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3a-nl-teaparty/fixloop/round2/weave.nl.25c857563cff.json",
+   "skipped": "fails today's check (33): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3a-nl-teaparty/weave.nl.6dbc6e277190.json",
+   "skipped": "fails today's check (32): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3b-nl-opening/fixloop/round1/weave.nl.3e95f21963ba.json",
+   "skipped": "fails today's check (33): Sentence 3: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3b-nl-opening/fixloop/round2/weave.nl.a43980f40ca9.json",
+   "skipped": "fails today's check (35): Sentence 3: m must hold the literal line: one [target, english, sources, lemma] per word of text."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3b-nl-opening/weave.nl.14c20f8874e4.json",
+   "skipped": "fails today's check (32): Sentence 3: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3b-nl-teaparty/fixloop/round1/weave.nl.84cc438d0834.json",
+   "skipped": "fails today's check (32): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3b-nl-teaparty/fixloop/round2/weave.nl.3f8d6e166473.json",
+   "skipped": "fails today's check (32): Sentence 2: each idiom upgrade must be [k, len, target]."
+  },
+  {
+   "path": "08-lexicommons/pipelines/books/work/carroll-alice-wonderland/runs/two3b-nl-teaparty/weave.nl.8e2f433f31d2.json",
+   "skipped": "fails today's check (31): Sentence 2: each idiom upgrade must be [k, len, target]."
+  }
+ ],
+ "plantResults": [
+  {
+   "to": "nl",
+   "same": true,
+   "pipeline": {
+    "s": 0,
+    "e": 4,
+    "h": "e876cffce0fc",
+    "t": [
+     [
+      "“Ga",
+      "gaan"
+     ],
+     [
+      "niet,”",
+      "niet"
+     ],
+     [
+      "zei",
+      "zeggen"
+     ],
+     [
+      "ze.",
+      "ze"
+     ]
+    ],
+    "text": "“Ga niet,” zei ze. —",
+    "m": [
+     [
+      "“Ga",
+      "go",
+      [
+       1
+      ],
+      "gaan"
+     ],
+     [
+      "niet,”",
+      "don’t",
+      [
+       0
+      ],
+      "niet"
+     ],
+     [
+      "zei",
+      "said",
+      [
+       3
+      ],
+      "zeggen"
+     ],
+     [
+      "ze.",
+      "she",
+      [
+       2
+      ],
+      "z'e"
+     ],
+     [
+      "—",
+      "—",
+      [],
+      null
+     ]
+    ]
+   },
+   "app": {
+    "s": 0,
+    "e": 4,
+    "h": "e876cffce0fc",
+    "t": [
+     [
+      "“Ga",
+      "gaan"
+     ],
+     [
+      "niet,”",
+      "niet"
+     ],
+     [
+      "zei",
+      "zeggen"
+     ],
+     [
+      "ze.",
+      "ze"
+     ]
+    ],
+    "text": "“Ga niet,” zei ze. —",
+    "m": [
+     [
+      "“Ga",
+      "go",
+      [
+       1
+      ],
+      "gaan"
+     ],
+     [
+      "niet,”",
+      "don’t",
+      [
+       0
+      ],
+      "niet"
+     ],
+     [
+      "zei",
+      "said",
+      [
+       3
+      ],
+      "zeggen"
+     ],
+     [
+      "ze.",
+      "she",
+      [
+       2
+      ],
+      "z'e"
+     ],
+     [
+      "—",
+      "—",
+      [],
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "to": "ja",
+   "same": true,
+   "pipeline": {
+    "s": 0,
+    "e": 4,
+    "h": "e876cffce0fc",
+    "t": [
+     [
+      "「行か",
+      "行く",
+      "いか"
+     ],
+     [
+      "ないで、」",
+      "ない"
+     ],
+     [
+      "彼女は",
+      "彼女",
+      "かのじょ"
+     ],
+     [
+      "言った。",
+      "言う",
+      "いった"
+     ]
+    ],
+    "text": "「行かないで」と彼女は言った。",
+    "m": [
+     [
+      "「行かないで」と",
+      "go",
+      [
+       1
+      ],
+      "行く",
+      "いかないで」と"
+     ],
+     [
+      "彼女は言った。",
+      "she said",
+      [
+       2,
+       3
+      ],
+      "言う",
+      "、"
+     ]
+    ]
+   },
+   "app": {
+    "s": 0,
+    "e": 4,
+    "h": "e876cffce0fc",
+    "t": [
+     [
+      "「行か",
+      "行く",
+      "いか"
+     ],
+     [
+      "ないで、」",
+      "ない"
+     ],
+     [
+      "彼女は",
+      "彼女",
+      "かのじょ"
+     ],
+     [
+      "言った。",
+      "言う",
+      "いった"
+     ]
+    ],
+    "text": "「行かないで」と彼女は言った。",
+    "m": [
+     [
+      "「行かないで」と",
+      "go",
+      [
+       1
+      ],
+      "行く",
+      "いかないで」と"
+     ],
+     [
+      "彼女は言った。",
+      "she said",
+      [
+       2,
+       3
+      ],
+      "言う",
+      "、"
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+/* The pages the server renders on the design system (src/pages.ts): sign in, create your account, connect an app,
+ * and messages. No card: the drop and its name, one line, and the ways in, each a press with a hard edge under it. Phone first; on a wide screen they sit in the middle. */
+@layer lx.page {
+  .lx-signin {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    width: 100%;
+    max-width: 400px;
+    min-height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-4) var(--space-4);
+  }
+  .lx-signin p { margin: 0; }
+
+  /* The drop, large, and its name: what this is, at a glance. */
+  .lx-signin-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+    align-self: flex-start;
+    color: var(--ink-2);
+    font: 700 var(--size-20) / 1 var(--type-head);
+    letter-spacing: var(--track-head);
+    text-decoration: none;
+  }
+  .lx-signin-mark { width: 136px; height: 136px; margin-inline-start: -14px; }
+  @media (max-height: 640px) { .lx-signin-mark { width: 72px; height: 72px; margin-inline-start: -8px; } }
+
+  .lx-signin-card { display: flex; flex: 1; flex-direction: column; gap: var(--space-5); }
+  .lx-signin-lead { display: flex; flex-direction: column; gap: var(--space-2); }
+  .lx-signin-lead [data-part="page-title"] { overflow-wrap: anywhere; font: 700 var(--size-34, 34px) / 1.1 var(--type-head); letter-spacing: -0.02em; text-wrap: balance; }
+
+  .lx-signin-ways { display: flex; flex-direction: column; gap: var(--space-3); margin-block-start: auto; }
+  .lx-signin-ways form { margin: 0; }
+  .lx-signin-ways-title { margin: 0; color: var(--ink-2); font: 500 var(--size-14) / 1.3 var(--type-ui); }
+  /* A way in: something you press, among others. */
+  .lx-signin [data-part="sign-in-button"] { min-height: 52px; margin-bottom: 3px; border-radius: var(--radius-16); font-weight: 600; box-shadow: 0 3px 0 var(--line-strong); transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  /* Google's keeps its own colors and face, by Google's rules. */
+  .lx-signin [data-part="sign-in-button"]:not([data-variant="google"]) { border: 2px solid var(--line-strong); background: none; color: var(--ink-1); }
+  .lx-signin [data-part="sign-in-button"]:not(:disabled):active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); }
+  .lx-signin [data-part="sign-in-button"]:not([data-variant="google"]):not(:disabled):active { background: var(--fill-active); }
+  /* The one way forward on these pages. */
+  .lx-signin [data-part="button"][data-variant="white"] { min-height: 56px; margin-bottom: 4px; border: 0; border-radius: var(--radius-16); background: var(--go); color: var(--on-go); font: 700 18px / 1 var(--type-head); letter-spacing: -0.01em; box-shadow: 0 4px 0 var(--go-deep); transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard); }
+  .lx-signin [data-part="button"][data-variant="white"]:not(:disabled):active { transform: translateY(3px); box-shadow: 0 1px 0 var(--go-deep); background: var(--go); }
+
+  /* Creating an account with a passkey: a row that opens the form under it. */
+  .lx-signin-new { margin: 0; }
+  .lx-signin-new > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    min-height: 48px;
+    color: var(--ink-2);
+    font-size: var(--size-14);
+    font-weight: 500;
+    list-style: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lx-signin-new > summary::-webkit-details-marker { display: none; }
+  .lx-signin-new > summary .lx-icon { color: var(--ink-3); transition: rotate var(--dur-150) var(--ease-standard); }
+  .lx-signin-new[open] > summary .lx-icon { rotate: 90deg; }
+  .lx-signin-new > summary:active { color: var(--ink-1); }
+  .lx-signin-new > summary:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: var(--radius-8); }
+  @media (hover: hover) { .lx-signin-new > summary:hover .lx-icon { color: var(--ink-1); } }
+
+  .lx-signin-form { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-signin-new .lx-signin-form { padding: var(--space-1) 0 var(--space-2); }
+  .lx-signin-note { color: var(--ink-3); }
+  .lx-signin-note a { color: var(--ink-2); text-underline-offset: 3px; }
+
+  /* The create step: the sign-in(s) nobody uses yet. */
+  .lx-signin-pending { display: flex; flex-direction: column; gap: var(--space-1); margin: var(--space-1) 0 0; padding: 0; list-style: none; }
+  .lx-signin-pending li { display: flex; align-items: center; gap: var(--space-3); min-height: 40px; overflow-wrap: anywhere; }
+  .lx-signin-pending .lx-sign-in-mark { display: grid; place-items: center; flex: none; width: 20px; height: 20px; }
+  .lx-signin-have { padding-top: var(--space-4); margin-block-start: 0; }
+
+  /* Connect an app. */
+  .lx-consent-origin { display: flex; align-items: flex-start; gap: var(--space-2); color: var(--ink-2); font-size: var(--size-14); line-height: 20px; }
+  .lx-consent-origin .lx-icon { margin-top: 1px; }
+  .lx-consent-origin[data-state="verified"] .lx-icon { color: var(--m-right); }
+  .lx-consent-origin[data-state="unverified"] .lx-icon { color: var(--m-slipping); }
+  .lx-consent-card { display: flex; flex-direction: column; gap: var(--space-3); padding: 0; border: 0; background: none; }
+  .lx-consent-card h2 { margin: 0; }
+  .lx-consent-scopes { display: flex; flex-direction: column; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  .lx-consent-scopes li { display: flex; align-items: flex-start; gap: var(--space-2); }
+  .lx-consent-scopes .lx-icon { margin-top: 3px; color: var(--ink-2); }
+  .lx-consent-actions { display: flex; flex-direction: column; gap: var(--space-2); margin: auto 0 0; }
+  .lx-consent-who { display: flex; align-items: center; gap: var(--space-3); margin: 0; }
+  .lx-consent-who > .lx-small { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  .lx-mono { font-family: var(--type-mono); font-size: 0.92em; }
+  .lx-signin-card .lx-small a { color: var(--ink-1); text-underline-offset: 3px; }
+  .lx-signin-foot { display: flex; justify-content: center; gap: var(--space-5); color: var(--ink-3); }
+  .lx-signin-foot a { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-2); text-underline-offset: 3px; }
+  /* A word shorter than 44 px ("Terms", 40) reaches past its sides with an invisible ::before, as far as it's short and no further (components.css's
+     rule for small controls); the links sit far enough apart (--space-5) for both reaches. */
+  .lx-signin-foot a::before { content: ""; position: absolute; inset: 0 min(0px, calc((100% - 44px) / 2)); }
+
+  @media (min-width: 640px) {
+    .lx-signin { justify-content: center; min-height: 100dvh; padding-block: var(--space-6); }
+    .lx-signin-card { flex: none; }
+    .lx-signin-ways { margin-block-start: var(--space-3); }
+  }
+
+  /* Someone new (/login?new=1): signing in is a plain line under creating an account, its words a press of 44 px. */
+  .lx-signin-already { display: flex; flex-wrap: wrap; align-items: center; column-gap: var(--space-1); color: var(--ink-2); font-size: var(--size-14); }
+  .lx-signin-plain { min-height: 44px; padding: 0; border: 0; background: none; color: var(--ink-1); font: 600 var(--size-14) / 1.3 var(--type-ui); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .lx-signin-plain:active { color: var(--ink-2); }
+  .lx-signin-plain:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: var(--radius-8); }
+  .lx-signin-plain:disabled { color: var(--ink-3); text-decoration: none; }
+
+  /* The newcomer's page: its ways right under the headline (signing in keeps them at the foot, in a thumb's reach), headed as a section.
+     New accounts paused (src/signups.ts): the ways right under the words too, which are the page's point while it lasts. */
+  .lx-signin-ways[data-mode="new"],
+  .lx-signin-ways[data-mode="paused"] { margin-block-start: var(--space-2); }
+  /* Its heading is the page's (the public page said what Lexicommons is), under a smaller drop: the name field and Create account sit high. */
+  .lx-signin[data-mode="new"] .lx-signin-mark { width: 72px; height: 72px; margin-inline-start: -8px; }
+  .lx-signin-ways[data-mode="new"] { margin-block-start: 0; }
+  .lx-signin-ways[data-mode="new"] > [data-part="page-title"] { margin: 0; overflow-wrap: anywhere; color: var(--ink-1); font: 700 var(--size-34, 34px) / 1.1 var(--type-head); letter-spacing: -0.02em; }
+
+  /* Report a bug, signed out (src/pages.ts reportPage): the picked screenshot in its row's place, the line over what goes along kept close
+     to its list, and every value of that list whole, wrapping rather than cut off (as Settings' own: shell.css). */
+  .lx-report .lx-signin-form { gap: var(--space-4); }
+  .lx-report-thumb { display: block; width: 40px; height: 40px; border-radius: var(--radius-8, 8px); object-fit: cover; object-position: top; outline: 1px solid var(--line); outline-offset: -1px; }
+  .lx-report-along { margin: 0 0 calc(-1 * var(--space-2)); }
+  .lx-report-summary .lx-row-value { max-width: 62%; white-space: normal; overflow-wrap: anywhere; }
+  /* A small summary, read only: quieter and closer than a list you tap. */
+  .lx-report-summary [data-part="list-row"] { min-height: 0; padding-block: 6px; }
+  .lx-report-summary .lx-row-title { color: var(--ink-2); font-size: var(--size-14); }
+}

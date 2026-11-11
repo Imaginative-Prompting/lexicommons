@@ -1,0 +1,7651 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-eu",
+  "name": "Starter: Basque",
+  "about": "Basque in real, everyday sentences, with each one's words in Basque order.",
+  "language": "eu",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kafe": "coffee",
+    "te": "tea",
+    "ur": "water",
+    "ni": "I, me (nik: I, doing something to something; nirekin: with me; niri: to me)",
+    "edan": "drink",
+    "eta": "and",
+    "ukan": "have (dut, duzu, du; ditut, ditu: with more than one)",
+    "bat": "one, a",
+    "esne": "milk (esnerik: any milk)",
+    "ondo": "well, fine",
+    "egon": "be (somewhere: nago, zaude, dago, daude)",
+    "zu": "you (zuk: you, doing something to something)",
+    "ez": "not, no",
+    "irakasle": "teacher",
+    "ikasle": "student",
+    "izan": "be (naiz, zara, da, gara, dira; zait: is to me)",
+    "ama": "mom, mother",
+    "aita": "dad, father",
+    "anaia": "brother",
+    "arreba": "sister (of a male person)",
+    "ahizpa": "sister (of a female person)",
+    "nire": "my",
+    "hau": "this (honek: this, doing something)",
+    "lagun": "friend",
+    "mediku": "doctor",
+    "giltza": "key",
+    "telefono": "phone",
+    "liburu": "book",
+    "on": "good",
+    "non": "where",
+    "hemen": "here (hemengo: of here)",
+    "han": "there",
+    "komun": "bathroom",
+    "bi": "two",
+    "hiru": "three",
+    "diru": "money (dirurik: any money)",
+    "hitz egin": "speak, talk",
+    "ingeles": "English",
+    "euskara": "Basque (euskaraz: in Basque)",
+    "ulertu": "understand",
+    "pixka": "bit, small amount (pixka bat: a little)",
+    "nahi": "want (nahi dut: I want)",
+    "egin": "do, make",
+    "etxe": "house, home",
+    "gela": "room",
+    "handi": "big",
+    "txiki": "small",
+    "bizi": "live; living",
+    "joan": "go (noa: I go)",
+    "eskola": "school",
+    "hiri": "city",
+    "geltoki": "station",
+    "tren": "train",
+    "auto": "car",
+    "gaur": "today",
+    "bihar": "tomorrow",
+    "orain": "now",
+    "lan": "work (lanera: to work)",
+    "behar": "need (behar dugu: we have to)",
+    "ezin": "cannot",
+    "zein": "which, what",
+    "zure": "your",
+    "izen": "name",
+    "etorri": "come (nator: I come)",
+    "mahai": "table",
+    "gain": "top (gainean: on)",
+    "hozkailu": "fridge",
+    "sukalde": "kitchen",
+    "irakurri": "read",
+    "ari": "busy (doing): -tzen ari naiz, I'm …ing",
+    "afari": "dinner",
+    "prestatu": "prepare, make",
+    "goiz": "morning (goizean: in the morning)",
+    "gustatu": "please (gustatzen zait: I like)",
+    "arrain": "fish",
+    "mesedez": "please",
+    "zer": "what",
+    "jan": "eat",
+    "ordaindu": "pay",
+    "paella": "paella",
+    "kontu": "check, bill",
+    "ogi": "bread (ogirik: any bread)",
+    "ardo": "wine",
+    "beltz": "black (ardo beltza: red wine)",
+    "nahiago": "rather (nahiago dut: I prefer)",
+    "kanpo": "outside (kanpoan: out)",
+    "afaldu": "have dinner",
+    "barkatu": "forgive (barkatu: excuse me)",
+    "zenbat": "how much, how many",
+    "balio": "worth (balio du: it costs)",
+    "zinema": "movie theater (zinemara: to the movies)",
+    "gau": "night (gaur gauean: tonight)",
+    "autobus": "bus (autobusez: by bus)",
+    "atera": "go out, leave",
+    "zortzi": "eight",
+    "larunbat": "Saturday",
+    "mendi": "mountain (mendira: to the mountains)",
+    "taxi": "taxi",
+    "hartu": "take",
+    "garbitu": "wash, clean",
+    "deitu": "call",
+    "asteburu": "weekend",
+    "euri": "rain (euria egin: to rain)",
+    "ikasi": "learn",
+    "guraso": "parent",
+    "egunero": "every day",
+    "oso": "very",
+    "polit": "pretty",
+    "euskal": "Basque (before a noun)",
+    "musika": "music",
+    "neska": "girl",
+    "altu": "tall"
+  },
+  "chunks": {
+    "kontua-mesedez": {
+      "text": "Kontua, mesedez",
+      "en": "The check, please",
+      "about": "Literally the account, please; mesedez is please."
+    },
+    "hello": {
+      "text": "Kaixo",
+      "en": "hello"
+    },
+    "please": {
+      "text": "Mesedez",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "Eskerrik asko",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Zer moduz",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Agur",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Bai",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Ez",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Zein da zure izena",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Pozten naiz zu ezagutzeaz",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Barkatu",
+      "en": "excuse me"
+    },
+    "how-much-is-it": {
+      "text": "Zenbat balio du",
+      "en": "how much is it?"
+    },
+    "see-you-tomorrow": {
+      "text": "Bihar arte",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "kafea-edaten-dut",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "aux-present"
+      ],
+      "text": "Kafea edaten dut.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Kafea",
+          "kafe"
+        ],
+        [
+          "edaten",
+          "edan"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafeak edaten dut.",
+        "Kafea edaten ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kafea",
+          "Tea",
+          "Ura"
+        ]
+      }
+    },
+    {
+      "id": "tea-edaten-dut",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "aux-present"
+      ],
+      "text": "Tea edaten dut.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Tea",
+          "te"
+        ],
+        [
+          "edaten",
+          "edan"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Teak edaten dut.",
+        "Tea edaten ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tea",
+          "Kafea",
+          "Ura"
+        ]
+      }
+    },
+    {
+      "id": "nik-ura-edaten-dut",
+      "topic": "food",
+      "concepts": [
+        "ergative",
+        "aux-present",
+        "verb-last"
+      ],
+      "text": "Nik ura edaten dut.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Nik",
+          "ni"
+        ],
+        [
+          "ura",
+          "ur"
+        ],
+        [
+          "edaten",
+          "edan"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni ura edaten dut.",
+        "Nik ura edaten ditut."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ura",
+          "tea",
+          "kafea"
+        ]
+      }
+    },
+    {
+      "id": "kafea-eta-tea-edaten-ditut",
+      "topic": "food",
+      "concepts": [
+        "aux-present",
+        "plural",
+        "verb-last"
+      ],
+      "text": "Kafea eta tea edaten ditut.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Kafea",
+          "kafe"
+        ],
+        [
+          "eta",
+          "eta"
+        ],
+        [
+          "tea",
+          "te"
+        ],
+        [
+          "edaten",
+          "edan"
+        ],
+        [
+          "ditut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni kafea eta tea edaten dut.",
+        "Ni kafea eta tea edaten ditut."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tea",
+          "ura",
+          "kafea"
+        ]
+      }
+    },
+    {
+      "id": "tea-eta-ura-edaten-ditut",
+      "topic": "food",
+      "concepts": [
+        "aux-present",
+        "plural",
+        "verb-last"
+      ],
+      "text": "Tea eta ura edaten ditut.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Tea",
+          "te"
+        ],
+        [
+          "eta",
+          "eta"
+        ],
+        [
+          "ura",
+          "ur"
+        ],
+        [
+          "edaten",
+          "edan"
+        ],
+        [
+          "ditut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni tea eta ura edaten dut.",
+        "Ni tea eta ura edaten ditut."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ura",
+          "kafea",
+          "tea"
+        ]
+      }
+    },
+    {
+      "id": "ura-eta-kafea-edaten-ditut",
+      "topic": "food",
+      "concepts": [
+        "aux-present",
+        "plural",
+        "verb-last"
+      ],
+      "text": "Ura eta kafea edaten ditut.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Ura",
+          "ur"
+        ],
+        [
+          "eta",
+          "eta"
+        ],
+        [
+          "kafea",
+          "kafe"
+        ],
+        [
+          "edaten",
+          "edan"
+        ],
+        [
+          "ditut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni ura eta kafea edaten dut.",
+        "Ni ura eta kafea edaten ditut."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafea",
+          "tea",
+          "ura"
+        ]
+      }
+    },
+    {
+      "id": "kaixo-kafe-bat-mesedez",
+      "topic": "food",
+      "concepts": [
+        "article-a"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Kaixo! Kafe bat, mesedez.",
+      "means": "Hello! A coffee, please.",
+      "words": [
+        [
+          "Kaixo!"
+        ],
+        [
+          "Kafe",
+          "kafe"
+        ],
+        [
+          "bat,",
+          "bat"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "a"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaixo! Kafea bat, mesedez.",
+        "Kaixo! Kafe baten, mesedez."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Kafe",
+          "Te",
+          "Ur"
+        ]
+      }
+    },
+    {
+      "id": "te-bat-eta-ur-bat-mesedez",
+      "topic": "food",
+      "concepts": [
+        "article-a"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Te bat eta ur bat, mesedez.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Te",
+          "te"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "eta",
+          "eta"
+        ],
+        [
+          "ur",
+          "ur"
+        ],
+        [
+          "bat,",
+          "bat"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "a"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "a"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tea bat eta ur bat, mesedez.",
+        "Te bat eta ura bat, mesedez."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ur",
+          "kafe",
+          "esne"
+        ]
+      }
+    },
+    {
+      "id": "kafe-bat-eskerrik-asko",
+      "topic": "food",
+      "concepts": [
+        "article-a"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Kafe bat, eskerrik asko.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Kafe",
+          "kafe"
+        ],
+        [
+          "bat,",
+          "bat"
+        ],
+        [
+          "eskerrik"
+        ],
+        [
+          "asko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "a"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafea bat, eskerrik asko.",
+        "Kafe baten, eskerrik asko."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kafe",
+          "Esne",
+          "Ur"
+        ]
+      }
+    },
+    {
+      "id": "kaixo-te-bat-mesedez",
+      "topic": "food",
+      "concepts": [
+        "article-a"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Kaixo! Te bat, mesedez.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Kaixo!"
+        ],
+        [
+          "Te",
+          "te"
+        ],
+        [
+          "bat,",
+          "bat"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "a"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaixo! Tea bat, mesedez.",
+        "Kaixo! Te baten, mesedez."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Te",
+          "Kafe",
+          "Esne"
+        ]
+      }
+    },
+    {
+      "id": "esnea-edaten-dut",
+      "topic": "food",
+      "concepts": [
+        "aux-present",
+        "verb-last"
+      ],
+      "text": "Esnea edaten dut.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Esnea",
+          "esne"
+        ],
+        [
+          "edaten",
+          "edan"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Milk"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Esneak edaten dut.",
+        "Esnea edaten ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Esnea",
+          "Kafea",
+          "Ura"
+        ]
+      }
+    },
+    {
+      "id": "kaixo-zer-moduz",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Kaixo! Zer moduz?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Kaixo!"
+        ],
+        [
+          "Zer"
+        ],
+        [
+          "moduz"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaixo! Zer modu?",
+        "Kaixo! Zer modua?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kaixo!",
+          "Agur!",
+          "Bai!"
+        ]
+      }
+    },
+    {
+      "id": "ondo-nago-eskerrik-asko",
+      "topic": "people",
+      "concepts": [
+        "egon"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Ondo nago, eskerrik asko.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Ondo",
+          "ondo"
+        ],
+        [
+          "nago,",
+          "egon"
+        ],
+        [
+          "eskerrik"
+        ],
+        [
+          "asko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni ondo dut, eskerrik asko.",
+        "Ni ondo ditut, eskerrik asko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nago,",
+          "dut,",
+          "ditut,"
+        ]
+      }
+    },
+    {
+      "id": "bai-mesedez",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Bai, mesedez.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Bai,"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Baia, mesedez.",
+        "Bai, mesedeza."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bai,",
+          "Ez,",
+          "Kaixo,"
+        ]
+      }
+    },
+    {
+      "id": "ez-eskerrik-asko",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Ez, eskerrik asko.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Ez,"
+        ],
+        [
+          "eskerrik"
+        ],
+        [
+          "asko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eza, eskerrik asko.",
+        "Ez, eskerrik askoa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ez,",
+          "Bai,",
+          "Kaixo,"
+        ]
+      }
+    },
+    {
+      "id": "bai-eskerrik-asko-agur",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Bai, eskerrik asko. Agur!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Bai,"
+        ],
+        [
+          "eskerrik"
+        ],
+        [
+          "asko."
+        ],
+        [
+          "Agur"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Baia, eskerrik asko. Agur!",
+        "Bai, eskerrik askoa. Agur!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bai,",
+          "Ez,",
+          "Kaixo,"
+        ]
+      }
+    },
+    {
+      "id": "ez-eskerrik-asko-agur",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Ez, eskerrik asko. Agur!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Ez,"
+        ],
+        [
+          "eskerrik"
+        ],
+        [
+          "asko."
+        ],
+        [
+          "Agur"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eza, eskerrik asko. Agur!",
+        "Ez, eskerrik askoa. Agur!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ez,",
+          "Bai,",
+          "Kaixo,"
+        ]
+      }
+    },
+    {
+      "id": "kaixo-zein-da-zure-izena",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "izan"
+      ],
+      "chunks": [
+        "what-s-your-name",
+        "hello"
+      ],
+      "text": "Kaixo! Zein da zure izena?",
+      "means": "Hello! What's your name?",
+      "words": [
+        [
+          "Kaixo!"
+        ],
+        [
+          "Zein"
+        ],
+        [
+          "da"
+        ],
+        [
+          "zure"
+        ],
+        [
+          "izena"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "what"
+        ],
+        [
+          "is"
+        ],
+        [
+          "your"
+        ],
+        [
+          "name"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaixo! Zein naiz zure izena?",
+        "Kaixo! Zein zara zure izena?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "da",
+          "naiz",
+          "zara"
+        ]
+      }
+    },
+    {
+      "id": "irakaslea-naiz",
+      "topic": "people",
+      "concepts": [
+        "izan",
+        "verb-last"
+      ],
+      "text": "Irakaslea naiz.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Irakaslea",
+          "irakasle"
+        ],
+        [
+          "naiz",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni irakaslea zara.",
+        "Ni irakaslea dut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Irakaslea",
+          "Ikaslea",
+          "Kafea"
+        ]
+      }
+    },
+    {
+      "id": "zu-ikaslea-zara",
+      "topic": "people",
+      "concepts": [
+        "izan",
+        "verb-last"
+      ],
+      "text": "Zu ikaslea zara.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Zu",
+          "zu"
+        ],
+        [
+          "ikaslea",
+          "ikasle"
+        ],
+        [
+          "zara",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zu ikaslea naiz.",
+        "Zu ikaslea da."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ikaslea",
+          "irakaslea",
+          "kafea"
+        ]
+      }
+    },
+    {
+      "id": "irakaslea-zara",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "izan"
+      ],
+      "text": "Irakaslea zara?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Irakaslea",
+          "irakasle"
+        ],
+        [
+          "zara",
+          "izan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "you are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zu irakaslea naiz?",
+        "Irakaslea ditut?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Irakaslea",
+          "Ikaslea",
+          "Kafea"
+        ]
+      }
+    },
+    {
+      "id": "ez-naiz-irakaslea",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "izan"
+      ],
+      "text": "Ez naiz irakaslea.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "naiz",
+          "izan"
+        ],
+        [
+          "irakaslea",
+          "irakasle"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ni ez zara irakaslea.",
+        "Ez ditut irakaslea."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "naiz",
+          "dut",
+          "ditut"
+        ]
+      }
+    },
+    {
+      "id": "kaixo-pozten-naiz-zu-ezagutzeaz",
+      "topic": "people",
+      "concepts": [
+        "izan"
+      ],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Kaixo! Pozten naiz zu ezagutzeaz.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Kaixo!"
+        ],
+        [
+          "Pozten"
+        ],
+        [
+          "naiz"
+        ],
+        [
+          "zu"
+        ],
+        [
+          "ezagutzeaz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "I am pleased"
+        ],
+        [
+          "to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaixo! Pozten dut zu ezagutzeaz.",
+        "Kaixo! Pozten naiz zuk ezagutzeaz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "naiz",
+          "dut",
+          "ditut"
+        ]
+      }
+    },
+    {
+      "id": "ikaslea-da",
+      "topic": "people",
+      "concepts": [
+        "izan",
+        "verb-last"
+      ],
+      "text": "Ikaslea da.",
+      "means": "She's a student.",
+      "words": [
+        [
+          "Ikaslea",
+          "ikasle"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A student"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zu ikaslea da.",
+        "Ikaslea ditut."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "da",
+          "naiz",
+          "zara"
+        ]
+      }
+    },
+    {
+      "id": "hau-nire-ama-da",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "izan"
+      ],
+      "text": "Hau nire ama da.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Hau",
+          "hau"
+        ],
+        [
+          "nire",
+          "nire"
+        ],
+        [
+          "ama",
+          "ama"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hau nire ama naiz.",
+        "Hau nire ama zara."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ama",
+          "aita",
+          "anaia"
+        ]
+      }
+    },
+    {
+      "id": "hau-nire-aita-da",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "izan"
+      ],
+      "text": "Hau nire aita da.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Hau",
+          "hau"
+        ],
+        [
+          "nire",
+          "nire"
+        ],
+        [
+          "aita",
+          "aita"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hau nire aita naiz.",
+        "Hau nire aita zara."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "aita",
+          "ama",
+          "anaia"
+        ]
+      }
+    },
+    {
+      "id": "nire-aita-irakaslea-da",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "izan",
+        "verb-last"
+      ],
+      "text": "Nire aita irakaslea da.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "aita",
+          "aita"
+        ],
+        [
+          "irakaslea",
+          "irakasle"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nire aita irakaslea naiz.",
+        "Nire aita irakaslea zara."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "aita",
+          "ama",
+          "anaia"
+        ]
+      }
+    },
+    {
+      "id": "nire-anaia-ikaslea-da",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "izan",
+        "verb-last"
+      ],
+      "text": "Nire anaia ikaslea da.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "anaia",
+          "anaia"
+        ],
+        [
+          "ikaslea",
+          "ikasle"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nire anaia ikaslea naiz.",
+        "Nire anaia ikaslea zara."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "anaia",
+          "aita",
+          "ama"
+        ]
+      }
+    },
+    {
+      "id": "hau-nire-arreba-da",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "izan"
+      ],
+      "text": "Hau nire arreba da.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Hau",
+          "hau"
+        ],
+        [
+          "nire",
+          "nire"
+        ],
+        [
+          "arreba",
+          "arreba"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hau nire arreba naiz.",
+        "Hau nire arreba zara."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "arreba",
+          "anaia",
+          "aita"
+        ]
+      }
+    },
+    {
+      "id": "nire-ahizpa-irakaslea-da",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "izan",
+        "verb-last"
+      ],
+      "text": "Nire ahizpa irakaslea da.",
+      "means": "My sister is a teacher.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "ahizpa",
+          "ahizpa"
+        ],
+        [
+          "irakaslea",
+          "irakasle"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nire ahizpa irakaslea naiz.",
+        "Nire ahizpa irakaslea zara."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ahizpa",
+          "ama",
+          "aita"
+        ]
+      }
+    },
+    {
+      "id": "telefono-bat-dut",
+      "topic": "people",
+      "concepts": [
+        "article-a",
+        "ukan",
+        "verb-last"
+      ],
+      "text": "Telefono bat dut.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Telefono",
+          "telefono"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Phone"
+        ],
+        [
+          "a"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telefono bat ditut.",
+        "Telefonoa bat dut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Telefono",
+          "Giltza",
+          "Lagun"
+        ]
+      }
+    },
+    {
+      "id": "giltza-bat-duzu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ukan",
+        "article-a"
+      ],
+      "text": "Giltza bat duzu?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Giltza",
+          "giltza"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "duzu",
+          "ukan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Key"
+        ],
+        [
+          "a"
+        ],
+        [
+          "you have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Giltza bat ditut?",
+        "Giltza baten duzu?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Giltza",
+          "Telefono",
+          "Lagun"
+        ]
+      }
+    },
+    {
+      "id": "ez-dut-libururik",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "partitive",
+        "ukan"
+      ],
+      "text": "Ez dut libururik.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "dut",
+          "ukan"
+        ],
+        [
+          "libururik",
+          "liburu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "any book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez ditut libururik.",
+        "Ez naiz libururik."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dut",
+          "ditut",
+          "naiz"
+        ]
+      }
+    },
+    {
+      "id": "zu-lagun-ona-zara",
+      "topic": "people",
+      "concepts": [
+        "izan",
+        "verb-last"
+      ],
+      "text": "Zu lagun ona zara.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Zu",
+          "zu"
+        ],
+        [
+          "lagun",
+          "lagun"
+        ],
+        [
+          "ona",
+          "on"
+        ],
+        [
+          "zara",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a friend"
+        ],
+        [
+          "good"
+        ],
+        [
+          "are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zu lagun ona naiz.",
+        "Zu lagun ona da."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "zara",
+          "naiz",
+          "da"
+        ]
+      }
+    },
+    {
+      "id": "non-dago-nire-giltza",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "location",
+        "egon",
+        "genitive"
+      ],
+      "text": "Non dago nire giltza?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "dago",
+          "egon"
+        ],
+        [
+          "nire",
+          "nire"
+        ],
+        [
+          "giltza",
+          "giltza"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non nago nire giltza?",
+        "Non dago nire giltzak?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "giltza",
+          "telefonoa",
+          "ama"
+        ]
+      }
+    },
+    {
+      "id": "nire-telefonoa-hemen-dago",
+      "topic": "out",
+      "concepts": [
+        "location",
+        "egon",
+        "genitive",
+        "verb-last"
+      ],
+      "text": "Nire telefonoa hemen dago.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "telefonoa",
+          "telefono"
+        ],
+        [
+          "hemen",
+          "hemen"
+        ],
+        [
+          "dago",
+          "egon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "here"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nire telefonoa hemen nago.",
+        "Nire telefonoak hemen dago."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hemen",
+          "han",
+          "non"
+        ]
+      }
+    },
+    {
+      "id": "giltza-han-dago",
+      "topic": "out",
+      "concepts": [
+        "location",
+        "egon",
+        "verb-last"
+      ],
+      "text": "Giltza han dago.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Giltza",
+          "giltza"
+        ],
+        [
+          "han",
+          "han"
+        ],
+        [
+          "dago",
+          "egon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "there"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Giltza han nago.",
+        "Giltzak han dago."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "han",
+          "hemen",
+          "non"
+        ]
+      }
+    },
+    {
+      "id": "barkatu-non-dago-komuna",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "location",
+        "egon"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Barkatu, non dago komuna?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Barkatu,"
+        ],
+        [
+          "non",
+          "non"
+        ],
+        [
+          "dago",
+          "egon"
+        ],
+        [
+          "komuna",
+          "komun"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Barkatu, non nago komuna?",
+        "Barkatu, non dago komunak?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "komuna",
+          "giltza",
+          "telefonoa"
+        ]
+      }
+    },
+    {
+      "id": "non-dago-nire-ama",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "location",
+        "egon",
+        "genitive"
+      ],
+      "text": "Non dago nire ama?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "dago",
+          "egon"
+        ],
+        [
+          "nire",
+          "nire"
+        ],
+        [
+          "ama",
+          "ama"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non nago nire ama?",
+        "Non dago nire amak?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ama",
+          "aita",
+          "arreba"
+        ]
+      }
+    },
+    {
+      "id": "bi-kafe-mesedez",
+      "topic": "out",
+      "concepts": [
+        "plural"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Bi kafe, mesedez.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Bi",
+          "bi"
+        ],
+        [
+          "kafe,",
+          "kafe"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bi kafea, mesedez.",
+        "Bi kafe bat, mesedez."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bi",
+          "Hiru",
+          "Bat"
+        ]
+      }
+    },
+    {
+      "id": "liburu-bat-mesedez",
+      "topic": "out",
+      "concepts": [
+        "article-a"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Liburu bat, mesedez.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Liburu",
+          "liburu"
+        ],
+        [
+          "bat,",
+          "bat"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Book"
+        ],
+        [
+          "one"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Liburua bat, mesedez.",
+        "Liburu baten, mesedez."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Liburu",
+          "Kafe",
+          "Te"
+        ]
+      }
+    },
+    {
+      "id": "hiru-liburu-ditut",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "ukan",
+        "verb-last"
+      ],
+      "text": "Hiru liburu ditut.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Hiru",
+          "hiru"
+        ],
+        [
+          "liburu",
+          "liburu"
+        ],
+        [
+          "ditut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Three"
+        ],
+        [
+          "books"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hiru liburu dut.",
+        "Hiru liburua ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hiru",
+          "Bi",
+          "Bat"
+        ]
+      }
+    },
+    {
+      "id": "barkatu-zenbat-balio-du",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "excuse-me"
+      ],
+      "text": "Barkatu, zenbat balio du?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Barkatu,"
+        ],
+        [
+          "zenbat"
+        ],
+        [
+          "balio"
+        ],
+        [
+          "du"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "does it cost"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Barkatu, zenbat balio naiz?",
+        "Barkatu, zenbat balio zara?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Barkatu,",
+          "Kaixo,",
+          "Agur,"
+        ]
+      }
+    },
+    {
+      "id": "ulertzen-duzu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "aux-present"
+      ],
+      "text": "Ulertzen duzu?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ulertzen",
+          "ulertu"
+        ],
+        [
+          "duzu",
+          "ukan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Understand"
+        ],
+        [
+          "you do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ulertzen zara?",
+        "Ulertzen dago?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "duzu",
+          "zara",
+          "dago"
+        ]
+      }
+    },
+    {
+      "id": "ingelesez-hitz-egiten-duzu",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "aux-present"
+      ],
+      "text": "Ingelesez hitz egiten duzu?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Ingelesez",
+          "ingeles"
+        ],
+        [
+          "hitz",
+          "hitz egin"
+        ],
+        [
+          "egiten",
+          "hitz egin"
+        ],
+        [
+          "duzu",
+          "ukan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "In English"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "you do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ingelesez hitz egiten zara?",
+        "Ingelesez hitz egiten dago?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ingelesez",
+          "Euskaraz",
+          "Ingelesa"
+        ]
+      }
+    },
+    {
+      "id": "euskaraz-pixka-bat-hitz-egiten-dut",
+      "topic": "people",
+      "concepts": [
+        "aux-present",
+        "verb-last"
+      ],
+      "text": "Euskaraz pixka bat hitz egiten dut.",
+      "means": "I speak a little Basque.",
+      "words": [
+        [
+          "Euskaraz",
+          "euskara"
+        ],
+        [
+          "pixka",
+          "pixka"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "hitz",
+          "hitz egin"
+        ],
+        [
+          "egiten",
+          "hitz egin"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In Basque"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Euskaraz pixka bat hitz egiten naiz.",
+        "Euskaraz pixka bat hitz egiten ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Euskaraz",
+          "Ingelesez",
+          "Euskara"
+        ]
+      }
+    },
+    {
+      "id": "egin-nahi-dut",
+      "topic": "people",
+      "concepts": [
+        "nahi-behar",
+        "verb-last"
+      ],
+      "text": "Egin nahi dut.",
+      "means": "I want to do it.",
+      "words": [
+        [
+          "Egin",
+          "egin"
+        ],
+        [
+          "nahi",
+          "nahi"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Do it"
+        ],
+        [
+          "want"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Egin nahi naiz.",
+        "Egin nahi zara."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Egin",
+          "Edan",
+          "Ulertu"
+        ]
+      }
+    },
+    {
+      "id": "nire-gela-txikia-da",
+      "topic": "home",
+      "concepts": [
+        "genitive",
+        "izan",
+        "verb-last"
+      ],
+      "text": "Nire gela txikia da.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "gela",
+          "gela"
+        ],
+        [
+          "txikia",
+          "txiki"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "small"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nire gela txikia naiz.",
+        "Nire gela txikia zara."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "txikia",
+          "handia",
+          "ona"
+        ]
+      }
+    },
+    {
+      "id": "etxe-hau-handia-da",
+      "topic": "home",
+      "concepts": [
+        "izan",
+        "verb-last"
+      ],
+      "text": "Etxe hau handia da.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Etxe",
+          "etxe"
+        ],
+        [
+          "hau",
+          "hau"
+        ],
+        [
+          "handia",
+          "handi"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "House"
+        ],
+        [
+          "this"
+        ],
+        [
+          "big"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Etxea hau handia da.",
+        "Etxe hau handia naiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "handia",
+          "txikia",
+          "ona"
+        ]
+      }
+    },
+    {
+      "id": "nire-ama-hemen-bizi-da",
+      "topic": "home",
+      "concepts": [
+        "location",
+        "genitive",
+        "izan",
+        "verb-last"
+      ],
+      "text": "Nire ama hemen bizi da.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "ama",
+          "ama"
+        ],
+        [
+          "hemen",
+          "hemen"
+        ],
+        [
+          "bizi",
+          "bizi"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "here"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nire ama hemen bizi naiz.",
+        "Nire ama hemen bizi zara."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hemen",
+          "han",
+          "etxean"
+        ]
+      }
+    },
+    {
+      "id": "etxe-txiki-batean-bizi-naiz",
+      "topic": "home",
+      "concepts": [
+        "location",
+        "izan",
+        "verb-last"
+      ],
+      "text": "Etxe txiki batean bizi naiz.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Etxe",
+          "etxe"
+        ],
+        [
+          "txiki",
+          "txiki"
+        ],
+        [
+          "batean",
+          "bat"
+        ],
+        [
+          "bizi",
+          "bizi"
+        ],
+        [
+          "naiz",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "House"
+        ],
+        [
+          "small"
+        ],
+        [
+          "in a"
+        ],
+        [
+          "I live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Etxe txikia batean bizi naiz.",
+        "Etxe txiki batean bizi dut."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "batean",
+          "bat",
+          "bi"
+        ]
+      }
+    },
+    {
+      "id": "non-bizi-zara",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "location",
+        "izan"
+      ],
+      "text": "Non bizi zara?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Non",
+          "non"
+        ],
+        [
+          "bizi",
+          "bizi"
+        ],
+        [
+          "zara",
+          "izan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "live"
+        ],
+        [
+          "you are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non bizi duzu?",
+        "Non bizi ditut?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zara",
+          "duzu",
+          "ditut"
+        ]
+      }
+    },
+    {
+      "id": "auto-hau-txikia-da",
+      "topic": "out",
+      "concepts": [
+        "izan",
+        "verb-last"
+      ],
+      "text": "Auto hau txikia da.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Auto",
+          "auto"
+        ],
+        [
+          "hau",
+          "hau"
+        ],
+        [
+          "txikia",
+          "txiki"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Car"
+        ],
+        [
+          "this"
+        ],
+        [
+          "small"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Autoa hau txikia da.",
+        "Auto hau txikia naiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "txikia",
+          "handia",
+          "ona"
+        ]
+      }
+    },
+    {
+      "id": "eskolara-joaten-naiz",
+      "topic": "out",
+      "concepts": [
+        "location",
+        "aux-present",
+        "verb-last"
+      ],
+      "text": "Eskolara joaten naiz.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Eskolara",
+          "eskola"
+        ],
+        [
+          "joaten",
+          "joan"
+        ],
+        [
+          "naiz",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To school"
+        ],
+        [
+          "go"
+        ],
+        [
+          "I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eskolara joaten dut.",
+        "Eskolara joaten ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Eskolara",
+          "Hirira",
+          "Eskola"
+        ]
+      }
+    },
+    {
+      "id": "nora-zoaz",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "location"
+      ],
+      "text": "Nora zoaz?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Nora",
+          "non"
+        ],
+        [
+          "zoaz",
+          "joan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where to"
+        ],
+        [
+          "you are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nora joaten?",
+        "Nora naiz?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nora",
+          "Non",
+          "Hemen"
+        ]
+      }
+    },
+    {
+      "id": "nire-ama-hirira-joaten-da",
+      "topic": "out",
+      "concepts": [
+        "location",
+        "genitive",
+        "aux-present",
+        "verb-last"
+      ],
+      "text": "Nire ama hirira joaten da.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "ama",
+          "ama"
+        ],
+        [
+          "hirira",
+          "hiri"
+        ],
+        [
+          "joaten",
+          "joan"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nire ama hirira joaten naiz.",
+        "Nire ama hirira joaten zara."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hirira",
+          "eskolara",
+          "etxean"
+        ]
+      }
+    },
+    {
+      "id": "eskerrik-asko-bihar-arte",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "see-you-tomorrow"
+      ],
+      "text": "Eskerrik asko. Bihar arte!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Eskerrik"
+        ],
+        [
+          "asko."
+        ],
+        [
+          "Bihar"
+        ],
+        [
+          "arte"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eskerrik askoa. Bihar arte!",
+        "Eskerrik asko. Bihar artea!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Bihar",
+          "Gaur",
+          "Orain"
+        ]
+      }
+    },
+    {
+      "id": "gaur-lan-egiten-dut",
+      "topic": "plans",
+      "concepts": [
+        "aux-present",
+        "verb-last"
+      ],
+      "text": "Gaur lan egiten dut.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Gaur",
+          "gaur"
+        ],
+        [
+          "lan",
+          "lan"
+        ],
+        [
+          "egiten",
+          "egin"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "work"
+        ],
+        [
+          "do"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gaur lan egiten naiz.",
+        "Gaur lan egiten ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Gaur",
+          "Bihar",
+          "Orain"
+        ]
+      }
+    },
+    {
+      "id": "orain-joan-behar-dut",
+      "topic": "plans",
+      "concepts": [
+        "nahi-behar",
+        "verb-last"
+      ],
+      "text": "Orain joan behar dut.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Orain",
+          "orain"
+        ],
+        [
+          "joan",
+          "joan"
+        ],
+        [
+          "behar",
+          "behar"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "go"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Orain joaten behar dut.",
+        "Orain joan behar ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Orain",
+          "Bihar",
+          "Gaur"
+        ]
+      }
+    },
+    {
+      "id": "bihar-hirira-noa",
+      "topic": "plans",
+      "concepts": [
+        "location",
+        "verb-last"
+      ],
+      "text": "Bihar hirira noa.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Bihar",
+          "bihar"
+        ],
+        [
+          "hirira",
+          "hiri"
+        ],
+        [
+          "noa",
+          "joan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "I am going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bihar hiria noa.",
+        "Bihar hirira joaten."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hirira",
+          "eskolara",
+          "etxean"
+        ]
+      }
+    },
+    {
+      "id": "gaur-ezin-naiz-joan",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "izan"
+      ],
+      "text": "Gaur ezin naiz joan.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Gaur",
+          "gaur"
+        ],
+        [
+          "ezin",
+          "ezin"
+        ],
+        [
+          "naiz",
+          "izan"
+        ],
+        [
+          "joan",
+          "joan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "cannot"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gaur ezin naiz joaten.",
+        "Gaur ezin naiz noa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Gaur",
+          "Bihar",
+          "Orain"
+        ]
+      }
+    },
+    {
+      "id": "bihar-lan-egin-behar-dut",
+      "topic": "plans",
+      "concepts": [
+        "nahi-behar",
+        "verb-last"
+      ],
+      "text": "Bihar lan egin behar dut.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Bihar",
+          "bihar"
+        ],
+        [
+          "lan",
+          "lan"
+        ],
+        [
+          "egin",
+          "egin"
+        ],
+        [
+          "behar",
+          "behar"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "work"
+        ],
+        [
+          "do"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "I do"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bihar lan egiten behar dut.",
+        "Bihar lan egin behar ditut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bihar",
+          "Gaur",
+          "Orain"
+        ]
+      }
+    },
+    {
+      "id": "zein-da-zure-izena",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "genitive"
+      ],
+      "text": "Zein da zure izena?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Zein",
+          "zein"
+        ],
+        [
+          "da",
+          "izan"
+        ],
+        [
+          "zure",
+          "zure"
+        ],
+        [
+          "izena",
+          "izen"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Which"
+        ],
+        [
+          "is"
+        ],
+        [
+          "your"
+        ],
+        [
+          "name"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zein zure izena da?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zure",
+          "nire",
+          "bere"
+        ]
+      }
+    },
+    {
+      "id": "estatu-batuetatik-nator",
+      "topic": "people",
+      "concepts": [
+        "location",
+        "verb-last"
+      ],
+      "text": "Estatu Batuetatik nator.",
+      "means": "I'm from the United States.",
+      "words": [
+        [
+          "Estatu"
+        ],
+        [
+          "Batuetatik"
+        ],
+        [
+          "nator",
+          "etorri"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "From the United States"
+        ],
+        [
+          "I come",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "nator"
+      ],
+      "wrong": [
+        "Estatu Batuetara nator."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Batuetatik",
+          "Batuetara",
+          "Batuetan"
+        ]
+      }
+    },
+    {
+      "id": "ama-irakaslea-da",
+      "topic": "people",
+      "concepts": [
+        "izan"
+      ],
+      "text": "Nire ama irakaslea da.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "ama",
+          "ama"
+        ],
+        [
+          "irakaslea",
+          "irakasle"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "da"
+      ],
+      "wrong": [
+        "Nire ama irakaslea dago."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "da",
+          "dago",
+          "du"
+        ]
+      }
+    },
+    {
+      "id": "aita-ez-da-medikua",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Nire aita ez da medikua.",
+      "means": "My dad isn't a doctor.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "aita",
+          "aita"
+        ],
+        [
+          "ez",
+          "ez"
+        ],
+        [
+          "da",
+          "izan"
+        ],
+        [
+          "medikua",
+          "mediku"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "dad"
+        ],
+        [
+          "not"
+        ],
+        [
+          "is",
+          true
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "da"
+      ],
+      "wrong": [
+        "Nire aita da ez medikua."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ez",
+          "bai",
+          "ere"
+        ]
+      }
+    },
+    {
+      "id": "bi-lagun-ditut",
+      "topic": "people",
+      "concepts": [
+        "ukan"
+      ],
+      "text": "Bi lagun ditut.",
+      "means": "I have two friends.",
+      "words": [
+        [
+          "Bi",
+          "bi"
+        ],
+        [
+          "lagun",
+          "lagun"
+        ],
+        [
+          "ditut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "I have them",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ditut"
+      ],
+      "wrong": [
+        "Bi lagun naiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ditut",
+          "naiz",
+          "dira"
+        ]
+      }
+    },
+    {
+      "id": "lagunaren-etxea-handia",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Nire lagunaren etxea handia da.",
+      "means": "My friend's house is big.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "lagunaren",
+          "lagun"
+        ],
+        [
+          "etxea",
+          "etxe"
+        ],
+        [
+          "handia",
+          "handi"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "friend's"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ],
+      "moved": [
+        "da"
+      ],
+      "wrong": [
+        "Nire lagunak etxea handia da."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lagunaren",
+          "lagunarekin",
+          "lagunari"
+        ]
+      }
+    },
+    {
+      "id": "laguna-bilbon-bizi-da",
+      "topic": "people",
+      "concepts": [
+        "location",
+        "verb-last"
+      ],
+      "text": "Nire laguna Bilbon bizi da.",
+      "means": "My friend lives in Bilbao.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "laguna",
+          "lagun"
+        ],
+        [
+          "Bilbon"
+        ],
+        [
+          "bizi",
+          "bizi"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "in Bilbao"
+        ],
+        [
+          "lives",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "bizi",
+        "da"
+      ],
+      "wrong": [
+        "Nire laguna Bilbora bizi da."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Bilbon",
+          "Bilbora",
+          "Bilbotik"
+        ]
+      }
+    },
+    {
+      "id": "lagunekin-bizi-naiz",
+      "topic": "people",
+      "concepts": [
+        "comitative"
+      ],
+      "text": "Lagunekin bizi naiz.",
+      "means": "I live with friends.",
+      "words": [
+        [
+          "Lagunekin",
+          "lagun"
+        ],
+        [
+          "bizi",
+          "bizi"
+        ],
+        [
+          "naiz",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With friends"
+        ],
+        [
+          "I live",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "bizi",
+        "naiz"
+      ],
+      "wrong": [
+        "Lagunak bizi naiz."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Lagunekin",
+          "Lagunetan",
+          "Lagunei"
+        ]
+      }
+    },
+    {
+      "id": "euskaraz-hitz-egiten-duzu",
+      "topic": "people",
+      "concepts": [
+        "aux-present"
+      ],
+      "text": "Euskaraz hitz egiten duzu?",
+      "means": "Do you speak Basque?",
+      "words": [
+        [
+          "Euskaraz",
+          "euskara"
+        ],
+        [
+          "hitz",
+          "hitz egin"
+        ],
+        [
+          "egiten",
+          "hitz egin"
+        ],
+        [
+          "duzu",
+          "ukan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "In Basque"
+        ],
+        [
+          "do you speak",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "hitz",
+        "egiten",
+        "duzu"
+      ],
+      "wrong": [
+        "Euskaraz hitz egiten zara?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "duzu",
+          "zara",
+          "dut"
+        ]
+      }
+    },
+    {
+      "id": "nirekin-etorriko-zara",
+      "topic": "people",
+      "concepts": [
+        "future"
+      ],
+      "text": "Nirekin etorriko zara?",
+      "means": "Will you come with me?",
+      "words": [
+        [
+          "Nirekin",
+          "ni"
+        ],
+        [
+          "etorriko",
+          "etorri"
+        ],
+        [
+          "zara",
+          "izan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "With me"
+        ],
+        [
+          "will you come",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "etorriko",
+        "zara"
+      ],
+      "wrong": [
+        "Nirekin etorri zara?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "etorriko",
+          "geratuko",
+          "etorri"
+        ]
+      }
+    },
+    {
+      "id": "neska-altua-nire-laguna",
+      "topic": "people",
+      "concepts": [
+        "article-a"
+      ],
+      "text": "Neska altua nire laguna da.",
+      "means": "The tall girl is my friend.",
+      "words": [
+        [
+          "Neska",
+          "neska"
+        ],
+        [
+          "altua",
+          "altu"
+        ],
+        [
+          "nire",
+          "nire"
+        ],
+        [
+          "laguna",
+          "lagun"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Girl"
+        ],
+        [
+          "the tall",
+          true
+        ],
+        [
+          "my"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "altua",
+        "da"
+      ],
+      "wrong": [
+        "Altua neska nire laguna da."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "altua",
+          "altu",
+          "altuak"
+        ]
+      }
+    },
+    {
+      "id": "etxean-nago",
+      "topic": "home",
+      "concepts": [
+        "location",
+        "egon"
+      ],
+      "text": "Etxean nago.",
+      "means": "I'm at home.",
+      "words": [
+        [
+          "Etxean",
+          "etxe"
+        ],
+        [
+          "nago",
+          "egon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At home"
+        ],
+        [
+          "I am",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "nago"
+      ],
+      "wrong": [
+        "Etxera nago."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nago",
+          "dago",
+          "dut"
+        ]
+      }
+    },
+    {
+      "id": "giltzak-mahai-gainean",
+      "topic": "home",
+      "concepts": [
+        "egon",
+        "plural",
+        "verb-last"
+      ],
+      "text": "Giltzak mahai gainean daude.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Giltzak",
+          "giltza"
+        ],
+        [
+          "mahai",
+          "mahai"
+        ],
+        [
+          "gainean",
+          "gain"
+        ],
+        [
+          "daude",
+          "egon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The keys"
+        ],
+        [
+          "on the table"
+        ],
+        [
+          "are",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "daude"
+      ],
+      "wrong": [
+        "Giltzak mahai gainean dago."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "daude",
+          "dago",
+          "ditut"
+        ]
+      }
+    },
+    {
+      "id": "hozkailuan-ez-dago-esnerik",
+      "topic": "home",
+      "concepts": [
+        "partitive"
+      ],
+      "text": "Hozkailuan ez dago esnerik.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Hozkailuan",
+          "hozkailu"
+        ],
+        [
+          "ez",
+          "ez"
+        ],
+        [
+          "dago",
+          "egon"
+        ],
+        [
+          "esnerik",
+          "esne"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge",
+          true
+        ],
+        [
+          "not"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "any milk"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Hozkailuan"
+      ],
+      "wrong": [
+        "Hozkailuan ez dago esnea."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "esnerik",
+          "esnea",
+          "esnean"
+        ]
+      }
+    },
+    {
+      "id": "ama-sukaldean-dago",
+      "topic": "home",
+      "concepts": [
+        "location",
+        "egon"
+      ],
+      "text": "Ama sukaldean dago.",
+      "means": "Mom is in the kitchen.",
+      "words": [
+        [
+          "Ama",
+          "ama"
+        ],
+        [
+          "sukaldean",
+          "sukalde"
+        ],
+        [
+          "dago",
+          "egon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mom"
+        ],
+        [
+          "in the kitchen"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "dago"
+      ],
+      "wrong": [
+        "Ama sukaldean du."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sukaldean",
+          "sukaldera",
+          "sukaldetik"
+        ]
+      }
+    },
+    {
+      "id": "liburu-bat-irakurtzen",
+      "topic": "home",
+      "concepts": [
+        "ari"
+      ],
+      "text": "Liburu bat irakurtzen ari naiz.",
+      "means": "I'm reading a book.",
+      "words": [
+        [
+          "Liburu",
+          "liburu"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "irakurtzen",
+          "irakurri"
+        ],
+        [
+          "ari",
+          "ari"
+        ],
+        [
+          "naiz",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Book"
+        ],
+        [
+          "a"
+        ],
+        [
+          "reading"
+        ],
+        [
+          "busy"
+        ],
+        [
+          "I am",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "naiz"
+      ],
+      "wrong": [
+        "Liburu bat irakurtzen ari dut."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ari",
+          "nahi",
+          "behar"
+        ]
+      }
+    },
+    {
+      "id": "aita-afaria-prestatzen",
+      "topic": "home",
+      "concepts": [
+        "ari"
+      ],
+      "text": "Aita afaria prestatzen ari da.",
+      "means": "Dad is making dinner.",
+      "words": [
+        [
+          "Aita",
+          "aita"
+        ],
+        [
+          "afaria",
+          "afari"
+        ],
+        [
+          "prestatzen",
+          "prestatu"
+        ],
+        [
+          "ari",
+          "ari"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Dad"
+        ],
+        [
+          "the dinner"
+        ],
+        [
+          "making"
+        ],
+        [
+          "busy"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "da"
+      ],
+      "wrong": [
+        "Aita afaria prestatzen ari du."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "da",
+          "du",
+          "dago"
+        ]
+      }
+    },
+    {
+      "id": "etxe-honek-bi-komun",
+      "topic": "home",
+      "concepts": [
+        "ukan"
+      ],
+      "text": "Etxe honek bi komun ditu.",
+      "means": "This house has two bathrooms.",
+      "words": [
+        [
+          "Etxe",
+          "etxe"
+        ],
+        [
+          "honek",
+          "hau"
+        ],
+        [
+          "bi",
+          "bi"
+        ],
+        [
+          "komun",
+          "komun"
+        ],
+        [
+          "ditu",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This house"
+        ],
+        [
+          "two bathrooms"
+        ],
+        [
+          "has",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "ditu"
+      ],
+      "wrong": [
+        "Etxe honek bi komun dira."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ditu",
+          "dira",
+          "daude"
+        ]
+      }
+    },
+    {
+      "id": "kafea-edan-dut",
+      "topic": "home",
+      "concepts": [
+        "aux-past"
+      ],
+      "text": "Gaur goizean kafea edan dut.",
+      "means": "I had coffee this morning.",
+      "words": [
+        [
+          "Gaur",
+          "gaur"
+        ],
+        [
+          "goizean",
+          "goiz"
+        ],
+        [
+          "kafea",
+          "kafe"
+        ],
+        [
+          "edan",
+          "edan"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "in the morning"
+        ],
+        [
+          "the coffee"
+        ],
+        [
+          "drunk"
+        ],
+        [
+          "I have",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dut"
+      ],
+      "wrong": [
+        "Gaur goizean kafea edaten dut."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "edan",
+          "edaten",
+          "edango"
+        ]
+      }
+    },
+    {
+      "id": "auto-bat-dut",
+      "topic": "home",
+      "concepts": [
+        "ukan"
+      ],
+      "text": "Auto bat dut.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Auto",
+          "auto"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Car"
+        ],
+        [
+          "a"
+        ],
+        [
+          "I have",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "dut"
+      ],
+      "wrong": [
+        "Auto bat naiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dut",
+          "naiz",
+          "nago"
+        ]
+      }
+    },
+    {
+      "id": "etxe-handi-batean",
+      "topic": "home",
+      "concepts": [
+        "article-a"
+      ],
+      "text": "Etxe handi batean bizi gara.",
+      "means": "We live in a big house.",
+      "words": [
+        [
+          "Etxe",
+          "etxe"
+        ],
+        [
+          "handi",
+          "handi"
+        ],
+        [
+          "batean",
+          "bat"
+        ],
+        [
+          "bizi",
+          "bizi"
+        ],
+        [
+          "gara",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "House"
+        ],
+        [
+          "big",
+          true
+        ],
+        [
+          "in a"
+        ],
+        [
+          "we live",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "handi",
+        "bizi",
+        "gara"
+      ],
+      "wrong": [
+        "Handi etxe batean bizi gara."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "handi",
+          "handia",
+          "handiak"
+        ]
+      }
+    },
+    {
+      "id": "kafea-gustatzen-zait",
+      "topic": "food",
+      "concepts": [
+        "gustatu"
+      ],
+      "text": "Kafea gustatzen zait.",
+      "means": "I like coffee.",
+      "words": [
+        [
+          "Kafea",
+          "kafe"
+        ],
+        [
+          "gustatzen",
+          "gustatu"
+        ],
+        [
+          "zait",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The coffee",
+          true
+        ],
+        [
+          "pleasing"
+        ],
+        [
+          "is to me"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Kafea"
+      ],
+      "wrong": [
+        "Kafea gustatzen dut."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zait",
+          "zaizu",
+          "dut"
+        ]
+      }
+    },
+    {
+      "id": "ez-zait-arraina-gustatzen",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "gustatu"
+      ],
+      "text": "Ez zait arraina gustatzen.",
+      "means": "I don't like fish.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "zait",
+          "izan"
+        ],
+        [
+          "arraina",
+          "arrain"
+        ],
+        [
+          "gustatzen",
+          "gustatu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "is to me"
+        ],
+        [
+          "the fish"
+        ],
+        [
+          "pleasing"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez arraina gustatzen zait."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "zait",
+          "zaio",
+          "dut"
+        ]
+      }
+    },
+    {
+      "id": "kafe-bat-nahi-dut",
+      "topic": "food",
+      "concepts": [
+        "nahi-behar"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kafe bat nahi dut, mesedez.",
+      "means": "I'd like a coffee, please.",
+      "words": [
+        [
+          "Kafe",
+          "kafe"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "nahi",
+          "nahi"
+        ],
+        [
+          "dut,",
+          "ukan"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "a"
+        ],
+        [
+          "I want,",
+          true
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nahi",
+        "dut,"
+      ],
+      "wrong": [
+        "Kafe bat nahi naiz, mesedez."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nahi",
+          "behar",
+          "ari"
+        ]
+      }
+    },
+    {
+      "id": "ura-edan-nahi-dut",
+      "topic": "food",
+      "concepts": [
+        "nahi-behar"
+      ],
+      "text": "Ura edan nahi dut.",
+      "means": "I want to drink some water.",
+      "words": [
+        [
+          "Ura",
+          "ur"
+        ],
+        [
+          "edan",
+          "edan"
+        ],
+        [
+          "nahi",
+          "nahi"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "I want",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nahi",
+        "dut"
+      ],
+      "wrong": [
+        "Ura edan nahi naiz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "edan",
+          "edaten",
+          "edango"
+        ]
+      }
+    },
+    {
+      "id": "zer-jan-nahi-duzu",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "nahi-behar"
+      ],
+      "text": "Zer jan nahi duzu?",
+      "means": "What do you want to eat?",
+      "words": [
+        [
+          "Zer",
+          "zer"
+        ],
+        [
+          "jan",
+          "jan"
+        ],
+        [
+          "nahi",
+          "nahi"
+        ],
+        [
+          "duzu",
+          "ukan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "do you want",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nahi",
+        "duzu"
+      ],
+      "wrong": [
+        "Zer jan nahi zara?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Zer",
+          "Non",
+          "Nor"
+        ]
+      }
+    },
+    {
+      "id": "nik-ordainduko-dut",
+      "topic": "food",
+      "concepts": [
+        "ergative"
+      ],
+      "text": "Nik ordainduko dut.",
+      "means": "I'll pay.",
+      "words": [
+        [
+          "Nik",
+          "ni"
+        ],
+        [
+          "ordainduko",
+          "ordaindu"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "will pay"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Niri ordainduko dut."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nik",
+          "Niri",
+          "Nirekin"
+        ]
+      }
+    },
+    {
+      "id": "paella-jan-dugu",
+      "topic": "food",
+      "concepts": [
+        "aux-past"
+      ],
+      "text": "Gaur paella jan dugu.",
+      "means": "We had paella today.",
+      "words": [
+        [
+          "Gaur",
+          "gaur"
+        ],
+        [
+          "paella",
+          "paella"
+        ],
+        [
+          "jan",
+          "jan"
+        ],
+        [
+          "dugu",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "paella"
+        ],
+        [
+          "eaten"
+        ],
+        [
+          "we have",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "dugu"
+      ],
+      "wrong": [
+        "Gaur paella jaten dugu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jan",
+          "jaten",
+          "jango"
+        ]
+      }
+    },
+    {
+      "id": "kontua-mesedez",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "kontua-mesedez"
+      ],
+      "text": "Kontua, mesedez.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Kontua,"
+        ],
+        [
+          "mesedez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kontuak, mesedez."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mesedez",
+          "agur",
+          "bai"
+        ]
+      }
+    },
+    {
+      "id": "ogirik-ba-al-dago",
+      "topic": "food",
+      "concepts": [
+        "partitive"
+      ],
+      "text": "Ogirik ba al dago?",
+      "means": "Is there any bread?",
+      "words": [
+        [
+          "Ogirik",
+          "ogi"
+        ],
+        [
+          "ba"
+        ],
+        [
+          "al"
+        ],
+        [
+          "dago",
+          "egon"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Any bread"
+        ],
+        [
+          "is there",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "ba",
+        "al",
+        "dago"
+      ],
+      "wrong": [
+        "Ogirik ba al dira?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ogirik",
+          "Ogia",
+          "Ogian"
+        ]
+      }
+    },
+    {
+      "id": "ardo-beltza-nahiago",
+      "topic": "food",
+      "concepts": [
+        "article-a"
+      ],
+      "text": "Ardo beltza nahiago dut.",
+      "means": "I prefer red wine.",
+      "words": [
+        [
+          "Ardo",
+          "ardo"
+        ],
+        [
+          "beltza",
+          "beltz"
+        ],
+        [
+          "nahiago",
+          "nahiago"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Wine"
+        ],
+        [
+          "the red",
+          true
+        ],
+        [
+          "I prefer",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "beltza",
+        "nahiago",
+        "dut"
+      ],
+      "wrong": [
+        "Beltza ardo nahiago dut."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "beltza",
+          "beltz",
+          "beltzak"
+        ]
+      }
+    },
+    {
+      "id": "kanpoan-afalduko-dugu",
+      "topic": "food",
+      "concepts": [
+        "future"
+      ],
+      "text": "Gaur kanpoan afalduko dugu.",
+      "means": "We're eating out tonight.",
+      "words": [
+        [
+          "Gaur",
+          "gaur"
+        ],
+        [
+          "kanpoan",
+          "kanpo"
+        ],
+        [
+          "afalduko",
+          "afaldu"
+        ],
+        [
+          "dugu",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "outside"
+        ],
+        [
+          "we will have dinner",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "afalduko",
+        "dugu"
+      ],
+      "wrong": [
+        "Gaur kanpoan afaldu dugu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "afalduko",
+          "bazkalduko",
+          "afaldu"
+        ]
+      }
+    },
+    {
+      "id": "non-dago-tren-geltokia",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Barkatu, non dago tren geltokia?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Barkatu,"
+        ],
+        [
+          "non",
+          "non"
+        ],
+        [
+          "dago",
+          "egon"
+        ],
+        [
+          "tren",
+          "tren"
+        ],
+        [
+          "geltokia",
+          "geltoki"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "train"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Barkatu, non tren geltokia dago?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "non",
+          "nora",
+          "noiz"
+        ]
+      }
+    },
+    {
+      "id": "zenbat-balio-du",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Zenbat balio du honek?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Zenbat",
+          "zenbat"
+        ],
+        [
+          "balio",
+          "balio"
+        ],
+        [
+          "du",
+          "ukan"
+        ],
+        [
+          "honek",
+          "hau"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "is worth"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zenbat honek balio du?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Zenbat",
+          "Non",
+          "Nor"
+        ]
+      }
+    },
+    {
+      "id": "zinemara-noa",
+      "topic": "out",
+      "concepts": [
+        "location"
+      ],
+      "text": "Gaur gauean zinemara noa.",
+      "means": "I'm going to the movies tonight.",
+      "words": [
+        [
+          "Gaur",
+          "gaur"
+        ],
+        [
+          "gauean",
+          "gau"
+        ],
+        [
+          "zinemara",
+          "zinema"
+        ],
+        [
+          "noa",
+          "joan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "at night"
+        ],
+        [
+          "to the movies"
+        ],
+        [
+          "I go",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "noa"
+      ],
+      "wrong": [
+        "Gaur gauean zineman noa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zinemara",
+          "zineman",
+          "zinematik"
+        ]
+      }
+    },
+    {
+      "id": "autobusez-joaten-naiz",
+      "topic": "out",
+      "concepts": [
+        "aux-present"
+      ],
+      "text": "Autobusez joaten naiz lanera.",
+      "means": "I go to work by bus.",
+      "words": [
+        [
+          "Autobusez",
+          "autobus"
+        ],
+        [
+          "joaten",
+          "joan"
+        ],
+        [
+          "naiz",
+          "izan"
+        ],
+        [
+          "lanera",
+          "lan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "By bus",
+          true
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to work"
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Autobusez"
+      ],
+      "wrong": [
+        "Autobusez joaten dut lanera."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "naiz",
+          "dut",
+          "dago"
+        ]
+      }
+    },
+    {
+      "id": "trena-zortzietan",
+      "topic": "out",
+      "concepts": [
+        "aux-present",
+        "location"
+      ],
+      "text": "Trena zortzietan ateratzen da.",
+      "means": "The train leaves at eight.",
+      "words": [
+        [
+          "Trena",
+          "tren"
+        ],
+        [
+          "zortzietan",
+          "zortzi"
+        ],
+        [
+          "ateratzen",
+          "atera"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "at eight"
+        ],
+        [
+          "leaves",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "ateratzen",
+        "da"
+      ],
+      "wrong": [
+        "Trena zortzietan ateratzen du."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "zortzietan",
+          "zortzira",
+          "zortzitik"
+        ]
+      }
+    },
+    {
+      "id": "ez-dut-ulertzen",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "aux-present"
+      ],
+      "text": "Ez dut ulertzen.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "dut",
+          "ukan"
+        ],
+        [
+          "ulertzen",
+          "ulertu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I do"
+        ],
+        [
+          "understanding"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez ulertzen dut."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dut",
+          "naiz",
+          "dago"
+        ]
+      }
+    },
+    {
+      "id": "mendira-joango-gara",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "location"
+      ],
+      "text": "Larunbatean mendira joango gara.",
+      "means": "We're going to the mountains on Saturday.",
+      "words": [
+        [
+          "Larunbatean",
+          "larunbat"
+        ],
+        [
+          "mendira",
+          "mendi"
+        ],
+        [
+          "joango",
+          "joan"
+        ],
+        [
+          "gara",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "to the mountains"
+        ],
+        [
+          "we will go",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "joango",
+        "gara"
+      ],
+      "wrong": [
+        "Larunbatean mendira joango dugu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mendira",
+          "mendian",
+          "menditik"
+        ]
+      }
+    },
+    {
+      "id": "taxi-bat-hartu-behar",
+      "topic": "out",
+      "concepts": [
+        "nahi-behar"
+      ],
+      "text": "Taxi bat hartu behar dugu.",
+      "means": "We have to take a taxi.",
+      "words": [
+        [
+          "Taxi",
+          "taxi"
+        ],
+        [
+          "bat",
+          "bat"
+        ],
+        [
+          "hartu",
+          "hartu"
+        ],
+        [
+          "behar",
+          "behar"
+        ],
+        [
+          "dugu",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Taxi"
+        ],
+        [
+          "a"
+        ],
+        [
+          "take"
+        ],
+        [
+          "we need",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "behar",
+        "dugu"
+      ],
+      "wrong": [
+        "Taxi bat hartu behar gara."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "behar",
+          "nahi",
+          "ari"
+        ]
+      }
+    },
+    {
+      "id": "zuk-zer-nahi-duzu",
+      "topic": "out",
+      "concepts": [
+        "ergative"
+      ],
+      "text": "Zuk zer nahi duzu?",
+      "means": "What would you like?",
+      "words": [
+        [
+          "Zuk",
+          "zu"
+        ],
+        [
+          "zer",
+          "zer"
+        ],
+        [
+          "nahi",
+          "nahi"
+        ],
+        [
+          "duzu",
+          "ukan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "what"
+        ],
+        [
+          "want",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nahi",
+        "duzu"
+      ],
+      "wrong": [
+        "Zuri zer nahi duzu?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Zuk",
+          "Zuri",
+          "Zurekin"
+        ]
+      }
+    },
+    {
+      "id": "aitak-autoa-garbitzen",
+      "topic": "out",
+      "concepts": [
+        "ergative",
+        "aux-present"
+      ],
+      "text": "Aitak autoa garbitzen du.",
+      "means": "Dad is washing the car.",
+      "words": [
+        [
+          "Aitak",
+          "aita"
+        ],
+        [
+          "autoa",
+          "auto"
+        ],
+        [
+          "garbitzen",
+          "garbitu"
+        ],
+        [
+          "du",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Dad"
+        ],
+        [
+          "the car"
+        ],
+        [
+          "washes",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "garbitzen",
+        "du"
+      ],
+      "wrong": [
+        "Aitari autoa garbitzen du."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Aitak",
+          "Aitari",
+          "Aitarekin"
+        ]
+      }
+    },
+    {
+      "id": "bihar-deituko-dizut",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Bihar deituko dizut.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Bihar",
+          "bihar"
+        ],
+        [
+          "deituko",
+          "deitu"
+        ],
+        [
+          "dizut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I will call you",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "deituko",
+        "dizut"
+      ],
+      "wrong": [
+        "Gaur deitu dizut."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "deituko",
+          "idatziko",
+          "deitu"
+        ]
+      }
+    },
+    {
+      "id": "zer-egingo-duzu-asteburuan",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Zer egingo duzu asteburuan?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Zer",
+          "zer"
+        ],
+        [
+          "egingo",
+          "egin"
+        ],
+        [
+          "duzu",
+          "ukan"
+        ],
+        [
+          "asteburuan",
+          "asteburu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "will you do"
+        ],
+        [
+          "at the weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zer egingo zara asteburuan?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "duzu",
+          "dut",
+          "zara"
+        ]
+      }
+    },
+    {
+      "id": "bihar-euria-egingo-du",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Bihar euria egingo du.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Bihar",
+          "bihar"
+        ],
+        [
+          "euria",
+          "euri"
+        ],
+        [
+          "egingo",
+          "egin"
+        ],
+        [
+          "du",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "it will make",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "egingo",
+        "du"
+      ],
+      "wrong": [
+        "Bihar euria egingo da."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "egingo",
+          "ekarriko",
+          "egin"
+        ]
+      }
+    },
+    {
+      "id": "euskara-ikasi-nahi-dut",
+      "topic": "plans",
+      "concepts": [
+        "nahi-behar"
+      ],
+      "text": "Euskara ikasi nahi dut.",
+      "means": "I want to learn Basque.",
+      "words": [
+        [
+          "Euskara",
+          "euskara"
+        ],
+        [
+          "ikasi",
+          "ikasi"
+        ],
+        [
+          "nahi",
+          "nahi"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Basque"
+        ],
+        [
+          "learn"
+        ],
+        [
+          "I want",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nahi",
+        "dut"
+      ],
+      "wrong": [
+        "Euskara ikasi nahi naiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nahi",
+          "ari",
+          "ohi"
+        ]
+      }
+    },
+    {
+      "id": "hemengo-etxeak-handiak",
+      "topic": "plans",
+      "concepts": [
+        "plural",
+        "izan"
+      ],
+      "text": "Hemengo etxeak handiak dira.",
+      "means": "The houses here are big.",
+      "words": [
+        [
+          "Hemengo",
+          "hemen"
+        ],
+        [
+          "etxeak",
+          "etxe"
+        ],
+        [
+          "handiak",
+          "handi"
+        ],
+        [
+          "dira",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Of here"
+        ],
+        [
+          "the houses"
+        ],
+        [
+          "big"
+        ],
+        [
+          "are",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dira"
+      ],
+      "wrong": [
+        "Hemengo etxeak handia dira."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dira",
+          "da",
+          "gara"
+        ]
+      }
+    },
+    {
+      "id": "gurasoak-donostian",
+      "topic": "plans",
+      "concepts": [
+        "plural",
+        "verb-last"
+      ],
+      "text": "Nire gurasoak Donostian bizi dira.",
+      "means": "My parents live in San Sebastián.",
+      "words": [
+        [
+          "Nire",
+          "nire"
+        ],
+        [
+          "gurasoak",
+          "guraso"
+        ],
+        [
+          "Donostian"
+        ],
+        [
+          "bizi",
+          "bizi"
+        ],
+        [
+          "dira",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My parents"
+        ],
+        [
+          "in San Sebastián"
+        ],
+        [
+          "live",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "bizi",
+        "dira"
+      ],
+      "wrong": [
+        "Nire gurasoak Donostian bizi da."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "dira",
+          "da",
+          "naiz"
+        ]
+      }
+    },
+    {
+      "id": "lagunekin-afaltzera-noa",
+      "topic": "plans",
+      "concepts": [
+        "comitative"
+      ],
+      "text": "Lagunekin afaltzera noa.",
+      "means": "I'm going to dinner with friends.",
+      "words": [
+        [
+          "Lagunekin",
+          "lagun"
+        ],
+        [
+          "afaltzera",
+          "afaldu"
+        ],
+        [
+          "noa",
+          "joan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With friends"
+        ],
+        [
+          "to have dinner"
+        ],
+        [
+          "I go",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "noa"
+      ],
+      "wrong": [
+        "Lagunak afaltzera noa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Lagunekin",
+          "Lagunei",
+          "Lagunena"
+        ]
+      }
+    },
+    {
+      "id": "egunero-amarekin",
+      "topic": "plans",
+      "concepts": [
+        "comitative",
+        "aux-present"
+      ],
+      "text": "Egunero amarekin hitz egiten dut.",
+      "means": "I talk to my mom every day.",
+      "words": [
+        [
+          "Egunero",
+          "egunero"
+        ],
+        [
+          "amarekin",
+          "ama"
+        ],
+        [
+          "hitz",
+          "hitz egin"
+        ],
+        [
+          "egiten",
+          "hitz egin"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Every day"
+        ],
+        [
+          "with mom"
+        ],
+        [
+          "I talk",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "hitz",
+        "egiten",
+        "dut"
+      ],
+      "wrong": [
+        "Egunero amarekin hitz egiten naiz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "amarekin",
+          "amaren",
+          "amak"
+        ]
+      }
+    },
+    {
+      "id": "lagunaren-autoa",
+      "topic": "plans",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Hau nire lagunaren autoa da.",
+      "means": "This is my friend's car.",
+      "words": [
+        [
+          "Hau",
+          "hau"
+        ],
+        [
+          "nire",
+          "nire"
+        ],
+        [
+          "lagunaren",
+          "lagun"
+        ],
+        [
+          "autoa",
+          "auto"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "friend's"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        4,
+        1,
+        2,
+        3
+      ],
+      "moved": [
+        "da"
+      ],
+      "wrong": [
+        "Hau nire laguna autoa da."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "lagunaren",
+          "lagunarekin",
+          "lagunari"
+        ]
+      }
+    },
+    {
+      "id": "zure-etxea-polita",
+      "topic": "plans",
+      "concepts": [
+        "genitive",
+        "izan"
+      ],
+      "text": "Zure etxea oso polita da.",
+      "means": "Your house is really pretty.",
+      "words": [
+        [
+          "Zure",
+          "zure"
+        ],
+        [
+          "etxea",
+          "etxe"
+        ],
+        [
+          "oso",
+          "oso"
+        ],
+        [
+          "polita",
+          "polit"
+        ],
+        [
+          "da",
+          "izan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Your"
+        ],
+        [
+          "house"
+        ],
+        [
+          "very"
+        ],
+        [
+          "pretty"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "moved": [
+        "da"
+      ],
+      "wrong": [
+        "Zu etxea oso polita da."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Zure",
+          "Zu",
+          "Zuk"
+        ]
+      }
+    },
+    {
+      "id": "liburua-irakurri-dut",
+      "topic": "plans",
+      "concepts": [
+        "aux-past"
+      ],
+      "text": "Liburua irakurri dut.",
+      "means": "I've read the book.",
+      "words": [
+        [
+          "Liburua",
+          "liburu"
+        ],
+        [
+          "irakurri",
+          "irakurri"
+        ],
+        [
+          "dut",
+          "ukan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The book"
+        ],
+        [
+          "read"
+        ],
+        [
+          "I have",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "dut"
+      ],
+      "wrong": [
+        "Liburua irakurri naiz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "irakurri",
+          "irakurtzen",
+          "irakurriko"
+        ]
+      }
+    },
+    {
+      "id": "ez-dut-dirurik",
+      "topic": "plans",
+      "concepts": [
+        "partitive",
+        "negation"
+      ],
+      "text": "Ez dut dirurik.",
+      "means": "I don't have any money.",
+      "words": [
+        [
+          "Ez",
+          "ez"
+        ],
+        [
+          "dut",
+          "ukan"
+        ],
+        [
+          "dirurik",
+          "diru"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "any money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez dut dirua."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dirurik",
+          "dirua",
+          "diruan"
+        ]
+      }
+    },
+    {
+      "id": "euskal-musika-gustatzen",
+      "topic": "plans",
+      "concepts": [
+        "gustatu"
+      ],
+      "text": "Euskal musika gustatzen zaizu?",
+      "means": "Do you like Basque music?",
+      "words": [
+        [
+          "Euskal",
+          "euskal"
+        ],
+        [
+          "musika",
+          "musika"
+        ],
+        [
+          "gustatzen",
+          "gustatu"
+        ],
+        [
+          "zaizu",
+          "izan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Basque"
+        ],
+        [
+          "music",
+          true
+        ],
+        [
+          "pleasing"
+        ],
+        [
+          "is to you"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "musika"
+      ],
+      "wrong": [
+        "Euskal musika gustatzen duzu?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "zaizu",
+          "zait",
+          "duzu"
+        ]
+      }
+    },
+    {
+      "id": "zer-egiten-ari-zara",
+      "topic": "plans",
+      "concepts": [
+        "ari"
+      ],
+      "text": "Zer egiten ari zara?",
+      "means": "What are you doing?",
+      "words": [
+        [
+          "Zer",
+          "zer"
+        ],
+        [
+          "egiten",
+          "egin"
+        ],
+        [
+          "ari",
+          "ari"
+        ],
+        [
+          "zara",
+          "izan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "doing"
+        ],
+        [
+          "busy"
+        ],
+        [
+          "are you",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "zara"
+      ],
+      "wrong": [
+        "Zer egiten ari duzu?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ari",
+          "nahi",
+          "behar"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kafe",
+          "forms": [
+            "kafea"
+          ],
+          "picture": "coffee",
+          "means": "kafea = coffee"
+        },
+        {
+          "lemma": "te",
+          "forms": [
+            "tea"
+          ],
+          "picture": "tea",
+          "means": "tea = tea"
+        },
+        {
+          "lemma": "ur",
+          "forms": [
+            "ura"
+          ],
+          "picture": "water",
+          "means": "ura = water"
+        },
+        {
+          "lemma": "ni",
+          "forms": [
+            "nik"
+          ],
+          "means": "nik = I"
+        },
+        {
+          "lemma": "edan",
+          "forms": [
+            "edaten"
+          ],
+          "picture": "drink",
+          "means": "edaten = drink"
+        },
+        {
+          "lemma": "eta",
+          "forms": [
+            "eta"
+          ],
+          "means": "and"
+        },
+        {
+          "lemma": "ukan",
+          "forms": [
+            "dut",
+            "ditut"
+          ],
+          "means": "dut = I have; ditut = I have"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "verb-last",
+        "line": "The verb usually comes last, with its helper word after it: Nire laguna Bilbon bizi da (my friend in-Bilbao living is)."
+      },
+      "items": [
+        "kafea-edaten-dut",
+        "tea-edaten-dut",
+        "nik-ura-edaten-dut",
+        "kafea-eta-tea-edaten-ditut",
+        "tea-eta-ura-edaten-ditut",
+        "ura-eta-kafea-edaten-ditut"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "bat",
+          "forms": [
+            "bat"
+          ],
+          "means": "one, a"
+        },
+        {
+          "lemma": "esne",
+          "forms": [
+            "esnea"
+          ],
+          "picture": "milk",
+          "means": "esnea = milk"
+        },
+        {
+          "lemma": "kafe",
+          "forms": [
+            "kafe"
+          ],
+          "means": "coffee"
+        },
+        {
+          "lemma": "te",
+          "forms": [
+            "te"
+          ],
+          "means": "tea"
+        },
+        {
+          "lemma": "ur",
+          "forms": [
+            "ur"
+          ],
+          "means": "water"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "kaixo-kafe-bat-mesedez",
+        "te-bat-eta-ur-bat-mesedez",
+        "kafe-bat-eskerrik-asko",
+        "kaixo-te-bat-mesedez",
+        "esnea-edaten-dut"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "ondo",
+          "forms": [
+            "ondo"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "egon",
+          "forms": [
+            "nago"
+          ],
+          "means": "nago = I am"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A question word goes right before the verb: Non dago tren geltokia?"
+      },
+      "items": [
+        "kaixo-zer-moduz",
+        "ondo-nago-eskerrik-asko",
+        "bai-mesedez",
+        "ez-eskerrik-asko",
+        "bai-eskerrik-asko-agur",
+        "ez-eskerrik-asko-agur"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "zu",
+          "forms": [
+            "zu"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ez",
+          "forms": [
+            "ez"
+          ],
+          "means": "not, no"
+        },
+        {
+          "lemma": "irakasle",
+          "forms": [
+            "irakaslea"
+          ],
+          "means": "irakaslea = a teacher"
+        },
+        {
+          "lemma": "ikasle",
+          "forms": [
+            "ikaslea"
+          ],
+          "means": "ikaslea = a student"
+        },
+        {
+          "lemma": "izan",
+          "forms": [
+            "naiz",
+            "zara",
+            "da"
+          ],
+          "means": "naiz = I am; zara = you are; da = is"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "kaixo-zein-da-zure-izena",
+        "irakaslea-naiz",
+        "zu-ikaslea-zara",
+        "irakaslea-zara",
+        "ez-naiz-irakaslea",
+        "kaixo-pozten-naiz-zu-ezagutzeaz",
+        "ikaslea-da"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ama",
+          "forms": [
+            "ama"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "aita",
+          "forms": [
+            "aita"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "anaia",
+          "forms": [
+            "anaia"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "arreba",
+          "forms": [
+            "arreba"
+          ],
+          "means": "sister (of a male person)"
+        },
+        {
+          "lemma": "ahizpa",
+          "forms": [
+            "ahizpa"
+          ],
+          "picture": "sister",
+          "means": "sister (of a female person)"
+        },
+        {
+          "lemma": "nire",
+          "forms": [
+            "nire"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "hau",
+          "forms": [
+            "hau"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "izan",
+        "line": "izan says who or what someone is: naiz (am), zara (are), da (is), gara (we are), dira (they are): Nire ama irakaslea da (my mom teacher-the is)."
+      },
+      "items": [
+        "ama-irakaslea-da",
+        "hau-nire-ama-da",
+        "hau-nire-aita-da",
+        "nire-aita-irakaslea-da",
+        "nire-anaia-ikaslea-da",
+        "hau-nire-arreba-da",
+        "nire-ahizpa-irakaslea-da"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "ukan",
+          "forms": [
+            "duzu"
+          ],
+          "means": "duzu = you have"
+        },
+        {
+          "lemma": "lagun",
+          "forms": [
+            "lagun"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "mediku",
+          "forms": [
+            "medikua"
+          ],
+          "picture": "doctor",
+          "means": "medikua = a doctor"
+        },
+        {
+          "lemma": "giltza",
+          "forms": [
+            "giltza"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefono",
+          "forms": [
+            "telefono"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "liburu",
+          "forms": [
+            "libururik"
+          ],
+          "picture": "book",
+          "means": "libururik = any book"
+        },
+        {
+          "lemma": "on",
+          "forms": [
+            "ona"
+          ],
+          "means": "ona = good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "telefono-bat-dut",
+        "giltza-bat-duzu",
+        "ez-dut-libururik",
+        "zu-lagun-ona-zara",
+        "aita-ez-da-medikua"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "non",
+          "forms": [
+            "non"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "hemen",
+          "forms": [
+            "hemen"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "han",
+          "forms": [
+            "han"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "komun",
+          "forms": [
+            "komuna"
+          ],
+          "means": "komuna = the bathroom"
+        },
+        {
+          "lemma": "egon",
+          "forms": [
+            "dago"
+          ],
+          "means": "dago = is"
+        },
+        {
+          "lemma": "telefono",
+          "forms": [
+            "telefonoa"
+          ],
+          "means": "telefonoa = phone"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "location",
+        "line": "-n is in or at, -ra is to and -tik is from, joined to the end of the place: etxean (in the house), etxera (to the house), etxetik (from the house)."
+      },
+      "items": [
+        "non-dago-nire-giltza",
+        "nire-telefonoa-hemen-dago",
+        "giltza-han-dago",
+        "barkatu-non-dago-komuna",
+        "non-dago-nire-ama"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "bat",
+          "forms": [
+            "bat"
+          ],
+          "means": "one, a"
+        },
+        {
+          "lemma": "bi",
+          "forms": [
+            "bi"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "hiru",
+          "forms": [
+            "hiru"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "diru",
+          "forms": [
+            "dirurik"
+          ],
+          "picture": "money",
+          "means": "dirurik = any money"
+        },
+        {
+          "lemma": "liburu",
+          "forms": [
+            "liburu"
+          ],
+          "means": "book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "kontua-mesedez"
+      ],
+      "concept": null,
+      "items": [
+        "bi-kafe-mesedez",
+        "liburu-bat-mesedez",
+        "hiru-liburu-ditut",
+        "ez-dut-dirurik",
+        "barkatu-zenbat-balio-du",
+        "kontua-mesedez",
+        "bi-lagun-ditut"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "hitz egin",
+          "forms": [
+            "hitz",
+            "egiten"
+          ],
+          "means": "hitz = speech; egiten = do"
+        },
+        {
+          "lemma": "ingeles",
+          "forms": [
+            "ingelesez"
+          ],
+          "means": "ingelesez = in English"
+        },
+        {
+          "lemma": "euskara",
+          "forms": [
+            "euskaraz"
+          ],
+          "means": "euskaraz = in Basque"
+        },
+        {
+          "lemma": "ulertu",
+          "forms": [
+            "ulertzen"
+          ],
+          "means": "ulertzen = understand"
+        },
+        {
+          "lemma": "pixka",
+          "forms": [
+            "pixka"
+          ],
+          "means": "bit, small amount (pixka bat: a little)"
+        },
+        {
+          "lemma": "nahi",
+          "forms": [
+            "nahi"
+          ],
+          "means": "to want"
+        },
+        {
+          "lemma": "egin",
+          "forms": [
+            "egin"
+          ],
+          "means": "to do"
+        },
+        {
+          "lemma": "edan",
+          "forms": [
+            "edan"
+          ],
+          "means": "to drink"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "aux-present",
+        "line": "A verb ending in -tzen or -ten with its helper (naiz for coming and going, dut for doing something to something) says what you usually do or what's the case now: Autobusez joaten naiz (by-bus going I-am), Ez dut ulertzen (not I-have-it understanding); ari picks out an action in progress."
+      },
+      "items": [
+        "ez-dut-ulertzen",
+        "ulertzen-duzu",
+        "kafe-bat-nahi-dut",
+        "ingelesez-hitz-egiten-duzu",
+        "euskaraz-hitz-egiten-duzu",
+        "euskaraz-pixka-bat-hitz-egiten-dut",
+        "ura-edan-nahi-dut",
+        "egin-nahi-dut"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "etxe",
+          "forms": [
+            "etxe",
+            "etxean"
+          ],
+          "picture": "house",
+          "means": "etxe = house; etxean = in the house"
+        },
+        {
+          "lemma": "gela",
+          "forms": [
+            "gela"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "handi",
+          "forms": [
+            "handia"
+          ],
+          "picture": "big",
+          "means": "handia = big"
+        },
+        {
+          "lemma": "txiki",
+          "forms": [
+            "txiki",
+            "txikia"
+          ],
+          "picture": "small",
+          "means": "txiki = small; txikia = small"
+        },
+        {
+          "lemma": "bizi",
+          "forms": [
+            "bizi"
+          ],
+          "means": "to live"
+        },
+        {
+          "lemma": "bat",
+          "forms": [
+            "batean"
+          ],
+          "means": "batean = in a"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "etxean-nago",
+        "nire-gela-txikia-da",
+        "etxe-hau-handia-da",
+        "nire-ama-hemen-bizi-da",
+        "etxe-txiki-batean-bizi-naiz",
+        "non-bizi-zara"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "joan",
+          "forms": [
+            "joaten",
+            "zoaz"
+          ],
+          "means": "joaten = go; zoaz = you are going"
+        },
+        {
+          "lemma": "eskola",
+          "forms": [
+            "eskolara"
+          ],
+          "picture": "school",
+          "means": "eskolara = to school"
+        },
+        {
+          "lemma": "hiri",
+          "forms": [
+            "hirira"
+          ],
+          "picture": "city",
+          "means": "hirira = to the city"
+        },
+        {
+          "lemma": "geltoki",
+          "forms": [
+            "geltokia"
+          ],
+          "means": "geltokia = the station"
+        },
+        {
+          "lemma": "tren",
+          "forms": [
+            "tren"
+          ],
+          "means": "train"
+        },
+        {
+          "lemma": "auto",
+          "forms": [
+            "auto"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "non",
+          "forms": [
+            "nora"
+          ],
+          "means": "nora = where to"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "genitive",
+        "line": "-ren says whose, and comes before what's owned; my and your are nire and zure: lagunaren etxea (friend-the's house-the), nire ama (my mom)."
+      },
+      "items": [
+        "auto-bat-dut",
+        "auto-hau-txikia-da",
+        "eskolara-joaten-naiz",
+        "nora-zoaz",
+        "nire-ama-hirira-joaten-da",
+        "non-dago-tren-geltokia"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "gaur",
+          "forms": [
+            "gaur"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "bihar",
+          "forms": [
+            "bihar"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "orain",
+          "forms": [
+            "orain"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "lan",
+          "forms": [
+            "lan"
+          ],
+          "picture": "work",
+          "means": "work"
+        },
+        {
+          "lemma": "behar",
+          "forms": [
+            "behar"
+          ],
+          "means": "need"
+        },
+        {
+          "lemma": "ezin",
+          "forms": [
+            "ezin"
+          ],
+          "means": "cannot"
+        },
+        {
+          "lemma": "egin",
+          "forms": [
+            "egiten"
+          ],
+          "means": "egiten = do"
+        },
+        {
+          "lemma": "joan",
+          "forms": [
+            "joan",
+            "noa"
+          ],
+          "means": "joan = go; noa = I am going"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "eskerrik-asko-bihar-arte",
+        "gaur-lan-egiten-dut",
+        "orain-joan-behar-dut",
+        "bihar-hirira-noa",
+        "gaur-ezin-naiz-joan",
+        "bihar-lan-egin-behar-dut"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

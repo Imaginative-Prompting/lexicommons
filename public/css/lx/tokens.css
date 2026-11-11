@@ -1,0 +1,442 @@
+/* Lexicommons design system: tokens and built-in themes.
+ *
+ * Built on NeedWright's design system (app/ds/tokens.css, design-system branch): monochrome, white ink is the only
+ * emphasis, Graphite neutrals on black, Instrument Sans UI, Onest headings, Geist Mono for numbers.
+ * Lexicommons adds meaning colors, so every way of studying shows the same signals: right, wrong, slipping, new,
+ * hint and moved words. Meaning never travels by color alone (always an icon, a word or a shape too), and the
+ * palette passes scripts/check-palette.py under protanopia, deuteranopia and tritanopia.
+ *
+ * Every value here is a theme token: built-in themes override them below, and a user's theme or custom CSS can
+ * override any of them. The token names are part of the theming surface (docs/design-system.md). */
+
+/* The app's CSS sits in cascade layers, in this order, so a person's own CSS (unlayered, from the theme engine)
+ * always wins over it, whatever its selectors. Load tokens.css first: this line fixes the order. */
+@layer lx.tokens, lx.base, lx.components, lx.presets, lx.page;
+
+
+@font-face { font-family: "Instrument Sans"; src: url("/fonts/instrument-sans-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Onest"; src: url("/fonts/onest-var-latin.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0000-00FF, U+0100-017F, U+018F, U+01A0-01A1, U+01AF-01B0, U+0218-021B, U+0259, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0304, U+0306-0309, U+030B-030C, U+0323, U+0326-0328, U+1E00-1EFF, U+2000-206F, U+20AC, U+20B4, U+20BA, U+20BD, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Onest"; src: url("/fonts/onest-var-cyrillic.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0400-052F, U+1C80-1C88, U+2116; }
+@font-face { font-family: "Geist Mono"; src: url("/fonts/geist-mono-var-latin.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; }
+/* Google Sans Medium (OFL, Google Fonts' latin subset): only the "Continue with Google" button uses it, as Google's
+   sign-in branding asks. */
+@font-face { font-family: "Google Sans"; src: url("/fonts/google-sans-500-latin.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+/* Hebrew, Arabic, Armenian, Georgian, Thai, Devanagari, Gurmukhi and Gujarati script (Noto, OFL: /fonts/noto-OFL.txt):
+   Instrument Sans has none of them, so they come next in the stacks, and a page downloads one only when it shows its
+   letters (unicode-range, each script's own blocks: never a character English text may hold, such as U+25CC or a
+   joiner). Urdu is written in Nastaliq; Thai in Noto's looped face, the letters a learner's textbook uses. Gurmukhi and
+   Gujarati take the danda from their own face. */
+@font-face { font-family: "Noto Sans Arabic"; src: url("/fonts/noto-sans-arabic-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Noto Sans Hebrew"; src: url("/fonts/noto-sans-hebrew-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; unicode-range: U+0590-05FF, U+FB1D-FB4F; }
+@font-face { font-family: "Noto Sans Thai Looped"; src: url("/fonts/noto-sans-thai-looped-var.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0E01-0E5B; }
+@font-face { font-family: "Noto Nastaliq Urdu"; src: url("/fonts/noto-nastaliq-urdu-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Noto Sans Armenian"; src: url("/fonts/noto-sans-armenian-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; unicode-range: U+0530-058F, U+FB13-FB17; }
+@font-face { font-family: "Noto Sans Georgian"; src: url("/fonts/noto-sans-georgian-var.woff2") format("woff2-variations"); font-weight: 400 700; font-display: swap; unicode-range: U+10A0-10FF, U+1C90-1CBF, U+2D00-2D2F; }
+@font-face { font-family: "Noto Sans Devanagari"; src: url("/fonts/noto-sans-devanagari-var.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0900-097F, U+A8E0-A8FF; }
+@font-face { font-family: "Noto Sans Gurmukhi"; src: url("/fonts/noto-sans-gurmukhi-var.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0964-0965, U+0A01-0A76; }
+@font-face { font-family: "Noto Sans Gujarati"; src: url("/fonts/noto-sans-gujarati-var.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; unicode-range: U+0964-0965, U+0A80-0AFF; }
+
+@layer lx.tokens {
+  :root {
+    /* The way forward (Start, Continue): Tinta's ink, its deep shade the hard edge. */
+    --go: var(--art-violet);
+    --go-deep: var(--art-violet-deep);
+    --on-go: #ffffff;
+    /* Solid line colors, so lines that meet or cross never double up (docs/design-bible.md). */
+    --line-strong: color-mix(in srgb, var(--ink-1) 26%, var(--canvas));
+    --line: color-mix(in srgb, var(--ink-1) 14%, var(--canvas));
+    --size-stat: 40px;
+    --bar-height: 64px;
+    --bar-gap: max(12px, calc(env(safe-area-inset-bottom) - 12px));
+    --bar-room: calc(var(--bar-height) + var(--bar-gap) + 24px);
+    /* Type. --type-read is for long reading and the sentence you're studying; themes often change only this. */
+    --type-ui: "Instrument Sans", "Noto Sans Armenian", "Noto Sans Georgian", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans Thai Looped", "Noto Sans Devanagari", "Noto Sans Gurmukhi", "Noto Sans Gujarati", ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --type-head: "Onest", "Instrument Sans", "Noto Sans Armenian", "Noto Sans Georgian", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans Thai Looped", "Noto Sans Devanagari", "Noto Sans Gurmukhi", "Noto Sans Gujarati", ui-sans-serif, sans-serif;
+    --type-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --type-read: var(--type-ui);
+
+    /* One scale. Product text uses 12/14/16/20/28; reading and the studied sentence have their own sizes, which the
+     * text-size preset scales. */
+    --size-12: 12px;
+    --size-14: 14px;
+    --size-16: 16px;
+    --size-20: 20px;
+    --size-28: 28px;
+    --size-read: 19px;
+    --size-target: 26px;
+    --track-head: -0.02em;
+
+    /* Five radii, each tied to a size of thing. */
+    --radius-8: 8px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-24: 24px;
+    --radius-full: 999px;
+
+    /* Controls: 32px like NeedWright on a desk, 44px for touch. The density preset picks one. */
+    --control-32: 32px;
+    --control-44: 44px;
+    --control: var(--control-44);
+
+    /* Space: one scale, multiplied by the density preset. */
+    --density: 1;
+    --space-1: calc(4px * var(--density));
+    --space-2: calc(8px * var(--density));
+    --space-3: calc(12px * var(--density));
+    --space-4: calc(16px * var(--density));
+    --space-5: calc(24px * var(--density));
+    --space-6: calc(32px * var(--density));
+    --space-7: calc(48px * var(--density));
+    --page-width: 720px;
+    /* The grid pages of Study, Explore and Knowledge on a wide screen (1280 and up: shell.css), so their grids use the room. */
+    --page-width-wide: 960px;
+    /* Settings on a wide screen (1280 and up: shell.css): its menu's pane, then the page it opened at the column's own width. */
+    --settings-pane: 320px;
+    /* A line of reading text at most ~68 characters: Instrument Sans averages ~0.46em a character (measured 8 Nov 2026: 68 of them 29.5–32.2em;
+       "ch" is its 0, 0.67em, so 68ch would be ~100), and never wider than 640 px (the reader's larger type: ~60 characters at 22.8 px). Set on
+       the text itself, where em is its own size; left where its column starts (only the reader centers). site.css mirrors it for the public
+       pages. */
+    --measure: min(31em, 640px);
+
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.3, 1.4, 0.5, 1);
+    --dur-150: 150ms;
+    --dur-200: 200ms;
+    --dur-320: 320ms;
+    --dur-640: 640ms; /* signature moments: the Dutch-order morph, a session's summary */
+    --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+    /* A sheet's slide in, out and back: quick off the mark, long and soft at the end, like iOS's own sheets. */
+    --dur-sheet: 500ms;
+    --dur-page: 350ms; /* a move between a tab's pages, iPhone-style (shell/page-slide.js; on --ease-sheet) */
+    --ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
+    /* A cover leaving from rest (a session's Done): the same long, soft end, but starting from standing still. --ease-sheet
+     * starts at 2.25× its average speed: a whole screen's cover went 98 px in its first frame. */
+    --ease-sheet-away: cubic-bezier(0.36, 0, 0.1, 1);
+
+    /* The shapes that go with right and wrong wherever a part has no icon of its own (tiles, matches, words), so
+     * meaning never rests on color. Masks, drawn in the part's current color; a theme can redraw them. */
+    --mark-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 12.5l5 5L19.5 7'/%3E%3C/svg%3E");
+    --mark-wrong: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E");
+
+    /* Image slots a theme can fill (custom images are stored on the device and set here as blob: URLs). */
+    --image-background: none;
+    --image-mark: none;
+    /* How the background image sits: its size (cover, contain, or auto for tiles), repeat, position, how much of the
+     * page color lies over it so text stays readable (0% to 90%), and blur. */
+    --image-background-size: cover;
+    --image-background-repeat: no-repeat;
+    --image-background-position: center;
+    --image-background-dim: 0%;
+    --image-background-blur: 0px;
+  }
+
+  /* The language you're learning reads in its own script's font under any theme: a theme's reading font has no Hebrew,
+     Arabic, Armenian or Georgian letters (and a device may have no font of its own for them), and Urdu wants Nastaliq
+     where Arabic and Persian use naskh. */
+  :lang(ar), :lang(fa), :lang(ps), :lang(ckb) { --type-read: "Noto Sans Arabic", var(--type-ui); }
+  :lang(ur) { --type-read: "Noto Nastaliq Urdu", var(--type-ui); }
+  :lang(he), :lang(yi) { --type-read: "Noto Sans Hebrew", var(--type-ui); }
+  :lang(hy) { --type-read: "Noto Sans Armenian", var(--type-ui); }
+  :lang(ka) { --type-read: "Noto Sans Georgian", var(--type-ui); }
+  :lang(th) { --type-read: "Noto Sans Thai Looped", var(--type-ui); }
+  :lang(hi), :lang(mr), :lang(ne) { --type-read: "Noto Sans Devanagari", var(--type-ui); }
+  :lang(pa) { --type-read: "Noto Sans Gurmukhi", var(--type-ui); }
+  :lang(gu) { --type-read: "Noto Sans Gujarati", var(--type-ui); }
+
+  /* ---------- Graphite: NeedWright's dark register (the default) ---------- */
+  :root,
+  :root[data-theme="graphite"],
+  [data-theme-preview="graphite"],
+  [data-theme-preview="auto"] {
+    color-scheme: dark;
+    --canvas: #000000;
+    /* The floating tab bar, and the tab you're on, seen through its lens. The glass (the bar, the header's buttons): the theme's own
+     * chrome, thin, over what's behind it blurred and dimmed (--bar-filter), with its words in the theme's strongest ink (--bar-ink)
+     * so they keep 4.5:1 over anything, even white; the tab you're on is on a lens with body (--tab-bubble) for the same reason.
+     * A light edge, and a highlight along its top (--bar-rim). Solid with reduced transparency (redesign.css). */
+    --bar-glass: color-mix(in srgb, var(--chrome) 30%, transparent);
+    --bar-filter: blur(16px) saturate(1.8) brightness(0.55);
+    --bar-ink: var(--ink-1);
+    --bar-edge: rgba(255, 255, 255, 0.13);
+    --bar-rim: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+    --bar-shadow: 0 10px 28px -6px rgba(0, 0, 0, 0.7);
+    --tab-on: #a68cff;
+    --tab-bubble: color-mix(in srgb, var(--tab-on) 18%, color-mix(in srgb, var(--chrome) 82%, transparent));
+    --tab-bubble-edge: rgba(166, 140, 255, 0.28);
+    --chrome: #0b0b0a;
+    --well: #151513;
+    --fill: rgba(30, 29, 26, 0.88);
+    --fill-hover: rgba(46, 44, 40, 0.92);
+    --fill-active: rgba(60, 58, 53, 0.92);
+    --hair: rgba(234, 228, 214, 0.09);
+    --edge: rgba(234, 228, 214, 0.14);
+    --edge-strong: rgba(234, 228, 214, 0.26);
+    --ink-1: #f1efea;
+    --ink-2: #a7a49c;
+    --ink-3: #78756d;
+    --ink-4: #56544d;
+    --solid: #f7f6f2;
+    --solid-hover: #dedcd6;
+    --on-solid: #0b0b0a;
+    --ring: rgba(247, 246, 242, 0.6);
+    --selection: rgba(247, 246, 242, 0.18);
+    /* Your highlights in the reader: the wash, its line, and the ✦ by it. */
+    --highlight: rgba(226, 166, 79, 0.18);
+    --highlight-edge: rgba(226, 166, 79, 0.5);
+    --highlight-mark: #e2a64f;
+    --backdrop: rgba(0, 0, 0, 0.62);
+    --shadow-pop: 0 16px 40px -12px rgba(0, 0, 0, 0.72), 0 2px 8px rgba(0, 0, 0, 0.4);
+
+    /* Meaning. Text-strength color, a tint behind it, and an edge. */
+    --m-right: #5ab0f0;
+    --m-right-bg: rgba(90, 176, 240, 0.14);
+    --m-right-edge: rgba(90, 176, 240, 0.42);
+    --m-wrong: #ff6e40;
+    --m-wrong-bg: rgba(255, 110, 64, 0.14);
+    --m-wrong-edge: rgba(255, 110, 64, 0.45);
+    --m-slipping: #f2d25c;
+    --m-slipping-bg: rgba(242, 210, 92, 0.13);
+    --m-slipping-edge: rgba(242, 210, 92, 0.4);
+    /* "New" and "hint" carry no hue: bright ink plus a sparkle, dim ink plus a dashed outline and a bulb. */
+    --m-new: var(--ink-1);
+    --m-new-bg: rgba(241, 239, 234, 0.08);
+    --m-new-edge: rgba(241, 239, 234, 0.34);
+    --m-hint: var(--ink-2);
+    --m-hint-bg: transparent;
+    --m-hint-edge: rgba(234, 228, 214, 0.34);
+    /* Moved words: a highlighter mark behind ink, plus a dotted underline so it isn't color alone. */
+    --m-moved-mark: rgba(122, 62, 110, 0.85);
+    --m-moved-ink: var(--ink-1);
+    --m-moved-line: #d98cc0;
+
+    /* How well you know something, 0 (unseen) to 4 (solid): one ink, five steps. */
+    --strength-0: rgba(234, 228, 214, 0.08);
+    --strength-1: rgba(234, 228, 214, 0.22);
+    --strength-2: rgba(234, 228, 214, 0.42);
+    --strength-3: rgba(234, 228, 214, 0.66);
+    --strength-4: #f1efea;
+  }
+
+  /* ---------- Paper: NeedWright's light register ---------- */
+  :root[data-theme="paper"],
+  [data-theme-preview="paper"] {
+    color-scheme: light;
+    --canvas: #fdfdfc;
+    --bar-glass: color-mix(in srgb, var(--chrome) 35%, transparent);
+    --bar-filter: blur(16px) saturate(1.6) contrast(0.6) brightness(1.35);
+    --bar-edge: rgba(255, 255, 255, 0.7);
+    --bar-rim: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    --bar-shadow: 0 0 0 0.5px rgba(40, 34, 20, 0.12), 0 10px 28px -8px rgba(40, 30, 10, 0.28);
+    --tab-on: #5e40c4;
+    --tab-bubble: color-mix(in srgb, var(--tab-on) 10%, rgba(255, 255, 255, 0.88));
+    --tab-bubble-edge: rgba(94, 64, 196, 0.2);
+    --chrome: #f6f5f2;
+    --well: #f3f2ee;
+    --fill: rgba(250, 249, 246, 0.94);
+    --fill-hover: rgba(236, 234, 229, 0.96);
+    --fill-active: rgba(226, 224, 218, 0.96);
+    --hair: rgba(38, 33, 20, 0.08);
+    --edge: rgba(38, 33, 20, 0.14);
+    --edge-strong: rgba(38, 33, 20, 0.26);
+    --ink-1: #1b1a17;
+    --ink-2: #57544d;
+    --ink-3: #77746c;
+    --ink-4: #99968d;
+    --solid: #1b1a17;
+    --solid-hover: #35342f;
+    --on-solid: #fdfdfc;
+    --ring: rgba(27, 26, 23, 0.5);
+    --selection: rgba(27, 26, 23, 0.12);
+    --highlight: rgba(196, 128, 20, 0.16);
+    --highlight-edge: rgba(156, 103, 8, 0.45);
+    --highlight-mark: #9c6708;
+    --backdrop: rgba(20, 19, 17, 0.32);
+    --shadow-pop: 0 16px 40px -12px rgba(30, 27, 20, 0.28), 0 2px 8px rgba(30, 27, 20, 0.12);
+
+    --m-right: #0b6fb3;
+    --m-right-bg: rgba(11, 111, 179, 0.09);
+    --m-right-edge: rgba(11, 111, 179, 0.36);
+    --m-wrong: #c2410c;
+    --m-wrong-bg: rgba(194, 65, 12, 0.08);
+    --m-wrong-edge: rgba(194, 65, 12, 0.36);
+    --m-slipping: #3d3200;
+    --m-slipping-bg: rgba(233, 190, 40, 0.24);
+    --m-slipping-edge: rgba(160, 125, 0, 0.45);
+    --m-new: var(--ink-1);
+    --m-new-bg: rgba(27, 26, 23, 0.05);
+    --m-new-edge: rgba(27, 26, 23, 0.36);
+    --m-hint: var(--ink-2);
+    --m-hint-bg: transparent;
+    --m-hint-edge: rgba(38, 33, 20, 0.34);
+    --m-moved-mark: #f5c6e4;
+    --m-moved-ink: var(--ink-1);
+    --m-moved-line: #9c3d76;
+
+    --strength-0: rgba(38, 33, 20, 0.07);
+    --strength-1: rgba(38, 33, 20, 0.2);
+    --strength-2: rgba(38, 33, 20, 0.4);
+    --strength-3: rgba(38, 33, 20, 0.64);
+    --strength-4: #1b1a17;
+  }
+
+  /* ---------- Match device: Graphite or Paper, following the system setting ---------- */
+  @media (prefers-color-scheme: light) {
+    :root[data-theme="auto"],
+    [data-theme-preview="auto"] {
+      color-scheme: light;
+      --canvas: #fdfdfc;
+      --bar-glass: color-mix(in srgb, var(--chrome) 35%, transparent);
+      --bar-filter: blur(16px) saturate(1.6) contrast(0.6) brightness(1.35);
+      --bar-edge: rgba(255, 255, 255, 0.7);
+      --bar-rim: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      --bar-shadow: 0 0 0 0.5px rgba(40, 34, 20, 0.12), 0 10px 28px -8px rgba(40, 30, 10, 0.28);
+      --tab-on: #5e40c4;
+      --tab-bubble: color-mix(in srgb, var(--tab-on) 10%, rgba(255, 255, 255, 0.88));
+      --tab-bubble-edge: rgba(94, 64, 196, 0.2);
+      --chrome: #f6f5f2;
+      --well: #f3f2ee;
+      --fill: rgba(250, 249, 246, 0.94);
+      --fill-hover: rgba(236, 234, 229, 0.96);
+      --fill-active: rgba(226, 224, 218, 0.96);
+      --hair: rgba(38, 33, 20, 0.08);
+      --edge: rgba(38, 33, 20, 0.14);
+      --edge-strong: rgba(38, 33, 20, 0.26);
+      --ink-1: #1b1a17;
+      --ink-2: #57544d;
+      --ink-3: #77746c;
+      --ink-4: #99968d;
+      --solid: #1b1a17;
+      --solid-hover: #35342f;
+      --on-solid: #fdfdfc;
+      --ring: rgba(27, 26, 23, 0.5);
+      --selection: rgba(27, 26, 23, 0.12);
+    --highlight: rgba(196, 128, 20, 0.16);
+    --highlight-edge: rgba(156, 103, 8, 0.45);
+    --highlight-mark: #9c6708;
+      --backdrop: rgba(20, 19, 17, 0.32);
+      --shadow-pop: 0 16px 40px -12px rgba(30, 27, 20, 0.28), 0 2px 8px rgba(30, 27, 20, 0.12);
+      --m-right: #0b6fb3;
+      --m-right-bg: rgba(11, 111, 179, 0.09);
+      --m-right-edge: rgba(11, 111, 179, 0.36);
+      --m-wrong: #c2410c;
+      --m-wrong-bg: rgba(194, 65, 12, 0.08);
+      --m-wrong-edge: rgba(194, 65, 12, 0.36);
+      --m-slipping: #3d3200;
+      --m-slipping-bg: rgba(233, 190, 40, 0.24);
+      --m-slipping-edge: rgba(160, 125, 0, 0.45);
+      --m-new: var(--ink-1);
+      --m-new-bg: rgba(27, 26, 23, 0.05);
+      --m-new-edge: rgba(27, 26, 23, 0.36);
+      --m-hint: var(--ink-2);
+      --m-hint-edge: rgba(38, 33, 20, 0.34);
+      --m-moved-mark: #f5c6e4;
+      --m-moved-line: #9c3d76;
+      --strength-0: rgba(38, 33, 20, 0.07);
+      --strength-1: rgba(38, 33, 20, 0.2);
+      --strength-2: rgba(38, 33, 20, 0.4);
+      --strength-3: rgba(38, 33, 20, 0.64);
+      --strength-4: #1b1a17;
+    }
+  }
+
+  /* ---------- High contrast: pure black and white, full-strength edges ---------- */
+  :root[data-theme="contrast"],
+  [data-theme-preview="contrast"] {
+    --canvas: #000000;
+    --chrome: #000000;
+    /* No glass: solid black, a full-strength edge. */
+    --bar-glass: #000000;
+    --bar-filter: none;
+    --bar-edge: #ffffff;
+    --bar-rim: none;
+    --well: #0d0d0d;
+    --fill: #141414;
+    --fill-hover: #262626;
+    --fill-active: #333333;
+    --hair: rgba(255, 255, 255, 0.28);
+    --edge: rgba(255, 255, 255, 0.55);
+    --edge-strong: #ffffff;
+    --ink-1: #ffffff;
+    --ink-2: #e6e6e6;
+    --ink-3: #c2c2c2;
+    --ink-4: #9e9e9e;
+    --solid: #ffffff;
+    --solid-hover: #e6e6e6;
+    --ring: #ffffff;
+    --m-right-bg: rgba(90, 176, 240, 0.24);
+    --m-wrong-bg: rgba(255, 110, 64, 0.24);
+    --m-slipping-bg: rgba(242, 210, 92, 0.22);
+    --m-moved-mark: #8f4a82;
+    --highlight: rgba(226, 166, 79, 0.3);
+    --highlight-edge: #e2a64f;
+  }
+
+  /* ---------- Sepia: warm paper for long reading sessions ---------- */
+  :root[data-theme="sepia"],
+  [data-theme-preview="sepia"] {
+    color-scheme: light;
+    --canvas: #f4ecd8;
+    --bar-glass: color-mix(in srgb, var(--chrome) 45%, transparent);
+    --bar-filter: blur(16px) saturate(1.6) contrast(0.6) brightness(1.4);
+    --bar-edge: rgba(255, 255, 255, 0.7);
+    --bar-rim: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    --bar-shadow: 0 0 0 0.5px rgba(40, 34, 20, 0.12), 0 10px 28px -8px rgba(40, 30, 10, 0.28);
+    --tab-on: #5e40c4;
+    --tab-bubble: color-mix(in srgb, var(--tab-on) 10%, rgba(255, 255, 255, 0.88));
+    --tab-bubble-edge: rgba(94, 64, 196, 0.2);
+    --chrome: #efe5cc;
+    --well: #ebe0c4;
+    --fill: rgba(239, 229, 204, 0.94);
+    --fill-hover: rgba(228, 216, 186, 0.96);
+    --fill-active: rgba(218, 205, 172, 0.96);
+    --hair: rgba(70, 52, 20, 0.1);
+    --edge: rgba(70, 52, 20, 0.18);
+    --edge-strong: rgba(70, 52, 20, 0.32);
+    --ink-1: #2b2214;
+    --ink-2: #5b4b31;
+    --ink-3: #7a684a;
+    --ink-4: #9c8a68;
+    --solid: #2b2214;
+    --solid-hover: #463924;
+    --on-solid: #f4ecd8;
+    --ring: rgba(43, 34, 20, 0.5);
+    --selection: rgba(43, 34, 20, 0.14);
+    --highlight: rgba(176, 112, 10, 0.18);
+    --highlight-edge: rgba(140, 90, 6, 0.5);
+    --highlight-mark: #8a5a06;
+    --backdrop: rgba(43, 34, 20, 0.3);
+    --shadow-pop: 0 16px 40px -12px rgba(60, 44, 16, 0.3), 0 2px 8px rgba(60, 44, 16, 0.14);
+    --m-right: #0b6fb3;
+    --m-right-bg: rgba(11, 111, 179, 0.1);
+    --m-right-edge: rgba(11, 111, 179, 0.38);
+    --m-wrong: #b23c0a;
+    --m-wrong-bg: rgba(178, 60, 10, 0.1);
+    --m-wrong-edge: rgba(178, 60, 10, 0.38);
+    --m-slipping: #3d3200;
+    --m-slipping-bg: rgba(215, 165, 20, 0.26);
+    --m-slipping-edge: rgba(150, 110, 0, 0.45);
+    --m-new: var(--ink-1);
+    --m-new-bg: rgba(43, 34, 20, 0.06);
+    --m-new-edge: rgba(43, 34, 20, 0.38);
+    --m-hint: var(--ink-2);
+    --m-hint-edge: rgba(70, 52, 20, 0.36);
+    --m-moved-mark: #ecc0d9;
+    --m-moved-line: #8f3a6c;
+    --strength-0: rgba(70, 52, 20, 0.08);
+    --strength-1: rgba(70, 52, 20, 0.22);
+    --strength-2: rgba(70, 52, 20, 0.42);
+    --strength-3: rgba(70, 52, 20, 0.66);
+    --strength-4: #2b2214;
+    --type-read: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+
+  /* Everything in the theme's own ink (Settings → Appearance → Drawings). After the themes, so it wins over each. */
+  :root[data-art="theme"] {
+    --go: var(--solid);
+    --go-deep: color-mix(in oklab, var(--solid) 62%, var(--canvas));
+    --on-go: var(--on-solid);
+    --tab-on: var(--ink-1);
+    --tab-bubble: color-mix(in srgb, var(--ink-1) 12%, color-mix(in srgb, var(--chrome) 82%, transparent));
+    --tab-bubble-edge: color-mix(in srgb, var(--ink-1) 22%, transparent);
+  }
+}

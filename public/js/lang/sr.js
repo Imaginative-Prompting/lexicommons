@@ -1,0 +1,38 @@
+// Serbian (lang/index.js has what each field means). Written in Cyrillic, in the standard ekavian forms of Serbia
+// (млеко, лепо); why: docs/languages/sr/script-decision.md, outside the app.
+
+export default {
+  name: "Serbian",
+  locale: "sr-RS",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["нпр.", "тј.", "тзв.", "ул.", "бр.", "стр.", "тел.", "проф."],
+  stray: ["чији"],
+  patterns: {
+    question: { name: "Questions: да ли, ли or a question word", about: "A yes/no question starts with да ли, or puts ли after the verb (Да ли говориш енглески? Говориш ли енглески?), and a question word like где, шта or како comes first; Serbian adds no do.", after: ["present"] },
+    "no-pronoun": { name: "Subject pronouns often left out", about: "A Serbian verb marks the person, so ја (I), ти (you), он, она (he, she) and ми (we) are usually left out when it's clear who: Живим у малом стану (I live in a small apartment).", after: ["present"] },
+    present: { name: "Present tense endings", about: "The verb's ending marks the person: (ја) живим, (ти) живиш, (он, она) живи, (ми) живимо, (ви) живите, (они) живе.", after: [] },
+    "second-position": { name: "Short words go second", about: "Short unstressed words like сам, си, је, се, ми, ти, нас and те follow the first word or phrase: Јуче сам био код куће; Свиђа ми се овај филм; Учитељ сам.", after: ["present"] },
+    gender: { name: "Masculine, feminine, neuter", about: "Serbian nouns are masculine (often a consonant: стан), feminine (often -а: кухиња) or neuter (often -о or -е: млеко), and the words with them match: мој брат, моја мама.", after: [] },
+    adjective: { name: "Adjectives match", about: "An adjective matches its noun's gender, number and case: мали балкон, велику кухињу, нове ципеле, у малом стану.", after: ["gender"] },
+    accusative: { name: "The object: accusative", about: "The accusative marks direct objects: a feminine singular -а often becomes -у (кафа, кафу), and a masculine singular person or animal usually takes the genitive's form (видим брата); it also follows у or на for where you're going and у for days: у продавницу, на плажу, у суботу.", after: ["gender"] },
+    genitive: { name: "Of, without: the genitive", about: "The genitive means of (ауто мог оца, чаша воде), follows без and код, and is what there's none of after нема (there is no): без шећера, код баке, нема млека.", after: ["gender"] },
+    locative: { name: "Where: у or на + locative", about: "After у or на for where something is, use the locative: у Београду, на столу, у фрижидеру, у малом стану.", after: ["gender"] },
+    dative: { name: "To someone: the dative", about: "The dative is to or for someone (Јави ми: let me know), and the one who feels or likes: Хладно ми је (I'm cold); Свиђа ми се (I like it).", after: ["gender"] },
+    instrumental: { name: "With and by: the instrumental", about: "The instrumental follows са (with: са мамом, са нама) and says how you travel: аутобусом.", after: ["gender"] },
+    vocative: { name: "Calling someone: the vocative", about: "When you speak to someone, the word you call them often changes: пријатељ, Хвала, пријатељу!; бака, Бако, дођи!; госпођа, Добар дан, госпођо!", after: ["gender"] },
+    "setting-first": { name: "The setting can come first", about: "Serbian often puts a time or place first and a new subject after the verb: На столу је књига; На станици нас чека бака; Сутра ће падати киша.", after: ["present"] },
+    ne: { name: "Not: не, нисам, нећу, немам, немој", about: "не goes right before the verb as its own word (Не знам: I don't know), but to be, to want and to have join with it (нисам, нећу, немам, нема), and so does a don't-command: Немој да идеш (Don't go).", after: ["present"] },
+    past: { name: "Past: сам and a matching participle", about: "The usual past is сам, си, је, смо… in second place with a participle that matches gender and number (био сам, купила сам, јели смо, Воз је каснио), but је is left out beside се: Она се вратила.", after: ["second-position", "gender"] },
+    future: { name: "Future: ћу", about: "The future is ћу, ћеш, ће… with the infinitive (Сутра ће падати киша) or, especially in Serbia, with да and the present (Сутра ћу да идем); when an infinitive in -ти comes first, the two are written as one word (скуваћу, позваћу те), but one in -ћи stays apart (доћи ћу).", after: ["second-position"] },
+    "da-present": { name: "да + the present", about: "Where English uses to with a verb, Serbian usually says да with a present-tense verb whose ending still marks who does it (Хоћу да поједем; Морам да идем; Можеш ли да затвориш?), though an infinitive is also right after many verbs: Морам ићи.", after: ["present"] },
+    aspect: { name: "Two verbs for one action", about: "Many verbs come in pairs: one for doing (кувати, куповати), one for getting it done (скувати, купити): Кад дођем кући, скуваћу вечеру.", after: ["present"] },
+    se: { name: "Verbs with се", about: "Some verbs are learned with се, often with nothing to match it in English, and it goes with the other short words after the first word or phrase: Како се зовеш?; Свиђа ми се; Надам се.", after: ["second-position"] },
+    numbers: { name: "Nouns after numbers", about: "After два or две, три and четири a noun takes a special form (два брата, три јабуке), and from пет to двадесет the genitive plural: десет минута.", after: ["genitive"] },
+    plural: { name: "More than one: plural", about: "Nouns and the words with them change in the plural (моји кључеви су…, нове ципеле су…), and some nouns are only plural: врата.", after: ["gender"] },
+    "no-articles": { name: "No a or the", about: "Serbian has no words for a, an or the; context and word order do their work: Учитељ сам; На столу је књига.", after: [] },
+    "dummy-subject": { name: "No empty it or there", about: "Serbian adds no it or there for the temperature or what there is: Данас је хладно; Хладно ми је; На столу је књига.", after: ["present"] },
+    imperative: { name: "Telling someone to do something", about: "A command uses a special verb form and normally no subject: Затвори, Дођи and Јави are to one person you know well; Затворите, Дођите and Јавите are to more than one, or polite (ви).", after: ["present"] },
+  },
+};

@@ -1,0 +1,1146 @@
+{
+  "format": "lexicommons-audio",
+  "version": 1,
+  "pack": "starter-word-order",
+  "language": "nl",
+  "voices": {
+    "emma": {
+      "name": "Emma",
+      "about": "Calm and clear, like explaining something to a friend",
+      "provider": "elevenlabs",
+      "voiceId": "OlBRrVAItyi00MuGMbna",
+      "model": "eleven_v4",
+      "locale": "nl-NL",
+      "made": "2026-10-26",
+      "items": {
+        "boek-gelezen": {
+          "src": "emma/boek-gelezen.mp3",
+          "text": "Ik heb gisteren een boek gelezen.",
+          "seconds": 2,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.187,
+              0.24
+            ],
+            [
+              0.32,
+              0.8
+            ],
+            [
+              0.88,
+              0.96
+            ],
+            [
+              1,
+              1.12
+            ],
+            [
+              1.2,
+              1.76
+            ]
+          ],
+          "hash": "29b62882ea34206f"
+        },
+        "morgen-oma": {
+          "src": "emma/morgen-oma.mp3",
+          "text": "Morgen gaan we naar oma.",
+          "seconds": 1.68,
+          "words": [
+            [
+              0,
+              0.4
+            ],
+            [
+              0.48,
+              0.64
+            ],
+            [
+              0.72,
+              0.76
+            ],
+            [
+              0.8,
+              0.96
+            ],
+            [
+              1.04,
+              1.44
+            ]
+          ],
+          "hash": "fd26ff900ba9851a"
+        },
+        "weet-komt": {
+          "src": "emma/weet-komt.mp3",
+          "text": "Ik weet dat hij morgen komt.",
+          "seconds": 1.92,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.48
+            ],
+            [
+              0.56,
+              0.64
+            ],
+            [
+              0.68,
+              0.8
+            ],
+            [
+              0.88,
+              1.2
+            ],
+            [
+              1.28,
+              1.68
+            ]
+          ],
+          "hash": "1f509aab7b67a3db"
+        },
+        "bel-op": {
+          "src": "emma/bel-op.mp3",
+          "text": "Ik bel je morgen op.",
+          "seconds": 1.36,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.32
+            ],
+            [
+              0.4,
+              0.48
+            ],
+            [
+              0.52,
+              0.88
+            ],
+            [
+              1.04,
+              1.2
+            ]
+          ],
+          "hash": "9ae595de085d25f7"
+        },
+        "hoe-gaat": {
+          "src": "emma/hoe-gaat.mp3",
+          "text": "Hoe gaat het met je?",
+          "seconds": 1.2,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.4
+            ],
+            [
+              0.48,
+              0.56
+            ],
+            [
+              0.68,
+              0.8
+            ],
+            [
+              0.92,
+              1.04
+            ]
+          ],
+          "hash": "775b81ff5049061f"
+        },
+        "wil-lezen": {
+          "src": "emma/wil-lezen.mp3",
+          "text": "Ik wil morgen een boek lezen.",
+          "seconds": 1.92,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.32
+            ],
+            [
+              0.4,
+              0.8
+            ],
+            [
+              0.88,
+              0.96
+            ],
+            [
+              1,
+              1.2
+            ],
+            [
+              1.28,
+              1.68
+            ]
+          ],
+          "hash": "234041892fc455b8"
+        },
+        "zie-niet": {
+          "src": "emma/zie-niet.mp3",
+          "text": "Ik zie hem niet.",
+          "seconds": 1.2,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.4
+            ],
+            [
+              0.48,
+              0.56
+            ],
+            [
+              0.64,
+              0.96
+            ]
+          ],
+          "hash": "9660ef5bfcfb5571"
+        },
+        "winkel-brood": {
+          "src": "emma/winkel-brood.mp3",
+          "text": "Ik ga naar de winkel om brood te kopen.",
+          "seconds": 2.4,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.32
+            ],
+            [
+              0.36,
+              0.48
+            ],
+            [
+              0.56,
+              0.64
+            ],
+            [
+              0.8,
+              1.12
+            ],
+            [
+              1.2,
+              1.28
+            ],
+            [
+              1.36,
+              1.6
+            ],
+            [
+              1.68,
+              1.76
+            ],
+            [
+              1.8,
+              2.16
+            ]
+          ],
+          "hash": "cd3a781e098e9e18"
+        },
+        "vader-thuis": {
+          "src": "emma/vader-thuis.mp3",
+          "text": "Vandaag werkt mijn vader thuis.",
+          "seconds": 2.24,
+          "words": [
+            [
+              0,
+              0.56
+            ],
+            [
+              0.64,
+              0.88
+            ],
+            [
+              0.933,
+              1.04
+            ],
+            [
+              1.12,
+              1.44
+            ],
+            [
+              1.52,
+              2
+            ]
+          ],
+          "hash": "666a6474befa29f6"
+        },
+        "denk-regent": {
+          "src": "emma/denk-regent.mp3",
+          "text": "Ik denk dat het morgen regent.",
+          "seconds": 2.16,
+          "words": [
+            [
+              0,
+              0.24
+            ],
+            [
+              0.32,
+              0.56
+            ],
+            [
+              0.64,
+              0.72
+            ],
+            [
+              0.8,
+              0.88
+            ],
+            [
+              0.92,
+              1.28
+            ],
+            [
+              1.44,
+              1.92
+            ]
+          ],
+          "hash": "1c3e8cc44c65b5c9"
+        },
+        "trein-gemist": {
+          "src": "emma/trein-gemist.mp3",
+          "text": "Wij hebben de trein gemist.",
+          "seconds": 1.84,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.4
+            ],
+            [
+              0.48,
+              0.56
+            ],
+            [
+              0.68,
+              0.96
+            ],
+            [
+              1.08,
+              1.6
+            ]
+          ],
+          "hash": "fbb9e2b8edce1141"
+        },
+        "raam-opendoen": {
+          "src": "emma/raam-opendoen.mp3",
+          "text": "Kun je het raam opendoen?",
+          "seconds": 1.52,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.2,
+              0.24
+            ],
+            [
+              0.32,
+              0.4
+            ],
+            [
+              0.48,
+              0.72
+            ],
+            [
+              0.8,
+              1.36
+            ]
+          ],
+          "hash": "1327065b22d842ea"
+        },
+        "wat-eet": {
+          "src": "emma/wat-eet.mp3",
+          "text": "Wat eet je vanavond?",
+          "seconds": 1.52,
+          "words": [
+            [
+              0,
+              0.24
+            ],
+            [
+              0.28,
+              0.48
+            ],
+            [
+              0.52,
+              0.56
+            ],
+            [
+              0.68,
+              1.28
+            ]
+          ],
+          "hash": "970e000908eb3284"
+        }
+      },
+      "words": {
+        "gisteren": {
+          "src": "emma/w-gisteren.mp3",
+          "text": "gisteren",
+          "seconds": 0.8,
+          "hash": "24cfd4921d643e9e"
+        },
+        "boek": {
+          "src": "emma/w-boek.mp3",
+          "text": "boek",
+          "seconds": 0.8,
+          "hash": "fd90836ef097317f"
+        },
+        "lezen": {
+          "src": "emma/w-lezen.mp3",
+          "text": "lezen",
+          "seconds": 0.88,
+          "hash": "4621f256f71165b5"
+        },
+        "morgen": {
+          "src": "emma/w-morgen.mp3",
+          "text": "morgen",
+          "seconds": 0.8,
+          "hash": "588ba84a8ab00bda"
+        },
+        "gaan": {
+          "src": "emma/w-gaan.mp3",
+          "text": "gaan",
+          "seconds": 0.88,
+          "hash": "c8f1f83a4de6f0c9"
+        },
+        "oma": {
+          "src": "emma/w-oma.mp3",
+          "text": "oma",
+          "seconds": 0.8,
+          "hash": "0fee22c32c09dc51"
+        },
+        "weten": {
+          "src": "emma/w-weten.mp3",
+          "text": "weten",
+          "seconds": 0.96,
+          "hash": "321457597197c142"
+        },
+        "komen": {
+          "src": "emma/w-komen.mp3",
+          "text": "komen",
+          "seconds": 0.88,
+          "hash": "3a814bc9949b8ebf"
+        },
+        "opbellen": {
+          "src": "emma/w-opbellen.mp3",
+          "text": "opbellen",
+          "seconds": 0.96,
+          "hash": "b9d953cd9f6c8c41"
+        },
+        "zien": {
+          "src": "emma/w-zien.mp3",
+          "text": "zien",
+          "seconds": 0.72,
+          "hash": "f88c0843570b0aa2"
+        },
+        "niet": {
+          "src": "emma/w-niet.mp3",
+          "text": "niet",
+          "seconds": 0.88,
+          "hash": "fc8519d2b5c22191"
+        },
+        "winkel": {
+          "src": "emma/w-winkel.mp3",
+          "text": "winkel",
+          "seconds": 0.96,
+          "hash": "221e0028c7699642"
+        },
+        "brood": {
+          "src": "emma/w-brood.mp3",
+          "text": "brood",
+          "seconds": 0.96,
+          "hash": "a658247d0a390769"
+        },
+        "kopen": {
+          "src": "emma/w-kopen.mp3",
+          "text": "kopen",
+          "seconds": 0.72,
+          "hash": "a9175a923d9d3617"
+        },
+        "vandaag": {
+          "src": "emma/w-vandaag.mp3",
+          "text": "vandaag",
+          "seconds": 0.88,
+          "hash": "ad688a442daff366"
+        },
+        "werken": {
+          "src": "emma/w-werken.mp3",
+          "text": "werken",
+          "seconds": 0.96,
+          "hash": "dd5d93b51c1d8db1"
+        },
+        "vader": {
+          "src": "emma/w-vader.mp3",
+          "text": "vader",
+          "seconds": 0.96,
+          "hash": "539af861594b5960"
+        },
+        "thuis": {
+          "src": "emma/w-thuis.mp3",
+          "text": "thuis",
+          "seconds": 0.96,
+          "hash": "e47eed48eab2fcac"
+        },
+        "denken": {
+          "src": "emma/w-denken.mp3",
+          "text": "denken",
+          "seconds": 0.96,
+          "hash": "6bf428cfe42ba1cc"
+        },
+        "regenen": {
+          "src": "emma/w-regenen.mp3",
+          "text": "regenen",
+          "seconds": 0.88,
+          "hash": "5b9e52e535b9950a"
+        },
+        "trein": {
+          "src": "emma/w-trein.mp3",
+          "text": "trein",
+          "seconds": 0.88,
+          "hash": "ba003df516e537b3"
+        },
+        "missen": {
+          "src": "emma/w-missen.mp3",
+          "text": "missen",
+          "seconds": 0.96,
+          "hash": "29a1c0aa2a4f0494"
+        },
+        "kunnen": {
+          "src": "emma/w-kunnen.mp3",
+          "text": "kunnen",
+          "seconds": 0.8,
+          "hash": "78eb9446d3b99531"
+        },
+        "raam": {
+          "src": "emma/w-raam.mp3",
+          "text": "raam",
+          "seconds": 0.96,
+          "hash": "5ce626238d1a4671"
+        },
+        "opendoen": {
+          "src": "emma/w-opendoen.mp3",
+          "text": "opendoen",
+          "seconds": 0.88,
+          "hash": "0a8950b34fd0be76"
+        },
+        "eten": {
+          "src": "emma/w-eten.mp3",
+          "text": "eten",
+          "seconds": 0.8,
+          "hash": "87d464bd830f77b6"
+        },
+        "vanavond": {
+          "src": "emma/w-vanavond.mp3",
+          "text": "vanavond",
+          "seconds": 1.04,
+          "hash": "7952599e4ebcdd2c"
+        },
+        "willen": {
+          "src": "emma/w-willen.mp3",
+          "text": "willen",
+          "seconds": 0.88,
+          "hash": "171aa72152e323df"
+        }
+      }
+    },
+    "ido": {
+      "name": "Ido",
+      "about": "Warm and friendly, no regional accent",
+      "provider": "elevenlabs",
+      "voiceId": "dLPO5AsXc3FZDbTh1IKa",
+      "model": "eleven_v4",
+      "locale": "nl-NL",
+      "made": "2026-10-26",
+      "items": {
+        "boek-gelezen": {
+          "src": "ido/boek-gelezen.mp3",
+          "text": "Ik heb gisteren een boek gelezen.",
+          "seconds": 2,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.2,
+              0.28
+            ],
+            [
+              0.32,
+              0.8
+            ],
+            [
+              0.88,
+              0.96
+            ],
+            [
+              1.04,
+              1.2
+            ],
+            [
+              1.28,
+              1.76
+            ]
+          ],
+          "hash": "5a04bd65e04452fe"
+        },
+        "morgen-oma": {
+          "src": "ido/morgen-oma.mp3",
+          "text": "Morgen gaan we naar oma.",
+          "seconds": 1.6,
+          "words": [
+            [
+              0,
+              0.4
+            ],
+            [
+              0.56,
+              0.72
+            ],
+            [
+              0.76,
+              0.8
+            ],
+            [
+              0.84,
+              0.96
+            ],
+            [
+              1.04,
+              1.44
+            ]
+          ],
+          "hash": "7e7ac4aa5f0e6407"
+        },
+        "weet-komt": {
+          "src": "ido/weet-komt.mp3",
+          "text": "Ik weet dat hij morgen komt.",
+          "seconds": 1.76,
+          "words": [
+            [
+              0,
+              0.24
+            ],
+            [
+              0.36,
+              0.48
+            ],
+            [
+              0.56,
+              0.64
+            ],
+            [
+              0.693,
+              0.8
+            ],
+            [
+              0.84,
+              1.2
+            ],
+            [
+              1.28,
+              1.52
+            ]
+          ],
+          "hash": "ca29110fa037b1bc"
+        },
+        "bel-op": {
+          "src": "ido/bel-op.mp3",
+          "text": "Ik bel je morgen op.",
+          "seconds": 1.28,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.32
+            ],
+            [
+              0.4,
+              0.48
+            ],
+            [
+              0.52,
+              0.8
+            ],
+            [
+              0.88,
+              1.04
+            ]
+          ],
+          "hash": "22baf707e2ef5994"
+        },
+        "hoe-gaat": {
+          "src": "ido/hoe-gaat.mp3",
+          "text": "Hoe gaat het met je?",
+          "seconds": 1.12,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.4
+            ],
+            [
+              0.48,
+              0.56
+            ],
+            [
+              0.64,
+              0.72
+            ],
+            [
+              0.8,
+              0.88
+            ]
+          ],
+          "hash": "4a094a3bff32988a"
+        },
+        "wil-lezen": {
+          "src": "ido/wil-lezen.mp3",
+          "text": "Ik wil morgen een boek lezen.",
+          "seconds": 1.84,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.32
+            ],
+            [
+              0.4,
+              0.8
+            ],
+            [
+              0.88,
+              0.96
+            ],
+            [
+              1,
+              1.2
+            ],
+            [
+              1.28,
+              1.6
+            ]
+          ],
+          "hash": "620fb3801be93cd6"
+        },
+        "zie-niet": {
+          "src": "ido/zie-niet.mp3",
+          "text": "Ik zie hem niet.",
+          "seconds": 1.12,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.4
+            ],
+            [
+              0.48,
+              0.56
+            ],
+            [
+              0.6,
+              0.88
+            ]
+          ],
+          "hash": "19886e69aa84f7e6"
+        },
+        "winkel-brood": {
+          "src": "ido/winkel-brood.mp3",
+          "text": "Ik ga naar de winkel om brood te kopen.",
+          "seconds": 2.32,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.32
+            ],
+            [
+              0.36,
+              0.48
+            ],
+            [
+              0.52,
+              0.56
+            ],
+            [
+              0.64,
+              1.04
+            ],
+            [
+              1.12,
+              1.2
+            ],
+            [
+              1.28,
+              1.52
+            ],
+            [
+              1.6,
+              1.68
+            ],
+            [
+              1.72,
+              2.08
+            ]
+          ],
+          "hash": "7b43bad8b5f23229"
+        },
+        "vader-thuis": {
+          "src": "ido/vader-thuis.mp3",
+          "text": "Vandaag werkt mijn vader thuis.",
+          "seconds": 2.08,
+          "words": [
+            [
+              0,
+              0.48
+            ],
+            [
+              0.56,
+              0.8
+            ],
+            [
+              0.853,
+              0.96
+            ],
+            [
+              1.04,
+              1.36
+            ],
+            [
+              1.44,
+              1.84
+            ]
+          ],
+          "hash": "9f1a0649db67d6ef"
+        },
+        "denk-regent": {
+          "src": "ido/denk-regent.mp3",
+          "text": "Ik denk dat het morgen regent.",
+          "seconds": 2.08,
+          "words": [
+            [
+              0,
+              0.24
+            ],
+            [
+              0.32,
+              0.48
+            ],
+            [
+              0.56,
+              0.64
+            ],
+            [
+              0.72,
+              0.8
+            ],
+            [
+              0.88,
+              1.2
+            ],
+            [
+              1.28,
+              1.84
+            ]
+          ],
+          "hash": "7a1c14cfc57dea5b"
+        },
+        "trein-gemist": {
+          "src": "ido/trein-gemist.mp3",
+          "text": "Wij hebben de trein gemist.",
+          "seconds": 1.84,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.24,
+              0.4
+            ],
+            [
+              0.48,
+              0.56
+            ],
+            [
+              0.64,
+              0.88
+            ],
+            [
+              1,
+              1.44
+            ]
+          ],
+          "hash": "fba3c7e2498433fe"
+        },
+        "raam-opendoen": {
+          "src": "ido/raam-opendoen.mp3",
+          "text": "Kun je het raam opendoen?",
+          "seconds": 1.44,
+          "words": [
+            [
+              0,
+              0.16
+            ],
+            [
+              0.2,
+              0.24
+            ],
+            [
+              0.32,
+              0.4
+            ],
+            [
+              0.48,
+              0.72
+            ],
+            [
+              0.8,
+              1.28
+            ]
+          ],
+          "hash": "e9fbac6d01ecebbe"
+        },
+        "wat-eet": {
+          "src": "ido/wat-eet.mp3",
+          "text": "Wat eet je vanavond?",
+          "seconds": 1.36,
+          "words": [
+            [
+              0,
+              0.24
+            ],
+            [
+              0.32,
+              0.48
+            ],
+            [
+              0.52,
+              0.56
+            ],
+            [
+              0.64,
+              1.12
+            ]
+          ],
+          "hash": "7cf1bf34259f77f6"
+        }
+      },
+      "words": {
+        "gisteren": {
+          "src": "ido/w-gisteren.mp3",
+          "text": "gisteren",
+          "seconds": 0.8,
+          "hash": "18c7b04ed4c73575"
+        },
+        "boek": {
+          "src": "ido/w-boek.mp3",
+          "text": "boek",
+          "seconds": 0.8,
+          "hash": "d715c9b52982bd8e"
+        },
+        "lezen": {
+          "src": "ido/w-lezen.mp3",
+          "text": "lezen",
+          "seconds": 0.8,
+          "hash": "473e4ca8e09089a5"
+        },
+        "morgen": {
+          "src": "ido/w-morgen.mp3",
+          "text": "morgen",
+          "seconds": 0.72,
+          "hash": "bd200a3ecc40a8f0"
+        },
+        "gaan": {
+          "src": "ido/w-gaan.mp3",
+          "text": "gaan",
+          "seconds": 0.88,
+          "hash": "4c42933c55834051"
+        },
+        "oma": {
+          "src": "ido/w-oma.mp3",
+          "text": "oma",
+          "seconds": 0.8,
+          "hash": "876c3af26300d67b"
+        },
+        "weten": {
+          "src": "ido/w-weten.mp3",
+          "text": "weten",
+          "seconds": 0.72,
+          "hash": "4474923022e7aa9c"
+        },
+        "komen": {
+          "src": "ido/w-komen.mp3",
+          "text": "komen",
+          "seconds": 0.8,
+          "hash": "97a98af33d991ff2"
+        },
+        "opbellen": {
+          "src": "ido/w-opbellen.mp3",
+          "text": "opbellen",
+          "seconds": 0.72,
+          "hash": "f6b3652452fb10da"
+        },
+        "zien": {
+          "src": "ido/w-zien.mp3",
+          "text": "zien",
+          "seconds": 0.8,
+          "hash": "8ad03f9449b13330"
+        },
+        "niet": {
+          "src": "ido/w-niet.mp3",
+          "text": "niet",
+          "seconds": 0.72,
+          "hash": "29d902d38680bc44"
+        },
+        "winkel": {
+          "src": "ido/w-winkel.mp3",
+          "text": "winkel",
+          "seconds": 0.8,
+          "hash": "873446f3deedd787"
+        },
+        "brood": {
+          "src": "ido/w-brood.mp3",
+          "text": "brood",
+          "seconds": 0.96,
+          "hash": "2309f5d06d076bc8"
+        },
+        "kopen": {
+          "src": "ido/w-kopen.mp3",
+          "text": "kopen",
+          "seconds": 0.72,
+          "hash": "66de282177ab6821"
+        },
+        "vandaag": {
+          "src": "ido/w-vandaag.mp3",
+          "text": "vandaag",
+          "seconds": 0.96,
+          "hash": "7ca5ad241aa80d1a"
+        },
+        "werken": {
+          "src": "ido/w-werken.mp3",
+          "text": "werken",
+          "seconds": 0.88,
+          "hash": "d1add22ffac04175"
+        },
+        "vader": {
+          "src": "ido/w-vader.mp3",
+          "text": "vader",
+          "seconds": 0.72,
+          "hash": "0cdd537bd4e88947"
+        },
+        "thuis": {
+          "src": "ido/w-thuis.mp3",
+          "text": "thuis",
+          "seconds": 0.72,
+          "hash": "ff3504ae1dc0a33b"
+        },
+        "denken": {
+          "src": "ido/w-denken.mp3",
+          "text": "denken",
+          "seconds": 0.96,
+          "hash": "e8b8c29d8b8c660a"
+        },
+        "regenen": {
+          "src": "ido/w-regenen.mp3",
+          "text": "regenen",
+          "seconds": 0.88,
+          "hash": "809701864161e6c5"
+        },
+        "trein": {
+          "src": "ido/w-trein.mp3",
+          "text": "trein",
+          "seconds": 0.72,
+          "hash": "425f6e7299f2fd74"
+        },
+        "missen": {
+          "src": "ido/w-missen.mp3",
+          "text": "missen",
+          "seconds": 0.96,
+          "hash": "a3cf067e9affd453"
+        },
+        "kunnen": {
+          "src": "ido/w-kunnen.mp3",
+          "text": "kunnen",
+          "seconds": 0.8,
+          "hash": "3c47bfc29900607a"
+        },
+        "raam": {
+          "src": "ido/w-raam.mp3",
+          "text": "raam",
+          "seconds": 0.88,
+          "hash": "6992b17bd264cf10"
+        },
+        "opendoen": {
+          "src": "ido/w-opendoen.mp3",
+          "text": "opendoen",
+          "seconds": 0.8,
+          "hash": "afe3ca289b974cf8"
+        },
+        "eten": {
+          "src": "ido/w-eten.mp3",
+          "text": "eten",
+          "seconds": 0.64,
+          "hash": "df88edde1c8c3ec8"
+        },
+        "vanavond": {
+          "src": "ido/w-vanavond.mp3",
+          "text": "vanavond",
+          "seconds": 0.88,
+          "hash": "f5192934a7da0a2e"
+        },
+        "willen": {
+          "src": "ido/w-willen.mp3",
+          "text": "willen",
+          "seconds": 0.8,
+          "hash": "d3512790265645ce"
+        }
+      }
+    }
+  }
+}

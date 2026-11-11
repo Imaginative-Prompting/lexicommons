@@ -1,0 +1,6972 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-mt",
+  "name": "Starter: Maltese",
+  "about": "Maltese in real, everyday sentences, with each one's words in Maltese order.",
+  "language": "mt",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kafè": "coffee",
+    "te": "tea",
+    "ilma": "water",
+    "jien": "I",
+    "xorob": "drink",
+    "u": "and",
+    "ħalib": "milk",
+    "xtaq": "wish (nixtieq: I'd like)",
+    "tajjeb": "good",
+    "int": "you",
+    "għalliem": "teacher (għalliema: a woman)",
+    "student": "student",
+    "omm": "mother (ommi: my mom)",
+    "missier": "father (missieri: my dad)",
+    "ħu": "brother (ħija: my brother)",
+    "oħt": "sister (oħti: my sister)",
+    "tiegħi": "of mine, my (after the noun)",
+    "dan": "this",
+    "din": "this (with a feminine noun)",
+    "għand": "at; have (għandi: I have, għandek: you have)",
+    "ħabib": "friend",
+    "tabib": "doctor",
+    "ċavetta": "key",
+    "telefon": "phone",
+    "ktieb": "book",
+    "fejn": "where",
+    "hawn": "here",
+    "hemm": "there; there is, there are",
+    "hi": "she, it (also: is)",
+    "wieħed": "one",
+    "tnejn": "two",
+    "tlieta": "three",
+    "flus": "money",
+    "tkellem": "speak, talk",
+    "ingliż": "English",
+    "malti": "Maltese",
+    "fehem": "to understand",
+    "ftit": "a little, some",
+    "ried": "want (irrid: I want, trid: you want)",
+    "ma": "not (with -x on the verb)",
+    "dar": "house, home",
+    "kamra": "room",
+    "kbir": "big (kbira with a feminine noun)",
+    "żgħir": "small, little",
+    "qagħad": "stay, live (toqgħod: she lives)",
+    "banju": "bath (il-kamra tal-banju: the bathroom)",
+    "mar": "go (mort: I went, tmur: you go)",
+    "skola": "school",
+    "belt": "city",
+    "stazzjon": "train station",
+    "karozza": "car",
+    "hu": "he, it (also: is)",
+    "illum": "today",
+    "għada": "tomorrow",
+    "issa": "now",
+    "ħadem": "work",
+    "seta": "can",
+    "kif": "how",
+    "isem": "name (jismek: your name)",
+    "minn": "from",
+    "ajruport": "airport",
+    "nanna": "grandma",
+    "aħmar": "red (ħamra with a feminine noun)",
+    "kemm": "how much, how many",
+    "żmien": "time (kemm għandek żmien?: how old are you?)",
+    "tifel": "boy, child (tfal: children)",
+    "min": "who",
+    "dak": "that, that one",
+    "tagħna": "of ours, our (after the noun)",
+    "fuq": "on",
+    "mejda": "table",
+    "friġġ": "fridge",
+    "ħobż": "bread",
+    "qed": "(going on now: -ing)",
+    "għamel": "do, make (jagħmel il-bard: it's cold)",
+    "lagħab": "play",
+    "ġnien": "garden",
+    "vojt": "empty",
+    "ilbieraħ": "yesterday",
+    "naddaf": "clean",
+    "kċina": "kitchen",
+    "kull": "every",
+    "filgħodu": "morning, in the morning",
+    "jekk": "if",
+    "għoġob": "please (jekk jogħġbok: please)",
+    "pastizz": "pastizz, a flaky savory pastry (pastizzi: more than one)",
+    "sħun": "hot (sħan: plural)",
+    "kiel": "eat",
+    "laħam": "meat",
+    "ristorant": "restaurant",
+    "ħafna": "very; a lot of",
+    "ġuħ": "hunger",
+    "sewa": "be worth, cost (jiswa: it costs)",
+    "wisq": "too, too much",
+    "illejla": "tonight",
+    "se": "going to (before a verb)",
+    "sajjar": "cook",
+    "għaġin": "pasta",
+    "skuża": "excuse (skużani: excuse me)",
+    "suq": "market",
+    "bus": "bus",
+    "wasal": "arrive",
+    "tard": "late",
+    "vapur": "ship, ferry",
+    "telaq": "leave",
+    "għaxra": "ten",
+    "nies": "people",
+    "bajja": "beach, bay",
+    "ġie": "come",
+    "festa": "party; village feast",
+    "xtara": "buy",
+    "ġdid": "new (ġdida with a feminine noun)",
+    "xita": "rain",
+    "bard": "cold",
+    "tgħallem": "learn",
+    "ġimgħa": "week",
+    "dieħel": "coming (il-ġimgħa d-dieħla: next week)",
+    "żar": "visit",
+    "lil": "to; marks a person as what a verb acts on",
+    "ra": "see",
+    "film": "movie",
+    "ħin": "time (time of day; time to spare)",
+    "seta'": "can, be able (nista': I can, tista': you can)",
+    "għen": "help (tgħinni: you help me)",
+    "sema'": "hear, listen (nisma': I hear, smajt: I heard)",
+    "mużika": "music",
+    "ta'": "of",
+    "aħbar": "news"
+  },
+  "chunks": {
+    "jekk-joghgbok": {
+      "text": "jekk jogħġbok",
+      "en": "please",
+      "about": "Literally if it pleases you; jekk jogħġobkom to more than one person."
+    },
+    "good-morning": {
+      "text": "Bonġu",
+      "en": "good morning"
+    },
+    "thank-you": {
+      "text": "grazzi",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Kif int",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "saħħa",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "iva",
+      "en": "yes"
+    },
+    "no": {
+      "text": "le",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Kif jismek",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Għandi pjaċir",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "skużani",
+      "en": "excuse me"
+    },
+    "the-bathroom": {
+      "text": "l-kamra tal-banju",
+      "en": "the bathroom"
+    },
+    "how-much-is-it": {
+      "text": "Kemm jiswa",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Il-kont, jekk jogħġbok",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Narak għada",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "nixrob-kafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Nixrob kafè.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Nixrob",
+          "xorob"
+        ],
+        [
+          "kafè",
+          "kafè"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nixrob u kafè.",
+        "Nixrob kafè u."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafè",
+          "te",
+          "ilma"
+        ]
+      }
+    },
+    {
+      "id": "jien-nixrob-te",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Jien nixrob te.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien u nixrob te.",
+        "Jien nixrob u te."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "kafè",
+          "ilma"
+        ]
+      }
+    },
+    {
+      "id": "jien-nixrob-ilma",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Jien nixrob ilma.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "ilma",
+          "ilma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien u nixrob ilma.",
+        "Jien nixrob u ilma."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ilma",
+          "kafè",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "jien-nixrob-kafe-u-te",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Jien nixrob kafè u te.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "kafè",
+          "kafè"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien u nixrob kafè te.",
+        "Jien nixrob kafè te u."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafè",
+          "te",
+          "ilma"
+        ]
+      }
+    },
+    {
+      "id": "jien-nixrob-te-u-ilma",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Jien nixrob te u ilma.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "ilma",
+          "ilma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien u nixrob te ilma.",
+        "Jien nixrob te ilma u."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "kafè",
+          "ilma"
+        ]
+      }
+    },
+    {
+      "id": "jien-nixrob-ilma-u-kafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Jien nixrob ilma u kafè.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "ilma",
+          "ilma"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "kafè",
+          "kafè"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien u nixrob ilma kafè.",
+        "Jien nixrob ilma kafè u."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ilma",
+          "te",
+          "kafè"
+        ]
+      }
+    },
+    {
+      "id": "bongu-kafe-jekk-jog-gbok",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "jekk-joghgbok",
+        "good-morning"
+      ],
+      "text": "Bonġu! Kafè, jekk jogħġbok.",
+      "means": "Good morning! A coffee, please.",
+      "words": [
+        [
+          "Bonġu!"
+        ],
+        [
+          "Kafè,",
+          "kafè"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Good morning"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonġu! Kafè, jogħġbok jekk.",
+        "Bonġu! Kafè u, jekk jogħġbok."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Kafè,",
+          "Te,",
+          "Ilma,"
+        ]
+      }
+    },
+    {
+      "id": "te-u-ilma-jekk-jog-gbok",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "jekk-joghgbok"
+      ],
+      "text": "Te u ilma, jekk jogħġbok.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Te",
+          "te"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "ilma,",
+          "ilma"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te u ilma, jogħġbok jekk.",
+        "Te ilma u, jekk jogħġbok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Te",
+          "Kafè",
+          "Ħalib"
+        ]
+      }
+    },
+    {
+      "id": "kafe-grazzi",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Kafè, grazzi.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Kafè,",
+          "kafè"
+        ],
+        [
+          "grazzi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafè u, grazzi.",
+        "Nixrob u kafè, grazzi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kafè,",
+          "Te,",
+          "Ħalib,"
+        ]
+      }
+    },
+    {
+      "id": "bongu-te-jekk-jog-gbok",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "jekk-joghgbok",
+        "good-morning"
+      ],
+      "text": "Bonġu! Te, jekk jogħġbok.",
+      "means": "Good morning! A tea, please.",
+      "words": [
+        [
+          "Bonġu!"
+        ],
+        [
+          "Te,",
+          "te"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Good morning"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonġu! Te, jogħġbok jekk.",
+        "Bonġu! Te u, jekk jogħġbok."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Te,",
+          "Kafè,",
+          "Ħalib,"
+        ]
+      }
+    },
+    {
+      "id": "jien-nixrob-alib",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Jien nixrob ħalib.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "ħalib",
+          "ħalib"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien u nixrob ħalib.",
+        "Jien nixrob u ħalib."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ħalib",
+          "te",
+          "kafè"
+        ]
+      }
+    },
+    {
+      "id": "iva-jekk-jog-gbok",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "jekk-joghgbok",
+        "yes"
+      ],
+      "text": "Iva, jekk jogħġbok.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Iva,"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Iva, jogħġbok jekk.",
+        "Iva u, jekk jogħġbok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Iva,",
+          "Le,",
+          "Grazzi,"
+        ]
+      }
+    },
+    {
+      "id": "le-grazzi",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Le, grazzi.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Le,"
+        ],
+        [
+          "grazzi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Le u, grazzi.",
+        "Le, jekk grazzi jogħġbok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Le,",
+          "Iva,",
+          "Bonġu,"
+        ]
+      }
+    },
+    {
+      "id": "bongu-kif-int",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "good-morning"
+      ],
+      "text": "Bonġu! Kif int?",
+      "means": "Good morning! How are you?",
+      "words": [
+        [
+          "Bonġu!"
+        ],
+        [
+          "Kif"
+        ],
+        [
+          "int"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Good morning"
+        ],
+        [
+          "how"
+        ],
+        [
+          "are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonġu! Kif u int?",
+        "Bonġu! Kif nixrob int?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bonġu!",
+          "Saħħa!",
+          "Grazzi!"
+        ]
+      }
+    },
+    {
+      "id": "jien-tajjeb-grazzi",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Jien tajjeb, grazzi.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "tajjeb,",
+          "tajjeb"
+        ],
+        [
+          "grazzi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien u tajjeb, grazzi.",
+        "Jien tajjeb u, grazzi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jien",
+          "Tajjeb",
+          "Nixrob"
+        ]
+      }
+    },
+    {
+      "id": "iva-grazzi-sa-a",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Iva, grazzi. Saħħa!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Iva,"
+        ],
+        [
+          "grazzi."
+        ],
+        [
+          "Saħħa"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Iva u, grazzi. Saħħa!",
+        "Iva, jekk grazzi jogħġbok. Saħħa!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Saħħa",
+          "Bonġu",
+          "Grazzi"
+        ]
+      }
+    },
+    {
+      "id": "le-grazzi-sa-a",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Le, grazzi. Saħħa!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Le,"
+        ],
+        [
+          "grazzi."
+        ],
+        [
+          "Saħħa"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Le u, grazzi. Saħħa!",
+        "Le, jekk grazzi jogħġbok. Saħħa!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Le,",
+          "Iva,",
+          "Bonġu,"
+        ]
+      }
+    },
+    {
+      "id": "jien-g-alliem",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Jien għalliem.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "għalliem",
+          "għalliem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int m'iniex għalliem.",
+        "Jien int għalliem."
+      ],
+      "otherGender": {
+        "text": "Jien għalliema.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "għalliem",
+          "student",
+          "kafè"
+        ]
+      }
+    },
+    {
+      "id": "int-student",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Int student.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Int",
+          "int"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int m'iniex student.",
+        "Int jien student."
+      ],
+      "otherGender": {
+        "text": "Int studenta.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "student",
+          "għalliem",
+          "ħalib"
+        ]
+      }
+    },
+    {
+      "id": "bongu-g-andi-pjacir",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "good-morning"
+      ],
+      "text": "Bonġu! Għandi pjaċir.",
+      "means": "Good morning! Nice to meet you.",
+      "words": [
+        [
+          "Bonġu!"
+        ],
+        [
+          "Għandi"
+        ],
+        [
+          "pjaċir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Good morning"
+        ],
+        [
+          "I am pleased"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonġu! Pjaċir għandi u.",
+        "Bonġu! Għandi u pjaċir."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bonġu!",
+          "Saħħa!",
+          "Grazzi!"
+        ]
+      }
+    },
+    {
+      "id": "int-g-alliem",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "copula"
+      ],
+      "text": "Int għalliem?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Int",
+          "int"
+        ],
+        [
+          "għalliem",
+          "għalliem"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int m'iniex għalliem?",
+        "Int jien għalliem?"
+      ],
+      "otherGender": {
+        "text": "Int għalliema?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "għalliem",
+          "student",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "m-iniex-g-alliem",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "copula"
+      ],
+      "text": "M'iniex għalliem.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "M'iniex",
+          "jien"
+        ],
+        [
+          "għalliem",
+          "għalliem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int m'iniex għalliem.",
+        "M'iniex int għalliem."
+      ],
+      "otherGender": {
+        "text": "M'iniex għalliema.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "M'iniex",
+          "Jien",
+          "Int"
+        ]
+      }
+    },
+    {
+      "id": "dan-missieri",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "gender",
+        "possessive"
+      ],
+      "text": "Dan missieri.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Dan",
+          "dan"
+        ],
+        [
+          "missieri",
+          "missier"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Din missieri.",
+        "Dan għalliema missieri."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dan",
+          "Din",
+          "Int"
+        ]
+      }
+    },
+    {
+      "id": "din-ommi",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "gender",
+        "possessive"
+      ],
+      "text": "Din ommi.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Din",
+          "din"
+        ],
+        [
+          "ommi",
+          "omm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dan ommi.",
+        "Din għalliem ommi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Din",
+          "Dan",
+          "Int"
+        ]
+      }
+    },
+    {
+      "id": "missieri-g-alliem",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "gender",
+        "possessive"
+      ],
+      "text": "Missieri għalliem.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Missieri",
+          "missier"
+        ],
+        [
+          "għalliem",
+          "għalliem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My father"
+        ],
+        [
+          "is a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Missieri għalliema.",
+        "Missieri m'iniex għalliem."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "għalliem",
+          "għalliema",
+          "student"
+        ]
+      }
+    },
+    {
+      "id": "ija-student",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Ħija student.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Ħija",
+          "ħu"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "is a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ħija m'iniex student.",
+        "Ħija int student."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ħija",
+          "Missieri",
+          "Jien"
+        ]
+      }
+    },
+    {
+      "id": "din-o-ti",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "gender",
+        "possessive"
+      ],
+      "text": "Din oħti.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Din",
+          "din"
+        ],
+        [
+          "oħti",
+          "oħt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is my sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dan oħti.",
+        "Din m'iniex oħti."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Din",
+          "Dan",
+          "Jien"
+        ]
+      }
+    },
+    {
+      "id": "int-student-tieg-i",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Int student tiegħi.",
+      "means": "You're a student of mine.",
+      "words": [
+        [
+          "Int",
+          "int"
+        ],
+        [
+          "student",
+          "student"
+        ],
+        [
+          "tiegħi",
+          "tiegħi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a student"
+        ],
+        [
+          "of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int tiegħi student.",
+        "Int m'iniex student tiegħi."
+      ],
+      "otherGender": {
+        "text": "Int studenta tiegħi.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "student",
+          "għalliem",
+          "missieri"
+        ]
+      }
+    },
+    {
+      "id": "g-andi-telefon",
+      "topic": "people",
+      "concepts": [
+        "ghandi"
+      ],
+      "text": "Għandi telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Għandi",
+          "għand"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien għandek telefon.",
+        "Int għandi telefon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefon",
+          "ktieb",
+          "ċavetta"
+        ]
+      }
+    },
+    {
+      "id": "g-andek-cavetta",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ghandi"
+      ],
+      "text": "Għandek ċavetta?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Għandek",
+          "għand"
+        ],
+        [
+          "ċavetta",
+          "ċavetta"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You have"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int għandi ċavetta?",
+        "Jien għandek ċavetta?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ċavetta",
+          "telefon",
+          "ktieb"
+        ]
+      }
+    },
+    {
+      "id": "m-g-andix-ktieb",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "ghandi"
+      ],
+      "text": "M'għandix ktieb.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "M'għandix",
+          "għand"
+        ],
+        [
+          "ktieb",
+          "ktieb"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int m'għandix ktieb.",
+        "Jien għandek ktieb."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ktieb",
+          "telefon",
+          "ċavetta"
+        ]
+      }
+    },
+    {
+      "id": "o-ti-tabiba",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "gender",
+        "possessive"
+      ],
+      "text": "Oħti tabiba.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Oħti",
+          "oħt"
+        ],
+        [
+          "tabiba",
+          "tabib"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Oħti m'iniex tabiba.",
+        "Oħti int tabiba."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tabiba",
+          "għalliema",
+          "ħabib"
+        ]
+      }
+    },
+    {
+      "id": "int-abib-tajjeb",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "adjective-after"
+      ],
+      "text": "Int ħabib tajjeb.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Int",
+          "int"
+        ],
+        [
+          "ħabib",
+          "ħabib"
+        ],
+        [
+          "tajjeb",
+          "tajjeb"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a friend"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int m'iniex ħabib tajjeb.",
+        "Int ħabib għalliema."
+      ],
+      "otherGender": {
+        "text": "Int ħabiba tajba.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "ħabib",
+          "student",
+          "għalliem"
+        ]
+      }
+    },
+    {
+      "id": "fejn-hi-ommi",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "copula",
+        "possessive"
+      ],
+      "text": "Fejn hi ommi?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Fejn",
+          "fejn"
+        ],
+        [
+          "hi",
+          "hi"
+        ],
+        [
+          "ommi",
+          "omm"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fejn hi missieri?",
+        "Fejn m'iniex ommi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ommi",
+          "oħti",
+          "missieri"
+        ]
+      }
+    },
+    {
+      "id": "o-ti-hawn",
+      "topic": "out",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Oħti hawn.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Oħti",
+          "oħt"
+        ],
+        [
+          "hawn",
+          "hawn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Oħti m'iniex hawn.",
+        "Oħti int hawn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hawn",
+          "hemm",
+          "fejn"
+        ]
+      }
+    },
+    {
+      "id": "ic-cavetta-hemm",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "copula"
+      ],
+      "text": "Iċ-ċavetta hemm.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Iċ-ċavetta",
+          "ċavetta"
+        ],
+        [
+          "hemm",
+          "hemm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Iċ-ċavetta m'iniex hemm.",
+        "Iċ-ċavetta int hemm."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hemm",
+          "hawn",
+          "fejn"
+        ]
+      }
+    },
+    {
+      "id": "it-telefon-tieg-i-hawn",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "possessive",
+        "copula"
+      ],
+      "text": "It-telefon tiegħi hawn.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "It-telefon",
+          "telefon"
+        ],
+        [
+          "tiegħi",
+          "tiegħi"
+        ],
+        [
+          "hawn",
+          "hawn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The phone"
+        ],
+        [
+          "of mine"
+        ],
+        [
+          "is here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "It-telefon hi hawn.",
+        "It-telefon tiegħi m'iniex hawn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hawn",
+          "hemm",
+          "fejn"
+        ]
+      }
+    },
+    {
+      "id": "skuzani-fejn-hi-c-cavetta-tieg-i",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "copula",
+        "possessive",
+        "article"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Skużani, fejn hi ċ-ċavetta tiegħi?",
+      "means": "Excuse me, where is my key?",
+      "words": [
+        [
+          "Skużani,"
+        ],
+        [
+          "fejn",
+          "fejn"
+        ],
+        [
+          "hi",
+          "hi"
+        ],
+        [
+          "ċ-ċavetta",
+          "ċavetta"
+        ],
+        [
+          "tiegħi",
+          "tiegħi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the key"
+        ],
+        [
+          "of mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Skużani, fejn hi it-telefon tiegħi?",
+        "Skużani, fejn m'iniex ċ-ċavetta tiegħi?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ċ-ċavetta",
+          "it-telefon",
+          "ommi"
+        ]
+      }
+    },
+    {
+      "id": "m-g-andix-flus",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "ghandi"
+      ],
+      "text": "M'għandix flus.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "M'għandix",
+          "għand"
+        ],
+        [
+          "flus",
+          "flus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int m'għandix flus.",
+        "Jien għandek flus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "flus",
+          "ktieb",
+          "telefon"
+        ]
+      }
+    },
+    {
+      "id": "ktieb-wie-ed-jekk-jog-gbok",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "jekk-joghgbok"
+      ],
+      "text": "Ktieb wieħed, jekk jogħġbok.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Ktieb",
+          "ktieb"
+        ],
+        [
+          "wieħed,",
+          "wieħed"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Book"
+        ],
+        [
+          "one"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kotba wieħed, jekk jogħġbok.",
+        "Ktieb wieħed, jogħġbok jekk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "wieħed,",
+          "żewġ,",
+          "tliet,"
+        ]
+      }
+    },
+    {
+      "id": "zewg-kafejiet-jekk-jog-gbok",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "jekk-joghgbok"
+      ],
+      "text": "Żewġ kafejiet, jekk jogħġbok.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Żewġ",
+          "tnejn"
+        ],
+        [
+          "kafejiet,",
+          "kafè"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Żewġ ktieb, jekk jogħġbok.",
+        "Żewġ kafejiet, jogħġbok jekk."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Żewġ",
+          "Tliet",
+          "Wieħed"
+        ]
+      }
+    },
+    {
+      "id": "g-andi-tliet-kotba",
+      "topic": "out",
+      "concepts": [
+        "ghandi"
+      ],
+      "text": "Għandi tliet kotba.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Għandi",
+          "għand"
+        ],
+        [
+          "tliet",
+          "tlieta"
+        ],
+        [
+          "kotba",
+          "ktieb"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Għandi tliet ktieb.",
+        "Għandi kotba tliet."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tliet",
+          "żewġ",
+          "wieħed"
+        ]
+      }
+    },
+    {
+      "id": "bongu-il-kont-jekk-jog-gbok",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "good-morning"
+      ],
+      "text": "Bonġu! Il-kont, jekk jogħġbok.",
+      "means": "Good morning! The check, please.",
+      "words": [
+        [
+          "Bonġu!"
+        ],
+        [
+          "Il-kont,"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Good morning"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonġu! Il-kont, jogħġbok jekk.",
+        "Bonġu! Il-kont u, jekk jogħġbok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bonġu!",
+          "Saħħa!",
+          "Grazzi!"
+        ]
+      }
+    },
+    {
+      "id": "skuzani-kemm-jiswa",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "excuse-me"
+      ],
+      "text": "Skużani, kemm jiswa?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Skużani,"
+        ],
+        [
+          "kemm"
+        ],
+        [
+          "jiswa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "does it cost"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Skużani, kemm u jiswa?",
+        "Skużani, kemm jiswa u?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Skużani,",
+          "Bonġu,",
+          "Grazzi,"
+        ]
+      }
+    },
+    {
+      "id": "nitkellem-ftit-bil-malti",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "prep-article"
+      ],
+      "text": "Nitkellem ftit bil-Malti.",
+      "means": "I speak a little Maltese.",
+      "words": [
+        [
+          "Nitkellem",
+          "tkellem"
+        ],
+        [
+          "ftit",
+          "ftit"
+        ],
+        [
+          "bil-Malti",
+          "malti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "in Maltese"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien titkellem ftit bil-Malti.",
+        "Int nitkellem ftit bil-Malti."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bil-Malti",
+          "bl-Ingliż",
+          "tal-banju"
+        ]
+      }
+    },
+    {
+      "id": "ma-nifhimx",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "negation"
+      ],
+      "text": "Ma nifhimx.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "nifhimx",
+          "fehem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma tifhem.",
+        "Int ma nifhimx."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nifhimx",
+          "tifhem",
+          "jitkellimx"
+        ]
+      }
+    },
+    {
+      "id": "int-tifhem",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "question"
+      ],
+      "text": "Int tifhem?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Int",
+          "int"
+        ],
+        [
+          "tifhem",
+          "fehem"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien tifhem?",
+        "Int nifhimx?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tifhem",
+          "nifhimx",
+          "nitkellem"
+        ]
+      }
+    },
+    {
+      "id": "irrid-kafe",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Irrid kafè.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Irrid",
+          "ried"
+        ],
+        [
+          "kafè",
+          "kafè"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Irrid u kafè.",
+        "Int irrid kafè."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafè",
+          "te",
+          "ilma"
+        ]
+      }
+    },
+    {
+      "id": "irrid-ilma-jekk-jog-gbok",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "jekk-joghgbok"
+      ],
+      "text": "Irrid ilma, jekk jogħġbok.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Irrid",
+          "ried"
+        ],
+        [
+          "ilma,",
+          "ilma"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int irrid ilma, jekk jogħġbok.",
+        "Irrid ilma, jogħġbok jekk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ilma,",
+          "kafè,",
+          "ħalib,"
+        ]
+      }
+    },
+    {
+      "id": "ommi-toqg-od-hawn",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Ommi toqgħod hawn.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Ommi",
+          "omm"
+        ],
+        [
+          "toqgħod",
+          "qagħad"
+        ],
+        [
+          "hawn",
+          "hawn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ommi noqgħod hawn.",
+        "Jien toqgħod hawn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "toqgħod",
+          "noqgħod",
+          "nitkellem"
+        ]
+      }
+    },
+    {
+      "id": "il-kamra-tieg-i-zg-ira",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "gender",
+        "possessive",
+        "article"
+      ],
+      "text": "Il-kamra tiegħi żgħira.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Il-kamra",
+          "kamra"
+        ],
+        [
+          "tiegħi",
+          "tiegħi"
+        ],
+        [
+          "żgħira",
+          "żgħir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The room"
+        ],
+        [
+          "of mine"
+        ],
+        [
+          "is small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il-kamra tiegħi tajjeb.",
+        "Il-kamra tiegħi m'iniex żgħira."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "żgħira",
+          "kbira",
+          "tajjeb"
+        ]
+      }
+    },
+    {
+      "id": "noqg-od-f-dar-zg-ira",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective-after"
+      ],
+      "text": "Noqgħod f'dar żgħira.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Noqgħod",
+          "qagħad"
+        ],
+        [
+          "f'dar",
+          "dar"
+        ],
+        [
+          "żgħira",
+          "żgħir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a house"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int noqgħod f'dar żgħira.",
+        "Noqgħod f'dar tajjeb."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "żgħira",
+          "kbira",
+          "tajjeb"
+        ]
+      }
+    },
+    {
+      "id": "fejn-toqg-od",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "question"
+      ],
+      "text": "Fejn toqgħod?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Fejn",
+          "fejn"
+        ],
+        [
+          "toqgħod",
+          "qagħad"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fejn int noqgħod?",
+        "Fejn jien toqgħod?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "toqgħod",
+          "noqgħod",
+          "nitkellem"
+        ]
+      }
+    },
+    {
+      "id": "din-id-dar-kbira",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "gender",
+        "copula"
+      ],
+      "text": "Din id-dar kbira.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Din",
+          "din"
+        ],
+        [
+          "id-dar",
+          "dar"
+        ],
+        [
+          "kbira",
+          "kbir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "the house"
+        ],
+        [
+          "is big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dan id-dar kbira.",
+        "Din id-dar tajjeb."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kbira",
+          "żgħira",
+          "tajjeb"
+        ]
+      }
+    },
+    {
+      "id": "il-kamra-tal-banju-fid-dar",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "prep-article"
+      ],
+      "text": "Il-kamra tal-banju fid-dar.",
+      "means": "The bathroom is in the house.",
+      "words": [
+        [
+          "Il-kamra",
+          "kamra"
+        ],
+        [
+          "tal-banju",
+          "banju"
+        ],
+        [
+          "fid-dar",
+          "dar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The room"
+        ],
+        [
+          "of the bath"
+        ],
+        [
+          "is in the house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il-kamra tal-banju m'iniex fid-dar.",
+        "Il-kamra tal-banju int fid-dar."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fid-dar",
+          "f'dar",
+          "id-dar"
+        ]
+      }
+    },
+    {
+      "id": "g-andi-karozza",
+      "topic": "out",
+      "concepts": [
+        "ghandi"
+      ],
+      "text": "Għandi karozza.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Għandi",
+          "għand"
+        ],
+        [
+          "karozza",
+          "karozza"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int għandi karozza.",
+        "Jien għandek karozza."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "karozza",
+          "telefon",
+          "ktieb"
+        ]
+      }
+    },
+    {
+      "id": "din-il-karozza-zg-ira",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "gender",
+        "copula"
+      ],
+      "text": "Din il-karozza żgħira.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Din",
+          "din"
+        ],
+        [
+          "il-karozza",
+          "karozza"
+        ],
+        [
+          "żgħira",
+          "żgħir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "the car"
+        ],
+        [
+          "is small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dan il-karozza żgħira.",
+        "Din il-karozza tajjeb."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "żgħira",
+          "kbira",
+          "tajjeb"
+        ]
+      }
+    },
+    {
+      "id": "immur-l-iskola",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "article"
+      ],
+      "text": "Immur l-iskola.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Immur",
+          "mar"
+        ],
+        [
+          "l-iskola",
+          "skola"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int immur l-iskola.",
+        "Jien tmur l-iskola."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "l-iskola",
+          "il-belt",
+          "l-istazzjon"
+        ]
+      }
+    },
+    {
+      "id": "fejn-sejjer",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Fejn sejjer?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Fejn",
+          "fejn"
+        ],
+        [
+          "sejjer",
+          "mar"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fejn hi sejjer?",
+        "Fejn ommi sejjer?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sejjer",
+          "immur",
+          "karozza"
+        ]
+      }
+    },
+    {
+      "id": "skuzani-fejn-hu-l-istazzjon",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "copula",
+        "gender",
+        "article"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Skużani, fejn hu l-istazzjon?",
+      "means": "Excuse me, where is the station?",
+      "words": [
+        [
+          "Skużani,"
+        ],
+        [
+          "fejn",
+          "fejn"
+        ],
+        [
+          "hu",
+          "hu"
+        ],
+        [
+          "l-istazzjon",
+          "stazzjon"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Skużani, fejn hi l-istazzjon?",
+        "Skużani, fejn m'iniex l-istazzjon?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hu",
+          "hi",
+          "m'iniex"
+        ]
+      }
+    },
+    {
+      "id": "ommi-tmur-il-belt",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Ommi tmur il-belt.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Ommi",
+          "omm"
+        ],
+        [
+          "tmur",
+          "mar"
+        ],
+        [
+          "il-belt",
+          "belt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ommi immur il-belt.",
+        "Jien tmur il-belt."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tmur",
+          "immur",
+          "sejjer"
+        ]
+      }
+    },
+    {
+      "id": "na-dem-illum",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Naħdem illum.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Naħdem",
+          "ħadem"
+        ],
+        [
+          "illum",
+          "illum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Int naħdem illum.",
+        "Ommi naħdem illum."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "illum",
+          "għada",
+          "issa"
+        ]
+      }
+    },
+    {
+      "id": "g-andi-mmur-issa",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Għandi mmur issa.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Għandi",
+          "għand"
+        ],
+        [
+          "mmur",
+          "mar"
+        ],
+        [
+          "issa",
+          "issa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Għandek mmur issa.",
+        "Għandi tmur issa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "issa",
+          "illum",
+          "għada"
+        ]
+      }
+    },
+    {
+      "id": "g-ada-mmur-il-belt",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Għada mmur il-belt.",
+      "means": "I'll go to the city tomorrow.",
+      "words": [
+        [
+          "Għada",
+          "għada"
+        ],
+        [
+          "mmur",
+          "mar"
+        ],
+        [
+          "il-belt",
+          "belt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Għada int mmur il-belt.",
+        "Għada jien tmur il-belt."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Għada",
+          "Illum",
+          "Issa"
+        ]
+      }
+    },
+    {
+      "id": "grazzi-narak-g-ada",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Grazzi. Narak għada!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Grazzi."
+        ],
+        [
+          "Narak"
+        ],
+        [
+          "għada"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Grazzi. Narak u għada!",
+        "Grazzi. Narak għada u!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "għada",
+          "illum",
+          "issa"
+        ]
+      }
+    },
+    {
+      "id": "ma-nistax-immur-illum",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "negation"
+      ],
+      "text": "Ma nistax immur illum.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "nistax",
+          "seta"
+        ],
+        [
+          "immur",
+          "mar"
+        ],
+        [
+          "illum",
+          "illum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma nistax tmur illum.",
+        "Int ma nistax immur illum."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "immur",
+          "tmur",
+          "sejjer"
+        ]
+      }
+    },
+    {
+      "id": "kif-jismek",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Kif jismek?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Kif"
+        ],
+        [
+          "jismek"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "your name"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fejn jismek?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kif",
+          "Fejn",
+          "Meta"
+        ]
+      }
+    },
+    {
+      "id": "jien-minn-londra",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Jien minn Londra.",
+      "means": "I'm from London.",
+      "words": [
+        [
+          "Jien",
+          "jien"
+        ],
+        [
+          "minn",
+          "minn"
+        ],
+        [
+          "Londra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "from"
+        ],
+        [
+          "London"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien hu minn Londra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "minn",
+          "lil",
+          "fuq"
+        ]
+      }
+    },
+    {
+      "id": "ommi-ghalliema",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender"
+      ],
+      "text": "Ommi għalliema.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Ommi",
+          "omm"
+        ],
+        [
+          "għalliema",
+          "għalliem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ommi għalliem."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ommi",
+          "Omm",
+          "Ommha"
+        ]
+      }
+    },
+    {
+      "id": "ghandi-oht-u-hu",
+      "topic": "people",
+      "concepts": [
+        "ghandi"
+      ],
+      "text": "Għandi oħt u ħu.",
+      "means": "I have a sister and a brother.",
+      "words": [
+        [
+          "Għandi",
+          "għand"
+        ],
+        [
+          "oħt",
+          "oħt"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "ħu",
+          "ħu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "and"
+        ],
+        [
+          "brother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien oħt u ħu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Għandi",
+          "Hemm",
+          "Jien"
+        ]
+      }
+    },
+    {
+      "id": "hija-jahdem-fl-ajruport",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present"
+      ],
+      "text": "Ħija jaħdem fl-ajruport.",
+      "means": "My brother works at the airport.",
+      "words": [
+        [
+          "Ħija",
+          "ħu"
+        ],
+        [
+          "jaħdem",
+          "ħadem"
+        ],
+        [
+          "fl-ajruport",
+          "ajruport"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "he works"
+        ],
+        [
+          "at the airport"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ħija naħdem fl-ajruport."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ħija",
+          "Ħu",
+          "Ħuha"
+        ]
+      }
+    },
+    {
+      "id": "in-nanna-toqghod-f-ghawdex",
+      "topic": "people",
+      "concepts": [
+        "article",
+        "present"
+      ],
+      "text": "In-nanna toqgħod f'Għawdex.",
+      "means": "Grandma lives in Gozo.",
+      "words": [
+        [
+          "In-nanna",
+          "nanna"
+        ],
+        [
+          "toqgħod",
+          "qagħad"
+        ],
+        [
+          "f'Għawdex"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The grandma"
+        ],
+        [
+          "she lives"
+        ],
+        [
+          "in Gozo"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il-nanna toqgħod f'Għawdex.",
+        "In-nanna noqgħod f'Għawdex."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "In-nanna",
+          "Il-nanna",
+          "L-nanna"
+        ]
+      }
+    },
+    {
+      "id": "kemm-ghandek-zmien",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ghandi"
+      ],
+      "text": "Kemm għandek żmien?",
+      "means": "How old are you?",
+      "words": [
+        [
+          "Kemm",
+          "kemm"
+        ],
+        [
+          "għandek",
+          "għand"
+        ],
+        [
+          "żmien",
+          "żmien"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "at you"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kemm int żmien?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kemm",
+          "Kif",
+          "Fejn"
+        ]
+      }
+    },
+    {
+      "id": "missieri-ma-jitkellimx",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Missieri ma jitkellimx bl-Ingliż.",
+      "means": "My dad doesn't speak English.",
+      "words": [
+        [
+          "Missieri",
+          "missier"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "jitkellimx",
+          "tkellem"
+        ],
+        [
+          "bl-Ingliż",
+          "ingliż"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My dad"
+        ],
+        [
+          "not"
+        ],
+        [
+          "he speaks not"
+        ],
+        [
+          "in the English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Missieri ma jitkellem bl-Ingliżx."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ma",
+          "mhux",
+          "le"
+        ]
+      }
+    },
+    {
+      "id": "ohti-ghandha-tifel-zghir",
+      "topic": "people",
+      "concepts": [
+        "ghandi",
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Oħti għandha tifel żgħir.",
+      "means": "My sister has a little boy.",
+      "words": [
+        [
+          "Oħti",
+          "oħt"
+        ],
+        [
+          "għandha",
+          "għand"
+        ],
+        [
+          "tifel",
+          "tifel"
+        ],
+        [
+          "żgħir",
+          "żgħir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "at her"
+        ],
+        [
+          "boy"
+        ],
+        [
+          "little",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "żgħir"
+      ],
+      "wrong": [
+        "Oħti għandha tifel żgħira."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "għandha",
+          "għandi",
+          "għandu"
+        ]
+      }
+    },
+    {
+      "id": "min-hu-dak",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "copula"
+      ],
+      "text": "Min hu dak?",
+      "means": "Who's that?",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "hu",
+          "hu"
+        ],
+        [
+          "dak",
+          "dak"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Who"
+        ],
+        [
+          "he"
+        ],
+        [
+          "that one"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min hi dak?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Min",
+          "Fejn",
+          "Kemm"
+        ]
+      }
+    },
+    {
+      "id": "id-dar-taghna-kbira",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "gender",
+        "possessive"
+      ],
+      "text": "Id-dar tagħna kbira.",
+      "means": "Our house is big.",
+      "words": [
+        [
+          "Id-dar",
+          "dar"
+        ],
+        [
+          "tagħna",
+          "tagħna"
+        ],
+        [
+          "kbira",
+          "kbir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The house"
+        ],
+        [
+          "of ours",
+          true
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tagħna"
+      ],
+      "wrong": [
+        "Il-dar tagħna kbira."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kbira",
+          "kbir",
+          "kbar"
+        ]
+      }
+    },
+    {
+      "id": "ic-cavetta-fuq-il-mejda",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "copula"
+      ],
+      "text": "Iċ-ċavetta fuq il-mejda.",
+      "means": "The key is on the table.",
+      "words": [
+        [
+          "Iċ-ċavetta",
+          "ċavetta"
+        ],
+        [
+          "fuq",
+          "fuq"
+        ],
+        [
+          "il-mejda",
+          "mejda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "on"
+        ],
+        [
+          "the table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Iċ-ċavetta hu fuq il-mejda."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Iċ-ċavetta",
+          "Il-ċavetta",
+          "L-ċavetta"
+        ]
+      }
+    },
+    {
+      "id": "hemm-halib-fil-frigg",
+      "topic": "home",
+      "concepts": [
+        "hemm",
+        "prep-article"
+      ],
+      "text": "Hemm ħalib fil-friġġ?",
+      "means": "Is there any milk in the fridge?",
+      "words": [
+        [
+          "Hemm",
+          "hemm"
+        ],
+        [
+          "ħalib",
+          "ħalib"
+        ],
+        [
+          "fil-friġġ",
+          "friġġ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hemm ħalib fl-friġġ?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hemm",
+          "Għandi",
+          "Hu"
+        ]
+      }
+    },
+    {
+      "id": "m-hemmx-hobz",
+      "topic": "home",
+      "concepts": [
+        "hemm",
+        "negation"
+      ],
+      "text": "M'hemmx ħobż.",
+      "means": "There's no bread.",
+      "words": [
+        [
+          "M'hemmx",
+          "hemm"
+        ],
+        [
+          "ħobż",
+          "ħobż"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not there not"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "M'hemm ħobżx."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "M'hemmx",
+          "M'għandix",
+          "Mhux"
+        ]
+      }
+    },
+    {
+      "id": "ommi-qed-taghmel-il-kafe",
+      "topic": "home",
+      "concepts": [
+        "qed",
+        "present"
+      ],
+      "text": "Ommi qed tagħmel il-kafè.",
+      "means": "My mom is making coffee.",
+      "words": [
+        [
+          "Ommi",
+          "omm"
+        ],
+        [
+          "qed",
+          "qed"
+        ],
+        [
+          "tagħmel",
+          "għamel"
+        ],
+        [
+          "il-kafè",
+          "kafè"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "now"
+        ],
+        [
+          "she makes"
+        ],
+        [
+          "the coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ommi qed għamlet il-kafè.",
+        "Ommi qed nagħmel il-kafè."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qed",
+          "kienet",
+          "kien"
+        ]
+      }
+    },
+    {
+      "id": "it-tfal-qed-jilaghbu",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "qed"
+      ],
+      "text": "It-tfal qed jilagħbu fil-ġnien.",
+      "means": "The kids are playing in the garden.",
+      "words": [
+        [
+          "It-tfal",
+          "tifel"
+        ],
+        [
+          "qed",
+          "qed"
+        ],
+        [
+          "jilagħbu",
+          "lagħab"
+        ],
+        [
+          "fil-ġnien",
+          "ġnien"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The children"
+        ],
+        [
+          "now"
+        ],
+        [
+          "they play"
+        ],
+        [
+          "in the garden"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "It-tfal qed lagħbu fil-ġnien."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "It-tfal",
+          "Il-tfal",
+          "L-tfal"
+        ]
+      }
+    },
+    {
+      "id": "fejn-hi-l-kamra-tal-banju",
+      "topic": "home",
+      "concepts": [
+        "copula"
+      ],
+      "chunks": [
+        "the-bathroom"
+      ],
+      "text": "Fejn hi l-kamra tal-banju?",
+      "means": "Where's the bathroom?",
+      "words": [
+        [
+          "Fejn",
+          "fejn"
+        ],
+        [
+          "hi",
+          "hi"
+        ],
+        [
+          "l-kamra"
+        ],
+        [
+          "tal-banju"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "she"
+        ],
+        [
+          "the room"
+        ],
+        [
+          "of the bath"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fejn hu l-kamra tal-banju?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hi",
+          "hu",
+          "huma"
+        ]
+      }
+    },
+    {
+      "id": "ghandna-gnien-zghir",
+      "topic": "home",
+      "concepts": [
+        "ghandi",
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Għandna ġnien żgħir.",
+      "means": "We have a small garden.",
+      "words": [
+        [
+          "Għandna",
+          "għand"
+        ],
+        [
+          "ġnien",
+          "ġnien"
+        ],
+        [
+          "żgħir",
+          "żgħir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At us"
+        ],
+        [
+          "garden"
+        ],
+        [
+          "small",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "żgħir"
+      ],
+      "wrong": [
+        "Għandna ġnien żgħira."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Għandna",
+          "Għandi",
+          "Hemm"
+        ]
+      }
+    },
+    {
+      "id": "il-frigg-vojt",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "gender"
+      ],
+      "text": "Il-friġġ vojt.",
+      "means": "The fridge is empty.",
+      "words": [
+        [
+          "Il-friġġ",
+          "friġġ"
+        ],
+        [
+          "vojt",
+          "vojt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The fridge"
+        ],
+        [
+          "empty"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il-friġġ hi vojt."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vojt",
+          "vojta",
+          "mimli"
+        ]
+      }
+    },
+    {
+      "id": "ilbierah-naddaft-il-kcina",
+      "topic": "home",
+      "concepts": [
+        "past"
+      ],
+      "text": "Ilbieraħ naddaft il-kċina.",
+      "means": "I cleaned the kitchen yesterday.",
+      "words": [
+        [
+          "Ilbieraħ",
+          "ilbieraħ"
+        ],
+        [
+          "naddaft",
+          "naddaf"
+        ],
+        [
+          "il-kċina",
+          "kċina"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I cleaned"
+        ],
+        [
+          "the kitchen"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ilbieraħ naddaf il-kċina."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "naddaft",
+          "naddaf",
+          "naddfet"
+        ]
+      }
+    },
+    {
+      "id": "kull-filghodu-nixrob-kafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Kull filgħodu nixrob kafè.",
+      "means": "I drink coffee every morning.",
+      "words": [
+        [
+          "Kull",
+          "kull"
+        ],
+        [
+          "filgħodu",
+          "filgħodu"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "kafè",
+          "kafè"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Every"
+        ],
+        [
+          "morning"
+        ],
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kull filgħodu jien xorob kafè."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nixrob",
+          "xrobt",
+          "jixrob"
+        ]
+      }
+    },
+    {
+      "id": "nixtieq-kafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "jekk-joghgbok"
+      ],
+      "text": "Nixtieq kafè, jekk jogħġbok.",
+      "means": "I'd like a coffee, please.",
+      "words": [
+        [
+          "Nixtieq",
+          "xtaq"
+        ],
+        [
+          "kafè,",
+          "kafè"
+        ],
+        [
+          "jekk"
+        ],
+        [
+          "jogħġbok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "if"
+        ],
+        [
+          "it pleases you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xtaq kafè, jekk jogħġbok."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nixtieq",
+          "Tixtieq",
+          "Jixtieq"
+        ]
+      }
+    },
+    {
+      "id": "il-pastizzi-shan",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "text": "Il-pastizzi sħan.",
+      "means": "The pastizzi are hot.",
+      "words": [
+        [
+          "Il-pastizzi",
+          "pastizz"
+        ],
+        [
+          "sħan",
+          "sħun"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The pastizzi"
+        ],
+        [
+          "hot"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il-pastizzi sħun."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sħan",
+          "sħun",
+          "sħuna"
+        ]
+      }
+    },
+    {
+      "id": "ma-nikolx-laham",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "present"
+      ],
+      "text": "Ma nikolx laħam.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "nikolx",
+          "kiel"
+        ],
+        [
+          "laħam",
+          "laħam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I eat not"
+        ],
+        [
+          "meat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma niekol laħamx."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nikolx",
+          "jikolx",
+          "kiltx"
+        ]
+      }
+    },
+    {
+      "id": "dan-ir-ristorant-tajjeb",
+      "topic": "food",
+      "concepts": [
+        "article"
+      ],
+      "text": "Dan ir-ristorant tajjeb ħafna.",
+      "means": "This restaurant is very good.",
+      "words": [
+        [
+          "Dan",
+          "dan"
+        ],
+        [
+          "ir-ristorant",
+          "ristorant"
+        ],
+        [
+          "tajjeb",
+          "tajjeb"
+        ],
+        [
+          "ħafna",
+          "ħafna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "the restaurant"
+        ],
+        [
+          "good"
+        ],
+        [
+          "very",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ħafna"
+      ],
+      "wrong": [
+        "Dan il-ristorant tajjeb ħafna."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ir-ristorant",
+          "il-ristorant",
+          "l-ristorant"
+        ]
+      }
+    },
+    {
+      "id": "irrid-nixrob-ftit-ilma",
+      "topic": "food",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Irrid nixrob ftit ilma.",
+      "means": "I want to drink some water.",
+      "words": [
+        [
+          "Irrid",
+          "ried"
+        ],
+        [
+          "nixrob",
+          "xorob"
+        ],
+        [
+          "ftit",
+          "ftit"
+        ],
+        [
+          "ilma",
+          "ilma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "I drink"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Irrid xorob ftit ilma."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nixrob",
+          "tixrob",
+          "xorob"
+        ]
+      }
+    },
+    {
+      "id": "ghandi-l-guh",
+      "topic": "food",
+      "concepts": [
+        "ghandi"
+      ],
+      "text": "Għandi l-ġuħ.",
+      "means": "I'm hungry.",
+      "words": [
+        [
+          "Għandi",
+          "għand"
+        ],
+        [
+          "l-ġuħ",
+          "ġuħ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "the hunger"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jien il-ġuħ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Għandi",
+          "Jien",
+          "Hemm"
+        ]
+      }
+    },
+    {
+      "id": "ilbierah-kilna-fir-ristorant",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "prep-article"
+      ],
+      "text": "Ilbieraħ kilna fir-ristorant.",
+      "means": "We ate at the restaurant yesterday.",
+      "words": [
+        [
+          "Ilbieraħ",
+          "ilbieraħ"
+        ],
+        [
+          "kilna",
+          "kiel"
+        ],
+        [
+          "fir-ristorant",
+          "ristorant"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "in the restaurant"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ilbieraħ kilna fil-ristorant."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kilna",
+          "kielu",
+          "kilt"
+        ]
+      }
+    },
+    {
+      "id": "kemm-jiswa-dan",
+      "topic": "food",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it"
+      ],
+      "text": "Kemm jiswa dan?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Kemm"
+        ],
+        [
+          "jiswa"
+        ],
+        [
+          "dan",
+          "dan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "it's worth"
+        ],
+        [
+          "this",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dan"
+      ],
+      "wrong": [
+        "Kif jiswa dan?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kemm",
+          "Kif",
+          "Min"
+        ]
+      }
+    },
+    {
+      "id": "il-kafe-shun-wisq",
+      "topic": "food",
+      "concepts": [
+        "copula",
+        "gender"
+      ],
+      "text": "Il-kafè sħun wisq.",
+      "means": "The coffee is too hot.",
+      "words": [
+        [
+          "Il-kafè",
+          "kafè"
+        ],
+        [
+          "sħun",
+          "sħun"
+        ],
+        [
+          "wisq",
+          "wisq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The coffee"
+        ],
+        [
+          "hot"
+        ],
+        [
+          "too",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "wisq"
+      ],
+      "wrong": [
+        "Il-kafè hi sħun wisq."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sħun",
+          "sħuna",
+          "sħan"
+        ]
+      }
+    },
+    {
+      "id": "illejla-se-nsajjar",
+      "topic": "food",
+      "concepts": [
+        "se-future"
+      ],
+      "text": "Illejla se nsajjar l-għaġin.",
+      "means": "I'm going to cook pasta tonight.",
+      "words": [
+        [
+          "Illejla",
+          "illejla"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "nsajjar",
+          "sajjar"
+        ],
+        [
+          "l-għaġin",
+          "għaġin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tonight"
+        ],
+        [
+          "going to"
+        ],
+        [
+          "I cook"
+        ],
+        [
+          "the pasta"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Illejla se sajjar l-għaġin."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "se",
+          "kont",
+          "kien"
+        ]
+      }
+    },
+    {
+      "id": "il-karozza-tieghi-hamra",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "gender"
+      ],
+      "text": "Il-karozza tiegħi ħamra.",
+      "means": "My car is red.",
+      "words": [
+        [
+          "Il-karozza",
+          "karozza"
+        ],
+        [
+          "tiegħi",
+          "tiegħi"
+        ],
+        [
+          "ħamra",
+          "aħmar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The car"
+        ],
+        [
+          "of mine",
+          true
+        ],
+        [
+          "red"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tiegħi"
+      ],
+      "wrong": [
+        "Il-karozza tiegħi aħmar."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ħamra",
+          "aħmar",
+          "ħomor"
+        ]
+      }
+    },
+    {
+      "id": "skuzani-fejn-hu-s-suq",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "copula"
+      ],
+      "text": "Skużani, fejn hu s-suq?",
+      "means": "Excuse me, where's the market?",
+      "words": [
+        [
+          "Skużani,",
+          "skuża"
+        ],
+        [
+          "fejn",
+          "fejn"
+        ],
+        [
+          "hu",
+          "hu"
+        ],
+        [
+          "s-suq",
+          "suq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he"
+        ],
+        [
+          "the market"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Skużani, fejn hi s-suq?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "s-suq",
+          "l-suq",
+          "il-suq"
+        ]
+      }
+    },
+    {
+      "id": "il-bus-wasal-tard",
+      "topic": "out",
+      "concepts": [
+        "past"
+      ],
+      "text": "Il-bus wasal tard.",
+      "means": "The bus arrived late.",
+      "words": [
+        [
+          "Il-bus",
+          "bus"
+        ],
+        [
+          "wasal",
+          "wasal"
+        ],
+        [
+          "tard",
+          "tard"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The bus"
+        ],
+        [
+          "arrived"
+        ],
+        [
+          "late"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il-bus wasalt tard."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "wasal",
+          "jasal",
+          "wasalt"
+        ]
+      }
+    },
+    {
+      "id": "ilbierah-mort-il-belt",
+      "topic": "out",
+      "concepts": [
+        "past"
+      ],
+      "text": "Ilbieraħ mort il-Belt.",
+      "means": "I went to Valletta yesterday.",
+      "words": [
+        [
+          "Ilbieraħ",
+          "ilbieraħ"
+        ],
+        [
+          "mort",
+          "mar"
+        ],
+        [
+          "il-Belt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I went"
+        ],
+        [
+          "the City"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ilbieraħ mar il-Belt."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mort",
+          "mar",
+          "marret"
+        ]
+      }
+    },
+    {
+      "id": "titkellem-bl-ingliz",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "prep-article"
+      ],
+      "text": "Titkellem bl-Ingliż?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Titkellem",
+          "tkellem"
+        ],
+        [
+          "bl-Ingliż",
+          "ingliż"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "in the English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Titkellem bil-Ingliż?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Titkellem",
+          "Nitkellem",
+          "Jitkellem"
+        ]
+      }
+    },
+    {
+      "id": "il-vapur-se-jitlaq",
+      "topic": "out",
+      "concepts": [
+        "se-future"
+      ],
+      "text": "Il-vapur se jitlaq fl-għaxra.",
+      "means": "The ferry is going to leave at ten.",
+      "words": [
+        [
+          "Il-vapur",
+          "vapur"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "jitlaq",
+          "telaq"
+        ],
+        [
+          "fl-għaxra",
+          "għaxra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The ferry"
+        ],
+        [
+          "going to"
+        ],
+        [
+          "it leaves"
+        ],
+        [
+          "at the ten"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il-vapur se telaq fl-għaxra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "se",
+          "kien",
+          "kont"
+        ]
+      }
+    },
+    {
+      "id": "hemm-hafna-nies-fil-bajja",
+      "topic": "out",
+      "concepts": [
+        "hemm",
+        "prep-article"
+      ],
+      "text": "Hemm ħafna nies fil-bajja.",
+      "means": "There are a lot of people at the beach.",
+      "words": [
+        [
+          "Hemm",
+          "hemm"
+        ],
+        [
+          "ħafna",
+          "ħafna"
+        ],
+        [
+          "nies",
+          "nies"
+        ],
+        [
+          "fil-bajja",
+          "bajja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "a lot of"
+        ],
+        [
+          "people"
+        ],
+        [
+          "at the beach"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hemm ħafna nies fl-bajja."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hemm",
+          "Għandi",
+          "Hu"
+        ]
+      }
+    },
+    {
+      "id": "trid-tigi-ghall-festa",
+      "topic": "out",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Trid tiġi għall-festa?",
+      "means": "Do you want to come to the party?",
+      "words": [
+        [
+          "Trid",
+          "ried"
+        ],
+        [
+          "tiġi",
+          "ġie"
+        ],
+        [
+          "għall-festa",
+          "festa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You want"
+        ],
+        [
+          "you come"
+        ],
+        [
+          "to the party"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Trid ġie għall-festa?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tiġi",
+          "niġi",
+          "ġie"
+        ]
+      }
+    },
+    {
+      "id": "xtrajna-karozza-gdida",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Xtrajna karozza ġdida.",
+      "means": "We bought a new car.",
+      "words": [
+        [
+          "Xtrajna",
+          "xtara"
+        ],
+        [
+          "karozza",
+          "karozza"
+        ],
+        [
+          "ġdida",
+          "ġdid"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We bought"
+        ],
+        [
+          "car"
+        ],
+        [
+          "new",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ġdida"
+      ],
+      "wrong": [
+        "Xtrajna karozza ġdid."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Xtrajna",
+          "Nixtru",
+          "Xtraw"
+        ]
+      }
+    },
+    {
+      "id": "ghada-ghandi-nahdem",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Għada għandi naħdem.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Għada",
+          "għada"
+        ],
+        [
+          "għandi",
+          "għand"
+        ],
+        [
+          "naħdem",
+          "ħadem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "at me"
+        ],
+        [
+          "I work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Għada għandi ħadem."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "naħdem",
+          "ħdimt",
+          "jaħdem"
+        ]
+      }
+    },
+    {
+      "id": "ghada-se-taghmel-ix-xita",
+      "topic": "plans",
+      "concepts": [
+        "se-future"
+      ],
+      "text": "Għada se tagħmel ix-xita.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Għada",
+          "għada"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "tagħmel",
+          "għamel"
+        ],
+        [
+          "ix-xita",
+          "xita"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "going to"
+        ],
+        [
+          "she makes"
+        ],
+        [
+          "the rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Għada se għamlet ix-xita."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "se",
+          "qed",
+          "kienet"
+        ]
+      }
+    },
+    {
+      "id": "illum-qed-jaghmel-il-bard",
+      "topic": "plans",
+      "concepts": [
+        "qed"
+      ],
+      "text": "Illum qed jagħmel il-bard.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Illum",
+          "illum"
+        ],
+        [
+          "qed",
+          "qed"
+        ],
+        [
+          "jagħmel",
+          "għamel"
+        ],
+        [
+          "il-bard",
+          "bard"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "now"
+        ],
+        [
+          "it makes"
+        ],
+        [
+          "the cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Illum qed għamel il-bard."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qed",
+          "se",
+          "kien"
+        ]
+      }
+    },
+    {
+      "id": "fejn-se-tmur-ghada",
+      "topic": "plans",
+      "concepts": [
+        "se-future"
+      ],
+      "text": "Fejn se tmur għada?",
+      "means": "Where are you going tomorrow?",
+      "words": [
+        [
+          "Fejn",
+          "fejn"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "tmur",
+          "mar"
+        ],
+        [
+          "għada",
+          "għada"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "going to"
+        ],
+        [
+          "you go"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fejn se mort għada?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tmur",
+          "mort",
+          "mar"
+        ]
+      }
+    },
+    {
+      "id": "irrid-nitghallem-il-malti",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Irrid nitgħallem il-Malti.",
+      "means": "I want to learn Maltese.",
+      "words": [
+        [
+          "Irrid",
+          "ried"
+        ],
+        [
+          "nitgħallem",
+          "tgħallem"
+        ],
+        [
+          "il-Malti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "I learn"
+        ],
+        [
+          "the Maltese"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Irrid tgħallem il-Malti."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nitgħallem",
+          "titgħallem",
+          "tgħallem"
+        ]
+      }
+    },
+    {
+      "id": "il-gimgha-d-diehla-se-nzur",
+      "topic": "plans",
+      "concepts": [
+        "se-future",
+        "possessive",
+        "adjective-after"
+      ],
+      "text": "Il-ġimgħa d-dieħla se nżur lil ommi.",
+      "means": "I'm going to visit my mom next week.",
+      "words": [
+        [
+          "Il-ġimgħa",
+          "ġimgħa"
+        ],
+        [
+          "d-dieħla",
+          "dieħel"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "nżur",
+          "żar"
+        ],
+        [
+          "lil",
+          "lil"
+        ],
+        [
+          "ommi",
+          "omm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The week"
+        ],
+        [
+          "the coming",
+          true
+        ],
+        [
+          "going to"
+        ],
+        [
+          "I visit"
+        ],
+        [
+          "to"
+        ],
+        [
+          "my mom"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "d-dieħla"
+      ],
+      "wrong": [
+        "Il-ġimgħa d-dieħla se żar lil ommi."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ommi",
+          "omm",
+          "ommha"
+        ]
+      }
+    },
+    {
+      "id": "qed-nitghallem-il-malti",
+      "topic": "plans",
+      "concepts": [
+        "qed",
+        "present"
+      ],
+      "text": "Qed nitgħallem il-Malti.",
+      "means": "I'm learning Maltese.",
+      "words": [
+        [
+          "Qed",
+          "qed"
+        ],
+        [
+          "nitgħallem",
+          "tgħallem"
+        ],
+        [
+          "il-Malti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I learn"
+        ],
+        [
+          "the Maltese"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Qed tgħallimt il-Malti."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nitgħallem",
+          "jitgħallem",
+          "titgħallem"
+        ]
+      }
+    },
+    {
+      "id": "ma-rajtx-il-film",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "past"
+      ],
+      "text": "Ma rajtx il-film.",
+      "means": "I didn't see the movie.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "rajtx",
+          "ra"
+        ],
+        [
+          "il-film",
+          "film"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I saw not"
+        ],
+        [
+          "the movie"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma rajt il-filmx."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "rajtx",
+          "narax",
+          "rax"
+        ]
+      }
+    },
+    {
+      "id": "m-ghandix-hin-illum",
+      "topic": "plans",
+      "concepts": [
+        "ghandi",
+        "negation"
+      ],
+      "text": "M'għandix ħin illum.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "M'għandix",
+          "għand"
+        ],
+        [
+          "ħin",
+          "ħin"
+        ],
+        [
+          "illum",
+          "illum"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not at me not"
+        ],
+        [
+          "time"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma għandi ħinx illum."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "M'għandix",
+          "M'għandux",
+          "M'għandhiex"
+        ]
+      }
+    },
+    {
+      "id": "tista-tghinni",
+      "topic": "out",
+      "concepts": [
+        "modal"
+      ],
+      "chunks": [
+        "jekk-joghgbok"
+      ],
+      "text": "Tista' tgħinni, jekk jogħġbok?",
+      "means": "Can you help me, please?",
+      "words": [
+        [
+          "Tista'",
+          "seta'"
+        ],
+        [
+          "tgħinni,",
+          "għen"
+        ],
+        [
+          "jekk",
+          "jekk"
+        ],
+        [
+          "jogħġbok",
+          "għoġob"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You can"
+        ],
+        [
+          "you help me"
+        ],
+        [
+          "if"
+        ],
+        [
+          "it pleases you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tista' għenni, jekk jogħġbok?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tista'",
+          "Nista'",
+          "Seta'"
+        ]
+      }
+    },
+    {
+      "id": "ma-nistax-nigi-ghada",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "modal"
+      ],
+      "text": "Ma nistax niġi għada.",
+      "means": "I can't come tomorrow.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "nistax",
+          "seta'"
+        ],
+        [
+          "niġi",
+          "ġie"
+        ],
+        [
+          "għada",
+          "għada"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can not"
+        ],
+        [
+          "I come"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma nistax ġie għada."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nistax",
+          "nista'",
+          "jistax"
+        ]
+      }
+    },
+    {
+      "id": "qed-nisma-l-muzika",
+      "topic": "home",
+      "concepts": [
+        "qed"
+      ],
+      "text": "Qed nisma' l-mużika.",
+      "means": "I'm listening to music.",
+      "words": [
+        [
+          "Qed",
+          "qed"
+        ],
+        [
+          "nisma'",
+          "sema'"
+        ],
+        [
+          "l-mużika",
+          "mużika"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I listen"
+        ],
+        [
+          "the music"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Qed smajt il-mużika."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Qed",
+          "Se",
+          "Kien"
+        ]
+      }
+    },
+    {
+      "id": "din-hi-l-karozza-ta-missieri",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "copula"
+      ],
+      "text": "Din hi l-karozza ta' missieri.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Din",
+          "din"
+        ],
+        [
+          "hi",
+          "hi"
+        ],
+        [
+          "l-karozza",
+          "karozza"
+        ],
+        [
+          "ta'",
+          "ta'"
+        ],
+        [
+          "missieri",
+          "missier"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "she"
+        ],
+        [
+          "the car"
+        ],
+        [
+          "of",
+          true
+        ],
+        [
+          "my dad",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ta'",
+        "missieri"
+      ],
+      "wrong": [
+        "Din hu l-karozza ta' missieri."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ta'",
+          "tiegħi",
+          "tal-"
+        ]
+      }
+    },
+    {
+      "id": "smajt-l-ahbar",
+      "topic": "plans",
+      "concepts": [
+        "past",
+        "article"
+      ],
+      "text": "Smajt l-aħbar?",
+      "means": "Did you hear the news?",
+      "words": [
+        [
+          "Smajt",
+          "sema'"
+        ],
+        [
+          "l-aħbar",
+          "aħbar"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You heard"
+        ],
+        [
+          "the news"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Smajt il-aħbar?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Smajt",
+          "Sema'",
+          "Tisma'"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kafè",
+          "forms": [
+            "kafè"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "te",
+          "forms": [
+            "te"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "ilma",
+          "forms": [
+            "ilma"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "jien",
+          "forms": [
+            "jien"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "xorob",
+          "forms": [
+            "nixrob"
+          ],
+          "picture": "drink",
+          "means": "nixrob = I drink"
+        },
+        {
+          "lemma": "u",
+          "forms": [
+            "u"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The present marks who with a letter in front of the verb and, in the plural, -u or -w at its end: nikteb (I write), tikteb (you write), jikteb (he writes), niktbu (we write), naraw (we see)."
+      },
+      "items": [
+        "nixrob-kafe",
+        "jien-nixrob-te",
+        "jien-nixrob-ilma",
+        "jien-nixrob-kafe-u-te",
+        "jien-nixrob-te-u-ilma",
+        "jien-nixrob-ilma-u-kafe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "ħalib",
+          "forms": [
+            "ħalib"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        },
+        {
+          "lemma": "xtaq",
+          "forms": [
+            "nixtieq"
+          ],
+          "means": "nixtieq = I would like"
+        }
+      ],
+      "phrases": [
+        "good-morning",
+        "jekk-joghgbok",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "bongu-kafe-jekk-jog-gbok",
+        "te-u-ilma-jekk-jog-gbok",
+        "kafe-grazzi",
+        "bongu-te-jekk-jog-gbok",
+        "jien-nixrob-alib",
+        "nixtieq-kafe"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "tajjeb",
+          "forms": [
+            "tajjeb"
+          ],
+          "picture": "good",
+          "means": "good; fine"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "copula",
+        "line": "Maltese often needs no word for is, or uses hu (he) and hi (she), matching the thing described: Il-kafè sħun (the coffee hot), Fejn hi d-dar?"
+      },
+      "items": [
+        "iva-jekk-jog-gbok",
+        "le-grazzi",
+        "bongu-kif-int",
+        "jien-tajjeb-grazzi",
+        "iva-grazzi-sa-a",
+        "le-grazzi-sa-a"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "int",
+          "forms": [
+            "int"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "għalliem",
+          "forms": [
+            "għalliem"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "student",
+          "forms": [
+            "student"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "jien",
+          "forms": [
+            "m'iniex"
+          ],
+          "means": "m'iniex = I am not"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "jien-g-alliem",
+        "int-student",
+        "kif-jismek",
+        "bongu-g-andi-pjacir",
+        "int-g-alliem",
+        "m-iniex-g-alliem"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "omm",
+          "forms": [
+            "ommi"
+          ],
+          "picture": "mother",
+          "means": "ommi = my mother"
+        },
+        {
+          "lemma": "missier",
+          "forms": [
+            "missieri"
+          ],
+          "picture": "father",
+          "means": "missieri = my father"
+        },
+        {
+          "lemma": "ħu",
+          "forms": [
+            "ħija"
+          ],
+          "picture": "brother",
+          "means": "ħija = my brother"
+        },
+        {
+          "lemma": "oħt",
+          "forms": [
+            "oħti"
+          ],
+          "picture": "sister",
+          "means": "oħti = my sister"
+        },
+        {
+          "lemma": "tiegħi",
+          "forms": [
+            "tiegħi"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "dan",
+          "forms": [
+            "dan"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "din",
+          "forms": [
+            "din"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "għalliem",
+          "forms": [
+            "għalliema"
+          ],
+          "means": "għalliema = female teacher"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "Close family takes an ending (omm → ommi: my mom, ħu → ħija: my brother); other things take tiegħi (of mine) after them: il-karozza tiegħi (the car of mine); of is ta': il-karozza ta' missieri (the car of my-dad)."
+      },
+      "items": [
+        "dan-missieri",
+        "din-ommi",
+        "missieri-g-alliem",
+        "ija-student",
+        "din-o-ti",
+        "ommi-ghalliema",
+        "int-student-tieg-i"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "għand",
+          "forms": [
+            "għandi",
+            "għandek",
+            "m'għandix"
+          ],
+          "means": "għandi = I have; għandek = you have; m'għandix = I do not have"
+        },
+        {
+          "lemma": "ħabib",
+          "forms": [
+            "ħabib"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "tabib",
+          "forms": [
+            "tabiba"
+          ],
+          "picture": "doctor",
+          "means": "tabiba = female doctor"
+        },
+        {
+          "lemma": "ċavetta",
+          "forms": [
+            "ċavetta"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "ktieb",
+          "forms": [
+            "ktieb"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "oħt",
+          "forms": [
+            "oħt"
+          ],
+          "means": "sister"
+        },
+        {
+          "lemma": "ħu",
+          "forms": [
+            "ħu"
+          ],
+          "means": "brother"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "g-andi-telefon",
+        "g-andek-cavetta",
+        "ghandi-oht-u-hu",
+        "m-g-andix-ktieb",
+        "o-ti-tabiba",
+        "int-abib-tajjeb"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "fejn",
+          "forms": [
+            "fejn"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "hawn",
+          "forms": [
+            "hawn"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "hemm",
+          "forms": [
+            "hemm"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "hi",
+          "forms": [
+            "hi"
+          ],
+          "means": "she; it"
+        },
+        {
+          "lemma": "ċavetta",
+          "forms": [
+            "iċ-ċavetta",
+            "ċ-ċavetta"
+          ],
+          "means": "iċ-ċavetta = the key; ċ-ċavetta = the key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "it-telefon"
+          ],
+          "means": "it-telefon = the phone"
+        }
+      ],
+      "phrases": [
+        "excuse-me",
+        "the-bathroom"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes-or-no question keeps a statement's order (Titkellem bl-Ingliż?"
+      },
+      "items": [
+        "fejn-hi-ommi",
+        "o-ti-hawn",
+        "ic-cavetta-hemm",
+        "it-telefon-tieg-i-hawn",
+        "fejn-hi-l-kamra-tal-banju",
+        "skuzani-fejn-hi-c-cavetta-tieg-i"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "wieħed",
+          "forms": [
+            "wieħed"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "tnejn",
+          "forms": [
+            "żewġ"
+          ],
+          "picture": "two",
+          "means": "żewġ = two"
+        },
+        {
+          "lemma": "tlieta",
+          "forms": [
+            "tliet"
+          ],
+          "picture": "three",
+          "means": "tliet = three"
+        },
+        {
+          "lemma": "flus",
+          "forms": [
+            "flus"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "kafè",
+          "forms": [
+            "kafejiet"
+          ],
+          "means": "kafejiet = coffees"
+        },
+        {
+          "lemma": "ktieb",
+          "forms": [
+            "kotba"
+          ],
+          "means": "kotba = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "m-g-andix-flus",
+        "ktieb-wie-ed-jekk-jog-gbok",
+        "zewg-kafejiet-jekk-jog-gbok",
+        "g-andi-tliet-kotba",
+        "bongu-il-kont-jekk-jog-gbok",
+        "skuzani-kemm-jiswa",
+        "kemm-jiswa-dan"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "tkellem",
+          "forms": [
+            "titkellem",
+            "nitkellem",
+            "jitkellimx"
+          ],
+          "means": "titkellem = you speak; nitkellem = I speak; jitkellimx = he does not speak"
+        },
+        {
+          "lemma": "ingliż",
+          "forms": [
+            "bl-Ingliż"
+          ],
+          "means": "bl-Ingliż = in English"
+        },
+        {
+          "lemma": "malti",
+          "forms": [
+            "bil-Malti"
+          ],
+          "means": "bil-Malti = in Maltese"
+        },
+        {
+          "lemma": "fehem",
+          "forms": [
+            "nifhimx",
+            "tifhem"
+          ],
+          "means": "nifhimx = I do not understand; tifhem = you understand"
+        },
+        {
+          "lemma": "ftit",
+          "forms": [
+            "ftit"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "ried",
+          "forms": [
+            "irrid"
+          ],
+          "means": "irrid = I want"
+        },
+        {
+          "lemma": "ma",
+          "forms": [
+            "ma"
+          ],
+          "means": "not"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "negation",
+        "line": "Not wraps the verb, with ma before it (which may shorten to m' before a vowel or a silent għ or h) and -x on its end: Ma nafx (not I-know-not), Ma nikolx laħam (not I-eat-not meat), M'għandix ħin (not-at-me-not time)."
+      },
+      "items": [
+        "titkellem-bl-ingliz",
+        "nitkellem-ftit-bil-malti",
+        "ma-nifhimx",
+        "int-tifhem",
+        "irrid-kafe",
+        "irrid-ilma-jekk-jog-gbok",
+        "irrid-nixrob-ftit-ilma",
+        "missieri-ma-jitkellimx"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "dar",
+          "forms": [
+            "f'dar",
+            "id-dar",
+            "fid-dar"
+          ],
+          "picture": "house",
+          "means": "f'dar = in a house; id-dar = the house; fid-dar = in the house"
+        },
+        {
+          "lemma": "kamra",
+          "forms": [
+            "il-kamra"
+          ],
+          "picture": "room",
+          "means": "il-kamra = the room"
+        },
+        {
+          "lemma": "kbir",
+          "forms": [
+            "kbira"
+          ],
+          "picture": "big",
+          "means": "kbira = big"
+        },
+        {
+          "lemma": "żgħir",
+          "forms": [
+            "żgħira"
+          ],
+          "picture": "small",
+          "means": "żgħira = small"
+        },
+        {
+          "lemma": "qagħad",
+          "forms": [
+            "toqgħod",
+            "noqgħod"
+          ],
+          "means": "toqgħod = you live; she lives; noqgħod = I live"
+        },
+        {
+          "lemma": "banju",
+          "forms": [
+            "tal-banju"
+          ],
+          "means": "tal-banju = of the bath"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ommi-toqg-od-hawn",
+        "il-kamra-tieg-i-zg-ira",
+        "noqg-od-f-dar-zg-ira",
+        "fejn-toqg-od",
+        "din-id-dar-kbira",
+        "il-kamra-tal-banju-fid-dar"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "mar",
+          "forms": [
+            "immur",
+            "sejjer",
+            "tmur"
+          ],
+          "means": "immur = I go; sejjer = going; tmur = she goes"
+        },
+        {
+          "lemma": "skola",
+          "forms": [
+            "l-iskola"
+          ],
+          "picture": "school",
+          "means": "l-iskola = to school"
+        },
+        {
+          "lemma": "belt",
+          "forms": [
+            "il-belt"
+          ],
+          "picture": "city",
+          "means": "il-belt = to the city"
+        },
+        {
+          "lemma": "stazzjon",
+          "forms": [
+            "l-istazzjon"
+          ],
+          "means": "l-istazzjon = the station"
+        },
+        {
+          "lemma": "karozza",
+          "forms": [
+            "karozza",
+            "il-karozza"
+          ],
+          "picture": "car",
+          "means": "karozza = car; il-karozza = the car"
+        },
+        {
+          "lemma": "hu",
+          "forms": [
+            "hu"
+          ],
+          "means": "he; it"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "A noun is masculine or feminine, often -a for feminine, and its describing words match it, in the plural too: tifel twil (boy tall), tifla twila (girl tall), tfal twal (children tall)."
+      },
+      "items": [
+        "g-andi-karozza",
+        "din-il-karozza-zg-ira",
+        "immur-l-iskola",
+        "fejn-sejjer",
+        "skuzani-fejn-hu-l-istazzjon",
+        "ommi-tmur-il-belt"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "illum",
+          "forms": [
+            "illum"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "għada",
+          "forms": [
+            "għada"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "issa",
+          "forms": [
+            "issa"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "ħadem",
+          "forms": [
+            "naħdem"
+          ],
+          "picture": "work",
+          "means": "naħdem = I work"
+        },
+        {
+          "lemma": "seta",
+          "forms": [
+            "nistax"
+          ],
+          "means": "nistax = I cannot"
+        },
+        {
+          "lemma": "mar",
+          "forms": [
+            "mmur"
+          ],
+          "means": "mmur = I go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "na-dem-illum",
+        "g-andi-mmur-issa",
+        "g-ada-mmur-il-belt",
+        "grazzi-narak-g-ada",
+        "ma-nistax-immur-illum",
+        "ghada-ghandi-nahdem"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

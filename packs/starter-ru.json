@@ -1,0 +1,7312 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-ru",
+  "name": "Starter: Russian",
+  "about": "Russian word order and cases in real, everyday sentences.",
+  "language": "ru",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "кофе": "coffee",
+    "чай": "tea",
+    "вода": "water",
+    "я": "I",
+    "пить": "to drink",
+    "и": "and",
+    "один": "one",
+    "молоко": "milk",
+    "нет": "there isn't; no",
+    "хорошо": "well, good",
+    "хороший": "good, nice",
+    "ты": "you",
+    "не": "not",
+    "учитель": "teacher",
+    "студент": "student",
+    "мама": "mom",
+    "папа": "dad",
+    "брат": "brother",
+    "сестра": "sister",
+    "мой": "my",
+    "этот": "this; these",
+    "быть": "to be (есть: there is)",
+    "у": "at",
+    "друг": "friend",
+    "врач": "doctor",
+    "ключ": "key",
+    "телефон": "phone",
+    "книга": "book",
+    "где": "where",
+    "здесь": "here",
+    "там": "there",
+    "туалет": "bathroom, toilet",
+    "два": "two",
+    "три": "three",
+    "деньги": "money",
+    "говорить": "to speak, to say",
+    "по-английски": "in English",
+    "русский": "Russian",
+    "понимать": "to understand",
+    "немного": "a little",
+    "хотеть": "to want",
+    "по-русски": "in Russian",
+    "дом": "house",
+    "комната": "room",
+    "большой": "big",
+    "маленький": "small",
+    "жить": "to live",
+    "в": "in",
+    "идти": "to go or come on foot; to leave",
+    "школа": "school",
+    "город": "city",
+    "вокзал": "train station",
+    "машина": "car",
+    "куда": "where to",
+    "сегодня": "today",
+    "завтра": "tomorrow",
+    "сейчас": "now",
+    "работать": "to work",
+    "должен": "must, have to",
+    "мочь": "can, to be able to",
+    "привет": "hi",
+    "дело": "matter, thing (как дела: how are things)",
+    "звать": "to call (меня зовут: my name is)",
+    "знать": "to know",
+    "нравиться": "to appeal to, to please (мне нравится: I like it)",
+    "фильм": "movie",
+    "квартира": "apartment",
+    "стол": "table",
+    "лежать": "to lie (be lying somewhere)",
+    "холодильник": "fridge",
+    "закрыть": "to close (and be done)",
+    "окно": "window",
+    "балкон": "balcony",
+    "приходить": "to come, to arrive",
+    "домой": "home (going there)",
+    "готовить": "to cook",
+    "ужин": "dinner",
+    "дверь": "door",
+    "пожалуйста": "please",
+    "сюда": "here (coming here)",
+    "сахар": "sugar",
+    "время": "time",
+    "можно": "it's possible, it's allowed; may, can",
+    "чашка": "cup",
+    "съесть": "to eat (up)",
+    "что-нибудь": "something, anything",
+    "сладкий": "sweet",
+    "вчера": "yesterday",
+    "есть": "to eat",
+    "пицца": "pizza",
+    "очень": "very",
+    "принести": "to bring",
+    "счёт": "check, bill",
+    "любить": "to love, to like",
+    "магазин": "store, shop",
+    "хлеб": "bread",
+    "ехать": "to go (by car, bus or train)",
+    "работа": "work, job",
+    "автобус": "bus",
+    "купить": "to buy",
+    "новый": "new",
+    "куртка": "jacket",
+    "поезд": "train",
+    "опоздать": "to be late",
+    "минута": "minute",
+    "никогда": "never",
+    "ботинок": "shoe, boot",
+    "слишком": "too",
+    "устать": "to get tired (устал: is tired)",
+    "взять": "to take",
+    "такси": "taxi",
+    "ждать": "to wait for",
+    "бабушка": "grandma",
+    "суббота": "Saturday",
+    "дождь": "rain",
+    "позвонить": "to call, to phone",
+    "уже": "already, now",
+    "пора": "it's time",
+    "пойти": "to set off; to go (one trip)",
+    "кино": "movies",
+    "пляж": "beach",
+    "учить": "to learn, to study",
+    "язык": "language",
+    "год": "year",
+    "делать": "to do, to make",
+    "выходной": "day off (plural выходные: the weekend)",
+    "холодно": "cold (it's cold)",
+    "дать": "to give",
+    "надеяться": "to hope",
+    "погода": "weather"
+  },
+  "chunks": {
+    "как-дела": {
+      "text": "Как дела?",
+      "en": "How are you?",
+      "about": "A friendly greeting: literally, how things? Answer with Хорошо, спасибо (fine, thanks)."
+    },
+    "как-тебя-зовут": {
+      "text": "Как тебя зовут?",
+      "en": "What's your name?",
+      "about": "Literally, how do they call you? Answer with Меня зовут and your name."
+    },
+    "извините": {
+      "text": "Извините",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention, or to say sorry."
+    },
+    "дай-мне-знать": {
+      "text": "Дай мне знать!",
+      "en": "Let me know!",
+      "about": "A fixed request: tell me, keep me posted."
+    },
+    "у-меня-есть": {
+      "text": "у меня есть",
+      "en": "I have",
+      "about": "Literally, at me there is. Есть is often left out when what matters is what something is like, not whether it's there: У меня большая комната."
+    },
+    "hi": {
+      "text": "Привет",
+      "en": "hi"
+    },
+    "please": {
+      "text": "Пожалуйста",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "Спасибо",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "До свидания",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Да",
+      "en": "yes"
+    },
+    "nice-to-meet-you": {
+      "text": "Приятно познакомиться",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Сколько это стоит",
+      "en": "how much is it?"
+    },
+    "please-bring-the-check": {
+      "text": "Принесите, пожалуйста, счёт",
+      "en": "please bring the check"
+    },
+    "see-you-tomorrow": {
+      "text": "До завтра",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "item",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Пью кофе.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Пью",
+          "пить"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Пью кофею.",
+        "Пью кофем."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Пью",
+          "Пить",
+          "Пьёт"
+        ]
+      }
+    },
+    {
+      "id": "item-2",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Пью воду.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Пью",
+          "пить"
+        ],
+        [
+          "воду",
+          "вода"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Пью вода.",
+        "Пью водой."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "воду",
+          "вода",
+          "водой"
+        ]
+      }
+    },
+    {
+      "id": "item-3",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Я пью воду и чай.",
+      "means": "I drink water and tea.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "пью",
+          "пить"
+        ],
+        [
+          "воду",
+          "вода"
+        ],
+        [
+          "и",
+          "и"
+        ],
+        [
+          "чай",
+          "чай"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я пью вода и чай.",
+        "Я пьёшь воду и чай."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "воду",
+          "вода",
+          "водой"
+        ]
+      }
+    },
+    {
+      "id": "item-4",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Я пью чай и кофе.",
+      "means": "I drink tea and coffee.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "пью",
+          "пить"
+        ],
+        [
+          "чай",
+          "чай"
+        ],
+        [
+          "и",
+          "и"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я пьёт чай и кофе.",
+        "Я пьёшь чай и кофе."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "пью",
+          "пьёт",
+          "пьёшь"
+        ]
+      }
+    },
+    {
+      "id": "item-5",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Пью кофе и воду.",
+      "means": "I drink coffee and water.",
+      "words": [
+        [
+          "Пью",
+          "пить"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "и",
+          "и"
+        ],
+        [
+          "воду",
+          "вода"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Пью кофе и вода.",
+        "Пью кофе и водой."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "воду",
+          "вода",
+          "водой"
+        ]
+      }
+    },
+    {
+      "id": "item-6",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Я пью воду и кофе.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "пью",
+          "пить"
+        ],
+        [
+          "воду",
+          "вода"
+        ],
+        [
+          "и",
+          "и"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я пью вода и кофе.",
+        "Я пьёт воду и кофе."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "воду",
+          "вода",
+          "водой"
+        ]
+      }
+    },
+    {
+      "id": "item-7",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Один кофе, пожалуйста.",
+      "means": "One coffee, please.",
+      "words": [
+        [
+          "Один",
+          "один"
+        ],
+        [
+          "кофе,",
+          "кофе"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Одно кофе, пожалуйста.",
+        "Одну кофе, пожалуйста."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Один",
+          "Одно",
+          "Одну"
+        ]
+      }
+    },
+    {
+      "id": "item-8",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "hi"
+      ],
+      "text": "Привет! Кофе, пожалуйста.",
+      "means": "Hi! A coffee, please.",
+      "words": [
+        [
+          "Привет!"
+        ],
+        [
+          "Кофе,",
+          "кофе"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "hi"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Привет! Кофем, пожалуйста.",
+        "Привет! Кофею, пожалуйста."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Кофе,",
+          "Кофем,",
+          "Кофею,"
+        ]
+      }
+    },
+    {
+      "id": "item-9",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Чай и воду, пожалуйста.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Чай",
+          "чай"
+        ],
+        [
+          "и",
+          "и"
+        ],
+        [
+          "воду,",
+          "вода"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Чай и водой, пожалуйста.",
+        "Чаем и воду, пожалуйста."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "воду,",
+          "водой,",
+          "воде,"
+        ]
+      }
+    },
+    {
+      "id": "item-10",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Молоко, пожалуйста.",
+      "means": "Some milk, please.",
+      "words": [
+        [
+          "Молоко,",
+          "молоко"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "milk"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Молокум, пожалуйста.",
+        "Молоку, пожалуйста."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Молоко,",
+          "Молоком,",
+          "Молоку,"
+        ]
+      }
+    },
+    {
+      "id": "item-11",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Кофе, спасибо.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Кофе,",
+          "кофе"
+        ],
+        [
+          "спасибо"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кофем, спасибо.",
+        "Кофею, спасибо."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Кофе,",
+          "Кофем,",
+          "Кофею,"
+        ]
+      }
+    },
+    {
+      "id": "item-12",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "please",
+        "hi"
+      ],
+      "text": "Привет! Чай, пожалуйста.",
+      "means": "Hi! A tea, please.",
+      "words": [
+        [
+          "Привет!"
+        ],
+        [
+          "Чай,",
+          "чай"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "hi"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Привет! Чайм, пожалуйста.",
+        "Привет! Чаюм, пожалуйста."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Чай,",
+          "Чаем,",
+          "Чаюм,"
+        ]
+      }
+    },
+    {
+      "id": "item-15",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Да, пожалуйста.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Да,"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Да, пожалуйсту.",
+        "Да, пожалуйстой."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Да,",
+          "Нет,",
+          "Спасибо,"
+        ]
+      }
+    },
+    {
+      "id": "item-17",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Да, спасибо. До свидания!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Да,"
+        ],
+        [
+          "спасибо."
+        ],
+        [
+          "До"
+        ],
+        [
+          "свидания"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Да, спасибо. До свидание!",
+        "Да, спасибо. До свиданию!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "свидания",
+          "свидание",
+          "свиданию"
+        ]
+      }
+    },
+    {
+      "id": "item-18",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you"
+      ],
+      "text": "Нет, спасибо. До свидания!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Нет,",
+          "нет"
+        ],
+        [
+          "спасибо."
+        ],
+        [
+          "До"
+        ],
+        [
+          "свидания"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "no"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Нет, спасибо. До свидание!",
+        "Нет, спасибо. До свиданию!"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "свидания",
+          "свидание",
+          "свиданию"
+        ]
+      }
+    },
+    {
+      "id": "item-19",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "gender",
+        "adjective"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Кофе хороший, спасибо.",
+      "means": "The coffee is good, thank you.",
+      "words": [
+        [
+          "Кофе",
+          "кофе"
+        ],
+        [
+          "хороший,",
+          "хороший"
+        ],
+        [
+          "спасибо"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "coffee"
+        ],
+        [
+          "good"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Кофе хорошая, спасибо.",
+        "Кофе хорошую, спасибо."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "хороший,",
+          "хорошая,",
+          "хорошую,"
+        ]
+      }
+    },
+    {
+      "id": "item-20",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hi"
+      ],
+      "text": "Привет! Приятно познакомиться.",
+      "means": "Hi! Nice to meet you.",
+      "words": [
+        [
+          "Привет!"
+        ],
+        [
+          "Приятно"
+        ],
+        [
+          "познакомиться"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "hi"
+        ],
+        [
+          "pleasant"
+        ],
+        [
+          "to meet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Привет! Приятный познакомиться.",
+        "Привет! Приятную познакомиться."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Приятно",
+          "Приятный",
+          "Приятную"
+        ]
+      }
+    },
+    {
+      "id": "item-21",
+      "topic": "people",
+      "concepts": [
+        "no-be"
+      ],
+      "text": "Я учитель.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "учитель",
+          "учитель"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я учителя.",
+        "Я учителю."
+      ],
+      "otherGender": {
+        "text": "Я учительница.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "учитель",
+          "учителя",
+          "учителю"
+        ]
+      }
+    },
+    {
+      "id": "item-22",
+      "topic": "people",
+      "concepts": [
+        "no-be"
+      ],
+      "text": "Ты студент.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Ты",
+          "ты"
+        ],
+        [
+          "студент",
+          "студент"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ты студента.",
+        "Ты студенту."
+      ],
+      "otherGender": {
+        "text": "Ты студентка.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "студент",
+          "студента",
+          "студенту"
+        ]
+      }
+    },
+    {
+      "id": "item-23",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "no-be"
+      ],
+      "text": "Ты учитель?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Ты",
+          "ты"
+        ],
+        [
+          "учитель",
+          "учитель"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ты учителя?",
+        "Ты учителю?"
+      ],
+      "otherGender": {
+        "text": "Ты учительница?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "учитель",
+          "учителя",
+          "учителю"
+        ]
+      }
+    },
+    {
+      "id": "item-24",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "ne"
+      ],
+      "text": "Я не учитель.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "не",
+          "не"
+        ],
+        [
+          "учитель",
+          "учитель"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я нет учитель.",
+        "Я не учителю."
+      ],
+      "otherGender": {
+        "text": "Я не учительница.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "не",
+          "нет",
+          "и"
+        ]
+      }
+    },
+    {
+      "id": "item-25",
+      "topic": "people",
+      "concepts": [
+        "no-be"
+      ],
+      "text": "Это мама.",
+      "means": "This is Mom.",
+      "words": [
+        [
+          "Это",
+          "этот"
+        ],
+        [
+          "мама",
+          "мама"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "mom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Это маму.",
+        "Это маме."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "мама",
+          "маму",
+          "маме"
+        ]
+      }
+    },
+    {
+      "id": "item-26",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Это моя мама.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Это",
+          "этот"
+        ],
+        [
+          "моя",
+          "мой"
+        ],
+        [
+          "мама",
+          "мама"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Это мой мама.",
+        "Это мою мама."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "моя",
+          "мой",
+          "мою"
+        ]
+      }
+    },
+    {
+      "id": "item-27",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Это мой папа.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Это",
+          "этот"
+        ],
+        [
+          "мой",
+          "мой"
+        ],
+        [
+          "папа",
+          "папа"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "my"
+        ],
+        [
+          "dad"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Это моя папа.",
+        "Это моё папа."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "мой",
+          "моя",
+          "моё"
+        ]
+      }
+    },
+    {
+      "id": "item-28",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Мой папа учитель.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Мой",
+          "мой"
+        ],
+        [
+          "папа",
+          "папа"
+        ],
+        [
+          "учитель",
+          "учитель"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "dad"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Моя папа — учитель.",
+        "Мой папа — учителю."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Мой",
+          "Моя",
+          "Моё"
+        ]
+      }
+    },
+    {
+      "id": "item-29",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Мой брат студент.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Мой",
+          "мой"
+        ],
+        [
+          "брат",
+          "брат"
+        ],
+        [
+          "студент",
+          "студент"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Моя брат — студент.",
+        "Мой брат — студенту."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "брат",
+          "брата",
+          "брату"
+        ]
+      }
+    },
+    {
+      "id": "item-30",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Это моя сестра.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Это",
+          "этот"
+        ],
+        [
+          "моя",
+          "мой"
+        ],
+        [
+          "сестра",
+          "сестра"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Это мой сестра.",
+        "Это моя сестру."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "сестра",
+          "сестру",
+          "сестре"
+        ]
+      }
+    },
+    {
+      "id": "item-31",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Моя мама учитель.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "мама",
+          "мама"
+        ],
+        [
+          "учитель",
+          "учитель"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мой мама — учитель.",
+        "Моя мама — учителю."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Моя",
+          "Мой",
+          "Моё"
+        ]
+      }
+    },
+    {
+      "id": "item-32",
+      "topic": "people",
+      "concepts": [
+        "no-be"
+      ],
+      "text": "Моя сестра врач.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "сестра",
+          "сестра"
+        ],
+        [
+          "врач",
+          "врач"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Моя сестра — врача.",
+        "Мой сестра — врач."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "врач",
+          "врача",
+          "врачу"
+        ]
+      }
+    },
+    {
+      "id": "item-33",
+      "topic": "people",
+      "concepts": [
+        "no-be",
+        "adjective",
+        "gender"
+      ],
+      "text": "Ты хороший друг.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Ты",
+          "ты"
+        ],
+        [
+          "хороший",
+          "хороший"
+        ],
+        [
+          "друг",
+          "друг"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ты хорошая друг.",
+        "Ты хороший другу."
+      ],
+      "otherGender": {
+        "text": "Ты хорошая подруга.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "хороший",
+          "хорошая",
+          "хорошую"
+        ]
+      }
+    },
+    {
+      "id": "item-34",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "genitive"
+      ],
+      "text": "У меня есть телефон.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "У",
+          "у"
+        ],
+        [
+          "меня",
+          "я"
+        ],
+        [
+          "есть",
+          "быть"
+        ],
+        [
+          "телефон",
+          "телефон"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "at"
+        ],
+        [
+          "me"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "У я есть телефон.",
+        "У меня есть телефона."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "меня",
+          "я",
+          "мне"
+        ]
+      }
+    },
+    {
+      "id": "item-35",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "have",
+        "genitive"
+      ],
+      "text": "У тебя есть ключ?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "У",
+          "у"
+        ],
+        [
+          "тебя",
+          "ты"
+        ],
+        [
+          "есть",
+          "быть"
+        ],
+        [
+          "ключ",
+          "ключ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "at"
+        ],
+        [
+          "you"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "У ты есть ключ?",
+        "У тебя есть ключа?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "тебя",
+          "ты",
+          "тебе"
+        ]
+      }
+    },
+    {
+      "id": "item-36",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "genitive-negation"
+      ],
+      "text": "У меня нет книги.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "У",
+          "у"
+        ],
+        [
+          "меня",
+          "я"
+        ],
+        [
+          "нет",
+          "нет"
+        ],
+        [
+          "книги",
+          "книга"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "at"
+        ],
+        [
+          "me"
+        ],
+        [
+          "there isn't"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "У меня нет книга.",
+        "У я нет книги."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "книги",
+          "книга",
+          "книгу"
+        ]
+      }
+    },
+    {
+      "id": "item-37",
+      "topic": "out",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Мой телефон здесь.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Мой",
+          "мой"
+        ],
+        [
+          "телефон",
+          "телефон"
+        ],
+        [
+          "здесь",
+          "здесь"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Моя телефон здесь.",
+        "Мой телефона здесь."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Мой",
+          "Моя",
+          "Мои"
+        ]
+      }
+    },
+    {
+      "id": "item-38",
+      "topic": "out",
+      "concepts": [
+        "no-be"
+      ],
+      "text": "Ключ там.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Ключ",
+          "ключ"
+        ],
+        [
+          "там",
+          "там"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "key"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ключа там.",
+        "Ключу там."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ключ",
+          "Ключа",
+          "Ключу"
+        ]
+      }
+    },
+    {
+      "id": "item-40",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "no-be"
+      ],
+      "chunks": [
+        "извините"
+      ],
+      "text": "Извините, где туалет?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Извините,"
+        ],
+        [
+          "где",
+          "где"
+        ],
+        [
+          "туалет",
+          "туалет"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Извините, где туалета?",
+        "Извините, где туалету?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "туалет",
+          "туалета",
+          "туалету"
+        ]
+      }
+    },
+    {
+      "id": "item-42",
+      "topic": "out",
+      "concepts": [
+        "no-be",
+        "gender"
+      ],
+      "text": "Моя сестра здесь.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "сестра",
+          "сестра"
+        ],
+        [
+          "здесь",
+          "здесь"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Мой сестра здесь.",
+        "Моя сестру здесь."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "сестра",
+          "сестру",
+          "сестре"
+        ]
+      }
+    },
+    {
+      "id": "item-43",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Два кофе, пожалуйста.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Два",
+          "два"
+        ],
+        [
+          "кофе,",
+          "кофе"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Две кофе, пожалуйста.",
+        "Два кофев, пожалуйста."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Два",
+          "Две",
+          "Двух"
+        ]
+      }
+    },
+    {
+      "id": "item-44",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "gender"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Одну книгу, пожалуйста.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Одну",
+          "один"
+        ],
+        [
+          "книгу,",
+          "книга"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "one"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Один книгу, пожалуйста.",
+        "Одну книгой, пожалуйста."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Одну",
+          "Один",
+          "Одно"
+        ]
+      }
+    },
+    {
+      "id": "item-45",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "genitive",
+        "plural"
+      ],
+      "text": "У меня есть три книги.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "У",
+          "у"
+        ],
+        [
+          "меня",
+          "я"
+        ],
+        [
+          "есть",
+          "быть"
+        ],
+        [
+          "три",
+          "три"
+        ],
+        [
+          "книги",
+          "книга"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "at"
+        ],
+        [
+          "me"
+        ],
+        [
+          "there are"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "У меня есть три книга.",
+        "У меня есть три книгу."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "книги",
+          "книга",
+          "книгу"
+        ]
+      }
+    },
+    {
+      "id": "item-46",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "genitive-negation",
+        "plural"
+      ],
+      "text": "У меня нет денег.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "У",
+          "у"
+        ],
+        [
+          "меня",
+          "я"
+        ],
+        [
+          "нет",
+          "нет"
+        ],
+        [
+          "денег",
+          "деньги"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "at"
+        ],
+        [
+          "me"
+        ],
+        [
+          "there isn't"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "У меня нет деньги.",
+        "У меня нет деньгами."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "денег",
+          "деньги",
+          "деньгами"
+        ]
+      }
+    },
+    {
+      "id": "item-47",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "извините"
+      ],
+      "text": "Извините, сколько это стоит?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Извините,"
+        ],
+        [
+          "сколько"
+        ],
+        [
+          "это"
+        ],
+        [
+          "стоит"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "this"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Извините, сколько это стоить?",
+        "Извините, сколько это стоишь?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "стоит",
+          "стоить",
+          "стоишь"
+        ]
+      }
+    },
+    {
+      "id": "item-48",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "accusative"
+      ],
+      "text": "Ты понимаешь русский?",
+      "means": "Do you understand Russian?",
+      "words": [
+        [
+          "Ты",
+          "ты"
+        ],
+        [
+          "понимаешь",
+          "понимать"
+        ],
+        [
+          "русский",
+          "русский"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "Russian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ты понимаю русский?",
+        "Ты понимаешь по-русский?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "понимаешь",
+          "понимаю",
+          "понимать"
+        ]
+      }
+    },
+    {
+      "id": "item-49",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Я немного говорю по-русски.",
+      "means": "I speak a little Russian.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "немного",
+          "немного"
+        ],
+        [
+          "говорю",
+          "говорить"
+        ],
+        [
+          "по-русски",
+          "по-русски"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "in Russian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я немного говоришь по-русски.",
+        "Я немного говорю по-русский."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "говорю",
+          "говоришь",
+          "говорить"
+        ]
+      }
+    },
+    {
+      "id": "item-50",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ne"
+      ],
+      "text": "Я не понимаю.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "не",
+          "не"
+        ],
+        [
+          "понимаю",
+          "понимать"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я не понимаешь.",
+        "Я нет понимаю."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "понимаю",
+          "понимаешь",
+          "понимать"
+        ]
+      }
+    },
+    {
+      "id": "item-51",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Ты понимаешь?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ты",
+          "ты"
+        ],
+        [
+          "понимаешь",
+          "понимать"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "you"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ты понимаю?",
+        "Ты понимать?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "понимаешь",
+          "понимаю",
+          "понимать"
+        ]
+      }
+    },
+    {
+      "id": "item-52",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Я хочу кофе.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "хочу",
+          "хотеть"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я хотеть кофе.",
+        "Я хочешь кофе."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "хочу",
+          "хотеть",
+          "хочешь"
+        ]
+      }
+    },
+    {
+      "id": "item-53",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Я хочу воду, пожалуйста.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "хочу",
+          "хотеть"
+        ],
+        [
+          "воду,",
+          "вода"
+        ],
+        [
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я хочу вода, пожалуйста.",
+        "Я хотеть воду, пожалуйста."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "воду,",
+          "вода,",
+          "водой,"
+        ]
+      }
+    },
+    {
+      "id": "item-54",
+      "topic": "home",
+      "concepts": [
+        "no-be",
+        "adjective",
+        "gender"
+      ],
+      "text": "Этот дом большой.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Этот",
+          "этот"
+        ],
+        [
+          "дом",
+          "дом"
+        ],
+        [
+          "большой",
+          "большой"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Этот дом большая.",
+        "Эта дом большой."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "большой",
+          "большая",
+          "большую"
+        ]
+      }
+    },
+    {
+      "id": "item-55",
+      "topic": "home",
+      "concepts": [
+        "no-be",
+        "adjective",
+        "gender"
+      ],
+      "text": "Моя комната маленькая.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "комната",
+          "комната"
+        ],
+        [
+          "маленькая",
+          "маленький"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "room"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Моя комната маленький.",
+        "Мой комната маленькая."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "маленькая",
+          "маленький",
+          "маленьком"
+        ]
+      }
+    },
+    {
+      "id": "item-56",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "prepositional",
+        "adjective"
+      ],
+      "text": "Я живу в маленьком доме.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "живу",
+          "жить"
+        ],
+        [
+          "в",
+          "в"
+        ],
+        [
+          "маленьком",
+          "маленький"
+        ],
+        [
+          "доме",
+          "дом"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я живу в маленький дом.",
+        "Я живёшь в маленьком доме."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "маленьком",
+          "маленький",
+          "маленькая"
+        ]
+      }
+    },
+    {
+      "id": "item-57",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Где ты живёшь?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Где",
+          "где"
+        ],
+        [
+          "ты",
+          "ты"
+        ],
+        [
+          "живёшь",
+          "жить"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "where"
+        ],
+        [
+          "you"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Где ты живу?",
+        "Где ты жить?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "живёшь",
+          "живу",
+          "живёт"
+        ]
+      }
+    },
+    {
+      "id": "item-58",
+      "topic": "home",
+      "concepts": [
+        "present"
+      ],
+      "text": "Моя мама живёт здесь.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "мама",
+          "мама"
+        ],
+        [
+          "живёт",
+          "жить"
+        ],
+        [
+          "здесь",
+          "здесь"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Моя мама живу здесь.",
+        "Моя мама живёшь здесь."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "живёт",
+          "живу",
+          "живёшь"
+        ]
+      }
+    },
+    {
+      "id": "item-59",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "motion",
+        "direction",
+        "accusative"
+      ],
+      "text": "Я иду в школу.",
+      "means": "I'm going to school.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "иду",
+          "идти"
+        ],
+        [
+          "в",
+          "в"
+        ],
+        [
+          "школу",
+          "школа"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я идти в школу.",
+        "Я идёшь в школу."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "школу",
+          "школе",
+          "школа"
+        ]
+      }
+    },
+    {
+      "id": "item-60",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "motion",
+        "direction"
+      ],
+      "text": "Куда ты идёшь?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Куда",
+          "куда"
+        ],
+        [
+          "ты",
+          "ты"
+        ],
+        [
+          "идёшь",
+          "идти"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "where to"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Куда ты иду?",
+        "Куда ты идёт?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "идёшь",
+          "иду",
+          "идёт"
+        ]
+      }
+    },
+    {
+      "id": "item-61",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "motion",
+        "direction",
+        "accusative"
+      ],
+      "text": "Моя мама идёт в город.",
+      "means": "My mother is going to the city.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "мама",
+          "мама"
+        ],
+        [
+          "идёт",
+          "идти"
+        ],
+        [
+          "в",
+          "в"
+        ],
+        [
+          "город",
+          "город"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "my"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "is going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Моя мама иду в город.",
+        "Моя мама идёшь в город."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "идёт",
+          "иду",
+          "идёшь"
+        ]
+      }
+    },
+    {
+      "id": "item-62",
+      "topic": "out",
+      "concepts": [
+        "no-be",
+        "adjective",
+        "gender"
+      ],
+      "text": "Эта машина маленькая.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Эта",
+          "этот"
+        ],
+        [
+          "машина",
+          "машина"
+        ],
+        [
+          "маленькая",
+          "маленький"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "this"
+        ],
+        [
+          "car"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Этот машина маленькая.",
+        "Эта машина маленький."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Эта",
+          "Этот",
+          "Это"
+        ]
+      }
+    },
+    {
+      "id": "item-63",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "genitive"
+      ],
+      "text": "У меня есть машина.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "У",
+          "у"
+        ],
+        [
+          "меня",
+          "я"
+        ],
+        [
+          "есть",
+          "быть"
+        ],
+        [
+          "машина",
+          "машина"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "at"
+        ],
+        [
+          "me"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "У меня есть машину.",
+        "У я есть машина."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "машина",
+          "машину",
+          "машиной"
+        ]
+      }
+    },
+    {
+      "id": "item-64",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Спасибо. До завтра!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Спасибо."
+        ],
+        [
+          "До"
+        ],
+        [
+          "завтра"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Спасибо. До завтру!",
+        "Спасибо. До завтрой!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "завтра",
+          "завтру",
+          "завтрой"
+        ]
+      }
+    },
+    {
+      "id": "item-65",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Я сегодня работаю.",
+      "means": "I'm working today.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "сегодня",
+          "сегодня"
+        ],
+        [
+          "работаю",
+          "работать"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я сегодня работать.",
+        "Я сегодня работаешь."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "работаю",
+          "работать",
+          "работаешь"
+        ]
+      }
+    },
+    {
+      "id": "item-66",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "motion"
+      ],
+      "text": "Я должен сейчас идти.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "должен",
+          "должен"
+        ],
+        [
+          "сейчас",
+          "сейчас"
+        ],
+        [
+          "идти",
+          "идти"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "now"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я должен сейчас иду.",
+        "Я должен сейчас идёшь."
+      ],
+      "otherGender": {
+        "text": "Я должна сейчас идти.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "идти",
+          "иду",
+          "идёшь"
+        ]
+      }
+    },
+    {
+      "id": "item-67",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "future",
+        "motion",
+        "direction"
+      ],
+      "text": "Завтра я иду в город.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Завтра",
+          "завтра"
+        ],
+        [
+          "я",
+          "я"
+        ],
+        [
+          "иду",
+          "идти"
+        ],
+        [
+          "в",
+          "в"
+        ],
+        [
+          "город",
+          "город"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "am going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Завтра я идёшь в город.",
+        "Завтра я идёт в город."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "иду",
+          "идёшь",
+          "идёт"
+        ]
+      }
+    },
+    {
+      "id": "item-68",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "infinitive",
+        "ne",
+        "motion"
+      ],
+      "text": "Я не могу сегодня идти.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "не",
+          "не"
+        ],
+        [
+          "могу",
+          "мочь"
+        ],
+        [
+          "сегодня",
+          "сегодня"
+        ],
+        [
+          "идти",
+          "идти"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "can"
+        ],
+        [
+          "today"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я не могу сегодня иду.",
+        "Я не мочь сегодня идти."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "могу",
+          "мочь",
+          "можешь"
+        ]
+      }
+    },
+    {
+      "id": "item-69",
+      "topic": "plans",
+      "concepts": [
+        "infinitive",
+        "future"
+      ],
+      "text": "Я должен завтра работать.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "должен",
+          "должен"
+        ],
+        [
+          "завтра",
+          "завтра"
+        ],
+        [
+          "работать",
+          "работать"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я должен завтра работаю.",
+        "Я должен завтра работаешь."
+      ],
+      "otherGender": {
+        "text": "Я должна завтра работать.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "работать",
+          "работаю",
+          "работаешь"
+        ]
+      }
+    },
+    {
+      "id": "kak-dela",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "no-be",
+        "plural"
+      ],
+      "chunks": [
+        "как-дела",
+        "hi"
+      ],
+      "text": "Привет, как дела?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Привет,"
+        ],
+        [
+          "как"
+        ],
+        [
+          "дела"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "things"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Привет, как делами?",
+        "Привет, как есть дела?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "дела",
+          "делах",
+          "делом"
+        ]
+      }
+    },
+    {
+      "id": "kak-tebya-zovut",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "accusative",
+        "address"
+      ],
+      "chunks": [
+        "как-тебя-зовут"
+      ],
+      "text": "Как тебя зовут?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Как"
+        ],
+        [
+          "тебя"
+        ],
+        [
+          "зовут"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "they call"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "тебя"
+      ],
+      "wrong": [
+        "Как ты зовут?",
+        "Как тебе зовут?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "тебя",
+          "ты",
+          "тебе"
+        ]
+      }
+    },
+    {
+      "id": "govorish-po-angliyski",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "address"
+      ],
+      "text": "Ты говоришь по-английски?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Ты",
+          "ты"
+        ],
+        [
+          "говоришь",
+          "говорить"
+        ],
+        [
+          "по-английски",
+          "по-английски"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "in English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ты говорить по-английски?",
+        "Ты говоришь английски?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "говоришь",
+          "говорю",
+          "говорит"
+        ]
+      }
+    },
+    {
+      "id": "u-menya-brat",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "new-last"
+      ],
+      "text": "У меня есть брат и сестра.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "У",
+          "у"
+        ],
+        [
+          "меня",
+          "я"
+        ],
+        [
+          "есть",
+          "быть"
+        ],
+        [
+          "брат",
+          "брат"
+        ],
+        [
+          "и",
+          "и"
+        ],
+        [
+          "сестра",
+          "сестра"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a brother and a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я есть брат и сестра.",
+        "У меня есть брата и сестры."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "брат",
+          "брата",
+          "братом"
+        ]
+      }
+    },
+    {
+      "id": "sestra-v-moskve",
+      "topic": "people",
+      "concepts": [
+        "prepositional",
+        "present",
+        "gender"
+      ],
+      "text": "Моя сестра живёт в Москве.",
+      "means": "My sister lives in Moscow.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "сестра",
+          "сестра"
+        ],
+        [
+          "живёт",
+          "жить"
+        ],
+        [
+          "в"
+        ],
+        [
+          "Москве"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "in Moscow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Моя сестра живёт в Москва.",
+        "Моя сестра живёт на Москве."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "живёт",
+          "живу",
+          "живут"
+        ]
+      }
+    },
+    {
+      "id": "mashina-papy",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "no-be",
+        "gender"
+      ],
+      "text": "Это машина моего папы.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Это"
+        ],
+        [
+          "машина",
+          "машина"
+        ],
+        [
+          "моего",
+          "мой"
+        ],
+        [
+          "папы",
+          "папа"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "car"
+        ],
+        [
+          "my dad's",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "моего",
+        "папы"
+      ],
+      "wrong": [
+        "Это машина мой папа.",
+        "Это машина моего папа."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "папы",
+          "папа",
+          "папу"
+        ]
+      }
+    },
+    {
+      "id": "ne-znayu-gde",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "present"
+      ],
+      "text": "Я не знаю, где он живёт.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "не"
+        ],
+        [
+          "знаю,",
+          "знать"
+        ],
+        [
+          "где"
+        ],
+        [
+          "он"
+        ],
+        [
+          "живёт",
+          "жить"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Я знаю не, где он живёт.",
+        "Я не знать, где он живёт."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "живёт",
+          "живу",
+          "жить"
+        ]
+      }
+    },
+    {
+      "id": "rabotayu-vrachom",
+      "topic": "people",
+      "concepts": [
+        "instrumental",
+        "present"
+      ],
+      "text": "Я работаю врачом.",
+      "means": "I work as a doctor.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "работаю",
+          "работать"
+        ],
+        [
+          "врачом",
+          "врач"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "as a doctor"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Я работаю врач.",
+        "Я работаю врача."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "врачом",
+          "врач",
+          "врача"
+        ]
+      }
+    },
+    {
+      "id": "mne-nravitsya",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "new-last",
+        "present"
+      ],
+      "text": "Мне нравится этот фильм.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Мне"
+        ],
+        [
+          "нравится",
+          "нравиться"
+        ],
+        [
+          "этот",
+          "этот"
+        ],
+        [
+          "фильм",
+          "фильм"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing"
+        ],
+        [
+          "this movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Мне",
+        "этот",
+        "фильм"
+      ],
+      "wrong": [
+        "Я нравится этот фильм.",
+        "Мне нравлюсь этот фильм."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "нравится",
+          "нравлюсь",
+          "нравятся"
+        ]
+      }
+    },
+    {
+      "id": "ya-student",
+      "topic": "people",
+      "concepts": [
+        "no-be"
+      ],
+      "text": "Я студент.",
+      "means": "I'm a student.",
+      "words": [
+        [
+          "Я",
+          "я"
+        ],
+        [
+          "студент",
+          "студент"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я есть студент.",
+        "Я студента."
+      ],
+      "otherGender": {
+        "text": "Я студентка.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "студент",
+          "студента",
+          "студентом"
+        ]
+      }
+    },
+    {
+      "id": "malenkaya-kvartira",
+      "topic": "home",
+      "concepts": [
+        "prepositional",
+        "adjective",
+        "gender",
+        "present"
+      ],
+      "text": "Я живу в маленькой квартире.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "живу",
+          "жить"
+        ],
+        [
+          "в"
+        ],
+        [
+          "маленькой",
+          "маленький"
+        ],
+        [
+          "квартире",
+          "квартира"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Я живу в маленькая квартира.",
+        "Я живу в маленькую квартиру."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "квартире",
+          "квартира",
+          "квартиру"
+        ]
+      }
+    },
+    {
+      "id": "na-stole-kniga",
+      "topic": "home",
+      "concepts": [
+        "new-last",
+        "prepositional",
+        "present"
+      ],
+      "text": "На столе лежит книга.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "На"
+        ],
+        [
+          "столе",
+          "стол"
+        ],
+        [
+          "лежит",
+          "лежать"
+        ],
+        [
+          "книга",
+          "книга"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "lies"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "На",
+        "столе",
+        "книга"
+      ],
+      "wrong": [
+        "На стол лежит книга.",
+        "На столе лежит книгу."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "столе",
+          "стол",
+          "стола"
+        ]
+      }
+    },
+    {
+      "id": "net-moloka",
+      "topic": "home",
+      "concepts": [
+        "genitive-negation",
+        "prepositional"
+      ],
+      "text": "В холодильнике нет молока.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "В"
+        ],
+        [
+          "холодильнике",
+          "холодильник"
+        ],
+        [
+          "нет",
+          "нет"
+        ],
+        [
+          "молока",
+          "молоко"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "В холодильнике нет молоко.",
+        "В холодильнике не молока."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "молока",
+          "молоко",
+          "молоком"
+        ]
+      }
+    },
+    {
+      "id": "zakryt-okno",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "aspect",
+        "infinitive",
+        "present"
+      ],
+      "text": "Ты можешь закрыть окно?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Ты"
+        ],
+        [
+          "можешь",
+          "мочь"
+        ],
+        [
+          "закрыть",
+          "закрыть"
+        ],
+        [
+          "окно",
+          "окно"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "can",
+          true
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "можешь"
+      ],
+      "wrong": [
+        "Ты можешь закрой окно?",
+        "Ты можешь закрыть окном?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "закрыть",
+          "закрой",
+          "закрыл"
+        ]
+      }
+    },
+    {
+      "id": "bolshaya-komnata",
+      "topic": "home",
+      "concepts": [
+        "have",
+        "adjective",
+        "gender"
+      ],
+      "text": "У меня большая комната и маленький балкон.",
+      "means": "I have a big room and a small balcony.",
+      "words": [
+        [
+          "У"
+        ],
+        [
+          "меня"
+        ],
+        [
+          "большая",
+          "большой"
+        ],
+        [
+          "комната",
+          "комната"
+        ],
+        [
+          "и"
+        ],
+        [
+          "маленький",
+          "маленький"
+        ],
+        [
+          "балкон",
+          "балкон"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "a big room"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "У меня большой комната и маленький балкон.",
+        "У меня большое комната и маленький балкон."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "большая",
+          "большой",
+          "большое"
+        ]
+      }
+    },
+    {
+      "id": "prikhozhu-domoy",
+      "topic": "home",
+      "concepts": [
+        "direction",
+        "present"
+      ],
+      "text": "Когда я прихожу домой, я готовлю ужин.",
+      "means": "When I get home, I cook dinner.",
+      "words": [
+        [
+          "Когда"
+        ],
+        [
+          "я"
+        ],
+        [
+          "прихожу",
+          "приходить"
+        ],
+        [
+          "домой,",
+          "домой"
+        ],
+        [
+          "я"
+        ],
+        [
+          "готовлю",
+          "готовить"
+        ],
+        [
+          "ужин",
+          "ужин"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I come"
+        ],
+        [
+          "home,"
+        ],
+        [
+          "I cook"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Когда я прихожу дома, я готовлю ужин.",
+        "Когда я прихожу домой, я готовить ужин."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "готовлю",
+          "готовить",
+          "готовит"
+        ]
+      }
+    },
+    {
+      "id": "zakroy-dver",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "aspect",
+        "address"
+      ],
+      "text": "Закрой дверь, пожалуйста.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Закрой",
+          "закрыть"
+        ],
+        [
+          "дверь,",
+          "дверь"
+        ],
+        [
+          "пожалуйста",
+          "пожалуйста"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Закрой дверью, пожалуйста.",
+        "Закрой дверю, пожалуйста."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "дверь,",
+          "дверью,",
+          "дверей,"
+        ]
+      }
+    },
+    {
+      "id": "gde-klyuchi",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "no-be",
+        "plural"
+      ],
+      "text": "Где мои ключи?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Где",
+          "где"
+        ],
+        [
+          "мои",
+          "мой"
+        ],
+        [
+          "ключи",
+          "ключ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Где мой ключи?",
+        "Где моя ключи?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "мои",
+          "мой",
+          "моя"
+        ]
+      }
+    },
+    {
+      "id": "idi-syuda",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "direction",
+        "motion",
+        "address"
+      ],
+      "text": "Иди сюда!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Иди",
+          "идти"
+        ],
+        [
+          "сюда",
+          "сюда"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Иди здесь!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "сюда",
+          "здесь",
+          "тут"
+        ]
+      }
+    },
+    {
+      "id": "kofe-bez-sakhara",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "present"
+      ],
+      "text": "Я пью кофе без сахара.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "пью",
+          "пить"
+        ],
+        [
+          "кофе",
+          "кофе"
+        ],
+        [
+          "без"
+        ],
+        [
+          "сахара",
+          "сахар"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Я пью кофе без сахар.",
+        "Я пью кофе без сахаром."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "сахара",
+          "сахар",
+          "сахаром"
+        ]
+      }
+    },
+    {
+      "id": "net-vremeni",
+      "topic": "plans",
+      "concepts": [
+        "genitive-negation",
+        "have"
+      ],
+      "text": "Сегодня у меня нет времени.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Сегодня",
+          "сегодня"
+        ],
+        [
+          "у"
+        ],
+        [
+          "меня"
+        ],
+        [
+          "нет",
+          "нет"
+        ],
+        [
+          "времени",
+          "время"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "at me"
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сегодня у меня нет время.",
+        "Сегодня у меня не времени."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "времени",
+          "время",
+          "временем"
+        ]
+      }
+    },
+    {
+      "id": "chashku-chaya",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "genitive",
+        "question"
+      ],
+      "text": "Можно чашку чая?",
+      "means": "Could I have a cup of tea?",
+      "words": [
+        [
+          "Можно",
+          "можно"
+        ],
+        [
+          "чашку",
+          "чашка"
+        ],
+        [
+          "чая",
+          "чай"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "May I have"
+        ],
+        [
+          "a cup"
+        ],
+        [
+          "of tea"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Можно чашка чая?",
+        "Можно чашку чай?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "чашку",
+          "чашка",
+          "чашки"
+        ]
+      }
+    },
+    {
+      "id": "chto-nibud-sladkoe",
+      "topic": "food",
+      "concepts": [
+        "aspect",
+        "accusative",
+        "infinitive",
+        "present"
+      ],
+      "text": "Я хочу съесть что-нибудь сладкое.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "хочу",
+          "хотеть"
+        ],
+        [
+          "съесть",
+          "съесть"
+        ],
+        [
+          "что-нибудь",
+          "что-нибудь"
+        ],
+        [
+          "сладкое",
+          "сладкий"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Я хочу съем что-нибудь сладкое.",
+        "Я хочу съесть что-нибудь сладкий."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "съесть",
+          "съем",
+          "съел"
+        ]
+      }
+    },
+    {
+      "id": "eli-pitstsu",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "accusative"
+      ],
+      "text": "Вчера мы ели пиццу.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Вчера",
+          "вчера"
+        ],
+        [
+          "мы"
+        ],
+        [
+          "ели",
+          "есть"
+        ],
+        [
+          "пиццу",
+          "пицца"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Вчера мы ел пиццу.",
+        "Вчера мы ели пицца."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ели",
+          "ел",
+          "ест"
+        ]
+      }
+    },
+    {
+      "id": "moloko-v-kholodilnike",
+      "topic": "food",
+      "concepts": [
+        "no-be",
+        "prepositional"
+      ],
+      "text": "Молоко в холодильнике.",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "Молоко",
+          "молоко"
+        ],
+        [
+          "в"
+        ],
+        [
+          "холодильнике",
+          "холодильник"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Молоко в холодильник.",
+        "Молоко на холодильника."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "холодильнике",
+          "холодильник",
+          "холодильника"
+        ]
+      }
+    },
+    {
+      "id": "mama-gotovit",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Моя мама очень хорошо готовит.",
+      "means": "My mom cooks really well.",
+      "words": [
+        [
+          "Моя",
+          "мой"
+        ],
+        [
+          "мама",
+          "мама"
+        ],
+        [
+          "очень",
+          "очень"
+        ],
+        [
+          "хорошо",
+          "хорошо"
+        ],
+        [
+          "готовит",
+          "готовить"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "really well",
+          true
+        ],
+        [
+          "cooks"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "очень",
+        "хорошо"
+      ],
+      "wrong": [
+        "Моя мама очень хорошая готовит.",
+        "Моя мама готовить очень хорошо."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "готовит",
+          "готовлю",
+          "готовить"
+        ]
+      }
+    },
+    {
+      "id": "prinesite-schyot",
+      "topic": "food",
+      "concepts": [
+        "imperative",
+        "accusative",
+        "address",
+        "aspect"
+      ],
+      "chunks": [
+        "please-bring-the-check"
+      ],
+      "text": "Принесите, пожалуйста, счёт.",
+      "means": "Could you bring the check, please?",
+      "words": [
+        [
+          "Принесите,"
+        ],
+        [
+          "пожалуйста,"
+        ],
+        [
+          "счёт"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bring"
+        ],
+        [
+          "please",
+          true
+        ],
+        [
+          "the check"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "пожалуйста,"
+      ],
+      "wrong": [
+        "Принесите, пожалуйста, счёта.",
+        "Принесите, пожалуйста, счётом."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "счёт",
+          "счёта",
+          "счётом"
+        ]
+      }
+    },
+    {
+      "id": "gotovit-s-mamoy",
+      "topic": "food",
+      "concepts": [
+        "instrumental",
+        "infinitive",
+        "present"
+      ],
+      "text": "Я люблю готовить с мамой.",
+      "means": "I love cooking with my mom.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "люблю",
+          "любить"
+        ],
+        [
+          "готовить",
+          "готовить"
+        ],
+        [
+          "с"
+        ],
+        [
+          "мамой",
+          "мама"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I love"
+        ],
+        [
+          "to cook"
+        ],
+        [
+          "with Mom"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Я люблю готовить с мама.",
+        "Я люблю готовлю с мамой."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "мамой",
+          "мама",
+          "маму"
+        ]
+      }
+    },
+    {
+      "id": "gde-vokzal",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "no-be",
+        "address"
+      ],
+      "chunks": [
+        "извините"
+      ],
+      "text": "Извините, где вокзал?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Извините,"
+        ],
+        [
+          "где",
+          "где"
+        ],
+        [
+          "вокзал",
+          "вокзал"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "the train station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Извините, где вокзала?",
+        "Извините, где вокзале?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "вокзал",
+          "вокзала",
+          "вокзале"
+        ]
+      }
+    },
+    {
+      "id": "idu-v-magazin",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "direction",
+        "instrumental",
+        "present"
+      ],
+      "text": "Я иду в магазин за хлебом.",
+      "means": "I'm going to the store for bread.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "иду",
+          "идти"
+        ],
+        [
+          "в"
+        ],
+        [
+          "магазин",
+          "магазин"
+        ],
+        [
+          "за"
+        ],
+        [
+          "хлебом",
+          "хлеб"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Я иду в магазине за хлебом.",
+        "Я иду в магазин за хлеб."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "магазин",
+          "магазине",
+          "магазина"
+        ]
+      }
+    },
+    {
+      "id": "edu-na-rabotu",
+      "topic": "out",
+      "concepts": [
+        "motion",
+        "direction",
+        "prepositional",
+        "future"
+      ],
+      "text": "Завтра я еду на работу на автобусе.",
+      "means": "Tomorrow I'm taking the bus to work.",
+      "words": [
+        [
+          "Завтра",
+          "завтра"
+        ],
+        [
+          "я"
+        ],
+        [
+          "еду",
+          "ехать"
+        ],
+        [
+          "на"
+        ],
+        [
+          "работу",
+          "работа"
+        ],
+        [
+          "на"
+        ],
+        [
+          "автобусе",
+          "автобус"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'm going"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Завтра я еду на работе на автобусе.",
+        "Завтра я иду на работу на автобусе."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "автобусе",
+          "автобус",
+          "автобуса"
+        ]
+      }
+    },
+    {
+      "id": "novaya-kurtka",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "accusative",
+        "adjective",
+        "aspect"
+      ],
+      "text": "Вчера я купила новую куртку.",
+      "means": "Yesterday I bought a new jacket.",
+      "words": [
+        [
+          "Вчера",
+          "вчера"
+        ],
+        [
+          "я"
+        ],
+        [
+          "купила",
+          "купить"
+        ],
+        [
+          "новую",
+          "новый"
+        ],
+        [
+          "куртку",
+          "куртка"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I bought"
+        ],
+        [
+          "a new jacket"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Вчера я купила новая куртка.",
+        "Вчера я купила новую куртка."
+      ],
+      "otherGender": {
+        "text": "Вчера я купил новую куртку.",
+        "gender": "m",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "новую",
+          "новая",
+          "новый"
+        ]
+      }
+    },
+    {
+      "id": "poezd-opozdal",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "genitive",
+        "gender"
+      ],
+      "text": "Поезд опоздал на десять минут.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Поезд",
+          "поезд"
+        ],
+        [
+          "опоздал",
+          "опоздать"
+        ],
+        [
+          "на"
+        ],
+        [
+          "десять"
+        ],
+        [
+          "минут",
+          "минута"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was late"
+        ],
+        [
+          "by ten minutes"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Поезд опоздал на десять минуты.",
+        "Поезд опоздала на десять минут."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "опоздал",
+          "опоздала",
+          "опоздать"
+        ]
+      }
+    },
+    {
+      "id": "nikogda-ne-byl",
+      "topic": "out",
+      "concepts": [
+        "ne",
+        "past",
+        "prepositional",
+        "gender"
+      ],
+      "text": "Я никогда не был в России.",
+      "means": "I've never been to Russia.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "никогда",
+          "никогда"
+        ],
+        [
+          "не"
+        ],
+        [
+          "был",
+          "быть"
+        ],
+        [
+          "в"
+        ],
+        [
+          "России"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "never"
+        ],
+        [
+          "not"
+        ],
+        [
+          "was"
+        ],
+        [
+          "in Russia"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я никогда был в России.",
+        "Я никогда не был в Россия."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "был",
+          "буду",
+          "есть"
+        ]
+      }
+    },
+    {
+      "id": "novye-botinki",
+      "topic": "out",
+      "concepts": [
+        "adjective",
+        "no-be",
+        "plural"
+      ],
+      "text": "Эти новые ботинки слишком маленькие.",
+      "means": "These new shoes are too small.",
+      "words": [
+        [
+          "Эти",
+          "этот"
+        ],
+        [
+          "новые",
+          "новый"
+        ],
+        [
+          "ботинки",
+          "ботинок"
+        ],
+        [
+          "слишком",
+          "слишком"
+        ],
+        [
+          "маленькие",
+          "маленький"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "These new shoes"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Эти новые ботинки слишком маленький.",
+        "Этот новые ботинки слишком маленькие."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "маленькие",
+          "маленький",
+          "маленькая"
+        ]
+      }
+    },
+    {
+      "id": "vzyat-taksi",
+      "topic": "out",
+      "concepts": [
+        "aspect",
+        "past",
+        "infinitive",
+        "present"
+      ],
+      "text": "Если ты устал, мы можем взять такси.",
+      "means": "If you're tired, we can take a taxi.",
+      "words": [
+        [
+          "Если"
+        ],
+        [
+          "ты"
+        ],
+        [
+          "устал,",
+          "устать"
+        ],
+        [
+          "мы"
+        ],
+        [
+          "можем",
+          "мочь"
+        ],
+        [
+          "взять",
+          "взять"
+        ],
+        [
+          "такси",
+          "такси"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you"
+        ],
+        [
+          "are tired,"
+        ],
+        [
+          "we can"
+        ],
+        [
+          "take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Если ты устал, мы можем возьмём такси.",
+        "Если ты устал, мы можем взял такси."
+      ],
+      "otherGender": {
+        "text": "Если ты устала, мы можем взять такси.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 5,
+        "options": [
+          "взять",
+          "возьмём",
+          "взял"
+        ]
+      }
+    },
+    {
+      "id": "zhdyot-babushka",
+      "topic": "out",
+      "concepts": [
+        "new-last",
+        "prepositional",
+        "accusative",
+        "present"
+      ],
+      "text": "На вокзале нас ждёт бабушка.",
+      "means": "Grandma is waiting for us at the station.",
+      "words": [
+        [
+          "На"
+        ],
+        [
+          "вокзале",
+          "вокзал"
+        ],
+        [
+          "нас"
+        ],
+        [
+          "ждёт",
+          "ждать"
+        ],
+        [
+          "бабушка",
+          "бабушка"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "us",
+          true
+        ],
+        [
+          "waits for"
+        ],
+        [
+          "Grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "На",
+        "вокзале",
+        "нас",
+        "бабушка"
+      ],
+      "wrong": [
+        "На вокзал нас ждёт бабушка.",
+        "На вокзале нас ждёт бабушку."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "вокзале",
+          "вокзал",
+          "вокзала"
+        ]
+      }
+    },
+    {
+      "id": "v-subbotu-k-babushke",
+      "topic": "plans",
+      "concepts": [
+        "motion",
+        "dative",
+        "accusative",
+        "future"
+      ],
+      "text": "В субботу мы едем к бабушке.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "В"
+        ],
+        [
+          "субботу",
+          "суббота"
+        ],
+        [
+          "мы"
+        ],
+        [
+          "едем",
+          "ехать"
+        ],
+        [
+          "к"
+        ],
+        [
+          "бабушке",
+          "бабушка"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "В субботу мы едем к бабушка.",
+        "В суббота мы едем к бабушке."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "бабушке",
+          "бабушка",
+          "бабушку"
+        ]
+      }
+    },
+    {
+      "id": "zavtra-dozhd",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "new-last"
+      ],
+      "text": "Завтра будет дождь.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Завтра",
+          "завтра"
+        ],
+        [
+          "будет",
+          "быть"
+        ],
+        [
+          "дождь",
+          "дождь"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "there will be"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Завтра будет дождя.",
+        "Завтра есть дождь."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "будет",
+          "будут",
+          "был"
+        ]
+      }
+    },
+    {
+      "id": "pozvonyu-tebe",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "aspect",
+        "dative"
+      ],
+      "text": "Я позвоню тебе завтра.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "позвоню",
+          "позвонить"
+        ],
+        [
+          "тебе"
+        ],
+        [
+          "завтра",
+          "завтра"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "will call"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Я позвоню тебя завтра.",
+        "Я позвонить тебе завтра."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "тебе",
+          "тебя",
+          "ты"
+        ]
+      }
+    },
+    {
+      "id": "mne-pora-idti",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "motion",
+        "infinitive",
+        "no-be"
+      ],
+      "text": "Мне уже пора идти.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Мне"
+        ],
+        [
+          "уже",
+          "уже"
+        ],
+        [
+          "пора",
+          "пора"
+        ],
+        [
+          "идти",
+          "идти"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For me"
+        ],
+        [
+          "already"
+        ],
+        [
+          "it's time"
+        ],
+        [
+          "to go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я уже пора идти.",
+        "Мне уже пора иду."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "идти",
+          "иду",
+          "шёл"
+        ]
+      }
+    },
+    {
+      "id": "poydyosh-v-kino",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "motion",
+        "instrumental",
+        "future"
+      ],
+      "text": "Ты пойдёшь с нами в кино?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Ты"
+        ],
+        [
+          "пойдёшь",
+          "пойти"
+        ],
+        [
+          "с"
+        ],
+        [
+          "нами"
+        ],
+        [
+          "в"
+        ],
+        [
+          "кино",
+          "кино"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "will go"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ты пойдёшь с мы в кино?",
+        "Ты пойдёт с нами в кино?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "пойдёшь",
+          "пойду",
+          "пойти"
+        ]
+      }
+    },
+    {
+      "id": "esli-ne-budet-dozhdya",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "ne",
+        "genitive-negation",
+        "direction"
+      ],
+      "text": "Если не будет дождя, мы пойдём на пляж.",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "Если"
+        ],
+        [
+          "не"
+        ],
+        [
+          "будет",
+          "быть"
+        ],
+        [
+          "дождя,",
+          "дождь"
+        ],
+        [
+          "мы"
+        ],
+        [
+          "пойдём",
+          "пойти"
+        ],
+        [
+          "на"
+        ],
+        [
+          "пляж",
+          "пляж"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "there won't be"
+        ],
+        [
+          "rain,"
+        ],
+        [
+          "we'll go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Если не будет дождь, мы пойдём на пляж.",
+        "Если не будет дождя, мы пойдём на пляже."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "пойдём",
+          "пойду",
+          "пойти"
+        ]
+      }
+    },
+    {
+      "id": "uchu-russkiy",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Я учу русский язык уже год.",
+      "means": "I've been learning Russian for a year.",
+      "words": [
+        [
+          "Я"
+        ],
+        [
+          "учу",
+          "учить"
+        ],
+        [
+          "русский",
+          "русский"
+        ],
+        [
+          "язык",
+          "язык"
+        ],
+        [
+          "уже",
+          "уже"
+        ],
+        [
+          "год",
+          "год"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I learn"
+        ],
+        [
+          "the Russian language"
+        ],
+        [
+          "already a year"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я учу русский язык уже года.",
+        "Я учить русский язык уже год."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "учу",
+          "учит",
+          "учить"
+        ]
+      }
+    },
+    {
+      "id": "chto-delaesh",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "present",
+        "accusative",
+        "plural"
+      ],
+      "text": "Что ты делаешь в эти выходные?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Что"
+        ],
+        [
+          "ты"
+        ],
+        [
+          "делаешь",
+          "делать"
+        ],
+        [
+          "в"
+        ],
+        [
+          "эти",
+          "этот"
+        ],
+        [
+          "выходные",
+          "выходной"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are doing"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Что ты делать в эти выходные?",
+        "Что ты делаешь в этих выходных?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "делаешь",
+          "делаю",
+          "делает"
+        ]
+      }
+    },
+    {
+      "id": "segodnya-kholodno",
+      "topic": "plans",
+      "concepts": [
+        "no-be"
+      ],
+      "text": "Сегодня холодно.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Сегодня",
+          "сегодня"
+        ],
+        [
+          "холодно",
+          "холодно"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Сегодня холодный.",
+        "Сегодня есть холодно."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "холодно",
+          "холодный",
+          "холодная"
+        ]
+      }
+    },
+    {
+      "id": "mne-kholodno",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "no-be"
+      ],
+      "text": "Мне холодно.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Мне"
+        ],
+        [
+          "холодно",
+          "холодно"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Я холодно.",
+        "Меня холодно."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Мне",
+          "Я",
+          "Меня"
+        ]
+      }
+    },
+    {
+      "id": "day-mne-znat",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "dative",
+        "infinitive",
+        "address"
+      ],
+      "chunks": [
+        "дай-мне-знать"
+      ],
+      "text": "Дай мне знать!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Дай",
+          "дать"
+        ],
+        [
+          "мне"
+        ],
+        [
+          "знать",
+          "знать"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let"
+        ],
+        [
+          "me"
+        ],
+        [
+          "know"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Дай меня знать!",
+        "Дай я знать!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "мне",
+          "меня",
+          "я"
+        ]
+      }
+    },
+    {
+      "id": "khoroshaya-pogoda",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "adjective",
+        "new-last",
+        "gender"
+      ],
+      "text": "Надеюсь, завтра будет хорошая погода.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Надеюсь,",
+          "надеяться"
+        ],
+        [
+          "завтра",
+          "завтра"
+        ],
+        [
+          "будет",
+          "быть"
+        ],
+        [
+          "хорошая",
+          "хороший"
+        ],
+        [
+          "погода",
+          "погода"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope,"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "nice weather",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "хорошая",
+        "погода"
+      ],
+      "wrong": [
+        "Надеюсь, завтра будет хороший погода.",
+        "Надеюсь, завтра будет хорошей погоды."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "хорошая",
+          "хороший",
+          "хорошее"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "кофе",
+          "forms": [
+            "кофе"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "чай",
+          "forms": [
+            "чай"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "вода",
+          "forms": [
+            "воду"
+          ],
+          "picture": "water",
+          "means": "воду = water"
+        },
+        {
+          "lemma": "я",
+          "forms": [
+            "я"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "пить",
+          "forms": [
+            "пью"
+          ],
+          "picture": "drink",
+          "means": "пью = drink"
+        },
+        {
+          "lemma": "и",
+          "forms": [
+            "и"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb changes for each person: я живу, ты живёшь, он живёт, мы живём, они живут."
+      },
+      "items": [
+        "item",
+        "item-2",
+        "item-3",
+        "item-4",
+        "item-5",
+        "item-6"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "один",
+          "forms": [
+            "один"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "молоко",
+          "forms": [
+            "молоко"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hi",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "item-7",
+        "item-8",
+        "item-9",
+        "item-10",
+        "item-11",
+        "item-12"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "нет",
+          "forms": [
+            "нет"
+          ],
+          "means": "no; there isn't"
+        },
+        {
+          "lemma": "хорошо",
+          "forms": [
+            "хорошо"
+          ],
+          "means": "well, good"
+        },
+        {
+          "lemma": "хороший",
+          "forms": [
+            "хороший"
+          ],
+          "means": "good, nice"
+        }
+      ],
+      "phrases": [
+        "как-дела",
+        "goodbye",
+        "yes"
+      ],
+      "concept": {
+        "pattern": "no-be",
+        "line": "Russian leaves out am, is and are in the present: Я студент (I'm a student); Где мои ключи?"
+      },
+      "items": [
+        "kak-dela",
+        "item-15",
+        "item-17",
+        "item-18",
+        "item-19"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ты",
+          "forms": [
+            "ты"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "не",
+          "forms": [
+            "не"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "учитель",
+          "forms": [
+            "учитель"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "студент",
+          "forms": [
+            "студент"
+          ],
+          "means": "student"
+        }
+      ],
+      "phrases": [
+        "как-тебя-зовут",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "kak-tebya-zovut",
+        "item-20",
+        "item-21",
+        "ya-student",
+        "item-22",
+        "item-23",
+        "item-24"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "мама",
+          "forms": [
+            "мама"
+          ],
+          "picture": "mother",
+          "means": "mom"
+        },
+        {
+          "lemma": "папа",
+          "forms": [
+            "папа"
+          ],
+          "picture": "father",
+          "means": "dad"
+        },
+        {
+          "lemma": "брат",
+          "forms": [
+            "брат"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "сестра",
+          "forms": [
+            "сестра"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "мой",
+          "forms": [
+            "мой",
+            "моя"
+          ],
+          "means": "мой = my; моя = my"
+        },
+        {
+          "lemma": "этот",
+          "forms": [
+            "это"
+          ],
+          "means": "это = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Most nouns ending in a consonant are masculine, most in -а or -я feminine and most in -о or -е neuter (though words for men stay masculine: папа), and adjectives, possessives such as мой and a singular past-tense verb agree with them."
+      },
+      "items": [
+        "item-25",
+        "item-26",
+        "item-27",
+        "item-28",
+        "item-29",
+        "item-30",
+        "item-31"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "быть",
+          "forms": [
+            "есть"
+          ],
+          "means": "есть = there is"
+        },
+        {
+          "lemma": "у",
+          "forms": [
+            "у"
+          ],
+          "means": "at; by"
+        },
+        {
+          "lemma": "друг",
+          "forms": [
+            "друг"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "врач",
+          "forms": [
+            "врач"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "ключ",
+          "forms": [
+            "ключ"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "телефон",
+          "forms": [
+            "телефон"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "книга",
+          "forms": [
+            "книги"
+          ],
+          "picture": "book",
+          "means": "книги = a book"
+        },
+        {
+          "lemma": "я",
+          "forms": [
+            "меня"
+          ],
+          "means": "меня = me"
+        },
+        {
+          "lemma": "ты",
+          "forms": [
+            "тебя"
+          ],
+          "means": "тебя = you"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "item-32",
+        "item-33",
+        "item-34",
+        "item-35",
+        "u-menya-brat",
+        "item-36"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "где",
+          "forms": [
+            "где"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "здесь",
+          "forms": [
+            "здесь"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "там",
+          "forms": [
+            "там"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "туалет",
+          "forms": [
+            "туалет"
+          ],
+          "means": "bathroom, toilet"
+        },
+        {
+          "lemma": "мой",
+          "forms": [
+            "мои"
+          ],
+          "means": "мои = my"
+        },
+        {
+          "lemma": "ключ",
+          "forms": [
+            "ключи"
+          ],
+          "means": "ключи = keys"
+        }
+      ],
+      "phrases": [
+        "извините"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes/no question keeps the order of a statement, with the voice rising on the word asked about (Ты говоришь по-английски?), a question word like как, где or что often comes first, and Russian adds no do."
+      },
+      "items": [
+        "item-37",
+        "item-38",
+        "item-40",
+        "gde-klyuchi",
+        "item-42"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "два",
+          "forms": [
+            "два"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "три",
+          "forms": [
+            "три"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "деньги",
+          "forms": [
+            "денег"
+          ],
+          "picture": "money",
+          "means": "денег = money"
+        },
+        {
+          "lemma": "один",
+          "forms": [
+            "одну"
+          ],
+          "means": "одну = one"
+        },
+        {
+          "lemma": "книга",
+          "forms": [
+            "книгу",
+            "книги"
+          ],
+          "means": "книгу = book; книги = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "please-bring-the-check"
+      ],
+      "concept": null,
+      "items": [
+        "item-43",
+        "item-44",
+        "item-45",
+        "item-46",
+        "prinesite-schyot",
+        "item-47"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "говорить",
+          "forms": [
+            "говоришь",
+            "говорю"
+          ],
+          "means": "говоришь = speak; говорю = speak"
+        },
+        {
+          "lemma": "по-английски",
+          "forms": [
+            "по-английски"
+          ],
+          "means": "in English"
+        },
+        {
+          "lemma": "русский",
+          "forms": [
+            "русский"
+          ],
+          "means": "Russian"
+        },
+        {
+          "lemma": "понимать",
+          "forms": [
+            "понимаешь",
+            "понимаю"
+          ],
+          "means": "понимаешь = understand; понимаю = understand"
+        },
+        {
+          "lemma": "немного",
+          "forms": [
+            "немного"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "хотеть",
+          "forms": [
+            "хочу"
+          ],
+          "means": "хочу = want"
+        },
+        {
+          "lemma": "по-русски",
+          "forms": [
+            "по-русски"
+          ],
+          "means": "in Russian"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "A direct object often takes the accusative (Мы ели пиццу); so does where you're going after в or на (в магазин, на работу), and many expressions of time (в субботу)."
+      },
+      "items": [
+        "govorish-po-angliyski",
+        "item-48",
+        "item-49",
+        "item-50",
+        "item-51",
+        "item-52",
+        "item-53"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "дом",
+          "forms": [
+            "дом",
+            "доме"
+          ],
+          "picture": "house",
+          "means": "дом = house; доме = house"
+        },
+        {
+          "lemma": "комната",
+          "forms": [
+            "комната"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "большой",
+          "forms": [
+            "большой"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "маленький",
+          "forms": [
+            "маленькая",
+            "маленьком"
+          ],
+          "picture": "small",
+          "means": "маленькая = small; маленьком = small"
+        },
+        {
+          "lemma": "жить",
+          "forms": [
+            "живу",
+            "живёшь",
+            "живёт"
+          ],
+          "means": "живу = live; живёшь = live; живёт = lives"
+        },
+        {
+          "lemma": "в",
+          "forms": [
+            "в"
+          ],
+          "picture": "in",
+          "means": "in; to"
+        },
+        {
+          "lemma": "этот",
+          "forms": [
+            "этот"
+          ],
+          "means": "this; these"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "item-54",
+        "item-55",
+        "item-56",
+        "item-57",
+        "item-58"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "идти",
+          "forms": [
+            "иду",
+            "идёшь",
+            "идёт"
+          ],
+          "means": "иду = am going; идёшь = are going; идёт = is going"
+        },
+        {
+          "lemma": "школа",
+          "forms": [
+            "школу"
+          ],
+          "picture": "school",
+          "means": "школу = school"
+        },
+        {
+          "lemma": "город",
+          "forms": [
+            "город"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "вокзал",
+          "forms": [
+            "вокзал"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "машина",
+          "forms": [
+            "машина"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "куда",
+          "forms": [
+            "куда"
+          ],
+          "means": "where to"
+        },
+        {
+          "lemma": "этот",
+          "forms": [
+            "эта"
+          ],
+          "means": "эта = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "have",
+        "line": "To say you have something, Russian says it is at you: У меня есть брат (I have a brother); when what matters is what it's like, not whether it's there, есть is often left out: У меня большая комната."
+      },
+      "items": [
+        "gde-vokzal",
+        "item-59",
+        "item-60",
+        "item-61",
+        "item-62",
+        "item-63"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "сегодня",
+          "forms": [
+            "сегодня"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "завтра",
+          "forms": [
+            "завтра"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "сейчас",
+          "forms": [
+            "сейчас"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "работать",
+          "forms": [
+            "работаю",
+            "работать"
+          ],
+          "picture": "work",
+          "means": "работаю = work; работать = to work"
+        },
+        {
+          "lemma": "должен",
+          "forms": [
+            "должен"
+          ],
+          "means": "must, have to"
+        },
+        {
+          "lemma": "мочь",
+          "forms": [
+            "могу"
+          ],
+          "means": "могу = can"
+        },
+        {
+          "lemma": "идти",
+          "forms": [
+            "идти"
+          ],
+          "means": "to go or come on foot; to leave"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "item-64",
+        "item-65",
+        "item-66",
+        "item-67",
+        "item-68",
+        "item-69"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

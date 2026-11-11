@@ -1,0 +1,67 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "check-de",
+  "name": "A check pack (German)",
+  "about": "Three German sentences that show a second language working in the same format. A test pack, never shipped.",
+  "language": "de",
+  "from": "en",
+  "topics": {
+    "everyday": "Everyday"
+  },
+  "words": {
+    "gestern": "yesterday",
+    "Buch": "book",
+    "lesen": "to read",
+    "morgen": "tomorrow",
+    "fahren": "to go (by car, train or bike)",
+    "wissen": "to know",
+    "kommen": "to come"
+  },
+  "chunks": {},
+  "patterns": {},
+  "items": [
+    {
+      "id": "buch-gelesen",
+      "topic": "everyday",
+      "concepts": ["perfect"],
+      "text": "Ich habe gestern ein Buch gelesen.",
+      "means": "I read a book yesterday.",
+      "words": [["Ich"],["habe"],["gestern","gestern"],["ein"],["Buch","Buch"],["gelesen","lesen"]],
+      "punct": ".",
+      "literal": [["I have"],["yesterday",true],["a book"],["read",true]],
+      "english": [0,3,2,1],
+      "moved": ["gestern","gelesen"],
+      "wrong": ["Ich habe gelesen gestern ein Buch.","Ich gestern habe ein Buch gelesen."],
+      "gap": {"index":5,"options":["gelesen","lesen","liest"]}
+    },
+    {
+      "id": "morgen-berlin",
+      "topic": "everyday",
+      "concepts": ["v2"],
+      "text": "Morgen fahren wir nach Berlin.",
+      "means": "Tomorrow we're going to Berlin.",
+      "words": [["Morgen","morgen"],["fahren","fahren"],["wir"],["nach"],["Berlin"]],
+      "punct": ".",
+      "literal": [["Tomorrow"],["go",true],["we"],["to Berlin"]],
+      "english": [0,2,1,3],
+      "moved": ["fahren"],
+      "wrong": ["Morgen wir fahren nach Berlin.","Wir morgen fahren nach Berlin."],
+      "gap": {"index":1,"options":["fahren","fährt","fahre"]}
+    },
+    {
+      "id": "weiss-kommt",
+      "topic": "everyday",
+      "concepts": ["dass"],
+      "text": "Ich weiß, dass er morgen kommt.",
+      "means": "I know he's coming tomorrow.",
+      "words": [["Ich"],["weiß,","wissen"],["dass"],["er"],["morgen","morgen"],["kommt","kommen"]],
+      "punct": ".",
+      "literal": [["I know that he"],["tomorrow"],["comes",true]],
+      "english": [0,2,1],
+      "moved": ["kommt"],
+      "wrong": ["Ich weiß, dass er kommt morgen.","Ich weiß, dass kommt er morgen."],
+      "gap": {"index":5,"options":["kommt","kommen","komme"]}
+    }
+  ]
+}

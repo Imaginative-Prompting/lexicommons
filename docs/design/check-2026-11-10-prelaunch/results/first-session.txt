@@ -1,0 +1,14 @@
+PASS Study's first session: new words, one at a time, most common first: card:ik card:zijn card:jij match meaning:ik meaning:zijn meaning:jij
+PASS no step quizzes a sentence with more than one new word: 0 whole-sentence steps, every one readable
+PASS the first card is about one word: boxed, the rest plain, a tap away: "Ja," → "Ja: Yes"
+PASS a press anywhere closes the meaning and still does what it presses: closed, and Show meaning ran
+PASS revealed: the word with its dictionary form, no grade on first sight: "ik: I"; 5 rows, all met
+PASS the rest of the first session: words met, matched, then asked about in another sentence: Read it in Dutch:zijn · Read it in Dutch:jij · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs · Match the pairs
+PASS only the words it taught have grades: 2 graded rows, on w:zijn, w:jij
+FAIL the summary names the words it taught: the summary doesn't name ik: 
+PASS with words known: whole-sentence games on what they can read, and a due word in a sentence they haven't had: 7 steps; 6 in sentences not had yet; 1 whole-sentence
+PASS a tap is free in Fill's sentence and on an answer's line; Words lists what's on the screen, in no giveaway order: hem (hij): him; it (referring to a de-word) · je (jij): you (one person, informal) · ons: our; ourselves
+PASS flagged sentences are never a new word's card or question, and the check can fail: 625 new-word steps, none flagged; with the flags ignored the selector picks 15 of the first 1,500 words' sentences among them
+PASS no page errors: none
+11/12 passed
+[gpu 17:23:00] parallel lane released after 3 min (exit 1)

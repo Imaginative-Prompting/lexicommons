@@ -1,0 +1,31 @@
+// Haitian Creole, in the official spelling of 1979 (lang/index.js has what each field means). The short pronouns m, w,
+// l, n, y are words of their own, headworded under their long forms (m under mwen).
+
+export default {
+  name: "Haitian Creole",
+  locale: "ht-HT",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: [],
+  stray: ["menm", "tou", "deja", "sèlman"],
+  patterns: {
+    pronouns: { name: "Pronouns: mwen, ou, li, nou, yo", about: "mwen (I, me), ou (you), li (he, she, it, him, her), nou (we, us, you all) and yo (they, them) often shorten to m, w, l, n and y where the sounds around them allow: M grangou (I hungry), M ap rele w (I will call you).", after: [] },
+    "bare-verb": { name: "Verbs have no is: the bare verb", about: "A verb never takes se as an English is, bare or after ka or pral; with no time marker, a state can be true now, an action a habit, or the time around it can make it past: Mwen vle dlo (I want water), Mwen travay chak jou (I work every day), Yè mwen achte pen (yesterday I bought bread).", after: ["pronouns"] },
+    se: { name: "Is a: se", about: "se joins two names for the same thing: Li se doktè (she is doctor), Sa se liv mwen (that is book my); before a describing word or a place there's usually no is: Li malad (she sick), Mwen lakay (I at home).", after: ["pronouns"] },
+    ye: { name: "Is at the end of a question: ye", about: "When a question asks who someone is, how someone is, or where someone or something is, ye comes at the end where English puts is earlier: Ki moun ou ye? (who you are?), Kijan ou ye? (how you are?), Ki kote estasyon otobis la ye? (where station bus the is?).", after: ["question-word"] },
+    progressive: { name: "Right now, and soon: ap", about: "ap before the verb says it's happening now, or will soon: M ap manje (I am eating), N ap vini demen (we are coming tomorrow).", after: ["pronouns"] },
+    past: { name: "The past: te", about: "te before a verb, a describing word or a place puts it in the past, though the time around it can make a bare verb past too: M te travay yè (I did work yesterday), Li te malad (she was sick).", after: ["pronouns"] },
+    future: { name: "Going to and going somewhere: pral, prale", about: "pral or prale before another verb says going to, and without one says going somewhere: Nou pral manje (we going-to eat), M pral lekòl (I going to school), M pral nan ayewopò a (I going to airport the), Ki kote w prale? (where you going?).", after: ["pronouns"] },
+    negation: { name: "Not: pa", about: "pa goes before the verb and before ap, te and pral: M pa konnen (I not know), Li pa t vini (she not did come).", after: ["pronouns"] },
+    article: { name: "The after the noun: la, a, an, nan, lan", about: "The singular the follows the whole noun phrase and takes one of five forms, by the sounds before it: liv la (book the), bato a (boat the), kay nou an (house our the), machin nan (car the), bank lan (bank the).", after: [] },
+    plural: { name: "The ones, more than one: yo", about: "yo after a noun says the, for more than one: liv yo (books the), timoun yo (children the).", after: ["article"] },
+    possessive: { name: "My, your: after the noun", about: "My and your come after the noun, as the pronoun: liv mwen (book my), manman m (mother my), kay li (house his).", after: ["pronouns"] },
+    gen: { name: "Have, there is: gen", about: "gen (or genyen) says have or there is: M gen yon frè (I have a brother), Pa gen lèt (not there-is milk).", after: [] },
+    eske: { name: "Yes-or-no questions: èske", about: "A question can keep its order and rise at the end, or start with èske: Èske ou pale angle? (is-it-that you speak English?).", after: [] },
+    "question-word": { name: "Where, what, how: kote, kisa, kijan", about: "A question word starts the question: Ki kote ou rete? (where you live?), Kisa w ap fè? (what you are doing?), Konbyen sa koute? (how much that costs?).", after: [] },
+    nan: { name: "In, at, to: nan", about: "nan goes before many places, for being there or going there: nan kay la (in house the), nan lekòl (at school), pral nan ayewopò a (going to airport the).", after: ["article"] },
+    ka: { name: "Can: ka, kapab", about: "ka (or kab, kapab) before the verb says can: M ka ede w (I can help you), Ou ka pale pi dousman? (you can speak more slowly?).", after: ["pronouns"] },
+    vle: { name: "Want: vle", about: "vle says want, before a thing or a verb: M vle dlo (I want water), M vle aprann kreyòl (I want to learn Creole).", after: ["pronouns"] },
+  },
+};

@@ -1,0 +1,7708 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-lv",
+  "name": "Starter: Latvian",
+  "about": "Latvian cases and word order in real, everyday sentences.",
+  "language": "lv",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kafija": "coffee",
+    "tēja": "tea",
+    "ūdens": "water",
+    "es": "I",
+    "dzert": "to drink",
+    "un": "and",
+    "viens": "one",
+    "piens": "milk",
+    "labs": "good, nice",
+    "būt": "to be (ir: is; nav: isn't, there's no)",
+    "tu": "you",
+    "skolotājs": "teacher (male; female skolotāja)",
+    "students": "university/college student",
+    "vai": "yes/no question marker",
+    "mamma": "mom",
+    "tētis": "dad",
+    "brālis": "brother",
+    "māsa": "sister",
+    "mans": "my",
+    "šis": "this (feminine šī; plural šie, šīs)",
+    "draugs": "friend",
+    "ārsts": "doctor",
+    "atslēga": "key",
+    "telefons": "phone",
+    "grāmata": "book",
+    "kur": "where",
+    "šeit": "here",
+    "tur": "there",
+    "tualete": "bathroom",
+    "divi": "two (masculine; feminine divas)",
+    "trīs": "three",
+    "nauda": "money",
+    "runāt": "to speak, to talk",
+    "anglisks": "English (angliski: in English)",
+    "latvisks": "Latvian",
+    "saprast": "to understand",
+    "mazliet": "a little",
+    "gribēt": "to want",
+    "māja": "house (mājās: at home, home)",
+    "istaba": "room",
+    "liels": "big",
+    "mazs": "small",
+    "dzīvot": "to live",
+    "braukt": "to go (by car, bus or train)",
+    "uz": "to",
+    "skola": "school",
+    "pilsēta": "city",
+    "stacija": "station",
+    "mašīna": "car",
+    "šodien": "today",
+    "rīt": "tomorrow",
+    "tagad": "now",
+    "strādāt": "to work",
+    "varēt": "can, to be able to",
+    "iet": "to go (on foot) (kā tev iet: how are you)",
+    "sveiki": "hi; bye",
+    "saukt": "to call (kā tevi sauc: what's your name)",
+    "studēt": "to study (at a university)",
+    "zināt": "to know",
+    "patikt": "to please (man patīk: I like it)",
+    "filma": "movie",
+    "vakar": "yesterday",
+    "slimnīca": "hospital",
+    "dzīvoklis": "apartment",
+    "mēs": "we (mūsu: our)",
+    "jauns": "new; young",
+    "galds": "table",
+    "ledusskapis": "fridge",
+    "aizvērt": "to close",
+    "logs": "window",
+    "virtuve": "kitchen",
+    "balkons": "balcony",
+    "atnākt": "to come, to arrive",
+    "pagatavot": "to make, to cook (and finish)",
+    "vakariņas": "dinner (only plural)",
+    "durvis": "door (only plural)",
+    "lūdzu": "please",
+    "pagaidīt": "to wait (for)",
+    "bez": "without",
+    "cukurs": "sugar",
+    "glāze": "glass (to drink from)",
+    "melns": "black",
+    "apēst": "to eat (up)",
+    "salds": "sweet",
+    "ēst": "to eat",
+    "pica": "pizza",
+    "gatavot": "to cook, to make",
+    "kopā": "together",
+    "rēķins": "check, bill",
+    "brokastis": "breakfast (only plural)",
+    "ola": "egg",
+    "veikals": "store, shop",
+    "pēc": "after; for (pēc maizes: to get bread)",
+    "maize": "bread",
+    "darbs": "work, job",
+    "autobuss": "bus",
+    "nopirkt": "to buy",
+    "kurpe": "shoe",
+    "vilciens": "train",
+    "kavēties": "to be late",
+    "desmit": "ten",
+    "minūte": "minute",
+    "nekad": "never",
+    "par": "too (par mazu: too small); about, for",
+    "taksis": "taxi",
+    "gaidīt": "to wait (for)",
+    "vecmāmiņa": "grandma",
+    "sestdien": "on Saturday",
+    "pie": "at or to someone's (pie vecmāmiņas: to grandma's)",
+    "biļete": "ticket",
+    "maksāt": "to cost; to pay",
+    "divdesmit": "twenty",
+    "eiro": "euro",
+    "skaidrs": "clear (skaidra nauda: cash)",
+    "līt": "to rain",
+    "piezvanīt": "to call",
+    "nākt": "to come",
+    "kino": "the movies, movie theater (uz kino: to the movies)",
+    "pludmale": "beach",
+    "mācīties": "to learn, to study",
+    "valoda": "language (latviešu valoda: Latvian)",
+    "jau": "already; now",
+    "gads": "year",
+    "auksts": "cold (auksti: of the weather or how someone feels)",
+    "dot": "to give (dod ziņu: let me know)",
+    "ziņa": "message; news (dod ziņu: let me know)",
+    "cerēt": "to hope",
+    "laiks": "weather; time",
+    "tikties": "to meet (tiksimies: see you)"
+  },
+  "chunks": {
+    "es-veletos": {
+      "text": "Es vēlētos",
+      "en": "I'd like",
+      "about": "A polite way to order or ask for something: Es vēlētos kafiju."
+    },
+    "ka-tev-iet": {
+      "text": "kā tev iet",
+      "en": "how are you",
+      "about": "The everyday how are you, literally how does it go to you; often answered Labi (fine)."
+    },
+    "ka-tevi-sauc": {
+      "text": "Kā tevi sauc",
+      "en": "What's your name",
+      "about": "Literally how do they call you; politely, Kā jūs sauc?"
+    },
+    "dod-zinu": {
+      "text": "Dod ziņu",
+      "en": "Let me know",
+      "about": "Literally give a message; to more than one, or politely, Dodiet ziņu."
+    },
+    "rekinu-ludzu": {
+      "text": "Rēķinu, lūdzu",
+      "en": "The check, please",
+      "about": "The usual way to ask for the bill in a café or restaurant."
+    },
+    "skaidra-nauda": {
+      "text": "skaidra nauda",
+      "en": "cash",
+      "about": "Literally clear money; Man nav skaidras naudas is I don't have any cash."
+    },
+    "kaut-ko": {
+      "text": "kaut ko",
+      "en": "something",
+      "about": "Something, anything, as one piece: kaut ko saldu (something sweet)."
+    },
+    "nedelas-nogale": {
+      "text": "Nedēļas nogalē",
+      "en": "On the weekend",
+      "about": "nedēļas nogale is the weekend (the week's end), and nedēļas nogalē is on the weekend."
+    },
+    "atvainojiet": {
+      "text": "Atvainojiet",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention or say sorry: polite, or to more than one; one friend gets Atvaino."
+    },
+    "hello": {
+      "text": "Sveiki",
+      "en": "hello"
+    },
+    "please": {
+      "text": "lūdzu",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "paldies",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "uz redzēšanos",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "jā",
+      "en": "yes"
+    },
+    "no": {
+      "text": "nē",
+      "en": "no"
+    },
+    "nice-to-meet-you": {
+      "text": "Prieks iepazīties",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Cik tas maksā",
+      "en": "how much is it"
+    },
+    "see-you-tomorrow": {
+      "text": "Tiksimies rīt",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "dzeru-kafiju-2",
+      "topic": "food",
+      "concepts": [
+        "no-pronoun",
+        "present",
+        "accusative"
+      ],
+      "text": "Dzeru kafiju.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Dzeru",
+          "dzert"
+        ],
+        [
+          "kafiju",
+          "kafija"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dzeru kafija.",
+        "Dzert kafiju."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafiju",
+          "kafija",
+          "dzert"
+        ]
+      }
+    },
+    {
+      "id": "es-dzeru-teju",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es dzeru tēju.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "dzeru",
+          "dzert"
+        ],
+        [
+          "tēju",
+          "tēja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es dzert tēju.",
+        "Es dzeru tēja."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tēju",
+          "tēja",
+          "dzert"
+        ]
+      }
+    },
+    {
+      "id": "es-dzeru-udeni",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es dzeru ūdeni.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "dzeru",
+          "dzert"
+        ],
+        [
+          "ūdeni",
+          "ūdens"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es dzeru ūdens.",
+        "Es dzert ūdeni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ūdeni",
+          "ūdens",
+          "dzert"
+        ]
+      }
+    },
+    {
+      "id": "es-dzeru-kafiju-un-teju",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es dzeru kafiju un tēju.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "dzeru",
+          "dzert"
+        ],
+        [
+          "kafiju",
+          "kafija"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "tēju",
+          "tēja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es dzeru kafija un tēju.",
+        "Es dzeru kafiju un tēja."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafiju",
+          "kafija",
+          "dzert"
+        ]
+      }
+    },
+    {
+      "id": "es-dzeru-teju-un-udeni",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es dzeru tēju un ūdeni.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "dzeru",
+          "dzert"
+        ],
+        [
+          "tēju",
+          "tēja"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "ūdeni",
+          "ūdens"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es dzeru tēja un ūdeni.",
+        "Es dzeru tēju un ūdens."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ūdeni",
+          "ūdens",
+          "dzert"
+        ]
+      }
+    },
+    {
+      "id": "es-dzeru-udeni-un-kafiju",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es dzeru ūdeni un kafiju.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "dzeru",
+          "dzert"
+        ],
+        [
+          "ūdeni",
+          "ūdens"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "kafiju",
+          "kafija"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es dzeru ūdens un kafiju.",
+        "Es dzeru ūdeni un kafija."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kafiju",
+          "kafija",
+          "dzert"
+        ]
+      }
+    },
+    {
+      "id": "kafiju-ludzu",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "no-articles"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Kafiju, lūdzu.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Kafiju,",
+          "kafija"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafija, lūdzu.",
+        "Kafiju un lūdzu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kafiju,",
+          "Kafija,",
+          "Dzert,"
+        ]
+      }
+    },
+    {
+      "id": "sveiki-vienu-teju-ludzu",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "numbers"
+      ],
+      "chunks": [
+        "hello",
+        "please"
+      ],
+      "text": "Sveiki! Vienu tēju, lūdzu.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Sveiki!"
+        ],
+        [
+          "Vienu",
+          "viens"
+        ],
+        [
+          "tēju,",
+          "tēja"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sveiki! Viens tēju, lūdzu.",
+        "Sveiki! Vienu tēja, lūdzu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Vienu",
+          "Viens",
+          "Es"
+        ]
+      }
+    },
+    {
+      "id": "vienu-teju-un-vienu-udeni-ludzu",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "numbers"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Vienu tēju un vienu ūdeni, lūdzu.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Vienu",
+          "viens"
+        ],
+        [
+          "tēju",
+          "tēja"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "vienu",
+          "viens"
+        ],
+        [
+          "ūdeni,",
+          "ūdens"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Viens tēju un vienu ūdeni, lūdzu.",
+        "Vienu tēju un vienu ūdens, lūdzu."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ūdeni,",
+          "ūdens,",
+          "dzert,"
+        ]
+      }
+    },
+    {
+      "id": "kafiju-paldies",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Kafiju, paldies.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Kafiju,",
+          "kafija"
+        ],
+        [
+          "paldies"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafija, paldies.",
+        "Kafiju un paldies."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kafiju,",
+          "Kafija,",
+          "Dzert,"
+        ]
+      }
+    },
+    {
+      "id": "es-dzeru-pienu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es dzeru pienu.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "dzeru",
+          "dzert"
+        ],
+        [
+          "pienu",
+          "piens"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es dzeru piens.",
+        "Es dzert pienu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pienu",
+          "piens",
+          "dzert"
+        ]
+      }
+    },
+    {
+      "id": "man-ir-labi-paldies",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "present",
+        "dummy-subject"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Man ir labi, paldies.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "labi,",
+          "labs"
+        ],
+        [
+          "paldies"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "it is"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es ir labi, paldies.",
+        "Man ir labs, paldies."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Es",
+          "Viens"
+        ]
+      }
+    },
+    {
+      "id": "ja-ludzu",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Jā, lūdzu.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Jā,"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jā ir lūdzu.",
+        "Jā un lūdzu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jā,",
+          "Nē,",
+          "Sveiki,"
+        ]
+      }
+    },
+    {
+      "id": "ne-paldies",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Nē, paldies.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nē,"
+        ],
+        [
+          "paldies"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nē ir paldies.",
+        "Nē un paldies."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nē,",
+          "Jā,",
+          "Sveiki,"
+        ]
+      }
+    },
+    {
+      "id": "ja-paldies-uz-redzesanos",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Jā, paldies. Uz redzēšanos!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Jā,"
+        ],
+        [
+          "paldies."
+        ],
+        [
+          "Uz"
+        ],
+        [
+          "redzēšanos"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jā ir paldies. Uz redzēšanos!",
+        "Jā, paldies. Redzēšanos uz!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jā,",
+          "Nē,",
+          "Sveiki,"
+        ]
+      }
+    },
+    {
+      "id": "ne-paldies-uz-redzesanos",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Nē, paldies. Uz redzēšanos!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nē,"
+        ],
+        [
+          "paldies."
+        ],
+        [
+          "Uz"
+        ],
+        [
+          "redzēšanos"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nē ir paldies. Uz redzēšanos!",
+        "Nē, paldies. Redzēšanos uz!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nē,",
+          "Jā,",
+          "Sveiki,"
+        ]
+      }
+    },
+    {
+      "id": "sveiki-prieks-iepazities",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Sveiki! Prieks iepazīties.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Sveiki!"
+        ],
+        [
+          "Prieks"
+        ],
+        [
+          "iepazīties"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a pleasure"
+        ],
+        [
+          "to meet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sveiki! Prieks esmu iepazīties.",
+        "Sveiki! Prieks un iepazīties."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sveiki!",
+          "Jā!",
+          "Nē!"
+        ]
+      }
+    },
+    {
+      "id": "tu-esi-students",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Tu esi students.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "esi",
+          "būt"
+        ],
+        [
+          "students",
+          "students"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu esmu students.",
+        "Tu ir students."
+      ],
+      "otherGender": {
+        "text": "Tu esi studente.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "esi",
+          "esmu",
+          "ir"
+        ]
+      }
+    },
+    {
+      "id": "vai-tu-esi-skolotajs",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Vai tu esi skolotājs?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Vai",
+          "vai"
+        ],
+        [
+          "tu",
+          "tu"
+        ],
+        [
+          "esi",
+          "būt"
+        ],
+        [
+          "skolotājs",
+          "skolotājs"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question marker]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vai tu esmu skolotājs?",
+        "Vai tu ir skolotājs?"
+      ],
+      "otherGender": {
+        "text": "Vai tu esi skolotāja?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "esi",
+          "esmu",
+          "ir"
+        ]
+      }
+    },
+    {
+      "id": "es-neesmu-skolotajs",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "present"
+      ],
+      "text": "Es neesmu skolotājs.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "neesmu",
+          "būt"
+        ],
+        [
+          "skolotājs",
+          "skolotājs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es nē esmu skolotājs.",
+        "Es esi skolotājs."
+      ],
+      "otherGender": {
+        "text": "Es neesmu skolotāja.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "neesmu",
+          "esmu",
+          "esi"
+        ]
+      }
+    },
+    {
+      "id": "si-ir-mamma",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Šī ir mamma.",
+      "means": "This is Mom.",
+      "words": [
+        [
+          "Šī",
+          "šis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "Mom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šis ir mamma.",
+        "Šī esmu mamma."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Šī",
+          "Šis",
+          "Man"
+        ]
+      }
+    },
+    {
+      "id": "sis-ir-mans-tetis",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Šis ir mans tētis.",
+      "means": "This is my dad.",
+      "words": [
+        [
+          "Šis",
+          "šis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mans",
+          "mans"
+        ],
+        [
+          "tētis",
+          "tētis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "dad"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šī ir mans tētis.",
+        "Šis ir mana tētis."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mans",
+          "mana",
+          "man"
+        ]
+      }
+    },
+    {
+      "id": "mans-tetis-ir-skolotajs",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Mans tētis ir skolotājs.",
+      "means": "My dad is a teacher.",
+      "words": [
+        [
+          "Mans",
+          "mans"
+        ],
+        [
+          "tētis",
+          "tētis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "skolotājs",
+          "skolotājs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "dad"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mana tētis ir skolotājs.",
+        "Mans tētis esi skolotājs."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mans",
+          "Mana",
+          "Man"
+        ]
+      }
+    },
+    {
+      "id": "mans-bralis-ir-students",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Mans brālis ir students.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Mans",
+          "mans"
+        ],
+        [
+          "brālis",
+          "brālis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "students",
+          "students"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mana brālis ir students.",
+        "Mans brālis esmu students."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mans",
+          "Mana",
+          "Man"
+        ]
+      }
+    },
+    {
+      "id": "si-ir-mana-masa",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Šī ir mana māsa.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Šī",
+          "šis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mana",
+          "mans"
+        ],
+        [
+          "māsa",
+          "māsa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šis ir mana māsa.",
+        "Šī ir mans māsa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mana",
+          "mans",
+          "man"
+        ]
+      }
+    },
+    {
+      "id": "mana-mamma-ir-skolotaja",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Mana mamma ir skolotāja.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Mana",
+          "mans"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "skolotāja",
+          "skolotājs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mans mamma ir skolotāja.",
+        "Mana mamma ir skolotājs."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "skolotāja",
+          "skolotājs",
+          "students"
+        ]
+      }
+    },
+    {
+      "id": "si-ir-mana-mamma",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Šī ir mana mamma.",
+      "means": "This is my mom.",
+      "words": [
+        [
+          "Šī",
+          "šis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mana",
+          "mans"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šis ir mana mamma.",
+        "Šī ir mans mamma."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mana",
+          "mans",
+          "man"
+        ]
+      }
+    },
+    {
+      "id": "man-ir-telefons",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "dative",
+        "present"
+      ],
+      "text": "Man ir telefons.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "telefons",
+          "telefons"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es ir telefons.",
+        "Man esmu telefons."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Es",
+          "Mans"
+        ]
+      }
+    },
+    {
+      "id": "vai-tev-ir-atslega",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "have",
+        "dative"
+      ],
+      "text": "Vai tev ir atslēga?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Vai",
+          "vai"
+        ],
+        [
+          "tev",
+          "tu"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "atslēga",
+          "atslēga"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question marker]"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vai tu ir atslēga?",
+        "Vai tev esi atslēga?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tev",
+          "tu",
+          "tevi"
+        ]
+      }
+    },
+    {
+      "id": "man-ir-bralis-un-masa",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "dative",
+        "present"
+      ],
+      "text": "Man ir brālis un māsa.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "brālis",
+          "brālis"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "māsa",
+          "māsa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es ir brālis un māsa.",
+        "Man esmu brālis un māsa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Es",
+          "Mans"
+        ]
+      }
+    },
+    {
+      "id": "man-nav-gramatas",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "nav",
+        "dative",
+        "genitive"
+      ],
+      "text": "Man nav grāmatas.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "nav",
+          "būt"
+        ],
+        [
+          "grāmatas",
+          "grāmata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "there is no"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es nav grāmatas.",
+        "Man nav grāmata."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "grāmatas",
+          "grāmata",
+          "grāmatu"
+        ]
+      }
+    },
+    {
+      "id": "mana-masa-ir-arste",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender",
+        "no-articles"
+      ],
+      "text": "Mana māsa ir ārste.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Mana",
+          "mans"
+        ],
+        [
+          "māsa",
+          "māsa"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "ārste",
+          "ārsts"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mans māsa ir ārste.",
+        "Mana māsa ir ārsts."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ārste",
+          "ārsts",
+          "skolotājs"
+        ]
+      }
+    },
+    {
+      "id": "tu-esi-labs-draugs",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "adjective",
+        "gender"
+      ],
+      "text": "Tu esi labs draugs.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "esi",
+          "būt"
+        ],
+        [
+          "labs",
+          "labs"
+        ],
+        [
+          "draugs",
+          "draugs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu esi labi draugs.",
+        "Tu esmu labs draugs."
+      ],
+      "otherGender": {
+        "text": "Tu esi laba draudzene.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "labs",
+          "labi",
+          "mans"
+        ]
+      }
+    },
+    {
+      "id": "kur-ir-mana-atslega",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Kur ir mana atslēga?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mana",
+          "mans"
+        ],
+        [
+          "atslēga",
+          "atslēga"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur ir mans atslēga?",
+        "Kur ir mani atslēga?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mana",
+          "mans",
+          "mani"
+        ]
+      }
+    },
+    {
+      "id": "mans-telefons-ir-seit",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Mans telefons ir šeit.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Mans",
+          "mans"
+        ],
+        [
+          "telefons",
+          "telefons"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "šeit",
+          "šeit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mana telefons ir šeit.",
+        "Mans telefons esmu šeit."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "šeit",
+          "tur",
+          "kur"
+        ]
+      }
+    },
+    {
+      "id": "atslega-ir-tur",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-articles"
+      ],
+      "text": "Atslēga ir tur.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Atslēga",
+          "atslēga"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "tur",
+          "tur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Atslēga esmu tur.",
+        "Atslēga esi tur."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tur",
+          "šeit",
+          "kur"
+        ]
+      }
+    },
+    {
+      "id": "atvainojiet-kur-ir-tualete",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "no-articles"
+      ],
+      "chunks": [
+        "atvainojiet"
+      ],
+      "text": "Atvainojiet, kur ir tualete?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Atvainojiet,"
+        ],
+        [
+          "kur",
+          "kur"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "tualete",
+          "tualete"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Atvainojiet, kur esmu tualete?",
+        "Atvainojiet, kur esi tualete?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ir",
+          "esmu",
+          "esi"
+        ]
+      }
+    },
+    {
+      "id": "kur-ir-mana-mamma",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Kur ir mana mamma?",
+      "means": "Where is my mom?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mana",
+          "mans"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur ir mans mamma?",
+        "Kur ir mani mamma?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mana",
+          "mans",
+          "mani"
+        ]
+      }
+    },
+    {
+      "id": "mana-masa-ir-seit",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Mana māsa ir šeit.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Mana",
+          "mans"
+        ],
+        [
+          "māsa",
+          "māsa"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "šeit",
+          "šeit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mans māsa ir šeit.",
+        "Mana māsa esi šeit."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "šeit",
+          "tur",
+          "kur"
+        ]
+      }
+    },
+    {
+      "id": "atvainojiet-cik-tas-maksa",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "how-much-is-it",
+        "atvainojiet"
+      ],
+      "text": "Atvainojiet, cik tas maksā?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Atvainojiet,"
+        ],
+        [
+          "cik"
+        ],
+        [
+          "tas"
+        ],
+        [
+          "maksā"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "it"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Atvainojiet, cik tas esmu maksā?",
+        "Atvainojiet, cik tas maksā ir?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Atvainojiet,",
+          "Sveiki,",
+          "Paldies,"
+        ]
+      }
+    },
+    {
+      "id": "divas-kafijas-ludzu",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "plural",
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Divas kafijas, lūdzu.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Divas",
+          "divi"
+        ],
+        [
+          "kafijas,",
+          "kafija"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Divi kafijas, lūdzu.",
+        "Divas kafiju, lūdzu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Divas",
+          "Divi",
+          "Vienu"
+        ]
+      }
+    },
+    {
+      "id": "vienu-gramatu-ludzu",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Vienu grāmatu, lūdzu.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Vienu",
+          "viens"
+        ],
+        [
+          "grāmatu,",
+          "grāmata"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Viens grāmatu, lūdzu.",
+        "Vienu grāmata, lūdzu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "grāmatu,",
+          "grāmata,",
+          "grāmatas,"
+        ]
+      }
+    },
+    {
+      "id": "man-ir-tris-gramatas",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "dative",
+        "numbers",
+        "plural"
+      ],
+      "text": "Man ir trīs grāmatas.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "trīs",
+          "trīs"
+        ],
+        [
+          "grāmatas",
+          "grāmata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "there are"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Man ir trīs grāmata.",
+        "Es ir trīs grāmatas."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "grāmatas",
+          "grāmata",
+          "grāmatu"
+        ]
+      }
+    },
+    {
+      "id": "man-nav-naudas-2",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "nav",
+        "dative",
+        "genitive"
+      ],
+      "text": "Man nav naudas.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "nav",
+          "būt"
+        ],
+        [
+          "naudas",
+          "nauda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "there is no"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Man nav nauda.",
+        "Es nav naudas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "naudas",
+          "nauda",
+          "naudu"
+        ]
+      }
+    },
+    {
+      "id": "es-nesaprotu",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ne"
+      ],
+      "text": "Es nesaprotu.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "nesaprotu",
+          "saprast"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es saproti.",
+        "Es nē saprast."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nesaprotu",
+          "saproti",
+          "saprast"
+        ]
+      }
+    },
+    {
+      "id": "vai-tu-saproti",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Vai tu saproti?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Vai",
+          "vai"
+        ],
+        [
+          "tu",
+          "tu"
+        ],
+        [
+          "saproti",
+          "saprast"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[yes/no question marker]"
+        ],
+        [
+          "you"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vai tu nesaprotu?",
+        "Vai tu saprast?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "saproti",
+          "nesaprotu",
+          "saprast"
+        ]
+      }
+    },
+    {
+      "id": "es-mazliet-runaju-latviski",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Es mazliet runāju latviski.",
+      "means": "I speak a little Latvian.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "mazliet",
+          "mazliet"
+        ],
+        [
+          "runāju",
+          "runāt"
+        ],
+        [
+          "latviski",
+          "latvisks"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "in Latvian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es mazliet runā latviski.",
+        "Es mazliet runāju latvisks."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "latviski",
+          "latvisks",
+          "anglisks"
+        ]
+      }
+    },
+    {
+      "id": "es-gribu-kafiju",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es gribu kafiju.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "gribu",
+          "gribēt"
+        ],
+        [
+          "kafiju",
+          "kafija"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es gribēt kafiju.",
+        "Es gribu kafija."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gribu",
+          "gribēt",
+          "runā"
+        ]
+      }
+    },
+    {
+      "id": "es-gribu-udeni-ludzu",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Es gribu ūdeni, lūdzu.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "gribu",
+          "gribēt"
+        ],
+        [
+          "ūdeni,",
+          "ūdens"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es gribu ūdens, lūdzu.",
+        "Es gribēt ūdeni, lūdzu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ūdeni,",
+          "ūdens,",
+          "pienu,"
+        ]
+      }
+    },
+    {
+      "id": "si-maja-ir-liela",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Šī māja ir liela.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Šī",
+          "šis"
+        ],
+        [
+          "māja",
+          "māja"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "liela",
+          "liels"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šī māja ir liels.",
+        "Šis māja ir liela."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "liela",
+          "liels",
+          "mazs"
+        ]
+      }
+    },
+    {
+      "id": "mana-istaba-ir-maza",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Mana istaba ir maza.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Mana",
+          "mans"
+        ],
+        [
+          "istaba",
+          "istaba"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "maza",
+          "mazs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mana istaba ir mazs.",
+        "Mans istaba ir maza."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maza",
+          "mazs",
+          "mazā"
+        ]
+      }
+    },
+    {
+      "id": "mana-mamma-dzivo-seit",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Mana mamma dzīvo šeit.",
+      "means": "My mom lives here.",
+      "words": [
+        [
+          "Mana",
+          "mans"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ],
+        [
+          "dzīvo",
+          "dzīvot"
+        ],
+        [
+          "šeit",
+          "šeit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mana mamma dzīvoju šeit.",
+        "Mans mamma dzīvo šeit."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dzīvo",
+          "dzīvoju",
+          "dzīvot"
+        ]
+      }
+    },
+    {
+      "id": "kur-tu-dzivo",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Kur tu dzīvo?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "tu",
+          "tu"
+        ],
+        [
+          "dzīvo",
+          "dzīvot"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur tu dzīvoju?",
+        "Kur tu dzīvot?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dzīvo",
+          "dzīvoju",
+          "dzīvot"
+        ]
+      }
+    },
+    {
+      "id": "es-dzivoju-maza-maja",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "locative",
+        "adjective"
+      ],
+      "text": "Es dzīvoju mazā mājā.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "dzīvoju",
+          "dzīvot"
+        ],
+        [
+          "mazā",
+          "mazs"
+        ],
+        [
+          "mājā",
+          "māja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es dzīvoju maza māja.",
+        "Es dzīvo mazā mājā."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mazā",
+          "maza",
+          "mazs"
+        ]
+      }
+    },
+    {
+      "id": "si-masina-ir-maza",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective"
+      ],
+      "text": "Šī mašīna ir maza.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Šī",
+          "šis"
+        ],
+        [
+          "mašīna",
+          "mašīna"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "maza",
+          "mazs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šis mašīna ir maza.",
+        "Šī mašīna ir mazs."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maza",
+          "mazs",
+          "mazā"
+        ]
+      }
+    },
+    {
+      "id": "kur-tu-brauc",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Kur tu brauc?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "tu",
+          "tu"
+        ],
+        [
+          "brauc",
+          "braukt"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you"
+        ],
+        [
+          "are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kur tu braucu?",
+        "Kur tu braukt?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "brauc",
+          "braucu",
+          "braukt"
+        ]
+      }
+    },
+    {
+      "id": "es-braucu-uz-skolu",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Es braucu uz skolu.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "braucu",
+          "braukt"
+        ],
+        [
+          "uz",
+          "uz"
+        ],
+        [
+          "skolu",
+          "skola"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es braucu uz skola.",
+        "Es brauc uz skolu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "skolu",
+          "skola",
+          "stacija"
+        ]
+      }
+    },
+    {
+      "id": "mana-mamma-brauc-uz-pilsetu",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative",
+        "gender"
+      ],
+      "text": "Mana mamma brauc uz pilsētu.",
+      "means": "My mom goes to the city.",
+      "words": [
+        [
+          "Mana",
+          "mans"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ],
+        [
+          "brauc",
+          "braukt"
+        ],
+        [
+          "uz",
+          "uz"
+        ],
+        [
+          "pilsētu",
+          "pilsēta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mana mamma brauc uz pilsēta.",
+        "Mana mamma braucu uz pilsētu."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pilsētu",
+          "pilsēta",
+          "stacija"
+        ]
+      }
+    },
+    {
+      "id": "man-ir-masina",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "dative",
+        "present"
+      ],
+      "text": "Man ir mašīna.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mašīna",
+          "mašīna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "there is"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es ir mašīna.",
+        "Man esmu mašīna."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Es",
+          "Mans"
+        ]
+      }
+    },
+    {
+      "id": "es-sodien-stradaju",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Es šodien strādāju.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "šodien",
+          "šodien"
+        ],
+        [
+          "strādāju",
+          "strādāt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es šodien strādāt.",
+        "Es šodien jāstrādā."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "strādāju",
+          "strādāt",
+          "jāstrādā"
+        ]
+      }
+    },
+    {
+      "id": "rit-es-brauksu-uz-pilsetu",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "setting-first",
+        "accusative"
+      ],
+      "text": "Rīt es braukšu uz pilsētu.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Rīt",
+          "rīt"
+        ],
+        [
+          "es",
+          "es"
+        ],
+        [
+          "braukšu",
+          "braukt"
+        ],
+        [
+          "uz",
+          "uz"
+        ],
+        [
+          "pilsētu",
+          "pilsēta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "will go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rīt es braukšu uz pilsēta.",
+        "Rīt es braukt uz pilsētu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "braukšu",
+          "braukt",
+          "brauc"
+        ]
+      }
+    },
+    {
+      "id": "es-sodien-nevaru-iet",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "modal",
+        "ne"
+      ],
+      "text": "Es šodien nevaru iet.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "šodien",
+          "šodien"
+        ],
+        [
+          "nevaru",
+          "varēt"
+        ],
+        [
+          "iet",
+          "iet"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "cannot"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es šodien nevaru jāiet.",
+        "Es šodien nē varu iet."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nevaru",
+          "varu",
+          "varēt"
+        ]
+      }
+    },
+    {
+      "id": "es-varu-iet",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "modal"
+      ],
+      "text": "Es varu iet.",
+      "means": "I can go.",
+      "words": [
+        [
+          "Es",
+          "es"
+        ],
+        [
+          "varu",
+          "varēt"
+        ],
+        [
+          "iet",
+          "iet"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "can"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es varēt iet.",
+        "Es varu jāiet."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "varu",
+          "nevaru",
+          "varēt"
+        ]
+      }
+    },
+    {
+      "id": "sveiki-ka-tev-iet",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "dative",
+        "dummy-subject"
+      ],
+      "chunks": [
+        "ka-tev-iet",
+        "hello"
+      ],
+      "text": "Sveiki, kā tev iet?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Sveiki,"
+        ],
+        [
+          "kā"
+        ],
+        [
+          "tev"
+        ],
+        [
+          "iet"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "it goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sveiki, kā tu iet?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tev",
+          "tevi",
+          "tu"
+        ]
+      }
+    },
+    {
+      "id": "ka-tevi-sauc",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "accusative",
+        "present"
+      ],
+      "chunks": [
+        "ka-tevi-sauc"
+      ],
+      "text": "Kā tevi sauc?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Kā"
+        ],
+        [
+          "tevi"
+        ],
+        [
+          "sauc"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you"
+        ],
+        [
+          "they call"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kā tev sauc?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tevi",
+          "tev",
+          "tu"
+        ]
+      }
+    },
+    {
+      "id": "vai-tu-runa-angliski",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Vai tu runā angliski?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Vai",
+          "vai"
+        ],
+        [
+          "tu",
+          "tu"
+        ],
+        [
+          "runā",
+          "runāt"
+        ],
+        [
+          "angliski",
+          "anglisks"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "in English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vai tu runā anglisks?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "angliski",
+          "anglisks",
+          "angļi"
+        ]
+      }
+    },
+    {
+      "id": "bralis-stude",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "present",
+        "gender"
+      ],
+      "text": "Mans brālis studē Rīgā.",
+      "means": "My brother studies in Riga.",
+      "words": [
+        [
+          "Mans",
+          "mans"
+        ],
+        [
+          "brālis",
+          "brālis"
+        ],
+        [
+          "studē",
+          "studēt"
+        ],
+        [
+          "Rīgā"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "studies"
+        ],
+        [
+          "in Riga"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mans brālis studē Rīga.",
+        "Mana brālis studē Rīgā."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "Rīgā",
+          "Rīga",
+          "Rīgas"
+        ]
+      }
+    },
+    {
+      "id": "man-ir-masa",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "numbers",
+        "dative",
+        "plural"
+      ],
+      "text": "Man ir viena māsa un divi brāļi.",
+      "means": "I have one sister and two brothers.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "viena",
+          "viens"
+        ],
+        [
+          "māsa",
+          "māsa"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "divi",
+          "divi"
+        ],
+        [
+          "brāļi",
+          "brālis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "one sister"
+        ],
+        [
+          "and"
+        ],
+        [
+          "two brothers"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es ir viena māsa un divi brāļi.",
+        "Man ir viena māsa un divas brāļi."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "divi",
+          "divas",
+          "divus"
+        ]
+      }
+    },
+    {
+      "id": "teta-masina",
+      "topic": "people",
+      "concepts": [
+        "genitive",
+        "gender",
+        "no-articles",
+        "present"
+      ],
+      "text": "Šī ir mana tēta mašīna.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Šī",
+          "šis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "mana",
+          "mans"
+        ],
+        [
+          "tēta",
+          "tētis"
+        ],
+        [
+          "mašīna",
+          "mašīna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my dad's"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Šī ir mana tētis mašīna.",
+        "Šī ir mans tēta mašīna."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tēta",
+          "tētis",
+          "tētim"
+        ]
+      }
+    },
+    {
+      "id": "nezinu-kur-dzivo",
+      "topic": "people",
+      "concepts": [
+        "ne",
+        "present"
+      ],
+      "text": "Es nezinu, kur viņš dzīvo.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "Es"
+        ],
+        [
+          "nezinu,",
+          "zināt"
+        ],
+        [
+          "kur"
+        ],
+        [
+          "viņš"
+        ],
+        [
+          "dzīvo",
+          "dzīvot"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "don't know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Es ne zinu, kur viņš dzīvo.",
+        "Es nezinu, kur viņš dzīvoju."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "dzīvo",
+          "dzīvoju",
+          "dzīvojam"
+        ]
+      }
+    },
+    {
+      "id": "esmu-skolotajs",
+      "topic": "people",
+      "concepts": [
+        "no-articles",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Esmu skolotājs.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Esmu",
+          "būt"
+        ],
+        [
+          "skolotājs",
+          "skolotājs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Esmu skolotāju."
+      ],
+      "otherGender": {
+        "text": "Esmu skolotāja.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "skolotājs",
+          "skolotāju",
+          "skolotāji"
+        ]
+      }
+    },
+    {
+      "id": "man-patik-filma",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "adjective",
+        "definite",
+        "present"
+      ],
+      "text": "Man patīk šī jaunā filma.",
+      "means": "I like this new movie.",
+      "words": [
+        [
+          "Man"
+        ],
+        [
+          "patīk",
+          "patikt"
+        ],
+        [
+          "šī",
+          "šis"
+        ],
+        [
+          "jaunā",
+          "jauns"
+        ],
+        [
+          "filma",
+          "filma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing"
+        ],
+        [
+          "this new movie",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Man",
+        "šī",
+        "jaunā",
+        "filma"
+      ],
+      "wrong": [
+        "Es patīk šī jaunā filma.",
+        "Man patīk šo jauno filmu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Es",
+          "Mani"
+        ]
+      }
+    },
+    {
+      "id": "vakar-biju-majas",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "no-pronoun",
+        "locative"
+      ],
+      "text": "Vakar biju mājās.",
+      "means": "Yesterday I was at home.",
+      "words": [
+        [
+          "Vakar",
+          "vakar"
+        ],
+        [
+          "biju",
+          "būt"
+        ],
+        [
+          "mājās",
+          "māja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I was"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Vakar būšu mājās."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "biju",
+          "būšu",
+          "būt"
+        ]
+      }
+    },
+    {
+      "id": "mamma-strada",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "present",
+        "no-articles",
+        "gender"
+      ],
+      "text": "Mana mamma strādā slimnīcā.",
+      "means": "My mom works at a hospital.",
+      "words": [
+        [
+          "Mana",
+          "mans"
+        ],
+        [
+          "mamma",
+          "mamma"
+        ],
+        [
+          "strādā",
+          "strādāt"
+        ],
+        [
+          "slimnīcā",
+          "slimnīca"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "works"
+        ],
+        [
+          "at a hospital"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mana mamma strādā slimnīca.",
+        "Mans mamma strādā slimnīcā."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "slimnīcā",
+          "slimnīca",
+          "slimnīcu"
+        ]
+      }
+    },
+    {
+      "id": "dzivoju-maza-dzivokli",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "adjective",
+        "no-pronoun",
+        "gender"
+      ],
+      "text": "Dzīvoju mazā dzīvoklī.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Dzīvoju",
+          "dzīvot"
+        ],
+        [
+          "mazā",
+          "mazs"
+        ],
+        [
+          "dzīvoklī",
+          "dzīvoklis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Dzīvoju mazs dzīvoklis."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mazā",
+          "mazs",
+          "mazu"
+        ]
+      }
+    },
+    {
+      "id": "musu-jaunais-dzivoklis",
+      "topic": "home",
+      "concepts": [
+        "definite",
+        "adjective",
+        "gender",
+        "present"
+      ],
+      "text": "Mūsu jaunais dzīvoklis ir liels.",
+      "means": "Our new apartment is big.",
+      "words": [
+        [
+          "Mūsu",
+          "mēs"
+        ],
+        [
+          "jaunais",
+          "jauns"
+        ],
+        [
+          "dzīvoklis",
+          "dzīvoklis"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "liels",
+          "liels"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Our"
+        ],
+        [
+          "new"
+        ],
+        [
+          "apartment"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Mūsu jauns dzīvoklis ir liels.",
+        "Mūsu jaunais dzīvoklis ir liela."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jaunais",
+          "jauns",
+          "jaunā"
+        ]
+      }
+    },
+    {
+      "id": "uz-galda-gramata",
+      "topic": "home",
+      "concepts": [
+        "genitive",
+        "no-articles",
+        "dummy-subject",
+        "setting-first"
+      ],
+      "text": "Uz galda ir grāmata.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Uz"
+        ],
+        [
+          "galda",
+          "galds"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "grāmata",
+          "grāmata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Uz",
+        "galda",
+        "grāmata"
+      ],
+      "wrong": [
+        "Uz galds ir grāmata.",
+        "Uz galda ir grāmatu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "galda",
+          "galds",
+          "galdu"
+        ]
+      }
+    },
+    {
+      "id": "ledusskapi-nav-piena",
+      "topic": "home",
+      "concepts": [
+        "nav",
+        "locative",
+        "dummy-subject",
+        "setting-first"
+      ],
+      "text": "Ledusskapī nav piena.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Ledusskapī",
+          "ledusskapis"
+        ],
+        [
+          "nav",
+          "būt"
+        ],
+        [
+          "piena",
+          "piens"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge",
+          true
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Ledusskapī"
+      ],
+      "wrong": [
+        "Ledusskapī ne ir piena."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "piena",
+          "pienu",
+          "pienam"
+        ]
+      }
+    },
+    {
+      "id": "vai-vari-aizvert-logu",
+      "topic": "home",
+      "concepts": [
+        "modal",
+        "accusative",
+        "question",
+        "no-pronoun"
+      ],
+      "text": "Vai vari aizvērt logu?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Vai"
+        ],
+        [
+          "vari",
+          "varēt"
+        ],
+        [
+          "aizvērt",
+          "aizvērt"
+        ],
+        [
+          "logu",
+          "logs"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you can"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vai vari aizver logu?",
+        "Vai vari aizvērt logs?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "aizvērt",
+          "aizver",
+          "aizvēra"
+        ]
+      }
+    },
+    {
+      "id": "mums-ir-liela-virtuve",
+      "topic": "home",
+      "concepts": [
+        "have",
+        "adjective",
+        "gender",
+        "dative"
+      ],
+      "text": "Mums ir liela virtuve un mazs balkons.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Mums"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "liela",
+          "liels"
+        ],
+        [
+          "virtuve",
+          "virtuve"
+        ],
+        [
+          "un"
+        ],
+        [
+          "mazs",
+          "mazs"
+        ],
+        [
+          "balkons",
+          "balkons"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To us"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mums ir lielu virtuvi un mazu balkonu.",
+        "Mums ir liels virtuve un mazs balkons."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "liela",
+          "liels",
+          "lielu"
+        ]
+      }
+    },
+    {
+      "id": "kad-atnaksu-majas",
+      "topic": "home",
+      "concepts": [
+        "future",
+        "accusative",
+        "no-pronoun",
+        "plural"
+      ],
+      "text": "Kad atnākšu mājās, pagatavošu vakariņas.",
+      "means": "When I get home, I'll make dinner.",
+      "words": [
+        [
+          "Kad"
+        ],
+        [
+          "atnākšu",
+          "atnākt"
+        ],
+        [
+          "mājās,",
+          "māja"
+        ],
+        [
+          "pagatavošu",
+          "pagatavot"
+        ],
+        [
+          "vakariņas",
+          "vakariņas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When"
+        ],
+        [
+          "I'll come"
+        ],
+        [
+          "home,"
+        ],
+        [
+          "I'll make"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kad atnākšu mājās, pagatavot vakariņas."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pagatavošu",
+          "pagatavot",
+          "pagatavotu"
+        ]
+      }
+    },
+    {
+      "id": "aizver-durvis",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "plural",
+        "accusative"
+      ],
+      "text": "Aizver durvis, lūdzu.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Aizver",
+          "aizvērt"
+        ],
+        [
+          "durvis,",
+          "durvis"
+        ],
+        [
+          "lūdzu",
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Aizver durvju, lūdzu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "durvis,",
+          "durvīm,",
+          "durvju,"
+        ]
+      }
+    },
+    {
+      "id": "kur-ir-atslegas",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "plural",
+        "gender",
+        "present"
+      ],
+      "text": "Kur ir manas atslēgas?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Kur",
+          "kur"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "manas",
+          "mans"
+        ],
+        [
+          "atslēgas",
+          "atslēga"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Kur ir mani atslēgas?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "manas",
+          "mani",
+          "mana"
+        ]
+      }
+    },
+    {
+      "id": "pagaidi-mani",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "accusative"
+      ],
+      "text": "Pagaidi mani!",
+      "means": "Wait for me!",
+      "words": [
+        [
+          "Pagaidi",
+          "pagaidīt"
+        ],
+        [
+          "mani"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait for"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Pagaidi es!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mani",
+          "es",
+          "mans"
+        ]
+      }
+    },
+    {
+      "id": "dzeru-kafiju",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "genitive",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Dzeru kafiju bez cukura.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Dzeru",
+          "dzert"
+        ],
+        [
+          "kafiju",
+          "kafija"
+        ],
+        [
+          "bez",
+          "bez"
+        ],
+        [
+          "cukura",
+          "cukurs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Dzeru kafiju bez cukurs."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "cukura",
+          "cukuru",
+          "cukurs"
+        ]
+      }
+    },
+    {
+      "id": "veletos-glazi-udens",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "accusative"
+      ],
+      "chunks": [
+        "es-veletos"
+      ],
+      "text": "Es vēlētos glāzi ūdens.",
+      "means": "I'd like a glass of water.",
+      "words": [
+        [
+          "Es"
+        ],
+        [
+          "vēlētos"
+        ],
+        [
+          "glāzi",
+          "glāze"
+        ],
+        [
+          "ūdens",
+          "ūdens"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'd like"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of water"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Es vēlētos glāzi ūdeni.",
+        "Es vēlētos glāze ūdens."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ūdens",
+          "ūdeni",
+          "ūdenim"
+        ]
+      }
+    },
+    {
+      "id": "vienu-melno-kafiju",
+      "topic": "food",
+      "concepts": [
+        "numbers",
+        "accusative",
+        "adjective",
+        "gender"
+      ],
+      "text": "Vienu melnu kafiju, lūdzu.",
+      "means": "One black coffee, please.",
+      "words": [
+        [
+          "Vienu",
+          "viens"
+        ],
+        [
+          "melnu",
+          "melns"
+        ],
+        [
+          "kafiju,",
+          "kafija"
+        ],
+        [
+          "lūdzu",
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "black"
+        ],
+        [
+          "coffee,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Vienu melnā kafiju, lūdzu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "melnu",
+          "melna",
+          "melnais"
+        ]
+      }
+    },
+    {
+      "id": "gribu-apest",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "no-pronoun",
+        "accusative"
+      ],
+      "chunks": [
+        "kaut-ko"
+      ],
+      "text": "Gribu apēst kaut ko saldu.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Gribu",
+          "gribēt"
+        ],
+        [
+          "apēst",
+          "apēst"
+        ],
+        [
+          "kaut"
+        ],
+        [
+          "ko"
+        ],
+        [
+          "saldu",
+          "salds"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something"
+        ],
+        [
+          "sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Gribu apēdu kaut ko saldu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "apēst",
+          "apēdu",
+          "apēdīs"
+        ]
+      }
+    },
+    {
+      "id": "vakar-edam-picu",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "accusative",
+        "no-pronoun"
+      ],
+      "text": "Vakar ēdām picu.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Vakar",
+          "vakar"
+        ],
+        [
+          "ēdām",
+          "ēst"
+        ],
+        [
+          "picu",
+          "pica"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Vakar ēdīsim picu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ēdām",
+          "ēdīsim",
+          "ēst"
+        ]
+      }
+    },
+    {
+      "id": "gatavot-ar-mammu",
+      "topic": "food",
+      "concepts": [
+        "dative",
+        "modal",
+        "ar",
+        "accusative"
+      ],
+      "text": "Man patīk gatavot kopā ar mammu.",
+      "means": "I like cooking with my mom.",
+      "words": [
+        [
+          "Man"
+        ],
+        [
+          "patīk",
+          "patikt"
+        ],
+        [
+          "gatavot",
+          "gatavot"
+        ],
+        [
+          "kopā",
+          "kopā"
+        ],
+        [
+          "ar"
+        ],
+        [
+          "mammu",
+          "mamma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me",
+          true
+        ],
+        [
+          "is pleasing",
+          true
+        ],
+        [
+          "to cook",
+          true
+        ],
+        [
+          "together",
+          true
+        ],
+        [
+          "with mom",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        3,
+        4,
+        1,
+        0
+      ],
+      "moved": [
+        "Man",
+        "patīk",
+        "gatavot",
+        "kopā",
+        "ar",
+        "mammu"
+      ],
+      "wrong": [
+        "Man patīk gatavot kopā ar mamma."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "mammu",
+          "mamma",
+          "mammas"
+        ]
+      }
+    },
+    {
+      "id": "rekinu-ludzu",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "no-articles"
+      ],
+      "chunks": [
+        "rekinu-ludzu"
+      ],
+      "text": "Rēķinu, lūdzu.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Rēķinu,"
+        ],
+        [
+          "lūdzu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Rēķinam, lūdzu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Rēķinu,",
+          "Rēķinam,",
+          "Rēķinā,"
+        ]
+      }
+    },
+    {
+      "id": "brokastis-olas",
+      "topic": "food",
+      "concepts": [
+        "locative",
+        "plural",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Brokastīs ēdu olas.",
+      "means": "I have eggs for breakfast.",
+      "words": [
+        [
+          "Brokastīs",
+          "brokastis"
+        ],
+        [
+          "ēdu",
+          "ēst"
+        ],
+        [
+          "olas",
+          "ola"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For breakfast"
+        ],
+        [
+          "I eat"
+        ],
+        [
+          "eggs"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Brokastīs ēdu olām."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "olas",
+          "olām",
+          "olās"
+        ]
+      }
+    },
+    {
+      "id": "kur-ir-stacija",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "no-articles",
+        "imperative"
+      ],
+      "chunks": [
+        "atvainojiet"
+      ],
+      "text": "Atvainojiet, kur ir stacija?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Atvainojiet,"
+        ],
+        [
+          "kur",
+          "kur"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "stacija",
+          "stacija"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Atvainojiet, kur ir staciju?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "stacija",
+          "staciju",
+          "stacijā"
+        ]
+      }
+    },
+    {
+      "id": "eju-uz-veikalu",
+      "topic": "out",
+      "concepts": [
+        "accusative",
+        "genitive",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Eju uz veikalu pēc maizes.",
+      "means": "I'm going to the store for bread.",
+      "words": [
+        [
+          "Eju",
+          "iet"
+        ],
+        [
+          "uz"
+        ],
+        [
+          "veikalu",
+          "veikals"
+        ],
+        [
+          "pēc",
+          "pēc"
+        ],
+        [
+          "maizes",
+          "maize"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Eju uz veikalā pēc maizes."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "veikalu",
+          "veikalā",
+          "veikals"
+        ]
+      }
+    },
+    {
+      "id": "rit-ar-autobusu",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "ar",
+        "accusative",
+        "setting-first"
+      ],
+      "text": "Rīt uz darbu braukšu ar autobusu.",
+      "means": "Tomorrow I'll go to work by bus.",
+      "words": [
+        [
+          "Rīt",
+          "rīt"
+        ],
+        [
+          "uz"
+        ],
+        [
+          "darbu",
+          "darbs"
+        ],
+        [
+          "braukšu",
+          "braukt"
+        ],
+        [
+          "ar"
+        ],
+        [
+          "autobusu",
+          "autobuss"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to work",
+          true
+        ],
+        [
+          "I'll go",
+          true
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "uz",
+        "darbu",
+        "braukšu"
+      ],
+      "wrong": [
+        "Rīt uz darbu braukšu ar autobuss."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "autobusu",
+          "autobuss",
+          "autobusam"
+        ]
+      }
+    },
+    {
+      "id": "nopirku-kurpes",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "adjective",
+        "plural",
+        "no-pronoun"
+      ],
+      "text": "Nopirku jaunas kurpes.",
+      "means": "I bought new shoes.",
+      "words": [
+        [
+          "Nopirku",
+          "nopirkt"
+        ],
+        [
+          "jaunas",
+          "jauns"
+        ],
+        [
+          "kurpes",
+          "kurpe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I bought"
+        ],
+        [
+          "new shoes"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Nopirku jauni kurpes."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jaunas",
+          "jauni",
+          "jaunu"
+        ]
+      }
+    },
+    {
+      "id": "vilciens-kavejas",
+      "topic": "out",
+      "concepts": [
+        "reflexive",
+        "past",
+        "numbers"
+      ],
+      "text": "Vilciens kavējās desmit minūtes.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Vilciens",
+          "vilciens"
+        ],
+        [
+          "kavējās",
+          "kavēties"
+        ],
+        [
+          "desmit",
+          "desmit"
+        ],
+        [
+          "minūtes",
+          "minūte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was late"
+        ],
+        [
+          "ten minutes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vilciens kavējās desmit minūte."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "minūtes",
+          "minūte",
+          "minūtē"
+        ]
+      }
+    },
+    {
+      "id": "nekad-neesmu-bijis",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "ne",
+        "locative",
+        "no-pronoun"
+      ],
+      "text": "Nekad neesmu bijis Liepājā.",
+      "means": "I've never been to Liepāja.",
+      "words": [
+        [
+          "Nekad",
+          "nekad"
+        ],
+        [
+          "neesmu",
+          "būt"
+        ],
+        [
+          "bijis",
+          "būt"
+        ],
+        [
+          "Liepājā"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Never"
+        ],
+        [
+          "I have not"
+        ],
+        [
+          "been"
+        ],
+        [
+          "in Liepāja"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nekad esmu bijis Liepājā."
+      ],
+      "otherGender": {
+        "text": "Nekad neesmu bijusi Liepājā.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "bijis",
+          "būt",
+          "būšu"
+        ]
+      }
+    },
+    {
+      "id": "jaunas-kurpes-par-mazu",
+      "topic": "out",
+      "concepts": [
+        "definite",
+        "plural",
+        "adjective",
+        "present"
+      ],
+      "text": "Jaunās kurpes ir par mazu.",
+      "means": "The new shoes are too small.",
+      "words": [
+        [
+          "Jaunās",
+          "jauns"
+        ],
+        [
+          "kurpes",
+          "kurpe"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "par",
+          "par"
+        ],
+        [
+          "mazu",
+          "mazs"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The new shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Jaunie kurpes ir par mazu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jaunās",
+          "Jaunie",
+          "Jaunais"
+        ]
+      }
+    },
+    {
+      "id": "varam-braukt-ar-taksi",
+      "topic": "out",
+      "concepts": [
+        "modal",
+        "ar",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Varam braukt ar taksi.",
+      "means": "We can take a taxi.",
+      "words": [
+        [
+          "Varam",
+          "varēt"
+        ],
+        [
+          "braukt",
+          "braukt"
+        ],
+        [
+          "ar"
+        ],
+        [
+          "taksi",
+          "taksis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "by taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Varam braucam ar taksi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "braukt",
+          "braucam",
+          "brauca"
+        ]
+      }
+    },
+    {
+      "id": "stacija-gaida-vecmamina",
+      "topic": "out",
+      "concepts": [
+        "locative",
+        "accusative",
+        "present",
+        "setting-first"
+      ],
+      "text": "Stacijā mūs gaida vecmāmiņa.",
+      "means": "Grandma's waiting for us at the station.",
+      "words": [
+        [
+          "Stacijā",
+          "stacija"
+        ],
+        [
+          "mūs"
+        ],
+        [
+          "gaida",
+          "gaidīt"
+        ],
+        [
+          "vecmāmiņa",
+          "vecmāmiņa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "us",
+          true
+        ],
+        [
+          "is waiting for",
+          true
+        ],
+        [
+          "grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Stacijā",
+        "mūs",
+        "gaida",
+        "vecmāmiņa"
+      ],
+      "wrong": [
+        "Stacijā mēs gaida vecmāmiņa."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mūs",
+          "mēs",
+          "mūsu"
+        ]
+      }
+    },
+    {
+      "id": "sestdien-pie-vecmaminas",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "genitive",
+        "no-pronoun"
+      ],
+      "text": "Sestdien brauksim pie vecmāmiņas.",
+      "means": "On Saturday we're going to grandma's.",
+      "words": [
+        [
+          "Sestdien",
+          "sestdien"
+        ],
+        [
+          "brauksim",
+          "braukt"
+        ],
+        [
+          "pie",
+          "pie"
+        ],
+        [
+          "vecmāmiņas",
+          "vecmāmiņa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we'll go"
+        ],
+        [
+          "to grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Sestdien brauksim pie vecmāmiņa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vecmāmiņas",
+          "vecmāmiņu",
+          "vecmāmiņai"
+        ]
+      }
+    },
+    {
+      "id": "bilete-maksa",
+      "topic": "out",
+      "concepts": [
+        "numbers",
+        "no-articles",
+        "present"
+      ],
+      "text": "Biļete maksā divdesmit eiro.",
+      "means": "The ticket costs twenty euros.",
+      "words": [
+        [
+          "Biļete",
+          "biļete"
+        ],
+        [
+          "maksā",
+          "maksāt"
+        ],
+        [
+          "divdesmit",
+          "divdesmit"
+        ],
+        [
+          "eiro",
+          "eiro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The ticket"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "twenty euros"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Biļete maksāju divdesmit eiro."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "maksā",
+          "maksāju",
+          "maksāt"
+        ]
+      }
+    },
+    {
+      "id": "man-nav-naudas",
+      "topic": "out",
+      "concepts": [
+        "nav",
+        "have",
+        "dative"
+      ],
+      "chunks": [
+        "skaidra-nauda"
+      ],
+      "text": "Man nav skaidras naudas.",
+      "means": "I don't have any cash.",
+      "words": [
+        [
+          "Man"
+        ],
+        [
+          "nav",
+          "būt"
+        ],
+        [
+          "skaidras",
+          "skaidrs"
+        ],
+        [
+          "naudas",
+          "nauda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "cash"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Man ne ir skaidras naudas."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "naudas",
+          "naudu",
+          "naudai"
+        ]
+      }
+    },
+    {
+      "id": "rit-lis",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "dummy-subject"
+      ],
+      "text": "Rīt līs.",
+      "means": "It'll rain tomorrow.",
+      "words": [
+        [
+          "Rīt",
+          "rīt"
+        ],
+        [
+          "līs",
+          "līt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rīt lija."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "līs",
+          "lija",
+          "līt"
+        ]
+      }
+    },
+    {
+      "id": "rit-tev-piezvanisu",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "dative",
+        "no-pronoun"
+      ],
+      "text": "Rīt tev piezvanīšu.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Rīt",
+          "rīt"
+        ],
+        [
+          "tev"
+        ],
+        [
+          "piezvanīšu",
+          "piezvanīt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "I'll call",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "tev",
+        "piezvanīšu"
+      ],
+      "wrong": [
+        "Rīt tevi piezvanīšu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tev",
+          "tevi",
+          "tu"
+        ]
+      }
+    },
+    {
+      "id": "man-tagad-jaiet",
+      "topic": "plans",
+      "concepts": [
+        "debitive",
+        "dative"
+      ],
+      "text": "Man tagad jāiet.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Man",
+          "es"
+        ],
+        [
+          "tagad",
+          "tagad"
+        ],
+        [
+          "jāiet",
+          "iet"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "now"
+        ],
+        [
+          "must go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es tagad jāiet."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Es",
+          "Mani"
+        ]
+      }
+    },
+    {
+      "id": "rit-man-jastrada",
+      "topic": "plans",
+      "concepts": [
+        "debitive",
+        "dative"
+      ],
+      "text": "Rīt man jāstrādā.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Rīt",
+          "rīt"
+        ],
+        [
+          "man",
+          "es"
+        ],
+        [
+          "jāstrādā",
+          "strādāt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "must work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rīt es jāstrādā."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jāstrādā",
+          "strādāju",
+          "jāstrādāju"
+        ]
+      }
+    },
+    {
+      "id": "man-janoperk-maize",
+      "topic": "plans",
+      "concepts": [
+        "debitive",
+        "dative",
+        "no-articles"
+      ],
+      "text": "Man jānopērk maize.",
+      "means": "I have to buy bread.",
+      "words": [
+        [
+          "Man"
+        ],
+        [
+          "jānopērk",
+          "nopirkt"
+        ],
+        [
+          "maize",
+          "maize"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "must buy"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es jānopērk maize."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "maize",
+          "maizei",
+          "maizē"
+        ]
+      }
+    },
+    {
+      "id": "vai-naksi-uz-kino",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "future",
+        "dative",
+        "ar"
+      ],
+      "text": "Vai nāksi ar mums uz kino?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Vai"
+        ],
+        [
+          "nāksi",
+          "nākt"
+        ],
+        [
+          "ar"
+        ],
+        [
+          "mums"
+        ],
+        [
+          "uz"
+        ],
+        [
+          "kino",
+          "kino"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you'll come"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vai nāksi ar mēs uz kino?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mums",
+          "mēs",
+          "mūs"
+        ]
+      }
+    },
+    {
+      "id": "nedelas-nogale-pludmale",
+      "topic": "plans",
+      "concepts": [
+        "locative",
+        "future",
+        "accusative"
+      ],
+      "chunks": [
+        "nedelas-nogale"
+      ],
+      "text": "Nedēļas nogalē brauksim uz pludmali.",
+      "means": "We're going to the beach this weekend.",
+      "words": [
+        [
+          "Nedēļas"
+        ],
+        [
+          "nogalē"
+        ],
+        [
+          "brauksim",
+          "braukt"
+        ],
+        [
+          "uz"
+        ],
+        [
+          "pludmali",
+          "pludmale"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the weekend"
+        ],
+        [
+          "we'll go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Nedēļas nogalē brauksim uz pludmalē."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pludmali",
+          "pludmalē",
+          "pludmale"
+        ]
+      }
+    },
+    {
+      "id": "macos-latviesu",
+      "topic": "plans",
+      "concepts": [
+        "reflexive",
+        "accusative",
+        "no-pronoun",
+        "present"
+      ],
+      "text": "Mācos latviešu valodu jau gadu.",
+      "means": "I've been learning Latvian for a year.",
+      "words": [
+        [
+          "Mācos",
+          "mācīties"
+        ],
+        [
+          "latviešu"
+        ],
+        [
+          "valodu",
+          "valoda"
+        ],
+        [
+          "jau",
+          "jau"
+        ],
+        [
+          "gadu",
+          "gads"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm learning"
+        ],
+        [
+          "Latvian"
+        ],
+        [
+          "for a year now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mācos latviešu valoda jau gadu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "valodu",
+          "valoda",
+          "valodai"
+        ]
+      }
+    },
+    {
+      "id": "sodien-ir-auksti",
+      "topic": "plans",
+      "concepts": [
+        "dummy-subject",
+        "present"
+      ],
+      "text": "Šodien ir auksti.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Šodien",
+          "šodien"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "auksti",
+          "auksts"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šodien ir aukstu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "auksti",
+          "aukstu",
+          "aukstā"
+        ]
+      }
+    },
+    {
+      "id": "man-ir-auksti",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "dummy-subject",
+        "present"
+      ],
+      "text": "Man ir auksti.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Man"
+        ],
+        [
+          "ir",
+          "būt"
+        ],
+        [
+          "auksti",
+          "auksts"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Es ir auksti."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Man",
+          "Es",
+          "Mani"
+        ]
+      }
+    },
+    {
+      "id": "dod-zinu",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "accusative"
+      ],
+      "chunks": [
+        "dod-zinu"
+      ],
+      "text": "Dod ziņu!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Dod",
+          "dot"
+        ],
+        [
+          "ziņu",
+          "ziņa"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Give"
+        ],
+        [
+          "a message"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dod ziņa!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ziņu",
+          "ziņa",
+          "ziņai"
+        ]
+      }
+    },
+    {
+      "id": "ceru-labs-laiks",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "adjective",
+        "gender",
+        "no-pronoun"
+      ],
+      "text": "Ceru, ka rīt būs labs laiks.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Ceru,",
+          "cerēt"
+        ],
+        [
+          "ka"
+        ],
+        [
+          "rīt",
+          "rīt"
+        ],
+        [
+          "būs",
+          "būt"
+        ],
+        [
+          "labs",
+          "labs"
+        ],
+        [
+          "laiks",
+          "laiks"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "good weather"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ceru, ka rīt būs laba laiks."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "labs",
+          "laba",
+          "labu"
+        ]
+      }
+    },
+    {
+      "id": "man-nav-laika",
+      "topic": "plans",
+      "concepts": [
+        "nav",
+        "have",
+        "ne",
+        "dative"
+      ],
+      "text": "Šodien man nav laika.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Šodien",
+          "šodien"
+        ],
+        [
+          "man"
+        ],
+        [
+          "nav",
+          "būt"
+        ],
+        [
+          "laika",
+          "laiks"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "there's no"
+        ],
+        [
+          "time"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šodien man ne ir laika."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "laika",
+          "laiku",
+          "laikam"
+        ]
+      }
+    },
+    {
+      "id": "tiksimies-rit",
+      "topic": "plans",
+      "concepts": [
+        "reflexive",
+        "future",
+        "no-pronoun"
+      ],
+      "chunks": [
+        "see-you-tomorrow"
+      ],
+      "text": "Tiksimies rīt!",
+      "means": "See you tomorrow!",
+      "words": [
+        [
+          "Tiksimies"
+        ],
+        [
+          "rīt"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We'll meet"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Tiksimies vakar!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tiksimies",
+          "Tikāmies",
+          "Tikties"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kafija",
+          "forms": [
+            "kafiju"
+          ],
+          "picture": "coffee",
+          "means": "kafiju = coffee"
+        },
+        {
+          "lemma": "tēja",
+          "forms": [
+            "tēju"
+          ],
+          "picture": "tea",
+          "means": "tēju = tea"
+        },
+        {
+          "lemma": "ūdens",
+          "forms": [
+            "ūdeni"
+          ],
+          "picture": "water",
+          "means": "ūdeni = water"
+        },
+        {
+          "lemma": "es",
+          "forms": [
+            "es"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "dzert",
+          "forms": [
+            "dzeru"
+          ],
+          "picture": "drink",
+          "means": "dzeru = drink"
+        },
+        {
+          "lemma": "un",
+          "forms": [
+            "un"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending marks the person: (es) dzīvoju, (tu) dzīvo, (viņš, viņa) dzīvo, (mēs) dzīvojam, (jūs) dzīvojat, (viņi) dzīvo; to be is esmu, esi, ir, esam, esat, ir."
+      },
+      "items": [
+        "dzeru-kafiju-2",
+        "es-dzeru-teju",
+        "es-dzeru-udeni",
+        "es-dzeru-kafiju-un-teju",
+        "es-dzeru-teju-un-udeni",
+        "es-dzeru-udeni-un-kafiju"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "viens",
+          "forms": [
+            "vienu"
+          ],
+          "means": "vienu = one"
+        },
+        {
+          "lemma": "piens",
+          "forms": [
+            "pienu"
+          ],
+          "picture": "milk",
+          "means": "pienu = milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "kafiju-ludzu",
+        "sveiki-vienu-teju-ludzu",
+        "vienu-teju-un-vienu-udeni-ludzu",
+        "kafiju-paldies",
+        "es-dzeru-pienu"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "labs",
+          "forms": [
+            "labi"
+          ],
+          "means": "labi = well"
+        },
+        {
+          "lemma": "būt",
+          "forms": [
+            "ir"
+          ],
+          "means": "ir = is"
+        },
+        {
+          "lemma": "es",
+          "forms": [
+            "man"
+          ],
+          "means": "man = to me"
+        }
+      ],
+      "phrases": [
+        "ka-tev-iet",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes/no question usually starts with vai (Vai tu runā angliski?), and a question word like kur, ko or kā usually starts its question; Latvian adds no do."
+      },
+      "items": [
+        "sveiki-ka-tev-iet",
+        "man-ir-labi-paldies",
+        "ja-ludzu",
+        "ne-paldies",
+        "ja-paldies-uz-redzesanos",
+        "ne-paldies-uz-redzesanos"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "tu",
+          "forms": [
+            "tu"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "skolotājs",
+          "forms": [
+            "skolotājs"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "students",
+          "forms": [
+            "students"
+          ],
+          "means": "university/college student"
+        },
+        {
+          "lemma": "vai",
+          "forms": [
+            "vai"
+          ],
+          "means": "yes/no question marker; whether; or"
+        },
+        {
+          "lemma": "būt",
+          "forms": [
+            "esmu",
+            "esi",
+            "neesmu"
+          ],
+          "means": "esmu = am; esi = are; neesmu = am not"
+        }
+      ],
+      "phrases": [
+        "ka-tevi-sauc",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "ka-tevi-sauc",
+        "sveiki-prieks-iepazities",
+        "esmu-skolotajs",
+        "tu-esi-students",
+        "vai-tu-esi-skolotajs",
+        "es-neesmu-skolotajs"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mamma",
+          "forms": [
+            "mamma"
+          ],
+          "picture": "mother",
+          "means": "mom"
+        },
+        {
+          "lemma": "tētis",
+          "forms": [
+            "tētis"
+          ],
+          "picture": "father",
+          "means": "dad"
+        },
+        {
+          "lemma": "brālis",
+          "forms": [
+            "brālis"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "māsa",
+          "forms": [
+            "māsa"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "mans",
+          "forms": [
+            "mana",
+            "mans"
+          ],
+          "means": "mana = my; mans = my"
+        },
+        {
+          "lemma": "šis",
+          "forms": [
+            "šī",
+            "šis"
+          ],
+          "means": "šī = this; šis = this"
+        },
+        {
+          "lemma": "skolotājs",
+          "forms": [
+            "skolotāja"
+          ],
+          "means": "skolotāja = teacher"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Every noun is masculine (often -s, -š or -is: brālis, galds) or feminine (often -a or -e: mamma, virtuve), and the words with it match: mans brālis, mana mamma."
+      },
+      "items": [
+        "si-ir-mamma",
+        "sis-ir-mans-tetis",
+        "mans-tetis-ir-skolotajs",
+        "mans-bralis-ir-students",
+        "si-ir-mana-masa",
+        "mana-mamma-ir-skolotaja",
+        "si-ir-mana-mamma"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "draugs",
+          "forms": [
+            "draugs"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "ārsts",
+          "forms": [
+            "ārste"
+          ],
+          "picture": "doctor",
+          "means": "ārste = doctor"
+        },
+        {
+          "lemma": "atslēga",
+          "forms": [
+            "atslēga"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefons",
+          "forms": [
+            "telefons"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "grāmata",
+          "forms": [
+            "grāmatas"
+          ],
+          "picture": "book",
+          "means": "grāmatas = a book"
+        },
+        {
+          "lemma": "tu",
+          "forms": [
+            "tev"
+          ],
+          "means": "tev = to you"
+        },
+        {
+          "lemma": "būt",
+          "forms": [
+            "nav"
+          ],
+          "means": "nav = there is no"
+        },
+        {
+          "lemma": "labs",
+          "forms": [
+            "labs"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "man-ir-telefons",
+        "vai-tev-ir-atslega",
+        "man-ir-bralis-un-masa",
+        "man-nav-gramatas",
+        "mana-masa-ir-arste",
+        "tu-esi-labs-draugs"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "kur",
+          "forms": [
+            "kur"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "šeit",
+          "forms": [
+            "šeit"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "tur",
+          "forms": [
+            "tur"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "tualete",
+          "forms": [
+            "tualete"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "atslēga",
+          "forms": [
+            "atslēgas"
+          ],
+          "means": "atslēgas = keys"
+        },
+        {
+          "lemma": "mans",
+          "forms": [
+            "manas"
+          ],
+          "means": "manas = my"
+        }
+      ],
+      "phrases": [
+        "atvainojiet"
+      ],
+      "concept": {
+        "pattern": "no-articles",
+        "line": "Latvian has no words for a, an or the; context does their work: Esmu skolotājs; Uz galda ir grāmata."
+      },
+      "items": [
+        "kur-ir-mana-atslega",
+        "mans-telefons-ir-seit",
+        "atslega-ir-tur",
+        "atvainojiet-kur-ir-tualete",
+        "kur-ir-mana-mamma",
+        "mana-masa-ir-seit",
+        "kur-ir-atslegas"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "divi",
+          "forms": [
+            "divas",
+            "divi"
+          ],
+          "picture": "two",
+          "means": "divas = two; divi = two"
+        },
+        {
+          "lemma": "trīs",
+          "forms": [
+            "trīs"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "nauda",
+          "forms": [
+            "naudas"
+          ],
+          "picture": "money",
+          "means": "naudas = money"
+        },
+        {
+          "lemma": "kafija",
+          "forms": [
+            "kafijas"
+          ],
+          "means": "kafijas = coffees"
+        },
+        {
+          "lemma": "grāmata",
+          "forms": [
+            "grāmatu",
+            "grāmatas"
+          ],
+          "means": "grāmatu = book; grāmatas = books"
+        },
+        {
+          "lemma": "viens",
+          "forms": [
+            "viena"
+          ],
+          "means": "viena = one"
+        },
+        {
+          "lemma": "brālis",
+          "forms": [
+            "brāļi"
+          ],
+          "means": "brāļi = brothers"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "rekinu-ludzu"
+      ],
+      "concept": null,
+      "items": [
+        "atvainojiet-cik-tas-maksa",
+        "rekinu-ludzu",
+        "divas-kafijas-ludzu",
+        "vienu-gramatu-ludzu",
+        "man-ir-tris-gramatas",
+        "man-nav-naudas-2",
+        "man-ir-masa"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "runāt",
+          "forms": [
+            "runā",
+            "runāju"
+          ],
+          "means": "runā = speak; runāju = speak"
+        },
+        {
+          "lemma": "anglisks",
+          "forms": [
+            "angliski"
+          ],
+          "means": "angliski = in English"
+        },
+        {
+          "lemma": "latvisks",
+          "forms": [
+            "latviski"
+          ],
+          "means": "latviski = in Latvian"
+        },
+        {
+          "lemma": "saprast",
+          "forms": [
+            "nesaprotu",
+            "saproti"
+          ],
+          "means": "nesaprotu = do not understand; saproti = understand"
+        },
+        {
+          "lemma": "mazliet",
+          "forms": [
+            "mazliet"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "gribēt",
+          "forms": [
+            "gribu"
+          ],
+          "means": "gribu = want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "The accusative marks the direct object (Dzeru kafiju; Pagaidi mani), and in the singular follows uz for where you're going: uz veikalu, uz darbu, uz pludmali."
+      },
+      "items": [
+        "vai-tu-runa-angliski",
+        "es-nesaprotu",
+        "vai-tu-saproti",
+        "es-mazliet-runaju-latviski",
+        "es-gribu-kafiju",
+        "es-gribu-udeni-ludzu"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "māja",
+          "forms": [
+            "māja",
+            "mājā"
+          ],
+          "picture": "house",
+          "means": "māja = house; mājā = in a house"
+        },
+        {
+          "lemma": "istaba",
+          "forms": [
+            "istaba"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "liels",
+          "forms": [
+            "liela"
+          ],
+          "picture": "big",
+          "means": "liela = big"
+        },
+        {
+          "lemma": "mazs",
+          "forms": [
+            "maza",
+            "mazā"
+          ],
+          "picture": "small",
+          "means": "maza = small; mazā = in a small"
+        },
+        {
+          "lemma": "dzīvot",
+          "forms": [
+            "dzīvoju",
+            "dzīvo"
+          ],
+          "means": "dzīvoju = live; dzīvo = live; lives"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "si-maja-ir-liela",
+        "mana-istaba-ir-maza",
+        "mana-mamma-dzivo-seit",
+        "kur-tu-dzivo",
+        "es-dzivoju-maza-maja"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "braukt",
+          "forms": [
+            "braucu",
+            "brauc"
+          ],
+          "means": "braucu = go; brauc = go; goes"
+        },
+        {
+          "lemma": "uz",
+          "forms": [
+            "uz"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "skola",
+          "forms": [
+            "skolu"
+          ],
+          "picture": "school",
+          "means": "skolu = school"
+        },
+        {
+          "lemma": "pilsēta",
+          "forms": [
+            "pilsētu"
+          ],
+          "picture": "city",
+          "means": "pilsētu = city"
+        },
+        {
+          "lemma": "stacija",
+          "forms": [
+            "stacija"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "mašīna",
+          "forms": [
+            "mašīna"
+          ],
+          "picture": "car",
+          "means": "car"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "dative",
+        "line": "The dative is to or for someone (Piezvanīšu tev), the one who feels or likes (Man ir auksti: I'm cold; Man patīk: I like it), and after most prepositions in the plural: ar mums, ar draugiem."
+      },
+      "items": [
+        "si-masina-ir-maza",
+        "kur-ir-stacija",
+        "kur-tu-brauc",
+        "es-braucu-uz-skolu",
+        "mana-mamma-brauc-uz-pilsetu",
+        "man-ir-masina"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "šodien",
+          "forms": [
+            "šodien"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "rīt",
+          "forms": [
+            "rīt"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "tagad",
+          "forms": [
+            "tagad"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "strādāt",
+          "forms": [
+            "strādāju",
+            "jāstrādā"
+          ],
+          "picture": "work",
+          "means": "strādāju = work; jāstrādā = must work"
+        },
+        {
+          "lemma": "varēt",
+          "forms": [
+            "nevaru",
+            "varu"
+          ],
+          "means": "nevaru = cannot; varu = can"
+        },
+        {
+          "lemma": "iet",
+          "forms": [
+            "jāiet",
+            "iet"
+          ],
+          "means": "jāiet = must go; iet = to go"
+        },
+        {
+          "lemma": "braukt",
+          "forms": [
+            "braukšu"
+          ],
+          "means": "braukšu = will go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "tiksimies-rit",
+        "es-sodien-stradaju",
+        "man-tagad-jaiet",
+        "rit-es-brauksu-uz-pilsetu",
+        "es-sodien-nevaru-iet",
+        "rit-man-jastrada",
+        "es-varu-iet"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

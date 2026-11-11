@@ -1,0 +1,7319 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-sq",
+  "name": "Starter: Albanian",
+  "about": "Albanian in real, everyday sentences, with each one's words in Albanian order.",
+  "language": "sq",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kafe": "coffee",
+    "çaj": "tea",
+    "ujë": "water",
+    "unë": "I (më: me)",
+    "pi": "drink",
+    "dhe": "and",
+    "një": "one, a",
+    "qumësht": "milk",
+    "mirë": "good, fine",
+    "jam": "be (jam: I am; je: you are; është: is; janë: are)",
+    "ti": "you (të: you, before the verb)",
+    "nuk": "not",
+    "mësues": "teacher",
+    "student": "university student",
+    "a": "(starts a yes-or-no question)",
+    "mama": "mom",
+    "baba": "dad",
+    "vëlla": "brother (vëllezër: brothers)",
+    "motër": "sister",
+    "im": "my (ime, e mi with others)",
+    "ky": "this (kjo with a feminine noun)",
+    "mësuese": "teacher (a woman)",
+    "kam": "have (ke: you have; ka: has, there is)",
+    "shok": "friend (a man)",
+    "mjeke": "doctor",
+    "çelës": "key",
+    "telefon": "phone",
+    "libër": "book",
+    "i": "linking article",
+    "ku": "where",
+    "këtu": "here",
+    "atje": "there",
+    "banjo": "bathroom (banjoja: the bathroom)",
+    "dy": "two",
+    "tre": "three",
+    "para": "money",
+    "flas": "speak",
+    "anglisht": "English, in English",
+    "shqip": "Albanian, in Albanian",
+    "kuptoj": "understand",
+    "pak": "a little, a bit",
+    "dua": "want; love",
+    "e": "it, him, her (before the verb)",
+    "shtëpi": "house",
+    "dhomë": "room",
+    "i madh": "big",
+    "i vogël": "small",
+    "jetoj": "live",
+    "në": "in, at",
+    "të": "(before a verb: to); the (before some describing words)",
+    "shkoj": "go",
+    "shkollë": "school",
+    "qytet": "city",
+    "stacion": "station",
+    "makinë": "car",
+    "tren": "train",
+    "sot": "today",
+    "nesër": "tomorrow",
+    "tani": "now",
+    "punoj": "to work",
+    "duhet": "must, have to",
+    "mund": "can",
+    "si": "how",
+    "fal": "forgive (më falni: excuse me)",
+    "quhem": "be called",
+    "nga": "from",
+    "fëmijë": "child, children",
+    "mbi": "on",
+    "tryezë": "table",
+    "frigorifer": "fridge",
+    "po": "(going on now); yes",
+    "gatuaj": "cook",
+    "darkë": "dinner",
+    "pa": "without",
+    "sheqer": "sugar",
+    "dje": "yesterday",
+    "lexoj": "read",
+    "ha": "eat",
+    "mish": "meat",
+    "uri": "hunger (kam uri: I'm hungry)",
+    "supë": "soup",
+    "shumë": "very; a lot of",
+    "i shijshëm": "tasty",
+    "peshk": "fish",
+    "bukë": "bread",
+    "do": "will (do të: will)",
+    "restorant": "restaurant",
+    "sonte": "tonight",
+    "sa": "how much, how many",
+    "kushtoj": "cost",
+    "punë": "work",
+    "autobus": "bus",
+    "vij": "come (eja: come!)",
+    "pas": "after; in (time)",
+    "dhjetë": "ten",
+    "minutë": "minute",
+    "lutem": "beg, ask (të lutem: please)",
+    "drejt": "straight",
+    "pastaj": "then",
+    "majtas": "left, to the left",
+    "ndihmoj": "help",
+    "iki": "leave, go",
+    "vizitoj": "visit",
+    "prind": "parent",
+    "çfarë": "what",
+    "bëj": "do, make",
+    "fundjavë": "weekend",
+    "bie": "fall (bie shi: it rains)",
+    "shi": "rain",
+    "ftohtë": "cold",
+    "shpresoj": "hope",
+    "mësoj": "learn",
+    "fle": "sleep",
+    "vajzë": "girl",
+    "i gjatë": "tall",
+    "shoqe": "friend (a woman)",
+    "qen": "dog",
+    "i zi": "black",
+    "pres": "wait (for)",
+    "di": "know",
+    "këngë": "song",
+    "mbrëmë": "last night",
+    "vonë": "late",
+    "turist": "tourist"
+  },
+  "chunks": {
+    "te-lutem": {
+      "text": "të lutem",
+      "en": "please",
+      "about": "Literally I beg you, to someone you call ti; ju lutem to someone you call ju."
+    },
+    "me-falni": {
+      "text": "Më falni",
+      "en": "Excuse me",
+      "about": "Literally forgive me, to someone you call ju; më fal to a friend."
+    },
+    "hello": {
+      "text": "Përshëndetje",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "faleminderit",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Si je",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Mirupafshim",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Po",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Jo",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Si quhesh",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Gëzohem që të njoh",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Sa kushton",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Llogarinë, të lutem",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Shihemi nesër",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "pi-kafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Pi kafe.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Pi",
+          "pi"
+        ],
+        [
+          "kafe",
+          "kafe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë pi dhe.",
+        "Pi kafe dhe."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafe",
+          "çaj",
+          "ujë"
+        ]
+      }
+    },
+    {
+      "id": "pi-caj",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Pi çaj.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Pi",
+          "pi"
+        ],
+        [
+          "çaj",
+          "çaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë pi dhe.",
+        "Pi çaj dhe."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "çaj",
+          "kafe",
+          "ujë"
+        ]
+      }
+    },
+    {
+      "id": "pi-uje",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Pi ujë.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Pi",
+          "pi"
+        ],
+        [
+          "ujë",
+          "ujë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë pi dhe.",
+        "Pi ujë dhe."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ujë",
+          "çaj",
+          "kafe"
+        ]
+      }
+    },
+    {
+      "id": "une-pi-kafe-dhe-caj",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Unë pi kafe dhe çaj.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Unë",
+          "unë"
+        ],
+        [
+          "pi",
+          "pi"
+        ],
+        [
+          "kafe",
+          "kafe"
+        ],
+        [
+          "dhe",
+          "dhe"
+        ],
+        [
+          "çaj",
+          "çaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë dhe pi kafe çaj.",
+        "Unë pi kafe dhe çaj dhe."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafe",
+          "ujë",
+          "çaj"
+        ]
+      }
+    },
+    {
+      "id": "une-pi-caj-dhe-uje",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Unë pi çaj dhe ujë.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Unë",
+          "unë"
+        ],
+        [
+          "pi",
+          "pi"
+        ],
+        [
+          "çaj",
+          "çaj"
+        ],
+        [
+          "dhe",
+          "dhe"
+        ],
+        [
+          "ujë",
+          "ujë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë dhe pi çaj ujë.",
+        "Unë pi çaj dhe ujë dhe."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ujë",
+          "kafe",
+          "çaj"
+        ]
+      }
+    },
+    {
+      "id": "une-pi-uje-dhe-kafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Unë pi ujë dhe kafe.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Unë",
+          "unë"
+        ],
+        [
+          "pi",
+          "pi"
+        ],
+        [
+          "ujë",
+          "ujë"
+        ],
+        [
+          "dhe",
+          "dhe"
+        ],
+        [
+          "kafe",
+          "kafe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë dhe pi ujë kafe.",
+        "Unë pi ujë dhe kafe dhe."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kafe",
+          "çaj",
+          "ujë"
+        ]
+      }
+    },
+    {
+      "id": "nje-kafe-te-lutem",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "te-lutem"
+      ],
+      "text": "Një kafe, të lutem.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Një",
+          "një"
+        ],
+        [
+          "kafe,",
+          "kafe"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Një kafe, lutem të.",
+        "Një dhe kafe, të lutem."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafe,",
+          "çaj,",
+          "qumësht,"
+        ]
+      }
+    },
+    {
+      "id": "pershendetje-nje-kafe-te-lutem",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "hello",
+        "te-lutem"
+      ],
+      "text": "Përshëndetje, një kafe, të lutem.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Përshëndetje,"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "kafe,",
+          "kafe"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Përshëndetje, një kafe, lutem të.",
+        "Përshëndetje, një dhe kafe, të lutem."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kafe,",
+          "ujë,",
+          "çaj,"
+        ]
+      }
+    },
+    {
+      "id": "nje-caj-dhe-nje-uje-te-lutem",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "te-lutem"
+      ],
+      "text": "Një çaj dhe një ujë, të lutem.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Një",
+          "një"
+        ],
+        [
+          "çaj",
+          "çaj"
+        ],
+        [
+          "dhe",
+          "dhe"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "ujë,",
+          "ujë"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Një çaj dhe një ujë, lutem të.",
+        "Një dhe çaj një ujë, të lutem."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ujë,",
+          "qumësht,",
+          "kafe,"
+        ]
+      }
+    },
+    {
+      "id": "nje-kafe-faleminderit",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Një kafe, faleminderit.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Një",
+          "një"
+        ],
+        [
+          "kafe,",
+          "kafe"
+        ],
+        [
+          "faleminderit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Një dhe kafe, faleminderit.",
+        "Një kafe dhe, faleminderit."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kafe,",
+          "çaj,",
+          "qumësht,"
+        ]
+      }
+    },
+    {
+      "id": "pershendetje-nje-caj-te-lutem",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "hello",
+        "te-lutem"
+      ],
+      "text": "Përshëndetje! Një çaj, të lutem.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Përshëndetje!"
+        ],
+        [
+          "Një",
+          "një"
+        ],
+        [
+          "çaj,",
+          "çaj"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Përshëndetje! Një çaj, lutem të.",
+        "Përshëndetje! Një dhe çaj, të lutem."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "çaj,",
+          "kafe,",
+          "ujë,"
+        ]
+      }
+    },
+    {
+      "id": "une-pi-qumesht",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Unë pi qumësht.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Unë",
+          "unë"
+        ],
+        [
+          "pi",
+          "pi"
+        ],
+        [
+          "qumësht",
+          "qumësht"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë pi dhe.",
+        "Unë pi qumësht dhe."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "qumësht",
+          "ujë",
+          "çaj"
+        ]
+      }
+    },
+    {
+      "id": "po-te-lutem",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "te-lutem",
+        "yes"
+      ],
+      "text": "Po, të lutem.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Po,"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Po, lutem të.",
+        "Po, të dhe lutem."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Po,",
+          "Jo,",
+          "Mirupafshim,"
+        ]
+      }
+    },
+    {
+      "id": "jo-faleminderit",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Jo, faleminderit.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Jo,"
+        ],
+        [
+          "faleminderit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jo dhe, faleminderit.",
+        "Jo, faleminderit dhe."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jo,",
+          "Po,",
+          "Përshëndetje,"
+        ]
+      }
+    },
+    {
+      "id": "jam-mire-faleminderit",
+      "topic": "people",
+      "concepts": [
+        "jam-kam"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Jam mirë, faleminderit.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Jam",
+          "jam"
+        ],
+        [
+          "mirë,",
+          "mirë"
+        ],
+        [
+          "faleminderit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë je mirë, faleminderit.",
+        "Jam një mirë, faleminderit."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jam",
+          "je",
+          "pi"
+        ]
+      }
+    },
+    {
+      "id": "pershendetje-si-je",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "hello",
+        "how-are-you"
+      ],
+      "text": "Përshëndetje! Si je?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Përshëndetje!"
+        ],
+        [
+          "Si"
+        ],
+        [
+          "je"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how"
+        ],
+        [
+          "are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Përshëndetje! Si një je?",
+        "Përshëndetje! Si je dhe?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Përshëndetje!",
+          "Mirupafshim!",
+          "Faleminderit!"
+        ]
+      }
+    },
+    {
+      "id": "po-faleminderit-mirupafshim",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Po, faleminderit. Mirupafshim!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Po,"
+        ],
+        [
+          "faleminderit."
+        ],
+        [
+          "Mirupafshim"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Po, faleminderit dhe. Mirupafshim!",
+        "Po dhe, faleminderit. Mirupafshim!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Mirupafshim",
+          "Përshëndetje",
+          "Po"
+        ]
+      }
+    },
+    {
+      "id": "jo-faleminderit-mirupafshim",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Jo, faleminderit. Mirupafshim!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Jo,"
+        ],
+        [
+          "faleminderit."
+        ],
+        [
+          "Mirupafshim"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jo, faleminderit dhe. Mirupafshim!",
+        "Jo dhe, faleminderit. Mirupafshim!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jo,",
+          "Po,",
+          "Përshëndetje,"
+        ]
+      }
+    },
+    {
+      "id": "pershendetje-si-quhesh",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "hello",
+        "what-s-your-name"
+      ],
+      "text": "Përshëndetje! Si quhesh?",
+      "means": "Hello! What's your name?",
+      "words": [
+        [
+          "Përshëndetje!"
+        ],
+        [
+          "Si"
+        ],
+        [
+          "quhesh"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how"
+        ],
+        [
+          "are you called"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Përshëndetje! Si një quhesh?",
+        "Përshëndetje! Si quhesh dhe?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Përshëndetje!",
+          "Mirupafshim!",
+          "Faleminderit!"
+        ]
+      }
+    },
+    {
+      "id": "pershendetje-gezohem-qe-te-njoh",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Përshëndetje! Gëzohem që të njoh.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Përshëndetje!"
+        ],
+        [
+          "Gëzohem"
+        ],
+        [
+          "që"
+        ],
+        [
+          "të"
+        ],
+        [
+          "njoh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "I am glad"
+        ],
+        [
+          "that"
+        ],
+        [
+          "you"
+        ],
+        [
+          "I know"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Përshëndetje! Gëzohem të që njoh.",
+        "Përshëndetje! Gëzohem që njoh të."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Përshëndetje!",
+          "Mirupafshim!",
+          "Faleminderit!"
+        ]
+      }
+    },
+    {
+      "id": "une-jam-mesues",
+      "topic": "people",
+      "concepts": [
+        "jam-kam"
+      ],
+      "text": "Unë jam mësues.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Unë",
+          "unë"
+        ],
+        [
+          "jam",
+          "jam"
+        ],
+        [
+          "mësues",
+          "mësues"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë je mësues.",
+        "Unë mësues jam dhe."
+      ],
+      "otherGender": {
+        "text": "Unë jam mësuese.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "jam",
+          "je",
+          "pi"
+        ]
+      }
+    },
+    {
+      "id": "ti-je-student",
+      "topic": "people",
+      "concepts": [
+        "jam-kam"
+      ],
+      "text": "Ti je student.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Ti",
+          "ti"
+        ],
+        [
+          "je",
+          "jam"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti jam student.",
+        "Ti student je dhe."
+      ],
+      "otherGender": {
+        "text": "Ti je studente.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "je",
+          "jam",
+          "pi"
+        ]
+      }
+    },
+    {
+      "id": "a-je-mesues",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "jam-kam"
+      ],
+      "text": "A je mësues?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "je",
+          "jam"
+        ],
+        [
+          "mësues",
+          "mësues"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[question marker]"
+        ],
+        [
+          "you are"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A ti jam mësues?",
+        "A je një dhe mësues?"
+      ],
+      "otherGender": {
+        "text": "A je mësuese?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "mësues",
+          "student",
+          "qumësht"
+        ]
+      }
+    },
+    {
+      "id": "une-nuk-jam-mesues",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "jam-kam"
+      ],
+      "text": "Unë nuk jam mësues.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Unë",
+          "unë"
+        ],
+        [
+          "nuk",
+          "nuk"
+        ],
+        [
+          "jam",
+          "jam"
+        ],
+        [
+          "mësues",
+          "mësues"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë nuk je mësues.",
+        "Unë jam nuk mësues."
+      ],
+      "otherGender": {
+        "text": "Unë nuk jam mësuese.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "jam",
+          "je",
+          "pi"
+        ]
+      }
+    },
+    {
+      "id": "babai-im-eshte-mesues",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "jam-kam",
+        "definite"
+      ],
+      "text": "Babai im është mësues.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Babai",
+          "baba"
+        ],
+        [
+          "im",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "mësues",
+          "mësues"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The father"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Babai ime është mësues.",
+        "Babai im je mësues."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "im",
+          "ime",
+          "unë"
+        ]
+      }
+    },
+    {
+      "id": "kjo-eshte-mamaja-ime",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "jam-kam",
+        "definite"
+      ],
+      "text": "Kjo është mamaja ime.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Kjo",
+          "ky"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "mamaja",
+          "mama"
+        ],
+        [
+          "ime",
+          "im"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kjo është mamaja im.",
+        "Kjo jam mamaja ime."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mamaja",
+          "motra",
+          "babai"
+        ]
+      }
+    },
+    {
+      "id": "vellai-im-eshte-student",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "jam-kam",
+        "definite"
+      ],
+      "text": "Vëllai im është student.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Vëllai",
+          "vëlla"
+        ],
+        [
+          "im",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The brother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vëllai ime është student.",
+        "Vëllai im jam student."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Vëllai",
+          "Babai",
+          "Motra"
+        ]
+      }
+    },
+    {
+      "id": "kjo-eshte-motra-ime",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "jam-kam",
+        "definite"
+      ],
+      "text": "Kjo është motra ime.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Kjo",
+          "ky"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "motra",
+          "motër"
+        ],
+        [
+          "ime",
+          "im"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the sister"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kjo është motra im.",
+        "Kjo je motra ime."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ime",
+          "im",
+          "unë"
+        ]
+      }
+    },
+    {
+      "id": "mamaja-ime-eshte-mesuese",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "jam-kam",
+        "definite"
+      ],
+      "text": "Mamaja ime është mësuese.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Mamaja",
+          "mama"
+        ],
+        [
+          "ime",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "mësuese",
+          "mësuese"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mamaja im është mësuese.",
+        "Mamaja ime jam mësuese."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ime",
+          "im",
+          "ti"
+        ]
+      }
+    },
+    {
+      "id": "kam-nje-telefon",
+      "topic": "people",
+      "concepts": [
+        "jam-kam",
+        "accusative"
+      ],
+      "text": "Kam një telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Kam",
+          "kam"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë ke një telefon.",
+        "Kam një dhe telefon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "telefon",
+          "çelës",
+          "libër"
+        ]
+      }
+    },
+    {
+      "id": "a-ke-nje-celes",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "jam-kam",
+        "accusative"
+      ],
+      "text": "A ke një çelës?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "ke",
+          "kam"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "çelës",
+          "çelës"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[question marker]"
+        ],
+        [
+          "you have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A ti kam një çelës?",
+        "A ke një dhe çelës?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "çelës",
+          "telefon",
+          "libër"
+        ]
+      }
+    },
+    {
+      "id": "kam-nje-vella-dhe-nje-moter",
+      "topic": "people",
+      "concepts": [
+        "jam-kam",
+        "accusative"
+      ],
+      "text": "Kam një vëlla dhe një motër.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Kam",
+          "kam"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "vëlla",
+          "vëlla"
+        ],
+        [
+          "dhe",
+          "dhe"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "motër",
+          "motër"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë ke një vëlla dhe një motër.",
+        "Kam një dhe vëlla një motër."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "motër",
+          "vëlla",
+          "shok"
+        ]
+      }
+    },
+    {
+      "id": "nuk-kam-liber",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "jam-kam"
+      ],
+      "text": "Nuk kam libër.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Nuk",
+          "nuk"
+        ],
+        [
+          "kam",
+          "kam"
+        ],
+        [
+          "libër",
+          "libër"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë nuk ke libër.",
+        "Kam nuk libër."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "libër",
+          "telefon",
+          "çelës"
+        ]
+      }
+    },
+    {
+      "id": "motra-ime-eshte-mjeke",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "jam-kam"
+      ],
+      "text": "Motra ime është mjeke.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Motra",
+          "motër"
+        ],
+        [
+          "ime",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "mjeke",
+          "mjeke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Motra im është mjeke.",
+        "Motra ime jam mjeke."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mjeke",
+          "mësuese",
+          "mësues"
+        ]
+      }
+    },
+    {
+      "id": "ti-je-shok-i-mire",
+      "topic": "people",
+      "concepts": [
+        "jam-kam",
+        "adjective-article"
+      ],
+      "text": "Ti je shok i mirë.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Ti",
+          "ti"
+        ],
+        [
+          "je",
+          "jam"
+        ],
+        [
+          "shok",
+          "shok"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "mirë",
+          "mirë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a friend"
+        ],
+        [
+          "[linking article]"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti jam shok i mirë.",
+        "Ti je shok mirë i."
+      ],
+      "otherGender": {
+        "text": "Ti je shoqe e mirë.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "je",
+          "jam",
+          "është"
+        ]
+      }
+    },
+    {
+      "id": "me-falni-ku-eshte-banjoja",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "definite"
+      ],
+      "chunks": [
+        "me-falni"
+      ],
+      "text": "Më falni, ku është banjoja?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Më"
+        ],
+        [
+          "falni,"
+        ],
+        [
+          "ku",
+          "ku"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "banjoja",
+          "banjo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Më falni, ku jam banjoja?",
+        "Më falni, ku është banjoja dhe?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "banjoja",
+          "telefoni",
+          "çelësi"
+        ]
+      }
+    },
+    {
+      "id": "ku-eshte-celesi-im",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive",
+        "definite"
+      ],
+      "text": "Ku është çelësi im?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Ku",
+          "ku"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "çelësi",
+          "çelës"
+        ],
+        [
+          "im",
+          "im"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the key"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ku është çelësi ime?",
+        "Ku je çelësi im?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "im",
+          "ime",
+          "ti"
+        ]
+      }
+    },
+    {
+      "id": "telefoni-im-eshte-ketu",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "jam-kam",
+        "definite"
+      ],
+      "text": "Telefoni im është këtu.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Telefoni",
+          "telefon"
+        ],
+        [
+          "im",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "këtu",
+          "këtu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The phone"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telefoni ime është këtu.",
+        "Telefoni im jam këtu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "këtu",
+          "atje",
+          "ku"
+        ]
+      }
+    },
+    {
+      "id": "celesi-eshte-atje",
+      "topic": "out",
+      "concepts": [
+        "jam-kam",
+        "definite"
+      ],
+      "text": "Çelësi është atje.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Çelësi",
+          "çelës"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "atje",
+          "atje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Çelësi jam atje.",
+        "Çelësi je atje."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "atje",
+          "këtu",
+          "ku"
+        ]
+      }
+    },
+    {
+      "id": "ku-eshte-mamaja-ime",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive"
+      ],
+      "text": "Ku është mamaja ime?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Ku",
+          "ku"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "mamaja",
+          "mama"
+        ],
+        [
+          "ime",
+          "im"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the mother"
+        ],
+        [
+          "my"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ku është mamaja im?",
+        "Ku jam mamaja ime?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ime",
+          "im",
+          "unë"
+        ]
+      }
+    },
+    {
+      "id": "motra-ime-eshte-ketu",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "jam-kam"
+      ],
+      "text": "Motra ime është këtu.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Motra",
+          "motër"
+        ],
+        [
+          "ime",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "këtu",
+          "këtu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The sister"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Motra im është këtu.",
+        "Motra ime je këtu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "këtu",
+          "atje",
+          "ku"
+        ]
+      }
+    },
+    {
+      "id": "dy-kafe-te-lutem",
+      "topic": "out",
+      "concepts": [
+        "plural"
+      ],
+      "chunks": [
+        "te-lutem"
+      ],
+      "text": "Dy kafe, të lutem.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dy",
+          "dy"
+        ],
+        [
+          "kafe,",
+          "kafe"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dy kafe, lutem të.",
+        "Dy dhe kafe, të lutem."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dy",
+          "Një",
+          "Tre"
+        ]
+      }
+    },
+    {
+      "id": "nje-liber-te-lutem",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "te-lutem"
+      ],
+      "text": "Një libër, të lutem.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Një",
+          "një"
+        ],
+        [
+          "libër,",
+          "libër"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Një libra, të lutem.",
+        "Një libër, lutem të."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "libër,",
+          "libra,",
+          "telefon,"
+        ]
+      }
+    },
+    {
+      "id": "kam-tre-libra",
+      "topic": "out",
+      "concepts": [
+        "jam-kam",
+        "plural"
+      ],
+      "text": "Kam tre libra.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Kam",
+          "kam"
+        ],
+        [
+          "tre",
+          "tre"
+        ],
+        [
+          "libra",
+          "libër"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kam tre libër.",
+        "Unë ke tre libra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tre",
+          "dy",
+          "një"
+        ]
+      }
+    },
+    {
+      "id": "nuk-kam-para",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "jam-kam"
+      ],
+      "text": "Nuk kam para.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Nuk",
+          "nuk"
+        ],
+        [
+          "kam",
+          "kam"
+        ],
+        [
+          "para",
+          "para"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë nuk ke para.",
+        "Kam nuk para."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "para",
+          "libra",
+          "qumësht"
+        ]
+      }
+    },
+    {
+      "id": "me-falni-sa-kushton",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "me-falni"
+      ],
+      "text": "Më falni, sa kushton?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Më"
+        ],
+        [
+          "falni,"
+        ],
+        [
+          "sa"
+        ],
+        [
+          "kushton"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "does it cost"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Më falni, sa një kushton?",
+        "Më falni, sa kushton dhe?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sa",
+          "ku",
+          "si"
+        ]
+      }
+    },
+    {
+      "id": "pershendetje-llogarine-te-lutem",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Përshëndetje! Llogarinë, të lutem.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Përshëndetje!"
+        ],
+        [
+          "Llogarinë,"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Përshëndetje! Llogarinë, lutem të.",
+        "Përshëndetje! Llogarinë dhe, të lutem."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Përshëndetje!",
+          "Mirupafshim!",
+          "Faleminderit!"
+        ]
+      }
+    },
+    {
+      "id": "a-flet-anglisht",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "A flet anglisht?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "flet",
+          "flas"
+        ],
+        [
+          "anglisht",
+          "anglisht"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[question marker]"
+        ],
+        [
+          "you speak"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A ti flas anglisht?",
+        "A flet një anglisht?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "flet",
+          "flas",
+          "kupton"
+        ]
+      }
+    },
+    {
+      "id": "flas-pak-shqip",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Flas pak shqip.",
+      "means": "I speak a little Albanian.",
+      "words": [
+        [
+          "Flas",
+          "flas"
+        ],
+        [
+          "pak",
+          "pak"
+        ],
+        [
+          "shqip",
+          "shqip"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Albanian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë flet pak shqip.",
+        "Flas një shqip."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "shqip",
+          "anglisht",
+          "mirë"
+        ]
+      }
+    },
+    {
+      "id": "a-e-kupton",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "object-pronoun",
+        "present"
+      ],
+      "text": "A e kupton?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "kupton",
+          "kuptoj"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "[question marker]"
+        ],
+        [
+          "it"
+        ],
+        [
+          "you understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A kupton e?",
+        "A ti e kuptoj?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kupton",
+          "kuptoj",
+          "dua"
+        ]
+      }
+    },
+    {
+      "id": "dua-uje-te-lutem",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "te-lutem"
+      ],
+      "text": "Dua ujë, të lutem.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Dua",
+          "dua"
+        ],
+        [
+          "ujë,",
+          "ujë"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dua ujë, lutem të.",
+        "Dua një dhe ujë, të lutem."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ujë,",
+          "qumësht,",
+          "çaj,"
+        ]
+      }
+    },
+    {
+      "id": "mamaja-ime-jeton-ketu",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Mamaja ime jeton këtu.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mamaja",
+          "mama"
+        ],
+        [
+          "ime",
+          "im"
+        ],
+        [
+          "jeton",
+          "jetoj"
+        ],
+        [
+          "këtu",
+          "këtu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mamaja ime jetoj këtu.",
+        "Mamaja im jeton këtu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jeton",
+          "jetoj",
+          "flas"
+        ]
+      }
+    },
+    {
+      "id": "dhoma-ime-eshte-e-vogel",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "adjective-article",
+        "jam-kam"
+      ],
+      "text": "Dhoma ime është e vogël.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Dhoma",
+          "dhomë"
+        ],
+        [
+          "ime",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "vogël",
+          "i vogël"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The room"
+        ],
+        [
+          "my"
+        ],
+        [
+          "is"
+        ],
+        [
+          "[linking article]"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dhoma im është e vogël.",
+        "Dhoma ime është i vogël."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "e",
+          "i",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "kjo-shtepi-eshte-e-madhe",
+      "topic": "home",
+      "concepts": [
+        "adjective-article",
+        "gender",
+        "jam-kam"
+      ],
+      "text": "Kjo shtëpi është e madhe.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Kjo",
+          "ky"
+        ],
+        [
+          "shtëpi",
+          "shtëpi"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "madhe",
+          "i madh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "[linking article]"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kjo shtëpi është i madhe.",
+        "Kjo shtëpi jam e madhe."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "madhe",
+          "vogël",
+          "mirë"
+        ]
+      }
+    },
+    {
+      "id": "shkoj-ne-shkolle",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "Shkoj në shkollë.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Shkoj",
+          "shkoj"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "shkollë",
+          "shkollë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë shkon në shkollë.",
+        "Shkoj në dhe shkollë."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "shkollë",
+          "qytet",
+          "shtëpi"
+        ]
+      }
+    },
+    {
+      "id": "ku-shkon",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Ku shkon?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Ku",
+          "ku"
+        ],
+        [
+          "shkon",
+          "shkoj"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ku ti shkoj?",
+        "Ku shkon dhe?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "shkon",
+          "shkoj",
+          "jeton"
+        ]
+      }
+    },
+    {
+      "id": "mamaja-ime-shkon-ne-qytet",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Mamaja ime shkon në qytet.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mamaja",
+          "mama"
+        ],
+        [
+          "ime",
+          "im"
+        ],
+        [
+          "shkon",
+          "shkoj"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "qytet",
+          "qytet"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The mother"
+        ],
+        [
+          "my"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mamaja ime shkoj në qytet.",
+        "Mamaja im shkon në qytet."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "qytet",
+          "shkollë",
+          "shtëpi"
+        ]
+      }
+    },
+    {
+      "id": "kam-nje-makine",
+      "topic": "out",
+      "concepts": [
+        "jam-kam",
+        "accusative"
+      ],
+      "text": "Kam një makinë.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Kam",
+          "kam"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "makinë",
+          "makinë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Unë ke një makinë.",
+        "Kam një dhe makinë."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "makinë",
+          "shtëpi",
+          "telefon"
+        ]
+      }
+    },
+    {
+      "id": "kjo-makine-eshte-e-vogel",
+      "topic": "out",
+      "concepts": [
+        "adjective-article",
+        "gender",
+        "jam-kam"
+      ],
+      "text": "Kjo makinë është e vogël.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Kjo",
+          "ky"
+        ],
+        [
+          "makinë",
+          "makinë"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "vogël",
+          "i vogël"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "[linking article]"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kjo makinë është i vogël.",
+        "Kjo makinë jam e vogël."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "e",
+          "i",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "faleminderit-shihemi-neser",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Faleminderit. Shihemi nesër!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Faleminderit."
+        ],
+        [
+          "Shihemi"
+        ],
+        [
+          "nesër"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "we will see each other"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Faleminderit. Shihemi një nesër!",
+        "Faleminderit. Shihemi nesër dhe!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nesër",
+          "sot",
+          "tani"
+        ]
+      }
+    },
+    {
+      "id": "punoj-sot",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Punoj sot.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Punoj",
+          "punoj"
+        ],
+        [
+          "sot",
+          "sot"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti punoj sot.",
+        "Punoj një sot."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sot",
+          "nesër",
+          "tani"
+        ]
+      }
+    },
+    {
+      "id": "duhet-te-shkoj-tani",
+      "topic": "plans",
+      "concepts": [
+        "te-subjunctive"
+      ],
+      "text": "Duhet të shkoj tani.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Duhet",
+          "duhet"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "shkoj",
+          "shkoj"
+        ],
+        [
+          "tani",
+          "tani"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It is necessary"
+        ],
+        [
+          "to"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Duhet shkoj tani.",
+        "Unë duhet të shkon tani."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tani",
+          "nesër",
+          "sot"
+        ]
+      }
+    },
+    {
+      "id": "neser-shkoj-ne-qytet",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Nesër shkoj në qytet.",
+      "means": "Tomorrow I go to the city.",
+      "words": [
+        [
+          "Nesër",
+          "nesër"
+        ],
+        [
+          "shkoj",
+          "shkoj"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "qytet",
+          "qytet"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nesër unë shkon në qytet.",
+        "Nesër shkoj në dhe qytet."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nesër",
+          "Sot",
+          "Tani"
+        ]
+      }
+    },
+    {
+      "id": "nuk-mund-te-shkoj-sot",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "te-subjunctive"
+      ],
+      "text": "Nuk mund të shkoj sot.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Nuk",
+          "nuk"
+        ],
+        [
+          "mund",
+          "mund"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "shkoj",
+          "shkoj"
+        ],
+        [
+          "sot",
+          "sot"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nuk mund shkoj sot.",
+        "Unë nuk mund të shkon sot."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mund",
+          "duhet",
+          "dua"
+        ]
+      }
+    },
+    {
+      "id": "duhet-te-punoj-neser",
+      "topic": "plans",
+      "concepts": [
+        "te-subjunctive"
+      ],
+      "text": "Duhet të punoj nesër.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Duhet",
+          "duhet"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "punoj",
+          "punoj"
+        ],
+        [
+          "nesër",
+          "nesër"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It is necessary"
+        ],
+        [
+          "to"
+        ],
+        [
+          "I work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Duhet punoj nesër.",
+        "Ti duhet të punoj nesër."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "punoj",
+          "shkoj",
+          "jetoj"
+        ]
+      }
+    },
+    {
+      "id": "si-quhesh",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Si quhesh?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Si"
+        ],
+        [
+          "quhesh"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you are called"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ku quhesh?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Si",
+          "Ku",
+          "Kur"
+        ]
+      }
+    },
+    {
+      "id": "jam-nga-amerika",
+      "topic": "people",
+      "concepts": [
+        "jam-kam"
+      ],
+      "text": "Jam nga Amerika.",
+      "means": "I'm from America.",
+      "words": [
+        [
+          "Jam",
+          "jam"
+        ],
+        [
+          "nga",
+          "nga"
+        ],
+        [
+          "Amerika"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "from"
+        ],
+        [
+          "America"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kam nga Amerika."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jam",
+          "Kam",
+          "Është"
+        ]
+      }
+    },
+    {
+      "id": "motra-ime-mesuese",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender"
+      ],
+      "text": "Motra ime është mësuese.",
+      "means": "My sister is a teacher.",
+      "words": [
+        [
+          "Motra",
+          "motër"
+        ],
+        [
+          "ime",
+          "im"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "mësuese",
+          "mësuese"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sister-the"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ime"
+      ],
+      "wrong": [
+        "Motra im është mësuese."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ime",
+          "im",
+          "imi"
+        ]
+      }
+    },
+    {
+      "id": "kam-dy-vellezer",
+      "topic": "people",
+      "concepts": [
+        "jam-kam",
+        "plural"
+      ],
+      "text": "Kam dy vëllezër.",
+      "means": "I have two brothers.",
+      "words": [
+        [
+          "Kam",
+          "kam"
+        ],
+        [
+          "dy",
+          "dy"
+        ],
+        [
+          "vëllezër",
+          "vëlla"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "two"
+        ],
+        [
+          "brothers"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jam dy vëllezër."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vëllezër",
+          "vëlla",
+          "vëllai"
+        ]
+      }
+    },
+    {
+      "id": "babai-nuk-flet-anglisht",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "possessive"
+      ],
+      "text": "Babai im nuk flet anglisht.",
+      "means": "My dad doesn't speak English.",
+      "words": [
+        [
+          "Babai",
+          "baba"
+        ],
+        [
+          "im",
+          "im"
+        ],
+        [
+          "nuk",
+          "nuk"
+        ],
+        [
+          "flet",
+          "flas"
+        ],
+        [
+          "anglisht",
+          "anglisht"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Dad-the"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "not"
+        ],
+        [
+          "speaks"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "im"
+      ],
+      "wrong": [
+        "Babai im flet nuk anglisht."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nuk",
+          "nga",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "a-ke-femije",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "text": "A ke fëmijë?",
+      "means": "Do you have kids?",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "ke",
+          "kam"
+        ],
+        [
+          "fëmijë",
+          "fëmijë"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you have"
+        ],
+        [
+          "children"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ke a fëmijë?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "A",
+          "Ku",
+          "Kush"
+        ]
+      }
+    },
+    {
+      "id": "shoku-im-jeton-ne-tirane",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "gender"
+      ],
+      "text": "Shoku im jeton në Tiranë.",
+      "means": "My friend lives in Tirana.",
+      "words": [
+        [
+          "Shoku",
+          "shok"
+        ],
+        [
+          "im",
+          "im"
+        ],
+        [
+          "jeton",
+          "jetoj"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "Tiranë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Friend-the"
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "lives"
+        ],
+        [
+          "in"
+        ],
+        [
+          "Tirana"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "im"
+      ],
+      "wrong": [
+        "Shoku ime jeton në Tiranë."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "im",
+          "ime",
+          "imja"
+        ]
+      }
+    },
+    {
+      "id": "makina-e-babait",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Kjo është makina e babait.",
+      "means": "This is Dad's car.",
+      "words": [
+        [
+          "Kjo",
+          "ky"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "makina",
+          "makinë"
+        ],
+        [
+          "e"
+        ],
+        [
+          "babait",
+          "baba"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "car-the"
+        ],
+        [
+          "of dad-the",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "babait"
+      ],
+      "wrong": [
+        "Kjo është makina babai."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "e",
+          "i",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "libri-i-vajzes",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Libri i vajzës është këtu.",
+      "means": "The girl's book is here.",
+      "words": [
+        [
+          "Libri",
+          "libër"
+        ],
+        [
+          "i"
+        ],
+        [
+          "vajzës",
+          "vajzë"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "këtu",
+          "këtu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Book-the"
+        ],
+        [
+          "of girl-the",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "vajzës"
+      ],
+      "wrong": [
+        "Libri vajza është këtu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "i",
+          "e",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "shtepi-te-vogel",
+      "topic": "home",
+      "concepts": [
+        "adjective-article"
+      ],
+      "text": "Jetoj në një shtëpi të vogël.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Jetoj",
+          "jetoj"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "shtëpi",
+          "shtëpi"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "vogël",
+          "i vogël"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a"
+        ],
+        [
+          "house"
+        ],
+        [
+          "the small",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "vogël"
+      ],
+      "wrong": [
+        "Jetoj në një shtëpi vogël."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "të",
+          "e",
+          "i"
+        ]
+      }
+    },
+    {
+      "id": "celesat-mbi-tryeze",
+      "topic": "home",
+      "concepts": [
+        "definite",
+        "plural"
+      ],
+      "text": "Çelësat janë mbi tryezë.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Çelësat",
+          "çelës"
+        ],
+        [
+          "janë",
+          "jam"
+        ],
+        [
+          "mbi",
+          "mbi"
+        ],
+        [
+          "tryezë",
+          "tryezë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Keys-the"
+        ],
+        [
+          "are"
+        ],
+        [
+          "on"
+        ],
+        [
+          "table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Çelësat është mbi tryezë."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Çelësat",
+          "Çelësi",
+          "Çelësin"
+        ]
+      }
+    },
+    {
+      "id": "nuk-ka-qumesht",
+      "topic": "home",
+      "concepts": [
+        "ka-existential",
+        "negation"
+      ],
+      "text": "Nuk ka qumësht në frigorifer.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Nuk",
+          "nuk"
+        ],
+        [
+          "ka",
+          "kam"
+        ],
+        [
+          "qumësht",
+          "qumësht"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "frigorifer",
+          "frigorifer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "has"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in"
+        ],
+        [
+          "fridge"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ka nuk qumësht në frigorifer."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ka",
+          "është",
+          "kam"
+        ]
+      }
+    },
+    {
+      "id": "mamaja-gatuan-darken",
+      "topic": "home",
+      "concepts": [
+        "accusative",
+        "po"
+      ],
+      "text": "Mamaja po gatuan darkën.",
+      "means": "Mom is cooking dinner.",
+      "words": [
+        [
+          "Mamaja",
+          "mama"
+        ],
+        [
+          "po",
+          "po"
+        ],
+        [
+          "gatuan",
+          "gatuaj"
+        ],
+        [
+          "darkën",
+          "darkë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mom-the"
+        ],
+        [
+          "(now)"
+        ],
+        [
+          "cooks"
+        ],
+        [
+          "dinner-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mamaja po gatuan darka."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "darkën",
+          "darka",
+          "darkës"
+        ]
+      }
+    },
+    {
+      "id": "e-pi-kafen-pa-sheqer",
+      "topic": "home",
+      "concepts": [
+        "object-pronoun",
+        "accusative"
+      ],
+      "text": "E pi kafen pa sheqer.",
+      "means": "I drink my coffee without sugar.",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "pi",
+          "pi"
+        ],
+        [
+          "kafen",
+          "kafe"
+        ],
+        [
+          "pa",
+          "pa"
+        ],
+        [
+          "sheqer",
+          "sheqer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It",
+          true
+        ],
+        [
+          "I drink"
+        ],
+        [
+          "coffee-the"
+        ],
+        [
+          "without"
+        ],
+        [
+          "sugar"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "E"
+      ],
+      "wrong": [
+        "E pi kafja pa sheqer."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "E",
+          "I",
+          "Më"
+        ]
+      }
+    },
+    {
+      "id": "dje-lexova-nje-liber",
+      "topic": "home",
+      "concepts": [
+        "past"
+      ],
+      "text": "Dje lexova një libër.",
+      "means": "Yesterday I read a book.",
+      "words": [
+        [
+          "Dje",
+          "dje"
+        ],
+        [
+          "lexova",
+          "lexoj"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "libër",
+          "libër"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I read"
+        ],
+        [
+          "a"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dje do të lexoj një libër."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "lexova",
+          "lexoj",
+          "lexon"
+        ]
+      }
+    },
+    {
+      "id": "ku-eshte-banjoja",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "definite"
+      ],
+      "text": "Ku është banjoja?",
+      "means": "Where's the bathroom?",
+      "words": [
+        [
+          "Ku",
+          "ku"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "banjoja",
+          "banjo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "bathroom-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ku janë banjoja?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ku",
+          "Kur",
+          "Kush"
+        ]
+      }
+    },
+    {
+      "id": "po-pres-autobusin",
+      "topic": "home",
+      "concepts": [
+        "accusative",
+        "po"
+      ],
+      "text": "Po pres autobusin.",
+      "means": "I'm waiting for the bus.",
+      "words": [
+        [
+          "Po",
+          "po"
+        ],
+        [
+          "pres",
+          "pres"
+        ],
+        [
+          "autobusin",
+          "autobus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "(Now)"
+        ],
+        [
+          "I wait for"
+        ],
+        [
+          "bus-the"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Po pres autobusi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "autobusin",
+          "autobusi",
+          "autobus"
+        ]
+      }
+    },
+    {
+      "id": "e-di-kete-kenge",
+      "topic": "home",
+      "concepts": [
+        "object-pronoun"
+      ],
+      "text": "E di këtë këngë.",
+      "means": "I know this song.",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "di",
+          "di"
+        ],
+        [
+          "këtë",
+          "ky"
+        ],
+        [
+          "këngë",
+          "këngë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It",
+          true
+        ],
+        [
+          "I know"
+        ],
+        [
+          "this"
+        ],
+        [
+          "song"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "E"
+      ],
+      "wrong": [
+        "Di e këtë këngë."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "E",
+          "I",
+          "Më"
+        ]
+      }
+    },
+    {
+      "id": "dua-nje-kafe",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "te-lutem"
+      ],
+      "text": "Dua një kafe, të lutem.",
+      "means": "I'd like a coffee, please.",
+      "words": [
+        [
+          "Dua",
+          "dua"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "kafe,",
+          "kafe"
+        ],
+        [
+          "të"
+        ],
+        [
+          "lutem"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee,"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "I beg"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "të"
+      ],
+      "wrong": [
+        "Dua një kafe, lutem të."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dua",
+          "Do",
+          "Duhet"
+        ]
+      }
+    },
+    {
+      "id": "nuk-ha-mish",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "present"
+      ],
+      "text": "Nuk ha mish.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Nuk",
+          "nuk"
+        ],
+        [
+          "ha",
+          "ha"
+        ],
+        [
+          "mish",
+          "mish"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I eat"
+        ],
+        [
+          "meat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ha nuk mish."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ha",
+          "han",
+          "hëngra"
+        ]
+      }
+    },
+    {
+      "id": "dua-te-pi-uje",
+      "topic": "food",
+      "concepts": [
+        "te-subjunctive"
+      ],
+      "text": "Dua të pi ujë.",
+      "means": "I want to drink some water.",
+      "words": [
+        [
+          "Dua",
+          "dua"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "pi",
+          "pi"
+        ],
+        [
+          "ujë",
+          "ujë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dua pi ujë."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "të",
+          "nga",
+          "në"
+        ]
+      }
+    },
+    {
+      "id": "a-ke-uri",
+      "topic": "food",
+      "concepts": [
+        "jam-kam",
+        "question"
+      ],
+      "text": "A ke uri?",
+      "means": "Are you hungry?",
+      "words": [
+        [
+          "A",
+          "a"
+        ],
+        [
+          "ke",
+          "kam"
+        ],
+        [
+          "uri",
+          "uri"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "you have"
+        ],
+        [
+          "hunger"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "A je uri?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ke",
+          "je",
+          "ka"
+        ]
+      }
+    },
+    {
+      "id": "supa-e-shijshme",
+      "topic": "food",
+      "concepts": [
+        "adjective-article",
+        "gender"
+      ],
+      "text": "Supa është shumë e shijshme.",
+      "means": "The soup is really tasty.",
+      "words": [
+        [
+          "Supa",
+          "supë"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "shumë",
+          "shumë"
+        ],
+        [
+          "e"
+        ],
+        [
+          "shijshme",
+          "i shijshëm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Soup-the"
+        ],
+        [
+          "is"
+        ],
+        [
+          "very"
+        ],
+        [
+          "the tasty"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Supa është shumë i shijshëm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "e",
+          "i",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "dje-hengrem-peshk",
+      "topic": "food",
+      "concepts": [
+        "past"
+      ],
+      "text": "Dje hëngrëm peshk.",
+      "means": "Yesterday we had fish.",
+      "words": [
+        [
+          "Dje",
+          "dje"
+        ],
+        [
+          "hëngrëm",
+          "ha"
+        ],
+        [
+          "peshk",
+          "peshk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "fish"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dje hamë peshk."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hëngrëm",
+          "hamë",
+          "hëngra"
+        ]
+      }
+    },
+    {
+      "id": "ka-buke",
+      "topic": "food",
+      "concepts": [
+        "ka-existential",
+        "question"
+      ],
+      "text": "Ka bukë?",
+      "means": "Is there any bread?",
+      "words": [
+        [
+          "Ka",
+          "kam"
+        ],
+        [
+          "bukë",
+          "bukë"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Has"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Është bukë?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ka",
+          "Është",
+          "Kam"
+        ]
+      }
+    },
+    {
+      "id": "do-te-ha-ne-restorant",
+      "topic": "food",
+      "concepts": [
+        "future"
+      ],
+      "text": "Do të ha në restorant sonte.",
+      "means": "I'll eat at a restaurant tonight.",
+      "words": [
+        [
+          "Do",
+          "do"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "ha",
+          "ha"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "restorant",
+          "restorant"
+        ],
+        [
+          "sonte",
+          "sonte"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I eat"
+        ],
+        [
+          "at"
+        ],
+        [
+          "restaurant"
+        ],
+        [
+          "tonight"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Do të hëngra në restorant sonte."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Do",
+          "Duhet",
+          "Mund"
+        ]
+      }
+    },
+    {
+      "id": "ku-eshte-stacioni-i-trenit",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "genitive"
+      ],
+      "chunks": [
+        "me-falni"
+      ],
+      "text": "Më falni, ku është stacioni i trenit?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Më"
+        ],
+        [
+          "falni,"
+        ],
+        [
+          "ku",
+          "ku"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "stacioni",
+          "stacion"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "trenit",
+          "tren"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Me",
+          true
+        ],
+        [
+          "forgive,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "station-the"
+        ],
+        [
+          "of train-the",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Më",
+        "trenit"
+      ],
+      "wrong": [
+        "Më falni, ku është stacioni trenit?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "i",
+          "e",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "sa-kushton-kjo",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "how-much-is-it"
+      ],
+      "text": "Sa kushton kjo?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Sa"
+        ],
+        [
+          "kushton"
+        ],
+        [
+          "kjo",
+          "ky"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sa kushtoj kjo?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sa",
+          "Ku",
+          "Kur"
+        ]
+      }
+    },
+    {
+      "id": "po-shkoj-ne-pune",
+      "topic": "out",
+      "concepts": [
+        "po"
+      ],
+      "text": "Po shkoj në punë.",
+      "means": "I'm going to work.",
+      "words": [
+        [
+          "Po",
+          "po"
+        ],
+        [
+          "shkoj",
+          "shkoj"
+        ],
+        [
+          "në",
+          "në"
+        ],
+        [
+          "punë",
+          "punë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "(Now)"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jam shkoj në punë."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Po",
+          "Nuk",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "autobusi-vjen",
+      "topic": "out",
+      "concepts": [
+        "definite"
+      ],
+      "text": "Autobusi vjen pas dhjetë minutash.",
+      "means": "The bus comes in ten minutes.",
+      "words": [
+        [
+          "Autobusi",
+          "autobus"
+        ],
+        [
+          "vjen",
+          "vij"
+        ],
+        [
+          "pas",
+          "pas"
+        ],
+        [
+          "dhjetë",
+          "dhjetë"
+        ],
+        [
+          "minutash",
+          "minutë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bus-the"
+        ],
+        [
+          "comes"
+        ],
+        [
+          "after"
+        ],
+        [
+          "ten"
+        ],
+        [
+          "minutes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Autobusin vjen pas dhjetë minutash."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Autobusi",
+          "Autobusin",
+          "Autobusë"
+        ]
+      }
+    },
+    {
+      "id": "nuk-e-kuptoj",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "object-pronoun"
+      ],
+      "text": "Nuk e kuptoj.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Nuk",
+          "nuk"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "kuptoj",
+          "kuptoj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "it",
+          true
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "e"
+      ],
+      "wrong": [
+        "E nuk kuptoj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "e",
+          "i",
+          "ka"
+        ]
+      }
+    },
+    {
+      "id": "mund-te-me-ndihmosh",
+      "topic": "out",
+      "concepts": [
+        "te-subjunctive",
+        "question"
+      ],
+      "text": "Mund të më ndihmosh?",
+      "means": "Can you help me?",
+      "words": [
+        [
+          "Mund",
+          "mund"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "më",
+          "unë"
+        ],
+        [
+          "ndihmosh",
+          "ndihmoj"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can"
+        ],
+        [
+          "that"
+        ],
+        [
+          "me",
+          true
+        ],
+        [
+          "you help"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "më"
+      ],
+      "wrong": [
+        "Mund më ndihmosh?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "të",
+          "në",
+          "nga"
+        ]
+      }
+    },
+    {
+      "id": "duhet-te-iki-tani",
+      "topic": "out",
+      "concepts": [
+        "te-subjunctive"
+      ],
+      "text": "Duhet të iki tani.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Duhet",
+          "duhet"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "iki",
+          "iki"
+        ],
+        [
+          "tani",
+          "tani"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Must"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I leave"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Duhet iki tani."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "të",
+          "në",
+          "nga"
+        ]
+      }
+    },
+    {
+      "id": "ku-jeton",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Ku jeton?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Ku",
+          "ku"
+        ],
+        [
+          "jeton",
+          "jetoj"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ku jetoj?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "jeton",
+          "jetoj",
+          "jetojnë"
+        ]
+      }
+    },
+    {
+      "id": "eja-ketu",
+      "topic": "out",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Eja këtu!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Eja",
+          "vij"
+        ],
+        [
+          "këtu",
+          "këtu"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vij këtu!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Eja",
+          "Vij",
+          "Vijnë"
+        ]
+      }
+    },
+    {
+      "id": "prit-pak",
+      "topic": "out",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Prit pak!",
+      "means": "Wait a moment!",
+      "words": [
+        [
+          "Prit",
+          "pres"
+        ],
+        [
+          "pak",
+          "pak"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait"
+        ],
+        [
+          "a little"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pres pak!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Prit",
+          "Pres",
+          "Pret"
+        ]
+      }
+    },
+    {
+      "id": "shko-drejt",
+      "topic": "out",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Shko drejt dhe pastaj majtas.",
+      "means": "Go straight and then left.",
+      "words": [
+        [
+          "Shko",
+          "shkoj"
+        ],
+        [
+          "drejt",
+          "drejt"
+        ],
+        [
+          "dhe",
+          "dhe"
+        ],
+        [
+          "pastaj",
+          "pastaj"
+        ],
+        [
+          "majtas",
+          "majtas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "straight"
+        ],
+        [
+          "and"
+        ],
+        [
+          "then"
+        ],
+        [
+          "left"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Shkoj drejt dhe pastaj majtas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Shko",
+          "Shkoj",
+          "Shkon"
+        ]
+      }
+    },
+    {
+      "id": "ka-shume-turiste",
+      "topic": "out",
+      "concepts": [
+        "ka-existential"
+      ],
+      "text": "Ka shumë turistë këtu.",
+      "means": "There are lots of tourists here.",
+      "words": [
+        [
+          "Ka",
+          "kam"
+        ],
+        [
+          "shumë",
+          "shumë"
+        ],
+        [
+          "turistë",
+          "turist"
+        ],
+        [
+          "këtu",
+          "këtu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Has"
+        ],
+        [
+          "many"
+        ],
+        [
+          "tourists"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kam shumë turistë këtu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ka",
+          "Kam",
+          "Kemi"
+        ]
+      }
+    },
+    {
+      "id": "do-te-vizitoj-prinderit",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "possessive"
+      ],
+      "text": "Nesër do të vizitoj prindërit e mi.",
+      "means": "Tomorrow I'll visit my parents.",
+      "words": [
+        [
+          "Nesër",
+          "nesër"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "vizitoj",
+          "vizitoj"
+        ],
+        [
+          "prindërit",
+          "prind"
+        ],
+        [
+          "e"
+        ],
+        [
+          "mi",
+          "im"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I visit"
+        ],
+        [
+          "parents-the"
+        ],
+        [
+          "the my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "mi"
+      ],
+      "wrong": [
+        "Nesër do të vizitoj prindërit im."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "e",
+          "i",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "cfare-do-te-besh",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "question"
+      ],
+      "text": "Çfarë do të bësh këtë fundjavë?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Çfarë",
+          "çfarë"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "bësh",
+          "bëj"
+        ],
+        [
+          "këtë",
+          "ky"
+        ],
+        [
+          "fundjavë",
+          "fundjavë"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "will"
+        ],
+        [
+          "that"
+        ],
+        [
+          "you do"
+        ],
+        [
+          "this"
+        ],
+        [
+          "weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Çfarë do të bëre këtë fundjavë?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bësh",
+          "bëj",
+          "bën"
+        ]
+      }
+    },
+    {
+      "id": "neser-do-te-bjere-shi",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Nesër do të bjerë shi.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Nesër",
+          "nesër"
+        ],
+        [
+          "do",
+          "do"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "bjerë",
+          "bie"
+        ],
+        [
+          "shi",
+          "shi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will"
+        ],
+        [
+          "that"
+        ],
+        [
+          "falls"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nesër ra shi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "do",
+          "nuk",
+          "është"
+        ]
+      }
+    },
+    {
+      "id": "kam-ftohte",
+      "topic": "plans",
+      "concepts": [
+        "jam-kam"
+      ],
+      "text": "Kam ftohtë.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Kam",
+          "kam"
+        ],
+        [
+          "ftohtë",
+          "ftohtë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jam ftohtë."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kam",
+          "Jam",
+          "Ka"
+        ]
+      }
+    },
+    {
+      "id": "shpresoj-te-vish",
+      "topic": "plans",
+      "concepts": [
+        "te-subjunctive"
+      ],
+      "text": "Shpresoj të vish.",
+      "means": "I hope you come.",
+      "words": [
+        [
+          "Shpresoj",
+          "shpresoj"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "vish",
+          "vij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "that"
+        ],
+        [
+          "you come"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Shpresoj vish."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "të",
+          "në",
+          "nga"
+        ]
+      }
+    },
+    {
+      "id": "dua-te-mesoj-shqip",
+      "topic": "plans",
+      "concepts": [
+        "te-subjunctive"
+      ],
+      "text": "Dua të mësoj shqip.",
+      "means": "I want to learn Albanian.",
+      "words": [
+        [
+          "Dua",
+          "dua"
+        ],
+        [
+          "të",
+          "të"
+        ],
+        [
+          "mësoj",
+          "mësoj"
+        ],
+        [
+          "shqip",
+          "shqip"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "that"
+        ],
+        [
+          "I learn"
+        ],
+        [
+          "Albanian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dua të mësova shqip."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mësoj",
+          "mëson",
+          "mësova"
+        ]
+      }
+    },
+    {
+      "id": "po-bie-shi",
+      "topic": "plans",
+      "concepts": [
+        "po"
+      ],
+      "text": "Po bie shi.",
+      "means": "It's raining.",
+      "words": [
+        [
+          "Po",
+          "po"
+        ],
+        [
+          "bie",
+          "bie"
+        ],
+        [
+          "shi",
+          "shi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "(Now)"
+        ],
+        [
+          "falls"
+        ],
+        [
+          "rain"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Po bjerë shi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Po",
+          "Nuk",
+          "Do"
+        ]
+      }
+    },
+    {
+      "id": "femijet-po-flene",
+      "topic": "plans",
+      "concepts": [
+        "po",
+        "plural",
+        "definite"
+      ],
+      "text": "Fëmijët po flenë.",
+      "means": "The kids are sleeping.",
+      "words": [
+        [
+          "Fëmijët",
+          "fëmijë"
+        ],
+        [
+          "po",
+          "po"
+        ],
+        [
+          "flenë",
+          "fle"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Children-the"
+        ],
+        [
+          "(now)"
+        ],
+        [
+          "sleep"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Fëmijët po fle."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Fëmijët",
+          "Fëmija",
+          "Fëmijë"
+        ]
+      }
+    },
+    {
+      "id": "vajze-e-gjate",
+      "topic": "plans",
+      "concepts": [
+        "adjective-article",
+        "gender"
+      ],
+      "text": "Kjo vajzë e gjatë është shoqja ime.",
+      "means": "This tall girl is my friend.",
+      "words": [
+        [
+          "Kjo",
+          "ky"
+        ],
+        [
+          "vajzë",
+          "vajzë"
+        ],
+        [
+          "e"
+        ],
+        [
+          "gjatë",
+          "i gjatë"
+        ],
+        [
+          "është",
+          "jam"
+        ],
+        [
+          "shoqja",
+          "shoqe"
+        ],
+        [
+          "ime",
+          "im"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "girl"
+        ],
+        [
+          "the tall",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "friend-the"
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "gjatë",
+        "ime"
+      ],
+      "wrong": [
+        "Kjo vajzë i gjatë është shoqja ime."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "e",
+          "i",
+          "të"
+        ]
+      }
+    },
+    {
+      "id": "nje-qen-te-zi",
+      "topic": "plans",
+      "concepts": [
+        "adjective-article"
+      ],
+      "text": "Kam një qen të zi.",
+      "means": "I have a black dog.",
+      "words": [
+        [
+          "Kam",
+          "kam"
+        ],
+        [
+          "një",
+          "një"
+        ],
+        [
+          "qen",
+          "qen"
+        ],
+        [
+          "të"
+        ],
+        [
+          "zi",
+          "i zi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "dog"
+        ],
+        [
+          "the black",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "zi"
+      ],
+      "wrong": [
+        "Kam një të zi qen."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "të",
+          "i",
+          "e"
+        ]
+      }
+    },
+    {
+      "id": "mbreme-fjeta-vone",
+      "topic": "plans",
+      "concepts": [
+        "past"
+      ],
+      "text": "Mbrëmë fjeta vonë.",
+      "means": "I went to bed late last night.",
+      "words": [
+        [
+          "Mbrëmë",
+          "mbrëmë"
+        ],
+        [
+          "fjeta",
+          "fle"
+        ],
+        [
+          "vonë",
+          "vonë"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Last night"
+        ],
+        [
+          "I slept"
+        ],
+        [
+          "late"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mbrëmë fle vonë."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fjeta",
+          "fle",
+          "fjetëm"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kafe",
+          "forms": [
+            "kafe"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "çaj",
+          "forms": [
+            "çaj"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "ujë",
+          "forms": [
+            "ujë"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "unë",
+          "forms": [
+            "unë"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "pi",
+          "forms": [
+            "pi"
+          ],
+          "picture": "drink",
+          "means": "to drink"
+        },
+        {
+          "lemma": "dhe",
+          "forms": [
+            "dhe"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "A verb's ending says who does it, so unë (I) and ti (you) are usually left out: jetoj (I live), jeton (you live), jetojmë (we live)."
+      },
+      "items": [
+        "pi-kafe",
+        "pi-caj",
+        "pi-uje",
+        "une-pi-kafe-dhe-caj",
+        "une-pi-caj-dhe-uje",
+        "une-pi-uje-dhe-kafe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "një",
+          "forms": [
+            "një"
+          ],
+          "means": "a, one"
+        },
+        {
+          "lemma": "qumësht",
+          "forms": [
+            "qumësht"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "te-lutem",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "nje-kafe-te-lutem",
+        "pershendetje-nje-kafe-te-lutem",
+        "nje-caj-dhe-nje-uje-te-lutem",
+        "nje-kafe-faleminderit",
+        "pershendetje-nje-caj-te-lutem",
+        "une-pi-qumesht"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "mirë",
+          "forms": [
+            "mirë"
+          ],
+          "picture": "good",
+          "means": "good, fine"
+        },
+        {
+          "lemma": "jam",
+          "forms": [
+            "jam"
+          ],
+          "means": "to be"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "jam-kam",
+        "line": "jam (I am), je, është… and kam (I have), ke, ka…; Albanian has hunger and cold where English is hungry and cold: Kam uri (I-have hunger), Kam ftohtë (I-have cold)."
+      },
+      "items": [
+        "po-te-lutem",
+        "jo-faleminderit",
+        "jam-mire-faleminderit",
+        "pershendetje-si-je",
+        "po-faleminderit-mirupafshim",
+        "jo-faleminderit-mirupafshim"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ti",
+          "forms": [
+            "ti"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "nuk",
+          "forms": [
+            "nuk"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "mësues",
+          "forms": [
+            "mësues"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "student",
+          "forms": [
+            "student"
+          ],
+          "means": "university student"
+        },
+        {
+          "lemma": "a",
+          "forms": [
+            "a"
+          ],
+          "means": "question marker"
+        },
+        {
+          "lemma": "jam",
+          "forms": [
+            "je"
+          ],
+          "means": "je = you are"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "si-quhesh",
+        "pershendetje-si-quhesh",
+        "pershendetje-gezohem-qe-te-njoh",
+        "une-jam-mesues",
+        "ti-je-student",
+        "a-je-mesues",
+        "une-nuk-jam-mesues"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mama",
+          "forms": [
+            "mamaja"
+          ],
+          "picture": "mother",
+          "means": "mamaja = the mother"
+        },
+        {
+          "lemma": "baba",
+          "forms": [
+            "babai"
+          ],
+          "picture": "father",
+          "means": "babai = the father"
+        },
+        {
+          "lemma": "vëlla",
+          "forms": [
+            "vëllai"
+          ],
+          "picture": "brother",
+          "means": "vëllai = the brother"
+        },
+        {
+          "lemma": "motër",
+          "forms": [
+            "motra"
+          ],
+          "picture": "sister",
+          "means": "motra = the sister"
+        },
+        {
+          "lemma": "im",
+          "forms": [
+            "im",
+            "ime"
+          ],
+          "means": "im = my; ime = my"
+        },
+        {
+          "lemma": "ky",
+          "forms": [
+            "kjo"
+          ],
+          "means": "kjo = this"
+        },
+        {
+          "lemma": "mësuese",
+          "forms": [
+            "mësuese"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "jam",
+          "forms": [
+            "është"
+          ],
+          "means": "është = is"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "my comes after the noun and matches it: shoku im (friend-the my), motra ime (sister-the my), prindërit e mi (parents-the the my)."
+      },
+      "items": [
+        "babai-im-eshte-mesues",
+        "motra-ime-mesuese",
+        "kjo-eshte-mamaja-ime",
+        "vellai-im-eshte-student",
+        "kjo-eshte-motra-ime",
+        "mamaja-ime-eshte-mesuese"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "kam",
+          "forms": [
+            "kam",
+            "ke"
+          ],
+          "means": "kam = I have; ke = you have"
+        },
+        {
+          "lemma": "shok",
+          "forms": [
+            "shok"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "mjeke",
+          "forms": [
+            "mjeke"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "çelës",
+          "forms": [
+            "çelës"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "libër",
+          "forms": [
+            "libër"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i"
+          ],
+          "means": "linking article"
+        },
+        {
+          "lemma": "vëlla",
+          "forms": [
+            "vëlla"
+          ],
+          "means": "brother"
+        },
+        {
+          "lemma": "motër",
+          "forms": [
+            "motër"
+          ],
+          "means": "sister"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "kam-nje-telefon",
+        "a-ke-nje-celes",
+        "kam-nje-vella-dhe-nje-moter",
+        "nuk-kam-liber",
+        "motra-ime-eshte-mjeke",
+        "ti-je-shok-i-mire"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "ku",
+          "forms": [
+            "ku"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "këtu",
+          "forms": [
+            "këtu"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "atje",
+          "forms": [
+            "atje"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "banjo",
+          "forms": [
+            "banjoja"
+          ],
+          "means": "banjoja = the bathroom"
+        },
+        {
+          "lemma": "çelës",
+          "forms": [
+            "çelësi"
+          ],
+          "means": "çelësi = the key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefoni"
+          ],
+          "means": "telefoni = the phone"
+        }
+      ],
+      "phrases": [
+        "me-falni"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A often starts a yes-or-no question (A ke fëmijë?"
+      },
+      "items": [
+        "ku-eshte-banjoja",
+        "me-falni-ku-eshte-banjoja",
+        "ku-eshte-celesi-im",
+        "telefoni-im-eshte-ketu",
+        "celesi-eshte-atje",
+        "ku-eshte-mamaja-ime",
+        "motra-ime-eshte-ketu"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "dy",
+          "forms": [
+            "dy"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "tre",
+          "forms": [
+            "tre"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "para",
+          "forms": [
+            "para"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "një",
+          "forms": [
+            "një"
+          ],
+          "means": "a, one"
+        },
+        {
+          "lemma": "libër",
+          "forms": [
+            "libra"
+          ],
+          "means": "libra = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "dy-kafe-te-lutem",
+        "nje-liber-te-lutem",
+        "kam-tre-libra",
+        "nuk-kam-para",
+        "sa-kushton-kjo",
+        "me-falni-sa-kushton",
+        "pershendetje-llogarine-te-lutem"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "flas",
+          "forms": [
+            "flet",
+            "flas"
+          ],
+          "means": "flet = speak, speaks; flas = I speak"
+        },
+        {
+          "lemma": "anglisht",
+          "forms": [
+            "anglisht"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "shqip",
+          "forms": [
+            "shqip"
+          ],
+          "means": "Albanian"
+        },
+        {
+          "lemma": "kuptoj",
+          "forms": [
+            "kuptoj",
+            "kupton"
+          ],
+          "means": "kuptoj = I understand; kupton = you understand"
+        },
+        {
+          "lemma": "pak",
+          "forms": [
+            "pak"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "dua",
+          "forms": [
+            "dua"
+          ],
+          "means": "to want"
+        },
+        {
+          "lemma": "e",
+          "forms": [
+            "e"
+          ],
+          "means": "it"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "negation",
+        "line": "nuk goes before the verb and any little pronoun in front of it: Nuk e di (not it I-know)."
+      },
+      "items": [
+        "a-flet-anglisht",
+        "flas-pak-shqip",
+        "nuk-e-kuptoj",
+        "a-e-kupton",
+        "dua-nje-kafe",
+        "dua-uje-te-lutem",
+        "babai-nuk-flet-anglisht"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "shtëpi",
+          "forms": [
+            "shtëpi"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "dhomë",
+          "forms": [
+            "dhoma"
+          ],
+          "picture": "room",
+          "means": "dhoma = the room"
+        },
+        {
+          "lemma": "i madh",
+          "forms": [
+            "madhe"
+          ],
+          "picture": "big",
+          "means": "madhe = big"
+        },
+        {
+          "lemma": "i vogël",
+          "forms": [
+            "vogël"
+          ],
+          "picture": "small",
+          "means": "vogël = small"
+        },
+        {
+          "lemma": "jetoj",
+          "forms": [
+            "jetoj",
+            "jeton"
+          ],
+          "means": "jetoj = I live; jeton = live, lives"
+        },
+        {
+          "lemma": "në",
+          "forms": [
+            "në"
+          ],
+          "picture": "in",
+          "means": "in, at"
+        },
+        {
+          "lemma": "të",
+          "forms": [
+            "të"
+          ],
+          "means": "linking article; to"
+        },
+        {
+          "lemma": "e",
+          "forms": [
+            "e"
+          ],
+          "means": "it; linking article"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ku-jeton",
+        "mamaja-ime-jeton-ketu",
+        "shtepi-te-vogel",
+        "dhoma-ime-eshte-e-vogel",
+        "kjo-shtepi-eshte-e-madhe"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "shkoj",
+          "forms": [
+            "shkoj",
+            "shkon"
+          ],
+          "means": "shkoj = I go; shkon = go, goes"
+        },
+        {
+          "lemma": "shkollë",
+          "forms": [
+            "shkollë"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "qytet",
+          "forms": [
+            "qytet"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "stacion",
+          "forms": [
+            "stacioni"
+          ],
+          "means": "stacioni = the station"
+        },
+        {
+          "lemma": "makinë",
+          "forms": [
+            "makinë"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "tren",
+          "forms": [
+            "trenit"
+          ],
+          "means": "trenit = the train's"
+        },
+        {
+          "lemma": "në",
+          "forms": [
+            "në"
+          ],
+          "means": "in, at, to"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i"
+          ],
+          "means": "linking article; of"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "adjective-article",
+        "line": "Most describing words come after the noun with a little word of their own (i, e, të or së) that matches it: një shtëpi e madhe (a house the big), një qen të zi (a dog the black, as the object)."
+      },
+      "items": [
+        "shkoj-ne-shkolle",
+        "ku-shkon",
+        "mamaja-ime-shkon-ne-qytet",
+        "ku-eshte-stacioni-i-trenit",
+        "kam-nje-makine",
+        "kjo-makine-eshte-e-vogel"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "sot",
+          "forms": [
+            "sot"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "nesër",
+          "forms": [
+            "nesër"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "tani",
+          "forms": [
+            "tani"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "punoj",
+          "forms": [
+            "punoj"
+          ],
+          "picture": "work",
+          "means": "to work"
+        },
+        {
+          "lemma": "duhet",
+          "forms": [
+            "duhet"
+          ],
+          "means": "must, have to"
+        },
+        {
+          "lemma": "mund",
+          "forms": [
+            "mund"
+          ],
+          "means": "can"
+        },
+        {
+          "lemma": "të",
+          "forms": [
+            "të"
+          ],
+          "means": "linking article; to"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "faleminderit-shihemi-neser",
+        "punoj-sot",
+        "duhet-te-shkoj-tani",
+        "neser-shkoj-ne-qytet",
+        "nuk-mund-te-shkoj-sot",
+        "duhet-te-punoj-neser"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

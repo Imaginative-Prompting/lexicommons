@@ -1,0 +1,8381 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-da",
+  "name": "Starter: Danish",
+  "about": "Danish word order in real, everyday sentences.",
+  "language": "da",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kaffe": "coffee",
+    "te": "tea",
+    "vand": "water",
+    "jeg": "I",
+    "drikke": "to drink",
+    "og": "and",
+    "en": "a, an",
+    "mælk": "milk",
+    "glas": "glass",
+    "kop": "cup",
+    "god": "good, fine",
+    "være": "to be",
+    "du": "you",
+    "ikke": "not",
+    "lærer": "teacher",
+    "elev": "student",
+    "mor": "mother",
+    "far": "father, dad",
+    "bror": "brother",
+    "søster": "sister",
+    "min": "my",
+    "denne": "this",
+    "have": "to have",
+    "ven": "friend",
+    "læge": "doctor",
+    "nøgle": "key",
+    "telefon": "phone",
+    "bog": "book",
+    "hvor": "where",
+    "her": "here",
+    "der": "there",
+    "toilet": "bathroom, toilet",
+    "to": "two",
+    "tre": "three",
+    "penge": "money",
+    "tale": "to speak",
+    "engelsk": "English",
+    "dansk": "Danish",
+    "forstå": "to understand",
+    "lidt": "a little",
+    "ville": "to want",
+    "hus": "house",
+    "værelse": "room",
+    "stor": "big",
+    "lille": "small (små: plural)",
+    "bo": "to live (somewhere)",
+    "i": "in",
+    "gå": "to go, to walk",
+    "til": "to",
+    "skole": "school",
+    "by": "town, city",
+    "station": "station",
+    "bil": "car",
+    "hen": "to a place (directional adverb",
+    "nu": "now",
+    "arbejde": "to work",
+    "skulle": "will, shall, have to",
+    "kunne": "can, to be able to",
+    "hej": "hi, hello",
+    "hedde": "to be called",
+    "tage": "to take, to go (somewhere)",
+    "mormor": "grandma (your mother's mother)",
+    "hjemmefra": "from home",
+    "vide": "to know (a fact)",
+    "komme": "to come",
+    "finde": "to find",
+    "åbne": "to open",
+    "vindue": "window",
+    "lejlighed": "apartment",
+    "sidste": "last",
+    "år": "year",
+    "se": "to see",
+    "køkken": "kitchen",
+    "altan": "balcony",
+    "rød": "red",
+    "vores": "our, ours",
+    "lave": "to make (lave mad: to cook)",
+    "mad": "food",
+    "blive": "to stay, to become",
+    "hjemme": "at home",
+    "fordi": "because",
+    "stå op": "to get up",
+    "klokke": "clock (klokken syv: at seven)",
+    "syv": "seven",
+    "hver": "every",
+    "dag": "day",
+    "spise": "to eat",
+    "morgenmad": "breakfast",
+    "fisk": "fish",
+    "pizza": "pizza",
+    "sodavand": "soda",
+    "stå": "to stand, to be (of upright things)",
+    "køleskab": "fridge",
+    "gerne": "gladly (vil gerne: would like)",
+    "kold": "cold",
+    "sige": "to say",
+    "sulten": "hungry",
+    "få": "to get, to receive (in requests: to have)",
+    "tak": "thanks",
+    "måtte": "may, must",
+    "regning": "check, bill",
+    "ligge": "to lie, to be (of places)",
+    "købe": "to buy",
+    "ny": "new",
+    "jakke": "jacket",
+    "tog": "train",
+    "minut": "minute",
+    "sent": "late (for sent: late, too late)",
+    "aldrig": "never",
+    "sko": "shoe",
+    "gammel": "old",
+    "starte": "to start",
+    "bager": "baker (bageren: the bakery)",
+    "brød": "bread",
+    "træt": "tired",
+    "taxa": "taxi",
+    "tyve": "twenty",
+    "derhen": "there (going there)",
+    "lørdag": "Saturday",
+    "middag": "dinner",
+    "forælder": "parent",
+    "regne": "to rain",
+    "ringe": "to call, to phone",
+    "regnvejr": "rain, rainy weather",
+    "strand": "beach",
+    "biograf": "movie theater",
+    "huske": "to remember",
+    "tage med": "to bring, to take along",
+    "paraply": "umbrella",
+    "lukke": "to close, to shut",
+    "lige": "just (softens a request)",
+    "dør": "door",
+    "komme med": "to come along"
+  },
+  "chunks": {
+    "hvordan-har-du-det": {
+      "text": "Hvordan har du det?",
+      "en": "How are you?",
+      "about": "A greeting you learn whole: literally, how have you it? Answer with Godt, tak (fine, thanks)."
+    },
+    "hvad-hedder-du": {
+      "text": "Hvad hedder du?",
+      "en": "What's your name?",
+      "about": "Literally, what are you called? Answer with Jeg hedder and your name."
+    },
+    "undskyld": {
+      "text": "Undskyld",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention, or to say sorry."
+    },
+    "i-dag": {
+      "text": "i dag",
+      "en": "today"
+    },
+    "i-morgen": {
+      "text": "i morgen",
+      "en": "tomorrow",
+      "about": "morgen alone is morning."
+    },
+    "i-går": {
+      "text": "i går",
+      "en": "yesterday"
+    },
+    "i-aften": {
+      "text": "i aften",
+      "en": "tonight, this evening"
+    },
+    "der-er": {
+      "text": "der er",
+      "en": "there is, there are",
+      "about": "Der er kaffe i køkkenet: there's coffee in the kitchen."
+    },
+    "tak-for-mad": {
+      "text": "Tak for mad!",
+      "en": "Thanks for the meal!",
+      "about": "Said to whoever made the food, as you get up from the table."
+    },
+    "har-det-godt": {
+      "text": "har det godt",
+      "en": "feel well",
+      "about": "A fixed phrase: literally, have it good. Hvordan har du det? asks the same way."
+    },
+    "kan-godt-lide": {
+      "text": "kan godt lide",
+      "en": "like",
+      "about": "How Danish says to like: Jeg kan godt lide kaffe (I like coffee)."
+    },
+    "hello": {
+      "text": "Hej",
+      "en": "hello"
+    },
+    "please-thank-you": {
+      "text": "tak",
+      "en": "please, thank you"
+    },
+    "goodbye": {
+      "text": "Farvel",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "ja",
+      "en": "yes"
+    },
+    "no": {
+      "text": "nej",
+      "en": "no"
+    },
+    "nice-to-meet-you": {
+      "text": "Hyggeligt at møde dig",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Hvad koster det",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Regningen, tak",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Vi ses i morgen",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "drik-vand",
+      "topic": "food",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Drik vand.",
+      "means": "Drink water.",
+      "words": [
+        [
+          "Drik",
+          "drikke"
+        ],
+        [
+          "vand",
+          "vand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Drikke vand.",
+        "Vand drikke."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vand",
+          "kaffe",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "jeg-drikker-vand",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg drikker vand.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "vand",
+          "vand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg drikke vand.",
+        "Jeg vand drikker."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vand",
+          "te",
+          "kaffe"
+        ]
+      }
+    },
+    {
+      "id": "jeg-drikker-kaffe",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg drikker kaffe.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "kaffe",
+          "kaffe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg drikke kaffe.",
+        "Jeg kaffe drikker."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaffe",
+          "te",
+          "vand"
+        ]
+      }
+    },
+    {
+      "id": "jeg-drikker-te",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg drikker te.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg drikke te.",
+        "Jeg te drikker."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "vand",
+          "kaffe"
+        ]
+      }
+    },
+    {
+      "id": "jeg-drikker-kaffe-og-te",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg drikker kaffe og te.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "kaffe",
+          "kaffe"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg drikke kaffe og te.",
+        "Jeg kaffe og te drikker."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaffe",
+          "vand",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "jeg-drikker-te-og-vand",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg drikker te og vand.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "vand",
+          "vand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg drikke te og vand.",
+        "Jeg te og vand drikker."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vand",
+          "kaffe",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "jeg-drikker-vand-og-kaffe",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg drikker vand og kaffe.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "vand",
+          "vand"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "kaffe",
+          "kaffe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg drikke vand og kaffe.",
+        "Jeg vand og kaffe drikker."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kaffe",
+          "te",
+          "vand"
+        ]
+      }
+    },
+    {
+      "id": "en-kaffe-tak",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "En kaffe, tak.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "En",
+          "en"
+        ],
+        [
+          "kaffe,",
+          "kaffe"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Et kaffe, tak.",
+        "Kaffe en, tak."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "En",
+          "Et",
+          "Jeg"
+        ]
+      }
+    },
+    {
+      "id": "hej-en-te-tak",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "hello",
+        "please-thank-you"
+      ],
+      "text": "Hej! En te, tak.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Hej!"
+        ],
+        [
+          "En",
+          "en"
+        ],
+        [
+          "te,",
+          "te"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hej! Et te, tak.",
+        "Hej! Te en, tak."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te,",
+          "kaffe,",
+          "mælk,"
+        ]
+      }
+    },
+    {
+      "id": "et-glas-vand-tak",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Et glas vand, tak.",
+      "means": "A glass of water, please.",
+      "words": [
+        [
+          "Et",
+          "en"
+        ],
+        [
+          "glas",
+          "glas"
+        ],
+        [
+          "vand,",
+          "vand"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "glass"
+        ],
+        [
+          "of water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "En glas vand, tak.",
+        "Glas et vand, tak."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Et",
+          "En",
+          "Jeg"
+        ]
+      }
+    },
+    {
+      "id": "et-glas-m-lk-tak",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Et glas mælk, tak.",
+      "means": "A glass of milk, please.",
+      "words": [
+        [
+          "Et",
+          "en"
+        ],
+        [
+          "glas",
+          "glas"
+        ],
+        [
+          "mælk,",
+          "mælk"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "glass"
+        ],
+        [
+          "of milk"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "En glas mælk, tak.",
+        "Glas et mælk, tak."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mælk,",
+          "vand,",
+          "te,"
+        ]
+      }
+    },
+    {
+      "id": "en-kop-kaffe-tak",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "En kop kaffe, tak.",
+      "means": "A cup of coffee, please.",
+      "words": [
+        [
+          "En",
+          "en"
+        ],
+        [
+          "kop",
+          "kop"
+        ],
+        [
+          "kaffe,",
+          "kaffe"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "cup"
+        ],
+        [
+          "of coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Et kop kaffe, tak.",
+        "Kop en kaffe, tak."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kop",
+          "glas",
+          "kaffe"
+        ]
+      }
+    },
+    {
+      "id": "en-te-og-et-glas-vand-tak",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "En te og et glas vand, tak.",
+      "means": "A tea and a glass of water, please.",
+      "words": [
+        [
+          "En",
+          "en"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "et",
+          "en"
+        ],
+        [
+          "glas",
+          "glas"
+        ],
+        [
+          "vand,",
+          "vand"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "glass"
+        ],
+        [
+          "of water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Et te og et glas vand, tak.",
+        "En te og en glas vand, tak."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "et",
+          "en",
+          "jeg"
+        ]
+      }
+    },
+    {
+      "id": "jeg-drikker-m-lk",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg drikker mælk.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "mælk",
+          "mælk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg drikke mælk.",
+        "Jeg mælk drikker."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mælk",
+          "te",
+          "kaffe"
+        ]
+      }
+    },
+    {
+      "id": "jeg-har-det-godt-tak",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "chunks": [
+        "har-det-godt",
+        "please-thank-you"
+      ],
+      "text": "Jeg har det godt, tak.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "har"
+        ],
+        [
+          "det"
+        ],
+        [
+          "godt,"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "it"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg det har godt, tak.",
+        "Jeg har godt det, tak."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "godt,",
+          "god,",
+          "er,"
+        ]
+      }
+    },
+    {
+      "id": "ja-tak",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please-thank-you",
+        "yes"
+      ],
+      "text": "Ja, tak.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ja,"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja, jeg tak.",
+        "Ja, tak er."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ja,",
+          "Nej,",
+          "Farvel,"
+        ]
+      }
+    },
+    {
+      "id": "nej-tak",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please-thank-you",
+        "no"
+      ],
+      "text": "Nej, tak.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nej,"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nej, jeg tak.",
+        "Nej, tak er."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nej,",
+          "Ja,",
+          "Hej,"
+        ]
+      }
+    },
+    {
+      "id": "ja-tak-farvel",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "please-thank-you",
+        "yes"
+      ],
+      "text": "Ja, tak. Farvel!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ja,"
+        ],
+        [
+          "tak."
+        ],
+        [
+          "Farvel"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja, jeg tak. Farvel!",
+        "Ja, tak er. Farvel!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Farvel",
+          "Hej",
+          "Tak"
+        ]
+      }
+    },
+    {
+      "id": "nej-tak-farvel",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "please-thank-you",
+        "no"
+      ],
+      "text": "Nej, tak. Farvel!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nej,"
+        ],
+        [
+          "tak."
+        ],
+        [
+          "Farvel"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nej, jeg tak. Farvel!",
+        "Nej, tak er. Farvel!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nej,",
+          "Ja,",
+          "Hej,"
+        ]
+      }
+    },
+    {
+      "id": "er-kaffen-god",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "adjective",
+        "definite"
+      ],
+      "text": "Er kaffen god?",
+      "means": "Is the coffee good?",
+      "words": [
+        [
+          "Er",
+          "være"
+        ],
+        [
+          "kaffen",
+          "kaffe"
+        ],
+        [
+          "god",
+          "god"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "the coffee"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Er kaffen godt?",
+        "Er god kaffen?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "god",
+          "godt",
+          "er"
+        ]
+      }
+    },
+    {
+      "id": "hej-hyggeligt-at-m-de-dig",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Hej! Hyggeligt at møde dig.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Hej!"
+        ],
+        [
+          "Hyggeligt"
+        ],
+        [
+          "at"
+        ],
+        [
+          "møde"
+        ],
+        [
+          "dig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice"
+        ],
+        [
+          "to"
+        ],
+        [
+          "meet"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hej! Hyggeligt møde at dig.",
+        "Hej! Hyggeligt at dig møde."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "dig",
+          "du",
+          "jeg"
+        ]
+      }
+    },
+    {
+      "id": "jeg-er-l-rer",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg er lærer.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "lærer",
+          "lærer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg være lærer.",
+        "Jeg lærer er."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "lærer",
+          "elev",
+          "kop"
+        ]
+      }
+    },
+    {
+      "id": "du-er-elev",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Du er elev.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Du",
+          "du"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "elev",
+          "elev"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Du være elev.",
+        "Du elev er."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "elev",
+          "lærer",
+          "glas"
+        ]
+      }
+    },
+    {
+      "id": "er-du-l-rer",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Er du lærer?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Er",
+          "være"
+        ],
+        [
+          "du",
+          "du"
+        ],
+        [
+          "lærer",
+          "lærer"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Være du lærer?",
+        "Er lærer du?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "du",
+          "dig",
+          "jeg"
+        ]
+      }
+    },
+    {
+      "id": "jeg-er-ikke-l-rer",
+      "topic": "people",
+      "concepts": [
+        "ikke",
+        "present",
+        "v2"
+      ],
+      "text": "Jeg er ikke lærer.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "lærer",
+          "lærer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg ikke er lærer.",
+        "Jeg være ikke lærer."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lærer",
+          "elev",
+          "kop"
+        ]
+      }
+    },
+    {
+      "id": "min-far-er-l-rer",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Min far er lærer.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "far",
+          "far"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "lærer",
+          "lærer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min far lærer er.",
+        "Min far være lærer."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "far",
+          "mor",
+          "bror"
+        ]
+      }
+    },
+    {
+      "id": "dette-er-min-mor",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Dette er min mor.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Dette",
+          "denne"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "min",
+          "min"
+        ],
+        [
+          "mor",
+          "mor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dette min mor er.",
+        "Dette er mor min."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mor",
+          "far",
+          "søster"
+        ]
+      }
+    },
+    {
+      "id": "dette-er-min-far",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Dette er min far.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Dette",
+          "denne"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "min",
+          "min"
+        ],
+        [
+          "far",
+          "far"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dette min far er.",
+        "Dette er far min."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "far",
+          "mor",
+          "bror"
+        ]
+      }
+    },
+    {
+      "id": "min-bror-er-elev",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Min bror er elev.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "bror",
+          "bror"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "elev",
+          "elev"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min bror elev er.",
+        "Min bror være elev."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bror",
+          "far",
+          "søster"
+        ]
+      }
+    },
+    {
+      "id": "dette-er-min-s-ster",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Dette er min søster.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Dette",
+          "denne"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "min",
+          "min"
+        ],
+        [
+          "søster",
+          "søster"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dette min søster er.",
+        "Dette er søster min."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "søster",
+          "mor",
+          "bror"
+        ]
+      }
+    },
+    {
+      "id": "min-mor-har-det-godt",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "chunks": [
+        "har-det-godt"
+      ],
+      "text": "Min mor har det godt.",
+      "means": "My mother is well.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "mor",
+          "mor"
+        ],
+        [
+          "har"
+        ],
+        [
+          "det"
+        ],
+        [
+          "godt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "has"
+        ],
+        [
+          "it"
+        ],
+        [
+          "well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min mor det har godt.",
+        "Min mor har godt det."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "godt",
+          "god",
+          "er"
+        ]
+      }
+    },
+    {
+      "id": "jeg-har-en-telefon",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "v2",
+        "gender"
+      ],
+      "text": "Jeg har en telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "har",
+          "have"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg have en telefon.",
+        "Jeg en telefon har."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "telefon",
+          "nøgle",
+          "bog"
+        ]
+      }
+    },
+    {
+      "id": "har-du-en-n-gle",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Har du en nøgle?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Har",
+          "have"
+        ],
+        [
+          "du",
+          "du"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "nøgle",
+          "nøgle"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Have du en nøgle?",
+        "Har du et nøgle?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nøgle",
+          "telefon",
+          "bog"
+        ]
+      }
+    },
+    {
+      "id": "jeg-har-en-bror-og-en-s-ster",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg har en bror og en søster.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "har",
+          "have"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "bror",
+          "bror"
+        ],
+        [
+          "og",
+          "og"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "søster",
+          "søster"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg have en bror og en søster.",
+        "Jeg en bror og en søster har."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "har",
+          "have",
+          "er"
+        ]
+      }
+    },
+    {
+      "id": "jeg-har-ikke-en-bog",
+      "topic": "people",
+      "concepts": [
+        "ikke",
+        "present",
+        "v2"
+      ],
+      "text": "Jeg har ikke en bog.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "har",
+          "have"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "bog",
+          "bog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "not"
+        ],
+        [
+          "a"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg ikke har en bog.",
+        "Jeg have ikke en bog."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "bog",
+          "telefon",
+          "nøgle"
+        ]
+      }
+    },
+    {
+      "id": "min-s-ster-er-l-ge",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Min søster er læge.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "søster",
+          "søster"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "læge",
+          "læge"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min søster læge er.",
+        "Min søster være læge."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "læge",
+          "lærer",
+          "elev"
+        ]
+      }
+    },
+    {
+      "id": "du-er-en-god-ven",
+      "topic": "people",
+      "concepts": [
+        "adjective",
+        "gender",
+        "present"
+      ],
+      "text": "Du er en god ven.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Du",
+          "du"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "god",
+          "god"
+        ],
+        [
+          "ven",
+          "ven"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a"
+        ],
+        [
+          "good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Du er en godt ven.",
+        "Du en god ven er."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ven",
+          "læge",
+          "lærer"
+        ]
+      }
+    },
+    {
+      "id": "hvor-er-min-n-gle",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive"
+      ],
+      "text": "Hvor er min nøgle?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Hvor",
+          "hvor"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "min",
+          "min"
+        ],
+        [
+          "nøgle",
+          "nøgle"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hvor min nøgle er?",
+        "Hvor er min nøglen?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nøgle",
+          "nøglen",
+          "telefon"
+        ]
+      }
+    },
+    {
+      "id": "undskyld-hvor-er-toilettet",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "definite"
+      ],
+      "chunks": [
+        "undskyld"
+      ],
+      "text": "Undskyld, hvor er toilettet?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Undskyld,"
+        ],
+        [
+          "hvor",
+          "hvor"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "toilettet",
+          "toilet"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Undskyld, hvor toilettet er?",
+        "Undskyld, hvor være toilettet?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "toilettet",
+          "nøglen",
+          "kaffen"
+        ]
+      }
+    },
+    {
+      "id": "min-telefon-er-her",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Min telefon er her.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "her",
+          "her"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min telefon her er.",
+        "Min telefon være her."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "her",
+          "der",
+          "hvor"
+        ]
+      }
+    },
+    {
+      "id": "n-glen-er-der",
+      "topic": "out",
+      "concepts": [
+        "definite",
+        "present",
+        "v2"
+      ],
+      "text": "Nøglen er der.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Nøglen",
+          "nøgle"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "der",
+          "der"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nøglen der er.",
+        "Nøglen være der."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "der",
+          "her",
+          "hvor"
+        ]
+      }
+    },
+    {
+      "id": "hvor-er-min-mor",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "possessive"
+      ],
+      "text": "Hvor er min mor?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Hvor",
+          "hvor"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "min",
+          "min"
+        ],
+        [
+          "mor",
+          "mor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hvor min mor er?",
+        "Hvor være min mor?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mor",
+          "far",
+          "søster"
+        ]
+      }
+    },
+    {
+      "id": "min-s-ster-er-her",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Min søster er her.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "søster",
+          "søster"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "her",
+          "her"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min søster her er.",
+        "Min søster være her."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "her",
+          "der",
+          "hvor"
+        ]
+      }
+    },
+    {
+      "id": "undskyld-hvad-koster-det",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "undskyld"
+      ],
+      "text": "Undskyld, hvad koster det?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Undskyld,"
+        ],
+        [
+          "hvad"
+        ],
+        [
+          "koster"
+        ],
+        [
+          "det"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "what"
+        ],
+        [
+          "costs"
+        ],
+        [
+          "it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Undskyld, hvad det koster?",
+        "Undskyld, koster hvad det?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hvad",
+          "hvor",
+          "hvordan"
+        ]
+      }
+    },
+    {
+      "id": "hej-regningen-tak",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Hej! Regningen, tak.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Hej!"
+        ],
+        [
+          "Regningen,"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hej! En regningen, tak.",
+        "Hej! Et regningen, tak."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Regningen,",
+          "Kaffen,",
+          "Nøglen,"
+        ]
+      }
+    },
+    {
+      "id": "to-kopper-kaffe-tak",
+      "topic": "out",
+      "concepts": [
+        "plural"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "To kopper kaffe, tak.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "To",
+          "to"
+        ],
+        [
+          "kopper",
+          "kop"
+        ],
+        [
+          "kaffe,",
+          "kaffe"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "cups"
+        ],
+        [
+          "of coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "To kop kaffe, tak.",
+        "Kopper to kaffe, tak."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kopper",
+          "kop",
+          "glas"
+        ]
+      }
+    },
+    {
+      "id": "en-bog-tak",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Én bog, tak.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Én",
+          "en"
+        ],
+        [
+          "bog,",
+          "bog"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Én bøger, tak.",
+        "Et bog, tak."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Én",
+          "To",
+          "Tre"
+        ]
+      }
+    },
+    {
+      "id": "jeg-har-tre-b-ger",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "present",
+        "v2"
+      ],
+      "text": "Jeg har tre bøger.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "har",
+          "have"
+        ],
+        [
+          "tre",
+          "tre"
+        ],
+        [
+          "bøger",
+          "bog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg har tre bog.",
+        "Jeg tre bøger har."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tre",
+          "to",
+          "én"
+        ]
+      }
+    },
+    {
+      "id": "jeg-har-ikke-penge",
+      "topic": "out",
+      "concepts": [
+        "ikke",
+        "present",
+        "v2"
+      ],
+      "text": "Jeg har ikke penge.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "har",
+          "have"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "penge",
+          "penge"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "not"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg ikke har penge.",
+        "Jeg have ikke penge."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "penge",
+          "bøger",
+          "kopper"
+        ]
+      }
+    },
+    {
+      "id": "jeg-taler-lidt-dansk",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg taler lidt dansk.",
+      "means": "I speak a little Danish.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "taler",
+          "tale"
+        ],
+        [
+          "lidt",
+          "lidt"
+        ],
+        [
+          "dansk",
+          "dansk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Danish"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg tale lidt dansk.",
+        "Jeg lidt dansk taler."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dansk",
+          "engelsk",
+          "lidt"
+        ]
+      }
+    },
+    {
+      "id": "forstar-du",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Forstår du?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Forstår",
+          "forstå"
+        ],
+        [
+          "du",
+          "du"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Understand"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Forstå du?",
+        "Forstår dig?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Forstår",
+          "Forstå",
+          "Taler"
+        ]
+      }
+    },
+    {
+      "id": "jeg-vil-have-en-kaffe",
+      "topic": "people",
+      "concepts": [
+        "modal",
+        "v2"
+      ],
+      "text": "Jeg vil have en kaffe.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "vil",
+          "ville"
+        ],
+        [
+          "have",
+          "have"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "kaffe",
+          "kaffe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want to"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg vil har en kaffe.",
+        "Jeg have vil en kaffe."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "have",
+          "har",
+          "drikker"
+        ]
+      }
+    },
+    {
+      "id": "jeg-vil-have-vand-tak",
+      "topic": "people",
+      "concepts": [
+        "modal",
+        "v2"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Jeg vil have vand, tak.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "vil",
+          "ville"
+        ],
+        [
+          "have",
+          "have"
+        ],
+        [
+          "vand,",
+          "vand"
+        ],
+        [
+          "tak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want to"
+        ],
+        [
+          "have"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg vil har vand, tak.",
+        "Jeg have vil vand, tak."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vil",
+          "ville",
+          "har"
+        ]
+      }
+    },
+    {
+      "id": "hvor-bor-du",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Hvor bor du?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Hvor",
+          "hvor"
+        ],
+        [
+          "bor",
+          "bo"
+        ],
+        [
+          "du",
+          "du"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "live"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hvor du bor?",
+        "Hvor bo du?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bor",
+          "bo",
+          "er"
+        ]
+      }
+    },
+    {
+      "id": "dette-hus-er-stort",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "gender",
+        "v2"
+      ],
+      "text": "Dette hus er stort.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Dette",
+          "denne"
+        ],
+        [
+          "hus",
+          "hus"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "stort",
+          "stor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dette hus er stor.",
+        "Dette hus stort er."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "stort",
+          "stor",
+          "god"
+        ]
+      }
+    },
+    {
+      "id": "min-mor-bor-her",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "present",
+        "v2"
+      ],
+      "text": "Min mor bor her.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "mor",
+          "mor"
+        ],
+        [
+          "bor",
+          "bo"
+        ],
+        [
+          "her",
+          "her"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min mor bo her.",
+        "Min mor her bor."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bor",
+          "bo",
+          "har"
+        ]
+      }
+    },
+    {
+      "id": "jeg-bor-i-et-lille-hus",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "gender",
+        "present",
+        "v2"
+      ],
+      "text": "Jeg bor i et lille hus.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "bor",
+          "bo"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "et",
+          "en"
+        ],
+        [
+          "lille",
+          "lille"
+        ],
+        [
+          "hus",
+          "hus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a"
+        ],
+        [
+          "small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg bor i en lille hus.",
+        "Jeg i et lille hus bor."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "lille",
+          "stort",
+          "stor"
+        ]
+      }
+    },
+    {
+      "id": "mit-v-relse-er-lille",
+      "topic": "home",
+      "concepts": [
+        "possessive",
+        "gender",
+        "adjective",
+        "v2"
+      ],
+      "text": "Mit værelse er lille.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Mit",
+          "min"
+        ],
+        [
+          "værelse",
+          "værelse"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "lille",
+          "lille"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min værelse er lille.",
+        "Mit værelse lille er."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mit",
+          "Min",
+          "Dette"
+        ]
+      }
+    },
+    {
+      "id": "jeg-gar-til-byen",
+      "topic": "out",
+      "concepts": [
+        "direction",
+        "present",
+        "v2"
+      ],
+      "text": "Jeg går til byen.",
+      "means": "I walk to the city.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "går",
+          "gå"
+        ],
+        [
+          "til",
+          "til"
+        ],
+        [
+          "byen",
+          "by"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "walk"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg gå til byen.",
+        "Jeg til byen går."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "går",
+          "gå",
+          "bor"
+        ]
+      }
+    },
+    {
+      "id": "jeg-gar-i-skole",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "text": "Jeg går i skole.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "går",
+          "gå"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "skole",
+          "skole"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "in"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg gå i skole.",
+        "Jeg i skole går."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "skole",
+          "byen",
+          "huset"
+        ]
+      }
+    },
+    {
+      "id": "hvor-gar-du-hen",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "direction",
+        "present"
+      ],
+      "text": "Hvor går du hen?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Hvor",
+          "hvor"
+        ],
+        [
+          "går",
+          "gå"
+        ],
+        [
+          "du",
+          "du"
+        ],
+        [
+          "hen",
+          "hen"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "go"
+        ],
+        [
+          "you"
+        ],
+        [
+          "to"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hvor du går hen?",
+        "Hvor gå du hen?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hen",
+          "her",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "undskyld-hvor-er-stationen",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "definite"
+      ],
+      "chunks": [
+        "undskyld"
+      ],
+      "text": "Undskyld, hvor er stationen?",
+      "means": "Excuse me, where is the station?",
+      "words": [
+        [
+          "Undskyld,"
+        ],
+        [
+          "hvor",
+          "hvor"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "stationen",
+          "station"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Undskyld, hvor stationen er?",
+        "Undskyld, hvor være stationen?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "stationen",
+          "toilettet",
+          "huset"
+        ]
+      }
+    },
+    {
+      "id": "min-mor-gar-til-byen",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "direction",
+        "present",
+        "v2"
+      ],
+      "text": "Min mor går til byen.",
+      "means": "My mother walks to the city.",
+      "words": [
+        [
+          "Min",
+          "min"
+        ],
+        [
+          "mor",
+          "mor"
+        ],
+        [
+          "går",
+          "gå"
+        ],
+        [
+          "til",
+          "til"
+        ],
+        [
+          "byen",
+          "by"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "walks"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Min mor gå til byen.",
+        "Min mor til byen går."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "byen",
+          "stationen",
+          "huset"
+        ]
+      }
+    },
+    {
+      "id": "denne-bil-er-lille",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "adjective",
+        "v2"
+      ],
+      "text": "Denne bil er lille.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Denne",
+          "denne"
+        ],
+        [
+          "bil",
+          "bil"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "lille",
+          "lille"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dette bil er lille.",
+        "Denne bil lille er."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Denne",
+          "Dette",
+          "Mit"
+        ]
+      }
+    },
+    {
+      "id": "jeg-har-en-bil",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "present",
+        "v2"
+      ],
+      "text": "Jeg har en bil.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "har",
+          "have"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "bil",
+          "bil"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg har et bil.",
+        "Jeg en bil har."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bil",
+          "telefon",
+          "bog"
+        ]
+      }
+    },
+    {
+      "id": "tak-vi-ses-i-morgen",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "please-thank-you"
+      ],
+      "text": "Tak. Vi ses i morgen!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Tak."
+        ],
+        [
+          "Vi"
+        ],
+        [
+          "ses"
+        ],
+        [
+          "i"
+        ],
+        [
+          "morgen"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "we"
+        ],
+        [
+          "will see each other"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tak. Vi i morgen ses!",
+        "Tak. Vi ses morgen i!"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "morgen",
+          "dag",
+          "nu"
+        ]
+      }
+    },
+    {
+      "id": "jeg-arbejder-i-dag",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "v2"
+      ],
+      "chunks": [
+        "i-dag"
+      ],
+      "text": "Jeg arbejder i dag.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "arbejder",
+          "arbejde"
+        ],
+        [
+          "i"
+        ],
+        [
+          "dag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg arbejde i dag.",
+        "Jeg i dag arbejder."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "arbejder",
+          "arbejde",
+          "bor"
+        ]
+      }
+    },
+    {
+      "id": "i-morgen-gar-jeg-til-byen",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "v2",
+        "direction"
+      ],
+      "chunks": [
+        "i-morgen"
+      ],
+      "text": "I morgen går jeg til byen.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "I"
+        ],
+        [
+          "morgen"
+        ],
+        [
+          "går",
+          "gå"
+        ],
+        [
+          "jeg",
+          "jeg"
+        ],
+        [
+          "til",
+          "til"
+        ],
+        [
+          "byen",
+          "by"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go"
+        ],
+        [
+          "I"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "I morgen jeg går til byen.",
+        "I morgen gå jeg til byen."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "går",
+          "gå",
+          "arbejder"
+        ]
+      }
+    },
+    {
+      "id": "jeg-kan-ikke-ga-i-dag",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "ikke",
+        "v2"
+      ],
+      "chunks": [
+        "i-dag"
+      ],
+      "text": "Jeg kan ikke gå i dag.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "kan",
+          "kunne"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "gå",
+          "gå"
+        ],
+        [
+          "i"
+        ],
+        [
+          "dag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "can"
+        ],
+        [
+          "not"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg kan ikke går i dag.",
+        "Jeg ikke kan gå i dag."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kan",
+          "kunne",
+          "skal"
+        ]
+      }
+    },
+    {
+      "id": "jeg-skal-arbejde-i-morgen",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "future",
+        "v2"
+      ],
+      "chunks": [
+        "i-morgen"
+      ],
+      "text": "Jeg skal arbejde i morgen.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "skal",
+          "skulle"
+        ],
+        [
+          "arbejde",
+          "arbejde"
+        ],
+        [
+          "i"
+        ],
+        [
+          "morgen"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg skal arbejder i morgen.",
+        "Jeg arbejde skal i morgen."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "arbejde",
+          "arbejder",
+          "går"
+        ]
+      }
+    },
+    {
+      "id": "hvordan-har-du-det",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "hvordan-har-du-det",
+        "hello"
+      ],
+      "text": "Hej, hvordan har du det?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Hej,"
+        ],
+        [
+          "hvordan"
+        ],
+        [
+          "har"
+        ],
+        [
+          "du"
+        ],
+        [
+          "det"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "how"
+        ],
+        [
+          "have",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "it"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "har"
+      ],
+      "wrong": [
+        "Hej, hvordan du har det?",
+        "Hej, hvordan har det du?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "har",
+          "have",
+          "havde"
+        ]
+      }
+    },
+    {
+      "id": "hvad-hedder-du",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "hvad-hedder-du"
+      ],
+      "text": "Hvad hedder du?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Hvad"
+        ],
+        [
+          "hedder"
+        ],
+        [
+          "du"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are called",
+          true
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "hedder"
+      ],
+      "wrong": [
+        "Hvad du hedder?",
+        "Hedder hvad du?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hedder",
+          "hedde",
+          "hed"
+        ]
+      }
+    },
+    {
+      "id": "taler-engelsk",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Taler du engelsk?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Taler",
+          "tale"
+        ],
+        [
+          "du",
+          "du"
+        ],
+        [
+          "engelsk",
+          "engelsk"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Speak",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Taler"
+      ],
+      "wrong": [
+        "Du engelsk taler?",
+        "Taler engelsk du?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Taler",
+          "Tale",
+          "Talte"
+        ]
+      }
+    },
+    {
+      "id": "morgen-mormor",
+      "topic": "people",
+      "concepts": [
+        "v2",
+        "future"
+      ],
+      "chunks": [
+        "i-morgen"
+      ],
+      "text": "I morgen tager vi til mormor.",
+      "means": "Tomorrow we're going to Grandma's.",
+      "words": [
+        [
+          "I"
+        ],
+        [
+          "morgen"
+        ],
+        [
+          "tager",
+          "tage"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "til"
+        ],
+        [
+          "mormor",
+          "mormor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "tager"
+      ],
+      "wrong": [
+        "I morgen vi tager til mormor.",
+        "Vi i morgen tager til mormor."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tager",
+          "tage",
+          "tog"
+        ]
+      }
+    },
+    {
+      "id": "far-hjemmefra",
+      "topic": "people",
+      "concepts": [
+        "v2",
+        "present",
+        "possessive"
+      ],
+      "chunks": [
+        "i-dag"
+      ],
+      "text": "I dag arbejder min far hjemmefra.",
+      "means": "My dad is working from home today.",
+      "words": [
+        [
+          "I"
+        ],
+        [
+          "dag"
+        ],
+        [
+          "arbejder",
+          "arbejde"
+        ],
+        [
+          "min"
+        ],
+        [
+          "far",
+          "far"
+        ],
+        [
+          "hjemmefra",
+          "hjemmefra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "works",
+          true
+        ],
+        [
+          "my dad"
+        ],
+        [
+          "from home"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "arbejder"
+      ],
+      "wrong": [
+        "I dag min far arbejder hjemmefra.",
+        "Min far i dag arbejder hjemmefra."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "arbejder",
+          "arbejde",
+          "arbejdede"
+        ]
+      }
+    },
+    {
+      "id": "forstar-ikke",
+      "topic": "people",
+      "concepts": [
+        "ikke"
+      ],
+      "text": "Jeg forstår ikke.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "forstår",
+          "forstå"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "not",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ikke"
+      ],
+      "wrong": [
+        "Jeg ikke forstår.",
+        "Ikke jeg forstår."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "forstår",
+          "forstå",
+          "forstod"
+        ]
+      }
+    },
+    {
+      "id": "ved-at-han-ikke",
+      "topic": "people",
+      "concepts": [
+        "clause-ikke",
+        "future"
+      ],
+      "chunks": [
+        "i-dag"
+      ],
+      "text": "Jeg ved at han ikke kommer i dag.",
+      "means": "I know he isn't coming today.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "ved",
+          "vide"
+        ],
+        [
+          "at"
+        ],
+        [
+          "han"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "kommer",
+          "komme"
+        ],
+        [
+          "i"
+        ],
+        [
+          "dag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I know that he"
+        ],
+        [
+          "not"
+        ],
+        [
+          "comes"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg ved at kommer han ikke i dag.",
+        "Jeg ved at han ikke komme i dag."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "kommer",
+          "komme",
+          "kom"
+        ]
+      }
+    },
+    {
+      "id": "kan-ikke-finde-telefon",
+      "topic": "people",
+      "concepts": [
+        "modal",
+        "ikke",
+        "possessive"
+      ],
+      "text": "Jeg kan ikke finde min telefon.",
+      "means": "I can't find my phone.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "kan",
+          "kunne"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "finde",
+          "finde"
+        ],
+        [
+          "min"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I can"
+        ],
+        [
+          "not"
+        ],
+        [
+          "find"
+        ],
+        [
+          "my phone"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeg ikke kan finde min telefon.",
+        "Jeg kan finde ikke min telefon."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "finde",
+          "finder",
+          "fandt"
+        ]
+      }
+    },
+    {
+      "id": "abne-vinduet",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "modal",
+        "definite"
+      ],
+      "text": "Kan du åbne vinduet?",
+      "means": "Can you open the window?",
+      "words": [
+        [
+          "Kan",
+          "kunne"
+        ],
+        [
+          "du"
+        ],
+        [
+          "åbne",
+          "åbne"
+        ],
+        [
+          "vinduet",
+          "vindue"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can you"
+        ],
+        [
+          "open"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Kan du åbner vinduet?",
+        "Kan åbne du vinduet?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "åbne",
+          "åbner",
+          "åbnede"
+        ]
+      }
+    },
+    {
+      "id": "bor-i-lejlighed",
+      "topic": "home",
+      "concepts": [
+        "v2",
+        "present",
+        "gender",
+        "definite"
+      ],
+      "text": "Nu bor jeg i en lejlighed i byen.",
+      "means": "Now I live in an apartment in town.",
+      "words": [
+        [
+          "Nu",
+          "nu"
+        ],
+        [
+          "bor",
+          "bo"
+        ],
+        [
+          "jeg"
+        ],
+        [
+          "i"
+        ],
+        [
+          "en"
+        ],
+        [
+          "lejlighed",
+          "lejlighed"
+        ],
+        [
+          "i"
+        ],
+        [
+          "byen",
+          "by"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "live",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "in an apartment"
+        ],
+        [
+          "in town"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ],
+      "moved": [
+        "bor"
+      ],
+      "wrong": [
+        "Nu jeg bor i en lejlighed i byen.",
+        "Jeg nu bor i en lejlighed i byen."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bor",
+          "bo",
+          "boede"
+        ]
+      }
+    },
+    {
+      "id": "boede-sidste-ar",
+      "topic": "home",
+      "concepts": [
+        "v2",
+        "past"
+      ],
+      "text": "Sidste år boede vi i Aarhus.",
+      "means": "Last year we lived in Aarhus.",
+      "words": [
+        [
+          "Sidste",
+          "sidste"
+        ],
+        [
+          "år",
+          "år"
+        ],
+        [
+          "boede",
+          "bo"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "i"
+        ],
+        [
+          "Aarhus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Last year"
+        ],
+        [
+          "lived",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "in Aarhus"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "boede"
+      ],
+      "wrong": [
+        "Sidste år vi boede i Aarhus.",
+        "Vi sidste år boede i Aarhus."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "boede",
+          "bor",
+          "boet"
+        ]
+      }
+    },
+    {
+      "id": "boet-to-ar",
+      "topic": "home",
+      "concepts": [
+        "perfect",
+        "plural"
+      ],
+      "text": "Vi har boet her i to år.",
+      "means": "We've lived here for two years.",
+      "words": [
+        [
+          "Vi"
+        ],
+        [
+          "har"
+        ],
+        [
+          "boet",
+          "bo"
+        ],
+        [
+          "her",
+          "her"
+        ],
+        [
+          "i"
+        ],
+        [
+          "to"
+        ],
+        [
+          "år",
+          "år"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "lived"
+        ],
+        [
+          "here"
+        ],
+        [
+          "for two years"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Vi har boede her i to år.",
+        "Vi boet har her i to år."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "boet",
+          "boede",
+          "bor"
+        ]
+      }
+    },
+    {
+      "id": "set-mine-nogler",
+      "topic": "home",
+      "concepts": [
+        "perfect",
+        "question",
+        "plural",
+        "possessive"
+      ],
+      "text": "Har du set mine nøgler?",
+      "means": "Have you seen my keys?",
+      "words": [
+        [
+          "Har"
+        ],
+        [
+          "du"
+        ],
+        [
+          "set",
+          "se"
+        ],
+        [
+          "mine"
+        ],
+        [
+          "nøgler",
+          "nøgle"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have you"
+        ],
+        [
+          "seen"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Har set du mine nøgler?",
+        "Har du ser mine nøgler?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "set",
+          "ser",
+          "så"
+        ]
+      }
+    },
+    {
+      "id": "stort-kokken",
+      "topic": "home",
+      "concepts": [
+        "adjective",
+        "gender"
+      ],
+      "text": "Vi har et stort køkken og en lille altan.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Vi"
+        ],
+        [
+          "har"
+        ],
+        [
+          "et"
+        ],
+        [
+          "stort",
+          "stor"
+        ],
+        [
+          "køkken",
+          "køkken"
+        ],
+        [
+          "og"
+        ],
+        [
+          "en"
+        ],
+        [
+          "lille",
+          "lille"
+        ],
+        [
+          "altan",
+          "altan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Vi har et stor køkken og en lille altan.",
+        "Vi har et store køkken og en lille altan."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "stort",
+          "stor",
+          "store"
+        ]
+      }
+    },
+    {
+      "id": "det-rode-hus",
+      "topic": "home",
+      "concepts": [
+        "adjective-definite",
+        "adjective"
+      ],
+      "text": "Det røde hus er vores.",
+      "means": "The red house is ours.",
+      "words": [
+        [
+          "Det"
+        ],
+        [
+          "røde",
+          "rød"
+        ],
+        [
+          "hus",
+          "hus"
+        ],
+        [
+          "er"
+        ],
+        [
+          "vores",
+          "vores"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The red house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "ours"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Det røde huset er vores.",
+        "Det rødt hus er vores."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hus",
+          "huset",
+          "huse"
+        ]
+      }
+    },
+    {
+      "id": "luk-lige-doren",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "definite"
+      ],
+      "text": "Luk lige døren!",
+      "means": "Close the door, would you?",
+      "words": [
+        [
+          "Luk",
+          "lukke"
+        ],
+        [
+          "lige",
+          "lige"
+        ],
+        [
+          "døren",
+          "dør"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "just",
+          true
+        ],
+        [
+          "the door"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "lige"
+      ],
+      "wrong": [
+        "Lukker lige døren!",
+        "Lukke lige døren!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Luk",
+          "Lukker",
+          "Lukke"
+        ]
+      }
+    },
+    {
+      "id": "nar-jeg-kommer-hjem",
+      "topic": "home",
+      "concepts": [
+        "clause-first",
+        "direction"
+      ],
+      "text": "Når jeg kommer hjem, laver jeg mad.",
+      "means": "When I get home, I cook.",
+      "words": [
+        [
+          "Når"
+        ],
+        [
+          "jeg"
+        ],
+        [
+          "kommer",
+          "komme"
+        ],
+        [
+          "hjem,"
+        ],
+        [
+          "laver",
+          "lave"
+        ],
+        [
+          "jeg"
+        ],
+        [
+          "mad",
+          "mad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I come home,"
+        ],
+        [
+          "make",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "food"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "laver"
+      ],
+      "wrong": [
+        "Når jeg kommer hjem, jeg laver mad.",
+        "Når jeg kommer hjem, laver mad jeg."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "laver",
+          "lave",
+          "lavede"
+        ]
+      }
+    },
+    {
+      "id": "bliver-hjemme",
+      "topic": "home",
+      "concepts": [
+        "clause-ikke",
+        "direction"
+      ],
+      "chunks": [
+        "har-det-godt"
+      ],
+      "text": "Jeg bliver hjemme fordi jeg ikke har det godt.",
+      "means": "I'm staying home because I'm not feeling well.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "bliver",
+          "blive"
+        ],
+        [
+          "hjemme",
+          "hjemme"
+        ],
+        [
+          "fordi",
+          "fordi"
+        ],
+        [
+          "jeg"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "har"
+        ],
+        [
+          "det"
+        ],
+        [
+          "godt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I stay"
+        ],
+        [
+          "at home"
+        ],
+        [
+          "because I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "feel well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg bliver hjemme fordi har jeg ikke det godt.",
+        "Jeg bliver hjemme fordi jeg ikke det har godt."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "fordi",
+          "før",
+          "efter"
+        ]
+      }
+    },
+    {
+      "id": "star-op-klokken-syv",
+      "topic": "home",
+      "concepts": [
+        "particle"
+      ],
+      "text": "Jeg står op klokken syv hver dag.",
+      "means": "I get up at seven every day.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "står",
+          "stå op"
+        ],
+        [
+          "op",
+          "stå op"
+        ],
+        [
+          "klokken",
+          "klokke"
+        ],
+        [
+          "syv",
+          "syv"
+        ],
+        [
+          "hver",
+          "hver"
+        ],
+        [
+          "dag",
+          "dag"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "get up"
+        ],
+        [
+          "at seven"
+        ],
+        [
+          "every day"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeg op står klokken syv hver dag.",
+        "Jeg stå op klokken syv hver dag."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "op",
+          "ud",
+          "på"
+        ]
+      }
+    },
+    {
+      "id": "spist-morgenmad",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "perfect"
+      ],
+      "text": "Har du spist morgenmad?",
+      "means": "Have you had breakfast?",
+      "words": [
+        [
+          "Har"
+        ],
+        [
+          "du"
+        ],
+        [
+          "spist",
+          "spise"
+        ],
+        [
+          "morgenmad",
+          "morgenmad"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have you"
+        ],
+        [
+          "eaten"
+        ],
+        [
+          "breakfast"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Har du spiste morgenmad?",
+        "Har spist du morgenmad?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "spist",
+          "spiser",
+          "spiste"
+        ]
+      }
+    },
+    {
+      "id": "drikker-ikke-kaffe",
+      "topic": "food",
+      "concepts": [
+        "ikke",
+        "present"
+      ],
+      "text": "Jeg drikker ikke kaffe.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "drikker",
+          "drikke"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "kaffe",
+          "kaffe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ikke"
+      ],
+      "wrong": [
+        "Jeg ikke drikker kaffe.",
+        "Jeg drikker kaffe ikke."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ikke",
+          "nej",
+          "ingenting"
+        ]
+      }
+    },
+    {
+      "id": "bror-vil-ikke",
+      "topic": "food",
+      "concepts": [
+        "ikke",
+        "modal",
+        "possessive"
+      ],
+      "text": "Min bror vil ikke spise fisk.",
+      "means": "My brother doesn't want to eat fish.",
+      "words": [
+        [
+          "Min"
+        ],
+        [
+          "bror",
+          "bror"
+        ],
+        [
+          "vil",
+          "ville"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "spise",
+          "spise"
+        ],
+        [
+          "fisk",
+          "fisk"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "wants"
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "fish"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ikke"
+      ],
+      "wrong": [
+        "Min bror ikke vil spise fisk.",
+        "Min bror vil spise ikke fisk."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "spise",
+          "spiser",
+          "spiste"
+        ]
+      }
+    },
+    {
+      "id": "spiste-pizza",
+      "topic": "food",
+      "concepts": [
+        "past"
+      ],
+      "text": "Vi spiste pizza og drak sodavand.",
+      "means": "We had pizza and drank soda.",
+      "words": [
+        [
+          "Vi"
+        ],
+        [
+          "spiste",
+          "spise"
+        ],
+        [
+          "pizza",
+          "pizza"
+        ],
+        [
+          "og"
+        ],
+        [
+          "drak",
+          "drikke"
+        ],
+        [
+          "sodavand",
+          "sodavand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We ate"
+        ],
+        [
+          "pizza"
+        ],
+        [
+          "and drank"
+        ],
+        [
+          "soda"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Vi spist pizza og drukket sodavand.",
+        "Vi spiser pizza og drak sodavand."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "spiste",
+          "spiser",
+          "spist"
+        ]
+      }
+    },
+    {
+      "id": "maelken-koleskabet",
+      "topic": "food",
+      "concepts": [
+        "definite"
+      ],
+      "text": "Mælken står i køleskabet.",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "Mælken",
+          "mælk"
+        ],
+        [
+          "står",
+          "stå"
+        ],
+        [
+          "i"
+        ],
+        [
+          "køleskabet",
+          "køleskab"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "stands"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mælken står i køleskaben.",
+        "Mælken stå i køleskabet."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "køleskabet",
+          "køleskaben",
+          "køleskabets"
+        ]
+      }
+    },
+    {
+      "id": "glas-koldt-vand",
+      "topic": "food",
+      "concepts": [
+        "adjective",
+        "modal",
+        "gender"
+      ],
+      "text": "Jeg vil gerne have et glas koldt vand.",
+      "means": "I'd like a glass of cold water.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "vil",
+          "ville"
+        ],
+        [
+          "gerne",
+          "gerne"
+        ],
+        [
+          "have",
+          "have"
+        ],
+        [
+          "et"
+        ],
+        [
+          "glas",
+          "glas"
+        ],
+        [
+          "koldt",
+          "kold"
+        ],
+        [
+          "vand",
+          "vand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "would like"
+        ],
+        [
+          "to have"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "cold water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jeg vil gerne have et glas kold vand.",
+        "Jeg vil gerne have et glas kolde vand."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "koldt",
+          "kold",
+          "kolde"
+        ]
+      }
+    },
+    {
+      "id": "kan-godt-lide-at-lave-mad",
+      "topic": "food",
+      "concepts": [
+        "at-infinitive",
+        "modal"
+      ],
+      "chunks": [
+        "kan-godt-lide"
+      ],
+      "text": "Jeg kan godt lide at lave mad.",
+      "means": "I like cooking.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "kan"
+        ],
+        [
+          "godt"
+        ],
+        [
+          "lide"
+        ],
+        [
+          "at"
+        ],
+        [
+          "lave",
+          "lave"
+        ],
+        [
+          "mad",
+          "mad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "like"
+        ],
+        [
+          "to make"
+        ],
+        [
+          "food"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeg kan godt lide lave mad.",
+        "Jeg kan lide godt at lave mad."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "at",
+          "og",
+          "for"
+        ]
+      }
+    },
+    {
+      "id": "ikke-sulten",
+      "topic": "food",
+      "concepts": [
+        "clause-ikke"
+      ],
+      "text": "Hun siger at hun ikke er sulten.",
+      "means": "She says she isn't hungry.",
+      "words": [
+        [
+          "Hun"
+        ],
+        [
+          "siger",
+          "sige"
+        ],
+        [
+          "at"
+        ],
+        [
+          "hun"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "er",
+          "være"
+        ],
+        [
+          "sulten",
+          "sulten"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "She says that she"
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "hungry"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "ikke"
+      ],
+      "wrong": [
+        "Hun siger at er hun ikke sulten.",
+        "Hun siger at hun ikke sulten er."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "er",
+          "være",
+          "var"
+        ]
+      }
+    },
+    {
+      "id": "kop-kaffe",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "question"
+      ],
+      "text": "Kan jeg få en kop kaffe?",
+      "means": "Can I have a cup of coffee?",
+      "words": [
+        [
+          "Kan",
+          "kunne"
+        ],
+        [
+          "jeg"
+        ],
+        [
+          "få",
+          "få"
+        ],
+        [
+          "en"
+        ],
+        [
+          "kop",
+          "kop"
+        ],
+        [
+          "kaffe",
+          "kaffe"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can I"
+        ],
+        [
+          "get"
+        ],
+        [
+          "a cup"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kan jeg får en kop kaffe?",
+        "Kan jeg få en kop af kaffe?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "få",
+          "får",
+          "fik"
+        ]
+      }
+    },
+    {
+      "id": "kaffe-i-kokkenet",
+      "topic": "food",
+      "concepts": [
+        "definite"
+      ],
+      "chunks": [
+        "der-er"
+      ],
+      "text": "Der er kaffe i køkkenet.",
+      "means": "There's coffee in the kitchen.",
+      "words": [
+        [
+          "Der"
+        ],
+        [
+          "er"
+        ],
+        [
+          "kaffe",
+          "kaffe"
+        ],
+        [
+          "i"
+        ],
+        [
+          "køkkenet",
+          "køkken"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "in the kitchen"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Der kaffe er i køkkenet.",
+        "Der er kaffe i køkken."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "køkkenet",
+          "køkken",
+          "køkkenerne"
+        ]
+      }
+    },
+    {
+      "id": "tak-for-mad",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "tak-for-mad"
+      ],
+      "text": "Tak for mad!",
+      "means": "Thanks for the meal!",
+      "words": [
+        [
+          "Tak",
+          "tak"
+        ],
+        [
+          "for"
+        ],
+        [
+          "mad",
+          "mad"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thanks"
+        ],
+        [
+          "for food"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "For mad tak!",
+        "Tak mad for!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mad",
+          "mat",
+          "med"
+        ]
+      }
+    },
+    {
+      "id": "ma-vi-fa-regningen",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "question",
+        "definite"
+      ],
+      "text": "Må vi få regningen?",
+      "means": "Can we have the check, please?",
+      "words": [
+        [
+          "Må",
+          "måtte"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "få",
+          "få"
+        ],
+        [
+          "regningen",
+          "regning"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "May we"
+        ],
+        [
+          "get"
+        ],
+        [
+          "the check"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Må vi får regningen?",
+        "Må få vi regningen?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "regningen",
+          "regning",
+          "regninger"
+        ]
+      }
+    },
+    {
+      "id": "undskyld-stationen",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "definite"
+      ],
+      "chunks": [
+        "undskyld"
+      ],
+      "text": "Undskyld, hvor ligger stationen?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Undskyld,"
+        ],
+        [
+          "hvor"
+        ],
+        [
+          "ligger",
+          "ligge"
+        ],
+        [
+          "stationen",
+          "station"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Undskyld, hvor stationen ligger?",
+        "Undskyld, ligger hvor stationen?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "stationen",
+          "station",
+          "stationer"
+        ]
+      }
+    },
+    {
+      "id": "kobte-jakke",
+      "topic": "out",
+      "concepts": [
+        "v2",
+        "past",
+        "adjective",
+        "gender"
+      ],
+      "chunks": [
+        "i-går"
+      ],
+      "text": "I går købte jeg en ny jakke.",
+      "means": "Yesterday I bought a new jacket.",
+      "words": [
+        [
+          "I"
+        ],
+        [
+          "går"
+        ],
+        [
+          "købte",
+          "købe"
+        ],
+        [
+          "jeg"
+        ],
+        [
+          "en"
+        ],
+        [
+          "ny",
+          "ny"
+        ],
+        [
+          "jakke",
+          "jakke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "bought",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "a new jacket"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "købte"
+      ],
+      "wrong": [
+        "I går jeg købte en ny jakke.",
+        "Jeg i går købte en ny jakke."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "købte",
+          "køber",
+          "købt"
+        ]
+      }
+    },
+    {
+      "id": "toget-for-sent",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "definite",
+        "plural"
+      ],
+      "text": "Toget kom ti minutter for sent.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Toget",
+          "tog"
+        ],
+        [
+          "kom",
+          "komme"
+        ],
+        [
+          "ti"
+        ],
+        [
+          "minutter",
+          "minut"
+        ],
+        [
+          "for"
+        ],
+        [
+          "sent",
+          "sent"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "came"
+        ],
+        [
+          "ten minutes"
+        ],
+        [
+          "too late"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Toget kommet ti minutter for sent.",
+        "Toget ti minutter kom for sent."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kom",
+          "kommer",
+          "kommet"
+        ]
+      }
+    },
+    {
+      "id": "aldrig-vaeret-sverige",
+      "topic": "out",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Jeg har aldrig været i Sverige.",
+      "means": "I've never been to Sweden.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "har"
+        ],
+        [
+          "aldrig",
+          "aldrig"
+        ],
+        [
+          "været",
+          "være"
+        ],
+        [
+          "i"
+        ],
+        [
+          "Sverige"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "never"
+        ],
+        [
+          "been"
+        ],
+        [
+          "to Sweden"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeg har været aldrig i Sverige.",
+        "Jeg aldrig har været i Sverige."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "været",
+          "var",
+          "være"
+        ]
+      }
+    },
+    {
+      "id": "de-nye-sko",
+      "topic": "out",
+      "concepts": [
+        "adjective-definite",
+        "adjective",
+        "plural"
+      ],
+      "text": "De nye sko er for små.",
+      "means": "The new shoes are too small.",
+      "words": [
+        [
+          "De"
+        ],
+        [
+          "nye",
+          "ny"
+        ],
+        [
+          "sko",
+          "sko"
+        ],
+        [
+          "er"
+        ],
+        [
+          "for"
+        ],
+        [
+          "små",
+          "lille"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The new shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "De nye skoene er for små.",
+        "De ny sko er for små."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sko",
+          "skoene",
+          "skoen"
+        ]
+      }
+    },
+    {
+      "id": "den-gamle-bil",
+      "topic": "out",
+      "concepts": [
+        "adjective-definite",
+        "adjective",
+        "ikke"
+      ],
+      "text": "Den gamle bil starter ikke.",
+      "means": "The old car won't start.",
+      "words": [
+        [
+          "Den"
+        ],
+        [
+          "gamle",
+          "gammel"
+        ],
+        [
+          "bil",
+          "bil"
+        ],
+        [
+          "starter",
+          "starte"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The old car"
+        ],
+        [
+          "starts"
+        ],
+        [
+          "not",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ikke"
+      ],
+      "wrong": [
+        "Den gamle bilen starter ikke.",
+        "Den gammel bil starter ikke."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bil",
+          "bilen",
+          "biler"
+        ]
+      }
+    },
+    {
+      "id": "bageren-brod",
+      "topic": "out",
+      "concepts": [
+        "at-infinitive",
+        "definite"
+      ],
+      "text": "Jeg går hen til bageren for at købe brød.",
+      "means": "I'm going to the bakery to buy bread.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "går",
+          "gå"
+        ],
+        [
+          "hen"
+        ],
+        [
+          "til"
+        ],
+        [
+          "bageren",
+          "bager"
+        ],
+        [
+          "for"
+        ],
+        [
+          "at"
+        ],
+        [
+          "købe",
+          "købe"
+        ],
+        [
+          "brød",
+          "brød"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "over to the bakery"
+        ],
+        [
+          "in order"
+        ],
+        [
+          "to buy"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeg går hen til bageren for købe brød.",
+        "Jeg går hen til bageren for at køber brød."
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "købe",
+          "køber",
+          "købte"
+        ]
+      }
+    },
+    {
+      "id": "traet-taxa",
+      "topic": "out",
+      "concepts": [
+        "clause-first",
+        "modal"
+      ],
+      "text": "Hvis du er træt, kan vi tage en taxa.",
+      "means": "If you're tired, we can take a taxi.",
+      "words": [
+        [
+          "Hvis"
+        ],
+        [
+          "du"
+        ],
+        [
+          "er"
+        ],
+        [
+          "træt,",
+          "træt"
+        ],
+        [
+          "kan",
+          "kunne"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "tage",
+          "tage"
+        ],
+        [
+          "en"
+        ],
+        [
+          "taxa",
+          "taxa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you are tired,"
+        ],
+        [
+          "can",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "take a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "kan"
+      ],
+      "wrong": [
+        "Hvis du er træt, vi kan tage en taxa.",
+        "Hvis du er træt, kan tage vi en taxa."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "tage",
+          "tager",
+          "tog"
+        ]
+      }
+    },
+    {
+      "id": "tyve-minutter-derhen",
+      "topic": "out",
+      "concepts": [
+        "at-infinitive",
+        "direction",
+        "plural"
+      ],
+      "text": "Det tager tyve minutter at gå derhen.",
+      "means": "It takes twenty minutes to walk there.",
+      "words": [
+        [
+          "Det"
+        ],
+        [
+          "tager",
+          "tage"
+        ],
+        [
+          "tyve",
+          "tyve"
+        ],
+        [
+          "minutter",
+          "minut"
+        ],
+        [
+          "at"
+        ],
+        [
+          "gå",
+          "gå"
+        ],
+        [
+          "derhen",
+          "derhen"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It takes"
+        ],
+        [
+          "twenty minutes"
+        ],
+        [
+          "to walk"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Det tager tyve minutter for at gå derhen.",
+        "Det tager tyve minutter gå derhen."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "derhen",
+          "derfra",
+          "herfra"
+        ]
+      }
+    },
+    {
+      "id": "lordag-middag",
+      "topic": "plans",
+      "concepts": [
+        "v2",
+        "future",
+        "modal",
+        "plural"
+      ],
+      "text": "På lørdag skal vi spise middag hos mine forældre.",
+      "means": "On Saturday we're having dinner at my parents'.",
+      "words": [
+        [
+          "På"
+        ],
+        [
+          "lørdag",
+          "lørdag"
+        ],
+        [
+          "skal",
+          "skulle"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "spise",
+          "spise"
+        ],
+        [
+          "middag",
+          "middag"
+        ],
+        [
+          "hos"
+        ],
+        [
+          "mine"
+        ],
+        [
+          "forældre",
+          "forælder"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "will",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "eat dinner"
+        ],
+        [
+          "at my parents'"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ],
+      "moved": [
+        "skal"
+      ],
+      "wrong": [
+        "På lørdag vi skal spise middag hos mine forældre.",
+        "Vi på lørdag skal spise middag hos mine forældre."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "spise",
+          "spiser",
+          "spiste"
+        ]
+      }
+    },
+    {
+      "id": "regner-ikke",
+      "topic": "plans",
+      "concepts": [
+        "v2",
+        "ikke"
+      ],
+      "chunks": [
+        "i-dag"
+      ],
+      "text": "I dag regner det ikke.",
+      "means": "It's not raining today.",
+      "words": [
+        [
+          "I"
+        ],
+        [
+          "dag"
+        ],
+        [
+          "regner",
+          "regne"
+        ],
+        [
+          "det"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "rains",
+          true
+        ],
+        [
+          "it"
+        ],
+        [
+          "not",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "regner",
+        "ikke"
+      ],
+      "wrong": [
+        "I dag det regner ikke.",
+        "I dag ikke regner det."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "regner",
+          "regne",
+          "regnede"
+        ]
+      }
+    },
+    {
+      "id": "skal-ga-nu",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Jeg skal gå nu.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Jeg",
+          "jeg"
+        ],
+        [
+          "skal",
+          "skulle"
+        ],
+        [
+          "gå",
+          "gå"
+        ],
+        [
+          "nu",
+          "nu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeg skal går nu.",
+        "Jeg skal at gå nu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gå",
+          "går",
+          "gik"
+        ]
+      }
+    },
+    {
+      "id": "ringer-i-morgen",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "chunks": [
+        "i-morgen"
+      ],
+      "text": "Jeg ringer til dig i morgen.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Jeg"
+        ],
+        [
+          "ringer",
+          "ringe"
+        ],
+        [
+          "til"
+        ],
+        [
+          "dig"
+        ],
+        [
+          "i"
+        ],
+        [
+          "morgen"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "call"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jeg ringer dig til i morgen.",
+        "Jeg til dig ringer i morgen."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ringer",
+          "ringe",
+          "ringede"
+        ]
+      }
+    },
+    {
+      "id": "regnvejr-i-aften",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "chunks": [
+        "i-aften"
+      ],
+      "text": "Det bliver regnvejr i aften.",
+      "means": "It's going to rain tonight.",
+      "words": [
+        [
+          "Det"
+        ],
+        [
+          "bliver",
+          "blive"
+        ],
+        [
+          "regnvejr",
+          "regnvejr"
+        ],
+        [
+          "i"
+        ],
+        [
+          "aften"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "will be"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "tonight"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Det blive regnvejr i aften.",
+        "I aften det bliver regnvejr."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bliver",
+          "blive",
+          "blev"
+        ]
+      }
+    },
+    {
+      "id": "ring-til-mig",
+      "topic": "plans",
+      "concepts": [
+        "imperative"
+      ],
+      "chunks": [
+        "i-aften"
+      ],
+      "text": "Ring til mig i aften!",
+      "means": "Call me tonight!",
+      "words": [
+        [
+          "Ring",
+          "ringe"
+        ],
+        [
+          "til"
+        ],
+        [
+          "mig"
+        ],
+        [
+          "i"
+        ],
+        [
+          "aften"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Call"
+        ],
+        [
+          "me"
+        ],
+        [
+          "tonight"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Ringer til mig i aften!",
+        "Ring mig til i aften!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ring",
+          "Ringer",
+          "Ringe"
+        ]
+      }
+    },
+    {
+      "id": "hvis-det-ikke-regner",
+      "topic": "plans",
+      "concepts": [
+        "clause-ikke",
+        "clause-first",
+        "future",
+        "definite"
+      ],
+      "text": "Hvis det ikke regner, tager vi på stranden.",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "Hvis"
+        ],
+        [
+          "det"
+        ],
+        [
+          "ikke",
+          "ikke"
+        ],
+        [
+          "regner,",
+          "regne"
+        ],
+        [
+          "tager",
+          "tage"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "på"
+        ],
+        [
+          "stranden",
+          "strand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If it"
+        ],
+        [
+          "not"
+        ],
+        [
+          "rains,"
+        ],
+        [
+          "go",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "tager"
+      ],
+      "wrong": [
+        "Hvis det ikke regner, vi tager på stranden.",
+        "Hvis regner det ikke, tager vi på stranden."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "tager",
+          "tage",
+          "tog"
+        ]
+      }
+    },
+    {
+      "id": "aften-biografen",
+      "topic": "plans",
+      "concepts": [
+        "v2",
+        "future",
+        "definite"
+      ],
+      "chunks": [
+        "i-aften"
+      ],
+      "text": "I aften skal vi i biografen.",
+      "means": "Tonight we're going to the movies.",
+      "words": [
+        [
+          "I"
+        ],
+        [
+          "aften"
+        ],
+        [
+          "skal",
+          "skulle"
+        ],
+        [
+          "vi"
+        ],
+        [
+          "i"
+        ],
+        [
+          "biografen",
+          "biograf"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tonight"
+        ],
+        [
+          "are going",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "skal"
+      ],
+      "wrong": [
+        "I aften vi skal i biografen.",
+        "Vi i aften skal i biografen."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "biografen",
+          "biograf",
+          "biografer"
+        ]
+      }
+    },
+    {
+      "id": "husk-paraply",
+      "topic": "plans",
+      "concepts": [
+        "particle",
+        "at-infinitive",
+        "imperative"
+      ],
+      "text": "Husk at tage en paraply med!",
+      "means": "Remember to bring an umbrella!",
+      "words": [
+        [
+          "Husk",
+          "huske"
+        ],
+        [
+          "at"
+        ],
+        [
+          "tage",
+          "tage med"
+        ],
+        [
+          "en"
+        ],
+        [
+          "paraply",
+          "paraply"
+        ],
+        [
+          "med",
+          "tage med"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Remember"
+        ],
+        [
+          "to take"
+        ],
+        [
+          "an umbrella"
+        ],
+        [
+          "along"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Husk tage at en paraply med!",
+        "Husk at tager en paraply med!"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "med",
+          "på",
+          "af"
+        ]
+      }
+    },
+    {
+      "id": "komme-med",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "modal",
+        "particle"
+      ],
+      "text": "Vil du komme med?",
+      "means": "Do you want to come along?",
+      "words": [
+        [
+          "Vil",
+          "ville"
+        ],
+        [
+          "du"
+        ],
+        [
+          "komme",
+          "komme med"
+        ],
+        [
+          "med",
+          "komme med"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Want",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "to come along"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Vil"
+      ],
+      "wrong": [
+        "Vil du med komme?",
+        "Vil du at komme med?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "med",
+          "på",
+          "af"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kaffe",
+          "forms": [
+            "kaffe"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "te",
+          "forms": [
+            "te"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "vand",
+          "forms": [
+            "vand"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "jeg",
+          "forms": [
+            "jeg"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "drikke",
+          "forms": [
+            "drik",
+            "drikker"
+          ],
+          "picture": "drink",
+          "means": "drik = drink; drikker = drink"
+        },
+        {
+          "lemma": "og",
+          "forms": [
+            "og"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The present usually ends in -r and is the same for every person (jeg taler, du taler, vi taler); it means both I speak and I'm speaking."
+      },
+      "items": [
+        "drik-vand",
+        "jeg-drikker-vand",
+        "jeg-drikker-kaffe",
+        "jeg-drikker-te",
+        "jeg-drikker-kaffe-og-te",
+        "jeg-drikker-te-og-vand",
+        "jeg-drikker-vand-og-kaffe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "en",
+          "forms": [
+            "en",
+            "et"
+          ],
+          "means": "en = a; et = a"
+        },
+        {
+          "lemma": "mælk",
+          "forms": [
+            "mælk"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        },
+        {
+          "lemma": "glas",
+          "forms": [
+            "glas"
+          ],
+          "means": "glass"
+        },
+        {
+          "lemma": "kop",
+          "forms": [
+            "kop"
+          ],
+          "means": "cup"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please-thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "en-kaffe-tak",
+        "hej-en-te-tak",
+        "et-glas-vand-tak",
+        "et-glas-m-lk-tak",
+        "en-kop-kaffe-tak",
+        "en-te-og-et-glas-vand-tak",
+        "jeg-drikker-m-lk"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "god",
+          "forms": [
+            "god"
+          ],
+          "picture": "good",
+          "means": "good, fine"
+        },
+        {
+          "lemma": "være",
+          "forms": [
+            "er"
+          ],
+          "means": "er = am, is, are"
+        },
+        {
+          "lemma": "kaffe",
+          "forms": [
+            "kaffen"
+          ],
+          "means": "kaffen = the coffee"
+        }
+      ],
+      "phrases": [
+        "hvordan-har-du-det",
+        "goodbye",
+        "yes",
+        "no",
+        "har-det-godt"
+      ],
+      "concept": {
+        "pattern": "v2",
+        "line": "In a main-clause statement the verb that shows the tense comes second (not always the second word): when a time, a place or a whole clause comes first, the subject follows that verb."
+      },
+      "items": [
+        "hvordan-har-du-det",
+        "jeg-har-det-godt-tak",
+        "ja-tak",
+        "nej-tak",
+        "ja-tak-farvel",
+        "nej-tak-farvel",
+        "er-kaffen-god"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "du",
+          "forms": [
+            "du"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ikke",
+          "forms": [
+            "ikke"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "lærer",
+          "forms": [
+            "lærer"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "elev",
+          "forms": [
+            "elev"
+          ],
+          "means": "student"
+        }
+      ],
+      "phrases": [
+        "hvad-hedder-du",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "hvad-hedder-du",
+        "hej-hyggeligt-at-m-de-dig",
+        "jeg-er-l-rer",
+        "du-er-elev",
+        "er-du-l-rer",
+        "jeg-er-ikke-l-rer",
+        "drikker-ikke-kaffe"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mor",
+          "forms": [
+            "mor"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "far",
+          "forms": [
+            "far"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "bror",
+          "forms": [
+            "bror"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "søster",
+          "forms": [
+            "søster"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "min",
+          "forms": [
+            "min"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "denne",
+          "forms": [
+            "dette"
+          ],
+          "means": "dette = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "min, din and vores come before the noun, and min and din match it: min far (an en word), mit hus (an et word), mine nøgler (plural)."
+      },
+      "items": [
+        "min-far-er-l-rer",
+        "dette-er-min-mor",
+        "dette-er-min-far",
+        "min-bror-er-elev",
+        "dette-er-min-s-ster",
+        "min-mor-har-det-godt"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "have",
+          "forms": [
+            "har"
+          ],
+          "means": "har = have, has"
+        },
+        {
+          "lemma": "ven",
+          "forms": [
+            "ven"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "læge",
+          "forms": [
+            "læge"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "nøgle",
+          "forms": [
+            "nøgle"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "bog",
+          "forms": [
+            "bog"
+          ],
+          "picture": "book",
+          "means": "book"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "jeg-har-en-telefon",
+        "har-du-en-n-gle",
+        "jeg-har-en-bror-og-en-s-ster",
+        "jeg-har-ikke-en-bog",
+        "min-s-ster-er-l-ge",
+        "du-er-en-god-ven"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "hvor",
+          "forms": [
+            "hvor"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "her",
+          "forms": [
+            "her"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "der",
+          "forms": [
+            "der"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "toilet",
+          "forms": [
+            "toilettet"
+          ],
+          "means": "toilettet = the bathroom"
+        },
+        {
+          "lemma": "nøgle",
+          "forms": [
+            "nøglen"
+          ],
+          "means": "nøglen = the key"
+        }
+      ],
+      "phrases": [
+        "undskyld"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "In a yes/no question the verb that shows the tense comes first; after a question word it comes before the subject (unless the question word is the subject)."
+      },
+      "items": [
+        "hvor-er-min-n-gle",
+        "undskyld-hvor-er-toilettet",
+        "min-telefon-er-her",
+        "n-glen-er-der",
+        "hvor-er-min-mor",
+        "min-s-ster-er-her"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "en",
+          "forms": [
+            "én"
+          ],
+          "means": "én = one"
+        },
+        {
+          "lemma": "to",
+          "forms": [
+            "to"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "tre",
+          "forms": [
+            "tre"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "penge",
+          "forms": [
+            "penge"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "kop",
+          "forms": [
+            "kopper"
+          ],
+          "means": "kopper = cups"
+        },
+        {
+          "lemma": "bog",
+          "forms": [
+            "bøger"
+          ],
+          "means": "bøger = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "undskyld-hvad-koster-det",
+        "hej-regningen-tak",
+        "to-kopper-kaffe-tak",
+        "en-bog-tak",
+        "jeg-har-tre-b-ger",
+        "jeg-har-ikke-penge"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "tale",
+          "forms": [
+            "taler"
+          ],
+          "means": "taler = speak"
+        },
+        {
+          "lemma": "engelsk",
+          "forms": [
+            "engelsk"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "dansk",
+          "forms": [
+            "dansk"
+          ],
+          "means": "Danish"
+        },
+        {
+          "lemma": "forstå",
+          "forms": [
+            "forstår"
+          ],
+          "means": "forstår = understand"
+        },
+        {
+          "lemma": "lidt",
+          "forms": [
+            "lidt"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "ville",
+          "forms": [
+            "vil"
+          ],
+          "means": "vil = want to"
+        },
+        {
+          "lemma": "have",
+          "forms": [
+            "have"
+          ],
+          "means": "to have"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "ikke",
+        "line": "In a main clause, ikke (not) comes after the verb that shows the tense, and after the subject too when something else comes first: I dag kommer han ikke."
+      },
+      "items": [
+        "taler-engelsk",
+        "forstar-ikke",
+        "jeg-taler-lidt-dansk",
+        "forstar-du",
+        "jeg-vil-have-en-kaffe",
+        "jeg-vil-have-vand-tak"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "hus",
+          "forms": [
+            "hus"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "værelse",
+          "forms": [
+            "værelse"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "stor",
+          "forms": [
+            "stort"
+          ],
+          "picture": "big",
+          "means": "stort = big"
+        },
+        {
+          "lemma": "lille",
+          "forms": [
+            "lille"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "bo",
+          "forms": [
+            "bor"
+          ],
+          "means": "bor = live, lives"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "min",
+          "forms": [
+            "mit"
+          ],
+          "means": "mit = my"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "hvor-bor-du",
+        "dette-hus-er-stort",
+        "min-mor-bor-her",
+        "jeg-bor-i-et-lille-hus",
+        "mit-v-relse-er-lille"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "gå",
+          "forms": [
+            "går"
+          ],
+          "means": "går = go, goes"
+        },
+        {
+          "lemma": "til",
+          "forms": [
+            "til"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "skole",
+          "forms": [
+            "skole"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "by",
+          "forms": [
+            "byen"
+          ],
+          "picture": "city",
+          "means": "byen = the city"
+        },
+        {
+          "lemma": "station",
+          "forms": [
+            "stationen"
+          ],
+          "means": "stationen = the station"
+        },
+        {
+          "lemma": "bil",
+          "forms": [
+            "bil"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "hen",
+          "forms": [
+            "hen"
+          ],
+          "means": "to a place (directional adverb; hvor ... hen? = where ... to?)"
+        },
+        {
+          "lemma": "denne",
+          "forms": [
+            "denne"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "gender",
+        "line": "Every noun is an en word or an et word, and the words with it match: en lejlighed, et hus; en stor bil, et stort køkken."
+      },
+      "items": [
+        "jeg-gar-til-byen",
+        "jeg-gar-i-skole",
+        "hvor-gar-du-hen",
+        "undskyld-hvor-er-stationen",
+        "min-mor-gar-til-byen",
+        "denne-bil-er-lille",
+        "jeg-har-en-bil"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "nu",
+          "forms": [
+            "nu"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "arbejde",
+          "forms": [
+            "arbejder",
+            "arbejde"
+          ],
+          "picture": "work",
+          "means": "arbejder = work; arbejde = work"
+        },
+        {
+          "lemma": "skulle",
+          "forms": [
+            "skal"
+          ],
+          "means": "skal = have to"
+        },
+        {
+          "lemma": "kunne",
+          "forms": [
+            "kan"
+          ],
+          "means": "kan = can"
+        },
+        {
+          "lemma": "gå",
+          "forms": [
+            "gå"
+          ],
+          "means": "to go, to walk"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow",
+        "i-dag",
+        "i-morgen"
+      ],
+      "concept": null,
+      "items": [
+        "tak-vi-ses-i-morgen",
+        "jeg-arbejder-i-dag",
+        "skal-ga-nu",
+        "i-morgen-gar-jeg-til-byen",
+        "jeg-kan-ikke-ga-i-dag",
+        "jeg-skal-arbejde-i-morgen"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

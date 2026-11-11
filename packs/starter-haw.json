@@ -1,0 +1,7955 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-haw",
+  "name": "Starter: Hawaiian",
+  "about": "Hawaiian in real, everyday sentences, with each one's words in Hawaiian order.",
+  "language": "haw",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kī": "key",
+    "wai": "who, what (of a name)",
+    "au": "I",
+    "inu": "drink",
+    "i": "to, at; before what a verb acts on; before a verb: a done thing (ʻaʻole … i)",
+    "ka": "the: ke before most words starting with k, e, a, o (and ke pākaukau); else ka",
+    "kope": "coffee",
+    "he": "a; is a",
+    "waiū": "milk",
+    "maikaʻi": "good, fine",
+    "ʻoe": "you",
+    "ʻaʻole": "not",
+    "kumu": "teacher",
+    "haumāna": "student",
+    "makuahine": "mother",
+    "makuakāne": "father",
+    "kaikunāne": "a woman's brother",
+    "kaikuaʻana": "older sibling of the same sex: a woman's older sister or a man's older brother",
+    "koʻu": "my (o-class: bonds you don't control, hoa- friends, what holds or carries you)",
+    "kēia": "this",
+    "ʻo": "marks a name, or the one a sentence is about",
+    "kaʻu": "my (a-class: what you control, get or make, bonds you cause; aʻu after ʻaʻohe)",
+    "kāu": "your (a-class)",
+    "hoaloha": "friend (also hoaaloha)",
+    "kauka": "doctor",
+    "kelepona": "telephone, call",
+    "puke": "book",
+    "hea": "where",
+    "ʻaneʻi": "here",
+    "ʻō": "there (ma ʻō: over there)",
+    "hale lua": "bathroom",
+    "aia": "there is; is (located)",
+    "ma": "at, in, on",
+    "hoʻokahi": "one",
+    "ʻelua": "two",
+    "ʻekolu": "three",
+    "kālā": "dollar, money",
+    "ʻaʻohe": "there is no",
+    "ʻōlelo": "language; speak",
+    "hawaiʻi": "Hawaiʻi",
+    "maopopo": "to be understood",
+    "iki": "a little",
+    "makemake": "want, like",
+    "iaʻu": "to me",
+    "iā": "marks the one an action is for or to (iā ʻoe: you)",
+    "hale": "house",
+    "lumi": "room",
+    "nui": "big",
+    "liʻiliʻi": "small",
+    "noho": "live, stay, sit",
+    "kekahi": "a, some",
+    "pelekānia": "English",
+    "hele": "go",
+    "kula": "school",
+    "kūlanakauhale": "city",
+    "kahua kaʻaahi": "train station",
+    "kaʻa": "car",
+    "e": "will, let's; to (before a verb)",
+    "ana": "going on, or will: after a verb, with e before it",
+    "ʻapōpō": "tomorrow",
+    "hana": "work",
+    "pono": "must, have to",
+    "kou": "your (o-class)",
+    "inoa": "name",
+    "pehea": "how",
+    "no": "from; for",
+    "mai": "toward here; from (mai … mai)",
+    "ʻīlio": "dog",
+    "ua": "done: before a verb",
+    "ʻai": "eat",
+    "kiʻiʻoniʻoni": "movie, the movies",
+    "ke": "right now: before a verb, with nei after it",
+    "pāʻani": "play",
+    "nei": "now: after a verb, with ke before it",
+    "nā": "the (more than one)",
+    "keiki": "child",
+    "waho": "outside",
+    "one hānau": "birthplace, hometown",
+    "kākou": "we, all of us (with you)",
+    "ko": "belonging to (o-class: ko mākou, our)",
+    "mākou": "we (not you)",
+    "luna": "top (ma luna o: on)",
+    "o": "of",
+    "pākaukau": "table",
+    "loko": "inside (i loko o: in)",
+    "pahu hau": "fridge",
+    "kuke": "cook",
+    "ʻaina ahiahi": "dinner",
+    "luhi": "tired",
+    "loa": "very",
+    "nehinei": "yesterday",
+    "kēlā me kēia": "every",
+    "kakahiaka": "morning",
+    "me": "with",
+    "hale ʻaina": "restaurant",
+    "palaoa": "bread",
+    "hale kūʻai": "store",
+    "ʻehia": "how many, how much",
+    "kāmaʻa": "shoe",
+    "hou": "new",
+    "kūʻai": "buy",
+    "kaʻa ʻōhua": "bus",
+    "panakō": "bank",
+    "kahi": "place",
+    "kokoke": "near",
+    "mamao": "far",
+    "kahua mokulele": "airport",
+    "e kala mai": "sorry, excuse me",
+    "ʻike": "know, see",
+    "likiki": "ticket",
+    "pōʻaono": "Saturday",
+    "kahakai": "beach",
+    "kauwela": "summer",
+    "hala": "pass (i hala: last, past)",
+    "pā": "blow (of the wind)",
+    "makani": "wind",
+    "manawa": "time",
+    "aʻo": "learn, teach",
+    "kāua": "we two (you and I)",
+    "hoʻomaha": "rest",
+    "ia": "he, she (ʻo ia)",
+    "lumi moe": "bedroom",
+    "heluhelu": "read",
+    "hiamoe": "sleep"
+  },
+  "chunks": {
+    "and": {
+      "text": "a me",
+      "en": "and"
+    },
+    "hello": {
+      "text": "Aloha",
+      "en": "hello"
+    },
+    "please": {
+      "text": "ke ʻoluʻolu",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "mahalo",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Pehea ʻoe",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "A hui hou",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "ʻAe",
+      "en": "yes"
+    },
+    "no": {
+      "text": "ʻAʻole",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "ʻO wai kou inoa",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Hauʻoli kēia hui ʻana me ʻoe",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "E kala mai",
+      "en": "excuse me"
+    },
+    "how-much-is-this": {
+      "text": "ʻEhia kālā no kēia",
+      "en": "how much is this?"
+    },
+    "the-check-please": {
+      "text": "Ka pila, ke ʻoluʻolu",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "A hui hou ʻapōpō",
+      "en": "see you tomorrow"
+    },
+    "today": {
+      "text": "i kēia lā",
+      "en": "today"
+    },
+    "now": {
+      "text": "i kēia manawa",
+      "en": "now"
+    },
+    "i-can-go": {
+      "text": "hiki iaʻu ke hele",
+      "en": "I can go"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "inu-au",
+      "topic": "food",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Inu au.",
+      "means": "I drink.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Au inu.",
+        "Inu i au."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "au",
+          "wai",
+          "kī"
+        ]
+      }
+    },
+    {
+      "id": "inu-au-i-ka-wai",
+      "topic": "food",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Inu au i ka wai.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "wai",
+          "wai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Inu i au ka wai.",
+        "Inu au ka wai."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "i",
+          "ka",
+          "ke"
+        ]
+      }
+    },
+    {
+      "id": "inu-au-i-ke-ki",
+      "topic": "food",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Inu au i ke kī.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kī",
+          "kī"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Inu i au ke kī.",
+        "Inu au ke kī."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "i",
+          "ka",
+          "ke"
+        ]
+      }
+    },
+    {
+      "id": "inu-au-i-ke-ki-a-me-ka-wai",
+      "topic": "food",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "chunks": [
+        "and"
+      ],
+      "text": "Inu au i ke kī a me ka wai.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kī",
+          "kī"
+        ],
+        [
+          "a"
+        ],
+        [
+          "me"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "wai",
+          "wai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Inu au ke kī a me ka wai.",
+        "Inu i au ke kī a me ka wai."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "i",
+          "ka",
+          "ke"
+        ]
+      }
+    },
+    {
+      "id": "inu-au-i-ka-wai-a-me-ke-ki",
+      "topic": "food",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "chunks": [
+        "and"
+      ],
+      "text": "Inu au i ka wai a me ke kī.",
+      "means": "I drink water and tea.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "wai",
+          "wai"
+        ],
+        [
+          "a"
+        ],
+        [
+          "me"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kī",
+          "kī"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Inu i au ka wai a me ke kī.",
+        "Inu au ka wai a me ke kī."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "i",
+          "ka",
+          "ke"
+        ]
+      }
+    },
+    {
+      "id": "inu-au-i-ke-kope-2",
+      "topic": "food",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Inu au i ke kope.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kope",
+          "kope"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Inu au ke kope.",
+        "Inu i au ke kope."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kope",
+          "waiū",
+          "kī"
+        ]
+      }
+    },
+    {
+      "id": "inu-au-i-ka-waiu",
+      "topic": "food",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Inu au i ka waiū.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "waiū",
+          "waiū"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Inu au ka waiū.",
+        "Inu i au ka waiū."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "waiū",
+          "kope",
+          "kī"
+        ]
+      }
+    },
+    {
+      "id": "he-kope-mahalo",
+      "topic": "food",
+      "concepts": [
+        "he"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "He kope, mahalo.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kope,",
+          "kope"
+        ],
+        [
+          "mahalo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ka kope, mahalo.",
+        "He kope ka, mahalo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kope,",
+          "kī,",
+          "waiū,"
+        ]
+      }
+    },
+    {
+      "id": "aloha-he-kope-ke-olu-olu",
+      "topic": "food",
+      "concepts": [
+        "he"
+      ],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Aloha! He kope, ke ʻoluʻolu.",
+      "means": "Hello! A coffee, please.",
+      "words": [
+        [
+          "Aloha!"
+        ],
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kope,",
+          "kope"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "ʻoluʻolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aloha! He ka kope, ke ʻoluʻolu.",
+        "Aloha! He kope ka, ke ʻoluʻolu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kope,",
+          "kī,",
+          "waiū,"
+        ]
+      }
+    },
+    {
+      "id": "he-ki-a-me-ka-wai-ke-olu-olu",
+      "topic": "food",
+      "concepts": [
+        "he",
+        "article"
+      ],
+      "chunks": [
+        "please",
+        "and"
+      ],
+      "text": "He kī a me ka wai, ke ʻoluʻolu.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kī",
+          "kī"
+        ],
+        [
+          "a"
+        ],
+        [
+          "me"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "wai,",
+          "wai"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "ʻoluʻolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ka kī a me ka wai, ke ʻoluʻolu.",
+        "He kī a me ka he wai, ke ʻoluʻolu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kī",
+          "kope",
+          "waiū"
+        ]
+      }
+    },
+    {
+      "id": "maika-i-au-mahalo",
+      "topic": "people",
+      "concepts": [
+        "verb-first"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Maikaʻi au, mahalo.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Maikaʻi",
+          "maikaʻi"
+        ],
+        [
+          "au,",
+          "au"
+        ],
+        [
+          "mahalo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine"
+        ],
+        [
+          "I"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Maikaʻi i au, mahalo.",
+        "Maikaʻi ka au, mahalo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "au,",
+          "ka,",
+          "he,"
+        ]
+      }
+    },
+    {
+      "id": "ae-ke-olu-olu",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "ʻAe, ke ʻoluʻolu.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "ʻAe,"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "ʻoluʻolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAe, ʻoluʻolu ke.",
+        "ʻAe, ke ke ʻoluʻolu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ke",
+          "ka",
+          "he"
+        ]
+      }
+    },
+    {
+      "id": "a-ole-mahalo",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "ʻAʻole, mahalo.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "ʻAʻole,"
+        ],
+        [
+          "mahalo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻole, ka mahalo.",
+        "ʻAʻole, i mahalo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻAʻole,",
+          "au,",
+          "he,"
+        ]
+      }
+    },
+    {
+      "id": "ae-mahalo-a-hui-hou",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "ʻAe, mahalo. A hui hou!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "ʻAe,"
+        ],
+        [
+          "mahalo."
+        ],
+        [
+          "A"
+        ],
+        [
+          "hui"
+        ],
+        [
+          "hou"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "until we meet again"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAe, mahalo. A hou hui!",
+        "ʻAe, mahalo. A hui ka hou!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "A",
+          "He",
+          "Ka"
+        ]
+      }
+    },
+    {
+      "id": "a-ole-mahalo-a-hui-hou",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "ʻAʻole, mahalo. A hui hou!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "ʻAʻole,"
+        ],
+        [
+          "mahalo."
+        ],
+        [
+          "A"
+        ],
+        [
+          "hui"
+        ],
+        [
+          "hou"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "until we meet again"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻole, mahalo. A hou hui!",
+        "ʻAʻole, mahalo. A hui ka hou!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "A",
+          "He",
+          "Ka"
+        ]
+      }
+    },
+    {
+      "id": "he-kumu-au",
+      "topic": "people",
+      "concepts": [
+        "he"
+      ],
+      "text": "He kumu au.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kumu",
+          "kumu"
+        ],
+        [
+          "au",
+          "au"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He kumu i au.",
+        "He ka kumu au."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kumu",
+          "haumāna",
+          "kope"
+        ]
+      }
+    },
+    {
+      "id": "aloha-hau-oli-keia-hui-ana-me-oe",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Aloha! Hauʻoli kēia hui ʻana me ʻoe.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Aloha!"
+        ],
+        [
+          "Hauʻoli"
+        ],
+        [
+          "kēia"
+        ],
+        [
+          "hui"
+        ],
+        [
+          "ʻana"
+        ],
+        [
+          "me"
+        ],
+        [
+          "ʻoe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "happy"
+        ],
+        [
+          "this meeting"
+        ],
+        [
+          "with you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aloha! Hauʻoli kēia hui ʻana me ka ʻoe.",
+        "Aloha! Hauʻoli kēia hui ʻana me he ʻoe."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "me",
+          "he",
+          "ka"
+        ]
+      }
+    },
+    {
+      "id": "he-kumu-oe",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "question"
+      ],
+      "text": "He kumu ʻoe?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kumu",
+          "kumu"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He kumu i ʻoe?",
+        "He ka kumu ʻoe?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kumu",
+          "haumāna",
+          "kope"
+        ]
+      }
+    },
+    {
+      "id": "a-ole-au-he-kumu",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "he"
+      ],
+      "text": "ʻAʻole au he kumu.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "ʻAʻole",
+          "ʻaʻole"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "he",
+          "he"
+        ],
+        [
+          "kumu",
+          "kumu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻole au he ka kumu.",
+        "ʻAʻole au he kumu i."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kumu",
+          "haumāna",
+          "kope"
+        ]
+      }
+    },
+    {
+      "id": "he-kumu-ko-u-makuakane",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "possessive"
+      ],
+      "text": "He kumu koʻu makuakāne.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kumu",
+          "kumu"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuakāne",
+          "makuakāne"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He kumu ka koʻu makuakāne.",
+        "He kumu koʻu i makuakāne."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "makuakāne",
+          "makuahine",
+          "kumu"
+        ]
+      }
+    },
+    {
+      "id": "o-ko-u-makuahine-keia",
+      "topic": "people",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "text": "ʻO koʻu makuahine kēia.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "ʻO",
+          "ʻo"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuahine",
+          "makuahine"
+        ],
+        [
+          "kēia",
+          "kēia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻO ka koʻu makuahine kēia.",
+        "ʻO koʻu i makuahine kēia."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "makuahine",
+          "makuakāne",
+          "kumu"
+        ]
+      }
+    },
+    {
+      "id": "o-ko-u-makuakane-keia",
+      "topic": "people",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "text": "ʻO koʻu makuakāne kēia.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "ʻO",
+          "ʻo"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuakāne",
+          "makuakāne"
+        ],
+        [
+          "kēia",
+          "kēia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My father"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻO ka koʻu makuakāne kēia.",
+        "ʻO koʻu i makuakāne kēia."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "makuakāne",
+          "makuahine",
+          "kumu"
+        ]
+      }
+    },
+    {
+      "id": "he-haumana-ko-u-kaikunane",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "possessive"
+      ],
+      "text": "He haumāna koʻu kaikunāne.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "haumāna",
+          "haumāna"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "kaikunāne",
+          "kaikunāne"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A student"
+        ],
+        [
+          "my brother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He haumāna ka koʻu kaikunāne.",
+        "He haumāna koʻu i kaikunāne."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kaikunāne",
+          "makuakāne",
+          "makuahine"
+        ]
+      }
+    },
+    {
+      "id": "o-ko-u-kaikua-ana-keia",
+      "topic": "people",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "text": "ʻO koʻu kaikuaʻana kēia.",
+      "means": "This is my older sister.",
+      "words": [
+        [
+          "ʻO",
+          "ʻo"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "kaikuaʻana",
+          "kaikuaʻana"
+        ],
+        [
+          "kēia",
+          "kēia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻO ka koʻu kaikuaʻana kēia.",
+        "ʻO koʻu i kaikuaʻana kēia."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaikuaʻana",
+          "kaikunāne",
+          "makuahine"
+        ]
+      }
+    },
+    {
+      "id": "he-kelepona-ka-u",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "have"
+      ],
+      "text": "He kelepona kaʻu.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kelepona",
+          "kelepona"
+        ],
+        [
+          "kaʻu",
+          "kaʻu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A phone"
+        ],
+        [
+          "mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ka kelepona kaʻu.",
+        "He kelepona ka kaʻu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kelepona",
+          "puke",
+          "kī"
+        ]
+      }
+    },
+    {
+      "id": "he-ki-kau",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "have",
+        "question"
+      ],
+      "text": "He kī kāu?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kī",
+          "kī"
+        ],
+        [
+          "kāu",
+          "kāu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A key"
+        ],
+        [
+          "yours"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ka kī kāu?",
+        "He kī ka kāu?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kī",
+          "puke",
+          "kelepona"
+        ]
+      }
+    },
+    {
+      "id": "he-kaikunane-a-me-ke-kaikua-ana-ko-u",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "have",
+        "possessive"
+      ],
+      "chunks": [
+        "and"
+      ],
+      "text": "He kaikunāne a me ke kaikuaʻana koʻu.",
+      "means": "I have a brother and an older sister.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kaikunāne",
+          "kaikunāne"
+        ],
+        [
+          "a"
+        ],
+        [
+          "me"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kaikuaʻana",
+          "kaikuaʻana"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "an older sister"
+        ],
+        [
+          "mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ka kaikunāne a me ke kaikuaʻana koʻu.",
+        "He kaikunāne a me ke kaikuaʻana ka koʻu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kaikunāne",
+          "kaikuaʻana",
+          "hoaloha"
+        ]
+      }
+    },
+    {
+      "id": "a-ole-he-puke-ka-u",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "he",
+        "have"
+      ],
+      "text": "ʻAʻole he puke kaʻu.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "ʻAʻole",
+          "ʻaʻole"
+        ],
+        [
+          "he",
+          "he"
+        ],
+        [
+          "puke",
+          "puke"
+        ],
+        [
+          "kaʻu",
+          "kaʻu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "a book"
+        ],
+        [
+          "mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻole he ka puke kaʻu.",
+        "ʻAʻole he puke ka kaʻu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "puke",
+          "kelepona",
+          "kī"
+        ]
+      }
+    },
+    {
+      "id": "he-kauka-ko-u-kaikua-ana",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "possessive"
+      ],
+      "text": "He kauka koʻu kaikuaʻana.",
+      "means": "My older sister is a doctor.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kauka",
+          "kauka"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "kaikuaʻana",
+          "kaikuaʻana"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A doctor"
+        ],
+        [
+          "my older sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ka kauka koʻu kaikuaʻana.",
+        "He kauka ka koʻu kaikuaʻana."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kauka",
+          "kumu",
+          "haumāna"
+        ]
+      }
+    },
+    {
+      "id": "he-hoaloha-maika-i-oe",
+      "topic": "people",
+      "concepts": [
+        "he"
+      ],
+      "text": "He hoaloha maikaʻi ʻoe.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "hoaloha",
+          "hoaloha"
+        ],
+        [
+          "maikaʻi",
+          "maikaʻi"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A good friend"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He maikaʻi hoaloha ʻoe.",
+        "He ka hoaloha maikaʻi ʻoe."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hoaloha",
+          "kumu",
+          "kauka"
+        ]
+      }
+    },
+    {
+      "id": "aia-ka-u-kelepona-ma-ane-i",
+      "topic": "out",
+      "concepts": [
+        "aia",
+        "possessive",
+        "prepositions"
+      ],
+      "text": "Aia kaʻu kelepona ma ʻaneʻi.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "kaʻu",
+          "kaʻu"
+        ],
+        [
+          "kelepona",
+          "kelepona"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ʻaneʻi",
+          "ʻaneʻi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is located"
+        ],
+        [
+          "my phone"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aia ka kaʻu kelepona ma ʻaneʻi.",
+        "Aia kaʻu kelepona ma ka ʻaneʻi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kelepona",
+          "puke",
+          "kī"
+        ]
+      }
+    },
+    {
+      "id": "aia-ke-ki-ma-o",
+      "topic": "out",
+      "concepts": [
+        "aia",
+        "article",
+        "prepositions"
+      ],
+      "text": "Aia ke kī ma ʻō.",
+      "means": "The key is over there.",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kī",
+          "kī"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ʻō",
+          "ʻō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is located"
+        ],
+        [
+          "the key"
+        ],
+        [
+          "over there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aia ke kī ma ke ʻō.",
+        "Aia ke kī ma he ʻō."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kī",
+          "kope",
+          "kelepona"
+        ]
+      }
+    },
+    {
+      "id": "e-kala-mai-aia-i-hea-ka-u-ki",
+      "topic": "out",
+      "concepts": [
+        "aia",
+        "question",
+        "possessive"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "E kala mai, aia i hea kaʻu kī?",
+      "means": "Excuse me, where is my key?",
+      "words": [
+        [
+          "E"
+        ],
+        [
+          "kala"
+        ],
+        [
+          "mai,"
+        ],
+        [
+          "aia",
+          "aia"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "hea",
+          "hea"
+        ],
+        [
+          "kaʻu",
+          "kaʻu"
+        ],
+        [
+          "kī",
+          "kī"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "is located"
+        ],
+        [
+          "where"
+        ],
+        [
+          "my key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "E kala mai, aia i hea ka kaʻu kī?",
+        "E kala mai, aia i ka hea kaʻu kī?"
+      ],
+      "gap": {
+        "index": 7,
+        "options": [
+          "kī",
+          "kelepona",
+          "puke"
+        ]
+      }
+    },
+    {
+      "id": "aia-i-hea-ko-u-makuahine",
+      "topic": "out",
+      "concepts": [
+        "aia",
+        "question",
+        "possessive"
+      ],
+      "text": "Aia i hea koʻu makuahine?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "hea",
+          "hea"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuahine",
+          "makuahine"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is located"
+        ],
+        [
+          "where"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aia i hea ka koʻu makuahine?",
+        "Aia i ka hea koʻu makuahine?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "makuahine",
+          "makuakāne",
+          "kaikuaʻana"
+        ]
+      }
+    },
+    {
+      "id": "aia-ko-u-kaikua-ana-ma-ane-i",
+      "topic": "out",
+      "concepts": [
+        "aia",
+        "possessive",
+        "prepositions"
+      ],
+      "text": "Aia koʻu kaikuaʻana ma ʻaneʻi.",
+      "means": "My older sister is here.",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "kaikuaʻana",
+          "kaikuaʻana"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ʻaneʻi",
+          "ʻaneʻi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is located"
+        ],
+        [
+          "my older sister"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aia ka koʻu kaikuaʻana ma ʻaneʻi.",
+        "Aia koʻu kaikuaʻana ma ka ʻaneʻi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaikuaʻana",
+          "makuahine",
+          "makuakāne"
+        ]
+      }
+    },
+    {
+      "id": "ho-okahi-puke-ke-olu-olu",
+      "topic": "out",
+      "concepts": [
+        "article"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Hoʻokahi puke, ke ʻoluʻolu.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Hoʻokahi",
+          "hoʻokahi"
+        ],
+        [
+          "puke,",
+          "puke"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "ʻoluʻolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hoʻokahi he puke, ke ʻoluʻolu.",
+        "Hoʻokahi puke ka, ke ʻoluʻolu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hoʻokahi",
+          "ʻElua",
+          "ʻEkolu"
+        ]
+      }
+    },
+    {
+      "id": "elua-kope-ke-olu-olu",
+      "topic": "out",
+      "concepts": [
+        "article"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "ʻElua kope, ke ʻoluʻolu.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "ʻElua",
+          "ʻelua"
+        ],
+        [
+          "kope,",
+          "kope"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "ʻoluʻolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻElua he kope, ke ʻoluʻolu.",
+        "ʻElua kope ka, ke ʻoluʻolu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻElua",
+          "Hoʻokahi",
+          "ʻEkolu"
+        ]
+      }
+    },
+    {
+      "id": "ekolu-a-u-puke",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "possessive"
+      ],
+      "text": "ʻEkolu aʻu puke.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "ʻEkolu",
+          "ʻekolu"
+        ],
+        [
+          "aʻu",
+          "kaʻu"
+        ],
+        [
+          "puke",
+          "puke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Three"
+        ],
+        [
+          "my books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻEkolu aʻu he puke.",
+        "ʻEkolu aʻu ka puke."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻEkolu",
+          "ʻElua",
+          "Hoʻokahi"
+        ]
+      }
+    },
+    {
+      "id": "a-ohe-a-u-kala",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "have",
+        "possessive"
+      ],
+      "text": "ʻAʻohe aʻu kālā.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "ʻAʻohe",
+          "ʻaʻohe"
+        ],
+        [
+          "aʻu",
+          "kaʻu"
+        ],
+        [
+          "kālā",
+          "kālā"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is no"
+        ],
+        [
+          "my money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻohe aʻu he kālā.",
+        "ʻAʻohe aʻu ka kālā."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kālā",
+          "puke",
+          "kelepona"
+        ]
+      }
+    },
+    {
+      "id": "aloha-ka-pila-ke-olu-olu",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Aloha! Ka pila, ke ʻoluʻolu.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Aloha!"
+        ],
+        [
+          "Ka"
+        ],
+        [
+          "pila,"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "ʻoluʻolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aloha! Ka pila, ʻoluʻolu ke.",
+        "Aloha! Ka pila, ke ke ʻoluʻolu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ke",
+          "ka",
+          "he"
+        ]
+      }
+    },
+    {
+      "id": "makemake-au-i-ke-kope",
+      "topic": "people",
+      "concepts": [
+        "makemake",
+        "verb-first",
+        "article"
+      ],
+      "text": "Makemake au i ke kope.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Makemake",
+          "makemake"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kope",
+          "kope"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want"
+        ],
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Makemake au ke kope.",
+        "Makemake i au ke kope."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Makemake",
+          "Inu",
+          "ʻŌlelo"
+        ]
+      }
+    },
+    {
+      "id": "makemake-au-i-ka-wai-ke-olu-olu",
+      "topic": "people",
+      "concepts": [
+        "makemake",
+        "verb-first",
+        "article"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Makemake au i ka wai, ke ʻoluʻolu.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Makemake",
+          "makemake"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "wai,",
+          "wai"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "ʻoluʻolu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want"
+        ],
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Makemake au ka wai, ke ʻoluʻolu.",
+        "Makemake i au ka wai, ke ʻoluʻolu."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "wai,",
+          "kope,",
+          "waiū,"
+        ]
+      }
+    },
+    {
+      "id": "olelo-oe-i-ka-olelo-hawai-i",
+      "topic": "people",
+      "concepts": [
+        "verb-first",
+        "question",
+        "article"
+      ],
+      "text": "ʻŌlelo ʻoe i ka ʻōlelo Hawaiʻi?",
+      "means": "Do you speak Hawaiian?",
+      "words": [
+        [
+          "ʻŌlelo",
+          "ʻōlelo"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "ʻōlelo",
+          "ʻōlelo"
+        ],
+        [
+          "Hawaiʻi",
+          "hawaiʻi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Speak"
+        ],
+        [
+          "you"
+        ],
+        [
+          "the Hawaiian language"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻŌlelo ʻoe ka ʻōlelo Hawaiʻi?",
+        "ʻŌlelo i ʻoe ka ʻōlelo Hawaiʻi?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻŌlelo",
+          "Inu",
+          "Makemake"
+        ]
+      }
+    },
+    {
+      "id": "olelo-iki-au-i-ka-olelo-hawai-i",
+      "topic": "people",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "ʻŌlelo iki au i ka ʻōlelo Hawaiʻi.",
+      "means": "I speak a little Hawaiian.",
+      "words": [
+        [
+          "ʻŌlelo",
+          "ʻōlelo"
+        ],
+        [
+          "iki",
+          "iki"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "ʻōlelo",
+          "ʻōlelo"
+        ],
+        [
+          "Hawaiʻi",
+          "hawaiʻi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Speak a little"
+        ],
+        [
+          "I"
+        ],
+        [
+          "the Hawaiian language"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻŌlelo iki au ka ʻōlelo Hawaiʻi.",
+        "ʻŌlelo iki i au ka ʻōlelo Hawaiʻi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻŌlelo",
+          "kope",
+          "waiū"
+        ]
+      }
+    },
+    {
+      "id": "a-ole-maopopo-ia-u",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "verb-first"
+      ],
+      "text": "ʻAʻole maopopo iaʻu.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "ʻAʻole",
+          "ʻaʻole"
+        ],
+        [
+          "maopopo",
+          "maopopo"
+        ],
+        [
+          "iaʻu",
+          "iaʻu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "understood"
+        ],
+        [
+          "to me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻole maopopo ka iaʻu.",
+        "ʻAʻole maopopo he iaʻu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "maopopo",
+          "maikaʻi",
+          "iki"
+        ]
+      }
+    },
+    {
+      "id": "maopopo-ia-oe",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "prepositions"
+      ],
+      "text": "Maopopo iā ʻoe?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Maopopo",
+          "maopopo"
+        ],
+        [
+          "iā",
+          "iā"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Understood"
+        ],
+        [
+          "to you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Maopopo iā ka ʻoe?",
+        "Maopopo iā he ʻoe?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "iā",
+          "ma",
+          "i"
+        ]
+      }
+    },
+    {
+      "id": "li-ili-i-ko-u-lumi",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "possessive"
+      ],
+      "text": "Liʻiliʻi koʻu lumi.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Liʻiliʻi",
+          "liʻiliʻi"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "lumi",
+          "lumi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small"
+        ],
+        [
+          "my room"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Liʻiliʻi ka koʻu lumi.",
+        "Liʻiliʻi koʻu i lumi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Liʻiliʻi",
+          "Nui",
+          "Maikaʻi"
+        ]
+      }
+    },
+    {
+      "id": "nui-keia-hale",
+      "topic": "home",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Nui kēia hale.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Nui",
+          "nui"
+        ],
+        [
+          "kēia",
+          "kēia"
+        ],
+        [
+          "hale",
+          "hale"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Big"
+        ],
+        [
+          "this house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nui ka kēia hale.",
+        "Nui kēia i hale."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nui",
+          "Liʻiliʻi",
+          "Maikaʻi"
+        ]
+      }
+    },
+    {
+      "id": "noho-au-ma-kekahi-hale-li-ili-i",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "prepositions"
+      ],
+      "text": "Noho au ma kekahi hale liʻiliʻi.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Noho",
+          "noho"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "kekahi",
+          "kekahi"
+        ],
+        [
+          "hale",
+          "hale"
+        ],
+        [
+          "liʻiliʻi",
+          "liʻiliʻi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Live"
+        ],
+        [
+          "I"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Noho au ma kekahi liʻiliʻi hale.",
+        "Noho au ma ka kekahi hale liʻiliʻi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Noho",
+          "Inu",
+          "ʻŌlelo"
+        ]
+      }
+    },
+    {
+      "id": "noho-oe-ma-hea",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "question",
+        "prepositions"
+      ],
+      "text": "Noho ʻoe ma hea?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Noho",
+          "noho"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "hea",
+          "hea"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Live"
+        ],
+        [
+          "you"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Noho ʻoe ma ka hea?",
+        "Noho ma ʻoe hea?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Noho",
+          "Inu",
+          "ʻŌlelo"
+        ]
+      }
+    },
+    {
+      "id": "noho-ko-u-makuahine-ma-ane-i",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "possessive",
+        "prepositions"
+      ],
+      "text": "Noho koʻu makuahine ma ʻaneʻi.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Noho",
+          "noho"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuahine",
+          "makuahine"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ʻaneʻi",
+          "ʻaneʻi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Lives"
+        ],
+        [
+          "my mother"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Noho ka koʻu makuahine ma ʻaneʻi.",
+        "Noho koʻu makuahine ma ka ʻaneʻi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "makuahine",
+          "makuakāne",
+          "kaikuaʻana"
+        ]
+      }
+    },
+    {
+      "id": "olelo-oe-i-ka-olelo-pelekania",
+      "topic": "home",
+      "concepts": [
+        "verb-first",
+        "question",
+        "article"
+      ],
+      "text": "ʻŌlelo ʻoe i ka ʻōlelo Pelekānia?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "ʻŌlelo",
+          "ʻōlelo"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "ʻōlelo",
+          "ʻōlelo"
+        ],
+        [
+          "Pelekānia",
+          "pelekānia"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Speak"
+        ],
+        [
+          "you"
+        ],
+        [
+          "the English language"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻŌlelo ʻoe ka ʻōlelo Pelekānia?",
+        "ʻŌlelo i ʻoe ka ʻōlelo Pelekānia?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻŌlelo",
+          "Inu",
+          "Noho"
+        ]
+      }
+    },
+    {
+      "id": "hele-au-i-ke-kula",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "prepositions",
+        "article"
+      ],
+      "text": "Hele au i ke kula.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Hele",
+          "hele"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kula",
+          "kula"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "I"
+        ],
+        [
+          "to school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hele i au ke kula.",
+        "Hele au i kula ke."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hele",
+          "Noho",
+          "Inu"
+        ]
+      }
+    },
+    {
+      "id": "e-kala-mai-aia-i-hea-ke-kahua",
+      "topic": "out",
+      "concepts": [
+        "aia",
+        "question",
+        "article"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "E kala mai, aia i hea ke kahua kaʻaahi?",
+      "means": "Excuse me, where is the train station?",
+      "words": [
+        [
+          "E"
+        ],
+        [
+          "kala"
+        ],
+        [
+          "mai,"
+        ],
+        [
+          "aia",
+          "aia"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "hea",
+          "hea"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kahua",
+          "kahua kaʻaahi"
+        ],
+        [
+          "kaʻaahi",
+          "kahua kaʻaahi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "is located"
+        ],
+        [
+          "where"
+        ],
+        [
+          "the train station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "E kala mai, aia i ka hea ke kahua kaʻaahi?",
+        "E kala mai, aia i hea ke he kahua kaʻaahi?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "i",
+          "iā",
+          "me"
+        ]
+      }
+    },
+    {
+      "id": "hele-ko-u-makuahine-i-ke",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "possessive",
+        "prepositions",
+        "article"
+      ],
+      "text": "Hele koʻu makuahine i ke kūlanakauhale.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Hele",
+          "hele"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuahine",
+          "makuahine"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kūlanakauhale",
+          "kūlanakauhale"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Goes"
+        ],
+        [
+          "my mother"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hele ka koʻu makuahine i ke kūlanakauhale.",
+        "Hele koʻu makuahine i kūlanakauhale ke."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "kūlanakauhale",
+          "kula",
+          "hale"
+        ]
+      }
+    },
+    {
+      "id": "li-ili-i-keia-ka-a",
+      "topic": "out",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Liʻiliʻi kēia kaʻa.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Liʻiliʻi",
+          "liʻiliʻi"
+        ],
+        [
+          "kēia",
+          "kēia"
+        ],
+        [
+          "kaʻa",
+          "kaʻa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small"
+        ],
+        [
+          "this car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Liʻiliʻi ka kēia kaʻa.",
+        "Liʻiliʻi kēia i kaʻa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaʻa",
+          "hale",
+          "lumi"
+        ]
+      }
+    },
+    {
+      "id": "he-ka-a-ko-u",
+      "topic": "out",
+      "concepts": [
+        "he",
+        "have",
+        "possessive"
+      ],
+      "text": "He kaʻa koʻu.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kaʻa",
+          "kaʻa"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A car"
+        ],
+        [
+          "mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ka kaʻa koʻu.",
+        "He kaʻa ka koʻu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kaʻa",
+          "hale",
+          "lumi"
+        ]
+      }
+    },
+    {
+      "id": "hana-au-i-keia-la",
+      "topic": "plans",
+      "concepts": [
+        "verb-first"
+      ],
+      "chunks": [
+        "today"
+      ],
+      "text": "Hana au i kēia lā.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Hana",
+          "hana"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i"
+        ],
+        [
+          "kēia"
+        ],
+        [
+          "lā"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Work"
+        ],
+        [
+          "I"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hana i au i kēia lā.",
+        "Hana ka au i kēia lā."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hana",
+          "Hele",
+          "Noho"
+        ]
+      }
+    },
+    {
+      "id": "pono-au-e-hele-i-keia-manawa",
+      "topic": "plans",
+      "concepts": [
+        "verb-first"
+      ],
+      "chunks": [
+        "now"
+      ],
+      "text": "Pono au e hele i kēia manawa.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Pono",
+          "pono"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "i"
+        ],
+        [
+          "kēia"
+        ],
+        [
+          "manawa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Must"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pono au e i hele i kēia manawa.",
+        "Pono au e ka hele i kēia manawa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hele",
+          "hana",
+          "noho"
+        ]
+      }
+    },
+    {
+      "id": "apopo-hele-au-i-ke-kulanakauhale",
+      "topic": "plans",
+      "concepts": [
+        "verb-first",
+        "prepositions",
+        "article"
+      ],
+      "text": "ʻApōpō, hele au i ke kūlanakauhale.",
+      "means": "Tomorrow I go to the city.",
+      "words": [
+        [
+          "ʻApōpō,",
+          "ʻapōpō"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kūlanakauhale",
+          "kūlanakauhale"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "go"
+        ],
+        [
+          "I"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻApōpō, hele i au ke kūlanakauhale.",
+        "ʻApōpō, hele au i kūlanakauhale ke."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hele",
+          "hana",
+          "inu"
+        ]
+      }
+    },
+    {
+      "id": "a-ole-hiki-ia-u-ke-hele-i-keia-la",
+      "topic": "plans",
+      "concepts": [
+        "negation"
+      ],
+      "chunks": [
+        "i-can-go",
+        "today"
+      ],
+      "text": "ʻAʻole hiki iaʻu ke hele i kēia lā.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "ʻAʻole",
+          "ʻaʻole"
+        ],
+        [
+          "hiki"
+        ],
+        [
+          "iaʻu"
+        ],
+        [
+          "ke"
+        ],
+        [
+          "hele"
+        ],
+        [
+          "i"
+        ],
+        [
+          "kēia"
+        ],
+        [
+          "lā"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "possible"
+        ],
+        [
+          "for me"
+        ],
+        [
+          "to go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻole hiki iaʻu ke i hele i kēia lā.",
+        "ʻAʻole hiki iaʻu ke ka hele i kēia lā."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "hele",
+          "hana",
+          "noho"
+        ]
+      }
+    },
+    {
+      "id": "pono-au-e-hana-apopo",
+      "topic": "plans",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Pono au e hana ʻapōpō.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Pono",
+          "pono"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "hana",
+          "hana"
+        ],
+        [
+          "ʻapōpō",
+          "ʻapōpō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Must"
+        ],
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pono au e i hana ʻapōpō.",
+        "Pono au e ka hana ʻapōpō."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hana",
+          "hele",
+          "noho"
+        ]
+      }
+    },
+    {
+      "id": "mahalo-a-hui-hou-apopo",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Mahalo. A hui hou ʻapōpō!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Mahalo."
+        ],
+        [
+          "A"
+        ],
+        [
+          "hui"
+        ],
+        [
+          "hou"
+        ],
+        [
+          "ʻapōpō"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "until we meet again tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mahalo. A hou hui ʻapōpō!",
+        "Mahalo. A hui ka hou ʻapōpō!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "A",
+          "He",
+          "Ka"
+        ]
+      }
+    },
+    {
+      "id": "o-wai-kou-inoa",
+      "topic": "people",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "ʻO wai kou inoa?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "ʻO"
+        ],
+        [
+          "wai"
+        ],
+        [
+          "kou"
+        ],
+        [
+          "inoa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Who"
+        ],
+        [
+          "your name"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻO wai kāu inoa?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻO",
+          "He",
+          "Ua"
+        ]
+      }
+    },
+    {
+      "id": "pehea-oe",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you"
+      ],
+      "text": "Pehea ʻoe?",
+      "means": "How are you?",
+      "words": [
+        [
+          "Pehea"
+        ],
+        [
+          "ʻoe"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hea ʻoe?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pehea",
+          "Hea",
+          "Wai"
+        ]
+      }
+    },
+    {
+      "id": "no-kaleponi-mai-au",
+      "topic": "people",
+      "concepts": [
+        "prepositions"
+      ],
+      "text": "No Kaleponi mai au.",
+      "means": "I'm from California.",
+      "words": [
+        [
+          "No",
+          "no"
+        ],
+        [
+          "Kaleponi"
+        ],
+        [
+          "mai",
+          "mai"
+        ],
+        [
+          "au",
+          "au"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "From California",
+          true
+        ],
+        [
+          "I",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "No",
+        "Kaleponi",
+        "mai",
+        "au"
+      ],
+      "wrong": [
+        "Ma Kaleponi mai au."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "No",
+          "Ma",
+          "Me"
+        ]
+      }
+    },
+    {
+      "id": "he-kumu-kou-makuahine",
+      "topic": "people",
+      "concepts": [
+        "he",
+        "possessive"
+      ],
+      "text": "He kumu koʻu makuahine.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kumu",
+          "kumu"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuahine",
+          "makuahine"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher",
+          true
+        ],
+        [
+          "my",
+          true
+        ],
+        [
+          "mother",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "He",
+        "kumu",
+        "koʻu",
+        "makuahine"
+      ],
+      "wrong": [
+        "He kumu kaʻu makuahine.",
+        "ʻO kumu koʻu makuahine."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "koʻu",
+          "kaʻu",
+          "kona"
+        ]
+      }
+    },
+    {
+      "id": "he-kumu-o-ia",
+      "topic": "people",
+      "concepts": [
+        "o",
+        "he"
+      ],
+      "text": "He kumu ʻo ia.",
+      "means": "She's a teacher.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kumu",
+          "kumu"
+        ],
+        [
+          "ʻo",
+          "ʻo"
+        ],
+        [
+          "ia",
+          "ia"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher",
+          true
+        ],
+        [
+          "she",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "He",
+        "kumu",
+        "ʻo",
+        "ia"
+      ],
+      "wrong": [
+        "Ka kumu ʻo ia."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ʻo",
+          "he",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "he-ilio-kau",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "possessive"
+      ],
+      "text": "He ʻīlio kaʻu.",
+      "means": "I have a dog.",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "ʻīlio",
+          "ʻīlio"
+        ],
+        [
+          "kaʻu",
+          "kaʻu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A dog"
+        ],
+        [
+          "mine"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He ʻīlio koʻu.",
+        "Ua ʻīlio kaʻu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaʻu",
+          "koʻu",
+          "kāu"
+        ]
+      }
+    },
+    {
+      "id": "ua-hele-kou-makuakane-i-ka-hana",
+      "topic": "people",
+      "concepts": [
+        "ua",
+        "verb-first"
+      ],
+      "text": "Ua hele koʻu makuakāne i ka hana.",
+      "means": "My father went to work.",
+      "words": [
+        [
+          "Ua",
+          "ua"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuakāne",
+          "makuakāne"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "hana",
+          "hana"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Went",
+          true
+        ],
+        [
+          "my father",
+          true
+        ],
+        [
+          "to work"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Ua",
+        "hele",
+        "koʻu",
+        "makuakāne"
+      ],
+      "wrong": [
+        "Koʻu makuakāne ua hele i ka hana.",
+        "Ua hele koʻu makuakāne ma ka hana."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ua",
+          "Ke",
+          "He"
+        ]
+      }
+    },
+    {
+      "id": "he-haumana-oe",
+      "topic": "people",
+      "concepts": [
+        "he"
+      ],
+      "text": "He haumāna ʻoe?",
+      "means": "Are you a student?",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "haumāna",
+          "haumāna"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A student",
+          true
+        ],
+        [
+          "you",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "He",
+        "haumāna",
+        "ʻoe"
+      ],
+      "wrong": [
+        "Ka haumāna ʻoe?",
+        "ʻO haumāna ʻoe?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "He",
+          "Ka",
+          "Ua"
+        ]
+      }
+    },
+    {
+      "id": "o-hilo-kou-one-hanau",
+      "topic": "people",
+      "concepts": [
+        "o",
+        "possessive"
+      ],
+      "text": "ʻO Hilo koʻu one hānau.",
+      "means": "Hilo is my hometown.",
+      "words": [
+        [
+          "ʻO",
+          "ʻo"
+        ],
+        [
+          "Hilo"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "one",
+          "one hānau"
+        ],
+        [
+          "hānau",
+          "one hānau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hilo"
+        ],
+        [
+          "my"
+        ],
+        [
+          "birthplace"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻO Hilo kaʻu one hānau.",
+        "He Hilo koʻu one hānau."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻO",
+          "He",
+          "Ua"
+        ]
+      }
+    },
+    {
+      "id": "ke-paani-nei-na-keiki-ma-waho",
+      "topic": "people",
+      "concepts": [
+        "ke-nei",
+        "na"
+      ],
+      "text": "Ke pāʻani nei nā keiki ma waho.",
+      "means": "The children are playing outside.",
+      "words": [
+        [
+          "Ke",
+          "ke"
+        ],
+        [
+          "pāʻani",
+          "pāʻani"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "nā",
+          "nā"
+        ],
+        [
+          "keiki",
+          "keiki"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "waho",
+          "waho"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are playing",
+          true
+        ],
+        [
+          "the children",
+          true
+        ],
+        [
+          "outside"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Ke",
+        "pāʻani",
+        "nei",
+        "nā",
+        "keiki"
+      ],
+      "wrong": [
+        "Ke pāʻani nā keiki ma waho.",
+        "Ke pāʻani nei ka keiki ma waho."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nā",
+          "ka",
+          "he"
+        ]
+      }
+    },
+    {
+      "id": "e-hele-kakou",
+      "topic": "people",
+      "concepts": [
+        "we",
+        "e-command"
+      ],
+      "text": "E hele kākou!",
+      "means": "Let's go, everybody!",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "kākou",
+          "kākou"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let's"
+        ],
+        [
+          "go"
+        ],
+        [
+          "all of us"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "E hele mākou!",
+        "Ua hele kākou!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kākou",
+          "mākou",
+          "lākou"
+        ]
+      }
+    },
+    {
+      "id": "liiliii-ko-makou-hale",
+      "topic": "home",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Liʻiliʻi ko mākou hale.",
+      "means": "Our house is small.",
+      "words": [
+        [
+          "Liʻiliʻi",
+          "liʻiliʻi"
+        ],
+        [
+          "ko",
+          "ko"
+        ],
+        [
+          "mākou",
+          "mākou"
+        ],
+        [
+          "hale",
+          "hale"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small",
+          true
+        ],
+        [
+          "our",
+          true
+        ],
+        [
+          "house",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Liʻiliʻi",
+        "ko",
+        "mākou",
+        "hale"
+      ],
+      "wrong": [
+        "Liʻiliʻi ka mākou hale."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mākou",
+          "ʻoe",
+          "lākou"
+        ]
+      }
+    },
+    {
+      "id": "aia-na-ki-ma-luna-o-ka-pakaukau",
+      "topic": "home",
+      "concepts": [
+        "aia",
+        "na"
+      ],
+      "text": "Aia nā kī ma luna o ke pākaukau.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "nā",
+          "nā"
+        ],
+        [
+          "kī",
+          "kī"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "luna",
+          "luna"
+        ],
+        [
+          "o",
+          "o"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "pākaukau",
+          "pākaukau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There are"
+        ],
+        [
+          "the keys"
+        ],
+        [
+          "on top"
+        ],
+        [
+          "of"
+        ],
+        [
+          "the table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aia ka kī ma luna o ke pākaukau.",
+        "He nā kī ma luna o ke pākaukau."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nā",
+          "ka",
+          "ke"
+        ]
+      }
+    },
+    {
+      "id": "aohe-waiu-i-loko-o-ka-pahu-hau",
+      "topic": "home",
+      "concepts": [
+        "negation"
+      ],
+      "text": "ʻAʻohe waiū i loko o ka pahu hau.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "ʻAʻohe",
+          "ʻaʻohe"
+        ],
+        [
+          "waiū",
+          "waiū"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "loko",
+          "loko"
+        ],
+        [
+          "o",
+          "o"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "pahu",
+          "pahu hau"
+        ],
+        [
+          "hau",
+          "pahu hau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There's no"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "inside"
+        ],
+        [
+          "of"
+        ],
+        [
+          "the fridge"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻohe ka waiū i loko o ka pahu hau."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻAʻohe",
+          "Aia",
+          "He"
+        ]
+      }
+    },
+    {
+      "id": "ke-kuke-nei-kou-makuahine",
+      "topic": "home",
+      "concepts": [
+        "ke-nei",
+        "possessive"
+      ],
+      "text": "Ke kuke nei koʻu makuahine i ka ʻaina ahiahi.",
+      "means": "My mother is cooking dinner.",
+      "words": [
+        [
+          "Ke",
+          "ke"
+        ],
+        [
+          "kuke",
+          "kuke"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "makuahine",
+          "makuahine"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "ʻaina",
+          "ʻaina ahiahi"
+        ],
+        [
+          "ahiahi",
+          "ʻaina ahiahi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is cooking",
+          true
+        ],
+        [
+          "my mother",
+          true
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Ke",
+        "kuke",
+        "nei",
+        "koʻu",
+        "makuahine"
+      ],
+      "wrong": [
+        "Ke kuke koʻu makuahine i ka ʻaina ahiahi.",
+        "Ke kuke nei kaʻu makuahine i ka ʻaina ahiahi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nei",
+          "ana",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "noho-makou-ma-honolulu",
+      "topic": "home",
+      "concepts": [
+        "prepositions",
+        "verb-first"
+      ],
+      "text": "Noho mākou ma Honolulu.",
+      "means": "We live in Honolulu.",
+      "words": [
+        [
+          "Noho",
+          "noho"
+        ],
+        [
+          "mākou",
+          "mākou"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "Honolulu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Live",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "in Honolulu"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Noho",
+        "mākou"
+      ],
+      "wrong": [
+        "Noho mākou me Honolulu.",
+        "Mākou noho ma Honolulu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ma",
+          "me",
+          "no"
+        ]
+      }
+    },
+    {
+      "id": "aia-au-ma-ka-hale",
+      "topic": "home",
+      "concepts": [
+        "aia"
+      ],
+      "text": "Aia au ma ka hale.",
+      "means": "I'm at home.",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "hale",
+          "hale"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Aia",
+        "au"
+      ],
+      "wrong": [
+        "He au ma ka hale.",
+        "Aia au mai ka hale."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Aia",
+          "He",
+          "Ua"
+        ]
+      }
+    },
+    {
+      "id": "aia-na-puke-ma-ka-lumi-moe",
+      "topic": "home",
+      "concepts": [
+        "aia",
+        "na"
+      ],
+      "text": "Aia nā puke ma ka lumi moe.",
+      "means": "The books are in the bedroom.",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "nā",
+          "nā"
+        ],
+        [
+          "puke",
+          "puke"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "lumi",
+          "lumi moe"
+        ],
+        [
+          "moe",
+          "lumi moe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There are"
+        ],
+        [
+          "the books"
+        ],
+        [
+          "in the bedroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He nā puke ma ka lumi moe."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "nā",
+          "ka",
+          "ke"
+        ]
+      }
+    },
+    {
+      "id": "ke-heluhelu-nei-au-i-ka-puke",
+      "topic": "home",
+      "concepts": [
+        "ke-nei",
+        "article"
+      ],
+      "text": "Ke heluhelu nei au i ka puke.",
+      "means": "I'm reading the book.",
+      "words": [
+        [
+          "Ke",
+          "ke"
+        ],
+        [
+          "heluhelu",
+          "heluhelu"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "puke",
+          "puke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am reading",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "the book"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Ke",
+        "heluhelu",
+        "nei",
+        "au"
+      ],
+      "wrong": [
+        "Ke heluhelu nei au i ke puke.",
+        "Ke heluhelu au i ka puke."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nei",
+          "ana",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "ua-hiamoe-na-keiki",
+      "topic": "home",
+      "concepts": [
+        "ua",
+        "na"
+      ],
+      "text": "Ua hiamoe nā keiki.",
+      "means": "The children are asleep.",
+      "words": [
+        [
+          "Ua",
+          "ua"
+        ],
+        [
+          "hiamoe",
+          "hiamoe"
+        ],
+        [
+          "nā",
+          "nā"
+        ],
+        [
+          "keiki",
+          "keiki"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fell asleep",
+          true
+        ],
+        [
+          "the children",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Ua",
+        "hiamoe",
+        "nā",
+        "keiki"
+      ],
+      "wrong": [
+        "Ua hiamoe ka keiki.",
+        "Ke hiamoe nā keiki."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nā",
+          "ka",
+          "he"
+        ]
+      }
+    },
+    {
+      "id": "ua-luhi-loa-au-i-nehinei",
+      "topic": "home",
+      "concepts": [
+        "ua"
+      ],
+      "text": "Ua luhi loa au i nehinei.",
+      "means": "I got really tired yesterday.",
+      "words": [
+        [
+          "Ua",
+          "ua"
+        ],
+        [
+          "luhi",
+          "luhi"
+        ],
+        [
+          "loa",
+          "loa"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "nehinei",
+          "nehinei"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Got",
+          true
+        ],
+        [
+          "very tired",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "moved": [
+        "Ua",
+        "luhi",
+        "loa",
+        "au"
+      ],
+      "wrong": [
+        "Ke luhi loa au i nehinei.",
+        "Ua luhi loa au i ʻapōpō."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ua",
+          "E",
+          "Ke"
+        ]
+      }
+    },
+    {
+      "id": "aole-au-i-ai",
+      "topic": "food",
+      "concepts": [
+        "negation"
+      ],
+      "text": "ʻAʻole au i ʻai.",
+      "means": "I didn't eat.",
+      "words": [
+        [
+          "ʻAʻole",
+          "ʻaʻole"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ʻai",
+          "ʻai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "ate"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ʻAʻole",
+        "au"
+      ],
+      "wrong": [
+        "ʻAʻole ua ʻai au."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "i",
+          "ua",
+          "ke"
+        ]
+      }
+    },
+    {
+      "id": "inu-au-i-ke-kope",
+      "topic": "food",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Inu au i ke kope i kēlā me kēia kakahiaka.",
+      "means": "I drink coffee every morning.",
+      "words": [
+        [
+          "Inu",
+          "inu"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kope",
+          "kope"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "kēlā",
+          "kēlā me kēia"
+        ],
+        [
+          "me",
+          "kēlā me kēia"
+        ],
+        [
+          "kēia",
+          "kēlā me kēia"
+        ],
+        [
+          "kakahiaka",
+          "kakahiaka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "the coffee"
+        ],
+        [
+          "every morning"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Inu",
+        "au"
+      ],
+      "wrong": [
+        "Inu au i ka kope i kēlā me kēia kakahiaka.",
+        "Au inu i ke kope i kēlā me kēia kakahiaka."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ke",
+          "ka",
+          "nā"
+        ]
+      }
+    },
+    {
+      "id": "makemake-au-i-ke-kope-me-ka-waiu",
+      "topic": "food",
+      "concepts": [
+        "makemake",
+        "prepositions"
+      ],
+      "text": "Makemake au i ke kope me ka waiū.",
+      "means": "I'd like coffee with milk.",
+      "words": [
+        [
+          "Makemake",
+          "makemake"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kope",
+          "kope"
+        ],
+        [
+          "me",
+          "me"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "waiū",
+          "waiū"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "the coffee"
+        ],
+        [
+          "with milk"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Makemake",
+        "au"
+      ],
+      "wrong": [
+        "Makemake au i ke kope mai ka waiū.",
+        "Makemake au e ke kope me ka waiū."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "me",
+          "mai",
+          "ma"
+        ]
+      }
+    },
+    {
+      "id": "makemake-au-e-ai",
+      "topic": "food",
+      "concepts": [
+        "makemake"
+      ],
+      "text": "Makemake au e ʻai.",
+      "means": "I want to eat.",
+      "words": [
+        [
+          "Makemake",
+          "makemake"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "ʻai",
+          "ʻai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to eat"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Makemake",
+        "au"
+      ],
+      "wrong": [
+        "Makemake au i ʻai."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "e",
+          "i",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "ua-ai-makou-ma-ka-hale-aina",
+      "topic": "food",
+      "concepts": [
+        "ua"
+      ],
+      "text": "Ua ʻai mākou ma ka hale ʻaina i nehinei.",
+      "means": "We ate at the restaurant yesterday.",
+      "words": [
+        [
+          "Ua",
+          "ua"
+        ],
+        [
+          "ʻai",
+          "ʻai"
+        ],
+        [
+          "mākou",
+          "mākou"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "hale",
+          "hale ʻaina"
+        ],
+        [
+          "ʻaina",
+          "hale ʻaina"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "nehinei",
+          "nehinei"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Ate",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "at the restaurant"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Ua",
+        "ʻai",
+        "mākou"
+      ],
+      "wrong": [
+        "E ʻai mākou ma ka hale ʻaina i nehinei."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ua",
+          "E",
+          "Ke"
+        ]
+      }
+    },
+    {
+      "id": "aohe-palaoa-ma-ka-hale-kuai",
+      "topic": "food",
+      "concepts": [
+        "negation"
+      ],
+      "text": "ʻAʻohe palaoa ma ka hale kūʻai.",
+      "means": "There's no bread at the store.",
+      "words": [
+        [
+          "ʻAʻohe",
+          "ʻaʻohe"
+        ],
+        [
+          "palaoa",
+          "palaoa"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "hale",
+          "hale kūʻai"
+        ],
+        [
+          "kūʻai",
+          "hale kūʻai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There's no"
+        ],
+        [
+          "bread"
+        ],
+        [
+          "at the store"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻohe ka palaoa ma ka hale kūʻai."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻAʻohe",
+          "Aia",
+          "Ua"
+        ]
+      }
+    },
+    {
+      "id": "he-kope-kau",
+      "topic": "food",
+      "concepts": [
+        "have",
+        "possessive"
+      ],
+      "text": "He kope kāu?",
+      "means": "Do you have coffee?",
+      "words": [
+        [
+          "He",
+          "he"
+        ],
+        [
+          "kope",
+          "kope"
+        ],
+        [
+          "kāu",
+          "kāu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "yours"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "He kope kou?",
+        "Ua he kope kāu?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kāu",
+          "kou",
+          "kaʻu"
+        ]
+      }
+    },
+    {
+      "id": "ehia-kala-o-keia",
+      "topic": "food",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-this"
+      ],
+      "text": "ʻEhia kālā no kēia?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "ʻEhia"
+        ],
+        [
+          "kālā"
+        ],
+        [
+          "no"
+        ],
+        [
+          "kēia"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How many"
+        ],
+        [
+          "dollars"
+        ],
+        [
+          "for"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hea kālā no kēia?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻEhia",
+          "Pehea",
+          "Wai"
+        ]
+      }
+    },
+    {
+      "id": "e-ai-kakou",
+      "topic": "food",
+      "concepts": [
+        "we",
+        "e-command"
+      ],
+      "text": "E ʻai kākou!",
+      "means": "Let's all eat!",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "ʻai",
+          "ʻai"
+        ],
+        [
+          "kākou",
+          "kākou"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let's"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "all of us"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "E ʻai lākou!",
+        "Ua ʻai kākou!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kākou",
+          "mākou",
+          "lākou"
+        ]
+      }
+    },
+    {
+      "id": "aia-i-hea-ka-hale-lua",
+      "topic": "out",
+      "concepts": [
+        "aia"
+      ],
+      "text": "Aia i hea ka hale lua?",
+      "means": "Where's the bathroom?",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "hea",
+          "hea"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "hale",
+          "hale lua"
+        ],
+        [
+          "lua",
+          "hale lua"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "where",
+          true
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Aia",
+        "i",
+        "hea"
+      ],
+      "wrong": [
+        "He hea ka hale lua?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Aia",
+          "He",
+          "Ua"
+        ]
+      }
+    },
+    {
+      "id": "aia-ka-hale-kuai-ma-o",
+      "topic": "out",
+      "concepts": [
+        "aia"
+      ],
+      "text": "Aia ka hale kūʻai ma ʻō.",
+      "means": "The store is over there.",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "hale",
+          "hale kūʻai"
+        ],
+        [
+          "kūʻai",
+          "hale kūʻai"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ʻō",
+          "ʻō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "the store",
+          true
+        ],
+        [
+          "over there"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Aia",
+        "ka",
+        "hale",
+        "kūʻai"
+      ],
+      "wrong": [
+        "He ka hale kūʻai ma ʻō."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ʻō",
+          "hea",
+          "wai"
+        ]
+      }
+    },
+    {
+      "id": "ua-kuai-au-i-na-kamaa-hou",
+      "topic": "out",
+      "concepts": [
+        "ua",
+        "na"
+      ],
+      "text": "Ua kūʻai au i nā kāmaʻa hou.",
+      "means": "I bought the new shoes.",
+      "words": [
+        [
+          "Ua",
+          "ua"
+        ],
+        [
+          "kūʻai",
+          "kūʻai"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "nā",
+          "nā"
+        ],
+        [
+          "kāmaʻa",
+          "kāmaʻa"
+        ],
+        [
+          "hou",
+          "hou"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bought",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "the new shoes"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Ua",
+        "kūʻai",
+        "au"
+      ],
+      "wrong": [
+        "Ua kūʻai au i ka kāmaʻa hou.",
+        "Ke kūʻai au i nā kāmaʻa hou."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "nā",
+          "ka",
+          "he"
+        ]
+      }
+    },
+    {
+      "id": "e-hele-ana-au-i-ke-kula",
+      "topic": "out",
+      "concepts": [
+        "e-ana",
+        "article"
+      ],
+      "text": "E hele ana au i ke kula.",
+      "means": "I'll go to school.",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "ana",
+          "ana"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kula",
+          "kula"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will go",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to school"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "E",
+        "hele",
+        "ana",
+        "au"
+      ],
+      "wrong": [
+        "E hele au ana i ke kula.",
+        "E hele ana au i ka kula."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ana",
+          "nei",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "hele-au-i-ka-hana-ma-ke-kaa-ohua",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "article"
+      ],
+      "text": "Hele au i ka hana ma ke kaʻa ʻōhua.",
+      "means": "I go to work by bus.",
+      "words": [
+        [
+          "Hele",
+          "hele"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "hana",
+          "hana"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kaʻa",
+          "kaʻa ʻōhua"
+        ],
+        [
+          "ʻōhua",
+          "kaʻa ʻōhua"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Hele",
+        "au"
+      ],
+      "wrong": [
+        "Hele au i ka hana ma ka kaʻa ʻōhua.",
+        "Au hele i ka hana ma ke kaʻa ʻōhua."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "ke",
+          "ka",
+          "nā"
+        ]
+      }
+    },
+    {
+      "id": "aia-he-panako-ma-kahi-kokoke",
+      "topic": "out",
+      "concepts": [
+        "aia"
+      ],
+      "text": "Aia he panakō ma kahi kokoke?",
+      "means": "Is there a bank nearby?",
+      "words": [
+        [
+          "Aia",
+          "aia"
+        ],
+        [
+          "he",
+          "he"
+        ],
+        [
+          "panakō",
+          "panakō"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "kahi",
+          "kahi"
+        ],
+        [
+          "kokoke",
+          "kokoke"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is there"
+        ],
+        [
+          "a bank"
+        ],
+        [
+          "nearby"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ua he panakō ma kahi kokoke?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Aia",
+          "Ua",
+          "Ke"
+        ]
+      }
+    },
+    {
+      "id": "e-hele-ana-oe-i-hea",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "E hele ana ʻoe i hea?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "ana",
+          "ana"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "hea",
+          "hea"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Going",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "to where",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "E",
+        "hele",
+        "ana",
+        "i",
+        "hea"
+      ],
+      "wrong": [
+        "E hele ana ʻoe i wai?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "hea",
+          "wai",
+          "aha"
+        ]
+      }
+    },
+    {
+      "id": "mamao-ke-kahua-mokulele",
+      "topic": "out",
+      "concepts": [
+        "article"
+      ],
+      "text": "Mamao ke kahua mokulele.",
+      "means": "The airport is far.",
+      "words": [
+        [
+          "Mamao",
+          "mamao"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kahua",
+          "kahua mokulele"
+        ],
+        [
+          "mokulele",
+          "kahua mokulele"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Far",
+          true
+        ],
+        [
+          "the airport",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mamao",
+        "ke",
+        "kahua",
+        "mokulele"
+      ],
+      "wrong": [
+        "Mamao ka kahua mokulele."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ke",
+          "ka",
+          "he"
+        ]
+      }
+    },
+    {
+      "id": "e-kala-mai-aole-au-i-ike",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "text": "E kala mai, ʻaʻole au i ʻike.",
+      "means": "Sorry, I don't know.",
+      "words": [
+        [
+          "E",
+          "e kala mai"
+        ],
+        [
+          "kala",
+          "e kala mai"
+        ],
+        [
+          "mai,",
+          "e kala mai"
+        ],
+        [
+          "ʻaʻole",
+          "ʻaʻole"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ʻike",
+          "ʻike"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sorry"
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "know"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ʻaʻole",
+        "au"
+      ],
+      "wrong": [
+        "E kala mai, ʻaʻole au ua ʻike."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ʻaʻole",
+          "ʻaʻohe",
+          "aia"
+        ]
+      }
+    },
+    {
+      "id": "apopo-e-hele-ana-au-i-maui",
+      "topic": "out",
+      "concepts": [
+        "e-ana",
+        "prepositions"
+      ],
+      "text": "ʻApōpō e hele ana au i Maui.",
+      "means": "Tomorrow I'll go to Maui.",
+      "words": [
+        [
+          "ʻApōpō",
+          "ʻapōpō"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "ana",
+          "ana"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "Maui"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will go",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to Maui"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "e",
+        "hele",
+        "ana",
+        "au"
+      ],
+      "wrong": [
+        "ʻApōpō ua hele au i Maui.",
+        "ʻApōpō e hele ana au mai Maui."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "i",
+          "mai",
+          "me"
+        ]
+      }
+    },
+    {
+      "id": "ehia-kala-no-ka-likiki",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "ʻEhia kālā no ka likiki?",
+      "means": "How much is the ticket?",
+      "words": [
+        [
+          "ʻEhia",
+          "ʻehia"
+        ],
+        [
+          "kālā",
+          "kālā"
+        ],
+        [
+          "no",
+          "no"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "likiki",
+          "likiki"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How many"
+        ],
+        [
+          "dollars"
+        ],
+        [
+          "for"
+        ],
+        [
+          "the ticket"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pehea kālā no ka likiki?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻEhia",
+          "Pehea",
+          "Aia"
+        ]
+      }
+    },
+    {
+      "id": "makemake-au-i-keia-kiioniani",
+      "topic": "plans",
+      "concepts": [
+        "makemake"
+      ],
+      "text": "Makemake au i kēia kiʻiʻoniʻoni.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Makemake",
+          "makemake"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "kēia",
+          "kēia"
+        ],
+        [
+          "kiʻiʻoniʻoni",
+          "kiʻiʻoniʻoni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Like",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "this movie"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Makemake",
+        "au"
+      ],
+      "wrong": [
+        "Makemake au e kēia kiʻiʻoniʻoni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "i",
+          "e",
+          "ma"
+        ]
+      }
+    },
+    {
+      "id": "e-kelepona-ana-au-ia-oe-apopo",
+      "topic": "plans",
+      "concepts": [
+        "e-ana"
+      ],
+      "text": "E kelepona ana au iā ʻoe ʻapōpō.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "kelepona",
+          "kelepona"
+        ],
+        [
+          "ana",
+          "ana"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "iā",
+          "iā"
+        ],
+        [
+          "ʻoe",
+          "ʻoe"
+        ],
+        [
+          "ʻapōpō",
+          "ʻapōpō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will call",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "E",
+        "kelepona",
+        "ana",
+        "au"
+      ],
+      "wrong": [
+        "Ua kelepona ana au iā ʻoe ʻapōpō."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ana",
+          "nei",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "ma-ka-poaono-e-hele-ana-kakou",
+      "topic": "plans",
+      "concepts": [
+        "article"
+      ],
+      "text": "Ma ka Pōʻaono e hele ana kākou i ke kahakai.",
+      "means": "On Saturday we're all going to the beach.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "Pōʻaono",
+          "pōʻaono"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "ana",
+          "ana"
+        ],
+        [
+          "kākou",
+          "kākou"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kahakai",
+          "kahakai"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "will go",
+          true
+        ],
+        [
+          "all of us",
+          true
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "e",
+        "hele",
+        "ana",
+        "kākou"
+      ],
+      "wrong": [
+        "Ma ka Pōʻaono e hele ana kākou i ka kahakai."
+      ],
+      "gap": {
+        "index": 8,
+        "options": [
+          "ke",
+          "ka",
+          "nā"
+        ]
+      }
+    },
+    {
+      "id": "ua-noho-makou-ma-kauai",
+      "topic": "plans",
+      "concepts": [
+        "ua",
+        "prepositions"
+      ],
+      "text": "Ua noho mākou ma Kauaʻi i ke kauwela i hala.",
+      "means": "We stayed on Kauaʻi last summer.",
+      "words": [
+        [
+          "Ua",
+          "ua"
+        ],
+        [
+          "noho",
+          "noho"
+        ],
+        [
+          "mākou",
+          "mākou"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "Kauaʻi"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kauwela",
+          "kauwela"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "hala",
+          "hala"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Stayed",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "on Kauaʻi"
+        ],
+        [
+          "last summer"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Ua",
+        "noho",
+        "mākou"
+      ],
+      "wrong": [
+        "E noho mākou ma Kauaʻi i ke kauwela i hala.",
+        "Ua noho mākou mai Kauaʻi i ke kauwela i hala."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ma",
+          "mai",
+          "me"
+        ]
+      }
+    },
+    {
+      "id": "ke-pa-nei-ka-makani",
+      "topic": "plans",
+      "concepts": [
+        "ke-nei"
+      ],
+      "text": "Ke pā nei ka makani.",
+      "means": "The wind is blowing.",
+      "words": [
+        [
+          "Ke",
+          "ke"
+        ],
+        [
+          "pā",
+          "pā"
+        ],
+        [
+          "nei",
+          "nei"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "makani",
+          "makani"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is blowing",
+          true
+        ],
+        [
+          "the wind",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Ke",
+        "pā",
+        "nei",
+        "ka",
+        "makani"
+      ],
+      "wrong": [
+        "Ke pā ka makani.",
+        "Ua pā nei ka makani."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nei",
+          "ana",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "aohe-au-manawa-apopo",
+      "topic": "plans",
+      "concepts": [
+        "have",
+        "negation"
+      ],
+      "text": "ʻAʻohe aʻu manawa ʻapōpō.",
+      "means": "I don't have time tomorrow.",
+      "words": [
+        [
+          "ʻAʻohe",
+          "ʻaʻohe"
+        ],
+        [
+          "aʻu",
+          "kaʻu"
+        ],
+        [
+          "manawa",
+          "manawa"
+        ],
+        [
+          "ʻapōpō",
+          "ʻapōpō"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There's no"
+        ],
+        [
+          "my"
+        ],
+        [
+          "time"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "ʻAʻohe kaʻu manawa ʻapōpō."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "ʻAʻohe",
+          "Aia",
+          "He"
+        ]
+      }
+    },
+    {
+      "id": "makemake-au-e-ao-i-ka-olelo-hawaii",
+      "topic": "plans",
+      "concepts": [
+        "makemake"
+      ],
+      "text": "Makemake au e aʻo i ka ʻōlelo Hawaiʻi.",
+      "means": "I want to learn Hawaiian.",
+      "words": [
+        [
+          "Makemake",
+          "makemake"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "aʻo",
+          "aʻo"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ka",
+          "ka"
+        ],
+        [
+          "ʻōlelo",
+          "ʻōlelo"
+        ],
+        [
+          "Hawaiʻi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to learn"
+        ],
+        [
+          "Hawaiian"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Makemake",
+        "au"
+      ],
+      "wrong": [
+        "Makemake au i aʻo i ka ʻōlelo Hawaiʻi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "e",
+          "i",
+          "ua"
+        ]
+      }
+    },
+    {
+      "id": "e-hele-kaua-i-ke-kiioniani",
+      "topic": "plans",
+      "concepts": [
+        "we",
+        "article",
+        "e-command"
+      ],
+      "text": "E hele kāua i ke kiʻiʻoniʻoni.",
+      "means": "Let's go to the movies, you and me.",
+      "words": [
+        [
+          "E",
+          "e"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "kāua",
+          "kāua"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ke",
+          "ka"
+        ],
+        [
+          "kiʻiʻoniʻoni",
+          "kiʻiʻoniʻoni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Let's"
+        ],
+        [
+          "go"
+        ],
+        [
+          "you and I"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "E hele māua i ke kiʻiʻoniʻoni.",
+        "E hele kāua i ka kiʻiʻoniʻoni.",
+        "Ua hele kāua i ke kiʻiʻoniʻoni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kāua",
+          "māua",
+          "kākou"
+        ]
+      }
+    },
+    {
+      "id": "makemake-au-e-hoomaha",
+      "topic": "plans",
+      "concepts": [
+        "makemake"
+      ],
+      "text": "Makemake au e hoʻomaha.",
+      "means": "I want to rest.",
+      "words": [
+        [
+          "Makemake",
+          "makemake"
+        ],
+        [
+          "au",
+          "au"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "hoʻomaha",
+          "hoʻomaha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to rest"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Makemake",
+        "au"
+      ],
+      "wrong": [
+        "Makemake au i hoʻomaha."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Makemake",
+          "Aia",
+          "He"
+        ]
+      }
+    },
+    {
+      "id": "ua-hele-mai-kou-hoaaloha",
+      "topic": "plans",
+      "concepts": [
+        "ua"
+      ],
+      "text": "Ua hele mai koʻu hoaaloha i nehinei.",
+      "means": "My friend came yesterday.",
+      "words": [
+        [
+          "Ua",
+          "ua"
+        ],
+        [
+          "hele",
+          "hele"
+        ],
+        [
+          "mai",
+          "mai"
+        ],
+        [
+          "koʻu",
+          "koʻu"
+        ],
+        [
+          "hoaaloha",
+          "hoaloha"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "nehinei",
+          "nehinei"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Came",
+          true
+        ],
+        [
+          "my friend",
+          true
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Ua",
+        "hele",
+        "mai",
+        "koʻu",
+        "hoaaloha"
+      ],
+      "wrong": [
+        "E hele mai koʻu hoaaloha i nehinei."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ua",
+          "E",
+          "Ke"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kī",
+          "forms": [
+            "kī"
+          ],
+          "picture": "tea",
+          "means": "tea; key"
+        },
+        {
+          "lemma": "wai",
+          "forms": [
+            "wai"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "au",
+          "forms": [
+            "au"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "inu",
+          "forms": [
+            "inu"
+          ],
+          "picture": "drink",
+          "means": "to drink"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i"
+          ],
+          "means": "object marker"
+        },
+        {
+          "lemma": "ka",
+          "forms": [
+            "ka",
+            "ke"
+          ],
+          "means": "ka = the; ke = the"
+        }
+      ],
+      "phrases": [
+        "and"
+      ],
+      "concept": {
+        "pattern": "verb-first",
+        "line": "A sentence usually starts with its action or description, then who or what it's about: Hele au i ke kula (go I to the school: I go to school), Liʻiliʻi ka hale (small the house: the house is small)."
+      },
+      "items": [
+        "inu-au",
+        "inu-au-i-ka-wai",
+        "inu-au-i-ke-ki",
+        "inu-au-i-ke-ki-a-me-ka-wai",
+        "inu-au-i-ka-wai-a-me-ke-ki"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kope",
+          "forms": [
+            "kope"
+          ],
+          "means": "coffee"
+        },
+        {
+          "lemma": "he",
+          "forms": [
+            "he"
+          ],
+          "means": "a, an"
+        },
+        {
+          "lemma": "waiū",
+          "forms": [
+            "waiū"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "inu-au-i-ke-kope-2",
+        "inu-au-i-ka-waiu",
+        "he-kope-mahalo",
+        "aloha-he-kope-ke-olu-olu",
+        "he-ki-a-me-ka-wai-ke-olu-olu"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "maikaʻi",
+          "forms": [
+            "maikaʻi"
+          ],
+          "picture": "good",
+          "means": "good, fine"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "pehea is how, he aha what, i hea or ma hea where, and ʻehia how many or how much: Pehea ʻoe?"
+      },
+      "items": [
+        "pehea-oe",
+        "maika-i-au-mahalo",
+        "ae-ke-olu-olu",
+        "a-ole-mahalo",
+        "ae-mahalo-a-hui-hou",
+        "a-ole-mahalo-a-hui-hou"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ʻoe",
+          "forms": [
+            "ʻoe"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ʻaʻole",
+          "forms": [
+            "ʻaʻole"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "kumu",
+          "forms": [
+            "kumu"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "haumāna",
+          "forms": [
+            "haumāna"
+          ],
+          "means": "student"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "o-wai-kou-inoa",
+        "he-kumu-au",
+        "he-haumana-oe",
+        "aloha-hau-oli-keia-hui-ana-me-oe",
+        "he-kumu-oe",
+        "a-ole-au-he-kumu"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "makuahine",
+          "forms": [
+            "makuahine"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "makuakāne",
+          "forms": [
+            "makuakāne"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "kaikunāne",
+          "forms": [
+            "kaikunāne"
+          ],
+          "picture": "brother",
+          "means": "a woman's brother"
+        },
+        {
+          "lemma": "kaikuaʻana",
+          "forms": [
+            "kaikuaʻana"
+          ],
+          "picture": "sister",
+          "means": "older sibling of the same sex: a woman's older sister or a man's older brother"
+        },
+        {
+          "lemma": "koʻu",
+          "forms": [
+            "koʻu"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "kēia",
+          "forms": [
+            "kēia"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "ʻo",
+          "forms": [
+            "ʻo"
+          ],
+          "means": "identity marker"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "My is koʻu mainly for bonds you don't control and for what holds, clothes or carries you (koʻu makuahine: my mother, koʻu hoaloha: my friend, koʻu hale: my house), and kaʻu for what you control, get or make and bonds you cause (kaʻu kope: my coffee, kaʻu keiki: my child); your is kou or kāu."
+      },
+      "items": [
+        "he-kumu-kou-makuahine",
+        "he-kumu-ko-u-makuakane",
+        "o-ko-u-makuahine-keia",
+        "o-ko-u-makuakane-keia",
+        "he-haumana-ko-u-kaikunane",
+        "o-ko-u-kaikua-ana-keia"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "kaʻu",
+          "forms": [
+            "kaʻu"
+          ],
+          "means": "my, mine"
+        },
+        {
+          "lemma": "kāu",
+          "forms": [
+            "kāu"
+          ],
+          "means": "your, yours"
+        },
+        {
+          "lemma": "hoaloha",
+          "forms": [
+            "hoaloha"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "kauka",
+          "forms": [
+            "kauka"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "kelepona",
+          "forms": [
+            "kelepona"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "puke",
+          "forms": [
+            "puke"
+          ],
+          "picture": "book",
+          "means": "book"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "he-kelepona-ka-u",
+        "he-ki-kau",
+        "he-kaikunane-a-me-ke-kaikua-ana-ko-u",
+        "a-ole-he-puke-ka-u",
+        "he-kauka-ko-u-kaikua-ana",
+        "he-hoaloha-maika-i-oe"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "hea",
+          "forms": [
+            "hea"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "ʻaneʻi",
+          "forms": [
+            "ʻaneʻi"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "ʻō",
+          "forms": [
+            "ʻō"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "hale lua",
+          "forms": [
+            "hale",
+            "lua"
+          ],
+          "means": "hale = house; lua = toilet"
+        },
+        {
+          "lemma": "aia",
+          "forms": [
+            "aia"
+          ],
+          "means": "to be located"
+        },
+        {
+          "lemma": "ma",
+          "forms": [
+            "ma"
+          ],
+          "means": "at, in"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "article",
+        "line": "The is ke before most words starting with k, e, a or o (ke kula, ke kai) and a few others (ke pākaukau: the table), and ka before most of the rest: ka hale (the house)."
+      },
+      "items": [
+        "aia-ka-u-kelepona-ma-ane-i",
+        "aia-ke-ki-ma-o",
+        "aia-i-hea-ka-hale-lua",
+        "e-kala-mai-aia-i-hea-ka-u-ki",
+        "aia-i-hea-ko-u-makuahine",
+        "aia-ko-u-kaikua-ana-ma-ane-i"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "hoʻokahi",
+          "forms": [
+            "hoʻokahi"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "ʻelua",
+          "forms": [
+            "ʻelua"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "ʻekolu",
+          "forms": [
+            "ʻekolu"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "kālā",
+          "forms": [
+            "kālā"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "ʻaʻohe",
+          "forms": [
+            "ʻaʻohe"
+          ],
+          "means": "there is no"
+        },
+        {
+          "lemma": "kaʻu",
+          "forms": [
+            "aʻu"
+          ],
+          "means": "aʻu = my"
+        }
+      ],
+      "phrases": [
+        "how-much-is-this",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "ho-okahi-puke-ke-olu-olu",
+        "elua-kope-ke-olu-olu",
+        "ekolu-a-u-puke",
+        "a-ohe-a-u-kala",
+        "ehia-kala-o-keia",
+        "aloha-ka-pila-ke-olu-olu"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "ʻōlelo",
+          "forms": [
+            "ʻōlelo"
+          ],
+          "means": "to speak; language"
+        },
+        {
+          "lemma": "hawaiʻi",
+          "forms": [
+            "Hawaiʻi"
+          ],
+          "means": "Hawaiʻi; Hawaiian (as a modifier, as in ʻōlelo Hawaiʻi, 'Hawaiian language')"
+        },
+        {
+          "lemma": "maopopo",
+          "forms": [
+            "maopopo"
+          ],
+          "means": "to be understood"
+        },
+        {
+          "lemma": "iki",
+          "forms": [
+            "iki"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "makemake",
+          "forms": [
+            "makemake"
+          ],
+          "means": "to want"
+        },
+        {
+          "lemma": "iaʻu",
+          "forms": [
+            "iaʻu"
+          ],
+          "means": "to me"
+        },
+        {
+          "lemma": "iā",
+          "forms": [
+            "iā"
+          ],
+          "means": "to"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "prepositions",
+        "line": "i says to or at (i ke kula: to the school) and comes before what many verbs act on (Inu au i ke kope: drink I the coffee), ma at or in (ma ka hale: at the house), mai from (mai Kaleponi mai: from California) and me with (me ka waiū: with milk)."
+      },
+      "items": [
+        "makemake-au-i-ke-kope",
+        "makemake-au-i-ka-wai-ke-olu-olu",
+        "olelo-oe-i-ka-olelo-hawai-i",
+        "olelo-iki-au-i-ka-olelo-hawai-i",
+        "a-ole-maopopo-ia-u",
+        "maopopo-ia-oe"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "hale",
+          "forms": [
+            "hale"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "lumi",
+          "forms": [
+            "lumi"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "nui",
+          "forms": [
+            "nui"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "liʻiliʻi",
+          "forms": [
+            "liʻiliʻi"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "noho",
+          "forms": [
+            "noho"
+          ],
+          "means": "to live"
+        },
+        {
+          "lemma": "kekahi",
+          "forms": [
+            "kekahi"
+          ],
+          "means": "a, some"
+        },
+        {
+          "lemma": "pelekānia",
+          "forms": [
+            "Pelekānia"
+          ],
+          "means": "English"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "li-ili-i-ko-u-lumi",
+        "nui-keia-hale",
+        "noho-au-ma-kekahi-hale-li-ili-i",
+        "noho-oe-ma-hea",
+        "noho-ko-u-makuahine-ma-ane-i",
+        "olelo-oe-i-ka-olelo-pelekania",
+        "aia-au-ma-ka-hale"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "hele",
+          "forms": [
+            "hele"
+          ],
+          "means": "to go"
+        },
+        {
+          "lemma": "kula",
+          "forms": [
+            "kula"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "kūlanakauhale",
+          "forms": [
+            "kūlanakauhale"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "kahua kaʻaahi",
+          "forms": [
+            "kahua",
+            "kaʻaahi"
+          ],
+          "means": "kahua = station; kaʻaahi = train"
+        },
+        {
+          "lemma": "kaʻa",
+          "forms": [
+            "kaʻa"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "e",
+          "forms": [
+            "e"
+          ],
+          "means": "will; to"
+        },
+        {
+          "lemma": "ana",
+          "forms": [
+            "ana"
+          ],
+          "means": "particle used in e … ana to mark future or ongoing action"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "he",
+        "line": "he says a, and starts a sentence that says what something is: He kumu ʻo ia (a teacher she: she's a teacher), He hale nui (a big house)."
+      },
+      "items": [
+        "hele-au-i-ke-kula",
+        "e-hele-ana-au-i-ke-kula",
+        "e-hele-ana-oe-i-hea",
+        "e-kala-mai-aia-i-hea-ke-kahua",
+        "hele-ko-u-makuahine-i-ke",
+        "li-ili-i-keia-ka-a",
+        "he-ka-a-ko-u"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "ʻapōpō",
+          "forms": [
+            "ʻapōpō"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "hana",
+          "forms": [
+            "hana"
+          ],
+          "picture": "work",
+          "means": "to work"
+        },
+        {
+          "lemma": "pono",
+          "forms": [
+            "pono"
+          ],
+          "means": "must, have to"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow",
+        "today",
+        "now",
+        "i-can-go"
+      ],
+      "concept": null,
+      "items": [
+        "hana-au-i-keia-la",
+        "pono-au-e-hele-i-keia-manawa",
+        "apopo-hele-au-i-ke-kulanakauhale",
+        "a-ole-hiki-ia-u-ke-hele-i-keia-la",
+        "pono-au-e-hana-apopo",
+        "mahalo-a-hui-hou-apopo"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

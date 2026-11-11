@@ -1,0 +1,33 @@
+// Portuguese, as spoken in Brazil (pt-BR), the variety most learners study (lang/index.js has what each field means).
+
+export default {
+  name: "Portuguese",
+  locale: "pt-BR",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["sr.", "sra.", "srta.", "dr.", "dra.", "prof.", "profa.", "av.", "pág.", "núm.", "tel.", "etc.", "ex.", "obs.", "aprox."],
+  stray: ["não", "o", "se", "que", "de", "me"],
+  patterns: {
+    present: { name: "Present-tense endings", about: "The verb's ending changes with who does it, so Portuguese often leaves eu out: (eu) falo (I speak), você fala (you speak), a gente fala (we speak).", after: [] },
+    gender: { name: "Gender and agreement", about: "Every noun is masculine or feminine, and o or a, um or uma and the adjectives with it match it: o carro novo, a casa nova, as casas novas.", after: [] },
+    possessive: { name: "meu, minha: my", about: "meu or minha, seu or sua match the thing owned, not the owner, and Brazilians often put o or a before them: minha irmã (my sister), o meu celular (the my phone).", after: ["gender"] },
+    "adjective-after": { name: "Adjectives after the noun", about: "Most describing words come after the noun: uma casa amarela (a house yellow).", after: ["gender"] },
+    negation: { name: "não before the verb", about: "não comes before the verb and any little pronoun in front of it: Eu não sei (I not know), Eu não me lembro (I not myself remember).", after: [] },
+    question: { name: "Questions", about: "A question usually keeps the order of a statement: Você fala inglês? (you speak English?); with a noun subject, some question words put the verb first: Onde fica a estação? (where is-located the station?).", after: [] },
+    "ser-estar": { name: "ser and estar", about: "Portuguese has two verbs for to be: ser for who or what someone or something is, estar for where a person or thing is and how they are: Ela é minha irmã (she is my sister), Ela está cansada (she is tired).", after: [] },
+    voce: { name: "você: you", about: "Brazilians say você for you, with the verb's ele form: Você fala inglês (you speaks English).", after: [] },
+    "a-gente": { name: "a gente: we", about: "In everyday Brazilian Portuguese, a gente (the people) usually means we, with the verb's ele form: A gente vai (the people goes: we go).", after: ["voce"] },
+    "object-pronoun": { name: "Pronouns before the verb", about: "In Brazil, little words for me, you and each other (me, te, se) go before the verb: Eu te vi (I you saw).", after: [] },
+    reflexive: { name: "Reflexive verbs", about: "Some verbs come with me, se or nos before the verb, pointing back to whoever does it: Eu me levanto (I myself raise: I get up).", after: ["object-pronoun"] },
+    "gostar-de": { name: "gostar de: liking", about: "gostar takes de (of) before what you like: Eu gosto de café (I like of coffee).", after: [] },
+    modal: { name: "Verb + infinitive", about: "After querer, poder, precisar and ter que, the next verb is in its basic form, the infinitive, with no word for to: Eu quero comer (I want eat).", after: [] },
+    "ir-inf": { name: "ir + infinitive: going to", about: "vou, vai, vamos and an infinitive say what's going to happen, with no word for to: Vou comer (I go eat).", after: ["modal"] },
+    progressive: { name: "estar + -ndo: right now", about: "estar with a verb ending in -ando, -endo or -indo says what's happening right now: Estou comendo (I am eating).", after: ["ser-estar"] },
+    past: { name: "Simple past", about: "One word with its own ending says what happened and is over: Eu comi (I ate), a gente comeu (the people ate: we ate).", after: [] },
+    "estar-com": { name: "estar com: I'm hungry", about: "Where English says I'm hungry, thirsty or sleepy, Portuguese says I am with: Estou com fome (I am with hunger).", after: ["ser-estar"] },
+    tem: { name: "tem: there is", about: "In everyday Brazilian Portuguese, tem (has) says both there is and there are: Tem pão (has bread: there's bread), where formal writing often uses há.", after: [] },
+    contraction: { name: "no, da, ao: a little word + the", about: "em, de, a and por join the word for the after them: no centro (in-the center), da minha avó (of-the my grandma), ao cinema (to-the movies).", after: ["gender"] },
+    de: { name: "de: of", about: "Portuguese joins nouns with de where English uses 's: o carro do meu pai (the car of-the my father).", after: ["contraction"] },
+  },
+};

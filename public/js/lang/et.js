@@ -1,0 +1,35 @@
+// Estonian (lang/index.js has what each field means). Estonian abbreviations may be written with or without a full
+// stop (nt or nt.); the ones that sit inside a sentence are listed with theirs.
+
+export default {
+  name: "Estonian",
+  locale: "et-EE",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["u.", "dr.", "prof.", "hr.", "pr.", "nr.", "nt.", "lk.", "kl.", "e.", "sh.", "s.o.", "st.", "s.t.", "v.a.", "ca.", "nn.", "n-ö.", "vrd.", "vt."],
+  stray: ["mille"],
+  patterns: {
+    "stem-changes": { name: "Stems can change", about: "A word's stem can change when it takes an ending, so learn its forms with it: õppima, õpib (studies); aken, akna (window); võtma, võtta (to take).", after: [] },
+    question: { name: "Questions: kas or a question word", about: "A plain yes/no question usually starts with kas (Kas sa räägid inglise keelt?), and a question word like kus, mis or kuidas comes first; Estonian adds no do.", after: ["present"] },
+    present: { name: "Present tense endings", about: "The verb's ending marks the person, so ma, sa and me are often left out: (ma) elan, (sa) elad, (ta) elab, (me) elame, (te) elate, (nad) elavad; ta is he and she alike, and to be is olen, oled, on, oleme, olete, on.", after: [] },
+    "no-articles": { name: "No a or the", about: "Estonian has no words for a, an or the; context does their work: Ma olen õpetaja; Laual on raamat.", after: [] },
+    "no-future": { name: "No future tense", about: "The present also says what will happen, and a time word or the context shows it's later: Homme sajab vihma (It'll rain tomorrow); Ma helistan sulle homme.", after: ["present"] },
+    ei: { name: "Not: ei and the verb's stem", about: "Not is ei before the verb, which takes the same short form for every person: ma ei tea, sa ei tea, nad ei tea; in the past, ei with a -nud or -tud form: ma ei olnud.", after: ["present"] },
+    partitive: { name: "Some, not, and after numbers: the partitive", about: "The partitive (kohvi, vett, keelt) is used with verbs that take a partitive object (Ma joon kohvi; Oota mind), for a negated object (Ma ei joo kohvi), for an indefinite amount or none (klaas vett; Külmkapis ei ole piima), and after a basic-form number other than one (kaks venda).", after: [] },
+    genitive: { name: "Of, and one kind of whole object: the genitive", about: "The genitive means of and comes first (isa auto: Dad's car; mu nimi), goes before words like juurde (vanaema juurde: to grandma's), and often marks a whole, finished object in an affirmative clause (Ma teen õhtusöögi; Kas sa saad akna sulgeda?); an affirmative command normally uses the nominative for a whole noun object instead: Pane uks kinni.", after: [] },
+    have: { name: "Having: mul on", about: "Estonian says having with -l and on: Mul on õde (I have a sister, literally at me is a sister); Meil on suur köök; and how you feel: Mul on külm (I'm cold).", after: ["present", "outer-cases"] },
+    "inner-cases": { name: "In; to or into; from or out of: -s, -sse, -st", about: "With the inner place cases, being somewhere takes -s (Tartus, korteris, külmkapis), going there or into it takes -sse or a short form (poodi, kinno, koju, randa), and coming from it or out of it takes -st.", after: [] },
+    "outer-cases": { name: "On, at, to, from: -l, -le, -lt", about: "On or at takes -l (laual, laupäeval, nädalavahetusel), onto or to takes -le (tööle; Mulle meeldib: I like it, literally to me it pleases), and off or from takes -lt (laualt: off the table; minult: from me).", after: [] },
+    "with-without": { name: "With and without: -ga and -ta", about: "-ga is with and by (emaga: with Mom; meiega; bussiga: by bus), and -ta is without: suhkruta (without sugar).", after: [] },
+    past: { name: "Past, and what has happened", about: "The simple past has its own endings, often with -s- or -i- (olin: I was; sõime: we ate; hilines: was late), and what has happened is a present form of olema with a -nud or -tud form: Ma ei ole kunagi Pärnus käinud.", after: ["present"] },
+    infinitives: { name: "Two to-forms: -ma and -da", about: "Dictionaries list a verb in its -ma form. Use it after pidama and for what you go to do (Pean minema; lähen ostma). The other to-form ends in -da, -ta or -a; it follows verbs such as tahtma, saama and võima (tahan süüa; saad sulgeda; võime võtta), and it can name an activity (Mulle meeldib emaga süüa teha).", after: ["present"] },
+    imperative: { name: "Telling someone to do something", about: "A command to one person is a short command form (Pane, Oota, Anna, Tule), and to more than one, or politely, it ends in -ge or -ke: Pange, Oodake, Vabandage.", after: ["present"] },
+    plural: { name: "More than one: plural", about: "The nominative plural ends in -d (võtmed), and a whole plural object takes that form too (uued kingad); the other plural cases have other forms, like mune (eggs, as some of them).", after: [] },
+    numbers: { name: "After a number", about: "When a number other than one is in its basic form, the noun after it is partitive singular (kaks venda, kümme minutit, kakskümmend eurot); in other cases both change: kahele vennale (to two brothers).", after: ["partitive"] },
+    adjective: { name: "Adjectives usually match", about: "An adjective usually takes its noun's case and number (väikeses korteris, uued kingad, väikesed), but with -ni, -na, -ta and -ga it stays in the genitive (suure majaga: with a big house); Estonian has no gender to match.", after: [] },
+    "dummy-subject": { name: "No empty it or there", about: "Estonian adds no empty it or there for the weather or what there is: Täna on külm; Homme sajab vihma; Laual on raamat.", after: ["present"] },
+    "verb-second": { name: "The verb often comes second", about: "In a plain statement the verb usually comes second, so when a time or place starts the sentence, the subject often follows the verb: Eile olin ma kodus; Nüüd pean ma minema; Homme lähen ma tööle.", after: ["present"] },
+    "particle-verbs": { name: "Verbs with a little word", about: "Some verbs pair with a small word that changes their meaning; it's shown before the dictionary form (kinni panema, teada andma, sisse tulema), and in a sentence it usually follows the verb: Pane uks kinni; Anna mulle teada; Tule sisse.", after: ["imperative"] },
+  },
+};

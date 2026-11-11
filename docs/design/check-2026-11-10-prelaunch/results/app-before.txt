@@ -1,0 +1,29 @@
+ok    sign up with a passkey, land in the app: signed in; 13 starter items
+ok    the shell: four tabs, Home, Study, Knowledge, Explore, and Read a row on Home; settings button: Home and the AI tab are built (scripts/knowledge-check.mjs checks Home and Knowledge, scripts/ai-check.mjs the AI tab); Explore is the community section (scripts/explore-check.mjs checks it); Read is your texts (scripts/reader-check.mjs checks it)
+FAIL  Study's games: every game a button on Study, Study cards among them; no More ways, and its old address is Study: page.waitForFunction: Timeout 30000ms exceeded.
+FAIL  wide screen: tabs become a sidebar with Settings at its foot: locator.click: Timeout 30000ms exceeded.
+FAIL  a session's frame: a solid header and footer from edge to edge, the background only between: both bands solid, before any answer too: {"head":true,"foot":false,"h":[360,0,1080],"f":[376,733.390625,1064],"w":1440,"hgt":900,"band":"rgb(0, 0, 0) 0px 0px 0px 1440px"}
+ok    never blocks: a placed tile is pressable at its destination while its ghost is still flying: {"duringFlight":{"running":1,"ghosts":1,"on":true},"afterPress":{"running":1,"ghosts":1,"on":true}}
+ok    never blocks: Continue works the instant an answer lands, mid-animation: arrange, then arrange
+ok    any press finishes every running animation at once: {"before":1,"after":0}
+ok    a quick session plays through to its summary: choose, listen, fill, card, match, fill, card, fill; 10 concepts moved
+ok    every game plays through: choose, arrange, place, fill, match, type, listen, say, repeat, cards: {"game/choose":6,"game/arrange":6,"game/place":6,"game/fill":6,"game/match":3,"game/type":6,"game/listen":6,"game/say":6,"game/repeat":6,"cards":6}
+ok    wrong answers: feedback, the right order, the typing diff: key shown; typing marked word by word (wrong)
+FAIL  games in detail: stray tile, dragging, where it goes, forgiving typing, listening: locator.click: Error: strict mode violation: locator('[data-part="session"]:not([data-ghost]) [data-part="choice"]').filter({ hasText: 'How are you?' }) resolved to 2 elements:
+ok    one concept and one topic pack sessions start: a concept, and starter-word-order by itself
+FAIL  settings: a menu of pages, each with a back link: locator.click: Timeout 30000ms exceeded.
+ok    settings: animations off means nothing animates at all: no animations, no ghosts; swatches pick the theme
+ok    the quick session's settings change what's in it: before 8 steps; with only Choose, short: 5 choose steps
+ok    study cards: flip the Dutch-order line back and forth; its settings apply: Can you the window open ⇄ Can you open the window
+ok    voices: a pack's recordings take turns (or a pin), the device voice is yours, words light up, cards and answers play: 5 words lit in order over 1733 ms; voices take turns (emma,ido), pin keeps ido; stop and slower 0.8; Ellen saved and spoke; recordings off → device voice; card, answer (path-nl/l008-1) and Match (laat, device voice) played
+ok    the page scrolls (and bounces) in its own area, the header stays put; a session locks it: page scrolled 1621px in its own area, header stayed at 0px; locked behind a session, unlocked after
+ok    on a phone: a tapped row doesn't stay highlighted; fields don't zoom: {"hover":false,"afterTap":"rgba(0, 0, 0, 0)","fieldPx":16}
+ok    on a phone: the app never zooms (pinch, double-tap, iOS's gestures), and every field on every page is 16px or more: {"zoom":{"today":{"pinch":1,"doubleTap":1},"game":{"pinch":1,"doubleTap":1}},"pages":79,"fields":214,"settingsPages":60}
+ok    speaking: Say it hears a real Dutch voice with each recognizer, a wrong order is caught, Repeat after too: Whisper (whisper-turbo, webgpu): Right, Heard: “Ik heb gisteren een boek gelezen.”; wrong order: Ik:right heb:right gisteren:right een:right boek:right gelezen:order. Browser (server): Right, Heard: “Ik heb gisteren een boek gelezen”; wrong order: Ik:right heb:right gisteren:right een:right boek:right gelezen:order
+ok    settings: name, passkeys, tokens: {"passkeys":2,"passkeyMessage":"This device already has a passkey for your account.","tokenShown":true}
+FAIL  export everything: account plus this device's study and appearance: study settings in it
+ok    delete the account: two presses, signed out, nothing left: 401 after, device data cleared
+ok    no stray "null" or "undefined" text on any screen we visited: none
+ok    no console errors: clean
+21/27 passed
+[gpu 17:40:31] parallel lane released after 6 min (exit 1)

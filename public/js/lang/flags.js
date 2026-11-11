@@ -1,0 +1,98 @@
+// Each language's flag: the country whose flag marks it at a glance. A language is wider than a country, so a flag is
+// only a mark beside the language's name or code, never instead of it, and a language with neither a flag nor a mark
+// here shows its name alone. A language no one country's flag stands for gets a mark of its script instead (MARKS:
+// public/flags/marks/<code>.svg, Lexicommons' own, the same 4:3 size), unless it has a flag of its own that isn't a country's:
+// Esperanto's green star, Brittany's Gwenn ha du, Friesland's, Hawaii's, Kurdistan's. The flags are flag-icons' SVGs (MIT,
+// public/flags/LICENSE), and those five public domain drawings from Wikimedia Commons cut to 4:3 (public/flags/SOURCES.md), all
+// served from public/flags/4x3/ and shown as images.
+// Pure data, read by lx/ui.js languageFlag(): a new language gets its flag by a line here.
+
+export const FLAGS = {
+  en: "us",
+  nl: "nl",
+  af: "za",
+  de: "de",
+  es: "es",
+  fr: "fr",
+  it: "it",
+  pt: "br",
+  ja: "jp",
+  zh: "cn",
+  "zh-Hant": "tw",
+  yue: "hk",
+  ko: "kr",
+  sv: "se",
+  sw: "tz",
+  nb: "no",
+  nn: "no",
+  no: "no",
+  da: "dk",
+  pl: "pl",
+  ru: "ru",
+  uk: "ua",
+  el: "gr",
+  tr: "tr",
+  az: "az",
+  be: "by",
+  ro: "ro",
+  cs: "cz",
+  hu: "hu",
+  fi: "fi",
+  id: "id",
+  hi: "in",
+  is: "is",
+  et: "ee",
+  lv: "lv",
+  lt: "lt",
+  sk: "sk",
+  sl: "si",
+  hr: "hr",
+  bs: "ba",
+  bg: "bg",
+  sr: "rs",
+  he: "il",
+  vi: "vn",
+  th: "th",
+  tl: "ph",
+  ms: "my",
+  fa: "ir",
+  ur: "pk",
+  bn: "bd",
+  ga: "ie",
+  ca: "es-ct",
+  eu: "es-pv",
+  gl: "es-ga",
+  cy: "gb-wls",
+  gd: "gb-sct",
+  sq: "al",
+  mk: "mk",
+  mt: "mt",
+  lb: "lu",
+  hy: "am",
+  ka: "ge",
+  kk: "kz",
+  uz: "uz",
+  ht: "ht",
+  ps: "af",
+  mr: "in",
+  ne: "np",
+  pa: "in",
+  gu: "in",
+  eo: "esperanto",
+  br: "fr-bre",
+  fy: "nl-fr",
+  haw: "us-hi",
+  kmr: "kurdistan",
+  ckb: "kurdistan",
+};
+
+export const MARKS = {
+  ar: "ar",
+  yi: "yi",
+  // No flag and no script of its own to mark: its initial (scratch/polish/tools/flag-marks.py drew it, from the app's Latin face).
+  la: "la",
+};
+
+/** A language's flag image (or its script's mark), or null when it has neither. */
+export const flagOf = (lang) =>
+  Object.hasOwn(FLAGS, lang) ? `/flags/4x3/${FLAGS[lang]}.svg` : Object.hasOwn(MARKS, lang) ? `/flags/marks/${MARKS[lang]}.svg` : null;

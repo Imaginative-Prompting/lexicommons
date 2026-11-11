@@ -1,0 +1,17 @@
+ok    sign up with a passkey: signed in
+ok    Japanese, English order: readings over the kanji (hidden once known by reading), a just-added word's English under it: 11 words in English order; 日 hidden, 角 かど over it, パン屋 や over and "bakery" under
+ok    Japanese, whole sentences: words run together (<wbr> between, none broken), the literal line with English marks and no moved marks: 通りは静かだった。 / The streetはquietwas. · ミラはこの時間が一番好きだった。 / Sheはthishourがbestliked.
+ok    Japanese, a tap: the hidden reading shows again, and the popover gives it: 時間 じかん hour Show it in English again More
+ok    Japanese order (the setting): the sentence in Japanese order, English among it with English marks and a narrow gap: 5 lines; first: Every morning,日が昇る前に、Milaは角onthe bakeryを…
+ok    the underline switch: off takes the dotted line off woven words, in English order and in a Japanese line; on again: 18 woven words (8 in Japanese lines) without the line; on again
+ok    lines leave room for readings: line height 2.15× the text
+ok    the text size: 24px by default, the same with the weave off; a size you pick stays: on 24px (line 2.15×), off 24px (line 1.75×, no room for readings), picked 20 → 20px
+ok    Chinese: pinyin over the characters (hidden once known by reading), a whole sentence run together: 7 words in English order; 街上很安静。 · 她最喜欢这个时候。
+ok    a Japanese book with English help: reading over, English under; names and particles neither; in place, English with a narrow gap: 村 むら over, "village" under; 私 known; in place: small when village called an old man from heard story
+ok    vowel marks: Latin woven into an English book, its macrons on the word; known, as written; a tap brings them back: sol (known) → sōl after a tap; amāvit; urbem plain; 19px, line 1.75×
+ok    vowel marks: Hebrew woven into an English book, points on the word, each its own isolate: שמש (known) as written; עִיר. אָהֲבָה pointed, right to left
+ok    vowel marks: a Latin book with English help, the macrons on its words and the English over them: Rōmam with "to Rome" over it
+ok    a verse line woven whole: it keeps the verse's indent, and its word-for-word line's chunks sit side by side inside the line: y Peter. / and Peter · y vivieron felices. / and lived happily; at the verse's 41.0 px
+ok    delete the test account: deleted
+ok    no console errors: clean
+16/16 passed

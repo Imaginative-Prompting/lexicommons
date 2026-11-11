@@ -1,0 +1,7375 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-fi",
+  "name": "Starter: Finnish",
+  "about": "Finnish word order and endings in real, everyday sentences.",
+  "language": "fi",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kahvi": "coffee",
+    "tee": "tea",
+    "vesi": "water",
+    "minä": "I",
+    "juoda": "to drink",
+    "ja": "and",
+    "yksi": "one",
+    "maito": "milk",
+    "saada": "to get, may",
+    "hyvä": "good",
+    "olla": "to be",
+    "kuulua": "to be heard; to belong (mitä kuuluu: how are you)",
+    "sinä": "you",
+    "ei": "not (the negative verb: en, et, ei…)",
+    "opettaja": "teacher",
+    "opiskelija": "student",
+    "äiti": "mother, mom",
+    "isä": "father, dad",
+    "veli": "brother",
+    "sisko": "sister",
+    "tämä": "this",
+    "ystävä": "friend",
+    "lääkäri": "doctor",
+    "avain": "key",
+    "puhelin": "phone",
+    "kirja": "book",
+    "missä": "where",
+    "täällä": "here",
+    "tuolla": "there",
+    "vessa": "bathroom, toilet",
+    "kaksi": "two",
+    "kolme": "three",
+    "raha": "money",
+    "puhua": "to speak",
+    "englanti": "English (the language)",
+    "suomi": "Finnish (the language)",
+    "ymmärtää": "to understand",
+    "vähän": "a little",
+    "haluta": "to want",
+    "talo": "house",
+    "huone": "room",
+    "iso": "big",
+    "pieni": "small",
+    "asua": "to live (somewhere)",
+    "mennä": "to go",
+    "koulu": "school",
+    "kaupunki": "city",
+    "asema": "station",
+    "auto": "car",
+    "mihin": "where to",
+    "tänään": "today",
+    "huomenna": "tomorrow",
+    "nyt": "now",
+    "työskennellä": "to work",
+    "täytyä": "to have to (minun täytyy: I have to)",
+    "voida": "can, to be able to",
+    "hei": "hi",
+    "nimi": "name",
+    "tietää": "to know",
+    "pitää": "to like (with -sta)",
+    "elokuva": "movie",
+    "asunto": "apartment",
+    "pöytä": "table",
+    "jääkaappi": "fridge",
+    "sulkea": "to close",
+    "ikkuna": "window",
+    "keittiö": "kitchen",
+    "parveke": "balcony",
+    "tulla": "to come",
+    "koti": "home",
+    "tehdä": "to do, to make",
+    "ruoka": "food",
+    "ovi": "door",
+    "kiitos": "thanks; please",
+    "tänne": "here (coming here)",
+    "ilman": "without",
+    "sokeri": "sugar",
+    "lasi": "glass",
+    "syödä": "to eat",
+    "jokin": "something",
+    "makea": "sweet",
+    "eilen": "yesterday",
+    "pizza": "pizza",
+    "tosi": "really",
+    "lasku": "check, bill",
+    "laittaa": "to put (laittaa ruokaa: to cook)",
+    "kanssa": "with (after the word)",
+    "kauppa": "store, shop",
+    "ostaa": "to buy",
+    "leipä": "bread",
+    "työ": "work (töihin: to work)",
+    "bussi": "bus",
+    "uusi": "new",
+    "takki": "jacket",
+    "juna": "train",
+    "minuutti": "minute",
+    "myöhässä": "late",
+    "koskaan": "ever (with not: never)",
+    "käydä": "to visit, to go",
+    "kenkä": "shoe",
+    "liian": "too",
+    "väsynyt": "tired",
+    "ottaa": "to take",
+    "taksi": "taxi",
+    "odottaa": "to wait (for)",
+    "mummo": "grandma",
+    "lauantai": "Saturday",
+    "sataa": "to rain",
+    "soittaa": "to call, to phone",
+    "lähteä": "to leave",
+    "ranta": "beach, shore",
+    "opiskella": "to study",
+    "vuosi": "year",
+    "viikonloppu": "weekend",
+    "ilta": "evening",
+    "kylmä": "cold",
+    "kertoa": "to tell",
+    "toivottavasti": "hopefully",
+    "kaunis": "beautiful, nice",
+    "ilma": "weather; air"
+  },
+  "chunks": {
+    "mitä-kuuluu": {
+      "text": "Mitä kuuluu?",
+      "en": "How are you?",
+      "about": "Literally, what is heard? Answer with Hyvää, kiitos (fine, thanks)."
+    },
+    "anteeksi": {
+      "text": "Anteeksi",
+      "en": "Excuse me, sorry",
+      "about": "To get someone's attention, or to say sorry."
+    },
+    "hello": {
+      "text": "Hei",
+      "en": "hello"
+    },
+    "please-thank-you": {
+      "text": "kiitos",
+      "en": "please; thank you"
+    },
+    "goodbye": {
+      "text": "Näkemiin",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Kyllä",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Ei",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Mikä sinun nimesi on",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Hauska tutustua",
+      "en": "nice to meet you"
+    },
+    "how-much-is-this": {
+      "text": "Paljonko tämä maksaa",
+      "en": "how much is this?"
+    },
+    "can-i-have-the-check-please": {
+      "text": "Saanko laskun, kiitos",
+      "en": "can I have the check, please?"
+    },
+    "see-you-tomorrow": {
+      "text": "Nähdään huomenna",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "mina-juon-kahvia",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Minä juon kahvia.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "juon",
+          "juoda"
+        ],
+        [
+          "kahvia",
+          "kahvi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä juoda kahvia.",
+        "Minä juon kahvi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "juon",
+          "juoda",
+          "juot"
+        ]
+      }
+    },
+    {
+      "id": "mina-juon-teeta",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Minä juon teetä.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "juon",
+          "juoda"
+        ],
+        [
+          "teetä",
+          "tee"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä juot teetä.",
+        "Minä juon tee."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "teetä",
+          "tee",
+          "teen"
+        ]
+      }
+    },
+    {
+      "id": "mina-juon-vetta",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive",
+        "gradation"
+      ],
+      "text": "Minä juon vettä.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "juon",
+          "juoda"
+        ],
+        [
+          "vettä",
+          "vesi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä juoda vettä.",
+        "Minä juon vesi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vettä",
+          "vesi",
+          "veden"
+        ]
+      }
+    },
+    {
+      "id": "mina-juon-kahvia-ja-teeta",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Minä juon kahvia ja teetä.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "juon",
+          "juoda"
+        ],
+        [
+          "kahvia",
+          "kahvi"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "teetä",
+          "tee"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä juon kahvi ja teetä.",
+        "Minä juoda kahvia ja teetä."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "juon",
+          "juot",
+          "juoda"
+        ]
+      }
+    },
+    {
+      "id": "mina-juon-teeta-ja-vetta",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Minä juon teetä ja vettä.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "juon",
+          "juoda"
+        ],
+        [
+          "teetä",
+          "tee"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "vettä",
+          "vesi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä juon tee ja vettä.",
+        "Minä juot teetä ja vettä."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vettä",
+          "vesi",
+          "veden"
+        ]
+      }
+    },
+    {
+      "id": "mina-juon-vetta-ja-kahvia",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Minä juon vettä ja kahvia.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "juon",
+          "juoda"
+        ],
+        [
+          "vettä",
+          "vesi"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "kahvia",
+          "kahvi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä juon vesi ja kahvia.",
+        "Minä juoda vettä ja kahvia."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kahvia",
+          "kahvi",
+          "kahvin"
+        ]
+      }
+    },
+    {
+      "id": "yksi-kahvi-kiitos",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Yksi kahvi, kiitos.",
+      "means": "One coffee, please.",
+      "words": [
+        [
+          "Yksi",
+          "yksi"
+        ],
+        [
+          "kahvi,",
+          "kahvi"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yksi kahvit, kiitos.",
+        "Yksi kahveja, kiitos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvi,",
+          "kahvit,",
+          "kahveja,"
+        ]
+      }
+    },
+    {
+      "id": "hei-saisinko-teeta-kiitos",
+      "topic": "food",
+      "concepts": [
+        "conditional",
+        "question-ko",
+        "partitive"
+      ],
+      "chunks": [
+        "please-thank-you",
+        "hello"
+      ],
+      "text": "Hei! Saisinko teetä, kiitos?",
+      "means": "Hello! Could I have some tea, please?",
+      "words": [
+        [
+          "Hei!"
+        ],
+        [
+          "Saisinko",
+          "saada"
+        ],
+        [
+          "teetä,",
+          "tee"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "could I have"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hei! Saisitko minä teetä, kiitos?",
+        "Hei! Saada teetä, kiitos?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Saisinko",
+          "Saada",
+          "Saisitko"
+        ]
+      }
+    },
+    {
+      "id": "saisinko-kahvin-kiitos",
+      "topic": "food",
+      "concepts": [
+        "conditional",
+        "question-ko",
+        "object"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Saisinko kahvin, kiitos?",
+      "means": "Could I have a coffee, please?",
+      "words": [
+        [
+          "Saisinko",
+          "saada"
+        ],
+        [
+          "kahvin,",
+          "kahvi"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Could I have"
+        ],
+        [
+          "a coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Saada kahvin, kiitos?",
+        "Saisinko kahvista, kiitos?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvin,",
+          "kahvista,",
+          "kahvissa,"
+        ]
+      }
+    },
+    {
+      "id": "yksi-tee-ja-yksi-vesi-kiitos",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Yksi tee ja yksi vesi, kiitos.",
+      "means": "One tea and one water, please.",
+      "words": [
+        [
+          "Yksi",
+          "yksi"
+        ],
+        [
+          "tee",
+          "tee"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "yksi",
+          "yksi"
+        ],
+        [
+          "vesi,",
+          "vesi"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yksi teet ja yksi vesi, kiitos.",
+        "Yksi tee ja yksi vedet, kiitos."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vesi,",
+          "vedet,",
+          "vesiä,"
+        ]
+      }
+    },
+    {
+      "id": "mina-juon-maitoa",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Minä juon maitoa.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "juon",
+          "juoda"
+        ],
+        [
+          "maitoa",
+          "maito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä juon maito.",
+        "Minä juoda maitoa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "maitoa",
+          "maito",
+          "maidon"
+        ]
+      }
+    },
+    {
+      "id": "kylla-kiitos",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please-thank-you",
+        "yes"
+      ],
+      "text": "Kyllä, kiitos.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Kyllä,"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kyllän, kiitos.",
+        "Kyllä, kiitosta."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kyllä,",
+          "Kyllän,",
+          "Kyllää,"
+        ]
+      }
+    },
+    {
+      "id": "ei-kiitos",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please-thank-you",
+        "no"
+      ],
+      "text": "Ei, kiitos.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Ei,"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ein, kiitos.",
+        "Ei, kiitoksen."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ei,",
+          "Ein,",
+          "Eitä,"
+        ]
+      }
+    },
+    {
+      "id": "minulle-kuuluu-hyvaa-kiitos",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Minulle kuuluu hyvää, kiitos.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Minulle",
+          "minä"
+        ],
+        [
+          "kuuluu",
+          "kuulua"
+        ],
+        [
+          "hyvää,",
+          "hyvä"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "is heard"
+        ],
+        [
+          "good"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minulle kuulun hyvää, kiitos.",
+        "Minulle kuuluu hyvä, kiitos."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hyvää,",
+          "hyvä,",
+          "hyvän,"
+        ]
+      }
+    },
+    {
+      "id": "kahvi-on-hyvaa",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive",
+        "adjective"
+      ],
+      "text": "Kahvi on hyvää.",
+      "means": "The coffee is good.",
+      "words": [
+        [
+          "Kahvi",
+          "kahvi"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "hyvää",
+          "hyvä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The coffee"
+        ],
+        [
+          "is"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kahvi olen hyvää.",
+        "Kahvi olla hyvää."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "kylla-kiitos-nakemiin",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "please-thank-you",
+        "yes"
+      ],
+      "text": "Kyllä, kiitos. Näkemiin!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Kyllä,"
+        ],
+        [
+          "kiitos."
+        ],
+        [
+          "Näkemiin"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kyllän, kiitos. Näkemiin!",
+        "Kyllä, kiitoksen. Näkemiin!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Näkemiin",
+          "Näkemissä",
+          "Näkemiltä"
+        ]
+      }
+    },
+    {
+      "id": "ei-kiitos-nakemiin",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "please-thank-you",
+        "no"
+      ],
+      "text": "Ei, kiitos. Näkemiin!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Ei,"
+        ],
+        [
+          "kiitos."
+        ],
+        [
+          "Näkemiin"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ein, kiitos. Näkemiin!",
+        "Ei, kiitoksen. Näkemiin!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Näkemiin",
+          "Näkemissä",
+          "Näkemiltä"
+        ]
+      }
+    },
+    {
+      "id": "hei-hauska-tutustua",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Hei! Hauska tutustua.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Hei!"
+        ],
+        [
+          "Hauska"
+        ],
+        [
+          "tutustua"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice"
+        ],
+        [
+          "to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hei! Hauskan tutustua.",
+        "Hei! Hauska tutustun."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tutustua",
+          "tutustun",
+          "tutustut"
+        ]
+      }
+    },
+    {
+      "id": "sina-olet-opiskelija",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Sinä olet opiskelija.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Sinä",
+          "sinä"
+        ],
+        [
+          "olet",
+          "olla"
+        ],
+        [
+          "opiskelija",
+          "opiskelija"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sinä olen opiskelija.",
+        "Sinä olla opiskelija."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "olet",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "oletko-sina-opettaja",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "question-ko"
+      ],
+      "text": "Oletko sinä opettaja?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Oletko",
+          "olla"
+        ],
+        [
+          "sinä",
+          "sinä"
+        ],
+        [
+          "opettaja",
+          "opettaja"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Olenko sinä opettaja?",
+        "Onko sinä opettaja?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Oletko",
+          "Olenko",
+          "Onko"
+        ]
+      }
+    },
+    {
+      "id": "mina-en-ole-opettaja",
+      "topic": "people",
+      "concepts": [
+        "negative-verb",
+        "present"
+      ],
+      "text": "Minä en ole opettaja.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Minä",
+          "minä"
+        ],
+        [
+          "en",
+          "ei"
+        ],
+        [
+          "ole",
+          "olla"
+        ],
+        [
+          "opettaja",
+          "opettaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not"
+        ],
+        [
+          "be"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä en olen opettaja.",
+        "Minä ei ole opettaja."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ole",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "tama-on-minun-aitini",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Tämä on minun äitini.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Tämä",
+          "tämä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "minun",
+          "minä"
+        ],
+        [
+          "äitini",
+          "äiti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tämä olen minun äitini.",
+        "Tämä on minä äitini."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "äitini",
+          "äidit",
+          "äitejä"
+        ]
+      }
+    },
+    {
+      "id": "tama-on-minun-isani",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Tämä on minun isäni.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Tämä",
+          "tämä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "minun",
+          "minä"
+        ],
+        [
+          "isäni",
+          "isä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tämä olet minun isäni.",
+        "Tämä on minä isäni."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "minun",
+          "minä",
+          "minulle"
+        ]
+      }
+    },
+    {
+      "id": "minun-isani-on-opettaja",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Minun isäni on opettaja.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Minun",
+          "minä"
+        ],
+        [
+          "isäni",
+          "isä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "opettaja",
+          "opettaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minun isäni olen opettaja.",
+        "Minä isäni on opettaja."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "on",
+          "olen",
+          "olet"
+        ]
+      }
+    },
+    {
+      "id": "minun-veljeni-on-opiskelija",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Minun veljeni on opiskelija.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Minun",
+          "minä"
+        ],
+        [
+          "veljeni",
+          "veli"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "opiskelija",
+          "opiskelija"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minun veljeni olet opiskelija.",
+        "Minun veljeni olla opiskelija."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "veljeni",
+          "veljeä",
+          "veljessä"
+        ]
+      }
+    },
+    {
+      "id": "tama-on-minun-siskoni",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Tämä on minun siskoni.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Tämä",
+          "tämä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "minun",
+          "minä"
+        ],
+        [
+          "siskoni",
+          "sisko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tämä olen minun siskoni.",
+        "Tämä on minä siskoni."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "siskoni",
+          "siskoja",
+          "siskossa"
+        ]
+      }
+    },
+    {
+      "id": "minun-aitini-on-opettaja",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Minun äitini on opettaja.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Minun",
+          "minä"
+        ],
+        [
+          "äitini",
+          "äiti"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "opettaja",
+          "opettaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minun äitini olen opettaja.",
+        "Minun äitini olla opettaja."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "minulla-on-puhelin",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "on-onto-from",
+        "present"
+      ],
+      "text": "Minulla on puhelin.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Minulla",
+          "minä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "puhelin",
+          "puhelin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minulla olen puhelin.",
+        "Minä on puhelin."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Minulla",
+          "Minä",
+          "Minun"
+        ]
+      }
+    },
+    {
+      "id": "onko-sinulla-avain",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "question-ko",
+        "on-onto-from"
+      ],
+      "text": "Onko sinulla avain?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Onko",
+          "olla"
+        ],
+        [
+          "sinulla",
+          "sinä"
+        ],
+        [
+          "avain",
+          "avain"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "with you"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Oletko sinulla avain?",
+        "Onko sinä avain?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sinulla",
+          "sinä",
+          "sinun"
+        ]
+      }
+    },
+    {
+      "id": "minulla-ei-ole-kirjaa",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "negative-verb",
+        "partitive"
+      ],
+      "text": "Minulla ei ole kirjaa.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Minulla",
+          "minä"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olla"
+        ],
+        [
+          "kirjaa",
+          "kirja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With me"
+        ],
+        [
+          "not"
+        ],
+        [
+          "be"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minulla ei on kirjaa.",
+        "Minulla ei ole kirja."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kirjaa",
+          "kirja",
+          "kirjan"
+        ]
+      }
+    },
+    {
+      "id": "minun-siskoni-on-laakari",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Minun siskoni on lääkäri.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Minun",
+          "minä"
+        ],
+        [
+          "siskoni",
+          "sisko"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "lääkäri",
+          "lääkäri"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minun siskoni olen lääkäri.",
+        "Minun siskoni olla lääkäri."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "sina-olet-hyva-ystava",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "adjective"
+      ],
+      "text": "Sinä olet hyvä ystävä.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Sinä",
+          "sinä"
+        ],
+        [
+          "olet",
+          "olla"
+        ],
+        [
+          "hyvä",
+          "hyvä"
+        ],
+        [
+          "ystävä",
+          "ystävä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sinä olen hyvä ystävä.",
+        "Sinä olet hyvää ystävä."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hyvä",
+          "hyvää",
+          "hyvän"
+        ]
+      }
+    },
+    {
+      "id": "missa-aitini-on",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive-suffix"
+      ],
+      "text": "Missä äitini on?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Missä",
+          "missä"
+        ],
+        [
+          "äitini",
+          "äiti"
+        ],
+        [
+          "on",
+          "olla"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "my mother"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Missä äitini olen?",
+        "Missä äitini olla?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "puhelimeni-on-taalla",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive-suffix"
+      ],
+      "text": "Puhelimeni on täällä.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Puhelimeni",
+          "puhelin"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "täällä",
+          "täällä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Puhelimeni olen täällä.",
+        "Puhelimeni olla täällä."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "avain-on-tuolla",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "text": "Avain on tuolla.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Avain",
+          "avain"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "tuolla",
+          "tuolla"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Avain olen tuolla.",
+        "Avain olla tuolla."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "anteeksi-missa-vessa-on",
+      "topic": "out",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "anteeksi"
+      ],
+      "text": "Anteeksi, missä vessa on?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Anteeksi,"
+        ],
+        [
+          "missä",
+          "missä"
+        ],
+        [
+          "vessa",
+          "vessa"
+        ],
+        [
+          "on",
+          "olla"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "the bathroom"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Anteeksi, missä vessa olen?",
+        "Anteeksi, missä vessa olla?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "missa-minun-avaimeni-on",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "genitive",
+        "possessive-suffix"
+      ],
+      "text": "Missä minun avaimeni on?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Missä",
+          "missä"
+        ],
+        [
+          "minun",
+          "minä"
+        ],
+        [
+          "avaimeni",
+          "avain"
+        ],
+        [
+          "on",
+          "olla"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ],
+        [
+          "is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Missä minä avaimeni on?",
+        "Missä minun avaimeni olen?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "minun",
+          "minä",
+          "minulle"
+        ]
+      }
+    },
+    {
+      "id": "siskoni-on-taalla",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "possessive-suffix"
+      ],
+      "text": "Siskoni on täällä.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Siskoni",
+          "sisko"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "täällä",
+          "täällä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siskoni olen täällä.",
+        "Siskoni olla täällä."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "on",
+          "olen",
+          "olla"
+        ]
+      }
+    },
+    {
+      "id": "avain-ei-ole-taalla",
+      "topic": "out",
+      "concepts": [
+        "negative-verb",
+        "present"
+      ],
+      "text": "Avain ei ole täällä.",
+      "means": "The key isn't here.",
+      "words": [
+        [
+          "Avain",
+          "avain"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olla"
+        ],
+        [
+          "täällä",
+          "täällä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "not"
+        ],
+        [
+          "be"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Avain ei on täällä.",
+        "Avain en ole täällä."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ei",
+          "en",
+          "et"
+        ]
+      }
+    },
+    {
+      "id": "yksi-kirja-kiitos",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Yksi kirja, kiitos.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Yksi",
+          "yksi"
+        ],
+        [
+          "kirja,",
+          "kirja"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yksi kirjat, kiitos.",
+        "Yksi kirjoja, kiitos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kirja,",
+          "kirjat,",
+          "kirjoja,"
+        ]
+      }
+    },
+    {
+      "id": "kaksi-kahvia-kiitos",
+      "topic": "out",
+      "concepts": [
+        "partitive"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Kaksi kahvia, kiitos.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Kaksi",
+          "kaksi"
+        ],
+        [
+          "kahvia,",
+          "kahvi"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kaksi kahvi, kiitos.",
+        "Kaksi kahvit, kiitos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvia,",
+          "kahvi,",
+          "kahvit,"
+        ]
+      }
+    },
+    {
+      "id": "minulla-on-kolme-kirjaa",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "partitive"
+      ],
+      "text": "Minulla on kolme kirjaa.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Minulla",
+          "minä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "kolme",
+          "kolme"
+        ],
+        [
+          "kirjaa",
+          "kirja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minulla on kolme kirja.",
+        "Minulla on kolme kirjat."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kirjaa",
+          "kirja",
+          "kirjat"
+        ]
+      }
+    },
+    {
+      "id": "minulla-ei-ole-rahaa",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "negative-verb",
+        "partitive"
+      ],
+      "text": "Minulla ei ole rahaa.",
+      "means": "I don't have any money.",
+      "words": [
+        [
+          "Minulla",
+          "minä"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olla"
+        ],
+        [
+          "rahaa",
+          "raha"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With me"
+        ],
+        [
+          "not"
+        ],
+        [
+          "be"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minulla ei on rahaa.",
+        "Minulla ei ole raha."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "rahaa",
+          "raha",
+          "rahan"
+        ]
+      }
+    },
+    {
+      "id": "anteeksi-paljonko-tama-maksaa",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "how-much-is-this",
+        "anteeksi"
+      ],
+      "text": "Anteeksi, paljonko tämä maksaa?",
+      "means": "Excuse me, how much does this cost?",
+      "words": [
+        [
+          "Anteeksi,"
+        ],
+        [
+          "paljonko"
+        ],
+        [
+          "tämä"
+        ],
+        [
+          "maksaa"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "this"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Anteeksi, paljonko tämä maksan?",
+        "Anteeksi, paljonko tämä maksavat?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maksaa",
+          "maksan",
+          "maksavat"
+        ]
+      }
+    },
+    {
+      "id": "puhun-suomea",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Puhun suomea.",
+      "means": "I speak Finnish.",
+      "words": [
+        [
+          "Puhun",
+          "puhua"
+        ],
+        [
+          "suomea",
+          "suomi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "Finnish"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Puhun suomi.",
+        "Puhua suomea."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "suomea",
+          "suomi",
+          "suomen"
+        ]
+      }
+    },
+    {
+      "id": "puhun-vahan-suomea",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Puhun vähän suomea.",
+      "means": "I speak a little Finnish.",
+      "words": [
+        [
+          "Puhun",
+          "puhua"
+        ],
+        [
+          "vähän",
+          "vähän"
+        ],
+        [
+          "suomea",
+          "suomi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Finnish"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Puhun vähän suomi.",
+        "Puhua vähän suomea."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Puhun",
+          "Puhua",
+          "Puhut"
+        ]
+      }
+    },
+    {
+      "id": "en-ymmarra",
+      "topic": "people",
+      "concepts": [
+        "negative-verb",
+        "gradation"
+      ],
+      "text": "En ymmärrä.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "En",
+          "ei"
+        ],
+        [
+          "ymmärrä",
+          "ymmärtää"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "En ymmärrän.",
+        "En ymmärtää."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ymmärrä",
+          "ymmärrän",
+          "ymmärtää"
+        ]
+      }
+    },
+    {
+      "id": "ymmarratko-sina",
+      "topic": "people",
+      "concepts": [
+        "question-ko",
+        "present",
+        "gradation"
+      ],
+      "text": "Ymmärrätkö sinä?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ymmärrätkö",
+          "ymmärtää"
+        ],
+        [
+          "sinä",
+          "sinä"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do you understand"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ymmärränkö sinä?",
+        "Ymmärtääkö sinä?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ymmärrätkö",
+          "Ymmärränkö",
+          "Ymmärtääkö"
+        ]
+      }
+    },
+    {
+      "id": "haluan-kahvin",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "object"
+      ],
+      "text": "Haluan kahvin.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Haluan",
+          "haluta"
+        ],
+        [
+          "kahvin",
+          "kahvi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haluta kahvin.",
+        "Haluan kahvi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvin",
+          "kahvi",
+          "kahvissa"
+        ]
+      }
+    },
+    {
+      "id": "haluan-vetta-kiitos",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "chunks": [
+        "please-thank-you"
+      ],
+      "text": "Haluan vettä, kiitos.",
+      "means": "I want some water, please.",
+      "words": [
+        [
+          "Haluan",
+          "haluta"
+        ],
+        [
+          "vettä,",
+          "vesi"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haluta vettä, kiitos.",
+        "Haluan vesi, kiitos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vettä,",
+          "vesi,",
+          "vedessä,"
+        ]
+      }
+    },
+    {
+      "id": "asun-taalla",
+      "topic": "home",
+      "concepts": [
+        "present"
+      ],
+      "text": "Asun täällä.",
+      "means": "I live here.",
+      "words": [
+        [
+          "Asun",
+          "asua"
+        ],
+        [
+          "täällä",
+          "täällä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Asua täällä.",
+        "Minä asut täällä."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Asun",
+          "Asua",
+          "Asut"
+        ]
+      }
+    },
+    {
+      "id": "asun-pienessa-talossa",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "in-into-from",
+        "adjective",
+        "vowel-harmony"
+      ],
+      "text": "Asun pienessä talossa.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Asun",
+          "asua"
+        ],
+        [
+          "pienessä",
+          "pieni"
+        ],
+        [
+          "talossa",
+          "talo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Asun pieni talossa.",
+        "Asun pienessä talo."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pienessä",
+          "pieni",
+          "pienen"
+        ]
+      }
+    },
+    {
+      "id": "missa-sina-asut",
+      "topic": "home",
+      "concepts": [
+        "present"
+      ],
+      "text": "Missä sinä asut?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Missä",
+          "missä"
+        ],
+        [
+          "sinä",
+          "sinä"
+        ],
+        [
+          "asut",
+          "asua"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Missä sinä asun?",
+        "Missä sinä asua?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "asut",
+          "asun",
+          "asua"
+        ]
+      }
+    },
+    {
+      "id": "minun-huoneeni-on-pieni",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "adjective",
+        "possessive-suffix",
+        "genitive"
+      ],
+      "text": "Minun huoneeni on pieni.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Minun",
+          "minä"
+        ],
+        [
+          "huoneeni",
+          "huone"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "pieni",
+          "pieni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minun huoneeni olen pieni.",
+        "Minun huoneeni on pienessä."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pieni",
+          "pienessä",
+          "pienen"
+        ]
+      }
+    },
+    {
+      "id": "tama-talo-on-iso",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "adjective"
+      ],
+      "text": "Tämä talo on iso.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Tämä",
+          "tämä"
+        ],
+        [
+          "talo",
+          "talo"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "iso",
+          "iso"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tämä talo olen iso.",
+        "Tämä talo on ison."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "iso",
+          "ison",
+          "isossa"
+        ]
+      }
+    },
+    {
+      "id": "aitini-asuu-taalla",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive-suffix"
+      ],
+      "text": "Äitini asuu täällä.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Äitini",
+          "äiti"
+        ],
+        [
+          "asuu",
+          "asua"
+        ],
+        [
+          "täällä",
+          "täällä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Äitini asun täällä.",
+        "Äitini asua täällä."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "asuu",
+          "asun",
+          "asut"
+        ]
+      }
+    },
+    {
+      "id": "minulla-on-auto",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "present"
+      ],
+      "text": "Minulla on auto.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Minulla",
+          "minä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minulla olen auto.",
+        "Minä on auto."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Minulla",
+          "Minä",
+          "Minun"
+        ]
+      }
+    },
+    {
+      "id": "tama-auto-on-pieni",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "adjective"
+      ],
+      "text": "Tämä auto on pieni.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Tämä",
+          "tämä"
+        ],
+        [
+          "auto",
+          "auto"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "pieni",
+          "pieni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tämä auto olen pieni.",
+        "Tämä auto on pienen."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pieni",
+          "pienen",
+          "pienessä"
+        ]
+      }
+    },
+    {
+      "id": "menen-kouluun",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "in-into-from"
+      ],
+      "text": "Menen kouluun.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Menen",
+          "mennä"
+        ],
+        [
+          "kouluun",
+          "koulu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mennä kouluun.",
+        "Menen koulu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kouluun",
+          "koulu",
+          "koulun"
+        ]
+      }
+    },
+    {
+      "id": "mihin-sina-menet",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "in-into-from"
+      ],
+      "text": "Mihin sinä menet?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Mihin",
+          "mihin"
+        ],
+        [
+          "sinä",
+          "sinä"
+        ],
+        [
+          "menet",
+          "mennä"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where to"
+        ],
+        [
+          "you"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mihin sinä menen?",
+        "Mihin sinä mennä?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "menet",
+          "menen",
+          "mennä"
+        ]
+      }
+    },
+    {
+      "id": "aitini-menee-kaupunkiin",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "in-into-from",
+        "possessive-suffix"
+      ],
+      "text": "Äitini menee kaupunkiin.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Äitini",
+          "äiti"
+        ],
+        [
+          "menee",
+          "mennä"
+        ],
+        [
+          "kaupunkiin",
+          "kaupunki"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Äitini menen kaupunkiin.",
+        "Äitini menee kaupunki."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kaupunkiin",
+          "kaupunki",
+          "kaupungin"
+        ]
+      }
+    },
+    {
+      "id": "kiitos-nahdaan-huomenna",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "please-thank-you"
+      ],
+      "text": "Kiitos. Nähdään huomenna!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Kiitos."
+        ],
+        [
+          "Nähdään"
+        ],
+        [
+          "huomenna"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kiitos. Nähdään huomennan!",
+        "Kiitos. Nähdään huomennaa!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "huomenna",
+          "huomennan",
+          "huomennaa"
+        ]
+      }
+    },
+    {
+      "id": "tyoskentelen-tanaan",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Työskentelen tänään.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Työskentelen",
+          "työskennellä"
+        ],
+        [
+          "tänään",
+          "tänään"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Työskennellä tänään.",
+        "Minä työskentelet tänään."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Työskentelen",
+          "Työskennellä",
+          "Työskentelet"
+        ]
+      }
+    },
+    {
+      "id": "minun-taytyy-menna-nyt",
+      "topic": "plans",
+      "concepts": [
+        "genitive",
+        "infinitive",
+        "present"
+      ],
+      "text": "Minun täytyy mennä nyt.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Minun",
+          "minä"
+        ],
+        [
+          "täytyy",
+          "täytyä"
+        ],
+        [
+          "mennä",
+          "mennä"
+        ],
+        [
+          "nyt",
+          "nyt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For me"
+        ],
+        [
+          "it is necessary"
+        ],
+        [
+          "to go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä täytyy mennä nyt.",
+        "Minun täytyy menen nyt."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mennä",
+          "menen",
+          "menee"
+        ]
+      }
+    },
+    {
+      "id": "huomenna-menen-kaupunkiin",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "future",
+        "in-into-from"
+      ],
+      "text": "Huomenna menen kaupunkiin.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Huomenna",
+          "huomenna"
+        ],
+        [
+          "menen",
+          "mennä"
+        ],
+        [
+          "kaupunkiin",
+          "kaupunki"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Huomenna mennä kaupunkiin.",
+        "Huomenna menen kaupunki."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "menen",
+          "mennä",
+          "menet"
+        ]
+      }
+    },
+    {
+      "id": "en-voi-menna-tanaan",
+      "topic": "plans",
+      "concepts": [
+        "negative-verb",
+        "infinitive",
+        "present"
+      ],
+      "text": "En voi mennä tänään.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "En",
+          "ei"
+        ],
+        [
+          "voi",
+          "voida"
+        ],
+        [
+          "mennä",
+          "mennä"
+        ],
+        [
+          "tänään",
+          "tänään"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not"
+        ],
+        [
+          "can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "En voin mennä tänään.",
+        "En voi menen tänään."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "voi",
+          "voin",
+          "voida"
+        ]
+      }
+    },
+    {
+      "id": "minun-taytyy-tyoskennella-huomenna",
+      "topic": "plans",
+      "concepts": [
+        "genitive",
+        "infinitive",
+        "future"
+      ],
+      "text": "Minun täytyy työskennellä huomenna.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Minun",
+          "minä"
+        ],
+        [
+          "täytyy",
+          "täytyä"
+        ],
+        [
+          "työskennellä",
+          "työskennellä"
+        ],
+        [
+          "huomenna",
+          "huomenna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For me"
+        ],
+        [
+          "it is necessary"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä täytyy työskennellä huomenna.",
+        "Minun täytyy työskentelen huomenna."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "työskennellä",
+          "työskentelen",
+          "työskentelet"
+        ]
+      }
+    },
+    {
+      "id": "mita-kuuluu",
+      "topic": "people",
+      "concepts": [
+        "partitive",
+        "question-ko"
+      ],
+      "chunks": [
+        "mitä-kuuluu",
+        "hello"
+      ],
+      "text": "Hei, mitä kuuluu?",
+      "means": "Hi, how are you?",
+      "words": [
+        [
+          "Hei,"
+        ],
+        [
+          "mitä"
+        ],
+        [
+          "kuuluu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hi,"
+        ],
+        [
+          "what"
+        ],
+        [
+          "is heard"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hei, mikä kuuluu?",
+        "Hei, kuuluu mitä?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kuuluu",
+          "kuulun",
+          "kuulua"
+        ]
+      }
+    },
+    {
+      "id": "mika-sinun-nimesi",
+      "topic": "people",
+      "concepts": [
+        "possessive-suffix",
+        "genitive",
+        "question-ko"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Mikä sinun nimesi on?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Mikä"
+        ],
+        [
+          "sinun"
+        ],
+        [
+          "nimesi"
+        ],
+        [
+          "on"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "your name"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "on"
+      ],
+      "wrong": [
+        "Mikä sinun nimeni on?",
+        "Mitä sinun nimesi on?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nimesi",
+          "nimeni",
+          "nimeä"
+        ]
+      }
+    },
+    {
+      "id": "puhutko-englantia",
+      "topic": "people",
+      "concepts": [
+        "question-ko",
+        "partitive",
+        "present",
+        "vowel-harmony"
+      ],
+      "text": "Puhutko englantia?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Puhutko",
+          "puhua"
+        ],
+        [
+          "englantia",
+          "englanti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Puhut englantiko?",
+        "Puhutko englanti?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "englantia",
+          "englanti",
+          "englannin"
+        ]
+      }
+    },
+    {
+      "id": "minulla-on-veli",
+      "topic": "people",
+      "concepts": [
+        "have"
+      ],
+      "text": "Minulla on veli ja sisko.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Minulla",
+          "minä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "veli",
+          "veli"
+        ],
+        [
+          "ja",
+          "ja"
+        ],
+        [
+          "sisko",
+          "sisko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a brother and a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä on veli ja sisko.",
+        "Minulla olen veli ja sisko."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Minulla",
+          "Minä",
+          "Minun"
+        ]
+      }
+    },
+    {
+      "id": "siskoni-helsingissa",
+      "topic": "people",
+      "concepts": [
+        "possessive-suffix",
+        "in-into-from",
+        "gradation"
+      ],
+      "text": "Siskoni asuu Helsingissä.",
+      "means": "My sister lives in Helsinki.",
+      "words": [
+        [
+          "Siskoni",
+          "sisko"
+        ],
+        [
+          "asuu",
+          "asua"
+        ],
+        [
+          "Helsingissä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "in Helsinki"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Siskoni asuu Helsinkissä.",
+        "Siskoni asuu Helsinkiin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Helsingissä",
+          "Helsinkiin",
+          "Helsingistä"
+        ]
+      }
+    },
+    {
+      "id": "isani-auto",
+      "topic": "people",
+      "concepts": [
+        "possessive-suffix"
+      ],
+      "text": "Tämä on isäni auto.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Tämä",
+          "tämä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "isäni",
+          "isä"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my dad's car"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Tämä on isä auto.",
+        "Tämä on isälle auto."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "isäni",
+          "isä",
+          "isälle"
+        ]
+      }
+    },
+    {
+      "id": "en-tieda",
+      "topic": "people",
+      "concepts": [
+        "negative-verb",
+        "vowel-harmony"
+      ],
+      "text": "En tiedä, missä hän asuu.",
+      "means": "I don't know where he lives.",
+      "words": [
+        [
+          "En",
+          "ei"
+        ],
+        [
+          "tiedä,",
+          "tietää"
+        ],
+        [
+          "missä"
+        ],
+        [
+          "hän"
+        ],
+        [
+          "asuu",
+          "asua"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't"
+        ],
+        [
+          "know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "he lives"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "En tiedän, missä hän asuu.",
+        "Minä ei tiedä, missä hän asuu."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "asuu",
+          "asun",
+          "asua"
+        ]
+      }
+    },
+    {
+      "id": "olen-opettaja",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Olen opettaja.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Olen",
+          "olla"
+        ],
+        [
+          "opettaja",
+          "opettaja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Minä on opettaja.",
+        "Olen opettajaa."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Olen",
+          "On",
+          "Olet"
+        ]
+      }
+    },
+    {
+      "id": "pidan-elokuvasta",
+      "topic": "people",
+      "concepts": [
+        "in-into-from",
+        "vowel-harmony"
+      ],
+      "text": "Pidän tästä elokuvasta.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Pidän",
+          "pitää"
+        ],
+        [
+          "tästä",
+          "tämä"
+        ],
+        [
+          "elokuvasta",
+          "elokuva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "this movie"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Pidän tätä elokuvaa.",
+        "Pidän tästä elokuva."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "elokuvasta",
+          "elokuvaa",
+          "elokuvassa"
+        ]
+      }
+    },
+    {
+      "id": "pienessa-asunnossa",
+      "topic": "home",
+      "concepts": [
+        "in-into-from",
+        "adjective",
+        "gradation",
+        "present"
+      ],
+      "text": "Asun pienessä asunnossa.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Asun",
+          "asua"
+        ],
+        [
+          "pienessä",
+          "pieni"
+        ],
+        [
+          "asunnossa",
+          "asunto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Asun pieni asunnossa.",
+        "Asun pienessä asuntossa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "asunnossa",
+          "asuntoon",
+          "asunnosta"
+        ]
+      }
+    },
+    {
+      "id": "poydalla-kirja",
+      "topic": "home",
+      "concepts": [
+        "there-is",
+        "on-onto-from",
+        "gradation",
+        "vowel-harmony"
+      ],
+      "text": "Pöydällä on kirja.",
+      "means": "There's a book on the table.",
+      "words": [
+        [
+          "Pöydällä",
+          "pöytä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "kirja",
+          "kirja"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On the table",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "a book",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Pöydällä",
+        "kirja"
+      ],
+      "wrong": [
+        "Pöytällä on kirja.",
+        "Pöydälle on kirja."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pöydällä",
+          "Pöydälle",
+          "Pöytällä"
+        ]
+      }
+    },
+    {
+      "id": "ei-ole-maitoa",
+      "topic": "home",
+      "concepts": [
+        "there-is",
+        "negative-verb",
+        "partitive",
+        "in-into-from"
+      ],
+      "text": "Jääkaapissa ei ole maitoa.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Jääkaapissa",
+          "jääkaappi"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "ole",
+          "olla"
+        ],
+        [
+          "maitoa",
+          "maito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge",
+          true
+        ],
+        [
+          "there is no"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Jääkaapissa"
+      ],
+      "wrong": [
+        "Jääkaapissa ei ole maito.",
+        "Jääkaapissa ei ole maitoja."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maitoa",
+          "maito",
+          "maidon"
+        ]
+      }
+    },
+    {
+      "id": "voitko-sulkea",
+      "topic": "home",
+      "concepts": [
+        "question-ko",
+        "infinitive",
+        "object",
+        "conditional"
+      ],
+      "text": "Voisitko sulkea ikkunan?",
+      "means": "Could you close the window?",
+      "words": [
+        [
+          "Voisitko",
+          "voida"
+        ],
+        [
+          "sulkea",
+          "sulkea"
+        ],
+        [
+          "ikkunan",
+          "ikkuna"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Could you"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Voisitko sulkea ikkunassa?",
+        "Voisitko suljet ikkunan?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ikkunan",
+          "ikkunassa",
+          "ikkunaan"
+        ]
+      }
+    },
+    {
+      "id": "meilla-on-iso-keittio",
+      "topic": "home",
+      "concepts": [
+        "have",
+        "adjective"
+      ],
+      "text": "Meillä on iso keittiö ja pieni parveke.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Meillä"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "iso",
+          "iso"
+        ],
+        [
+          "keittiö",
+          "keittiö"
+        ],
+        [
+          "ja"
+        ],
+        [
+          "pieni",
+          "pieni"
+        ],
+        [
+          "parveke",
+          "parveke"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At us"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a big kitchen and a small balcony"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me on iso keittiö ja pieni parveke.",
+        "Meillä olemme iso keittiö ja pieni parveke."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Meillä",
+          "Me",
+          "Meidän"
+        ]
+      }
+    },
+    {
+      "id": "tulen-kotiin",
+      "topic": "home",
+      "concepts": [
+        "in-into-from",
+        "partitive",
+        "present"
+      ],
+      "text": "Kun tulen kotiin, teen ruokaa.",
+      "means": "When I get home, I cook.",
+      "words": [
+        [
+          "Kun"
+        ],
+        [
+          "tulen",
+          "tulla"
+        ],
+        [
+          "kotiin,",
+          "koti"
+        ],
+        [
+          "teen",
+          "tehdä"
+        ],
+        [
+          "ruokaa",
+          "ruoka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I come"
+        ],
+        [
+          "home,"
+        ],
+        [
+          "I make"
+        ],
+        [
+          "food"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Kun tulen kotona, teen ruokaa.",
+        "Kun tulen kotiin, teen ruoka."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "teen",
+          "tekee",
+          "tehdä"
+        ]
+      }
+    },
+    {
+      "id": "sulje-ovi",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "object"
+      ],
+      "text": "Sulje ovi, kiitos.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Sulje",
+          "sulkea"
+        ],
+        [
+          "ovi,",
+          "ovi"
+        ],
+        [
+          "kiitos",
+          "kiitos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Close"
+        ],
+        [
+          "the door,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Sulje oven, kiitos.",
+        "Sulkea ovi, kiitos."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sulje",
+          "Suljen",
+          "Sulkea"
+        ]
+      }
+    },
+    {
+      "id": "missa-avaimeni",
+      "topic": "home",
+      "concepts": [
+        "possessive-suffix",
+        "plural",
+        "question-ko"
+      ],
+      "text": "Missä avaimeni ovat?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Missä",
+          "missä"
+        ],
+        [
+          "avaimeni",
+          "avain"
+        ],
+        [
+          "ovat",
+          "olla"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "my keys"
+        ],
+        [
+          "are",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "ovat"
+      ],
+      "wrong": [
+        "Missä avaimeni olen?",
+        "Missä avain ovat?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ovat",
+          "olen",
+          "olet"
+        ]
+      }
+    },
+    {
+      "id": "tule-tanne",
+      "topic": "home",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Tule tänne!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Tule",
+          "tulla"
+        ],
+        [
+          "tänne",
+          "tänne"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Tule täällä!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tänne",
+          "täällä",
+          "täältä"
+        ]
+      }
+    },
+    {
+      "id": "kahvia-ilman-sokeria",
+      "topic": "food",
+      "concepts": [
+        "partitive",
+        "present"
+      ],
+      "text": "Juon kahvia ilman sokeria.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Juon",
+          "juoda"
+        ],
+        [
+          "kahvia",
+          "kahvi"
+        ],
+        [
+          "ilman",
+          "ilman"
+        ],
+        [
+          "sokeria",
+          "sokeri"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Juon kahvi ilman sokeria.",
+        "Juon kahvia ilman sokeri."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvia",
+          "kahvi",
+          "kahvin"
+        ]
+      }
+    },
+    {
+      "id": "en-juo-kahvia",
+      "topic": "food",
+      "concepts": [
+        "negative-verb",
+        "partitive"
+      ],
+      "text": "En juo kahvia.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "En",
+          "ei"
+        ],
+        [
+          "juo",
+          "juoda"
+        ],
+        [
+          "kahvia",
+          "kahvi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "En juon kahvia.",
+        "Minä ei juo kahvia."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "juo",
+          "juon",
+          "juoda"
+        ]
+      }
+    },
+    {
+      "id": "saisinko-lasin-vetta",
+      "topic": "food",
+      "concepts": [
+        "question-ko",
+        "partitive",
+        "object",
+        "conditional"
+      ],
+      "text": "Saisinko lasin vettä?",
+      "means": "Could I have a glass of water?",
+      "words": [
+        [
+          "Saisinko",
+          "saada"
+        ],
+        [
+          "lasin",
+          "lasi"
+        ],
+        [
+          "vettä",
+          "vesi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Could I get"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of water"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Saisinko lasin vesi?",
+        "Saisinko lasin vedessä?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vettä",
+          "vesi",
+          "veden"
+        ]
+      }
+    },
+    {
+      "id": "jotain-makeaa",
+      "topic": "food",
+      "concepts": [
+        "infinitive",
+        "partitive",
+        "vowel-harmony"
+      ],
+      "text": "Haluan syödä jotain makeaa.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Haluan",
+          "haluta"
+        ],
+        [
+          "syödä",
+          "syödä"
+        ],
+        [
+          "jotain",
+          "jokin"
+        ],
+        [
+          "makeaa",
+          "makea"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Haluan syön jotain makeaa.",
+        "Haluan syödä jotain makea."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "syödä",
+          "syön",
+          "söin"
+        ]
+      }
+    },
+    {
+      "id": "soimme-pizzaa",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "partitive"
+      ],
+      "text": "Eilen söimme pizzaa.",
+      "means": "Yesterday we had pizza.",
+      "words": [
+        [
+          "Eilen",
+          "eilen"
+        ],
+        [
+          "söimme",
+          "syödä"
+        ],
+        [
+          "pizzaa",
+          "pizza"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "we ate"
+        ],
+        [
+          "pizza"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Eilen söin pizzaa.",
+        "Eilen söimme pizza."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "söimme",
+          "söin",
+          "söit"
+        ]
+      }
+    },
+    {
+      "id": "maito-jaakaapissa",
+      "topic": "food",
+      "concepts": [
+        "in-into-from",
+        "gradation"
+      ],
+      "text": "Maito on jääkaapissa.",
+      "means": "The milk is in the fridge.",
+      "words": [
+        [
+          "Maito",
+          "maito"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "jääkaapissa",
+          "jääkaappi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The milk"
+        ],
+        [
+          "is"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Maito on jääkaappiin.",
+        "Maito on jääkaappissa."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "jääkaapissa",
+          "jääkaappiin",
+          "jääkaapista"
+        ]
+      }
+    },
+    {
+      "id": "aitini-tekee-ruokaa",
+      "topic": "food",
+      "concepts": [
+        "possessive-suffix",
+        "partitive",
+        "adjective"
+      ],
+      "text": "Äitini tekee tosi hyvää ruokaa.",
+      "means": "My mom makes really good food.",
+      "words": [
+        [
+          "Äitini",
+          "äiti"
+        ],
+        [
+          "tekee",
+          "tehdä"
+        ],
+        [
+          "tosi",
+          "tosi"
+        ],
+        [
+          "hyvää",
+          "hyvä"
+        ],
+        [
+          "ruokaa",
+          "ruoka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "makes"
+        ],
+        [
+          "really good food"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Äitini tekee tosi hyvä ruoka.",
+        "Äitini teen tosi hyvää ruokaa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hyvää",
+          "hyvä",
+          "hyvän"
+        ]
+      }
+    },
+    {
+      "id": "saanko-laskun",
+      "topic": "food",
+      "concepts": [
+        "question-ko",
+        "object"
+      ],
+      "chunks": [
+        "can-i-have-the-check-please"
+      ],
+      "text": "Saanko laskun, kiitos?",
+      "means": "Can I have the check, please?",
+      "words": [
+        [
+          "Saanko"
+        ],
+        [
+          "laskun,"
+        ],
+        [
+          "kiitos"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can I get"
+        ],
+        [
+          "the check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Saanko lasku, kiitos?",
+        "Saanko laskuun, kiitos?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Saanko",
+          "Saatko",
+          "Saammeko"
+        ]
+      }
+    },
+    {
+      "id": "aidin-kanssa",
+      "topic": "food",
+      "concepts": [
+        "genitive",
+        "partitive"
+      ],
+      "text": "Laitan ruokaa äidin kanssa.",
+      "means": "I cook with my mom.",
+      "words": [
+        [
+          "Laitan",
+          "laittaa"
+        ],
+        [
+          "ruokaa",
+          "ruoka"
+        ],
+        [
+          "äidin",
+          "äiti"
+        ],
+        [
+          "kanssa",
+          "kanssa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I cook"
+        ],
+        [
+          "Mom's"
+        ],
+        [
+          "with",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "kanssa"
+      ],
+      "wrong": [
+        "Laitan ruokaa äiti kanssa.",
+        "Laitan ruokaa äidin kanssaan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "äidin",
+          "äiti",
+          "äitiä"
+        ]
+      }
+    },
+    {
+      "id": "missa-asema-on",
+      "topic": "out",
+      "concepts": [
+        "question-ko"
+      ],
+      "chunks": [
+        "anteeksi"
+      ],
+      "text": "Anteeksi, missä asema on?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Anteeksi,"
+        ],
+        [
+          "missä",
+          "missä"
+        ],
+        [
+          "asema",
+          "asema"
+        ],
+        [
+          "on",
+          "olla"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "the station"
+        ],
+        [
+          "is",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "moved": [
+        "on"
+      ],
+      "wrong": [
+        "Anteeksi, missä asemaa on?",
+        "Anteeksi, missä asemassa on?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "asema",
+          "asemaa",
+          "aseman"
+        ]
+      }
+    },
+    {
+      "id": "menen-kauppaan",
+      "topic": "out",
+      "concepts": [
+        "in-into-from",
+        "infinitive",
+        "partitive"
+      ],
+      "text": "Menen kauppaan ostamaan leipää.",
+      "means": "I'm going to the store to buy bread.",
+      "words": [
+        [
+          "Menen",
+          "mennä"
+        ],
+        [
+          "kauppaan",
+          "kauppa"
+        ],
+        [
+          "ostamaan",
+          "ostaa"
+        ],
+        [
+          "leipää",
+          "leipä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "to buy"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Menen kaupassa ostamaan leipää.",
+        "Menen kauppaan ostamaan leipä."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kauppaan",
+          "kaupassa",
+          "kaupasta"
+        ]
+      }
+    },
+    {
+      "id": "toihin-bussilla",
+      "topic": "out",
+      "concepts": [
+        "on-onto-from",
+        "future",
+        "in-into-from",
+        "plural"
+      ],
+      "text": "Huomenna menen töihin bussilla.",
+      "means": "Tomorrow I'm taking the bus to work.",
+      "words": [
+        [
+          "Huomenna",
+          "huomenna"
+        ],
+        [
+          "menen",
+          "mennä"
+        ],
+        [
+          "töihin",
+          "työ"
+        ],
+        [
+          "bussilla",
+          "bussi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'm going"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Huomenna menen töihin bussiin.",
+        "Huomenna menen työ bussilla."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bussilla",
+          "bussiin",
+          "bussista"
+        ]
+      }
+    },
+    {
+      "id": "uuden-takin",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "object",
+        "adjective",
+        "gradation"
+      ],
+      "text": "Eilen ostin uuden takin.",
+      "means": "Yesterday I bought a new jacket.",
+      "words": [
+        [
+          "Eilen",
+          "eilen"
+        ],
+        [
+          "ostin",
+          "ostaa"
+        ],
+        [
+          "uuden",
+          "uusi"
+        ],
+        [
+          "takin",
+          "takki"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "I bought"
+        ],
+        [
+          "a new jacket"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Eilen ostin uusi takki.",
+        "Eilen ostin uuden takkin."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "takin",
+          "takki",
+          "takkin"
+        ]
+      }
+    },
+    {
+      "id": "juna-myohassa",
+      "topic": "out",
+      "concepts": [
+        "past",
+        "partitive"
+      ],
+      "text": "Juna oli kymmenen minuuttia myöhässä.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Juna",
+          "juna"
+        ],
+        [
+          "oli",
+          "olla"
+        ],
+        [
+          "kymmenen"
+        ],
+        [
+          "minuuttia",
+          "minuutti"
+        ],
+        [
+          "myöhässä",
+          "myöhässä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "was"
+        ],
+        [
+          "ten minutes"
+        ],
+        [
+          "late"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Juna oli kymmenen minuutti myöhässä.",
+        "Juna oli kymmenen minuutteja myöhässä."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "minuuttia",
+          "minuutti",
+          "minuutteja"
+        ]
+      }
+    },
+    {
+      "id": "en-ole-kaynyt",
+      "topic": "out",
+      "concepts": [
+        "negative-verb",
+        "past",
+        "in-into-from"
+      ],
+      "text": "En ole koskaan käynyt Suomessa.",
+      "means": "I've never been to Finland.",
+      "words": [
+        [
+          "En",
+          "ei"
+        ],
+        [
+          "ole",
+          "olla"
+        ],
+        [
+          "koskaan",
+          "koskaan"
+        ],
+        [
+          "käynyt",
+          "käydä"
+        ],
+        [
+          "Suomessa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I haven't"
+        ],
+        [
+          "ever"
+        ],
+        [
+          "been"
+        ],
+        [
+          "in Finland"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "En ole koskaan kävin Suomessa.",
+        "En ole koskaan käynyt Suomeen."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "käynyt",
+          "käyn",
+          "kävin"
+        ]
+      }
+    },
+    {
+      "id": "uudet-kengat",
+      "topic": "out",
+      "concepts": [
+        "plural",
+        "adjective",
+        "gradation"
+      ],
+      "text": "Uudet kengät ovat liian pienet.",
+      "means": "The new shoes are too small.",
+      "words": [
+        [
+          "Uudet",
+          "uusi"
+        ],
+        [
+          "kengät",
+          "kenkä"
+        ],
+        [
+          "ovat",
+          "olla"
+        ],
+        [
+          "liian",
+          "liian"
+        ],
+        [
+          "pienet",
+          "pieni"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The new shoes"
+        ],
+        [
+          "are"
+        ],
+        [
+          "too small"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Uudet kengät ovat liian pieni.",
+        "Uusi kengät ovat liian pienet."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pienet",
+          "pieni",
+          "pientä"
+        ]
+      }
+    },
+    {
+      "id": "voimme-ottaa-taksin",
+      "topic": "out",
+      "concepts": [
+        "infinitive",
+        "object",
+        "conditional"
+      ],
+      "text": "Jos olet väsynyt, voisimme ottaa taksin.",
+      "means": "If you're tired, we could take a taxi.",
+      "words": [
+        [
+          "Jos"
+        ],
+        [
+          "olet",
+          "olla"
+        ],
+        [
+          "väsynyt,",
+          "väsynyt"
+        ],
+        [
+          "voisimme",
+          "voida"
+        ],
+        [
+          "ottaa",
+          "ottaa"
+        ],
+        [
+          "taksin",
+          "taksi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If you are tired,"
+        ],
+        [
+          "we could"
+        ],
+        [
+          "take"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Jos olet väsynyt, voisimme ottaa taksi.",
+        "Jos olet väsynyt, voisimme otamme taksin."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "taksin",
+          "taksi",
+          "taksissa"
+        ]
+      }
+    },
+    {
+      "id": "asemalla-odottaa",
+      "topic": "out",
+      "concepts": [
+        "on-onto-from",
+        "partitive"
+      ],
+      "text": "Asemalla meitä odottaa mummo.",
+      "means": "Grandma is waiting for us at the station.",
+      "words": [
+        [
+          "Asemalla",
+          "asema"
+        ],
+        [
+          "meitä"
+        ],
+        [
+          "odottaa",
+          "odottaa"
+        ],
+        [
+          "mummo",
+          "mummo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the station",
+          true
+        ],
+        [
+          "us",
+          true
+        ],
+        [
+          "waits for"
+        ],
+        [
+          "Grandma",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Asemalla",
+        "meitä",
+        "mummo"
+      ],
+      "wrong": [
+        "Asemalle meitä odottaa mummo.",
+        "Asemalla me odottaa mummo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Asemalla",
+          "Asemalle",
+          "Asemalta"
+        ]
+      }
+    },
+    {
+      "id": "lauantaina-mummolle",
+      "topic": "plans",
+      "concepts": [
+        "on-onto-from",
+        "future",
+        "time-essive"
+      ],
+      "text": "Lauantaina menemme mummolle.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "Lauantaina",
+          "lauantai"
+        ],
+        [
+          "menemme",
+          "mennä"
+        ],
+        [
+          "mummolle",
+          "mummo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Lauantaina menemme mummolla.",
+        "Lauantaina menemme mummoon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mummolle",
+          "mummolla",
+          "mummolta"
+        ]
+      }
+    },
+    {
+      "id": "huomenna-sataa",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Huomenna sataa.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Huomenna",
+          "huomenna"
+        ],
+        [
+          "sataa",
+          "sataa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "it rains"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Huomenna satoi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sataa",
+          "satoi",
+          "sateen"
+        ]
+      }
+    },
+    {
+      "id": "soitan-sinulle",
+      "topic": "plans",
+      "concepts": [
+        "on-onto-from",
+        "future"
+      ],
+      "text": "Soitan sinulle huomenna.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Soitan",
+          "soittaa"
+        ],
+        [
+          "sinulle"
+        ],
+        [
+          "huomenna",
+          "huomenna"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'll call"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Soitan sinua huomenna.",
+        "Soitan sinut huomenna."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sinulle",
+          "sinua",
+          "sinut"
+        ]
+      }
+    },
+    {
+      "id": "minun-taytyy",
+      "topic": "plans",
+      "concepts": [
+        "genitive",
+        "infinitive"
+      ],
+      "text": "Minun täytyy lähteä nyt.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Minun"
+        ],
+        [
+          "täytyy",
+          "täytyä"
+        ],
+        [
+          "lähteä",
+          "lähteä"
+        ],
+        [
+          "nyt",
+          "nyt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For me"
+        ],
+        [
+          "it's necessary"
+        ],
+        [
+          "to leave"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä täytyy lähteä nyt.",
+        "Minun täytyy lähden nyt."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Minun",
+          "Minä",
+          "Minua"
+        ]
+      }
+    },
+    {
+      "id": "tuletko-elokuviin",
+      "topic": "plans",
+      "concepts": [
+        "question-ko",
+        "genitive",
+        "plural",
+        "in-into-from"
+      ],
+      "text": "Tuletko meidän kanssa elokuviin?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Tuletko",
+          "tulla"
+        ],
+        [
+          "meidän"
+        ],
+        [
+          "kanssa",
+          "kanssa"
+        ],
+        [
+          "elokuviin",
+          "elokuva"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you coming"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Tuletko meidän kanssa elokuvissa?",
+        "Tuletko me kanssa elokuviin?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "elokuviin",
+          "elokuvissa",
+          "elokuvista"
+        ]
+      }
+    },
+    {
+      "id": "jos-ei-sada",
+      "topic": "plans",
+      "concepts": [
+        "negative-verb",
+        "on-onto-from",
+        "gradation",
+        "future"
+      ],
+      "text": "Jos ei sada, menemme rannalle.",
+      "means": "If it doesn't rain, we'll go to the beach.",
+      "words": [
+        [
+          "Jos"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "sada,",
+          "sataa"
+        ],
+        [
+          "menemme",
+          "mennä"
+        ],
+        [
+          "rannalle",
+          "ranta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "If"
+        ],
+        [
+          "it doesn't"
+        ],
+        [
+          "rain,"
+        ],
+        [
+          "we'll go"
+        ],
+        [
+          "to the beach"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "moved": [],
+      "wrong": [
+        "Jos ei sataa, menemme rannalle.",
+        "Jos ei sada, menemme rantalle."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "rannalle",
+          "rannalla",
+          "rantalle"
+        ]
+      }
+    },
+    {
+      "id": "opiskellut-suomea",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "partitive"
+      ],
+      "text": "Olen opiskellut suomea vuoden.",
+      "means": "I've been studying Finnish for a year.",
+      "words": [
+        [
+          "Olen",
+          "olla"
+        ],
+        [
+          "opiskellut",
+          "opiskella"
+        ],
+        [
+          "suomea",
+          "suomi"
+        ],
+        [
+          "vuoden",
+          "vuosi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "studied"
+        ],
+        [
+          "Finnish"
+        ],
+        [
+          "for a year"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Olen opiskellut suomi vuoden.",
+        "Olen opiskelin suomea vuoden."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "suomea",
+          "suomi",
+          "suomessa"
+        ]
+      }
+    },
+    {
+      "id": "mita-teet",
+      "topic": "plans",
+      "concepts": [
+        "partitive",
+        "time-essive",
+        "question-ko",
+        "future"
+      ],
+      "text": "Mitä teet viikonloppuna?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Mitä"
+        ],
+        [
+          "teet",
+          "tehdä"
+        ],
+        [
+          "viikonloppuna",
+          "viikonloppu"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are you doing"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Mikä teet viikonloppuna?",
+        "Mitä teet viikonloppu?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "teet",
+          "teen",
+          "tekee"
+        ]
+      }
+    },
+    {
+      "id": "tana-iltana-kotona",
+      "topic": "plans",
+      "concepts": [
+        "time-essive",
+        "in-into-from",
+        "future"
+      ],
+      "text": "Tänä iltana syömme kotona.",
+      "means": "Tonight we're eating at home.",
+      "words": [
+        [
+          "Tänä",
+          "tämä"
+        ],
+        [
+          "iltana",
+          "ilta"
+        ],
+        [
+          "syömme",
+          "syödä"
+        ],
+        [
+          "kotona",
+          "koti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tonight"
+        ],
+        [
+          "we're eating"
+        ],
+        [
+          "at home"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Tänä iltaa syömme kotona.",
+        "Tänä iltana syömme kotiin."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kotona",
+          "kotiin",
+          "kotoa"
+        ]
+      }
+    },
+    {
+      "id": "tanaan-on-kylma",
+      "topic": "plans",
+      "concepts": [
+        "there-is"
+      ],
+      "text": "Tänään on kylmä.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Tänään",
+          "tänään"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "kylmä",
+          "kylmä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tänään olen kylmä."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "on",
+          "olen",
+          "ovat"
+        ]
+      }
+    },
+    {
+      "id": "minulla-on-kylma",
+      "topic": "people",
+      "concepts": [
+        "have"
+      ],
+      "text": "Minulla on kylmä.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Minulla"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "kylmä",
+          "kylmä"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At me"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Minä on kylmä.",
+        "Minulle on kylmä."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Minulla",
+          "Minä",
+          "Minulle"
+        ]
+      }
+    },
+    {
+      "id": "kerro-minulle",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "on-onto-from"
+      ],
+      "text": "Kerro minulle!",
+      "means": "Tell me!",
+      "words": [
+        [
+          "Kerro",
+          "kertoa"
+        ],
+        [
+          "minulle"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Tell"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Kerro minua!",
+        "Kerro minut!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "minulle",
+          "minua",
+          "minut"
+        ]
+      }
+    },
+    {
+      "id": "kaunis-ilma",
+      "topic": "plans",
+      "concepts": [
+        "there-is",
+        "future"
+      ],
+      "text": "Toivottavasti huomenna on kaunis ilma.",
+      "means": "Hopefully the weather's nice tomorrow.",
+      "words": [
+        [
+          "Toivottavasti",
+          "toivottavasti"
+        ],
+        [
+          "huomenna",
+          "huomenna"
+        ],
+        [
+          "on",
+          "olla"
+        ],
+        [
+          "kaunis",
+          "kaunis"
+        ],
+        [
+          "ilma",
+          "ilma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hopefully"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "is"
+        ],
+        [
+          "nice weather"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Toivottavasti huomenna on kaunista ilma.",
+        "Toivottavasti huomenna on kaunis ilmaa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kaunis",
+          "kaunista",
+          "kauniin"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kahvi",
+          "forms": [
+            "kahvia"
+          ],
+          "picture": "coffee",
+          "means": "kahvia = coffee"
+        },
+        {
+          "lemma": "tee",
+          "forms": [
+            "teetä"
+          ],
+          "picture": "tea",
+          "means": "teetä = tea"
+        },
+        {
+          "lemma": "vesi",
+          "forms": [
+            "vettä"
+          ],
+          "picture": "water",
+          "means": "vettä = water"
+        },
+        {
+          "lemma": "minä",
+          "forms": [
+            "minä"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "juoda",
+          "forms": [
+            "juon"
+          ],
+          "picture": "drink",
+          "means": "juon = I drink"
+        },
+        {
+          "lemma": "ja",
+          "forms": [
+            "ja"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb's ending marks the person, so standard Finnish often leaves out minä and sinä (asun, asut, asuu), though everyday speech often keeps mä and sä."
+      },
+      "items": [
+        "mina-juon-kahvia",
+        "mina-juon-teeta",
+        "mina-juon-vetta",
+        "mina-juon-kahvia-ja-teeta",
+        "mina-juon-teeta-ja-vetta",
+        "mina-juon-vetta-ja-kahvia"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "yksi",
+          "forms": [
+            "yksi"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "maito",
+          "forms": [
+            "maitoa"
+          ],
+          "picture": "milk",
+          "means": "maitoa = milk"
+        },
+        {
+          "lemma": "saada",
+          "forms": [
+            "saisinko"
+          ],
+          "means": "saisinko = could I have"
+        },
+        {
+          "lemma": "kahvi",
+          "forms": [
+            "kahvi",
+            "kahvin"
+          ],
+          "means": "kahvi = coffee; kahvin = a coffee"
+        },
+        {
+          "lemma": "tee",
+          "forms": [
+            "tee"
+          ],
+          "means": "tea"
+        },
+        {
+          "lemma": "vesi",
+          "forms": [
+            "vesi"
+          ],
+          "means": "water"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please-thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "yksi-kahvi-kiitos",
+        "hei-saisinko-teeta-kiitos",
+        "saisinko-kahvin-kiitos",
+        "yksi-tee-ja-yksi-vesi-kiitos",
+        "mina-juon-maitoa"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "hyvä",
+          "forms": [
+            "hyvää"
+          ],
+          "picture": "good",
+          "means": "hyvää = good; fine"
+        },
+        {
+          "lemma": "olla",
+          "forms": [
+            "on"
+          ],
+          "means": "on = is"
+        },
+        {
+          "lemma": "kuulua",
+          "forms": [
+            "kuuluu"
+          ],
+          "means": "kuuluu = is heard"
+        },
+        {
+          "lemma": "minä",
+          "forms": [
+            "minulle"
+          ],
+          "means": "minulle = to me"
+        }
+      ],
+      "phrases": [
+        "mitä-kuuluu",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "partitive",
+        "line": "The partitive (-a, -ä, -ta, -tä) is for amounts, objects that are partial or not definite, every object after not, and the question word mitä: lasi vettä; Juon kahvia; En juo kahvia; Mitä teet?"
+      },
+      "items": [
+        "mita-kuuluu",
+        "kylla-kiitos",
+        "ei-kiitos",
+        "minulle-kuuluu-hyvaa-kiitos",
+        "kahvi-on-hyvaa",
+        "kylla-kiitos-nakemiin",
+        "ei-kiitos-nakemiin"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "sinä",
+          "forms": [
+            "sinä"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ei",
+          "forms": [
+            "en"
+          ],
+          "means": "en = I do not"
+        },
+        {
+          "lemma": "opettaja",
+          "forms": [
+            "opettaja"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "opiskelija",
+          "forms": [
+            "opiskelija"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "olla",
+          "forms": [
+            "olen",
+            "olet",
+            "oletko",
+            "ole"
+          ],
+          "means": "olen = I am; olet = you are; oletko = are you; ole = be"
+        },
+        {
+          "lemma": "juoda",
+          "forms": [
+            "juo"
+          ],
+          "means": "juo = drink"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "mika-sinun-nimesi",
+        "hei-hauska-tutustua",
+        "olen-opettaja",
+        "sina-olet-opiskelija",
+        "oletko-sina-opettaja",
+        "mina-en-ole-opettaja",
+        "en-juo-kahvia"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "äiti",
+          "forms": [
+            "äitini"
+          ],
+          "picture": "mother",
+          "means": "äitini = my mother"
+        },
+        {
+          "lemma": "isä",
+          "forms": [
+            "isäni"
+          ],
+          "picture": "father",
+          "means": "isäni = my father"
+        },
+        {
+          "lemma": "veli",
+          "forms": [
+            "veljeni"
+          ],
+          "picture": "brother",
+          "means": "veljeni = my brother"
+        },
+        {
+          "lemma": "sisko",
+          "forms": [
+            "siskoni"
+          ],
+          "picture": "sister",
+          "means": "siskoni = my sister"
+        },
+        {
+          "lemma": "minä",
+          "forms": [
+            "minun"
+          ],
+          "means": "minun = my"
+        },
+        {
+          "lemma": "tämä",
+          "forms": [
+            "tämä"
+          ],
+          "means": "this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive-suffix",
+        "line": "Standard Finnish adds -ni or -si to the noun (siskoni, sinun nimesi, avaimeni), while everyday speech often says mun or sun without it."
+      },
+      "items": [
+        "tama-on-minun-aitini",
+        "tama-on-minun-isani",
+        "minun-isani-on-opettaja",
+        "minun-veljeni-on-opiskelija",
+        "tama-on-minun-siskoni",
+        "minun-aitini-on-opettaja"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "ystävä",
+          "forms": [
+            "ystävä"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "lääkäri",
+          "forms": [
+            "lääkäri"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "avain",
+          "forms": [
+            "avain"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "puhelin",
+          "forms": [
+            "puhelin"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "kirja",
+          "forms": [
+            "kirjaa"
+          ],
+          "picture": "book",
+          "means": "kirjaa = a book"
+        },
+        {
+          "lemma": "minä",
+          "forms": [
+            "minulla"
+          ],
+          "means": "minulla = minulla: with me; in my possession (minulla on = I have)"
+        },
+        {
+          "lemma": "sinä",
+          "forms": [
+            "sinulla"
+          ],
+          "means": "sinulla = sinulla: with you; in your possession (sinulla on = you have)"
+        },
+        {
+          "lemma": "olla",
+          "forms": [
+            "onko"
+          ],
+          "means": "onko = onko: is ...?; is there ...? (onko sinulla ...? = do you have ...?)"
+        },
+        {
+          "lemma": "veli",
+          "forms": [
+            "veli"
+          ],
+          "means": "brother"
+        },
+        {
+          "lemma": "sisko",
+          "forms": [
+            "sisko"
+          ],
+          "means": "sister"
+        },
+        {
+          "lemma": "hyvä",
+          "forms": [
+            "hyvä"
+          ],
+          "means": "good, fine"
+        },
+        {
+          "lemma": "ei",
+          "forms": [
+            "ei"
+          ],
+          "means": "not"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "minulla-on-puhelin",
+        "onko-sinulla-avain",
+        "minulla-on-veli",
+        "minulla-ei-ole-kirjaa",
+        "minun-siskoni-on-laakari",
+        "sina-olet-hyva-ystava"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "missä",
+          "forms": [
+            "missä"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "täällä",
+          "forms": [
+            "täällä"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "tuolla",
+          "forms": [
+            "tuolla"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "vessa",
+          "forms": [
+            "vessa"
+          ],
+          "means": "bathroom, toilet"
+        },
+        {
+          "lemma": "puhelin",
+          "forms": [
+            "puhelimeni"
+          ],
+          "means": "puhelimeni = my phone"
+        },
+        {
+          "lemma": "avain",
+          "forms": [
+            "avaimeni"
+          ],
+          "means": "avaimeni = my key; my keys"
+        },
+        {
+          "lemma": "olla",
+          "forms": [
+            "ovat"
+          ],
+          "means": "ovat = are"
+        },
+        {
+          "lemma": "ei",
+          "forms": [
+            "ei"
+          ],
+          "means": "not"
+        }
+      ],
+      "phrases": [
+        "anteeksi"
+      ],
+      "concept": {
+        "pattern": "genitive",
+        "line": "-n is of or 's (isän auto), comes before kanssa (äidin kanssa: with Mom), and marks who must: Minun täytyy lähteä."
+      },
+      "items": [
+        "missa-aitini-on",
+        "puhelimeni-on-taalla",
+        "avain-on-tuolla",
+        "anteeksi-missa-vessa-on",
+        "missa-minun-avaimeni-on",
+        "siskoni-on-taalla",
+        "missa-avaimeni",
+        "avain-ei-ole-taalla"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "kaksi",
+          "forms": [
+            "kaksi"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "kolme",
+          "forms": [
+            "kolme"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "raha",
+          "forms": [
+            "rahaa"
+          ],
+          "picture": "money",
+          "means": "rahaa = money"
+        },
+        {
+          "lemma": "kirja",
+          "forms": [
+            "kirja"
+          ],
+          "means": "book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-this",
+        "can-i-have-the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "yksi-kirja-kiitos",
+        "kaksi-kahvia-kiitos",
+        "minulla-on-kolme-kirjaa",
+        "minulla-ei-ole-rahaa",
+        "anteeksi-paljonko-tama-maksaa",
+        "saanko-laskun"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "puhua",
+          "forms": [
+            "puhutko",
+            "puhun"
+          ],
+          "means": "puhutko = do you speak; puhun = I speak"
+        },
+        {
+          "lemma": "englanti",
+          "forms": [
+            "englantia"
+          ],
+          "means": "englantia = English"
+        },
+        {
+          "lemma": "suomi",
+          "forms": [
+            "suomea"
+          ],
+          "means": "suomea = Finnish"
+        },
+        {
+          "lemma": "ymmärtää",
+          "forms": [
+            "ymmärrä",
+            "ymmärrätkö"
+          ],
+          "means": "ymmärrä = understand; ymmärrätkö = do you understand"
+        },
+        {
+          "lemma": "vähän",
+          "forms": [
+            "vähän"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "haluta",
+          "forms": [
+            "haluan"
+          ],
+          "means": "haluan = I want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question-ko",
+        "line": "A yes/no question usually starts with the verb and -ko or -kö (Puhutko englantia?"
+      },
+      "items": [
+        "puhutko-englantia",
+        "puhun-suomea",
+        "puhun-vahan-suomea",
+        "en-ymmarra",
+        "ymmarratko-sina",
+        "haluan-kahvin",
+        "haluan-vetta-kiitos"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "talo",
+          "forms": [
+            "talossa",
+            "talo"
+          ],
+          "picture": "house",
+          "means": "talossa = in a house; talo = house"
+        },
+        {
+          "lemma": "huone",
+          "forms": [
+            "huoneeni"
+          ],
+          "picture": "room",
+          "means": "huoneeni = my room"
+        },
+        {
+          "lemma": "iso",
+          "forms": [
+            "iso"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "pieni",
+          "forms": [
+            "pienessä",
+            "pieni"
+          ],
+          "picture": "small",
+          "means": "pienessä = in a small; pieni = small"
+        },
+        {
+          "lemma": "asua",
+          "forms": [
+            "asun",
+            "asut",
+            "asuu"
+          ],
+          "means": "asun = I live; asut = you live; asuu = lives"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "asun-taalla",
+        "asun-pienessa-talossa",
+        "missa-sina-asut",
+        "minun-huoneeni-on-pieni",
+        "tama-talo-on-iso",
+        "aitini-asuu-taalla"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "mennä",
+          "forms": [
+            "menen",
+            "menet",
+            "menee"
+          ],
+          "means": "menen = I go; menet = you go; menee = goes"
+        },
+        {
+          "lemma": "koulu",
+          "forms": [
+            "kouluun"
+          ],
+          "picture": "school",
+          "means": "kouluun = to school"
+        },
+        {
+          "lemma": "kaupunki",
+          "forms": [
+            "kaupunkiin"
+          ],
+          "picture": "city",
+          "means": "kaupunkiin = to the city"
+        },
+        {
+          "lemma": "asema",
+          "forms": [
+            "asema"
+          ],
+          "means": "station"
+        },
+        {
+          "lemma": "auto",
+          "forms": [
+            "auto"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "mihin",
+          "forms": [
+            "mihin"
+          ],
+          "means": "where to"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "have",
+        "line": "Finnish says a thing is at you: Minulla on veli (I have a brother, literally at me is a brother); also feelings: Minulla on kylmä (I'm cold)."
+      },
+      "items": [
+        "minulla-on-auto",
+        "tama-auto-on-pieni",
+        "menen-kouluun",
+        "mihin-sina-menet",
+        "aitini-menee-kaupunkiin",
+        "missa-asema-on"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "tänään",
+          "forms": [
+            "tänään"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "huomenna",
+          "forms": [
+            "huomenna"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "nyt",
+          "forms": [
+            "nyt"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "työskennellä",
+          "forms": [
+            "työskentelen",
+            "työskennellä"
+          ],
+          "picture": "work",
+          "means": "työskentelen = I work; työskennellä = to work"
+        },
+        {
+          "lemma": "täytyä",
+          "forms": [
+            "täytyy"
+          ],
+          "means": "täytyy = must; have to"
+        },
+        {
+          "lemma": "voida",
+          "forms": [
+            "voi"
+          ],
+          "means": "voi = can"
+        },
+        {
+          "lemma": "mennä",
+          "forms": [
+            "mennä"
+          ],
+          "means": "to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "kiitos-nahdaan-huomenna",
+        "tyoskentelen-tanaan",
+        "minun-taytyy-menna-nyt",
+        "huomenna-menen-kaupunkiin",
+        "en-voi-menna-tanaan",
+        "minun-taytyy-tyoskennella-huomenna"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

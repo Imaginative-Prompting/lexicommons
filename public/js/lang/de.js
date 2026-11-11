@@ -1,0 +1,31 @@
+// German (lang/index.js has what each field means).
+
+export default {
+  name: "German",
+  locale: "de-DE",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "any",
+  abbreviations: ["hr.", "fr.", "dr.", "prof.", "st.", "z.b.", "d.h.", "u.a.", "usw.", "bzw.", "ca.", "nr.", "s.", "vgl.", "evtl.", "str.", "tel.", "inkl.", "ggf.", "z.", "b.", "d.", "h.", "u.", "a."],
+  stray: ["nicht", "auch", "es", "noch", "der", "zu"],
+  patterns: {
+    present: { name: "Verb endings with ich, du, wir and the rest", about: "Most verbs end in -e with ich, -st with du, -t with er, sie, es or ihr, and -en with wir, sie or Sie; if the part before -en ends in s, ß, x or z, du takes only -t: ich arbeite, du arbeitest, wir arbeiten, du heißt.", after: [] },
+    v2: { name: "Verb second", about: "In a main clause the verb comes second. Start with a time word, and the subject moves after the verb: Morgen fahren wir (tomorrow go we).", after: ["present"] },
+    question: { name: "Questions: verb first or after the question word", about: "In a yes-or-no question the verb comes first; after a question word, it comes next: Wo wohnst du (where live you).", after: ["v2"] },
+    gender: { name: "der, die, das", about: "Every noun is masculine (der), feminine (die) or neuter (das), and ein, kein, mein and the rest match it: der Bahnhof, die Bank, das Haus.", after: [] },
+    accusative: { name: "den for a masculine object", about: "When a masculine noun is the object of the verb, der becomes den and ein becomes einen: Ich habe den Zug verpasst (I have the train missed).", after: ["gender"] },
+    dative: { name: "dem after mit, in, auf …", about: "After mit, zu, von, bei, and in or auf for where something is, der and das become dem, a feminine die becomes der, and a plural die becomes den, with the noun usually adding -n: mit dem Bus (with the bus), mit den Kindern (with the children).", after: ["accusative"] },
+    nicht: { name: "Where nicht goes", about: "nicht usually comes after the object and time words, near the end, but before a place word, an adjective or a verb at the end: Ich kenne ihn nicht (I know him not).", after: ["v2"] },
+    kein: { name: "kein: no, not a", about: "Before a noun, German says kein (no) where English says not a or not any: Ich habe kein Auto (I have no car).", after: ["gender"] },
+    perfect: { name: "Past with haben: second verb last", about: "To talk about the past with haben, put the second verb in its past form at the end: Ich habe ein Buch gelesen (I have a book read).", after: ["v2"] },
+    "sein-perfect": { name: "Past with sein", about: "Verbs of going from place to place, and a few more, take sein instead of haben: Wir sind nach Hamburg gefahren (we are to Hamburg traveled).", after: ["perfect"] },
+    modal: { name: "können, müssen, wollen, möchten: second verb last", about: "With können, müssen, wollen or möchten, the second verb goes to the end, with no word for to: Ich will heute schwimmen (I want today swim).", after: ["v2"] },
+    separable: { name: "Separable verbs", about: "Verbs like aufstehen split: the verb comes second and the little word (auf) goes to the end: Ich stehe um sieben auf (I stand at seven up).", after: ["v2"] },
+    dass: { name: "dass: verb to the end", about: "After dass (that), the verb goes to the end of its clause: Ich glaube, dass sie heute arbeitet (I believe that she today works).", after: ["v2"] },
+    weil: { name: "weil: because, verb last", about: "After weil (because), the verb goes to the end of its clause too: weil ich müde bin (because I tired am).", after: ["dass"] },
+    "es-gibt": { name: "es gibt: there is", about: "es gibt (it gives) says there is or there are, and a masculine der or ein after it becomes den or einen: Es gibt einen Park (it gives a park).", after: ["accusative"] },
+    gern: { name: "gern: liking to do", about: "To say you like doing something, put gern (gladly) after the verb: Ich trinke gern Kaffee (I drink gladly coffee).", after: ["v2"] },
+    "time-place": { name: "Time before place", about: "German usually puts the time before the place: Ich fahre morgen nach München (I go tomorrow to Munich), where English often puts the time last.", after: ["v2"] },
+    destination: { name: "Going somewhere: nach, zu, in", about: "Use nach with cities and most countries, zu with people and places such as work, and in with places you go into: nach München, zur Arbeit, ins Kino.", after: ["dative"] },
+  },
+};

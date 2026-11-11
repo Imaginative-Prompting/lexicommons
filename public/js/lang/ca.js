@@ -1,0 +1,32 @@
+// Catalan (lang/index.js has what each field means).
+
+export default {
+  name: "Catalan",
+  locale: "ca-ES",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["sr.", "sra.", "srta.", "dr.", "dra.", "pàg.", "núm.", "tel.", "av.", "c.", "etc.", "p.", "ex."],
+  stray: ["no", "el", "es", "que", "de", "hi"],
+  patterns: {
+    present: { name: "Present-tense endings", about: "A verb's ending changes with who does it: parlo (I speak), parles (you speak), parla (he or she speaks).", after: [] },
+    "no-subject": { name: "No subject needed", about: "Catalan usually leaves out jo, tu and the other subject words when the verb's ending shows who: Parlo (I speak), Parlem (we speak).", after: ["present"] },
+    gender: { name: "Gender and agreement", about: "Every noun is masculine or feminine, and el or la, un or una and the adjectives with it match it: un cotxe nou (a car new), una casa nova (a house new).", after: [] },
+    elision: { name: "Apostrophes before vowels", about: "Before most vowel sounds, el, la and de shorten to l' or d': l'estació (the station), d'aquí (of here).", after: ["gender"] },
+    "adjective-after": { name: "Adjectives after the noun", about: "Most describing words come after the noun: una casa petita (a house small).", after: ["gender"] },
+    possessive: { name: "Possessives with articles", about: "Before a noun, meu, teu and the rest usually take an article, and both match the thing owned: la meva germana (the my sister), els meus pares (the my parents).", after: ["gender"] },
+    negation: { name: "no before the verb", about: "no goes before the verb, and before any little pronoun in front of it: No ho sé (not it I-know).", after: [] },
+    question: { name: "Questions", about: "A yes-or-no question keeps the order of a statement, with your voice going up, and after a question word the verb usually comes before the subject: A quina hora surt el tren? (at what hour leaves the train?).", after: [] },
+    "object-pronoun": { name: "Pronouns with verbs", about: "Little words for me, you, him, her and them (em, et, el, la, els) go before a verb with a person's ending, and join the end of an infinitive: Et veig (you I-see), veure't (see-you).", after: ["no-subject"] },
+    reflexive: { name: "Reflexive and each-other verbs", about: "Some verbs use em, et, es or ens when someone does something to themselves or people do it to each other: Em llevo (myself I-raise: I get up), Ens veiem (each other we-see).", after: ["object-pronoun"] },
+    agradar: { name: "Verbs like agradar", about: "With agradar and encantar, the verb matches the thing liked and a little pronoun shows the person: M'agrada el cafè (to-me pleases the coffee), M'encanten les maduixes (to-me delight the strawberries).", after: ["object-pronoun"] },
+    past: { name: "vaig + infinitive: the past", about: "Catalan's everyday past is a form of anar (to go) and the infinitive: Vaig menjar (I-went eat: I ate), Vam anar (we-went go: we went).", after: [] },
+    perfect: { name: "Today's past: he + participle", about: "For something done today or in a time not over yet, use haver and the past participle: He menjat (I-have eaten).", after: ["past"] },
+    future: { name: "The future: one word", about: "The future is one word with its own ending: agafaré (I'll take), plourà (it will rain).", after: ["present"] },
+    modal: { name: "Verb + infinitive", about: "After voler, poder and haver de, the next verb is in its basic form, the infinitive: Vull menjar (I-want eat), He de treballar (I-have of work: I have to work).", after: [] },
+    "hi-ha": { name: "hi ha: there is, there are", about: "hi ha (there has) says both there is and there are: Hi ha pa (there has bread: there's bread).", after: [] },
+    contraction: { name: "al, del: a and de with el", about: "a el becomes al and de el becomes del: al mercat (to-the market), del meu pare (of-the my father).", after: ["gender"] },
+    fer: { name: "fer: the weather", about: "Catalan talks about the weather with fer (to make): Fa calor (makes heat: it's hot), Fa fred (makes cold: it's cold).", after: [] },
+    tenir: { name: "tenir: I have hunger", about: "Where English says I'm hungry, cold or twenty, Catalan says I have: Tinc gana (I-have hunger), Tinc vint anys (I-have twenty years).", after: [] },
+  },
+};

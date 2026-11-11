@@ -1,0 +1,7627 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-bs",
+  "name": "Starter: Bosnian",
+  "about": "Bosnian in real, everyday sentences, with each one's words in Bosnian order.",
+  "language": "bs",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kahva": "coffee",
+    "čaj": "tea",
+    "voda": "water",
+    "ja": "I (mi: to me; me: me)",
+    "piti": "drink",
+    "i": "and",
+    "jedan": "one",
+    "mlijeko": "milk",
+    "dobro": "fine",
+    "biti": "be (sam, si, je, smo, ste, su)",
+    "ti": "you (te: you; tebi, ti: to you)",
+    "ne": "not",
+    "učitelj": "teacher",
+    "student": "student",
+    "li": "(makes a yes-or-no question)",
+    "majka": "mother",
+    "otac": "father",
+    "brat": "brother",
+    "sestra": "sister",
+    "moj": "my",
+    "ovo": "this",
+    "dobar": "good",
+    "imati": "have",
+    "prijatelj": "friend",
+    "doktorica": "doctor",
+    "ključ": "key",
+    "telefon": "phone",
+    "knjiga": "book",
+    "nemati": "not have; there isn't, there aren't",
+    "gdje": "where",
+    "ovdje": "here",
+    "tamo": "there",
+    "toalet": "bathroom",
+    "dva": "two",
+    "tri": "three",
+    "novac": "money",
+    "govoriti": "speak",
+    "engleski": "English",
+    "bosanski": "Bosnian (the language)",
+    "razumjeti": "to understand",
+    "malo": "a little",
+    "željeti": "want, wish",
+    "kuća": "house",
+    "soba": "room",
+    "velik": "big",
+    "mali": "small",
+    "živjeti": "live",
+    "u": "in",
+    "ovaj": "this",
+    "ići": "go",
+    "škola": "school",
+    "grad": "city",
+    "stanica": "stop, station",
+    "željeznički": "railway",
+    "auto": "car",
+    "danas": "today",
+    "sutra": "tomorrow",
+    "sad": "now",
+    "raditi": "work; do",
+    "morati": "must, have to",
+    "moći": "can, be able to",
+    "kako": "how",
+    "se": "oneself; each other; part of some verbs",
+    "zvati": "call (zvati se: to be called)",
+    "drago": "glad, pleased (drago mi je: nice to meet you)",
+    "studirati": "study (at a university)",
+    "tata": "dad",
+    "znati": "know",
+    "mi": "we (nas: us; nama: with us)",
+    "odakle": "where from",
+    "sviđati": "please (sviđati se: to be liked)",
+    "film": "movie",
+    "cijeli": "whole",
+    "dan": "day",
+    "stan": "apartment",
+    "stol": "table",
+    "frižider": "fridge",
+    "zatvoriti": "close",
+    "prozor": "window",
+    "kuhinja": "kitchen",
+    "balkon": "balcony",
+    "mama": "mom",
+    "kuhati": "cook",
+    "ručak": "lunch",
+    "vidjeti": "see (vidjeti se: to see each other)",
+    "visok": "tall",
+    "čaša": "glass",
+    "dobiti": "get",
+    "šta": "what",
+    "htjeti": "want; will (ću, ćeš, će)",
+    "jesti": "eat",
+    "nana": "grandma",
+    "jučer": "yesterday",
+    "peći": "bake",
+    "kolač": "cake",
+    "račun": "check, bill",
+    "pojesti": "eat (up)",
+    "nešto": "something",
+    "sladak": "sweet",
+    "hljeb": "bread",
+    "voljeti": "love, like",
+    "riba": "fish",
+    "meso": "meat",
+    "supa": "soup",
+    "bez": "without",
+    "šećer": "sugar",
+    "platiti": "pay",
+    "kartica": "card",
+    "izviniti": "excuse (izvinite: excuse me)",
+    "autobuski": "bus (as in bus station)",
+    "pekara": "bakery",
+    "kod": "at or to someone's place",
+    "posao": "work, job",
+    "autobus": "bus",
+    "voz": "train",
+    "kasniti": "be late",
+    "deset": "ten",
+    "minuta": "minute",
+    "čekati": "wait (for)",
+    "subota": "Saturday",
+    "kino": "movie theater (u kino: to the movies)",
+    "naći": "find",
+    "hotel": "hotel",
+    "koliko": "how much, how many",
+    "koštati": "cost",
+    "padati": "fall (pada kiša: it's raining)",
+    "kiša": "rain",
+    "nazvati": "call (on the phone)",
+    "vikend": "weekend",
+    "hladno": "cold",
+    "javiti": "let know (javi mi: let me know)",
+    "nadati": "hope (nadati se: to hope)",
+    "lijepo": "nice, nicely",
+    "učiti": "learn, study",
+    "već": "already",
+    "ona": "she",
+    "sačekati": "wait (a while)",
+    "doći": "come",
+    "ovamo": "here (to this place)",
+    "da": "that (joining two sentences); yes",
+    "moliti": "ask, beg (molim: please)",
+    "godina": "year",
+    "roditelj": "parent",
+    "prošli": "last, past",
+    "tvoj": "your",
+    "torba": "bag",
+    "puno": "a lot of, lots",
+    "turist": "tourist"
+  },
+  "chunks": {
+    "drago-mi-je": {
+      "text": "Drago mi je",
+      "en": "Nice to meet you",
+      "about": "Literally pleasing to me it is; said when you meet someone."
+    },
+    "racun-molim": {
+      "text": "Račun, molim",
+      "en": "The check, please",
+      "about": "molim is please, and also what you say for pardon? and you're welcome."
+    },
+    "hello": {
+      "text": "Zdravo",
+      "en": "hello"
+    },
+    "please": {
+      "text": "molim",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "hvala",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Kako si",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Doviđenja",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "da",
+      "en": "yes"
+    },
+    "no": {
+      "text": "ne",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Kako se zoveš",
+      "en": "what's your name?"
+    },
+    "excuse-me": {
+      "text": "Izvinite",
+      "en": "excuse me"
+    },
+    "how-much-is-this": {
+      "text": "Koliko ovo košta",
+      "en": "how much is this?"
+    },
+    "see-you-tomorrow": {
+      "text": "Vidimo se sutra",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "pijem-kahvu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Pijem kahvu.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "kahvu",
+          "kahva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piti kahvu.",
+        "Pijem kahva."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvu",
+          "čaj",
+          "vodu"
+        ]
+      }
+    },
+    {
+      "id": "pijem-caj",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Pijem čaj.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piti čaj.",
+        "Ja piti čaj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "čaj",
+          "kahvu",
+          "vodu"
+        ]
+      }
+    },
+    {
+      "id": "ja-pijem-vodu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Ja pijem vodu.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Ja",
+          "ja"
+        ],
+        [
+          "pijem",
+          "piti"
+        ],
+        [
+          "vodu",
+          "voda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja piti vodu.",
+        "Ja pijem voda."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vodu",
+          "kahvu",
+          "čaj"
+        ]
+      }
+    },
+    {
+      "id": "pijem-kahvu-i-caj",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Pijem kahvu i čaj.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "kahvu",
+          "kahva"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pijem kahva i čaj.",
+        "Piti kahvu i čaj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvu",
+          "vodu",
+          "čaj"
+        ]
+      }
+    },
+    {
+      "id": "pijem-caj-i-vodu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Pijem čaj i vodu.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "vodu",
+          "voda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pijem čaj i voda.",
+        "Ja piti čaj i vodu."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "vodu",
+          "čaj",
+          "kahvu"
+        ]
+      }
+    },
+    {
+      "id": "pijem-vodu-i-kahvu",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Pijem vodu i kahvu.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "vodu",
+          "voda"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "kahvu",
+          "kahva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pijem voda i kahvu.",
+        "Pijem vodu i kahva."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kahvu",
+          "čaj",
+          "vodu"
+        ]
+      }
+    },
+    {
+      "id": "zdravo-kahvu-molim",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "hello",
+        "please"
+      ],
+      "text": "Zdravo, kahvu, molim.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Zdravo,"
+        ],
+        [
+          "kahvu,",
+          "kahva"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zdravo, kahva, molim.",
+        "Zdravo, kahvi, molim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvu,",
+          "čaj,",
+          "vodu,"
+        ]
+      }
+    },
+    {
+      "id": "jedan-caj-i-jednu-vodu-molim",
+      "topic": "food",
+      "concepts": [
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Jedan čaj i jednu vodu, molim.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Jedan",
+          "jedan"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "jednu",
+          "jedan"
+        ],
+        [
+          "vodu,",
+          "voda"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jednu čaj i jednu vodu, molim.",
+        "Jedan čaj i jedan vodu, molim."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "jednu",
+          "jedan",
+          "jedno"
+        ]
+      }
+    },
+    {
+      "id": "jednu-kahvu-hvala",
+      "topic": "food",
+      "concepts": [
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Jednu kahvu, hvala.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Jednu",
+          "jedan"
+        ],
+        [
+          "kahvu,",
+          "kahva"
+        ],
+        [
+          "hvala"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jedan kahvu, hvala.",
+        "Jednu kahva, hvala."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jednu",
+          "Jedan",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "zdravo-jedan-caj-molim",
+      "topic": "food",
+      "concepts": [
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "hello",
+        "please"
+      ],
+      "text": "Zdravo! Jedan čaj, molim.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Zdravo!"
+        ],
+        [
+          "Jedan",
+          "jedan"
+        ],
+        [
+          "čaj,",
+          "čaj"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zdravo! Jednu čaj, molim.",
+        "Zdravo! Jedno čaj, molim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Jedan",
+          "Jednu",
+          "Jedno"
+        ]
+      }
+    },
+    {
+      "id": "pijem-mlijeko",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Pijem mlijeko.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "mlijeko",
+          "mlijeko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Piti mlijeko.",
+        "Ja piti mlijeko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mlijeko",
+          "vodu",
+          "čaj"
+        ]
+      }
+    },
+    {
+      "id": "zdravo-kako-si",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "biti"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Zdravo! Kako si?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Zdravo!"
+        ],
+        [
+          "Kako"
+        ],
+        [
+          "si"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how"
+        ],
+        [
+          "are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Zdravo! Kako ja si?",
+        "Zdravo! Kako ja biti?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "si",
+          "sam",
+          "biti"
+        ]
+      }
+    },
+    {
+      "id": "dobro-sam-hvala",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "clitics",
+        "no-pronoun"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Dobro sam, hvala.",
+      "means": "I'm good, thank you.",
+      "words": [
+        [
+          "Dobro",
+          "dobro"
+        ],
+        [
+          "sam,",
+          "biti"
+        ],
+        [
+          "hvala"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja dobro si, hvala.",
+        "Sam dobro, hvala."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sam,",
+          "si,",
+          "biti,"
+        ]
+      }
+    },
+    {
+      "id": "da-molim",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Da, molim.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Da,"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Da sam, molim.",
+        "Da si, molim."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Da,",
+          "Ne,",
+          "Hvala,"
+        ]
+      }
+    },
+    {
+      "id": "ne-hvala",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, hvala.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "hvala"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne, hvala sam.",
+        "Ne, hvala si."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hvala",
+          "molim",
+          "zdravo"
+        ]
+      }
+    },
+    {
+      "id": "da-hvala-dovi-enja",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Da, hvala. Doviđenja!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Da,"
+        ],
+        [
+          "hvala."
+        ],
+        [
+          "Doviđenja"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Da, hvala sam. Doviđenja!",
+        "Da, hvala. Doviđenja si!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Da,",
+          "Ne,",
+          "Zdravo,"
+        ]
+      }
+    },
+    {
+      "id": "ne-hvala-dovi-enja",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Ne, hvala. Doviđenja!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Ne,"
+        ],
+        [
+          "hvala."
+        ],
+        [
+          "Doviđenja"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne, hvala si. Doviđenja!",
+        "Ne, hvala. Doviđenja sam!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ne,",
+          "Da,",
+          "Zdravo,"
+        ]
+      }
+    },
+    {
+      "id": "ja-sam-ucitelj",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "clitics"
+      ],
+      "text": "Ja sam učitelj.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Ja",
+          "ja"
+        ],
+        [
+          "sam",
+          "biti"
+        ],
+        [
+          "učitelj",
+          "učitelj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja si učitelj.",
+        "Ja učitelj sam."
+      ],
+      "otherGender": {
+        "text": "Ja sam učiteljica.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "sam",
+          "si",
+          "je"
+        ]
+      }
+    },
+    {
+      "id": "ti-si-student",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "clitics"
+      ],
+      "text": "Ti si student.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Ti",
+          "ti"
+        ],
+        [
+          "si",
+          "biti"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti sam student.",
+        "Ti je student."
+      ],
+      "otherGender": {
+        "text": "Ti si studentica.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "si",
+          "sam",
+          "je"
+        ]
+      }
+    },
+    {
+      "id": "jesi-li-ti-ucitelj",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "biti",
+        "clitics"
+      ],
+      "text": "Jesi li ti učitelj?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Jesi",
+          "biti"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "učitelj",
+          "učitelj"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Si li ti učitelj?",
+        "Jesi ti li učitelj?"
+      ],
+      "otherGender": {
+        "text": "Jesi li ti učiteljica?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Jesi",
+          "Sam",
+          "Je"
+        ]
+      }
+    },
+    {
+      "id": "ja-nisam-ucitelj",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "ne"
+      ],
+      "text": "Ja nisam učitelj.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Ja",
+          "ja"
+        ],
+        [
+          "nisam",
+          "biti"
+        ],
+        [
+          "učitelj",
+          "učitelj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja ne sam učitelj.",
+        "Ja nisam učitelja."
+      ],
+      "otherGender": {
+        "text": "Ja nisam učiteljica.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "nisam",
+          "sam",
+          "si"
+        ]
+      }
+    },
+    {
+      "id": "ucitelj-je-student-i-ne-pije-caj",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "present",
+        "ne",
+        "accusative"
+      ],
+      "text": "Učitelj je student i ne pije čaj.",
+      "means": "The teacher is a student and doesn't drink tea.",
+      "words": [
+        [
+          "Učitelj",
+          "učitelj"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "student",
+          "student"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "pije",
+          "piti"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The teacher"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ],
+        [
+          "and"
+        ],
+        [
+          "not"
+        ],
+        [
+          "drinks"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Učitelj biti student i ne pije čaj.",
+        "Učitelj je student i ne piti čaj."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "je",
+          "sam",
+          "si"
+        ]
+      }
+    },
+    {
+      "id": "ovo-je-moja-majka",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "clitics",
+        "gender"
+      ],
+      "text": "Ovo je moja majka.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Ovo",
+          "ovo"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "moja",
+          "moj"
+        ],
+        [
+          "majka",
+          "majka"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ovo je moj majka.",
+        "Ovo sam moja majka."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "moja",
+          "moj",
+          "ja"
+        ]
+      }
+    },
+    {
+      "id": "ovo-je-moj-otac",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "clitics",
+        "gender"
+      ],
+      "text": "Ovo je moj otac.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Ovo",
+          "ovo"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "moj",
+          "moj"
+        ],
+        [
+          "otac",
+          "otac"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ovo je moja otac.",
+        "Ovo si moj otac."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "otac",
+          "brat",
+          "učitelj"
+        ]
+      }
+    },
+    {
+      "id": "moj-otac-je-ucitelj",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "gender",
+        "clitics"
+      ],
+      "text": "Moj otac je učitelj.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Moj",
+          "moj"
+        ],
+        [
+          "otac",
+          "otac"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "učitelj",
+          "učitelj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja otac je učitelj.",
+        "Moj otac si učitelj."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "učitelj",
+          "student",
+          "brat"
+        ]
+      }
+    },
+    {
+      "id": "moj-brat-je-student",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "gender",
+        "clitics"
+      ],
+      "text": "Moj brat je student.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Moj",
+          "moj"
+        ],
+        [
+          "brat",
+          "brat"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "student",
+          "student"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja brat je student.",
+        "Moj brat sam student."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "brat",
+          "otac",
+          "učitelj"
+        ]
+      }
+    },
+    {
+      "id": "ovo-je-moja-sestra",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "gender",
+        "clitics"
+      ],
+      "text": "Ovo je moja sestra.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Ovo",
+          "ovo"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "moja",
+          "moj"
+        ],
+        [
+          "sestra",
+          "sestra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ovo je moj sestra.",
+        "Ovo je moja sestru."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "sestra",
+          "majka",
+          "otac"
+        ]
+      }
+    },
+    {
+      "id": "moja-majka-je-dobra",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "gender",
+        "adjective"
+      ],
+      "text": "Moja majka je dobra.",
+      "means": "My mother is good.",
+      "words": [
+        [
+          "Moja",
+          "moj"
+        ],
+        [
+          "majka",
+          "majka"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "dobra",
+          "dobar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja majka je dobar.",
+        "Moj majka je dobra."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dobra",
+          "dobar",
+          "dobro"
+        ]
+      }
+    },
+    {
+      "id": "imam-telefon",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Imam telefon.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Imam",
+          "imati"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja imaš telefon.",
+        "Imati telefon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefon",
+          "ključ",
+          "knjigu"
+        ]
+      }
+    },
+    {
+      "id": "imas-li-kljuc",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "question",
+        "no-pronoun"
+      ],
+      "text": "Imaš li ključ?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Imaš",
+          "imati"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "ključ",
+          "ključ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You have"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Imaš ključ li?",
+        "Ti imam li ključ?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ključ",
+          "telefon",
+          "knjigu"
+        ]
+      }
+    },
+    {
+      "id": "imam-brata-i-sestru",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Imam brata i sestru.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Imam",
+          "imati"
+        ],
+        [
+          "brata",
+          "brat"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "sestru",
+          "sestra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Imam brat i sestru.",
+        "Imam brata i sestra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "brata",
+          "brat",
+          "bratu"
+        ]
+      }
+    },
+    {
+      "id": "nemam-knjigu",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "ne",
+        "accusative"
+      ],
+      "text": "Nemam knjigu.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Nemam",
+          "nemati"
+        ],
+        [
+          "knjigu",
+          "knjiga"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne imam knjigu.",
+        "Nemam knjizi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "knjigu",
+          "knjiga",
+          "knjizi"
+        ]
+      }
+    },
+    {
+      "id": "moja-sestra-je-doktorica",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "gender",
+        "clitics"
+      ],
+      "text": "Moja sestra je doktorica.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Moja",
+          "moj"
+        ],
+        [
+          "sestra",
+          "sestra"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "doktorica",
+          "doktorica"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja sestru je doktorica.",
+        "Moja sestra sam doktorica."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sestra",
+          "majka",
+          "brat"
+        ]
+      }
+    },
+    {
+      "id": "ti-si-dobar-prijatelj",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "adjective",
+        "gender"
+      ],
+      "text": "Ti si dobar prijatelj.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Ti",
+          "ti"
+        ],
+        [
+          "si",
+          "biti"
+        ],
+        [
+          "dobar",
+          "dobar"
+        ],
+        [
+          "prijatelj",
+          "prijatelj"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ti si dobra prijatelj.",
+        "Ti sam dobar prijatelj."
+      ],
+      "otherGender": {
+        "text": "Ti si dobra prijateljica.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "dobar",
+          "dobra",
+          "dobro"
+        ]
+      }
+    },
+    {
+      "id": "gdje-je-moj-kljuc",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "biti",
+        "gender"
+      ],
+      "text": "Gdje je moj ključ?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Gdje",
+          "gdje"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "moj",
+          "moj"
+        ],
+        [
+          "ključ",
+          "ključ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdje je moja ključ?",
+        "Gdje su moj ključ?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ključ",
+          "telefon",
+          "otac"
+        ]
+      }
+    },
+    {
+      "id": "izvinite-gdje-je-toalet",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "biti",
+        "clitics"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Izvinite, gdje je toalet?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Izvinite,"
+        ],
+        [
+          "gdje",
+          "gdje"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "toalet",
+          "toalet"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Izvinite, gdje sam toalet?",
+        "Izvinite, gdje je toaletu?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "toalet",
+          "ključ",
+          "telefon"
+        ]
+      }
+    },
+    {
+      "id": "moj-telefon-je-ovdje",
+      "topic": "out",
+      "concepts": [
+        "biti",
+        "clitics",
+        "gender"
+      ],
+      "text": "Moj telefon je ovdje.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Moj",
+          "moj"
+        ],
+        [
+          "telefon",
+          "telefon"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "ovdje",
+          "ovdje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja telefon je ovdje.",
+        "Moj telefon su ovdje."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ovdje",
+          "tamo",
+          "gdje"
+        ]
+      }
+    },
+    {
+      "id": "kljuc-je-tamo",
+      "topic": "out",
+      "concepts": [
+        "biti",
+        "clitics"
+      ],
+      "text": "Ključ je tamo.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Ključ",
+          "ključ"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "tamo",
+          "tamo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ključ su tamo.",
+        "Ključa je tamo."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tamo",
+          "ovdje",
+          "gdje"
+        ]
+      }
+    },
+    {
+      "id": "gdje-je-moja-majka",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "biti",
+        "gender"
+      ],
+      "text": "Gdje je moja majka?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Gdje",
+          "gdje"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "moja",
+          "moj"
+        ],
+        [
+          "majka",
+          "majka"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdje je moj majka?",
+        "Gdje je moja majku?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "majka",
+          "sestra",
+          "otac"
+        ]
+      }
+    },
+    {
+      "id": "moja-sestra-je-ovdje",
+      "topic": "out",
+      "concepts": [
+        "biti",
+        "gender",
+        "clitics"
+      ],
+      "text": "Moja sestra je ovdje.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Moja",
+          "moj"
+        ],
+        [
+          "sestra",
+          "sestra"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "ovdje",
+          "ovdje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moj sestra je ovdje.",
+        "Moja sestra su ovdje."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ovdje",
+          "tamo",
+          "gdje"
+        ]
+      }
+    },
+    {
+      "id": "dvije-kahve-molim",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "genitive"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Dvije kahve, molim.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dvije",
+          "dva"
+        ],
+        [
+          "kahve,",
+          "kahva"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dva kahve, molim.",
+        "Dvije kahvu, molim."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dvije",
+          "Dva",
+          "Jednu"
+        ]
+      }
+    },
+    {
+      "id": "jednu-knjigu-molim",
+      "topic": "out",
+      "concepts": [
+        "gender",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Jednu knjigu, molim.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Jednu",
+          "jedan"
+        ],
+        [
+          "knjigu,",
+          "knjiga"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Jedan knjigu, molim.",
+        "Jednu knjiga, molim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "knjigu,",
+          "knjiga,",
+          "knjige,"
+        ]
+      }
+    },
+    {
+      "id": "imam-tri-knjige",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "genitive"
+      ],
+      "text": "Imam tri knjige.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Imam",
+          "imati"
+        ],
+        [
+          "tri",
+          "tri"
+        ],
+        [
+          "knjige",
+          "knjiga"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Imam tri knjigu.",
+        "Imam tri knjiga."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tri",
+          "dvije",
+          "jednu"
+        ]
+      }
+    },
+    {
+      "id": "nemam-novca",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "genitive-negation",
+        "ne"
+      ],
+      "text": "Nemam novca.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Nemam",
+          "nemati"
+        ],
+        [
+          "novca",
+          "novac"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I don't have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne imam novca.",
+        "Nemam novcu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "novca",
+          "novcu",
+          "novcem"
+        ]
+      }
+    },
+    {
+      "id": "ne-razumijem",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "ne",
+        "no-pronoun"
+      ],
+      "text": "Ne razumijem.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "razumijem",
+          "razumjeti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja ne razumiješ.",
+        "Ne razumjeti."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "razumijem",
+          "razumiješ",
+          "razumjeti"
+        ]
+      }
+    },
+    {
+      "id": "razumijes-li",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "question",
+        "no-pronoun",
+        "clitics"
+      ],
+      "text": "Razumiješ li?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Razumiješ",
+          "razumjeti"
+        ],
+        [
+          "li",
+          "li"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You understand"
+        ],
+        [
+          "(question)"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Li razumiješ?",
+        "Ti razumijem li?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Razumiješ",
+          "Razumijem",
+          "Razumjeti"
+        ]
+      }
+    },
+    {
+      "id": "govorim-malo-bosanski",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Govorim malo bosanski.",
+      "means": "I speak a little Bosnian.",
+      "words": [
+        [
+          "Govorim",
+          "govoriti"
+        ],
+        [
+          "malo",
+          "malo"
+        ],
+        [
+          "bosanski",
+          "bosanski"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Bosnian"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja govoriš malo bosanski.",
+        "Govoriti malo bosanski."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bosanski",
+          "engleski",
+          "malo"
+        ]
+      }
+    },
+    {
+      "id": "zelim-kahvu",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Želim kahvu.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Želim",
+          "željeti"
+        ],
+        [
+          "kahvu",
+          "kahva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Želim kahva.",
+        "Željeti kahvu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kahvu",
+          "čaj",
+          "mlijeko"
+        ]
+      }
+    },
+    {
+      "id": "zelim-vodu-molim",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Želim vodu, molim.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Želim",
+          "željeti"
+        ],
+        [
+          "vodu,",
+          "voda"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Želim voda, molim.",
+        "Željeti vodu, molim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vodu,",
+          "kahvu,",
+          "čaj,"
+        ]
+      }
+    },
+    {
+      "id": "moja-soba-je-mala",
+      "topic": "home",
+      "concepts": [
+        "biti",
+        "adjective",
+        "gender"
+      ],
+      "text": "Moja soba je mala.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Moja",
+          "moj"
+        ],
+        [
+          "soba",
+          "soba"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "mala",
+          "mali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "room"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moj soba je mala.",
+        "Moja soba je mali."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mala",
+          "mali",
+          "maloj"
+        ]
+      }
+    },
+    {
+      "id": "ova-kuca-je-velika",
+      "topic": "home",
+      "concepts": [
+        "biti",
+        "adjective",
+        "gender"
+      ],
+      "text": "Ova kuća je velika.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Ova",
+          "ovaj"
+        ],
+        [
+          "kuća",
+          "kuća"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "velika",
+          "velik"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ovo kuća je velika.",
+        "Ova kuća je velik."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "velika",
+          "mala",
+          "dobra"
+        ]
+      }
+    },
+    {
+      "id": "moja-majka-zivi-ovdje",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Moja majka živi ovdje.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Moja",
+          "moj"
+        ],
+        [
+          "majka",
+          "majka"
+        ],
+        [
+          "živi",
+          "živjeti"
+        ],
+        [
+          "ovdje",
+          "ovdje"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja majka živim ovdje.",
+        "Moja majka živjeti ovdje."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "živi",
+          "živim",
+          "živiš"
+        ]
+      }
+    },
+    {
+      "id": "gdje-zivis",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "question",
+        "no-pronoun"
+      ],
+      "text": "Gdje živiš?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Gdje",
+          "gdje"
+        ],
+        [
+          "živiš",
+          "živjeti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdje ti živim?",
+        "Gdje ti živi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "živiš",
+          "živim",
+          "živi"
+        ]
+      }
+    },
+    {
+      "id": "zivim-u-maloj-kuci",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "locative",
+        "adjective"
+      ],
+      "text": "Živim u maloj kući.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Živim",
+          "živjeti"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "maloj",
+          "mali"
+        ],
+        [
+          "kući",
+          "kuća"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Živim u mala kući.",
+        "Živim u maloj kuća."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "maloj",
+          "mala",
+          "mali"
+        ]
+      }
+    },
+    {
+      "id": "imam-auto",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Imam auto.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Imam",
+          "imati"
+        ],
+        [
+          "auto",
+          "auto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja imaš auto.",
+        "Imati auto."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "auto",
+          "telefon",
+          "ključ"
+        ]
+      }
+    },
+    {
+      "id": "ovaj-auto-je-mali",
+      "topic": "out",
+      "concepts": [
+        "biti",
+        "adjective",
+        "gender"
+      ],
+      "text": "Ovaj auto je mali.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Ovaj",
+          "ovaj"
+        ],
+        [
+          "auto",
+          "auto"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "mali",
+          "mali"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ova auto je mali.",
+        "Ovaj auto je mala."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ovaj",
+          "Ova",
+          "Ovo"
+        ]
+      }
+    },
+    {
+      "id": "gdje-ides",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "question",
+        "no-pronoun"
+      ],
+      "text": "Gdje ideš?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Gdje",
+          "gdje"
+        ],
+        [
+          "ideš",
+          "ići"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdje ti idem?",
+        "Gdje ti ide?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ideš",
+          "idem",
+          "ide"
+        ]
+      }
+    },
+    {
+      "id": "idem-u-skolu",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Idem u školu.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Idem",
+          "ići"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "školu",
+          "škola"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Idem u škola.",
+        "Idem u školi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "školu",
+          "škola",
+          "školi"
+        ]
+      }
+    },
+    {
+      "id": "moja-majka-ide-u-grad",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "accusative"
+      ],
+      "text": "Moja majka ide u grad.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Moja",
+          "moj"
+        ],
+        [
+          "majka",
+          "majka"
+        ],
+        [
+          "ide",
+          "ići"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "grad",
+          "grad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moja majka idem u grad.",
+        "Moja majka ide u gradu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ide",
+          "idem",
+          "ideš"
+        ]
+      }
+    },
+    {
+      "id": "izvinite-gdje-je-zeljeznicka-stanica",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "biti",
+        "adjective",
+        "gender"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Izvinite, gdje je željeznička stanica?",
+      "means": "Excuse me, where is the train station?",
+      "words": [
+        [
+          "Izvinite,"
+        ],
+        [
+          "gdje",
+          "gdje"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "željeznička",
+          "željeznički"
+        ],
+        [
+          "stanica",
+          "stanica"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the railway"
+        ],
+        [
+          "station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Izvinite, gdje je željeznički stanica?",
+        "Izvinite, gdje je željeznička stanicu?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "željeznička",
+          "željeznički",
+          "željezničko"
+        ]
+      }
+    },
+    {
+      "id": "radim-danas",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "no-pronoun"
+      ],
+      "text": "Radim danas.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Radim",
+          "raditi"
+        ],
+        [
+          "danas",
+          "danas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja raditi danas.",
+        "Ja radiš danas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "danas",
+          "sutra",
+          "sad"
+        ]
+      }
+    },
+    {
+      "id": "sutra-idem-u-grad",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "no-pronoun",
+        "accusative"
+      ],
+      "text": "Sutra idem u grad.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Sutra",
+          "sutra"
+        ],
+        [
+          "idem",
+          "ići"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "grad",
+          "grad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sutra ja ideš u grad.",
+        "Sutra idem u gradu."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sutra",
+          "Danas",
+          "Sad"
+        ]
+      }
+    },
+    {
+      "id": "ne-mogu-ici-danas",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "ne",
+        "no-pronoun"
+      ],
+      "text": "Ne mogu ići danas.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "mogu",
+          "moći"
+        ],
+        [
+          "ići",
+          "ići"
+        ],
+        [
+          "danas",
+          "danas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne mogu idem danas.",
+        "Ne moći ići danas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ići",
+          "idem",
+          "ideš"
+        ]
+      }
+    },
+    {
+      "id": "moram-raditi-sutra",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "no-pronoun"
+      ],
+      "text": "Moram raditi sutra.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Moram",
+          "morati"
+        ],
+        [
+          "raditi",
+          "raditi"
+        ],
+        [
+          "sutra",
+          "sutra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have to"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moram radim sutra.",
+        "Morati raditi sutra."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "raditi",
+          "radim",
+          "radiš"
+        ]
+      }
+    },
+    {
+      "id": "kako-se-zoves",
+      "topic": "people",
+      "concepts": [
+        "se",
+        "clitics"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Kako se zoveš?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Kako"
+        ],
+        [
+          "se"
+        ],
+        [
+          "zoveš"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "you call"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "se"
+      ],
+      "wrong": [
+        "Kako zoveš?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "se",
+          "si",
+          "sam"
+        ]
+      }
+    },
+    {
+      "id": "drago-mi-je",
+      "topic": "people",
+      "concepts": [
+        "dative",
+        "clitics"
+      ],
+      "chunks": [
+        "drago-mi-je"
+      ],
+      "text": "Drago mi je.",
+      "means": "Nice to meet you.",
+      "words": [
+        [
+          "Drago"
+        ],
+        [
+          "mi"
+        ],
+        [
+          "je"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Pleasing"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "it is",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "je"
+      ],
+      "wrong": [
+        "Drago ja je."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mi",
+          "me",
+          "ja"
+        ]
+      }
+    },
+    {
+      "id": "brat-studira-u-zagrebu",
+      "topic": "people",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Moj brat studira u Sarajevu.",
+      "means": "My brother studies in Sarajevo.",
+      "words": [
+        [
+          "Moj",
+          "moj"
+        ],
+        [
+          "brat",
+          "brat"
+        ],
+        [
+          "studira",
+          "studirati"
+        ],
+        [
+          "u"
+        ],
+        [
+          "Sarajevu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "studies"
+        ],
+        [
+          "in Sarajevo"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moj brat studira u Sarajevo."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "Sarajevu",
+          "Sarajevo",
+          "Sarajeva"
+        ]
+      }
+    },
+    {
+      "id": "imam-sestru",
+      "topic": "people",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Imam jednu sestru i dva brata.",
+      "means": "I have one sister and two brothers.",
+      "words": [
+        [
+          "Imam",
+          "imati"
+        ],
+        [
+          "jednu",
+          "jedan"
+        ],
+        [
+          "sestru",
+          "sestra"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "dva",
+          "dva"
+        ],
+        [
+          "brata",
+          "brat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "one sister"
+        ],
+        [
+          "and"
+        ],
+        [
+          "two brothers"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Imam jedna sestra i dva brata."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sestru",
+          "sestra",
+          "sestre"
+        ]
+      }
+    },
+    {
+      "id": "auto-mog-tate",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Ovo je auto mog tate.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Ovo",
+          "ovo"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "auto",
+          "auto"
+        ],
+        [
+          "mog",
+          "moj"
+        ],
+        [
+          "tate",
+          "tata"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "car"
+        ],
+        [
+          "of my dad"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ovo je auto moj tata."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "tate",
+          "tata",
+          "tati"
+        ]
+      }
+    },
+    {
+      "id": "ne-znam-gdje-zivi",
+      "topic": "people",
+      "concepts": [
+        "ne"
+      ],
+      "text": "Ne znam gdje ona živi.",
+      "means": "I don't know where she lives.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "znam",
+          "znati"
+        ],
+        [
+          "gdje",
+          "gdje"
+        ],
+        [
+          "ona",
+          "ona"
+        ],
+        [
+          "živi",
+          "živjeti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "she"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Znam ne gdje ona živi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ne",
+          "Nije",
+          "Nisam"
+        ]
+      }
+    },
+    {
+      "id": "mi-smo-iz-amerike",
+      "topic": "people",
+      "concepts": [
+        "biti",
+        "genitive"
+      ],
+      "text": "Mi smo iz Amerike.",
+      "means": "We're from America.",
+      "words": [
+        [
+          "Mi",
+          "mi"
+        ],
+        [
+          "smo",
+          "biti"
+        ],
+        [
+          "iz"
+        ],
+        [
+          "Amerike"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "are"
+        ],
+        [
+          "from America"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mi smo iz Ameriku."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "smo",
+          "su",
+          "ste"
+        ]
+      }
+    },
+    {
+      "id": "odakle-si",
+      "topic": "people",
+      "concepts": [
+        "biti"
+      ],
+      "text": "Odakle si?",
+      "means": "Where are you from?",
+      "words": [
+        [
+          "Odakle",
+          "odakle"
+        ],
+        [
+          "si",
+          "biti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where from"
+        ],
+        [
+          "you are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Odakle siš?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "si",
+          "je",
+          "sam"
+        ]
+      }
+    },
+    {
+      "id": "svida-mi-se-film",
+      "topic": "people",
+      "concepts": [
+        "dative"
+      ],
+      "text": "Sviđa mi se ovaj film.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Sviđa",
+          "sviđati"
+        ],
+        [
+          "mi",
+          "ja"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "ovaj",
+          "ovaj"
+        ],
+        [
+          "film",
+          "film"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is pleasing"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "itself"
+        ],
+        [
+          "this movie",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ovaj",
+        "film"
+      ],
+      "wrong": [
+        "Sviđam se ovom filmu."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mi",
+          "me",
+          "ja"
+        ]
+      }
+    },
+    {
+      "id": "tata-je-radio",
+      "topic": "people",
+      "concepts": [
+        "past",
+        "gender"
+      ],
+      "text": "Tata je cijeli dan radio.",
+      "means": "Dad worked all day.",
+      "words": [
+        [
+          "Tata",
+          "tata"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "cijeli",
+          "cijeli"
+        ],
+        [
+          "dan",
+          "dan"
+        ],
+        [
+          "radio",
+          "raditi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Dad"
+        ],
+        [
+          "is"
+        ],
+        [
+          "whole day"
+        ],
+        [
+          "worked",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "radio"
+      ],
+      "wrong": [
+        "Tata je cijeli dan radila."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "radio",
+          "radila",
+          "radi"
+        ]
+      }
+    },
+    {
+      "id": "zivim-u-malom-stanu",
+      "topic": "home",
+      "concepts": [
+        "locative",
+        "adjective"
+      ],
+      "text": "Živim u malom stanu.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Živim",
+          "živjeti"
+        ],
+        [
+          "u"
+        ],
+        [
+          "malom",
+          "mali"
+        ],
+        [
+          "stanu",
+          "stan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Živim u mali stan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "malom",
+          "mali",
+          "malu"
+        ]
+      }
+    },
+    {
+      "id": "knjiga-je-na-stolu",
+      "topic": "home",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Knjiga je na stolu.",
+      "means": "The book is on the table.",
+      "words": [
+        [
+          "Knjiga",
+          "knjiga"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "na"
+        ],
+        [
+          "stolu",
+          "stol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The book"
+        ],
+        [
+          "is"
+        ],
+        [
+          "on the table"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Knjiga je na stol."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "stolu",
+          "stol",
+          "stola"
+        ]
+      }
+    },
+    {
+      "id": "nema-mlijeka",
+      "topic": "home",
+      "concepts": [
+        "genitive-negation"
+      ],
+      "text": "U frižideru nema mlijeka.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "U"
+        ],
+        [
+          "frižideru",
+          "frižider"
+        ],
+        [
+          "nema",
+          "nemati"
+        ],
+        [
+          "mlijeka",
+          "mlijeko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "there isn't"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "U frižideru nema mlijeko."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mlijeka",
+          "mlijeko",
+          "mlijekom"
+        ]
+      }
+    },
+    {
+      "id": "mozes-li-zatvoriti-prozor",
+      "topic": "home",
+      "concepts": [
+        "modal",
+        "question"
+      ],
+      "text": "Možeš li zatvoriti prozor?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Možeš",
+          "moći"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "zatvoriti",
+          "zatvoriti"
+        ],
+        [
+          "prozor",
+          "prozor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can you"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Li možeš zatvoriti prozor?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "zatvoriti",
+          "zatvoriš",
+          "zatvori"
+        ]
+      }
+    },
+    {
+      "id": "velika-kuhinja",
+      "topic": "home",
+      "concepts": [
+        "accusative",
+        "adjective"
+      ],
+      "text": "Imamo veliku kuhinju i mali balkon.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "Imamo",
+          "imati"
+        ],
+        [
+          "veliku",
+          "velik"
+        ],
+        [
+          "kuhinju",
+          "kuhinja"
+        ],
+        [
+          "i"
+        ],
+        [
+          "mali",
+          "mali"
+        ],
+        [
+          "balkon",
+          "balkon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Imamo velika kuhinja i mali balkon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "veliku",
+          "velika",
+          "velikoj"
+        ]
+      }
+    },
+    {
+      "id": "gdje-su-moji-kljucevi",
+      "topic": "home",
+      "concepts": [
+        "biti"
+      ],
+      "text": "Gdje su moji ključevi?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Gdje",
+          "gdje"
+        ],
+        [
+          "su",
+          "biti"
+        ],
+        [
+          "moji",
+          "moj"
+        ],
+        [
+          "ključevi",
+          "ključ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "my keys"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gdje je moji ključevi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "su",
+          "je",
+          "smo"
+        ]
+      }
+    },
+    {
+      "id": "mama-kuha-rucak",
+      "topic": "home",
+      "concepts": [
+        "present"
+      ],
+      "text": "Mama kuha ručak.",
+      "means": "Mom is cooking lunch.",
+      "words": [
+        [
+          "Mama",
+          "mama"
+        ],
+        [
+          "kuha",
+          "kuhati"
+        ],
+        [
+          "ručak",
+          "ručak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Mom"
+        ],
+        [
+          "cooks"
+        ],
+        [
+          "lunch"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mama kuham ručak."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kuha",
+          "kuham",
+          "kuhaju"
+        ]
+      }
+    },
+    {
+      "id": "ne-pijem-kahvu",
+      "topic": "home",
+      "concepts": [
+        "ne",
+        "accusative"
+      ],
+      "text": "Ne pijem kahvu.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "pijem",
+          "piti"
+        ],
+        [
+          "kahvu",
+          "kahva"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nisam pijem kahvu.",
+        "Ne pijem kahva."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kahvu",
+          "kahva",
+          "kahvom"
+        ]
+      }
+    },
+    {
+      "id": "sestra-je-visoka",
+      "topic": "home",
+      "concepts": [
+        "gender",
+        "adjective"
+      ],
+      "text": "Moja sestra je visoka.",
+      "means": "My sister is tall.",
+      "words": [
+        [
+          "Moja",
+          "moj"
+        ],
+        [
+          "sestra",
+          "sestra"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "visoka",
+          "visok"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "tall"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Moj sestra je visok."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "visoka",
+          "visok",
+          "visoko"
+        ]
+      }
+    },
+    {
+      "id": "je-li-ovo-tvoja-torba",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "gender"
+      ],
+      "text": "Je li ovo tvoja torba?",
+      "means": "Is this your bag?",
+      "words": [
+        [
+          "Je",
+          "biti"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "ovo",
+          "ovo"
+        ],
+        [
+          "tvoja",
+          "tvoj"
+        ],
+        [
+          "torba",
+          "torba"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "this"
+        ],
+        [
+          "your bag"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je li ovo tvoj torba?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "li",
+          "da",
+          "ne"
+        ]
+      }
+    },
+    {
+      "id": "kahva-s-mlijekom",
+      "topic": "food",
+      "concepts": [
+        "instrumental"
+      ],
+      "text": "Pijem kahvu s mlijekom.",
+      "means": "I drink coffee with milk.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "kahvu",
+          "kahva"
+        ],
+        [
+          "s"
+        ],
+        [
+          "mlijekom",
+          "mlijeko"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "with milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pijem kahvu s mlijeko."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mlijekom",
+          "mlijeko",
+          "mlijeka"
+        ]
+      }
+    },
+    {
+      "id": "casu-vode",
+      "topic": "food",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Mogu li dobiti čašu vode?",
+      "means": "Could I have a glass of water?",
+      "words": [
+        [
+          "Mogu",
+          "moći"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "dobiti",
+          "dobiti"
+        ],
+        [
+          "čašu",
+          "čaša"
+        ],
+        [
+          "vode",
+          "voda"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can I"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "get"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mogu li dobiti čašu voda?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "vode",
+          "voda",
+          "vodu"
+        ]
+      }
+    },
+    {
+      "id": "sto-ces-jesti",
+      "topic": "food",
+      "concepts": [
+        "future"
+      ],
+      "text": "Šta ćeš jesti?",
+      "means": "What are you going to eat?",
+      "words": [
+        [
+          "Šta",
+          "šta"
+        ],
+        [
+          "ćeš",
+          "htjeti"
+        ],
+        [
+          "jesti",
+          "jesti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you will"
+        ],
+        [
+          "eat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šta će jesti?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ćeš",
+          "ću",
+          "će"
+        ]
+      }
+    },
+    {
+      "id": "nana-je-pekla-kolac",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "gender"
+      ],
+      "text": "Nana je jučer pekla kolač.",
+      "means": "Grandma baked a cake yesterday.",
+      "words": [
+        [
+          "Nana",
+          "nana"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "jučer",
+          "jučer"
+        ],
+        [
+          "pekla",
+          "peći"
+        ],
+        [
+          "kolač",
+          "kolač"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Grandma"
+        ],
+        [
+          "is"
+        ],
+        [
+          "yesterday"
+        ],
+        [
+          "baked",
+          true
+        ],
+        [
+          "a cake"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "pekla"
+      ],
+      "wrong": [
+        "Nana je jučer pekao kolač."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pekla",
+          "pekao",
+          "peče"
+        ]
+      }
+    },
+    {
+      "id": "racun-molim",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "racun-molim"
+      ],
+      "text": "Račun, molim.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "Račun,"
+        ],
+        [
+          "molim"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Računom, molim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "molim",
+          "volim",
+          "mogu"
+        ]
+      }
+    },
+    {
+      "id": "zelim-pojesti-nesto-slatko",
+      "topic": "food",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Želim pojesti nešto slatko.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Želim",
+          "željeti"
+        ],
+        [
+          "pojesti",
+          "pojesti"
+        ],
+        [
+          "nešto",
+          "nešto"
+        ],
+        [
+          "slatko",
+          "sladak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Želim pojedem nešto slatko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pojesti",
+          "pojedem",
+          "pojeo"
+        ]
+      }
+    },
+    {
+      "id": "danas-nema-hljeba",
+      "topic": "food",
+      "concepts": [
+        "genitive-negation"
+      ],
+      "text": "Danas nema hljeba.",
+      "means": "There's no bread today.",
+      "words": [
+        [
+          "Danas",
+          "danas"
+        ],
+        [
+          "nema",
+          "nemati"
+        ],
+        [
+          "hljeba",
+          "hljeb"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "there isn't"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Danas nema hljeb."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "hljeba",
+          "hljeb",
+          "hljebom"
+        ]
+      }
+    },
+    {
+      "id": "volim-ribu",
+      "topic": "food",
+      "concepts": [
+        "accusative",
+        "present"
+      ],
+      "text": "Volim ribu, ali ne volim meso.",
+      "means": "I like fish, but I don't like meat.",
+      "words": [
+        [
+          "Volim",
+          "voljeti"
+        ],
+        [
+          "ribu,",
+          "riba"
+        ],
+        [
+          "ali"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "volim",
+          "voljeti"
+        ],
+        [
+          "meso",
+          "meso"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "fish,"
+        ],
+        [
+          "but"
+        ],
+        [
+          "not"
+        ],
+        [
+          "I like"
+        ],
+        [
+          "meat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Volim riba, ali ne volim meso."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Volim",
+          "Voli",
+          "Volimo"
+        ]
+      }
+    },
+    {
+      "id": "ja-cu-supu",
+      "topic": "food",
+      "concepts": [
+        "future",
+        "accusative"
+      ],
+      "text": "Ja ću supu, molim.",
+      "means": "I'll have the soup, please.",
+      "words": [
+        [
+          "Ja",
+          "ja"
+        ],
+        [
+          "ću",
+          "htjeti"
+        ],
+        [
+          "supu,",
+          "supa"
+        ],
+        [
+          "molim",
+          "moliti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "will (have)"
+        ],
+        [
+          "the soup,"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ja ću supa, molim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ću",
+          "ćeš",
+          "će"
+        ]
+      }
+    },
+    {
+      "id": "caj-bez-secera",
+      "topic": "food",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Pijem čaj bez šećera.",
+      "means": "I drink tea without sugar.",
+      "words": [
+        [
+          "Pijem",
+          "piti"
+        ],
+        [
+          "čaj",
+          "čaj"
+        ],
+        [
+          "bez",
+          "bez"
+        ],
+        [
+          "šećera",
+          "šećer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pijem čaj bez šećer."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "šećera",
+          "šećer",
+          "šećerom"
+        ]
+      }
+    },
+    {
+      "id": "platiti-karticom",
+      "topic": "food",
+      "concepts": [
+        "instrumental"
+      ],
+      "text": "Možemo li platiti karticom?",
+      "means": "Can we pay by card?",
+      "words": [
+        [
+          "Možemo",
+          "moći"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "platiti",
+          "platiti"
+        ],
+        [
+          "karticom",
+          "kartica"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can we"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "pay"
+        ],
+        [
+          "by card"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Možemo li platiti kartica?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "karticom",
+          "kartica",
+          "karticu"
+        ]
+      }
+    },
+    {
+      "id": "gdje-je-autobuska-stanica",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Izvinite, gdje je autobuska stanica?",
+      "means": "Excuse me, where's the bus station?",
+      "words": [
+        [
+          "Izvinite,",
+          "izviniti"
+        ],
+        [
+          "gdje",
+          "gdje"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "autobuska",
+          "autobuski"
+        ],
+        [
+          "stanica",
+          "stanica"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bus station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Izvinite, gdje je li autobuska stanica?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gdje",
+          "kuda",
+          "kada"
+        ]
+      }
+    },
+    {
+      "id": "idem-u-ducan",
+      "topic": "out",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Idem u pekaru po hljeb.",
+      "means": "I'm going to the bakery for bread.",
+      "words": [
+        [
+          "Idem",
+          "ići"
+        ],
+        [
+          "u"
+        ],
+        [
+          "pekaru",
+          "pekara"
+        ],
+        [
+          "po"
+        ],
+        [
+          "hljeb",
+          "hljeb"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm going"
+        ],
+        [
+          "to the bakery"
+        ],
+        [
+          "for bread"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Idem u pekari po hljeb."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pekaru",
+          "pekari",
+          "pekare"
+        ]
+      }
+    },
+    {
+      "id": "na-posao-autobusom",
+      "topic": "out",
+      "concepts": [
+        "instrumental",
+        "accusative"
+      ],
+      "text": "Sutra idem na posao autobusom.",
+      "means": "Tomorrow I'm taking the bus to work.",
+      "words": [
+        [
+          "Sutra",
+          "sutra"
+        ],
+        [
+          "idem",
+          "ići"
+        ],
+        [
+          "na"
+        ],
+        [
+          "posao",
+          "posao"
+        ],
+        [
+          "autobusom",
+          "autobus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'm going"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sutra idem na poslu autobusom."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "autobusom",
+          "autobus",
+          "autobusu"
+        ]
+      }
+    },
+    {
+      "id": "voz-kasni",
+      "topic": "out",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Voz kasni deset minuta.",
+      "means": "The train is ten minutes late.",
+      "words": [
+        [
+          "Voz",
+          "voz"
+        ],
+        [
+          "kasni",
+          "kasniti"
+        ],
+        [
+          "deset",
+          "deset"
+        ],
+        [
+          "minuta",
+          "minuta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The train"
+        ],
+        [
+          "is late"
+        ],
+        [
+          "ten minutes",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "deset",
+        "minuta"
+      ],
+      "wrong": [
+        "Voz kasni deset minute."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "minuta",
+          "minute",
+          "minutu"
+        ]
+      }
+    },
+    {
+      "id": "nana-nas-ceka",
+      "topic": "out",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Nana nas čeka na stanici.",
+      "means": "Grandma is waiting for us at the station.",
+      "words": [
+        [
+          "Nana",
+          "nana"
+        ],
+        [
+          "nas",
+          "mi"
+        ],
+        [
+          "čeka",
+          "čekati"
+        ],
+        [
+          "na"
+        ],
+        [
+          "stanici",
+          "stanica"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Grandma"
+        ],
+        [
+          "for us",
+          true
+        ],
+        [
+          "waits"
+        ],
+        [
+          "at the station"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "nas"
+      ],
+      "wrong": [
+        "Nana nas čeka na stanica."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "stanici",
+          "stanica",
+          "stanicu"
+        ]
+      }
+    },
+    {
+      "id": "u-subotu-kod-nane",
+      "topic": "out",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "U subotu idemo kod nane.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "U"
+        ],
+        [
+          "subotu",
+          "subota"
+        ],
+        [
+          "idemo",
+          "ići"
+        ],
+        [
+          "kod",
+          "kod"
+        ],
+        [
+          "nane",
+          "nana"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "we're going"
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "U subotu idemo kod nanu."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "nane",
+          "nana",
+          "nanom"
+        ]
+      }
+    },
+    {
+      "id": "ides-li-s-nama",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "instrumental"
+      ],
+      "text": "Ideš li s nama u kino?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Ideš",
+          "ići"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "s"
+        ],
+        [
+          "nama",
+          "mi"
+        ],
+        [
+          "u"
+        ],
+        [
+          "kino",
+          "kino"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are you going"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Li ideš s nama u kino?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "nama",
+          "nas",
+          "mi"
+        ]
+      }
+    },
+    {
+      "id": "ne-mogu-naci-hotel",
+      "topic": "out",
+      "concepts": [
+        "ne",
+        "modal"
+      ],
+      "text": "Ne mogu naći hotel.",
+      "means": "I can't find the hotel.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "mogu",
+          "moći"
+        ],
+        [
+          "naći",
+          "naći"
+        ],
+        [
+          "hotel",
+          "hotel"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I can"
+        ],
+        [
+          "find"
+        ],
+        [
+          "the hotel"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne mogu nađem hotel."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ne",
+          "Nisam",
+          "Nema"
+        ]
+      }
+    },
+    {
+      "id": "koliko-ovo-kosta",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-much-is-this"
+      ],
+      "text": "Koliko ovo košta?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Koliko"
+        ],
+        [
+          "ovo"
+        ],
+        [
+          "košta"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "this"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kako ovo košta?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Koliko",
+          "Gdje",
+          "Kada"
+        ]
+      }
+    },
+    {
+      "id": "ovdje-ima-puno-turista",
+      "topic": "out",
+      "concepts": [
+        "no-pronoun",
+        "genitive"
+      ],
+      "text": "Ovdje ima puno turista.",
+      "means": "There are lots of tourists here.",
+      "words": [
+        [
+          "Ovdje",
+          "ovdje"
+        ],
+        [
+          "ima",
+          "imati"
+        ],
+        [
+          "puno",
+          "puno"
+        ],
+        [
+          "turista",
+          "turist"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Here"
+        ],
+        [
+          "has"
+        ],
+        [
+          "lots of"
+        ],
+        [
+          "tourists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ovdje ima puno turisti."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ima",
+          "imaju",
+          "su"
+        ]
+      }
+    },
+    {
+      "id": "nema-autobusa",
+      "topic": "out",
+      "concepts": [
+        "genitive-negation"
+      ],
+      "text": "Na stanici nema autobusa.",
+      "means": "There's no bus at the stop.",
+      "words": [
+        [
+          "Na"
+        ],
+        [
+          "stanici",
+          "stanica"
+        ],
+        [
+          "nema",
+          "nemati"
+        ],
+        [
+          "autobusa",
+          "autobus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the stop"
+        ],
+        [
+          "there isn't"
+        ],
+        [
+          "a bus"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Na stanici nema autobus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "autobusa",
+          "autobus",
+          "autobusom"
+        ]
+      }
+    },
+    {
+      "id": "pricekaj-malo",
+      "topic": "out",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Sačekaj malo!",
+      "means": "Wait a moment!",
+      "words": [
+        [
+          "Sačekaj",
+          "sačekati"
+        ],
+        [
+          "malo",
+          "malo"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait"
+        ],
+        [
+          "a little"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sačekam malo!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sačekaj",
+          "Sačekam",
+          "Sačekaju"
+        ]
+      }
+    },
+    {
+      "id": "dodi-ovamo",
+      "topic": "out",
+      "concepts": [
+        "imperative"
+      ],
+      "text": "Dođi ovamo!",
+      "means": "Come here!",
+      "words": [
+        [
+          "Dođi",
+          "doći"
+        ],
+        [
+          "ovamo",
+          "ovamo"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Come"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dođem ovamo!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dođi",
+          "Dođem",
+          "Dođu"
+        ]
+      }
+    },
+    {
+      "id": "govoris-li-engleski",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Govoriš li engleski?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Govoriš",
+          "govoriti"
+        ],
+        [
+          "li",
+          "li"
+        ],
+        [
+          "engleski",
+          "engleski"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You speak"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Govoriš da engleski?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "li",
+          "da",
+          "ne"
+        ]
+      }
+    },
+    {
+      "id": "sutra-ce-padati-kisa",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Sutra će padati kiša.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Sutra",
+          "sutra"
+        ],
+        [
+          "će",
+          "htjeti"
+        ],
+        [
+          "padati",
+          "padati"
+        ],
+        [
+          "kiša",
+          "kiša"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will"
+        ],
+        [
+          "fall"
+        ],
+        [
+          "rain",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "kiša"
+      ],
+      "wrong": [
+        "Sutra ću padati kiša."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "će",
+          "ću",
+          "je"
+        ]
+      }
+    },
+    {
+      "id": "nazvat-cu-te",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "clitics"
+      ],
+      "text": "Nazvat ću te sutra.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Nazvat",
+          "nazvati"
+        ],
+        [
+          "ću",
+          "htjeti"
+        ],
+        [
+          "te",
+          "ti"
+        ],
+        [
+          "sutra",
+          "sutra"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Call",
+          true
+        ],
+        [
+          "I will"
+        ],
+        [
+          "you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Nazvat"
+      ],
+      "wrong": [
+        "Nazvat će te sutra."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "ti",
+          "se"
+        ]
+      }
+    },
+    {
+      "id": "sad-moram-ici",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Sad moram ići.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Sad",
+          "sad"
+        ],
+        [
+          "moram",
+          "morati"
+        ],
+        [
+          "ići",
+          "ići"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Now"
+        ],
+        [
+          "I have to"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sad moram idem."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ići",
+          "idem",
+          "išao"
+        ]
+      }
+    },
+    {
+      "id": "sto-radis-ovaj-vikend",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Šta radiš ovaj vikend?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Šta",
+          "šta"
+        ],
+        [
+          "radiš",
+          "raditi"
+        ],
+        [
+          "ovaj",
+          "ovaj"
+        ],
+        [
+          "vikend",
+          "vikend"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "you're doing"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Šta radim ovaj vikend?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "radiš",
+          "radim",
+          "radi"
+        ]
+      }
+    },
+    {
+      "id": "danas-je-hladno",
+      "topic": "plans",
+      "concepts": [
+        "no-pronoun",
+        "biti"
+      ],
+      "text": "Danas je hladno.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Danas",
+          "danas"
+        ],
+        [
+          "je",
+          "biti"
+        ],
+        [
+          "hladno",
+          "hladno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "is"
+        ],
+        [
+          "cold"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Danas to je hladno."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "je",
+          "su",
+          "sam"
+        ]
+      }
+    },
+    {
+      "id": "pada-kisa",
+      "topic": "plans",
+      "concepts": [
+        "no-pronoun"
+      ],
+      "text": "Pada kiša.",
+      "means": "It's raining.",
+      "words": [
+        [
+          "Pada",
+          "padati"
+        ],
+        [
+          "kiša",
+          "kiša"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Falls"
+        ],
+        [
+          "rain",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "kiša"
+      ],
+      "wrong": [
+        "To je pada kiša."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pada",
+          "Padam",
+          "Padaju"
+        ]
+      }
+    },
+    {
+      "id": "hladno-mi-je",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "clitics"
+      ],
+      "text": "Hladno mi je.",
+      "means": "I'm cold.",
+      "words": [
+        [
+          "Hladno",
+          "hladno"
+        ],
+        [
+          "mi",
+          "ja"
+        ],
+        [
+          "je",
+          "biti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Cold"
+        ],
+        [
+          "to me"
+        ],
+        [
+          "it is",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "je"
+      ],
+      "wrong": [
+        "Ja je hladno."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mi",
+          "me",
+          "ja"
+        ]
+      }
+    },
+    {
+      "id": "javi-mi",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "imperative"
+      ],
+      "text": "Javi mi!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Javi",
+          "javiti"
+        ],
+        [
+          "mi",
+          "ja"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Let know"
+        ],
+        [
+          "to me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Javi me!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Javi",
+          "Javim",
+          "Javlja"
+        ]
+      }
+    },
+    {
+      "id": "nadam-se-lijepo",
+      "topic": "plans",
+      "concepts": [
+        "se",
+        "future"
+      ],
+      "text": "Nadam se da će sutra biti lijepo.",
+      "means": "I hope it's nice out tomorrow.",
+      "words": [
+        [
+          "Nadam",
+          "nadati"
+        ],
+        [
+          "se",
+          "se"
+        ],
+        [
+          "da",
+          "da"
+        ],
+        [
+          "će",
+          "htjeti"
+        ],
+        [
+          "sutra",
+          "sutra"
+        ],
+        [
+          "biti",
+          "biti"
+        ],
+        [
+          "lijepo",
+          "lijepo"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I hope"
+        ],
+        [
+          "myself"
+        ],
+        [
+          "that"
+        ],
+        [
+          "it will"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "be"
+        ],
+        [
+          "nice"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nadam da će sutra biti lijepo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "će",
+          "ću",
+          "je"
+        ]
+      }
+    },
+    {
+      "id": "vidimo-se-sutra",
+      "topic": "plans",
+      "concepts": [
+        "se"
+      ],
+      "chunks": [
+        "see-you-tomorrow"
+      ],
+      "text": "Vidimo se sutra!",
+      "means": "See you tomorrow!",
+      "words": [
+        [
+          "Vidimo"
+        ],
+        [
+          "se"
+        ],
+        [
+          "sutra"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "We see"
+        ],
+        [
+          "each other"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vidimo si sutra!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "se",
+          "si",
+          "smo"
+        ]
+      }
+    },
+    {
+      "id": "ucim-bosanski",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Učim bosanski već godinu dana.",
+      "means": "I've been learning Bosnian for a year.",
+      "words": [
+        [
+          "Učim",
+          "učiti"
+        ],
+        [
+          "bosanski",
+          "bosanski"
+        ],
+        [
+          "već",
+          "već"
+        ],
+        [
+          "godinu",
+          "godina"
+        ],
+        [
+          "dana",
+          "dan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I'm learning"
+        ],
+        [
+          "Bosnian"
+        ],
+        [
+          "already"
+        ],
+        [
+          "a year"
+        ],
+        [
+          "of days"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Učiš bosanski već godinu dana."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Učim",
+          "Uči",
+          "Učimo"
+        ]
+      }
+    },
+    {
+      "id": "roditelji-su-bili-u-splitu",
+      "topic": "plans",
+      "concepts": [
+        "past",
+        "gender"
+      ],
+      "text": "Roditelji su prošle godine bili u Mostaru.",
+      "means": "My parents were in Mostar last year.",
+      "words": [
+        [
+          "Roditelji",
+          "roditelj"
+        ],
+        [
+          "su",
+          "biti"
+        ],
+        [
+          "prošle",
+          "prošli"
+        ],
+        [
+          "godine",
+          "godina"
+        ],
+        [
+          "bili",
+          "biti"
+        ],
+        [
+          "u"
+        ],
+        [
+          "Mostaru"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Parents"
+        ],
+        [
+          "are"
+        ],
+        [
+          "last year"
+        ],
+        [
+          "been",
+          true
+        ],
+        [
+          "in Mostar"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bili"
+      ],
+      "wrong": [
+        "Roditelji su prošle godine bile u Mostaru."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "bili",
+          "bile",
+          "bilo"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kahva",
+          "forms": [
+            "kahvu"
+          ],
+          "picture": "coffee",
+          "means": "kahvu = coffee"
+        },
+        {
+          "lemma": "čaj",
+          "forms": [
+            "čaj"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "voda",
+          "forms": [
+            "vodu"
+          ],
+          "picture": "water",
+          "means": "vodu = water"
+        },
+        {
+          "lemma": "ja",
+          "forms": [
+            "ja"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "piti",
+          "forms": [
+            "pijem"
+          ],
+          "picture": "drink",
+          "means": "pijem = I drink"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "A verb's ending says who does it: radim (I work), radiš (you work), radi (she works), radimo (we work), rade (they work)."
+      },
+      "items": [
+        "pijem-kahvu",
+        "pijem-caj",
+        "ja-pijem-vodu",
+        "pijem-kahvu-i-caj",
+        "pijem-caj-i-vodu",
+        "pijem-vodu-i-kahvu"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "jedan",
+          "forms": [
+            "jednu",
+            "jedan"
+          ],
+          "means": "jednu = one; jedan = one"
+        },
+        {
+          "lemma": "mlijeko",
+          "forms": [
+            "mlijeko"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "zdravo-kahvu-molim",
+        "jedan-caj-i-jednu-vodu-molim",
+        "jednu-kahvu-hvala",
+        "zdravo-jedan-caj-molim",
+        "pijem-mlijeko"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "dobro",
+          "forms": [
+            "dobro"
+          ],
+          "means": "fine"
+        },
+        {
+          "lemma": "biti",
+          "forms": [
+            "sam"
+          ],
+          "means": "sam = I am"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "no-pronoun",
+        "line": "Bosnian usually leaves out a subject pronoun when the verb or context identifies it, and it uses no dummy word for the it in “It’s raining” or the there in “There’s no milk”: Radim (I-work), Pada kiša (falls rain: it’s raining)."
+      },
+      "items": [
+        "zdravo-kako-si",
+        "dobro-sam-hvala",
+        "da-molim",
+        "ne-hvala",
+        "da-hvala-dovi-enja",
+        "ne-hvala-dovi-enja"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ti",
+          "forms": [
+            "ti"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ne",
+          "forms": [
+            "ne"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "učitelj",
+          "forms": [
+            "učitelj"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "student",
+          "forms": [
+            "student"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "li",
+          "forms": [
+            "li"
+          ],
+          "means": "question particle"
+        },
+        {
+          "lemma": "biti",
+          "forms": [
+            "je",
+            "si",
+            "jesi",
+            "nisam"
+          ],
+          "means": "je = is; si = you are; jesi = you are; nisam = I am not"
+        },
+        {
+          "lemma": "piti",
+          "forms": [
+            "pije"
+          ],
+          "means": "pije = drinks"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "drago-mi-je"
+      ],
+      "concept": null,
+      "items": [
+        "kako-se-zoves",
+        "drago-mi-je",
+        "ja-sam-ucitelj",
+        "ti-si-student",
+        "jesi-li-ti-ucitelj",
+        "ja-nisam-ucitelj",
+        "ne-pijem-kahvu",
+        "ucitelj-je-student-i-ne-pije-caj"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "majka",
+          "forms": [
+            "majka"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "otac",
+          "forms": [
+            "otac"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "brat",
+          "forms": [
+            "brat"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "sestra",
+          "forms": [
+            "sestra"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "moj",
+          "forms": [
+            "moja",
+            "moj"
+          ],
+          "means": "moja = my; moj = my"
+        },
+        {
+          "lemma": "ovo",
+          "forms": [
+            "ovo"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "dobar",
+          "forms": [
+            "dobra"
+          ],
+          "means": "dobra = good"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "biti",
+        "line": "biti has short forms sam, si, je, smo, ste, and su; its negative forms include nisam (I am not), nisi (you are not), and nije (he, she, or it is not)."
+      },
+      "items": [
+        "ovo-je-moja-majka",
+        "ovo-je-moj-otac",
+        "moj-otac-je-ucitelj",
+        "moj-brat-je-student",
+        "ovo-je-moja-sestra",
+        "moja-majka-je-dobra"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "imati",
+          "forms": [
+            "imam",
+            "imaš"
+          ],
+          "means": "imam = I have; imaš = you have"
+        },
+        {
+          "lemma": "prijatelj",
+          "forms": [
+            "prijatelj"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "doktorica",
+          "forms": [
+            "doktorica"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "ključ",
+          "forms": [
+            "ključ"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefon"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "knjiga",
+          "forms": [
+            "knjigu"
+          ],
+          "picture": "book",
+          "means": "knjigu = book"
+        },
+        {
+          "lemma": "nemati",
+          "forms": [
+            "nemam"
+          ],
+          "means": "nemam = I don't have"
+        },
+        {
+          "lemma": "brat",
+          "forms": [
+            "brata"
+          ],
+          "means": "brata = brother"
+        },
+        {
+          "lemma": "sestra",
+          "forms": [
+            "sestru"
+          ],
+          "means": "sestru = sister"
+        },
+        {
+          "lemma": "dobar",
+          "forms": [
+            "dobar"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "imam-telefon",
+        "imas-li-kljuc",
+        "imam-brata-i-sestru",
+        "nemam-knjigu",
+        "moja-sestra-je-doktorica",
+        "ti-si-dobar-prijatelj"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "gdje",
+          "forms": [
+            "gdje"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "ovdje",
+          "forms": [
+            "ovdje"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "tamo",
+          "forms": [
+            "tamo"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "toalet",
+          "forms": [
+            "toalet"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "biti",
+          "forms": [
+            "su"
+          ],
+          "means": "su = are"
+        },
+        {
+          "lemma": "moj",
+          "forms": [
+            "moji"
+          ],
+          "means": "moji = my"
+        },
+        {
+          "lemma": "ključ",
+          "forms": [
+            "ključevi"
+          ],
+          "means": "ključevi = keys"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "gender",
+        "line": "Every noun is masculine (stol), feminine (torba) or neuter (mlijeko), mostly told by its ending, and the words with it match: moj stol, moja torba, moje mlijeko."
+      },
+      "items": [
+        "gdje-je-moj-kljuc",
+        "izvinite-gdje-je-toalet",
+        "moj-telefon-je-ovdje",
+        "kljuc-je-tamo",
+        "gdje-je-moja-majka",
+        "moja-sestra-je-ovdje",
+        "gdje-su-moji-kljucevi"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "dva",
+          "forms": [
+            "dvije",
+            "dva"
+          ],
+          "picture": "two",
+          "means": "dvije = two; dva = two"
+        },
+        {
+          "lemma": "tri",
+          "forms": [
+            "tri"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "novac",
+          "forms": [
+            "novca"
+          ],
+          "picture": "money",
+          "means": "novca = money"
+        },
+        {
+          "lemma": "kahva",
+          "forms": [
+            "kahve"
+          ],
+          "means": "kahve = coffees"
+        },
+        {
+          "lemma": "knjiga",
+          "forms": [
+            "knjige"
+          ],
+          "means": "knjige = books"
+        }
+      ],
+      "phrases": [
+        "how-much-is-this",
+        "racun-molim"
+      ],
+      "concept": null,
+      "items": [
+        "koliko-ovo-kosta",
+        "racun-molim",
+        "dvije-kahve-molim",
+        "jednu-knjigu-molim",
+        "imam-tri-knjige",
+        "nemam-novca",
+        "imam-sestru"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "govoriti",
+          "forms": [
+            "govoriš",
+            "govorim"
+          ],
+          "means": "govoriš = you speak; govorim = I speak"
+        },
+        {
+          "lemma": "engleski",
+          "forms": [
+            "engleski"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "bosanski",
+          "forms": [
+            "bosanski"
+          ],
+          "means": "Bosnian"
+        },
+        {
+          "lemma": "razumjeti",
+          "forms": [
+            "razumijem",
+            "razumiješ"
+          ],
+          "means": "razumijem = I understand; razumiješ = you understand"
+        },
+        {
+          "lemma": "malo",
+          "forms": [
+            "malo"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "željeti",
+          "forms": [
+            "želim"
+          ],
+          "means": "želim = I want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "accusative",
+        "line": "What a verb acts on takes the accusative, which changes feminine -a to -u (Pijem kahvu: I-drink coffee); u or na + accusative is where you go: Idem u pekaru (I-go into bakery)."
+      },
+      "items": [
+        "govoris-li-engleski",
+        "ne-razumijem",
+        "razumijes-li",
+        "govorim-malo-bosanski",
+        "zelim-kahvu",
+        "zelim-vodu-molim"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "kuća",
+          "forms": [
+            "kuća",
+            "kući"
+          ],
+          "picture": "house",
+          "means": "kuća = house; kući = house"
+        },
+        {
+          "lemma": "soba",
+          "forms": [
+            "soba"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "velik",
+          "forms": [
+            "velika"
+          ],
+          "picture": "big",
+          "means": "velika = big"
+        },
+        {
+          "lemma": "mali",
+          "forms": [
+            "mala",
+            "maloj"
+          ],
+          "picture": "small",
+          "means": "mala = small; maloj = small"
+        },
+        {
+          "lemma": "živjeti",
+          "forms": [
+            "živi",
+            "živiš",
+            "živim"
+          ],
+          "means": "živi = lives; živiš = you live; živim = I live"
+        },
+        {
+          "lemma": "u",
+          "forms": [
+            "u"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "ovaj",
+          "forms": [
+            "ova"
+          ],
+          "means": "ova = this"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "moja-soba-je-mala",
+        "ova-kuca-je-velika",
+        "moja-majka-zivi-ovdje",
+        "gdje-zivis",
+        "zivim-u-maloj-kuci"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "ići",
+          "forms": [
+            "idem",
+            "ideš",
+            "ide"
+          ],
+          "means": "idem = I go; ideš = you go; ide = goes"
+        },
+        {
+          "lemma": "škola",
+          "forms": [
+            "školu"
+          ],
+          "picture": "school",
+          "means": "školu = school"
+        },
+        {
+          "lemma": "grad",
+          "forms": [
+            "grad"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "stanica",
+          "forms": [
+            "stanica"
+          ],
+          "means": "station"
+        },
+        {
+          "lemma": "željeznički",
+          "forms": [
+            "željeznička"
+          ],
+          "means": "željeznička = railway"
+        },
+        {
+          "lemma": "auto",
+          "forms": [
+            "auto"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "u",
+          "forms": [
+            "u"
+          ],
+          "means": "in"
+        },
+        {
+          "lemma": "ovaj",
+          "forms": [
+            "ovaj"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "mali",
+          "forms": [
+            "mali"
+          ],
+          "means": "small"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes-or-no question puts li after the verb (Govoriš li engleski?"
+      },
+      "items": [
+        "imam-auto",
+        "ovaj-auto-je-mali",
+        "gdje-ides",
+        "idem-u-skolu",
+        "moja-majka-ide-u-grad",
+        "izvinite-gdje-je-zeljeznicka-stanica"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "danas",
+          "forms": [
+            "danas"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "sutra",
+          "forms": [
+            "sutra"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "sad",
+          "forms": [
+            "sad"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "raditi",
+          "forms": [
+            "radim",
+            "raditi"
+          ],
+          "picture": "work",
+          "means": "radim = I work; raditi = to work"
+        },
+        {
+          "lemma": "morati",
+          "forms": [
+            "moram"
+          ],
+          "means": "moram = I have to"
+        },
+        {
+          "lemma": "moći",
+          "forms": [
+            "mogu"
+          ],
+          "means": "mogu = I can"
+        },
+        {
+          "lemma": "ići",
+          "forms": [
+            "ići"
+          ],
+          "means": "to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "vidimo-se-sutra",
+        "radim-danas",
+        "sad-moram-ici",
+        "sutra-idem-u-grad",
+        "ne-mogu-ici-danas",
+        "moram-raditi-sutra"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

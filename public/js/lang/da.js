@@ -1,0 +1,33 @@
+// Danish (lang/index.js has what each field means).
+
+export default {
+  name: "Danish",
+  locale: "da-DK",
+  segmenter: "spaces",
+  separator: " ",
+  lemmaCase: "lower",
+  abbreviations: ["f.eks.", "bl.a.", "dvs.", "osv.", "m.m.", "o.l.", "mht.", "pga.", "ca.", "kl.", "nr.", "s.", "jf.", "evt.", "ifm.", "hhv.", "inkl.", "ekskl.", "tlf.", "st.", "dr.", "hr.", "fr.", "frk.", "prof.", "kr.", "mfl.", "m.fl.", "mv.", "m.v.", "m.a.o."],
+  stray: ["at", "som", "end", "mens"],
+  patterns: {
+    v2: { name: "Verb second", about: "In a main-clause statement the verb that shows the tense comes second (not always the second word): when a time, a place or a whole clause comes first, the subject follows that verb.", after: ["present"] },
+    question: { name: "Questions: verb first or after the question word", about: "In a yes/no question the verb that shows the tense comes first; after a question word it comes before the subject (unless the question word is the subject). Danish adds no English-style do.", after: ["v2"] },
+    ikke: { name: "Where ikke goes", about: "In a main clause, ikke (not) comes after the verb that shows the tense, and after the subject too when something else comes first: I dag kommer han ikke.", after: ["v2"] },
+    present: { name: "Present tense", about: "The present usually ends in -r and is the same for every person (jeg taler, du taler, vi taler); it means both I speak and I'm speaking.", after: [] },
+    modal: { name: "Modal + infinitive", about: "After vil, kan, skal, må and bør, the next verb is a plain infinitive, with no at.", after: [] },
+    future: { name: "Talking about the future", about: "Danish often uses the present tense for the future (Jeg ringer i morgen), and skal for plans (Vi skal i biografen).", after: ["modal", "present"] },
+    past: { name: "Past tense", about: "The past is the same for every person: many verbs end in -ede or -te (boede, købte), and some change more (kom).", after: ["present"] },
+    perfect: { name: "Perfect: har or er + participle", about: "har (or er, with verbs like komme and gå) and the past participle make the perfect, in the same order as English: har spist, er kommet.", after: ["past"] },
+    imperative: { name: "Telling someone to do something", about: "The command form is the verb's stem, with no subject: Husk! Luk lige døren! Ring til mig!", after: ["present"] },
+    gender: { name: "En or et", about: "Every noun is an en word or an et word, and the words with it match: en lejlighed, et hus; en stor bil, et stort køkken.", after: [] },
+    definite: { name: "The article on the end", about: "With no adjective, the word for the is an ending on the noun: bil, bilen (the car); hus, huset (the house).", after: ["gender"] },
+    plural: { name: "Plurals", about: "Plurals end in -er, -e or nothing, so learn each with its noun: nøgle, nøgler; minut, minutter; sko, sko; år, år.", after: ["gender"] },
+    adjective: { name: "Adjective endings", about: "Most adjectives take nothing with an en word, -t with an et word, and -e in the plural or after the: en stor bil, et stort køkken, store biler.", after: ["gender"] },
+    "adjective-definite": { name: "Adjective + the: den røde bil", about: "With an adjective, Danish puts den, det or de in front, and the noun has no definite ending: den røde bil (the red car), de nye sko.", after: ["definite", "adjective"] },
+    possessive: { name: "My, your, our", about: "min, din and vores come before the noun, and min and din match it: min far (an en word), mit hus (an et word), mine nøgler (plural).", after: ["gender"] },
+    direction: { name: "Where you are, where you go", about: "Some place words change when you're moving: hjemme (at home), hjem (home, going there); der (there), derhen (to there).", after: [] },
+    particle: { name: "Particle verbs", about: "Some verbs take a stressed little word that changes what they mean: stå op (to get up), tage med (to bring). With tage med, the thing goes in between: Tag en paraply med.", after: [] },
+    "at-infinitive": { name: "at + infinitive", about: "at before a verb is English to (Jeg kan godt lide at lave mad), and for at is in order to.", after: ["modal"] },
+    "clause-ikke": { name: "Clauses: ikke before the verb", about: "In a clause after at (that), hvis, når or fordi, the subject comes first, then ikke, then the verb that shows the tense: fordi jeg ikke kan komme.", after: ["ikke"] },
+    "clause-first": { name: "A clause first, then the verb", about: "When a clause like Når jeg kommer hjem comes first, the main clause's verb that shows the tense follows it, before the subject.", after: ["v2"] },
+  },
+};

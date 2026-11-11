@@ -1,0 +1,221 @@
+{
+  "about": "The areas of the app whose words have moved into lx/i18n.js's catalogs (public/js/i18n/en/<area>.js). scripts/test-i18n.mjs: no file listed under an area may hold a word a person sees outside t(), except what `allow` lists with its reason. scripts/i18n-walk.mjs: where each area is on screen (`states`), what --pseudo and --capture walk, and what --text compares. An area grows its files and states as its screens move; `complete` means every key of its catalog must be captured on screen; `names` that the area shows languages' names (languageLabel), so --pseudo counts an English name as a word that didn't come through t(). `fit.oneLine`: the parts whose words must stay on one line (i18n-walk --mode fit). A state's `unmoved` names file prefixes whose words are the page's own (/design's captions), which --pseudo doesn't count against an area.",
+  "areas": {
+    "core": {
+      "catalog": "public/js/i18n/en/core.js",
+      "files": [
+        "public/js/lx/ui.js"
+      ],
+      "allow": {},
+      "complete": false,
+      "states": [
+        "design"
+      ]
+    },
+    "welcome": {
+      "catalog": "public/js/i18n/en/welcome.js",
+      "files": [
+        "public/js/shell/welcome.js"
+      ],
+      "allow": {},
+      "complete": true,
+      "states": [
+        "first-run",
+        "first-run-learn",
+        "first-run-no-match",
+        "language-sheet"
+      ],
+      "names": true
+    },
+    "home": {
+      "catalog": "public/js/i18n/en/home.js",
+      "files": [
+        "public/js/know/today.js",
+        "public/js/know/home-cards.js"
+      ],
+      "allow": {},
+      "complete": false,
+      "states": [
+        "today"
+      ]
+    },
+    "know": {
+      "catalog": "public/js/i18n/en/know.js",
+      "files": [
+        "public/js/know/ui.js"
+      ],
+      "allow": {},
+      "complete": false,
+      "states": [
+        "today",
+        "know",
+        "design"
+      ]
+    },
+    "study": {
+      "catalog": "public/js/i18n/en/study.js",
+      "files": [
+        "public/js/study/concept-picture.js", "public/js/study/learn-more.js"
+      ],
+      "allow": {},
+      "complete": false,
+      "states": [
+        "design"
+      ]
+    },
+    "translate": {
+      "catalog": "public/js/i18n/en/translate.js",
+      "files": [
+        "public/js/translate/page.js"
+      ],
+      "allow": {
+        "public/js/translate/page.js": [
+          {
+            "text": "Lexicommons",
+            "why": "the app's name, as the credit of a pack whose credit isn't known: a name, never translated"
+          }
+        ]
+      },
+      "complete": false,
+      "states": [
+        "translate-typed",
+        "translate-word"
+      ],
+      "names": true
+    },
+    "settings": {
+      "catalog": "public/js/i18n/en/settings.js",
+      "files": [],
+      "allow": {},
+      "complete": false,
+      "states": [
+        "settings-language"
+      ]
+    }
+  },
+  "states": {
+    "first-run": {
+      "url": "/app/#today",
+      "open": [
+        "/js/shell/welcome.js",
+        "openWelcome"
+      ],
+      "root": ".lx-welcome",
+      "settle": 800,
+      "clear": [
+        "lx.interface.v1"
+      ]
+    },
+    "first-run-learn": {
+      "url": "/app/#today",
+      "open": [
+        "/js/shell/welcome.js",
+        "openWelcome"
+      ],
+      "root": ".lx-welcome",
+      "settle": 800,
+      "clear": [
+        "lx.interface.v1"
+      ],
+      "press": ".lx-welcome [data-language=\"en\"]"
+    },
+    "first-run-no-match": {
+      "url": "/app/#today",
+      "open": [
+        "/js/shell/welcome.js",
+        "openWelcome"
+      ],
+      "root": ".lx-welcome",
+      "type": [
+        ".lx-welcome input[type=search]",
+        "zzqx"
+      ],
+      "settle": 500
+    },
+    "language-sheet": {
+      "url": "/app/#settings/language",
+      "open": [
+        "/js/shell/welcome.js",
+        "openLanguageSheet"
+      ],
+      "root": ".lx-sheet-layer:not([hidden]) [data-part=\"sheet\"]",
+      "settle": 900
+    },
+    "design": {
+      "url": "/design/",
+      "ready": "html[data-surface-check]",
+      "settle": 1500,
+      "unmoved": [
+        "public/js/design"
+      ],
+      "pseudo": false,
+      "why": "/design prints code ids as its demos' captions (a state's name, a symbol's), a developer's page; its words are checked by test-i18n and on the app's own screens"
+    },
+    "today": {
+      "url": "/app/#today",
+      "settle": 800
+    },
+    "study": {
+      "url": "/app/#study",
+      "settle": 800
+    },
+    "know": {
+      "url": "/app/#know",
+      "settle": 800
+    },
+    "settings": {
+      "url": "/app/#settings",
+      "settle": 600
+    },
+    "settings-language": {
+      "url": "/app/#settings/language",
+      "settle": 600
+    },
+    "explore": {
+      "url": "/app/#explore",
+      "settle": 1200
+    },
+    "translate-typed": {
+      "url": "/app/#today/translate",
+      "root": ".lx-today-translate",
+      "type": [
+        "[data-part=\"translate-field\"] textarea",
+        "De oude molenaar fietst langzaam langs de bevroren sloot."
+      ],
+      "settle": 2500
+    },
+    "translate-word": {
+      "url": "/app/#today/translate",
+      "root": ".lx-today-translate",
+      "type": [
+        "[data-part=\"translate-field\"] textarea",
+        "hond"
+      ],
+      "settle": 2500
+    }
+  },
+  "text": [
+    "first-run",
+    "first-run-no-match",
+    "language-sheet",
+    "today",
+    "study",
+    "know",
+    "settings",
+    "settings-language",
+    "explore",
+    "design",
+    "translate-typed",
+    "translate-word"
+  ],
+  "fit": {
+    "oneLine": [
+      "button",
+      "badge",
+      "section-link",
+      "mic-button",
+      "segmented",
+      "speak-button"
+    ]
+  }
+}

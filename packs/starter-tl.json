@@ -1,0 +1,8090 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-tl",
+  "name": "Starter: Tagalog",
+  "about": "Tagalog sentence order and verb focus in real, everyday sentences.",
+  "language": "tl",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Out and about",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kape": "coffee",
+    "tsaa": "tea",
+    "tubig": "water",
+    "ako": "I (ko: my, by me; akin: mine)",
+    "inom": "drink (umiinom: drinks)",
+    "at": "and",
+    "ng": "of; marks an object or doer that isn't the topic",
+    "isa": "one (isang: a, one)",
+    "gatas": "milk",
+    "mabuti": "good",
+    "ikaw": "you (ikaw, ka; mo: your, by you)",
+    "hindi": "not",
+    "guro": "teacher",
+    "ba": "(makes a yes/no question)",
+    "ang": "marks the topic, often before a definite noun",
+    "nanay": "mom",
+    "tatay": "dad",
+    "kuya": "older brother",
+    "ate": "older sister",
+    "ito": "this",
+    "estudyante": "student",
+    "may": "there is; have",
+    "kaibigan": "friend",
+    "doktor": "doctor",
+    "susi": "key",
+    "telepono": "phone",
+    "libro": "book",
+    "wala": "there isn't; don't have",
+    "nasaan": "where (is it)",
+    "dito": "here",
+    "doon": "there",
+    "banyo": "bathroom",
+    "nasa": "at, in (nasa bahay: at home)",
+    "dalawa": "two",
+    "tatlo": "three",
+    "pera": "money",
+    "mga": "(makes a noun plural)",
+    "salita": "word (nagsasalita: speaks)",
+    "ingles": "English",
+    "tagalog": "Tagalog",
+    "intindi": "to understand",
+    "kaunti": "a little",
+    "gusto": "like, want",
+    "bahay": "house, home",
+    "kuwarto": "room",
+    "laki": "size (malaki: big)",
+    "liit": "smallness (maliit: small)",
+    "tira": "live, stay (nakatira: lives)",
+    "sa": "in, at, to; after sasama, sa amin means with us",
+    "na": "(links words); already, now",
+    "punta": "go (pupunta: will go)",
+    "paaralan": "school",
+    "lungsod": "city",
+    "istasyon": "station",
+    "kotse": "car",
+    "saan": "where",
+    "ngayon": "now, today (ngayong Sabado: this Saturday)",
+    "bukas": "tomorrow",
+    "trabaho": "work (nagtatrabaho: works)",
+    "kailangan": "need, have to",
+    "puwede": "can, may",
+    "kumusta": "how (kumusta ka: how are you)",
+    "ano": "what",
+    "pangalan": "name",
+    "aral": "study (nag-aaral: studies)",
+    "kapatid": "sibling, brother or sister",
+    "alam": "know (alam ko: I know)",
+    "kung": "if; whether; before a question word, an indirect question (kung saan: where)",
+    "siya": "he, she, or singular they",
+    "pelikula": "movie",
+    "kahapon": "yesterday",
+    "ospital": "hospital",
+    "apartment": "apartment",
+    "mesa": "table",
+    "ref": "fridge",
+    "sara": "close (isara: to close)",
+    "bintana": "window",
+    "kusina": "kitchen",
+    "balkonahe": "balcony",
+    "kami": "we, not including you (amin: us, our)",
+    "uwi": "going home (pag-uwi: on getting home)",
+    "luto": "cook (magluto: to cook)",
+    "hapunan": "dinner",
+    "pinto": "door",
+    "hintay": "wait (hintayin: wait for)",
+    "nang": "marks how or by how much (nang walang asukal; nang sampung minuto)",
+    "asukal": "sugar",
+    "baso": "glass",
+    "kain": "eat (kumain: ate)",
+    "tamis": "sweetness (matamis: sweet, something sweet)",
+    "pizza": "pizza",
+    "kasama": "with, together with",
+    "magkano": "how much",
+    "po": "(shows respect)",
+    "itlog": "egg",
+    "almusal": "breakfast",
+    "salamat": "thanks, thank you",
+    "tindahan": "store",
+    "para": "to, in order to; for",
+    "bili": "buy (bumili: bought, to buy)",
+    "tinapay": "bread",
+    "sakay": "ride (sumakay: to ride)",
+    "bus": "bus",
+    "bago": "new",
+    "sapatos": "shoes",
+    "huli": "late (nahuli: was late)",
+    "tren": "train",
+    "sampu": "ten",
+    "minuto": "minute",
+    "pa": "still, yet",
+    "masyado": "too, too much",
+    "tayo": "we, including you",
+    "taxi": "taxi",
+    "ni": "by (before a name)",
+    "kay": "to (before a name)",
+    "dalawandaan": "two hundred",
+    "piso": "peso",
+    "tiket": "ticket",
+    "ulan": "rain (uulan: will rain)",
+    "tawag": "call (tatawagan: will call)",
+    "kita": "I … you (tatawagan kita: I'll call you)",
+    "alis": "leave (umalis: to leave)",
+    "sama": "come along (sasama: will come along)",
+    "sinehan": "movie theater",
+    "dagat": "sea, beach",
+    "taon": "year",
+    "gawa": "do, make (gagawin: will do)",
+    "lamig": "cold (malamig: cold; nilalamig: feels cold)",
+    "sabi": "say (sabihan: tell)",
+    "sana": "I hope, hopefully",
+    "ganda": "beauty (maganda: nice, beautiful)",
+    "panahon": "weather; time",
+    "oras": "time, hour",
+    "lola": "grandmother, grandma",
+    "sabado": "Saturday"
+  },
+  "chunks": {
+    "pahingi": {
+      "text": "Pahingi",
+      "en": "May I have",
+      "about": "To ask someone for something: Pahingi ng tubig."
+    },
+    "kita-tayo": {
+      "text": "Kita tayo",
+      "en": "See you; let's meet",
+      "about": "A casual, shortened Magkita tayo (let's meet): Kita tayo bukas!"
+    },
+    "pasensiya-na": {
+      "text": "Pasensiya na",
+      "en": "Excuse me, sorry",
+      "about": "An everyday way to say excuse me or sorry, often with po."
+    },
+    "hello": {
+      "text": "Magandang araw",
+      "en": "Hello!"
+    },
+    "thank-you": {
+      "text": "Salamat po",
+      "en": "Thank you!"
+    },
+    "how-are-you": {
+      "text": "Kumusta ka",
+      "en": "How are you?"
+    },
+    "goodbye": {
+      "text": "Paalam",
+      "en": "Goodbye!"
+    },
+    "yes": {
+      "text": "Oo",
+      "en": "Yes"
+    },
+    "no": {
+      "text": "Hindi",
+      "en": "No"
+    },
+    "what-s-your-name": {
+      "text": "Ano ang pangalan mo",
+      "en": "What's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Ikinagagalak kitang makilala",
+      "en": "Nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Pasensiya na po",
+      "en": "Excuse me"
+    },
+    "how-much-is-it": {
+      "text": "Magkano po",
+      "en": "How much is it?"
+    },
+    "the-check-please": {
+      "text": "Pahingi ng kuwenta",
+      "en": "The check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Kita tayo bukas",
+      "en": "See you tomorrow!"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "umiinom-ako-ng-kape-2",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "pronoun-second",
+        "ng"
+      ],
+      "text": "Umiinom ako ng kape.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "kape",
+          "kape"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umiinom ng ako kape.",
+        "Ako ng umiinom kape."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kape",
+          "tsaa",
+          "tubig"
+        ]
+      }
+    },
+    {
+      "id": "umiinom-ako-ng-tsaa",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "pronoun-second",
+        "ng"
+      ],
+      "text": "Umiinom ako ng tsaa.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tsaa",
+          "tsaa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umiinom ng ako tsaa.",
+        "Ako ng umiinom tsaa."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tsaa",
+          "kape",
+          "tubig"
+        ]
+      }
+    },
+    {
+      "id": "umiinom-ako-ng-tubig",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "pronoun-second",
+        "ng"
+      ],
+      "text": "Umiinom ako ng tubig.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tubig",
+          "tubig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umiinom ng ako tubig.",
+        "Ako ng umiinom tubig."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tubig",
+          "kape",
+          "tsaa"
+        ]
+      }
+    },
+    {
+      "id": "umiinom-ako-ng-kape-at-tsaa",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "ng"
+      ],
+      "text": "Umiinom ako ng kape at tsaa.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "kape",
+          "kape"
+        ],
+        [
+          "at",
+          "at"
+        ],
+        [
+          "tsaa",
+          "tsaa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umiinom ng ako kape at tsaa.",
+        "Umiinom ako at kape ng tsaa."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "at",
+          "ng",
+          "ako"
+        ]
+      }
+    },
+    {
+      "id": "umiinom-ako-ng-tsaa-at-tubig",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "ng"
+      ],
+      "text": "Umiinom ako ng tsaa at tubig.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tsaa",
+          "tsaa"
+        ],
+        [
+          "at",
+          "at"
+        ],
+        [
+          "tubig",
+          "tubig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umiinom ng ako tsaa at tubig.",
+        "Umiinom ako at tsaa ng tubig."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tsaa",
+          "kape",
+          "tubig"
+        ]
+      }
+    },
+    {
+      "id": "umiinom-ako-ng-tubig-at-kape",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "ng"
+      ],
+      "text": "Umiinom ako ng tubig at kape.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tubig",
+          "tubig"
+        ],
+        [
+          "at",
+          "at"
+        ],
+        [
+          "kape",
+          "kape"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umiinom ng ako tubig at kape.",
+        "Umiinom ako at tubig ng kape."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "kape",
+          "tsaa",
+          "tubig"
+        ]
+      }
+    },
+    {
+      "id": "pahingi-ng-isang-kape",
+      "topic": "food",
+      "concepts": [
+        "ng",
+        "linker"
+      ],
+      "chunks": [
+        "pahingi"
+      ],
+      "text": "Pahingi ng isang kape.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Pahingi"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "isang",
+          "isa"
+        ],
+        [
+          "kape",
+          "kape"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "May I have"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pahingi isang ng kape.",
+        "Pahingi ng kape isang."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kape",
+          "tsaa",
+          "tubig"
+        ]
+      }
+    },
+    {
+      "id": "magandang-araw-pahingi-ng-isang-tsaa",
+      "topic": "food",
+      "concepts": [
+        "ng",
+        "linker"
+      ],
+      "chunks": [
+        "hello",
+        "pahingi"
+      ],
+      "text": "Magandang araw! Pahingi ng isang tsaa.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Magandang"
+        ],
+        [
+          "araw!"
+        ],
+        [
+          "Pahingi"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "isang",
+          "isa"
+        ],
+        [
+          "tsaa",
+          "tsaa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "may I have"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Magandang araw! Pahingi isang ng tsaa.",
+        "Magandang araw! Pahingi ng tsaa isang."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "tsaa",
+          "kape",
+          "gatas"
+        ]
+      }
+    },
+    {
+      "id": "pahingi-ng-isang-tsaa-at-isang-tubig",
+      "topic": "food",
+      "concepts": [
+        "ng",
+        "linker"
+      ],
+      "chunks": [
+        "pahingi"
+      ],
+      "text": "Pahingi ng isang tsaa at isang tubig.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Pahingi"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "isang",
+          "isa"
+        ],
+        [
+          "tsaa",
+          "tsaa"
+        ],
+        [
+          "at",
+          "at"
+        ],
+        [
+          "isang",
+          "isa"
+        ],
+        [
+          "tubig",
+          "tubig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "May I have"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pahingi isang ng tsaa at isang tubig.",
+        "Pahingi ng isang tsaa isang at tubig."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "tubig",
+          "kape",
+          "gatas"
+        ]
+      }
+    },
+    {
+      "id": "isang-kape-salamat-po",
+      "topic": "food",
+      "concepts": [
+        "linker"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Isang kape, salamat po!",
+      "means": "A coffee, thank you!",
+      "words": [
+        [
+          "Isang",
+          "isa"
+        ],
+        [
+          "kape,",
+          "kape"
+        ],
+        [
+          "salamat"
+        ],
+        [
+          "po"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ng isang kape, salamat po!",
+        "Isang ng kape, salamat po!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kape,",
+          "tsaa,",
+          "tubig,"
+        ]
+      }
+    },
+    {
+      "id": "umiinom-ako-ng-gatas",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "ng",
+        "pronoun-second"
+      ],
+      "text": "Umiinom ako ng gatas.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "gatas",
+          "gatas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink"
+        ],
+        [
+          "I"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umiinom ng ako gatas.",
+        "Ako ng umiinom gatas."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gatas",
+          "kape",
+          "tsaa"
+        ]
+      }
+    },
+    {
+      "id": "mabuti-ako-salamat-po",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "pronoun-second"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Mabuti ako, salamat po.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Mabuti",
+          "mabuti"
+        ],
+        [
+          "ako,",
+          "ako"
+        ],
+        [
+          "salamat"
+        ],
+        [
+          "po"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine"
+        ],
+        [
+          "I"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mabuti ng ako, salamat po.",
+        "Ako ng mabuti, salamat po."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ako,",
+          "ka,",
+          "ng,"
+        ]
+      }
+    },
+    {
+      "id": "oo-pahingi-ng-tubig",
+      "topic": "people",
+      "concepts": [
+        "ng"
+      ],
+      "chunks": [
+        "pahingi",
+        "yes"
+      ],
+      "text": "Oo, pahingi ng tubig.",
+      "means": "Yes, water, please.",
+      "words": [
+        [
+          "Oo,"
+        ],
+        [
+          "pahingi"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tubig",
+          "tubig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "may I have"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Oo, ng pahingi tubig.",
+        "Oo, pahingi tubig ng."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tubig",
+          "kape",
+          "gatas"
+        ]
+      }
+    },
+    {
+      "id": "hindi-salamat-po",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Hindi, salamat po.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Hindi,"
+        ],
+        [
+          "salamat"
+        ],
+        [
+          "po"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hindi, po salamat.",
+        "Hindi, salamat ng po."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hindi,",
+          "Oo,",
+          "Pahingi,"
+        ]
+      }
+    },
+    {
+      "id": "oo-salamat-po-paalam",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Oo, salamat po. Paalam!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Oo,"
+        ],
+        [
+          "salamat"
+        ],
+        [
+          "po."
+        ],
+        [
+          "Paalam"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Oo, po salamat. Paalam!",
+        "Oo, salamat ng po. Paalam!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Oo,",
+          "Hindi,",
+          "Pahingi,"
+        ]
+      }
+    },
+    {
+      "id": "hindi-salamat-po-paalam",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Hindi, salamat po. Paalam!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Hindi,"
+        ],
+        [
+          "salamat"
+        ],
+        [
+          "po."
+        ],
+        [
+          "Paalam"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hindi, po salamat. Paalam!",
+        "Hindi, salamat ng po. Paalam!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Hindi,",
+          "Oo,",
+          "Pahingi,"
+        ]
+      }
+    },
+    {
+      "id": "guro-ka-ba",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "predicate-first",
+        "pronoun-second",
+        "ba"
+      ],
+      "text": "Guro ka ba?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Guro",
+          "guro"
+        ],
+        [
+          "ka",
+          "ikaw"
+        ],
+        [
+          "ba",
+          "ba"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Teacher"
+        ],
+        [
+          "you"
+        ],
+        [
+          "question"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Guro ba ka?",
+        "Guro ng ka ba?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ka",
+          "ako",
+          "mo"
+        ]
+      }
+    },
+    {
+      "id": "hindi-ako-guro",
+      "topic": "people",
+      "concepts": [
+        "hindi",
+        "pronoun-second",
+        "predicate-first"
+      ],
+      "text": "Hindi ako guro.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Hindi",
+          "hindi"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "guro",
+          "guro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hindi ng ako guro.",
+        "Hindi ako ng guro."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ako",
+          "ka",
+          "mo"
+        ]
+      }
+    },
+    {
+      "id": "magandang-araw-ikinagagalak-kitang",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Magandang araw! Ikinagagalak kitang makilala.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Magandang"
+        ],
+        [
+          "araw!"
+        ],
+        [
+          "Ikinagagalak"
+        ],
+        [
+          "kitang"
+        ],
+        [
+          "makilala"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Magandang araw! Ikinagagalak makilala kitang.",
+        "Magandang araw! Kitang ikinagagalak makilala."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kitang",
+          "ako",
+          "ka"
+        ]
+      }
+    },
+    {
+      "id": "mabuti-ang-guro",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang"
+      ],
+      "text": "Mabuti ang guro.",
+      "means": "The teacher is good.",
+      "words": [
+        [
+          "Mabuti",
+          "mabuti"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "guro",
+          "guro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Good"
+        ],
+        [
+          "the teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mabuti ng guro.",
+        "Mabuti ang ng guro."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ang",
+          "ng",
+          "at"
+        ]
+      }
+    },
+    {
+      "id": "guro-ang-nanay-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Guro ang nanay ko.",
+      "means": "My mother is a teacher.",
+      "words": [
+        [
+          "Guro",
+          "guro"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "nanay",
+          "nanay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Teacher"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Guro ng nanay ko.",
+        "Guro ang nanay ako."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ko",
+          "ako",
+          "ka"
+        ]
+      }
+    },
+    {
+      "id": "guro-ang-tatay-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Guro ang tatay ko.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Guro",
+          "guro"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "tatay",
+          "tatay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Teacher"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Guro ng tatay ko.",
+        "Guro ang tatay ako."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tatay",
+          "nanay",
+          "kuya"
+        ]
+      }
+    },
+    {
+      "id": "ito-ang-nanay-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Ito ang nanay ko.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Ito",
+          "ito"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "nanay",
+          "nanay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ito ng nanay ko.",
+        "Ito ang nanay ako."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nanay",
+          "tatay",
+          "ate"
+        ]
+      }
+    },
+    {
+      "id": "ito-ang-tatay-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Ito ang tatay ko.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Ito",
+          "ito"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "tatay",
+          "tatay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ito ng tatay ko.",
+        "Ito ang tatay ako."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "tatay",
+          "nanay",
+          "kuya"
+        ]
+      }
+    },
+    {
+      "id": "estudyante-ang-kuya-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Estudyante ang kuya ko.",
+      "means": "My older brother is a student.",
+      "words": [
+        [
+          "Estudyante",
+          "estudyante"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "kuya",
+          "kuya"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Student"
+        ],
+        [
+          "my older brother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Estudyante ng kuya ko.",
+        "Estudyante ang kuya ako."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kuya",
+          "ate",
+          "tatay"
+        ]
+      }
+    },
+    {
+      "id": "ito-ang-ate-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Ito ang ate ko.",
+      "means": "This is my older sister.",
+      "words": [
+        [
+          "Ito",
+          "ito"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "ate",
+          "ate"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my older sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ito ng ate ko.",
+        "Ito ang ate ako."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ate",
+          "kuya",
+          "nanay"
+        ]
+      }
+    },
+    {
+      "id": "estudyante-ka",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "pronoun-second"
+      ],
+      "text": "Estudyante ka.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Estudyante",
+          "estudyante"
+        ],
+        [
+          "ka",
+          "ikaw"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Student"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Estudyante ng ka.",
+        "Ka estudyante."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ka",
+          "ko",
+          "ako"
+        ]
+      }
+    },
+    {
+      "id": "may-telepono-ako",
+      "topic": "people",
+      "concepts": [
+        "may-wala",
+        "predicate-first"
+      ],
+      "text": "May telepono ako.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "telepono",
+          "telepono"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "May ko telepono.",
+        "May ng telepono ako."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telepono",
+          "susi",
+          "libro"
+        ]
+      }
+    },
+    {
+      "id": "may-susi-ka-ba",
+      "topic": "people",
+      "concepts": [
+        "may-wala",
+        "question",
+        "ba",
+        "pronoun-second"
+      ],
+      "text": "May susi ka ba?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "susi",
+          "susi"
+        ],
+        [
+          "ka",
+          "ikaw"
+        ],
+        [
+          "ba",
+          "ba"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "key"
+        ],
+        [
+          "you"
+        ],
+        [
+          "question"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "May susi ba ka?",
+        "May susi ko ba?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "susi",
+          "telepono",
+          "libro"
+        ]
+      }
+    },
+    {
+      "id": "wala-akong-libro",
+      "topic": "people",
+      "concepts": [
+        "may-wala",
+        "linker",
+        "pronoun-second"
+      ],
+      "text": "Wala akong libro.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Wala",
+          "wala"
+        ],
+        [
+          "akong",
+          "ako"
+        ],
+        [
+          "libro",
+          "libro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Do not have"
+        ],
+        [
+          "I"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wala ako libro.",
+        "Wala ko libro."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "akong",
+          "ako",
+          "ko"
+        ]
+      }
+    },
+    {
+      "id": "doktor-ang-ate-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Doktor ang ate ko.",
+      "means": "My older sister is a doctor.",
+      "words": [
+        [
+          "Doktor",
+          "doktor"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "ate",
+          "ate"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Doctor"
+        ],
+        [
+          "my older sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Doktor ng ate ko.",
+        "Doktor ang ate ako."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Doktor",
+          "guro",
+          "estudyante"
+        ]
+      }
+    },
+    {
+      "id": "mabuti-kang-kaibigan",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "linker",
+        "pronoun-second"
+      ],
+      "text": "Mabuti kang kaibigan.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Mabuti",
+          "mabuti"
+        ],
+        [
+          "kang",
+          "ikaw"
+        ],
+        [
+          "kaibigan",
+          "kaibigan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Good"
+        ],
+        [
+          "you"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mabuti ka kaibigan.",
+        "Mabuti ko kaibigan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kang",
+          "ka",
+          "ko"
+        ]
+      }
+    },
+    {
+      "id": "may-kuya-at-ate-ako",
+      "topic": "people",
+      "concepts": [
+        "may-wala",
+        "predicate-first"
+      ],
+      "text": "May kuya at ate ako.",
+      "means": "I have an older brother and an older sister.",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "kuya",
+          "kuya"
+        ],
+        [
+          "at",
+          "at"
+        ],
+        [
+          "ate",
+          "ate"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "older brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "older sister"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "May kuya at ate ko.",
+        "May ng kuya at ate ako."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ate",
+          "nanay",
+          "tatay"
+        ]
+      }
+    },
+    {
+      "id": "nasaan-ang-susi-ko",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Nasaan ang susi ko?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Nasaan",
+          "nasaan"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "susi",
+          "susi"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where is"
+        ],
+        [
+          "my key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nasaan ng susi ko?",
+        "Nasaan ang susi ako?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "susi",
+          "telepono",
+          "libro"
+        ]
+      }
+    },
+    {
+      "id": "pasensiya-na-po-nasaan-ang-banyo",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "ang",
+        "po"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Pasensiya na po, nasaan ang banyo?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Pasensiya"
+        ],
+        [
+          "na"
+        ],
+        [
+          "po,"
+        ],
+        [
+          "nasaan",
+          "nasaan"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "banyo",
+          "banyo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where is"
+        ],
+        [
+          "the bathroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pasensiya na po, nasaan ng banyo?",
+        "Pasensiya na po, nasaan ang ng banyo?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "banyo",
+          "susi",
+          "telepono"
+        ]
+      }
+    },
+    {
+      "id": "dito-ang-telepono-ko",
+      "topic": "out",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Dito ang telepono ko.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Dito",
+          "dito"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "telepono",
+          "telepono"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Here"
+        ],
+        [
+          "my phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dito ng telepono ko.",
+        "Dito ang telepono ako."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dito",
+          "doon",
+          "nasaan"
+        ]
+      }
+    },
+    {
+      "id": "doon-ang-susi",
+      "topic": "out",
+      "concepts": [
+        "predicate-first",
+        "ang"
+      ],
+      "text": "Doon ang susi.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Doon",
+          "doon"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "susi",
+          "susi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There"
+        ],
+        [
+          "the key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Doon ng susi.",
+        "Doon ang ng susi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Doon",
+          "dito",
+          "nasaan"
+        ]
+      }
+    },
+    {
+      "id": "nasaan-ang-nanay-ko",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Nasaan ang nanay ko?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Nasaan",
+          "nasaan"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "nanay",
+          "nanay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nasaan ng nanay ko?",
+        "Nasaan ang nanay ako?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nanay",
+          "tatay",
+          "ate"
+        ]
+      }
+    },
+    {
+      "id": "nasa-banyo-ang-ate-ko",
+      "topic": "out",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Nasa banyo ang ate ko.",
+      "means": "My older sister is in the bathroom.",
+      "words": [
+        [
+          "Nasa",
+          "nasa"
+        ],
+        [
+          "banyo",
+          "banyo"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "ate",
+          "ate"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In"
+        ],
+        [
+          "the bathroom"
+        ],
+        [
+          "my older sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nasa banyo ang ate ako."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ate",
+          "kuya",
+          "nanay"
+        ]
+      }
+    },
+    {
+      "id": "pasensiya-na-po-magkano-po",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "po"
+      ],
+      "chunks": [
+        "excuse-me",
+        "how-much-is-it"
+      ],
+      "text": "Pasensiya na po, magkano po?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Pasensiya"
+        ],
+        [
+          "na"
+        ],
+        [
+          "po,"
+        ],
+        [
+          "magkano"
+        ],
+        [
+          "po"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much is it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pasensiya na po, po magkano?",
+        "Pasensiya na po, magkano ng po?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "magkano",
+          "nasaan",
+          "kumusta"
+        ]
+      }
+    },
+    {
+      "id": "magandang-araw-pahingi-ng-kuwenta",
+      "topic": "out",
+      "concepts": [
+        "ng"
+      ],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Magandang araw! Pahingi ng kuwenta.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Magandang"
+        ],
+        [
+          "araw!"
+        ],
+        [
+          "Pahingi"
+        ],
+        [
+          "ng"
+        ],
+        [
+          "kuwenta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check, please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Magandang araw! Ng pahingi kuwenta.",
+        "Magandang araw! Pahingi kuwenta ng."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kuwenta",
+          "kape",
+          "tsaa"
+        ]
+      }
+    },
+    {
+      "id": "pahingi-ng-dalawang-kape",
+      "topic": "out",
+      "concepts": [
+        "ng",
+        "linker"
+      ],
+      "chunks": [
+        "pahingi"
+      ],
+      "text": "Pahingi ng dalawang kape.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Pahingi"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "dalawang",
+          "dalawa"
+        ],
+        [
+          "kape",
+          "kape"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "May I have"
+        ],
+        [
+          "two"
+        ],
+        [
+          "coffees"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pahingi dalawang ng kape.",
+        "Pahingi ng kape dalawang."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dalawang",
+          "isang",
+          "tatlong"
+        ]
+      }
+    },
+    {
+      "id": "pahingi-ng-isang-libro",
+      "topic": "out",
+      "concepts": [
+        "ng",
+        "linker"
+      ],
+      "chunks": [
+        "pahingi"
+      ],
+      "text": "Pahingi ng isang libro.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Pahingi"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "isang",
+          "isa"
+        ],
+        [
+          "libro",
+          "libro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "May I have"
+        ],
+        [
+          "one"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pahingi isang ng libro.",
+        "Pahingi ng libro isang."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "isang",
+          "dalawang",
+          "tatlong"
+        ]
+      }
+    },
+    {
+      "id": "may-tatlong-libro-ako",
+      "topic": "out",
+      "concepts": [
+        "may-wala",
+        "linker",
+        "predicate-first"
+      ],
+      "text": "May tatlong libro ako.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "tatlong",
+          "tatlo"
+        ],
+        [
+          "libro",
+          "libro"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "May tatlong libro ko.",
+        "May ng tatlong libro ako."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tatlong",
+          "dalawang",
+          "isang"
+        ]
+      }
+    },
+    {
+      "id": "wala-akong-pera",
+      "topic": "out",
+      "concepts": [
+        "may-wala",
+        "linker",
+        "pronoun-second"
+      ],
+      "text": "Wala akong pera.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Wala",
+          "wala"
+        ],
+        [
+          "akong",
+          "ako"
+        ],
+        [
+          "pera",
+          "pera"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Do not have"
+        ],
+        [
+          "I"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wala ako pera.",
+        "Wala ko pera."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pera",
+          "libro",
+          "telepono"
+        ]
+      }
+    },
+    {
+      "id": "hindi-ko-naiintindihan",
+      "topic": "people",
+      "concepts": [
+        "hindi",
+        "object-focus",
+        "pronoun-second"
+      ],
+      "text": "Hindi ko naiintindihan.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Hindi",
+          "hindi"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "naiintindihan",
+          "intindi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hindi naiintindihan ng ko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ko",
+          "ako",
+          "akong"
+        ]
+      }
+    },
+    {
+      "id": "naiintindihan-mo-ba",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "object-focus",
+        "pronoun-second",
+        "ba"
+      ],
+      "text": "Naiintindihan mo ba?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Naiintindihan",
+          "intindi"
+        ],
+        [
+          "mo",
+          "ikaw"
+        ],
+        [
+          "ba",
+          "ba"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Understand"
+        ],
+        [
+          "you"
+        ],
+        [
+          "question"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Naiintindihan ba mo?",
+        "Naiintindihan ng mo ba?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mo",
+          "ka",
+          "kang"
+        ]
+      }
+    },
+    {
+      "id": "nagsasalita-ako-ng-kaunting-tagalog",
+      "topic": "people",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "ng",
+        "linker"
+      ],
+      "text": "Nagsasalita ako ng kaunting Tagalog.",
+      "means": "I speak a little Tagalog.",
+      "words": [
+        [
+          "Nagsasalita",
+          "salita"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "kaunting",
+          "kaunti"
+        ],
+        [
+          "Tagalog",
+          "tagalog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Speak"
+        ],
+        [
+          "I"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Tagalog"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nagsasalita ko ng kaunting Tagalog.",
+        "Nagsasalita ng ako kaunting Tagalog."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "Tagalog",
+          "Ingles",
+          "kaunting"
+        ]
+      }
+    },
+    {
+      "id": "gusto-ko-ng-isang-kape",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "pronoun-forms",
+        "ng",
+        "linker"
+      ],
+      "text": "Gusto ko ng isang kape.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Gusto",
+          "gusto"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "isang",
+          "isa"
+        ],
+        [
+          "kape",
+          "kape"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want"
+        ],
+        [
+          "I"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gusto ng ko isang kape."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ko",
+          "ako",
+          "akong"
+        ]
+      }
+    },
+    {
+      "id": "gusto-ko-ng-tubig-pahingi",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "pronoun-forms",
+        "ng"
+      ],
+      "chunks": [
+        "pahingi"
+      ],
+      "text": "Gusto ko ng tubig. Pahingi.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Gusto",
+          "gusto"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tubig.",
+          "tubig"
+        ],
+        [
+          "Pahingi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want"
+        ],
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "may I have some"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Gusto ng ko tubig. Pahingi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tubig.",
+          "kape.",
+          "gatas."
+        ]
+      }
+    },
+    {
+      "id": "maliit-ang-kuwarto-ko",
+      "topic": "home",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Maliit ang kuwarto ko.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Maliit",
+          "liit"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "kuwarto",
+          "kuwarto"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small"
+        ],
+        [
+          "my room"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Maliit ng kuwarto ko.",
+        "Maliit ang kuwarto ako."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Maliit",
+          "malaki",
+          "mabuti"
+        ]
+      }
+    },
+    {
+      "id": "malaki-ang-bahay-na-ito",
+      "topic": "home",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "linker"
+      ],
+      "text": "Malaki ang bahay na ito.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Malaki",
+          "laki"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "bahay",
+          "bahay"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "ito",
+          "ito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Big"
+        ],
+        [
+          "this house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Malaki ang bahay ito.",
+        "Malaki ng bahay na ito."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Malaki",
+          "maliit",
+          "mabuti"
+        ]
+      }
+    },
+    {
+      "id": "nakatira-dito-ang-nanay-ko",
+      "topic": "home",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "pronoun-forms"
+      ],
+      "text": "Nakatira dito ang nanay ko.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Nakatira",
+          "tira"
+        ],
+        [
+          "dito",
+          "dito"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "nanay",
+          "nanay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Lives"
+        ],
+        [
+          "here"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nakatira dito ng nanay ko.",
+        "Nakatira dito ang nanay ako."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "dito",
+          "doon",
+          "nasaan"
+        ]
+      }
+    },
+    {
+      "id": "nakatira-ako-sa-maliit-na-bahay",
+      "topic": "home",
+      "concepts": [
+        "predicate-first",
+        "pronoun-second",
+        "sa",
+        "linker"
+      ],
+      "text": "Nakatira ako sa maliit na bahay.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Nakatira",
+          "tira"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "maliit",
+          "liit"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "bahay",
+          "bahay"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Live"
+        ],
+        [
+          "I"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nakatira ko sa maliit na bahay.",
+        "Nakatira ako sa maliit bahay."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sa",
+          "ng",
+          "ang"
+        ]
+      }
+    },
+    {
+      "id": "nakatira-ka-ba-dito",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "predicate-first",
+        "pronoun-second",
+        "ba"
+      ],
+      "text": "Nakatira ka ba dito?",
+      "means": "Do you live here?",
+      "words": [
+        [
+          "Nakatira",
+          "tira"
+        ],
+        [
+          "ka",
+          "ikaw"
+        ],
+        [
+          "ba",
+          "ba"
+        ],
+        [
+          "dito",
+          "dito"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Live"
+        ],
+        [
+          "you"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nakatira ko ba dito?",
+        "Nakatira ba ka dito?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ka",
+          "ko",
+          "mo"
+        ]
+      }
+    },
+    {
+      "id": "may-kotse-ako",
+      "topic": "out",
+      "concepts": [
+        "may-wala",
+        "predicate-first"
+      ],
+      "text": "May kotse ako.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "kotse",
+          "kotse"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have"
+        ],
+        [
+          "car"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "May kotse ko.",
+        "May ng kotse ako."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kotse",
+          "telepono",
+          "libro"
+        ]
+      }
+    },
+    {
+      "id": "pumupunta-ako-sa-paaralan",
+      "topic": "out",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "sa",
+        "pronoun-second"
+      ],
+      "text": "Pumupunta ako sa paaralan.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Pumupunta",
+          "punta"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "paaralan",
+          "paaralan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "I"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pumupunta ko sa paaralan.",
+        "Pumupunta ako ng paaralan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sa",
+          "ng",
+          "ang"
+        ]
+      }
+    },
+    {
+      "id": "saan-ka-pupunta",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "actor-focus",
+        "contemplated",
+        "pronoun-second"
+      ],
+      "text": "Saan ka pupunta?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Saan",
+          "saan"
+        ],
+        [
+          "ka",
+          "ikaw"
+        ],
+        [
+          "pupunta",
+          "punta"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "you"
+        ],
+        [
+          "will go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Saan ko pupunta?",
+        "Saan pupunta ng ka?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ka",
+          "ko",
+          "mo"
+        ]
+      }
+    },
+    {
+      "id": "pumupunta-sa-lungsod-ang-nanay-ko",
+      "topic": "out",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "sa",
+        "ang"
+      ],
+      "text": "Pumupunta sa lungsod ang nanay ko.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Pumupunta",
+          "punta"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "lungsod",
+          "lungsod"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "nanay",
+          "nanay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pumupunta ng lungsod ang nanay ko.",
+        "Pumupunta sa lungsod ang nanay ako."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "lungsod",
+          "paaralan",
+          "istasyon"
+        ]
+      }
+    },
+    {
+      "id": "nagtatrabaho-ako-ngayon",
+      "topic": "plans",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "pronoun-second"
+      ],
+      "text": "Nagtatrabaho ako ngayon.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Nagtatrabaho",
+          "trabaho"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ngayon",
+          "ngayon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Work"
+        ],
+        [
+          "I"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nagtatrabaho ko ngayon.",
+        "Nagtatrabaho ng ako ngayon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ngayon",
+          "bukas",
+          "dito"
+        ]
+      }
+    },
+    {
+      "id": "kailangan-kong-pumunta-ngayon",
+      "topic": "plans",
+      "concepts": [
+        "predicate-first",
+        "pronoun-forms",
+        "linker",
+        "actor-focus"
+      ],
+      "text": "Kailangan kong pumunta ngayon.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Kailangan",
+          "kailangan"
+        ],
+        [
+          "kong",
+          "ako"
+        ],
+        [
+          "pumunta",
+          "punta"
+        ],
+        [
+          "ngayon",
+          "ngayon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have to"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kailangan ko pumunta ngayon.",
+        "Kailangan ako pumunta ngayon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kong",
+          "ko",
+          "ako"
+        ]
+      }
+    },
+    {
+      "id": "bukas-pupunta-ako-sa-lungsod",
+      "topic": "plans",
+      "concepts": [
+        "actor-focus",
+        "contemplated",
+        "sa",
+        "pronoun-second"
+      ],
+      "text": "Bukas, pupunta ako sa lungsod.",
+      "means": "Tomorrow I'll go to the city.",
+      "words": [
+        [
+          "Bukas,",
+          "bukas"
+        ],
+        [
+          "pupunta",
+          "punta"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "lungsod",
+          "lungsod"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "will go"
+        ],
+        [
+          "I"
+        ],
+        [
+          "to"
+        ],
+        [
+          "the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bukas, pupunta ko sa lungsod.",
+        "Bukas, pupunta ako ng lungsod."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bukas,",
+          "ngayon,",
+          "doon,"
+        ]
+      }
+    },
+    {
+      "id": "hindi-ako-puwedeng-pumunta-ngayon",
+      "topic": "plans",
+      "concepts": [
+        "hindi",
+        "pronoun-second",
+        "linker",
+        "actor-focus"
+      ],
+      "text": "Hindi ako puwedeng pumunta ngayon.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Hindi",
+          "hindi"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "puwedeng",
+          "puwede"
+        ],
+        [
+          "pumunta",
+          "punta"
+        ],
+        [
+          "ngayon",
+          "ngayon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I"
+        ],
+        [
+          "can"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hindi ko puwedeng pumunta ngayon.",
+        "Hindi ako puwedeng pupunta ngayon."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pumunta",
+          "pupunta",
+          "pumupunta"
+        ]
+      }
+    },
+    {
+      "id": "kailangan-kong-magtrabaho-bukas",
+      "topic": "plans",
+      "concepts": [
+        "predicate-first",
+        "pronoun-forms",
+        "linker",
+        "actor-focus"
+      ],
+      "text": "Kailangan kong magtrabaho bukas.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Kailangan",
+          "kailangan"
+        ],
+        [
+          "kong",
+          "ako"
+        ],
+        [
+          "magtrabaho",
+          "trabaho"
+        ],
+        [
+          "bukas",
+          "bukas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have to"
+        ],
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kailangan ko magtrabaho bukas.",
+        "Kailangan kong nagtatrabaho bukas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "magtrabaho",
+          "nagtatrabaho",
+          "pumupunta"
+        ]
+      }
+    },
+    {
+      "id": "kumusta-ka",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "pronoun-second"
+      ],
+      "chunks": [
+        "how-are-you"
+      ],
+      "text": "Kumusta ka?",
+      "means": "How are you?",
+      "words": [
+        [
+          "Kumusta"
+        ],
+        [
+          "ka"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kumusta ko?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ka",
+          "ko",
+          "mo"
+        ]
+      }
+    },
+    {
+      "id": "ano-ang-pangalan-mo",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ang",
+        "pronoun-forms"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Ano ang pangalan mo?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Ano"
+        ],
+        [
+          "ang"
+        ],
+        [
+          "pangalan"
+        ],
+        [
+          "mo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "the name",
+          true
+        ],
+        [
+          "your",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ang",
+        "pangalan",
+        "mo"
+      ],
+      "wrong": [
+        "Ano ang pangalan ka?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mo",
+          "ka",
+          "ikaw"
+        ]
+      }
+    },
+    {
+      "id": "nagsasalita-ka-ba",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ba",
+        "ongoing",
+        "actor-focus"
+      ],
+      "text": "Nagsasalita ka ba ng Ingles?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Nagsasalita",
+          "salita"
+        ],
+        [
+          "ka",
+          "ikaw"
+        ],
+        [
+          "ba",
+          "ba"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "Ingles",
+          "ingles"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Speak",
+          true
+        ],
+        [
+          "you"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nagsasalita"
+      ],
+      "wrong": [
+        "Nagsasalita ka ba ang Ingles?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ng",
+          "ang",
+          "si"
+        ]
+      }
+    },
+    {
+      "id": "nag-aaral-ang-kuya-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "sa",
+        "ongoing"
+      ],
+      "text": "Nag-aaral ang kuya ko sa Maynila.",
+      "means": "My older brother studies in Manila.",
+      "words": [
+        [
+          "Nag-aaral",
+          "aral"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "kuya",
+          "kuya"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "Maynila"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Studies",
+          true
+        ],
+        [
+          "my older brother",
+          true
+        ],
+        [
+          "in Manila"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Nag-aaral",
+        "ang",
+        "kuya",
+        "ko"
+      ],
+      "wrong": [
+        "Nag-aaral ng kuya ko sa Maynila."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "sa",
+          "ng",
+          "ang"
+        ]
+      }
+    },
+    {
+      "id": "may-dalawa-akong-kapatid",
+      "topic": "people",
+      "concepts": [
+        "may-wala",
+        "linker"
+      ],
+      "text": "May dalawa akong kapatid.",
+      "means": "I have two siblings.",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "dalawa",
+          "dalawa"
+        ],
+        [
+          "akong",
+          "ako"
+        ],
+        [
+          "kapatid",
+          "kapatid"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have",
+          true
+        ],
+        [
+          "two",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "siblings"
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "moved": [
+        "May",
+        "dalawa",
+        "akong"
+      ],
+      "wrong": [
+        "May dalawa ako kapatid."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "akong",
+          "ako",
+          "kong"
+        ]
+      }
+    },
+    {
+      "id": "kotse-ng-tatay-ko",
+      "topic": "people",
+      "concepts": [
+        "ang",
+        "ng",
+        "predicate-first"
+      ],
+      "text": "Ito ang kotse ng tatay ko.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Ito",
+          "ito"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "kotse",
+          "kotse"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tatay",
+          "tatay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "the car"
+        ],
+        [
+          "of my dad"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ito ang kotse ang tatay ko."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ng",
+          "ang",
+          "si"
+        ]
+      }
+    },
+    {
+      "id": "hindi-ko-alam",
+      "topic": "people",
+      "concepts": [
+        "hindi",
+        "pronoun-second",
+        "pronoun-forms"
+      ],
+      "text": "Hindi ko alam kung saan siya nakatira.",
+      "means": "I don't know where they live.",
+      "words": [
+        [
+          "Hindi",
+          "hindi"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "alam",
+          "alam"
+        ],
+        [
+          "kung",
+          "kung"
+        ],
+        [
+          "saan",
+          "saan"
+        ],
+        [
+          "siya",
+          "siya"
+        ],
+        [
+          "nakatira",
+          "tira"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "know"
+        ],
+        [
+          "where"
+        ],
+        [
+          "they"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Hindi",
+        "ko"
+      ],
+      "wrong": [
+        "Hindi alam ko kung saan siya nakatira."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ko",
+          "ako",
+          "akin"
+        ]
+      }
+    },
+    {
+      "id": "guro-ako",
+      "topic": "people",
+      "concepts": [
+        "predicate-first"
+      ],
+      "text": "Guro ako.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Guro",
+          "guro"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher",
+          true
+        ],
+        [
+          "I",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Guro",
+        "ako"
+      ],
+      "wrong": [
+        "Ako guro."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ako",
+          "ko",
+          "akin"
+        ]
+      }
+    },
+    {
+      "id": "gusto-ko-ang-pelikulang-ito",
+      "topic": "people",
+      "concepts": [
+        "linker",
+        "ang",
+        "pronoun-second"
+      ],
+      "text": "Gusto ko ang pelikulang ito.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Gusto",
+          "gusto"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "pelikulang",
+          "pelikula"
+        ],
+        [
+          "ito",
+          "ito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Like",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "this movie"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Gusto",
+        "ko"
+      ],
+      "wrong": [
+        "Gusto ako ang pelikulang ito."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pelikulang",
+          "pelikula",
+          "pelikulanga"
+        ]
+      }
+    },
+    {
+      "id": "nasa-bahay-ako-kahapon",
+      "topic": "people",
+      "concepts": [
+        "sa",
+        "predicate-first"
+      ],
+      "text": "Nasa bahay ako kahapon.",
+      "means": "I was at home yesterday.",
+      "words": [
+        [
+          "Nasa",
+          "nasa"
+        ],
+        [
+          "bahay",
+          "bahay"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "kahapon",
+          "kahapon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At home",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Nasa",
+        "bahay",
+        "ako"
+      ],
+      "wrong": [
+        "Nasa bahay akin kahapon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ako",
+          "akin",
+          "akong"
+        ]
+      }
+    },
+    {
+      "id": "nagtatrabaho-ang-nanay-ko",
+      "topic": "people",
+      "concepts": [
+        "predicate-first",
+        "ang",
+        "sa",
+        "ongoing"
+      ],
+      "text": "Nagtatrabaho ang nanay ko sa ospital.",
+      "means": "My mom works at the hospital.",
+      "words": [
+        [
+          "Nagtatrabaho",
+          "trabaho"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "nanay",
+          "nanay"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "ospital",
+          "ospital"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Works",
+          true
+        ],
+        [
+          "my mom",
+          true
+        ],
+        [
+          "at the hospital"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Nagtatrabaho",
+        "ang",
+        "nanay",
+        "ko"
+      ],
+      "wrong": [
+        "Nagtatrabaho ng nanay ko sa ospital."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ang",
+          "ng",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "nakatira-ako-sa-maliit",
+      "topic": "home",
+      "concepts": [
+        "linker",
+        "sa",
+        "pronoun-second"
+      ],
+      "text": "Nakatira ako sa maliit na apartment.",
+      "means": "I live in a small apartment.",
+      "words": [
+        [
+          "Nakatira",
+          "tira"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "maliit",
+          "liit"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "apartment",
+          "apartment"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Live",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "in a small apartment"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Nakatira",
+        "ako"
+      ],
+      "wrong": [
+        "Nakatira ako sa maliit apartment."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "na",
+          "ng",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "may-mga-libro-sa-mesa",
+      "topic": "home",
+      "concepts": [
+        "may-wala",
+        "sa",
+        "mga"
+      ],
+      "text": "May mga libro sa mesa.",
+      "means": "There are books on the table.",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "mga",
+          "mga"
+        ],
+        [
+          "libro",
+          "libro"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "mesa",
+          "mesa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There are"
+        ],
+        [
+          "books"
+        ],
+        [
+          "on the table"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "May ang mga libro sa mesa."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mga",
+          "ng",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "walang-gatas-sa-ref",
+      "topic": "home",
+      "concepts": [
+        "may-wala",
+        "linker",
+        "sa"
+      ],
+      "text": "Walang gatas sa ref.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Walang",
+          "wala"
+        ],
+        [
+          "gatas",
+          "gatas"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "ref",
+          "ref"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There's no"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in the fridge"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Wala gatas sa ref."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Walang",
+          "Wala",
+          "Hindi"
+        ]
+      }
+    },
+    {
+      "id": "puwede-mo-bang-isara",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "ba",
+        "object-focus",
+        "linker"
+      ],
+      "text": "Puwede mo bang isara ang bintana?",
+      "means": "Can you close the window?",
+      "words": [
+        [
+          "Puwede",
+          "puwede"
+        ],
+        [
+          "mo",
+          "ikaw"
+        ],
+        [
+          "bang",
+          "ba"
+        ],
+        [
+          "isara",
+          "sara"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "bintana",
+          "bintana"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Can"
+        ],
+        [
+          "you"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "close"
+        ],
+        [
+          "the window"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Puwede ka bang isara ang bintana?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mo",
+          "ka",
+          "ikaw"
+        ]
+      }
+    },
+    {
+      "id": "may-malaking-kusina-kami",
+      "topic": "home",
+      "concepts": [
+        "may-wala",
+        "linker",
+        "kami-tayo"
+      ],
+      "text": "May malaking kusina at maliit na balkonahe kami.",
+      "means": "We have a big kitchen and a small balcony.",
+      "words": [
+        [
+          "May",
+          "may"
+        ],
+        [
+          "malaking",
+          "laki"
+        ],
+        [
+          "kusina",
+          "kusina"
+        ],
+        [
+          "at",
+          "at"
+        ],
+        [
+          "maliit",
+          "liit"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "balkonahe",
+          "balkonahe"
+        ],
+        [
+          "kami",
+          "kami"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Have",
+          true
+        ],
+        [
+          "a big kitchen"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a small balcony"
+        ],
+        [
+          "we",
+          true
+        ]
+      ],
+      "english": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [
+        "May",
+        "kami"
+      ],
+      "wrong": [
+        "May malaki kusina at maliit na balkonahe kami."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "malaking",
+          "malaki",
+          "laki"
+        ]
+      }
+    },
+    {
+      "id": "pag-uwi-ko",
+      "topic": "home",
+      "concepts": [
+        "contemplated",
+        "actor-focus",
+        "ng",
+        "pronoun-forms"
+      ],
+      "text": "Pag-uwi ko, magluluto ako ng hapunan.",
+      "means": "When I get home, I'll cook dinner.",
+      "words": [
+        [
+          "Pag-uwi",
+          "uwi"
+        ],
+        [
+          "ko,",
+          "ako"
+        ],
+        [
+          "magluluto",
+          "luto"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "hapunan",
+          "hapunan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "When I get home,"
+        ],
+        [
+          "will cook",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "magluluto",
+        "ako"
+      ],
+      "wrong": [
+        "Pag-uwi ko, magluluto ko ng hapunan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "magluluto",
+          "lutuin",
+          "niluto"
+        ]
+      }
+    },
+    {
+      "id": "pakisara-ang-pinto",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "object-focus",
+        "ang"
+      ],
+      "text": "Pakisara ang pinto.",
+      "means": "Close the door, please.",
+      "words": [
+        [
+          "Pakisara",
+          "sara"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "pinto",
+          "pinto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Please close"
+        ],
+        [
+          "the door"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Pakisara ka ang pinto."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ang",
+          "si",
+          "kay"
+        ]
+      }
+    },
+    {
+      "id": "nasaan-ang-mga-susi-ko",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "mga",
+        "ang"
+      ],
+      "text": "Nasaan ang mga susi ko?",
+      "means": "Where are my keys?",
+      "words": [
+        [
+          "Nasaan",
+          "nasaan"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "mga",
+          "mga"
+        ],
+        [
+          "susi",
+          "susi"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "the keys",
+          true
+        ],
+        [
+          "my",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "ang",
+        "mga",
+        "susi",
+        "ko"
+      ],
+      "wrong": [
+        "Nasaan ang mga susi ako?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mga",
+          "ng",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "hintayin-mo-ako",
+      "topic": "home",
+      "concepts": [
+        "imperative",
+        "object-focus"
+      ],
+      "text": "Hintayin mo ako!",
+      "means": "Wait for me!",
+      "words": [
+        [
+          "Hintayin",
+          "hintay"
+        ],
+        [
+          "mo",
+          "ikaw"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Wait for"
+        ],
+        [
+          "you"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hintayin ka ako!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ako",
+          "akin",
+          "akong"
+        ]
+      }
+    },
+    {
+      "id": "umiinom-ako-ng-kape",
+      "topic": "food",
+      "concepts": [
+        "actor-focus",
+        "ongoing",
+        "ng",
+        "nang"
+      ],
+      "text": "Umiinom ako ng kape nang walang asukal.",
+      "means": "I drink coffee without sugar.",
+      "words": [
+        [
+          "Umiinom",
+          "inom"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "kape",
+          "kape"
+        ],
+        [
+          "nang",
+          "nang"
+        ],
+        [
+          "walang",
+          "wala"
+        ],
+        [
+          "asukal",
+          "asukal"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Drink",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "without sugar"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Umiinom",
+        "ako"
+      ],
+      "wrong": [
+        "Umiinom ko ng kape nang walang asukal."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ako",
+          "ko",
+          "akin"
+        ]
+      }
+    },
+    {
+      "id": "hindi-ako-umiinom",
+      "topic": "food",
+      "concepts": [
+        "hindi",
+        "pronoun-second",
+        "ng"
+      ],
+      "text": "Hindi ako umiinom ng kape.",
+      "means": "I don't drink coffee.",
+      "words": [
+        [
+          "Hindi",
+          "hindi"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "umiinom",
+          "inom"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "kape",
+          "kape"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Hindi",
+        "ako"
+      ],
+      "wrong": [
+        "Hindi umiinom ako ng kape."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "umiinom",
+          "inumin",
+          "iinumin"
+        ]
+      }
+    },
+    {
+      "id": "pahingi-ng-tubig",
+      "topic": "food",
+      "concepts": [
+        "ng",
+        "linker",
+        "imperative"
+      ],
+      "chunks": [
+        "pahingi"
+      ],
+      "text": "Pahingi ng isang basong tubig.",
+      "means": "Could I have a glass of water?",
+      "words": [
+        [
+          "Pahingi"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "isang",
+          "isa"
+        ],
+        [
+          "basong",
+          "baso"
+        ],
+        [
+          "tubig",
+          "tubig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "May I have"
+        ],
+        [
+          "a glass of"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2
+      ],
+      "moved": [],
+      "wrong": [
+        "Pahingi ng isang baso tubig."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "basong",
+          "baso",
+          "basung"
+        ]
+      }
+    },
+    {
+      "id": "gusto-kong-kumain",
+      "topic": "food",
+      "concepts": [
+        "linker",
+        "actor-focus",
+        "pronoun-second"
+      ],
+      "text": "Gusto kong kumain ng matamis.",
+      "means": "I want to eat something sweet.",
+      "words": [
+        [
+          "Gusto",
+          "gusto"
+        ],
+        [
+          "kong",
+          "ako"
+        ],
+        [
+          "kumain",
+          "kain"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "matamis",
+          "tamis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to eat"
+        ],
+        [
+          "something sweet"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Gusto",
+        "kong"
+      ],
+      "wrong": [
+        "Gusto ako kumain ng matamis."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kong",
+          "akong",
+          "kang"
+        ]
+      }
+    },
+    {
+      "id": "kumain-kami-ng-pizza",
+      "topic": "food",
+      "concepts": [
+        "completed",
+        "actor-focus",
+        "kami-tayo"
+      ],
+      "text": "Kumain kami ng pizza kahapon.",
+      "means": "We had pizza yesterday.",
+      "words": [
+        [
+          "Kumain",
+          "kain"
+        ],
+        [
+          "kami",
+          "kami"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "pizza",
+          "pizza"
+        ],
+        [
+          "kahapon",
+          "kahapon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Ate",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "pizza"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Kumain",
+        "kami"
+      ],
+      "wrong": [
+        "Kakain kami ng pizza kahapon."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kumain",
+          "Kakain",
+          "Kainin"
+        ]
+      }
+    },
+    {
+      "id": "gusto-kong-magluto",
+      "topic": "food",
+      "concepts": [
+        "linker",
+        "actor-focus",
+        "ang"
+      ],
+      "text": "Gusto kong magluto kasama ang nanay ko.",
+      "means": "I want to cook with my mom.",
+      "words": [
+        [
+          "Gusto",
+          "gusto"
+        ],
+        [
+          "kong",
+          "ako"
+        ],
+        [
+          "magluto",
+          "luto"
+        ],
+        [
+          "kasama",
+          "kasama"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "nanay",
+          "nanay"
+        ],
+        [
+          "ko",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Want",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to cook"
+        ],
+        [
+          "with"
+        ],
+        [
+          "my mom"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "moved": [
+        "Gusto",
+        "kong"
+      ],
+      "wrong": [
+        "Gusto kong nagluto kasama ang nanay ko."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "magluto",
+          "nagluto",
+          "nagluluto"
+        ]
+      }
+    },
+    {
+      "id": "magkano-po-ang-kape",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "po",
+        "ang"
+      ],
+      "chunks": [
+        "how-much-is-it"
+      ],
+      "text": "Magkano po ang kape?",
+      "means": "How much is the coffee?",
+      "words": [
+        [
+          "Magkano"
+        ],
+        [
+          "po"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "kape",
+          "kape"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "(polite)"
+        ],
+        [
+          "the coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Magkano po ng kape?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ang",
+          "ng",
+          "ni"
+        ]
+      }
+    },
+    {
+      "id": "itlog-ang-kinakain-ko",
+      "topic": "food",
+      "concepts": [
+        "object-focus",
+        "ang",
+        "ongoing"
+      ],
+      "text": "Itlog ang kinakain ko sa almusal.",
+      "means": "I have eggs for breakfast.",
+      "words": [
+        [
+          "Itlog",
+          "itlog"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "kinakain",
+          "kain"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "almusal",
+          "almusal"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Eggs"
+        ],
+        [
+          "what"
+        ],
+        [
+          "I eat"
+        ],
+        [
+          "at breakfast"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Itlog ang kumakain ko sa almusal."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kinakain",
+          "kumakain",
+          "kakain"
+        ]
+      }
+    },
+    {
+      "id": "salamat-po",
+      "topic": "food",
+      "concepts": [
+        "po"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Salamat po!",
+      "means": "Thank you!",
+      "words": [
+        [
+          "Salamat"
+        ],
+        [
+          "po"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "(polite)"
+        ]
+      ],
+      "english": [
+        0,
+        1
+      ],
+      "moved": [],
+      "wrong": [
+        "Salamat opo!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "po",
+          "opo",
+          "pa"
+        ]
+      }
+    },
+    {
+      "id": "nasaan-ang-istasyon",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "po",
+        "ang"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Pasensiya na po, nasaan ang istasyon?",
+      "means": "Excuse me, where's the station?",
+      "words": [
+        [
+          "Pasensiya"
+        ],
+        [
+          "na"
+        ],
+        [
+          "po,"
+        ],
+        [
+          "nasaan",
+          "nasaan"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "istasyon",
+          "istasyon"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me,"
+        ],
+        [
+          "(polite)"
+        ],
+        [
+          "where"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pasensiya na po, nasaan ng istasyon?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ang",
+          "ng",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "pupunta-ako-sa-tindahan",
+      "topic": "out",
+      "concepts": [
+        "contemplated",
+        "sa",
+        "actor-focus"
+      ],
+      "text": "Pupunta ako sa tindahan para bumili ng tinapay.",
+      "means": "I'm going to the store to buy bread.",
+      "words": [
+        [
+          "Pupunta",
+          "punta"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "tindahan",
+          "tindahan"
+        ],
+        [
+          "para",
+          "para"
+        ],
+        [
+          "bumili",
+          "bili"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "tinapay",
+          "tinapay"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will go",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "to the store"
+        ],
+        [
+          "to"
+        ],
+        [
+          "buy"
+        ],
+        [
+          "bread"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "moved": [
+        "Pupunta",
+        "ako"
+      ],
+      "wrong": [
+        "Pupunta ako sa tindahan para bumili ang tinapay."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "bumili",
+          "binili",
+          "bilhin"
+        ]
+      }
+    },
+    {
+      "id": "bukas-sasakay-ako-ng-bus",
+      "topic": "out",
+      "concepts": [
+        "contemplated",
+        "actor-focus",
+        "ng"
+      ],
+      "text": "Bukas, sasakay ako ng bus papunta sa trabaho.",
+      "means": "Tomorrow I'll take the bus to work.",
+      "words": [
+        [
+          "Bukas,",
+          "bukas"
+        ],
+        [
+          "sasakay",
+          "sakay"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "bus",
+          "bus"
+        ],
+        [
+          "papunta",
+          "punta"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "trabaho",
+          "trabaho"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow,"
+        ],
+        [
+          "will ride",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "a bus"
+        ],
+        [
+          "to"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "moved": [
+        "sasakay",
+        "ako"
+      ],
+      "wrong": [
+        "Bukas, sumakay ako ng bus papunta sa trabaho."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sasakay",
+          "sumakay",
+          "sinakay"
+        ]
+      }
+    },
+    {
+      "id": "bumili-ako-ng-bagong-sapatos",
+      "topic": "out",
+      "concepts": [
+        "completed",
+        "actor-focus",
+        "linker",
+        "ng"
+      ],
+      "text": "Bumili ako ng bagong sapatos.",
+      "means": "I bought new shoes.",
+      "words": [
+        [
+          "Bumili",
+          "bili"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "bagong",
+          "bago"
+        ],
+        [
+          "sapatos",
+          "sapatos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bought",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "new shoes"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Bumili",
+        "ako"
+      ],
+      "wrong": [
+        "Bumili ako ng bago sapatos."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bagong",
+          "bago",
+          "bagung"
+        ]
+      }
+    },
+    {
+      "id": "nahuli-ang-tren",
+      "topic": "out",
+      "concepts": [
+        "completed",
+        "ang",
+        "linker",
+        "nang"
+      ],
+      "text": "Nahuli ang tren nang sampung minuto.",
+      "means": "The train was ten minutes late.",
+      "words": [
+        [
+          "Nahuli",
+          "huli"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "tren",
+          "tren"
+        ],
+        [
+          "nang",
+          "nang"
+        ],
+        [
+          "sampung",
+          "sampu"
+        ],
+        [
+          "minuto",
+          "minuto"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Was late",
+          true
+        ],
+        [
+          "the train",
+          true
+        ],
+        [
+          "by ten minutes"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Nahuli",
+        "ang",
+        "tren"
+      ],
+      "wrong": [
+        "Nahuli ang tren nang sampu minuto."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "sampung",
+          "sampu",
+          "sampuang"
+        ]
+      }
+    },
+    {
+      "id": "hindi-pa-ako-nakakapunta",
+      "topic": "out",
+      "concepts": [
+        "hindi",
+        "pronoun-second",
+        "na-pa",
+        "ongoing"
+      ],
+      "text": "Hindi pa ako nakakapunta sa Cebu.",
+      "means": "I haven't been to Cebu yet.",
+      "words": [
+        [
+          "Hindi",
+          "hindi"
+        ],
+        [
+          "pa",
+          "pa"
+        ],
+        [
+          "ako",
+          "ako"
+        ],
+        [
+          "nakakapunta",
+          "punta"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "Cebu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not",
+          true
+        ],
+        [
+          "yet",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "have been"
+        ],
+        [
+          "to Cebu"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Hindi",
+        "pa",
+        "ako"
+      ],
+      "wrong": [
+        "Hindi pa nakakapunta ako sa Cebu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ako",
+          "ko",
+          "akin"
+        ]
+      }
+    },
+    {
+      "id": "masyadong-maliit-ang-sapatos",
+      "topic": "out",
+      "concepts": [
+        "predicate-first",
+        "linker",
+        "ang",
+        "mga"
+      ],
+      "text": "Masyadong maliit ang mga sapatos na ito.",
+      "means": "These shoes are too small.",
+      "words": [
+        [
+          "Masyadong",
+          "masyado"
+        ],
+        [
+          "maliit",
+          "liit"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "mga",
+          "mga"
+        ],
+        [
+          "sapatos",
+          "sapatos"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "ito",
+          "ito"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Too",
+          true
+        ],
+        [
+          "small",
+          true
+        ],
+        [
+          "these shoes",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Masyadong",
+        "maliit",
+        "ang",
+        "mga",
+        "sapatos",
+        "na",
+        "ito"
+      ],
+      "wrong": [
+        "Masyadong maliit ng mga sapatos na ito."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ang",
+          "ng",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "puwede-tayong-sumakay",
+      "topic": "out",
+      "concepts": [
+        "kami-tayo",
+        "linker",
+        "actor-focus"
+      ],
+      "text": "Puwede tayong sumakay ng taxi.",
+      "means": "We can take a taxi.",
+      "words": [
+        [
+          "Puwede",
+          "puwede"
+        ],
+        [
+          "tayong",
+          "tayo"
+        ],
+        [
+          "sumakay",
+          "sakay"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "taxi",
+          "taxi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Can",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "ride"
+        ],
+        [
+          "a taxi"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Puwede",
+        "tayong"
+      ],
+      "wrong": [
+        "Puwede tayong sumakay ang taxi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sumakay",
+          "sinakay",
+          "sasakay"
+        ]
+      }
+    },
+    {
+      "id": "hinihintay-tayo-ni-lola",
+      "topic": "out",
+      "concepts": [
+        "object-focus",
+        "ongoing",
+        "kami-tayo",
+        "ng"
+      ],
+      "text": "Hinihintay tayo ni Lola sa istasyon.",
+      "means": "Grandma's waiting for us at the station.",
+      "words": [
+        [
+          "Hinihintay",
+          "hintay"
+        ],
+        [
+          "tayo",
+          "tayo"
+        ],
+        [
+          "ni",
+          "ni"
+        ],
+        [
+          "Lola",
+          "lola"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "istasyon",
+          "istasyon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is waiting for",
+          true
+        ],
+        [
+          "us",
+          true
+        ],
+        [
+          "Grandma",
+          true
+        ],
+        [
+          "at the station"
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "moved": [
+        "Hinihintay",
+        "tayo",
+        "ni",
+        "Lola"
+      ],
+      "wrong": [
+        "Hinihintay tayo si Lola sa istasyon."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ni",
+          "si",
+          "kay"
+        ]
+      }
+    },
+    {
+      "id": "sa-sabado-kay-lola",
+      "topic": "out",
+      "concepts": [
+        "contemplated",
+        "kami-tayo",
+        "sa",
+        "actor-focus"
+      ],
+      "text": "Sa Sabado, pupunta kami kay Lola.",
+      "means": "On Saturday we're going to Grandma's.",
+      "words": [
+        [
+          "Sa",
+          "sa"
+        ],
+        [
+          "Sabado,",
+          "sabado"
+        ],
+        [
+          "pupunta",
+          "punta"
+        ],
+        [
+          "kami",
+          "kami"
+        ],
+        [
+          "kay",
+          "kay"
+        ],
+        [
+          "Lola",
+          "lola"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday,"
+        ],
+        [
+          "will go",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "to Grandma's"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "pupunta",
+        "kami"
+      ],
+      "wrong": [
+        "Sa Sabado, pupunta kami sa Lola."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "kay",
+          "sa",
+          "ni"
+        ]
+      }
+    },
+    {
+      "id": "dalawandaang-piso-ang-tiket",
+      "topic": "out",
+      "concepts": [
+        "predicate-first",
+        "linker",
+        "ang"
+      ],
+      "text": "Dalawandaang piso ang tiket.",
+      "means": "The ticket is two hundred pesos.",
+      "words": [
+        [
+          "Dalawandaang",
+          "dalawandaan"
+        ],
+        [
+          "piso",
+          "piso"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "tiket",
+          "tiket"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two hundred",
+          true
+        ],
+        [
+          "pesos",
+          true
+        ],
+        [
+          "the ticket",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dalawandaang",
+        "piso",
+        "ang",
+        "tiket"
+      ],
+      "wrong": [
+        "Dalawandaan piso ang tiket."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dalawandaang",
+          "Dalawandaan",
+          "Dalawandaanang"
+        ]
+      }
+    },
+    {
+      "id": "uulan-bukas",
+      "topic": "plans",
+      "concepts": [
+        "contemplated"
+      ],
+      "text": "Uulan bukas.",
+      "means": "It'll rain tomorrow.",
+      "words": [
+        [
+          "Uulan",
+          "ulan"
+        ],
+        [
+          "bukas",
+          "bukas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will rain"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Umulan bukas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Uulan",
+          "Umulan",
+          "Ulanin"
+        ]
+      }
+    },
+    {
+      "id": "tatawagan-kita-bukas",
+      "topic": "plans",
+      "concepts": [
+        "object-focus",
+        "contemplated",
+        "pronoun-second"
+      ],
+      "text": "Tatawagan kita bukas.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Tatawagan",
+          "tawag"
+        ],
+        [
+          "kita",
+          "kita"
+        ],
+        [
+          "bukas",
+          "bukas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will call",
+          true
+        ],
+        [
+          "I … you"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Tatawagan"
+      ],
+      "wrong": [
+        "Tatawagan ako mo bukas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kita",
+          "ikaw",
+          "akin"
+        ]
+      }
+    },
+    {
+      "id": "kailangan-ko-nang-umalis",
+      "topic": "plans",
+      "concepts": [
+        "linker",
+        "pronoun-second",
+        "nang",
+        "na-pa"
+      ],
+      "text": "Kailangan ko nang umalis.",
+      "means": "I need to leave now.",
+      "words": [
+        [
+          "Kailangan",
+          "kailangan"
+        ],
+        [
+          "ko",
+          "ako"
+        ],
+        [
+          "nang",
+          "na"
+        ],
+        [
+          "umalis",
+          "alis"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Need",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "now",
+          true
+        ],
+        [
+          "to leave",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "moved": [
+        "Kailangan",
+        "ko",
+        "nang",
+        "umalis"
+      ],
+      "wrong": [
+        "Kailangan ako nang umalis."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "umalis",
+          "aalis",
+          "umaalis"
+        ]
+      }
+    },
+    {
+      "id": "sasama-ka-ba",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "ba",
+        "contemplated",
+        "sa"
+      ],
+      "text": "Sasama ka ba sa amin sa sinehan?",
+      "means": "Are you coming to the movies with us?",
+      "words": [
+        [
+          "Sasama",
+          "sama"
+        ],
+        [
+          "ka",
+          "ikaw"
+        ],
+        [
+          "ba",
+          "ba"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "amin",
+          "kami"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "sinehan",
+          "sinehan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Will come along"
+        ],
+        [
+          "you"
+        ],
+        [
+          "(question)"
+        ],
+        [
+          "with us"
+        ],
+        [
+          "to the movies"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sasama ko ba sa amin sa sinehan?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ka",
+          "ko",
+          "mo"
+        ]
+      }
+    },
+    {
+      "id": "pupunta-kami-sa-dagat",
+      "topic": "plans",
+      "concepts": [
+        "contemplated",
+        "kami-tayo",
+        "sa",
+        "linker"
+      ],
+      "text": "Pupunta kami sa dagat ngayong Sabado.",
+      "means": "We're going to the beach this Saturday.",
+      "words": [
+        [
+          "Pupunta",
+          "punta"
+        ],
+        [
+          "kami",
+          "kami"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "dagat",
+          "dagat"
+        ],
+        [
+          "ngayong",
+          "ngayon"
+        ],
+        [
+          "Sabado",
+          "sabado"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will go",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "to the beach"
+        ],
+        [
+          "this"
+        ],
+        [
+          "Saturday"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "moved": [
+        "Pupunta",
+        "kami"
+      ],
+      "wrong": [
+        "Pupunta kami sa dagat ngayon Sabado."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ngayong",
+          "ngayon",
+          "ngayung"
+        ]
+      }
+    },
+    {
+      "id": "isang-taon-nag-aaral",
+      "topic": "plans",
+      "concepts": [
+        "linker",
+        "ongoing",
+        "pronoun-second",
+        "na-pa"
+      ],
+      "text": "Isang taon na akong nag-aaral ng Tagalog.",
+      "means": "I've been studying Tagalog for a year now.",
+      "words": [
+        [
+          "Isang",
+          "isa"
+        ],
+        [
+          "taon",
+          "taon"
+        ],
+        [
+          "na",
+          "na"
+        ],
+        [
+          "akong",
+          "ako"
+        ],
+        [
+          "nag-aaral",
+          "aral"
+        ],
+        [
+          "ng",
+          "ng"
+        ],
+        [
+          "Tagalog"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "For one year now",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "have been studying",
+          true
+        ],
+        [
+          "Tagalog",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "moved": [
+        "Isang",
+        "taon",
+        "na",
+        "akong",
+        "nag-aaral",
+        "ng",
+        "Tagalog"
+      ],
+      "wrong": [
+        "Isang taon na akong nag-aaral ang Tagalog."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ng",
+          "ang",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "ano-ang-gagawin-mo",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "object-focus",
+        "contemplated",
+        "ang"
+      ],
+      "text": "Ano ang gagawin mo sa Sabado?",
+      "means": "What are you doing on Saturday?",
+      "words": [
+        [
+          "Ano",
+          "ano"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "gagawin",
+          "gawa"
+        ],
+        [
+          "mo",
+          "ikaw"
+        ],
+        [
+          "sa",
+          "sa"
+        ],
+        [
+          "Sabado",
+          "sabado"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "will be done"
+        ],
+        [
+          "by you"
+        ],
+        [
+          "on Saturday"
+        ]
+      ],
+      "english": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "moved": [],
+      "wrong": [
+        "Ano ang gagawin ka sa Sabado?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mo",
+          "ka",
+          "ikaw"
+        ]
+      }
+    },
+    {
+      "id": "malamig-ngayon",
+      "topic": "plans",
+      "concepts": [
+        "predicate-first"
+      ],
+      "text": "Malamig ngayon.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Malamig",
+          "lamig"
+        ],
+        [
+          "ngayon",
+          "ngayon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Cold"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Malamig ngayong."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ngayon",
+          "ngayong",
+          "ngayun"
+        ]
+      }
+    },
+    {
+      "id": "nilalamig-ako",
+      "topic": "plans",
+      "concepts": [
+        "ongoing",
+        "pronoun-second"
+      ],
+      "text": "Nilalamig ako.",
+      "means": "I feel cold.",
+      "words": [
+        [
+          "Nilalamig",
+          "lamig"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Feel cold",
+          true
+        ],
+        [
+          "I",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "Nilalamig",
+        "ako"
+      ],
+      "wrong": [
+        "Nilalamig ko."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ako",
+          "ko",
+          "akin"
+        ]
+      }
+    },
+    {
+      "id": "sabihan-mo-ako",
+      "topic": "plans",
+      "concepts": [
+        "imperative",
+        "object-focus"
+      ],
+      "text": "Sabihan mo ako!",
+      "means": "Let me know!",
+      "words": [
+        [
+          "Sabihan",
+          "sabi"
+        ],
+        [
+          "mo",
+          "ikaw"
+        ],
+        [
+          "ako",
+          "ako"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Tell"
+        ],
+        [
+          "you"
+        ],
+        [
+          "me"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sabihan ka ako!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mo",
+          "ka",
+          "ko"
+        ]
+      }
+    },
+    {
+      "id": "sana-maganda-ang-panahon",
+      "topic": "plans",
+      "concepts": [
+        "predicate-first",
+        "ang"
+      ],
+      "text": "Sana maganda ang panahon bukas.",
+      "means": "I hope the weather's nice tomorrow.",
+      "words": [
+        [
+          "Sana",
+          "sana"
+        ],
+        [
+          "maganda",
+          "ganda"
+        ],
+        [
+          "ang",
+          "ang"
+        ],
+        [
+          "panahon",
+          "panahon"
+        ],
+        [
+          "bukas",
+          "bukas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hopefully"
+        ],
+        [
+          "nice",
+          true
+        ],
+        [
+          "the weather",
+          true
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "maganda",
+        "ang",
+        "panahon"
+      ],
+      "wrong": [
+        "Sana maganda ng panahon bukas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ang",
+          "ng",
+          "sa"
+        ]
+      }
+    },
+    {
+      "id": "wala-akong-oras",
+      "topic": "plans",
+      "concepts": [
+        "may-wala",
+        "linker",
+        "pronoun-second"
+      ],
+      "text": "Wala akong oras ngayon.",
+      "means": "I don't have time now.",
+      "words": [
+        [
+          "Wala",
+          "wala"
+        ],
+        [
+          "akong",
+          "ako"
+        ],
+        [
+          "oras",
+          "oras"
+        ],
+        [
+          "ngayon",
+          "ngayon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Don't have",
+          true
+        ],
+        [
+          "I",
+          true
+        ],
+        [
+          "time"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Wala",
+        "akong"
+      ],
+      "wrong": [
+        "Wala ako oras ngayon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "akong",
+          "ako",
+          "kong"
+        ]
+      }
+    },
+    {
+      "id": "kita-tayo-bukas",
+      "topic": "plans",
+      "concepts": [
+        "kami-tayo"
+      ],
+      "chunks": [
+        "see-you-tomorrow"
+      ],
+      "text": "Kita tayo bukas!",
+      "means": "See you tomorrow!",
+      "words": [
+        [
+          "Kita"
+        ],
+        [
+          "tayo"
+        ],
+        [
+          "bukas"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Meet each other",
+          true
+        ],
+        [
+          "we",
+          true
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Kita",
+        "tayo"
+      ],
+      "wrong": [
+        "Kita tayo kahapon!"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tayo",
+          "ako",
+          "mo"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kape",
+          "forms": [
+            "kape"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "tsaa",
+          "forms": [
+            "tsaa"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "tubig",
+          "forms": [
+            "tubig"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "ako",
+          "forms": [
+            "ako"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "inom",
+          "forms": [
+            "umiinom"
+          ],
+          "picture": "drink",
+          "means": "umiinom = drink"
+        },
+        {
+          "lemma": "at",
+          "forms": [
+            "at"
+          ],
+          "means": "and"
+        },
+        {
+          "lemma": "ng",
+          "forms": [
+            "ng"
+          ],
+          "means": "object marker; of"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "pronoun-second",
+        "line": "Short pronouns and little words like ba, po and na go together just after the clause's first word or phrase, in their own order: Hindi ko alam; Nagsasalita ka ba ng Ingles?; Puwede mo bang isara…?"
+      },
+      "items": [
+        "umiinom-ako-ng-kape-2",
+        "umiinom-ako-ng-tsaa",
+        "umiinom-ako-ng-tubig",
+        "umiinom-ako-ng-kape-at-tsaa",
+        "umiinom-ako-ng-tsaa-at-tubig",
+        "umiinom-ako-ng-tubig-at-kape"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "isa",
+          "forms": [
+            "isang"
+          ],
+          "means": "isang = one; a"
+        },
+        {
+          "lemma": "gatas",
+          "forms": [
+            "gatas"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "pahingi",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "salamat-po",
+        "pahingi-ng-isang-kape",
+        "magandang-araw-pahingi-ng-isang-tsaa",
+        "pahingi-ng-isang-tsaa-at-isang-tubig",
+        "isang-kape-salamat-po",
+        "umiinom-ako-ng-gatas"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "mabuti",
+          "forms": [
+            "mabuti"
+          ],
+          "picture": "good",
+          "means": "good; fine"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "predicate-first",
+        "line": "Tagalog usually puts the description or the action first and its topic after, often with no word for is, am or are: Guro ako (I'm a teacher); Masyadong maliit ang sapatos (the shoes are too small)."
+      },
+      "items": [
+        "kumusta-ka",
+        "mabuti-ako-salamat-po",
+        "oo-pahingi-ng-tubig",
+        "hindi-salamat-po",
+        "oo-salamat-po-paalam",
+        "hindi-salamat-po-paalam"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ikaw",
+          "forms": [
+            "ka"
+          ],
+          "means": "ka = you"
+        },
+        {
+          "lemma": "hindi",
+          "forms": [
+            "hindi"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "guro",
+          "forms": [
+            "guro"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "ba",
+          "forms": [
+            "ba"
+          ],
+          "means": "question marker"
+        },
+        {
+          "lemma": "ang",
+          "forms": [
+            "ang"
+          ],
+          "means": "topic marker"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "guro-ako",
+        "guro-ka-ba",
+        "hindi-ako-guro",
+        "ano-ang-pangalan-mo",
+        "magandang-araw-ikinagagalak-kitang",
+        "mabuti-ang-guro"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "nanay",
+          "forms": [
+            "nanay"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "tatay",
+          "forms": [
+            "tatay"
+          ],
+          "picture": "father",
+          "means": "father"
+        },
+        {
+          "lemma": "kuya",
+          "forms": [
+            "kuya"
+          ],
+          "picture": "brother",
+          "means": "older brother"
+        },
+        {
+          "lemma": "ate",
+          "forms": [
+            "ate"
+          ],
+          "picture": "sister",
+          "means": "older sister"
+        },
+        {
+          "lemma": "ako",
+          "forms": [
+            "ko"
+          ],
+          "means": "ko = my"
+        },
+        {
+          "lemma": "ito",
+          "forms": [
+            "ito"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "estudyante",
+          "forms": [
+            "estudyante"
+          ],
+          "means": "student"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "ang",
+        "line": "ang marks the sentence's topic, often a noun English would give the (ang pinto, ang tren), and si does the same before a person's name."
+      },
+      "items": [
+        "guro-ang-nanay-ko",
+        "guro-ang-tatay-ko",
+        "ito-ang-nanay-ko",
+        "ito-ang-tatay-ko",
+        "estudyante-ang-kuya-ko",
+        "ito-ang-ate-ko",
+        "estudyante-ka"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "may",
+          "forms": [
+            "may"
+          ],
+          "means": "to have"
+        },
+        {
+          "lemma": "kaibigan",
+          "forms": [
+            "kaibigan"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "doktor",
+          "forms": [
+            "doktor"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "susi",
+          "forms": [
+            "susi"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telepono",
+          "forms": [
+            "telepono"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "libro",
+          "forms": [
+            "libro"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "wala",
+          "forms": [
+            "wala"
+          ],
+          "means": "to not have"
+        },
+        {
+          "lemma": "ako",
+          "forms": [
+            "akong"
+          ],
+          "means": "akong = I; linking"
+        },
+        {
+          "lemma": "ikaw",
+          "forms": [
+            "kang"
+          ],
+          "means": "kang = you; linking"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "may-telepono-ako",
+        "may-susi-ka-ba",
+        "wala-akong-libro",
+        "doktor-ang-ate-ko",
+        "mabuti-kang-kaibigan",
+        "may-kuya-at-ate-ako"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "nasaan",
+          "forms": [
+            "nasaan"
+          ],
+          "means": "where is"
+        },
+        {
+          "lemma": "dito",
+          "forms": [
+            "dito"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "doon",
+          "forms": [
+            "doon"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "banyo",
+          "forms": [
+            "banyo"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "nasa",
+          "forms": [
+            "nasa"
+          ],
+          "means": "at; in"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "pronoun-forms",
+        "line": "A pronoun changes with its role: ako is the topic, ko is my or by me, and sa akin is to or for me; ikaw or ka, mo, and sa iyo work the same way: Hindi ko alam; Ano ang pangalan mo?"
+      },
+      "items": [
+        "nasaan-ang-susi-ko",
+        "pasensiya-na-po-nasaan-ang-banyo",
+        "dito-ang-telepono-ko",
+        "doon-ang-susi",
+        "nasaan-ang-nanay-ko",
+        "nasa-banyo-ang-ate-ko"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "dalawa",
+          "forms": [
+            "dalawang"
+          ],
+          "picture": "two",
+          "means": "dalawang = two; linking"
+        },
+        {
+          "lemma": "tatlo",
+          "forms": [
+            "tatlong"
+          ],
+          "picture": "three",
+          "means": "tatlong = three; linking"
+        },
+        {
+          "lemma": "pera",
+          "forms": [
+            "pera"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "mga",
+          "forms": [
+            "mga"
+          ],
+          "means": "plural marker"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "pasensiya-na-po-magkano-po",
+        "magandang-araw-pahingi-ng-kuwenta",
+        "pahingi-ng-dalawang-kape",
+        "pahingi-ng-isang-libro",
+        "may-tatlong-libro-ako",
+        "wala-akong-pera",
+        "nasaan-ang-mga-susi-ko",
+        "magkano-po-ang-kape"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "salita",
+          "forms": [
+            "nagsasalita"
+          ],
+          "means": "nagsasalita = speak"
+        },
+        {
+          "lemma": "ingles",
+          "forms": [
+            "Ingles"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "tagalog",
+          "forms": [
+            "Tagalog"
+          ],
+          "means": "Tagalog"
+        },
+        {
+          "lemma": "intindi",
+          "forms": [
+            "naiintindihan"
+          ],
+          "means": "naiintindihan = understand"
+        },
+        {
+          "lemma": "kaunti",
+          "forms": [
+            "kaunting"
+          ],
+          "means": "kaunting = a little; linking"
+        },
+        {
+          "lemma": "gusto",
+          "forms": [
+            "gusto"
+          ],
+          "means": "to want"
+        },
+        {
+          "lemma": "ikaw",
+          "forms": [
+            "mo"
+          ],
+          "means": "mo = you; your"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "ng",
+        "line": "ng marks an object or doer that isn't the topic, and whose (Umiinom ako ng kape; ang kotse ng tatay ko); before a person's name, ni marks a doer or whose: Hinihintay tayo ni Lola; ang kotse ni Lola."
+      },
+      "items": [
+        "hindi-ko-naiintindihan",
+        "naiintindihan-mo-ba",
+        "nagsasalita-ka-ba",
+        "nagsasalita-ako-ng-kaunting-tagalog",
+        "gusto-ko-ng-isang-kape",
+        "gusto-ko-ng-tubig-pahingi"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "bahay",
+          "forms": [
+            "bahay"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "kuwarto",
+          "forms": [
+            "kuwarto"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "laki",
+          "forms": [
+            "malaki"
+          ],
+          "picture": "big",
+          "means": "malaki = big"
+        },
+        {
+          "lemma": "liit",
+          "forms": [
+            "maliit"
+          ],
+          "picture": "small",
+          "means": "maliit = small"
+        },
+        {
+          "lemma": "tira",
+          "forms": [
+            "nakatira"
+          ],
+          "means": "nakatira = live"
+        },
+        {
+          "lemma": "sa",
+          "forms": [
+            "sa"
+          ],
+          "picture": "in",
+          "means": "in; at; to"
+        },
+        {
+          "lemma": "na",
+          "forms": [
+            "na"
+          ],
+          "means": "linking word"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "maliit-ang-kuwarto-ko",
+        "malaki-ang-bahay-na-ito",
+        "nakatira-dito-ang-nanay-ko",
+        "nakatira-ako-sa-maliit-na-bahay",
+        "nakatira-ka-ba-dito"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "punta",
+          "forms": [
+            "pumupunta",
+            "pupunta"
+          ],
+          "means": "pumupunta = go habitually; pupunta = will go"
+        },
+        {
+          "lemma": "paaralan",
+          "forms": [
+            "paaralan"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "lungsod",
+          "forms": [
+            "lungsod"
+          ],
+          "picture": "city",
+          "means": "city"
+        },
+        {
+          "lemma": "istasyon",
+          "forms": [
+            "istasyon"
+          ],
+          "means": "station"
+        },
+        {
+          "lemma": "kotse",
+          "forms": [
+            "kotse"
+          ],
+          "picture": "car",
+          "means": "car"
+        },
+        {
+          "lemma": "saan",
+          "forms": [
+            "saan"
+          ],
+          "means": "where"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "actor-focus",
+        "line": "A verb with -um- or mag- makes the one doing it what the sentence is about (ako, kami), and the thing done takes ng: Kumain kami ng pizza; Umiinom ako ng kape."
+      },
+      "items": [
+        "may-kotse-ako",
+        "pumupunta-ako-sa-paaralan",
+        "saan-ka-pupunta",
+        "nasaan-ang-istasyon",
+        "pumupunta-sa-lungsod-ang-nanay-ko",
+        "kotse-ng-tatay-ko"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "ngayon",
+          "forms": [
+            "ngayon"
+          ],
+          "means": "today; now"
+        },
+        {
+          "lemma": "bukas",
+          "forms": [
+            "bukas"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "trabaho",
+          "forms": [
+            "nagtatrabaho",
+            "magtrabaho"
+          ],
+          "picture": "work",
+          "means": "nagtatrabaho = work; magtrabaho = to work"
+        },
+        {
+          "lemma": "kailangan",
+          "forms": [
+            "kailangan"
+          ],
+          "means": "to need; to have to"
+        },
+        {
+          "lemma": "puwede",
+          "forms": [
+            "puwedeng"
+          ],
+          "means": "puwedeng = can; linking"
+        },
+        {
+          "lemma": "ako",
+          "forms": [
+            "kong"
+          ],
+          "means": "kong = I; linking"
+        },
+        {
+          "lemma": "punta",
+          "forms": [
+            "pumunta"
+          ],
+          "means": "pumunta = to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "kita-tayo-bukas",
+        "nagtatrabaho-ako-ngayon",
+        "kailangan-kong-pumunta-ngayon",
+        "bukas-pupunta-ako-sa-lungsod",
+        "hindi-ako-puwedeng-pumunta-ngayon",
+        "kailangan-kong-magtrabaho-bukas"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

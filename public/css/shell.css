@@ -1,0 +1,480 @@
+/* The app's own small pieces around the design system (settings forms, the to-do pages). In the lx.page layer, the
+ * last of the app's layers, so a person's custom CSS still wins over it. */
+
+/* The room at a page's foot as things are now (the floating bar, the keys up, Translate open: --page-foot-now) is the page's alone, not
+ * inherited: what changes it restyles the page and its spacer, never every element in the page. As an inherited one, Translate opening and
+ * the keys coming up each restyled a whole page (7 Nov 2026). --page-foot, inherited, is that room by the layout alone, for what's inside the
+ * page; the states that move it are written on what reads it. */
+@property --page-foot-now { syntax: "*"; inherits: false; }
+
+@layer lx.page {
+  .lx-loading,
+  .lx-start-error { max-width: var(--page-width); margin: 0 auto; padding: var(--space-7) var(--space-4); color: var(--ink-3); }
+  /* Said only when starting takes more than a second (a quick start shows nothing before the app's frame). */
+  .lx-loading { animation: lx-loading-late 0s 1s both; }
+  @keyframes lx-loading-late { from { visibility: hidden; } to { visibility: visible; } }
+
+  /* The page scrolls in its own area between the header and the tab bar, so only the content bounces at its ends:
+   * the header and the tabs never move with it. The document itself neither scrolls nor bounces. The scroller is the
+   * full width (its scroll bar at the window's edge), with the content centered inside it. */
+  html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+  /* An app, not a web page. A finger held on a tab, a row or a button opens no preview of where it goes and selects none of its words: only
+   * fields keep both (the reader has its own hold, read/hold.js, and keeps native selection off itself). Android has no callout to turn off:
+   * its menu for a held link is stopped in main.js. Nothing moves sideways either: the document, the app's frame and the page clip what's
+   * wider than the screen and never pan or bounce that way; the page pans only up and down (what pans sideways has its own scroller or
+   * touch-action: a shelf, the pile, the reader, a sheet). */
+  html { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; overflow-x: clip; overscroll-behavior-x: none; }
+  :is(input, textarea, select, [contenteditable]:not([contenteditable="false"])) { -webkit-touch-callout: default; -webkit-user-select: text; user-select: text; }
+  body, [data-part="app"] { overflow-x: clip; overscroll-behavior-x: none; }
+  /* Typing (shell/main.js followKeyboard): the app takes exactly the screen above the keyboard (the visual viewport, where
+     the phone has scrolled it), so the header stays put and a bar pinned at the page's foot sits on the keys, not behind
+     them; and the tab bar steps aside, as in any app. */
+  :root[data-keyboard] [data-part="app"] { height: var(--lx-vv-height, 100%); transform: translateY(var(--lx-vv-top, 0px)); }
+  :root[data-keyboard] [data-part="app"] > [data-part="tab-bar"] { display: none; }
+  /* The header takes the status bar's strip at the top too, so no background shows above it. */
+  body { height: 100dvh; padding-top: 0; }
+  #root { height: 100%; }
+  [data-part="app"] { display: flex; flex-direction: column; height: 100%; max-width: none; margin: 0; padding: 0; }
+  [data-part="app"] > [data-part="app-header"] {
+    flex: none;
+    padding-top: calc(var(--space-3) + env(safe-area-inset-top));
+    padding-inline: max(var(--space-4), calc((100% - var(--page-width)) / 2));
+  }
+  [data-part="app"] > [data-part="page"] {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: clip;
+    overscroll-behavior-y: contain;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+    padding-inline: max(var(--space-4), calc((100% - var(--page-width)) / 2));
+    /* Room to scroll the last thing clear of the tab bar: --page-foot-now (redesign.css sets it to clear the floating bar on a phone, and for
+     * the keys), and --page-foot by the layout alone (above). */
+    --page-foot: calc(var(--space-7) + 64px);
+    --page-foot-now: calc(var(--space-7) + 64px);
+    padding-bottom: 0;
+    position: relative;
+  }
+  /* That room is a spacer after the page's content, not the page's own padding: WebKit leaves a scroller's end padding out of what it can scroll
+   * to when the content alone nearly fits, and a page's last rows sat under the bar for good (Settings, in an installed iPhone, 5 Nov). Last in
+   * the page's column, less the gap the column puts before it. Hidden, so a layout-shift count never takes it for something that moved when a
+   * page's content comes in above it. */
+  [data-part="app"] > [data-part="page"]::before { content: ""; display: block; flex: none; order: 2147483647; --page-foot-now: inherit; height: max(0px, calc(var(--page-foot-now) - var(--space-5))); visibility: hidden; pointer-events: none; }
+  /* A page's main action pinned low stops where the padding used to stop it. */
+  [data-part="app"] > [data-part="page"] [data-part="pinned-actions"] { bottom: calc(var(--page-foot) - var(--space-7) - var(--space-3)); }
+  /* Every page scrolls and bounces like an app's, even one that fits the screen: an invisible line one pixel taller
+   * than the page keeps it scrollable. */
+  [data-part="app"] > [data-part="page"]::after { content: ""; position: absolute; top: 0; left: 0; width: 1px; height: calc(100% + 1px); pointer-events: none; }
+  /* Translate's page: everything else away, the page itself scrolling below the field (know.css). */
+  :root[data-translate]:not([data-swipe-back]) [data-part="app"] > [data-part="tab-bar"] { display: none; }
+  :root[data-translate] [data-part="app"] > [data-part="page"] { overflow: hidden; padding-bottom: 0; }
+  :root[data-translate] [data-part="app"] > [data-part="page"]::after,
+  :root[data-translate] [data-part="app"] > [data-part="page"]::before { content: none; }
+  :root[data-translate] [data-part="app"] > [data-part="app-header"] { position: relative; }
+  :root[data-translate] [data-part="app"] > [data-part="app-header"] [data-part="app-title"] { position: absolute; inset-inline: 0; justify-content: center; color: var(--ink-2); pointer-events: none; }
+  /* Behind a session nothing scrolls. */
+  :root[data-scroll-lock] [data-part="app"] > [data-part="page"] { overflow: hidden; }
+  @media (min-width: 1024px) {
+    /* The sidebar holds the tabs: the column starts after it, and there's no tab bar at the bottom to clear. */
+    [data-part="app"]:has(> [data-part="tab-bar"]) { padding: 0 0 0 232px; }
+    [data-part="app"]:has(> [data-part="tab-bar"]) > :is([data-part="app-header"], [data-part="page"]) { max-width: none; margin-inline: 0; }
+    [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="page"] { --page-foot: var(--space-7); --page-foot-now: var(--space-7); }
+    /* Translate keeps the sidebar and its column: the tabs step aside only on a phone, where they'd sit over the page (or while typing). */
+    :root[data-translate]:not([data-swipe-back], [data-keyboard]) [data-part="app"] > [data-part="tab-bar"] { display: grid; }
+    :root[data-translate] [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="page"] { padding-bottom: 0; }
+    /* A way back to a tab (Settings' menu: ui.appHeader data-back="tab") the sidebar already has: no pill. */
+    [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"][data-back="tab"] > [data-part="app-back"] { display: none; }
+  }
+  /* 1280 and up: the grid pages of Study, Explore and Knowledge in a wider column, their grids using the room; the shell marks the app
+     data-column="wide" while one is in view (main.js WIDE_PAGES; their lists and forms keep the 720). The header's and the page's own padding,
+     not --page-width: a custom property the whole page inherits, so changing it restyles every element under it. Reading lines stay capped
+     (--measure), no button grows past its 720 width (components.css, its end); a session, a sheet and the reader keep their own. */
+  @media (min-width: 1280px) {
+    [data-part="app"][data-column="wide"]:has(> [data-part="tab-bar"]) > :is([data-part="app-header"], [data-part="page"]) { padding-inline: max(var(--space-4), calc((100% - var(--page-width-wide)) / 2)); }
+    /* Settings: its menu's pane (--settings-pane) beside the page it opened (the 720 column, narrower at 1280), the two centered together;
+       the header over the page, not the pane; a first page's way back is the pane, so no pill (main.js SPLIT). The pane stays put as the page
+       scrolls, and scrolls itself if it's taller than the screen. */
+    [data-part="app"][data-split="settings"]:has(> [data-part="tab-bar"]) > [data-part="page"] {
+      --split-side: max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2));
+      display: grid;
+      grid-template-columns: var(--settings-pane) minmax(0, 1fr);
+      grid-auto-rows: max-content;
+      column-gap: var(--space-6);
+      align-content: start;
+      padding-inline: var(--split-side);
+    }
+    [data-part="app"][data-split="settings"] > [data-part="page"] > .lx-settings-aside { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; grid-column: 1; grid-row: 1 / span 2; position: sticky; top: 0; align-self: start; max-height: calc(100dvh - var(--header-room) - var(--space-5)); overflow-y: auto; overscroll-behavior: contain; }
+    [data-part="app"][data-split="settings"] > [data-part="page"] > :not(.lx-settings-aside) { grid-column: 2; }
+    [data-part="app"][data-split="settings"] > [data-part="page"]::before { grid-column: 1 / -1; }
+    [data-part="app"][data-split="settings"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] {
+      padding-inline: calc(max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2)) + var(--settings-pane) + var(--space-6)) max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2));
+    }
+    [data-part="app"][data-split="settings"] > [data-part="app-header"] > [data-part="app-back"][href="#settings"] { visibility: hidden; }
+    /* The page it opened, lit in the pane with the sidebar's own token for the tab you're on (--fill-active), so "you're here" looks one way;
+       its words keep their ink (the tab's purple on that fill is under 4.5:1 in most themes). An avatar on it keeps a ring (components.css). */
+    .lx-settings-aside a[aria-current="page"] { background: var(--fill-active); }
+  }
+
+  /* ---------- The header floats (asks 8 and 9, 5 Nov) ----------
+   * No band of its own: the page, its color and pictures, runs to the top of the screen under the header, starting below it
+   * (--header-room: the header's own height, which is fixed) and fading as it scrolls away under it. Its buttons are glass,
+   * as the bar is. Then the same fade at the foot, under the floating bar. Both fade to --page-ground: the canvas, or the
+   * color a page paints itself (set it on :root while that page is up). Not in Translate, whose header is its own. */
+  :root { --page-ground: var(--canvas); --header-room: calc(var(--space-3) * 2 + 40px + env(safe-area-inset-top)); }
+  :root:not([data-translate]) [data-part="app"] > [data-part="app-header"] { background: none; box-shadow: none; clip-path: none; }
+  :root:not([data-translate]) [data-part="app"] > [data-part="page"] { margin-top: calc(-1 * var(--header-room)); padding-top: var(--header-room); scroll-padding-top: var(--header-room); }
+  /* (Behind the header's own content, inside it: a clip-path or filter on the header would stop the blur seeing the page.) */
+  :root:not([data-translate]) [data-part="app"] > [data-part="app-header"]::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 calc(-1 * var(--header-band)) 0;
+    pointer-events: none;
+    /* Solid for the header's whole row, behind the title and the buttons, so nothing scrolled under them can be read through them; below
+       the row it fades (with the blur in that fade) as far as the page has scrolled, up to --space-5 (--page-scroll, set by shell/main.js).
+       At rest there's none: reaching past the header, it lay over a page's title and grayed it. */
+    --header-band: min(var(--page-scroll, 0px), var(--space-5));
+    /* (--header-ground: a page whose ground changes as it scrolls sets it on the header, the ground under it now: the path's units.) */
+    background: var(--header-ground, var(--page-ground));
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--header-band)), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - var(--header-band)), transparent);
+  }
+  /* The same solid band on every theme, a look with its own picture too (theme.js data-has-picture): the picture stays under the page and
+     never shows through the bar. */
+  /* The header's other buttons, the language and your initials, are the same glass as its back (.lx-back, components.css). */
+  [data-part="app-header"] :is([data-part="header-language"], [data-part="settings-button"]) {
+    border: 1px solid var(--bar-edge);
+    background: var(--bar-glass);
+    -webkit-backdrop-filter: var(--bar-filter);
+    backdrop-filter: var(--bar-filter);
+    box-shadow: var(--bar-rim), 0 4px 14px -6px rgba(0, 0, 0, 0.35);
+    color: var(--bar-ink);
+  }
+  [data-part="app-header"] :is([data-part="header-language"], [data-part="settings-button"]):active { background: color-mix(in srgb, var(--bar-ink) 16%, var(--bar-glass)); }
+  @media (hover: hover) {
+    [data-part="app-header"] :is([data-part="header-language"], [data-part="settings-button"]):hover { background: color-mix(in srgb, var(--bar-ink) 9%, var(--bar-glass)); }
+  }
+  /* The sample learner's mark (shell/main.js sampleMark), while it's on: the same glass as the language, its word, then Off, a button of its
+     own behind a hairline. Quiet, and on every page's header, so the progress shown is never taken for your own. */
+  [data-part="app-header"] [data-part="sample-mark"] {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    height: 32px;
+    padding: 0 2px 0 10px;
+    border: 1px solid var(--bar-edge);
+    border-radius: var(--radius-full);
+    background: var(--bar-glass);
+    -webkit-backdrop-filter: var(--bar-filter);
+    backdrop-filter: var(--bar-filter);
+    box-shadow: var(--bar-rim), 0 4px 14px -6px rgba(0, 0, 0, 0.35);
+    color: var(--bar-ink);
+    font: 600 var(--size-12) / 1 var(--type-ui);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  [data-part="sample-mark"] .lx-sample-off {
+    position: relative;
+    height: 28px;
+    margin-left: 8px;
+    padding: 0 10px;
+    border: 0;
+    border-left: 1px solid var(--bar-edge);
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
+    background: none;
+    color: inherit;
+    font: 700 var(--size-12) / 1 var(--type-ui);
+    letter-spacing: 0.04em;
+  }
+  /* Its reach, 44 px tall (components.css's rule for every small control). */
+  [data-part="sample-mark"] .lx-sample-off::before { content: ""; position: absolute; inset: min(0px, calc((100% - 44px) / 2)); }
+  [data-part="sample-mark"] .lx-sample-off:active { background: color-mix(in srgb, var(--bar-ink) 16%, transparent); }
+  @media (hover: hover) { [data-part="sample-mark"] .lx-sample-off:hover { background: color-mix(in srgb, var(--bar-ink) 9%, transparent); } }
+  /* On a narrow phone the mark takes the language's place, so the page's title stays whole (the language is a tap away in Settings). */
+  @media (max-width: 359.98px) {
+    [data-part="app-header"]:has(> .lx-header-end > [data-part="sample-mark"]) [data-part="header-language"] { display: none; }
+  }
+  /* The foot, under the bar on a phone: first in the app, so the bar and the header draw over it and a sliding page's pictures under
+   * it. Not while typing (no bar), behind a session, or over a page's pinned action, which has its own fade. */
+  @media (max-width: 1023.98px) {
+    :root:not([data-translate], [data-keyboard], [data-scroll-lock]) [data-part="app"]:has(> [data-part="tab-bar"]):not(:has(> [data-part="page"] [data-part="pinned-actions"]))::before {
+      content: "";
+      position: fixed;
+      z-index: 5;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: calc(var(--bar-height) + var(--bar-gap) + var(--space-6));
+      pointer-events: none;
+      /* Slight: the glass keeps its labels readable by itself, so this only softens what goes under it. */
+      background: linear-gradient(to top, color-mix(in srgb, var(--page-ground) 70%, transparent), color-mix(in srgb, var(--page-ground) 38%, transparent) 50%, transparent);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      -webkit-mask-image: linear-gradient(to top, #000 50%, transparent);
+      mask-image: linear-gradient(to top, #000 50%, transparent);
+    }
+  }
+
+  .lx-todo { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-align: center; }
+  .lx-todo p { max-width: 52ch; margin: 0; color: var(--ink-2); line-height: 1.6; }
+
+  .lx-inline-form { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+  /* Its lines 12 px apart when they hold small buttons (Explore's and Read's filters): components.css's "rows of small controls". */
+  .lx-inline-form:has(> [data-part="button"][data-size="sm"]) { row-gap: 12px; }
+  .lx-inline-form > [data-part="text-field"],
+  .lx-inline-form > .lx-code { flex: 1 1 220px; min-width: 0; }
+  .lx-code {
+    display: block;
+    overflow-x: auto;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--hair);
+    border-radius: var(--radius-12);
+    background: var(--well);
+    font: 400 var(--size-12) / 1.5 var(--type-mono);
+    white-space: nowrap;
+  }
+  .lx-secret { color: var(--ink-1); }
+  /* A box that opens (Appearance → CSS's parts): its summary a row the control's height, edge to edge in the box, shaded while pressed. */
+  .lx-details { border: 1px solid var(--hair); border-radius: var(--radius-12); padding: 0 var(--space-3); }
+  .lx-details[open] { padding-bottom: var(--space-3); }
+  .lx-details > summary {
+    margin-inline: calc(-1 * var(--space-3));
+    padding: calc((var(--control) - 20px) / 2) var(--space-3);
+    border-radius: calc(var(--radius-12) - 1px);
+    cursor: pointer;
+    color: var(--ink-2);
+    font-size: var(--size-14);
+    line-height: 20px;
+  }
+  .lx-details[open] > summary { border-end-start-radius: 0; border-end-end-radius: 0; color: var(--ink-1); }
+  .lx-details > summary:active { background: var(--fill-active); }
+  .lx-details > * + * { margin-top: var(--space-2); }
+  /* flex: none: in a page taller than the screen, a flex item may shrink to its min-height and spill its lines. */
+  .lx-settings-message { display: flex; flex: none; align-items: center; gap: var(--space-1); min-height: 1.5em; color: var(--ink-2); }
+  .lx-settings-message:empty { display: none; }
+  .lx-settings-message[data-tone="right"] .lx-icon { color: var(--m-right); }
+  .lx-settings-message[data-tone="wrong"] .lx-icon { color: var(--m-wrong); }
+  .lx-link { color: var(--ink-1); text-underline-offset: 3px; }
+  [data-part="button"][data-armed] { box-shadow: 0 0 0 2px var(--m-wrong-edge); }
+  /* A destructive row waiting for its second press. */
+  [data-part="list-row"][data-armed] { background: var(--m-wrong-bg); }
+
+  /* Settings */
+  .lx-profile { display: flex; align-items: center; gap: var(--space-3); }
+  /* Settings → Account: only one way to sign in left, so the note asks for another. */
+  .lx-group [data-part="group-note"][data-nudge] { color: var(--ink-1); }
+  .lx-profile-text { display: flex; flex-direction: column; gap: 2px; }
+  .lx-profile-row { min-height: 72px; }
+  .lx-quick-preview { display: flex; flex-direction: column; gap: var(--space-2); }
+  .lx-card-preview { min-height: 260px; }
+  .lx-voice-groups { display: contents; }
+  /* Listening and Repeat after: Play again and Slower, side by side. */
+  .lx-listen-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding: var(--space-3); border: 1px solid var(--edge); border-radius: var(--radius-16); background: var(--well); }
+  .lx-say-mic { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-5) 0 var(--space-3); }
+  .lx-say-status { margin: 0; text-align: center; }
+  /* One line's room, outside a session's speaking zone (Settings → Speaking's test, a practice card). The zone holds two (components.css): this
+     layer comes after that one, so a min-height here won over it whatever its selector, and a speaking game's status went from two lines to one under
+     the microphone, moving it. */
+  .lx-say-status:not(.lx-say-zone > .lx-say-status) { min-height: 1.4em; }
+  .lx-said { display: flex; flex-direction: column; gap: var(--space-2); }
+  .lx-say-try { display: flex; flex-direction: column; gap: var(--space-4); padding-block: var(--space-3) 0; list-style: none; }
+  .lx-listening-sample { padding: var(--space-4); border: 1px solid var(--edge); border-radius: var(--radius-16); background: var(--fill); }
+  .lx-row-empty { min-height: 44px; }
+  /* "How to connect": a row that opens its instructions in place. */
+  .lx-disclosure > summary { list-style: none; }
+  .lx-disclosure > summary::-webkit-details-marker { display: none; }
+  .lx-disclosure > summary > .lx-icon:last-child { transition: transform var(--dur-150) var(--ease-standard); }
+  .lx-disclosure[open] > summary > .lx-icon:last-child { transform: rotate(90deg); }
+  .lx-disclosure-body { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-1) 0 var(--space-3) calc(34px + var(--space-3)); }
+  summary[data-part="list-row"] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  @media (hover: hover) { summary[data-part="list-row"]:hover { background: var(--fill-hover); } }
+  summary[data-part="list-row"]:active { background: var(--fill-active); }
+  .lx-row-item audio { width: 100%; margin: 0 0 var(--space-2); }
+
+  /* In a session: the answer under a wrong step, and its literal line with the order switch. */
+  .lx-answer-sentence { margin: 0; font: 500 var(--size-20) / 1.35 var(--type-read); }
+  .lx-answer-literal { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+  /* Its English, and when the English rewords it, word for word and why: the words that differ in the full ink, with a dotted line under
+   * them (not by color alone), the rest quieter. */
+  .lx-answer-english { margin: 0; color: var(--ink-2); font-size: var(--size-16); line-height: 1.4; }
+  .lx-answer-reword { display: flex; flex-direction: column; gap: 2px; }
+  .lx-reword-line { margin: 0; color: var(--ink-2); font-size: var(--size-16); line-height: 1.4; }
+  .lx-reword-label { color: var(--ink-3); font-size: var(--size-14); font-weight: 600; }
+  .lx-reword-changed { color: var(--ink-1); font-weight: 600; text-decoration: underline dotted var(--m-hint-edge) 2px; text-underline-offset: 4px; }
+  .lx-reword-note { margin: 0; color: var(--ink-3); font-size: var(--size-14); line-height: 1.4; }
+  /* A lesson's idea, met (the "One idea" step): the concept sheet's card on the page, its picture drawn on the sentence it's met on. */
+  .lx-idea-card { padding-bottom: var(--space-4); }
+  /* Its picture the page's main thing: larger than in a sheet. */
+  .lx-idea-card .lx-rule { --rule-scale: 1.45; }
+  .lx-idea-card .lx-concept-this { margin-top: var(--space-3); }
+
+  /* Translate's header band reaches the screen's edges: unseen on a plain page, one clean bar over a background image
+   * (rather than a box with the image showing either side). Every other page's header floats (above). */
+  :root[data-translate] [data-part="app"] > [data-part="app-header"] { box-shadow: 0 0 0 100vmax var(--canvas); clip-path: inset(0 -100vmax); }
+
+  /* Explore's pages: the home's sections spaced as the page spaces them, a shelf's or the topics' heading over its
+   * row, a pack's sentences close together. */
+  .lx-explore-body { gap: var(--space-6); }
+  .lx-explore-shelf,
+  .lx-explore-topics { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-explore-about { margin: 0; color: var(--ink-1); line-height: 1.5; }
+  .lx-explore-sentences { gap: var(--space-2); }
+
+  /* The AI tab (and the sheet asking about something): a request's own fields are prose, not code; the question
+   * asked, and its answer with the language's words marked (by weight, as well as their lang). */
+  :is(.lx-ai-form, .lx-ask-sheet) textarea[data-part="text-field"] { min-height: 96px; font-family: var(--type-ui); font-size: max(16px, var(--size-16)); }
+  .lx-ai-asked { margin: 0; color: var(--ink-2); font-size: var(--size-16); line-height: 1.5; }
+  .lx-ai-answer { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); border: 1px solid var(--hair); border-radius: var(--radius-24); background: var(--well); }
+  .lx-ai-answer p { margin: 0; line-height: 1.6; }
+  .lx-ai-said { font-weight: 600; }
+
+  /* Study's page: your packs and the ways to study, each a heading over its rows or tiles. */
+  .lx-study-packs,
+  .lx-study-ways { display: flex; flex-direction: column; gap: var(--space-3); }
+  .lx-study-note { margin: 0; font-size: var(--size-14); line-height: 1.45; }
+
+  /* ---------- Settings and its pages, as docs/design-bible.md has them. A row you press has no box and no tile: a quiet symbol on the root, nothing but its words deeper in. Space groups them, not lines. ---------- */
+  [data-part="list-row"] > svg[data-symbol] { flex: none; width: 30px; height: 30px; color: var(--ink-2); }
+  [data-settings] { display: flex; flex-direction: column; gap: var(--space-4); }
+  [data-settings] [data-part="page-title"] { font-weight: 700; }
+  [data-settings] .lx-group { gap: 0; }
+  [data-settings] [data-part="list"] { gap: 0; }
+  [data-settings] [data-part="list-row"] { min-height: 52px; padding-block: var(--space-1); }
+  /* Settings → Downloads with nothing on the device: where the big downloads come from, quietly, under the empty state's words. */
+  .lx-empty-more { display: block; margin-top: var(--space-2); color: var(--ink-3); font-size: var(--size-14); }
+  /* Settings → Admin: the sample learner's row opens a sheet but is drawn as its neighbors are (no box), so the four read as one list. */
+  .lx-admin :is(a, button)[data-part="list-row"][data-opens="sheet"] { width: calc(100% + 2 * var(--space-3)); margin: 0 calc(-1 * var(--space-3)); border: 0; border-radius: var(--radius-12); box-shadow: none; }
+  .lx-admin :is(a, button)[data-part="list-row"][data-opens="sheet"]:active { transform: none; }
+  /* A value here is a row of its own (a flag beside a name), ending where the row's does. One wider than its room wraps onto a second line, never cut:
+     held to one line it lost its start with no ellipsis (a flex row's text has none), "ecorded, then Xander" on a 320 px phone. */
+  [data-settings] .lx-row-value { display: inline-flex; align-items: center; justify-content: flex-end; gap: 6px; max-width: 60%; color: var(--ink-2); white-space: normal; overflow-wrap: anywhere; }
+  /* You, at the top of the list. */
+  .lx-settings-you .lx-profile-row { min-height: 56px; }
+  .lx-settings-you .lx-row-title { font: 700 var(--size-20) / 1.2 var(--type-head); }
+  .lx-settings-you [data-part="avatar"] { width: 36px; height: 36px; font-size: var(--size-14); }
+
+  /* Anything still carrying an icon on these pages has no tile. */
+  [data-settings] .lx-row-icon { width: 24px; height: 24px; background: none; color: var(--ink-2); }
+  /* A choice between short options sits on its row; long ones stack, as a plain list with the chosen one marked. */
+  [data-settings] .lx-row-choice .lx-row-text { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: var(--space-3); row-gap: var(--space-1); }
+  [data-settings] .lx-row-choice .lx-row-title { flex: 1 1 auto; min-width: 0; }
+  [data-settings] .lx-row-choice .lx-row-sub { order: 3; flex-basis: 100%; }
+  [data-settings] .lx-row-choice:has(.lx-segmented-stack) .lx-row-text { flex-direction: column; align-items: stretch; }
+  [data-settings] .lx-segmented-stack { padding: 0; border: 0; background: none; box-shadow: none; }
+  [data-settings] .lx-segmented-stack [data-part="segment"] { position: relative; min-height: 44px; padding: 0; border-radius: 0; background: none; box-shadow: none; color: var(--ink-2); font-size: var(--size-16); font-weight: 400; }
+  [data-settings] .lx-segmented-stack [data-part="segment"][aria-pressed="true"] { color: var(--ink-1); font-weight: 600; }
+  [data-settings] .lx-segmented-stack [data-part="segment"][aria-pressed="true"]::after { content: ""; position: absolute; inset-inline-end: 4px; top: 50%; width: 12px; height: 7px; margin-top: -6px; border-inline-start: 2px solid var(--ink-1); border-bottom: 2px solid var(--ink-1); transform: rotate(-45deg); }
+  [data-settings] .lx-segmented-stack [data-part="segment"]:active { background: var(--fill-active); }
+  /* A page's one way forward among its rows (Download Whisper, Download a translator): the solid button, the full width. */
+  [data-settings] .lx-row-go { padding-block: var(--space-3) var(--space-2); list-style: none; }
+  /* A pack's about, whole, as the first thing under About it (settings-packs.js aboutRows). */
+  [data-settings] .lx-pack-about > p { margin: 0; padding-block: var(--space-2); color: var(--ink-2); }
+  /* The same list from radio rows (ui.pickList, ui.radioRow): no circle; the chosen one bold with the check, the rest in the quieter ink. */
+  .lx-choice-title { margin: 0; padding-block: var(--space-2) 0; color: var(--ink-1); font-size: var(--size-16); }
+  :is([data-settings], .lx-choice-list) .lx-row-control > [data-part="radio"] { width: 24px; height: 24px; border: 0; border-radius: 0; background: none; }
+  :is([data-settings], .lx-choice-list) .lx-row-control > [data-part="radio"]::after { width: 12px; height: 7px; margin-top: -4px; border-radius: 0; background: none; border-inline-start: 2px solid var(--ink-1); border-bottom: 2px solid var(--ink-1); transform: rotate(-45deg) scale(0); }
+  :is([data-settings], .lx-choice-list) .lx-row-control > [data-part="radio"]:checked::after { transform: rotate(-45deg) scale(1); }
+  /* Pressed, it takes the press fill as every radio does (components.css), on the square round its check: this list's no-circle look above
+     had taken it away (component-check, Settings → Language). */
+  :is([data-settings], .lx-choice-list) .lx-row-control > [data-part="radio"]:active { border-radius: var(--radius-8); background: var(--fill-active); }
+  :is([data-settings], .lx-choice-list) .lx-row-control:has(> [data-part="radio"]) .lx-row-title { color: var(--ink-2); }
+  :is([data-settings], .lx-choice-list) .lx-row-control:has(> [data-part="radio"]:checked) .lx-row-title { color: var(--ink-1); font-weight: 600; }
+  /* A fold: a row that opens what's under it. */
+  .lx-settings-fold > summary { list-style: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .lx-settings-fold > summary::-webkit-details-marker { display: none; }
+  .lx-settings-fold > summary:active { background: var(--fill-active); }
+  .lx-settings-fold > summary .lx-icon:last-child { transition: rotate var(--dur-150) var(--ease-standard); }
+  .lx-settings-fold[open] > summary .lx-icon:last-child { rotate: 90deg; }
+  /* Words in a sheet. */
+  .lx-sheet-words p { margin: 0; color: var(--ink-2); line-height: 1.5; }
+  /* The theme you're using: the ring and the name say so, never color alone. A theme is something you press, among others. */
+  [data-settings] .lx-swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+  /* Under 360 px (a 320 phone), two a row: a name gets ~120 px and stays whole at its own size (three across left 72, and Luxembourg broke). */
+  @media (max-width: 359px) { [data-settings] .lx-swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  [data-settings] [data-part="theme-swatch"] { margin-bottom: 3px; border: 2px solid var(--line); box-shadow: 0 3px 0 var(--line); }
+  [data-settings] [data-part="theme-swatch"][aria-pressed="true"] { border-color: var(--line-strong); box-shadow: 0 3px 0 var(--line-strong), inset 0 0 0 1px var(--line-strong); }
+  [data-settings] [data-part="theme-swatch"][aria-pressed="true"] .lx-swatch-name { font-weight: 700; }
+  [data-settings] .lx-theme-picker > [data-part="group-note"] { display: none; }
+  /* Picking a pause's days, in its sheet: two fields side by side, the button under them, nothing past the sheet's edge. */
+  .lx-pause-dates { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+  .lx-pause-dates > [data-part="field"] { min-width: 0; }
+  .lx-pause-dates input { width: 100%; min-width: 0; }
+  .lx-pause-dates > [data-part="button"] { grid-column: 1 / -1; }
+  /* The streak on its page, as on Home. */
+  .lx-settings-pauses:empty { display: none; }
+  /* Empty and off states sit on the page, with no box. */
+  [data-settings] [data-part="empty-state"] { padding-block: var(--space-4); border: 0; }
+  /* Reminders' fields: on the page's own edge, and wide enough that a time keeps its am or pm. */
+  .lx-settings-body { display: flex; flex-direction: column; gap: var(--space-4); }
+  [data-settings] .lx-reminder-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 0 var(--space-2); }
+  @media (max-width: 359.98px) { [data-settings] .lx-reminder-fields { grid-template-columns: minmax(0, 1fr); } }
+  /* An empty state's own drawing, where there's one for it. */
+  .lx-empty-picture { display: block; width: 168px; height: 168px; margin: 0 auto var(--space-3); border-radius: var(--radius-24); overflow: hidden; }
+  /* A page that couldn't load, online (ui.loadFailed): as an empty state, Tinta at its full size over the words, Retry under them. */
+  .lx-load-failed { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+  .lx-load-failed > [data-part="character"] { margin-bottom: 0; }
+  .lx-load-failed-words { margin: 0; max-width: 32ch; color: var(--ink-2); line-height: 1.45; }
+  /* Anki's first view: the deck's own art on its tile, and the one thing to do. */
+  .lx-anki-start { display: grid; justify-items: center; gap: var(--space-5); padding-block: var(--space-6) 0; color: var(--ink-3); }
+  .lx-anki-start > .lx-stack { justify-self: stretch; }
+  .lx-anki-done-art { padding-block: var(--space-4) 0; }
+  /* Something that didn't go: Tinta beside the words, the words in the full ink. */
+  .lx-anki-start .lx-settings-message[data-tone="wrong"], .lx-anki-other .lx-settings-message[data-tone="wrong"] { align-items: flex-start; gap: var(--space-3); color: var(--ink-1); line-height: 1.45; }
+  .lx-anki-start .lx-settings-message > [data-part="character"] { flex: none; }
+  /* The report. The deck's first card is the thing to look at: a flash card you only read (an outline, nothing behind it), the side you'll
+   * learn large over the other, and Swap sides on it, since that's what it changes. */
+  .lx-anki-sample { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); margin: 0; padding: var(--space-4) var(--space-4) var(--space-3); border: 2px solid var(--line-strong); border-radius: var(--radius-24); }
+  .lx-anki-sample-label { color: var(--ink-3); font-size: var(--size-12); font-weight: 600; letter-spacing: 0.02em; }
+  .lx-anki-sample-front { margin: 0; color: var(--ink-1); font: 700 var(--size-28, 28px) / 1.2 var(--type-head); overflow-wrap: anywhere; }
+  .lx-anki-sample-back { margin: 0; color: var(--ink-2); font-size: var(--size-18, 18px); line-height: 1.35; overflow-wrap: anywhere; }
+  .lx-anki-sample > [data-part="button"] { margin-top: var(--space-1); margin-left: calc(-1 * var(--space-2)); }
+  /* What you get: the number leads, as a stat does, with what it's made of under it. Nothing to press, so no box. */
+  .lx-anki-what { display: grid; gap: var(--space-1); }
+  .lx-anki-what p { margin: 0; }
+  .lx-anki-count { color: var(--ink-2); font-size: var(--size-16); }
+  .lx-anki-count strong { color: var(--ink-1); font: 700 var(--size-stat) / 1 var(--type-head); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .lx-anki-sounds { color: var(--ink-2); font-size: var(--size-14); }
+  .lx-anki-games { display: grid; gap: 2px; margin-top: var(--space-3) !important; color: var(--ink-1); font-size: var(--size-16); line-height: 1.45; }
+  .lx-anki-games-label { color: var(--ink-2); font-size: var(--size-14); }
+  /* When it couldn't tell the languages, that question comes first, in words at full size. */
+  .lx-anki-ask { margin: 0; color: var(--ink-1); font-size: var(--size-16); line-height: 1.45; }
+  /* On a wide screen, the one forward button is a button, not a bar across the column. */
+  @media (min-width: 1024px) {
+    [data-settings] [data-part="button"][data-variant="go"], .lx-anki-start [data-part="button"][data-variant="go"] { max-width: 360px; margin-inline: auto; }
+  }
+  /* The first run. Over everything until a language is picked. */
+  .lx-welcome { position: fixed; inset: 0; z-index: 90; display: flex; flex-direction: column; padding-top: env(safe-area-inset-top); background: var(--canvas); color: var(--ink-1); }
+  .lx-welcome-head { display: flex; flex-direction: column; gap: var(--space-3); width: 100%; max-width: 480px; margin-inline: auto; padding: var(--space-5) var(--space-4) var(--space-3); }
+  .lx-welcome-head [data-part="character"] { margin-inline-start: -8px; }
+  .lx-welcome-head [data-part="page-title"] { font: 700 34px / 1.08 var(--type-head); letter-spacing: -0.02em; }
+  /* What you said you speak, over the second question, with the way back to the first: a word-sized link with a full-sized reach. */
+  .lx-welcome-said { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-1); margin: calc(-1 * var(--space-2)) 0 0; }
+  .lx-welcome-change { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-1); margin-inline-start: calc(-1 * var(--space-1)); border: 0; background: none; color: var(--ink-1); font: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .lx-welcome-list { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; width: 100%; max-width: 480px; margin-inline: auto; padding: 0 var(--space-4) calc(var(--space-5) + env(safe-area-inset-bottom)); }
+  .lx-welcome-list [data-part="list"] { gap: 0; }
+  .lx-welcome-list [data-part="list-row"] { min-height: 56px; font-size: 18px; }
+  .lx-welcome-list [data-part="language-flag"] { margin: 0; }
+  .lx-language-list [hidden] { display: none; }
+  .lx-language-list [data-part="list"] { gap: 0; }
+  .lx-language-list [data-part="list-row"] { min-height: 52px; }
+  .lx-language-list [data-part="language-flag"] { margin: 0; }
+
+  /* Settings → Report a bug (settings-report.js): the picked screenshot in its row's place, cropped from its top; the line over what goes
+     along kept close to its list. */
+  .lx-report-thumb { display: block; width: 40px; height: 40px; border-radius: var(--radius-8, 8px); object-fit: cover; object-position: top; outline: 1px solid var(--line); outline-offset: -1px; }
+  .lx-report-along { margin: var(--space-2) 0 calc(-1 * var(--space-2)); }
+  /* What goes along is never cut off: each value wraps rather than ending in an ellipsis. */
+  .lx-report-summary .lx-row-value { max-width: 62%; white-space: normal; overflow-wrap: anywhere; }
+  /* A small summary, read only: quieter and closer than a list you tap. */
+  .lx-report-summary [data-part="list-row"] { min-height: 0; padding-block: 6px; }
+  .lx-report-summary .lx-row-title { color: var(--ink-2); font-size: var(--size-14); }
+}
+
+/* Settings → Admin → Feature flags (settings-flags.js): what a flag shows, then on its own line what everyone has, or why this device can't
+   preview it yet. */
+.lx-flags .lx-row-sub > span { display: grid; gap: 2px; }
+.lx-flag-state { color: var(--ink-1); font-weight: 500; }

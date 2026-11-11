@@ -1,0 +1,8269 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-cy",
+  "name": "Starter: Welsh",
+  "about": "Welsh in real, everyday sentences, with each one's words in Welsh order.",
+  "language": "cy",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "bod": "be (dw, wyt, mae, ydy; roedd: was; bydd: will be)",
+    "i": "I, me; to, for (i'n: I + yn; i'r: to the)",
+    "yfed": "to drink",
+    "coffi": "coffee",
+    "te": "tea",
+    "dŵr": "water",
+    "a": "and (aspirates what follows)",
+    "llaeth": "milk",
+    "gyda": "with",
+    "da": "good, fine",
+    "ti": "you (di in dy enw di and after forms such as fyddi or alli)",
+    "dim": "not, no (ddim after who)",
+    "athro": "teacher",
+    "myfyriwr": "student",
+    "yn": "(links bod to an action or description; also in)",
+    "mam": "mom",
+    "tad": "father, dad",
+    "brawd": "brother",
+    "chwaer": "sister",
+    "fy": "my (nasalizes what follows)",
+    "dyma": "this is",
+    "gan": "with (gen i: with me, I have)",
+    "ffrind": "friend",
+    "meddyg": "doctor",
+    "allwedd": "key",
+    "ffôn": "phone",
+    "llyfr": "book",
+    "ble": "where",
+    "yma": "here",
+    "yno": "there",
+    "toiled": "toilet",
+    "un": "one",
+    "dau": "two",
+    "tri": "three",
+    "arian": "money",
+    "siarad": "speak",
+    "saesneg": "English",
+    "cymraeg": "Welsh",
+    "deall": "understand",
+    "ychydig": "a little",
+    "eisiau": "want",
+    "tŷ": "house",
+    "ystafell": "room",
+    "mawr": "big",
+    "bach": "small",
+    "byw": "live, living",
+    "mewn": "in a",
+    "y": "the (yr before a vowel, 'r after one)",
+    "mynd": "go (es i: I went)",
+    "ysgol": "school",
+    "dinas": "city",
+    "gorsaf": "station",
+    "trên": "train (trenau: trains)",
+    "car": "car",
+    "heddiw": "today",
+    "yfory": "tomorrow",
+    "nawr": "now",
+    "gweithio": "to work",
+    "rhaid": "must",
+    "gallu": "to be able to",
+    "beth": "what",
+    "dy": "your (softens what follows)",
+    "enw": "name",
+    "ei": "his (softens) or her (aspirates)",
+    "hi": "she, her, it (hi'n: she + yn)",
+    "tal": "tall",
+    "gwybod": "know",
+    "hoffi": "like (hoffwn i: I'd like)",
+    "ar": "on",
+    "bwrdd": "table",
+    "oergell": "fridge",
+    "coginio": "cook, cooking",
+    "cinio": "lunch, dinner",
+    "wedi": "after (dw i wedi: I have)",
+    "bwyta": "eat",
+    "diolch": "thanks",
+    "plentyn": "child (plant: children)",
+    "gwely": "bed",
+    "coch": "red",
+    "cawl": "soup",
+    "blasus": "tasty",
+    "iawn": "very",
+    "pysgodyn": "fish (pysgod: fish as food, or more than one fish)",
+    "cael": "have, get (ces i: I had)",
+    "brechdan": "sandwich",
+    "swper": "supper",
+    "bara": "bread",
+    "cegin": "kitchen",
+    "cath": "cat",
+    "du": "black",
+    "esgusodi": "excuse (esgusodwch fi: excuse me)",
+    "fi": "me",
+    "faint": "how much",
+    "hwn": "this (one)",
+    "tref": "town",
+    "bws": "bus",
+    "hwyr": "late",
+    "dal": "catch",
+    "adref": "home, homeward",
+    "tacsi": "taxi",
+    "sori": "sorry",
+    "gweld": "see",
+    "bwrw": "throw (bwrw glaw: to rain)",
+    "glaw": "rain",
+    "siop": "shop",
+    "cau": "close (ar gau: closed)",
+    "heno": "tonight",
+    "oer": "cold",
+    "braf": "fine, nice (weather)",
+    "doe": "yesterday (ddoe)",
+    "blino": "get tired; tire (wedi blino: tired)",
+    "dod": "come",
+    "ni": "we, us",
+    "amser": "time",
+    "gwin": "wine",
+    "allan": "out",
+    "dysgu": "learn, teach"
+  },
+  "chunks": {
+    "esgusodwch-fi": {
+      "text": "Esgusodwch fi",
+      "en": "Excuse me",
+      "about": "Literally excuse me, to someone you'd call chi; to a friend, esgusoda fi."
+    },
+    "hello": {
+      "text": "Helo",
+      "en": "hello"
+    },
+    "please": {
+      "text": "os gwelwch yn dda",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "diolch",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Sut wyt ti",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Hwyl fawr",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Ie",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Na",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Beth yw dy enw",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Braf cwrdd â thi",
+      "en": "nice to meet you"
+    },
+    "how-much-is-it": {
+      "text": "Faint yw e",
+      "en": "how much is it?"
+    },
+    "the-bill-please": {
+      "text": "Y bil, os gwelwch yn dda",
+      "en": "the bill, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Wela i di yfory",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "rydw-i-n-yfed-coffi",
+      "topic": "food",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Rydw i'n yfed coffi.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "yfed",
+          "yfed"
+        ],
+        [
+          "coffi",
+          "coffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "drinking"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "I'n rydw yfed coffi.",
+        "Rydw i'n coffi yfed."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "coffi",
+          "te",
+          "dŵr"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-yfed-te",
+      "topic": "food",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Rydw i'n yfed te.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "yfed",
+          "yfed"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "drinking"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "I'n rydw yfed te.",
+        "Rydw i'n te yfed."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "te",
+          "coffi",
+          "dŵr"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-yfed-dwr",
+      "topic": "food",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Rydw i'n yfed dŵr.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "yfed",
+          "yfed"
+        ],
+        [
+          "dŵr",
+          "dŵr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "drinking"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "I'n rydw yfed dŵr.",
+        "Rydw i'n dŵr yfed."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dŵr",
+          "coffi",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-yfed-coffi-a-the",
+      "topic": "food",
+      "concepts": [
+        "bod-present",
+        "aspirate-mutation"
+      ],
+      "text": "Rydw i'n yfed coffi a the.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "yfed",
+          "yfed"
+        ],
+        [
+          "coffi",
+          "coffi"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "the",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "drinking"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rydw i'n yfed coffi a te.",
+        "I'n rydw yfed coffi a the."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "the",
+          "coffi",
+          "dŵr"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-yfed-te-a-dwr",
+      "topic": "food",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Rydw i'n yfed te a dŵr.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "yfed",
+          "yfed"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "dŵr",
+          "dŵr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "drinking"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "I'n rydw yfed te a dŵr.",
+        "Rydw i'n te a dŵr yfed."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "dŵr",
+          "coffi",
+          "the"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-yfed-dwr-a-choffi",
+      "topic": "food",
+      "concepts": [
+        "bod-present",
+        "aspirate-mutation"
+      ],
+      "text": "Rydw i'n yfed dŵr a choffi.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "yfed",
+          "yfed"
+        ],
+        [
+          "dŵr",
+          "dŵr"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "choffi",
+          "coffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "drinking"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rydw i'n yfed dŵr a coffi.",
+        "I'n rydw yfed dŵr a choffi."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "choffi",
+          "coffi",
+          "the"
+        ]
+      }
+    },
+    {
+      "id": "coffi-os-gwelwch-yn-dda",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Coffi, os gwelwch yn dda.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Coffi,",
+          "coffi"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Coffi, os yn gwelwch dda.",
+        "Coffi, os gwelwch dda yn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Coffi,",
+          "Te,",
+          "Dŵr,"
+        ]
+      }
+    },
+    {
+      "id": "helo-coffi-os-gwelwch-yn-dda",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Helo, coffi, os gwelwch yn dda.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Helo,"
+        ],
+        [
+          "coffi,",
+          "coffi"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Helo, coffi, os yn gwelwch dda.",
+        "Helo, coffi, gwelwch os yn dda."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "coffi,",
+          "te,",
+          "llaeth,"
+        ]
+      }
+    },
+    {
+      "id": "te-a-dwr-os-gwelwch-yn-dda",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Te a dŵr, os gwelwch yn dda.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Te",
+          "te"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "dŵr,",
+          "dŵr"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te a dŵr, os yn gwelwch dda.",
+        "Te a dŵr, os gwelwch dda yn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dŵr,",
+          "llaeth,",
+          "choffi,"
+        ]
+      }
+    },
+    {
+      "id": "llaeth-os-gwelwch-yn-dda",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Llaeth, os gwelwch yn dda.",
+      "means": "Some milk, please.",
+      "words": [
+        [
+          "Llaeth,",
+          "llaeth"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Some milk"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Llaeth, os yn gwelwch dda.",
+        "Llaeth, gwelwch os yn dda."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Llaeth,",
+          "Coffi,",
+          "Te,"
+        ]
+      }
+    },
+    {
+      "id": "coffi-diolch",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Coffi, diolch.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Coffi,",
+          "coffi"
+        ],
+        [
+          "diolch"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Choffi, diolch.",
+        "The, diolch."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Coffi,",
+          "Te,",
+          "Llaeth,"
+        ]
+      }
+    },
+    {
+      "id": "helo-te-os-gwelwch-yn-dda",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Helo! Te, os gwelwch yn dda.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Helo!"
+        ],
+        [
+          "Te,",
+          "te"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Helo! Te, os yn gwelwch dda.",
+        "Helo! Te, os gwelwch dda yn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Te,",
+          "Coffi,",
+          "Dŵr,"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-yfed-llaeth",
+      "topic": "food",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Rydw i'n yfed llaeth.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "yfed",
+          "yfed"
+        ],
+        [
+          "llaeth",
+          "llaeth"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "drinking"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "I'n rydw yfed llaeth.",
+        "Rydw i'n llaeth yfed."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "llaeth",
+          "coffi",
+          "dŵr"
+        ]
+      }
+    },
+    {
+      "id": "coffi-gyda-llaeth-os-gwelwch-yn-dda",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Coffi gyda llaeth, os gwelwch yn dda.",
+      "means": "A coffee with milk, please.",
+      "words": [
+        [
+          "Coffi",
+          "coffi"
+        ],
+        [
+          "gyda",
+          "gyda"
+        ],
+        [
+          "llaeth,",
+          "llaeth"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "with"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Coffi gyda llaeth, os yn gwelwch dda.",
+        "Coffi gyda llaeth, os gwelwch dda yn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gyda",
+          "a",
+          "yn"
+        ]
+      }
+    },
+    {
+      "id": "helo-sut-wyt-ti",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Helo! Sut wyt ti?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Helo!"
+        ],
+        [
+          "Sut"
+        ],
+        [
+          "wyt"
+        ],
+        [
+          "ti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Helo! Sut ti wyt?",
+        "Helo! Ti sut wyt?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wyt",
+          "Rydw",
+          "yfed"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-dda-diolch",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Rydw i'n dda, diolch.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "dda,",
+          "da"
+        ],
+        [
+          "diolch"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "I'n rydw dda, diolch.",
+        "Rydw dda i'n, diolch."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dda,",
+          "yfed,",
+          "coffi,"
+        ]
+      }
+    },
+    {
+      "id": "ie-os-gwelwch-yn-dda",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Ie, os gwelwch yn dda.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ie,"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ie, os yn gwelwch dda.",
+        "Ie, os gwelwch dda yn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ie,",
+          "Na,",
+          "Helo,"
+        ]
+      }
+    },
+    {
+      "id": "na-diolch",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Na, diolch.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Na,"
+        ],
+        [
+          "diolch"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Na, os yn gwelwch dda.",
+        "Na, os gwelwch dda yn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Na,",
+          "Ie,",
+          "Helo,"
+        ]
+      }
+    },
+    {
+      "id": "ie-diolch-hwyl-fawr",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Ie, diolch. Hwyl fawr!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ie,"
+        ],
+        [
+          "diolch."
+        ],
+        [
+          "Hwyl"
+        ],
+        [
+          "fawr"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ie, diolch. Fawr hwyl!",
+        "Ie, diolch. Hwyl yn fawr!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ie,",
+          "Na,",
+          "Helo,"
+        ]
+      }
+    },
+    {
+      "id": "na-diolch-hwyl-fawr",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Na, diolch. Hwyl fawr!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Na,"
+        ],
+        [
+          "diolch."
+        ],
+        [
+          "Hwyl"
+        ],
+        [
+          "fawr"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Na, diolch. Fawr hwyl!",
+        "Na, diolch. Hwyl yn fawr!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Na,",
+          "Ie,",
+          "Helo,"
+        ]
+      }
+    },
+    {
+      "id": "helo-beth-yw-dy-enw",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name",
+        "hello"
+      ],
+      "text": "Helo! Beth yw dy enw?",
+      "means": "Hello! What's your name?",
+      "words": [
+        [
+          "Helo!"
+        ],
+        [
+          "Beth"
+        ],
+        [
+          "yw"
+        ],
+        [
+          "dy"
+        ],
+        [
+          "enw"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "what is your name"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Helo! Beth dy yw enw?",
+        "Helo! Beth enw dy yw?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yw",
+          "ydw",
+          "Rwyt"
+        ]
+      }
+    },
+    {
+      "id": "helo-braf-cwrdd-a-thi",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Helo! Braf cwrdd â thi.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Helo!"
+        ],
+        [
+          "Braf"
+        ],
+        [
+          "cwrdd"
+        ],
+        [
+          "â"
+        ],
+        [
+          "thi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Helo! Braf â cwrdd ti.",
+        "Helo! Braf cwrdd ti â."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "thi",
+          "i",
+          "athro"
+        ]
+      }
+    },
+    {
+      "id": "athro-ydw-i",
+      "topic": "people",
+      "concepts": [
+        "bod-present"
+      ],
+      "text": "Athro ydw i.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Athro",
+          "athro"
+        ],
+        [
+          "ydw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "am"
+        ],
+        [
+          "I"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Athro rydw i.",
+        "Athro ydw ti."
+      ],
+      "otherGender": {
+        "text": "Athrawes ydw i.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Athro",
+          "Fyfyriwr",
+          "Coffi"
+        ]
+      }
+    },
+    {
+      "id": "rwyt-ti-yn-fyfyriwr",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Rwyt ti yn fyfyriwr.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Rwyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "fyfyriwr",
+          "myfyriwr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rwyt i yn fyfyriwr.",
+        "Rwyt ti fyfyriwr yn."
+      ],
+      "otherGender": {
+        "text": "Rwyt ti yn fyfyrwraig.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "fyfyriwr",
+          "athro",
+          "dda"
+        ]
+      }
+    },
+    {
+      "id": "wyt-ti-yn-athro",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Wyt ti yn athro?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "athro",
+          "athro"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wyt i yn athro?",
+        "Wyt ti athro yn?"
+      ],
+      "otherGender": {
+        "text": "Wyt ti yn athrawes?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "athro",
+          "fyfyriwr",
+          "dda"
+        ]
+      }
+    },
+    {
+      "id": "dydw-i-ddim-yn-athro",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Dydw i ddim yn athro.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Dydw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "athro",
+          "athro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "a"
+        ],
+        [
+          "teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dydw ti ddim yn athro.",
+        "Dydw i yn ddim athro."
+      ],
+      "otherGender": {
+        "text": "Dydw i ddim yn athrawes.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "ddim",
+          "yn",
+          "gyda"
+        ]
+      }
+    },
+    {
+      "id": "dyma-mam",
+      "topic": "people",
+      "concepts": [
+        "bod-present"
+      ],
+      "text": "Dyma mam.",
+      "means": "Here's Mum.",
+      "words": [
+        [
+          "Dyma",
+          "dyma"
+        ],
+        [
+          "mam",
+          "mam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Here is"
+        ],
+        [
+          "Mum"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dyma yn mam.",
+        "Dyma mam yn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mam",
+          "chwaer",
+          "athro"
+        ]
+      }
+    },
+    {
+      "id": "dyma-fy-mam",
+      "topic": "people",
+      "concepts": [
+        "nasal-mutation"
+      ],
+      "text": "Dyma fy mam.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Dyma",
+          "dyma"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "mam",
+          "mam"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dyma mam fy.",
+        "Dyma fy yn mam."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fy",
+          "yn",
+          "gyda"
+        ]
+      }
+    },
+    {
+      "id": "dyma-fy-nhad",
+      "topic": "people",
+      "concepts": [
+        "nasal-mutation"
+      ],
+      "text": "Dyma fy nhad.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Dyma",
+          "dyma"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "nhad",
+          "tad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dyma nhad fy.",
+        "Dyma fy yn nhad."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nhad",
+          "mam",
+          "chwaer"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-mrawd-yn-fyfyriwr",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "nasal-mutation",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Mae fy mrawd yn fyfyriwr.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "mrawd",
+          "brawd"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "fyfyriwr",
+          "myfyriwr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "brother"
+        ],
+        [
+          "a"
+        ],
+        [
+          "student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae mrawd fy yn fyfyriwr.",
+        "Mae fy mrawd fyfyriwr yn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mrawd",
+          "nhad",
+          "mam"
+        ]
+      }
+    },
+    {
+      "id": "dyma-fy-chwaer",
+      "topic": "people",
+      "concepts": [
+        "nasal-mutation"
+      ],
+      "text": "Dyma fy chwaer.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Dyma",
+          "dyma"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "chwaer",
+          "chwaer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dyma chwaer fy.",
+        "Dyma fy yn chwaer."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "chwaer",
+          "mam",
+          "nhad"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-mam-yn-dda",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Mae fy mam yn dda.",
+      "means": "My mother is well.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "mam",
+          "mam"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "dda",
+          "da"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae mam fy yn dda.",
+        "Mae fy mam dda yn."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mam",
+          "nhad",
+          "chwaer"
+        ]
+      }
+    },
+    {
+      "id": "dyma-ffon",
+      "topic": "people",
+      "concepts": [
+        "bod-present"
+      ],
+      "text": "Dyma ffôn.",
+      "means": "Here's a phone.",
+      "words": [
+        [
+          "Dyma",
+          "dyma"
+        ],
+        [
+          "ffôn",
+          "ffôn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Here is"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dyma yn ffôn.",
+        "Dyma ffôn yn."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ffôn",
+          "allwedd",
+          "llyfr"
+        ]
+      }
+    },
+    {
+      "id": "mae-gen-i-ffon",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "bod-present"
+      ],
+      "text": "Mae gen i ffôn.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ffôn",
+          "ffôn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "with"
+        ],
+        [
+          "me"
+        ],
+        [
+          "a phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae i gen ffôn.",
+        "Mae gen ffôn i."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ffôn",
+          "allwedd",
+          "chwaer"
+        ]
+      }
+    },
+    {
+      "id": "oes-gen-ti-allwedd",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "question"
+      ],
+      "text": "Oes gen ti allwedd?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Oes",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "allwedd",
+          "allwedd"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is there"
+        ],
+        [
+          "with"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Oes ti gen allwedd?",
+        "Oes gen allwedd ti?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "allwedd",
+          "ffôn",
+          "chwaer"
+        ]
+      }
+    },
+    {
+      "id": "mae-gen-i-frawd-a-chwaer",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "soft-mutation"
+      ],
+      "text": "Mae gen i frawd a chwaer.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "frawd",
+          "brawd"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "chwaer",
+          "chwaer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "with"
+        ],
+        [
+          "me"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae i gen frawd a chwaer.",
+        "Mae gen frawd i a chwaer."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "frawd",
+          "mrawd",
+          "nhad"
+        ]
+      }
+    },
+    {
+      "id": "does-gen-i-ddim-llyfr",
+      "topic": "people",
+      "concepts": [
+        "have",
+        "negation"
+      ],
+      "text": "Does gen i ddim llyfr.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Does",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "llyfr",
+          "llyfr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is not"
+        ],
+        [
+          "with"
+        ],
+        [
+          "me"
+        ],
+        [
+          "any"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Does i gen ddim llyfr.",
+        "Does gen i llyfr ddim."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "llyfr",
+          "ffôn",
+          "allwedd"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-chwaer-yn-feddyg",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Mae fy chwaer yn feddyg.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "chwaer",
+          "chwaer"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "feddyg",
+          "meddyg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "a"
+        ],
+        [
+          "doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae chwaer fy yn feddyg.",
+        "Mae fy chwaer feddyg yn."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "feddyg",
+          "athro",
+          "fyfyriwr"
+        ]
+      }
+    },
+    {
+      "id": "rwyt-ti-yn-ffrind-da",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "adjective-after"
+      ],
+      "text": "Rwyt ti yn ffrind da.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Rwyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "ffrind",
+          "ffrind"
+        ],
+        [
+          "da",
+          "da"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "a"
+        ],
+        [
+          "friend"
+        ],
+        [
+          "good"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rwyt i yn ffrind da.",
+        "Rwyt ti ffrind yn da."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ffrind",
+          "athro",
+          "feddyg"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-chwaer-yma",
+      "topic": "out",
+      "concepts": [
+        "bod-present"
+      ],
+      "text": "Mae fy chwaer yma.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "chwaer",
+          "chwaer"
+        ],
+        [
+          "yma",
+          "yma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "sister"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae chwaer fy yma.",
+        "Mae fy chwaer yn yma."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "yma",
+          "yno",
+          "ble"
+        ]
+      }
+    },
+    {
+      "id": "mae-r-allwedd-yno",
+      "topic": "out",
+      "concepts": [
+        "bod-present",
+        "article"
+      ],
+      "text": "Mae'r allwedd yno.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "allwedd",
+          "allwedd"
+        ],
+        [
+          "yno",
+          "yno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is the"
+        ],
+        [
+          "key"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae'r allwedd yn yno.",
+        "Mae'r yno allwedd."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yno",
+          "yma",
+          "ble"
+        ]
+      }
+    },
+    {
+      "id": "ble-mae-fy-allwedd",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bod-present"
+      ],
+      "text": "Ble mae fy allwedd?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Ble",
+          "ble"
+        ],
+        [
+          "mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "allwedd",
+          "allwedd"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ble mae allwedd fy?",
+        "Ble fy mae allwedd?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ble",
+          "Yma",
+          "Yno"
+        ]
+      }
+    },
+    {
+      "id": "esgusodwch-fi-ble-mae-r-toiled",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "article"
+      ],
+      "chunks": [
+        "esgusodwch-fi"
+      ],
+      "text": "Esgusodwch fi, ble mae'r toiled?",
+      "means": "Excuse me, where is the toilet?",
+      "words": [
+        [
+          "Esgusodwch"
+        ],
+        [
+          "fi,"
+        ],
+        [
+          "ble",
+          "ble"
+        ],
+        [
+          "mae'r",
+          "bod"
+        ],
+        [
+          "toiled",
+          "toiled"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is the"
+        ],
+        [
+          "toilet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Esgusodwch fi, ble mae'r yn toiled?",
+        "Esgusodwch fi, ble mae'r toiled yn?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "toiled",
+          "allwedd",
+          "ffôn"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-ffon-yma",
+      "topic": "out",
+      "concepts": [
+        "bod-present"
+      ],
+      "text": "Mae fy ffôn yma.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "ffôn",
+          "ffôn"
+        ],
+        [
+          "yma",
+          "yma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae ffôn fy yma.",
+        "Mae fy ffôn yn yma."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "yma",
+          "yno",
+          "ble"
+        ]
+      }
+    },
+    {
+      "id": "ble-mae-fy-mam",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bod-present"
+      ],
+      "text": "Ble mae fy mam?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Ble",
+          "ble"
+        ],
+        [
+          "mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "mam",
+          "mam"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ble mae mam fy?",
+        "Ble fy mae mam?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mam",
+          "nhad",
+          "chwaer"
+        ]
+      }
+    },
+    {
+      "id": "un-llyfr-os-gwelwch-yn-dda",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Un llyfr, os gwelwch yn dda.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "llyfr,",
+          "llyfr"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Un llyfr, os yn gwelwch dda.",
+        "Un llyfr, os gwelwch dda yn."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Un",
+          "Dau",
+          "dri"
+        ]
+      }
+    },
+    {
+      "id": "dau-goffi-os-gwelwch-yn-dda",
+      "topic": "out",
+      "concepts": [
+        "soft-mutation"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Dau goffi, os gwelwch yn dda.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Dau",
+          "dau"
+        ],
+        [
+          "goffi,",
+          "coffi"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dau coffi, os gwelwch yn dda.",
+        "Dau choffi, os gwelwch yn dda."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "goffi,",
+          "coffi,",
+          "choffi,"
+        ]
+      }
+    },
+    {
+      "id": "esgusodwch-fi-faint-yw-e",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "esgusodwch-fi",
+        "how-much-is-it"
+      ],
+      "text": "Esgusodwch fi, faint yw e?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Esgusodwch"
+        ],
+        [
+          "fi,"
+        ],
+        [
+          "faint"
+        ],
+        [
+          "yw"
+        ],
+        [
+          "e"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much is it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Esgusodwch fi, faint e yw?",
+        "Esgusodwch fi, faint rydw e?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "yw",
+          "ydw",
+          "Rwyt"
+        ]
+      }
+    },
+    {
+      "id": "helo-y-bil-os-gwelwch-yn-dda",
+      "topic": "out",
+      "concepts": [
+        "article"
+      ],
+      "chunks": [
+        "the-bill-please",
+        "hello"
+      ],
+      "text": "Helo! Y bil, os gwelwch yn dda.",
+      "means": "Hello! The bill, please.",
+      "words": [
+        [
+          "Helo!"
+        ],
+        [
+          "Y"
+        ],
+        [
+          "bil,"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the bill, please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Helo! Bil y, os gwelwch yn dda.",
+        "Helo! Y bil, os yn gwelwch dda."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bil,",
+          "coffi,",
+          "llaeth,"
+        ]
+      }
+    },
+    {
+      "id": "mae-gen-i-dri-llyfr",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "soft-mutation"
+      ],
+      "text": "Mae gen i dri llyfr.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "dri",
+          "tri"
+        ],
+        [
+          "llyfr",
+          "llyfr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "with"
+        ],
+        [
+          "me"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae i gen dri llyfr.",
+        "Mae gen dri i llyfr."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dri",
+          "dau",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "does-gen-i-ddim-arian",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "negation"
+      ],
+      "text": "Does gen i ddim arian.",
+      "means": "I don't have any money.",
+      "words": [
+        [
+          "Does",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "arian",
+          "arian"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is not"
+        ],
+        [
+          "with"
+        ],
+        [
+          "me"
+        ],
+        [
+          "any"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Does i gen ddim arian.",
+        "Does gen i arian ddim."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "arian",
+          "llyfr",
+          "ffôn"
+        ]
+      }
+    },
+    {
+      "id": "wyt-ti-yn-siarad-saesneg",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Wyt ti yn siarad Saesneg?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "siarad",
+          "siarad"
+        ],
+        [
+          "Saesneg",
+          "saesneg"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "speaking"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wyt i yn siarad Saesneg?",
+        "Wyt ti siarad yn Saesneg?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "Saesneg",
+          "Cymraeg",
+          "coffi"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-siarad-ychydig-gymraeg",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Rydw i'n siarad ychydig Gymraeg.",
+      "means": "I speak a little Welsh.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "siarad",
+          "siarad"
+        ],
+        [
+          "ychydig",
+          "ychydig"
+        ],
+        [
+          "Gymraeg",
+          "cymraeg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "speaking"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Welsh"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rydw ti yn siarad Cymraeg ychydig.",
+        "I'n rydw siarad Cymraeg ychydig."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ychydig",
+          "yma",
+          "yno"
+        ]
+      }
+    },
+    {
+      "id": "dydw-i-ddim-yn-deall",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Dydw i ddim yn deall.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Dydw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "deall",
+          "deall"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understanding"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dydw ti ddim yn deall.",
+        "Dydw i yn ddim deall."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "deall",
+          "siarad",
+          "yfed"
+        ]
+      }
+    },
+    {
+      "id": "wyt-ti-yn-deall",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Wyt ti yn deall?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "deall",
+          "deall"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "understanding"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wyt i yn deall?",
+        "Wyt ti deall yn?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "deall",
+          "siarad",
+          "yfed"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-eisiau-coffi",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "eisiau"
+      ],
+      "text": "Rydw i eisiau coffi.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "eisiau",
+          "eisiau"
+        ],
+        [
+          "coffi",
+          "coffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "wanting"
+        ],
+        [
+          "a coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rydw i yn eisiau coffi.",
+        "Rydw i'n eisiau coffi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "eisiau",
+          "yfed",
+          "deall"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-eisiau-dwr-os-gwelwch-yn-dda",
+      "topic": "people",
+      "concepts": [
+        "bod-present",
+        "eisiau"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Rydw i eisiau dŵr, os gwelwch yn dda.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "eisiau",
+          "eisiau"
+        ],
+        [
+          "dŵr,",
+          "dŵr"
+        ],
+        [
+          "os"
+        ],
+        [
+          "gwelwch"
+        ],
+        [
+          "yn"
+        ],
+        [
+          "dda"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "wanting"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rydw i yn eisiau dŵr, os gwelwch yn dda.",
+        "Rydw i'n eisiau dŵr, os gwelwch yn dda."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dŵr,",
+          "coffi,",
+          "llaeth,"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-ystafell-yn-fach",
+      "topic": "home",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Mae fy ystafell yn fach.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "ystafell",
+          "ystafell"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "fach",
+          "bach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "room"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae ystafell fy yn fach.",
+        "Mae fy ystafell fach yn."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "fach",
+          "bach",
+          "fawr"
+        ]
+      }
+    },
+    {
+      "id": "mae-r-ty-yma-yn-fawr",
+      "topic": "home",
+      "concepts": [
+        "bod-present",
+        "article",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Mae'r tŷ yma yn fawr.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "tŷ",
+          "tŷ"
+        ],
+        [
+          "yma",
+          "yma"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "fawr",
+          "mawr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is the"
+        ],
+        [
+          "house"
+        ],
+        [
+          "here"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae'r tŷ yma fawr yn.",
+        "Mae'r yn tŷ yma fawr."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "fawr",
+          "fach",
+          "bach"
+        ]
+      }
+    },
+    {
+      "id": "ble-wyt-ti-yn-byw",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Ble wyt ti yn byw?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Ble",
+          "ble"
+        ],
+        [
+          "wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "byw",
+          "byw"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "living"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ble wyt i yn byw?",
+        "Ble wyt ti byw yn?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "byw",
+          "siarad",
+          "yfed"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-mam-yn-byw-yma",
+      "topic": "home",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Mae fy mam yn byw yma.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "mam",
+          "mam"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "byw",
+          "byw"
+        ],
+        [
+          "yma",
+          "yma"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "living"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae mam fy yn byw yma.",
+        "Mae fy mam byw yn yma."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "byw",
+          "siarad",
+          "yfed"
+        ]
+      }
+    },
+    {
+      "id": "mae-r-toiled-yn-y-ty",
+      "topic": "home",
+      "concepts": [
+        "bod-present",
+        "article"
+      ],
+      "text": "Mae'r toiled yn y tŷ.",
+      "means": "The toilet is in the house.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "toiled",
+          "toiled"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "y",
+          "y"
+        ],
+        [
+          "tŷ",
+          "tŷ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is the"
+        ],
+        [
+          "toilet"
+        ],
+        [
+          "in"
+        ],
+        [
+          "the"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae'r toiled mewn y tŷ.",
+        "Mae'r toiled yn tŷ y."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "y",
+          "fy",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "mae-r-car-yma-yn-fach",
+      "topic": "out",
+      "concepts": [
+        "bod-present",
+        "article",
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Mae'r car yma yn fach.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "car",
+          "car"
+        ],
+        [
+          "yma",
+          "yma"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "fach",
+          "bach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is the"
+        ],
+        [
+          "car"
+        ],
+        [
+          "here"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae'r car yma fach yn.",
+        "Mae'r yn car yma fach."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "car",
+          "tŷ",
+          "ffôn"
+        ]
+      }
+    },
+    {
+      "id": "mae-gen-i-gar",
+      "topic": "out",
+      "concepts": [
+        "have",
+        "soft-mutation"
+      ],
+      "text": "Mae gen i gar.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "gar",
+          "car"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "with"
+        ],
+        [
+          "me"
+        ],
+        [
+          "a car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae i gen gar.",
+        "Mae gen gar i."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gar",
+          "car",
+          "ffôn"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-mynd-i-r-ysgol",
+      "topic": "out",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "mynd-i",
+        "article"
+      ],
+      "text": "Rydw i'n mynd i'r ysgol.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i'r",
+          "i"
+        ],
+        [
+          "ysgol",
+          "ysgol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rydw i mynd i'r ysgol.",
+        "Rydw i'n i'r mynd ysgol."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ysgol",
+          "ddinas",
+          "orsaf"
+        ]
+      }
+    },
+    {
+      "id": "ble-wyt-ti-yn-mynd",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Ble wyt ti yn mynd?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Ble",
+          "ble"
+        ],
+        [
+          "wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ble wyt i yn mynd?",
+        "Ble wyt ti mynd yn?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "mynd",
+          "byw",
+          "yfed"
+        ]
+      }
+    },
+    {
+      "id": "mae-fy-mam-yn-mynd-i-r-ddinas",
+      "topic": "out",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "mynd-i",
+        "soft-mutation"
+      ],
+      "text": "Mae fy mam yn mynd i'r ddinas.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "mam",
+          "mam"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i'r",
+          "i"
+        ],
+        [
+          "ddinas",
+          "dinas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "mother"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae mam fy yn mynd i'r ddinas.",
+        "Mae fy mam mynd yn i'r ddinas."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "ddinas",
+          "ysgol",
+          "orsaf"
+        ]
+      }
+    },
+    {
+      "id": "rydw-i-n-gweithio-heddiw",
+      "topic": "plans",
+      "concepts": [
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Rydw i'n gweithio heddiw.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "gweithio",
+          "gweithio"
+        ],
+        [
+          "heddiw",
+          "heddiw"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "working"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rydw i gweithio heddiw.",
+        "I'n rydw gweithio heddiw."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "heddiw",
+          "yfory",
+          "nawr"
+        ]
+      }
+    },
+    {
+      "id": "diolch-wela-i-di-yfory",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Diolch. Wela i di yfory!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Diolch."
+        ],
+        [
+          "Wela"
+        ],
+        [
+          "i"
+        ],
+        [
+          "di"
+        ],
+        [
+          "yfory"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Diolch. Wela di i yfory!",
+        "Diolch. Wela i ti yfory!"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "yfory",
+          "heddiw",
+          "nawr"
+        ]
+      }
+    },
+    {
+      "id": "rhaid-i-mi-fynd-nawr",
+      "topic": "plans",
+      "concepts": [
+        "soft-mutation"
+      ],
+      "text": "Rhaid i mi fynd nawr.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Rhaid",
+          "rhaid"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "mi",
+          "i"
+        ],
+        [
+          "fynd",
+          "mynd"
+        ],
+        [
+          "nawr",
+          "nawr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A necessity"
+        ],
+        [
+          "for"
+        ],
+        [
+          "me"
+        ],
+        [
+          "to go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rhaid i mi mynd nawr.",
+        "Rhaid mi i fynd nawr."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "fynd",
+          "mynd",
+          "gweithio"
+        ]
+      }
+    },
+    {
+      "id": "yfory-rydw-i-n-mynd-i-r-ddinas",
+      "topic": "plans",
+      "concepts": [
+        "bod-present",
+        "yn-linker",
+        "mynd-i",
+        "soft-mutation"
+      ],
+      "text": "Yfory, rydw i'n mynd i'r ddinas.",
+      "means": "Tomorrow I'm going to the city.",
+      "words": [
+        [
+          "Yfory,",
+          "yfory"
+        ],
+        [
+          "rydw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i'r",
+          "i"
+        ],
+        [
+          "ddinas",
+          "dinas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yfory, rydw i mynd i'r ddinas.",
+        "Yfory, rydw i'n i'r mynd ddinas."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Yfory,",
+          "Heddiw,",
+          "Nawr,"
+        ]
+      }
+    },
+    {
+      "id": "dydw-i-ddim-yn-gallu-mynd-heddiw",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "bod-present",
+        "yn-linker"
+      ],
+      "text": "Dydw i ddim yn gallu mynd heddiw.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Dydw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "gallu",
+          "gallu"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "heddiw",
+          "heddiw"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am"
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "able to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dydw ti ddim yn gallu mynd heddiw.",
+        "Dydw i yn ddim gallu mynd heddiw."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "gallu",
+          "eisiau",
+          "gweithio"
+        ]
+      }
+    },
+    {
+      "id": "rhaid-i-mi-weithio-yfory",
+      "topic": "plans",
+      "concepts": [
+        "soft-mutation"
+      ],
+      "text": "Rhaid i mi weithio yfory.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Rhaid",
+          "rhaid"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "mi",
+          "i"
+        ],
+        [
+          "weithio",
+          "gweithio"
+        ],
+        [
+          "yfory",
+          "yfory"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A necessity"
+        ],
+        [
+          "for"
+        ],
+        [
+          "me"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rhaid i mi gweithio yfory.",
+        "Rhaid mi i weithio yfory."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "yfory",
+          "heddiw",
+          "nawr"
+        ]
+      }
+    },
+    {
+      "id": "beth-ydy-dy-enw",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "text": "Beth ydy dy enw di?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Beth",
+          "beth"
+        ],
+        [
+          "ydy",
+          "bod"
+        ],
+        [
+          "dy",
+          "dy"
+        ],
+        [
+          "enw",
+          "enw"
+        ],
+        [
+          "di",
+          "ti"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "is"
+        ],
+        [
+          "your"
+        ],
+        [
+          "name"
+        ],
+        [
+          "(yours)"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Beth dy enw di ydy?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dy",
+          "fy",
+          "ei"
+        ]
+      }
+    },
+    {
+      "id": "byw-yng-nghaerdydd",
+      "topic": "people",
+      "concepts": [
+        "nasal-mutation",
+        "verb-first"
+      ],
+      "text": "Dw i'n byw yng Nghaerdydd.",
+      "means": "I live in Cardiff.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "byw",
+          "byw"
+        ],
+        [
+          "yng"
+        ],
+        [
+          "Nghaerdydd"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "living"
+        ],
+        [
+          "in Cardiff"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n byw i Gaerdydd."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "Nghaerdydd",
+          "Gaerdydd",
+          "Chaerdydd"
+        ]
+      }
+    },
+    {
+      "id": "fy-nhad-yn-athro",
+      "topic": "people",
+      "concepts": [
+        "nasal-mutation",
+        "verb-first"
+      ],
+      "text": "Mae fy nhad yn athro.",
+      "means": "My dad is a teacher.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "fy",
+          "fy"
+        ],
+        [
+          "nhad",
+          "tad"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "athro",
+          "athro"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "my father"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Mae fy thad yn athro."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "nhad",
+          "dad",
+          "thad"
+        ]
+      }
+    },
+    {
+      "id": "ei-thad-hi",
+      "topic": "people",
+      "concepts": [
+        "aspirate-mutation"
+      ],
+      "text": "Mae ei thad hi'n feddyg.",
+      "means": "Her father is a doctor.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "thad",
+          "tad"
+        ],
+        [
+          "hi'n",
+          "hi"
+        ],
+        [
+          "feddyg",
+          "meddyg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "her father"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Mae ei dad hi'n feddyg."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "thad",
+          "dad",
+          "nhad"
+        ]
+      }
+    },
+    {
+      "id": "dy-frawd-yn-dal",
+      "topic": "people",
+      "concepts": [
+        "soft-mutation"
+      ],
+      "text": "Mae dy frawd yn dal.",
+      "means": "Your brother is tall.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "dy",
+          "dy"
+        ],
+        [
+          "frawd",
+          "brawd"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "dal",
+          "tal"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "your brother"
+        ],
+        [
+          "tall"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Mae dy mrawd yn dal."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "frawd",
+          "mrawd",
+          "frodyr"
+        ]
+      }
+    },
+    {
+      "id": "mae-gen-i-chwaer",
+      "topic": "people",
+      "concepts": [
+        "have"
+      ],
+      "text": "Mae gen i chwaer.",
+      "means": "I have a sister.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "chwaer",
+          "chwaer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "with me"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Dw i gen chwaer."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gen",
+          "gyda",
+          "am"
+        ]
+      }
+    },
+    {
+      "id": "dw-i-ddim-yn-gwybod",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Dw i ddim yn gwybod.",
+      "means": "I don't know.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "gwybod",
+          "gwybod"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "knowing"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n ddim gwybod."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ddim",
+          "byth",
+          "hefyd"
+        ]
+      }
+    },
+    {
+      "id": "wyt-ti-n-siarad-cymraeg",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "bod-present"
+      ],
+      "text": "Wyt ti'n siarad Cymraeg?",
+      "means": "Do you speak Welsh?",
+      "words": [
+        [
+          "Wyt",
+          "bod"
+        ],
+        [
+          "ti'n",
+          "ti"
+        ],
+        [
+          "siarad",
+          "siarad"
+        ],
+        [
+          "Cymraeg",
+          "cymraeg"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "speaking"
+        ],
+        [
+          "Welsh"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae ti'n siarad Cymraeg?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Wyt",
+          "Dw",
+          "Mae"
+        ]
+      }
+    },
+    {
+      "id": "dw-i-n-hoffi-coffi",
+      "topic": "home",
+      "concepts": [
+        "bod-present"
+      ],
+      "text": "Dw i'n hoffi coffi.",
+      "means": "I like coffee.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "hoffi",
+          "hoffi"
+        ],
+        [
+          "coffi",
+          "coffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "liking"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n coffi hoffi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dw",
+          "Mae",
+          "Wyt"
+        ]
+      }
+    },
+    {
+      "id": "byw-mewn-ty-bach",
+      "topic": "home",
+      "concepts": [
+        "adjective-after"
+      ],
+      "text": "Dw i'n byw mewn tŷ bach.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "byw",
+          "byw"
+        ],
+        [
+          "mewn",
+          "mewn"
+        ],
+        [
+          "tŷ",
+          "tŷ"
+        ],
+        [
+          "bach",
+          "bach"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "living"
+        ],
+        [
+          "in a"
+        ],
+        [
+          "house"
+        ],
+        [
+          "small",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw",
+        "bach"
+      ],
+      "wrong": [
+        "Dw i'n byw mewn bach tŷ."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mewn",
+          "yn",
+          "o"
+        ]
+      }
+    },
+    {
+      "id": "allweddi-ar-y-bwrdd",
+      "topic": "home",
+      "concepts": [
+        "article",
+        "verb-first"
+      ],
+      "text": "Mae'r allweddi ar y bwrdd.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "allweddi",
+          "allwedd"
+        ],
+        [
+          "ar",
+          "ar"
+        ],
+        [
+          "y",
+          "y"
+        ],
+        [
+          "bwrdd",
+          "bwrdd"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are",
+          true
+        ],
+        [
+          "the keys"
+        ],
+        [
+          "on"
+        ],
+        [
+          "the table"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Mae'r"
+      ],
+      "wrong": [
+        "Mae allweddi ar y bwrdd."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "y",
+          "yr",
+          "'r"
+        ]
+      }
+    },
+    {
+      "id": "does-dim-llaeth",
+      "topic": "home",
+      "concepts": [
+        "negation",
+        "article"
+      ],
+      "text": "Does dim llaeth yn yr oergell.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Does",
+          "bod"
+        ],
+        [
+          "dim",
+          "dim"
+        ],
+        [
+          "llaeth",
+          "llaeth"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "yr",
+          "y"
+        ],
+        [
+          "oergell",
+          "oergell"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Isn't",
+          true
+        ],
+        [
+          "any"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "in"
+        ],
+        [
+          "the fridge"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Does"
+      ],
+      "wrong": [
+        "Does llaeth dim yn yr oergell."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "yr",
+          "y",
+          "'r"
+        ]
+      }
+    },
+    {
+      "id": "mae-mam-yn-coginio",
+      "topic": "home",
+      "concepts": [
+        "yn-linker",
+        "verb-first"
+      ],
+      "text": "Mae Mam yn coginio cinio.",
+      "means": "Mom is cooking dinner.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "Mam",
+          "mam"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "coginio",
+          "coginio"
+        ],
+        [
+          "cinio",
+          "cinio"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "Mom"
+        ],
+        [
+          "cooking"
+        ],
+        [
+          "dinner"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Mae Mam yn goginio cinio."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yn",
+          "wedi",
+          "ddim"
+        ]
+      }
+    },
+    {
+      "id": "dw-i-wedi-bwyta",
+      "topic": "home",
+      "concepts": [
+        "wedi",
+        "yn-linker"
+      ],
+      "text": "Dw i wedi bwyta, diolch.",
+      "means": "I've eaten, thanks.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "wedi",
+          "wedi"
+        ],
+        [
+          "bwyta,",
+          "bwyta"
+        ],
+        [
+          "diolch",
+          "diolch"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "after"
+        ],
+        [
+          "eating,"
+        ],
+        [
+          "thanks"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n wedi bwyta, diolch."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wedi",
+          "yn",
+          "ddim"
+        ]
+      }
+    },
+    {
+      "id": "plant-wedi-mynd-i-r-gwely",
+      "topic": "home",
+      "concepts": [
+        "wedi",
+        "article"
+      ],
+      "text": "Mae'r plant wedi mynd i'r gwely.",
+      "means": "The kids have gone to bed.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "plant",
+          "plentyn"
+        ],
+        [
+          "wedi",
+          "wedi"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i'r",
+          "i"
+        ],
+        [
+          "gwely",
+          "gwely"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are",
+          true
+        ],
+        [
+          "the children"
+        ],
+        [
+          "after"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to the"
+        ],
+        [
+          "bed"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mae'r"
+      ],
+      "wrong": [
+        "Mae plant wedi mynd i'r gwely."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wedi",
+          "ddim",
+          "byth"
+        ]
+      }
+    },
+    {
+      "id": "mae-gen-i-gar-coch",
+      "topic": "home",
+      "concepts": [
+        "have",
+        "soft-mutation",
+        "adjective-after"
+      ],
+      "text": "Mae gen i gar coch.",
+      "means": "I have a red car.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "gar",
+          "car"
+        ],
+        [
+          "coch",
+          "coch"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "with me"
+        ],
+        [
+          "car"
+        ],
+        [
+          "red",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mae",
+        "coch"
+      ],
+      "wrong": [
+        "Mae gen i coch gar."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gar",
+          "nghar",
+          "char"
+        ]
+      }
+    },
+    {
+      "id": "hoffwn-i-goffi",
+      "topic": "food",
+      "concepts": [
+        "soft-mutation"
+      ],
+      "text": "Hoffwn i goffi.",
+      "means": "I'd like a coffee.",
+      "words": [
+        [
+          "Hoffwn",
+          "hoffi"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "goffi",
+          "coffi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Would like",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Hoffwn"
+      ],
+      "wrong": [
+        "Hoffwn i nghoffi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "goffi",
+          "nghoffi",
+          "choffi"
+        ]
+      }
+    },
+    {
+      "id": "cawl-yn-flasus",
+      "topic": "food",
+      "concepts": [
+        "yn-linker",
+        "soft-mutation"
+      ],
+      "text": "Mae'r cawl yn flasus iawn.",
+      "means": "The soup is really tasty.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "cawl",
+          "cawl"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "flasus",
+          "blasus"
+        ],
+        [
+          "iawn",
+          "iawn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "the soup"
+        ],
+        [
+          "tasty"
+        ],
+        [
+          "very",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mae'r",
+        "iawn"
+      ],
+      "wrong": [
+        "Mae'r cawl flasus iawn."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "flasus",
+          "mlasus",
+          "flas"
+        ]
+      }
+    },
+    {
+      "id": "ddim-yn-hoffi-pysgod",
+      "topic": "food",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Dw i ddim yn hoffi pysgod.",
+      "means": "I don't like fish.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "hoffi",
+          "hoffi"
+        ],
+        [
+          "pysgod",
+          "pysgodyn"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "liking"
+        ],
+        [
+          "fish"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n ddim hoffi pysgod."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ddim",
+          "byth",
+          "hefyd"
+        ]
+      }
+    },
+    {
+      "id": "ces-i-frechdan",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "soft-mutation"
+      ],
+      "text": "Ces i frechdan i ginio.",
+      "means": "I had a sandwich for lunch.",
+      "words": [
+        [
+          "Ces",
+          "cael"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "frechdan",
+          "brechdan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ginio",
+          "cinio"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Had",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "a sandwich"
+        ],
+        [
+          "for lunch"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Ces"
+      ],
+      "wrong": [
+        "Ces i'n frechdan i ginio."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "frechdan",
+          "mrechdan",
+          "frechdanau"
+        ]
+      }
+    },
+    {
+      "id": "beth-wyt-ti-eisiau",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "eisiau"
+      ],
+      "text": "Beth wyt ti eisiau i swper?",
+      "means": "What do you want for supper?",
+      "words": [
+        [
+          "Beth",
+          "beth"
+        ],
+        [
+          "wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "eisiau",
+          "eisiau"
+        ],
+        [
+          "i"
+        ],
+        [
+          "swper",
+          "swper"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "wanting"
+        ],
+        [
+          "for supper"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wyt beth ti eisiau i swper?",
+        "Beth wyt ti'n eisiau i swper?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Beth",
+          "Ble",
+          "Pwy"
+        ]
+      }
+    },
+    {
+      "id": "bara-yn-y-gegin",
+      "topic": "food",
+      "concepts": [
+        "soft-mutation"
+      ],
+      "text": "Mae bara yn y gegin.",
+      "means": "There's bread in the kitchen.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "bara",
+          "bara"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "y",
+          "y"
+        ],
+        [
+          "gegin",
+          "cegin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "bread"
+        ],
+        [
+          "in"
+        ],
+        [
+          "the kitchen"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Mae bara yn y nghegin."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "gegin",
+          "nghegin",
+          "chegin"
+        ]
+      }
+    },
+    {
+      "id": "coffi-a-the",
+      "topic": "food",
+      "concepts": [
+        "aspirate-mutation"
+      ],
+      "text": "Dw i'n hoffi coffi a the.",
+      "means": "I like coffee and tea.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "hoffi",
+          "hoffi"
+        ],
+        [
+          "coffi",
+          "coffi"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "the",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "liking"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n hoffi coffi a de."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "the",
+          "de",
+          "nhe"
+        ]
+      }
+    },
+    {
+      "id": "ei-chath-hi",
+      "topic": "food",
+      "concepts": [
+        "aspirate-mutation"
+      ],
+      "text": "Mae ei chath hi'n ddu.",
+      "means": "Her cat is black.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "ei",
+          "ei"
+        ],
+        [
+          "chath",
+          "cath"
+        ],
+        [
+          "hi'n",
+          "hi"
+        ],
+        [
+          "ddu",
+          "du"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "her cat"
+        ],
+        [
+          "black"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Mae ei gath hi'n ddu."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "chath",
+          "gath",
+          "nghath"
+        ]
+      }
+    },
+    {
+      "id": "gwin-coch",
+      "topic": "food",
+      "concepts": [
+        "adjective-after"
+      ],
+      "text": "Dw i'n hoffi gwin coch.",
+      "means": "I like red wine.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "hoffi",
+          "hoffi"
+        ],
+        [
+          "gwin",
+          "gwin"
+        ],
+        [
+          "coch",
+          "coch"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "liking"
+        ],
+        [
+          "wine"
+        ],
+        [
+          "red",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw",
+        "coch"
+      ],
+      "wrong": [
+        "Dw i'n hoffi coch gwin."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "coch",
+          "goch",
+          "nghoch"
+        ]
+      }
+    },
+    {
+      "id": "ble-mae-r-orsaf",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "soft-mutation"
+      ],
+      "chunks": [
+        "esgusodwch-fi"
+      ],
+      "text": "Esgusodwch fi, ble mae'r orsaf drenau?",
+      "means": "Excuse me, where's the train station?",
+      "words": [
+        [
+          "Esgusodwch"
+        ],
+        [
+          "fi,"
+        ],
+        [
+          "ble",
+          "ble"
+        ],
+        [
+          "mae'r",
+          "bod"
+        ],
+        [
+          "orsaf",
+          "gorsaf"
+        ],
+        [
+          "drenau",
+          "trên"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse"
+        ],
+        [
+          "me,"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is the"
+        ],
+        [
+          "station"
+        ],
+        [
+          "of trains",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "drenau"
+      ],
+      "wrong": [
+        "Esgusodwch fi, ble wyt yr orsaf drenau?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "orsaf",
+          "ngorsaf",
+          "gorsafoedd"
+        ]
+      }
+    },
+    {
+      "id": "faint-ydy-hwn",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Faint ydy hwn?",
+      "means": "How much is this?",
+      "words": [
+        [
+          "Faint",
+          "faint"
+        ],
+        [
+          "ydy",
+          "bod"
+        ],
+        [
+          "hwn",
+          "hwn"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "is"
+        ],
+        [
+          "this"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Faint wyt hwn?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Faint",
+          "Ble",
+          "Pwy"
+        ]
+      }
+    },
+    {
+      "id": "mynd-i-r-dre",
+      "topic": "out",
+      "concepts": [
+        "bod-present"
+      ],
+      "text": "Dw i'n mynd i'r dref.",
+      "means": "I'm going into town.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i'r",
+          "i"
+        ],
+        [
+          "dref",
+          "tref"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to the town"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Mae i'n mynd i'r dref."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dw",
+          "Mae",
+          "Wyt"
+        ]
+      }
+    },
+    {
+      "id": "bws-yn-hwyr",
+      "topic": "out",
+      "concepts": [
+        "verb-first",
+        "yn-linker"
+      ],
+      "text": "Mae'r bws yn hwyr.",
+      "means": "The bus is late.",
+      "words": [
+        [
+          "Mae'r",
+          "bod"
+        ],
+        [
+          "bws",
+          "bws"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "hwyr",
+          "hwyr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "the bus"
+        ],
+        [
+          "late"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Mae'r"
+      ],
+      "wrong": [
+        "Mae'r bws hwyr."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hwyr",
+          "heddiw",
+          "yfory"
+        ]
+      }
+    },
+    {
+      "id": "mynd-i-ddal-y-tren",
+      "topic": "out",
+      "concepts": [
+        "mynd-i",
+        "soft-mutation"
+      ],
+      "text": "Dw i'n mynd i ddal y trên.",
+      "means": "I'm going to catch the train.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddal",
+          "dal"
+        ],
+        [
+          "y",
+          "y"
+        ],
+        [
+          "trên",
+          "trên"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "catch"
+        ],
+        [
+          "the train"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n mynd i'n dal y trên."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ddal",
+          "nal",
+          "thal"
+        ]
+      }
+    },
+    {
+      "id": "es-i-adref-mewn-tacsi",
+      "topic": "out",
+      "concepts": [
+        "past"
+      ],
+      "text": "Es i adref mewn tacsi.",
+      "means": "I went home in a taxi.",
+      "words": [
+        [
+          "Es",
+          "mynd"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "adref",
+          "adref"
+        ],
+        [
+          "mewn",
+          "mewn"
+        ],
+        [
+          "tacsi",
+          "tacsi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Went",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "home"
+        ],
+        [
+          "in a"
+        ],
+        [
+          "taxi"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "moved": [
+        "Es"
+      ],
+      "wrong": [
+        "Es i'n adref mewn tacsi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Es",
+          "Dw",
+          "Wyt"
+        ]
+      }
+    },
+    {
+      "id": "wedi-bod-yng-nghymru",
+      "topic": "out",
+      "concepts": [
+        "wedi",
+        "nasal-mutation"
+      ],
+      "text": "Wyt ti wedi bod yng Nghymru?",
+      "means": "Have you been to Wales?",
+      "words": [
+        [
+          "Wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "wedi",
+          "wedi"
+        ],
+        [
+          "bod",
+          "bod"
+        ],
+        [
+          "yng"
+        ],
+        [
+          "Nghymru"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "after"
+        ],
+        [
+          "being"
+        ],
+        [
+          "in Wales"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Wyt ti'n wedi bod yng Nghymru?"
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "Nghymru",
+          "Gymru",
+          "Chymru"
+        ]
+      }
+    },
+    {
+      "id": "sori-ddim-yn-deall",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Sori, dw i ddim yn deall.",
+      "means": "Sorry, I don't understand.",
+      "words": [
+        [
+          "Sori,",
+          "sori"
+        ],
+        [
+          "dw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "yn",
+          "yn"
+        ],
+        [
+          "deall",
+          "deall"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sorry,"
+        ],
+        [
+          "am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "understanding"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dw"
+      ],
+      "wrong": [
+        "Sori, dw i'n ddim deall."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ddim",
+          "byth",
+          "hefyd"
+        ]
+      }
+    },
+    {
+      "id": "mynd-i-weld-ffrindiau",
+      "topic": "plans",
+      "concepts": [
+        "mynd-i",
+        "soft-mutation"
+      ],
+      "text": "Dw i'n mynd i weld ffrindiau yfory.",
+      "means": "I'm going to see friends tomorrow.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i'n",
+          "i"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "weld",
+          "gweld"
+        ],
+        [
+          "ffrindiau",
+          "ffrind"
+        ],
+        [
+          "yfory",
+          "yfory"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "see"
+        ],
+        [
+          "friends"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i wedi mynd i weld ffrindiau yfory."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "weld",
+          "ngweld",
+          "gwelodd"
+        ]
+      }
+    },
+    {
+      "id": "rydyn-ni-n-mynd-i-fwyta",
+      "topic": "plans",
+      "concepts": [
+        "mynd-i",
+        "soft-mutation"
+      ],
+      "text": "Rydyn ni'n mynd i fwyta allan heno.",
+      "means": "We're going to eat out tonight.",
+      "words": [
+        [
+          "Rydyn",
+          "bod"
+        ],
+        [
+          "ni'n",
+          "ni"
+        ],
+        [
+          "mynd",
+          "mynd"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "fwyta",
+          "bwyta"
+        ],
+        [
+          "allan",
+          "allan"
+        ],
+        [
+          "heno",
+          "heno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Are",
+          true
+        ],
+        [
+          "we"
+        ],
+        [
+          "going"
+        ],
+        [
+          "to"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "out"
+        ],
+        [
+          "tonight"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "moved": [
+        "Rydyn"
+      ],
+      "wrong": [
+        "Rydyn ni'n mynd i fwyta allan ddoe."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "fwyta",
+          "mwyta",
+          "fwytodd"
+        ]
+      }
+    },
+    {
+      "id": "bydd-hi-n-bwrw-glaw",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Bydd hi'n bwrw glaw yfory.",
+      "means": "It's going to rain tomorrow.",
+      "words": [
+        [
+          "Bydd",
+          "bod"
+        ],
+        [
+          "hi'n",
+          "hi"
+        ],
+        [
+          "bwrw",
+          "bwrw"
+        ],
+        [
+          "glaw",
+          "glaw"
+        ],
+        [
+          "yfory",
+          "yfory"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will be",
+          true
+        ],
+        [
+          "it"
+        ],
+        [
+          "throwing"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Bydd"
+      ],
+      "wrong": [
+        "Roedd hi'n bwrw glaw yfory."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bydd",
+          "Roedd",
+          "Oedd"
+        ]
+      }
+    },
+    {
+      "id": "bydda-i-adref-heno",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Bydda i adref heno.",
+      "means": "I'll be home tonight.",
+      "words": [
+        [
+          "Bydda",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "adref",
+          "adref"
+        ],
+        [
+          "heno",
+          "heno"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will be",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "home"
+        ],
+        [
+          "tonight"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Bydda"
+      ],
+      "wrong": [
+        "Roeddwn i adref heno."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bydda",
+          "Bydd",
+          "Byddi"
+        ]
+      }
+    },
+    {
+      "id": "siop-ar-gau-yfory",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Bydd y siop ar gau yfory.",
+      "means": "The shop will be closed tomorrow.",
+      "words": [
+        [
+          "Bydd",
+          "bod"
+        ],
+        [
+          "y",
+          "y"
+        ],
+        [
+          "siop",
+          "siop"
+        ],
+        [
+          "ar",
+          "ar"
+        ],
+        [
+          "gau",
+          "cau"
+        ],
+        [
+          "yfory",
+          "yfory"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Will be",
+          true
+        ],
+        [
+          "the shop"
+        ],
+        [
+          "closed"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Bydd"
+      ],
+      "wrong": [
+        "Roedd y siop ar gau yfory."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bydd",
+          "Roedd",
+          "Oedd"
+        ]
+      }
+    },
+    {
+      "id": "mae-hi-n-oer-heddiw",
+      "topic": "plans",
+      "concepts": [
+        "verb-first"
+      ],
+      "text": "Mae hi'n oer heddiw.",
+      "means": "It's cold today.",
+      "words": [
+        [
+          "Mae",
+          "bod"
+        ],
+        [
+          "hi'n",
+          "hi"
+        ],
+        [
+          "oer",
+          "oer"
+        ],
+        [
+          "heddiw",
+          "heddiw"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "it"
+        ],
+        [
+          "cold"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Mae"
+      ],
+      "wrong": [
+        "Hi'n oer mae heddiw."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "heddiw",
+          "ddoe",
+          "yfory"
+        ]
+      }
+    },
+    {
+      "id": "roedd-hi-n-braf-ddoe",
+      "topic": "plans",
+      "concepts": [
+        "past"
+      ],
+      "text": "Roedd hi'n braf ddoe.",
+      "means": "It was nice yesterday.",
+      "words": [
+        [
+          "Roedd",
+          "bod"
+        ],
+        [
+          "hi'n",
+          "hi"
+        ],
+        [
+          "braf",
+          "braf"
+        ],
+        [
+          "ddoe",
+          "doe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Was",
+          true
+        ],
+        [
+          "it"
+        ],
+        [
+          "fine"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Roedd"
+      ],
+      "wrong": [
+        "Mae hi'n braf ddoe."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Roedd",
+          "Mae",
+          "Bydd"
+        ]
+      }
+    },
+    {
+      "id": "dw-i-wedi-blino",
+      "topic": "plans",
+      "concepts": [
+        "wedi"
+      ],
+      "text": "Dw i wedi blino.",
+      "means": "I'm tired.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "wedi",
+          "wedi"
+        ],
+        [
+          "blino",
+          "blino"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "after"
+        ],
+        [
+          "getting tired"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n wedi blino."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "wedi",
+          "ddim",
+          "byth"
+        ]
+      }
+    },
+    {
+      "id": "wyt-ti-eisiau-dod",
+      "topic": "plans",
+      "concepts": [
+        "question",
+        "eisiau"
+      ],
+      "text": "Wyt ti eisiau dod gyda ni?",
+      "means": "Do you want to come with us?",
+      "words": [
+        [
+          "Wyt",
+          "bod"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "eisiau",
+          "eisiau"
+        ],
+        [
+          "dod",
+          "dod"
+        ],
+        [
+          "gyda",
+          "gyda"
+        ],
+        [
+          "ni",
+          "ni"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Are"
+        ],
+        [
+          "you"
+        ],
+        [
+          "wanting"
+        ],
+        [
+          "come"
+        ],
+        [
+          "with"
+        ],
+        [
+          "us"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mae ti eisiau dod gyda ni?",
+        "Wyt ti eisiau i ddod gyda ni?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Wyt",
+          "Dw",
+          "Mae"
+        ]
+      }
+    },
+    {
+      "id": "eisiau-dysgu-cymraeg",
+      "topic": "plans",
+      "concepts": [
+        "eisiau"
+      ],
+      "text": "Dw i eisiau dysgu Cymraeg.",
+      "means": "I want to learn Welsh.",
+      "words": [
+        [
+          "Dw",
+          "bod"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "eisiau",
+          "eisiau"
+        ],
+        [
+          "dysgu",
+          "dysgu"
+        ],
+        [
+          "Cymraeg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Am",
+          true
+        ],
+        [
+          "I"
+        ],
+        [
+          "wanting"
+        ],
+        [
+          "learn"
+        ],
+        [
+          "Welsh"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Dw"
+      ],
+      "wrong": [
+        "Dw i'n eisiau i ddysgu Cymraeg."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "eisiau",
+          "angen",
+          "gallu"
+        ]
+      }
+    },
+    {
+      "id": "does-gen-i-ddim-amser",
+      "topic": "plans",
+      "concepts": [
+        "have",
+        "negation"
+      ],
+      "text": "Does gen i ddim amser heddiw.",
+      "means": "I don't have time today.",
+      "words": [
+        [
+          "Does",
+          "bod"
+        ],
+        [
+          "gen",
+          "gan"
+        ],
+        [
+          "i",
+          "i"
+        ],
+        [
+          "ddim",
+          "dim"
+        ],
+        [
+          "amser",
+          "amser"
+        ],
+        [
+          "heddiw",
+          "heddiw"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Isn't",
+          true
+        ],
+        [
+          "with me"
+        ],
+        [
+          "any"
+        ],
+        [
+          "time"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Does"
+      ],
+      "wrong": [
+        "Dw i ddim gen amser heddiw."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ddim",
+          "byth",
+          "hefyd"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "bod",
+          "forms": [
+            "Rydw"
+          ],
+          "means": "Rydw = am"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i'n"
+          ],
+          "means": "i'n = I"
+        },
+        {
+          "lemma": "yfed",
+          "forms": [
+            "yfed"
+          ],
+          "picture": "drink",
+          "means": "to drink"
+        },
+        {
+          "lemma": "coffi",
+          "forms": [
+            "coffi",
+            "choffi"
+          ],
+          "picture": "coffee",
+          "means": "coffi = coffee; choffi = coffee"
+        },
+        {
+          "lemma": "te",
+          "forms": [
+            "te",
+            "the"
+          ],
+          "picture": "tea",
+          "means": "te = tea; the = tea"
+        },
+        {
+          "lemma": "dŵr",
+          "forms": [
+            "dŵr"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "a",
+          "forms": [
+            "a"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "bod-present",
+        "line": "A form of bod (be) starts most present sentences: dw i (am I), rwyt ti (are you), mae e, o or hi (is he, she, it), while a question uses a form such as Wyt ti…?"
+      },
+      "items": [
+        "rydw-i-n-yfed-coffi",
+        "rydw-i-n-yfed-te",
+        "rydw-i-n-yfed-dwr",
+        "rydw-i-n-yfed-coffi-a-the",
+        "rydw-i-n-yfed-te-a-dwr",
+        "rydw-i-n-yfed-dwr-a-choffi"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "llaeth",
+          "forms": [
+            "llaeth"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        },
+        {
+          "lemma": "gyda",
+          "forms": [
+            "gyda"
+          ],
+          "means": "with"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "coffi-os-gwelwch-yn-dda",
+        "helo-coffi-os-gwelwch-yn-dda",
+        "te-a-dwr-os-gwelwch-yn-dda",
+        "llaeth-os-gwelwch-yn-dda",
+        "coffi-diolch",
+        "helo-te-os-gwelwch-yn-dda",
+        "rydw-i-n-yfed-llaeth",
+        "coffi-gyda-llaeth-os-gwelwch-yn-dda"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "da",
+          "forms": [
+            "dda"
+          ],
+          "means": "dda = well"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "yn-linker",
+        "line": "After bod, yn (just 'n after a vowel) joins the action or description: Dw i'n byw (am I living), Mae hi'n oer (is it cold); after wedi there's no yn."
+      },
+      "items": [
+        "helo-sut-wyt-ti",
+        "rydw-i-n-dda-diolch",
+        "ie-os-gwelwch-yn-dda",
+        "na-diolch",
+        "ie-diolch-hwyl-fawr",
+        "na-diolch-hwyl-fawr"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ti",
+          "forms": [
+            "ti"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "dim",
+          "forms": [
+            "ddim"
+          ],
+          "means": "ddim = not"
+        },
+        {
+          "lemma": "athro",
+          "forms": [
+            "athro"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "myfyriwr",
+          "forms": [
+            "fyfyriwr"
+          ],
+          "means": "fyfyriwr = student"
+        },
+        {
+          "lemma": "yn",
+          "forms": [
+            "yn"
+          ],
+          "means": "linking particle"
+        },
+        {
+          "lemma": "bod",
+          "forms": [
+            "ydw",
+            "Rwyt",
+            "Wyt",
+            "Dydw"
+          ],
+          "means": "ydw = am; Rwyt = are; Wyt = are; Dydw = am not"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i"
+          ],
+          "means": "I, me"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "helo-beth-yw-dy-enw",
+        "helo-braf-cwrdd-a-thi",
+        "athro-ydw-i",
+        "rwyt-ti-yn-fyfyriwr",
+        "wyt-ti-yn-athro",
+        "dydw-i-ddim-yn-athro"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mam",
+          "forms": [
+            "mam"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "tad",
+          "forms": [
+            "nhad"
+          ],
+          "picture": "father",
+          "means": "nhad = father"
+        },
+        {
+          "lemma": "brawd",
+          "forms": [
+            "mrawd"
+          ],
+          "picture": "brother",
+          "means": "mrawd = brother"
+        },
+        {
+          "lemma": "chwaer",
+          "forms": [
+            "chwaer"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "fy",
+          "forms": [
+            "fy"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "dyma",
+          "forms": [
+            "Dyma"
+          ],
+          "means": "this is"
+        },
+        {
+          "lemma": "bod",
+          "forms": [
+            "Mae"
+          ],
+          "means": "Mae = is"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "soft-mutation",
+        "line": "Many words soften their first sound after certain words: dy (your), i (to), o (from), a feminine singular noun after y, the thing after gen i: tad → dy dad (your dad), cegin → y gegin (the kitchen)."
+      },
+      "items": [
+        "dyma-mam",
+        "dyma-fy-mam",
+        "dyma-fy-nhad",
+        "fy-nhad-yn-athro",
+        "mae-fy-mrawd-yn-fyfyriwr",
+        "dyma-fy-chwaer",
+        "mae-fy-mam-yn-dda"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "gan",
+          "forms": [
+            "gen"
+          ],
+          "means": "gen = with"
+        },
+        {
+          "lemma": "ffrind",
+          "forms": [
+            "ffrind"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "meddyg",
+          "forms": [
+            "feddyg"
+          ],
+          "picture": "doctor",
+          "means": "feddyg = doctor"
+        },
+        {
+          "lemma": "allwedd",
+          "forms": [
+            "allwedd"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "ffôn",
+          "forms": [
+            "ffôn"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "llyfr",
+          "forms": [
+            "llyfr"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "bod",
+          "forms": [
+            "Oes",
+            "Does"
+          ],
+          "means": "Oes = is there; Does = there is not"
+        },
+        {
+          "lemma": "brawd",
+          "forms": [
+            "frawd"
+          ],
+          "means": "frawd = brother"
+        },
+        {
+          "lemma": "da",
+          "forms": [
+            "da"
+          ],
+          "means": "good, fine"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "dyma-ffon",
+        "mae-gen-i-ffon",
+        "mae-gen-i-chwaer",
+        "oes-gen-ti-allwedd",
+        "mae-gen-i-frawd-a-chwaer",
+        "does-gen-i-ddim-llyfr",
+        "mae-fy-chwaer-yn-feddyg",
+        "rwyt-ti-yn-ffrind-da"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "ble",
+          "forms": [
+            "ble"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "yma",
+          "forms": [
+            "yma"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "yno",
+          "forms": [
+            "yno"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "toiled",
+          "forms": [
+            "toiled"
+          ],
+          "means": "toilet"
+        },
+        {
+          "lemma": "bod",
+          "forms": [
+            "mae'r"
+          ],
+          "means": "mae'r = is the"
+        },
+        {
+          "lemma": "ffôn",
+          "forms": [
+            "ffôn"
+          ],
+          "means": "phone"
+        }
+      ],
+      "phrases": [
+        "esgusodwch-fi"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "A yes-or-no question starts with bod's question form (Wyt ti'n siarad Cymraeg?"
+      },
+      "items": [
+        "mae-fy-chwaer-yma",
+        "mae-r-allwedd-yno",
+        "ble-mae-fy-allwedd",
+        "esgusodwch-fi-ble-mae-r-toiled",
+        "mae-fy-ffon-yma",
+        "ble-mae-fy-mam"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "un",
+          "forms": [
+            "Un"
+          ],
+          "means": "one"
+        },
+        {
+          "lemma": "dau",
+          "forms": [
+            "Dau"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "tri",
+          "forms": [
+            "dri"
+          ],
+          "picture": "three",
+          "means": "dri = three"
+        },
+        {
+          "lemma": "arian",
+          "forms": [
+            "arian"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "coffi",
+          "forms": [
+            "goffi"
+          ],
+          "means": "goffi = coffees"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-bill-please"
+      ],
+      "concept": null,
+      "items": [
+        "un-llyfr-os-gwelwch-yn-dda",
+        "dau-goffi-os-gwelwch-yn-dda",
+        "esgusodwch-fi-faint-yw-e",
+        "helo-y-bil-os-gwelwch-yn-dda",
+        "mae-gen-i-dri-llyfr",
+        "does-gen-i-ddim-arian"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "siarad",
+          "forms": [
+            "siarad"
+          ],
+          "means": "to speak"
+        },
+        {
+          "lemma": "saesneg",
+          "forms": [
+            "Saesneg"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "cymraeg",
+          "forms": [
+            "Cymraeg",
+            "Gymraeg"
+          ],
+          "means": "Cymraeg = Welsh; Gymraeg = Welsh"
+        },
+        {
+          "lemma": "deall",
+          "forms": [
+            "deall"
+          ],
+          "means": "to understand"
+        },
+        {
+          "lemma": "ychydig",
+          "forms": [
+            "ychydig"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "eisiau",
+          "forms": [
+            "eisiau"
+          ],
+          "means": "to want"
+        },
+        {
+          "lemma": "ti",
+          "forms": [
+            "ti'n"
+          ],
+          "means": "ti'n = you"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "negation",
+        "line": "ddim (not) goes after who: Dw i ddim yn gwybod (am I not knowing); there isn't is does dim: Does dim llaeth (isn't any milk)."
+      },
+      "items": [
+        "wyt-ti-yn-siarad-saesneg",
+        "wyt-ti-n-siarad-cymraeg",
+        "rydw-i-n-siarad-ychydig-gymraeg",
+        "dydw-i-ddim-yn-deall",
+        "wyt-ti-yn-deall",
+        "rydw-i-eisiau-coffi",
+        "rydw-i-eisiau-dwr-os-gwelwch-yn-dda"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "tŷ",
+          "forms": [
+            "tŷ"
+          ],
+          "picture": "house",
+          "means": "house"
+        },
+        {
+          "lemma": "ystafell",
+          "forms": [
+            "ystafell"
+          ],
+          "picture": "room",
+          "means": "room"
+        },
+        {
+          "lemma": "mawr",
+          "forms": [
+            "fawr"
+          ],
+          "picture": "big",
+          "means": "fawr = big"
+        },
+        {
+          "lemma": "bach",
+          "forms": [
+            "fach",
+            "bach"
+          ],
+          "picture": "small",
+          "means": "fach = small; bach = small"
+        },
+        {
+          "lemma": "byw",
+          "forms": [
+            "byw"
+          ],
+          "means": "to live"
+        },
+        {
+          "lemma": "mewn",
+          "forms": [
+            "mewn"
+          ],
+          "picture": "in",
+          "means": "in a"
+        },
+        {
+          "lemma": "y",
+          "forms": [
+            "y"
+          ],
+          "means": "the"
+        },
+        {
+          "lemma": "bod",
+          "forms": [
+            "Dw"
+          ],
+          "means": "Dw = am"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mae-fy-ystafell-yn-fach",
+        "mae-r-ty-yma-yn-fawr",
+        "byw-mewn-ty-bach",
+        "ble-wyt-ti-yn-byw",
+        "mae-fy-mam-yn-byw-yma",
+        "mae-r-toiled-yn-y-ty"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "mynd",
+          "forms": [
+            "mynd"
+          ],
+          "means": "to go"
+        },
+        {
+          "lemma": "ysgol",
+          "forms": [
+            "ysgol"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "dinas",
+          "forms": [
+            "ddinas"
+          ],
+          "picture": "city",
+          "means": "ddinas = city"
+        },
+        {
+          "lemma": "gorsaf",
+          "forms": [
+            "orsaf"
+          ],
+          "means": "orsaf = station"
+        },
+        {
+          "lemma": "trên",
+          "forms": [
+            "drenau"
+          ],
+          "means": "drenau = trains"
+        },
+        {
+          "lemma": "car",
+          "forms": [
+            "car",
+            "gar"
+          ],
+          "picture": "car",
+          "means": "car = car; gar = car"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i'r"
+          ],
+          "means": "i'r = to the"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "have",
+        "line": "Welsh says something is with you: Mae gen i gar (is with me car: I have a car), and the thing softens after gen i; does gen i ddim is I don't have."
+      },
+      "items": [
+        "mae-r-car-yma-yn-fach",
+        "mae-gen-i-gar",
+        "rydw-i-n-mynd-i-r-ysgol",
+        "ble-wyt-ti-yn-mynd",
+        "ble-mae-r-orsaf",
+        "mae-fy-mam-yn-mynd-i-r-ddinas"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "heddiw",
+          "forms": [
+            "heddiw"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "yfory",
+          "forms": [
+            "yfory"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "nawr",
+          "forms": [
+            "nawr"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "gweithio",
+          "forms": [
+            "gweithio",
+            "weithio"
+          ],
+          "picture": "work",
+          "means": "gweithio = working; weithio = work"
+        },
+        {
+          "lemma": "rhaid",
+          "forms": [
+            "Rhaid"
+          ],
+          "means": "must"
+        },
+        {
+          "lemma": "gallu",
+          "forms": [
+            "gallu"
+          ],
+          "means": "to be able to"
+        },
+        {
+          "lemma": "i",
+          "forms": [
+            "i",
+            "mi"
+          ],
+          "means": "i = to; mi = me"
+        },
+        {
+          "lemma": "mynd",
+          "forms": [
+            "fynd"
+          ],
+          "means": "fynd = go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "rydw-i-n-gweithio-heddiw",
+        "diolch-wela-i-di-yfory",
+        "rhaid-i-mi-fynd-nawr",
+        "yfory-rydw-i-n-mynd-i-r-ddinas",
+        "dydw-i-ddim-yn-gallu-mynd-heddiw",
+        "rhaid-i-mi-weithio-yfory"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

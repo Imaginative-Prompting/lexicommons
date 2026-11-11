@@ -1,0 +1,7583 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-br",
+  "name": "Starter: Breton",
+  "about": "Breton in real, everyday sentences, with each one's words in Breton order.",
+  "language": "br",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "kafe": "coffee",
+    "te": "tea",
+    "dour": "water",
+    "me": "I (stressed)",
+    "evañ": "drink",
+    "ha": "and (hag before a vowel); whether",
+    "a": "of (after amounts or n'eus ket); (verb marker after a subject/object put first)",
+    "un": "a, an (ur, ul)",
+    "laezh": "milk",
+    "banne": "cup (of a drink)",
+    "mat": "good, fine",
+    "bezañ": "be (eo: is; emañ/emaon: where or -ing; on: I'm; vo: will be; n'eus: there isn't)",
+    "ne": "not (with ket)",
+    "ket": "not (with ne)",
+    "kelenner": "teacher",
+    "studier": "student",
+    "mamm": "mother, mom",
+    "tad": "father, dad",
+    "breur": "brother",
+    "c'hoar": "sister",
+    "ma": "my",
+    "hemañ": "this",
+    "kaout": "have (am/em eus: I have, en deus: he has, he deus: she has, o deus: they have)",
+    "mignon": "friend",
+    "mezeg": "doctor",
+    "alc'hwez": "key",
+    "pellgomzer": "phone",
+    "levr": "book",
+    "pelec'h": "where",
+    "amañ": "here",
+    "aze": "there",
+    "an": "the (ar, al)",
+    "ti-bihan": "toilet, bathroom",
+    "daou": "two",
+    "tri": "three",
+    "arc'hant": "money",
+    "komz": "speak",
+    "saozneg": "English (the language)",
+    "brezhoneg": "Breton (the language)",
+    "kompren": "understand",
+    "mennout": "to want",
+    "ober": "do (a ran: I do, a rin: I'll do)",
+    "ti": "house",
+    "kambr": "room",
+    "bras": "big",
+    "bihan": "small, little",
+    "chom": "to live",
+    "e": "in; his; (before the verb, after anything else put first; ez before a vowel)",
+    "mont": "go (aet: gone)",
+    "da": "your (to a friend); to",
+    "skol": "school",
+    "kêr": "town; home (er gêr: at home)",
+    "ti-gar": "train station",
+    "karr": "car",
+    "hiziv": "today",
+    "warc'hoazh": "tomorrow",
+    "bremañ": "now",
+    "labourat": "work",
+    "rankout": "to have to",
+    "gallout": "to be able to",
+    "petra": "what",
+    "anv": "name",
+    "en": "in the (before a vowel)",
+    "ospital": "hospital",
+    "skuizh": "tired",
+    "he": "her",
+    "galleg": "French (the language)",
+    "o": "(before a verb: -ing); their",
+    "er": "in the",
+    "karout": "love, like",
+    "sonerezh": "music",
+    "kazh": "cat",
+    "war": "on",
+    "taol": "table",
+    "prenañ": "buy",
+    "kador": "chair",
+    "nevez": "new",
+    "naetaat": "clean",
+    "kegin": "kitchen",
+    "ken": "anymore",
+    "kalz": "a lot",
+    "tud": "people",
+    "bus": "bus",
+    "pep": "every (bep mintin: every morning)",
+    "mintin": "morning",
+    "naon": "hunger",
+    "debriñ": "eat",
+    "kig": "meat",
+    "pegement": "how much",
+    "preti": "restaurant",
+    "dec'h": "yesterday",
+    "bara": "bread",
+    "diwezhat": "late",
+    "gortoz": "wait (for)",
+    "glav": "rain",
+    "brav": "fine, nice",
+    "amzer": "weather; time",
+    "lenn": "read",
+    "fenoz": "tonight",
+    "gouzout": "know",
+    "dont": "come",
+    "gant": "with (ganeomp: with us)",
+    "kozh": "old",
+    "plac'h": "girl",
+    "kanañ": "sing"
+  },
+  "chunks": {
+    "mar-plij": {
+      "text": "mar plij",
+      "en": "please",
+      "about": "Literally if it pleases; the same to anyone."
+    },
+    "hello": {
+      "text": "Demat",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "trugarez",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Penaos emaout",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Kenavo",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Ya",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Nann",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Petra eo da anv",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Laouen on oc'h ober da anaoudegezh",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Digarez",
+      "en": "excuse me"
+    },
+    "how-much-is-it": {
+      "text": "Pegement eo",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "Ar gont, mar plij",
+      "en": "the check, please"
+    },
+    "a-little": {
+      "text": "un tamm",
+      "en": "a little"
+    },
+    "see-you-tomorrow": {
+      "text": "Ken arc'hoazh",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "kafe-te",
+      "topic": "food",
+      "concepts": [
+        "question"
+      ],
+      "text": "Kafe? Te?",
+      "means": "Coffee? Tea?",
+      "words": [
+        [
+          "Kafe?",
+          "kafe"
+        ],
+        [
+          "Te",
+          "te"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "Tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafe a te?",
+        "Kafe te a?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kafe?",
+          "Te?",
+          "Dour?"
+        ]
+      }
+    },
+    {
+      "id": "kafe-ha-dour",
+      "topic": "food",
+      "concepts": [
+        "question"
+      ],
+      "text": "Kafe ha dour?",
+      "means": "Coffee and water?",
+      "words": [
+        [
+          "Kafe",
+          "kafe"
+        ],
+        [
+          "ha",
+          "ha"
+        ],
+        [
+          "dour",
+          "dour"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafe a ha dour?",
+        "Kafe ha a dour?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "dour",
+          "te",
+          "kafe"
+        ]
+      }
+    },
+    {
+      "id": "kafe-a-evan",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "focus-first"
+      ],
+      "text": "Kafe a evan.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Kafe",
+          "kafe"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "evan",
+          "evañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kafe evan a.",
+        "Kafe a me evan."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kafe",
+          "Te",
+          "Dour"
+        ]
+      }
+    },
+    {
+      "id": "me-a-ev-te",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a ev te.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ev",
+          "evañ"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me ev a te.",
+        "Me a te ev."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "te",
+          "kafe",
+          "dour"
+        ]
+      }
+    },
+    {
+      "id": "me-a-ev-dour",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a ev dour.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ev",
+          "evañ"
+        ],
+        [
+          "dour",
+          "dour"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me ev a dour.",
+        "Me a dour ev."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dour",
+          "te",
+          "kafe"
+        ]
+      }
+    },
+    {
+      "id": "me-a-ev-kafe-ha-te",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a ev kafe ha te.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ev",
+          "evañ"
+        ],
+        [
+          "kafe",
+          "kafe"
+        ],
+        [
+          "ha",
+          "ha"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me ev a kafe ha te.",
+        "Me a kafe ha te ev."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "kafe",
+          "te",
+          "dour"
+        ]
+      }
+    },
+    {
+      "id": "me-a-ev-te-ha-dour",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a ev te ha dour.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ev",
+          "evañ"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "ha",
+          "ha"
+        ],
+        [
+          "dour",
+          "dour"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me ev a te ha dour.",
+        "Me a te ha dour ev."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "te",
+          "kafe",
+          "dour"
+        ]
+      }
+    },
+    {
+      "id": "me-a-ev-dour-ha-kafe",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a ev dour ha kafe.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ev",
+          "evañ"
+        ],
+        [
+          "dour",
+          "dour"
+        ],
+        [
+          "ha",
+          "ha"
+        ],
+        [
+          "kafe",
+          "kafe"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me ev a dour ha kafe.",
+        "Me a dour ha kafe ev."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "dour",
+          "te",
+          "kafe"
+        ]
+      }
+    },
+    {
+      "id": "me-a-ev-laezh",
+      "topic": "food",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a ev laezh.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ev",
+          "evañ"
+        ],
+        [
+          "laezh",
+          "laezh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me ev a laezh.",
+        "Me a laezh ev."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "laezh",
+          "dour",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "ur-c-hafe-trugarez",
+      "topic": "food",
+      "concepts": [
+        "article",
+        "soft-mutation"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Ur c'hafe, trugarez.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "c'hafe,",
+          "kafe"
+        ],
+        [
+          "trugarez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur kafe, trugarez.",
+        "C'hafe ur, trugarez."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "c'hafe,",
+          "te,",
+          "laezh,"
+        ]
+      }
+    },
+    {
+      "id": "demat-ur-c-hafe-mar-plij",
+      "topic": "food",
+      "concepts": [
+        "article",
+        "soft-mutation"
+      ],
+      "chunks": [
+        "mar-plij",
+        "hello"
+      ],
+      "text": "Demat, ur c'hafe, mar plij.",
+      "means": "Hello, a coffee, please.",
+      "words": [
+        [
+          "Demat,"
+        ],
+        [
+          "ur",
+          "un"
+        ],
+        [
+          "c'hafe,",
+          "kafe"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Demat, ur kafe, mar plij.",
+        "Demat, c'hafe ur, mar plij."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "c'hafe,",
+          "te,",
+          "dour,"
+        ]
+      }
+    },
+    {
+      "id": "ur-banne-te-hag-ur-banne-dour-mar",
+      "topic": "food",
+      "concepts": [
+        "article"
+      ],
+      "chunks": [
+        "mar-plij"
+      ],
+      "text": "Ur banne te hag ur banne dour, mar plij.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "banne",
+          "banne"
+        ],
+        [
+          "te",
+          "te"
+        ],
+        [
+          "hag",
+          "ha"
+        ],
+        [
+          "ur",
+          "un"
+        ],
+        [
+          "banne",
+          "banne"
+        ],
+        [
+          "dour,",
+          "dour"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A cup of tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a cup of water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur banne te ha ur banne dour, mar plij.",
+        "Banne ur te hag banne ur dour, mar plij."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "kafe",
+          "laezh"
+        ]
+      }
+    },
+    {
+      "id": "demat-ur-banne-te-mar-plij",
+      "topic": "food",
+      "concepts": [
+        "article"
+      ],
+      "chunks": [
+        "mar-plij",
+        "hello"
+      ],
+      "text": "Demat! Ur banne te, mar plij.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Demat!"
+        ],
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "banne",
+          "banne"
+        ],
+        [
+          "te,",
+          "te"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a cup of tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Demat! Banne ur te, mar plij.",
+        "Demat! Ur te banne, mar plij."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "te,",
+          "kafe,",
+          "dour,"
+        ]
+      }
+    },
+    {
+      "id": "mat-on-trugarez",
+      "topic": "people",
+      "concepts": [
+        "bezan"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Mat on, trugarez.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Mat",
+          "mat"
+        ],
+        [
+          "on,",
+          "bezañ"
+        ],
+        [
+          "trugarez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mat a on, trugarez.",
+        "On a mat, trugarez."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "trugarez",
+          "kenavo",
+          "demat"
+        ]
+      }
+    },
+    {
+      "id": "demat-penaos-emaout",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Demat! Penaos emaout?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Demat!"
+        ],
+        [
+          "Penaos"
+        ],
+        [
+          "emaout"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Demat! Emaout a penaos?",
+        "Demat! Penaos a on?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Demat!",
+          "Kenavo!",
+          "Trugarez!"
+        ]
+      }
+    },
+    {
+      "id": "ya-mar-plij",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "mar-plij",
+        "yes"
+      ],
+      "text": "Ya, mar plij.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ya,"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ya, plij mar.",
+        "Ya, mar a plij."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ya,",
+          "Nann,",
+          "Demat,"
+        ]
+      }
+    },
+    {
+      "id": "nann-trugarez",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Nann, trugarez.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Nann,"
+        ],
+        [
+          "trugarez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nann a trugarez.",
+        "Nann, mar trugarez."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nann,",
+          "Ya,",
+          "Demat,"
+        ]
+      }
+    },
+    {
+      "id": "ya-trugarez-kenavo",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Ya, trugarez. Kenavo!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ya,"
+        ],
+        [
+          "trugarez."
+        ],
+        [
+          "Kenavo"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ya a trugarez. Kenavo!",
+        "Ya, trugarez. Mar kenavo!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Kenavo",
+          "Demat",
+          "Trugarez"
+        ]
+      }
+    },
+    {
+      "id": "nann-trugarez-kenavo",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Nann, trugarez. Kenavo!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Nann,"
+        ],
+        [
+          "trugarez."
+        ],
+        [
+          "Kenavo"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nann a trugarez. Kenavo!",
+        "Nann, trugarez. Mar kenavo!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Nann,",
+          "Ya,",
+          "Demat,"
+        ]
+      }
+    },
+    {
+      "id": "mat-eo",
+      "topic": "people",
+      "concepts": [
+        "bezan"
+      ],
+      "text": "Mat eo.",
+      "means": "It's good.",
+      "words": [
+        [
+          "Mat",
+          "mat"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Good"
+        ],
+        [
+          "it is"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mat a eo.",
+        "Mat eo a."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "eo",
+          "on",
+          "out"
+        ]
+      }
+    },
+    {
+      "id": "demat-laouen-on-oc-h-ober-da",
+      "topic": "people",
+      "concepts": [
+        "bezan"
+      ],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Demat! Laouen on oc'h ober da anaoudegezh.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Demat!"
+        ],
+        [
+          "Laouen"
+        ],
+        [
+          "on"
+        ],
+        [
+          "oc'h"
+        ],
+        [
+          "ober"
+        ],
+        [
+          "da"
+        ],
+        [
+          "anaoudegezh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "glad"
+        ],
+        [
+          "I am"
+        ],
+        [
+          "to make"
+        ],
+        [
+          "your acquaintance"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Demat! Laouen a on oc'h ober da anaoudegezh.",
+        "Demat! Laouen on oc'h da ober anaoudegezh."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "on",
+          "out",
+          "eo"
+        ]
+      }
+    },
+    {
+      "id": "kelenner-on",
+      "topic": "people",
+      "concepts": [
+        "bezan"
+      ],
+      "text": "Kelenner on.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Kelenner",
+          "kelenner"
+        ],
+        [
+          "on",
+          "bezañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kelenner a on.",
+        "On a kelenner."
+      ],
+      "otherGender": {
+        "text": "Kelennerez on.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kelenner",
+          "Studier",
+          "Kafe"
+        ]
+      }
+    },
+    {
+      "id": "te-a-zo-studier",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "bezan"
+      ],
+      "text": "Te a zo studier.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Te",
+          "te"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "zo",
+          "bezañ"
+        ],
+        [
+          "studier",
+          "studier"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Te a out studier.",
+        "Te a studier zo."
+      ],
+      "otherGender": {
+        "text": "Te a zo studierez.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 3,
+        "options": [
+          "studier",
+          "kelenner",
+          "kafe"
+        ]
+      }
+    },
+    {
+      "id": "kelenner-out",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "bezan"
+      ],
+      "text": "Kelenner out?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Kelenner",
+          "kelenner"
+        ],
+        [
+          "out",
+          "bezañ"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "you are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kelenner a out?",
+        "Out a kelenner?"
+      ],
+      "otherGender": {
+        "text": "Kelennerez out?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "out",
+          "on",
+          "eo"
+        ]
+      }
+    },
+    {
+      "id": "n-on-ket-kelenner",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "bezan"
+      ],
+      "text": "N'on ket kelenner.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "N'on",
+          "bezañ"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "kelenner",
+          "kelenner"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "N'on kelenner ket.",
+        "Ket n'on kelenner."
+      ],
+      "otherGender": {
+        "text": "N'on ket kelennerez.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "kelenner",
+          "studier",
+          "kafe"
+        ]
+      }
+    },
+    {
+      "id": "ne-evan-ket-te",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "present"
+      ],
+      "text": "Ne evan ket te.",
+      "means": "I don't drink tea.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "evan",
+          "evañ"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "te",
+          "te"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not drink"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne evan te ket.",
+        "Ne me evan ket te."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "evan",
+          "ev",
+          "on"
+        ]
+      }
+    },
+    {
+      "id": "kelenner-eo-ma-zad",
+      "topic": "people",
+      "concepts": [
+        "bezan",
+        "possessive",
+        "spirant"
+      ],
+      "text": "Kelenner eo ma zad.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Kelenner",
+          "kelenner"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "zad",
+          "tad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A teacher"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kelenner eo ma tad.",
+        "Kelenner a eo ma zad."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "zad",
+          "mamm",
+          "breur"
+        ]
+      }
+    },
+    {
+      "id": "heman-eo-ma-zad",
+      "topic": "people",
+      "concepts": [
+        "bezan",
+        "possessive",
+        "spirant"
+      ],
+      "text": "Hemañ eo ma zad.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Hemañ",
+          "hemañ"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "zad",
+          "tad"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Hemañ eo ma tad.",
+        "Hemañ ma zad eo."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "zad",
+          "breur",
+          "kelenner"
+        ]
+      }
+    },
+    {
+      "id": "houman-eo-ma-mamm",
+      "topic": "people",
+      "concepts": [
+        "bezan",
+        "possessive"
+      ],
+      "text": "Houmañ eo ma mamm.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Houmañ",
+          "hemañ"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "mamm",
+          "mamm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Houmañ ma mamm eo.",
+        "Houmañ on ma mamm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mamm",
+          "c'hoar",
+          "zad"
+        ]
+      }
+    },
+    {
+      "id": "studier-eo-ma-breur",
+      "topic": "people",
+      "concepts": [
+        "bezan",
+        "possessive"
+      ],
+      "text": "Studier eo ma breur.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Studier",
+          "studier"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "breur",
+          "breur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A student"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my brother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Studier a eo ma breur.",
+        "Studier on ma breur."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "breur",
+          "zad",
+          "mamm"
+        ]
+      }
+    },
+    {
+      "id": "houman-eo-ma-c-hoar",
+      "topic": "people",
+      "concepts": [
+        "bezan",
+        "possessive"
+      ],
+      "text": "Houmañ eo ma c'hoar.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "Houmañ",
+          "hemañ"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "c'hoar",
+          "c'hoar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Houmañ ma c'hoar eo.",
+        "Houmañ out ma c'hoar."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "c'hoar",
+          "mamm",
+          "breur"
+        ]
+      }
+    },
+    {
+      "id": "mat-eo-ma-mamm",
+      "topic": "people",
+      "concepts": [
+        "bezan",
+        "possessive"
+      ],
+      "text": "Mat eo ma mamm.",
+      "means": "My mother is fine.",
+      "words": [
+        [
+          "Mat",
+          "mat"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "mamm",
+          "mamm"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mat ma mamm eo.",
+        "Mat on ma mamm."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mamm",
+          "zad",
+          "breur"
+        ]
+      }
+    },
+    {
+      "id": "ur-pellgomzer-am-eus",
+      "topic": "people",
+      "concepts": [
+        "kaout",
+        "article",
+        "focus-first"
+      ],
+      "text": "Ur pellgomzer am eus.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "pellgomzer",
+          "pellgomzer"
+        ],
+        [
+          "am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A phone"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur pellgomzer am peus.",
+        "Ur pellgomzer eus am."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pellgomzer",
+          "levr",
+          "alc'hwez"
+        ]
+      }
+    },
+    {
+      "id": "un-alc-hwez-az-peus",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "kaout",
+        "article"
+      ],
+      "text": "Un alc'hwez az peus?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "alc'hwez",
+          "alc'hwez"
+        ],
+        [
+          "az",
+          "kaout"
+        ],
+        [
+          "peus",
+          "kaout"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "A key"
+        ],
+        [
+          "you have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur alc'hwez az eus?",
+        "Ur alc'hwez peus az?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "alc'hwez",
+          "pellgomzer",
+          "levr"
+        ]
+      }
+    },
+    {
+      "id": "n-am-eus-ket-a-levr",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "kaout"
+      ],
+      "text": "N'am eus ket a levr.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "N'am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "levr",
+          "levr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "N'am peus ket a levr.",
+        "N'am eus a ket levr."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "levr",
+          "pellgomzer",
+          "alc'hwez"
+        ]
+      }
+    },
+    {
+      "id": "mezeg-eo-ma-c-hoar",
+      "topic": "people",
+      "concepts": [
+        "bezan",
+        "possessive"
+      ],
+      "text": "Mezeg eo ma c'hoar.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Mezeg",
+          "mezeg"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "c'hoar",
+          "c'hoar"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A doctor"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mezeg a eo ma c'hoar.",
+        "Mezeg out ma c'hoar."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Mezeg",
+          "Kelenner",
+          "Studier"
+        ]
+      }
+    },
+    {
+      "id": "ur-mignon-mat-out",
+      "topic": "people",
+      "concepts": [
+        "article",
+        "adjective-after",
+        "bezan"
+      ],
+      "text": "Ur mignon mat out.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "mignon",
+          "mignon"
+        ],
+        [
+          "mat",
+          "mat"
+        ],
+        [
+          "out",
+          "bezañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A good friend"
+        ],
+        [
+          "you are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur mat mignon out.",
+        "Ur mignon mat a out."
+      ],
+      "otherGender": {
+        "text": "Ur mignonez mat out.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "mignon",
+          "kelenner",
+          "mezeg"
+        ]
+      }
+    },
+    {
+      "id": "ul-levr-am-eus",
+      "topic": "people",
+      "concepts": [
+        "kaout",
+        "article",
+        "focus-first"
+      ],
+      "text": "Ul levr am eus.",
+      "means": "I have a book.",
+      "words": [
+        [
+          "Ul",
+          "un"
+        ],
+        [
+          "levr",
+          "levr"
+        ],
+        [
+          "am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A book"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ul levr am peus.",
+        "Ul levr eus am."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "levr",
+          "pellgomzer",
+          "alc'hwez"
+        ]
+      }
+    },
+    {
+      "id": "eman-ma-fellgomzer-aman",
+      "topic": "out",
+      "concepts": [
+        "bezan",
+        "possessive",
+        "spirant"
+      ],
+      "text": "Emañ ma fellgomzer amañ.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Emañ",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "fellgomzer",
+          "pellgomzer"
+        ],
+        [
+          "amañ",
+          "amañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my phone"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Emañ ma pellgomzer amañ.",
+        "Eo ma fellgomzer amañ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fellgomzer",
+          "alc'hwez",
+          "levr"
+        ]
+      }
+    },
+    {
+      "id": "eman-an-alc-hwez-aze",
+      "topic": "out",
+      "concepts": [
+        "bezan",
+        "article"
+      ],
+      "text": "Emañ an alc'hwez aze.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Emañ",
+          "bezañ"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "alc'hwez",
+          "alc'hwez"
+        ],
+        [
+          "aze",
+          "aze"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "the key"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eo an alc'hwez aze.",
+        "Emañ alc'hwez an aze."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "aze",
+          "amañ",
+          "pelec'h"
+        ]
+      }
+    },
+    {
+      "id": "pelec-h-eman-ma-alc-hwez",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bezan",
+        "possessive"
+      ],
+      "text": "Pelec'h emañ ma alc'hwez?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Pelec'h",
+          "pelec'h"
+        ],
+        [
+          "emañ",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "alc'hwez",
+          "alc'hwez"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pelec'h eo ma alc'hwez?",
+        "Pelec'h emañ alc'hwez ma?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "alc'hwez",
+          "levr",
+          "fellgomzer"
+        ]
+      }
+    },
+    {
+      "id": "pelec-h-eman-ma-mamm",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bezan",
+        "possessive"
+      ],
+      "text": "Pelec'h emañ ma mamm?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Pelec'h",
+          "pelec'h"
+        ],
+        [
+          "emañ",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "mamm",
+          "mamm"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pelec'h eo ma mamm?",
+        "Pelec'h emañ mamm ma?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mamm",
+          "zad",
+          "breur"
+        ]
+      }
+    },
+    {
+      "id": "eman-ma-c-hoar-aman",
+      "topic": "out",
+      "concepts": [
+        "bezan",
+        "possessive"
+      ],
+      "text": "Emañ ma c'hoar amañ.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Emañ",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "c'hoar",
+          "c'hoar"
+        ],
+        [
+          "amañ",
+          "amañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is"
+        ],
+        [
+          "my sister"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Eo ma c'hoar amañ.",
+        "Emañ c'hoar ma amañ."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "c'hoar",
+          "mamm",
+          "breur"
+        ]
+      }
+    },
+    {
+      "id": "digarez-pelec-h-eman-ma-levr",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bezan",
+        "possessive"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Digarez, pelec'h emañ ma levr?",
+      "means": "Excuse me, where is my book?",
+      "words": [
+        [
+          "Digarez,"
+        ],
+        [
+          "pelec'h",
+          "pelec'h"
+        ],
+        [
+          "emañ",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "levr",
+          "levr"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Digarez, pelec'h eo ma levr?",
+        "Digarez, pelec'h emañ levr ma?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "levr",
+          "alc'hwez",
+          "fellgomzer"
+        ]
+      }
+    },
+    {
+      "id": "daou-gafe-mar-plij",
+      "topic": "out",
+      "concepts": [
+        "soft-mutation"
+      ],
+      "chunks": [
+        "mar-plij"
+      ],
+      "text": "Daou gafe, mar plij.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Daou",
+          "daou"
+        ],
+        [
+          "gafe,",
+          "kafe"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Daou kafe, mar plij.",
+        "Gafe daou, mar plij."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Daou",
+          "Tri",
+          "Ur"
+        ]
+      }
+    },
+    {
+      "id": "tri-levr-am-eus",
+      "topic": "out",
+      "concepts": [
+        "kaout",
+        "focus-first"
+      ],
+      "text": "Tri levr am eus.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Tri",
+          "tri"
+        ],
+        [
+          "levr",
+          "levr"
+        ],
+        [
+          "am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Three books"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tri levr am peus.",
+        "Tri levr eus am."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Tri",
+          "Daou",
+          "Ul"
+        ]
+      }
+    },
+    {
+      "id": "ul-levr-mar-plij",
+      "topic": "out",
+      "concepts": [
+        "article"
+      ],
+      "chunks": [
+        "mar-plij"
+      ],
+      "text": "Ul levr, mar plij.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Ul",
+          "un"
+        ],
+        [
+          "levr,",
+          "levr"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Levr ul, mar plij.",
+        "Ul levr, plij mar."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ul",
+          "Daou",
+          "Tri"
+        ]
+      }
+    },
+    {
+      "id": "n-am-eus-ket-a-arc-hant",
+      "topic": "out",
+      "concepts": [
+        "negation",
+        "kaout"
+      ],
+      "text": "N'am eus ket a arc'hant.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "N'am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "arc'hant",
+          "arc'hant"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I do not have"
+        ],
+        [
+          "money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "N'am peus ket a arc'hant.",
+        "N'am eus a ket arc'hant."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "arc'hant",
+          "laezh",
+          "dour"
+        ]
+      }
+    },
+    {
+      "id": "digarez-pegement-eo",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bezan"
+      ],
+      "chunks": [
+        "how-much-is-it",
+        "excuse-me"
+      ],
+      "text": "Digarez, pegement eo?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Digarez,"
+        ],
+        [
+          "pegement"
+        ],
+        [
+          "eo"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "is it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Digarez, pegement a eo?",
+        "Digarez, pegement eo a?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "eo",
+          "on",
+          "out"
+        ]
+      }
+    },
+    {
+      "id": "demat-ar-gont-mar-plij",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "soft-mutation"
+      ],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Demat! Ar gont, mar plij.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Demat!"
+        ],
+        [
+          "Ar"
+        ],
+        [
+          "gont,"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Demat! Gont ar, mar plij.",
+        "Demat! Ar gont, plij mar."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gont,",
+          "c'hafe,",
+          "levr,"
+        ]
+      }
+    },
+    {
+      "id": "ur-c-hafe-a-vennan",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "focus-first",
+        "soft-mutation"
+      ],
+      "text": "Ur c'hafe a vennan.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "c'hafe",
+          "kafe"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "vennan",
+          "mennout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A coffee"
+        ],
+        [
+          "I want"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur c'hafe vennan a.",
+        "Ur c'hafe a me vennan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "c'hafe",
+          "te",
+          "levr"
+        ]
+      }
+    },
+    {
+      "id": "me-a-gomz-un-tamm-brezhoneg",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "soft-mutation"
+      ],
+      "chunks": [
+        "a-little"
+      ],
+      "text": "Me a gomz un tamm brezhoneg.",
+      "means": "I speak a little Breton.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "gomz",
+          "komz"
+        ],
+        [
+          "un"
+        ],
+        [
+          "tamm"
+        ],
+        [
+          "brezhoneg",
+          "brezhoneg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "Breton"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me a komz un tamm brezhoneg.",
+        "Me gomz a un tamm brezhoneg."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "brezhoneg",
+          "saozneg",
+          "kafe"
+        ]
+      }
+    },
+    {
+      "id": "ha-kompren-a-rit",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "ober",
+        "present"
+      ],
+      "text": "Ha kompren a rit?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Ha",
+          "ha"
+        ],
+        [
+          "kompren",
+          "kompren"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "rit",
+          "ober"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Do"
+        ],
+        [
+          "understand"
+        ],
+        [
+          "you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ha kompren rit a?",
+        "Ha kompren a out?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kompren",
+          "komz",
+          "ober"
+        ]
+      }
+    },
+    {
+      "id": "dour-a-vennan-mar-plij",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "focus-first"
+      ],
+      "chunks": [
+        "mar-plij"
+      ],
+      "text": "Dour a vennan, mar plij.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Dour",
+          "dour"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "vennan,",
+          "mennout"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Water"
+        ],
+        [
+          "I want"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dour vennan a, mar plij.",
+        "Dour a me vennan, mar plij."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Dour",
+          "Laezh",
+          "Te"
+        ]
+      }
+    },
+    {
+      "id": "bihan-eo-ma-c-hambr",
+      "topic": "home",
+      "concepts": [
+        "bezan",
+        "possessive",
+        "spirant"
+      ],
+      "text": "Bihan eo ma c'hambr.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Bihan",
+          "bihan"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "c'hambr",
+          "kambr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my room"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bihan eo ma kambr.",
+        "Bihan ma c'hambr eo."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bihan",
+          "Bras",
+          "Mat"
+        ]
+      }
+    },
+    {
+      "id": "ma-mamm-a-chom-aman",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "possessive"
+      ],
+      "text": "Ma mamm a chom amañ.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "mamm",
+          "mamm"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "chom",
+          "chom"
+        ],
+        [
+          "amañ",
+          "amañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "lives"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma mamm chom a amañ.",
+        "Ma mamm a chomez amañ."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mamm",
+          "zad",
+          "breur"
+        ]
+      }
+    },
+    {
+      "id": "me-a-chom-en-un-ti-bihan",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "article",
+        "adjective-after"
+      ],
+      "text": "Me a chom en un ti bihan.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "chom",
+          "chom"
+        ],
+        [
+          "en",
+          "e"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "bihan",
+          "bihan"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a small house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me a chom en un bihan ti.",
+        "Me a chomez en un ti bihan."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "bihan",
+          "bras",
+          "mat"
+        ]
+      }
+    },
+    {
+      "id": "pelec-h-e-chomez",
+      "topic": "home",
+      "concepts": [
+        "question",
+        "present",
+        "focus-first"
+      ],
+      "text": "Pelec'h e chomez?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Pelec'h",
+          "pelec'h"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "chomez",
+          "chom"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "do you live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pelec'h chomez e?",
+        "Pelec'h e te chomez?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "chomez",
+          "gomz",
+          "ev"
+        ]
+      }
+    },
+    {
+      "id": "bras-eo-an-ti-man",
+      "topic": "home",
+      "concepts": [
+        "bezan",
+        "article"
+      ],
+      "text": "Bras eo an ti-mañ.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Bras",
+          "bras"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "ti-mañ",
+          "ti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Big"
+        ],
+        [
+          "is"
+        ],
+        [
+          "this house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bras an ti-mañ eo.",
+        "Bras on an ti-mañ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bras",
+          "Bihan",
+          "Mat"
+        ]
+      }
+    },
+    {
+      "id": "ur-c-harr-am-eus",
+      "topic": "out",
+      "concepts": [
+        "kaout",
+        "article",
+        "soft-mutation"
+      ],
+      "text": "Ur c'harr am eus.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "c'harr",
+          "karr"
+        ],
+        [
+          "am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A car"
+        ],
+        [
+          "I have"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur karr am eus.",
+        "Ur c'harr am peus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "c'harr",
+          "levr",
+          "pellgomzer"
+        ]
+      }
+    },
+    {
+      "id": "mont-a-ran-aze",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "ober"
+      ],
+      "text": "Mont a ran aze.",
+      "means": "I go there.",
+      "words": [
+        [
+          "Mont",
+          "mont"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ran",
+          "ober"
+        ],
+        [
+          "aze",
+          "aze"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "I do"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mont ran a aze.",
+        "Mont a me ran aze."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ran",
+          "ra",
+          "rit"
+        ]
+      }
+    },
+    {
+      "id": "mont-a-ran-d-ar-skol",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "ober",
+        "article"
+      ],
+      "text": "Mont a ran d'ar skol.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Mont",
+          "mont"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ran",
+          "ober"
+        ],
+        [
+          "d'ar",
+          "da"
+        ],
+        [
+          "skol",
+          "skol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "I do"
+        ],
+        [
+          "to the school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mont ran a d'ar skol.",
+        "Mont a me ran d'ar skol."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "skol",
+          "gêr",
+          "ti-gar"
+        ]
+      }
+    },
+    {
+      "id": "pelec-h-ez-ez",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "focus-first"
+      ],
+      "text": "Pelec'h ez ez?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Pelec'h",
+          "pelec'h"
+        ],
+        [
+          "ez",
+          "e"
+        ],
+        [
+          "ez",
+          "mont"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "are you going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pelec'h ez te ez?",
+        "Pelec'h ez ez a?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ez",
+          "mont",
+          "chomez"
+        ]
+      }
+    },
+    {
+      "id": "digarez-pelec-h-eman-an-ti-gar",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bezan",
+        "article"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Digarez, pelec'h emañ an ti-gar?",
+      "means": "Excuse me, where is the station?",
+      "words": [
+        [
+          "Digarez,"
+        ],
+        [
+          "pelec'h",
+          "pelec'h"
+        ],
+        [
+          "emañ",
+          "bezañ"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "ti-gar",
+          "ti-gar"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the train station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Digarez, pelec'h eo an ti-gar?",
+        "Digarez, pelec'h emañ ti-gar an?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "ti-gar",
+          "ti-bihan",
+          "alc'hwez"
+        ]
+      }
+    },
+    {
+      "id": "mont-a-ra-ma-mamm-d-ar-ger",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "ober",
+        "possessive",
+        "soft-mutation"
+      ],
+      "text": "Mont a ra ma mamm d'ar gêr.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Mont",
+          "mont"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ra",
+          "ober"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "mamm",
+          "mamm"
+        ],
+        [
+          "d'ar",
+          "da"
+        ],
+        [
+          "gêr",
+          "kêr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "does"
+        ],
+        [
+          "my mother"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mont a ra ma mamm d'ar kêr.",
+        "Mont a ran ma mamm d'ar gêr."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "gêr",
+          "skol",
+          "ti-gar"
+        ]
+      }
+    },
+    {
+      "id": "bihan-eo-ar-c-harr-man",
+      "topic": "out",
+      "concepts": [
+        "bezan",
+        "article",
+        "soft-mutation"
+      ],
+      "text": "Bihan eo ar c'harr-mañ.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Bihan",
+          "bihan"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ar",
+          "an"
+        ],
+        [
+          "c'harr-mañ",
+          "karr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small"
+        ],
+        [
+          "is"
+        ],
+        [
+          "this car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bihan ar c'harr-mañ eo.",
+        "Bihan on ar c'harr-mañ."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bihan",
+          "Bras",
+          "Mat"
+        ]
+      }
+    },
+    {
+      "id": "me-a-labour-hiziv",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a labour hiziv.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "labour",
+          "labourat"
+        ],
+        [
+          "hiziv",
+          "hiziv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "work"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me labour a hiziv.",
+        "Me a labourat hiziv."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "hiziv",
+          "warc'hoazh",
+          "bremañ"
+        ]
+      }
+    },
+    {
+      "id": "trugarez-ken-arc-hoazh",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Trugarez. Ken arc'hoazh!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Trugarez."
+        ],
+        [
+          "Ken"
+        ],
+        [
+          "arc'hoazh"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Trugarez. Arc'hoazh ken!",
+        "Trugarez. Ken a arc'hoazh!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Trugarez.",
+          "Demat.",
+          "Kenavo."
+        ]
+      }
+    },
+    {
+      "id": "me-a-rank-mont-breman",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a rank mont bremañ.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "rank",
+          "rankout"
+        ],
+        [
+          "mont",
+          "mont"
+        ],
+        [
+          "bremañ",
+          "bremañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "must"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me rank a mont bremañ.",
+        "Me a rank ez bremañ."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "bremañ",
+          "hiziv",
+          "warc'hoazh"
+        ]
+      }
+    },
+    {
+      "id": "warc-hoazh-ez-in-d-ar-ger",
+      "topic": "plans",
+      "concepts": [
+        "future",
+        "focus-first",
+        "soft-mutation"
+      ],
+      "text": "Warc'hoazh ez in d'ar gêr.",
+      "means": "Tomorrow I'll go to the city.",
+      "words": [
+        [
+          "Warc'hoazh",
+          "warc'hoazh"
+        ],
+        [
+          "ez",
+          "e"
+        ],
+        [
+          "in",
+          "mont"
+        ],
+        [
+          "d'ar",
+          "da"
+        ],
+        [
+          "gêr",
+          "kêr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I will go"
+        ],
+        [
+          "to the city"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Warc'hoazh ez in d'ar kêr.",
+        "Warc'hoazh in ez d'ar gêr."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Warc'hoazh",
+          "Hiziv",
+          "Bremañ"
+        ]
+      }
+    },
+    {
+      "id": "ne-c-hallan-ket-mont-hiziv",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "present",
+        "soft-mutation"
+      ],
+      "text": "Ne c'hallan ket mont hiziv.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "c'hallan",
+          "gallout"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "mont",
+          "mont"
+        ],
+        [
+          "hiziv",
+          "hiziv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I cannot"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne c'hallan ket ez hiziv.",
+        "Ne c'hallan mont ket hiziv."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "mont",
+          "labourat",
+          "komz"
+        ]
+      }
+    },
+    {
+      "id": "me-a-rank-labourat-warc-hoazh",
+      "topic": "plans",
+      "concepts": [
+        "present"
+      ],
+      "text": "Me a rank labourat warc'hoazh.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "rank",
+          "rankout"
+        ],
+        [
+          "labourat",
+          "labourat"
+        ],
+        [
+          "warc'hoazh",
+          "warc'hoazh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "must"
+        ],
+        [
+          "work"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me rank a labourat warc'hoazh.",
+        "Me a rank labour warc'hoazh."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "labourat",
+          "mont",
+          "komz"
+        ]
+      }
+    },
+    {
+      "id": "petra-eo-da-anv",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Petra eo da anv?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Petra"
+        ],
+        [
+          "eo"
+        ],
+        [
+          "da"
+        ],
+        [
+          "anv"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "is"
+        ],
+        [
+          "your"
+        ],
+        [
+          "name"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Petra on da anv?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Petra",
+          "Pelec'h",
+          "Penaos"
+        ]
+      }
+    },
+    {
+      "id": "ur-breur-hag-ur-choar-am-eus",
+      "topic": "people",
+      "concepts": [
+        "kaout",
+        "article"
+      ],
+      "text": "Ur breur hag ur c'hoar am eus.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "breur",
+          "breur"
+        ],
+        [
+          "hag",
+          "ha"
+        ],
+        [
+          "ur",
+          "un"
+        ],
+        [
+          "c'hoar",
+          "c'hoar"
+        ],
+        [
+          "am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ],
+        [
+          "I have",
+          true
+        ]
+      ],
+      "english": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "moved": [
+        "am",
+        "eus"
+      ],
+      "wrong": [
+        "Ur breur hag ur c'hoar a ran."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "breur",
+          "vreur",
+          "preur"
+        ]
+      }
+    },
+    {
+      "id": "ma-mamm-a-labour-en-ospital",
+      "topic": "people",
+      "concepts": [
+        "focus-first",
+        "present"
+      ],
+      "text": "Ma mamm a labour en ospital.",
+      "means": "My mom works at the hospital.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "mamm",
+          "mamm"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "labour",
+          "labourat"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "ospital",
+          "ospital"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "mom"
+        ],
+        [
+          "works"
+        ],
+        [
+          "in the hospital"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma mamm a labouran en ospital."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "a",
+          "e",
+          "o"
+        ]
+      }
+    },
+    {
+      "id": "ma-zad-a-gomz-brezhoneg",
+      "topic": "people",
+      "concepts": [
+        "spirant",
+        "soft-mutation"
+      ],
+      "text": "Ma zad a gomz brezhoneg.",
+      "means": "My dad speaks Breton.",
+      "words": [
+        [
+          "Ma",
+          "ma"
+        ],
+        [
+          "zad",
+          "tad"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "gomz",
+          "komz"
+        ],
+        [
+          "brezhoneg",
+          "brezhoneg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "dad"
+        ],
+        [
+          "speaks"
+        ],
+        [
+          "Breton"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma zad a komz brezhoneg."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "zad",
+          "tad",
+          "dad"
+        ]
+      }
+    },
+    {
+      "id": "skuizh-eo-da-vreur",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "soft-mutation"
+      ],
+      "text": "Skuizh eo da vreur.",
+      "means": "Your brother is tired.",
+      "words": [
+        [
+          "Skuizh",
+          "skuizh"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "da",
+          "da"
+        ],
+        [
+          "vreur",
+          "breur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tired",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "your"
+        ],
+        [
+          "brother"
+        ]
+      ],
+      "english": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "moved": [
+        "Skuizh"
+      ],
+      "wrong": [
+        "Skuizh eo da breur."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "da",
+          "ma",
+          "e"
+        ]
+      }
+    },
+    {
+      "id": "bras-eo-he-zi",
+      "topic": "people",
+      "concepts": [
+        "spirant",
+        "possessive"
+      ],
+      "text": "Bras eo he zi.",
+      "means": "Her house is big.",
+      "words": [
+        [
+          "Bras",
+          "bras"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "he",
+          "he"
+        ],
+        [
+          "zi",
+          "ti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Big",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "her"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "moved": [
+        "Bras"
+      ],
+      "wrong": [
+        "Bras eo he ti."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "zi",
+          "ti",
+          "di"
+        ]
+      }
+    },
+    {
+      "id": "bihan-eo-e-di",
+      "topic": "people",
+      "concepts": [
+        "possessive",
+        "soft-mutation"
+      ],
+      "text": "Bihan eo e di.",
+      "means": "His house is small.",
+      "words": [
+        [
+          "Bihan",
+          "bihan"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "di",
+          "ti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Small",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "his"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "moved": [
+        "Bihan"
+      ],
+      "wrong": [
+        "Bihan eo e zi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "di",
+          "ti",
+          "zi"
+        ]
+      }
+    },
+    {
+      "id": "ne-gomzan-ket-galleg",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "soft-mutation",
+        "present"
+      ],
+      "text": "Ne gomzan ket galleg.",
+      "means": "I don't speak French.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "gomzan",
+          "komz"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "galleg",
+          "galleg"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I speak"
+        ],
+        [
+          "not"
+        ],
+        [
+          "French"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne ket gomzan galleg."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gomzan",
+          "komzan",
+          "gomz"
+        ]
+      }
+    },
+    {
+      "id": "me-a-gar-ar-sonerezh",
+      "topic": "people",
+      "concepts": [
+        "focus-first",
+        "soft-mutation",
+        "present"
+      ],
+      "text": "Me a gar ar sonerezh.",
+      "means": "I love music.",
+      "words": [
+        [
+          "Me",
+          "me"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "gar",
+          "karout"
+        ],
+        [
+          "ar",
+          "an"
+        ],
+        [
+          "sonerezh",
+          "sonerezh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "love"
+        ],
+        [
+          "the music"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Me a garan ar sonerezh."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gar",
+          "kar",
+          "c'har"
+        ]
+      }
+    },
+    {
+      "id": "kozh-eo-ma-chazh",
+      "topic": "people",
+      "concepts": [
+        "spirant"
+      ],
+      "text": "Kozh eo ma c'hazh.",
+      "means": "My cat is old.",
+      "words": [
+        [
+          "Kozh",
+          "kozh"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "c'hazh",
+          "kazh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Old",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "my"
+        ],
+        [
+          "cat"
+        ]
+      ],
+      "english": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "moved": [
+        "Kozh"
+      ],
+      "wrong": [
+        "Kozh eo ma kazh."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "c'hazh",
+          "kazh",
+          "gazh"
+        ]
+      }
+    },
+    {
+      "id": "ur-plach-vihan-he-deus",
+      "topic": "people",
+      "concepts": [
+        "adjective-after",
+        "soft-mutation",
+        "kaout"
+      ],
+      "text": "Ur plac'h vihan he deus.",
+      "means": "She has a little girl.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "plac'h",
+          "plac'h"
+        ],
+        [
+          "vihan",
+          "bihan"
+        ],
+        [
+          "he",
+          "kaout"
+        ],
+        [
+          "deus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A girl"
+        ],
+        [
+          "little",
+          true
+        ],
+        [
+          "she has",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "vihan",
+        "he",
+        "deus"
+      ],
+      "wrong": [
+        "Ur plac'h fihan he deus."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "he",
+          "en",
+          "o"
+        ]
+      }
+    },
+    {
+      "id": "emaon-o-labourat-er-ger",
+      "topic": "home",
+      "concepts": [
+        "progressive"
+      ],
+      "text": "Emaon o labourat er gêr hiziv.",
+      "means": "I'm working from home today.",
+      "words": [
+        [
+          "Emaon",
+          "bezañ"
+        ],
+        [
+          "o",
+          "o"
+        ],
+        [
+          "labourat",
+          "labourat"
+        ],
+        [
+          "er",
+          "er"
+        ],
+        [
+          "gêr",
+          "kêr"
+        ],
+        [
+          "hiziv",
+          "hiziv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I am"
+        ],
+        [
+          "at"
+        ],
+        [
+          "working"
+        ],
+        [
+          "at home"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Emaon o labouras er gêr hiziv."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "o",
+          "a",
+          "e"
+        ]
+      }
+    },
+    {
+      "id": "eman-ar-chazh-war-an-daol",
+      "topic": "home",
+      "concepts": [
+        "bezan",
+        "article"
+      ],
+      "text": "Emañ ar c'hazh war an daol.",
+      "means": "The cat is on the table.",
+      "words": [
+        [
+          "Emañ",
+          "bezañ"
+        ],
+        [
+          "ar",
+          "an"
+        ],
+        [
+          "c'hazh",
+          "kazh"
+        ],
+        [
+          "war",
+          "war"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "daol",
+          "taol"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "the cat"
+        ],
+        [
+          "on"
+        ],
+        [
+          "the table"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "moved": [
+        "Emañ"
+      ],
+      "wrong": [
+        "Emañ ar kazh war an daol."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Emañ",
+          "Eo",
+          "On"
+        ]
+      }
+    },
+    {
+      "id": "bras-eo-an-ti",
+      "topic": "home",
+      "concepts": [
+        "bezan",
+        "article"
+      ],
+      "text": "Bras eo an ti.",
+      "means": "The house is big.",
+      "words": [
+        [
+          "Bras",
+          "bras"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "ti",
+          "ti"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Big",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "the house"
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Bras"
+      ],
+      "wrong": [
+        "Bras eo ar ti."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "eo",
+          "emañ",
+          "on"
+        ]
+      }
+    },
+    {
+      "id": "prenet-em-eus-ur-gador-nevez",
+      "topic": "home",
+      "concepts": [
+        "perfect",
+        "adjective-after"
+      ],
+      "text": "Prenet em eus ur gador nevez.",
+      "means": "I bought a new chair.",
+      "words": [
+        [
+          "Prenet",
+          "prenañ"
+        ],
+        [
+          "em",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ],
+        [
+          "ur",
+          "un"
+        ],
+        [
+          "gador",
+          "kador"
+        ],
+        [
+          "nevez",
+          "nevez"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bought"
+        ],
+        [
+          "I have",
+          true
+        ],
+        [
+          "a chair"
+        ],
+        [
+          "new",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nevez",
+        "em",
+        "eus"
+      ],
+      "wrong": [
+        "Prenañ em eus ur gador nevez."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Prenet",
+          "Prenañ",
+          "Pren"
+        ]
+      }
+    },
+    {
+      "id": "naetaet-em-eus-ar-gegin",
+      "topic": "home",
+      "concepts": [
+        "perfect",
+        "article"
+      ],
+      "text": "Naetaet em eus ar gegin.",
+      "means": "I cleaned the kitchen.",
+      "words": [
+        [
+          "Naetaet",
+          "naetaat"
+        ],
+        [
+          "em",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ],
+        [
+          "ar",
+          "an"
+        ],
+        [
+          "gegin",
+          "kegin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Cleaned"
+        ],
+        [
+          "I have",
+          true
+        ],
+        [
+          "the kitchen"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "em",
+        "eus"
+      ],
+      "wrong": [
+        "Naetaat em eus ar gegin."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "gegin",
+          "kegin",
+          "c'hegin"
+        ]
+      }
+    },
+    {
+      "id": "neus-ket-a-laezh-ken",
+      "topic": "home",
+      "concepts": [
+        "ez-eus",
+        "negation"
+      ],
+      "text": "N'eus ket a laezh ken.",
+      "means": "There's no more milk.",
+      "words": [
+        [
+          "N'eus",
+          "bezañ"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "laezh",
+          "laezh"
+        ],
+        [
+          "ken",
+          "ken"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not is"
+        ],
+        [
+          "not"
+        ],
+        [
+          "of"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "anymore"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez eus ket a laezh ken."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "N'eus",
+          "N'on",
+          "N'emañ"
+        ]
+      }
+    },
+    {
+      "id": "eman-ma-mamm-o-kanan",
+      "topic": "home",
+      "concepts": [
+        "progressive"
+      ],
+      "text": "Emañ ma mamm o kanañ.",
+      "means": "My mom is singing.",
+      "words": [
+        [
+          "Emañ",
+          "bezañ"
+        ],
+        [
+          "ma",
+          "ma"
+        ],
+        [
+          "mamm",
+          "mamm"
+        ],
+        [
+          "o",
+          "o"
+        ],
+        [
+          "kanañ",
+          "kanañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Is",
+          true
+        ],
+        [
+          "my mom"
+        ],
+        [
+          "at"
+        ],
+        [
+          "singing"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Emañ"
+      ],
+      "wrong": [
+        "Emañ ma mamm o kanas."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "o",
+          "a",
+          "e"
+        ]
+      }
+    },
+    {
+      "id": "un-ti-bras-o-deus",
+      "topic": "home",
+      "concepts": [
+        "kaout",
+        "adjective-after"
+      ],
+      "text": "Un ti bras o deus.",
+      "means": "They have a big house.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "ti",
+          "ti"
+        ],
+        [
+          "bras",
+          "bras"
+        ],
+        [
+          "o",
+          "kaout"
+        ],
+        [
+          "deus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A house"
+        ],
+        [
+          "big",
+          true
+        ],
+        [
+          "they have",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bras",
+        "o",
+        "deus"
+      ],
+      "wrong": [
+        "Un ti bras a ran."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "o",
+          "he",
+          "en"
+        ]
+      }
+    },
+    {
+      "id": "kafe-a-evan-bep-mintin",
+      "topic": "food",
+      "concepts": [
+        "focus-first",
+        "present"
+      ],
+      "text": "Kafe a evan bep mintin.",
+      "means": "I drink coffee every morning.",
+      "words": [
+        [
+          "Kafe",
+          "kafe"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "evan",
+          "evañ"
+        ],
+        [
+          "bep",
+          "pep"
+        ],
+        [
+          "mintin",
+          "mintin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee",
+          true
+        ],
+        [
+          "I drink"
+        ],
+        [
+          "every morning"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Kafe"
+      ],
+      "wrong": [
+        "Kafe e evan bep mintin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "evan",
+          "ev",
+          "evez"
+        ]
+      }
+    },
+    {
+      "id": "naon-am-eus",
+      "topic": "food",
+      "concepts": [
+        "kaout"
+      ],
+      "text": "Naon am eus.",
+      "means": "I'm hungry.",
+      "words": [
+        [
+          "Naon",
+          "naon"
+        ],
+        [
+          "am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hunger"
+        ],
+        [
+          "I have",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "am",
+        "eus"
+      ],
+      "wrong": [
+        "Naon on."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Naon",
+          "Skuizh",
+          "Bras"
+        ]
+      }
+    },
+    {
+      "id": "ne-zebran-ket-kig",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "soft-mutation"
+      ],
+      "text": "Ne zebran ket kig.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "zebran",
+          "debriñ"
+        ],
+        [
+          "ket",
+          "ket"
+        ],
+        [
+          "kig",
+          "kig"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I eat"
+        ],
+        [
+          "not"
+        ],
+        [
+          "meat"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne ket zebran kig."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "zebran",
+          "debran",
+          "tebran"
+        ]
+      }
+    },
+    {
+      "id": "pegement-eo-ar-chafe",
+      "topic": "food",
+      "concepts": [
+        "question",
+        "article"
+      ],
+      "chunks": [
+        "how-much-is-it"
+      ],
+      "text": "Pegement eo ar c'hafe?",
+      "means": "How much is the coffee?",
+      "words": [
+        [
+          "Pegement"
+        ],
+        [
+          "eo"
+        ],
+        [
+          "ar",
+          "an"
+        ],
+        [
+          "c'hafe",
+          "kafe"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How much"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pegement eo ar kafe?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pegement",
+          "Pelec'h",
+          "Petra"
+        ]
+      }
+    },
+    {
+      "id": "ur-banne-kafe-mar-plij",
+      "topic": "food",
+      "concepts": [
+        "article"
+      ],
+      "chunks": [
+        "mar-plij"
+      ],
+      "text": "Ur banne kafe, mar plij.",
+      "means": "A cup of coffee, please.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "banne",
+          "banne"
+        ],
+        [
+          "kafe,",
+          "kafe"
+        ],
+        [
+          "mar"
+        ],
+        [
+          "plij"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A cup"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "if it pleases"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ur vanne kafe, mar plij."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "banne",
+          "vanne",
+          "panne"
+        ]
+      }
+    },
+    {
+      "id": "debret-em-eus-er-preti",
+      "topic": "food",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Debret em eus er preti dec'h.",
+      "means": "I ate at the restaurant yesterday.",
+      "words": [
+        [
+          "Debret",
+          "debriñ"
+        ],
+        [
+          "em",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ],
+        [
+          "er",
+          "er"
+        ],
+        [
+          "preti",
+          "preti"
+        ],
+        [
+          "dec'h",
+          "dec'h"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Eaten"
+        ],
+        [
+          "I have",
+          true
+        ],
+        [
+          "in the restaurant"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "em",
+        "eus"
+      ],
+      "wrong": [
+        "Debriñ em eus er preti dec'h."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Debret",
+          "Debriñ",
+          "Debr"
+        ]
+      }
+    },
+    {
+      "id": "bara-ha-laezh-am-eus-prenet",
+      "topic": "food",
+      "concepts": [
+        "perfect",
+        "focus-first"
+      ],
+      "text": "Bara ha laezh am eus prenet.",
+      "means": "I bought bread and milk.",
+      "words": [
+        [
+          "Bara",
+          "bara"
+        ],
+        [
+          "ha",
+          "ha"
+        ],
+        [
+          "laezh",
+          "laezh"
+        ],
+        [
+          "am",
+          "kaout"
+        ],
+        [
+          "eus",
+          "kaout"
+        ],
+        [
+          "prenet",
+          "prenañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Bread and milk",
+          true
+        ],
+        [
+          "I have"
+        ],
+        [
+          "bought"
+        ]
+      ],
+      "english": [
+        1,
+        2,
+        0
+      ],
+      "moved": [
+        "Bara",
+        "ha",
+        "laezh"
+      ],
+      "wrong": [
+        "Bara ha laezh am eus prenañ."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "prenet",
+          "prenañ",
+          "pren"
+        ]
+      }
+    },
+    {
+      "id": "pelech-eman-an-ti-bihan",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "bezan"
+      ],
+      "text": "Pelec'h emañ an ti-bihan?",
+      "means": "Where's the bathroom?",
+      "words": [
+        [
+          "Pelec'h",
+          "pelec'h"
+        ],
+        [
+          "emañ",
+          "bezañ"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "ti-bihan",
+          "ti-bihan"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the toilet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Pelec'h emaon an ti-bihan?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Pelec'h",
+          "Penaos",
+          "Petra"
+        ]
+      }
+    },
+    {
+      "id": "mont-a-rin-da-roazhon",
+      "topic": "out",
+      "concepts": [
+        "future",
+        "ober"
+      ],
+      "text": "Mont a rin da Roazhon warc'hoazh.",
+      "means": "I'll go to Rennes tomorrow.",
+      "words": [
+        [
+          "Mont",
+          "mont"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "rin",
+          "ober"
+        ],
+        [
+          "da",
+          "da"
+        ],
+        [
+          "Roazhon"
+        ],
+        [
+          "warc'hoazh",
+          "warc'hoazh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Go"
+        ],
+        [
+          "I'll do",
+          true
+        ],
+        [
+          "to"
+        ],
+        [
+          "Rennes"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "a",
+        "rin"
+      ],
+      "wrong": [
+        "Mont a ris da Roazhon warc'hoazh."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "rin",
+          "ris",
+          "raio"
+        ]
+      }
+    },
+    {
+      "id": "aet-on-da-gemper",
+      "topic": "out",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Aet on da Gemper dec'h.",
+      "means": "I went to Quimper yesterday.",
+      "words": [
+        [
+          "Aet",
+          "mont"
+        ],
+        [
+          "on",
+          "bezañ"
+        ],
+        [
+          "da",
+          "da"
+        ],
+        [
+          "Gemper"
+        ],
+        [
+          "dec'h",
+          "dec'h"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Gone"
+        ],
+        [
+          "I am",
+          true
+        ],
+        [
+          "to"
+        ],
+        [
+          "Quimper"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "on"
+      ],
+      "wrong": [
+        "Aet eo da Gemper dec'h."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "on",
+          "em",
+          "eo"
+        ]
+      }
+    },
+    {
+      "id": "diwezhat-eo-ar-bus",
+      "topic": "out",
+      "concepts": [
+        "bezan",
+        "article"
+      ],
+      "text": "Diwezhat eo ar bus.",
+      "means": "The bus is late.",
+      "words": [
+        [
+          "Diwezhat",
+          "diwezhat"
+        ],
+        [
+          "eo",
+          "bezañ"
+        ],
+        [
+          "ar",
+          "an"
+        ],
+        [
+          "bus",
+          "bus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Late",
+          true
+        ],
+        [
+          "is"
+        ],
+        [
+          "the bus"
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "Diwezhat"
+      ],
+      "wrong": [
+        "Diwezhat eo ar vus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "eo",
+          "emañ",
+          "on"
+        ]
+      }
+    },
+    {
+      "id": "ha-komz-a-rit-saozneg",
+      "topic": "out",
+      "concepts": [
+        "ober"
+      ],
+      "text": "Ha komz a rit saozneg?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Ha",
+          "ha"
+        ],
+        [
+          "komz",
+          "komz"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "rit",
+          "ober"
+        ],
+        [
+          "saozneg",
+          "saozneg"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "you do",
+          true
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "a",
+        "rit"
+      ],
+      "wrong": [
+        "Ha komz a ran saozneg?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "rit",
+          "ran",
+          "ra"
+        ]
+      }
+    },
+    {
+      "id": "ur-charr-nevez-en-deus-prenet",
+      "topic": "out",
+      "concepts": [
+        "article",
+        "adjective-after",
+        "perfect"
+      ],
+      "text": "Ur c'harr nevez en deus prenet.",
+      "means": "He bought a new car.",
+      "words": [
+        [
+          "Ur",
+          "un"
+        ],
+        [
+          "c'harr",
+          "karr"
+        ],
+        [
+          "nevez",
+          "nevez"
+        ],
+        [
+          "en",
+          "kaout"
+        ],
+        [
+          "deus",
+          "kaout"
+        ],
+        [
+          "prenet",
+          "prenañ"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A car"
+        ],
+        [
+          "new",
+          true
+        ],
+        [
+          "he has",
+          true
+        ],
+        [
+          "bought",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "nevez",
+        "en",
+        "deus",
+        "prenet"
+      ],
+      "wrong": [
+        "Ur karr nevez en deus prenet."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "c'harr",
+          "karr",
+          "garr"
+        ]
+      }
+    },
+    {
+      "id": "emaomp-o-chortoz-ar-bus",
+      "topic": "out",
+      "concepts": [
+        "progressive"
+      ],
+      "text": "Emaomp o c'hortoz ar bus.",
+      "means": "We're waiting for the bus.",
+      "words": [
+        [
+          "Emaomp",
+          "bezañ"
+        ],
+        [
+          "o",
+          "o"
+        ],
+        [
+          "c'hortoz",
+          "gortoz"
+        ],
+        [
+          "ar",
+          "an"
+        ],
+        [
+          "bus",
+          "bus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We are"
+        ],
+        [
+          "at"
+        ],
+        [
+          "waiting"
+        ],
+        [
+          "the bus"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Emaomp o c'hortozas ar bus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "o",
+          "a",
+          "e"
+        ]
+      }
+    },
+    {
+      "id": "ez-eus-kalz-a-dud-e-ker",
+      "topic": "out",
+      "concepts": [
+        "ez-eus"
+      ],
+      "text": "Ez eus kalz a dud e kêr.",
+      "means": "There are a lot of people in town.",
+      "words": [
+        [
+          "Ez",
+          "e"
+        ],
+        [
+          "eus",
+          "bezañ"
+        ],
+        [
+          "kalz",
+          "kalz"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "dud",
+          "tud"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "kêr",
+          "kêr"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "a lot"
+        ],
+        [
+          "of"
+        ],
+        [
+          "people"
+        ],
+        [
+          "in"
+        ],
+        [
+          "town"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ez eo kalz a dud e kêr."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "eus",
+          "eo",
+          "emañ"
+        ]
+      }
+    },
+    {
+      "id": "ez-eus-ur-bus-da-gemper",
+      "topic": "out",
+      "concepts": [
+        "ez-eus"
+      ],
+      "text": "Ez eus ur bus da Gemper bep mintin.",
+      "means": "There's a bus to Quimper every morning.",
+      "words": [
+        [
+          "Ez",
+          "e"
+        ],
+        [
+          "eus",
+          "bezañ"
+        ],
+        [
+          "ur",
+          "un"
+        ],
+        [
+          "bus",
+          "bus"
+        ],
+        [
+          "da",
+          "da"
+        ],
+        [
+          "Gemper"
+        ],
+        [
+          "bep",
+          "pep"
+        ],
+        [
+          "mintin",
+          "mintin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "There is"
+        ],
+        [
+          "a bus"
+        ],
+        [
+          "to"
+        ],
+        [
+          "Quimper"
+        ],
+        [
+          "every morning"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Emañ eus ur bus da Gemper bep mintin."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "eus",
+          "eo",
+          "emañ"
+        ]
+      }
+    },
+    {
+      "id": "glav-a-ra-hiziv",
+      "topic": "plans",
+      "concepts": [
+        "ober"
+      ],
+      "text": "Glav a ra hiziv.",
+      "means": "It's raining today.",
+      "words": [
+        [
+          "Glav",
+          "glav"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "ra",
+          "ober"
+        ],
+        [
+          "hiziv",
+          "hiziv"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Rain"
+        ],
+        [
+          "it does",
+          true
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "a",
+        "ra"
+      ],
+      "wrong": [
+        "Glav a ran hiziv."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ra",
+          "ran",
+          "rez"
+        ]
+      }
+    },
+    {
+      "id": "brav-e-vo-an-amzer",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Brav e vo an amzer warc'hoazh.",
+      "means": "The weather will be nice tomorrow.",
+      "words": [
+        [
+          "Brav",
+          "brav"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "vo",
+          "bezañ"
+        ],
+        [
+          "an",
+          "an"
+        ],
+        [
+          "amzer",
+          "amzer"
+        ],
+        [
+          "warc'hoazh",
+          "warc'hoazh"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Fine",
+          true
+        ],
+        [
+          "will be"
+        ],
+        [
+          "the weather"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "Brav"
+      ],
+      "wrong": [
+        "Brav e oa an amzer warc'hoazh."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vo",
+          "eo",
+          "oa"
+        ]
+      }
+    },
+    {
+      "id": "ul-levr-a-lennin-fenoz",
+      "topic": "plans",
+      "concepts": [
+        "future"
+      ],
+      "text": "Ul levr a lennin fenoz.",
+      "means": "I'll read a book tonight.",
+      "words": [
+        [
+          "Ul",
+          "un"
+        ],
+        [
+          "levr",
+          "levr"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "lennin",
+          "lenn"
+        ],
+        [
+          "fenoz",
+          "fenoz"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A book",
+          true
+        ],
+        [
+          "I'll read"
+        ],
+        [
+          "tonight"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "Ul",
+        "levr"
+      ],
+      "wrong": [
+        "Ul levr a lennas fenoz."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lennin",
+          "lennan",
+          "lennas"
+        ]
+      }
+    },
+    {
+      "id": "warchoazh-e-labourin",
+      "topic": "plans",
+      "concepts": [
+        "focus-first"
+      ],
+      "text": "Warc'hoazh e labourin.",
+      "means": "I'll work tomorrow.",
+      "words": [
+        [
+          "Warc'hoazh",
+          "warc'hoazh"
+        ],
+        [
+          "e",
+          "e"
+        ],
+        [
+          "labourin",
+          "labourat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I'll work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Warc'hoazh o labourin."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "e",
+          "a",
+          "o"
+        ]
+      }
+    },
+    {
+      "id": "ne-gomprenan-ket",
+      "topic": "plans",
+      "concepts": [
+        "negation",
+        "soft-mutation",
+        "present"
+      ],
+      "text": "Ne gomprenan ket.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Ne",
+          "ne"
+        ],
+        [
+          "gomprenan",
+          "kompren"
+        ],
+        [
+          "ket",
+          "ket"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not"
+        ],
+        [
+          "I understand"
+        ],
+        [
+          "not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ne ket gomprenan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gomprenan",
+          "komprenan",
+          "gompren"
+        ]
+      }
+    },
+    {
+      "id": "nouzon-ket",
+      "topic": "plans",
+      "concepts": [
+        "negation"
+      ],
+      "text": "N'ouzon ket.",
+      "means": "I don't know.",
+      "words": [
+        [
+          "N'ouzon",
+          "gouzout"
+        ],
+        [
+          "ket",
+          "ket"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Not I know"
+        ],
+        [
+          "not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "N'ouzon ne."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ket",
+          "ne",
+          "ha"
+        ]
+      }
+    },
+    {
+      "id": "ha-dont-a-rez-ganeomp",
+      "topic": "plans",
+      "concepts": [
+        "ober"
+      ],
+      "text": "Ha dont a rez ganeomp?",
+      "means": "Are you coming with us?",
+      "words": [
+        [
+          "Ha",
+          "ha"
+        ],
+        [
+          "dont",
+          "dont"
+        ],
+        [
+          "a",
+          "a"
+        ],
+        [
+          "rez",
+          "ober"
+        ],
+        [
+          "ganeomp",
+          "gant"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Whether"
+        ],
+        [
+          "come"
+        ],
+        [
+          "you do",
+          true
+        ],
+        [
+          "with us"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "a",
+        "rez"
+      ],
+      "wrong": [
+        "Ha dont a ra ganeomp?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "rez",
+          "ran",
+          "ra"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "kafe",
+          "forms": [
+            "kafe"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "te",
+          "forms": [
+            "te"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "dour",
+          "forms": [
+            "dour"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "me",
+          "forms": [
+            "me"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "evañ",
+          "forms": [
+            "evan",
+            "ev"
+          ],
+          "picture": "drink",
+          "means": "evan = I drink; ev = drink"
+        },
+        {
+          "lemma": "ha",
+          "forms": [
+            "ha"
+          ],
+          "means": "and"
+        },
+        {
+          "lemma": "a",
+          "forms": [
+            "a"
+          ],
+          "means": "verb marker"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "A present verb's ending says who does it: komzan (I speak), komzez (you speak), komz (he or she speaks); after a subject put first, the verb takes its he-or-she form: Ma zad a gomz brezhoneg (my dad speaks Breton)."
+      },
+      "items": [
+        "kafe-te",
+        "kafe-ha-dour",
+        "kafe-a-evan",
+        "me-a-ev-te",
+        "me-a-ev-dour",
+        "me-a-ev-kafe-ha-te",
+        "me-a-ev-te-ha-dour",
+        "me-a-ev-dour-ha-kafe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "un",
+          "forms": [
+            "ur"
+          ],
+          "means": "ur = a"
+        },
+        {
+          "lemma": "laezh",
+          "forms": [
+            "laezh"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        },
+        {
+          "lemma": "banne",
+          "forms": [
+            "banne"
+          ],
+          "means": "a drop; a drink or serving of a beverage"
+        },
+        {
+          "lemma": "kafe",
+          "forms": [
+            "c'hafe"
+          ],
+          "means": "c'hafe = coffee"
+        },
+        {
+          "lemma": "ha",
+          "forms": [
+            "hag"
+          ],
+          "means": "hag = and"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "mar-plij",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "me-a-ev-laezh",
+        "ur-c-hafe-trugarez",
+        "demat-ur-c-hafe-mar-plij",
+        "ur-banne-kafe-mar-plij",
+        "ur-banne-te-hag-ur-banne-dour-mar",
+        "demat-ur-banne-te-mar-plij"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "mat",
+          "forms": [
+            "mat"
+          ],
+          "picture": "good",
+          "means": "good, fine"
+        },
+        {
+          "lemma": "bezañ",
+          "forms": [
+            "on"
+          ],
+          "means": "on = I am"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "bezan",
+        "line": "Use eo after what something is (Bras eo an ti: big is the house), emañ (emaon for I) for where someone or something is and before o for what's going on (Emañ ar c'hazh war an daol: is the cat on the table), and on for I am: Skuizh on (tired I-am)."
+      },
+      "items": [
+        "mat-on-trugarez",
+        "demat-penaos-emaout",
+        "ya-mar-plij",
+        "nann-trugarez",
+        "ya-trugarez-kenavo",
+        "nann-trugarez-kenavo"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "te",
+          "forms": [
+            "te"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "ne",
+          "forms": [
+            "ne"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "ket",
+          "forms": [
+            "ket"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "kelenner",
+          "forms": [
+            "kelenner"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "studier",
+          "forms": [
+            "studier"
+          ],
+          "means": "student"
+        },
+        {
+          "lemma": "bezañ",
+          "forms": [
+            "eo",
+            "zo",
+            "out",
+            "n'on"
+          ],
+          "means": "eo = is; zo = are; out = you are; n'on = I am not"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "petra-eo-da-anv",
+        "mat-eo",
+        "demat-laouen-on-oc-h-ober-da",
+        "kelenner-on",
+        "te-a-zo-studier",
+        "kelenner-out",
+        "n-on-ket-kelenner",
+        "ne-evan-ket-te"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mamm",
+          "forms": [
+            "mamm"
+          ],
+          "picture": "mother",
+          "means": "mother"
+        },
+        {
+          "lemma": "tad",
+          "forms": [
+            "zad"
+          ],
+          "picture": "father",
+          "means": "zad = father"
+        },
+        {
+          "lemma": "breur",
+          "forms": [
+            "breur"
+          ],
+          "picture": "brother",
+          "means": "brother"
+        },
+        {
+          "lemma": "c'hoar",
+          "forms": [
+            "c'hoar"
+          ],
+          "picture": "sister",
+          "means": "sister"
+        },
+        {
+          "lemma": "ma",
+          "forms": [
+            "ma"
+          ],
+          "means": "my"
+        },
+        {
+          "lemma": "hemañ",
+          "forms": [
+            "hemañ",
+            "houmañ"
+          ],
+          "means": "hemañ = this; houmañ = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "Each one changes the next word its own way, and his and her differ only by that: e di (his house: softened), he zi (her house: t → z), da vreur (your brother)."
+      },
+      "items": [
+        "kelenner-eo-ma-zad",
+        "heman-eo-ma-zad",
+        "houman-eo-ma-mamm",
+        "studier-eo-ma-breur",
+        "houman-eo-ma-c-hoar",
+        "mat-eo-ma-mamm"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "kaout",
+          "forms": [
+            "am",
+            "eus",
+            "az",
+            "peus",
+            "n'am"
+          ],
+          "means": "am = I; eus = have; az = you; peus = have; n'am = I do not"
+        },
+        {
+          "lemma": "mignon",
+          "forms": [
+            "mignon"
+          ],
+          "picture": "friend",
+          "means": "friend"
+        },
+        {
+          "lemma": "mezeg",
+          "forms": [
+            "mezeg"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "alc'hwez",
+          "forms": [
+            "alc'hwez"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "pellgomzer",
+          "forms": [
+            "pellgomzer"
+          ],
+          "picture": "phone",
+          "means": "phone"
+        },
+        {
+          "lemma": "levr",
+          "forms": [
+            "levr"
+          ],
+          "picture": "book",
+          "means": "book"
+        },
+        {
+          "lemma": "un",
+          "forms": [
+            "ul",
+            "un"
+          ],
+          "means": "ul = a; un = a"
+        },
+        {
+          "lemma": "ha",
+          "forms": [
+            "hag"
+          ],
+          "means": "hag = and"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ur-pellgomzer-am-eus",
+        "un-alc-hwez-az-peus",
+        "ur-breur-hag-ur-choar-am-eus",
+        "n-am-eus-ket-a-levr",
+        "mezeg-eo-ma-c-hoar",
+        "ur-mignon-mat-out",
+        "ul-levr-am-eus"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "pelec'h",
+          "forms": [
+            "pelec'h"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "amañ",
+          "forms": [
+            "amañ"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "aze",
+          "forms": [
+            "aze"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "an",
+          "forms": [
+            "an"
+          ],
+          "means": "the"
+        },
+        {
+          "lemma": "ti-bihan",
+          "forms": [
+            "ti-bihan"
+          ],
+          "means": "bathroom"
+        },
+        {
+          "lemma": "bezañ",
+          "forms": [
+            "emañ"
+          ],
+          "means": "emañ = is"
+        },
+        {
+          "lemma": "pellgomzer",
+          "forms": [
+            "fellgomzer"
+          ],
+          "means": "fellgomzer = phone"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "article",
+        "line": "the is an before a vowel or d, h, n and t, al before l, and ar elsewhere (a is un, ul, ur the same way); a feminine singular noun usually softens after it (plac'h, girl, doesn't), and a masculine singular one starting with k takes c'h: ar gegin (the kitchen, from kegin), ar c'hafe (the coffee, from kafe)."
+      },
+      "items": [
+        "eman-ma-fellgomzer-aman",
+        "eman-an-alc-hwez-aze",
+        "pelec-h-eman-ma-alc-hwez",
+        "pelech-eman-an-ti-bihan",
+        "pelec-h-eman-ma-mamm",
+        "eman-ma-c-hoar-aman",
+        "digarez-pelec-h-eman-ma-levr"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "daou",
+          "forms": [
+            "daou"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "tri",
+          "forms": [
+            "tri"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "arc'hant",
+          "forms": [
+            "arc'hant"
+          ],
+          "picture": "money",
+          "means": "money"
+        },
+        {
+          "lemma": "kafe",
+          "forms": [
+            "gafe"
+          ],
+          "means": "gafe = coffees"
+        },
+        {
+          "lemma": "an",
+          "forms": [
+            "ar"
+          ],
+          "means": "ar = the"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "daou-gafe-mar-plij",
+        "tri-levr-am-eus",
+        "ul-levr-mar-plij",
+        "n-am-eus-ket-a-arc-hant",
+        "digarez-pegement-eo",
+        "demat-ar-gont-mar-plij",
+        "pegement-eo-ar-chafe"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "komz",
+          "forms": [
+            "komz",
+            "gomz"
+          ],
+          "means": "komz = to speak; gomz = speak"
+        },
+        {
+          "lemma": "saozneg",
+          "forms": [
+            "saozneg"
+          ],
+          "means": "English"
+        },
+        {
+          "lemma": "brezhoneg",
+          "forms": [
+            "brezhoneg"
+          ],
+          "means": "Breton"
+        },
+        {
+          "lemma": "kompren",
+          "forms": [
+            "gomprenan",
+            "kompren"
+          ],
+          "means": "gomprenan = I understand; kompren = to understand"
+        },
+        {
+          "lemma": "mennout",
+          "forms": [
+            "vennan"
+          ],
+          "means": "vennan = I want"
+        },
+        {
+          "lemma": "ober",
+          "forms": [
+            "rit"
+          ],
+          "means": "rit = you do"
+        },
+        {
+          "lemma": "ne",
+          "forms": [
+            "ne"
+          ],
+          "means": "not"
+        }
+      ],
+      "phrases": [
+        "a-little"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "Ha starts a yes-or-no question (Ha komz a rit saozneg?"
+      },
+      "items": [
+        "ne-gomprenan-ket",
+        "ur-c-hafe-a-vennan",
+        "ma-zad-a-gomz-brezhoneg",
+        "me-a-gomz-un-tamm-brezhoneg",
+        "ha-komz-a-rit-saozneg",
+        "ha-kompren-a-rit",
+        "dour-a-vennan-mar-plij"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "ti",
+          "forms": [
+            "ti",
+            "ti-mañ"
+          ],
+          "picture": "house",
+          "means": "ti = house; ti-mañ = this house"
+        },
+        {
+          "lemma": "kambr",
+          "forms": [
+            "c'hambr"
+          ],
+          "picture": "room",
+          "means": "c'hambr = room"
+        },
+        {
+          "lemma": "bras",
+          "forms": [
+            "bras"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "bihan",
+          "forms": [
+            "bihan"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "chom",
+          "forms": [
+            "chom",
+            "chomez"
+          ],
+          "means": "chom = live; chomez = you live"
+        },
+        {
+          "lemma": "e",
+          "forms": [
+            "e",
+            "en"
+          ],
+          "picture": "in",
+          "means": "e = verb marker; en = in"
+        },
+        {
+          "lemma": "un",
+          "forms": [
+            "un"
+          ],
+          "means": "a, an, one"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "bras-eo-an-ti",
+        "bihan-eo-ma-c-hambr",
+        "ma-mamm-a-chom-aman",
+        "me-a-chom-en-un-ti-bihan",
+        "pelec-h-e-chomez",
+        "bras-eo-an-ti-man"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "mont",
+          "forms": [
+            "mont",
+            "ez"
+          ],
+          "means": "mont = to go; ez = you go"
+        },
+        {
+          "lemma": "da",
+          "forms": [
+            "d'ar"
+          ],
+          "means": "d'ar = to the"
+        },
+        {
+          "lemma": "skol",
+          "forms": [
+            "skol"
+          ],
+          "picture": "school",
+          "means": "school"
+        },
+        {
+          "lemma": "kêr",
+          "forms": [
+            "gêr"
+          ],
+          "picture": "city",
+          "means": "gêr = city"
+        },
+        {
+          "lemma": "ti-gar",
+          "forms": [
+            "ti-gar"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "karr",
+          "forms": [
+            "c'harr",
+            "c'harr-mañ"
+          ],
+          "picture": "car",
+          "means": "c'harr = car; c'harr-mañ = this car"
+        },
+        {
+          "lemma": "e",
+          "forms": [
+            "ez"
+          ],
+          "means": "ez = preverbal particle (ez before a vowel)"
+        },
+        {
+          "lemma": "ober",
+          "forms": [
+            "ran",
+            "ra"
+          ],
+          "means": "ran = I do; ra = does"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "soft-mutation",
+        "line": "After da (your, or to), e (his), ne (not), the particle a, and the article before a feminine singular noun, a first sound often softens: k → g, t → d, p → b, b → v, d → z, m → v: komz → ne gomzan (not I-speak), breur → da vreur (your brother)."
+      },
+      "items": [
+        "ur-c-harr-am-eus",
+        "mont-a-ran-aze",
+        "mont-a-ran-d-ar-skol",
+        "pelec-h-ez-ez",
+        "digarez-pelec-h-eman-an-ti-gar",
+        "mont-a-ra-ma-mamm-d-ar-ger",
+        "bihan-eo-ar-c-harr-man"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "hiziv",
+          "forms": [
+            "hiziv"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "warc'hoazh",
+          "forms": [
+            "warc'hoazh"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "bremañ",
+          "forms": [
+            "bremañ"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "labourat",
+          "forms": [
+            "labour",
+            "labourat",
+            "labourin"
+          ],
+          "picture": "work",
+          "means": "labour = work; labourat = to work; labourin = I will work"
+        },
+        {
+          "lemma": "rankout",
+          "forms": [
+            "rank"
+          ],
+          "means": "rank = must"
+        },
+        {
+          "lemma": "gallout",
+          "forms": [
+            "c'hallan"
+          ],
+          "means": "c'hallan = I can"
+        },
+        {
+          "lemma": "mont",
+          "forms": [
+            "mont",
+            "in"
+          ],
+          "means": "mont = to go; in = I will go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "me-a-labour-hiziv",
+        "trugarez-ken-arc-hoazh",
+        "me-a-rank-mont-breman",
+        "warc-hoazh-ez-in-d-ar-ger",
+        "ne-c-hallan-ket-mont-hiziv",
+        "me-a-rank-labourat-warc-hoazh",
+        "warchoazh-e-labourin"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

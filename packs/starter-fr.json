@@ -1,0 +1,7413 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-fr",
+  "name": "Starter: French",
+  "about": "French in real, everyday sentences, with each one's words in French order.",
+  "language": "fr",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "café": "coffee",
+    "thé": "tea",
+    "eau": "water",
+    "je": "I",
+    "boire": "to drink",
+    "et": "and",
+    "de": "of, some",
+    "un": "a, an, one",
+    "lait": "milk",
+    "bien": "well, fine",
+    "aller": "to go",
+    "tu": "you",
+    "pas": "not",
+    "professeur": "teacher",
+    "être": "to be",
+    "ne": "not",
+    "mère": "mother",
+    "père": "father",
+    "frère": "brother",
+    "sœur": "sister",
+    "mon": "my",
+    "étudiant": "student",
+    "avoir": "to have",
+    "ami": "friend",
+    "médecin": "doctor",
+    "clé": "key",
+    "téléphone": "phone",
+    "livre": "book",
+    "bon": "good",
+    "où": "where",
+    "ici": "here",
+    "là": "there",
+    "le": "the",
+    "toilettes": "bathroom",
+    "deux": "two",
+    "trois": "three",
+    "argent": "money",
+    "parler": "to speak",
+    "anglais": "English language",
+    "français": "French language",
+    "comprendre": "to understand",
+    "vouloir": "to want",
+    "maison": "house",
+    "chambre": "bedroom",
+    "grand": "tall, big",
+    "petit": "small",
+    "habiter": "to live",
+    "dans": "in",
+    "ce": "this",
+    "à": "to",
+    "école": "school",
+    "ville": "town, city",
+    "gare": "train station",
+    "voiture": "car",
+    "en": "in, to",
+    "aujourd'hui": "today",
+    "demain": "tomorrow",
+    "maintenant": "now",
+    "travailler": "to work",
+    "devoir": "must, to have to; devoirs: homework",
+    "pouvoir": "can, to be able to",
+    "s'appeler": "to be called",
+    "très": "very",
+    "plus": "more; plus tard: later",
+    "an": "year",
+    "cinq": "five",
+    "vingt": "twenty",
+    "sept": "seven",
+    "voir": "to see",
+    "dimanche": "Sunday",
+    "connaître": "to know (a person, a place)",
+    "hier": "yesterday",
+    "parent": "parent",
+    "partir": "to leave",
+    "vacances": "vacation",
+    "bleu": "blue",
+    "salle": "room",
+    "bain": "bath",
+    "se lever": "to get up",
+    "heure": "hour; o'clock",
+    "se coucher": "to go to bed",
+    "trouver": "to find",
+    "fermer": "to close",
+    "porte": "door",
+    "finir": "to finish",
+    "ranger": "to tidy",
+    "faire": "to do, to make",
+    "chaud": "hot, warm",
+    "rentrer": "to come back (home)",
+    "travail": "work",
+    "six": "six",
+    "faim": "hunger",
+    "matin": "morning",
+    "aimer": "to like, to love",
+    "beaucoup": "a lot",
+    "fromage": "cheese",
+    "manger": "to eat",
+    "viande": "meat",
+    "verre": "glass",
+    "plaire": "to please",
+    "pizza": "pizza",
+    "soir": "evening",
+    "dîner": "to have dinner",
+    "soif": "thirst",
+    "addition": "check, bill",
+    "acheter": "to buy",
+    "tomate": "tomato",
+    "marché": "market",
+    "samedi": "Saturday",
+    "adorer": "to love, to adore",
+    "cuisine": "cooking; kitchen",
+    "grand-mère": "grandmother",
+    "banque": "bank",
+    "près": "near",
+    "train": "train",
+    "rater": "to miss",
+    "minute": "minute",
+    "arriver": "to arrive",
+    "payer": "to pay",
+    "carte": "card",
+    "chercher": "to look for",
+    "hôtel": "hotel",
+    "cher": "expensive",
+    "bus": "bus",
+    "dernier": "last",
+    "été": "summer",
+    "appeler": "to call",
+    "tard": "late",
+    "croire": "to believe, to think",
+    "pleuvoir": "to rain",
+    "bientôt": "soon",
+    "beau": "beautiful, nice",
+    "froid": "cold",
+    "week-end": "weekend",
+    "excuser": "to excuse; excuse-moi: sorry, excuse me",
+    "retard": "lateness; en retard: late",
+    "cinéma": "movie theater"
+  },
+  "chunks": {
+    "ca-va": {
+      "text": "Ça va",
+      "en": "How's it going; I'm fine",
+      "about": "Literally that goes: a question with your voice going up, an answer with it going down."
+    },
+    "s-il-vous-plait": {
+      "text": "s'il vous plaît",
+      "en": "please",
+      "about": "Literally if it pleases you; s'il te plaît to a friend."
+    },
+    "hello": {
+      "text": "Bonjour",
+      "en": "hello"
+    },
+    "thank-you": {
+      "text": "merci",
+      "en": "thank you"
+    },
+    "goodbye": {
+      "text": "Au revoir",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "oui",
+      "en": "yes"
+    },
+    "no": {
+      "text": "non",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Comment tu t'appelles",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Enchanté",
+      "en": "nice to meet you"
+    },
+    "this-is": {
+      "text": "C'est",
+      "en": "this is"
+    },
+    "excuse-me": {
+      "text": "Excusez-moi",
+      "en": "excuse me"
+    },
+    "how-much-is-it": {
+      "text": "C'est combien",
+      "en": "how much is it?"
+    },
+    "the-check-please": {
+      "text": "L'addition, s'il vous plaît",
+      "en": "the check, please"
+    },
+    "a-little": {
+      "text": "un peu",
+      "en": "a little"
+    },
+    "see-you-tomorrow": {
+      "text": "À demain",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "je-bois-du-the",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Je bois du thé.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "bois",
+          "boire"
+        ],
+        [
+          "du",
+          "de"
+        ],
+        [
+          "thé",
+          "thé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "some"
+        ],
+        [
+          "tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je du thé bois.",
+        "Je bois thé du."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "thé",
+          "café",
+          "l'eau"
+        ]
+      }
+    },
+    {
+      "id": "je-bois-du-cafe-et-du-the",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Je bois du café et du thé.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "bois",
+          "boire"
+        ],
+        [
+          "du",
+          "de"
+        ],
+        [
+          "café",
+          "café"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "du",
+          "de"
+        ],
+        [
+          "thé",
+          "thé"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "some coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "some tea"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je du café et du thé bois.",
+        "Je bois café du et thé du."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "café",
+          "thé",
+          "l'eau"
+        ]
+      }
+    },
+    {
+      "id": "je-bois-du-the-et-de-l-eau",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Je bois du thé et de l'eau.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "bois",
+          "boire"
+        ],
+        [
+          "du",
+          "de"
+        ],
+        [
+          "thé",
+          "thé"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "l'eau",
+          "eau"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "some tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "some water"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je du thé et de l'eau bois.",
+        "Je bois du thé et du l'eau."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "thé",
+          "café",
+          "l'eau"
+        ]
+      }
+    },
+    {
+      "id": "je-bois-de-l-eau-et-du-cafe",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Je bois de l'eau et du café.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "bois",
+          "boire"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "l'eau",
+          "eau"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "du",
+          "de"
+        ],
+        [
+          "café",
+          "café"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "some water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "some coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je de l'eau et du café bois.",
+        "Je bois du l'eau et du café."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "café",
+          "thé",
+          "l'eau"
+        ]
+      }
+    },
+    {
+      "id": "un-cafe-merci",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Un café, merci.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "café,",
+          "café"
+        ],
+        [
+          "merci"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Une café, merci.",
+        "Un café du, merci."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Un",
+          "Une",
+          "Du"
+        ]
+      }
+    },
+    {
+      "id": "bonjour-un-the-s-il-vous-plait",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "s-il-vous-plait",
+        "hello"
+      ],
+      "text": "Bonjour! Un thé, s'il vous plaît.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Bonjour!"
+        ],
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "thé,",
+          "thé"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "a tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonjour! Une thé, s'il vous plaît.",
+        "Bonjour! Un du thé, s'il vous plaît."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Un",
+          "Une",
+          "Du"
+        ]
+      }
+    },
+    {
+      "id": "un-the-et-une-eau-s-il-vous-plait",
+      "topic": "food",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "s-il-vous-plait"
+      ],
+      "text": "Un thé et une eau, s'il vous plaît.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "thé",
+          "thé"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "une",
+          "un"
+        ],
+        [
+          "eau,",
+          "eau"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "A tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Une thé et une eau, s'il vous plaît.",
+        "Un thé et un eau, s'il vous plaît."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "une",
+          "un",
+          "du"
+        ]
+      }
+    },
+    {
+      "id": "je-bois-du-lait",
+      "topic": "food",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "text": "Je bois du lait.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "bois",
+          "boire"
+        ],
+        [
+          "du",
+          "de"
+        ],
+        [
+          "lait",
+          "lait"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "drink"
+        ],
+        [
+          "some"
+        ],
+        [
+          "milk"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je du lait bois.",
+        "Je bois lait du."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "lait",
+          "café",
+          "thé"
+        ]
+      }
+    },
+    {
+      "id": "je-vais-bien-merci",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Je vais bien, merci.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "vais",
+          "aller"
+        ],
+        [
+          "bien,",
+          "bien"
+        ],
+        [
+          "merci"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am doing"
+        ],
+        [
+          "well"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je bien vais, merci.",
+        "Je bois bien vais, merci."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vais",
+          "bois",
+          "bien"
+        ]
+      }
+    },
+    {
+      "id": "oui-merci-au-revoir",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "yes"
+      ],
+      "text": "Oui, merci. Au revoir!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Oui,"
+        ],
+        [
+          "merci."
+        ],
+        [
+          "Au"
+        ],
+        [
+          "revoir"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Oui, merci. Revoir au!",
+        "Oui, merci. Au du revoir!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Oui,",
+          "Non,",
+          "Bonjour,"
+        ]
+      }
+    },
+    {
+      "id": "non-merci-au-revoir",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "goodbye",
+        "thank-you",
+        "no"
+      ],
+      "text": "Non, merci. Au revoir!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Non,"
+        ],
+        [
+          "merci."
+        ],
+        [
+          "Au"
+        ],
+        [
+          "revoir"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Non, merci. Revoir au!",
+        "Non, merci. Au du revoir!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Non,",
+          "Oui,",
+          "Bonjour,"
+        ]
+      }
+    },
+    {
+      "id": "bonjour-enchante",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Bonjour! Enchanté.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Bonjour!"
+        ],
+        [
+          "Enchanté"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "nice to meet you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bonjour! Je enchanté.",
+        "Bonjour! Du enchanté."
+      ],
+      "otherGender": {
+        "text": "Bonjour! Enchantée.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bonjour!",
+          "Oui!",
+          "Non!"
+        ]
+      }
+    },
+    {
+      "id": "je-suis-professeur",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "text": "Je suis professeur.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "suis",
+          "être"
+        ],
+        [
+          "professeur",
+          "professeur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je es professeur.",
+        "Je professeur suis."
+      ],
+      "otherGender": {
+        "text": "Je suis professeure.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "suis",
+          "es",
+          "bois"
+        ]
+      }
+    },
+    {
+      "id": "tu-es-professeur",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Tu es professeur?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "es",
+          "être"
+        ],
+        [
+          "professeur",
+          "professeur"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu suis professeur?",
+        "Es professeur tu?"
+      ],
+      "otherGender": {
+        "text": "Tu es professeure?",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "professeur",
+          "café",
+          "lait"
+        ]
+      }
+    },
+    {
+      "id": "je-ne-suis-pas-professeur",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "negation"
+      ],
+      "text": "Je ne suis pas professeur.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "suis",
+          "être"
+        ],
+        [
+          "pas",
+          "pas"
+        ],
+        [
+          "professeur",
+          "professeur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am not"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je ne es pas professeur.",
+        "Je ne suis professeur pas."
+      ],
+      "otherGender": {
+        "text": "Je ne suis pas professeure.",
+        "gender": "f",
+        "who": "speaker"
+      },
+      "gap": {
+        "index": 2,
+        "options": [
+          "suis",
+          "es",
+          "vais"
+        ]
+      }
+    },
+    {
+      "id": "ma-mere-va-bien",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Ma mère va bien.",
+      "means": "My mother is well.",
+      "words": [
+        [
+          "Ma",
+          "mon"
+        ],
+        [
+          "mère",
+          "mère"
+        ],
+        [
+          "va",
+          "aller"
+        ],
+        [
+          "bien",
+          "bien"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "is doing"
+        ],
+        [
+          "well"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mon mère va bien.",
+        "Ma mère vais bien."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ma",
+          "Mon",
+          "Un"
+        ]
+      }
+    },
+    {
+      "id": "c-est-ma-mere",
+      "topic": "people",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "this-is"
+      ],
+      "text": "C'est ma mère.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "C'est"
+        ],
+        [
+          "ma",
+          "mon"
+        ],
+        [
+          "mère",
+          "mère"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "C'est mon mère.",
+        "C'est mère ma."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ma",
+          "mon",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "c-est-mon-pere",
+      "topic": "people",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "this-is"
+      ],
+      "text": "C'est mon père.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "C'est"
+        ],
+        [
+          "mon",
+          "mon"
+        ],
+        [
+          "père",
+          "père"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "C'est ma père.",
+        "C'est père mon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mon",
+          "ma",
+          "une"
+        ]
+      }
+    },
+    {
+      "id": "mon-pere-est-professeur",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Mon père est professeur.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Mon",
+          "mon"
+        ],
+        [
+          "père",
+          "père"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "professeur",
+          "professeur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My father"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma père est professeur.",
+        "Mon père es professeur."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "est",
+          "es",
+          "suis"
+        ]
+      }
+    },
+    {
+      "id": "mon-frere-est-etudiant",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Mon frère est étudiant.",
+      "means": "My brother is a student.",
+      "words": [
+        [
+          "Mon",
+          "mon"
+        ],
+        [
+          "frère",
+          "frère"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "étudiant",
+          "étudiant"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma frère est étudiant.",
+        "Mon frère suis étudiant."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "frère",
+          "père",
+          "sœur"
+        ]
+      }
+    },
+    {
+      "id": "c-est-ma-s-ur",
+      "topic": "people",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "this-is"
+      ],
+      "text": "C'est ma sœur.",
+      "means": "This is my sister.",
+      "words": [
+        [
+          "C'est"
+        ],
+        [
+          "ma",
+          "mon"
+        ],
+        [
+          "sœur",
+          "sœur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This is"
+        ],
+        [
+          "my sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "C'est mon sœur.",
+        "C'est sœur ma."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ma",
+          "mon",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "j-ai-un-telephone",
+      "topic": "people",
+      "concepts": [
+        "avoir",
+        "gender"
+      ],
+      "text": "J'ai un téléphone.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "J'ai",
+          "avoir"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "téléphone",
+          "téléphone"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "J'ai une téléphone.",
+        "J'ai téléphone un."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "un",
+          "une",
+          "ma"
+        ]
+      }
+    },
+    {
+      "id": "tu-as-une-cle",
+      "topic": "people",
+      "concepts": [
+        "avoir",
+        "question",
+        "gender"
+      ],
+      "text": "Tu as une clé?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "as",
+          "avoir"
+        ],
+        [
+          "une",
+          "un"
+        ],
+        [
+          "clé",
+          "clé"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "key"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu as un clé?",
+        "Tu est une clé?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "as",
+          "est",
+          "suis"
+        ]
+      }
+    },
+    {
+      "id": "j-ai-un-frere-et-une-s-ur",
+      "topic": "people",
+      "concepts": [
+        "avoir",
+        "gender"
+      ],
+      "text": "J'ai un frère et une sœur.",
+      "means": "I have a brother and a sister.",
+      "words": [
+        [
+          "J'ai",
+          "avoir"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "frère",
+          "frère"
+        ],
+        [
+          "et",
+          "et"
+        ],
+        [
+          "une",
+          "un"
+        ],
+        [
+          "sœur",
+          "sœur"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "a sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "J'ai une frère et une sœur.",
+        "J'ai un frère et un sœur."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "une",
+          "un",
+          "mon"
+        ]
+      }
+    },
+    {
+      "id": "je-n-ai-pas-de-livre",
+      "topic": "people",
+      "concepts": [
+        "avoir",
+        "negation",
+        "de"
+      ],
+      "text": "Je n'ai pas de livre.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "n'ai",
+          "avoir"
+        ],
+        [
+          "pas",
+          "pas"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "livre",
+          "livre"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not have"
+        ],
+        [
+          "a book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je n'ai pas livre de.",
+        "Je n'ai de pas livre."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "livre",
+          "téléphone",
+          "clé"
+        ]
+      }
+    },
+    {
+      "id": "ma-s-ur-est-medecin",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Ma sœur est médecin.",
+      "means": "My sister is a doctor.",
+      "words": [
+        [
+          "Ma",
+          "mon"
+        ],
+        [
+          "sœur",
+          "sœur"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "médecin",
+          "médecin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mon sœur est médecin.",
+        "Ma sœur es médecin."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "médecin",
+          "professeur",
+          "ami"
+        ]
+      }
+    },
+    {
+      "id": "tu-es-un-bon-ami",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Tu es un bon ami.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "es",
+          "être"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "bon",
+          "bon"
+        ],
+        [
+          "ami",
+          "ami"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are"
+        ],
+        [
+          "a"
+        ],
+        [
+          "good"
+        ],
+        [
+          "friend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu suis un bon ami.",
+        "Tu es une bon ami."
+      ],
+      "otherGender": {
+        "text": "Tu es une bonne amie.",
+        "gender": "f",
+        "who": "listener"
+      },
+      "gap": {
+        "index": 1,
+        "options": [
+          "es",
+          "est",
+          "suis"
+        ]
+      }
+    },
+    {
+      "id": "mon-telephone-est-ici",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Mon téléphone est ici.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Mon",
+          "mon"
+        ],
+        [
+          "téléphone",
+          "téléphone"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "ici",
+          "ici"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My phone"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma téléphone est ici.",
+        "Mon téléphone es ici."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "ici",
+          "là",
+          "où"
+        ]
+      }
+    },
+    {
+      "id": "la-cle-est-la",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "La clé est là.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "La",
+          "le"
+        ],
+        [
+          "clé",
+          "clé"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "là",
+          "là"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "is"
+        ],
+        [
+          "there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "La clé es là.",
+        "Les clé est là."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "là",
+          "ici",
+          "où"
+        ]
+      }
+    },
+    {
+      "id": "excusez-moi-ou-sont-les-toilettes",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Excusez-moi, où sont les toilettes?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Excusez-moi,"
+        ],
+        [
+          "où",
+          "où"
+        ],
+        [
+          "sont",
+          "être"
+        ],
+        [
+          "les",
+          "le"
+        ],
+        [
+          "toilettes",
+          "toilettes"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "where"
+        ],
+        [
+          "are"
+        ],
+        [
+          "the toilets"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Excusez-moi, où est les toilettes?",
+        "Excusez-moi, où sont la toilettes?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "sont",
+          "est",
+          "es"
+        ]
+      }
+    },
+    {
+      "id": "ou-est-ma-mere",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "gender"
+      ],
+      "text": "Où est ma mère?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Où",
+          "où"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "ma",
+          "mon"
+        ],
+        [
+          "mère",
+          "mère"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Où est mon mère?",
+        "Où sont ma mère?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ma",
+          "mon",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "ma-s-ur-est-ici",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Ma sœur est ici.",
+      "means": "My sister is here.",
+      "words": [
+        [
+          "Ma",
+          "mon"
+        ],
+        [
+          "sœur",
+          "sœur"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "ici",
+          "ici"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mon sœur est ici.",
+        "Ma sœur sont ici."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sœur",
+          "mère",
+          "frère"
+        ]
+      }
+    },
+    {
+      "id": "excusez-moi-c-est-combien",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "how-much-is-it",
+        "excuse-me"
+      ],
+      "text": "Excusez-moi, c'est combien?",
+      "means": "Excuse me, how much is it?",
+      "words": [
+        [
+          "Excusez-moi,"
+        ],
+        [
+          "c'est"
+        ],
+        [
+          "combien"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "how much is it"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Excusez-moi, c'est du combien?",
+        "Excusez-moi, c'est une combien?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Excusez-moi,",
+          "Bonjour,",
+          "Merci,"
+        ]
+      }
+    },
+    {
+      "id": "deux-cafes-s-il-vous-plait",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "s-il-vous-plait"
+      ],
+      "text": "Deux cafés, s'il vous plaît.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Deux",
+          "deux"
+        ],
+        [
+          "cafés,",
+          "café"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Deux café, s'il vous plaît.",
+        "Deux un cafés, s'il vous plaît."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Deux",
+          "Trois",
+          "Un"
+        ]
+      }
+    },
+    {
+      "id": "un-livre-s-il-vous-plait",
+      "topic": "out",
+      "concepts": [
+        "gender"
+      ],
+      "chunks": [
+        "s-il-vous-plait"
+      ],
+      "text": "Un livre, s'il vous plaît.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Un",
+          "un"
+        ],
+        [
+          "livre,",
+          "livre"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Un livre, s'il plaît vous.",
+        "Un livres, s'il vous plaît."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Un",
+          "Deux",
+          "Trois"
+        ]
+      }
+    },
+    {
+      "id": "j-ai-trois-livres",
+      "topic": "out",
+      "concepts": [
+        "avoir"
+      ],
+      "text": "J'ai trois livres.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "J'ai",
+          "avoir"
+        ],
+        [
+          "trois",
+          "trois"
+        ],
+        [
+          "livres",
+          "livre"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "J'ai trois livre.",
+        "J'ai trois un livres."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "trois",
+          "deux",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "je-n-ai-pas-d-argent",
+      "topic": "out",
+      "concepts": [
+        "avoir",
+        "negation",
+        "de"
+      ],
+      "text": "Je n'ai pas d'argent.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "n'ai",
+          "avoir"
+        ],
+        [
+          "pas",
+          "pas"
+        ],
+        [
+          "d'argent",
+          "argent"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not have"
+        ],
+        [
+          "any money"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je n'ai d'argent pas.",
+        "Je n'ai pas un d'argent."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "pas",
+          "non",
+          "ne"
+        ]
+      }
+    },
+    {
+      "id": "tu-comprends",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Tu comprends?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "comprends",
+          "comprendre"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Comprends tu tu?",
+        "Tu est comprends?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "comprends",
+          "parles",
+          "veux"
+        ]
+      }
+    },
+    {
+      "id": "tu-parles-anglais",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "text": "Tu parles anglais?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "parles",
+          "parler"
+        ],
+        [
+          "anglais",
+          "anglais"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "English"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu parle anglais?",
+        "Tu anglais parles?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "parles",
+          "parle",
+          "est"
+        ]
+      }
+    },
+    {
+      "id": "je-parle-un-peu-francais",
+      "topic": "people",
+      "concepts": [
+        "present"
+      ],
+      "chunks": [
+        "a-little"
+      ],
+      "text": "Je parle un peu français.",
+      "means": "I speak a little French.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "parle",
+          "parler"
+        ],
+        [
+          "un"
+        ],
+        [
+          "peu"
+        ],
+        [
+          "français",
+          "français"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "speak"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "French"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je parles un peu français.",
+        "Je parle une peu français."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "parle",
+          "parles",
+          "est"
+        ]
+      }
+    },
+    {
+      "id": "je-veux-un-cafe",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "Je veux un café.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "veux",
+          "vouloir"
+        ],
+        [
+          "un",
+          "un"
+        ],
+        [
+          "café",
+          "café"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "a"
+        ],
+        [
+          "coffee"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je veux une café.",
+        "Je un café veux."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "veux",
+          "bois",
+          "comprends"
+        ]
+      }
+    },
+    {
+      "id": "je-veux-de-l-eau-s-il-vous-plait",
+      "topic": "people",
+      "concepts": [
+        "present",
+        "partitive"
+      ],
+      "chunks": [
+        "s-il-vous-plait"
+      ],
+      "text": "Je veux de l'eau, s'il vous plaît.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "veux",
+          "vouloir"
+        ],
+        [
+          "de",
+          "de"
+        ],
+        [
+          "l'eau,",
+          "eau"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "want"
+        ],
+        [
+          "some water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je veux du l'eau, s'il vous plaît.",
+        "Je de l'eau veux, s'il vous plaît."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "de",
+          "du",
+          "un"
+        ]
+      }
+    },
+    {
+      "id": "ma-chambre-est-petite",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective-after"
+      ],
+      "text": "Ma chambre est petite.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Ma",
+          "mon"
+        ],
+        [
+          "chambre",
+          "chambre"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "petite",
+          "petit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My bedroom"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mon chambre est petite.",
+        "Ma chambre es petite."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "petite",
+          "grande",
+          "bon"
+        ]
+      }
+    },
+    {
+      "id": "cette-chambre-est-grande",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective-after"
+      ],
+      "text": "Cette chambre est grande.",
+      "means": "This room is big.",
+      "words": [
+        [
+          "Cette",
+          "ce"
+        ],
+        [
+          "chambre",
+          "chambre"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "grande",
+          "grand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This bedroom"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cette chambre est bon.",
+        "Cette chambre sont grande."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "grande",
+          "petite",
+          "bon"
+        ]
+      }
+    },
+    {
+      "id": "cette-maison-est-grande",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective-after"
+      ],
+      "text": "Cette maison est grande.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Cette",
+          "ce"
+        ],
+        [
+          "maison",
+          "maison"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "grande",
+          "grand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This house"
+        ],
+        [
+          "is"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cette maison es grande.",
+        "Cette maison est bon."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "maison",
+          "chambre",
+          "téléphone"
+        ]
+      }
+    },
+    {
+      "id": "j-habite-dans-une-petite-maison",
+      "topic": "home",
+      "concepts": [
+        "present",
+        "gender"
+      ],
+      "text": "J'habite dans une petite maison.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "J'habite",
+          "habiter"
+        ],
+        [
+          "dans",
+          "dans"
+        ],
+        [
+          "une",
+          "un"
+        ],
+        [
+          "petite",
+          "petit"
+        ],
+        [
+          "maison",
+          "maison"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I live"
+        ],
+        [
+          "in"
+        ],
+        [
+          "a"
+        ],
+        [
+          "small"
+        ],
+        [
+          "house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "J'habite dans un petite maison.",
+        "J'habite une dans petite maison."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "une",
+          "un",
+          "mon"
+        ]
+      }
+    },
+    {
+      "id": "j-ai-une-voiture",
+      "topic": "out",
+      "concepts": [
+        "avoir",
+        "gender"
+      ],
+      "text": "J'ai une voiture.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "J'ai",
+          "avoir"
+        ],
+        [
+          "une",
+          "un"
+        ],
+        [
+          "voiture",
+          "voiture"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "a"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "J'ai un voiture.",
+        "J'ai voiture une."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "une",
+          "un",
+          "mon"
+        ]
+      }
+    },
+    {
+      "id": "cette-voiture-est-petite",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "gender",
+        "adjective-after"
+      ],
+      "text": "Cette voiture est petite.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Cette",
+          "ce"
+        ],
+        [
+          "voiture",
+          "voiture"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "petite",
+          "petit"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This car"
+        ],
+        [
+          "is"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Cette voiture est bon.",
+        "Cette voiture sont petite."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "petite",
+          "grande",
+          "bon"
+        ]
+      }
+    },
+    {
+      "id": "je-vais-a-l-ecole",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "aller"
+      ],
+      "text": "Je vais à l'école.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "vais",
+          "aller"
+        ],
+        [
+          "à",
+          "à"
+        ],
+        [
+          "l'école",
+          "école"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je vas à l'école.",
+        "Je à l'école vais."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vais",
+          "vas",
+          "va"
+        ]
+      }
+    },
+    {
+      "id": "tu-vas-ou",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "present",
+        "aller"
+      ],
+      "text": "Tu vas où?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Tu",
+          "tu"
+        ],
+        [
+          "vas",
+          "aller"
+        ],
+        [
+          "où",
+          "où"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are going"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu vais où?",
+        "Tu va où?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vas",
+          "vais",
+          "va"
+        ]
+      }
+    },
+    {
+      "id": "ma-mere-va-en-ville",
+      "topic": "out",
+      "concepts": [
+        "present",
+        "aller"
+      ],
+      "text": "Ma mère va en ville.",
+      "means": "My mother goes into town.",
+      "words": [
+        [
+          "Ma",
+          "mon"
+        ],
+        [
+          "mère",
+          "mère"
+        ],
+        [
+          "va",
+          "aller"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "ville",
+          "ville"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "to"
+        ],
+        [
+          "town"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma mère vas en ville.",
+        "Mon mère va en ville."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "va",
+          "vas",
+          "vais"
+        ]
+      }
+    },
+    {
+      "id": "merci-a-demain",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Merci. À demain!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Merci."
+        ],
+        [
+          "À"
+        ],
+        [
+          "demain"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "see you tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Merci. À du demain!",
+        "Merci. À une demain!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Merci.",
+          "Bonjour.",
+          "Oui."
+        ]
+      }
+    },
+    {
+      "id": "demain-je-vais-en-ville",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "aller"
+      ],
+      "text": "Demain, je vais en ville.",
+      "means": "Tomorrow I'm going into town.",
+      "words": [
+        [
+          "Demain,",
+          "demain"
+        ],
+        [
+          "je",
+          "je"
+        ],
+        [
+          "vais",
+          "aller"
+        ],
+        [
+          "en",
+          "en"
+        ],
+        [
+          "ville",
+          "ville"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I"
+        ],
+        [
+          "go"
+        ],
+        [
+          "to"
+        ],
+        [
+          "town"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Demain, je vas en ville.",
+        "Demain, je aller en ville."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vais",
+          "vas",
+          "aller"
+        ]
+      }
+    },
+    {
+      "id": "je-dois-aller-maintenant",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "modal",
+        "aller"
+      ],
+      "text": "Je dois aller maintenant.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "dois",
+          "devoir"
+        ],
+        [
+          "aller",
+          "aller"
+        ],
+        [
+          "maintenant",
+          "maintenant"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "have to"
+        ],
+        [
+          "go"
+        ],
+        [
+          "now"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je dois vais maintenant.",
+        "Je aller dois maintenant."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "maintenant",
+          "aujourd'hui",
+          "demain"
+        ]
+      }
+    },
+    {
+      "id": "je-ne-peux-pas-aller-aujourd-hui",
+      "topic": "plans",
+      "concepts": [
+        "present",
+        "negation",
+        "modal",
+        "aller"
+      ],
+      "text": "Je ne peux pas aller aujourd'hui.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Je",
+          "je"
+        ],
+        [
+          "ne",
+          "ne"
+        ],
+        [
+          "peux",
+          "pouvoir"
+        ],
+        [
+          "pas",
+          "pas"
+        ],
+        [
+          "aller",
+          "aller"
+        ],
+        [
+          "aujourd'hui",
+          "aujourd'hui"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "cannot"
+        ],
+        [
+          "go"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je ne peux pas vais aujourd'hui.",
+        "Je ne peux aller pas aujourd'hui."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "peux",
+          "dois",
+          "veux"
+        ]
+      }
+    },
+    {
+      "id": "tu-t-appelles",
+      "topic": "people",
+      "concepts": [
+        "reflexive",
+        "question"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Comment tu t'appelles?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Comment"
+        ],
+        [
+          "tu"
+        ],
+        [
+          "t'appelles"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "How"
+        ],
+        [
+          "you"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "call"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "t'appelles"
+      ],
+      "wrong": [
+        "Comment tu appelles-toi?",
+        "Comment tu s'appelles?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "t'appelles",
+          "s'appelle",
+          "m'appelle"
+        ]
+      }
+    },
+    {
+      "id": "ca-va",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "present"
+      ],
+      "chunks": [
+        "ca-va"
+      ],
+      "text": "Ça va?",
+      "means": "How's it going?",
+      "words": [
+        [
+          "Ça"
+        ],
+        [
+          "va"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "That"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ça vais?",
+        "Ça allez?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "va",
+          "vais",
+          "vas"
+        ]
+      }
+    },
+    {
+      "id": "soeur-grande",
+      "topic": "people",
+      "concepts": [
+        "gender"
+      ],
+      "text": "Ma sœur est très grande.",
+      "means": "My sister is very tall.",
+      "words": [
+        [
+          "Ma"
+        ],
+        [
+          "sœur",
+          "sœur"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "très",
+          "très"
+        ],
+        [
+          "grande",
+          "grand"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My sister"
+        ],
+        [
+          "is"
+        ],
+        [
+          "very tall"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ma sœur est très grand.",
+        "Mon sœur est très grande."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "grande",
+          "grand",
+          "grandes"
+        ]
+      }
+    },
+    {
+      "id": "frere-vingt-ans",
+      "topic": "people",
+      "concepts": [
+        "avoir"
+      ],
+      "text": "Mon frère a vingt ans.",
+      "means": "My brother is twenty.",
+      "words": [
+        [
+          "Mon"
+        ],
+        [
+          "frère",
+          "frère"
+        ],
+        [
+          "a",
+          "avoir"
+        ],
+        [
+          "vingt",
+          "vingt"
+        ],
+        [
+          "ans",
+          "an"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My brother"
+        ],
+        [
+          "has"
+        ],
+        [
+          "twenty years"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mon frère est vingt ans.",
+        "Mon frère a vingt an."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "a",
+          "est",
+          "as"
+        ]
+      }
+    },
+    {
+      "id": "je-les-vois",
+      "topic": "people",
+      "concepts": [
+        "object-pronoun"
+      ],
+      "text": "Je les vois le dimanche.",
+      "means": "I see them on Sundays.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "les"
+        ],
+        [
+          "vois",
+          "voir"
+        ],
+        [
+          "le"
+        ],
+        [
+          "dimanche",
+          "dimanche"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "them",
+          true
+        ],
+        [
+          "see"
+        ],
+        [
+          "on Sundays"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "les"
+      ],
+      "wrong": [
+        "Je vois les le dimanche.",
+        "Je leur vois le dimanche."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "les",
+          "leur",
+          "la"
+        ]
+      }
+    },
+    {
+      "id": "voiture-pere",
+      "topic": "people",
+      "concepts": [
+        "de"
+      ],
+      "text": "C'est la voiture de mon père.",
+      "means": "It's my father's car.",
+      "words": [
+        [
+          "C'est",
+          "être"
+        ],
+        [
+          "la"
+        ],
+        [
+          "voiture",
+          "voiture"
+        ],
+        [
+          "de"
+        ],
+        [
+          "mon"
+        ],
+        [
+          "père",
+          "père"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It is"
+        ],
+        [
+          "the car"
+        ],
+        [
+          "of my father",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "de",
+        "mon",
+        "père"
+      ],
+      "wrong": [
+        "C'est mon père voiture.",
+        "C'est la voiture du mon père."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "de",
+          "du",
+          "des"
+        ]
+      }
+    },
+    {
+      "id": "connais-pas-frere",
+      "topic": "people",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Je ne connais pas ton frère.",
+      "means": "I don't know your brother.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "ne"
+        ],
+        [
+          "connais",
+          "connaître"
+        ],
+        [
+          "pas"
+        ],
+        [
+          "ton"
+        ],
+        [
+          "frère",
+          "frère"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "know"
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "your brother"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "pas"
+      ],
+      "wrong": [
+        "Je connais ne pas ton frère.",
+        "Je ne pas connais ton frère."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pas",
+          "non",
+          "ne"
+        ]
+      }
+    },
+    {
+      "id": "je-l-ai-vu",
+      "topic": "people",
+      "concepts": [
+        "object-pronoun",
+        "perfect"
+      ],
+      "text": "Je l'ai vu hier.",
+      "means": "I saw him yesterday.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "l'ai",
+          "avoir"
+        ],
+        [
+          "vu",
+          "voir"
+        ],
+        [
+          "hier",
+          "hier"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "him",
+          true
+        ],
+        [
+          "have seen"
+        ],
+        [
+          "yesterday"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "l'ai"
+      ],
+      "wrong": [
+        "J'ai le vu hier.",
+        "J'ai vu lui hier."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "vu",
+          "vois",
+          "voir"
+        ]
+      }
+    },
+    {
+      "id": "parents-partis",
+      "topic": "people",
+      "concepts": [
+        "etre-perfect"
+      ],
+      "text": "Mes parents sont partis en vacances.",
+      "means": "My parents went on vacation.",
+      "words": [
+        [
+          "Mes"
+        ],
+        [
+          "parents",
+          "parent"
+        ],
+        [
+          "sont",
+          "être"
+        ],
+        [
+          "partis",
+          "partir"
+        ],
+        [
+          "en"
+        ],
+        [
+          "vacances",
+          "vacances"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My parents"
+        ],
+        [
+          "are"
+        ],
+        [
+          "left"
+        ],
+        [
+          "on vacation"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mes parents ont partis en vacances.",
+        "Mes parents sont parti en vacances."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "partis",
+          "parti",
+          "partir"
+        ]
+      }
+    },
+    {
+      "id": "maison-bleue",
+      "topic": "home",
+      "concepts": [
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Nous habitons dans une maison bleue.",
+      "means": "We live in a blue house.",
+      "words": [
+        [
+          "Nous"
+        ],
+        [
+          "habitons",
+          "habiter"
+        ],
+        [
+          "dans"
+        ],
+        [
+          "une"
+        ],
+        [
+          "maison",
+          "maison"
+        ],
+        [
+          "bleue",
+          "bleu"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We live in a"
+        ],
+        [
+          "house"
+        ],
+        [
+          "blue",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "bleue"
+      ],
+      "wrong": [
+        "Nous habitons dans un maison bleue.",
+        "Nous habitons dans une maison bleu."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "bleue",
+          "bleu",
+          "bleus"
+        ]
+      }
+    },
+    {
+      "id": "deux-salles-de-bain",
+      "topic": "home",
+      "concepts": [
+        "il-y-a",
+        "de"
+      ],
+      "text": "Il y a deux salles de bain.",
+      "means": "There are two bathrooms.",
+      "words": [
+        [
+          "Il"
+        ],
+        [
+          "y"
+        ],
+        [
+          "a",
+          "avoir"
+        ],
+        [
+          "deux",
+          "deux"
+        ],
+        [
+          "salles",
+          "salle"
+        ],
+        [
+          "de"
+        ],
+        [
+          "bain",
+          "bain"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "there has"
+        ],
+        [
+          "two rooms"
+        ],
+        [
+          "of bath",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "de",
+        "bain"
+      ],
+      "wrong": [
+        "Il y sont deux salles de bain.",
+        "Il a deux salles de bain."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "y",
+          "en",
+          "le"
+        ]
+      }
+    },
+    {
+      "id": "pas-de-lait",
+      "topic": "home",
+      "concepts": [
+        "il-y-a",
+        "negation",
+        "partitive"
+      ],
+      "text": "Il n'y a pas de lait.",
+      "means": "There's no milk.",
+      "words": [
+        [
+          "Il"
+        ],
+        [
+          "n'y"
+        ],
+        [
+          "a",
+          "avoir"
+        ],
+        [
+          "pas"
+        ],
+        [
+          "de"
+        ],
+        [
+          "lait",
+          "lait"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It"
+        ],
+        [
+          "not there"
+        ],
+        [
+          "has"
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "any milk"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "pas"
+      ],
+      "wrong": [
+        "Il n'y a pas de le lait.",
+        "Il ne y a pas de lait."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "de",
+          "du",
+          "le"
+        ]
+      }
+    },
+    {
+      "id": "je-me-leve",
+      "topic": "home",
+      "concepts": [
+        "reflexive"
+      ],
+      "text": "Je me lève à sept heures.",
+      "means": "I get up at seven.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "me"
+        ],
+        [
+          "lève",
+          "se lever"
+        ],
+        [
+          "à"
+        ],
+        [
+          "sept",
+          "sept"
+        ],
+        [
+          "heures",
+          "heure"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "myself",
+          true
+        ],
+        [
+          "raise"
+        ],
+        [
+          "at seven o'clock"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "me"
+      ],
+      "wrong": [
+        "Je lève me à sept heures.",
+        "Je me lève sept heures."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "me",
+          "se",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "tu-te-couches",
+      "topic": "home",
+      "concepts": [
+        "reflexive",
+        "question"
+      ],
+      "text": "À quelle heure tu te couches?",
+      "means": "What time do you go to bed?",
+      "words": [
+        [
+          "À"
+        ],
+        [
+          "quelle"
+        ],
+        [
+          "heure",
+          "heure"
+        ],
+        [
+          "tu"
+        ],
+        [
+          "te"
+        ],
+        [
+          "couches",
+          "se coucher"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "At what hour"
+        ],
+        [
+          "you"
+        ],
+        [
+          "yourself",
+          true
+        ],
+        [
+          "lay down"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te"
+      ],
+      "wrong": [
+        "À quelle heure tu couches te?",
+        "À quelle heure tu se couches?"
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "te",
+          "se",
+          "me"
+        ]
+      }
+    },
+    {
+      "id": "ne-les-trouve-pas",
+      "topic": "home",
+      "concepts": [
+        "negation",
+        "object-pronoun"
+      ],
+      "text": "Je ne les trouve pas.",
+      "means": "I can't find them.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "ne"
+        ],
+        [
+          "les"
+        ],
+        [
+          "trouve",
+          "trouver"
+        ],
+        [
+          "pas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "them",
+          true
+        ],
+        [
+          "find"
+        ],
+        [
+          "not",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "les",
+        "pas"
+      ],
+      "wrong": [
+        "Je ne trouve pas les.",
+        "Je les ne trouve pas."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "les",
+          "leur",
+          "la"
+        ]
+      }
+    },
+    {
+      "id": "fini-devoirs",
+      "topic": "home",
+      "concepts": [
+        "perfect",
+        "question"
+      ],
+      "text": "Tu as fini tes devoirs?",
+      "means": "Have you finished your homework?",
+      "words": [
+        [
+          "Tu"
+        ],
+        [
+          "as",
+          "avoir"
+        ],
+        [
+          "fini",
+          "finir"
+        ],
+        [
+          "tes"
+        ],
+        [
+          "devoirs",
+          "devoir"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "have",
+          true
+        ],
+        [
+          "finished"
+        ],
+        [
+          "your homework"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "as"
+      ],
+      "wrong": [
+        "Tu es fini tes devoirs?",
+        "Tu as finir tes devoirs?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "fini",
+          "finir",
+          "finis"
+        ]
+      }
+    },
+    {
+      "id": "ranger-chambre",
+      "topic": "home",
+      "concepts": [
+        "aller"
+      ],
+      "text": "Je vais ranger ma chambre.",
+      "means": "I'm going to clean up my room.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "vais",
+          "aller"
+        ],
+        [
+          "ranger",
+          "ranger"
+        ],
+        [
+          "ma"
+        ],
+        [
+          "chambre",
+          "chambre"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "tidy"
+        ],
+        [
+          "my bedroom"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je vais à ranger ma chambre.",
+        "Je vais range ma chambre."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ranger",
+          "range",
+          "rangé"
+        ]
+      }
+    },
+    {
+      "id": "chaud-maison",
+      "topic": "home",
+      "concepts": [
+        "il-fait"
+      ],
+      "text": "Il fait chaud dans la maison.",
+      "means": "It's hot in the house.",
+      "words": [
+        [
+          "Il"
+        ],
+        [
+          "fait",
+          "faire"
+        ],
+        [
+          "chaud",
+          "chaud"
+        ],
+        [
+          "dans"
+        ],
+        [
+          "la"
+        ],
+        [
+          "maison",
+          "maison"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It makes"
+        ],
+        [
+          "hot"
+        ],
+        [
+          "in the house"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il est chaud dans la maison.",
+        "Il fait chaude dans la maison."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fait",
+          "est",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "rentre-du-travail",
+      "topic": "home",
+      "concepts": [
+        "contraction"
+      ],
+      "text": "Je rentre du travail à six heures.",
+      "means": "I get back from work at six.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "rentre",
+          "rentrer"
+        ],
+        [
+          "du"
+        ],
+        [
+          "travail",
+          "travail"
+        ],
+        [
+          "à"
+        ],
+        [
+          "six",
+          "six"
+        ],
+        [
+          "heures",
+          "heure"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I come home"
+        ],
+        [
+          "from the work"
+        ],
+        [
+          "at six o'clock"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je rentre de le travail à six heures.",
+        "Je rentre de la travail à six heures."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "du",
+          "de",
+          "au"
+        ]
+      }
+    },
+    {
+      "id": "j-ai-faim",
+      "topic": "food",
+      "concepts": [
+        "avoir",
+        "question"
+      ],
+      "text": "J'ai faim, et toi?",
+      "means": "I'm hungry, what about you?",
+      "words": [
+        [
+          "J'ai",
+          "avoir"
+        ],
+        [
+          "faim,",
+          "faim"
+        ],
+        [
+          "et"
+        ],
+        [
+          "toi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "hunger"
+        ],
+        [
+          "and you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je suis faim, et toi?",
+        "J'ai faim, et tu?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "toi",
+          "tu",
+          "te"
+        ]
+      }
+    },
+    {
+      "id": "du-cafe",
+      "topic": "food",
+      "concepts": [
+        "partitive"
+      ],
+      "text": "Je bois du café le matin.",
+      "means": "I drink coffee in the morning.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "bois",
+          "boire"
+        ],
+        [
+          "du"
+        ],
+        [
+          "café",
+          "café"
+        ],
+        [
+          "le"
+        ],
+        [
+          "matin",
+          "matin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I drink"
+        ],
+        [
+          "some"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "in the morning"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je bois de café le matin.",
+        "Je bois café le matin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "du",
+          "de",
+          "des"
+        ]
+      }
+    },
+    {
+      "id": "aime-fromage",
+      "topic": "food",
+      "concepts": [
+        "partitive"
+      ],
+      "text": "J'aime beaucoup le fromage.",
+      "means": "I really like cheese.",
+      "words": [
+        [
+          "J'aime",
+          "aimer"
+        ],
+        [
+          "beaucoup",
+          "beaucoup"
+        ],
+        [
+          "le"
+        ],
+        [
+          "fromage",
+          "fromage"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I like"
+        ],
+        [
+          "a lot",
+          true
+        ],
+        [
+          "the cheese"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "beaucoup"
+      ],
+      "wrong": [
+        "J'aime le fromage beaucoup.",
+        "J'aime beaucoup du fromage."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "le",
+          "du",
+          "de"
+        ]
+      }
+    },
+    {
+      "id": "pas-de-viande",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "partitive"
+      ],
+      "text": "Je ne mange pas de viande.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "ne"
+        ],
+        [
+          "mange",
+          "manger"
+        ],
+        [
+          "pas"
+        ],
+        [
+          "de"
+        ],
+        [
+          "viande",
+          "viande"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "not"
+        ],
+        [
+          "eat"
+        ],
+        [
+          "not",
+          true
+        ],
+        [
+          "any meat"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "pas"
+      ],
+      "wrong": [
+        "Je ne mange pas du viande.",
+        "Je ne pas mange de viande."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "de",
+          "du",
+          "la"
+        ]
+      }
+    },
+    {
+      "id": "verre-d-eau",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "s-il-vous-plait"
+      ],
+      "text": "Je voudrais un verre d'eau, s'il vous plaît.",
+      "means": "I'd like a glass of water, please.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "voudrais",
+          "vouloir"
+        ],
+        [
+          "un"
+        ],
+        [
+          "verre",
+          "verre"
+        ],
+        [
+          "d'eau,",
+          "eau"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît",
+          "plaire"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I would like"
+        ],
+        [
+          "a glass"
+        ],
+        [
+          "of water"
+        ],
+        [
+          "if it"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "pleases"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "vous"
+      ],
+      "wrong": [
+        "Je voudrais un verre de eau, s'il vous plaît.",
+        "Je voudrais un verre d'eau, si il vous plaît."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "verre",
+          "vert",
+          "vers"
+        ]
+      }
+    },
+    {
+      "id": "mange-pizza",
+      "topic": "food",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "J'ai mangé une pizza hier soir.",
+      "means": "I had pizza last night.",
+      "words": [
+        [
+          "J'ai",
+          "avoir"
+        ],
+        [
+          "mangé",
+          "manger"
+        ],
+        [
+          "une"
+        ],
+        [
+          "pizza",
+          "pizza"
+        ],
+        [
+          "hier",
+          "hier"
+        ],
+        [
+          "soir",
+          "soir"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I have"
+        ],
+        [
+          "eaten"
+        ],
+        [
+          "a pizza"
+        ],
+        [
+          "yesterday evening"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je suis mangé une pizza hier soir.",
+        "J'ai manger une pizza hier soir."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mangé",
+          "manger",
+          "mange"
+        ]
+      }
+    },
+    {
+      "id": "diner-parents",
+      "topic": "food",
+      "concepts": [
+        "aller"
+      ],
+      "text": "Ce soir, nous allons dîner chez mes parents.",
+      "means": "Tonight we're having dinner at my parents' place.",
+      "words": [
+        [
+          "Ce"
+        ],
+        [
+          "soir,",
+          "soir"
+        ],
+        [
+          "nous"
+        ],
+        [
+          "allons",
+          "aller"
+        ],
+        [
+          "dîner",
+          "dîner"
+        ],
+        [
+          "chez"
+        ],
+        [
+          "mes"
+        ],
+        [
+          "parents",
+          "parent"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This evening"
+        ],
+        [
+          "we go"
+        ],
+        [
+          "have dinner"
+        ],
+        [
+          "at the home of"
+        ],
+        [
+          "my parents"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ce soir, nous allons à dîner chez mes parents.",
+        "Ce soir, nous allons dînons chez mes parents."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "allons",
+          "allez",
+          "vont"
+        ]
+      }
+    },
+    {
+      "id": "tu-as-soif",
+      "topic": "food",
+      "concepts": [
+        "avoir",
+        "question"
+      ],
+      "text": "Tu as soif?",
+      "means": "Are you thirsty?",
+      "words": [
+        [
+          "Tu"
+        ],
+        [
+          "as",
+          "avoir"
+        ],
+        [
+          "soif",
+          "soif"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You have"
+        ],
+        [
+          "thirst"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Tu es soif?",
+        "As soif tu?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "as",
+          "es",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "l-addition",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "the-check-please"
+      ],
+      "text": "L'addition, s'il vous plaît.",
+      "means": "The check, please.",
+      "words": [
+        [
+          "L'addition,"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The check"
+        ],
+        [
+          "if it"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "pleases"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "vous"
+      ],
+      "wrong": [
+        "La addition, s'il vous plaît.",
+        "L'addition, s'il vous plaire."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "plaît",
+          "plaire",
+          "plais"
+        ]
+      }
+    },
+    {
+      "id": "acheter-tomates",
+      "topic": "food",
+      "concepts": [
+        "modal",
+        "partitive"
+      ],
+      "text": "Je dois acheter des tomates.",
+      "means": "I need to buy tomatoes.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "dois",
+          "devoir"
+        ],
+        [
+          "acheter",
+          "acheter"
+        ],
+        [
+          "des"
+        ],
+        [
+          "tomates",
+          "tomate"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I must"
+        ],
+        [
+          "buy"
+        ],
+        [
+          "some tomatoes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je dois achète des tomates.",
+        "Je dois de acheter des tomates."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "acheter",
+          "achète",
+          "acheté"
+        ]
+      }
+    },
+    {
+      "id": "au-marche",
+      "topic": "food",
+      "concepts": [
+        "contraction"
+      ],
+      "text": "Je vais au marché le samedi.",
+      "means": "I go to the market on Saturdays.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "vais",
+          "aller"
+        ],
+        [
+          "au"
+        ],
+        [
+          "marché",
+          "marché"
+        ],
+        [
+          "le"
+        ],
+        [
+          "samedi",
+          "samedi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I go"
+        ],
+        [
+          "to the market"
+        ],
+        [
+          "on Saturdays"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je vais à le marché le samedi.",
+        "Je vais à la marché le samedi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "au",
+          "à",
+          "aux"
+        ]
+      }
+    },
+    {
+      "id": "on-mange",
+      "topic": "food",
+      "concepts": [
+        "on",
+        "question",
+        "present"
+      ],
+      "text": "On mange à quelle heure?",
+      "means": "What time are we eating?",
+      "words": [
+        [
+          "On"
+        ],
+        [
+          "mange",
+          "manger"
+        ],
+        [
+          "à"
+        ],
+        [
+          "quelle"
+        ],
+        [
+          "heure",
+          "heure"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "eats"
+        ],
+        [
+          "at what hour",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "à",
+        "quelle",
+        "heure"
+      ],
+      "wrong": [
+        "On mangeons à quelle heure?",
+        "On mange quelle heure?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mange",
+          "mangeons",
+          "manges"
+        ]
+      }
+    },
+    {
+      "id": "cuisine-grand-mere",
+      "topic": "food",
+      "concepts": [
+        "de"
+      ],
+      "text": "J'adore la cuisine de ma grand-mère.",
+      "means": "I love my grandmother's cooking.",
+      "words": [
+        [
+          "J'adore",
+          "adorer"
+        ],
+        [
+          "la"
+        ],
+        [
+          "cuisine",
+          "cuisine"
+        ],
+        [
+          "de"
+        ],
+        [
+          "ma"
+        ],
+        [
+          "grand-mère",
+          "grand-mère"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I love"
+        ],
+        [
+          "the cooking"
+        ],
+        [
+          "of my grandmother",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "de",
+        "ma",
+        "grand-mère"
+      ],
+      "wrong": [
+        "J'adore ma grand-mère cuisine.",
+        "J'adore la cuisine du ma grand-mère."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "de",
+          "du",
+          "des"
+        ]
+      }
+    },
+    {
+      "id": "j-en-veux-deux",
+      "topic": "food",
+      "concepts": [
+        "y-en"
+      ],
+      "chunks": [
+        "s-il-vous-plait"
+      ],
+      "text": "J'en veux deux, s'il vous plaît.",
+      "means": "I'd like two of them, please.",
+      "words": [
+        [
+          "J'en"
+        ],
+        [
+          "veux",
+          "vouloir"
+        ],
+        [
+          "deux,",
+          "deux"
+        ],
+        [
+          "s'il"
+        ],
+        [
+          "vous"
+        ],
+        [
+          "plaît",
+          "plaire"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "of them",
+          true
+        ],
+        [
+          "want"
+        ],
+        [
+          "two"
+        ],
+        [
+          "if it"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "pleases"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        3,
+        1,
+        4,
+        6,
+        5
+      ],
+      "moved": [
+        "J'en",
+        "vous"
+      ],
+      "wrong": [
+        "Je veux en deux, s'il vous plaît.",
+        "J'y veux deux, s'il vous plaît."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "veux",
+          "veut",
+          "voulez"
+        ]
+      }
+    },
+    {
+      "id": "ou-est-la-gare",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "gender"
+      ],
+      "text": "Où est la gare?",
+      "means": "Where's the train station?",
+      "words": [
+        [
+          "Où",
+          "où"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "la",
+          "le"
+        ],
+        [
+          "gare",
+          "gare"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Where"
+        ],
+        [
+          "is"
+        ],
+        [
+          "the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Où la gare est?",
+        "Où est le gare?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "la",
+          "le",
+          "les"
+        ]
+      }
+    },
+    {
+      "id": "banque-pres-d-ici",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "il-y-a"
+      ],
+      "text": "Est-ce qu'il y a une banque près d'ici?",
+      "means": "Is there a bank near here?",
+      "words": [
+        [
+          "Est-ce"
+        ],
+        [
+          "qu'il"
+        ],
+        [
+          "y"
+        ],
+        [
+          "a",
+          "avoir"
+        ],
+        [
+          "une"
+        ],
+        [
+          "banque",
+          "banque"
+        ],
+        [
+          "près",
+          "près"
+        ],
+        [
+          "d'ici",
+          "ici"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Is it"
+        ],
+        [
+          "that it"
+        ],
+        [
+          "there has"
+        ],
+        [
+          "a bank"
+        ],
+        [
+          "near"
+        ],
+        [
+          "of here"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Est-ce que il y a une banque près d'ici?",
+        "Est-ce qu'il a une banque près d'ici?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "y",
+          "en",
+          "le"
+        ]
+      }
+    },
+    {
+      "id": "part-le-train",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "À quelle heure part le train?",
+      "means": "What time does the train leave?",
+      "words": [
+        [
+          "À"
+        ],
+        [
+          "quelle"
+        ],
+        [
+          "heure",
+          "heure"
+        ],
+        [
+          "part",
+          "partir"
+        ],
+        [
+          "le"
+        ],
+        [
+          "train",
+          "train"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "At what hour"
+        ],
+        [
+          "leaves",
+          true
+        ],
+        [
+          "the train"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "part"
+      ],
+      "wrong": [
+        "À quelle heure pars le train?",
+        "Quelle heure part le train?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "part",
+          "pars",
+          "partir"
+        ]
+      }
+    },
+    {
+      "id": "rate-le-train",
+      "topic": "out",
+      "concepts": [
+        "perfect"
+      ],
+      "text": "Nous avons raté le train de cinq minutes.",
+      "means": "We missed the train by five minutes.",
+      "words": [
+        [
+          "Nous"
+        ],
+        [
+          "avons",
+          "avoir"
+        ],
+        [
+          "raté",
+          "rater"
+        ],
+        [
+          "le"
+        ],
+        [
+          "train",
+          "train"
+        ],
+        [
+          "de"
+        ],
+        [
+          "cinq",
+          "cinq"
+        ],
+        [
+          "minutes",
+          "minute"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We have"
+        ],
+        [
+          "missed"
+        ],
+        [
+          "the train"
+        ],
+        [
+          "by five minutes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nous sommes raté le train de cinq minutes.",
+        "Nous avons rater le train de cinq minutes."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "raté",
+          "rater",
+          "rate"
+        ]
+      }
+    },
+    {
+      "id": "arrivee-gare",
+      "topic": "out",
+      "concepts": [
+        "etre-perfect"
+      ],
+      "text": "Elle est arrivée à la gare.",
+      "means": "She got to the station.",
+      "words": [
+        [
+          "Elle"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "arrivée",
+          "arriver"
+        ],
+        [
+          "à"
+        ],
+        [
+          "la"
+        ],
+        [
+          "gare",
+          "gare"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "She is"
+        ],
+        [
+          "arrived"
+        ],
+        [
+          "at the station"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Elle a arrivée à la gare.",
+        "Elle est arrivé à la gare."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "arrivée",
+          "arrivé",
+          "arriver"
+        ]
+      }
+    },
+    {
+      "id": "j-y-vais",
+      "topic": "out",
+      "concepts": [
+        "y-en",
+        "present"
+      ],
+      "text": "J'y vais en bus.",
+      "means": "I go there by bus.",
+      "words": [
+        [
+          "J'y"
+        ],
+        [
+          "vais",
+          "aller"
+        ],
+        [
+          "en"
+        ],
+        [
+          "bus",
+          "bus"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "there",
+          true
+        ],
+        [
+          "go"
+        ],
+        [
+          "by bus"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "moved": [
+        "J'y"
+      ],
+      "wrong": [
+        "Je vais y en bus.",
+        "J'en vais en bus."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vais",
+          "va",
+          "vas"
+        ]
+      }
+    },
+    {
+      "id": "payer-par-carte",
+      "topic": "out",
+      "concepts": [
+        "modal",
+        "question"
+      ],
+      "text": "Je peux payer par carte?",
+      "means": "Can I pay by card?",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "peux",
+          "pouvoir"
+        ],
+        [
+          "payer",
+          "payer"
+        ],
+        [
+          "par"
+        ],
+        [
+          "carte",
+          "carte"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "can",
+          true
+        ],
+        [
+          "pay"
+        ],
+        [
+          "by card"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "peux"
+      ],
+      "wrong": [
+        "Je peux paie par carte?",
+        "Je peux à payer par carte?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "payer",
+          "paie",
+          "payé"
+        ]
+      }
+    },
+    {
+      "id": "hotel-pas-cher",
+      "topic": "out",
+      "concepts": [
+        "adjective-after",
+        "gender"
+      ],
+      "text": "Je cherche un hôtel pas cher.",
+      "means": "I'm looking for a cheap hotel.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "cherche",
+          "chercher"
+        ],
+        [
+          "un"
+        ],
+        [
+          "hôtel",
+          "hôtel"
+        ],
+        [
+          "pas"
+        ],
+        [
+          "cher",
+          "cher"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I look for a"
+        ],
+        [
+          "hotel"
+        ],
+        [
+          "not expensive",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "pas",
+        "cher"
+      ],
+      "wrong": [
+        "Je cherche un pas cher hôtel.",
+        "Je cherche pour un hôtel pas cher."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "cher",
+          "chère",
+          "chers"
+        ]
+      }
+    },
+    {
+      "id": "paris-ete-dernier",
+      "topic": "plans",
+      "concepts": [
+        "etre-perfect",
+        "adjective-after"
+      ],
+      "text": "Elle est allée à Paris l'été dernier.",
+      "means": "She went to Paris last summer.",
+      "words": [
+        [
+          "Elle"
+        ],
+        [
+          "est",
+          "être"
+        ],
+        [
+          "allée",
+          "aller"
+        ],
+        [
+          "à"
+        ],
+        [
+          "Paris"
+        ],
+        [
+          "l'été",
+          "été"
+        ],
+        [
+          "dernier",
+          "dernier"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "She is"
+        ],
+        [
+          "gone"
+        ],
+        [
+          "to Paris"
+        ],
+        [
+          "the summer"
+        ],
+        [
+          "last",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "dernier"
+      ],
+      "wrong": [
+        "Elle a allée à Paris l'été dernier.",
+        "Elle est aller à Paris l'été dernier."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "est",
+          "a",
+          "va"
+        ]
+      }
+    },
+    {
+      "id": "je-t-appelle",
+      "topic": "plans",
+      "concepts": [
+        "object-pronoun"
+      ],
+      "text": "Je t'appelle plus tard.",
+      "means": "I'll call you later.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "t'appelle",
+          "appeler"
+        ],
+        [
+          "plus",
+          "plus"
+        ],
+        [
+          "tard",
+          "tard"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "call"
+        ],
+        [
+          "later"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "t'appelle"
+      ],
+      "wrong": [
+        "J'appelle te plus tard.",
+        "Je appelle toi plus tard."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "tard",
+          "tôt",
+          "tarde"
+        ]
+      }
+    },
+    {
+      "id": "on-se-voit",
+      "topic": "plans",
+      "concepts": [
+        "on",
+        "reflexive",
+        "question"
+      ],
+      "text": "On se voit samedi?",
+      "means": "Should we meet up on Saturday?",
+      "words": [
+        [
+          "On"
+        ],
+        [
+          "se"
+        ],
+        [
+          "voit",
+          "voir"
+        ],
+        [
+          "samedi",
+          "samedi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "each other",
+          true
+        ],
+        [
+          "sees"
+        ],
+        [
+          "Saturday"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "se"
+      ],
+      "wrong": [
+        "On voit se samedi?",
+        "On se voyons samedi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "voit",
+          "voyons",
+          "vois"
+        ]
+      }
+    },
+    {
+      "id": "on-y-va",
+      "topic": "plans",
+      "concepts": [
+        "on",
+        "y-en",
+        "question"
+      ],
+      "text": "On y va?",
+      "means": "Should we go?",
+      "words": [
+        [
+          "On"
+        ],
+        [
+          "y"
+        ],
+        [
+          "va",
+          "aller"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "there",
+          true
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "y"
+      ],
+      "wrong": [
+        "On va y?",
+        "On y allons?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "va",
+          "allons",
+          "vas"
+        ]
+      }
+    },
+    {
+      "id": "va-pleuvoir",
+      "topic": "plans",
+      "concepts": [
+        "aller"
+      ],
+      "text": "Je crois qu'il va pleuvoir demain.",
+      "means": "I think it's going to rain tomorrow.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "crois",
+          "croire"
+        ],
+        [
+          "qu'il"
+        ],
+        [
+          "va",
+          "aller"
+        ],
+        [
+          "pleuvoir",
+          "pleuvoir"
+        ],
+        [
+          "demain",
+          "demain"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I believe"
+        ],
+        [
+          "that it"
+        ],
+        [
+          "goes"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "tomorrow"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Je crois que il va pleuvoir demain.",
+        "Je crois qu'il va pleut demain."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "pleuvoir",
+          "pleut",
+          "plu"
+        ]
+      }
+    },
+    {
+      "id": "te-voir-bientot",
+      "topic": "plans",
+      "concepts": [
+        "modal",
+        "object-pronoun"
+      ],
+      "text": "Je veux te voir bientôt.",
+      "means": "I want to see you soon.",
+      "words": [
+        [
+          "Je"
+        ],
+        [
+          "veux",
+          "vouloir"
+        ],
+        [
+          "te"
+        ],
+        [
+          "voir",
+          "voir"
+        ],
+        [
+          "bientôt",
+          "bientôt"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want"
+        ],
+        [
+          "you",
+          true
+        ],
+        [
+          "see"
+        ],
+        [
+          "soon"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "te"
+      ],
+      "wrong": [
+        "Je te veux voir bientôt.",
+        "Je veux voir te bientôt."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "te",
+          "toi",
+          "tu"
+        ]
+      }
+    },
+    {
+      "id": "dois-travailler",
+      "topic": "plans",
+      "concepts": [
+        "modal"
+      ],
+      "text": "Demain, je dois travailler.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Demain,",
+          "demain"
+        ],
+        [
+          "je",
+          "je"
+        ],
+        [
+          "dois",
+          "devoir"
+        ],
+        [
+          "travailler",
+          "travailler"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "I must"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Demain, je dois travaille.",
+        "Demain, je dois de travailler."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "travailler",
+          "travaille",
+          "travaillé"
+        ]
+      }
+    },
+    {
+      "id": "il-fait-beau",
+      "topic": "plans",
+      "concepts": [
+        "il-fait"
+      ],
+      "text": "Il fait beau aujourd'hui.",
+      "means": "It's nice out today.",
+      "words": [
+        [
+          "Il"
+        ],
+        [
+          "fait",
+          "faire"
+        ],
+        [
+          "beau",
+          "beau"
+        ],
+        [
+          "aujourd'hui",
+          "aujourd'hui"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It makes"
+        ],
+        [
+          "beautiful"
+        ],
+        [
+          "today"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il est beau aujourd'hui.",
+        "Il fait bel aujourd'hui."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "fait",
+          "est",
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "il-fait-froid",
+      "topic": "plans",
+      "concepts": [
+        "il-fait"
+      ],
+      "text": "Il fait froid ce matin.",
+      "means": "It's cold this morning.",
+      "words": [
+        [
+          "Il"
+        ],
+        [
+          "fait",
+          "faire"
+        ],
+        [
+          "froid",
+          "froid"
+        ],
+        [
+          "ce"
+        ],
+        [
+          "matin",
+          "matin"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "It makes"
+        ],
+        [
+          "cold"
+        ],
+        [
+          "this morning"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Il est froid ce matin.",
+        "Il fait froide ce matin."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "froid",
+          "froide",
+          "froids"
+        ]
+      }
+    },
+    {
+      "id": "ce-week-end",
+      "topic": "plans",
+      "concepts": [
+        "question"
+      ],
+      "text": "Qu'est-ce que tu fais ce week-end?",
+      "means": "What are you doing this weekend?",
+      "words": [
+        [
+          "Qu'est-ce"
+        ],
+        [
+          "que"
+        ],
+        [
+          "tu"
+        ],
+        [
+          "fais",
+          "faire"
+        ],
+        [
+          "ce"
+        ],
+        [
+          "week-end",
+          "week-end"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What is it"
+        ],
+        [
+          "that"
+        ],
+        [
+          "you do"
+        ],
+        [
+          "this weekend"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Qu'est-ce que tu fait ce week-end?",
+        "Qu'est-ce que tu faire ce week-end?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "fais",
+          "fait",
+          "faire"
+        ]
+      }
+    },
+    {
+      "id": "en-retard",
+      "topic": "plans",
+      "concepts": [
+        "aller"
+      ],
+      "text": "Excuse-moi, je vais être en retard.",
+      "means": "Sorry, I'm going to be late.",
+      "words": [
+        [
+          "Excuse-moi,",
+          "excuser"
+        ],
+        [
+          "je"
+        ],
+        [
+          "vais",
+          "aller"
+        ],
+        [
+          "être",
+          "être"
+        ],
+        [
+          "en"
+        ],
+        [
+          "retard",
+          "retard"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "I go"
+        ],
+        [
+          "be"
+        ],
+        [
+          "in lateness"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Excuse-moi, je vais à être en retard.",
+        "Excuse-moi, je vais suis en retard."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "être",
+          "suis",
+          "été"
+        ]
+      }
+    },
+    {
+      "id": "au-cinema",
+      "topic": "plans",
+      "concepts": [
+        "contraction",
+        "on",
+        "partitive"
+      ],
+      "text": "Ce soir, on va au cinéma avec des amis.",
+      "means": "Tonight we're going to the movies with friends.",
+      "words": [
+        [
+          "Ce"
+        ],
+        [
+          "soir,",
+          "soir"
+        ],
+        [
+          "on"
+        ],
+        [
+          "va",
+          "aller"
+        ],
+        [
+          "au"
+        ],
+        [
+          "cinéma",
+          "cinéma"
+        ],
+        [
+          "avec"
+        ],
+        [
+          "des"
+        ],
+        [
+          "amis",
+          "ami"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This evening"
+        ],
+        [
+          "one goes"
+        ],
+        [
+          "to the movie theater"
+        ],
+        [
+          "with some friends"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ce soir, on va à le cinéma avec des amis.",
+        "Ce soir, on allons au cinéma avec des amis."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "au",
+          "à",
+          "du"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "café",
+          "forms": [
+            "café"
+          ],
+          "article": "le",
+          "picture": "coffee",
+          "means": "the coffee"
+        },
+        {
+          "lemma": "thé",
+          "forms": [
+            "thé"
+          ],
+          "article": "le",
+          "picture": "tea",
+          "means": "the tea"
+        },
+        {
+          "lemma": "eau",
+          "forms": [
+            "l'eau"
+          ],
+          "article": "l'",
+          "picture": "water",
+          "means": "the water"
+        },
+        {
+          "lemma": "je",
+          "forms": [
+            "je"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "boire",
+          "forms": [
+            "bois"
+          ],
+          "picture": "drink",
+          "means": "bois = drink"
+        },
+        {
+          "lemma": "et",
+          "forms": [
+            "et"
+          ],
+          "means": "and"
+        },
+        {
+          "lemma": "de",
+          "forms": [
+            "du",
+            "de"
+          ],
+          "means": "du = some; de = some"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present",
+        "line": "The verb changes with who does it: je parle (I speak), tu parles (you speak), il or elle parle (he or she speaks), nous parlons (we speak), vous parlez (you speak), ils or elles parlent (they speak)."
+      },
+      "items": [
+        "je-bois-du-the",
+        "je-bois-du-cafe-et-du-the",
+        "je-bois-du-the-et-de-l-eau",
+        "je-bois-de-l-eau-et-du-cafe"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "un",
+          "forms": [
+            "un",
+            "une"
+          ],
+          "means": "un = a; une = a"
+        },
+        {
+          "lemma": "lait",
+          "forms": [
+            "lait"
+          ],
+          "article": "le",
+          "picture": "milk",
+          "means": "the milk"
+        },
+        {
+          "lemma": "eau",
+          "forms": [
+            "eau"
+          ],
+          "article": "l'",
+          "means": "the water"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "s-il-vous-plait",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "un-cafe-merci",
+        "bonjour-un-the-s-il-vous-plait",
+        "un-the-et-une-eau-s-il-vous-plait",
+        "je-bois-du-lait"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "bien",
+          "forms": [
+            "bien"
+          ],
+          "means": "well, fine"
+        },
+        {
+          "lemma": "aller",
+          "forms": [
+            "vais"
+          ],
+          "means": "vais = am doing"
+        }
+      ],
+      "phrases": [
+        "ca-va",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "Ask by raising your voice at the end, or start with est-ce que (is it that)."
+      },
+      "items": [
+        "ca-va",
+        "je-vais-bien-merci",
+        "oui-merci-au-revoir",
+        "non-merci-au-revoir"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "tu",
+          "forms": [
+            "tu"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "pas",
+          "forms": [
+            "pas"
+          ],
+          "means": "not"
+        },
+        {
+          "lemma": "professeur",
+          "forms": [
+            "professeur"
+          ],
+          "article": "le",
+          "means": "the teacher"
+        },
+        {
+          "lemma": "être",
+          "forms": [
+            "suis",
+            "es"
+          ],
+          "means": "suis = am; es = are"
+        },
+        {
+          "lemma": "ne",
+          "forms": [
+            "ne"
+          ],
+          "means": "not"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "tu-t-appelles",
+        "bonjour-enchante",
+        "je-suis-professeur",
+        "tu-es-professeur",
+        "je-ne-suis-pas-professeur"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "mère",
+          "forms": [
+            "mère"
+          ],
+          "article": "la",
+          "picture": "mother",
+          "means": "the mother"
+        },
+        {
+          "lemma": "père",
+          "forms": [
+            "père"
+          ],
+          "article": "le",
+          "picture": "father",
+          "means": "the father"
+        },
+        {
+          "lemma": "frère",
+          "forms": [
+            "frère"
+          ],
+          "article": "le",
+          "picture": "brother",
+          "means": "the brother"
+        },
+        {
+          "lemma": "sœur",
+          "forms": [
+            "sœur"
+          ],
+          "article": "la",
+          "picture": "sister",
+          "means": "the sister"
+        },
+        {
+          "lemma": "mon",
+          "forms": [
+            "mon",
+            "ma"
+          ],
+          "means": "mon = my; ma = my"
+        },
+        {
+          "lemma": "étudiant",
+          "forms": [
+            "étudiant"
+          ],
+          "article": "l'",
+          "means": "the student"
+        },
+        {
+          "lemma": "être",
+          "forms": [
+            "est"
+          ],
+          "means": "est = is"
+        },
+        {
+          "lemma": "aller",
+          "forms": [
+            "va"
+          ],
+          "means": "va = is doing"
+        }
+      ],
+      "phrases": [
+        "this-is"
+      ],
+      "concept": {
+        "pattern": "gender",
+        "line": "Every noun is masculine or feminine, and le or la, un or une and the adjectives with it match it: un petit chat, une petite maison."
+      },
+      "items": [
+        "ma-mere-va-bien",
+        "c-est-ma-mere",
+        "c-est-mon-pere",
+        "mon-pere-est-professeur",
+        "mon-frere-est-etudiant",
+        "c-est-ma-s-ur"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "avoir",
+          "forms": [
+            "j'ai",
+            "as",
+            "n'ai"
+          ],
+          "means": "j'ai = I have; as = have; n'ai = do not have"
+        },
+        {
+          "lemma": "ami",
+          "forms": [
+            "ami"
+          ],
+          "article": "l'",
+          "picture": "friend",
+          "means": "the friend"
+        },
+        {
+          "lemma": "médecin",
+          "forms": [
+            "médecin"
+          ],
+          "article": "le",
+          "picture": "doctor",
+          "means": "the doctor"
+        },
+        {
+          "lemma": "clé",
+          "forms": [
+            "clé"
+          ],
+          "article": "la",
+          "picture": "key",
+          "means": "the key"
+        },
+        {
+          "lemma": "téléphone",
+          "forms": [
+            "téléphone"
+          ],
+          "article": "le",
+          "picture": "phone",
+          "means": "the phone"
+        },
+        {
+          "lemma": "livre",
+          "forms": [
+            "livre"
+          ],
+          "article": "le",
+          "picture": "book",
+          "means": "the book"
+        },
+        {
+          "lemma": "bon",
+          "forms": [
+            "bon"
+          ],
+          "means": "good"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "j-ai-un-telephone",
+        "tu-as-une-cle",
+        "j-ai-un-frere-et-une-s-ur",
+        "je-n-ai-pas-de-livre",
+        "ma-s-ur-est-medecin",
+        "tu-es-un-bon-ami"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "où",
+          "forms": [
+            "où"
+          ],
+          "means": "where"
+        },
+        {
+          "lemma": "ici",
+          "forms": [
+            "ici"
+          ],
+          "means": "here"
+        },
+        {
+          "lemma": "là",
+          "forms": [
+            "là"
+          ],
+          "means": "there"
+        },
+        {
+          "lemma": "le",
+          "forms": [
+            "la",
+            "les"
+          ],
+          "means": "la = the; les = the"
+        },
+        {
+          "lemma": "toilettes",
+          "forms": [
+            "toilettes"
+          ],
+          "article": "les",
+          "means": "the bathroom"
+        },
+        {
+          "lemma": "être",
+          "forms": [
+            "sont"
+          ],
+          "means": "sont = are"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": null,
+      "items": [
+        "mon-telephone-est-ici",
+        "la-cle-est-la",
+        "excusez-moi-ou-sont-les-toilettes",
+        "ou-est-ma-mere",
+        "ma-s-ur-est-ici"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "deux",
+          "forms": [
+            "deux"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "trois",
+          "forms": [
+            "trois"
+          ],
+          "picture": "three",
+          "means": "three"
+        },
+        {
+          "lemma": "argent",
+          "forms": [
+            "d'argent"
+          ],
+          "article": "l'",
+          "picture": "money",
+          "means": "the money"
+        },
+        {
+          "lemma": "café",
+          "forms": [
+            "cafés"
+          ],
+          "article": "le",
+          "means": "the coffee"
+        },
+        {
+          "lemma": "livre",
+          "forms": [
+            "livres"
+          ],
+          "article": "le",
+          "means": "the book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-it",
+        "the-check-please"
+      ],
+      "concept": {
+        "pattern": "avoir",
+        "line": "Where English says I'm hungry, thirsty or twenty, French says I have: J'ai faim (I have hunger), J'ai vingt ans (I have twenty years)."
+      },
+      "items": [
+        "excusez-moi-c-est-combien",
+        "l-addition",
+        "deux-cafes-s-il-vous-plait",
+        "un-livre-s-il-vous-plait",
+        "j-ai-trois-livres",
+        "je-n-ai-pas-d-argent"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "parler",
+          "forms": [
+            "parles",
+            "parle"
+          ],
+          "means": "parles = speak; parle = speak"
+        },
+        {
+          "lemma": "anglais",
+          "forms": [
+            "anglais"
+          ],
+          "article": "l'",
+          "means": "the English language"
+        },
+        {
+          "lemma": "français",
+          "forms": [
+            "français"
+          ],
+          "article": "le",
+          "means": "the French language"
+        },
+        {
+          "lemma": "comprendre",
+          "forms": [
+            "comprends"
+          ],
+          "means": "comprends = understand"
+        },
+        {
+          "lemma": "vouloir",
+          "forms": [
+            "veux"
+          ],
+          "means": "veux = want"
+        }
+      ],
+      "phrases": [
+        "a-little"
+      ],
+      "concept": null,
+      "items": [
+        "tu-comprends",
+        "tu-parles-anglais",
+        "je-parle-un-peu-francais",
+        "je-veux-un-cafe",
+        "je-veux-de-l-eau-s-il-vous-plait"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "maison",
+          "forms": [
+            "maison"
+          ],
+          "article": "la",
+          "picture": "house",
+          "means": "the house"
+        },
+        {
+          "lemma": "chambre",
+          "forms": [
+            "chambre"
+          ],
+          "article": "la",
+          "picture": "room",
+          "means": "the bedroom"
+        },
+        {
+          "lemma": "grand",
+          "forms": [
+            "grande"
+          ],
+          "picture": "big",
+          "means": "grande = big"
+        },
+        {
+          "lemma": "petit",
+          "forms": [
+            "petite"
+          ],
+          "picture": "small",
+          "means": "petite = small"
+        },
+        {
+          "lemma": "habiter",
+          "forms": [
+            "j'habite",
+            "habites",
+            "habite"
+          ],
+          "means": "j'habite = I live; habites = live; habite = lives"
+        },
+        {
+          "lemma": "dans",
+          "forms": [
+            "dans"
+          ],
+          "picture": "in",
+          "means": "in"
+        },
+        {
+          "lemma": "ce",
+          "forms": [
+            "cette"
+          ],
+          "means": "cette = this"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "adjective-after",
+        "line": "Most adjectives come after the noun: une maison bleue (a house blue)."
+      },
+      "items": [
+        "ma-chambre-est-petite",
+        "cette-chambre-est-grande",
+        "cette-maison-est-grande",
+        "j-habite-dans-une-petite-maison"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "aller",
+          "forms": [
+            "vas",
+            "va"
+          ],
+          "means": "vas = are going; va = goes"
+        },
+        {
+          "lemma": "à",
+          "forms": [
+            "à"
+          ],
+          "means": "to"
+        },
+        {
+          "lemma": "école",
+          "forms": [
+            "l'école"
+          ],
+          "article": "l'",
+          "picture": "school",
+          "means": "the school"
+        },
+        {
+          "lemma": "ville",
+          "forms": [
+            "ville"
+          ],
+          "article": "la",
+          "picture": "city",
+          "means": "the town, city"
+        },
+        {
+          "lemma": "gare",
+          "forms": [
+            "gare"
+          ],
+          "article": "la",
+          "means": "the train station"
+        },
+        {
+          "lemma": "voiture",
+          "forms": [
+            "voiture"
+          ],
+          "article": "la",
+          "picture": "car",
+          "means": "the car"
+        },
+        {
+          "lemma": "en",
+          "forms": [
+            "en"
+          ],
+          "means": "in, to"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "ou-est-la-gare",
+        "j-ai-une-voiture",
+        "cette-voiture-est-petite",
+        "je-vais-a-l-ecole",
+        "tu-vas-ou",
+        "ma-mere-va-en-ville"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "aujourd'hui",
+          "forms": [
+            "aujourd'hui"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "demain",
+          "forms": [
+            "demain"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "maintenant",
+          "forms": [
+            "maintenant"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "travailler",
+          "forms": [
+            "travaille",
+            "travailler"
+          ],
+          "picture": "work",
+          "means": "travaille = work; travailler = to work"
+        },
+        {
+          "lemma": "devoir",
+          "forms": [
+            "dois"
+          ],
+          "means": "dois = have to"
+        },
+        {
+          "lemma": "pouvoir",
+          "forms": [
+            "peux"
+          ],
+          "means": "peux = can"
+        },
+        {
+          "lemma": "aller",
+          "forms": [
+            "aller"
+          ],
+          "means": "to go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": {
+        "pattern": "aller",
+        "line": "Je vais, tu vas, il va and an infinitive say what's going to happen, with no word for to: Je vais manger (I go eat)."
+      },
+      "items": [
+        "merci-a-demain",
+        "demain-je-vais-en-ville",
+        "dois-travailler",
+        "je-dois-aller-maintenant",
+        "je-ne-peux-pas-aller-aujourd-hui"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}

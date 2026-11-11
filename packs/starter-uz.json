@@ -1,0 +1,7326 @@
+{
+  "format": "lexicommons-pack",
+  "version": 2,
+  "id": "starter-uz",
+  "name": "Starter: Uzbek",
+  "about": "Uzbek in real, everyday sentences, with each one's words in Uzbek order.",
+  "language": "uz",
+  "from": "en",
+  "topics": {
+    "people": "Family & people",
+    "home": "At home",
+    "food": "Food & drink",
+    "out": "Getting around",
+    "plans": "Plans & weather"
+  },
+  "words": {
+    "qahva": "coffee",
+    "choy": "tea",
+    "suv": "water",
+    "men": "I (menga: to me, mening: my, meni: me)",
+    "ichmoq": "drink",
+    "va": "and",
+    "bitta": "one, a",
+    "sut": "milk",
+    "yaxshi": "good, fine",
+    "siz": "you (to a stranger, or more than one; sizda: at you, in your possession)",
+    "emas": "isn't, not",
+    "oʻqituvchi": "teacher",
+    "talaba": "student",
+    "ona": "mother, mom",
+    "ota": "father, dad",
+    "aka": "older brother",
+    "opa": "older sister",
+    "bu": "this",
+    "bor": "there is",
+    "doʻst": "friend",
+    "shifokor": "doctor",
+    "kalit": "key",
+    "telefon": "phone",
+    "kitob": "book",
+    "yoʻq": "there isn't",
+    "qayer": "where (qayerda: where, at)",
+    "yer": "place (bu yerdan: from here)",
+    "u": "that",
+    "hojatxona": "bathroom, toilet",
+    "ikki": "two",
+    "uch": "three",
+    "pul": "money",
+    "gapirmoq": "speak",
+    "inglizcha": "in English",
+    "oʻzbekcha": "in Uzbek",
+    "tushunmoq": "to understand",
+    "ozgina": "a little",
+    "xohlamoq": "to want",
+    "uy": "house, home",
+    "xona": "room",
+    "katta": "big",
+    "kichkina": "small",
+    "yashamoq": "live",
+    "bormoq": "go",
+    "maktab": "school",
+    "shahar": "city",
+    "vokzal": "train station",
+    "mashina": "car",
+    "bugun": "today",
+    "ertaga": "tomorrow",
+    "hozir": "now",
+    "ishlamoq": "work",
+    "kerak": "necessary",
+    "olmoq": "take; after a verb's -a or -y: can",
+    "ism": "name",
+    "nima": "what",
+    "film": "movie",
+    "yoqmoq": "please (menga yoqadi: I like it)",
+    "bola": "child",
+    "hovli": "yard",
+    "oʻynamoq": "play",
+    "bilan": "with, by",
+    "kino": "the movies",
+    "biz": "we (bizning: our)",
+    "kvartira": "apartment",
+    "stol": "table",
+    "ust": "top (ustida: on)",
+    "muzlatkich": "fridge",
+    "oshxona": "kitchen",
+    "ovqat": "food, meal",
+    "pishirmoq": "cook",
+    "deraza": "window",
+    "yopmoq": "close",
+    "iltimos": "please",
+    "markaz": "center",
+    "javon": "shelf",
+    "har": "every",
+    "kun": "day (har kuni: every day, shanba kuni: on Saturday)",
+    "ertalab": "in the morning",
+    "shakarsiz": "without sugar, sugarless",
+    "karta": "card",
+    "toʻlamoq": "pay",
+    "goʻsht": "meat",
+    "yemoq": "eat",
+    "kecha": "yesterday",
+    "restoran": "restaurant",
+    "ovqatlanmoq": "eat, have a meal",
+    "doʻkon": "store",
+    "non": "bread",
+    "emoq": "be (edi: was, edik: we were)",
+    "bir": "one, a",
+    "stakan": "glass",
+    "bermoq": "give",
+    "palov": "plov",
+    "yaxshi koʻrmoq": "love, like a lot",
+    "ish": "work",
+    "avtobus": "bus",
+    "yaqin": "near",
+    "atrof": "surroundings (yaqin atrofda: nearby)",
+    "bank": "bank",
+    "qilmoq": "do",
+    "aeroport": "airport",
+    "uzoq": "far",
+    "kechirmoq": "forgive (kechirasiz: sorry, excuse me)",
+    "bilmoq": "know",
+    "taksi": "taxi",
+    "chipta": "ticket",
+    "qancha": "how much, how many",
+    "turmoq": "stand; cost (turadi: it costs)",
+    "yangi": "new",
+    "poyabzal": "shoes",
+    "sotib olmoq": "buy",
+    "dorixona": "pharmacy",
+    "yon": "side (yonida: next to)",
+    "yordam": "help",
+    "sen": "you (to a friend; senga: to you, seni: you)",
+    "qoʻngʻiroq qilmoq": "call (on the phone)",
+    "shanba": "Saturday",
+    "oʻtgan": "last, past",
+    "yoz": "summer",
+    "yomgʻir": "rain",
+    "yogʻmoq": "fall (rain, snow)",
+    "vaqt": "time",
+    "oʻzbek": "Uzbek",
+    "til": "language",
+    "oʻrganmoq": "learn",
+    "suzmoq": "swim",
+    "dam olmoq": "rest"
+  },
+  "chunks": {
+    "hello": {
+      "text": "Salom",
+      "en": "hello"
+    },
+    "please": {
+      "text": "Iltimos",
+      "en": "please"
+    },
+    "thank-you": {
+      "text": "Rahmat",
+      "en": "thank you"
+    },
+    "how-are-you": {
+      "text": "Qalaysiz",
+      "en": "how are you?"
+    },
+    "goodbye": {
+      "text": "Xayr",
+      "en": "goodbye"
+    },
+    "yes": {
+      "text": "Ha",
+      "en": "yes"
+    },
+    "no": {
+      "text": "Yoʻq",
+      "en": "no"
+    },
+    "what-s-your-name": {
+      "text": "Ismingiz nima",
+      "en": "what's your name?"
+    },
+    "nice-to-meet-you": {
+      "text": "Tanishganimdan xursandman",
+      "en": "nice to meet you"
+    },
+    "excuse-me": {
+      "text": "Kechirasiz",
+      "en": "excuse me"
+    },
+    "how-much-is-this": {
+      "text": "Bu qancha",
+      "en": "how much is this?"
+    },
+    "the-check-please": {
+      "text": "Hisobni bering, iltimos",
+      "en": "the check, please"
+    },
+    "see-you-tomorrow": {
+      "text": "Ertaga koʻrishguncha",
+      "en": "see you tomorrow"
+    }
+  },
+  "patterns": {},
+  "items": [
+    {
+      "id": "qahva-ichaman",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Qahva ichaman.",
+      "means": "I drink coffee.",
+      "words": [
+        [
+          "Qahva",
+          "qahva"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Coffee"
+        ],
+        [
+          "I drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Qahva ichmoqman.",
+        "Qahva ichamansiz."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Qahva",
+          "Qahvaman",
+          "Qahvasan"
+        ]
+      }
+    },
+    {
+      "id": "men-choy-ichaman",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men choy ichaman.",
+      "means": "I drink tea.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "choy",
+          "choy"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men choy ichasan.",
+        "Men choy ichadi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "choy",
+          "choyman",
+          "choysan"
+        ]
+      }
+    },
+    {
+      "id": "men-suv-ichaman",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men suv ichaman.",
+      "means": "I drink water.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "suv",
+          "suv"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men suv ichasiz.",
+        "Men suv ichadi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "suv",
+          "suvman",
+          "suvsan"
+        ]
+      }
+    },
+    {
+      "id": "men-qahva-va-choy-ichaman",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men qahva va choy ichaman.",
+      "means": "I drink coffee and tea.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "qahva",
+          "qahva"
+        ],
+        [
+          "va",
+          "va"
+        ],
+        [
+          "choy",
+          "choy"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "and"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men qahva va choy ichadi.",
+        "Men qahva va choy ichasiz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qahva",
+          "qahvaman",
+          "qahvasan"
+        ]
+      }
+    },
+    {
+      "id": "men-choy-va-suv-ichaman",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men choy va suv ichaman.",
+      "means": "I drink tea and water.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "choy",
+          "choy"
+        ],
+        [
+          "va",
+          "va"
+        ],
+        [
+          "suv",
+          "suv"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "water"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men choy va suv ichasan.",
+        "Men choy va suv ichadi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "choy",
+          "choyman",
+          "choysan"
+        ]
+      }
+    },
+    {
+      "id": "men-suv-va-qahva-ichaman",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men suv va qahva ichaman.",
+      "means": "I drink water and coffee.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "suv",
+          "suv"
+        ],
+        [
+          "va",
+          "va"
+        ],
+        [
+          "qahva",
+          "qahva"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "and"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men suv va qahva ichasiz.",
+        "Men suv va qahva ichadi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "suv",
+          "suvman",
+          "suvsan"
+        ]
+      }
+    },
+    {
+      "id": "bitta-qahva-iltimos",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Bitta qahva, iltimos.",
+      "means": "A coffee, please.",
+      "words": [
+        [
+          "Bitta",
+          "bitta"
+        ],
+        [
+          "qahva,",
+          "qahva"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bitta qahvalar, iltimos.",
+        "Bitta va qahva, iltimos."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bitta",
+          "Bittaman",
+          "Bittasiz"
+        ]
+      }
+    },
+    {
+      "id": "salom-bitta-qahva-iltimos",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Salom! Bitta qahva, iltimos.",
+      "means": "Hello! A coffee, please.",
+      "words": [
+        [
+          "Salom!"
+        ],
+        [
+          "Bitta",
+          "bitta"
+        ],
+        [
+          "qahva,",
+          "qahva"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salom! Bitta qahvalar, iltimos.",
+        "Salom! Bitta va qahva, iltimos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Bitta",
+          "Bittaman",
+          "Bittasiz"
+        ]
+      }
+    },
+    {
+      "id": "bitta-choy-va-bitta-suv-iltimos",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Bitta choy va bitta suv, iltimos.",
+      "means": "A tea and a water, please.",
+      "words": [
+        [
+          "Bitta",
+          "bitta"
+        ],
+        [
+          "choy",
+          "choy"
+        ],
+        [
+          "va",
+          "va"
+        ],
+        [
+          "bitta",
+          "bitta"
+        ],
+        [
+          "suv,",
+          "suv"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "water"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bitta choylar va bitta suv, iltimos.",
+        "Bitta choy va bitta suvlar, iltimos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "choy",
+          "choylar",
+          "choyman"
+        ]
+      }
+    },
+    {
+      "id": "bitta-qahva-rahmat",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Bitta qahva, rahmat.",
+      "means": "A coffee, thank you.",
+      "words": [
+        [
+          "Bitta",
+          "bitta"
+        ],
+        [
+          "qahva,",
+          "qahva"
+        ],
+        [
+          "rahmat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bitta qahvalar, rahmat.",
+        "Bitta va qahva, rahmat."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bitta",
+          "Bittaman",
+          "Bittasiz"
+        ]
+      }
+    },
+    {
+      "id": "salom-bitta-choy-iltimos",
+      "topic": "food",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "hello"
+      ],
+      "text": "Salom! Bitta choy, iltimos.",
+      "means": "Hello! A tea, please.",
+      "words": [
+        [
+          "Salom!"
+        ],
+        [
+          "Bitta",
+          "bitta"
+        ],
+        [
+          "choy,",
+          "choy"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "one"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salom! Bitta choylar, iltimos.",
+        "Salom! Bitta va choy, iltimos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Bitta",
+          "Bittaman",
+          "Bittasiz"
+        ]
+      }
+    },
+    {
+      "id": "men-sut-ichaman",
+      "topic": "food",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men sut ichaman.",
+      "means": "I drink milk.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "sut",
+          "sut"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "drink"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men sut ichasiz.",
+        "Men sut ichadi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "sut",
+          "sutman",
+          "sutsizman"
+        ]
+      }
+    },
+    {
+      "id": "yo-q-rahmat",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "no"
+      ],
+      "text": "Yoʻq, rahmat.",
+      "means": "No, thank you.",
+      "words": [
+        [
+          "Yoʻq,"
+        ],
+        [
+          "rahmat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yoʻq, rahmatman."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Yoʻq,",
+          "Yoʻqman,",
+          "Yoʻqsiz,"
+        ]
+      }
+    },
+    {
+      "id": "ha-iltimos",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "please",
+        "yes"
+      ],
+      "text": "Ha, iltimos.",
+      "means": "Yes, please.",
+      "words": [
+        [
+          "Ha,"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haman, iltimos.",
+        "Ha, iltimosman."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ha,",
+          "Haman,",
+          "Hasiz,"
+        ]
+      }
+    },
+    {
+      "id": "men-yaxshiman-rahmat",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "chunks": [
+        "thank-you"
+      ],
+      "text": "Men yaxshiman, rahmat.",
+      "means": "I'm fine, thank you.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "yaxshiman,",
+          "yaxshi"
+        ],
+        [
+          "rahmat"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am fine"
+        ],
+        [
+          "thank you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men yaxshisiz, rahmat.",
+        "Men yaxshisan, rahmat."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "yaxshiman,",
+          "yaxshisiz,",
+          "yaxshisan,"
+        ]
+      }
+    },
+    {
+      "id": "salom-qalaysiz",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "how-are-you",
+        "hello"
+      ],
+      "text": "Salom! Qalaysiz?",
+      "means": "Hello! How are you?",
+      "words": [
+        [
+          "Salom!"
+        ],
+        [
+          "Qalaysiz"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "how are you"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salom! Qalaysizman?",
+        "Salom! Qalaysizsiz?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Qalaysiz",
+          "Qalaysizman",
+          "Qalaysizsiz"
+        ]
+      }
+    },
+    {
+      "id": "ha-rahmat-xayr",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "yes"
+      ],
+      "text": "Ha, rahmat. Xayr!",
+      "means": "Yes, thank you. Goodbye!",
+      "words": [
+        [
+          "Ha,"
+        ],
+        [
+          "rahmat."
+        ],
+        [
+          "Xayr"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Yes"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Haman, rahmat. Xayr!",
+        "Ha, rahmatman. Xayr!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ha,",
+          "Haman,",
+          "Hasiz,"
+        ]
+      }
+    },
+    {
+      "id": "yo-q-rahmat-xayr",
+      "topic": "people",
+      "concepts": [],
+      "chunks": [
+        "thank-you",
+        "goodbye",
+        "no"
+      ],
+      "text": "Yoʻq, rahmat. Xayr!",
+      "means": "No, thank you. Goodbye!",
+      "words": [
+        [
+          "Yoʻq,"
+        ],
+        [
+          "rahmat."
+        ],
+        [
+          "Xayr"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "No"
+        ],
+        [
+          "thank you"
+        ],
+        [
+          "goodbye"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Yoʻq, rahmatman. Xayr!"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Yoʻq,",
+          "Yoʻqman,",
+          "Yoʻqsiz,"
+        ]
+      }
+    },
+    {
+      "id": "men-o-qituvchiman",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Men oʻqituvchiman.",
+      "means": "I'm a teacher.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "oʻqituvchiman",
+          "oʻqituvchi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "am a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men oʻqituvchisiz.",
+        "Men oʻqituvchisan."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Men",
+          "Siz",
+          "Menim"
+        ]
+      }
+    },
+    {
+      "id": "men-o-qituvchi-emasman",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "negation"
+      ],
+      "text": "Men oʻqituvchi emasman.",
+      "means": "I'm not a teacher.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "oʻqituvchi",
+          "oʻqituvchi"
+        ],
+        [
+          "emasman",
+          "emas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a teacher"
+        ],
+        [
+          "am not"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men oʻqituvchi emassiz.",
+        "Men oʻqituvchi emassan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "oʻqituvchi",
+          "oʻqituvchiman",
+          "oʻqituvchisiz"
+        ]
+      }
+    },
+    {
+      "id": "siz-talabasiz",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Siz talabasiz.",
+      "means": "You're a student.",
+      "words": [
+        [
+          "Siz",
+          "siz"
+        ],
+        [
+          "talabasiz",
+          "talaba"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz talabaman.",
+        "Siz talabasan."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Siz",
+          "Men",
+          "Sizning"
+        ]
+      }
+    },
+    {
+      "id": "siz-o-qituvchimisiz",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "question"
+      ],
+      "text": "Siz oʻqituvchimisiz?",
+      "means": "Are you a teacher?",
+      "words": [
+        [
+          "Siz",
+          "siz"
+        ],
+        [
+          "oʻqituvchimisiz",
+          "oʻqituvchi"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are you a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz oʻqituvchimanmi?",
+        "Siz oʻqituvchimisan?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Siz",
+          "Men",
+          "Sizning"
+        ]
+      }
+    },
+    {
+      "id": "salom-tanishganimdan-xursandman",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "chunks": [
+        "nice-to-meet-you",
+        "hello"
+      ],
+      "text": "Salom! Tanishganimdan xursandman.",
+      "means": "Hello! Nice to meet you.",
+      "words": [
+        [
+          "Salom!"
+        ],
+        [
+          "Tanishganimdan"
+        ],
+        [
+          "xursandman"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "to have met you"
+        ],
+        [
+          "I am pleased"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salom! Tanishganimdan xursandmansiz.",
+        "Salom! Tanishganimdan xursandmanman."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "xursandman",
+          "xursandmansiz",
+          "xursandmanman"
+        ]
+      }
+    },
+    {
+      "id": "bu-onam",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Bu onam.",
+      "means": "This is my mother.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "onam",
+          "ona"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my mother"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu onamman.",
+        "Bu onamsan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "onam",
+          "onamman",
+          "onamsiz"
+        ]
+      }
+    },
+    {
+      "id": "bu-otam",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Bu otam.",
+      "means": "This is my father.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "otam",
+          "ota"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my father"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu otamman.",
+        "Bu otamsan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "otam",
+          "otamman",
+          "otamsiz"
+        ]
+      }
+    },
+    {
+      "id": "otam-o-qituvchi",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Otam oʻqituvchi.",
+      "means": "My father is a teacher.",
+      "words": [
+        [
+          "Otam",
+          "ota"
+        ],
+        [
+          "oʻqituvchi",
+          "oʻqituvchi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My father"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Otam oʻqituvchiman.",
+        "Otam oʻqituvchisan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "oʻqituvchi",
+          "oʻqituvchiman",
+          "oʻqituvchisiz"
+        ]
+      }
+    },
+    {
+      "id": "akam-talaba",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Akam talaba.",
+      "means": "My older brother is a student.",
+      "words": [
+        [
+          "Akam",
+          "aka"
+        ],
+        [
+          "talaba",
+          "talaba"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older brother"
+        ],
+        [
+          "a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Akam talabaman.",
+        "Akam talabasan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "talaba",
+          "talabaman",
+          "talabasiz"
+        ]
+      }
+    },
+    {
+      "id": "bu-mening-opam",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "genitive",
+        "possessive"
+      ],
+      "text": "Bu mening opam.",
+      "means": "This is my older sister.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "mening",
+          "men"
+        ],
+        [
+          "opam",
+          "opa"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "older sister"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu mening opangiz.",
+        "Bu mening opasi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "opam",
+          "opangiz",
+          "opasi"
+        ]
+      }
+    },
+    {
+      "id": "mening-telefonim-bor",
+      "topic": "people",
+      "concepts": [
+        "bor-yoq",
+        "genitive",
+        "possessive"
+      ],
+      "text": "Mening telefonim bor.",
+      "means": "I have a phone.",
+      "words": [
+        [
+          "Mening",
+          "men"
+        ],
+        [
+          "telefonim",
+          "telefon"
+        ],
+        [
+          "bor",
+          "bor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "phone"
+        ],
+        [
+          "exists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mening telefoningiz bor.",
+        "Mening telefoni bor."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "telefonim",
+          "telefoningiz",
+          "telefoni"
+        ]
+      }
+    },
+    {
+      "id": "sizda-kalit-bormi",
+      "topic": "people",
+      "concepts": [
+        "bor-yoq",
+        "locative",
+        "question"
+      ],
+      "text": "Sizda kalit bormi?",
+      "means": "Do you have a key?",
+      "words": [
+        [
+          "Sizda",
+          "siz"
+        ],
+        [
+          "kalit",
+          "kalit"
+        ],
+        [
+          "bormi",
+          "bor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "In your possession"
+        ],
+        [
+          "a key"
+        ],
+        [
+          "is there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz kalit bormi?",
+        "Sizning kalit bormi?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Sizda",
+          "Siz",
+          "Sizning"
+        ]
+      }
+    },
+    {
+      "id": "mening-kitobim-yo-q",
+      "topic": "people",
+      "concepts": [
+        "bor-yoq",
+        "negation",
+        "genitive",
+        "possessive"
+      ],
+      "text": "Mening kitobim yoʻq.",
+      "means": "I don't have a book.",
+      "words": [
+        [
+          "Mening",
+          "men"
+        ],
+        [
+          "kitobim",
+          "kitob"
+        ],
+        [
+          "yoʻq",
+          "yoʻq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "book"
+        ],
+        [
+          "does not exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mening kitobingiz yoʻq.",
+        "Mening kitobi yoʻq."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kitobim",
+          "kitobingiz",
+          "kitobi"
+        ]
+      }
+    },
+    {
+      "id": "opam-shifokor",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Opam shifokor.",
+      "means": "My older sister is a doctor.",
+      "words": [
+        [
+          "Opam",
+          "opa"
+        ],
+        [
+          "shifokor",
+          "shifokor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "a doctor"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Opam shifokorman.",
+        "Opam shifokorsan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "shifokor",
+          "shifokorman",
+          "shifokorsiz"
+        ]
+      }
+    },
+    {
+      "id": "siz-yaxshi-do-stsiz",
+      "topic": "people",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Siz yaxshi doʻstsiz.",
+      "means": "You're a good friend.",
+      "words": [
+        [
+          "Siz",
+          "siz"
+        ],
+        [
+          "yaxshi",
+          "yaxshi"
+        ],
+        [
+          "doʻstsiz",
+          "doʻst"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "a good"
+        ],
+        [
+          "friend are"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz yaxshi doʻstman.",
+        "Siz yaxshi doʻstsan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "doʻstsiz",
+          "doʻstman",
+          "doʻstsan"
+        ]
+      }
+    },
+    {
+      "id": "kalit-qayerda",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "locative"
+      ],
+      "text": "Kalit qayerda?",
+      "means": "Where is the key?",
+      "words": [
+        [
+          "Kalit",
+          "kalit"
+        ],
+        [
+          "qayerda",
+          "qayer"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kalit qayerdaman?",
+        "Kalit qayerdasiz?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qayerda",
+          "qayerdaman",
+          "qayerdasiz"
+        ]
+      }
+    },
+    {
+      "id": "kechirasiz-hojatxona-qayerda",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "locative"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Kechirasiz, hojatxona qayerda?",
+      "means": "Excuse me, where is the bathroom?",
+      "words": [
+        [
+          "Kechirasiz,"
+        ],
+        [
+          "hojatxona",
+          "hojatxona"
+        ],
+        [
+          "qayerda",
+          "qayer"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "the bathroom"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kechirasiz, hojatxona qayerdaman?",
+        "Kechirasiz, hojatxona qayerdasiz?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "hojatxona",
+          "hojatxonaman",
+          "hojatxonasiz"
+        ]
+      }
+    },
+    {
+      "id": "telefonim-bu-yerda",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative"
+      ],
+      "text": "Telefonim bu yerda.",
+      "means": "My phone is here.",
+      "words": [
+        [
+          "Telefonim",
+          "telefon"
+        ],
+        [
+          "bu",
+          "bu"
+        ],
+        [
+          "yerda",
+          "yer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My phone"
+        ],
+        [
+          "this"
+        ],
+        [
+          "place in"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Telefonim bu yerdaman.",
+        "Telefonim bu yerdasiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yerda",
+          "yerdaman",
+          "yerdasiz"
+        ]
+      }
+    },
+    {
+      "id": "kalit-u-yerda",
+      "topic": "out",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Kalit u yerda.",
+      "means": "The key is there.",
+      "words": [
+        [
+          "Kalit",
+          "kalit"
+        ],
+        [
+          "u",
+          "u"
+        ],
+        [
+          "yerda",
+          "yer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The key"
+        ],
+        [
+          "that"
+        ],
+        [
+          "place in"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kalit u yerdaman.",
+        "Kalit u yerdasiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yerda",
+          "yerdaman",
+          "yerdasiz"
+        ]
+      }
+    },
+    {
+      "id": "onam-qayerda",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "question",
+        "locative"
+      ],
+      "text": "Onam qayerda?",
+      "means": "Where is my mother?",
+      "words": [
+        [
+          "Onam",
+          "ona"
+        ],
+        [
+          "qayerda",
+          "qayer"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onam qayerdaman?",
+        "Onam qayerdasiz?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qayerda",
+          "qayerdaman",
+          "qayerdasiz"
+        ]
+      }
+    },
+    {
+      "id": "opam-bu-yerda",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "locative"
+      ],
+      "text": "Opam bu yerda.",
+      "means": "My older sister is here.",
+      "words": [
+        [
+          "Opam",
+          "opa"
+        ],
+        [
+          "bu",
+          "bu"
+        ],
+        [
+          "yerda",
+          "yer"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "this"
+        ],
+        [
+          "place in"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Opam bu yerdaman.",
+        "Opam bu yerdasiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yerda",
+          "yerdaman",
+          "yerdasiz"
+        ]
+      }
+    },
+    {
+      "id": "kalitim-qayerda",
+      "topic": "out",
+      "concepts": [
+        "possessive",
+        "question",
+        "locative"
+      ],
+      "text": "Kalitim qayerda?",
+      "means": "Where is my key?",
+      "words": [
+        [
+          "Kalitim",
+          "kalit"
+        ],
+        [
+          "qayerda",
+          "qayer"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "My key"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kalitim qayerdaman?",
+        "Kalitim qayerdasiz?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qayerda",
+          "qayerdaman",
+          "qayerdasiz"
+        ]
+      }
+    },
+    {
+      "id": "bitta-kitob-iltimos",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Bitta kitob, iltimos.",
+      "means": "One book, please.",
+      "words": [
+        [
+          "Bitta",
+          "bitta"
+        ],
+        [
+          "kitob,",
+          "kitob"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "One"
+        ],
+        [
+          "book"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bitta kitoblar, iltimos.",
+        "Bitta va kitob, iltimos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kitob,",
+          "kitoblar,",
+          "kitobman,"
+        ]
+      }
+    },
+    {
+      "id": "ikki-qahva-iltimos",
+      "topic": "out",
+      "concepts": [],
+      "chunks": [
+        "please"
+      ],
+      "text": "Ikki qahva, iltimos.",
+      "means": "Two coffees, please.",
+      "words": [
+        [
+          "Ikki",
+          "ikki"
+        ],
+        [
+          "qahva,",
+          "qahva"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Two"
+        ],
+        [
+          "coffees"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ikki qahvalar, iltimos.",
+        "Ikki va qahva, iltimos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qahva,",
+          "qahvalar,",
+          "qahvaman,"
+        ]
+      }
+    },
+    {
+      "id": "mening-uchta-kitobim-bor",
+      "topic": "out",
+      "concepts": [
+        "bor-yoq",
+        "genitive",
+        "possessive"
+      ],
+      "text": "Mening uchta kitobim bor.",
+      "means": "I have three books.",
+      "words": [
+        [
+          "Mening",
+          "men"
+        ],
+        [
+          "uchta",
+          "uch"
+        ],
+        [
+          "kitobim",
+          "kitob"
+        ],
+        [
+          "bor",
+          "bor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "three"
+        ],
+        [
+          "books"
+        ],
+        [
+          "exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mening uchta kitobingiz bor.",
+        "Mening uchta kitobi bor."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kitobim",
+          "kitobingiz",
+          "kitobi"
+        ]
+      }
+    },
+    {
+      "id": "mening-pulim-yo-q",
+      "topic": "out",
+      "concepts": [
+        "bor-yoq",
+        "negation",
+        "genitive",
+        "possessive"
+      ],
+      "text": "Mening pulim yoʻq.",
+      "means": "I don't have money.",
+      "words": [
+        [
+          "Mening",
+          "men"
+        ],
+        [
+          "pulim",
+          "pul"
+        ],
+        [
+          "yoʻq",
+          "yoʻq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "money"
+        ],
+        [
+          "does not exist"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mening pulingiz yoʻq.",
+        "Mening puli yoʻq."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "pulim",
+          "pulingiz",
+          "puli"
+        ]
+      }
+    },
+    {
+      "id": "kechirasiz-bu-qancha",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "chunks": [
+        "excuse-me",
+        "how-much-is-this"
+      ],
+      "text": "Kechirasiz, bu qancha?",
+      "means": "Excuse me, how much is this?",
+      "words": [
+        [
+          "Kechirasiz,"
+        ],
+        [
+          "bu"
+        ],
+        [
+          "qancha"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "this"
+        ],
+        [
+          "how much"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kechirasiz, bu qanchaman?",
+        "Kechirasiz, bu qanchasiz?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "qancha",
+          "qanchaman",
+          "qanchasiz"
+        ]
+      }
+    },
+    {
+      "id": "salom-hisobni-bering-iltimos",
+      "topic": "out",
+      "concepts": [
+        "accusative"
+      ],
+      "chunks": [
+        "the-check-please",
+        "hello"
+      ],
+      "text": "Salom! Hisobni bering, iltimos.",
+      "means": "Hello! The check, please.",
+      "words": [
+        [
+          "Salom!"
+        ],
+        [
+          "Hisobni"
+        ],
+        [
+          "bering,"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Hello"
+        ],
+        [
+          "the check"
+        ],
+        [
+          "give"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Salom! Hisobning bering, iltimos.",
+        "Salom! Hisobni beringman, iltimos."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Hisobni",
+          "Hisobning",
+          "Hisobda"
+        ]
+      }
+    },
+    {
+      "id": "men-ozgina-o-zbekcha-gapiraman",
+      "topic": "people",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men ozgina oʻzbekcha gapiraman.",
+      "means": "I speak a little Uzbek.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "ozgina",
+          "ozgina"
+        ],
+        [
+          "oʻzbekcha",
+          "oʻzbekcha"
+        ],
+        [
+          "gapiraman",
+          "gapirmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a little"
+        ],
+        [
+          "in Uzbek"
+        ],
+        [
+          "speak"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men ozgina oʻzbekcha gapirasiz.",
+        "Men ozgina oʻzbekcha gapiradi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "gapiraman",
+          "gapirasiz",
+          "gapiradi"
+        ]
+      }
+    },
+    {
+      "id": "men-tushunmayman",
+      "topic": "people",
+      "concepts": [
+        "present-future",
+        "negation"
+      ],
+      "text": "Men tushunmayman.",
+      "means": "I don't understand.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "tushunmayman",
+          "tushunmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "do not understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men tushunmaysiz.",
+        "Men tushunmaydi."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tushunmayman",
+          "tushunmaysiz",
+          "tushunmaydi"
+        ]
+      }
+    },
+    {
+      "id": "siz-tushunasizmi",
+      "topic": "people",
+      "concepts": [
+        "present-future",
+        "question"
+      ],
+      "text": "Siz tushunasizmi?",
+      "means": "Do you understand?",
+      "words": [
+        [
+          "Siz",
+          "siz"
+        ],
+        [
+          "tushunasizmi",
+          "tushunmoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "do you understand"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz tushunamanmi?",
+        "Siz tushunasanmi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "tushunasizmi",
+          "tushunamanmi",
+          "tushunasanmi"
+        ]
+      }
+    },
+    {
+      "id": "men-qahva-xohlayman",
+      "topic": "people",
+      "concepts": [
+        "verb-last",
+        "present-future",
+        "want"
+      ],
+      "text": "Men qahva xohlayman.",
+      "means": "I want a coffee.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "qahva",
+          "qahva"
+        ],
+        [
+          "xohlayman",
+          "xohlamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "coffee"
+        ],
+        [
+          "want"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men qahva xohlaysiz.",
+        "Men qahva xohlaydi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "xohlayman",
+          "xohlaysiz",
+          "xohlaydi"
+        ]
+      }
+    },
+    {
+      "id": "men-suv-xohlayman-iltimos",
+      "topic": "people",
+      "concepts": [
+        "present-future",
+        "want"
+      ],
+      "chunks": [
+        "please"
+      ],
+      "text": "Men suv xohlayman, iltimos.",
+      "means": "I want water, please.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "suv",
+          "suv"
+        ],
+        [
+          "xohlayman,",
+          "xohlamoq"
+        ],
+        [
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "water"
+        ],
+        [
+          "want"
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men suv xohlaysiz, iltimos.",
+        "Men suv xohlaydi, iltimos."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "xohlayman,",
+          "xohlaysiz,",
+          "xohlaydi,"
+        ]
+      }
+    },
+    {
+      "id": "xonam-kichkina",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "possessive"
+      ],
+      "text": "Xonam kichkina.",
+      "means": "My room is small.",
+      "words": [
+        [
+          "Xonam",
+          "xona"
+        ],
+        [
+          "kichkina",
+          "kichkina"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My room"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Xonam kichkinaman.",
+        "Xonam kichkinasiz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kichkina",
+          "kichkinaman",
+          "kichkinasiz"
+        ]
+      }
+    },
+    {
+      "id": "bu-uy-katta",
+      "topic": "home",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Bu uy katta.",
+      "means": "This house is big.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "uy",
+          "uy"
+        ],
+        [
+          "katta",
+          "katta"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "house"
+        ],
+        [
+          "big"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu uy kattaman.",
+        "Bu uy kattasiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "katta",
+          "kattaman",
+          "kattasiz"
+        ]
+      }
+    },
+    {
+      "id": "men-kichkina-uyda-yashayman",
+      "topic": "home",
+      "concepts": [
+        "verb-last",
+        "present-future",
+        "locative"
+      ],
+      "text": "Men kichkina uyda yashayman.",
+      "means": "I live in a small house.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "kichkina",
+          "kichkina"
+        ],
+        [
+          "uyda",
+          "uy"
+        ],
+        [
+          "yashayman",
+          "yashamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "a small"
+        ],
+        [
+          "house in"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men kichkina uyda yashaysiz.",
+        "Men kichkina uyda yashaydi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "yashayman",
+          "yashaysiz",
+          "yashaydi"
+        ]
+      }
+    },
+    {
+      "id": "onam-bu-yerda-yashaydi",
+      "topic": "home",
+      "concepts": [
+        "verb-last",
+        "present-future",
+        "locative",
+        "possessive"
+      ],
+      "text": "Onam bu yerda yashaydi.",
+      "means": "My mother lives here.",
+      "words": [
+        [
+          "Onam",
+          "ona"
+        ],
+        [
+          "bu",
+          "bu"
+        ],
+        [
+          "yerda",
+          "yer"
+        ],
+        [
+          "yashaydi",
+          "yashamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "this"
+        ],
+        [
+          "place in"
+        ],
+        [
+          "lives"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onam bu yerda yashayman.",
+        "Onam bu yerda yashaysan."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "yashaydi",
+          "yashayman",
+          "yashaysan"
+        ]
+      }
+    },
+    {
+      "id": "men-maktabga-boraman",
+      "topic": "out",
+      "concepts": [
+        "verb-last",
+        "present-future",
+        "dative"
+      ],
+      "text": "Men maktabga boraman.",
+      "means": "I go to school.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "maktabga",
+          "maktab"
+        ],
+        [
+          "boraman",
+          "bormoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "to school"
+        ],
+        [
+          "go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men maktabga borasiz.",
+        "Men maktabga boradi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "boraman",
+          "borasiz",
+          "boradi"
+        ]
+      }
+    },
+    {
+      "id": "bu-mashina-kichkina",
+      "topic": "out",
+      "concepts": [
+        "copula"
+      ],
+      "text": "Bu mashina kichkina.",
+      "means": "This car is small.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "mashina",
+          "mashina"
+        ],
+        [
+          "kichkina",
+          "kichkina"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "car"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu mashina kichkinaman.",
+        "Bu mashina kichkinasiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kichkina",
+          "kichkinaman",
+          "kichkinasiz"
+        ]
+      }
+    },
+    {
+      "id": "onam-shaharga-boradi",
+      "topic": "out",
+      "concepts": [
+        "verb-last",
+        "present-future",
+        "dative",
+        "possessive"
+      ],
+      "text": "Onam shaharga boradi.",
+      "means": "My mother goes to the city.",
+      "words": [
+        [
+          "Onam",
+          "ona"
+        ],
+        [
+          "shaharga",
+          "shahar"
+        ],
+        [
+          "boradi",
+          "bormoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mother"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "goes"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onam shaharga boraman.",
+        "Onam shaharga borasan."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "boradi",
+          "boraman",
+          "borasan"
+        ]
+      }
+    },
+    {
+      "id": "siz-qayerga-boryapsiz",
+      "topic": "out",
+      "concepts": [
+        "verb-last",
+        "present-continuous",
+        "question",
+        "dative"
+      ],
+      "text": "Siz qayerga boryapsiz?",
+      "means": "Where are you going?",
+      "words": [
+        [
+          "Siz",
+          "siz"
+        ],
+        [
+          "qayerga",
+          "qayer"
+        ],
+        [
+          "boryapsiz",
+          "bormoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "where to"
+        ],
+        [
+          "are going"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz qayerga boryapman?",
+        "Siz qayerga boryapsan?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "boryapsiz",
+          "boryapman",
+          "boryapsan"
+        ]
+      }
+    },
+    {
+      "id": "mening-mashinam-bor",
+      "topic": "out",
+      "concepts": [
+        "bor-yoq",
+        "genitive",
+        "possessive"
+      ],
+      "text": "Mening mashinam bor.",
+      "means": "I have a car.",
+      "words": [
+        [
+          "Mening",
+          "men"
+        ],
+        [
+          "mashinam",
+          "mashina"
+        ],
+        [
+          "bor",
+          "bor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "car"
+        ],
+        [
+          "exists"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Mening mashinangiz bor.",
+        "Mening mashinasi bor."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "mashinam",
+          "mashinangiz",
+          "mashinasi"
+        ]
+      }
+    },
+    {
+      "id": "kechirasiz-vokzal-qayerda",
+      "topic": "out",
+      "concepts": [
+        "question",
+        "locative"
+      ],
+      "chunks": [
+        "excuse-me"
+      ],
+      "text": "Kechirasiz, vokzal qayerda?",
+      "means": "Excuse me, where is the train station?",
+      "words": [
+        [
+          "Kechirasiz,"
+        ],
+        [
+          "vokzal",
+          "vokzal"
+        ],
+        [
+          "qayerda",
+          "qayer"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Excuse me"
+        ],
+        [
+          "the train station"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kechirasiz, vokzal qayerdaman?",
+        "Kechirasiz, vokzal qayerdasiz?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "qayerda",
+          "qayerdaman",
+          "qayerdasiz"
+        ]
+      }
+    },
+    {
+      "id": "men-bugun-ishlayman",
+      "topic": "plans",
+      "concepts": [
+        "verb-last",
+        "present-future"
+      ],
+      "text": "Men bugun ishlayman.",
+      "means": "I work today.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "bugun",
+          "bugun"
+        ],
+        [
+          "ishlayman",
+          "ishlamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "work"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men bugun ishlaysiz.",
+        "Men bugun ishlaydi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ishlayman",
+          "ishlaysiz",
+          "ishlaydi"
+        ]
+      }
+    },
+    {
+      "id": "ertaga-shaharga-boraman",
+      "topic": "plans",
+      "concepts": [
+        "verb-last",
+        "present-future",
+        "dative"
+      ],
+      "text": "Ertaga shaharga boraman.",
+      "means": "Tomorrow I'll go to the city.",
+      "words": [
+        [
+          "Ertaga",
+          "ertaga"
+        ],
+        [
+          "shaharga",
+          "shahar"
+        ],
+        [
+          "boraman",
+          "bormoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to the city"
+        ],
+        [
+          "I go"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ertaga shaharni boraman.",
+        "Ertaga shaharning boraman."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "shaharga",
+          "shaharni",
+          "shaharning"
+        ]
+      }
+    },
+    {
+      "id": "men-hozir-borishim-kerak",
+      "topic": "plans",
+      "concepts": [
+        "verb-last",
+        "possessive"
+      ],
+      "text": "Men hozir borishim kerak.",
+      "means": "I have to go now.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "hozir",
+          "hozir"
+        ],
+        [
+          "borishim",
+          "bormoq"
+        ],
+        [
+          "kerak",
+          "kerak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "now"
+        ],
+        [
+          "my going"
+        ],
+        [
+          "is necessary"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men hozir borishingiz kerak.",
+        "Men hozir borishi kerak."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "borishim",
+          "borishingiz",
+          "borishi"
+        ]
+      }
+    },
+    {
+      "id": "men-bugun-bora-olmayman",
+      "topic": "plans",
+      "concepts": [
+        "verb-last",
+        "present-future",
+        "negation",
+        "ability"
+      ],
+      "text": "Men bugun bora olmayman.",
+      "means": "I can't go today.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "bugun",
+          "bugun"
+        ],
+        [
+          "bora",
+          "bormoq"
+        ],
+        [
+          "olmayman",
+          "olmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "today"
+        ],
+        [
+          "go"
+        ],
+        [
+          "cannot"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men bugun bora olmaysiz.",
+        "Men bugun boraman olmayman."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bora",
+          "boraman",
+          "boradi"
+        ]
+      }
+    },
+    {
+      "id": "men-ertaga-ishlashim-kerak",
+      "topic": "plans",
+      "concepts": [
+        "verb-last",
+        "possessive"
+      ],
+      "text": "Men ertaga ishlashim kerak.",
+      "means": "I have to work tomorrow.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "ertaga",
+          "ertaga"
+        ],
+        [
+          "ishlashim",
+          "ishlamoq"
+        ],
+        [
+          "kerak",
+          "kerak"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "my working"
+        ],
+        [
+          "is necessary"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men ertaga ishlashingiz kerak.",
+        "Men ertaga ishlashi kerak."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ishlashim",
+          "ishlashingiz",
+          "ishlashi"
+        ]
+      }
+    },
+    {
+      "id": "rahmat-ertaga-ko-rishguncha",
+      "topic": "plans",
+      "concepts": [],
+      "chunks": [
+        "see-you-tomorrow",
+        "thank-you"
+      ],
+      "text": "Rahmat. Ertaga koʻrishguncha!",
+      "means": "Thank you. See you tomorrow!",
+      "words": [
+        [
+          "Rahmat."
+        ],
+        [
+          "Ertaga"
+        ],
+        [
+          "koʻrishguncha"
+        ]
+      ],
+      "punct": "!",
+      "literal": [
+        [
+          "Thank you"
+        ],
+        [
+          "tomorrow"
+        ],
+        [
+          "until we meet"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Rahmat. Ertaga koʻrishgunchaman!",
+        "Rahmat. Ertaga koʻrishgunchasiz!"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "koʻrishguncha",
+          "koʻrishgunchaman",
+          "koʻrishgunchasiz"
+        ]
+      }
+    },
+    {
+      "id": "ismingiz-nima",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "chunks": [
+        "what-s-your-name"
+      ],
+      "text": "Ismingiz nima?",
+      "means": "What's your name?",
+      "words": [
+        [
+          "Ismingiz"
+        ],
+        [
+          "nima"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Your name"
+        ],
+        [
+          "what"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ismim nima?"
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Ismingiz",
+          "Ismim",
+          "Ismi"
+        ]
+      }
+    },
+    {
+      "id": "men-amerikadanman",
+      "topic": "people",
+      "concepts": [
+        "ablative",
+        "copula"
+      ],
+      "text": "Men Amerikadanman.",
+      "means": "I'm from America.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "Amerikadanman"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "from America I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men Amerikadaman.",
+        "Men Amerikadanmiz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Amerikadanman",
+          "Amerikadaman",
+          "Amerikadanmiz"
+        ]
+      }
+    },
+    {
+      "id": "onam-oqituvchi",
+      "topic": "people",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Onam oʻqituvchi.",
+      "means": "My mom is a teacher.",
+      "words": [
+        [
+          "Onam",
+          "ona"
+        ],
+        [
+          "oʻqituvchi",
+          "oʻqituvchi"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "a teacher"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Onang oʻqituvchi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Onam",
+          "Onang",
+          "Onasi"
+        ]
+      }
+    },
+    {
+      "id": "mening-bitta-akam-va-bitta-opam-bor",
+      "topic": "people",
+      "concepts": [
+        "bor-yoq"
+      ],
+      "text": "Mening bitta akam va bitta opam bor.",
+      "means": "I have an older brother and an older sister.",
+      "words": [
+        [
+          "Mening",
+          "men"
+        ],
+        [
+          "bitta",
+          "bitta"
+        ],
+        [
+          "akam",
+          "aka"
+        ],
+        [
+          "va",
+          "va"
+        ],
+        [
+          "bitta",
+          "bitta"
+        ],
+        [
+          "opam",
+          "opa"
+        ],
+        [
+          "bor",
+          "bor"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My"
+        ],
+        [
+          "one"
+        ],
+        [
+          "older brother"
+        ],
+        [
+          "and"
+        ],
+        [
+          "one"
+        ],
+        [
+          "older sister"
+        ],
+        [
+          "there is",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bor"
+      ],
+      "wrong": [
+        "Mening bitta akam va bitta opam yoʻq.",
+        "Men bitta akam va bitta opam bor."
+      ],
+      "gap": {
+        "index": 6,
+        "options": [
+          "bor",
+          "yoʻq",
+          "boraman"
+        ]
+      }
+    },
+    {
+      "id": "akam-toshkentda-yashaydi",
+      "topic": "people",
+      "concepts": [
+        "locative",
+        "verb-last"
+      ],
+      "text": "Akam Toshkentda yashaydi.",
+      "means": "My older brother lives in Tashkent.",
+      "words": [
+        [
+          "Akam",
+          "aka"
+        ],
+        [
+          "Toshkentda"
+        ],
+        [
+          "yashaydi",
+          "yashamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older brother"
+        ],
+        [
+          "in Tashkent"
+        ],
+        [
+          "lives",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "yashaydi"
+      ],
+      "wrong": [
+        "Akam Toshkentga yashaydi.",
+        "Akam Toshkentdan yashaydi.",
+        "Akam yashamoq Toshkentda."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "Toshkentda",
+          "Toshkentga",
+          "Toshkentdan"
+        ]
+      }
+    },
+    {
+      "id": "opam-inglizcha-gapirmaydi",
+      "topic": "people",
+      "concepts": [
+        "negation",
+        "verb-last"
+      ],
+      "text": "Opam inglizcha gapirmaydi.",
+      "means": "My older sister doesn't speak English.",
+      "words": [
+        [
+          "Opam",
+          "opa"
+        ],
+        [
+          "inglizcha",
+          "inglizcha"
+        ],
+        [
+          "gapirmaydi",
+          "gapirmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My older sister"
+        ],
+        [
+          "in English"
+        ],
+        [
+          "doesn't speak",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "gapirmaydi"
+      ],
+      "wrong": [
+        "Opam inglizcha gapiradi.",
+        "Opam inglizcha gapiradi emas.",
+        "Opam gapirmoq inglizcha."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "gapirmaydi",
+          "gapiradi",
+          "gapirmayman"
+        ]
+      }
+    },
+    {
+      "id": "bu-otamning-mashinasi",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Bu otamning mashinasi.",
+      "means": "This is my dad's car.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "otamning",
+          "ota"
+        ],
+        [
+          "mashinasi",
+          "mashina"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my dad's"
+        ],
+        [
+          "car"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu otamning mashina."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "mashinasi",
+          "mashina",
+          "mashinam"
+        ]
+      }
+    },
+    {
+      "id": "bu-mening-dostimning-kitobi",
+      "topic": "people",
+      "concepts": [
+        "genitive"
+      ],
+      "text": "Bu mening doʻstimning kitobi.",
+      "means": "This is my friend's book.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "mening",
+          "men"
+        ],
+        [
+          "doʻstimning",
+          "doʻst"
+        ],
+        [
+          "kitobi",
+          "kitob"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "friend's"
+        ],
+        [
+          "book"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bu mening doʻstimning kitob."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "doʻstimning",
+          "doʻstimga",
+          "doʻstimdan"
+        ]
+      }
+    },
+    {
+      "id": "menga-bu-film-yoqadi",
+      "topic": "people",
+      "concepts": [
+        "dative"
+      ],
+      "text": "Menga bu film yoqadi.",
+      "means": "I like this movie.",
+      "words": [
+        [
+          "Menga",
+          "men"
+        ],
+        [
+          "bu",
+          "bu"
+        ],
+        [
+          "film",
+          "film"
+        ],
+        [
+          "yoqadi",
+          "yoqmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "this movie"
+        ],
+        [
+          "pleases"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men bu film yoqadi.",
+        "Mening bu film yoqadi."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Menga",
+          "Men",
+          "Meni"
+        ]
+      }
+    },
+    {
+      "id": "bolalar-hovlida-oynayapti",
+      "topic": "people",
+      "concepts": [
+        "plural",
+        "present-continuous"
+      ],
+      "text": "Bolalar hovlida oʻynayapti.",
+      "means": "The children are playing in the yard.",
+      "words": [
+        [
+          "Bolalar",
+          "bola"
+        ],
+        [
+          "hovlida",
+          "hovli"
+        ],
+        [
+          "oʻynayapti",
+          "oʻynamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The children"
+        ],
+        [
+          "in the yard"
+        ],
+        [
+          "are playing",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "oʻynayapti"
+      ],
+      "wrong": [
+        "Bolalar hovlida oʻynayapman.",
+        "Bolalar hovlida oʻynamoq."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bolalar",
+          "Bola",
+          "Bolani"
+        ]
+      }
+    },
+    {
+      "id": "bolalarim-maktabda",
+      "topic": "people",
+      "concepts": [
+        "plural"
+      ],
+      "text": "Bolalarim maktabda.",
+      "means": "My children are at school.",
+      "words": [
+        [
+          "Bolalarim",
+          "bola"
+        ],
+        [
+          "maktabda",
+          "maktab"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My children"
+        ],
+        [
+          "at school"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bolam maktabda."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Bolalarim",
+          "Bolam",
+          "Bolalar"
+        ]
+      }
+    },
+    {
+      "id": "siz-qayerda-yashaysiz",
+      "topic": "people",
+      "concepts": [
+        "question",
+        "locative"
+      ],
+      "text": "Siz qayerda yashaysiz?",
+      "means": "Where do you live?",
+      "words": [
+        [
+          "Siz",
+          "siz"
+        ],
+        [
+          "qayerda",
+          "qayer"
+        ],
+        [
+          "yashaysiz",
+          "yashamoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "where"
+        ],
+        [
+          "live"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz qayerda yashaysizmi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qayerda",
+          "qayerga",
+          "kim"
+        ]
+      }
+    },
+    {
+      "id": "inglizcha-gapirasizmi",
+      "topic": "people",
+      "concepts": [
+        "question"
+      ],
+      "text": "Inglizcha gapirasizmi?",
+      "means": "Do you speak English?",
+      "words": [
+        [
+          "Inglizcha",
+          "inglizcha"
+        ],
+        [
+          "gapirasizmi",
+          "gapirmoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "In English"
+        ],
+        [
+          "do you speak",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "gapirasizmi"
+      ],
+      "wrong": [
+        "Inglizcha gapirasiz mi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "gapirasizmi",
+          "gapiramanmi",
+          "gapiradimi"
+        ]
+      }
+    },
+    {
+      "id": "siz-talabamisiz",
+      "topic": "people",
+      "concepts": [
+        "copula",
+        "question"
+      ],
+      "text": "Siz talabamisiz?",
+      "means": "Are you a student?",
+      "words": [
+        [
+          "Siz",
+          "siz"
+        ],
+        [
+          "talabamisiz",
+          "talaba"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "You"
+        ],
+        [
+          "are a student"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Siz talabamanmi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "talabamisiz",
+          "talabamanmi",
+          "talabamiz"
+        ]
+      }
+    },
+    {
+      "id": "bizning-kvartiramiz-kichkina",
+      "topic": "home",
+      "concepts": [
+        "possessive"
+      ],
+      "text": "Bizning kvartiramiz kichkina.",
+      "means": "Our apartment is small.",
+      "words": [
+        [
+          "Bizning",
+          "biz"
+        ],
+        [
+          "kvartiramiz",
+          "kvartira"
+        ],
+        [
+          "kichkina",
+          "kichkina"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Our"
+        ],
+        [
+          "apartment"
+        ],
+        [
+          "small"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bizning kvartiram kichkina."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "kvartiramiz",
+          "kvartiram",
+          "kvartirang"
+        ]
+      }
+    },
+    {
+      "id": "kalitlar-stolning-ustida",
+      "topic": "home",
+      "concepts": [
+        "locative"
+      ],
+      "text": "Kalitlar stolning ustida.",
+      "means": "The keys are on the table.",
+      "words": [
+        [
+          "Kalitlar",
+          "kalit"
+        ],
+        [
+          "stolning",
+          "stol"
+        ],
+        [
+          "ustida",
+          "ust"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The keys"
+        ],
+        [
+          "the table's"
+        ],
+        [
+          "on top"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kalitlar stolning ustiga."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ustida",
+          "ustiga",
+          "ustidan"
+        ]
+      }
+    },
+    {
+      "id": "muzlatkichda-sut-yoq",
+      "topic": "home",
+      "concepts": [
+        "bor-yoq",
+        "locative"
+      ],
+      "text": "Muzlatkichda sut yoʻq.",
+      "means": "There's no milk in the fridge.",
+      "words": [
+        [
+          "Muzlatkichda",
+          "muzlatkich"
+        ],
+        [
+          "sut",
+          "sut"
+        ],
+        [
+          "yoʻq",
+          "yoʻq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "In the fridge"
+        ],
+        [
+          "milk"
+        ],
+        [
+          "there isn't",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "yoʻq"
+      ],
+      "wrong": [
+        "Muzlatkichda sut emas.",
+        "Muzlatkichga sut yoʻq."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yoʻq",
+          "emas",
+          "bor"
+        ]
+      }
+    },
+    {
+      "id": "onam-oshxonada-ovqat-pishiryapti",
+      "topic": "home",
+      "concepts": [
+        "present-continuous",
+        "locative"
+      ],
+      "text": "Onam oshxonada ovqat pishiryapti.",
+      "means": "My mom is cooking in the kitchen.",
+      "words": [
+        [
+          "Onam",
+          "ona"
+        ],
+        [
+          "oshxonada",
+          "oshxona"
+        ],
+        [
+          "ovqat",
+          "ovqat"
+        ],
+        [
+          "pishiryapti",
+          "pishirmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "My mom"
+        ],
+        [
+          "in the kitchen"
+        ],
+        [
+          "food"
+        ],
+        [
+          "is cooking",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "pishiryapti"
+      ],
+      "wrong": [
+        "Onam oshxonada ovqat pishirmoq.",
+        "Onam oshxonaga ovqat pishiryapti."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "pishiryapti",
+          "pishirdi",
+          "pishirmoq"
+        ]
+      }
+    },
+    {
+      "id": "derazani-yoping-iltimos",
+      "topic": "home",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Derazani yoping, iltimos.",
+      "means": "Close the window, please.",
+      "words": [
+        [
+          "Derazani",
+          "deraza"
+        ],
+        [
+          "yoping,",
+          "yopmoq"
+        ],
+        [
+          "iltimos",
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The window"
+        ],
+        [
+          "close",
+          true
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": [
+        1,
+        0,
+        2
+      ],
+      "moved": [
+        "yoping,"
+      ],
+      "wrong": [
+        "Derazaga yoping, iltimos.",
+        "Derazada yoping, iltimos."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Derazani",
+          "Derazaga",
+          "Derazada"
+        ]
+      }
+    },
+    {
+      "id": "biz-shahar-markazida-yashaymiz",
+      "topic": "home",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Biz shahar markazida yashaymiz.",
+      "means": "We live in the city center.",
+      "words": [
+        [
+          "Biz",
+          "biz"
+        ],
+        [
+          "shahar",
+          "shahar"
+        ],
+        [
+          "markazida",
+          "markaz"
+        ],
+        [
+          "yashaymiz",
+          "yashamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "We"
+        ],
+        [
+          "in the city center"
+        ],
+        [
+          "live",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "yashaymiz"
+      ],
+      "wrong": [
+        "Biz shahar markazida yashayman."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "yashaymiz",
+          "yashayman",
+          "yashaydi"
+        ]
+      }
+    },
+    {
+      "id": "men-uydaman",
+      "topic": "home",
+      "concepts": [
+        "copula",
+        "locative"
+      ],
+      "text": "Men uydaman.",
+      "means": "I'm at home.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "uydaman",
+          "uy"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "at home I am"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Men uygaman.",
+        "Men uydamiz."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uydaman",
+          "uygaman",
+          "uydanman"
+        ]
+      }
+    },
+    {
+      "id": "kitoblar-javonda",
+      "topic": "home",
+      "concepts": [
+        "plural",
+        "locative"
+      ],
+      "text": "Kitoblar javonda.",
+      "means": "The books are on the shelf.",
+      "words": [
+        [
+          "Kitoblar",
+          "kitob"
+        ],
+        [
+          "javonda",
+          "javon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The books"
+        ],
+        [
+          "on the shelf"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kitoblar javonga."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Kitoblar",
+          "Kitob",
+          "Kitoblarni"
+        ]
+      }
+    },
+    {
+      "id": "bu-mening-uyim-emas",
+      "topic": "home",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Bu mening uyim emas.",
+      "means": "This isn't my house.",
+      "words": [
+        [
+          "Bu",
+          "bu"
+        ],
+        [
+          "mening",
+          "men"
+        ],
+        [
+          "uyim",
+          "uy"
+        ],
+        [
+          "emas",
+          "emas"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "This"
+        ],
+        [
+          "my"
+        ],
+        [
+          "house"
+        ],
+        [
+          "isn't",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "emas"
+      ],
+      "wrong": [
+        "Bu mening uyim yoʻq.",
+        "Bu mening uyim emasman."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "emas",
+          "yoʻq",
+          "bor"
+        ]
+      }
+    },
+    {
+      "id": "men-har-kuni-ertalab-choy-ichaman",
+      "topic": "home",
+      "concepts": [
+        "present-future"
+      ],
+      "text": "Men har kuni ertalab choy ichaman.",
+      "means": "I drink tea every morning.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "har",
+          "har"
+        ],
+        [
+          "kuni",
+          "kun"
+        ],
+        [
+          "ertalab",
+          "ertalab"
+        ],
+        [
+          "choy",
+          "choy"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "every day"
+        ],
+        [
+          "in the morning"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "drink",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "ichaman"
+      ],
+      "wrong": [
+        "Men har kuni ertalab choy ichadi.",
+        "Men har kuni ertalab choy ichmoq."
+      ],
+      "gap": {
+        "index": 5,
+        "options": [
+          "ichaman",
+          "ichadi",
+          "ichasan"
+        ]
+      }
+    },
+    {
+      "id": "men-choyni-shakarsiz-ichaman",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Men choyni shakarsiz ichaman.",
+      "means": "I drink my tea without sugar.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "choyni",
+          "choy"
+        ],
+        [
+          "shakarsiz",
+          "shakarsiz"
+        ],
+        [
+          "ichaman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "the tea"
+        ],
+        [
+          "without sugar"
+        ],
+        [
+          "drink",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "ichaman"
+      ],
+      "wrong": [
+        "Men choyga shakarsiz ichaman.",
+        "Men choyda shakarsiz ichaman."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "choyni",
+          "choyga",
+          "choyda"
+        ]
+      }
+    },
+    {
+      "id": "qahvani-sut-bilan-ichasizmi",
+      "topic": "food",
+      "concepts": [
+        "instrumental",
+        "question"
+      ],
+      "text": "Qahvani sut bilan ichasizmi?",
+      "means": "Do you take your coffee with milk?",
+      "words": [
+        [
+          "Qahvani",
+          "qahva"
+        ],
+        [
+          "sut",
+          "sut"
+        ],
+        [
+          "bilan",
+          "bilan"
+        ],
+        [
+          "ichasizmi",
+          "ichmoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The coffee"
+        ],
+        [
+          "with milk"
+        ],
+        [
+          "do you drink",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        0,
+        1
+      ],
+      "moved": [
+        "ichasizmi"
+      ],
+      "wrong": [
+        "Qahvani sutdan ichasizmi?",
+        "Qahvani sut bilan ichasiz mi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bilan",
+          "uchun",
+          "haqida"
+        ]
+      }
+    },
+    {
+      "id": "karta-bilan-tolay-olamanmi",
+      "topic": "food",
+      "concepts": [
+        "ability",
+        "question"
+      ],
+      "text": "Karta bilan toʻlay olamanmi?",
+      "means": "Can I pay by card?",
+      "words": [
+        [
+          "Karta",
+          "karta"
+        ],
+        [
+          "bilan",
+          "bilan"
+        ],
+        [
+          "toʻlay",
+          "toʻlamoq"
+        ],
+        [
+          "olamanmi",
+          "olmoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "By card"
+        ],
+        [
+          "pay"
+        ],
+        [
+          "can I",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "olamanmi"
+      ],
+      "wrong": [
+        "Karta bilan toʻlamoq olamanmi?",
+        "Karta bilan toʻlay olaman mi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "toʻlay",
+          "toʻlamoq",
+          "toʻladim"
+        ]
+      }
+    },
+    {
+      "id": "men-gosht-yemayman",
+      "topic": "food",
+      "concepts": [
+        "negation",
+        "verb-last"
+      ],
+      "text": "Men goʻsht yemayman.",
+      "means": "I don't eat meat.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "goʻsht",
+          "goʻsht"
+        ],
+        [
+          "yemayman",
+          "yemoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "meat"
+        ],
+        [
+          "don't eat",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "yemayman"
+      ],
+      "wrong": [
+        "Men goʻsht yeyman.",
+        "Men goʻsht yeyman emas.",
+        "Men yemoq goʻsht."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yemayman",
+          "yeyman",
+          "yemaydi"
+        ]
+      }
+    },
+    {
+      "id": "sizda-suv-bormi",
+      "topic": "food",
+      "concepts": [
+        "bor-yoq",
+        "question"
+      ],
+      "text": "Sizda suv bormi?",
+      "means": "Do you have water?",
+      "words": [
+        [
+          "Sizda",
+          "siz"
+        ],
+        [
+          "suv",
+          "suv"
+        ],
+        [
+          "bormi",
+          "bor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "At you"
+        ],
+        [
+          "water"
+        ],
+        [
+          "is there"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Sizda suv bor mi?",
+        "Siz suv bormi?"
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "bormi",
+          "boramanmi",
+          "borasizmi"
+        ]
+      }
+    },
+    {
+      "id": "kecha-restoranda-ovqatlandik",
+      "topic": "food",
+      "concepts": [
+        "past",
+        "locative"
+      ],
+      "text": "Kecha restoranda ovqatlandik.",
+      "means": "Yesterday we ate at a restaurant.",
+      "words": [
+        [
+          "Kecha",
+          "kecha"
+        ],
+        [
+          "restoranda",
+          "restoran"
+        ],
+        [
+          "ovqatlandik",
+          "ovqatlanmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "at a restaurant"
+        ],
+        [
+          "we ate",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "ovqatlandik"
+      ],
+      "wrong": [
+        "Kecha restoranda ovqatlanamiz.",
+        "Kecha restoranga ovqatlandik."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "ovqatlandik",
+          "ovqatlanamiz",
+          "ovqatlandim"
+        ]
+      }
+    },
+    {
+      "id": "dokonda-non-yoq-edi",
+      "topic": "food",
+      "concepts": [
+        "bor-yoq",
+        "past"
+      ],
+      "text": "Doʻkonda non yoʻq edi.",
+      "means": "There was no bread at the store.",
+      "words": [
+        [
+          "Doʻkonda",
+          "doʻkon"
+        ],
+        [
+          "non",
+          "non"
+        ],
+        [
+          "yoʻq",
+          "yoʻq"
+        ],
+        [
+          "edi",
+          "emoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "At the store"
+        ],
+        [
+          "bread"
+        ],
+        [
+          "there wasn't",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "yoʻq",
+        "edi"
+      ],
+      "wrong": [
+        "Doʻkonda non yoʻq.",
+        "Doʻkonda non emas edi."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "edi",
+          "emas",
+          "bor"
+        ]
+      }
+    },
+    {
+      "id": "choy-ichmoqchiman",
+      "topic": "food",
+      "concepts": [
+        "want"
+      ],
+      "text": "Choy ichmoqchiman.",
+      "means": "I'd like to drink some tea.",
+      "words": [
+        [
+          "Choy",
+          "choy"
+        ],
+        [
+          "ichmoqchiman",
+          "ichmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tea"
+        ],
+        [
+          "I want to drink",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "ichmoqchiman"
+      ],
+      "wrong": [
+        "Choy ichmoqchisan.",
+        "Choy ichmoq."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ichmoqchiman",
+          "ichaman",
+          "ichmoq"
+        ]
+      }
+    },
+    {
+      "id": "menga-bir-stakan-suv-bering",
+      "topic": "food",
+      "concepts": [
+        "dative"
+      ],
+      "text": "Menga bir stakan suv bering, iltimos.",
+      "means": "Could I have a glass of water, please?",
+      "words": [
+        [
+          "Menga",
+          "men"
+        ],
+        [
+          "bir",
+          "bir"
+        ],
+        [
+          "stakan",
+          "stakan"
+        ],
+        [
+          "suv",
+          "suv"
+        ],
+        [
+          "bering,",
+          "bermoq"
+        ],
+        [
+          "iltimos",
+          "iltimos"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "To me"
+        ],
+        [
+          "a"
+        ],
+        [
+          "glass"
+        ],
+        [
+          "water"
+        ],
+        [
+          "give",
+          true
+        ],
+        [
+          "please"
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "bering,"
+      ],
+      "wrong": [
+        "Men bir stakan suv bering, iltimos.",
+        "Meni bir stakan suv bering, iltimos."
+      ],
+      "gap": {
+        "index": 0,
+        "options": [
+          "Menga",
+          "Men",
+          "Meni"
+        ]
+      }
+    },
+    {
+      "id": "men-palovni-yaxshi-koraman",
+      "topic": "food",
+      "concepts": [
+        "accusative"
+      ],
+      "text": "Men palovni yaxshi koʻraman.",
+      "means": "I love plov.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "palovni",
+          "palov"
+        ],
+        [
+          "yaxshi",
+          "yaxshi koʻrmoq"
+        ],
+        [
+          "koʻraman",
+          "yaxshi koʻrmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "plov"
+        ],
+        [
+          "love",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "yaxshi",
+        "koʻraman"
+      ],
+      "wrong": [
+        "Men palovga yaxshi koʻraman.",
+        "Men palovda yaxshi koʻraman."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "palovni",
+          "palovga",
+          "palovda"
+        ]
+      }
+    },
+    {
+      "id": "vokzal-qayerda",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Vokzal qayerda?",
+      "means": "Where's the train station?",
+      "words": [
+        [
+          "Vokzal",
+          "vokzal"
+        ],
+        [
+          "qayerda",
+          "qayer"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The station"
+        ],
+        [
+          "where"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Vokzal qayerdami?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qayerda",
+          "qachon",
+          "nima"
+        ]
+      }
+    },
+    {
+      "id": "men-ishga-avtobus-bilan-boraman",
+      "topic": "out",
+      "concepts": [
+        "dative",
+        "instrumental"
+      ],
+      "text": "Men ishga avtobus bilan boraman.",
+      "means": "I go to work by bus.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "ishga",
+          "ish"
+        ],
+        [
+          "avtobus",
+          "avtobus"
+        ],
+        [
+          "bilan",
+          "bilan"
+        ],
+        [
+          "boraman",
+          "bormoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "to work"
+        ],
+        [
+          "by bus"
+        ],
+        [
+          "go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "moved": [
+        "boraman"
+      ],
+      "wrong": [
+        "Men ishda avtobus bilan boraman.",
+        "Men ishga avtobusdan boraman."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "ishga",
+          "ishda",
+          "ishni"
+        ]
+      }
+    },
+    {
+      "id": "yaqin-atrofda-bank-bormi",
+      "topic": "out",
+      "concepts": [
+        "bor-yoq",
+        "question"
+      ],
+      "text": "Yaqin atrofda bank bormi?",
+      "means": "Is there a bank nearby?",
+      "words": [
+        [
+          "Yaqin",
+          "yaqin"
+        ],
+        [
+          "atrofda",
+          "atrof"
+        ],
+        [
+          "bank",
+          "bank"
+        ],
+        [
+          "bormi",
+          "bor"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Nearby"
+        ],
+        [
+          "a bank"
+        ],
+        [
+          "is there",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "bormi"
+      ],
+      "wrong": [
+        "Yaqin atrofda bank bor mi?"
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "bormi",
+          "boradimi",
+          "borasizmi"
+        ]
+      }
+    },
+    {
+      "id": "nima-qilyapsan",
+      "topic": "out",
+      "concepts": [
+        "present-continuous"
+      ],
+      "text": "Nima qilyapsan?",
+      "means": "What are you doing?",
+      "words": [
+        [
+          "Nima",
+          "nima"
+        ],
+        [
+          "qilyapsan",
+          "qilmoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "What"
+        ],
+        [
+          "are you doing"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Nima qilyap?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qilyapsan",
+          "qildi",
+          "qilmoq"
+        ]
+      }
+    },
+    {
+      "id": "aeroport-bu-yerdan-uzoq",
+      "topic": "out",
+      "concepts": [
+        "ablative"
+      ],
+      "text": "Aeroport bu yerdan uzoq.",
+      "means": "The airport is far from here.",
+      "words": [
+        [
+          "Aeroport",
+          "aeroport"
+        ],
+        [
+          "bu",
+          "bu"
+        ],
+        [
+          "yerdan",
+          "yer"
+        ],
+        [
+          "uzoq",
+          "uzoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The airport"
+        ],
+        [
+          "from here"
+        ],
+        [
+          "far"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Aeroport bu yerda uzoq."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yerdan",
+          "yerda",
+          "yerga"
+        ]
+      }
+    },
+    {
+      "id": "kechirasiz-bilmayman",
+      "topic": "out",
+      "concepts": [
+        "negation"
+      ],
+      "text": "Kechirasiz, bilmayman.",
+      "means": "Sorry, I don't know.",
+      "words": [
+        [
+          "Kechirasiz,",
+          "kechirmoq"
+        ],
+        [
+          "bilmayman",
+          "bilmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Sorry"
+        ],
+        [
+          "I don't know"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Kechirasiz, bilaman.",
+        "Kechirasiz, bilaman emas."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bilmayman",
+          "bilaman",
+          "bilmaydi"
+        ]
+      }
+    },
+    {
+      "id": "ertaga-taksida-aeroportga-boraman",
+      "topic": "out",
+      "concepts": [
+        "dative",
+        "present-future"
+      ],
+      "text": "Ertaga taksida aeroportga boraman.",
+      "means": "Tomorrow I'll take a taxi to the airport.",
+      "words": [
+        [
+          "Ertaga",
+          "ertaga"
+        ],
+        [
+          "taksida",
+          "taksi"
+        ],
+        [
+          "aeroportga",
+          "aeroport"
+        ],
+        [
+          "boraman",
+          "bormoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "by taxi"
+        ],
+        [
+          "to the airport"
+        ],
+        [
+          "I'll go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "moved": [
+        "boraman"
+      ],
+      "wrong": [
+        "Ertaga taksida aeroportga bordim.",
+        "Ertaga taksida aeroportda boraman."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "aeroportga",
+          "aeroportda",
+          "aeroportdan"
+        ]
+      }
+    },
+    {
+      "id": "chipta-qancha-turadi",
+      "topic": "out",
+      "concepts": [
+        "question"
+      ],
+      "text": "Chipta qancha turadi?",
+      "means": "How much is the ticket?",
+      "words": [
+        [
+          "Chipta",
+          "chipta"
+        ],
+        [
+          "qancha",
+          "qancha"
+        ],
+        [
+          "turadi",
+          "turmoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "The ticket"
+        ],
+        [
+          "how much"
+        ],
+        [
+          "costs"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Chipta qancha turadimi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "qancha",
+          "qayerda",
+          "kim"
+        ]
+      }
+    },
+    {
+      "id": "kecha-yangi-poyabzal-sotib-oldim",
+      "topic": "out",
+      "concepts": [
+        "past"
+      ],
+      "text": "Kecha yangi poyabzal sotib oldim.",
+      "means": "Yesterday I bought new shoes.",
+      "words": [
+        [
+          "Kecha",
+          "kecha"
+        ],
+        [
+          "yangi",
+          "yangi"
+        ],
+        [
+          "poyabzal",
+          "poyabzal"
+        ],
+        [
+          "sotib",
+          "sotib olmoq"
+        ],
+        [
+          "oldim",
+          "sotib olmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Yesterday"
+        ],
+        [
+          "new shoes"
+        ],
+        [
+          "I bought",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "sotib",
+        "oldim"
+      ],
+      "wrong": [
+        "Kecha yangi poyabzal sotib olaman."
+      ],
+      "gap": {
+        "index": 4,
+        "options": [
+          "oldim",
+          "olaman",
+          "oldi"
+        ]
+      }
+    },
+    {
+      "id": "dorixona-bankning-yonida",
+      "topic": "out",
+      "concepts": [
+        "genitive",
+        "locative"
+      ],
+      "text": "Dorixona bankning yonida.",
+      "means": "The pharmacy is next to the bank.",
+      "words": [
+        [
+          "Dorixona",
+          "dorixona"
+        ],
+        [
+          "bankning",
+          "bank"
+        ],
+        [
+          "yonida",
+          "yon"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The pharmacy"
+        ],
+        [
+          "the bank's"
+        ],
+        [
+          "at the side"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dorixona bankning yoniga.",
+        "Dorixona bankning yonimda."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yonida",
+          "yoniga",
+          "yonidan"
+        ]
+      }
+    },
+    {
+      "id": "yordam-bera-olasizmi",
+      "topic": "out",
+      "concepts": [
+        "ability",
+        "question"
+      ],
+      "text": "Yordam bera olasizmi?",
+      "means": "Can you help?",
+      "words": [
+        [
+          "Yordam",
+          "yordam"
+        ],
+        [
+          "bera",
+          "bermoq"
+        ],
+        [
+          "olasizmi",
+          "olmoq"
+        ]
+      ],
+      "punct": "?",
+      "literal": [
+        [
+          "Help"
+        ],
+        [
+          "can you give",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "bera",
+        "olasizmi"
+      ],
+      "wrong": [
+        "Yordam bermoq olasizmi?",
+        "Yordam bera olasiz mi?"
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "bera",
+          "bermoq",
+          "berdi"
+        ]
+      }
+    },
+    {
+      "id": "dostim-bilan-kinoga-boraman",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "instrumental"
+      ],
+      "text": "Doʻstim bilan kinoga boraman.",
+      "means": "I'm going to the movies with my friend.",
+      "words": [
+        [
+          "Doʻstim",
+          "doʻst"
+        ],
+        [
+          "bilan",
+          "bilan"
+        ],
+        [
+          "kinoga",
+          "kino"
+        ],
+        [
+          "boraman",
+          "bormoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "With my friend"
+        ],
+        [
+          "to the movies"
+        ],
+        [
+          "I go",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "boraman"
+      ],
+      "wrong": [
+        "Doʻstimdan kinoga boraman.",
+        "Doʻstim bilan kinoda boraman."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "kinoga",
+          "kinoda",
+          "kinodan"
+        ]
+      }
+    },
+    {
+      "id": "ertaga-senga-qongiroq-qilaman",
+      "topic": "plans",
+      "concepts": [
+        "dative",
+        "present-future"
+      ],
+      "text": "Ertaga senga qoʻngʻiroq qilaman.",
+      "means": "I'll call you tomorrow.",
+      "words": [
+        [
+          "Ertaga",
+          "ertaga"
+        ],
+        [
+          "senga",
+          "sen"
+        ],
+        [
+          "qoʻngʻiroq",
+          "qoʻngʻiroq qilmoq"
+        ],
+        [
+          "qilaman",
+          "qoʻngʻiroq qilmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "to you"
+        ],
+        [
+          "I'll call",
+          true
+        ]
+      ],
+      "english": null,
+      "moved": [
+        "qoʻngʻiroq",
+        "qilaman"
+      ],
+      "wrong": [
+        "Ertaga seni qoʻngʻiroq qilaman.",
+        "Ertaga senga qoʻngʻiroq qildim."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "senga",
+          "seni",
+          "sen"
+        ]
+      }
+    },
+    {
+      "id": "shanba-kuni-samarqandga-boramiz",
+      "topic": "plans",
+      "concepts": [
+        "dative"
+      ],
+      "text": "Shanba kuni Samarqandga boramiz.",
+      "means": "On Saturday we'll go to Samarkand.",
+      "words": [
+        [
+          "Shanba",
+          "shanba"
+        ],
+        [
+          "kuni",
+          "kun"
+        ],
+        [
+          "Samarqandga"
+        ],
+        [
+          "boramiz",
+          "bormoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "On Saturday"
+        ],
+        [
+          "to Samarkand"
+        ],
+        [
+          "we'll go",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "boramiz"
+      ],
+      "wrong": [
+        "Shanba kuni Samarqandda boramiz."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "Samarqandga",
+          "Samarqandda",
+          "Samarqandni"
+        ]
+      }
+    },
+    {
+      "id": "otgan-yozda-chorvoqda-edik",
+      "topic": "plans",
+      "concepts": [
+        "past",
+        "locative"
+      ],
+      "text": "Oʻtgan yozda Chorvoqda edik.",
+      "means": "We were at Charvak last summer.",
+      "words": [
+        [
+          "Oʻtgan",
+          "oʻtgan"
+        ],
+        [
+          "yozda",
+          "yoz"
+        ],
+        [
+          "Chorvoqda"
+        ],
+        [
+          "edik",
+          "emoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Last summer"
+        ],
+        [
+          "at Charvak"
+        ],
+        [
+          "we were",
+          true
+        ]
+      ],
+      "english": [
+        2,
+        1,
+        0
+      ],
+      "moved": [
+        "edik"
+      ],
+      "wrong": [
+        "Oʻtgan yozda Chorvoqqa edik.",
+        "Oʻtgan yozda Chorvoqdamiz."
+      ],
+      "gap": {
+        "index": 3,
+        "options": [
+          "edik",
+          "edim",
+          "bor"
+        ]
+      }
+    },
+    {
+      "id": "bugun-yomgir-yogyapti",
+      "topic": "plans",
+      "concepts": [
+        "present-continuous"
+      ],
+      "text": "Bugun yomgʻir yogʻyapti.",
+      "means": "It's raining today.",
+      "words": [
+        [
+          "Bugun",
+          "bugun"
+        ],
+        [
+          "yomgʻir",
+          "yomgʻir"
+        ],
+        [
+          "yogʻyapti",
+          "yogʻmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Today"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "is falling"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Bugun yomgʻir yogʻmoq.",
+        "Bugun yomgʻir yogʻyapman."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "yogʻyapti",
+          "yogʻdi",
+          "yogʻmoq"
+        ]
+      }
+    },
+    {
+      "id": "ertaga-vaqtim-yoq",
+      "topic": "plans",
+      "concepts": [
+        "bor-yoq",
+        "possessive"
+      ],
+      "text": "Ertaga vaqtim yoʻq.",
+      "means": "I don't have time tomorrow.",
+      "words": [
+        [
+          "Ertaga",
+          "ertaga"
+        ],
+        [
+          "vaqtim",
+          "vaqt"
+        ],
+        [
+          "yoʻq",
+          "yoʻq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "Tomorrow"
+        ],
+        [
+          "my time"
+        ],
+        [
+          "there isn't"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Ertaga vaqtim emas.",
+        "Ertaga vaqting yoʻq."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "vaqtim",
+          "vaqting",
+          "vaqti"
+        ]
+      }
+    },
+    {
+      "id": "ozbek-tilini-organmoqchiman",
+      "topic": "plans",
+      "concepts": [
+        "want",
+        "accusative"
+      ],
+      "text": "Oʻzbek tilini oʻrganmoqchiman.",
+      "means": "I want to learn Uzbek.",
+      "words": [
+        [
+          "Oʻzbek",
+          "oʻzbek"
+        ],
+        [
+          "tilini",
+          "til"
+        ],
+        [
+          "oʻrganmoqchiman",
+          "oʻrganmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "The Uzbek language"
+        ],
+        [
+          "I want to learn",
+          true
+        ]
+      ],
+      "english": [
+        1,
+        0
+      ],
+      "moved": [
+        "oʻrganmoqchiman"
+      ],
+      "wrong": [
+        "Oʻzbek tiliga oʻrganmoqchiman.",
+        "Oʻzbek tilini oʻrganmoq."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "oʻrganmoqchiman",
+          "oʻrganaman",
+          "oʻrganmoq"
+        ]
+      }
+    },
+    {
+      "id": "men-uydan-ishlayman",
+      "topic": "plans",
+      "concepts": [
+        "ablative",
+        "verb-last"
+      ],
+      "text": "Men uydan ishlayman.",
+      "means": "I work from home.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "uydan",
+          "uy"
+        ],
+        [
+          "ishlayman",
+          "ishlamoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "from home"
+        ],
+        [
+          "work",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "ishlayman"
+      ],
+      "wrong": [
+        "Men uyga ishlayman.",
+        "Men uyni ishlayman.",
+        "Men ishlamoq uydan."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "uydan",
+          "uyga",
+          "uyni"
+        ]
+      }
+    },
+    {
+      "id": "men-suza-olaman",
+      "topic": "plans",
+      "concepts": [
+        "ability"
+      ],
+      "text": "Men suza olaman.",
+      "means": "I can swim.",
+      "words": [
+        [
+          "Men",
+          "men"
+        ],
+        [
+          "suza",
+          "suzmoq"
+        ],
+        [
+          "olaman",
+          "olmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I"
+        ],
+        [
+          "swim"
+        ],
+        [
+          "can",
+          true
+        ]
+      ],
+      "english": [
+        0,
+        2,
+        1
+      ],
+      "moved": [
+        "olaman"
+      ],
+      "wrong": [
+        "Men suzmoq olaman.",
+        "Men suza oladi."
+      ],
+      "gap": {
+        "index": 2,
+        "options": [
+          "olaman",
+          "oladi",
+          "oldim"
+        ]
+      }
+    },
+    {
+      "id": "dam-olmoqchiman",
+      "topic": "plans",
+      "concepts": [
+        "want"
+      ],
+      "text": "Dam olmoqchiman.",
+      "means": "I want to rest.",
+      "words": [
+        [
+          "Dam",
+          "dam olmoq"
+        ],
+        [
+          "olmoqchiman",
+          "dam olmoq"
+        ]
+      ],
+      "punct": ".",
+      "literal": [
+        [
+          "I want to rest"
+        ]
+      ],
+      "english": null,
+      "moved": [],
+      "wrong": [
+        "Dam olmoqchisan.",
+        "Dam olmoq."
+      ],
+      "gap": {
+        "index": 1,
+        "options": [
+          "olmoqchiman",
+          "olaman",
+          "olmoq"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "s01",
+      "title": "Something to drink",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "qahva",
+          "forms": [
+            "qahva"
+          ],
+          "picture": "coffee",
+          "means": "coffee"
+        },
+        {
+          "lemma": "choy",
+          "forms": [
+            "choy"
+          ],
+          "picture": "tea",
+          "means": "tea"
+        },
+        {
+          "lemma": "suv",
+          "forms": [
+            "suv"
+          ],
+          "picture": "water",
+          "means": "water"
+        },
+        {
+          "lemma": "men",
+          "forms": [
+            "men"
+          ],
+          "means": "I"
+        },
+        {
+          "lemma": "ichmoq",
+          "forms": [
+            "ichaman"
+          ],
+          "picture": "drink",
+          "means": "ichaman = I drink"
+        },
+        {
+          "lemma": "va",
+          "forms": [
+            "va"
+          ],
+          "means": "and"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "verb-last",
+        "line": "The verb normally follows its object and place: Men choy ichaman (I tea drink), Akam Toshkentda yashaydi (my-brother in-Tashkent lives)."
+      },
+      "items": [
+        "qahva-ichaman",
+        "men-choy-ichaman",
+        "men-suv-ichaman",
+        "men-qahva-va-choy-ichaman",
+        "men-choy-va-suv-ichaman",
+        "men-suv-va-qahva-ichaman"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Order a coffee",
+      "unit": "first-steps",
+      "theme": "food",
+      "words": [
+        {
+          "lemma": "bitta",
+          "forms": [
+            "bitta"
+          ],
+          "means": "one, a"
+        },
+        {
+          "lemma": "sut",
+          "forms": [
+            "sut"
+          ],
+          "picture": "milk",
+          "means": "milk"
+        }
+      ],
+      "phrases": [
+        "hello",
+        "please",
+        "thank-you"
+      ],
+      "concept": null,
+      "items": [
+        "bitta-qahva-iltimos",
+        "salom-bitta-qahva-iltimos",
+        "bitta-choy-va-bitta-suv-iltimos",
+        "bitta-qahva-rahmat",
+        "salom-bitta-choy-iltimos",
+        "men-sut-ichaman"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "How are you?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "yaxshi",
+          "forms": [
+            "yaxshiman"
+          ],
+          "means": "yaxshiman = I am fine"
+        }
+      ],
+      "phrases": [
+        "how-are-you",
+        "goodbye",
+        "yes",
+        "no"
+      ],
+      "concept": {
+        "pattern": "copula",
+        "line": "After a noun or a place, -man, -san, -miz and -siz say I am, you are, we are and you are (polite): Men talabaman (I student-am), Siz talabasiz (you student-are); is usually has none (U talaba: he or she student), and -dir is formal or for emphasis."
+      },
+      "items": [
+        "yo-q-rahmat",
+        "ha-iltimos",
+        "men-yaxshiman-rahmat",
+        "salom-qalaysiz",
+        "ha-rahmat-xayr",
+        "yo-q-rahmat-xayr"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "Meet someone new",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "siz",
+          "forms": [
+            "siz"
+          ],
+          "means": "you"
+        },
+        {
+          "lemma": "emas",
+          "forms": [
+            "emasman"
+          ],
+          "means": "emasman = I am not"
+        },
+        {
+          "lemma": "oʻqituvchi",
+          "forms": [
+            "oʻqituvchiman",
+            "oʻqituvchi",
+            "oʻqituvchimisiz"
+          ],
+          "means": "oʻqituvchiman = I am a teacher; oʻqituvchi = teacher; oʻqituvchimisiz = are you a teacher?"
+        },
+        {
+          "lemma": "talaba",
+          "forms": [
+            "talabamisiz",
+            "talabasiz"
+          ],
+          "means": "talabamisiz = are you a student?; talabasiz = you are a student"
+        }
+      ],
+      "phrases": [
+        "what-s-your-name",
+        "nice-to-meet-you"
+      ],
+      "concept": null,
+      "items": [
+        "men-o-qituvchiman",
+        "men-o-qituvchi-emasman",
+        "siz-talabamisiz",
+        "siz-talabasiz",
+        "siz-o-qituvchimisiz",
+        "ismingiz-nima",
+        "salom-tanishganimdan-xursandman"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Your family",
+      "unit": "first-steps",
+      "theme": "people",
+      "words": [
+        {
+          "lemma": "ona",
+          "forms": [
+            "onam"
+          ],
+          "picture": "mother",
+          "means": "onam = my mother"
+        },
+        {
+          "lemma": "ota",
+          "forms": [
+            "otam"
+          ],
+          "picture": "father",
+          "means": "otam = my father"
+        },
+        {
+          "lemma": "aka",
+          "forms": [
+            "akam"
+          ],
+          "picture": "brother",
+          "means": "akam = my older brother"
+        },
+        {
+          "lemma": "opa",
+          "forms": [
+            "opam"
+          ],
+          "picture": "sister",
+          "means": "opam = my older sister"
+        },
+        {
+          "lemma": "men",
+          "forms": [
+            "mening"
+          ],
+          "means": "mening = my"
+        },
+        {
+          "lemma": "bu",
+          "forms": [
+            "bu"
+          ],
+          "means": "this"
+        },
+        {
+          "lemma": "oʻqituvchi",
+          "forms": [
+            "oʻqituvchi"
+          ],
+          "means": "teacher"
+        },
+        {
+          "lemma": "talaba",
+          "forms": [
+            "talaba"
+          ],
+          "means": "student"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "possessive",
+        "line": "My and your are endings, often with mening or sening before the noun: mening ismim (my name-my), sening uying (your house-your), uning qizi (her daughter-her)."
+      },
+      "items": [
+        "bu-onam",
+        "bu-otam",
+        "otam-o-qituvchi",
+        "akam-talaba",
+        "bu-mening-opam",
+        "onam-oqituvchi"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "What do you have?",
+      "unit": "first-steps",
+      "theme": "things",
+      "words": [
+        {
+          "lemma": "bor",
+          "forms": [
+            "bor",
+            "bormi"
+          ],
+          "means": "bor = there is; bormi = is there?"
+        },
+        {
+          "lemma": "doʻst",
+          "forms": [
+            "doʻstsiz"
+          ],
+          "picture": "friend",
+          "means": "doʻstsiz = you are a friend"
+        },
+        {
+          "lemma": "shifokor",
+          "forms": [
+            "shifokor"
+          ],
+          "picture": "doctor",
+          "means": "doctor"
+        },
+        {
+          "lemma": "kalit",
+          "forms": [
+            "kalit"
+          ],
+          "picture": "key",
+          "means": "key"
+        },
+        {
+          "lemma": "telefon",
+          "forms": [
+            "telefonim"
+          ],
+          "picture": "phone",
+          "means": "telefonim = my phone"
+        },
+        {
+          "lemma": "kitob",
+          "forms": [
+            "kitobim"
+          ],
+          "picture": "book",
+          "means": "kitobim = my book"
+        },
+        {
+          "lemma": "yoʻq",
+          "forms": [
+            "yoʻq"
+          ],
+          "means": "there isn't"
+        },
+        {
+          "lemma": "siz",
+          "forms": [
+            "sizda"
+          ],
+          "means": "sizda = in your possession"
+        },
+        {
+          "lemma": "yaxshi",
+          "forms": [
+            "yaxshi"
+          ],
+          "means": "good, fine"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "mening-telefonim-bor",
+        "sizda-kalit-bormi",
+        "mening-bitta-akam-va-bitta-opam-bor",
+        "mening-kitobim-yo-q",
+        "opam-shifokor",
+        "siz-yaxshi-do-stsiz",
+        "sizda-suv-bormi"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Where is it?",
+      "unit": "first-steps",
+      "theme": "places",
+      "words": [
+        {
+          "lemma": "qayer",
+          "forms": [
+            "qayerda"
+          ],
+          "means": "qayerda = where"
+        },
+        {
+          "lemma": "yer",
+          "forms": [
+            "yerda"
+          ],
+          "means": "yerda = in the place"
+        },
+        {
+          "lemma": "u",
+          "forms": [
+            "u"
+          ],
+          "means": "that"
+        },
+        {
+          "lemma": "hojatxona",
+          "forms": [
+            "hojatxona"
+          ],
+          "means": "bathroom, toilet"
+        },
+        {
+          "lemma": "kalit",
+          "forms": [
+            "kalitim"
+          ],
+          "means": "kalitim = my key"
+        }
+      ],
+      "phrases": [
+        "excuse-me"
+      ],
+      "concept": {
+        "pattern": "question",
+        "line": "-mi on a word makes a yes-or-no question (Inglizcha gapirasizmi?: English-ly do-you-speak?), and a question word stays where its answer goes: Siz qayerda yashaysiz?"
+      },
+      "items": [
+        "kalit-qayerda",
+        "kechirasiz-hojatxona-qayerda",
+        "telefonim-bu-yerda",
+        "kalit-u-yerda",
+        "onam-qayerda",
+        "opam-bu-yerda",
+        "kalitim-qayerda"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "How much is it?",
+      "unit": "first-steps",
+      "theme": "money",
+      "words": [
+        {
+          "lemma": "ikki",
+          "forms": [
+            "ikki"
+          ],
+          "picture": "two",
+          "means": "two"
+        },
+        {
+          "lemma": "uch",
+          "forms": [
+            "uchta"
+          ],
+          "picture": "three",
+          "means": "uchta = three"
+        },
+        {
+          "lemma": "pul",
+          "forms": [
+            "pulim"
+          ],
+          "picture": "money",
+          "means": "pulim = my money"
+        },
+        {
+          "lemma": "kitob",
+          "forms": [
+            "kitob"
+          ],
+          "means": "book"
+        }
+      ],
+      "phrases": [
+        "how-much-is-this",
+        "the-check-please"
+      ],
+      "concept": null,
+      "items": [
+        "bitta-kitob-iltimos",
+        "ikki-qahva-iltimos",
+        "mening-uchta-kitobim-bor",
+        "mening-pulim-yo-q",
+        "kechirasiz-bu-qancha",
+        "salom-hisobni-bering-iltimos"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "Do you speak English?",
+      "unit": "first-steps",
+      "theme": "talk",
+      "words": [
+        {
+          "lemma": "gapirmoq",
+          "forms": [
+            "gapirasizmi",
+            "gapiraman",
+            "gapirmaydi"
+          ],
+          "means": "gapirasizmi = do you speak?; gapiraman = I speak; gapirmaydi = does not speak"
+        },
+        {
+          "lemma": "inglizcha",
+          "forms": [
+            "inglizcha"
+          ],
+          "means": "in English"
+        },
+        {
+          "lemma": "oʻzbekcha",
+          "forms": [
+            "oʻzbekcha"
+          ],
+          "means": "in Uzbek"
+        },
+        {
+          "lemma": "tushunmoq",
+          "forms": [
+            "tushunmayman",
+            "tushunasizmi"
+          ],
+          "means": "tushunmayman = I do not understand; tushunasizmi = do you understand?"
+        },
+        {
+          "lemma": "ozgina",
+          "forms": [
+            "ozgina"
+          ],
+          "means": "a little"
+        },
+        {
+          "lemma": "xohlamoq",
+          "forms": [
+            "xohlayman"
+          ],
+          "means": "xohlayman = I want"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "present-future",
+        "line": "-a or -y with the person's ending says what you usually do, or will do: Men choy ichaman (I tea drink), Ertaga boramiz (tomorrow we-go)."
+      },
+      "items": [
+        "inglizcha-gapirasizmi",
+        "men-ozgina-o-zbekcha-gapiraman",
+        "men-tushunmayman",
+        "siz-tushunasizmi",
+        "men-qahva-xohlayman",
+        "men-suv-xohlayman-iltimos",
+        "opam-inglizcha-gapirmaydi"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "At home",
+      "unit": "first-steps",
+      "theme": "home",
+      "words": [
+        {
+          "lemma": "uy",
+          "forms": [
+            "uy",
+            "uyda",
+            "uydaman",
+            "uyim"
+          ],
+          "picture": "house",
+          "means": "uy = house; uyda = in a house; uydaman = I am at home; uyim = my house"
+        },
+        {
+          "lemma": "xona",
+          "forms": [
+            "xonam"
+          ],
+          "picture": "room",
+          "means": "xonam = my room"
+        },
+        {
+          "lemma": "katta",
+          "forms": [
+            "katta"
+          ],
+          "picture": "big",
+          "means": "big"
+        },
+        {
+          "lemma": "kichkina",
+          "forms": [
+            "kichkina"
+          ],
+          "picture": "small",
+          "means": "small"
+        },
+        {
+          "lemma": "yashamoq",
+          "forms": [
+            "yashayman",
+            "yashaysiz",
+            "yashaydi"
+          ],
+          "means": "yashayman = I live; yashaysiz = you live; yashaydi = lives"
+        },
+        {
+          "lemma": "emas",
+          "forms": [
+            "emas"
+          ],
+          "means": "not"
+        }
+      ],
+      "phrases": [],
+      "concept": null,
+      "items": [
+        "xonam-kichkina",
+        "bu-uy-katta",
+        "men-kichkina-uyda-yashayman",
+        "siz-qayerda-yashaysiz",
+        "onam-bu-yerda-yashaydi",
+        "men-uydaman",
+        "bu-mening-uyim-emas"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "Going somewhere",
+      "unit": "first-steps",
+      "theme": "travel",
+      "words": [
+        {
+          "lemma": "bormoq",
+          "forms": [
+            "boraman",
+            "boradi",
+            "boryapsiz"
+          ],
+          "means": "boraman = I go; boradi = goes; boryapsiz = you are going"
+        },
+        {
+          "lemma": "maktab",
+          "forms": [
+            "maktabga"
+          ],
+          "picture": "school",
+          "means": "maktabga = to school"
+        },
+        {
+          "lemma": "shahar",
+          "forms": [
+            "shaharga"
+          ],
+          "picture": "city",
+          "means": "shaharga = to the city"
+        },
+        {
+          "lemma": "vokzal",
+          "forms": [
+            "vokzal"
+          ],
+          "means": "train station"
+        },
+        {
+          "lemma": "mashina",
+          "forms": [
+            "mashina",
+            "mashinam"
+          ],
+          "picture": "car",
+          "means": "mashina = car; mashinam = my car"
+        },
+        {
+          "lemma": "qayer",
+          "forms": [
+            "qayerga"
+          ],
+          "means": "qayerga = where to"
+        }
+      ],
+      "phrases": [],
+      "concept": {
+        "pattern": "locative",
+        "line": "-da on the end says in or at: Toshkentda (in Tashkent), uyda (at home), maktabda (at school)."
+      },
+      "items": [
+        "men-maktabga-boraman",
+        "bu-mashina-kichkina",
+        "onam-shaharga-boradi",
+        "vokzal-qayerda",
+        "siz-qayerga-boryapsiz",
+        "mening-mashinam-bor",
+        "kechirasiz-vokzal-qayerda"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "See you tomorrow",
+      "unit": "first-steps",
+      "theme": "time",
+      "words": [
+        {
+          "lemma": "bugun",
+          "forms": [
+            "bugun"
+          ],
+          "means": "today"
+        },
+        {
+          "lemma": "ertaga",
+          "forms": [
+            "ertaga"
+          ],
+          "means": "tomorrow"
+        },
+        {
+          "lemma": "hozir",
+          "forms": [
+            "hozir"
+          ],
+          "means": "now"
+        },
+        {
+          "lemma": "ishlamoq",
+          "forms": [
+            "ishlayman",
+            "ishlashim"
+          ],
+          "picture": "work",
+          "means": "ishlayman = I work; ishlashim = my working"
+        },
+        {
+          "lemma": "kerak",
+          "forms": [
+            "kerak"
+          ],
+          "means": "necessary"
+        },
+        {
+          "lemma": "olmoq",
+          "forms": [
+            "olmayman"
+          ],
+          "means": "olmayman = to take; to be able to (auxiliary after a verb in -a/-y)"
+        },
+        {
+          "lemma": "bormoq",
+          "forms": [
+            "borishim",
+            "bora"
+          ],
+          "means": "borishim = my going; bora = go"
+        }
+      ],
+      "phrases": [
+        "see-you-tomorrow"
+      ],
+      "concept": null,
+      "items": [
+        "men-bugun-ishlayman",
+        "ertaga-shaharga-boraman",
+        "men-hozir-borishim-kerak",
+        "men-bugun-bora-olmayman",
+        "men-ertaga-ishlashim-kerak",
+        "rahmat-ertaga-ko-rishguncha"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "first-steps",
+      "title": "First steps"
+    }
+  ]
+}
