@@ -29,6 +29,8 @@ const CATALOGUE = "/library/catalogue.json";
 const ROW_LIMIT = 10;
 // The lead shelf's grid: six covers shown (read.css .lx-shelf-grid), one more drawn for when the first moves up to Read's place up front.
 const GRID_SHOWN = 6;
+import { canWeaveInto } from "./weave-own.js";
+import { aiConnected } from "../shell/layout.js";
 const CREDITS = "These books are free to share. Picture books and stories come from Global Storybooks, StoryWeaver, Bloom and Wikijunior, under Creative Commons licenses. The classics are in the public domain, from Standard Ebooks and older printed editions. Every book names its source, authors and license inside.";
 const languageName = (code) => LANGUAGES[code]?.name ?? code;
 
@@ -128,12 +130,48 @@ export function bookKinds() {
     // A picture book for another language is that language's: it goes under Other languages, as every other book does.
     { id: "picture", name: "Picture books", has: (meta) => forLearning(meta) && !nonfiction(meta) && picture(meta) },
     { id: "nonfiction", name: "Non-fiction", has: (meta) => forLearning(meta) && nonfiction(meta) },
-    { id: "woven", name: `Woven into ${learningName()}`, has: (meta) => forLearning(meta) && !nonfiction(meta) && !picture(meta) && woven(meta) },
+    // The woven story: the one thing that shows what weaving is. It has no shelf of its own on Read: it's shown with Weave your own, up front
+    // (library.js, wovenStory below; `shelf: false`). Find a book still finds it, as this kind. No other kind's name or line says woven (kindNote).
+    { id: "woven", name: `Woven into ${learningName()}`, shelf: false, has: (meta) => forLearning(meta) && !nonfiction(meta) && !picture(meta) && woven(meta) },
     { id: "help", name: `In ${learningName()}, with help`, has: (meta) => forLearning(meta) && !nonfiction(meta) && !picture(meta) && !woven(meta) && helped(meta) },
     { id: "plain", name: `In ${learningName()}`, has: (meta) => forLearning(meta) && !nonfiction(meta) && !picture(meta) && !woven(meta) && !helped(meta) },
     { id: "other", name: "Other languages", has: (meta) => !forLearning(meta) },
   ];
 }
+/**
+ * What a kind's shelf is, in a line under its heading, from the books on it: the woven story says what weaving is; books in the language you're
+ * learning say which help they come with (a translation beside the text, or each word's meaning), from their own layers, and never that
+ * they're woven. Null for a kind that needs no line.
+ */
+export function kindNote(kind, books) {
+  const lang = learningName();
+  if (kind === "woven") return `A story with the ${lang} words you know woven into it, each in its place. The more you learn, the more of it turns ${lang}.`;
+  if (kind !== "picture" && kind !== "help") return null;
+  const layers = books.flatMap((meta) => Object.entries(meta.layers ?? {}).filter(([, layer]) => layer?.kind === "help" || layer?.kind === "parallel"));
+  const langs = [...new Set(layers.map(([code]) => languageName(code)))];
+  if (!layers.length || langs.length !== 1) return kind === "picture" ? `Real books in ${lang}.` : null;
+  const kinds = new Set(layers.map(([, layer]) => layer.kind));
+  const how = kinds.size > 1 ? `with ${langs[0]} help` : kinds.has("help") ? `tap a word for its meaning in ${langs[0]}` : `with their ${langs[0]} translation beside the text`;
+  return kind === "picture" ? `Real books in ${lang}: ${how}.` : `Books in ${lang}: ${how}.`;
+}
+
+// Where someone looks for more books: why the ones people are reading now aren't here, and what to do instead. Short, once. Where texts can be
+// woven into the language, it ends there: a text only (an EPUB can't be woven yet), and it names an AI only to someone who has one connected
+// (outside Weave your own, Read names none to anyone else).
+const ownCopy = () =>
+  `Most books people read today are under copyright, so the shelf can't carry them. Add your own copy below: an EPUB or a text file.${
+    canWeaveInto(learning()) ? (aiConnected() ? " Your AI can weave a text." : " A text can be woven: see above.") : ""
+  }`;
+
+/**
+ * The woven story for the language you're learning, or null: the book woven into it that isn't a picture book or non-fiction (the first by
+ * title when there are several). What Read shows with Weave your own, so a press tries weaving before anything's asked.
+ */
+export function wovenStory(catalog) {
+  const woven = bookKinds().find((kind) => kind.id === "woven");
+  return (catalog?.books ?? []).filter(woven.has).sort((a, b) => (a.title < b.title ? -1 : 1))[0] ?? null;
+}
+
 /**
  * A catalog book's cover picture for ui.bookCover: its size from the catalog (coverSize), or, when it doesn't say (a book published
  * without it, a catalog kept from before), the open library's picture books' own shape, held as it is once the picture comes.
@@ -273,8 +311,10 @@ function sectionsOf(catalog) {
     // shelves of one name).
     const named = sections.find((section) => !section.find && section.title.trim().toLowerCase() === kind.name.toLowerCase());
     if (named) Object.assign(named, { books: [...named.books, ...these.filter((meta) => !named.books.includes(meta))], find: kind.id, total });
-    else if (these.length) sections.push({ id: own(kind.id), title: kind.name, books: these, find: kind.id, total });
+    else if (these.length && kind.shelf !== false) sections.push({ id: own(kind.id), title: kind.name, books: these, find: kind.id, total });
   }
+  // Each kind's shelf says what it is (kindNote).
+  for (const section of sections) if (section.find) section.note = kindNote(section.find, section.books);
   return sections;
 }
 
@@ -422,6 +462,18 @@ export function renderShelf(container, { catalog, open, known } = {}) {
     const none = !(shelf.books ?? []).some(forLearning);
     // One shelf leads, its covers in a grid (a picture book two across, a designed cover four); every other shelf follows with its covers in
     // a row. Each one's All N, when it has more than it shows, goes to its page. Seven books look like a full shelf, and a hundred still fit.
+    const noteOf = (section) => (section.note ? el("p", { class: "lx-small lx-muted lx-shelf-note" }, section.note) : null);
+    const rowOf = (section) =>
+      el(
+        "div",
+        { class: "lx-shelf-section", "data-kind": section.find ?? undefined },
+        ui.sectionHead(section.title ?? "All of them", {
+          sub: true,
+          link: countOf(section) > Math.min(section.books.length, ROW_LIMIT) ? { href: hrefOf(section), label: `All ${countOf(section).toLocaleString("en")}` } : null,
+        }),
+        noteOf(section),
+        ui.bookList(section.books.slice(0, ROW_LIMIT).map(tile), { layout: "row", label: section.title }),
+      );
     const [lead, ...rest] = sections;
     const hrefOf = (section) => (section.find ? `#read/find?kind=${section.find}` : `#read/shelf/${encodeURIComponent(section.id)}`);
     const countOf = (section) => (section.find ? section.total : section.books.length);
@@ -432,7 +484,7 @@ export function renderShelf(container, { catalog, open, known } = {}) {
       ...(none ? [el("div", { class: "lx-read-none-yet" }, ui.emptyState(`No books in ${learningName()} yet. These are free to read in other languages.`, { pose: "box" }))] : []),
       el(
         "div",
-        { class: "lx-shelf-section", "data-lead": "" },
+        { class: "lx-shelf-section", "data-lead": "", "data-kind": lead.find ?? undefined },
         lead.title || lead.books.length > GRID_SHOWN
           ? ui.sectionHead(lead.title ?? "All of them", {
               sub: true,
@@ -440,19 +492,12 @@ export function renderShelf(container, { catalog, open, known } = {}) {
               link: countOf(lead) > GRID_SHOWN ? { href: hrefOf(lead), label: `All ${countOf(lead).toLocaleString("en")}` } : null,
             })
           : null,
+        noteOf(lead),
         grid,
       ),
-      ...rest.map((section) =>
-        el(
-          "div",
-          { class: "lx-shelf-section" },
-          ui.sectionHead(section.title ?? "All of them", {
-            sub: true,
-            link: countOf(section) > Math.min(section.books.length, ROW_LIMIT) ? { href: hrefOf(section), label: `All ${countOf(section).toLocaleString("en")}` } : null,
-          }),
-          ui.bookList(section.books.slice(0, ROW_LIMIT).map(tile), { layout: "row", label: section.title }),
-        ),
-      ),
+      ...rest.map(rowOf),
+      // Under the last shelf, where someone looks for more: why today's books aren't here, and the way to their own (Add a book or text, next).
+      el("p", { class: "lx-small lx-muted lx-shelf-note", "data-part": "own-copy-note" }, ownCopy()),
     );
     // Its place for next time, so a Read drawn before the catalog's in holds exactly this.
     keepHeight("read.shelf", list);

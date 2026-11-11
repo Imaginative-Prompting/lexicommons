@@ -13,11 +13,14 @@ import { el } from "../lx/ui.js";
 import * as store from "./store.js";
 import { MAX_TEXT_BYTES, bookFromText } from "./import-text.js";
 import { LANGUAGES, coverageOf, joinWords, picturePath, weaveSentence } from "./book-format.js";
+import { canWeaveInto, storyLine, tryWeaving, weaveOwn } from "./weave-own.js";
+import { aiConnected } from "../shell/layout.js";
 import { FLIP_AT, isTarget, pieceGap } from "./woven-text.js";
 import { bookFromEpub } from "./import-epub.js";
 import { dismissFailedText, failedTexts, onTextsChange } from "./text-inbox.js";
 import { learning, learningFrom, learningName } from "../study/learning.js";
-import { firstBookOf, keptCatalog, loadCatalog, renderShelf, renderShelfSection } from "./shelf.js";
+import { firstBookOf, keptCatalog, loadCatalog, renderShelf, renderShelfSection, wovenStory } from "./shelf.js";
+import { icon } from "../lx/icons.js";
 import { renderFind } from "./find.js";
 import { bookArt, bookOpens } from "../know/home-cards.js";
 import { knownSet } from "./bank.js";
@@ -209,17 +212,21 @@ export async function coverOfBook(id, file = null) {
   return { cover, picture, urls };
 }
 
-/** A book of yours as a tile: its cover, how far in you are, the language it teaches when that isn't yours. */
+/**
+ * A book of yours as a tile: its cover, how far in you are, the language it teaches when that isn't yours. Woven into the language you learn
+ * (by your AI, or a book of the shelf's), its line says so: that's how a text you asked your AI to weave is found.
+ */
 function yourTile(book, { cover, positions, woven }) {
   const share = percent(book, positions) / 100;
   const teaches = taughtBy(book, woven);
+  const wovenInto = (woven.get(book.id) ?? []).includes(learning()) ? learning() : null;
   return ui.bookTile({
     id: book.id,
     title: book.title,
     lang: book.lang,
     flag: teaches && teaches !== learning() ? { lang: teaches, label: LANGUAGES[teaches]?.name ?? teaches } : undefined,
     cover,
-    sub: book.openedAt ? `${Math.round(share * 100)}% read` : undefined,
+    sub: wovenInto ? `Woven into ${LANGUAGES[wovenInto]?.name ?? wovenInto}` : book.openedAt ? `${Math.round(share * 100)}% read` : undefined,
     progress: book.openedAt ? share : null,
     href: `#read/book/${encodeURIComponent(book.id)}`,
   });
@@ -277,6 +284,46 @@ function renderLibrary(page) {
   const addRow = ui.listRow({ icon: "plus", title: "Add a book or text", sub: "Paste a text, or open a file", onclick: () => sheet.lxOpen(), opens: "sheet" });
   addRow.querySelector('[data-part="list-row"]')?.setAttribute("data-read-add", "");
   sheet.lxBody.append(note); // where your books are kept: said where you add one
+  // Weave your own (weave-own.js): Read's lead where the language can be woven into, after the book you're in. Its words and its steps are that
+  // file's; the one press it has opens Add a book or text, where today's way in starts.
+  const weaving = el("section", { class: "lx-library-section lx-weave-own", part: "weave-your-own", "aria-label": "Weave your own" });
+  // The woven story (shelf.js wovenStory) sits with it, right under what weaving is: one press tries it before anything's asked. Where the
+  // language has the story but texts of your own can't be woven into it yet, the story alone with what weaving is; with neither, nothing.
+  let story = null; // { meta, tile }: the catalog's woven story and the shelf's own tile for it
+  const drawWeaving = () => {
+    const open = canWeaveInto(learning());
+    const words = open ? weaveOwn(learningName(), aiConnected()) : story ? tryWeaving(learningName()) : null;
+    // Drawn again only when what it says changes (an AI connected since, another language, the story come or gone).
+    const from = JSON.stringify([words, story?.meta.id ?? null, story?.meta.version ?? null]);
+    if (weaving.lxFrom === from) return;
+    weaving.lxFrom = from;
+    if (!words) return weaving.replaceChildren();
+    const row = story
+      ? el(
+          "div",
+          { class: "lx-weave-own-story" },
+          story.tile,
+          el("button", { class: "lx-weave-own-see", type: "button", onclick: () => story.tile.click() }, storyLine(story.meta.title), icon("chevron")),
+        )
+      : null;
+    weaving.replaceChildren(
+      ui.sectionHead(words.title),
+      el("p", { class: "lx-weave-own-about" }, words.about),
+      ...(row ? [row] : []),
+      // Connected: the one message to give your AI, to copy (as the AI section's prompts are), what to put after it and what happens next.
+      ...(words.message
+        ? [
+            el("p", { class: "lx-small lx-muted" }, words.lead),
+            el("div", { part: "ask-prompt", class: "lx-weave-own-message" }, el("span", { class: "lx-ask-prompt-text" }, words.message), ui.copyButton(() => words.message)),
+            el("p", { class: "lx-weave-own-next" }, `${words.after} ${words.next}`),
+          ]
+        : []),
+      ...(open ? [el("p", { class: "lx-small lx-muted" }, [words.expect, words.needs].filter(Boolean).join(" "))] : []),
+      ...(words.byHand ? [el("p", { class: "lx-small lx-muted" }, words.byHand)] : []),
+      ...(open ? [words.connect ? ui.button(words.connect.label, { variant: "gray", onclick: () => (location.hash = words.connect.href) }) : ui.button("Add a text", { variant: "gray", icon: "plus", onclick: () => sheet.lxOpen() })] : []),
+    );
+  };
+  drawWeaving();
   // The book you're in is up front, so it isn't also on the shelf under it.
   let readingId = null;
   let stopOpening = null;
@@ -301,6 +348,7 @@ function renderLibrary(page) {
       { class: "lx-library" },
       // The book you're in, then finding one (the search, the shelf, its kinds), then yours.
       carryOn,
+      weaving,
       shelf,
       yours,
       failed,
@@ -356,8 +404,15 @@ function renderLibrary(page) {
   // to Read repaints nothing (no new covers, nothing moving under a finger) unless something changed.
   let drawnFrom = "";
   const load = async () => {
+    drawWeaving();
     const [books, positions, keep, reading, meta, woven] = await Promise.all([store.listBooks(), store.getPositions(), store.keepState(), continueReading(), catalog.then((c) => c, () => null), store.weaveLanguages()]);
     if (stale) return;
+    // The woven story for the language, with the shelf's own tile for it (its press, its download's bar): kept while it's the same book.
+    const found = meta ? wovenStory(meta) : null;
+    if ((found?.id ?? null) !== (story?.meta.id ?? null) || (found?.version ?? null) !== (story?.meta.version ?? null)) {
+      story = found && shelfView?.tile ? { meta: found, tile: shelfView.tile(found) } : null;
+    }
+    drawWeaving();
     note.textContent = KEEP_NOTE[keep];
     const levelOf = (id) => meta?.books?.find((b) => b.id === id)?.level;
     const from = JSON.stringify([

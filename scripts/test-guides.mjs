@@ -38,7 +38,8 @@ const T = await import(join(APP, "src/texts.ts"));
 const { receiveUpload } = await import(join(APP, "src/library.ts"));
 const { SMALLEST, FULL, OTHER_GENDER, READINGS, REFUSALS } = await import(join(APP, "src/pack-guide.ts"));
 const { TEXT_EXAMPLE, TEXT_REFUSALS, BOOK_EXAMPLE } = await import(join(APP, "src/text-guide.ts"));
-const { WEAVE_EXAMPLE, WEAVE_MORE, WEAVE_REFUSALS, FLIP_AT } = await import(join(APP, "src/weave-guide.ts"));
+const { WEAVE_EXAMPLE, WEAVE_EXAMPLE_ES, WEAVE_MORE, WEAVE_REFUSALS, FLIP_AT } = await import(join(APP, "src/weave-guide.ts"));
+const { WEAVE_LANGUAGES, WEAVE_TUNED } = await import(join(APP, "public/js/read/weave-languages.generated.js"));
 const { bookFromText } = await import(join(APP, "public/js/read/import-text.js"));
 const { shownJson } = await import(join(APP, "src/guide-json.ts"));
 const { numberedSentences } = await import(join(APP, "src/weave-answer.ts"));
@@ -313,6 +314,11 @@ async function requested(book, requestId) {
   await claim.tie(requestId);
 }
 const exampleBook = await bookFromText(WEAVE_EXAMPLE.text, { lang: "en", title: WEAVE_EXAMPLE.title });
+/** A text your AI added (plain text, through the real tools): its text_id. */
+async function addedText(words) {
+  const { upload_id } = await uploaded("text", "t.txt", utf8(words));
+  return passes(await texts("add_text", { upload_id, language: "en", title: words }), "add_text").text_id;
+}
 const weaveInput = (over = {}) => ({ requestId: "req-guide", title: WEAVE_EXAMPLE.title, language: WEAVE_EXAMPLE.language, weave: clone(WEAVE_EXAMPLE.weave), ...over });
 
 await test("get_weave_guide: the whole guide, its example, every refusal and the patterns the example's c uses", async () => {
@@ -332,7 +338,7 @@ await test("get_weave_guide: the whole guide, its example, every refusal and the
   assert.deepEqual(used.filter((id) => !listed.includes(id)), [], "a pattern the example uses isn't in the rules' list");
   assert.equal(new Set(listed).size, listed.length, "a pattern listed twice");
   assert.equal(FLIP_AT, woven.FLIP_AT, "the guide's FLIP_AT isn't the reader's");
-  const refused = await texts("get_weave_guide", { language: "de" });
+  const refused = await texts("get_weave_guide", { language: "ja" });
   assert.ok(!refused.ok && refused.text.includes("isn't ready yet"));
   return `${served.guide.length.toLocaleString("en")} characters, rules as of ${served.rules_as_of}`;
 });
@@ -364,6 +370,55 @@ await test("the weave guide's two more sentences (a verb group; an adverb inside
     said.push(`${one.title}: ${relayed.change_id}`);
   }
   return said.join(", ");
+});
+
+await test("their one message: add_text with the example's text, get_text's to_weave by its text_id, add_weave with text_id and language, nothing pressed; read at each level as the guide says", async () => {
+  const guide = (await texts("get_weave_guide", { language: "nl" })).value.guide;
+  for (const part of ["## Their one message", "## The steps", "## Before you send", "## The other way in: their press in Read"]) ok(guide.includes(part), `the guide has no ${part}`);
+  ok(guide.indexOf("## Their one message") < guide.indexOf("## The other way in"), "the one message comes before the press");
+  const { upload_id } = await uploaded("text", "alice.txt", utf8(WEAVE_EXAMPLE.text));
+  const added = passes(await texts("add_text", { upload_id, language: "en", title: WEAVE_EXAMPLE.title }), "add_text");
+  ok(/get_text with this text_id hands you its sentences/.test(added.next), `add_text's next doesn't lead on to weaving: ${added.next}`);
+  const got = passes(await texts("get_text", { text_id: added.text_id }), "get_text");
+  assert.deepEqual(got.to_weave, WEAVE_EXAMPLE.to_weave, "get_text's to_weave by text_id isn't the guide's");
+  const made = passes(await texts("add_weave", { text_id: added.text_id, language: "nl", weave: clone(WEAVE_EXAMPLE.weave) }), "add_weave");
+  const change = await env.DB.prepare("SELECT text_id, kind, body FROM text_changes WHERE user_id = ? AND id = ?").bind(USER, made.change_id).first();
+  ok(change?.text_id === added.text_id && change.kind === "weave" && !JSON.parse(change.body).request, `the weave isn't relayed for that text, with no request: ${JSON.stringify(change)}`);
+  const stored = JSON.parse(await (await T.serveTextFile(env, USER, made.change_id, "weave")).text());
+  const book = await T.textSource(env, USER, added.text_id);
+  const every = new Set(stored.sentences.flatMap((s) => s.t.map(([, lemma]) => lemma).filter(Boolean)));
+  const reads = (known) =>
+    woven
+      .wovenParagraphs(book, stored, known)
+      .flatMap((p) => p.sentences.flatMap((s) => s.pieces.map((piece) => piece.text)))
+      .join(" ");
+  for (const level of WEAVE_EXAMPLE.shown) assert.equal(reads(level.knows === "every word" ? every : new Set(level.knows)), level.reads);
+  return `text ${added.text_id}, ${got.to_weave.length} sentences to weave, woven as ${made.change_id}, no request`;
+});
+
+await test("every language a text can be woven into: its guide, saying whether Lexicommons' rules are tuned for it or the AI follows the general rules, its worked example, the mix check's footing", async () => {
+  const said = [];
+  for (const code of WEAVE_LANGUAGES) {
+    const { guide } = passes(await texts("get_weave_guide", { language: code }), `get_weave_guide ${code}`);
+    const name = (await import(join(APP, "public/js/lang/index.js"))).LANGUAGES[code].name;
+    ok(guide.startsWith(`# Weaving a text into ${name}`) && guide.includes(`"Weave this into ${name} for me in Lexicommons"`), `${code}'s guide isn't ${name}'s`);
+    const footing = WEAVE_TUNED.includes(code) ? `Lexicommons' rules are tuned for ${name}:` : `Lexicommons' rules aren't tuned for ${name} yet: you follow the general rules`;
+    ok(guide.includes(footing), `${code}'s guide doesn't say its footing: ${footing}`);
+    ok(guide.includes(code === "es" ? shownJson(WEAVE_EXAMPLE_ES.weave) : shownJson(WEAVE_EXAMPLE.weave)), `${code}'s worked example`);
+    ok(code === "nl" || code === "es" || guide.includes(`There's no worked example in ${name} yet`), `${code}'s guide doesn't say its example is Dutch's`);
+    ok(!/woven for 90 days|kept here for weaving 90 days/.test(guide), `${code}'s guide says the 90 days as weaving`);
+    said.push(`${code} ${WEAVE_TUNED.includes(code) ? "tuned" : "general"}`);
+  }
+  return said.join(", ");
+});
+
+await test("the Spanish worked example through the one message: add_text with its text, get_text's to_weave the example's, add_weave into Spanish with text_id", async () => {
+  const { upload_id } = await uploaded("text", "peter.txt", utf8(WEAVE_EXAMPLE_ES.text));
+  const added = passes(await texts("add_text", { upload_id, language: "en", title: WEAVE_EXAMPLE_ES.title }), "add_text");
+  const got = passes(await texts("get_text", { text_id: added.text_id }), "get_text");
+  assert.deepEqual(got.to_weave, WEAVE_EXAMPLE_ES.to_weave, "Spanish's example isn't numbered as get_text hands it over");
+  const made = passes(await texts("add_weave", { text_id: added.text_id, language: "es", weave: clone(WEAVE_EXAMPLE_ES.weave) }), "add_weave es");
+  return `${got.to_weave.length} sentences into Spanish as ${made.change_id}`;
 });
 
 await test("every refusal the weave guide lists: planted, refused, saying what the guide says", async () => {
@@ -417,8 +472,30 @@ await test("every refusal the weave guide lists: planted, refused, saying what t
       small("I saw him.", "req-pronoun", {
         sentences: [{ x: 0, t: [{ w: "I", target: "Ik", lemma: "ik" }, { w: "saw", target: "zag", lemma: "zien" }, { w: "him.", target: "hem.", lemma: "hem" }], text: "Ik zag hem.", m: [{ target: "Ik", cue: "I", sources: [0], lemma: "ik" }, { target: "zag", cue: "saw", sources: [1], lemma: "zien" }, { target: "hem.", cue: "him", sources: [2], lemma: "hem" }] }],
       }),
-    language: weave(() => {}, { language: "de" }),
+    language: weave(() => {}, { language: "ja" }),
     gone: weave(() => {}, { requestId: "req-none" }),
+    // One message's: through the tool itself, as an AI calls it.
+    which: () => texts("add_weave", { language: "nl", weave: clone(WEAVE_EXAMPLE.weave) }),
+    "text-language": () => texts("add_weave", { text_id: "nowhere-text", weave: clone(WEAVE_EXAMPLE.weave) }),
+    "not-yours": () => texts("add_weave", { text_id: "nowhere-text", language: "nl", weave: clone(WEAVE_EXAMPLE.weave) }),
+    "copy-gone": async () => {
+      const id = await addedText("Gone.");
+      await env.DB.prepare("DELETE FROM uploads WHERE user_id = ? AND purpose = ?").bind(USER, `text-book:${id}`).run();
+      return texts("add_weave", { text_id: id, language: "nl", weave: clone(WEAVE_EXAMPLE.weave) });
+    },
+    epub: async () => {
+      // An EPUB's add keeps no copy (it's made into a book on each device): its add says epub, and there's none here.
+      const id = await addedText("An epub.");
+      await env.DB.prepare("DELETE FROM uploads WHERE user_id = ? AND purpose = ?").bind(USER, `text-book:${id}`).run();
+      const row = await env.DB.prepare("SELECT seq, body FROM text_changes WHERE user_id = ? AND text_id = ? AND kind = 'add'").bind(USER, id).first();
+      await env.DB.prepare("UPDATE text_changes SET body = ? WHERE seq = ?").bind(JSON.stringify({ ...JSON.parse(row.body), format: "epub" }), row.seq).run();
+      return texts("add_weave", { text_id: id, language: "nl", weave: clone(WEAVE_EXAMPLE.weave) });
+    },
+    removed: async () => {
+      const id = await addedText("Removed.");
+      passes(await texts("remove_text", { text_id: id }), "remove_text");
+      return texts("add_weave", { text_id: id, language: "nl", weave: clone(WEAVE_EXAMPLE.weave) });
+    },
   };
   return plantedAll(WEAVE_REFUSALS, plants);
 });

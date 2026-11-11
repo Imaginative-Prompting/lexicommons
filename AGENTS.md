@@ -43,7 +43,9 @@ node scripts/whisper-memory-check.mjs http://localhost:<port> <outDir> [--model 
 node scripts/no-ai-check.mjs http://localhost:<port> <outDir>   # the app with no AI, in Chrome on a phone screen: a fresh account has no
                                           # AI tab, and every link outside the AI section, a whole session, Home, Know, Read and every
                                           # pack off name no AI and offer no ask menu. Then the AI section: calm with nothing connected,
-                                          # the tab and the request kinds once an AI is. On a server with the catalog seeded, so the walk
+                                          # the tab and the request kinds once an AI is. One part outside the section may name an AI to
+                                          # everyone: Read's Weave your own ([data-part="weave-your-own"], read/weave-own.js: the reader's
+                                          # main use needs one), its own lines whole and only there, with planted lines both ways. On a server with the catalog seeded, so the walk
                                           # reaches packs and books (`docs/design/ai-section/`, exit 0 = pass)
 node scripts/everyone-check.mjs http://localhost:<port> <outDir> --persist-to <dir>   # community actions by ordinary accounts, in Chrome:
                                           # Ask for it through the terms, Share, Suggest a fix, Flag it, Answer, Suggest a pattern; what the
@@ -612,10 +614,13 @@ node scripts/test-texts.mjs               # a text's files as the server checks 
                                           # an EPUB told apart, a cover cleaned (exit 0 = pass)
 node scripts/test-guides.mjs              # the AI guides hold true (src/text-guide.ts, src/weave-guide.ts): every example through the real tools as
                                           # an AI calls them (a text's upload, PUT and add_text, Japanese, Chinese, Cantonese and Thai too; a weave in the
-                                          # guide's form through add_weave, read at each level as the guide says), and every refusal a guide lists planted
+                                          # guide's form through add_weave, read at each level as the guide says; their one message: add_text, get_text's
+                                          # to_weave by text_id, add_weave with text_id and language, nothing pressed; every language a text can be woven into,
+                                          # its footing said: tuned or the general rules; Spanish's own example into Spanish), and every refusal a guide lists planted
                                           # and said in its words; change a guide or what it describes and run it (exit 0 = pass)
 node scripts/test-text-relay.mjs          # the text relay (src/texts.ts) on the real migrations in Node's SQLite: a queued
-                                          # change never taken back, Undo's 7 days, expiry, one upload per text (exit 0 = pass)
+                                          # change never taken back, Undo's 7 days, expiry, one upload per text; a text your AI adds kept for weaving
+                                          # (text-book:<id>: the add's own book, not counted, swept after 90 days, none for an EPUB, gone with the account) (exit 0 = pass)
 node scripts/test-weave-texts.mjs         # weaving a text of yours with your AI (src/texts.ts) on the real migrations: the copy the app sends (checked as
                                           # a book, one of the account's uploads, the same text replacing an unused one), a request's claim (the account's own,
                                           # that text, within the hour, never two requests'), add_weave refusing with nothing written (a language not accepted, a
@@ -1670,7 +1675,9 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "weave 
   # (dated), a broken weave refused with the request still the AI's, a clean one relayed and the request done with its copy gone at once, the device
   # keeping it and the reader opening the text woven, a second request canceled in the app taking its copy with it (D1 read); LOCAL only, path-nl seeded
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "weave check" --kind parallel -- \
-  node 08-lexicommons/app/scripts/weave-check.mjs http://localhost:<port> <outDir> [--standin]   # weaving a text of yours with your AI, the
+  node 08-lexicommons/app/scripts/weave-check.mjs http://localhost:<port> <outDir> [--standin]   # (the reader's foot card never stale: once sent, that
+  # it's read woven from here, the same after a reload; on arrival Woven into Dutch with Read it woven, the page not woven by itself, its press as
+  # Contents'; gone once it's read woven; the app from before 11 Nov 2026 fails it) weaving a text of yours with your AI, the
   # app's side (read/reader.js offerWeave, ai/client.js askToWeave, a "weave" request, text-inbox.js's "weave" change), a learner weeks into Dutch:
   # no AI, nothing; an AI connected, the offer once at the reader's foot, stepping aside while a sheet is up (what's under it pressable), none
   # for a shelf book or a Dutch text, Not now kept per text; the press

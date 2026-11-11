@@ -171,7 +171,7 @@ export const REQUEST_KINDS = {
   // through the text relay (read/text-inbox.js, a "weave" change), each checking it again against the text it has.
   weave: {
     name: "Weave a text",
-    about: "A text of yours with the language you're learning woven in at your level: it opens woven in Read.",
+    about: "A text of yours with the language you're learning woven in at your level: read it woven in Read.",
     // Asked from the reader, on the text itself (reader.js offerWeave): no page in the AI section to write one by hand.
     from: "read",
     check: (value) => {
@@ -179,7 +179,7 @@ export const REQUEST_KINDS = {
       if (!BOOK_ID.test(book)) throw new PracticeError("book must be the id of a text of yours.");
       const language = plain(value.language);
       if (!Object.hasOwn(LANGUAGES, language)) throw new PracticeError(`language must be one of ${Object.keys(LANGUAGES).join(", ")}.`);
-      // Only into a language the books pipeline's judges have accepted weaves for (weave-languages.generated.js), as the server.
+      // Only into a language a text of yours can be woven into (weave-languages.generated.js), as the server.
       if (!WEAVE_LANGUAGES.includes(language)) throw new PracticeError("Weaving into that language isn't ready yet.");
       const upload = plain(value.upload);
       if (!UPLOAD_ID.test(upload)) throw new PracticeError("upload must be the id POST /api/ai/weave-texts gave for this text.");

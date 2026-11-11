@@ -534,6 +534,8 @@ await stage("Read's shelves at 960: the leading one's All N is the whole kind, g
     ...curated.map((one) => (kindNamed(one.title) ? [one.title, kindTotal(kindNamed(one.title)), `#read/find?kind=${kindNamed(one.title)}`] : [one.title, one.books.length, `#read/shelf/${encodeURIComponent(one.id)}`])),
     ...Object.keys(KIND_NAMES)
       .filter((k) => !curated.some((one) => kindNamed(one.title) === k) && big.books.some((m) => kindOf(m) === k && (k === "other" || !placed.has(m.id))))
+      // (The woven kind has no shelf on Read: its story is shown with Weave your own, shelf.js bookKinds' shelf: false. Find a book still has the kind.)
+      .filter((k) => k !== "woven")
       .map((k) => [KIND_NAMES[k], kindTotal(k), `#read/find?kind=${k}`]),
   ].map(([title, n, href]) => [title, n.toLocaleString("en"), href]);
   same(shelves[0]?.[0], "Picture books", "the leading shelf, as the catalog orders them");

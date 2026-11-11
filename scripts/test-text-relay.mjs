@@ -325,5 +325,52 @@ await test("a device saying it's here: each piece of the text relay's housekeepi
   return "each one done by the device saying it's here";
 });
 
+await test("a text your AI adds is kept here for weaving (add_weave with its text_id): the add's own book at its version, not one of the account's uploads, swept 90 days on; an EPUB keeps none; deleting the account leaves none", async () => {
+  reset();
+  const { textSource } = await import(join(APP, "src/texts.ts"));
+  const added = await addText(env, USER, "pat:check", { upload_id: await upload("text:text", utf8(STORY)), language: "nl" });
+  const kept = rows("SELECT id, purpose, r2_key, created_at FROM uploads WHERE user_id = ? AND purpose = ?", USER, `text-book:${added.text_id}`);
+  ok(kept.length === 1, `the copy: ${JSON.stringify(kept)}`);
+  // The copy is the book the device gets (the add's own file), so a weave of it fits the device's text, version and all.
+  const sent = JSON.parse(await (await serveTextFile(env, USER, added.change_id, "text")).text());
+  const book = await textSource(env, USER, added.text_id);
+  ok(book.version === sent.version && JSON.stringify(book.words) === JSON.stringify(sent.words), "the copy isn't the book the device gets");
+  // Not one of the account's uploads: at the limit, a text is still added and kept.
+  for (let i = rows("SELECT id FROM uploads WHERE user_id = ?", USER).length; i < 200; i++) await upload("text:cover", utf8(COVER));
+  const atLimit = await addText(env, USER, "pat:check", { upload_id: (await (async () => {
+    sqlite.prepare("DELETE FROM uploads WHERE user_id = ? AND purpose = 'text:cover' AND id = (SELECT id FROM uploads WHERE user_id = ? AND purpose = 'text:cover' LIMIT 1)").run(USER, USER);
+    return upload("text:text", utf8(STORY));
+  })()), language: "nl" });
+  ok(rows("SELECT id FROM uploads WHERE purpose = ?", `text-book:${atLimit.text_id}`).length === 1, "at the account's limit the copy wasn't kept");
+  sqlite.prepare("DELETE FROM uploads WHERE user_id = ? AND purpose = 'text:cover'").run(USER);
+  // The tidy: kept within 90 days, gone after.
+  const DAYS = TEXT_RELAY.history;
+  sqlite.prepare("UPDATE uploads SET created_at = ? WHERE purpose = ?").run(Date.now() - DAYS + 60_000, `text-book:${added.text_id}`);
+  await tidy(env, USER, Date.now());
+  ok(rows("SELECT id FROM uploads WHERE purpose = ?", `text-book:${added.text_id}`).length === 1, "swept before its 90 days");
+  sqlite.prepare("UPDATE uploads SET created_at = ? WHERE purpose = ?").run(Date.now() - DAYS - 60_000, `text-book:${added.text_id}`);
+  await tidy(env, USER, Date.now());
+  ok(!rows("SELECT id FROM uploads WHERE purpose = ?", `text-book:${added.text_id}`).length && !objects.has(kept[0].r2_key), "kept past its 90 days");
+  // An EPUB is made into a book on each device: nothing here to weave.
+  const epub = await addText(env, USER, "pat:check", { upload_id: await upload("text:epub", makeEpub({ title: "E", lang: "nl", chapters: [{ title: "Een", paragraphs: ["Oma heeft een rode jas."] }] })), language: "nl" });
+  ok(!rows("SELECT id FROM uploads WHERE purpose = ?", `text-book:${epub.text_id}`).length, "an EPUB kept a copy");
+  // Deleting the account (accounts.ts deleteAccount, its neighbors stood in as test-bug-reports.mjs stands them): no copy, row or file, left.
+  const copies = rows("SELECT r2_key FROM uploads WHERE user_id = ? AND purpose LIKE 'text-book:%'", USER);
+  ok(copies.length >= 1, "no copy left to see go with the account");
+  const { registerHooks } = await import("node:module");
+  registerHooks({
+    resolve(specifier, context, next) {
+      if (specifier === "cloudflare:workers") return { url: "data:text/javascript,export class DurableObject { constructor(ctx, env) { this.ctx = ctx; this.env = env; } }", shortCircuit: true };
+      return next(specifier, context);
+    },
+  });
+  const { deleteAccount } = await import(join(APP, "src/accounts.ts"));
+  env.OAUTH_PROVIDER ??= { listUserGrants: async () => ({ items: [], cursor: undefined }) };
+  env.PRACTICE ??= { getByName: () => ({ wipe: async () => {} }) };
+  await deleteAccount(env, USER);
+  ok(!rows("SELECT id FROM uploads WHERE user_id = ?", USER).length && copies.every((c) => !objects.has(c.r2_key)), "a copy outlived the account");
+  return `kept as the add's book (${book.version}), not counted at the limit, swept after ${DAYS / 86_400_000} days, none for an EPUB`;
+});
+
 console.log(`\n${passed}/${passed + failed} passed`);
 process.exit(failed ? 1 : 0);

@@ -162,6 +162,8 @@ export const PARTS = [
   { name: "picture", group: "Surfaces", about: "A word picture: our own drawing of what a word means, on its tile, sized by what holds it, colored by the art tokens (study/pictures.js)" },
   { name: "book-cover", group: "Library", about: "A book's cover, always one: its own picture, art made for it (an AI's SVG, as an image), or its title on a plain cover", variants: ["picture", "art", "type"] },
   { name: "book-progress", group: "Library", about: "How far into a book you are (--progress, 0 to 1)" },
+  { name: "weave-your-own", group: "Library", about: "Read's lead where texts can be woven: what weaving your own text is, how it's done, what to expect, and the way to connect an AI" },
+  { name: "own-copy-note", group: "Library", about: "The line under the last shelf: why the books people read today aren't on it, and to add your own copy" },
   { name: "continue-card", group: "Library", about: "The book you're reading: its cover, where you are, how much you'd follow, and Continue at the foot" },
   { name: "ask-ai", group: "Library", about: "A way in through your AI wherever you add your own: what it can do, prompts to copy, a note" },
   { name: "ask-prompt", group: "Library", about: "One prompt to copy into your AI, with its Copy button" },

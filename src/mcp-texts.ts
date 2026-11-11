@@ -7,7 +7,7 @@ import type { McpServer } from "@modelcontextprotocol/server";
 import { z } from "zod";
 import type { CallerProps, Env } from "./env";
 import { requestUpload, TEXT_UPLOADS } from "./library";
-import { addText, addWeave, dropWeaveText, getText, listTexts, removeText, undoTextChange, weaveSource, weaveUpload } from "./texts";
+import { addText, addWeave, dropWeaveText, getText, listTexts, removeText, textSource, undoTextChange, weaveSource, weaveUpload } from "./texts";
 import { practiceRoom, unwrap, type RequestMeta } from "./practice";
 import { enqueue } from "./reminders";
 import { LibraryError } from "./library";
@@ -87,9 +87,11 @@ export function registerTextTools(server: McpServer, env: Env, { caller, sourceL
         const added = await addText(env, userId(), sourceLabel(caller()), input);
         return ok({
           ...added,
-          next: added.devices.length
-            ? `It's on its way to ${added.devices.join(", ")}. get_text with text_id ${added.text_id} in a few seconds says where it arrived (or why it couldn't be read).`
-            : "No device of theirs has opened Lexicommons yet: it goes to the first one that does (within 7 days), so don't add it again. Ask them to open the app.",
+          next: `${
+            added.devices.length
+              ? `It's on its way to ${added.devices.join(", ")}. get_text with text_id ${added.text_id} in a few seconds says where it arrived (or why it couldn't be read).`
+              : "No device of theirs has opened Lexicommons yet: it goes to the first one that does (within 7 days), so don't add it again. Ask them to open the app."
+          } To weave it: get_text with this text_id hands you its sentences (to_weave), then add_weave with text_id and language (get_weave_guide).`,
         });
       }),
   );
@@ -123,7 +125,18 @@ export function registerTextTools(server: McpServer, env: Env, { caller, sourceL
           return ok({ request_id, title: request.title, language: request.language, words: book.words.length, sentences: (book.sentences as unknown[]).length, text: { id: book.id, version: book.version, lang: book.lang }, to_weave: numberedSentences(book), next: `Read get_weave_guide with language "${request.language}", weave every sentence in to_weave, then add_weave with this request_id and your seat.` });
         }
         if (!text_id) throw new LibraryError("Give text_id (a text in their library) or request_id (a weave request's text).");
-        return ok(await getText(env, userId(), text_id));
+        const where = await getText(env, userId(), text_id);
+        // A text your AI added, kept for weaving (texts.ts textSource): its sentences, numbered as get_weave_guide's rules number them. Any
+        // other says why it can't be woven this way, in the words add_weave would use.
+        let weaving: Record<string, unknown>;
+        try {
+          const book = await textSource(env, userId(), text_id);
+          weaving = { text: { id: book.id, version: book.version, lang: book.lang }, to_weave: numberedSentences(book) };
+        } catch (error) {
+          if (!(error instanceof LibraryError)) throw error;
+          weaving = { to_weave: null, why_not: error.message };
+        }
+        return ok({ ...where, ...weaving });
       }),
   );
 
@@ -156,18 +169,38 @@ export function registerTextTools(server: McpServer, env: Env, { caller, sourceL
       title: "Add your weave of their text",
       annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: false, openWorldHint: false },
       description:
-        "Adds your weave of a weave request's text (get_text with the request_id) to their library: checked first, as the books pipeline's judges check a layer (every sentence and word, the language, split forms and pronouns shown alone), with every problem said; then relayed to their devices, each keeping it beside its own copy of the text, and the request is done. Give the weave in get_weave_guide's form ({ sentences: [{ x, t, text, m, u, c }] }), or upload_id from request_text_upload (format weave) for a big one.",
+        "Adds your weave of a text to their library: a text you added (text_id, with language: one message from them does it all, get_weave_guide says how), or a weave request's text (request_id with your seat, from their press in Read). Checked first, as the books pipeline's judges check a layer (every sentence and word, the language, split forms and pronouns shown alone), with every problem said; then relayed to their devices, each keeping it beside its own copy of the text, and the request is done. Give the weave in get_weave_guide's form ({ sentences: [{ x, t, text, m, u, c }] }), or upload_id from request_text_upload (format weave) for a big one.",
       inputSchema: z.object({
-        request_id: z.string().min(4).max(40),
-        seat: z.string().min(1).max(40).describe("The seat take_request gave you"),
+        text_id: z.string().min(2).max(80).optional().describe("A text you added (add_text's text_id), to weave with no request"),
+        language: z.string().min(2).max(12).optional().describe("With text_id: the language to weave it into, the one they learn"),
+        request_id: z.string().min(4).max(40).optional().describe("Or: a weave request's id (their press in Read)"),
+        seat: z.string().min(1).max(40).optional().describe("With request_id: the seat take_request gave you"),
         weave: z.record(z.string(), z.unknown()).optional().describe("The weave, in get_weave_guide's form: { sentences: [{ x, t, text, m, u, c }] }"),
         upload_id: z.string().min(8).max(40).optional().describe("Or: the weave uploaded with request_text_upload, format weave"),
       }),
     },
-    async ({ request_id, seat, weave, upload_id }) =>
+    async ({ text_id, language, request_id, seat, weave, upload_id }) =>
       guarded(async () => {
         if (!weave === !upload_id) throw new LibraryError("Give the weave, or upload_id: one of them.");
+        if (!text_id === !request_id) throw new LibraryError("Give text_id (a text you added) or request_id (their press's weave request): one of them.");
         const source = sourceLabel(caller());
+        // A text your AI added: no request, no seat. Checked and relayed the same way; they're told as for a request.
+        if (text_id) {
+          if (!language) throw new LibraryError("With text_id, give language: the one they learn, as get_weave_guide's.");
+          const uploaded = upload_id ? await weaveUpload(env, userId(), upload_id) : null;
+          let relayed;
+          try {
+            relayed = await addWeave(env, userId(), source, { textId: text_id, language, weave: weave ?? uploaded!.weave });
+          } catch (error) {
+            await uploaded?.release().catch(() => {});
+            throw error;
+          }
+          await uploaded?.done().catch(() => {});
+          const said = relayed.said.replace(/^wove/, "Wove");
+          await enqueue(env, userId(), "ai", { title: "Your AI wove your text", body: said.slice(0, 160), url: `/app/#read/book/${encodeURIComponent(text_id)}` }).catch(() => false);
+          return ok({ ...relayed, next: "It's on its way to their devices: get_text with this text_id shows where it arrived, a few seconds later. In Read its card says it's woven." });
+        }
+        if (!request_id || !seat) throw new LibraryError("With request_id, give seat: the one take_request gave you.");
         // Only the AI holding the request (its seat): take_request with its seat gives it back only to that seat.
         const held = unwrap(await room().aiTakeRequest(source, request_id, seat)) as { request: RequestMeta & { book: string; title: string; language: string } };
         if (held.request.kind !== "weave") throw new LibraryError("That request isn't a weave.");

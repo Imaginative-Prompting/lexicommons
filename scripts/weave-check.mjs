@@ -116,6 +116,14 @@ const contentsRow = async () => {
   });
   return row;
 };
+// The card at the reader's foot, as it stands: null with none; never two.
+const card = () =>
+  page.evaluate(() => {
+    const cards = [...document.querySelectorAll('[data-part="reader"]:not([data-ghost]) [data-part="reader-offer"]')];
+    if (!cards.length) return null;
+    const one = cards[0];
+    return { count: cards.length, state: one.getAttribute("data-state"), title: one.querySelector("strong")?.textContent ?? "", line: one.querySelector(".lx-offer-text span")?.textContent ?? "", button: one.querySelector(':scope > [data-part="button"]')?.textContent ?? "" };
+  });
 const closeSheet = async () => {
   await page.keyboard.press("Escape");
   await page.waitForTimeout(500);
@@ -329,6 +337,9 @@ await stage("the press: the text goes up as this device keeps it, then a weave r
   await page.getByRole("button", { name: "Weave it with your AI" }).click();
   await until(() => document.querySelector('[data-part="reader-offer"]')?.textContent.includes("Sent to your AI"));
   await shot("3-sent");
+  // What it says is what will happen: it's read woven from here once it's back, never "opens woven" (the open page doesn't change by itself).
+  const sent = await card();
+  assert(sent?.count === 1 && sent.state === "out" && /Then you can read it woven from here\.$/.test(sent.line) && !sent.button && !/opens woven/.test(sent.line), `the card once sent: ${JSON.stringify(sent)}`);
   if (STANDIN) {
     assert(uploads.length === 1, `uploads: ${uploads.length}`);
     const sent = uploads[0].book;
@@ -339,7 +350,13 @@ await stage("the press: the text goes up as this device keeps it, then a weave r
   request = (await requests()).find((r) => r.kind === "weave" && r.book === MINE);
   assert(request, "a weave request on the server");
   assert(request.title === "Alice, pasted" && request.language === "nl" && request.state === "waiting", `the request: ${JSON.stringify(request)}`);
-  await page.locator('[data-part="reader-offer"] [aria-label="Not now"]').click();
+  // A reload while it's out: the same card, from the request, not the offer again.
+  await page.reload();
+  await page.waitForSelector("html[data-app-ready]");
+  await openText(MINE);
+  await until(() => document.querySelector('[data-part="reader-offer"]')?.getAttribute("data-state") === "out", null, 20_000);
+  const again = await card();
+  assert(again?.count === 1 && again.title === "Sent to your AI", `the card after a reload, the request out: ${JSON.stringify(again)}`);
   const row = await contentsRow();
   assert(row?.title === "Waiting for your AI", `Contents: ${JSON.stringify(row)}`);
   await shot("4-waiting");
@@ -356,6 +373,8 @@ await stage("your AI takes it over MCP: Contents says it's on it, live", async (
   seat = (await tool("take_request", { request_id: request.id })).seat;
   assert(seat, "take_request gave a seat");
   await until(() => document.querySelector('[data-part="reader"] .lx-reader-weave .lx-row-title')?.textContent === "Your AI is weaving it", null, 40_000);
+  const sub = await page.evaluate(() => document.querySelector('[data-part="reader"] .lx-reader-weave .lx-row-sub')?.textContent ?? "");
+  assert(sub === "Read it woven here when it's done", `Contents' line while it's woven: ${sub}`);
   await shot("5-working");
   await closeSheet();
   return JSON.stringify(mine.asked);
@@ -395,8 +414,23 @@ await stage("back woven: the change checked again here and kept; Read it woven o
   const row = await contentsRow();
   assert(row?.title === "Woven into Dutch" && row.button === "Read it woven", `Contents: ${JSON.stringify(row)}`);
   await shot("6-read-it-woven");
-  await page.getByRole("button", { name: "Read it woven" }).click();
-  await until(() => document.querySelector('[data-part="reader"]')?.hasAttribute("data-woven"));
+  await closeSheet();
+  // The card at the foot, on arrival: the way in, never still "Sent to your AI", and the page not woven by itself. Seen once the sheet has gone.
+  await until(() => { const one = document.querySelector('[data-part="reader"]:not([data-ghost]) [data-part="reader-offer"]'); return Boolean(one) && getComputedStyle(one).visibility !== "hidden" && Number(getComputedStyle(one).opacity) > 0.99; }, null, 10_000);
+  const arrived = await card();
+  assert(arrived?.count === 1 && arrived.state === "kept" && arrived.title === "Woven into Dutch" && arrived.button === "Read it woven", `the card once the weave is here: ${JSON.stringify(arrived)}`);
+  assert(!(await page.evaluate(() => document.querySelector('[data-part="reader"]:not([data-ghost])')?.hasAttribute("data-woven"))), "the page turned woven by itself");
+  await shot("6b-card-read-it-woven");
+  // Its press does what Contents' does, and the card goes.
+  await page.locator('[data-part="reader"]:not([data-ghost]) [data-part="reader-offer"] > [data-part="button"]').click();
+  await until(() => document.querySelector('[data-part="reader"]:not([data-ghost])')?.hasAttribute("data-woven"));
+  assert((await card()) === null, `the card once it's read woven: ${JSON.stringify(await card())}`);
+  // After a reload a text with its weave on this device opens woven: no card, in either state.
+  await page.reload();
+  await page.waitForSelector("html[data-app-ready]");
+  await openText(MINE);
+  await until(() => document.querySelector('[data-part="reader"]:not([data-ghost])')?.hasAttribute("data-woven"), null, 20_000);
+  assert((await card()) === null, `a card on a text open woven after a reload: ${JSON.stringify(await card())}`);
   await page.waitForTimeout(1200);
   const dutch = await page.evaluate(() => document.querySelectorAll('[data-part="reader"] [data-part="woven-word"]').length);
   assert(dutch > 0, "no woven words on the page");

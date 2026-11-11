@@ -172,9 +172,10 @@ export async function tidy(env: Env, userId: string, now: number) {
   // A text's copy for weaving: one no request named within the hour, one a request was being made with (its claim never
   // finished), and one whose request is long past (it went when the request finished; this catches one that expired).
   const weaving = await env.DB.prepare(
-    `SELECT id FROM uploads WHERE user_id = ? AND ((purpose LIKE 'weave-in:%' OR purpose LIKE 'weave-claim:%') AND created_at < ? OR purpose LIKE 'weave-for:%' AND created_at < ?)`,
+    `SELECT id FROM uploads WHERE user_id = ? AND ((purpose LIKE 'weave-in:%' OR purpose LIKE 'weave-claim:%') AND created_at < ? OR purpose LIKE 'weave-for:%' AND created_at < ?
+       OR purpose LIKE 'text-book:%' AND created_at < ?)`,
   )
-    .bind(userId, now - WEAVE_TEXT.unused, now - WEAVE_TEXT.kept)
+    .bind(userId, now - WEAVE_TEXT.unused, now - WEAVE_TEXT.kept, now - TEXT_RELAY.history)
     .all<{ id: string }>();
   for (const { id } of weaving.results) await dropUploads(env, userId, "id", id).catch(() => {});
 }
@@ -252,12 +253,16 @@ export async function addText(env: Env, userId: string, source: string, input: A
       if (!moved.meta.changes) throw new LibraryError(`Upload ${asText(input.upload_id)}'s file is gone: upload it again.`);
     }
     if (cover) await storeMade(env, userId, id, cover.file, TEXT_UPLOADS.cover!.type, new TextEncoder().encode(cover.svg));
+    // The book it made, kept as the text's own for your AI to weave later (add_weave with text_id) for the relay's 90 days (tidy): an EPUB is
+    // made into one on each device, so there's none of it here. Not one of the account's 200 uploads: one a text, gone after its days.
+    if (checked.format === "book") await storeFile(env, userId, `text-book:${textId}`, `${textId}.json`, contentOf("book"), checked.bytes);
     const retitle = checked.format === "epub" && title !== undefined;
     const body: TextBody = { title: shown, language, format: checked.format, bytes: checked.bytes.byteLength, ...(checked.words ? { words: checked.words } : {}), ...(cover ? { cover: { file: cover.file } } : {}), ...(checked.format === "epub" && authors.length ? { authors } : {}), ...(retitle ? { retitle } : {}) };
     const queued = await queue(env, userId, { id, textId, kind: "add", body, said: `added “${shown}”`, source, latest: null });
     added = { ...queued, title: shown, ...(checked.words ? { words: checked.words } : {}), ...(cover?.dropped.length ? { cover_left_out: cover.dropped } : {}) };
   } catch (error) {
     await dropUploads(env, userId, "purpose", `text-in:${id}`).catch(() => {});
+    await dropUploads(env, userId, "purpose", `text-book:${textId}`).catch(() => {});
     for (const release of claims) await release().catch(() => {});
     throw error;
   }
@@ -340,7 +345,8 @@ export function textHousekeepingWork(env: Env, userId: string, now: number): D1P
          OR EXISTS (SELECT 1 FROM text_changes WHERE user_id = ?1 AND created_at < ?3)
          OR EXISTS (SELECT 1 FROM uploads u WHERE u.user_id = ?1 AND COALESCE(u.stored_at, u.created_at) < ?4 AND (u.purpose LIKE 'text:%' OR u.purpose LIKE 'text-claim:%'
               OR (u.purpose LIKE 'text-in:%' AND NOT EXISTS (SELECT 1 FROM text_changes c WHERE c.user_id = u.user_id AND c.body IS NOT NULL AND u.purpose = 'text-in:' || c.id))))
-         OR EXISTS (SELECT 1 FROM uploads WHERE user_id = ?1 AND ((purpose LIKE 'weave-in:%' OR purpose LIKE 'weave-claim:%') AND created_at < ?5 OR purpose LIKE 'weave-for:%' AND created_at < ?6)) AS tidy`,
+         OR EXISTS (SELECT 1 FROM uploads WHERE user_id = ?1 AND ((purpose LIKE 'weave-in:%' OR purpose LIKE 'weave-claim:%') AND created_at < ?5 OR purpose LIKE 'weave-for:%' AND created_at < ?6
+              OR purpose LIKE 'text-book:%' AND created_at < ?3)) AS tidy`,
   ).bind(userId, now, now - TEXT_RELAY.history, now - TEXT_RELAY.staging, now - WEAVE_TEXT.unused, now - WEAVE_TEXT.kept);
 }
 
@@ -422,15 +428,42 @@ function possessiveHer(f: { kind: string; english: string; gloss: unknown }) {
 }
 
 /**
+ * A text your AI added, as the book add_text made of it (its copy for weaving, kept the relay's 90 days): for add_weave and get_text's to_weave.
+ * Never a text they added themselves, an EPUB (made into a book on each device), one removed, or one past its days, each said with what to do.
+ */
+export async function textSource(env: Env, userId: string, textId: string) {
+  if (!TEXT_ID.test(textId)) throw new LibraryError("text_id must be a text's id (list_texts).");
+  const latest = await latestOf(env, userId, textId);
+  const added = await env.DB.prepare("SELECT body FROM text_changes WHERE user_id = ? AND text_id = ? AND kind = 'add' ORDER BY seq DESC LIMIT 1").bind(userId, textId).first<{ body: string | null }>();
+  const ask = "ask them to open it in Read and press Weave it, which sends you its text as a weave request";
+  if (!latest || !added) throw new LibraryError(`No text your AI added has that id (list_texts). To weave a text they added themselves, ${ask}.`);
+  if ((latest.kind === "remove" && !latest.undone) || (latest.kind === "undo" && latest.undid === "add")) throw new LibraryError("That text is removed: it can't be woven.");
+  const row = await env.DB.prepare("SELECT r2_key FROM uploads WHERE user_id = ? AND purpose = ? AND status = 'stored'").bind(userId, `text-book:${textId}`).first<{ r2_key: string }>();
+  const object = row ? await env.UPLOADS.get(row.r2_key) : null;
+  if (!object) {
+    const format = (() => {
+      try {
+        return JSON.parse(added.body ?? "{}").format;
+      } catch {
+        return null;
+      }
+    })();
+    throw new LibraryError(format === "epub" ? `That text came as an EPUB, made into a book on each of their devices, so there's no copy of it here to weave: ${ask}.` : `That text's copy for weaving is gone: the server keeps its copy of a text your AI added for ${TEXT_RELAY.history / 86_400_000} days so your AI can weave it (the text itself stays on their devices). Add it again and weave that, or ${ask}.`);
+  }
+  return JSON.parse(await object.text()) as Record<string, unknown> & { id: string; title: string; version: string; lang: string; words: string[]; sentences: [number, number][] };
+}
+
+/**
  * add_weave: a weave of a request's text, checked as the books pipeline's layers are (book-format.js validateWeave: every
  * sentence and word, the book and its version) and woven into the request's language, kept as the change's file and
  * relayed to every device as a change of kind "weave" (a device without the text says it's missing). Finishing the request
  * is the caller's (mcp-texts.ts), then its copy of the text goes.
  */
-export async function addWeave(env: Env, userId: string, source: string, input: { requestId: string; title: string; language: string; weave: unknown }) {
+export async function addWeave(env: Env, userId: string, source: string, input: { requestId?: string; textId?: string; title?: string; language: string; weave: unknown }) {
   const language = asText(input.language);
   if (!WEAVE_LANGUAGES.includes(language)) throw new LibraryError(`Weaving into ${LANGUAGES[language as keyof typeof LANGUAGES]?.name ?? language} isn't ready yet.`);
-  const book = await weaveSource(env, userId, input.requestId);
+  // A request's text (the app sent it), or a text your AI added (its copy, textSource).
+  const book = input.requestId ? await weaveSource(env, userId, input.requestId) : await textSource(env, userId, asText(input.textId));
   if (!isObject(input.weave)) throw new LibraryError("weave must be an object: { sentences: [...] }, as get_weave_guide shows.");
   let weave: Record<string, unknown> = input.weave;
   const refuse = (problems: string[]) =>
@@ -468,7 +501,7 @@ export async function addWeave(env: Env, userId: string, source: string, input: 
   try {
     await storeMade(env, userId, id, `${book.id}.${language}.weave.json`, TEXT_UPLOADS.book!.type, new TextEncoder().encode(JSON.stringify(weave)));
     const latest = await latestOf(env, userId, book.id);
-    return await queue(env, userId, { id, textId: book.id, kind: "weave", body: { title, to: language, bookVersion: book.version, request: input.requestId }, said: `wove “${title}” into ${shown}`, source, latest: latest?.id ?? null });
+    return await queue(env, userId, { id, textId: book.id, kind: "weave", body: { title, to: language, bookVersion: book.version, ...(input.requestId ? { request: input.requestId } : {}) }, said: `wove “${title}” into ${shown}`, source, latest: latest?.id ?? null });
   } catch (error) {
     await dropUploads(env, userId, "purpose", `text-in:${id}`).catch(() => {});
     throw error;

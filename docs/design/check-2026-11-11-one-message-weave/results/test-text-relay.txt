@@ -1,0 +1,20 @@
+ok    add_text: the change carries the book it checked and the cleaned cover; what they were made from goes: txc_qwHyAbQIghaIXoQg, 20 words
+ok    Codex's second review: a failure after the change is queued never takes it back (its files stay; the rest goes later)
+ok    a failure before the change is queued leaves nothing behind, and the upload can be used again: then added as txc_PZzhHtI8mv9G0zu3
+ok    Codex's second review: an EPUB keeps its own title unless your AI gives one
+ok    Codex's second review: Undo brings a removed text back only while the devices keep it (7 days); a second remove is refused: Their devices kept that text 7 days after it was removed, and that's past: add it again instead.
+ok    Codex's second review: get_text says a change past its 7 days expired, not that it's on its way
+ok    one upload sent into two add_text calls at once goes into one text: Upload upcheck00011 is going into another text right now.
+ok    a device saying it's here tidies the text relay: an upload add_text never used goes after a day
+ok    Codex's third review: when the device list can't be read, nothing is queued and nothing is left
+ok    Codex's third review: a day on, the tidy takes a change file nothing is on its way with (a rollback whose delete failed)
+ok    Codex's third review: an expired change's files that storage couldn't delete go with a later tidy
+ok    Codex's third review: storage down never stops a device saying it's here (the tidy waits for next time)
+ok    a device back after 30 days away gets what's still on its way again, texts and packs (it used to fail to register)
+ok    Codex's fourth review: add_text names the devices it goes to: one registering before the batch is named and gets it; one after isn't named, and gets it anyway: named Second device, Check device; the third gets it on registering
+ok    the 6 Nov review (C17): with no device to send it to, a report from a device it was never sent to clears nothing: kept until a device takes it, or it expires
+ok    the 6 Nov review (C17): the device the text was sent to reporting it in still clears it (the control): done
+ok    the 6 Nov review (C17): a change's files aren't served once it has expired, even before the tidy runs: 404 once expired
+ok    a device saying it's here: each piece of the text relay's housekeeping, alone, still done; 2 round trips between: each one done by the device saying it's here
+ok    a text your AI adds is kept here for weaving (add_weave with its text_id): the add's own book at its version, not one of the account's uploads, swept 90 days on; an EPUB keeps none; deleting the account leaves none: kept as the add's book (de9b29f4dcaeaa59), not counted at the limit, swept after 90 days, none for an EPUB
+19/19 passed

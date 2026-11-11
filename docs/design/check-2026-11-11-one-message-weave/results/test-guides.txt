@@ -1,0 +1,16 @@
+ok    the controls: a refusal saying something else, and a guide missing a refusal's line, are both caught
+ok    get_pack_guide: the whole guide, every example and every refusal in it: 30,738 characters
+ok    get_pack_guide with a language: that language's pattern ids at its end, every one the guide's examples use among them; another language's refused in words: 29 Dutch pattern ids
+ok    the pack guide's examples through the real tools: the whole new pack, the smallest sentence, the other gender and readings, each kept with no warning: 6 + 1 kept, 2 checked
+ok    every refusal the pack guide lists: planted, refused, saying what the guide says: 30 refusals, each said
+ok    get_text_guide: the whole guide, its example and every refusal in it: 8,819 characters
+ok    the text guide's example as it says: request_text_upload, the PUT, add_text; a book of the chapters it names, on its way to their device: 47 words, chapters Naar de markt / Thuis
+ok    a text in a language written without spaces, as the guide says: plain text split here, and a book of split words and paragraphs (its Japanese example; Chinese, Cantonese and Thai too) added, its sentences worked out here: ja text 6 words, zh text 3 words, yue text 2 words, th text 4 words, ja 11 words, zh 6 words, yue 7 words, th 4 words
+ok    a failed PUT leaves its link to send again (the guide's retry); a link sent once can't be sent twice
+ok    every refusal the text guide lists: planted, refused, saying what the guide says: 10 refusals, each said
+ok    get_weave_guide: the whole guide, its example, every refusal and the patterns the example's c uses: 36,942 characters, rules as of 2026-11-07T16:31
+ok    the weave guide's example: the text numbered as get_text hands it over, its weave through add_weave, read at each level as the guide says: 3 sentences kept and relayed as txc_PLgk_zGIXgt0FCqf
+ok    the weave guide's two more sentences (a verb group; an adverb inside a perfect): in the guide, numbered as written, each through add_weave: Twenty: txc_KzuMChjwJqnkemU2, The cake: txc_I0qwCaPblfSDwK09
+ok    their one message: add_text with the example's text, get_text's to_weave by its text_id, add_weave with text_id and language, nothing pressed; read at each level as the guide says: text ai-5dd16e3f17081638, 3 sentences to weave, woven as txc_SnVjjTtwDa-Jq5Qs, no request
+ok    every refusal the weave guide lists: planted, refused, saying what the guide says: 25 refusals, each said
+15/15 passed

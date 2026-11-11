@@ -53,6 +53,14 @@ const READ = () => {
   // person is owed, and no offer of an AI. Only that line, whole, and only there: any other mention in the credits is still found, and
   // so are those words anywhere else (the stage's planted lines hold both).
   const CREDIT = /^Its [\p{L} ]+: Made for Lexicommons with an AI model and checked sentence by sentence(?:, [^,]+)?\.$/u;
+  // Read's Weave your own (read/weave-own.js): the reader's main use needs an AI of your own, so that one part says so to everyone, with its
+  // one press to connect. Only its own lines, each whole, and only inside that part: another line there, or these words anywhere else, is still
+  // found (the Read stage's planted lines hold both).
+  const WEAVE_OWN = [
+    /^Read what you'd read anyway, an article or a chapter, with [\p{L} ]+ woven in as far as you know it: first the words you've learned, each in its place, then whole sentences\. Your own AI does the weaving\.$/u,
+    /^It's as good as your AI: expect the odd mistake, and tap any word to check it\. It isn't quick, and a long text takes a lot of your AI's usage, so start with a page or two\. It needs an AI of your own, connected to Lexicommons\.$/,
+    /^Connect your AI$/,
+  ];
   const out = [];
   const seen = new Set();
   const add = (text, node, how) => {
@@ -60,6 +68,7 @@ const READ = () => {
     const key = `${how}|${line}`;
     if (!RE.test(line) || seen.has(key)) return;
     if (how === "text" && CREDIT.test(line) && node.closest('[data-part="reader-credits"]')) return;
+    if (how === "text" && node.closest('[data-part="weave-your-own"]') && WEAVE_OWN.some((own) => own.test(line))) return;
     seen.add(key);
     out.push({ text: line.slice(0, 300), how, tab: Boolean(node.closest('[data-part="tab-bar"]')) });
   };
@@ -272,6 +281,23 @@ await stage("Read: Add a book or text offers what works, and a book's word names
   const before = snapshot();
   await go("#read");
   await settle();
+  // Weave your own's allowance can fail: another line naming an AI planted inside it, and its own button's words planted outside it, are both found;
+  // its own lines, where they are, aren't.
+  const WEAVE_LINES = ["Ask your AI about this book.", "Connect your AI"];
+  const weave = await page.evaluate((lines) => {
+    const part = document.querySelector('[data-part="page"]:not([data-ghost]) [data-part="weave-your-own"]');
+    const own = part ? part.innerText.replace(/\s+/g, " ") : "";
+    const made = lines.map((line) => Object.assign(document.createElement("p"), { textContent: line }));
+    for (const p of made) p.setAttribute("data-planted", "");
+    if (part?.firstChild) part.append(made[0]);
+    (part?.parentElement ?? document.querySelector('[data-part="page"]:not([data-ghost])')).append(made[1]);
+    return { shown: Boolean(part?.firstChild), own };
+  }, WEAVE_LINES);
+  const seenWeave = (await page.evaluate(READ)).mentions.map((m) => m.text);
+  await page.evaluate(() => document.querySelectorAll("[data-planted]").forEach((p) => p.remove()));
+  assert(!weave.shown || seenWeave.includes(WEAVE_LINES[0]), "a line offering an AI, planted inside Weave your own, wasn't found");
+  assert(seenWeave.includes(WEAVE_LINES[1]), "Weave your own's button's words, planted outside it, weren't found");
+  if (weave.shown) assert(/Your own AI does the weaving/.test(weave.own) && /Connect your AI/.test(weave.own) && !/Weave it with your AI|Add a text/.test(weave.own), `Weave your own with no AI connected: ${weave.own}`);
   await page.getByRole("button", { name: "Add a book or text" }).first().click();
   await page.waitForTimeout(400);
   await look("Read's Add a book or text", { outside: true });

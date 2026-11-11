@@ -1,0 +1,57 @@
+{
+ "ok": true,
+ "steps": [
+  {
+   "what": "a phone, signed up, learning Dutch; a personal token for the AI's connection"
+  },
+  {
+   "what": "1. get_weave_guide { language: nl }",
+   "detail": "40,226 characters; it opens: A weave puts Dutch into a text of theirs at their level: the words they've learned show in Dutch in the English sentence, and a sentence they know nearly all of shows in Dutch whole. You write the wea"
+  },
+  {
+   "what": "2. request_text_upload { format: text } and the PUT",
+   "detail": {
+    "upload_id": "RgT1s-7CBEmHfbiv",
+    "status": 200
+   }
+  },
+  {
+   "what": "3. add_text { upload_id, language: en, title }",
+   "detail": {
+    "text_id": "ai-bbdcf2c999a1ce2a",
+    "words": 24,
+    "next": "It's on its way to Mac, browser. get_text with text_id ai-bbdcf2c999a1ce2a in a few seconds says where it arrived (or why it couldn't be read). To weave it: get_text with this text_id hands you its sentences (to_weave), then add_weave with text_id and language (get_weave_guide)."
+   }
+  },
+  {
+   "what": "4. get_text { text_id }",
+   "detail": {
+    "sentences": 3,
+    "first": {
+     "x": 0,
+     "words": [
+      "Down,",
+      "down,",
+      "down."
+     ]
+    }
+   }
+  },
+  {
+   "what": "5. add_weave { text_id, language: nl, weave }",
+   "detail": {
+    "change_id": "txc_2s4ZKB6yhUF7-tOZ",
+    "said": "wove “Alice: down the rabbit-hole” into Dutch",
+    "next": "It's on its way to their devices: get_text with this text_id shows where it arrived, a few seconds later. In Read its card says it's woven."
+   }
+  },
+  {
+   "what": "the phone: in Read, its card",
+   "detail": "Alice: down the rabbit-holeAlice: down the rabbit-holeWoven into Dutch"
+  },
+  {
+   "what": "the phone: the text open in the reader (in English at first: no Dutch words known yet)",
+   "detail": "Down, down, down. Would the fall never come to an end! “I wonder how many miles I’ve fallen by this time?” she said aloud. 1/1ReadNotesContentsAlice: down the rabbit-holeAATurn pages or scrollPagesScr"
+  }
+ ]
+}

@@ -5,10 +5,10 @@
 // lines it says the learner sees against the reader's own render (read/woven-text.js), and plants every refusal listed.
 
 import { LANGUAGES } from "../public/js/lang/index.js";
-import { WEAVE_LANGUAGES } from "../public/js/read/weave-languages.generated.js";
+import { WEAVE_LANGUAGES, WEAVE_TUNED } from "../public/js/read/weave-languages.generated.js";
 import { TEXT_UPLOADS } from "./library";
 import { shownJson } from "./guide-json";
-import { WEAVE_RULES } from "./weave-rules.generated";
+import { WEAVE_RULES, WEAVE_SPLIT } from "./weave-rules.generated";
 
 /**
  * The worked example: the start of a paragraph of Alice's Adventures in Wonderland (public domain), as a person would paste it, and its weave
@@ -192,6 +192,341 @@ export const WEAVE_MORE = [
   },
 ];
 
+/**
+ * The Spanish worked example: Peter Rabbit's sentences 1 and 8 from the books pipeline's judged weave of it (work/potter-peter-rabbit/runs/
+ * stories-es-2/set2, weave.es.b5a35fd7b846.json: 0 of its 62 sentences misleading), as a text of their own, numbered as get_text hands them
+ * over (the same words as the judged layer's), in the guide's form. test-guides.mjs adds it through the one-message flow.
+ */
+export const WEAVE_EXAMPLE_ES = {
+  title: "Peter Rabbit",
+  language: "es",
+  text: "Once upon a time there were four little Rabbits, and their names were—\n\n'Now run along, and don't get into mischief.",
+  to_weave: [
+  {
+    "x": 0,
+    "words": [
+      "Once",
+      "upon",
+      "a",
+      "time",
+      "there",
+      "were",
+      "four",
+      "little",
+      "Rabbits,",
+      "and",
+      "their",
+      "names",
+      "were—"
+    ]
+  },
+  {
+    "x": 1,
+    "words": [
+      "'Now",
+      "run",
+      "along,",
+      "and",
+      "don't",
+      "get",
+      "into",
+      "mischief."
+    ]
+  }
+],
+  weave: {
+  "sentences": [
+    {
+      "x": 0,
+      "t": [
+        {
+          "w": "Once",
+          "target": "Una vez",
+          "lemma": "vez"
+        },
+        {
+          "w": "upon",
+          "target": "en",
+          "lemma": "en"
+        },
+        {
+          "w": "a",
+          "target": "un",
+          "lemma": "un"
+        },
+        {
+          "w": "time",
+          "target": "tiempo",
+          "lemma": "tiempo"
+        },
+        {
+          "w": "there",
+          "target": "there",
+          "lemma": null
+        },
+        {
+          "w": "were",
+          "target": "había",
+          "lemma": "haber"
+        },
+        {
+          "w": "four",
+          "target": "cuatro",
+          "lemma": "cuatro"
+        },
+        {
+          "w": "little",
+          "target": "pequeños",
+          "lemma": "pequeño"
+        },
+        {
+          "w": "Rabbits,",
+          "target": "conejos,",
+          "lemma": "conejo"
+        },
+        {
+          "w": "and",
+          "target": "y",
+          "lemma": "y"
+        },
+        {
+          "w": "their",
+          "target": "sus",
+          "lemma": "su"
+        },
+        {
+          "w": "names",
+          "target": "nombres",
+          "lemma": "nombre"
+        },
+        {
+          "w": "were—",
+          "target": "eran—",
+          "lemma": "ser"
+        }
+      ],
+      "text": "Había una vez cuatro conejos pequeños, y sus nombres eran—",
+      "m": [
+        {
+          "target": "Había",
+          "cue": "there were",
+          "sources": [
+            4,
+            5
+          ],
+          "lemma": "haber"
+        },
+        {
+          "target": "una",
+          "cue": "a",
+          "sources": [
+            2
+          ],
+          "lemma": "un"
+        },
+        {
+          "target": "vez",
+          "cue": "time",
+          "sources": [
+            0,
+            1,
+            3
+          ],
+          "lemma": "vez"
+        },
+        {
+          "target": "cuatro",
+          "cue": "four",
+          "sources": [
+            6
+          ],
+          "lemma": "cuatro"
+        },
+        {
+          "target": "conejos",
+          "cue": "rabbits",
+          "sources": [
+            8
+          ],
+          "lemma": "conejo"
+        },
+        {
+          "target": "pequeños,",
+          "cue": "little",
+          "sources": [
+            7
+          ],
+          "lemma": "pequeño"
+        },
+        {
+          "target": "y",
+          "cue": "and",
+          "sources": [
+            9
+          ],
+          "lemma": "y"
+        },
+        {
+          "target": "sus",
+          "cue": "their",
+          "sources": [
+            10
+          ],
+          "lemma": "su"
+        },
+        {
+          "target": "nombres",
+          "cue": "names",
+          "sources": [
+            11
+          ],
+          "lemma": "nombre"
+        },
+        {
+          "target": "eran—",
+          "cue": "were",
+          "sources": [
+            12
+          ],
+          "lemma": "ser"
+        }
+      ],
+      "u": [
+        {
+          "k": 0,
+          "len": 6,
+          "target": "Había una vez"
+        }
+      ],
+      "c": [
+        "hay",
+        "gender",
+        "adjective-after",
+        "ser-estar",
+        "past"
+      ]
+    },
+    {
+      "x": 1,
+      "t": [
+        {
+          "w": "'Now",
+          "target": "'Ahora",
+          "lemma": "ahora"
+        },
+        {
+          "w": "run",
+          "target": "corran",
+          "lemma": "correr"
+        },
+        {
+          "w": "along,",
+          "target": "adelante,",
+          "lemma": "adelante"
+        },
+        {
+          "w": "and",
+          "target": "y",
+          "lemma": "y"
+        },
+        {
+          "w": "don't",
+          "target": "no",
+          "lemma": "no"
+        },
+        {
+          "w": "get",
+          "target": "se metan",
+          "lemma": "meter"
+        },
+        {
+          "w": "into",
+          "target": "en",
+          "lemma": "en"
+        },
+        {
+          "w": "mischief.",
+          "target": "travesuras.",
+          "lemma": "travesura"
+        }
+      ],
+      "text": "'Ahora váyanse, y no hagan travesuras.",
+      "m": [
+        {
+          "target": "'Ahora",
+          "cue": "now",
+          "sources": [
+            0
+          ],
+          "lemma": "ahora"
+        },
+        {
+          "target": "váyanse,",
+          "cue": "go away",
+          "sources": [
+            1,
+            2
+          ],
+          "lemma": "ir"
+        },
+        {
+          "target": "y",
+          "cue": "and",
+          "sources": [
+            3
+          ],
+          "lemma": "y"
+        },
+        {
+          "target": "no",
+          "cue": "don't",
+          "sources": [
+            4
+          ],
+          "lemma": "no"
+        },
+        {
+          "target": "hagan",
+          "cue": "do",
+          "sources": [
+            5,
+            6
+          ],
+          "lemma": "hacer"
+        },
+        {
+          "target": "travesuras.",
+          "cue": "mischief",
+          "sources": [
+            7
+          ],
+          "lemma": "travesura"
+        }
+      ],
+      "u": [
+        {
+          "k": 1,
+          "len": 2,
+          "target": "váyanse,"
+        },
+        {
+          "k": 4,
+          "len": 4,
+          "target": "no hagan travesuras."
+        }
+      ],
+      "c": [
+        "no-subject",
+        "negation",
+        "reflexive"
+      ]
+    }
+  ]
+},
+  note:
+    "Note what the rules ask for. \"Once upon a time\" has no Spanish word for each English one: each glosses as itself (Once → Una vez, upon → en, a → un, time → tiempo), \"there\" stays English with lemma null because \"había\" carries it, and an idiom upgrade over the first six words shows \"Había una vez\" once they're all known. In the second sentence the negative \"don't get into mischief\" is held whole by an upgrade over its four words (\"no hagan travesuras.\"), so a learner never meets \"no\" cut off from its verb in Spanish order: the first thing Before you send asks for.",
+};
+
 /** What add_weave says when it refuses, and what to do: `says` is part of the message (test-guides.mjs plants each and finds it). */
 export const WEAVE_REFUSALS: { id: string; says: string; fix: string }[] = [
   { id: "missing", says: "Every sentence needs its entry", fix: "One entry for every sentence get_text lists, each with its x." },
@@ -212,31 +547,72 @@ export const WEAVE_REFUSALS: { id: string; says: string; fix: string }[] = [
   { id: "split-form", says: "a verb's form split from the rest of it", fix: "Gloss the words of one verb form (had … gone) as the rules' groups say: one lemma, the verb's, and an idiom upgrade over them." },
   { id: "pronoun-alone", says: "an object pronoun shown alone", fix: "An object pronoun of a verb (hem, haar, het, ze, me…) goes in its verb's group: the verb's lemma on both, and an idiom upgrade over the run. A possessive (her coat → haar jas) is a word of its own with its own lemma (haar), and is never refused for this." },
   { id: "language", says: "Weaving into … isn't ready yet", fix: "Only the languages listed can be woven into." },
+  { id: "which", says: "Give text_id (a text you added) or request_id", fix: "add_weave takes text_id with language (a text you added), or request_id with your seat (their press in Read): one of them." },
+  { id: "text-language", says: "With text_id, give language", fix: "With text_id, language is the one they learn: this guide's." },
+  { id: "not-yours", says: "No text your AI added has that id", fix: "text_id is the one add_text gave you (list_texts lists them). A text they added themselves comes to you through their press in Read, as a weave request." },
+  { id: "epub", says: "That text came as an EPUB", fix: "An EPUB is made into a book on each of their devices, so there's no copy here for you to weave: add it again as plain text, or ask them to press Weave it with your AI in Read." },
+  { id: "copy-gone", says: "That text's copy for weaving is gone", fix: "The server keeps its copy of a text you added for 90 days so you can weave it (the text stays on their devices): add it again and weave that, or ask them to press Weave it with your AI on it in Read." },
+  { id: "removed", says: "That text is removed: it can't be woven", fix: "Add it again if they want it woven." },
   { id: "gone", says: "That request's text isn't here any more", fix: "The request finished or was canceled (its text goes with it): look at list_requests." },
 ];
 
 // Where a weave comes from (today: the person's press in Read), and which languages: each its own passage, to change as the app does.
-const WHERE_IT_STARTS = `## Where a weave comes from
-A weave starts with the person, in Read: on a text of theirs (one they pasted or uploaded, or one you added with add_text) in a language other than the one they learn, the reader offers "Weave it with your AI" at the text's end the first time, and after that in its Contents ("Weave it into Dutch", with a Weave it button). Their press sends you a weave request with the text. So to weave a text of your own: add it with add_text, then ask them to open it in Read and press Weave it with your AI.`;
+const WHERE_IT_STARTS = `## The other way in: their press in Read
+A weave can also start with the person, in Read: on a text of theirs (one they pasted or uploaded, or one you added with add_text) in a language other than the one they learn, the reader offers "Weave it with your AI" at the text's end the first time, and after that in its Contents ("Weave it into Dutch", with a Weave it button). Their press sends you a weave request with the text. Then: list_requests (or wait_for_request) shows it, of kind weave; take_request with its request_id (keep the seat it gives); get_text with the request_id gives to_weave; weave it as below; add_weave with the request_id and your seat; if you can't, finish_request with couldnt and why.`;
 
-const languagesNow = () => {
-  const names = WEAVE_LANGUAGES.map((code) => LANGUAGES[code as keyof typeof LANGUAGES]?.name ?? code);
-  const which = names.length === 1 ? `${names[0]} only, for now: the one language whose` : `${names.join(", ")} for now: the languages whose`;
+const nameOf = (code: string) => LANGUAGES[code as keyof typeof LANGUAGES]?.name ?? code;
+const listed = (codes: string[]) => (codes.length < 2 ? codes.map(nameOf).join("") : `${codes.slice(0, -1).map(nameOf).join(", ")} and ${nameOf(codes.at(-1)!)}`);
+
+/**
+ * Which languages a text can be woven into (weave-languages.generated.js: the books pipeline's weave-accepted.json and weave-own.json), and
+ * this one's footing: Lexicommons' rules tuned for it (WEAVE_TUNED), or the general rules, said plainly; the mix check's data for it, or
+ * what the check does without (lx-books, 11 Nov 2026: with no list of object pronouns it reads any word glossed as a pronoun after an English
+ * verb as one shown alone).
+ */
+const languagesNow = (language: string) => {
+  const tuned = WEAVE_LANGUAGES.filter((code) => WEAVE_TUNED.includes(code));
+  const general = WEAVE_LANGUAGES.filter((code) => !WEAVE_TUNED.includes(code));
+  const here = nameOf(language);
+  const footing = WEAVE_TUNED.includes(language)
+    ? `Lexicommons' rules are tuned for ${here}: the rules at the end carry ${here}'s own notes, and the mix check has its object pronouns and verb forms.`
+    : `Lexicommons' rules aren't tuned for ${here} yet: you follow the general rules at the end, with the notes ${here} has, and your weave is checked the same way.${
+        Object.keys(WEAVE_SPLIT[language] ?? {}).length
+          ? ""
+          : ` The mix check has no list of ${here}'s object pronouns yet, so it reads any word you gloss as a pronoun right after an English verb as an object pronoun shown alone: keep an object pronoun in its verb's group.`
+      }`;
   return `## Which languages
-Weaving goes into ${which} woven books the books pipeline's judges have accepted. More come as theirs are. The rules are written for a text in English, a language they know; the weave is checked the same way whatever the text's language.`;
+A text can be woven into ${listed(WEAVE_LANGUAGES)}. Lexicommons' rules are tuned for ${listed(tuned)}${general.length ? `; for ${listed(general)} you follow the general rules` : ""}. ${footing} The rules are written for a text in English, a language they know; the weave is checked the same way whatever the text's language. More languages come as their rules do.`;
 };
 
-const STEPS = [
-  "list_requests (or wait_for_request): a request of kind weave, with its title and language.",
-  "take_request with its request_id: it's yours now, and the app shows you're on it. Keep the seat it gives: add_weave needs it, and take_request with it gives the request back to you later.",
-  "get_weave_guide with language, the request's (\"nl\"): you're reading it. Read it once for each language you weave into; the rules at its end are the books pipeline's.",
-  "get_text with the request_id: its title, language, and to_weave: every sentence's words, numbered as the rules number them ([0] is a sentence's first word).",
-  "Weave every sentence by the rules into the form below.",
-  `add_weave with the request_id, your seat and the weave. A long text's weave (past about 1 MB) goes up as a file instead: request_text_upload with format weave (${TEXT_UPLOADS.weave!.maxBytes / 1_000_000} MB at most), send it with the curl command it gives, then add_weave with upload_id in place of weave.`,
-  "It's checked at once, as the pipeline's judges check a layer: every sentence and word, then the two mixes they count (a verb's form split from the rest of it, an object pronoun shown alone). Every problem comes back at once, nothing is kept: fix them all and send it again with the same seat.",
-  "Once it passes, it's on its way to each of their devices and the request is finished: the app's AI section shows it done, a notification comes if they allow them, and in Read the text's Contents says \"Woven into Dutch\". Tell them what to expect: the text reads in English at first, and Dutch comes into it as they learn its words (a sentence they know nearly all of shows in Dutch whole). get_text with the text_id it gives says where it arrived.",
-  "If you can't weave it, finish_request with couldnt and why: they see it, and can ask again.",
-];
+// Their one message: everything an AI needs to do it with no more from them (11 Nov 2026: the main way in).
+const ONE_MESSAGE = (name: string, code: string) => `## Their one message
+They ask you something like "Weave this into ${name} for me in Lexicommons", with the text pasted, a link to it, or a file. That's all it takes: do the rest from that one message, with nothing for them to press.
+- If you don't have the text, ask for it: pasted, a link you can open, or a file. Nothing else to ask: the language is the one they learn (get_learner, or list_packs, says which; ask if neither does).
+- Before a long text, say it takes a while and uses a lot of your usage: every sentence is written three ways (word by word in English order, whole in ${name}, and the ${name}-order line) and checked. A chapter of about 3,000 words, some 150 sentences, is a long job.
+- A chapter at a time: each chapter its own text (add_text) and its own weave. A text goes up to ${TEXT_UPLOADS.text!.maxBytes / 1_000_000} MB; a weave sent inline should stay under about 1 MB (a few hundred sentences), and past that it goes up as a file (format weave, ${TEXT_UPLOADS.weave!.maxBytes / 1_000_000} MB).
+- What they'll see: the text in Read, its card saying "Woven into ${name}", a notification if they allow them, and the text in English at first, ${name} coming into it as they learn its words (see What they see).
+The server keeps its copy of a text you add for 90 days so you can weave it; the text and its weave stay on their devices. After that, weave it from Read: they press Weave it with your AI on the text. A text in a language they know (English, in the rules) is what's woven; an EPUB can't be woven by you yet: add it as plain text instead.
+
+## The steps
+1. get_weave_guide with language ("${code}"): you're reading it. Read it once for each language you weave into; the rules at its end are the books pipeline's.
+2. Add the text (get_text_guide has the details): request_text_upload with format text (plain text) or book (a lexicommons-book), send it with the curl command it gives, then add_text with its upload_id, language (the text's own, "en" for English) and a title. It gives text_id.
+3. get_text with that text_id: to_weave, every sentence's words, numbered as the rules number them ([0] is a sentence's first word).
+4. Weave every sentence by the rules into the form below.
+5. Check what's below under "Before you send".
+6. add_weave with text_id, language ("${code}") and the weave. Past about 1 MB: request_text_upload with format weave, send it, then add_weave with upload_id in place of weave.
+7. It's checked at once, as the pipeline's judges check a layer: every sentence and word, then the two mixes they count (a verb's form split from the rest of it, an object pronoun shown alone). Every problem comes back at once and nothing is kept: fix them all and send it again.
+8. Once it passes, it's on its way to each of their devices: a notification comes if they allow them, and in Read its card and its Contents say "Woven into ${name}". Tell them what to expect: the text reads in English at first, and ${name} comes into it as they learn its words (a sentence they know nearly all of shows in ${name} whole). get_text with the text_id says where it arrived.
+9. If you can't weave it, tell them why.`;
+
+// What a weave that passes every check still gets wrong (lx-books, 11 Nov 2026: Alice's 22 sentences woven by hand into Spanish passed the
+// checks with no finding, and a trusted judge still found 5 that mislead a reader). Asked of the AI before it sends.
+const BEFORE_YOU_SEND = (name: string) => `## Before you send
+The checks can't see everything that misleads a learner. Look at these three before add_weave:
+1. A negative that takes two words. A word-by-word gloss of "never", "nothing" or "no one" can show the negative word without the "not" ${name} needs with it (Spanish: "iba a … nunca llegar", with no "no"). When the negative word goes with the verb, keep the pair in one group, which shows whole or not at all.
+2. A verb that carries a pronoun or a little word the English doesn't show (Dutch: "I wonder" is vraag me af; Spanish: ocurrírsele, decirse, the a before a person). Gloss the verb with what it needs, as the rules' groups say, or keep it English (lemma null) until the sentence turns whole.
+3. A fixed phrase glossed word by word with no idiom upgrade over it ("by this time" is inmiddels, one word, not three). Give the run its upgrade (u).
+Then read each sentence as a learner who knows about half its words would see it: in English order, some words in ${name}, the rest English. Is any ${name} shown there wrong on its own? Where it would be, leave that word English (lemma null) rather than show something false.`;
+
 
 const FORM = `## The weave you send
 { "sentences": [ one entry per sentence of the text ] }, each:
@@ -252,8 +628,8 @@ The rules below say how to choose each one. Nothing else goes in: where each sen
 // them equal; 95 until 10 Nov 2026). Kept here so the Worker doesn't load the reader's module for one number.
 export const FLIP_AT = 90;
 
-const SEES = `## What they see
-- The text in Read, its Contents saying "Woven into Dutch", and woven: the words they know show in the language they learn, in the English sentence, as they learn them; once they know ${FLIP_AT}% of a sentence's words (the reader's default; a setting there changes it), the whole sentence shows in natural {language}: its text.
+const SEES = (name: string) => `## What they see
+- The text in Read, its card and its Contents saying "Woven into ${name}", and woven: the words they know show in the language they learn, in the English sentence, as they learn them; once they know ${FLIP_AT}% of a sentence's words (the reader's default; a setting there changes it), the whole sentence shows in natural {language}: its text.
 - A weave isn't undone: it stays with the text on their devices.`;
 
 const block = (value: unknown) => shownJson(value);
@@ -279,18 +655,33 @@ export function weaveGuide(language: string, patterns: Record<string, { name: st
   const rules = WEAVE_RULES[language]!;
   const name = LANGUAGES[language as keyof typeof LANGUAGES]?.name ?? language;
   const example = WEAVE_EXAMPLE;
+  // The worked example: Spanish's own (WEAVE_EXAMPLE_ES), Dutch's (Alice, its levels, two more sentences), and for a language with none of
+  // its own yet, Dutch's, said so, to show the form.
+  const dutchExample = (heading: string, lead: string) =>
+    `${heading}\n${lead}The start of a paragraph of Alice's Adventures in Wonderland, pasted by the person. get_text gives its sentences as:\n${block(example.to_weave)}\nIts weave into Dutch, as add_weave takes it (Lexicommons' own woven Alice, which the pipeline's judges passed):\n${block(example.weave)}\nWhat they read:\n${example.shown
+      .map((level) => `- Knowing ${Array.isArray(level.knows) ? level.knows.join(", ") : level.knows}: ${level.reads}`)
+      .join("\n")}\nNote what the rules ask for: "wonder" is the separable "vraag me af" (one lemma, afvragen, for all three words in m, and "me" its own), "how many" is one word of text (hoeveel, sources [2, 3]) with an idiom upgrade over the two, "by this time" is "inmiddels", and sentence 1 is tagged question: Carroll's "!" closes a question in form, verb first.`;
   const guide = [
     `# Weaving a text into ${name}`,
     `A weave puts ${name} into a text of theirs at their level: the words they've learned show in ${name} in the English sentence, and a sentence they know nearly all of shows in ${name} whole. You write the weave, sentence by sentence, by the rules the books pipeline holds its own woven books to; it's checked here before it reaches them.`,
-    WHERE_IT_STARTS.replaceAll("Dutch", name),
-    languagesNow(),
-    `## The steps\n${STEPS.map((step, i) => `${i + 1}. ${step}`).join("\n")}`,
+    ONE_MESSAGE(name, language),
+    BEFORE_YOU_SEND(name),
+    languagesNow(language),
     FORM,
-    `## A worked example\nThe start of a paragraph of Alice's Adventures in Wonderland, pasted by the person. get_text gives its sentences as:\n${block(example.to_weave)}\nIts weave into Dutch, as add_weave takes it (Lexicommons' own woven Alice, which the pipeline's judges passed):\n${block(example.weave)}\nWhat they read:\n${example.shown.map((level) => `- Knowing ${Array.isArray(level.knows) ? level.knows.join(", ") : level.knows}: ${level.reads}`).join("\n")}\nNote what the rules ask for: "wonder" is the separable "vraag me af" (one lemma, afvragen, for all three words in m, and "me" its own), "how many" is one word of text (hoeveel, sources [2, 3]) with an idiom upgrade over the two, "by this time" is "inmiddels", and sentence 1 is tagged question: Carroll's "!" closes a question in form, verb first.`,
-    `## Two more sentences\nEach a text of its own, woven the same way:\n${WEAVE_MORE.map((one) => `### ${one.text}\n${one.note}\n${block(one.weave)}`).join("\n\n")}`,
+    ...(language === "es"
+      ? [
+          `## A worked example\nTwo sentences of The Tale of Peter Rabbit, pasted by the person. get_text gives them as:\n${block(WEAVE_EXAMPLE_ES.to_weave)}\nTheir weave into Spanish, as add_weave takes it (from a weave of Peter Rabbit the books pipeline's judges passed, 0 of its 62 sentences misleading):\n${block(WEAVE_EXAMPLE_ES.weave)}\n${WEAVE_EXAMPLE_ES.note}`,
+        ]
+      : language === "nl"
+        ? [
+            dutchExample("## A worked example", ""),
+            `## Two more sentences\nEach a text of its own, woven the same way:\n${WEAVE_MORE.map((one) => `### ${one.text}\n${one.note}\n${block(one.weave)}`).join("\n\n")}`,
+          ]
+        : [dutchExample("## A worked example, in Dutch", `There's no worked example in ${name} yet: here is the Dutch one, to show the form. Yours is the same, with ${name} words and ${name}'s own dictionary forms.\n`)]),
     `## When it's refused\nEach problem says which sentence and word. What each one says (… is the part that changes), and what to do:\n${WEAVE_REFUSALS.map(({ says, fix }) => `- ${says}: ${fix}`).join("\n")}`,
     `## Limits\n- A weave inline in add_weave up to about 1 MB; past that, upload it (format weave, ${TEXT_UPLOADS.weave!.maxBytes / 1_000_000} MB).\n- The text itself came from the app (${TEXT_UPLOADS.book!.maxBytes / 1_000_000} MB at most as a book): every sentence of it is woven, none left out.`,
-    SEES.replace("{language}", name),
+    WHERE_IT_STARTS.replaceAll("Dutch", name),
+    SEES(name),
     `## The rules\nThe books pipeline's, as of ${rules.asOf}: the same ones its judges hold its own woven books to. Their list of patterns (c) is the language's grammar as it is now.\n\n${rulesWith(rules.rules, patterns)}`,
   ].join("\n\n");
   // One text: the guide with the rules in it (a client that shows only the text a tool sends shows all of it).

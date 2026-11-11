@@ -3208,7 +3208,7 @@ export function openReader(host, { bookId = null, book: given = null, word: give
           : state === "waiting"
             ? row("Waiting for your AI", "It weaves it the next time it checks in")
             : state === "working"
-              ? row("Your AI is weaving it", "It opens woven here when it's done")
+              ? row("Your AI is weaving it", "Read it woven here when it's done")
               : state === "done"
                 ? row(`Woven into ${name}`, "On its way to this device")
                 : state === "failed"
@@ -3218,6 +3218,61 @@ export function openReader(host, { bookId = null, book: given = null, word: give
       weaveGroup = ui.group(null, [node]);
       weaveGroup.classList.add("lx-reader-weave");
       if (openSheet === contents) showChapters();
+      drawCard();
+    };
+    // The card at the reader's foot says the same, from the same state, so it's never stale: the offer while nothing's been asked; that it's
+    // with your AI while a request is out (after a reload too); the way in once the weave is on this device (Read it woven, as Contents'
+    // does); gone once you're reading it woven, and for good once put away (its cross). One state at a time, drawn again only when it changes.
+    const KEY = `lx.weave-offer.${book.id}`;
+    let put = false;
+    try {
+      put = localStorage.getItem(KEY) === "no";
+    } catch {}
+    let cardState = null;
+    const drawCard = () => {
+      const state = request ? client.requestStatus(request).mark : null;
+      const want = put || woven ? null : kept ? "kept" : !request ? "offer" : state === "waiting" || state === "working" ? "out" : state === "done" ? "coming" : state === "failed" ? "failed" : null;
+      if (want === cardState) return;
+      cardState = want;
+      offerCard?.remove();
+      offerCard = null;
+      if (!want) return;
+      const words = {
+        offer: [`Weave it into ${name}?`, `Your AI weaves ${name} words in at your level. The text goes to it through your account.`],
+        out: ["Sent to your AI", "It weaves it the next time it checks in. Then you can read it woven from here."],
+        coming: [`Woven into ${name}`, "On its way to this device."],
+        kept: [`Woven into ${name}`, `Your AI has woven it. Read it with the ${name} you know in its place.`],
+        failed: ["Your AI couldn't weave it", request?.result?.why ?? "It didn't say why."],
+      }[want];
+      const text = el("div", { class: "lx-offer-text" }, el("strong", {}, words[0]), el("span", {}, words[1]));
+      const close = ui.iconButton("cross", "Not now", {
+        onclick: () => {
+          put = true;
+          try {
+            localStorage.setItem(KEY, "no");
+          } catch {}
+          drawCard();
+        },
+      });
+      const asking = (label) => {
+        const go = ui.button(label, {
+          variant: "go",
+          block: true,
+          onclick: async () => {
+            go.disabled = true;
+            try {
+              await ask(); // draws again: the card says it's with your AI
+            } catch (error) {
+              go.disabled = false;
+              text.replaceChildren(el("strong", {}, "That didn't go"), el("span", {}, error.message));
+            }
+          },
+        });
+        return go;
+      };
+      const action = want === "offer" ? asking("Weave it with your AI") : want === "failed" ? asking("Ask again") : want === "kept" ? ui.button("Read it woven", { variant: "go", block: true, onclick: () => readWoven() }) : null;
+      offerCard = el("div", { part: "reader-offer", "data-state": want }, el("div", { class: "lx-offer-top" }, symbol("translate-q", { size: 30 }), text, close), ...(action ? [action] : []));
+      root.append(offerCard);
     };
     // Opening it woven, where you are.
     const readWoven = async () => {
@@ -3254,41 +3309,9 @@ export function openReader(host, { bookId = null, book: given = null, word: give
       };
     };
     draw();
-    if (request && (request.state === "waiting" || request.state === "taken" || request.state === "done")) follow();
-    // The offer at the foot: only while nothing's been asked, it's not woven, and it hasn't been put away for this text.
-    const KEY = `lx.weave-offer.${book.id}`;
-    let put = false;
-    try {
-      put = localStorage.getItem(KEY) === "no";
-    } catch {}
-    if (woven || kept || request || put) return;
-    const text = el("div", { class: "lx-offer-text" }, el("strong", {}, `Weave it into ${name}?`), el("span", {}, `Your AI weaves ${name} words in at your level. The text goes to it through your account.`));
-    const close = ui.iconButton("cross", "Not now", {
-      onclick: () => {
-        try {
-          localStorage.setItem(KEY, "no");
-        } catch {}
-        offerCard?.remove();
-        offerCard = null;
-      },
-    });
-    const go = ui.button("Weave it with your AI", {
-      variant: "go",
-      block: true,
-      onclick: async () => {
-        go.disabled = true;
-        try {
-          await ask();
-          text.replaceChildren(el("strong", {}, "Sent to your AI"), el("span", {}, "It weaves it the next time it checks in, and it opens woven here."));
-          go.remove();
-        } catch (error) {
-          go.disabled = false;
-          text.replaceChildren(el("strong", {}, "That didn't go"), el("span", {}, error.message));
-        }
-      },
-    });
-    offerCard = el("div", { part: "reader-offer" }, el("div", { class: "lx-offer-top" }, symbol("translate-q", { size: 30 }), text, close), go);
-    root.append(offerCard);
+    // Followed whenever it isn't woven yet, a request out or not: a weave can come with none (your AI weaving a text it added), and the card
+    // and Contents' row turn into the way in the moment this device keeps it.
+    follow();
   }
 
   /** Contents' chapters (each with how long it is), where you are among them, and About this book. */

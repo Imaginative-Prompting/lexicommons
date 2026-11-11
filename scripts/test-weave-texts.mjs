@@ -3,7 +3,7 @@
 //   same text replacing one no request has named;
 // - a weave request being made (claimWeaveText): only the account's own copy, of that text, within the hour, never two requests'
 //   at once; tie keeps it for the request, release puts it back;
-// - add_weave (addWeave): a language the books pipeline's judges haven't accepted, a weave into another language, one that fails
+// - add_weave (addWeave): a language not open to a person's own weave (weave-languages.generated.js), a weave into another language, one that fails
 //   the format's checks and one that fails the pipeline's split-forms check (Alice's accepted Dutch layer predates that rule, so it's
 //   the control that the check is wired) all refused with nothing written; a clean one relayed as a change of kind "weave" with its
 //   file served to the device as part "weave";
@@ -145,9 +145,10 @@ const nothingWritten = (before) => {
 };
 const state = () => ({ changes: changes().length, files: uploadsOf(USER, "text-in:%").length });
 
-await test("add_weave refuses, writing nothing: a language not yet accepted, a weave into another language, one failing the format's checks", async () => {
+await test("add_weave refuses, writing nothing: a language not open to a weave, a weave into another language, one failing the format's checks", async () => {
   const before = state();
-  await refused(() => T.addWeave(env, USER, "oauth:Claude", input({ language: "de" })), /isn't ready yet/);
+  // Japanese stays shut for a person's own weave (11 Nov 2026: its readings in a weave not yet seen in the reader).
+  await refused(() => T.addWeave(env, USER, "oauth:Claude", input({ language: "ja" })), /isn't ready yet/);
   await refused(() => T.addWeave(env, USER, "oauth:Claude", input({ weave: { ...WEAVE, to: "de" } })), /to must be "nl"/);
   // A text of yours is woven, never given help or a parallel layer.
   for (const kind of ["help", "parallel"]) await refused(() => T.addWeave(env, USER, "oauth:Claude", input({ weave: { ...WEAVE, kind } })), /weave\.kind must be "weave"/);
