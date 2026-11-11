@@ -104,6 +104,12 @@ node scripts/test-speech-browser.mjs      # the tag the browser's recognizer is 
                                           # every other its own locale), and Chrome's only for the languages Google
                                           # really knows (browser.js GOOGLE_KNOWS, measured; a new language isn't on it
                                           # until measured: ../docs/speech-2026-10-28-recognizer-languages) (exit 0 = pass)
+node scripts/test-recognizer-mic.mjs [<app dir>]   # who opens the microphone for the browser's recognizer (speech/browser.js takesTrack; speech.js listen),
+                                          # all stood in: a computer's Chrome on our track with the meter; Android's Chrome never (it recognizes through Android's
+                                          # own service: with our microphone open beside it a learner's meter moved and nothing was heard), started plain, its bars
+                                          # drawn from what the recognizer says it has (speech.js heardBars), flat until then; a listen on our track ending
+                                          # no-speech with a voice on our meter making the device open none from then on (a quiet room its control); Safari as
+                                          # ever; another copy's dir to see it fail on one from before. Only a real Android phone shows that it then hears (exit 0 = pass)
 node scripts/test-speech-support.mjs      # which recognizer Say it gets per language (speaking.js chooseEngine): Whisper only
                                           # for the languages it knows (speech.js WHISPER_LANGUAGES, held to the vendored
                                           # transformers.js list), else the browser's, else "unsupported" and why; Translate's
@@ -280,6 +286,10 @@ node scripts/test-streak-days.mjs         # the streak page's year and a day of 
                                           # a day's words and ideas only those known well at its end and not its start, with evidence that day, in its
                                           # language (a control that a rule asking only about the end fails); lessons by title, sessions, minutes, talks; the
                                           # parts the page slices it into adding up to the same, each unit's start asked first (exit 0 = pass)
+node scripts/test-install.mjs             # (also where progress is kept, shell/keep-rules.js: the lines an iPhone's browser, another app's browser and
+                                          # the Home Screen app opening empty get, once, in the first run and on the first summary; apps' own
+                                          # browsers by their user agents, an iPhone app's plain web view by its missing "Safari/"; and that
+                                          # those lines are gone once the server keeps an account's progress, /api/account/sync)
 node scripts/test-install.mjs             # Add to Home Screen (shell/install-guide.js): which device and browser a real user
                                           # agent is (iPhone/iPad Safari before and after iOS 26, Chrome, Firefox, Edge, apps'
                                           # own browsers, Android's, a computer's), and every device's steps (exit 0 = pass)
@@ -1034,6 +1044,12 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "settin
   # a Settings row's value is never cut (shell.css: one wider than its room wraps): every page of Settings at 320 and 390, each value's words against the
   # box that clips them; a planted value held to one line and too long caught first. --from <copy> serves another copy's files (the app from before
   # 10 Nov 2026 fails it at 320: Sound and speech's Voices lost its start). LOCAL only (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "woven why check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/woven-why-check.mjs http://localhost:<port> <outDir>
+  # a woven text says why it reads in English (read/reader.js whyEnglish; read/library.js; shelf.js wovenShare), new learners of Dutch on a phone:
+  # Read's woven story row says "Woven · 0% in Dutch for you"; opened, the page is woven with no Dutch word and one card at the foot says why,
+  # never two (a planted second card counted first); its cross puts it away for good on that text; a learner who knows a tenth of it or more
+  # never sees it, and the row says their share. LOCAL only, a copy whose shelf has a woven story (npm run local) (exit 0 = pass, 2 = no story)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "leave copy check" --kind parallel -- \
   node 08-lexicommons/app/scripts/leave-copy-check.mjs http://localhost:<port> <outDir> [--from <copy dir>] [--cpu 1,4]
   # a copy of something leaving never shows what the original hid (lx/motion.js copyInside): every frame of every step's, result's and summary's leave
@@ -1071,7 +1087,7 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "learn 
   # than the screen. --from <copy> serves another
   # copy's /js and /css (the app from before fails it). LOCAL only, path-nl and the word packs seeded (npm run local) (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "desk check" --kind parallel -- \
-  node 08-lexicommons/app/scripts/desk-check.mjs http://localhost:<port> <outDir> --base <copy dir> [--only <regex>] [--from <copy dir>]
+  node 08-lexicommons/app/scripts/desk-check.mjs http://localhost:<port> <outDir> --base <copy dir> [--only <regex>] [--from <copy dir>] [--screens <regex>]
   # tablets and computers (docs/design-system.md, "Tablets and computers"): Settings from the sidebar with no way back (1024, 1180 by touch, 1440;
   # a page inside it back to Settings, at 1440 none beside the menu and a page further in back to its own; at 820 the menu back to its tab); split
   # (1280 and 1440 by mouse: Settings' menu in a 320 px pane beside its page, Settings itself opening Account, the page's row lit as the sidebar's tab
@@ -1088,15 +1104,23 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "desk c
   # item, Everyday's words, Translate's sources, Terms, Privacy, and in the wide column Study, Explore, Knowledge, Your words and the topics: no line of
   # reading text over 72 characters, counted as read; a page's line under its title where its column starts); wide (1280 and 1440 by mouse: the grid
   # pages, Study's, Explore's and Knowledge's own, Your words and the topics, in a 960 column, games 4 a row, topics 6, words 4 a shelf; their lists
-  # and forms, Home and Settings at 720; no button on a grid page wider than with the column at 720, its rows and lists to the column's edge); phones
-  # (390 and 320: Home, Settings, Translate typed, two games asked and answered, Your words, Study's packs, Everyday's words, a book in the reader) pixel for pixel as --base's files draw them, both sides served
-  # from files, animations off, the clock and Math.random fixed, Tinta hidden, a pixel changed past raster rounding (8 of 255).
-  # --from <copy> serves another copy's /js and /css (the app from before fails it). LOCAL only (exit 0 = pass)
+  # and forms, Home and Settings at 720 at the one frame's start, every page's title at one place; every block button in a page and its cards 240–360
+  # at its box's start edge or centered in it (BUTTON_RULE); its rows and lists to the column's edge); read (1024, 1280 and 1440 by mouse, a new learner: the book up front beside its name and its way in, 380 × 240 at
+  # most, Weave your own in the first view, the lead shelf's covers one height, Your library's books six to a row at a book's size); reader (1280, 1440 and 1920 by mouse, a text book from the shelf: its two pages' first line and its chapter's
+  # heading under the top bar and where they were with the bar put away, the way back, the chevron, the page number and the gear at the book's edges, reading
+  # settings a panel over the gear and Contents one under its button, 400 px at most, no handle, Escape and a press on the page closing them); phones
+  # (390 and 320: Home, Settings, Translate typed, two games asked and answered, Your words, the Knowledge tab (its top without the pile's tiles, which every visit lays out anew, and This week) and the Ideas page, Study's packs, Everyday's words, Read, a book in the reader) pixel for pixel as --base's files draw them, both sides served
+  # from files, animations off, the clock and Math.random fixed, Tinta hidden, a pixel changed past raster rounding (8 of 255); a book's photo (on Read's
+  # shelf and in the reader) by its place, its size and its file's size, its own pixels left out (one photo scaled twice comes out a few hundred dots apart with the same files
+  # both sides), with a word and a photo each moved one pixel caught first.
+  # --from <copy> serves another copy's /js and /css (the app from before fails it); --screens <regex> compares only those of the phones' screens (to prove
+  # one: --only '^phones' --screens reader). LOCAL only (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "know grammar check" --kind parallel -- \
   node 08-lexicommons/app/scripts/know-grammar-check.mjs http://localhost:<port> <outDir> --persist-to <dir> [--only <regex>]
-  # the Knowledge tab's ideas (know/cards.js ideasCard): none before you've met one; then "Ideas you've met", a card after your words, a tile per pattern met with its
+  # the Knowledge tab's ideas (know/cards-more.js ideasCard): none before you've met one; then "Ideas you've met" after your words, a card per pattern met with its
   # picture and how well ("Getting there · 3 of 4 right"), the least known first, each opening the sheet an answer does (study/after-answer.js conceptSheet) with your
-  # own sentence; past four, Show all in place; 390 and 320 in dark and light; walk.mp4. LOCAL only, path-nl seeded (seed-local.mjs --default)
+  # own sentence; past four, the first four and See all N ideas, which opens the Ideas page (#know/ideas) with every one, its way back Knowledge; 390 and 320 in dark and
+  # light; walk.mp4. LOCAL only, path-nl seeded (seed-local.mjs --default)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "knowledge cards check" --kind parallel -- \
   node 08-lexicommons/app/scripts/knowledge-cards-check.mjs http://localhost:<port> <outDir> [--theme paper]   # the Knowledge page as big cards (know/cards.js), as a
   # learner four weeks in: your words, the map, this week, the ideas, over time, in order, and no row leading to another page; every word started a chip in one of
@@ -1655,10 +1679,12 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "i18n w
   # off the language list, which it must name). A state may `clear` localStorage keys before it loads and `press` through a step to
   # reach the next (the walk's header lists a state's fields); LOCAL only
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "first run check" --kind parallel -- \
-  node 08-lexicommons/app/scripts/first-run-check.mjs http://localhost:<port> <outDir>   # a first run on a phone: a brand-new account asked which language it speaks (the
-  # phone's own first, none assumed or kept before an answer), then what it wants to learn, over everything; Change going back; a phone whose languages it doesn't know
-  # given the plain list; a device that has said asked only what to learn, without that language; the list and its search; a press mid-wave choosing the language, Home in it, never asked again; a device with a language or an account that has studied never asked; the language you learn
-  # from (study/learning.js fromFor): English from the one you speak, every other language from English, never the one before;
+  node 08-lexicommons/app/scripts/first-run-check.mjs http://localhost:<port> <outDir>   # a first run on a phone: a brand-new account asked one thing, what it wants to
+  # learn, over everything (never which language it speaks, nothing kept or assumed about that: the app teaches from English alone, so the question went on
+  # 11 Nov 2026; interface-language.js speaks); a phone set to Spanish or to a language nobody knows given the same list; a device that said which it speaks,
+  # when that was asked, keeping its answer (not offered that language); the list and its search; a press mid-wave choosing the language, Home in it, never
+  # asked again; the language you learn from (study/learning.js fromFor): from English for a new learner whatever the phone's language, English from Spanish
+  # for a device that said Spanish, never the one before;
   # every other check starts past it (quiet-browser.mjs marks it done unless LX_FIRST_RUN is set); LOCAL only
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "language check" --kind parallel -- \
   node 08-lexicommons/app/scripts/language-check.mjs http://localhost:<port> <outDir>   # Settings → Language on a phone: with only English shipped, I speak from
@@ -1715,7 +1741,8 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "reader
   # layout; More on the word tapped in a flipped sentence; a highlight inside one painted with its ✦. Each failed before its fix; LOCAL only
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "explore check" --kind parallel -- \
   node 08-lexicommons/app/scripts/explore-check.mjs http://localhost:<port> <outDir> --persist-to <dir>   # Explore in
-  # Chrome: the home (languages and flags), filters, search, an item, Add pack, Like, Make my own copy, another
+  # Chrome: the home (languages and flags; no pack to add next until lesson 1 is done, none drawn in under the eye as it's done, there on
+  # coming back to the kept page), filters, search, an item, Add pack, Like, Make my own copy, another
   # language, the terms, Report, a taken-down pack of yours with its counter-notice, Yours, Share in Explore from a
   # pack's page, corrections on a pack's page (suggest, flag, like, report, accept, decline) and the community
   # corrections switch, requests (the home's way in, the board, asking for a pack and for a book, "me too", answering

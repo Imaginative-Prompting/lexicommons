@@ -1079,6 +1079,8 @@
   .lx-glass-day { color: var(--ink-3); font: 600 var(--size-14) / 1 var(--type-head); }
   .lx-glass-col[aria-current="date"] .lx-glass-day { color: var(--ink-1); }
   .lx-week-new { display: grid; gap: var(--space-2); }
+  /* What the week is made of, its new words and its way on (cards-more.js weekCard): the card's own parts here, a column on a computer's board. */
+  .lx-week-side { display: contents; }
   .lx-mini-tiles { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   [data-part="mini-tile"] { position: relative; display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 32px; padding: 0 11px 3px; border: 0; border-radius: 9px; background: var(--tile-paint); color: var(--tile-ink); box-shadow: inset 0 -3px 0 var(--tile-deep); font: 700 15px / 1 var(--type-head); white-space: nowrap; cursor: pointer; -webkit-tap-highlight-color: transparent; }
   [data-part="mini-tile"]::before { content: ""; position: absolute; inset: -6px -2px; } /* a 44 px reach */
@@ -1183,4 +1185,36 @@
      text needs it, never past the screen. Its lines are spaced by its own size (the button's 20px would overlap them at twice the
      size), with room above and below; one line still stands at the button's own height. */
   [data-part="button"].lx-know-wrap { white-space: normal; text-wrap: balance; line-height: 1.25; padding-block: var(--space-2); }
+
+  /* A tablet's 44 px (docs/design-system.md, "Tablets and computers"; components.css's rule for small controls: two of them at least their
+     two reaches apart): a mini tile is 32 px tall and reaches 6 each way, so its rows stand 12 px apart there, not a phone's 8, and no tile
+     takes the reach of the one over it (This week's new words measured 40 px tall by touch at 744, 820 and 1180). */
+  @media (min-width: 700px) { .lx-mini-tiles { row-gap: 12px; } }
+
+  /* ---------- The Knowledge page on a computer (docs/design-system.md, "Tablets and computers") ----------
+     The ideas two to a row wherever the tabs are a sidebar (the tab's four and the Ideas page's every one: a card there is a phone's width
+     again), one left over at the end taking its row. */
+  @media (min-width: 1024px) {
+    .lx-idea-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+    .lx-idea-cards > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+    [data-part="idea-card"] { align-content: start; }
+  }
+  /* From 1280, in the frame (the app's wide column: shell/main.js WIDE_PAGES), the tab's cards are a board, not a phone's column. Its first
+     row is what the page draws before its first frame (know/page.js): the pile's card about a phone's width, so the pile fills it as it
+     does there (never under 288 px, the smallest phone's card), and This week beside it. Everything after takes the frame's width. */
+  @media (min-width: 1280px) {
+    [data-part="app"][data-column="wide"] .lx-know-board { display: grid; grid-template-columns: minmax(288px, 3fr) minmax(0, 7fr); column-gap: var(--space-6); }
+    [data-part="app"][data-column="wide"] .lx-know-board > * { grid-column: 1 / -1; min-width: 0; }
+    [data-part="app"][data-column="wide"] .lx-know-board > :is(.lx-words-card, [data-part="know-card"][data-card="words"]) { grid-column: 1; }
+    /* The card is as tall as its row (This week's lines can run a little past it): the pile stays on its floor, the room over it. */
+    [data-part="app"][data-column="wide"] .lx-know-board > .lx-words-card [data-part="word-pile"] { margin-top: auto; }
+    [data-part="app"][data-column="wide"] .lx-know-board > [data-card="week"] { grid-column: 2; }
+    /* This week in two columns of its own: its number, its glasses and their scale at its start (a little over half, so the glasses keep a
+       gap between them at 960), what they're made of, the new words and its button beside them (.lx-week-side). The first three float, so
+       each side is as tall as its own parts and neither spaces the other out. */
+    [data-part="app"][data-column="wide"] .lx-know-board > [data-card="week"] { display: flow-root; --week-gap: var(--space-5); --week-start: 54%; }
+    [data-part="app"][data-column="wide"] .lx-know-board > [data-card="week"] > .lx-know-h { margin-bottom: var(--space-4); }
+    [data-part="app"][data-column="wide"] .lx-know-board > [data-card="week"] > :is(.lx-know-stat-block, [data-part="week-glasses"], .lx-know-caption) { float: inline-start; clear: inline-start; width: calc(var(--week-start) - var(--week-gap) / 2); margin-bottom: var(--space-4); }
+    [data-part="app"][data-column="wide"] .lx-know-board > [data-card="week"] > .lx-week-side { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; margin-inline-start: calc(var(--week-start) + var(--week-gap) / 2); }
+  }
 }

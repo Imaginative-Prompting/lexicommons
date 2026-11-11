@@ -41,6 +41,8 @@ const plural = (n, one, many = `${one}s`) => `${n.toLocaleString()} ${n === 1 ? 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const KIND_WORD = { word: "word", pattern: "pattern", phrase: "phrase" };
+// What Tab stops at in a card (for keeping the focus through a card's redraw: knowledgePage's put).
+const CONTROLS = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 // Find any word, pattern or phrase: what you type, matched as you type, each result opening its page.
 function searchBox(lang) {
@@ -157,8 +159,9 @@ function knowledgePage(page, { asTab, focus = null }) {
   // The shell keeps a new page unseen until `ready` (400 ms at most), then puts it where `place` says in its first frame: so whatever the first
   // screen shows is there in it, at its final height, and nothing comes into it after. Opened at a card (a link), every card: the pile is
   // off the screen, so nothing of it waits on them. Opened at its top, down to This week, the card under the pile on the first screen; the
-  // rest come in below it, off the screen, after the pile.
-  const upTo = focus ? NAMES.length - 1 : NAMES.indexOf("week");
+  // rest come in below it, off the screen, after the pile. On a computer's board (know.css, from 1280: the pile beside This week on one row)
+  // the ideas are on the first screen too.
+  const upTo = focus ? NAMES.length - 1 : NAMES.indexOf(globalThis.matchMedia?.("(min-width: 1280px)").matches ? "ideas" : "week");
   let composed;
   const ready = new Promise((resolve) => (composed = resolve));
   const composing = () => Boolean(composed);
@@ -173,10 +176,18 @@ function knowledgePage(page, { asTab, focus = null }) {
   let slots = null;
   let wordsOf = "";
   let drawing = 0;
+  // A card drawn again in place (the packs' notes or the word list arriving bring one up to date) keeps the focus where it was: on the same
+  // control in the new card, by its place among the card's own. Left to itself the focus went with the old nodes, and the next Tab started
+  // again at the card's first control: back up the page for someone walking it by keyboard.
+  const controlsOf = (node) => [...(node.matches?.(CONTROLS) ? [node] : []), ...node.querySelectorAll(CONTROLS)];
   const put = (name, node) => {
     const old = slots[name];
     const next = node ?? document.createComment(name);
-    if (old !== next) old.replaceWith(next);
+    if (old !== next) {
+      const at = old.nodeType === Node.ELEMENT_NODE && old.contains(document.activeElement) ? controlsOf(old).indexOf(document.activeElement) : -1;
+      old.replaceWith(next);
+      if (at >= 0 && next.nodeType === Node.ELEMENT_NODE) controlsOf(next)[at]?.focus({ preventScroll: true });
+    }
     slots[name] = next;
   };
   // The way forward, when something's slipping, over the cards: known before the first frame (a read of the word index, stopping at the first

@@ -556,7 +556,13 @@ const KEPT_TABS = new Set(["today", "study", "read", "ai", "know", "explore", "s
 // and Knowledge's own pages, Your words, the days and the topics. Their lists and forms (Your packs, the path, a topic, a pack's page, Browse,
 // Add your own) keep the 720 column: a list's switches sat 900 px from their names at 960 (the director, 9 Nov 2026). The column's move
 // between the two rides the page's push.
-const WIDE_PAGES = new Set(["study", "know", "know/words", "know/days", "explore", "explore/topics"]);
+// Read's own page too (its lists, the shelf's grid and the paste form stay 720): the book up front and Weave your own in one row, the shelf
+// across the frame (desk-read, 11 Nov 2026).
+const WIDE_PAGES = new Set(["study", "know", "know/words", "know/days", "explore", "explore/topics", "read"]);
+// The pages that are one block centered as a whole on a wide screen (data-column="center": shell.css, 1280 and up), their way back with them,
+// not a 720 column at the frame's start: the path (Where you are), whose winding path sat left of the middle of its ground (the director,
+// 11 Nov 2026).
+const CENTER_PAGES = new Set(["study/path"]);
 // Settings on a wide screen (1280 and up, the sidebar's): its menu in a pane of its own beside the page it opened (data-split="settings" on the
 // app: shell.css), its row lit, as a computer's settings are. Settings itself opens its first page (Account) there: its menu alone would be the
 // pane twice. The menu's way back to the menu is the pane beside it, so a first page has no back pill; a page further in keeps its own.
@@ -899,7 +905,9 @@ function render(force = false, { kind = null, from = nav.i, replaced = false, sy
     }
     state.view = entry;
     // (The page under a session or a book: its own.)
-    if (WIDE_PAGES.has(overPath ? "study/path" : inSession ? "study" : inBook ? "read" : inTranslate ? "today" : [tab, ...rest].join("/"))) app.setAttribute("data-column", "wide");
+    const column = overPath ? "study/path" : inSession ? "study" : inBook ? "read" : inTranslate ? "today" : [tab, ...rest].join("/");
+    if (WIDE_PAGES.has(column)) app.setAttribute("data-column", "wide");
+    else if (CENTER_PAGES.has(column)) app.setAttribute("data-column", "center");
     else app.removeAttribute("data-column");
     placeAside(tab === "settings" && SPLIT.matches, rest);
     setHeader(entry.view.title, entry.view.back);

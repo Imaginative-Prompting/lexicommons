@@ -37,7 +37,7 @@
 //     a screen or raise the tries to make a run pass; a difference that stays is the code's, so find it.
 // --from <copy> serves another copy's /js and /css for everything but the phones' --base side (the app from before fails settings and
 // translate). LOCAL only: it signs up accounts with a virtual passkey.
-// Usage: node scripts/desk-check.mjs http://localhost:<port> <outDir> --base <copy dir> [--only <regex>] [--from <copy dir>]   (exit 0 = pass)
+// Usage: node scripts/desk-check.mjs http://localhost:<port> <outDir> --base <copy dir> [--only <regex>] [--from <copy dir>] [--screens <regex>]   (exit 0 = pass)
 import { chromium } from "./quiet-browser.mjs";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
@@ -53,6 +53,8 @@ const opt = (name) => (argv.includes(`--${name}`) ? argv[argv.indexOf(`--${name}
 const ONLY = opt("only") ? new RegExp(opt("only")) : null;
 const FROM = opt("from") ? resolve(opt("from")) : null;
 const BEFORE = opt("base") ? resolve(opt("base")) : null;
+// The phones stage's screens to compare, for proving one (--screens reader): the others are left out, and the stage says so.
+const SCREENS = opt("screens") ? new RegExp(opt("screens")) : null;
 // This copy: the phones' side to compare, served the same way as --base's (from the files, not the server), so only the files differ.
 const HERE = resolve(fileURLToPath(new URL("..", import.meta.url)));
 if (!/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(BASE_URL ?? "") || !OUT || !BEFORE || !existsSync(join(BEFORE, "public"))) {
@@ -508,15 +510,19 @@ async function steady(page) {
 }
 
 const noise = []; // the edges drawn apart that were let pass, said in the stage's result
-/** Two pictures the same, pixel for pixel; else how many differ, and a picture of where. */
-async function samePixels(a, b, name) {
+/** Two pictures the same, pixel for pixel; else how many differ, and a picture of where. skip: boxes in the pictures' own pixels ({ x, y, r, b })
+ *  left out (a book's photo, compared by its place and size instead: photosOf). */
+async function samePixels(a, b, name, skip = []) {
   const [one, two] = await Promise.all([sharp(a).raw().toBuffer({ resolveWithObject: true }), sharp(b).raw().toBuffer({ resolveWithObject: true })]);
   if (one.info.width !== two.info.width || one.info.height !== two.info.height) return `${name}: ${one.info.width}×${one.info.height} against ${two.info.width}×${two.info.height}`;
   const channels = one.info.channels;
   const marks = Buffer.alloc(one.info.width * one.info.height);
+  const out = skip.length ? Buffer.alloc(one.info.width * one.info.height) : null;
+  for (const box of skip) for (let y = Math.max(0, box.y); y < Math.min(one.info.height, box.b); y++) out.fill(1, y * one.info.width + Math.max(0, box.x), y * one.info.width + Math.min(one.info.width, box.r));
   let differ = 0;
   let most = 0;
   for (let i = 0, p = 0; i < one.data.length; i += channels, p++) {
+    if (out?.[p]) continue;
     for (let c = 0; c < channels; c++) {
       const by = Math.abs(one.data[i + c] - two.data[i + c]);
       most = Math.max(most, by);
@@ -556,6 +562,35 @@ async function weeksIn(page) {
   await page.waitForTimeout(1500);
 }
 const MAIN_TABS = ["#today", "#study", "#explore", "#know"];
+// A computer's block button (components.css, frame.md rule 4, 11 Nov 2026): on the page itself and in its cards (not a session, a sheet, a
+// dialog or the reader, whose boxes are blocks of their own) as wide as its words, 240 to 360 px (narrower only where its box is), at its box's
+// start edge or centered in it. Each fault said with the button's words.
+const BUTTON_RULE = () => {
+  const view = document.querySelector('[data-part="page"] > .lx-view:not([data-waiting])');
+  const out = [];
+  for (const b of view?.querySelectorAll('[data-part="button"][data-block]') ?? []) {
+    if (!b.checkVisibility() || b.closest('[data-part="session"], [data-part="sheet"], [role="dialog"], [data-part="reader"]')) continue;
+    const r = b.getBoundingClientRect();
+    const box = b.parentElement;
+    const s = getComputedStyle(box);
+    const br = box.getBoundingClientRect();
+    const start = br.left + parseFloat(s.paddingLeft) + parseFloat(s.borderLeftWidth);
+    const end = br.right - parseFloat(s.paddingRight) - parseFloat(s.borderRightWidth);
+    const name = `"${b.textContent.trim().replace(/\s+/g, " ").slice(0, 28)}"`;
+    if (r.width > 361) out.push(`${name} ${Math.round(r.width)} wide, past 360`);
+    if (r.width < Math.min(240, end - start) - 1) out.push(`${name} ${Math.round(r.width)} wide, under 240`);
+    const alone = [...box.children].filter((c) => c.matches('[data-part="button"]') && c.checkVisibility()).length === 1;
+    // Where its box lays out as a column (block, a flex column, a one-track grid); a box laid out as a row (a one-line card with the button
+    // at its end: Explore's lessons card) is that page's own design.
+    const column = /^(block|flow-root)$/.test(s.display) || (/flex/.test(s.display) && s.flexDirection.startsWith("column")) || (/grid/.test(s.display) && s.gridTemplateColumns.trim().split(/\s+/).length === 1);
+    if (alone && column && Math.abs(r.left - start) > 1 && Math.abs((r.left + r.right) / 2 - (start + end) / 2) > 1) out.push(`${name} neither at its box's start edge nor centered in it`);
+  }
+  return out;
+};
+const TITLE_X = () => {
+  const t = document.querySelector('[data-part="app-title"]');
+  return t && t.checkVisibility() ? Math.round(t.getBoundingClientRect().left) : null;
+};
 // The pages in the wide column at 1280 and up (shell/main.js WIDE_PAGES): the grids. Their lists and forms, Home and Settings keep the 720.
 const WIDE_GRIDS = [["#study", "Study"], ["#explore", "Explore"], ["#know", "Knowledge"], ["#know/words", "Your words"], ["#explore/topics", "the topics"]];
 
@@ -918,9 +953,11 @@ const READING_LINES = () => {
     const widest = Math.max(0, ...[...lines.values()].map((l) => l.right - l.left));
     out.push({ chars: Math.round(widest / avg), text: text.slice(0, 40) });
   }
-  // A page's line under its title, against its column.
+  // A page's line under its title, against its column: the page's, or on Knowledge's board (know.css, from 1280: the pile's card beside This
+  // week, itself in two columns) the card's own, or This week's side where that's a column (a box of its own; on a phone it draws none).
   const column = document.querySelector('[data-part="app"] > [data-part="page"] .lx-view')?.getBoundingClientRect();
-  const intros = [...document.querySelectorAll(".lx-page-head > p, .lx-packs-line, .lx-know-caption")].filter((n) => n.getClientRects().length).map((n) => ({ text: n.textContent.trim().slice(0, 30), off: column ? Math.round(n.getBoundingClientRect().left - column.left) : null }));
+  const columnOf = (n) => [n.closest(".lx-week-side"), n.closest('[data-part="know-section"]')].find((at) => at?.getClientRects().length)?.getBoundingClientRect() ?? column;
+  const intros = [...document.querySelectorAll(".lx-page-head > p, .lx-packs-line, .lx-know-caption")].filter((n) => n.getClientRects().length).map((n) => ({ text: n.textContent.trim().slice(0, 30), off: column ? Math.round(n.getBoundingClientRect().left - columnOf(n).left) : null }));
   return { longest: out.sort((a, b) => b.chars - a.chars)[0] ?? null, intros };
 };
 await stage("measure: at 1024, 1280 and 1440 by mouse, no line of reading text over 72 characters on the pages the walk found long (Study's packs, a pack's page, an Explore item, Everyday's words, Translate's sources, Terms, Privacy) nor, in the wide column, on Study, Explore, Knowledge, Your words and the topics; a page's line under its title where its column starts", async () => {
@@ -1003,26 +1040,15 @@ await stage("wide: at 1280 and 1440 by mouse, the grid pages (Study's, Explore's
     try {
       await weeksIn(page);
       let rowsSeen = 0;
+      const titles = [];
       const column = () => page.evaluate(() => Math.round(document.querySelector('[data-part="page"] > .lx-view:not([data-waiting])')?.getBoundingClientRect().width ?? -1));
       for (const [route, name] of WIDE_GRIDS) {
         await go(page, route);
         await page.waitForTimeout(600);
         const width = await column();
         if (width !== 960) faults.push(`${size.width} ${name}: its column ${width} wide, not 960`);
-        const capped = await page.evaluate(() => {
-          // Each button on the page in view: [key, width].
-          const read = () =>
-            [...document.querySelectorAll('[data-part="page"] > .lx-view:not([data-waiting]) [data-part="button"]')]
-              .filter((node) => node.checkVisibility() && node.getBoundingClientRect().width > 0)
-              .map((node, i) => [`${node.dataset.part} "${node.textContent.trim().replace(/\s+/g, " ").slice(0, 28)}" (${i})`, node.getBoundingClientRect().width]);
-          const wide = read();
-          const app = document.querySelector('[data-part="app"]');
-          app.removeAttribute("data-column");
-          const narrow = new Map(read());
-          app.setAttribute("data-column", "wide");
-          return wide.filter(([key, w]) => narrow.has(key) && w > narrow.get(key) + 1).map(([key, w]) => `${key} ${Math.round(w)} wide, ${Math.round(narrow.get(key))} in the 720 column`);
-        });
-        for (const one of capped) faults.push(`${size.width} ${name}: ${one}`);
+        for (const one of await page.evaluate(BUTTON_RULE)) faults.push(`${size.width} ${name}: ${one}`);
+        titles.push([name, await page.evaluate(TITLE_X)]);
         const spans = await page.evaluate(() => {
           const view = document.querySelector('[data-part="page"] > .lx-view:not([data-waiting])');
           const right = view.getBoundingClientRect().right;
@@ -1060,7 +1086,13 @@ await stage("wide: at 1280 and 1440 by mouse, the grid pages (Study's, Explore's
         await page.waitForTimeout(600);
         const width = await column();
         if (width !== 720) faults.push(`${size.width} ${name}: its column ${width} wide, not 720`);
+        for (const one of await page.evaluate(BUTTON_RULE)) faults.push(`${size.width} ${name}: ${one}`);
+        // (The path is one block centered as a whole, its title with it: main.js CENTER_PAGES.)
+        if (route !== "#study/path") titles.push([name, await page.evaluate(TITLE_X)]);
       }
+      // One frame: every page's title starts at the same place, a grid page's and a list's alike (shell.css --lx-frame).
+      const xs = new Set(titles.filter(([, x]) => x !== null).map(([, x]) => x));
+      if (xs.size !== 1) faults.push(`${size.width}: the title moves between pages: ${titles.map(([n, x]) => `${n} ${x}`).join(", ")}`);
       assert(rowsSeen >= 2, `${size.width}: only ${rowsSeen} rows straight in a grid page's column: Explore's All packs and its language row missing`);
       assert(!errors.length, `${size.width}: page errors: ${errors.join(" | ")}`);
       said.push(`${size.width}: games ${rows.games}, topics ${rows.topics}, words ${rows.words} a row, ${rowsSeen} rows to the column's edge`);
@@ -1069,7 +1101,7 @@ await stage("wide: at 1280 and 1440 by mouse, the grid pages (Study's, Explore's
     }
   }
   assert(!faults.length, faults.join("\n"));
-  return `the grid pages 960, the rest 720, no button past its 720 width, the rows the column's width; ${said.join("; ")}`;
+  return `the grid pages 960, the rest 720 at the frame's start, every title at one place, every block button 240–360 at its box's start or centered, the rows the column's width; ${said.join("; ")}`;
 });
 
 // Settings on a wide screen (1280 and up: shell/main.js SPLIT, shell.css data-split): its menu in a pane of its own beside the page it opened, as a
@@ -1089,7 +1121,13 @@ await stage("split: at 1280 and 1440 by mouse, Settings' menu in a pane beside i
       const title = (root) => r(root?.querySelector('[data-part="page-title"], h1'));
       return {
         hash: location.hash,
-        pane: pane && pane.checkVisibility() ? { left: Math.round(r(pane).left), right: Math.round(r(pane).right), width: Math.round(r(pane).width), title: Math.round(title(pane)?.top ?? -1) } : null,
+        // The pane's content box (its rows' rounded outset sits in its padding, shell.css: their text is where the pane's is).
+        pane: pane && pane.checkVisibility() ? (() => {
+          const s = getComputedStyle(pane);
+          const left = r(pane).left + parseFloat(s.paddingLeft);
+          const right = r(pane).right - parseFloat(s.paddingRight);
+          return { left: Math.round(left), right: Math.round(right), width: Math.round(right - left), title: Math.round(title(pane)?.top ?? -1) };
+        })() : null,
         view: view ? { left: Math.round(r(view).left), width: Math.round(r(view).width), title: Math.round(title(view)?.top ?? -1) } : null,
         lit: pane ? [...pane.querySelectorAll('[aria-current="page"]')].map((node) => node.getAttribute("href")) : [],
       };
@@ -1181,13 +1219,236 @@ await stage("split: at 1280 and 1440 by mouse, Settings' menu in a pane beside i
 });
 
 const PHONE_GAMES = ["see", "fill"];
+// The Knowledge tab on a phone, for the phones stage: its top (the pile's card), This week brought to the top (its glasses, what it's made of,
+// its new words and its button, which a computer's board lays out in two columns), and the Ideas page. Two things on the tab aren't in the
+// pictures, each holding its place: the pile's own tiles (every visit lays them out anew from a seed of its own, know/cards.js freshSeed,
+// crypto's, so two sides never match; the pile itself is pile-drop-check's), and the tab's idea cards (each is built a little at a time
+// before it's on the page, and its sentence is sized to its line only if no frame passes in between, study/concept-picture.js, so the same
+// files can draw it a step apart: 11 Nov 2026, one side at 1.05 on one line, the other at 1.1 on two). The Ideas page builds its cards at
+// once, and has them.
+const KNOW_BOARD = '[data-part="page"]:not([data-ghost]) .lx-know-board';
+const NO_PILE = '.lx-pile-canvas, .lx-know-board [data-card="ideas"] { visibility: hidden !important; }';
+const toKnowCard = async (page, card) => {
+  await page.evaluate((sel) => document.querySelector(sel)?.scrollIntoView({ block: "start" }), `${KNOW_BOARD} [data-card="${card}"]`);
+  await page.waitForTimeout(800);
+};
+const KNOW_SCREENS = [
+  ["know", async (page) => (await page.addStyleTag({ content: NO_PILE }), await go(page, "#know"), await page.waitForSelector(`${KNOW_BOARD}[data-drawn]`, { timeout: 30_000 }), await page.waitForTimeout(1500))],
+  ["know-week", (page) => toKnowCard(page, "week")],
+  ["ideas", async (page) => (await go(page, "#know/ideas"), await page.waitForTimeout(1500))],
+];
+// A book's photos on the reader's screen: each one shown (what's under its middle is the photo itself, so one under a page's cover doesn't count),
+// by where it is, how large it's drawn and its file's own size. Their own pixels are left out of the pixel comparison: one photo scaled
+// twice comes out a few dots apart with the very same files both sides (8 Nov 2026: 347 pixels inside the photo at 390; 11 Nov: 126 to 347 on
+// every lane's landing, a different count each run, never outside the photo), so a photo is compared by its place and size, and everything
+// around it pixel for pixel. The stage proves both halves each run: a word moved one pixel and a photo moved one pixel are each caught.
+// The screens with photos: where its photos are, and a word of its own to move for the control. Read's shelf has the same photos as covers.
+const PHOTO_SCREENS = {
+  reader: { photos: '[data-part="reader"] img', word: '[data-part="reader"] > [data-part="reader-text"] .lx-w' },
+  read: { photos: '[data-part="page"]:not([data-ghost]) [data-part="book-cover"] img:not([data-part="language-flag"])', word: '[data-part="page"]:not([data-ghost]) :is([data-part="continue-card"] h2, [data-part="section-title"])' },
+};
+const photosOf = (page, selector = PHOTO_SCREENS.reader.photos) =>
+  page.evaluate((selector) =>
+    [...document.querySelectorAll(selector)]
+      .map((img) => ({ img, box: img.getBoundingClientRect() }))
+      .filter(({ img, box }) => {
+        if (!box.width || !box.height || box.right <= 0 || box.left >= innerWidth || box.bottom <= 0 || box.top >= innerHeight) return false;
+        const at = document.elementFromPoint(Math.min(innerWidth - 1, Math.max(0, box.left + box.width / 2)), Math.min(innerHeight - 1, Math.max(0, box.top + box.height / 2)));
+        return Boolean(at) && (img.closest('[data-part="reader-picture"], [data-part="book-cover"]') ?? img).contains(at);
+      })
+      .map(({ img, box }) => ({
+        loaded: img.complete && img.naturalWidth > 0,
+        file: [img.naturalWidth, img.naturalHeight],
+        at: [box.left, box.top, box.width, box.height].map((n) => Math.round(n * 100) / 100),
+        // In the picture's pixels, a pixel wider all round (the edge it's blended into).
+        skip: { x: Math.floor(box.left * devicePixelRatio) - 1, y: Math.floor(box.top * devicePixelRatio) - 1, r: Math.ceil(box.right * devicePixelRatio) + 1, b: Math.ceil(box.bottom * devicePixelRatio) + 1 },
+      })), selector);
+const placed = (photos) => JSON.stringify(photos.map((photo) => [photo.loaded, photo.file, photo.at]));
+/** How many pixels inside these boxes two pictures draw apart (past raster rounding): what leaving a photo's own pixels out left out, said in the stage's result. */
+async function apartInside(a, b, boxes) {
+  const [one, two] = await Promise.all([sharp(a).raw().toBuffer({ resolveWithObject: true }), sharp(b).raw().toBuffer({ resolveWithObject: true })]);
+  if (one.info.width !== two.info.width || one.info.height !== two.info.height) return -1;
+  const { width, height, channels } = one.info;
+  let apart = 0;
+  for (const box of boxes)
+    for (let y = Math.max(0, box.y); y < Math.min(height, box.b); y++)
+      for (let x = Math.max(0, box.x); x < Math.min(width, box.r); x++) {
+        const i = (y * width + x) * channels;
+        for (let c = 0; c < channels; c++)
+          if (Math.abs(one.data[i + c] - two.data[i + c]) > PIXEL_NOISE) {
+            apart++;
+            break;
+          }
+      }
+  return apart;
+}
 const AGAIN = new Set(["home", "settings", "translate"]);
 // Both versions side by side, a screen at a time: what each did to get there, then a picture of each once settled. A screen that differs is
 // pictured again on both sides, up to three times, a second apart: a moment caught differently (a face, a flag, a sound) clears, a change
 // of the code's stays.
-await stage("phones: Home, Settings, Translate, two games (question and result), Your words, Study's packs, Everyday's words and a book in the reader at 390 and 320, pixel for pixel as the app was (--base)", async () => {
+// ---------- Read on a computer ----------
+// From 1024 px (read.css, "on a computer"): the book up front sits beside its name and its way in at a book's size (it was a phone's page
+// across the column: a 720 × 343 picture over the button, the window's whole first view), so Weave your own is in the first view; the lead
+// shelf is a shelf, its covers one height, none wider than a wide page; Your library's books are six to a row.
+await stage("read: at 1024, 1280 and 1440 by mouse the book up front sits beside its name and its way in at a book's size with Weave your own in the first view, the lead shelf's covers are one height, and Your library's books are six to a row", async () => {
+  const seen = [];
+  for (const size of [{ width: 1024, height: 768 }, { width: 1280, height: 800 }, { width: 1440, height: 900 }]) {
+    const { context, page, errors } = await device(size);
+    try {
+      await go(page, "#read");
+      await page.waitForSelector('[data-part="page"]:not([data-ghost]) [data-part="continue-card"]', { timeout: 30_000 });
+      await page.waitForTimeout(1800);
+      const now = await page.evaluate(() => {
+        const r = (node) => {
+          if (!node || !node.checkVisibility({ visibilityProperty: true })) return null;
+          const b = node.getBoundingClientRect();
+          return { x: Math.round(b.left), y: Math.round(b.top), w: Math.round(b.width), h: Math.round(b.height), r: Math.round(b.right), b: Math.round(b.bottom) };
+        };
+        const live = document.querySelector('[data-part="page"]:not([data-ghost])');
+        const card = live.querySelector('[data-part="continue-card"]');
+        const cover = card.querySelector(".lx-continue-top > :first-child");
+        return {
+          column: r(live.querySelector(".lx-library")),
+          card: r(card),
+          cover: r(cover.querySelector('[data-part="book-cover"]') ?? cover),
+          text: r(card.querySelector(".lx-continue-text")),
+          button: r(card.querySelector(':scope > [data-part="button"]')),
+          weave: r(live.querySelector('[data-part="weave-your-own"] [data-part="section-title"], [data-part="weave-your-own"] h2, [data-part="weave-your-own"]')),
+          shelf: [...live.querySelectorAll('.lx-shelf-grid > [data-part="book-tile"]')].map((tile) => r(tile.querySelector('[data-part="book-cover"]'))).filter(Boolean),
+          view: innerHeight,
+        };
+      });
+      const at = `${size.width}: ${JSON.stringify(now)}`;
+      await page.screenshot({ path: join(OUT, `read-${size.width}.png`) });
+      assert(now.cover && now.text && now.button, `${size.width}: Read has no book up front\n${at}`);
+      assert(now.cover.h <= 240 && now.cover.w <= 380, `${size.width}: the book up front is ${now.cover.w} × ${now.cover.h}, larger than a book (380 × 240 at most)\n${at}`);
+      assert(now.text.x >= now.cover.r && now.text.y < now.cover.b && now.text.b > now.cover.y, `${size.width}: its name (${now.text.x}, ${now.text.y}–${now.text.b}) isn't beside its cover (to ${now.cover.r}, ${now.cover.y}–${now.cover.b})\n${at}`);
+      assert(Math.abs(now.button.x - now.text.x) <= 2 && now.button.y >= now.text.b && now.button.w <= 360, `${size.width}: its way in (${now.button.x}, ${now.button.w} wide) isn't under its name (${now.text.x}), a button's width\n${at}`);
+      assert(now.card.h <= 260, `${size.width}: the book up front takes ${now.card.h} px of the page\n${at}`);
+      assert(now.weave && now.weave.y < now.view - 80, `${size.width}: Weave your own (${now.weave?.y}) isn't in the window's first view (${now.view})\n${at}`);
+      assert(now.shelf.length >= 1 && now.shelf.every((cover) => Math.abs(cover.h - now.shelf[0].h) <= 1 && cover.h <= 140 && cover.w <= 300 && cover.r <= now.column.r + 1), `${size.width}: the lead shelf's covers aren't one height (140 at most), 300 wide at most, in the column: ${JSON.stringify(now.shelf)}`);
+      // Your library, with the book just opened in it.
+      await page.locator('[data-part="page"]:not([data-ghost]) [data-part="continue-card"] > [data-part="button"]').click();
+      await page.waitForSelector('[data-part="reader"]', { timeout: 30_000 });
+      await page.waitForTimeout(1500);
+      await go(page, "#read/library");
+      await page.waitForSelector('[data-part="page"]:not([data-ghost]) .lx-read-library-all [data-part="book-tile"]', { timeout: 20_000 });
+      await page.waitForTimeout(800);
+      const library = await page.evaluate(() => {
+        const grid = document.querySelector('[data-part="page"]:not([data-ghost]) .lx-read-library-all [data-part="book-list"]');
+        const covers = [...grid.querySelectorAll('[data-part="book-cover"]')].map((cover) => cover.getBoundingClientRect());
+        return { columns: getComputedStyle(grid).gridTemplateColumns.split(" ").length, widest: Math.round(Math.max(...covers.map((b) => b.width))), tallest: Math.round(Math.max(...covers.map((b) => b.height))) };
+      });
+      await page.screenshot({ path: join(OUT, `read-${size.width}-library.png`) });
+      assert(library.columns === 6 && library.widest <= 250 && library.tallest <= 200, `${size.width}: Your library isn't six books to a row at a book's size: ${JSON.stringify(library)}`);
+      assert(!errors.length, `${size.width}: page errors: ${errors.join(" | ")}`);
+      seen.push(`${size.width}: the book up front ${now.cover.w} × ${now.cover.h}, its name at ${now.text.x}, Start ${now.button.w} wide, Weave your own at ${now.weave.y} of ${now.view}; shelf covers ${now.shelf[0].h} tall; library ${library.columns} a row, covers ${library.widest} wide at most`);
+    } finally {
+      await context.close();
+    }
+  }
+  return seen.join("; ");
+});
+
+// ---------- the reader on a computer ----------
+// From 1024 px the book's own things keep to the book (reader.css, "on a computer"). A text's two pages start under the top bar: until 11 Nov 2026
+// the bar lay over both pages' first lines (a chapter's heading, the opening of a text of your own) until it was put away, and putting it away
+// still moves no word. The bar's buttons, the page number and the gear sit at the book's edges, not the window's corners (400 px from the page
+// at 1920). Its sheets are panels at its end edge with no handle to drag: reading settings over the gear, Contents under its own button.
+await stage("reader: at 1280, 1440 and 1920 by mouse a text's two pages start under the top bar and stay put when it's put away, the bar's buttons, the page number and the gear keep to the book's edges, and its sheets are panels at its end edge (settings over the gear, Contents under its button)", async () => {
+  const seen = [];
+  for (const size of [{ width: 1280, height: 800 }, { width: 1440, height: 900 }, { width: 1920, height: 1080 }]) {
+    const { context, page, errors } = await device(size);
+    try {
+      await go(page, "#read");
+      await page.waitForTimeout(1200);
+      const tile = page.locator('[data-part="page"]:not([data-ghost]) [data-part="book-tile"]', { hasText: /Alice/ }).first();
+      assert(await tile.count(), `${size.width}: no text book on Read's shelf (a copy with the shelf's books: npm run local)`);
+      await tile.scrollIntoViewIfNeeded();
+      await tile.click();
+      await page.waitForSelector('[data-part="reader"][data-variant="spread"]', { timeout: 30_000 });
+      await page.waitForTimeout(2500);
+      const now = () =>
+        page.evaluate(() => {
+          const r = (node) => {
+            if (!node || !node.checkVisibility({ visibilityProperty: true })) return null;
+            const b = node.getBoundingClientRect();
+            return { x: Math.round(b.left), y: Math.round(b.top), w: Math.round(b.width), h: Math.round(b.height), r: Math.round(b.right), b: Math.round(b.bottom) };
+          };
+          const reader = document.querySelector('[data-part="reader"]');
+          const text = reader.querySelector(':scope > [data-part="reader-text"]');
+          const book = text.getBoundingClientRect();
+          const gutter = parseFloat(getComputedStyle(text).paddingLeft);
+          // The words of the two pages in view (the next spread's columns lie outside the text's box, which clips them).
+          const words = [...text.querySelectorAll('.lx-w, [data-part="woven-word"], [data-part="reader-heading"]')]
+            .map((node) => node.getBoundingClientRect())
+            .filter((b) => b.width > 0 && b.left >= book.left - 1 && b.right <= book.right + 1 && b.bottom > 0 && b.top < innerHeight);
+          const sheet = reader.querySelector(':scope > [data-part="sheet"]:not([hidden])');
+          return {
+            bar: r(reader.querySelector('[data-part="reader-bar"]')),
+            back: r(reader.querySelector('[data-part="reader-bar"] .lx-back')),
+            collapse: r(reader.querySelector('[data-part="reader-collapse"]')),
+            status: r(reader.querySelector('[data-part="reader-status"]')),
+            gear: r(reader.querySelector('[data-part="reader-settings-button"]')),
+            words: words.length,
+            first: words.length ? Math.round(Math.min(...words.map((b) => b.top))) : null,
+            heading: r(text.querySelector('[data-part="reader-heading"]')),
+            page: { x: Math.round(book.left + gutter), r: Math.round(book.right - gutter) },
+            sheet: sheet && { ...r(sheet), handle: Boolean(sheet.querySelector('[data-part="sheet-handle"]')?.checkVisibility()), label: sheet.getAttribute("aria-label") },
+            zen: reader.getAttribute("data-state") === "zen",
+          };
+        });
+      const up = await now();
+      const at = `${size.width}: ${JSON.stringify(up)}`;
+      await page.screenshot({ path: join(OUT, `reader-${size.width}.png`) });
+      assert(up.words > 40 && up.heading, `${size.width}: the chapter's first two pages aren't on the screen\n${at}`);
+      assert(up.first >= up.bar.b - 1, `${size.width}: the pages' first line (${up.first}) is under the top bar (to ${up.bar.b})\n${at}`);
+      assert(up.heading.y >= up.bar.b - 1, `${size.width}: the chapter's heading (${up.heading.y}) is under the top bar (to ${up.bar.b})`);
+      // The book's edges: where its pages' text starts and ends.
+      assert(up.back.x >= up.page.x - 24 && up.back.x <= up.page.x + 8, `${size.width}: the way back (${up.back.x}) isn't at the page's start (${up.page.x})\n${at}`);
+      assert(up.collapse.r <= up.page.r + 24 && up.collapse.r >= up.page.r - 8, `${size.width}: the chevron (to ${up.collapse.r}) isn't at the page's end (${up.page.r})\n${at}`);
+      assert(up.status && Math.abs(up.status.x - up.page.x) <= 2, `${size.width}: the page number (${up.status?.x}) isn't under the page's first letter (${up.page.x})\n${at}`);
+      assert(up.gear.x >= up.page.r && up.gear.x - up.page.r <= 48, `${size.width}: the gear (${up.gear.x}) isn't beside the last page (text to ${up.page.r})\n${at}`);
+      // Reading settings: a panel over the gear.
+      await page.locator('[data-part="reader-settings-button"]').click();
+      await page.waitForTimeout(900);
+      const set = (await now()).sheet;
+      await page.screenshot({ path: join(OUT, `reader-${size.width}-settings.png`) });
+      assert(set, `${size.width}: the gear opened nothing`);
+      assert(set.w <= 400 && Math.abs(set.r - up.gear.r) <= 2 && set.b <= up.gear.y && set.y >= up.bar.b - 1 && !set.handle, `${size.width}: reading settings isn't a panel over the gear, at most 400 wide, under the bar, with no handle: ${JSON.stringify(set)} (the gear ${JSON.stringify(up.gear)})`);
+      await page.keyboard.press("Escape");
+      await page.waitForTimeout(700);
+      assert(!(await now()).sheet, `${size.width}: Escape left reading settings open`);
+      // Contents: under its own button.
+      const contents = page.locator('[data-part="reader-bar"] button', { hasText: "Contents" }).first();
+      const button = await contents.boundingBox();
+      await contents.click();
+      await page.waitForTimeout(900);
+      const list = (await now()).sheet;
+      await page.screenshot({ path: join(OUT, `reader-${size.width}-contents.png`) });
+      assert(list && list.w <= 400 && list.y >= button.y + button.height - 1 && list.y <= button.y + button.height + 16 && Math.abs(list.r - up.collapse.r) <= 2 && !list.handle, `${size.width}: Contents isn't a panel under its button, to the bar's end: ${JSON.stringify(list)} (its button to ${Math.round(button.y + button.height)}, the chevron to ${up.collapse.r})`);
+      // A press on the page puts it away, and turns nothing.
+      await page.mouse.click(up.page.x + 40, size.height - 200);
+      await page.waitForTimeout(700);
+      assert(!(await now()).sheet, `${size.width}: a press on the page left Contents open`);
+      // The bar put away: no word moves.
+      await page.locator('[data-part="reader-collapse"]').click();
+      await page.waitForTimeout(900);
+      const away = await now();
+      assert(away.zen && away.first === up.first && away.heading.y === up.heading.y, `${size.width}: putting the bar away moved the page (first line ${up.first} → ${away.first}, zen ${away.zen})`);
+      assert(!errors.length, `${size.width}: page errors: ${errors.join(" | ")}`);
+      seen.push(`${size.width}: first line ${up.first} under the bar's ${up.bar.b}; back ${up.back.x}, number ${up.status.x}, text ${up.page.x}–${up.page.r}, gear ${up.gear.x}; settings ${set.w} wide over the gear, Contents ${list.y} under its button`);
+    } finally {
+      await context.close();
+    }
+  }
+  return seen.join("; ");
+});
+
+await stage("phones: Home, Settings, Translate, two games (question and result), Your words, Study's packs, Everyday's words, Read and a book in the reader at 390 and 320, pixel for pixel as the app was (--base)", async () => {
   const faults = [];
   const shots = [];
+  const controls = [];
   const settings = async (page) => {
     await page.locator('[data-part="settings-button"]').first().tap();
     await page.waitForFunction(() => location.hash === "#settings", null, { timeout: 10_000 });
@@ -1208,8 +1469,22 @@ await stage("phones: Home, Settings, Translate, two games (question and result),
       [`${game}-result`, async (page) => void (await answerStep(page, { next: false }))],
     ]),
     ["words", async (page) => (await endSession(page), await go(page, "#know/words"), await page.waitForTimeout(1500))],
+    ...KNOW_SCREENS,
     ["packs", async (page) => (await go(page, "#study/packs"), await page.waitForTimeout(1500))],
+    // Study's own page and Where you are (the path): their computer rules sit beside the phone's in study-screens.css and path-page.css.
+    ["study", async (page) => (await go(page, "#study"), await page.waitForTimeout(1500))],
+    ["path", async (page) => (await go(page, "#study/path"), await page.waitForTimeout(2000))],
     ["everyday", async (page) => (await go(page, "#know/everyday/words"), await page.waitForTimeout(1500))],
+    // Read, its top as a new learner has it: the book up front, Weave your own, the shelf's first covers (decoded before it's pictured).
+    ["read", async (page) => {
+      await go(page, "#read");
+      await page.waitForSelector('[data-part="page"]:not([data-ghost]) [data-part="continue-card"]', { timeout: 30_000 });
+      await page.waitForTimeout(1500);
+      await page.evaluate(async () => {
+        await Promise.all([...document.querySelectorAll('[data-part="page"]:not([data-ghost]) [data-part="book-cover"] img')].filter((img) => img.getBoundingClientRect().top < innerHeight).map((img) => img.decode().catch(() => {})));
+        await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+      });
+    }],
     ["reader", async (page) => {
       await go(page, "#read");
       await page.waitForTimeout(1200);
@@ -1218,8 +1493,8 @@ await stage("phones: Home, Settings, Translate, two games (question and result),
       await tile.tap();
       await page.waitForSelector('[data-part="reader"]', { timeout: 30_000 });
       await page.waitForTimeout(2500);
-      // Its pictures decoded whole before it's pictured. (A book's photo at 390 has still come out 347 pixels apart, inside the photo only and the
-      // layout the same, with the very same files on both sides: 8 Nov 2026, C's control. Judge such a difference against that control.)
+      // Its pictures decoded whole before it's pictured. (A book's photo has still come out a few hundred pixels apart, inside the photo only and
+      // the layout the same, with the very same files on both sides: so its own pixels are left out, and it's compared by its place and size, photosOf.)
       await page.evaluate(async () => {
         await Promise.all([...document.querySelectorAll('[data-part="reader"] img')].map((img) => img.decode().catch(() => {})));
         await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
@@ -1234,6 +1509,7 @@ await stage("phones: Home, Settings, Translate, two games (question and result),
     const before = await device({ width, height, touch: true, still: true, files: BEFORE });
     try {
       for (const [name, act] of screens) {
+        if (SCREENS && !SCREENS.test(name)) continue;
         await act(now.page);
         await act(before.page);
         let fault = null;
@@ -1255,8 +1531,66 @@ await stage("phones: Home, Settings, Translate, two games (question and result),
           }
           shot = await steady(now.page);
           other = await steady(before.page);
-          fault = await samePixels(shot, other, `phone-${width}-${name}`);
+          // A book's photos by their place and size (photosOf), the rest of the screen pixel for pixel.
+          const pictured = PHOTO_SCREENS[name];
+          const photos = pictured ? [await photosOf(now.page, pictured.photos), await photosOf(before.page, pictured.photos)] : null;
+          fault =
+            photos && (placed(photos[0]) !== placed(photos[1]) || photos[0].some((photo) => !photo.loaded))
+              ? `phone-${width}-${name}: the book's photos aren't as they were (loaded, the file's size, left/top/width/height): ${placed(photos[1])} → ${placed(photos[0])}`
+              : await samePixels(shot, other, `phone-${width}-${name}`, photos ? photos[0].map((photo) => photo.skip) : []);
           if (!fault) break;
+        }
+        // That comparison can still fail: a word of the page moved one pixel is caught with the photos left out, and a photo moved one pixel
+        // is caught by its place.
+        if (PHOTO_SCREENS[name] && !fault) {
+          const pictured = PHOTO_SCREENS[name];
+          const skip = (await photosOf(now.page, pictured.photos)).map((photo) => photo.skip);
+          const inside = await apartInside(shot, other, skip);
+          const word = await now.page.evaluate((selector) => {
+            const shown = [...document.querySelectorAll(selector)].find((node) => {
+              const b = node.getBoundingClientRect();
+              const at = b.width > 4 && b.left >= 0 && b.right <= innerWidth && b.top >= 0 && b.bottom <= innerHeight ? document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2) : null;
+              return Boolean(at) && (node.contains(at) || at.contains(node));
+            });
+            if (!shown) return null;
+            shown.setAttribute("data-desk-check-moved", "");
+            shown.style.position = "relative";
+            shown.style.left = "1px";
+            const word = shown.cloneNode(true);
+            for (const gloss of word.querySelectorAll("rt")) gloss.remove();
+            return word.textContent.trim().slice(0, 20);
+          }, pictured.word);
+          assert(word, `phone-${width}-${name}: no word of its own on the screen to move for the control`);
+          await now.page.waitForTimeout(300);
+          const moved = await samePixels(await now.page.screenshot(), other, `phone-${width}-${name}-control-word`, skip);
+          await now.page.evaluate(() => {
+            const node = document.querySelector("[data-desk-check-moved]");
+            node.style.removeProperty("position");
+            node.style.removeProperty("left");
+            node.removeAttribute("data-desk-check-moved");
+          });
+          assert(moved, `phone-${width}-${name}: "${word}" moved one pixel, and the screens still compare the same: the comparison can't fail`);
+          if (skip.length) {
+            await now.page.evaluate((selector) => {
+              const img = [...document.querySelectorAll(selector)].find((node) => {
+                const b = node.getBoundingClientRect();
+                const at = b.width && b.left >= 0 && b.right <= innerWidth && b.top >= 0 && b.bottom <= innerHeight ? document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2) : null;
+                return Boolean(at) && (node.closest('[data-part="reader-picture"], [data-part="book-cover"]') ?? node).contains(at);
+              });
+              img.setAttribute("data-desk-check-moved", "");
+              img.style.position = "relative";
+              img.style.left = "1px";
+            }, pictured.photos);
+            const there = placed(await photosOf(now.page, pictured.photos)) !== placed(await photosOf(before.page, pictured.photos));
+            await now.page.evaluate(() => {
+              const node = document.querySelector("[data-desk-check-moved]");
+              node.style.removeProperty("position");
+              node.style.removeProperty("left");
+              node.removeAttribute("data-desk-check-moved");
+            });
+            assert(there, `phone-${width}-${name}: a photo moved one pixel, and its place still reads the same: the comparison can't fail`);
+          }
+          controls.push(`${width} ${name}: ${skip.length} photo${skip.length === 1 ? "" : "s"} by place and size (${inside} of its own pixels drawn apart this run, left out), "${word}" and a photo each caught one pixel off`);
         }
         writeFileSync(join(OUT, `phone-${width}-${name}.png`), shot);
         if (fault) writeFileSync(join(OUT, `phone-${width}-${name}-before.png`), other);
@@ -1270,7 +1604,8 @@ await stage("phones: Home, Settings, Translate, two games (question and result),
     }
   }
   assert(!faults.length, faults.join("\n"));
-  return `the same: ${shots.join(", ")}${noise.length ? ` (edges drawn apart, let pass: ${noise.join("; ")})` : ""}`;
+  assert(shots.length, `no screen compared${SCREENS ? ` (--screens ${SCREENS.source} names none of ${screens.map(([name]) => name).join(", ")})` : ""}`);
+  return `the same: ${shots.join(", ")}${SCREENS ? ` (only --screens ${SCREENS.source})` : ""}; a book's photos: ${controls.join("; ") || "no screen with one"}${noise.length ? ` (edges drawn apart, let pass: ${noise.join("; ")})` : ""}`;
 });
 
 await browser.close();

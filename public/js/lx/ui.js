@@ -1451,7 +1451,10 @@ export function tabBar(tabs, active, { settings } = {}) {
   };
   const bubble = el("span", { class: "lx-tab-bubble", "aria-hidden": "true" });
   const lens = el("span", { class: "lx-tab-lens", "aria-hidden": "true" }, tabs.map(([id, label, iconName]) => el("span", { class: "lx-tab-lens-item" }, tabSymbol(id, iconName), el("span", { class: "lx-tab-label" }, label))));
-  const nav = el("nav", { part: "tab-bar", "aria-label": t("core.tabBar") }, bubble, tabs.map((t) => tab(t)), settings ? tab(settings, "settings") : null, lens);
+  // On a computer the bar is a sidebar, and it leads with Lexicommons' drop and name (components.css draws it from 1024 only; a phone's floating
+  // bar never shows it). Not a link: Home is the first tab under it.
+  const brand = el("div", { class: "lx-sidebar-brand", "aria-hidden": "true" }, el("img", { class: "lx-sidebar-mark", src: "/icons/mark.svg", alt: "" }), el("span", {}, t("core.appName")));
+  const nav = el("nav", { part: "tab-bar", "aria-label": t("core.tabBar") }, brand, bubble, tabs.map((t) => tab(t)), settings ? tab(settings, "settings") : null, lens);
   nav.style.setProperty("--tabs", String(tabs.length));
   const moves = tabLens(nav, bubble, lens);
   nav.lxSetActive = (id) => {

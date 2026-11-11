@@ -167,6 +167,25 @@ const flagOk = (locator) =>
       }),
   );
 
+/** Lesson 1 done on this device, as a learner a day in has it: Explore's "Add next" waits for it (explore.js, 11 Nov 2026). */
+async function lessonOneDone(p) {
+  for (const start = Date.now(); ; await p.waitForTimeout(250)) {
+    const done = await p.evaluate(async () => {
+      const { lessonsComing } = await import("/js/study/packs.js");
+      const { pathLessons } = await import("/js/study/path.js");
+      const lessons = pathLessons();
+      // The path's own lessons, never the stand-in a first sync lays out while they're on their way (a word band's starter lessons, while
+      // packs.js lessonsComing): marking that one left the real lesson 1 undone after a reload. With no library, the starter's own path.
+      if (lessonsComing() || !lessons.length) return false;
+      const { lessonFinished, markLessonsDone } = await import("/js/study/plan.js");
+      if (!lessonFinished(lessons[0])) markLessonsDone(lessons.slice(0, 1));
+      return lessonFinished(lessons[0]);
+    });
+    if (done) return;
+    if (Date.now() - start > 30_000) throw new Error("the path's lessons never came, to mark lesson 1 done");
+  }
+}
+
 /** A pack's page keeps its corrections, versions and about a press away (the item's stage presses them): everywhere after it, they're open, so what's in them can be read and pressed. */
 const openQuiet = async (p) => {
   const run = () => new MutationObserver(() => document.querySelectorAll(".lx-quiet-more:not([open])").forEach((more) => (more.open = true))).observe(document, { childList: true, subtree: true });
@@ -174,9 +193,23 @@ const openQuiet = async (p) => {
   await p.evaluate(run);
 };
 
-await stage("the home: search, the topics as books with the pack to start face-out, what learners shared, each pack once, in the language being learned; the other languages with their flags a row away", async () => {
+await stage("the home: search, the topics as books with the pack to start face-out (once lesson 1 is done; before it, none), what learners shared, each pack once, in the language being learned; the other languages with their flags a row away", async () => {
+  // A brand-new learner: the home with its topics, and no pack to add next before lesson 1.
   await page.goto(`${BASE}/app/#explore`);
-  await page.locator(".lx-face").waitFor({ timeout: 15_000 });
+  await page.locator('[data-part="page"]:not([data-ghost]) .lx-explore-topics').first().waitFor({ timeout: 15_000 });
+  await page.waitForTimeout(1500);
+  const face = () => page.locator('[data-part="page"]:not([data-ghost]) .lx-face').count();
+  assert(!(await face()), `a pack to add next before lesson 1: ${await page.locator(".lx-pick").first().innerText().catch(() => "")}`);
+  // Lesson 1 done with Explore on the screen: not drawn into it under the eye; back on it (kept, no reload), it's there.
+  await page.evaluate(() => (globalThis.__sameLoad = true));
+  await lessonOneDone(page);
+  await page.waitForTimeout(1200);
+  assert(!(await face()), "the pack to add next was drawn into Explore under the eye as lesson 1 was done");
+  await page.goto(`${BASE}/app/#today`);
+  await page.waitForFunction(() => location.hash === "#today");
+  await page.goto(`${BASE}/app/#explore`);
+  await page.locator('[data-part="page"]:not([data-ghost]) .lx-face').waitFor({ timeout: 15_000 });
+  assert(await page.evaluate(() => globalThis.__sameLoad === true), "Explore was reloaded to show the pack to add next");
   const featured = await page.locator('.lx-pick[data-pick]').innerText();
   assert(featured.includes("Add next") && featured.includes("Dutch on the move") && featured.includes("3 sentences"), `the pack to start with (the curated one): ${featured}`);
   assert(await page.locator('.lx-face [data-part="pack-cover"]').count() === 1, "its cover");
@@ -1062,6 +1095,9 @@ await stage("sharing off for a learner: no way to publish anywhere in Explore, S
   const shown = (re) => p.locator('[data-part="page"]:not([hidden]) :is(a, button, [data-part="list-row"])', { hasText: re }).count();
   const found = {};
   try {
+    await p.goto(`${BASE}/app/#explore`);
+    await lessonOneDone(p);
+    await p.goto(`${BASE}/app/#today`);
     await p.goto(`${BASE}/app/#explore`);
     await p.locator(".lx-face").waitFor({ timeout: 20_000 });
     await p.waitForTimeout(800);

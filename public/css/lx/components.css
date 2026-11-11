@@ -42,6 +42,8 @@
     background: var(--canvas);
   }
 
+  /* The sidebar's head is a computer's alone (above, from 1024). */
+  .lx-sidebar-brand { display: none; }
   [data-part="app-title"] {
     display: flex;
     align-items: center;
@@ -155,7 +157,12 @@
       border-top: 0;
       border-right: 1px solid var(--hair);
     }
-    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"] { flex-direction: row; justify-content: flex-start; gap: var(--space-3); min-height: 44px; padding: 0 var(--space-3); font-size: var(--size-14); }
+    [data-part="app"] > [data-part="tab-bar"] [data-part="tab"] { flex-direction: row; justify-content: flex-start; gap: var(--space-3); min-height: 44px; padding: 0 var(--space-3); font-size: var(--size-16); }
+    /* The sidebar's head (frame.md §2, 11 Nov 2026): Lexicommons' drop and name, as the sign-in pages lead with them, over the tabs. */
+    .lx-sidebar-brand { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; margin-bottom: var(--space-4); padding: 0 var(--space-3); color: var(--ink-1); font: 700 var(--size-20) / 1 var(--type-head); letter-spacing: var(--track-head); }
+    .lx-sidebar-mark { width: 32px; height: 32px; }
+    /* The page's title is its heading on a computer (frame.md §3): 28 px bold, more room over it. */
+    :root:not([data-translate]) [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] [data-part="app-title"] { font: 700 var(--size-28) / 1.15 var(--type-head); letter-spacing: var(--track-head); }
     [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] { background: var(--fill-active); }
     [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-variant="settings"] { display: flex; position: absolute; left: var(--space-3); right: var(--space-3); bottom: var(--space-5); }
     [data-part="app"]:has(> [data-part="tab-bar"]) [data-part="app-header"] [data-part="settings-button"] { display: none; }
@@ -2396,15 +2403,42 @@
   :is(.lx-row, .lx-answer-actions, .lx-card-actions, [data-part="card-actions"]):has(> :is([data-part="button"][data-size="sm"], [data-part="order-toggle"])) { row-gap: 12px; }
   [data-part="segmented"]:not(.lx-segmented-stack) { row-gap: 6px; }
 
-  /* The wide column (1280 and up: shell.css, data-column="wide"): no button grows past its width in the 720 one (the director, 9 Nov 2026). A
-     button in a box wider than 720 (one that spans the column, so it grew with it) gives back the 240 px the column grew, left where its box's
-     text starts: Explore's Continue 684 wide as before, not 924. In a box no wider than 720 (a grid's cell) it's as it is: the second term is
-     then the whole box. Rows and lists span the 960 as fields, cards and grids do (capped, Explore's All packs and its language row stopped
-     short of the search field and the topics above them). Low (:where), so a part's own narrower cap stands; desk-check's wide stage measures
-     every button against the 720 column and every row against the column's edge. */
-  @media (min-width: 1280px) {
-    :where([data-part="app"][data-column="wide"] > [data-part="page"]) [data-part="button"] {
-      max-width: max(calc(100% - (var(--page-width-wide) - var(--page-width))), min(100%, calc((var(--page-width) + 1px - 100%) * 1000)));
+  /* A computer's frame for what a phone pins to its foot or lays edge to edge (frame.md §4, §8, §9; 11 Nov 2026), from 1024:
+     - A game's pictures about a phone's size (tiles at most 196 px): the session's fit made them fill the height (290 at 1440, 310 at 1920),
+       so the step filled the window and its quiet actions sat at its foot; capped, the step and its bar are one block in the middle, with
+       room over and under it from 1440 × 900 (at 1280 × 800 the fit already draws them a phone's size).
+     - A page's pinned action (ui.js pinnedActions) in the page's flow, under what it ends, at the column's start: a phone's band at the
+       window's foot, 720 wide with its note centered over it, read as stranded. (In a sheet it stays the sheet's.)
+     - A segmented control as wide as its options, at its box's start (a flex column stretched it, its options bunched at one end).
+     - A sheet is a dialog in the middle of the page's room (beside the sidebar; a session's or the reader's, the window's): every corner
+       round, 560 wide, its handle a close mark in its corner (a computer drags nothing), nothing under its foot. */
+  @media (min-width: 1024px) {
+    [data-part="picture-choices"] { max-width: 400px; }
+    :where([data-part="app"] > [data-part="page"]) [data-part="pinned-actions"]:not(.lx-sheet-body *) { position: static; margin-inline: 0; padding: var(--space-5) 0 0; background: none; }
+    :where([data-part="app"] > [data-part="page"]) [data-part="pinned-actions"]:not(.lx-sheet-body *) :is(.lx-pinned-note, [role="status"]) { text-align: start; }
+    [data-part="segmented"] { align-self: flex-start; justify-self: start; }
+    .lx-sheet-layer { justify-content: center; padding: var(--space-6) var(--space-5); }
+    :root:has([data-part="app"] > [data-part="tab-bar"]):not(:has([data-part="app"] > :is([data-part="session"], [data-part="reader"]))) .lx-sheet-layer { padding-inline-start: calc(232px + var(--space-5)); }
+    .lx-sheet-layer > [data-part="sheet"] { max-width: 560px; max-height: calc(100dvh - 2 * var(--space-6)); padding-top: var(--space-5); border-bottom: 1px solid var(--edge); border-radius: var(--radius-24); }
+    .lx-sheet-layer > [data-part="sheet"]::after { display: none; }
+    /* Its handle (a button: "Close …") is its close mark in its top corner, not a bar to drag. */
+    .lx-sheet-layer > [data-part="sheet"] > [data-part="sheet-handle"] { position: absolute; top: var(--space-3); inset-inline-end: var(--space-3); z-index: 1; width: 36px; height: 36px; margin: 0; padding: 0; border-radius: var(--radius-full); cursor: pointer; }
+    .lx-sheet-layer > [data-part="sheet"] > [data-part="sheet-handle"]::before,
+    .lx-sheet-layer > [data-part="sheet"] > [data-part="sheet-handle"]::after { content: ""; grid-area: 1 / 1; width: 16px; height: 2px; border-radius: 1px; background: var(--ink-2); transform: rotate(45deg); }
+    .lx-sheet-layer > [data-part="sheet"] > [data-part="sheet-handle"]::after { transform: rotate(-45deg); }
+    .lx-sheet-layer > [data-part="sheet"] > [data-part="sheet-handle"]:hover { background: var(--fill-hover); }
+  }
+
+  /* A block button on a computer (the sidebar's width up; frame.md, 11 Nov 2026): not a bar across its column or card. As wide as its words
+     need, at least 240 px and at most 360, at its box's start edge under what it acts on, or centered where what's above it is centered (an
+     empty state: its box centers it). A phone's full width, 720 or 960 px on a computer, read as off center (Knowledge's Review what's
+     slipping, 720 at the left of a 960 column: 9 Nov's cap). A session's bar, a sheet, a dialog and the reader keep theirs: their box is a
+     block of its own, centered. Low (:where on the page), so a part's own rule stands; desk-check's wide stage holds it. */
+  @media (min-width: 1024px) {
+    :where([data-part="app"] > [data-part="page"]) [data-part="button"][data-block]:not(:where([data-part="session"], [data-part="sheet"], [role="dialog"], [data-part="reader"]) *) {
+      width: fit-content;
+      min-width: min(240px, 100%);
+      max-width: min(360px, 100%);
     }
   }
 }

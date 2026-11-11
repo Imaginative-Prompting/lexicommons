@@ -10,7 +10,7 @@ import { LANGUAGES, languageName } from "../lang/index.js";
 import { checkPack } from "../study/pack-format.js";
 import { allPacks, savePack, setPackOn } from "../study/packs.js";
 import { fromFor, learning, learningFrom, setLearning } from "../study/learning.js";
-import { iSpeak } from "../shell/interface-language.js";
+import { speaks } from "../shell/interface-language.js";
 import { gamesReport, leftOutLines, packOf } from "./deck.js";
 import { readDeckFile } from "./import.js";
 import { saidAloud } from "../study/deck.js";
@@ -239,7 +239,7 @@ export function ankiImportPage(page) {
           variant: "go",
           block: true,
           onclick: () => {
-            if (learning() !== pack.language) setLearning(pack.language, pack.from && pack.from !== pack.language ? pack.from : fromFor(pack.language, iSpeak()));
+            if (learning() !== pack.language) setLearning(pack.language, pack.from && pack.from !== pack.language ? pack.from : fromFor(pack.language, speaks()));
             location.hash = `#study/session/deck/${encodeURIComponent(pack.id)}`;
           },
         }),

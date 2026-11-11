@@ -1006,7 +1006,27 @@ await stage("AI tab: on Practice with me's floor, beside your AI; scribbling whi
   return `${back.states.join(" → ")} (the catch ${back.after.toFixed(2)} s)`;
 });
 
+/** Lesson 1 done on this device, as a learner a day in has it: Explore's "Add next" waits for it (explore.js, 11 Nov 2026). */
+async function lessonOneDone(p) {
+  for (const start = Date.now(); ; await p.waitForTimeout(250)) {
+    const done = await p.evaluate(async () => {
+      const { lessonsComing } = await import("/js/study/packs.js");
+      const { pathLessons } = await import("/js/study/path.js");
+      const lessons = pathLessons();
+      // The path's own lessons, never the stand-in a first sync lays out while they're on their way (a word band's starter lessons, while
+      // packs.js lessonsComing): marking that one left the real lesson 1 undone after a reload. With no library, the starter's own path.
+      if (lessonsComing() || !lessons.length) return false;
+      const { lessonFinished, markLessonsDone } = await import("/js/study/plan.js");
+      if (!lessonFinished(lessons[0])) markLessonsDone(lessons.slice(0, 1));
+      return lessonFinished(lessons[0]);
+    });
+    if (done) return;
+    if (Date.now() - start > 30_000) throw new Error("the path's lessons never came, to mark lesson 1 done");
+  }
+}
+
 await stage("Explore: the pack to start stands face-out with its cover, and Tinta leaves it to that", async () => {
+  await lessonOneDone(page);
   await toTab("Explore");
   await page.waitForSelector(".lx-face", { timeout: 15_000 });
   assert(await page.locator('.lx-face [data-part="pack-cover"]').count(), "no cover on the pack to start");

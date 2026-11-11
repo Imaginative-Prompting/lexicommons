@@ -318,6 +318,16 @@ function sectionsOf(catalog) {
   return sections;
 }
 
+/**
+ * How much of a shelf book woven into `lang` shows in that language for a set of known words (a whole percent, 0 for someone new), or
+ * null when it isn't woven into it. Reads its layer (kept by the browser once fetched); throws when it can't be had.
+ */
+export async function wovenShare(meta, lang, known) {
+  const layer = meta?.layers?.[lang];
+  if (layer?.kind !== "weave" || !layer.url) return null;
+  return Math.round(coverageOf(await getJson(layer.url), known ?? new Set()).share * 100);
+}
+
 // Opening books from the shelf: one at a time, saying how it's going. Returns { choose(meta), tile(meta), status, stop }.
 export function opener({ open, known }) {
   const status = el("p", { class: "lx-settings-message", role: "status" });

@@ -29,7 +29,7 @@
 //   started) → "thinking" → the result.
 // Errors: SpeechError with .code (errors.js) and a .message for people.
 
-import { browserListen, browserSupport, installLanguage, takesTrack } from "./browser.js";
+import { browserListen, browserSupport, installLanguage, noteTrackDeaf, takesTrack } from "./browser.js";
 import { asSpeechError, SpeechError } from "./errors.js";
 import { onPhone } from "./guard.js";
 import { match } from "./match.js";
@@ -246,6 +246,49 @@ function decide(expected, accept, lang, out, readings = []) {
 
 // ---------- listening ----------
 
+// A voice at the microphone, by our meter: a level a room's noise doesn't reach (mic.js levelOf: 0.5 is -36 dBFS), for this long in one
+// listen. With that measured and the recognizer saying it heard nothing, the recognizer isn't hearing our track (browser.js noteTrackDeaf).
+const VOICED_LEVEL = 0.5;
+export const VOICED_MS = 400;
+/** Adds up how long the meter's levels stayed at a voice's: { hear(level, now?), ms() }. A gap between two readings counts 100 ms at most. */
+export function voicedClock() {
+  let total = 0;
+  let last = null;
+  return {
+    hear(level, now = performance.now()) {
+      if (last != null && level >= VOICED_LEVEL) total += Math.min(100, now - last);
+      last = now;
+    },
+    ms: () => total,
+  };
+}
+
+// The bars where there's no meter (the recognizer has the microphone): each heard() moves them for a moment, a set swell and fall, so
+// they follow what the recognizer says it has and never a sound nobody measured.
+const HEARD_SWELL = [0.35, 0.7, 0.9, 0.6, 0.75, 0.45, 0.3, 0.15, 0];
+const HEARD_STEP_MS = 70;
+/** → { heard(), stop() }. onLevel gets the swell's levels, then 0. */
+export function heardBars(onLevel) {
+  let timer = null;
+  let at = 0;
+  const step = () => {
+    onLevel(HEARD_SWELL[at]);
+    at++;
+    timer = at < HEARD_SWELL.length ? setTimeout(step, HEARD_STEP_MS) : null;
+  };
+  return {
+    heard() {
+      clearTimeout(timer);
+      at = 0;
+      step();
+    },
+    stop() {
+      clearTimeout(timer);
+      timer = null;
+    },
+  };
+}
+
 /**
  * Listens for one answer and checks it against `expected` (a sentence, or its words as an array). See the top of
  * this file for the states, the result and the errors. Call it inside the press that starts it (iPhone needs that
@@ -316,7 +359,7 @@ export function listen({ engine = "whisper", model = null, expected, accept = []
   }
 
   async function viaBrowser() {
-    // Chrome listens to our own microphone track; start audio inside the press, for the level meter.
+    // A computer's Chrome listens to our own microphone track; start audio inside the press, for the level meter.
     const ownMic = takesTrack();
     if (ownMic && onLevel) audioContext();
     state("asking");
@@ -324,6 +367,7 @@ export function listen({ engine = "whisper", model = null, expected, accept = []
     if (supported.state === "none") throw new SpeechError("unsupported", supported.why);
     let stream = null;
     let stopLevel = null;
+    const voiced = voicedClock();
     if (ownMic) {
       stream = await openMic();
       if (hold) holdMic(stream, true);
@@ -331,14 +375,22 @@ export function listen({ engine = "whisper", model = null, expected, accept = []
         if (!hold) releaseMic(stream);
         throw new SpeechError("aborted");
       }
-      if (onLevel) stopLevel = monitorLevel(stream, onLevel);
+      // The meter, and how long it measured a voice: a recognizer that then says it heard nothing is deaf to our track.
+      stopLevel = monitorLevel(stream, (level) => (voiced.hear(level), onLevel?.(level)));
     }
+    // Where the recognizer opens the microphone itself there's no meter: the bars are drawn from what it says, flat until it has
+    // something of yours, moving each time it does (heardBars), so nobody speaks into a button that looks dead.
+    const drawn = !ownMic && onLevel ? heardBars(onLevel) : null;
     let out;
     try {
-      active = browserListen({ lang, onState: state, signal: controller.signal, local: supported.state === "local", track: stream?.getAudioTracks()[0] ?? null });
+      active = browserListen({ lang, onState: state, onHeard: drawn?.heard, signal: controller.signal, local: supported.state === "local", track: stream?.getAudioTracks()[0] ?? null });
       if (stopped) active.stop();
       out = await active.done;
+    } catch (error) {
+      if (ownMic && error?.code === "no-speech" && voiced.ms() >= VOICED_MS) noteTrackDeaf();
+      throw error;
     } finally {
+      drawn?.stop();
       stopLevel?.();
       if (stream && !hold) releaseMic(stream);
     }

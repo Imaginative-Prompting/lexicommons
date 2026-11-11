@@ -1055,6 +1055,20 @@ the page:
 - **Translate keeps the sidebar and the column.** Its box is as tall as its text, two lines to about 40% of the screen, then it scrolls
   inside (`translate/page.js placeWide`: no split to keep and no keys to make room for), and the language bar sits in the page under the
   answer, never over it.
+- **Read is a shelf, not a phone's page blown up** (`read.css`, "on a computer"). The book up front sits beside its name and its way in, at
+  a book's size: a picture book's page 168 px tall and as wide as its shape gives, a designed cover 148 wide, Home's drawing of the book
+  you're reading in a tile 320 wide; so Weave your own and the shelf are in the window's first view. The lead shelf's covers are one height
+  (132 px), each as wide as its shape (a wide page 276, a square one 132), side by side and wrapping; the shelves after it and Your library's
+  row keep a picture book's page at the same 132. Your library's page has its books six to a row (a picture book takes two places), and
+  with nothing in it the way to a book sits under the empty card, clear of it. desk-check's read stage holds it.
+- **The reader keeps its things with the book.** The book is at most 1100 px wide in the window's middle, and what belongs to it stays at
+  its edges, not the window's corners (`reader.css`, "on a computer"; `--reader-side` is the room either side): the way back and the bar's
+  buttons over the pages' edges, the page number under the first page's first letter, the gear and the full-screen button beside the last
+  page. A text's two pages start under the top bar, as a picture book's do (on a phone the bar lies over a page's first line), and the page
+  is as tall with the bar up or away, so putting it away moves no word. Its sheets are panels there, 400 px wide with no handle to drag:
+  reading settings, a note and a word's card rise over the gear; Contents and Notes come down under their own buttons (`reader.js` marks
+  them `data-dock="top"`). The card at its foot (weaving a text of yours, why a woven text reads in English) is as wide as the pages' text.
+  desk-check's reader stage holds it.
 
 A session (a lesson, Practice, any game) changes from 700 px wide and 640 tall (an iPad either way up, a computer; never a phone, upright or on
 its side), in `components.css`:
@@ -1064,14 +1078,31 @@ its side), in `components.css`:
 - **Number keys, shown.** With a mouse, each choice a key answers (1–9: `data-keys` on Choose's, Tap the picture's and Fill's choices)
   shows its number in its corner until the step is answered.
 
+**One frame, at 1280 and up** (11 Nov 2026). Every page sits in one frame, 960 wide (1120 from 1600), centered beside the sidebar
+(`shell.css --lx-frame`), so the header's title and chips stand at the same place on every tab. A grid page fills the frame; every other
+page's column is 720 at the frame's start edge, never centered in it. A tab's own 720 page (Home, Read, the AI section) uses the frame's
+other 240 for an aside of its own; a sub-page leaves it as its margin.
+
+**A block button on a computer** (1024 and up, `components.css`): as wide as its words, 240 to 360 px, at its box's start edge under what it
+acts on, or centered where its box centers what's above it (an empty state), on the page and in its cards alike. A session's bar, a sheet, a
+dialog and the reader keep theirs spanning their box. (It replaces 9 Nov's cap, under which a 720 button sat at the left of a 960 column and
+read as off center.) desk-check's wide stage holds it (BUTTON_RULE) with one title place on every page.
+
 **A wider column for the grids, at 1280 and up.** Study's, Explore's and Knowledge's own pages, Your words and the topics are 960 wide
 (`--page-width-wide`): Study's games 4 a row, Explore's topics 6 (with All packs and the language row in the first view), Your words 4 a
 shelf. `shell/main.js WIDE_PAGES` marks the app `data-column="wide"`, and `shell.css` widens the header's and the page's padding (not
 `--page-width`: a custom property the whole page inherits, so changing it restyles every element in the page). Their lists and forms (Study's
 packs, the path, a topic, a pack's page, Browse, Add your own) stay 720: a list's switches sat 900 px from their names at 960. The move between
-the two rides the page's push. No button grows past its width in the 720 column: one in a box wider than 720 gives back the 240 px
-(components.css, its end), left where its box's text starts, so Explore's Continue is 684 wide as before. Rows and lists span the 960 as
+the two rides the page's push. Buttons follow the computer's own rule (above). Rows and lists span the 960 as
 fields, cards and grids do (All packs and the language row end where the search field and the topics do). desk-check's wide stage holds it.
+
+**Knowledge's cards as a board, at 1280 and up** (`know.css`). The tab's first row is what the page draws before its first frame: the pile's
+card about a phone's width (three tenths of the frame, never under 288 px, so the pile fills it as it does on a phone; as tall as its row,
+the pile on its floor) beside This week, itself in two columns: its number, glasses and scale at its start, what they're made of, the new
+words and its button beside them (`cards-more.js weekCard`'s `.lx-week-side`, which draws no box on a phone). Then the ideas two to a row
+(from 1024, and on the Ideas page: one left over takes its row), and Everyday and Over time the frame's width. `know/page.js` draws the ideas
+before the first frame there, since they're on the first screen. desk-check's phones stage holds the tab's top (without the pile's tiles,
+which every visit lays out anew), This week and the Ideas page as they were.
 
 **Reading lines at most ~68 characters, everywhere.** `--measure` (tokens.css: `min(31em, 640px)`) is the one cap: ~68 characters of Instrument Sans
 at 12–16 px (it averages ~0.46em a character; `68ch` would be ~100, "ch" being its 0), 640 px at the reader's larger type (~60 characters).
@@ -1090,6 +1121,8 @@ A tablet (700 to 1023 px wide: an iPad upright; the floating tab bar stays) keep
 - **44 px on a tablet too.** An iPad is touched at arm's length: every control reaches 44 × 44 there as on a phone (components.css's rule for
   small controls: an invisible `::before` as far as it's short), counted where it can really be touched (a sticky header over its edge doesn't
   count: Study's gear reaches 3 px into its card's bite for the header over its top). `component-check.mjs --tablet` and desk-check's targets hold it.
+  Two small controls stand their two reaches apart, or the later takes the earlier's: This week's mini tiles (32 px tall, reaching 6 each
+  way) have their rows 12 px apart from 700 px (`know.css`); at a phone's 8 each keeps 40.
 
 With a mouse or a keyboard (any width; `@media (hover: hover)`, which a phone or a tablet by touch never matches):
 - **Everything you can press shows it before you press.** With the mouse on it, a link or button changes: drawn on the canvas (a row, a

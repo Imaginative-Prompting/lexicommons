@@ -173,6 +173,15 @@ export type LoginOptions = {
 /** What a name is for, as it's true now: on what you share once learners can share; until then, only yours. */
 export const nameLine = (sharingOpen: boolean): string => (sharingOpen ? "Shown on anything you share." : "Only you see it, on your account.");
 
+/** On a computer, a quiet line that Lexicommons is made for phones first, and the way onto one, its address and a code for the phone's camera
+ *  (public/icons/site/qr-lexicommons.svg: https://lexicommons.com). Right after the ways in: a wide window shows it in a column beside them, a
+ *  narrower one at the card's end (signin.css). Drawn hidden; login.js shows it only where install-guide.js's detect says it's neither a phone
+ *  nor a tablet (nor an app's own browser), so a phone never shows it, and never fetches the code (lazy). */
+const computerNote = () => `<aside class="lx-signin-computer" id="on-a-computer" hidden>
+<img src="/icons/site/qr-lexicommons.svg" width="99" height="99" alt="${escapeHtml(say("core.computer.qr"))}" loading="lazy" decoding="async">
+<p class="lx-small">${escapeHtml(say("core.computer.note"))} ${escapeHtml(say("core.computer.phone"))}</p>
+</aside>`;
+
 export function loginPage(next: string, options: LoginOptions = {}): string {
   const { deleted = false, signedOut = false, connecting = null, providers = { google: true, github: true, apple: false } } = options;
   // Paused, someone new gets the sign-in page with the words at its top: there's no account to make.
@@ -217,6 +226,7 @@ ${createForm()}
 ${notice("wrong", "", { id: "auth-error", hidden: true })}
 <p class="lx-signin-already">Already have an account? <button type="button" class="lx-signin-plain" id="signin">Sign in with a passkey</button></p>
 </section>
+${computerNote()}
 ${options.recovery ? `<p class="lx-signin-note lx-small" id="recover-link"><a href="/login/recover?next=${encodeURIComponent(next)}">Lost your passkey? Get back in with your email</a></p>` : ""}
 `,
       { scripts: ["/js/login.js"], mode: "new" },
@@ -236,6 +246,7 @@ ${providers.apple ? providerForm("apple", next, "signin") : ""}
 ${signInButtonMarkup("passkey", { type: "button", attrs: { id: "signin" } })}
 ${notice("wrong", "", { id: "auth-error", hidden: true })}
 </section>
+${connecting ? "" : computerNote()}
 ${options.recovery ? `<p class="lx-signin-note lx-small" id="recover-link"><a href="/login/recover?next=${encodeURIComponent(next)}">Lost your passkey? Get back in with your email</a></p>` : ""}
 ${
   paused

@@ -123,6 +123,25 @@ await cdp.send("WebAuthn.addVirtualAuthenticator", { options: { protocol: "ctap2
 await page.goto(`${BASE}/app/`);
 await page.waitForURL(/\/login\?next=/);
 await page.click("summary");
+/** Lesson 1 done on this device, as a learner a day in has it: Explore's "Add next" waits for it (explore.js, 11 Nov 2026). */
+async function lessonOneDone(p) {
+  for (const start = Date.now(); ; await p.waitForTimeout(250)) {
+    const done = await p.evaluate(async () => {
+      const { lessonsComing } = await import("/js/study/packs.js");
+      const { pathLessons } = await import("/js/study/path.js");
+      const lessons = pathLessons();
+      // The path's own lessons, never the stand-in a first sync lays out while they're on their way (a word band's starter lessons, while
+      // packs.js lessonsComing): marking that one left the real lesson 1 undone after a reload. With no library, the starter's own path.
+      if (lessonsComing() || !lessons.length) return false;
+      const { lessonFinished, markLessonsDone } = await import("/js/study/plan.js");
+      if (!lessonFinished(lessons[0])) markLessonsDone(lessons.slice(0, 1));
+      return lessonFinished(lessons[0]);
+    });
+    if (done) return;
+    if (Date.now() - start > 30_000) throw new Error("the path's lessons never came, to mark lesson 1 done");
+  }
+}
+
 await page.fill('input[name="name"]', "Explore Browse Check");
 await page.click('#register button[type="submit"]');
 await page.waitForURL(`${BASE}/app/`, { timeout: 30_000 });
@@ -131,6 +150,7 @@ if ((await page.evaluate(async () => (await import("/js/study/learning.js")).lea
   console.error("explore-browse-check needs Dutch as a new account's language.");
   process.exit(2);
 }
+await lessonOneDone(page);
 
 // ---------- what the server says ----------
 const home = await json("/api/community/explore?lang=nl");

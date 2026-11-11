@@ -1,7 +1,8 @@
 // The app's own words, and the language they're in (docs/plan-localization.md §4.7). Three settings on this device (localStorage
 // "lx.interface.v1": { speak, app, grow }) decide it:
-// - I speak: the language you speak, asked at the first run (from the device's languages first, never assumed). The app's words come in
-//   it when the app has that language. (Explanations follow it too once packs have sides in it; until then study stays on its own `from`,
+// - I speak: the language you speak. Nothing asks it for now (the first run did until 11 Nov 2026: the app teaches from English alone, so
+//   the question promised a choice that wasn't there); a device that answered then keeps its answer, and Settings → Language brings the
+//   row back once the app ships a second language. The app's words come in it when the app has that language. (Explanations follow it too once packs have sides in it; until then study stays on its own `from`,
 //   study/learning.js.)
 // - App language: another language for the app's words, to live in the one you're learning; null is the same as I speak.
 // - Grow: off until it's turned on. With the app's words in the language you speak, each one turns into the language you're learning once
@@ -43,10 +44,15 @@ const save = (next) => {
   for (const fn of listeners) fn(interfaceLanguage());
 };
 
-/** The language you speak, as set (the first run asks it); before that, the device's first language Lexicommons knows, or null. */
+/** The language you speak, as set; before that, the device's first language Lexicommons knows, or null (for the app's own words). */
 export const iSpeak = () => speakerOf(current, deviceLanguages());
-/** Whether you've said which language you speak (the first run asks until you have). */
+/** Whether you've said which language you speak (a first run before 11 Nov 2026 asked; Settings → Language will, once it has the row). */
 export const saidISpeak = () => current.speak !== null;
+/**
+ * The language to take you as speaking where it decides what you can learn and what you learn it from: what you've said, else English.
+ * Never the device's own language by itself: nobody was asked, and the packs are written from English.
+ */
+export const speaks = () => current.speak ?? "en";
 /** { speak, app, grow } as set. */
 export const interfaceSetting = () => ({ ...current });
 

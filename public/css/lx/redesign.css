@@ -85,6 +85,8 @@
      main ink. The purple on that fill holds as a graphic (3:1 at least) in every ready-made theme but not as words (4.5:1): under it in 105 of
      144 (9 Nov 2026). test-themes reads both from here and measures them. */
   @media (min-width: 1024px) {
+    /* A computer's sidebar stands on the canvas, its hairline on its edge (components.css), not on the floating bar's glass (frame.md §2). */
+    [data-part="app"] > [data-part="tab-bar"] { background: var(--canvas); -webkit-backdrop-filter: none; backdrop-filter: none; }
     [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] { color: var(--ink-1); }
     [data-part="app"] > [data-part="tab-bar"] [data-part="tab"][data-state="active"] > :not(.lx-tab-label) { color: var(--tab-on); }
   }
@@ -390,7 +392,9 @@
   [data-part="concept-row"] { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-3); padding-left: var(--hang, 0px); }
   /* Under the sentence it's about: its reach takes up the bar's gap, not the room around the words. */
   [data-part="answer-bar"] [data-part="concept-row"] { margin-block: calc(-1 * var(--space-3)) calc(-1 * var(--space-1)); }
-  [data-part="concept-chip"] { position: relative; display: inline-flex; align-items: center; gap: 2px; min-height: 44px; padding: 0; border: 0; border-radius: var(--radius-8, 8px); background: none; color: var(--ink-1); font: 600 var(--size-14) / 1.1 var(--type-ui); cursor: pointer; }
+  [data-part="concept-chip"] { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 2px; min-height: 44px; padding: 0; border: 0; border-radius: var(--radius-8, 8px); background: none; color: var(--ink-1); font: 600 var(--size-14) / 1.1 var(--type-ui); cursor: pointer; }
+  /* (z-index: the line under it, its marked word's box taller than its line, reached 1 px into the chip's 44 on a wrong answer's result:
+     desk-study, 11 Nov 2026. The chip is drawn over that pixel row; nothing moves.) */
   [data-part="concept-chip"] > .lx-icon { width: 16px; height: 16px; color: var(--ink-3); }
   [data-part="concept-chip"]:active { background: var(--fill-active); }
   [data-part="concept-row"][data-outcome="right"] [data-part="concept-chip"] { color: var(--ink-2); font-weight: 500; }

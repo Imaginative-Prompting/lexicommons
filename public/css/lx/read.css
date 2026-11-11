@@ -78,6 +78,7 @@
   [data-part="reader-bar"] [data-part="icon-button"]:active { background: var(--fill-active); }
   [data-part="reader-title"] { color: var(--ink-3); }
   [data-part="reader-settings-button"] { border: 0; background: none; color: var(--ink-3); }
+  @media (hover: hover) { [data-part="reader-settings-button"]:not(:active, [aria-expanded="true"]):hover { background: var(--fill-hover); color: var(--ink-1); } }
   /* The gear never sits on a sheet. */
   /* Over a sheet it needs its own ground, to be read and pressed there: it still closes its sheet and moves between them. */
   :root:has([data-part="reader"] [data-part="sheet"]:not([hidden])) [data-part="reader-settings-button"]:not(:active) { border: 1px solid var(--edge); background: var(--chrome); }
@@ -108,6 +109,9 @@
   .lx-weave-own-story > [data-part="book-tile"] :is(.lx-tile-title, .lx-tile-sub, .lx-cover-head, .lx-cover-by) { display: none; }
   .lx-weave-own-see { flex: 1; min-height: 44px; display: inline-flex; align-items: center; justify-content: space-between; gap: var(--space-2); padding: 0; border: 0; background: none; color: var(--ink-1); font: 600 var(--size-15, 15px) / 1.3 var(--type-ui); text-align: start; text-wrap: pretty; cursor: pointer; }
   .lx-weave-own-see:active { opacity: 0.7; }
+  .lx-weave-own-see-text { display: flex; flex-direction: column; gap: 2px; }
+  .lx-weave-own-share { color: var(--ink-2); font: 400 var(--size-13, 13px) / 1.3 var(--type-ui); }
+  .lx-weave-own-share:empty { display: none; }
   .lx-weave-own-message { align-self: stretch; }
   .lx-weave-own-steps { margin: 0; padding-inline-start: 1.4em; display: flex; flex-direction: column; gap: 2px; color: var(--ink-2); }
   /* Find a book's page (find.js): its filters, its rows with a small cover, and the press for more. */
@@ -121,4 +125,47 @@
   .lx-read-thumb > [data-part="book-cover"] img:not([data-part="language-flag"]) { width: 100%; height: 100%; object-fit: cover; }
   .lx-read-thumb :is(.lx-cover-head, .lx-cover-by, [data-part="language-flag"]) { display: none; }
   [data-part="list-row"] .lx-row-icon:has(> .lx-read-thumb) { width: 40px; height: 58px; padding: 0; border: 0; background: none; }
+
+  /* ============ on a computer (1024 px and up) ============ */
+  @media (min-width: 1024px) {
+    /* The book up front beside its name and its way in, at a book's size: a phone's page across the column was a 720 × 343 picture, and the
+       window's first view was one book and a button. Its words start where its button does. */
+    .lx-library [data-part="continue-card"] { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: 1fr auto auto 1fr; column-gap: var(--space-5); row-gap: 0; }
+    .lx-library [data-part="continue-card"] > .lx-continue-top { display: contents; }
+    .lx-library [data-part="continue-card"] > .lx-continue-top > :first-child { grid-column: 1; grid-row: 1 / -1; align-self: center; }
+    .lx-library [data-part="continue-card"] .lx-continue-text { grid-column: 2; grid-row: 2; align-items: flex-start; margin-bottom: var(--space-4); padding: 0; text-align: start; }
+    .lx-library [data-part="continue-card"] > [data-part="button"] { grid-column: 2; grid-row: 3; }
+    /* Its cover: a picture book's page 168 px tall, as wide as its picture's shape gives (a wide page 350, a square one 168); a designed cover
+       or a book's own drawing a book 148 px wide; Home's drawing of the book you're reading in a tile 320 wide. */
+    .lx-library .lx-continue-top > [data-part="book-tile"] { width: auto; }
+    .lx-library .lx-continue-top > [data-part="book-tile"] > [data-part="book-cover"],
+    .lx-library .lx-continue-top > [data-part="book-cover"] { width: 148px; margin-inline: 0; }
+    .lx-library .lx-continue-top > [data-part="book-tile"] > [data-part="book-cover"][data-variant="picture"],
+    .lx-library .lx-continue-top > [data-part="book-cover"][data-variant="picture"] { width: max-content; max-width: 360px; height: 168px; }
+    .lx-library .lx-continue-top > [data-part="book-tile"] > [data-part="book-cover"][data-variant="picture"] img:not([data-part="language-flag"]),
+    .lx-library .lx-continue-top > [data-part="book-cover"][data-variant="picture"] img:not([data-part="language-flag"]) { width: auto; height: 100%; max-width: 360px; object-fit: cover; }
+    .lx-library [data-part="continue-card"][data-art] .lx-continue-top > .lx-hb-tile { width: 320px; }
+    .lx-library [data-part="continue-card"][data-art] .lx-continue-text { padding: 0; }
+
+    /* Read's lead shelf, a shelf: its covers one height (132 px), each as wide as its shape gives (a wide page 276, a square one 132), side by
+       side and wrapping, where a phone's two columns drew a wide page 354 px across and a square one 354 tall beside it. */
+    .lx-shelf-grid[data-part="book-list"][data-variant="grid"] { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-4); }
+    .lx-shelf-grid[data-part="book-list"][data-variant="grid"] > [data-part="book-tile"] { flex: none; width: max-content; }
+    .lx-shelf-grid[data-part="book-list"][data-variant="grid"] [data-part="book-cover"] { width: 88px; height: 132px; aspect-ratio: auto; }
+    .lx-shelf-grid[data-part="book-list"][data-variant="grid"] [data-part="book-cover"][data-variant="picture"] { width: max-content; min-width: 88px; }
+    .lx-shelf-grid[data-part="book-list"][data-variant="grid"] [data-part="book-cover"][data-variant="picture"] img:not([data-part="language-flag"]) { width: auto; height: 100%; max-width: 290px; object-fit: cover; }
+    /* Covers of both shapes on it (the phone's rule above gives each a square box): here each keeps its own shape at the shelf's height, so a
+       designed cover is a whole book again. */
+    .lx-shelf-grid[data-part="book-list"][data-variant="grid"]:has(> [data-part="book-tile"]:nth-child(-n + 6) [data-part="book-cover"][data-variant="picture"]):has(> [data-part="book-tile"]:nth-child(-n + 6) [data-part="book-cover"]:not([data-variant="picture"])) [data-part="book-cover"][data-variant="type"] { padding-inline: 12%; }
+    .lx-shelf-grid[data-part="book-list"][data-variant="grid"]:has(> [data-part="book-tile"]:nth-child(-n + 6) [data-part="book-cover"][data-variant="picture"]):has(> [data-part="book-tile"]:nth-child(-n + 6) [data-part="book-cover"]:not([data-variant="picture"])) [data-part="book-cover"][data-variant="type"] > .lx-cover-split { inset: 0; width: 100%; }
+
+    /* The shelves after it, and Your library's row: a picture book's page the same 132 px tall. */
+    .lx-library [data-part="book-list"][data-variant="row"] [data-part="book-cover"][data-variant="picture"] { height: 132px; }
+
+    /* Your library's page: its books six to a row (a picture book takes two places), a book's size, not a phone's three blown up to 232 × 348. */
+    .lx-read-library-all [data-part="book-list"][data-variant="grid"] { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-5) var(--space-4); }
+    /* With nothing in it yet: the way to a book under the empty card, clear of it, centered as the card's words are. */
+    .lx-read-library-all:has(> [data-part="empty-state"]) { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); }
+    .lx-read-library-all > [data-part="empty-state"] { align-self: stretch; }
+  }
 }

@@ -86,6 +86,26 @@ await page.waitForSelector("html[data-app-ready]");
 await page.evaluate(() => fetch("/api/tokens", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: "an AI, for this check" }) }));
 await page.reload();
 await page.waitForSelector("html[data-app-ready]");
+await lessonOneDone(page);
+
+/** Lesson 1 done on this device, as a learner a day in has it: Explore's "Add next" waits for it (explore.js, 11 Nov 2026). */
+async function lessonOneDone(p) {
+  for (const start = Date.now(); ; await p.waitForTimeout(250)) {
+    const done = await p.evaluate(async () => {
+      const { lessonsComing } = await import("/js/study/packs.js");
+      const { pathLessons } = await import("/js/study/path.js");
+      const lessons = pathLessons();
+      // The path's own lessons, never the stand-in a first sync lays out while they're on their way (a word band's starter lessons, while
+      // packs.js lessonsComing): marking that one left the real lesson 1 undone after a reload. With no library, the starter's own path.
+      if (lessonsComing() || !lessons.length) return false;
+      const { lessonFinished, markLessonsDone } = await import("/js/study/plan.js");
+      if (!lessonFinished(lessons[0])) markLessonsDone(lessons.slice(0, 1));
+      return lessonFinished(lessons[0]);
+    });
+    if (done) return;
+    if (Date.now() - start > 30_000) throw new Error("the path's lessons never came, to mark lesson 1 done");
+  }
+}
 
 // Every layout shift from here on, with the time it happened (input or not: a tab's tap doesn't excuse a jump).
 await page.evaluate(() => {

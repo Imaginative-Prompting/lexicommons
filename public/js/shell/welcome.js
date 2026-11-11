@@ -1,4 +1,5 @@
-// What you're learning, asked. A first run is the one thing the app has to ask before it can be any use to you: it comes up over Home on a device where no language has been picked and
+// What you're learning, asked: the one question. (Which language you speak was asked first until 11 Nov 2026; the app teaches from English
+// alone, so it isn't asked: interface-language.js speaks.) A first run is the one thing the app has to ask before it can be any use to you: it comes up over Home on a device where no language has been picked and
 // nothing's been studied (so an account you already use, on a new phone, is asked too: the language you're learning is kept per device), and it's gone at the first press. Nothing here
 // waits on a download: a language's packs start coming as soon as it's picked (study/packs.js follows the language). Settings → Language opens the same list, in a sheet.
 
@@ -10,12 +11,15 @@ import { allEvidence } from "../study/progress.js";
 import { fromFor, learning, setLearning } from "../study/learning.js";
 import { syncLibraryPacks } from "../study/packs.js";
 import { streakExport } from "../study/done.js";
-import { deviceLanguages, iSpeak, saidISpeak, setISpeak } from "./interface-language.js";
+import { speaks } from "./interface-language.js";
+import { SITE_FACTS } from "../site-facts.js";
+import { keepNote } from "./keep-here.js";
 
 const CATALOGUE = "/library/catalogue.json";
 const DONE = "lx.welcome.v1";
 const LEARNING = "lx.learning.v1";
-// The languages most people come for, then the rest by name. Dutch first: it has the most.
+// Among the languages with a full course, the ones most people come for lead, then the rest by name (which languages have one is never
+// written here: fullCourse below).
 const FIRST = ["nl", "es", "fr", "de", "it", "pt", "ja", "ko", "zh"];
 
 const saved = (key) => {
@@ -53,12 +57,21 @@ const remember = () => {
 // whole list to a few rows mid-slide (5 Nov 2026, Settings → Language).
 let offeredNow = null;
 let offeredAsk = null;
+// Each language's lessons, as the catalog last said (its biggest pack's: a full course's path, or a starter's dozen); null until it has.
+let lessonsNow = null;
+/** A language's lessons: the catalog's count once it has answered, the release's own facts (site-facts.js) until then. */
+const lessonsOf = (code) => (lessonsNow ? (lessonsNow.get(code) ?? 0) : (SITE_FACTS.lessons[code] ?? 0));
+/** Whether a language has a full course: as many lessons as the site's facts call one (the same fact the home page counts them by). */
+const fullCourse = (code) => lessonsOf(code) >= SITE_FACTS.fullCourse;
 const askOffered = () =>
   (offeredAsk ??= fetch(CATALOGUE)
     .then((response) => (response.ok ? response.json() : null))
     .then((catalogue) => {
       const packs = catalogue?.packs;
-      if (packs && typeof packs === "object") offeredNow = new Set(Object.keys(packs).filter((code) => Array.isArray(packs[code]) && packs[code].some((pack) => !pack?.optIn)));
+      if (packs && typeof packs === "object") {
+        offeredNow = new Set(Object.keys(packs).filter((code) => Array.isArray(packs[code]) && packs[code].some((pack) => !pack?.optIn)));
+        lessonsNow = new Map(Object.keys(packs).map((code) => [code, Array.isArray(packs[code]) ? Math.max(0, ...packs[code].map((pack) => Number(pack?.lessons) || 0)) : 0]));
+      }
       return offeredNow;
     })
     .catch(() => offeredNow)
@@ -72,34 +85,63 @@ export const primeLanguageChoices = () => {
 };
 
 /**
- * A search and every language, each a press: onPick(code). Returns { find, list }, to lay out as the caller likes. speak: the list for the
- * language you speak (every language, this phone's own first, none taken away), instead of the one to learn (the language you speak left
- * out, and only what has something to learn once the catalog says).
+ * The list's order: the languages with a full course first (the likeliest of them leading, FIRST, the rest by name), then every other
+ * language by name; never the language you speak (interface-language.js speaks). { all, full }: every code in order, and how many lead.
  */
-/** The list's order: the language you speak's list leads with this phone's own, the one to learn with the likeliest (FIRST), the rest by name. */
-function choiceOrder({ speak = false } = {}) {
-  const device = speak ? deviceLanguages() : [];
-  const lead = speak ? device : FIRST;
-  const skip = speak ? null : (iSpeak() ?? "en");
-  return { device, all: [...lead.filter((code) => LANGUAGES[code] && code !== skip), ...Object.keys(LANGUAGES).filter((code) => code !== skip && !lead.includes(code)).sort((a, b) => languageLabel(a).localeCompare(languageLabel(b), intlLocale()))] };
+function choiceOrder() {
+  const skip = speaks();
+  const byName = (a, b) => languageLabel(a).localeCompare(languageLabel(b), intlLocale());
+  const codes = Object.keys(LANGUAGES).filter((code) => code !== skip);
+  const full = [...FIRST.filter((code) => codes.includes(code) && fullCourse(code)), ...codes.filter((code) => fullCourse(code) && !FIRST.includes(code)).sort(byName)];
+  return { all: [...full, ...codes.filter((code) => !full.includes(code)).sort(byName)], full: full.length };
 }
 
-function languageChoices(onPick, { speak = false } = {}) {
-  const { device, all } = choiceOrder({ speak });
-  const current = speak ? (saidISpeak() ? iSpeak() : null) : learning();
-  const subOf = (code) => (speak ? (device.includes(code) ? t("welcome.thisPhone") : null) : code === "nl" ? t("welcome.mostSoFar") : null);
-  const rows = all.map((code, i) =>
-    el(
-      "li",
-      { class: "lx-row-item" },
-      el(
-        "button",
-        { part: "list-row", type: "button", "data-language": code, "aria-current": code === current ? "true" : undefined, onclick: () => onPick(code) },
-        ui.languageFlag(code, { size: "lg", lazy: i >= ui.FLAG_ROWS_SHOWN }),
-        el("span", { class: "lx-row-text" }, el("span", { class: "lx-row-title" }, languageLabel(code)), subOf(code) ? el("span", { class: "lx-row-sub" }, subOf(code)) : null),
-      ),
-    ),
-  );
+/**
+ * A search and every language to learn, each a press: onPick(code). Returns { find, list }, to lay out as the caller likes. Two groups under
+ * their headings: Full courses, each with its lessons, then First lessons (a starter). Only what has something to learn once the catalog says.
+ */
+function languageChoices(onPick) {
+  const current = learning();
+  const rowOf = new Map();
+  const row = (code) => {
+    if (!rowOf.has(code)) {
+      const sub = el("span", { class: "lx-row-sub", hidden: true });
+      const node = el(
+        "li",
+        { class: "lx-row-item" },
+        el(
+          "button",
+          { part: "list-row", type: "button", "data-language": code, "aria-current": code === current ? "true" : undefined, onclick: () => onPick(code) },
+          ui.languageFlag(code, { size: "lg", lazy: true }),
+          el("span", { class: "lx-row-text" }, el("span", { class: "lx-row-title" }, languageLabel(code)), sub),
+        ),
+      );
+      rowOf.set(code, { node, sub });
+    }
+    return rowOf.get(code);
+  };
+  const head = (text, group) => el("li", { class: "lx-language-head", "data-group": group }, el("h2", { class: "lx-small lx-muted" }, text));
+  const heads = { full: head(t("welcome.fullCourses"), "full"), rest: head(t("welcome.firstLessons"), "rest") };
+  const list = el("ul", { part: "list" });
+  // Laid out from what's known of each language's lessons: at once from the release's facts, again only if the catalog's answer changes the
+  // groups or a count (a new course joins the first group).
+  let all = [];
+  let full = 0;
+  let laid = "";
+  const arrange = () => {
+    const order = choiceOrder();
+    const key = JSON.stringify([order.all, order.full, order.all.slice(0, order.full).map(lessonsOf)]);
+    if (key === laid) return;
+    laid = key;
+    ({ all, full } = order);
+    all.forEach((code, i) => {
+      const { sub } = row(code);
+      sub.hidden = i >= full;
+      sub.textContent = i < full ? t("welcome.lessons", { count: lessonsOf(code) }) : "";
+    });
+    list.replaceChildren(heads.full, ...all.slice(0, full).map((code) => row(code).node), heads.rest, ...all.slice(full).map((code) => row(code).node));
+  };
+  arrange();
   // Only what has something to learn: the catalog says which, and until it answers they're all shown. (With no answer at all, nothing's taken away: picking one says what it needs.)
   let offered = null;
   const none = el("p", { class: "lx-small lx-muted", hidden: true }, t("welcome.noMatch"));
@@ -107,30 +149,35 @@ function languageChoices(onPick, { speak = false } = {}) {
   const show = () => {
     const q = find.value.trim().toLocaleLowerCase(intlLocale());
     let shown = 0;
+    const seen = { full: 0, rest: 0 };
     all.forEach((code, i) => {
       const hit = (!offered || offered.has(code)) && (!q || languageLabel(code).toLocaleLowerCase(intlLocale()).includes(q) || LANGUAGES[code].name.toLowerCase().includes(q));
-      rows[i].hidden = !hit;
-      // A row the search or the catalog brings into the first screenful draws its flag at once (lx/ui.js languageFlag).
-      const flag = hit && shown < ui.FLAG_ROWS_SHOWN ? rows[i].querySelector('img[loading="lazy"]') : null;
+      const { node } = row(code);
+      node.hidden = !hit;
+      // A row in the first screenful draws its flag at once (lx/ui.js languageFlag), whatever brought it there.
+      const flag = hit && shown < ui.FLAG_ROWS_SHOWN ? node.querySelector('img[loading="lazy"]') : null;
       if (flag) Object.assign(flag, { loading: "eager", decoding: "sync" });
       if (hit) shown++;
+      if (hit) seen[i < full ? "full" : "rest"]++;
     });
+    // A heading only over rows that show, and none at all over a single group (a search's few hits need no sorting into two).
+    heads.full.hidden = !seen.full || !seen.rest;
+    heads.rest.hidden = !seen.rest || !seen.full;
     none.hidden = shown > 0;
   };
   find.addEventListener("input", show);
   // What the catalog last said, at once; a newer answer only if it differs.
   const take = (set) => {
-    if (!set) return;
+    arrange();
+    if (!set) return show();
     const next = new Set([...set, learning()]);
-    if (offered && next.size === offered.size && [...next].every((code) => offered.has(code))) return;
+    if (offered && next.size === offered.size && [...next].every((code) => offered.has(code))) return show();
     offered = next;
     show();
   };
-  if (!speak) {
-    take(offeredNow);
-    askOffered().then(take);
-  }
-  return { find, list: el("div", { class: "lx-language-list" }, el("ul", { part: "list" }, rows), none) };
+  take(offeredNow);
+  askOffered().then(take);
+  return { find, list: el("div", { class: "lx-language-list" }, list, none) };
 }
 
 /** Every language in a sheet (Settings → Language). */
@@ -138,30 +185,14 @@ export function openLanguageSheet() {
   const sheet = ui.sheetLayer({ label: t("welcome.addLanguage") });
   const { find, list } = languageChoices((code) => {
     sheet.lxClose();
-    setLearning(code, fromFor(code, iSpeak()));
+    setLearning(code, fromFor(code, speaks()));
   });
   sheet.lxBody.append(el("div", { class: "lx-stack" }, el("h2", { class: "lx-sheet-title" }, t("welcome.addLanguage")), find, list));
   sheet.lxOpen();
 }
 
-/** Every language, to pick the one you speak, in a sheet (Settings → Language). */
-export function openSpeakSheet() {
-  const sheet = ui.sheetLayer({ label: t("welcome.speakQuestion") });
-  const { find, list } = languageChoices(
-    (code) => {
-      sheet.lxClose();
-      setISpeak(code);
-    },
-    { speak: true },
-  );
-  sheet.lxBody.append(el("div", { class: "lx-stack" }, el("h2", { class: "lx-sheet-title" }, t("welcome.speakQuestion")), find, list));
-  sheet.lxOpen();
-}
-
 /**
- * Opens the first run over the page. Returns it, or null if there's already one up. Two questions, each one press: the language you speak
- * (this phone's languages first, none assumed), then the one you want to learn. A device that has said which it speaks is asked only the
- * second.
+ * Opens the first run over the page. Returns it, or null if there's already one up. One question, one press: what you want to learn.
  */
 /**
  * The first run, over the app. whole (a start's): it shows once its first screenful's flags are drawn (FLAGS_WAIT at most), so it comes in
@@ -181,44 +212,25 @@ export function openWelcome({ whole = false } = {}) {
     document.documentElement.removeAttribute("data-scroll-lock");
     previously?.focus?.({ preventScroll: true });
   };
-  const ask = (question, choices, extra = null) => {
+  const ask = (question, choices) => {
     node.setAttribute("aria-label", question);
     title.textContent = question;
-    head.replaceChildren(tinta, title, ...[extra, choices.find].filter(Boolean));
+    // Where this browser's progress is kept, said before lesson 1 where it's about to be lost (keep-here.js): an iPhone's browser, another
+    // app's browser, the Home Screen app opening empty.
+    const keep = keepNote({ fresh: true, where: "welcome" });
+    head.replaceChildren(tinta, title, ...(keep ? [keep] : []), choices.find);
     body.replaceChildren(choices.list);
     node.scrollTop = 0;
   };
-  const askLearning = () => {
-    const speak = iSpeak();
-    // What you said you speak, with the way back to it.
-    const said = speak
-      ? el("p", { class: "lx-welcome-said lx-small lx-muted" }, t("welcome.youSpeak", { language: languageLabel(speak) }), " ", el("button", { type: "button", class: "lx-welcome-change", onclick: askSpeak }, t("welcome.change")))
-      : null;
-    ask(
-      t("welcome.question"),
-      languageChoices((code) => {
-        close();
-        setLearning(code, fromFor(code, iSpeak()));
-        // (Picking the language it already was changes nothing, so nothing has asked for its packs yet.)
-        syncLibraryPacks();
-      }),
-      said,
-    );
-  };
-  function askSpeak() {
-    ask(
-      t("welcome.speakQuestion"),
-      languageChoices(
-        (code) => {
-          setISpeak(code);
-          askLearning();
-        },
-        { speak: true },
-      ),
-    );
-  }
-  if (saidISpeak()) askLearning();
-  else askSpeak();
+  ask(
+    t("welcome.question"),
+    languageChoices((code) => {
+      close();
+      setLearning(code, fromFor(code, speaks()));
+      // (Picking the language it already was changes nothing, so nothing has asked for its packs yet.)
+      syncLibraryPacks();
+    }),
+  );
   const show = () => {
     document.body.append(node);
     document.documentElement.setAttribute("data-scroll-lock", "");

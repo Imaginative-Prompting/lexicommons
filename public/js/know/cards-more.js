@@ -379,13 +379,18 @@ export function weekCard({ lang, now, week = weekOf({ lang, now }), tinta = null
     glasses,
     el("p", { class: "lx-know-caption" }, t("know.week.scale")),
     // What the number counted: what it came from (lessons, practices, games, reading), and what one thing is. Home's "things done this week"
-    // opens this card.
-    countedFrom(finishedIn(now - 7 * DAY, now + 1)),
-    madeOf(week.from),
-    week.done ? whatCounts() : null,
-    words,
-    stronger,
-    wideButton(t("know.week.seeAll"), { variant: "gray", onclick: () => (location.hash = "#know/week") }),
+    // opens this card. With the new words and the way on, one group: the card's own parts on a phone (know.css: its box isn't drawn), a
+    // column of its own beside the glasses on a computer's board.
+    el(
+      "div",
+      { class: "lx-week-side" },
+      countedFrom(finishedIn(now - 7 * DAY, now + 1)),
+      madeOf(week.from),
+      week.done ? whatCounts() : null,
+      words,
+      stronger,
+      wideButton(t("know.week.seeAll"), { variant: "gray", onclick: () => (location.hash = "#know/week") }),
+    ),
   );
   // The number a screen reader hears is the week's, at once; the one shown may still be counting.
   headline = card.querySelector(":scope > .lx-know-stat-block > .lx-know-n");

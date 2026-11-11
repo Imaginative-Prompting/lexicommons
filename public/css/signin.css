@@ -105,6 +105,20 @@
     .lx-signin-ways { margin-block-start: var(--space-3); }
   }
 
+  /* On a computer only (login.js; src/pages.ts computerNote): a quiet line under the ways in, beside the code a phone's camera opens the site
+     with. Not a box: the page's quiet ink, the code on its own white (a camera reads dark on light) with the page's corner. */
+  .lx-signin-computer { order: 1; display: grid; grid-template-columns: 99px minmax(0, 1fr); align-items: center; gap: var(--space-4); margin-block-start: var(--space-5); color: var(--ink-3); }
+  .lx-signin-computer img { display: block; width: 99px; height: 99px; border-radius: var(--radius-8, 8px); }
+  /* A wide window: the note in a column of its own beside the card, centered on the ways in (level with the form), so it's in view with no
+     scroll; Google's and GitHub's rows had put it under the fold at 1280 × 800 (11 Nov 2026). The page grows by that column and stays in the
+     middle. Only while the note is shown (a computer): a phone's and a tablet's page are as they were. */
+  @media (min-width: 960px) {
+    .lx-signin:has(> .lx-signin-card > .lx-signin-computer:not([hidden])) { max-width: calc(400px + 48px + 280px); }
+    .lx-signin-card:has(> .lx-signin-computer:not([hidden])) { display: grid; grid-template-columns: minmax(0, 1fr) 280px; column-gap: 48px; row-gap: var(--space-5); align-content: start; }
+    .lx-signin-card:has(> .lx-signin-computer:not([hidden])) > * { grid-column: 1; }
+    .lx-signin-card:has(> .lx-signin-computer:not([hidden])) > .lx-signin-computer { order: 0; grid-column: 2; align-self: center; margin: 0; grid-template-columns: 1fr; justify-items: start; gap: var(--space-3); }
+  }
+
   /* Someone new (/login?new=1): signing in is a plain line under creating an account, its words a press of 44 px. */
   .lx-signin-already { display: flex; flex-wrap: wrap; align-items: center; column-gap: var(--space-1); color: var(--ink-2); font-size: var(--size-14); }
   .lx-signin-plain { min-height: 44px; padding: 0; border: 0; background: none; color: var(--ink-1); font: 600 var(--size-14) / 1.3 var(--type-ui); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }

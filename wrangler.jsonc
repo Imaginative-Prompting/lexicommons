@@ -65,7 +65,7 @@
     // The address account email comes from (src/account-email.ts); empty turns account email off.
     "EMAIL_FROM": "account@lexicommons.com",
     "RP_NAME": "Lexicommons",
-    "GATE_ENABLED": "true",
+    "GATE_ENABLED": "false",
     // "true" opens only the home page, the privacy policy and the terms while the gate is on, still out of search (src/gate.ts).
     "GATE_PUBLIC_PAGES": "false",
     // The paid plan and the in-app AI are off at launch (src/offered.ts planOffered; a key of your own, OWN_KEY_ENABLED): no screen, public

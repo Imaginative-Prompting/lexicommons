@@ -174,6 +174,25 @@ a:focus-visible, .site-button:focus-visible { outline: 2px solid var(--ring); ou
 @media (min-width: 1100px) {
   .site-beat { gap: 104px; }
 }
+/* A wide window (1440 and up, 11 Nov 2026): the page a wider column with larger type and phones, so 1920 isn't a small island in its
+ * middle; the hero fills the first view, so the next phone starts under the fold rather than cut by it. */
+@media (min-width: 1440px) {
+  .site { max-width: 1240px; padding: 0 48px; }
+  .site-hero { min-height: calc(100svh - 68px); align-content: center; padding: 24px 0 48px; }
+  .site-hero h1 { font-size: 88px; }
+  .site-hero .site-beat-words { max-width: 44em; }
+  .site-hero .site-beat-words > p { max-width: 32em; font-size: 21px; }
+  .site-beat { grid-template-columns: minmax(0, 30em) auto; gap: 128px; padding: 48px 0; }
+  .site-beat:nth-of-type(even) { grid-template-columns: auto minmax(0, 30em); }
+  .site-hero.site-beat { grid-template-columns: minmax(0, 1fr) auto; }
+  .site-beat h2 { font-size: 54px; }
+  .site-beat-words > p { font-size: 21px; }
+  .site-phone { --phone: clamp(320px, calc((100svh - 64px) * 0.435), 400px); }
+  .site-why > h2, .site-end h2 { font-size: 54px; }
+  .site-facts { gap: 32px 56px; }
+  .site-facts h3 { font-size: 22px; }
+  .site-facts p { font-size: 17px; }
+}
 
 /* The privacy policy and the terms. */
 .site-doc { max-width: 720px; padding: 32px 0 48px; }

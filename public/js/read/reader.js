@@ -71,7 +71,7 @@ import { curlLayers, pageOf, paginate, paginateSpread, spreadFits, spreadPin, tu
 import * as store from "./store.js";
 import { removeText } from "./text-inbox.js";
 import { englishEnd, typeset, withArticle } from "../lang/index.js";
-import { LANGUAGES, frameOf, gapBetween, helpSentence, layerCredit, literalLineOf, picturePath, weaveSentence, joinWords } from "./book-format.js";
+import { LANGUAGES, coverageOf, frameOf, gapBetween, helpSentence, layerCredit, literalLineOf, picturePath, weaveSentence, joinWords } from "./book-format.js";
 import { FLIP_AT, FLIP_CHOICES, addNotYet, addWord, announce, bankEntry, bankWords, flipAtOf, inBank, knownIn, lemmaKey, notYet, onBankChange, removeWord, restartFade, setSuggestClock, studiedWords, suggestClock } from "./bank.js";
 import { learningOrder } from "./woven-text.js";
 import { WEAVE_LANGUAGES } from "./weave-languages.generated.js";
@@ -286,6 +286,8 @@ export function openReader(host, { bookId = null, book: given = null, word: give
   const marksSheet = ui.sheet({ label: "Highlights and notes", onClose: (options) => closeSheet(options) });
   const noteSheet = ui.sheet({ label: "Note", onClose: (options) => closeSheet(options) });
   const cardSheet = ui.sheet({ label: "Word", onClose: (options) => closeSheet(options) });
+  // On a computer Contents and Notes come down from their own buttons, at the top; the others rise over the gear (reader.css, from 1024 px).
+  contents.dataset.dock = marksSheet.dataset.dock = "top";
   const status = el("div", { part: "reader-status", "aria-live": "polite" });
   const turnLayer = el("div", { part: "reader-turn", "aria-hidden": "true", hidden: true });
   const root = el("div", { part: "reader", role: "dialog", "aria-label": "Reader", "data-mode": mode }, text, turnLayer, status, topBar, collapse, gear, fullscreen, settings, contents, marksSheet, noteSheet, cardSheet);
@@ -3287,6 +3289,8 @@ export function openReader(host, { bookId = null, book: given = null, word: give
       buildSettings();
       rewave();
       draw();
+      // Woven now, its card gone: if it still reads in English, the line that says why.
+      whyEnglish(book).catch(() => {});
     };
     // While a request is out: its state live, and the layer the moment this device keeps it.
     const follow = () => {
@@ -3312,6 +3316,57 @@ export function openReader(host, { bookId = null, book: given = null, word: give
     // Followed whenever it isn't woven yet, a request out or not: a weave can come with none (your AI weaving a text it added), and the card
     // and Contents' row turn into the way in the moment this device keeps it.
     follow();
+  }
+
+  // ---------- a woven text that still reads in English ----------
+
+  // A woven text shows in the language only as far as you know its words, so to someone new it opens as the English it was, and reads as
+  // "nothing happened". While you know under a tenth of it, one line at the reader's foot says why, once a text: put away with its cross, and
+  // gone for good on that text once it is, or once you know more of it than that. Never while the weave offer's card is there (one card).
+  const WHY_UNDER = 0.1;
+  let whyCard = null;
+  async function whyEnglish(book) {
+    whyCard?.remove();
+    whyCard = null;
+    if (root.hasAttribute("data-why")) {
+      root.removeAttribute("data-why");
+      root.style.removeProperty("--why-room");
+      relayout(lastWord);
+    }
+    if (demo || ended || weave?.kind !== "weave" || !weaveOn() || offerCard) return;
+    const KEY = `lx.weave-why.${book.id}`;
+    // The page leaves the card its room for as long as it's there (reader.css reads data-why and --why-room), so it's never over the text:
+    // laid out again when it comes and when it goes.
+    const room = (on) => {
+      if (on === root.hasAttribute("data-why")) return;
+      if (on) root.setAttribute("data-why", "");
+      else root.removeAttribute("data-why");
+      // From the card's top to the reader's foot: the card and the controls under it.
+      if (on) root.style.setProperty("--why-room", `${Math.ceil(root.getBoundingClientRect().bottom - whyCard.getBoundingClientRect().top)}px`);
+      else root.style.removeProperty("--why-room");
+      relayout(lastWord);
+      placeMarks();
+    };
+    const putAway = () => {
+      try {
+        localStorage.setItem(KEY, "no");
+      } catch {}
+      whyCard?.remove();
+      whyCard = null;
+      room(false);
+    };
+    try {
+      if (localStorage.getItem(KEY) === "no") return;
+    } catch {}
+    if (coverageOf(weave, (lemma) => known(lemma)).share >= WHY_UNDER) return putAway();
+    const { symbol } = await import("../lx/symbols.js");
+    if (ended || whyCard || offerCard || weave?.kind !== "weave") return;
+    const name = LANGUAGES[weave.to]?.name ?? weave.to;
+    const text = el("div", { class: "lx-offer-text" }, el("strong", {}, `Woven into ${name}`), el("span", {}, `It reads in English until you know its words: each ${name} word you learn shows here in its place.`));
+    const close = ui.iconButton("cross", "Got it", { onclick: putAway });
+    whyCard = el("div", { part: "reader-offer", "data-state": "why" }, el("div", { class: "lx-offer-top" }, symbol("translate-q", { size: 30 }), text, close));
+    root.append(whyCard);
+    room(true);
   }
 
   /** Contents' chapters (each with how long it is), where you are among them, and About this book. */
@@ -3491,6 +3546,7 @@ export function openReader(host, { bookId = null, book: given = null, word: give
     const beside = woven?.kind === "parallel" && woven.bookVersion === found.text.version ? woven : null;
     open(found.text, position?.word ?? 0, layer, beside);
     offerWeave(found.text, layer).catch((error) => console.error("[lexicommons] the weave offer:", error));
+    whyEnglish(found.text).catch(() => {});
     // Definitions the library has now that this device doesn't yet (they came after the book): fetched, kept, used.
     newerDefinitions(found.text, layerTo, layer).catch(() => {});
   })().catch((error) => {

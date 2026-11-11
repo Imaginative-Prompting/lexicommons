@@ -1,5 +1,6 @@
-// A first run, on a phone in Chrome: a brand-new account is asked which language it speaks, its phone's own first and none assumed, then what it wants to learn, before anything
-// else; it's gone at the second press. A phone whose languages it doesn't know, the plain list; a device that has said, only what to learn; Change going back. The list and its search;
+// A first run, on a phone in Chrome: a brand-new account is asked one thing, what it wants to learn, before anything else (never which language it
+// speaks: the app teaches from English alone, so that question went on 11 Nov 2026); it's gone at the press. A phone set to another language or
+// to one nobody knows gets the same list; a device that said which it speaks, when that was asked, keeps its answer. The list and its search;
 // a press making that language the one you're learning, its packs on their way and Home in that language, never asked again; a press while Tinta waves; an account that has already
 // studied, and a device where a language was picked, never asked; a control that the check can fail. A press in the list to learn waits for the list
 // the welcome shows once the catalog has answered (until then every language; on a server with only Dutch's packs, Dutch alone), with a control
@@ -60,16 +61,16 @@ async function newAccount(name, { languages = null, stored = {}, before = null }
   return { context, page };
 }
 const welcome = ".lx-welcome";
-const SPEAK = "Which language do you speak?";
+// (Until 11 Nov 2026 a first question asked which language you speak. The app teaches from English alone, so nothing asks it now: SPOKE is
+// the old question, which must never come up.)
+const SPOKE = "Which language do you speak?";
 const LEARN = "What do you want to learn?";
 const titleOf = (page) => page.locator(`${welcome} [data-part="page-title"]`).textContent();
-// The first question answered: the language this account speaks (English unless given), and the second question up.
-async function answerSpeak(page, code = "en") {
+// The one question is up: what to learn (never which language is spoken).
+async function onLearn(page) {
   await page.waitForSelector(welcome);
   const title = await titleOf(page);
-  assert(title === SPEAK, `the first question is "${title}"`);
-  await page.locator(`${welcome} [data-language="${code}"]`).click();
-  await page.waitForFunction((learn) => document.querySelector('.lx-welcome [data-part="page-title"]')?.textContent === learn, LEARN, { timeout: 5_000 });
+  assert(title === LEARN && title !== SPOKE, `the first question is "${title}"`);
 }
 // The rows of the question that's up: [code, its name, its line under it].
 const rowsOf = (page) =>
@@ -129,33 +130,17 @@ async function pickToLearn(page, codes) {
 }
 
 const { context, page } = await newAccount("First Run", { languages: ["en-US", "nl-NL"] });
-await stage("a brand-new account is asked first which language it speaks, its phone's own first, none assumed", async () => {
-  await page.waitForSelector(welcome);
-  assert((await titleOf(page)) === SPEAK, `its title: ${await titleOf(page)}`);
-  const rows = await rowsOf(page);
-  assert(rows[0][0] === "en" && rows[1][0] === "nl", `the first rows are ${rows.slice(0, 2).map((r) => r[0]).join(", ")}, not the phone's English and Dutch`);
-  const phone = rows.filter(([, , sub]) => sub === "This phone's language").map(([code]) => code);
-  assert(phone.join() === "en,nl", `marked as the phone's: ${phone.join(", ")}`);
-  assert(!rows.some(([, , , current]) => current === "true"), "a language is marked as chosen before anything was said");
-  assert(rows.length >= 70, `only ${rows.length} languages: anyone may speak any of them`);
+await stage("a brand-new account is asked one thing, what it wants to learn: never which language it speaks, and nothing kept or assumed about that", async () => {
+  await onLearn(page);
+  assert(!(await page.locator(`${welcome} .lx-welcome-said, ${welcome} .lx-welcome-change`).count()), "a line about the language spoken, or a way to change it");
+  assert(!/speak/i.test(await page.locator(welcome).innerText()), `the first run says something about speaking: ${(await page.locator(welcome).innerText()).slice(0, 120)}`);
   const kept = await page.evaluate(() => localStorage.getItem("lx.interface.v1"));
-  assert(kept === null, `something was kept before an answer: ${kept}`);
-  await page.screenshot({ path: join(OUT, "shots", "00-i-speak.png") });
-  return `${rows.length} languages, the phone's English and Dutch first`;
-});
-await stage("then what it wants to learn, under what it said it speaks", async () => {
-  await answerSpeak(page, "en");
-  const kept = await page.evaluate(() => JSON.parse(localStorage.getItem("lx.interface.v1"))?.speak);
-  assert(kept === "en", `kept as spoken: ${kept}`);
-  const said = await page.locator(`${welcome} .lx-welcome-said`).innerText();
-  assert(/^You speak English\.\s+Change$/.test(said.trim()), `the line: ${said}`);
-});
-await stage("Change goes back to which language it speaks, and an answer there comes back here", async () => {
-  await page.locator(`${welcome} .lx-welcome-change`).click();
-  assert((await titleOf(page)) === SPEAK, `Change opened "${await titleOf(page)}"`);
-  const current = (await rowsOf(page)).filter(([, , , c]) => c === "true").map(([code]) => code);
-  assert(current.join() === "en", `marked as chosen: ${current.join(", ")}`);
-  await answerSpeak(page, "en");
+  assert(kept === null, `something was kept about the language spoken: ${kept}`);
+  // The phone's own languages (English and Dutch here) change nothing: Dutch is offered to learn, English isn't.
+  const rows = await rowsOf(page);
+  assert(rows.some(([code]) => code === "nl") && !rows.some(([code]) => code === "en"), `offered to learn: ${rows.slice(0, 6).map((r) => r[0]).join(", ")}…`);
+  await page.screenshot({ path: join(OUT, "shots", "00-what-to-learn.png") });
+  return `${rows.length} languages to learn, Dutch among them on a phone set to English and Dutch`;
 });
 await stage("a brand-new account is asked what it wants to learn, over everything", async () => {
   await page.waitForSelector(welcome);
@@ -172,6 +157,64 @@ await stage("a brand-new account is asked what it wants to learn, over everythin
   const count = await page.locator(`${welcome} [data-language]`).count();
   assert(count > 20, `only ${count} languages`);
   return `${count} languages in the list`;
+});
+// The list as it's laid out: its two headings, each group's codes in order, and each shown row's line under its name.
+const groupsOf = (p) =>
+  p.evaluate((sel) => {
+    const out = { heads: [], full: [], rest: [], subs: {} };
+    let group = null;
+    for (const item of document.querySelectorAll(`${sel} .lx-language-list [data-part="list"] > li`)) {
+      if (item.classList.contains("lx-language-head")) {
+        group = item.getAttribute("data-group");
+        if (!item.hidden) out.heads.push(item.textContent.trim());
+        continue;
+      }
+      if (item.hidden) continue;
+      const row = item.querySelector("[data-language]");
+      out[group]?.push(row.dataset.language);
+      const sub = row.querySelector(".lx-row-sub:not([hidden])")?.textContent ?? "";
+      if (sub) out.subs[row.dataset.language] = sub;
+    }
+    return out;
+  }, welcome);
+// The languages with a full course, from the facts the list itself reads: the catalog's lesson counts against the site's own number for one.
+const fullByTheFacts = (p) =>
+  p.evaluate(async () => {
+    const { SITE_FACTS } = await import("/js/site-facts.js");
+    const packs = (await (await fetch("/library/catalogue.json")).json()).packs ?? {};
+    const lessons = Object.fromEntries(Object.entries(packs).map(([code, list]) => [code, Math.max(0, ...list.map((pack) => Number(pack?.lessons) || 0))]));
+    return { need: SITE_FACTS.fullCourse, lessons, full: Object.keys(lessons).filter((code) => lessons[code] >= SITE_FACTS.fullCourse && code !== "en") };
+  });
+await stage("the languages with a full course lead the list under Full courses, each with its lessons, from the catalog's own counts; every other under First lessons, by name", async () => {
+  await settledList(page);
+  const facts = await fullByTheFacts(page);
+  if (!facts.full.length) return "no full course on this server's catalog: nothing to lead";
+  const laid = await groupsOf(page);
+  assert(laid.heads.join("|") === "Full courses|First lessons", `the headings: ${laid.heads.join(", ")}`);
+  assert([...laid.full].sort().join() === [...facts.full].sort().join(), `under Full courses: ${laid.full.join(", ")}; by the catalog (${facts.need} lessons or more): ${facts.full.join(", ")}`);
+  assert(laid.full[0] === "nl" || !facts.full.includes("nl"), `Dutch isn't first: ${laid.full.join(", ")}`);
+  for (const code of laid.full) assert(laid.subs[code] === `${facts.lessons[code]} lessons`, `${code}'s line: "${laid.subs[code]}", its lessons: ${facts.lessons[code]}`);
+  assert(!laid.rest.some((code) => laid.subs[code]), `a line under a language with a starter: ${laid.rest.filter((code) => laid.subs[code]).join(", ")}`);
+  const names = await page.locator(`${welcome} li:not([hidden]) [data-language]`).evaluateAll((nodes, n) => nodes.slice(n).map((node) => node.querySelector(".lx-row-title").textContent), laid.full.length);
+  assert(names.join("|") === [...names].sort((a, b) => a.localeCompare(b, "en")).join("|"), `the rest isn't in order of name: ${names.slice(0, 6).join(", ")}…`);
+  assert(!/most so far/i.test(await page.locator(welcome).innerText()), "Dutch is still said to have the most");
+  await page.screenshot({ path: join(OUT, "shots", "00b-full-courses-first.png") });
+  // A ninth course joins them: Korean's starter planted with as many lessons as a full course, in the catalog this account gets.
+  const planted = await newAccount("Ninth Course", {
+    before: (context) =>
+      context.route(/\/library\/catalogue\.json(\?|$)/, async (route) => {
+        const response = await route.fetch();
+        const catalog = await response.json();
+        if (catalog.packs?.ko?.[0]) catalog.packs.ko[0] = { ...catalog.packs.ko[0], lessons: facts.need };
+        return route.fulfill({ response, json: catalog });
+      }),
+  });
+  await onLearn(planted.page);
+  await planted.page.waitForFunction((sel) => [...document.querySelectorAll(`${sel} .lx-language-head ~ li [data-language]`)].length > 0 && document.querySelector(`${sel} [data-language="ko"] .lx-row-sub:not([hidden])`), welcome, { timeout: 10_000 }).catch(() => {});
+  const withNinth = await groupsOf(planted.page);
+  await planted.context.close();
+  assert(withNinth.full.includes("ko") && withNinth.subs.ko === `${facts.need} lessons` && withNinth.full.length === laid.full.length + 1, `PLANT: Korean with ${facts.need} lessons: under Full courses ${withNinth.full.join(", ")}, its line "${withNinth.subs.ko}"`);
+  return `${laid.full.join(", ")} (${facts.need} lessons each), then ${laid.rest.length} by name; Korean planted with ${facts.need} joins them`;
 });
 await stage("only languages with something to learn are offered, once the catalog says which", async () => {
   const catalogue = await page.evaluate(async () => (await (await fetch("/library/catalogue.json")).json()).packs ?? {});
@@ -196,7 +239,7 @@ await stage("the control: with the catalog held back, every language shows and t
       }),
   });
   try {
-    await answerSpeak(held.page);
+    await onLearn(held.page);
     const all = await shownRows(held.page);
     if (all.every((code) => offered.includes(code))) return "every language is offered: nothing to wait for";
     const scrolls = await held.page.locator(`${welcome} .lx-welcome-list`).evaluate((n) => n.scrollHeight > n.clientHeight);
@@ -285,12 +328,7 @@ await stage("nothing's fetched for a language nobody picked: a first run asks be
   const packsNow = () => fresh.page.evaluate(async () => (await import("/js/study/packs.js")).libraryPacks().map((p) => p.id));
   const before = await packsNow();
   assert(!before.some((id) => id !== "starter-word-order"), `packs taken before a language was picked: ${before.join(", ")}`);
-  // The language you speak is no language to learn: answering it takes no pack either.
-  await answerSpeak(fresh.page, "pl");
-  await fresh.page.waitForTimeout(1500);
-  const spoken = await packsNow();
-  assert(!spoken.some((id) => id !== "starter-word-order"), `packs taken for the language spoken: ${spoken.join(", ")}`);
-  assert(!(await fresh.page.locator(`${welcome} [data-language="pl"]`).count()), "the language spoken is offered to learn");
+  await onLearn(fresh.page);
   const picked = await pickToLearn(fresh.page, ["de"]);
   await fresh.page.waitForSelector(welcome, { state: "detached" });
   const catalogue = await fresh.page.evaluate(async () => (await (await fetch("/library/catalogue.json")).json()).packs ?? {});
@@ -305,8 +343,10 @@ await stage("the control: with a language's pack held back, that wait fails, and
     await held.context.close();
     return "no library on this server";
   }
-  await held.page.route("**/library/packs/starter-fr/**", (route) => route.abort());
-  await answerSpeak(held.page);
+  // Every pack the catalog lists for French, by its id (its lessons' pack and its word packs, whatever they're called).
+  const frenchIds = catalogue.fr.map((pack) => pack.id).filter(Boolean);
+  await held.page.route("**/library/packs/**", (route) => (frenchIds.some((id) => route.request().url().includes(`/${id}/`) || route.request().url().includes(`/${id}.`)) ? route.abort() : route.continue()));
+  await onLearn(held.page);
   const picked = await pickToLearn(held.page, ["fr"]);
   if (picked !== "fr") {
     await held.context.close();
@@ -338,28 +378,29 @@ await stage("#welcome opens it again, to look at, and a press there still works"
 });
 await context.close();
 
-await stage("a phone whose languages it doesn't know: the plain list, nothing first, nothing assumed", async () => {
-  const odd = await newAccount("Odd Phone", { languages: ["xx-YY"] });
-  await odd.page.waitForSelector(welcome);
-  assert((await titleOf(odd.page)) === SPEAK, `its title: ${await titleOf(odd.page)}`);
-  const rows = await rowsOf(odd.page);
-  assert(!rows.some(([, , sub]) => sub), `a line under a row: ${rows.filter(([, , sub]) => sub).map(([c]) => c).join(", ")}`);
-  assert(!rows.some(([, , , current]) => current === "true"), "a language is marked as chosen");
-  const names = rows.map(([, name]) => name);
-  const sorted = [...names].sort((a, b) => a.localeCompare(b, "en"));
-  assert(names.join("|") === sorted.join("|"), `not in order of name: ${names.slice(0, 5).join(", ")}…`);
-  await odd.page.screenshot({ path: join(OUT, "shots", "05-phone-says-nothing.png") });
-  await odd.context.close();
-  return `${rows.length} languages in order of name`;
+await stage("a phone set to another language than English (Spanish), or to one nobody knows: the same one question and the same list, Spanish offered", async () => {
+  const notes = [];
+  for (const languages of [["es-ES"], ["xx-YY"]]) {
+    const other = await newAccount(`Phone ${languages[0]}`, { languages });
+    await onLearn(other.page);
+    const rows = await rowsOf(other.page);
+    assert(rows.some(([code]) => code === "es") && !rows.some(([code]) => code === "en"), `on a phone set to ${languages[0]}, offered: ${rows.slice(0, 6).map((r) => r[0]).join(", ")}…`);
+    assert(!rows.some(([, , sub]) => /phone/i.test(sub ?? "")), "a row marked as the phone's language");
+    assert((await other.page.evaluate(() => localStorage.getItem("lx.interface.v1"))) === null, "something kept about the language spoken");
+    if (languages[0] === "es-ES") await other.page.screenshot({ path: join(OUT, "shots", "05-phone-in-spanish.png") });
+    await other.context.close();
+    notes.push(`${languages[0]}: ${rows.length} languages`);
+  }
+  return notes.join("; ");
 });
 
-await stage("a device that has said which language it speaks is asked only what to learn, and not offered that one", async () => {
-  const said = await newAccount("Said Dutch", { stored: { "lx.interface.v1": JSON.stringify({ speak: "nl", app: null, grow: false }) } });
-  await said.page.waitForSelector(welcome);
-  assert((await titleOf(said.page)) === LEARN, `its title: ${await titleOf(said.page)}`);
-  const line = await said.page.locator(`${welcome} .lx-welcome-said`).innerText();
-  assert(/^You speak Dutch\./.test(line.trim()), `the line: ${line}`);
-  assert(!(await said.page.locator(`${welcome} [data-language="nl"]`).count()), "Dutch is offered to someone who speaks it");
+await stage("a device that said which language it speaks, when that was asked, keeps its answer: not offered that one, and it's kept as it was", async () => {
+  const stored = JSON.stringify({ speak: "nl", app: null, grow: false });
+  const said = await newAccount("Said Dutch", { stored: { "lx.interface.v1": stored } });
+  await onLearn(said.page);
+  assert(!(await said.page.locator(`${welcome} .lx-welcome-said`).count()), "a line about the language spoken");
+  assert(!(await said.page.locator(`${welcome} [data-language="nl"]`).count()), "Dutch is offered to someone who said they speak it");
+  assert((await said.page.evaluate(() => localStorage.getItem("lx.interface.v1"))) === stored, "what it said was changed");
   await said.context.close();
 });
 
@@ -396,40 +437,53 @@ await stage("an account that has already studied isn't asked (the control: the s
   await fresh.context.close();
 });
 
-// The language you learn from (study/learning.js fromFor), as a learner picks what to learn: English from the language they
-// speak (English's packs are written from it), every other language from English (theirs are), never the language they
-// learned before. A new learner who spoke Spanish and picked English was set to learn it from Dutch, the first language's,
-// and read "Tap an English word, then its Dutch." over Spanish words.
-await stage("the language you learn from: English from the one you speak, every other language from English, never the one before", async () => {
-  const es = await newAccount("Speaks Spanish", { languages: ["es-ES"] });
+// The language you learn from (study/learning.js fromFor; interface-language.js speaks), as a learner picks what to learn. Nobody's asked
+// which language they speak, so a new learner learns every language from English, whatever their phone is set to. A device that said it
+// speaks Spanish, when that was asked, still learns English from Spanish and every other language from English, never from the language it
+// learned before (a new learner who spoke Spanish and picked English was once set to learn it from Dutch).
+await stage("the language you learn from: from English for a new learner on a Spanish phone; a device that said Spanish keeps English from Spanish, never the language before", async () => {
+  const kept = (page) => page.evaluate(() => JSON.parse(localStorage.getItem("lx.learning.v1") ?? "null"));
+  const said = (value) => `${value?.lang} from ${value?.from}`;
+  // A row pressed as a person would, in the first run or Settings → Language's sheet (shown or not: a server without the
+  // open library offers every language, one with it only those with packs, and this is about what a press keeps).
+  const press = async (page, list, code) => {
+    const row = `${list} [data-language="${code}"]`;
+    await page.waitForSelector(row, { state: "attached", timeout: 10_000 });
+    await page.evaluate((row) => document.querySelector(row).click(), row);
+    await page.waitForTimeout(300);
+  };
+  const sheet = async (page, code) => {
+    await page.evaluate(async () => (await import("/js/shell/welcome.js")).openLanguageSheet());
+    await press(page, '.lx-sheet-layer:not([hidden]) [data-part="sheet"]', code);
+  };
+  const fresh = await newAccount("Spanish Phone", { languages: ["es-ES"] });
+  const old = await newAccount("Said Spanish", { languages: ["es-ES"], stored: { "lx.interface.v1": JSON.stringify({ speak: "es", app: null, grow: false }) } });
   try {
-    const kept = () => es.page.evaluate(() => JSON.parse(localStorage.getItem("lx.learning.v1") ?? "null"));
-    const said = (value) => `${value?.lang} from ${value?.from}`;
-    // A row pressed as a person would, in the first run or Settings → Language's sheet (shown or not: a server without the
-    // open library offers every language, one with it only those with packs, and this is about what a press keeps).
-    const press = async (list, code) => {
-      const row = `${list} [data-language="${code}"]`;
-      await es.page.waitForSelector(row, { state: "attached", timeout: 10_000 });
-      await es.page.evaluate((row) => document.querySelector(row).click(), row);
-      await es.page.waitForTimeout(300);
-    };
-    const sheet = async (code) => {
-      await es.page.evaluate(async () => (await import("/js/shell/welcome.js")).openLanguageSheet());
-      await press('.lx-sheet-layer:not([hidden]) [data-part="sheet"]', code);
-    };
-    await answerSpeak(es.page, "es");
-    await press(welcome, "en");
-    const english = await kept();
-    assert(english?.lang === "en" && english?.from === "es", `a Spanish speaker's first pick, English, is kept as ${said(english)}`);
-    await sheet("nl");
-    const dutch = await kept();
+    await onLearn(fresh.page);
+    // (German: picking Dutch, the language a device starts on, changes nothing, so nothing is kept to read.)
+    await press(fresh.page, welcome, "de");
+    const dutchNew = await kept(fresh.page);
+    assert(dutchNew?.lang === "de" && dutchNew?.from === "en", `a new learner on a Spanish phone picks German: kept as ${said(dutchNew)}`);
+    const english = await fresh.page.evaluate(async () => {
+      (await import("/js/shell/welcome.js")).openLanguageSheet();
+      await new Promise((done) => setTimeout(done, 500));
+      return Boolean(document.querySelector('.lx-sheet-layer:not([hidden]) [data-language="en"]'));
+    });
+    assert(!english, "English is offered to learn to someone nobody asked which language they speak");
+    await onLearn(old.page);
+    await press(old.page, welcome, "en");
+    const first = await kept(old.page);
+    assert(first?.lang === "en" && first?.from === "es", `a device that said Spanish picks English: kept as ${said(first)}`);
+    await sheet(old.page, "nl");
+    const dutch = await kept(old.page);
     assert(dutch?.lang === "nl" && dutch?.from === "en", `then Dutch is kept as ${said(dutch)}`);
-    await sheet("en");
-    const back = await kept();
+    await sheet(old.page, "en");
+    const back = await kept(old.page);
     assert(back?.lang === "en" && back?.from === "es", `back to English, it's kept as ${said(back)}`);
-    return `${said(english)}, then ${said(dutch)}, then ${said(back)}`;
+    return `new: ${said(dutchNew)}; said Spanish: ${said(first)}, then ${said(dutch)}, then ${said(back)}`;
   } finally {
-    await es.context.close();
+    await fresh.context.close();
+    await old.context.close();
   }
 });
 

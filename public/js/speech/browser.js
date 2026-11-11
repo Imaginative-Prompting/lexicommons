@@ -1,7 +1,9 @@
 // The browser's own speech recognizer (the Web Speech API): Chrome's (Google's servers, or on the device where
 // Chrome has the language), Safari's (Apple's), Edge's (Microsoft's). Nothing runs on our server and it costs us
-// nothing. Chrome listens to a microphone track we open (start(track)), so it gets the same permission handling and
-// level meter as Whisper; elsewhere the recognizer opens the microphone itself.
+// nothing. A computer's Chrome listens to a microphone track we open (start(track)), so it gets the same permission handling and
+// level meter as Whisper; elsewhere the recognizer opens the microphone itself. Android's Chrome is elsewhere: it recognizes through
+// Android's own speech service, which opens the microphone itself, and with ours open beside it a learner saw the meter move as they
+// spoke and was told nothing was heard (11 Nov 2026, Chrome 157). So there we open none (takesTrack).
 
 import { SpeechError } from "./errors.js";
 import { LANGUAGES } from "../lang/index.js";
@@ -63,8 +65,29 @@ export async function browserSupport(lang = "nl-NL") {
   return { state: "unknown" };
 }
 
-/** Whether this browser's recognizer listens to a track we give it (Chrome's, from the same release as available()). */
-export const takesTrack = () => typeof Recognition()?.available === "function";
+// A device where a listen on our own track heard nothing while our meter measured a voice (speech.js viaBrowser): from then on its
+// recognizer opens the microphone itself, as Android's does. Kept per device; nothing of the learner's.
+const DEAF_KEY = "lx.speech.track-deaf.v1";
+const trackDeaf = () => {
+  try {
+    return localStorage.getItem(DEAF_KEY) === "1";
+  } catch {
+    return false;
+  }
+};
+/** Remembers that this device's recognizer hears nothing on a track we give it. */
+export function noteTrackDeaf() {
+  try {
+    localStorage.setItem(DEAF_KEY, "1");
+  } catch {}
+}
+const isAndroid = () => /Android/i.test(globalThis.navigator?.userAgent ?? "");
+
+/**
+ * Whether this browser's recognizer listens to a track we give it: Chrome's, from the same release as available(), on a computer.
+ * Never on Android, and never on a device where it has been deaf to one (noteTrackDeaf).
+ */
+export const takesTrack = () => typeof Recognition()?.available === "function" && !isAndroid() && !trackDeaf();
 
 /** Downloads the language for on-device recognition, where the browser offers it (Chrome). true when done. */
 export async function installLanguage(lang = "nl-NL") {
@@ -94,11 +117,11 @@ const QUIET_MS = 20_000; // nothing heard for this long
 const STOPPED_MS = 3_000; // asked to stop, and it hasn't ended
 
 /**
- * Listens once (to `track` when given). onState("listening" | "hearing" | "thinking"). Ends by itself when you stop
- * talking.
+ * Listens once (to `track` when given). onState("listening" | "hearing" | "thinking"). onHeard(): the recognizer has something of
+ * yours, each time it says so (speech starting, every result as it comes). Ends by itself when you stop talking.
  * → { stop(), cancel(), done: Promise<{ heard, alternatives, local }> }
  */
-export function browserListen({ lang = "nl-NL", onState, signal, local = false, track = null } = {}) {
+export function browserListen({ lang = "nl-NL", onState, onHeard, signal, local = false, track = null } = {}) {
   const R = Recognition();
   if (!R) throw new SpeechError("unsupported", "This browser has no speech recognizer.");
   const rec = new R();
@@ -150,10 +173,11 @@ export function browserListen({ lang = "nl-NL", onState, signal, local = false, 
   };
 
   rec.onaudiostart = () => onState?.("listening");
-  rec.onspeechstart = () => (stillThere(), onState?.("hearing"));
+  rec.onspeechstart = () => (stillThere(), onState?.("hearing"), onHeard?.());
   rec.onspeechend = () => onState?.("thinking");
   rec.onresult = (event) => {
     stillThere();
+    onHeard?.();
     latest = [];
     for (let i = event.resultIndex; i < event.results.length; i++) {
       const result = event.results[i];

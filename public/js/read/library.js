@@ -19,7 +19,7 @@ import { FLIP_AT, isTarget, pieceGap } from "./woven-text.js";
 import { bookFromEpub } from "./import-epub.js";
 import { dismissFailedText, failedTexts, onTextsChange } from "./text-inbox.js";
 import { learning, learningFrom, learningName } from "../study/learning.js";
-import { firstBookOf, keptCatalog, loadCatalog, renderShelf, renderShelfSection, wovenStory } from "./shelf.js";
+import { firstBookOf, keptCatalog, loadCatalog, renderShelf, renderShelfSection, wovenShare, wovenStory } from "./shelf.js";
 import { icon } from "../lx/icons.js";
 import { renderFind } from "./find.js";
 import { bookArt, bookOpens } from "../know/home-cards.js";
@@ -220,16 +220,30 @@ function yourTile(book, { cover, positions, woven }) {
   const share = percent(book, positions) / 100;
   const teaches = taughtBy(book, woven);
   const wovenInto = (woven.get(book.id) ?? []).includes(learning()) ? learning() : null;
-  return ui.bookTile({
+  const wovenLine = wovenInto ? `Woven into ${LANGUAGES[wovenInto]?.name ?? wovenInto}` : null;
+  const tile = ui.bookTile({
     id: book.id,
     title: book.title,
     lang: book.lang,
     flag: teaches && teaches !== learning() ? { lang: teaches, label: LANGUAGES[teaches]?.name ?? teaches } : undefined,
     cover,
-    sub: wovenInto ? `Woven into ${LANGUAGES[wovenInto]?.name ?? wovenInto}` : book.openedAt ? `${Math.round(share * 100)}% read` : undefined,
+    sub: wovenLine ?? (book.openedAt ? `${Math.round(share * 100)}% read` : undefined),
     progress: book.openedAt ? share : null,
     href: `#read/book/${encodeURIComponent(book.id)}`,
   });
+  // A woven text says how much of it shows in the language for you so far, 0% included: to someone new it reads in English, and the card
+  // says so before they open it. Once its layer's been read off this device.
+  if (wovenInto) {
+    store
+      .getWeave(book.id, wovenInto)
+      .then((layer) => {
+        const sub = tile.querySelector(".lx-tile-sub");
+        if (layer?.kind !== "weave" || !sub) return;
+        sub.textContent = `${wovenLine} · ${Math.round(coverageOf(layer, knownSet(wovenInto)).share * 100)}% so far`;
+      })
+      .catch(() => {});
+  }
+  return tile;
 }
 // Your library on Read is a row of the latest; more than this and its heading has the way to all of them.
 const LIBRARY_ROW = 12;
@@ -303,7 +317,7 @@ function renderLibrary(page) {
           "div",
           { class: "lx-weave-own-story" },
           story.tile,
-          el("button", { class: "lx-weave-own-see", type: "button", onclick: () => story.tile.click() }, storyLine(story.meta.title), icon("chevron")),
+          el("button", { class: "lx-weave-own-see", type: "button", onclick: () => story.tile.click() }, el("span", { class: "lx-weave-own-see-text" }, storyLine(story.meta.title), story.share), icon("chevron")),
         )
       : null;
     weaving.replaceChildren(
@@ -410,7 +424,18 @@ function renderLibrary(page) {
     // The woven story for the language, with the shelf's own tile for it (its press, its download's bar): kept while it's the same book.
     const found = meta ? wovenStory(meta) : null;
     if ((found?.id ?? null) !== (story?.meta.id ?? null) || (found?.version ?? null) !== (story?.meta.version ?? null)) {
-      story = found && shelfView?.tile ? { meta: found, tile: shelfView.tile(found) } : null;
+      story = found && shelfView?.tile ? { meta: found, tile: shelfView.tile(found), share: el("span", { class: "lx-weave-own-share" }) } : null;
+    }
+    // How much of it shows in the language for you, as the shelf's tiles word it, 0% included: someone new knows it opens in English. Worked
+    // out each time Read is shown (your words change; its layer is fetched once).
+    if (story) {
+      const mine = story;
+      wovenShare(mine.meta, learning(), knownSet(learning()))
+        .then((percent) => {
+          const line = percent == null ? "" : `Woven · ${percent}% in ${learningName()} for you`;
+          if (mine.share.textContent !== line) mine.share.replaceChildren(line);
+        })
+        .catch(() => {});
     }
     drawWeaving();
     note.textContent = KEEP_NOTE[keep];

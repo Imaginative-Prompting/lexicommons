@@ -4,6 +4,7 @@
 
 import * as ui from "./lx/ui.js";
 import { el } from "./lx/ui.js";
+import { weaveOwn } from "./read/weave-own.js";
 
 // Two sample images, drawn here (a picture and an AI's art are both just images to the cover).
 const svg = (body, bg) => `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300"><rect width="200" height="300" fill="${bg}"/>${body}</svg>`)}`;
@@ -84,5 +85,25 @@ export function librarySection({ section, demo, states }) {
       }),
     ),
     demo("A sheet over the page, its shade behind it: a press on the shade closes it", sheetDemo),
+    // Read's own two (read/library.js, read/shelf.js), drawn here as Read draws them, with weave-own.js's words for someone with an AI.
+    demo("Weave your own: Read's lead where texts can be woven, with the one message to give your AI", weaveYourOwn()),
+    demo(
+      "The line under the last shelf: why today's books aren't on it",
+      el("p", { class: "lx-small lx-muted lx-shelf-note", "data-part": "own-copy-note" }, "Most books people read today are under copyright, so the shelf can't carry them. Add your own copy below: an EPUB or a text file."),
+    ),
+  );
+}
+
+/** Weave your own as Read draws it for someone with an AI connected (read/library.js drawWeaving), its words weave-own.js's. */
+function weaveYourOwn() {
+  const words = weaveOwn("Dutch", true);
+  return el(
+    "section",
+    { class: "lx-library-section lx-weave-own", part: "weave-your-own", "aria-label": "Weave your own" },
+    ui.sectionHead(words.title),
+    el("p", { class: "lx-weave-own-about" }, words.about),
+    el("p", { class: "lx-small lx-muted" }, words.lead),
+    el("div", { part: "ask-prompt", class: "lx-weave-own-message" }, el("span", { class: "lx-ask-prompt-text" }, words.message), ui.copyButton(() => words.message)),
+    el("p", { class: "lx-weave-own-next" }, `${words.after} ${words.next}`),
   );
 }

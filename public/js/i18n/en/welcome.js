@@ -6,9 +6,7 @@ export default {
   "welcome.addLanguage": ["Add a language", "Settings → Language: the title of the drawer listing every language, and its name for screen readers."],
   "welcome.search": ["Search languages", "The search field above the list of languages: its placeholder and its label for screen readers."],
   "welcome.noMatch": ["No language by that name yet.", "Under the list of languages, when nothing matches what was typed in the search."],
-  "welcome.mostSoFar": ["The most so far", "Under Dutch's name in the list of languages: Dutch has the most to study so far. A row's second line, short."],
-  "welcome.speakQuestion": ["Which language do you speak?", "The first run's first question, over a list of every language, and the title of Settings → Language's sheet to change it. One line if it can, two at most at 390 px."],
-  "welcome.thisPhone": ["This phone's language", "The first run and Settings → Language: the small line under a language the device is set to, at the top of the list. A few words."],
-  "welcome.youSpeak": ["You speak {language}.", "The first run's second question (what to learn): a small line over the list saying what the person answered first; a Change link follows it. {language}: a language's name."],
-  "welcome.change": ["Change", "The first run: a small link after \"You speak …\", back to the first question. One word."],
+  "welcome.fullCourses": ["Full courses", "The list of languages to learn: the small heading over the languages that have a whole course of lessons. Two words."],
+  "welcome.firstLessons": ["First lessons", "The list of languages to learn: the small heading over every other language, which has a starter (its first dozen lessons) so far. Two words."],
+  "welcome.lessons": ["{count, plural, one {# lesson} other {# lessons}}", "Under a language's name in the list of languages to learn, for one with a full course: how many lessons it has (200)."],
 };

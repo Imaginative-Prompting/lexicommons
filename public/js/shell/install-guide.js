@@ -204,6 +204,10 @@ export function detect({ ua = "", maxTouchPoints = 0, standalone = false } = {})
   const mobile = ios || android;
   const out = (id) => ({ id, installed: Boolean(standalone), mobile });
   if (IN_APP.test(ua)) return out("in-app");
+  // On an iPhone or iPad every browser says "Safari/"; a page shown inside an app (its own web view: YouTube's, Discord's, a mail app's)
+  // doesn't. (An app that borrows Safari's own view says exactly what Safari says, and can't be told apart.)
+  // The Home Screen app says nothing of Safari either: it's told by `standalone`, and is never another app's browser.
+  if (ios && !ipad && !standalone && !/Safari\//.test(ua)) return out("in-app");
   if (ios) {
     if (/CriOS\//.test(ua)) return out("ios-chrome");
     if (/FxiOS\/|EdgiOS\/|OPiOS\/|OPT\/|DuckDuckGo\/|YaBrowser\//.test(ua)) return out("ios-other");

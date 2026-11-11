@@ -21,6 +21,7 @@ export const STATE_ATTRIBUTES = {
   "data-found": "On the words a search found in the reader, lit up for a moment (fading: on their way back)",
   "data-zoomed": "On the reader while its page is pinched in (zoomed past 1×)",
   "data-fullscreen": "On the reader while the page is in full screen",
+  "data-why": "On the reader while the line that says why a woven text reads in English is at its foot: the page ends above it",
   "data-underline": "On the reader while its woven words are underlined (the weave's setting, per language; on by default)",
   "data-rtl": "On the reader while its book reads right to left (its turns mirror, and the bars' collapse chevron sits top left, over the end of the first line)",
   "data-lang-readings": "On the reader while its book is woven into, or helped in, a language that shows readings over its words (Japanese, Chinese): its text starts at 24px, with the weave on or off (a size you pick stays)",

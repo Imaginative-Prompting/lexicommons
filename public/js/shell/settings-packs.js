@@ -22,7 +22,7 @@ import * as voice from "../study/voice.js";
 import { drawnEmpty, twoStepRow, wordsRow } from "./settings.js";
 import { lookToast } from "./look-watch.js";
 import { openLanguageSheet, primeLanguageChoices } from "./welcome.js";
-import { canGrow, iSpeak, interfaceSetting, isShipped, onInterfaceChange, setAppLanguage, setGrow, setISpeak } from "./interface-language.js";
+import { canGrow, iSpeak, interfaceSetting, isShipped, onInterfaceChange, setAppLanguage, setGrow, setISpeak, speaks } from "./interface-language.js";
 import { shippedLocales } from "../lx/locales.js";
 import { languageLabel, t } from "../lx/i18n.js";
 
@@ -142,7 +142,7 @@ export function languageSettings(page) {
             name: "learning",
             value: code,
             checked: code === learning(),
-            onchange: (value) => setLearning(value, fromFor(value, iSpeak())),
+            onchange: (value) => setLearning(value, fromFor(value, speaks())),
           }),
         ),
       ),
@@ -383,7 +383,7 @@ function studyDeck(pack) {
       title: "Study these cards",
       sub: deckLine({ due, fresh, total }),
       onclick: () => {
-        if (learning() !== pack.language) setLearning(pack.language, pack.from && pack.from !== pack.language ? pack.from : fromFor(pack.language, iSpeak()));
+        if (learning() !== pack.language) setLearning(pack.language, pack.from && pack.from !== pack.language ? pack.from : fromFor(pack.language, speaks()));
         location.hash = `#study/session/deck/${encodeURIComponent(pack.id)}`;
       },
     }),

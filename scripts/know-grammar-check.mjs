@@ -1,7 +1,8 @@
-// The Knowledge tab's ideas (know/cards.js ideasCard), in Chrome on a phone: none before you've met one; then every pattern you've met as a tile
-// on the "Ideas you've met" card, after your words, each with its picture and how well ("Getting there · 3 of 4 right"), the ones to work on first,
-// each opening a sheet; one opens the sheet an answer does with its name, your own sentence with it and how well; past four, Show all shows the rest
-// in place; 390 and 320 in dark and light; a recording (walk.mp4).
+// The Knowledge tab's ideas (know/cards-more.js ideasCard), in Chrome on a phone: none before you've met one; then the patterns you've met as
+// cards under "Ideas you've met", after your words, each with its picture and how well ("Getting there · 3 of 4 right"), the ones to work on
+// first, each opening a sheet; one opens the sheet an answer does with its name, your own sentence with it and how well; past four, the first
+// four and See all N ideas, which opens the Ideas page (#know/ideas, know/ideas-page.js) with every one; 390 and 320 in dark and light; a
+// recording (walk.mp4). (Until 11 Nov 2026 it still looked for the tiles and the Show all of before v96, and failed on the app as it was.)
 // LOCAL only, path-nl seeded.
 // Usage: node scripts/know-grammar-check.mjs http://localhost:<port> <outDir> --persist-to <dir> [--only <regex>]   (exit 0 = pass)
 import { chromium } from "./quiet-browser.mjs";
@@ -104,7 +105,8 @@ const shot = async (page, name) => {
 };
 const sheet = (page) => page.locator('[data-part="sheet"]:not([hidden])').first();
 const SECTION = `${PAGE} [data-card="ideas"]`;
-const ROWS = `${SECTION} [data-part="idea-tile"]`;
+const ROWS = `${SECTION} [data-part="idea-card"]`;
+const IDEAS_PAGE = `${PAGE} .lx-ideas-page [data-part="idea-card"]`;
 
 /** The lessons' pack in, its words known, and `count` concepts met: answers on one of each one's sentences, `wrong` of them missed. */
 async function meet(page, { count = 3, wrong = 1 } = {}) {
@@ -150,15 +152,15 @@ await stage("Knowledge: the ideas you've met as a card after your words, each wi
     const met = await meet(page, { count: 3, wrong: 1 });
     await goKnow(page);
     await page.locator(SECTION).waitFor({ timeout: 15_000 });
-    const order = await page.locator(`${PAGE} [data-part="know-card"]`).evaluateAll((nodes) => nodes.map((n) => n.dataset.card));
+    const order = await page.locator(`${PAGE} .lx-know-board > [data-card]`).evaluateAll((nodes) => nodes.map((n) => n.dataset.card));
     assert(order.indexOf("ideas") > order.indexOf("words") && order.indexOf("words") >= 0, `where it sits: ${order}`);
     const rows = await page.locator(ROWS).evaluateAll((nodes) => nodes.map((n) => ({ text: n.innerText.replace(/\s+/g, " ").trim(), meter: Boolean(n.querySelector('[data-part="strength-meter"], .lx-strength, [data-part="strength"]')), sheet: n.getAttribute("aria-haspopup") })));
     eq(rows.length, 3, `the concepts met: ${JSON.stringify(rows)}`);
     assert(rows.every((r) => r.sheet === "dialog"), `a row that opens a sheet without saying so: ${JSON.stringify(rows)}`);
     assert(/0 of 1 right/.test(rows[0].text), `the one missed isn't first: ${JSON.stringify(rows)}`);
     assert(rows.slice(1).every((r) => /1 of 1 right/.test(r.text)), `how well: ${JSON.stringify(rows)}`);
-    eq(await page.locator(`${SECTION} .lx-know-card-title`).first().innerText(), "Ideas you've met", "the card's title");
-    eq(await page.locator(`${SECTION} [data-part="idea-tile"] .lx-rule-line`).count(), 3, "an idea without its picture");
+    eq(await page.locator(`${SECTION} .lx-know-h`).first().innerText(), "Ideas you've met", "the card's title");
+    eq(await page.locator(`${ROWS} .lx-rule-line`).count(), 3, "an idea without its picture");
     assert(!NO_AI.test(await page.locator(PAGE).first().innerText()), "the Knowledge page mentions an AI");
     assert(!errors.length, `page errors: ${errors.slice(0, 3)}`);
     return { met: met.map((m) => m.id), rows: rows.map((r) => r.text) };
@@ -192,7 +194,7 @@ await stage("a concept opens the sheet an answer does: its name, your own senten
   }
 });
 
-await stage("more than four: the first four, the ones to work on first, then Show all, which shows the rest in place", async () => {
+await stage("more than four: the first four, the ones to work on first, then See all 11 ideas, which opens the Ideas page with every one; back is Knowledge", async () => {
   const { context, page } = await phone();
   try {
     await meet(page, { count: 11, wrong: 3 });
@@ -200,17 +202,24 @@ await stage("more than four: the first four, the ones to work on first, then Sho
     await page.locator(SECTION).waitFor({ timeout: 15_000 });
     eq(await page.locator(ROWS).count(), 4, "the first four");
     assert((await page.locator(ROWS).allInnerTexts()).slice(0, 3).every((text) => /0 of 1 right/.test(text)), "the missed ones aren't first");
-    const all = page.locator(`${SECTION} [data-part="button"]`, { hasText: /^Show all 11$/ });
-    eq(await all.count(), 1, "Show all 11");
+    const all = page.locator(`${SECTION} [data-part="button"]`, { hasText: /^See all 11 ideas$/ });
+    eq(await all.count(), 1, "See all 11 ideas");
     await all.click();
-    await page.waitForFunction((R) => document.querySelectorAll(R).length === 11, ROWS, { timeout: 5000 });
-    eq(await page.evaluate(() => location.hash), "#know", "it stays on the page");
+    await page.waitForFunction(() => location.hash === "#know/ideas", null, { timeout: 5000 });
+    await page.waitForFunction((R) => [...document.querySelectorAll(R)].filter((n) => !n.closest("[data-ghost]")).length === 11, IDEAS_PAGE, { timeout: 8000 });
+    const texts = await page.locator(IDEAS_PAGE).allInnerTexts();
+    assert(texts.slice(0, 3).every((text) => /0 of 1 right/.test(text)), `the Ideas page: the missed ones aren't first: ${JSON.stringify(texts.slice(0, 4))}`);
+    eq(await page.locator(`${IDEAS_PAGE} .lx-rule-line`).count(), 11, "the Ideas page: an idea without its picture");
+    await shot(page, "ideas-page");
+    await page.goBack();
+    await page.waitForFunction(() => location.hash === "#know", null, { timeout: 5000 });
+    return `the first four on the tab, all 11 on the Ideas page`;
   } finally {
     await context.close();
   }
 });
 
-await stage("how it looks at 390 and 320, dark and light: whole rows, nothing off the page; and a recording of opening a concept (walk.mp4)", async () => {
+await stage("how it looks at 390 and 320, dark and light: whole cards, nothing off the page; and a recording of opening a concept (walk.mp4)", async () => {
   const seen = [];
   for (const [theme, width, height] of [["graphite", 390, 844], ["paper", 390, 844], ["graphite", 320, 568], ["paper", 320, 568]]) {
     const { context, page } = await phone({ theme, width, height });
@@ -224,7 +233,9 @@ await stage("how it looks at 390 and 320, dark and light: whole rows, nothing of
         short: [...document.querySelectorAll(R)].filter((n) => n.getBoundingClientRect().height < 44).length,
         off: [...document.querySelectorAll(R)].filter((n) => n.getBoundingClientRect().right > innerWidth + 0.5).length,
       }), ROWS);
-      eq([m.sideways, m.short, m.off], [0, 0, 0], `${theme} ${width}: sideways, short rows, rows off the page`);
+      eq([m.sideways, m.short, m.off], [0, 0, 0], `${theme} ${width}: sideways, short cards, cards off the page`);
+      // Its picture is of the ideas (they're under the pile and This week).
+      await page.locator(SECTION).evaluate((node) => node.scrollIntoView({ block: "start" }));
       await shot(page, `knowledge-${theme}-${width}`);
       seen.push(`${theme} ${width}`);
     } finally {

@@ -5,12 +5,18 @@
 import { startAuthentication, startRegistration, browserSupportsWebAuthn } from "/vendor/simplewebauthn/index.js";
 import { fetchRetrying } from "./lx/retry.js";
 import { refusalWords, SOMETHING_WRONG } from "./refusal-words.js";
+import { detect } from "./shell/install-guide.js";
 
 const root = document.getElementById("auth");
 const next = root.dataset.next || "/app/";
 const attaching = root.dataset.attach;
 const errorBox = document.getElementById("auth-error");
 const register = document.getElementById("register");
+
+// On a computer (install-guide.js: not a phone or a tablet, an iPad asking for desktop pages included, nor an app's own browser), the quiet
+// line that Lexicommons is made for phones first, with the way onto one (src/pages.ts computerNote). Nothing kept; nothing waits for it.
+const device = detect({ ua: navigator.userAgent, maxTouchPoints: navigator.maxTouchPoints ?? 0 });
+if (!device.mobile && device.id !== "in-app") document.getElementById("on-a-computer")?.removeAttribute("hidden");
 
 // The site's own pages follow the phone's light or dark (src/pages.ts lxLayout): no saved look, so no look's images either.
 

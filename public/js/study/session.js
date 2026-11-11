@@ -44,6 +44,7 @@ import { t } from "../lx/i18n.js";
 import { celebration, wordsKnown } from "../know/celebration-ui.js";
 import { deckStep } from "./deck-steps.js";
 import { cardRows, saidNoun, setLetterHearing, setSpeechHearing } from "./deck.js";
+import { keepNoteOnce, keepStorage } from "../shell/keep-here.js";
 import { bareChoice, gapMarks } from "./gap-marks.js";
 
 // The answer bar's quiet actions (Hint, I don't know, Can't speak now, Can't listen now): their words in a span of their own. They sit on
@@ -627,8 +628,10 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     const top = bar.getBoundingClientRect().top;
     let lowest = lowestNow();
     // Into the step: the game up by just what clears the bar, 8 px over it, never past where its space begins (centered again below
-    // when even that isn't room enough). The move itself is settleBar's, on the bar's curve.
-    if (lowest + 8 > top && reach && held) {
+    // when even that isn't room enough). The move itself is settleBar's, on the bar's curve. Never on the stage (a tablet, a computer):
+    // there the game stays right under its question and the whole block moves up instead (fitStage); taking the game's own room moved
+    // Fill's 9 px toward its question on an iPad, under a result taller than the room under the block.
+    if (lowest + 8 > top && reach && held && !stage?.matches) {
       const at = held.getBoundingClientRect().top;
       reach.style.justifyContent = "flex-start";
       reach.style.paddingTop = "0";
@@ -2176,6 +2179,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
       else if (plan.practice) finishedPractice();
       else if (mode === "game") finishedGame();
       else finishedSession();
+      // Something worth keeping is on this device now: ask the browser to keep it (keep-here.js).
+      keepStorage();
     }
     const moment = momentOf({ before: atStart.streak, after: streakNow(), wordsBefore: atStart.words, wordsAfter: wordsKnown() });
     // Whether the server can send reminders, asked while the summary's up, so the ask after its Done knows (finish).
@@ -2255,6 +2260,9 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
         nudge,
         celebration(moment, { unit: Boolean(plan.lesson?.full) }),
         tally,
+        // Once, on the first summary, where this browser's progress is about to be left behind (keep-here.js): an iPhone's browser before
+        // the Home Screen app, another app's browser.
+        ...[keepNoteOnce()].filter(Boolean),
       ),
     );
     setBar(null, el("div", { class: "lx-answer-actions" }, again, done));

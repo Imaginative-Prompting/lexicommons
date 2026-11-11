@@ -34,12 +34,18 @@ import { api, del, post } from "../shell/api.js";
 import { languageName, withArticle } from "../lang/index.js";
 import { learning } from "../study/learning.js";
 import { aiConnected } from "../shell/layout.js";
-import { readingHides } from "../study/progress.js";
+import { onProgressChange, readingHides } from "../study/progress.js";
 import * as packs from "../study/packs.js";
 import { addPackAction } from "../study/pack-actions.js";
 import { LANGUAGES } from "../lang/index.js";
 import { WORDS_NAMED, pathLessons, taughtForm } from "../study/path.js";
 import { lessonFinished, lessonNow, studyOverview } from "../study/plan.js";
+
+/** Whether the path's first lesson is done (marked or studied), or there's no path to wait for. */
+const lessonOneDone = () => {
+  const first = pathLessons()[0];
+  return !first || lessonFinished(first);
+};
 import { onContentChange } from "../study/content.js";
 import { onDoneChange } from "../study/done.js";
 import { onPlaceChange } from "../study/path-place.js";
@@ -536,6 +542,9 @@ function renderHome(page, params = {}) {
   const stopLessons = [onContentChange(redrawLessons), onDoneChange(redrawLessons), onPlaceChange(redrawLessons)];
   let stale = false;
   let shown = null; // the home as drawn (home-data.js): a refresh draws again only when what came differs
+  // Whether the home as drawn held its pack to add next back for lesson 1 (drawHome). Once lesson 1 is done it's drawn with it: at once off
+  // the screen, else the next time the page comes (stale, refresh({ now }), worked out then), never into it under the eye.
+  let pickHeld = false;
   // Each draw collects the pictures it asks for (waitPicture), for the page's ready.
   let drawnPictures = [];
   const draw = (entry) => {
@@ -554,7 +563,11 @@ function renderHome(page, params = {}) {
     ui.warmFlags(languagesOf().slice(0, ui.FLAG_ROWS_SHOWN));
     // Packs you added that a report took down: off your devices, and here, why (they come back if restored).
     const gone = down.map((i) => ui.listRow({ icon: "info", title: i.title, sub: i.state === "removed" ? "Taken down after a report: it's off your devices" : "Hidden while a report is looked at: it's off your devices for now" }));
-    const pick = pickOf(home);
+    // The pack to add next waits for lesson 1 in the language being learned (11 Nov 2026: a brand-new learner saw "Add next: Culture" under
+    // Dutch lessons' Start, a second thing to start before the first). Another language's Explore keeps its pick, and a language with no
+    // lessons (a starter alone) has none to wait for. Held back, it's drawn once lesson 1 is done (pickCheck).
+    pickHeld = lang === learning() && !lessonOneDone();
+    const pick = pickHeld ? null : pickOf(home);
     // The topics with packs here, each with how many (the server's count, of what's about it alone).
     const here = Array.isArray(home.topics) ? home.topics : topics;
     const shelfNode = here.length
@@ -655,6 +668,19 @@ function renderHome(page, params = {}) {
     fillLessons();
   }
   const asked = update();
+  // Lesson 1 done (a session's end, its answers, a mark, or another device's at a sync): a home that held its pick back is drawn again with it,
+  // at once off the screen (a kept tab), else the next time it comes. (A kept Explore is otherwise drawn again only when the server's home
+  // differs, so the pick would wait for that.) A beat after the last change: a session's answers come one by one.
+  // (The path's own lessons arriving count too: until they're here, a first sync's stand-in lessons are the path.)
+  const pickNow = () => !stale && Boolean(shown) && pickHeld && lessonOneDone();
+  let pickTimer = 0;
+  const pickCheck = () => {
+    clearTimeout(pickTimer);
+    pickTimer = setTimeout(() => {
+      if (pickNow() && !seen()) draw(shown);
+    }, 300);
+  };
+  stopLessons.push(onProgressChange(pickCheck), onDoneChange(pickCheck), onPlaceChange(pickCheck), onContentChange(pickCheck));
   // The learner view turned on or off (Settings → Admin): its rows drawn again from what's shown.
   stopLessons.push(onSharingChange(() => !stale && shown && draw(shown)));
   // Kept while you're elsewhere (shell/main.js): coming back shows it as it was, and brings it up to date quietly. A first
@@ -666,18 +692,20 @@ function renderHome(page, params = {}) {
     ready: Promise.resolve(asked).then(() => Promise.all(drawnPictures)),
     // Coming back: a newer home kept while this one was on the screen is drawn before the first frame; else it looks again, quietly.
     refresh: ({ now = false } = {}) => {
-      if (now && pending) {
-        const next = pending;
+      const due = now && pickNow();
+      if (now && (pending || due)) {
+        const next = pending ?? shown;
         pending = null;
-        if (!sameHome(next, shown)) draw(next);
+        if (due || !sameHome(next, shown)) draw(next);
         return;
       }
       return update();
     },
-    stale: () => Boolean(pending),
+    stale: () => Boolean(pending) || pickNow(),
     dispose: () => {
       stale = true;
       clearTimeout(pause);
+      clearTimeout(pickTimer);
       stopSearch?.();
       for (const stop of stopLessons) stop?.();
     },

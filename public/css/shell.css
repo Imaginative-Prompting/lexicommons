@@ -86,13 +86,27 @@
     :root[data-translate] [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="page"] { padding-bottom: 0; }
     /* A way back to a tab (Settings' menu: ui.appHeader data-back="tab") the sidebar already has: no pill. */
     [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"][data-back="tab"] > [data-part="app-back"] { display: none; }
+    /* Translate's band (below) stops at the header's own start edge, the sidebar's: reaching left, it painted over the sidebar's first tab
+       (desk-read, 11 Nov 2026). */
+    :root[data-translate] [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] { clip-path: inset(0 -100vmax 0 0); }
   }
-  /* 1280 and up: the grid pages of Study, Explore and Knowledge in a wider column, their grids using the room; the shell marks the app
-     data-column="wide" while one is in view (main.js WIDE_PAGES; their lists and forms keep the 720). The header's and the page's own padding,
-     not --page-width: a custom property the whole page inherits, so changing it restyles every element under it. Reading lines stay capped
-     (--measure), no button grows past its 720 width (components.css, its end); a session, a sheet and the reader keep their own. */
+  /* 1280 and up: one frame (11 Nov 2026), 960 wide (--lx-frame; 1120 from 1600), centered in the room beside the sidebar, so the header's
+     title and its chips never move between tabs (a 720 page and a 960 page were each centered: Home's title 120 px right of Study's). The
+     header spans the frame on every page. A grid page (Study's, Explore's and Knowledge's own, Your words, the days, the topics: data-column
+     "wide", main.js WIDE_PAGES) fills it; a list, form or reading page keeps its 720 at the frame's start edge, where every tab's text starts.
+     The header's and the page's own padding, not --page-width (a custom property the whole page inherits, so changing it restyles every
+     element under it; --lx-frame is read here alone). Reading lines stay capped (--measure); a session, a sheet and the reader keep their own,
+     centered; Settings' split keeps its own (below). */
   @media (min-width: 1280px) {
-    [data-part="app"][data-column="wide"]:has(> [data-part="tab-bar"]) > :is([data-part="app-header"], [data-part="page"]) { padding-inline: max(var(--space-4), calc((100% - var(--page-width-wide)) / 2)); }
+    [data-part="app"]:has(> [data-part="tab-bar"]) { --lx-frame: var(--page-width-wide); }
+    [data-part="app"]:not([data-split="settings"]):has(> [data-part="tab-bar"]) > [data-part="app-header"],
+    [data-part="app"][data-column="wide"]:has(> [data-part="tab-bar"]) > [data-part="page"] { padding-inline: max(var(--space-4), calc((100% - var(--lx-frame)) / 2)); }
+    [data-part="app"]:not([data-column="wide"], [data-column="center"], [data-split="settings"]):has(> [data-part="tab-bar"]) > [data-part="page"] {
+      padding-inline: max(var(--space-4), calc((100% - var(--lx-frame)) / 2)) max(var(--space-4), calc((100% - var(--lx-frame)) / 2 + var(--lx-frame) - var(--page-width)));
+    }
+    /* A page that's one block centered as a whole (main.js CENTER_PAGES: the path), its header and its way back with it: its 720 in the
+       middle of the room beside the sidebar, as from 1024 to 1279. */
+    [data-part="app"][data-column="center"]:has(> [data-part="tab-bar"]) > :is([data-part="app-header"], [data-part="page"]) { padding-inline: max(var(--space-4), calc((100% - var(--page-width)) / 2)); }
     /* Settings: its menu's pane (--settings-pane) beside the page it opened (the 720 column, narrower at 1280), the two centered together;
        the header over the page, not the pane; a first page's way back is the pane, so no pill (main.js SPLIT). The pane stays put as the page
        scrolls, and scrolls itself if it's taller than the screen. */
@@ -107,6 +121,9 @@
     }
     [data-part="app"][data-split="settings"] > [data-part="page"] > .lx-settings-aside { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; grid-column: 1; grid-row: 1 / span 2; position: sticky; top: 0; align-self: start; max-height: calc(100dvh - var(--header-room) - var(--space-5)); overflow-y: auto; overscroll-behavior: contain; }
     [data-part="app"][data-split="settings"] > [data-part="page"] > :not(.lx-settings-aside) { grid-column: 2; }
+    /* Room inside the pane's scroller for its rows' rounded outset (their 12 px reach past their text, as the page's rows have): the scroller
+       clipped it, so the lit row was a square slab to the pane's edges (desk-read, 11 Nov 2026). Its text stays where it was. */
+    [data-part="app"][data-split="settings"] > [data-part="page"] > .lx-settings-aside { padding-inline: var(--space-3); margin-inline: calc(-1 * var(--space-3)); }
     [data-part="app"][data-split="settings"] > [data-part="page"]::before { grid-column: 1 / -1; }
     [data-part="app"][data-split="settings"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] {
       padding-inline: calc(max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2)) + var(--settings-pane) + var(--space-6)) max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2));
@@ -117,12 +134,23 @@
     .lx-settings-aside a[aria-current="page"] { background: var(--fill-active); }
   }
 
+  /* 1600 and up: the frame is 1120, so a wide window isn't a strip a third of its width; a grid page's grids take a cell more a row there
+     (their own rules), and a 720 page keeps its 720 at the frame's start edge. */
+  @media (min-width: 1600px) {
+    [data-part="app"]:has(> [data-part="tab-bar"]) { --lx-frame: 1120px; }
+  }
+
   /* ---------- The header floats (asks 8 and 9, 5 Nov) ----------
    * No band of its own: the page, its color and pictures, runs to the top of the screen under the header, starting below it
    * (--header-room: the header's own height, which is fixed) and fading as it scrolls away under it. Its buttons are glass,
    * as the bar is. Then the same fade at the foot, under the floating bar. Both fade to --page-ground: the canvas, or the
    * color a page paints itself (set it on :root while that page is up). Not in Translate, whose header is its own. */
   :root { --page-ground: var(--canvas); --header-room: calc(var(--space-3) * 2 + 40px + env(safe-area-inset-top)); }
+  /* A computer: the title is the page's heading (components.css, 28 px), with room over it (frame.md §3). Translate keeps its own header. */
+  @media (min-width: 1024px) {
+    :root:not([data-translate]):has([data-part="app"] > [data-part="tab-bar"]) { --header-room: calc(var(--space-6) + var(--space-3) + 40px); }
+    :root:not([data-translate]) [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] { padding-top: var(--space-6); }
+  }
   :root:not([data-translate]) [data-part="app"] > [data-part="app-header"] { background: none; box-shadow: none; clip-path: none; }
   :root:not([data-translate]) [data-part="app"] > [data-part="page"] { margin-top: calc(-1 * var(--header-room)); padding-top: var(--header-room); scroll-padding-top: var(--header-room); }
   /* (Behind the header's own content, inside it: a clip-path or filter on the header would stop the blur seeing the page.) */
@@ -442,24 +470,28 @@
   .lx-anki-games-label { color: var(--ink-2); font-size: var(--size-14); }
   /* When it couldn't tell the languages, that question comes first, in words at full size. */
   .lx-anki-ask { margin: 0; color: var(--ink-1); font-size: var(--size-16); line-height: 1.45; }
-  /* On a wide screen, the one forward button is a button, not a bar across the column. */
-  @media (min-width: 1024px) {
-    [data-settings] [data-part="button"][data-variant="go"], .lx-anki-start [data-part="button"][data-variant="go"] { max-width: 360px; margin-inline: auto; }
-  }
+  /* On a wide screen, the one forward button is a button, not a bar across the column: components.css's rule for every block button (as wide
+     as its words, 240 to 360, at its box's start edge under the form it sends: 11 Nov 2026; it was centered under left-aligned forms). */
   /* The first run. Over everything until a language is picked. */
   .lx-welcome { position: fixed; inset: 0; z-index: 90; display: flex; flex-direction: column; padding-top: env(safe-area-inset-top); background: var(--canvas); color: var(--ink-1); }
   .lx-welcome-head { display: flex; flex-direction: column; gap: var(--space-3); width: 100%; max-width: 480px; margin-inline: auto; padding: var(--space-5) var(--space-4) var(--space-3); }
   .lx-welcome-head [data-part="character"] { margin-inline-start: -8px; }
   .lx-welcome-head [data-part="page-title"] { font: 700 34px / 1.08 var(--type-head); letter-spacing: -0.02em; }
   /* What you said you speak, over the second question, with the way back to the first: a word-sized link with a full-sized reach. */
-  .lx-welcome-said { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-1); margin: calc(-1 * var(--space-2)) 0 0; }
-  .lx-welcome-change { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-1); margin-inline-start: calc(-1 * var(--space-1)); border: 0; background: none; color: var(--ink-1); font: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
   .lx-welcome-list { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; width: 100%; max-width: 480px; margin-inline: auto; padding: 0 var(--space-4) calc(var(--space-5) + env(safe-area-inset-bottom)); }
   .lx-welcome-list [data-part="list"] { gap: 0; }
   .lx-welcome-list [data-part="list-row"] { min-height: 56px; font-size: 18px; }
   .lx-welcome-list [data-part="language-flag"] { margin: 0; }
+  /* Where this browser's progress is kept, said once (shell/keep-here.js): the first run's line and the first summary's. */
+  .lx-keep-note { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); max-width: 62ch; }
+  .lx-keep-note > p { margin: 0; text-wrap: pretty; }
+  .lx-keep-how { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-1); font: 500 var(--size-14) / 1.2 var(--type-ui); text-decoration: underline; text-underline-offset: 3px; }
   .lx-language-list [hidden] { display: none; }
   .lx-language-list [data-part="list"] { gap: 0; }
+  /* Its two groups' headings: Full courses, First lessons. */
+  .lx-language-head { list-style: none; padding: var(--space-3) 0 var(--space-1); }
+  .lx-language-head:first-child { padding-top: 0; }
+  .lx-language-head > h2 { margin: 0; font-weight: 500; }
   .lx-language-list [data-part="list-row"] { min-height: 52px; }
   .lx-language-list [data-part="language-flag"] { margin: 0; }
 
