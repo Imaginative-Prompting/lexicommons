@@ -117,6 +117,22 @@ function inTx(mode, names, action) {
 // ---------- keys, order and clears ----------
 
 const monthOf = (at) => new Date(at).toISOString().slice(0, 7);
+/** A month's span of time ("2026-11": [its first millisecond, the next month's]) in UTC, as monthOf has it; null for anything else. */
+const monthSpan = (month) => {
+  const match = typeof month === "string" && /^(\d{4})-(0[1-9]|1[0-2])$/.exec(month);
+  return match ? [Date.UTC(+match[1], +match[2] - 1, 1), Date.UTC(+match[1], +match[2], 1)] : null;
+};
+/** The first row in the cache (kept in time order: inOrder) at or after a time. */
+function firstAtOrAfter(at) {
+  let lo = 0;
+  let hi = cache.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >>> 1;
+    if (cache[mid].at < at) lo = mid + 1;
+    else hi = mid;
+  }
+  return lo;
+}
 const keys = new WeakMap();
 /** A row's key on every device: its month (UTC) and its uid, or for a row from before uids, a hash of its content. */
 export function evidenceKey(row) {
@@ -331,7 +347,10 @@ function change({ wipe = false, put = [], markers = [], settle = false, forget =
   }
   const changed = moved || wipe || fresh.length > 0 || markers.length > 0 || forget.length > 0;
   if (!changed) return false;
-  const detail = { units };
+  // And the months (evidenceKey's, a sync's shards) whose rows changed: those of the new rows, or (null) any at all, as for units, and for a
+  // clear made or undone, or kept rows forgotten, whatever moved (sync.js then goes through every month).
+  const shards = moved || wipe || markers.length || forget.length ? null : [...new Set(fresh.map((row) => monthOf(row.at)))];
+  const detail = { units, shards };
   if (fromTab) {
     // Another tab has saved it and asked for a sync if one is needed.
     const was = applying;
@@ -1030,8 +1049,9 @@ export async function undoClear(id) {
 }
 
 /**
- * Calls fn when this device's evidence changes (an answer recorded, a clear, an Undo, a sync), with { units }: the units whose rows changed, as
- * "<lang> <unit>" (new rows: answers, a sync's or another tab's), or null when anything may have (a clear, an Undo, everything wiped).
+ * Calls fn when this device's evidence changes (an answer recorded, a clear, an Undo, a sync), with { units, shards }: the units whose rows
+ * changed, as "<lang> <unit>" (new rows: answers, a sync's or another tab's), and the months they're in (a sync's shards, "2026-11"), each
+ * null when anything may have (a clear, an Undo, everything wiped).
  * Returns a function to stop.
  */
 export function onProgressChange(fn) {
@@ -1113,9 +1133,16 @@ registerSync({
   shards: /^\d{4}-\d{2}$/,
   // The account's clears first, so what they cover is taken here before this device's files are written.
   prepare: () => refreshClears(),
-  records() {
+  // Every row's record, or only the months asked for (a quiet sync's: sync.js), found in the rows' order by time.
+  records(shards) {
     const out = {};
-    for (const row of cache) out[evidenceKey(row)] = { at: row.at, value: stripped(row) };
+    const put = (row) => (out[evidenceKey(row)] = { at: row.at, value: stripped(row) });
+    const months = shards && [...shards].map(monthSpan);
+    if (!months || months.some((span) => !span)) {
+      for (const row of cache) put(row);
+      return out;
+    }
+    for (const [from, to] of months) for (let i = firstAtOrAfter(from), end = firstAtOrAfter(to); i < end; i++) put(cache[i]);
     return out;
   },
   check(record, key) {
@@ -1138,6 +1165,6 @@ registerSync({
       applying = was;
     }
   },
-  // What a sync (or another tab) brought in doesn't ask for another sync.
-  onChange: (fn) => onProgressChange(() => applying || fn()),
+  // What a sync (or another tab) brought in doesn't ask for another sync; a change says its months, when it knows them.
+  onChange: (fn) => onProgressChange((detail) => applying || fn(detail?.shards ?? null)),
 });

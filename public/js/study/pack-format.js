@@ -75,7 +75,7 @@
 // the entry (and a ref) names it in audio. The helpers at the end are what every publisher uses (the Worker's library
 // tools, local seeding), so they all write the same.
 
-import { LANGUAGES, endMark, sentenceEnds, typeset, withoutInvisible } from "../lang/index.js";
+import { LANGUAGES, endMark, isOurLanguage, ourLanguages, ownLanguageDef, ownLanguageProblem, sameOwnLanguage, sentenceEnds, typeset, withOwnLanguage, withoutInvisible } from "../lang/index.js";
 import { needsReading, readingProblem } from "../lang/readings.js";
 import { ITEM_LIMITS, checkPlainFields, isSentence, orderedItem, sentencesOf, upgradeItem } from "./pack-items.js";
 import { checkShapes, renameShapes, SHAPE_LIMITS } from "./shape-marks.js";
@@ -114,7 +114,7 @@ export function upgradeChange(change) {
  * scripts/test-packs.mjs fingerprints the check's code and fails until it's bumped and the fingerprint in
  * scripts/fixtures/pack-checks.json is updated. Every stored pack is then checked in full once more, at its next start.
  */
-export const PACK_CHECKS = 15; // 15: a pack's teaches: "script" (8 Nov 2026); 14: a Russian word's stress mark as its reading (8 Nov 2026); 13: an item's otherGender (8 Nov 2026); 12: a copy into another learner language says its own means (6 Nov 2026); 2: a pack's own patterns as <pack id>.<id>, and same (2 Nov 2026); 3: lessons (4 Nov 2026); 4: a lesson word's article (4 Nov 2026); 5: plain cards (4 Nov 2026); 6: a lesson word's picture, and a phrase's readings (4 Nov 2026); 7: units, and a lesson's theme (4 Nov 2026); 8: version 2, one kind of item (5 Nov 2026); 9: extras and tags on a plain item (5 Nov 2026); 10: an item's shapes (5 Nov 2026); 11: an item's copyOf (5 Nov 2026)
+export const PACK_CHECKS = 16; // 16: a pack in a language of its own (languageDef, 12 Nov 2026); 15: a pack's teaches: "script" (8 Nov 2026); 14: a Russian word's stress mark as its reading (8 Nov 2026); 13: an item's otherGender (8 Nov 2026); 12: a copy into another learner language says its own means (6 Nov 2026); 2: a pack's own patterns as <pack id>.<id>, and same (2 Nov 2026); 3: lessons (4 Nov 2026); 4: a lesson word's article (4 Nov 2026); 5: plain cards (4 Nov 2026); 6: a lesson word's picture, and a phrase's readings (4 Nov 2026); 7: units, and a lesson's theme (4 Nov 2026); 8: version 2, one kind of item (5 Nov 2026); 9: extras and tags on a plain item (5 Nov 2026); 10: an item's shapes (5 Nov 2026); 11: an item's copyOf (5 Nov 2026)
 
 export const PACK_LIMITS = {
   items: ITEM_LIMITS.items, // items in one pack
@@ -145,7 +145,8 @@ export const PACK_LIMITS = {
   bytes: 2_000_000, // the whole pack as JSON
 };
 
-const PACK_ID = /^[a-z0-9][a-z0-9-]{1,47}$/;
+/** A pack's id (also a sync shard's name: packs.js keeps a file per pack). */
+export const PACK_ID = /^[a-z0-9][a-z0-9-]{1,47}$/;
 /** Whether a value is a pack's id (2 to 48 lowercase letters, digits and dashes). */
 export const isPackId = (id) => typeof id === "string" && PACK_ID.test(id);
 const VERSION_HEX = /^[0-9a-f]{12}$/;
@@ -163,7 +164,7 @@ const CHUNK_ID = /^[\p{Ll}\p{N}][\p{Ll}\p{N}-]{0,47}$/u;
 // lowercase dictionary form may hold them.
 const LEMMA = { lower: /^[\p{Ll}\u02BB\u02BC](?:[\p{Ll}\p{M}\u02BB\u02BC'’ -]|[\u200C\u200D](?=\p{Ll}))*$/u, any: /^\p{L}(?:[\p{L}\p{M}'’ -]|[\u200C\u200D](?=\p{L}))*$/u };
 const HAS_ALNUM = /[\p{L}\p{N}]/u;
-const PACK_FIELDS = new Set(["format", "version", "id", "name", "about", "language", "from", "copiedFrom", "teaches", "topics", "words", "readings", "chunks", "patterns", "items", "lessons", "units"]);
+const PACK_FIELDS = new Set(["format", "version", "id", "name", "about", "language", "languageDef", "from", "copiedFrom", "teaches", "topics", "words", "readings", "chunks", "patterns", "items", "lessons", "units"]);
 // An item's fields in the learner's language: what a copy into another learner language says in its own (copyOf).
 const SIDE_FIELDS = new Set(["means", "literal", "english", "moved"]);
 const ITEM_FIELDS = new Set(["id", "copyOf", "topic", "concepts", "chunks", "text", "means", "reading", "words", "punct", "literal", "english", "moved", "wrong", "otherGender", "gap", "shapes", "sentence", "sentenceBack", "cloze", "extras", "tags"]);
@@ -228,7 +229,9 @@ export function checkRulesOf(language) {
 // Rules 15 only add a pack's teaches, which a pack checked before can't have (the field was dropped), so a proof under 14 still holds.
 // Rules 14 only let a Russian word carry its stress mark as a reading, which a Russian pack checked before can't have (a reading was refused),
 // and change no other language's, so a proof under 13 still holds (a Russian pack's proof names Russian's rules, which changed: it's checked again).
-const proofStillGood = (checks, pack) => checks === PACK_CHECKS || checks === 14 || checks === 13 || checks === 12 || checks === 11 || checks === 10 || checks === 9 || checks === 8 || checks === 7 || ((checks === 5 || checks === 6) && pack?.lessons === undefined) || ((checks === 3 || checks === 4) && pack?.cards === undefined && pack?.lessons === undefined);
+// Rules 16 only add a pack's languageDef (a language Lexicommons doesn't list), which a pack checked before can't have (the field was dropped,
+// and its language was refused), so a proof under 15 still holds.
+const proofStillGood = (checks, pack) => checks === PACK_CHECKS || checks === 15 || checks === 14 || checks === 13 || checks === 12 || checks === 11 || checks === 10 || checks === 9 || checks === 8 || checks === 7 || ((checks === 5 || checks === 6) && pack?.lessons === undefined) || ((checks === 3 || checks === 4) && pack?.cards === undefined && pack?.lessons === undefined);
 
 /** What a public pack fully checked at a version is kept with: the rules it passed under, and that version. */
 export const checkedProof = (pack, version) => ({ checks: PACK_CHECKS, rules: checkRulesOf(pack?.language), version });
@@ -654,8 +657,16 @@ function whole(steps) {
   }
 }
 
+/**
+ * A pack in a language Lexicommons doesn't list carries that language's rules (languageDef). Checked whole, the language is in the registry
+ * for that check alone (lang/index.js withOwnLanguage), so a server, which serves every account, never keeps one; a device adds a learner's
+ * own languages for good (useLanguage) before it checks their packs a piece at a time.
+ */
 export function checkPack(given, options) {
-  return whole(checkPackSteps(given, options));
+  const value = isObject(given) ? given : null;
+  return value && typeof value.language === "string" && !isOurLanguage(value.language)
+    ? withOwnLanguage(value.language, value.languageDef, () => whole(checkPackSteps(given, options)))
+    : whole(checkPackSteps(given, options));
 }
 
 /**
@@ -689,11 +700,26 @@ export function* checkPackSteps(given, { installed: others_ = [] } = {}) {
   const about = r.text(value.about, "about", PACK_LIMITS.about);
   const language = plain(value.language);
   const from = plain(value.from);
-  if (!LANGUAGES[language]) {
-    r.error("language", `language "${language.slice(0, 20)}" isn't one Lexicommons knows (${Object.keys(LANGUAGES).join(", ")}).`);
-    return done(null);
+  // One of ours takes no languageDef; any other language comes with its own (lang/index.js ownLanguageProblem), and on a device it's the
+  // definition the device holds for it (a device keeps one: its other packs in the language were made with it).
+  let languageDef;
+  if (isOurLanguage(language)) {
+    if (value.languageDef !== undefined) r.error("languageDef", `${LANGUAGES[language].name} is one Lexicommons knows: its pack takes no languageDef.`);
+  } else {
+    const problem = ownLanguageProblem(language, value.languageDef);
+    if (problem) {
+      r.error(problem.at, problem.at === "language" ? `${problem.message} (Lexicommons' own: ${ourLanguages().join(", ")}.)` : problem.message);
+      return done(null);
+    }
+    if (!sameOwnLanguage(language, value.languageDef)) {
+      r.error("languageDef", Object.hasOwn(LANGUAGES, language)
+        ? `${LANGUAGES[language].name} is on this device as ${JSON.stringify(LANGUAGES[language].def)}: a pack in it says the same (it says ${JSON.stringify(ownLanguageDef(value.languageDef))}).`
+        : "A pack in a language of its own is checked whole (checkPack), or after its language is added on this device (lang/index.js useLanguage).");
+      return done(null);
+    }
+    languageDef = ownLanguageDef(value.languageDef);
   }
-  if (!LANGUAGES[from]) r.error("from", `from "${from.slice(0, 20)}" isn't a language Lexicommons knows (${Object.keys(LANGUAGES).join(", ")}).`);
+  if (!isOurLanguage(from)) r.error("from", `from "${from.slice(0, 20)}" isn't a language Lexicommons knows (${ourLanguages().join(", ")}).`);
   else if (from === language) r.error("from", "from must be a different language from language.");
   let copiedFrom;
   if (value.copiedFrom !== undefined) {
@@ -814,6 +840,7 @@ export function* checkPackSteps(given, { installed: others_ = [] } = {}) {
     name,
     ...(about ? { about } : {}),
     language,
+    ...(languageDef ? { languageDef } : {}),
     from,
     ...(copiedFrom ? { copiedFrom } : {}),
     ...(teaches ? { teaches } : {}),

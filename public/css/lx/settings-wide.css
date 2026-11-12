@@ -1,0 +1,69 @@
+/* On a computer (1024 px and up): the first run, Settings' pages and the AI section, whose own rules are in shell.css and explore.css. Every
+ * rule here sits in a wide-screen media query and is keyed to one of those pages, so a phone and a tablet are as they were. Linked after
+ * shell.css: the same layer, so a rule here stands over a page rule there of the same weight. */
+@layer lx.page {
+  /* ---------- the first run ---------- */
+  /* What do you want to learn? as a page of the frame's width, not a phone's column down the window's middle (75 languages: a long scroll
+     beside two empty thirds). The courses and the first lessons are each set in four columns, read down then across as a list is, their
+     headings across all four; a row is 48 px, not a thumb's 56. The search keeps a field's width. */
+  @media (min-width: 1024px) {
+    .lx-welcome-head, .lx-welcome-list { max-width: 960px; padding-inline: var(--space-5); }
+    .lx-welcome-head { padding-top: var(--space-7); padding-bottom: var(--space-4); }
+    .lx-welcome-head > [data-part="text-field"] { max-width: 360px; }
+    .lx-welcome-list .lx-language-list > [data-part="list"] { display: block; column-count: 4; column-gap: var(--space-5); }
+    .lx-welcome-list .lx-language-head { column-span: all; padding-top: var(--space-5); padding-bottom: var(--space-2); }
+    .lx-welcome-list .lx-language-head:first-child { padding-top: 0; }
+    .lx-welcome-list .lx-row-item { break-inside: avoid; }
+    .lx-welcome-list [data-part="list-row"] { min-height: 48px; font-size: var(--size-16); }
+  }
+
+  /* ---------- the AI section ---------- */
+  @media (min-width: 1024px) {
+    /* A request's form: a choice's mark sits before its words, as a form's does on a computer (at the row's far end it was 700 px from them). */
+    .lx-ai-form .lx-row-control > [data-part="radio"] { order: -1; }
+  }
+
+  /* The AI section's own page fills the frame from 1280 (shell/main.js WIDE_PAGES), two columns: Practice and what to ask for, and beside
+     them an aside of its own (ai/tab.js builds it from 1280 only): the connection as a card, which AI and when it was last here, and your
+     newest requests with where each is. The foot's rows for those two go then; Past practices stays under what to ask for. At 720 the page
+     left a 240 px band empty beside a phone's list. From 1600 the main column is the page's 720 and the aside takes the rest. */
+  @media (min-width: 1280px) {
+    [data-column="wide"] .lx-ai-home { display: grid; grid-template-columns: minmax(0, 1fr) 320px; column-gap: var(--space-6); align-items: start; }
+    [data-column="wide"] .lx-ai-home > * { grid-column: 1; min-width: 0; }
+    [data-column="wide"] .lx-ai-home > .lx-ai-aside { grid-column: 2; grid-row: 1 / span 4; display: flex; flex-direction: column; gap: var(--space-5); }
+    [data-column="wide"] .lx-ai-home:has(> .lx-ai-aside) [data-part="list-row"]:is([href="#ai/requests"], [href="#ai/connect"]) { display: none; }
+    .lx-ai-aside-card { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--edge); border-radius: var(--radius-24); color: var(--ink-1); text-decoration: none; }
+    .lx-ai-aside-card:active { background: var(--fill-active); }
+    .lx-ai-aside-mark { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--fill); color: var(--ink-2); }
+    .lx-ai-aside-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .lx-ai-aside-label { color: var(--ink-3); font: 500 var(--size-14) / 1.2 var(--type-ui); }
+    .lx-ai-aside-who { overflow: hidden; font: 600 var(--size-20) / 1.25 var(--type-ui); text-overflow: ellipsis; white-space: nowrap; }
+    .lx-ai-aside-when { color: var(--ink-2); font: 400 var(--size-14) / 1.3 var(--type-ui); }
+    .lx-ai-aside-card > .lx-icon { color: var(--ink-3); }
+    .lx-ai-aside-requests { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+    .lx-ai-aside-none { margin: 0; color: var(--ink-2); font: 400 var(--size-14) / 1.45 var(--type-ui); }
+    /* An AI not connected yet shares the page's key: its one card and its list keep the page's 720 at the start. */
+    [data-column="wide"] .lx-ai-body:not(.lx-ai-home) { max-width: var(--page-width); }
+  }
+  @media (min-width: 1280px) and (hover: hover) { .lx-ai-aside-card:not(:active):hover { background: var(--fill-hover); } }
+  @media (min-width: 1600px) { [data-column="wide"] .lx-ai-home { grid-template-columns: minmax(0, var(--page-width)) minmax(0, 1fr); } }
+
+  /* ---------- Settings' pages ---------- */
+  @media (min-width: 1024px) {
+    /* Reading text at most the measure (frame.md §6: about 68 characters), on Settings' pages and the AI section's: a note under a setting,
+       a row's second line, an empty list's line. They ran the column's width: 95 to 110 characters on Your AI, a request's page and
+       Appearance → CSS. */
+    :is([data-settings], .lx-ai-form, .lx-ai-connection) :is(p.lx-small, p.lx-muted, .lx-row-sub, .lx-row-empty > .lx-row-text) { max-width: var(--measure); }
+    /* Report a bug: what goes along is a small table, each value beside its name (they were the column's width apart). */
+    .lx-report-summary [data-part="list-row"] { justify-content: flex-start; gap: var(--space-4); }
+    .lx-report-summary .lx-row-text { flex: 0 0 8em; }
+    .lx-report-summary .lx-row-value { flex: 1; max-width: none; justify-content: flex-start; text-align: start; }
+    /* Appearance: the themes five to a row, a phone's tile and a little more (three to a row drew each 235 px wide, with a lonely last row). */
+    [data-settings] .lx-swatches { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  }
+
+  /* A theme's tile answers the mouse: painted, so it brightens, and its edge firms (the part's own hover is under Settings' edge). */
+  @media (min-width: 1024px) and (hover: hover) {
+    [data-settings] [data-part="theme-swatch"]:not(:active, [aria-pressed="true"]):hover { border-color: var(--line-strong); filter: brightness(1.06); }
+  }
+}

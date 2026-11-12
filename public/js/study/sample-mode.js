@@ -28,31 +28,43 @@ export function readSample() {
   }
 }
 
-const atStart = readSample();
+// The try-out (/try/, no account): the same isolation as the sample learner, by the page's address alone, never a stored switch, so /app/
+// can never start in it and it can never write a real store. Its stores are its own again (DEMO_PREFIX, DEMO_DB_SUFFIX), so an admin's
+// sample learner and a try-out on one browser never share one.
+export const DEMO_PREFIX = "lx.try:";
+export const DEMO_DB_SUFFIX = ".try";
+const DEMO = /^\/try(\/|$)/.test(globalThis.location?.pathname ?? "");
+/** Whether this page is the try-out: no account, nothing kept as anyone's, nothing sent. */
+export const demoPage = () => DEMO;
 
-/** The sample this page started with ({ preset, at }), or null: which stores it uses. */
+const atStart = DEMO ? { preset: "demo", at: 0 } : readSample();
+
+/** The sample this page started with ({ preset, at }; the try-out's is { preset: "demo" }), or null: which stores it uses. */
 export const sampleAtStart = () => atStart;
 
 /** Whether the sample learner is on, here or since this page started: nothing goes out while it is. */
 export const sampleOn = () => Boolean(atStart || readSample());
 
 /** A store's localStorage key on this page: the sample's own while it's on. */
-export const sampleKey = (key) => (atStart ? `${SAMPLE_PREFIX}${key}` : key);
+export const sampleKey = (key) => (DEMO ? `${DEMO_PREFIX}${key}` : atStart ? `${SAMPLE_PREFIX}${key}` : key);
 
 /** An IndexedDB database's name (or a BroadcastChannel's) on this page: the sample's own while it's on. */
-export const sampleDb = (name) => (atStart ? `${name}${SAMPLE_DB_SUFFIX}` : name);
+export const sampleDb = (name) => (DEMO ? `${name}${DEMO_DB_SUFFIX}` : atStart ? `${name}${SAMPLE_DB_SUFFIX}` : name);
 
 /** Everything a sample keeps on this device: its localStorage keys, then its databases (each deleted; a database open elsewhere goes once it closes). */
-export function clearSampleStores() {
+export const clearSampleStores = () => clearStores(SAMPLE_PREFIX, SAMPLE_DB_SUFFIX);
+/** Everything a try-out keeps on this browser, the same way: a try-out starts with none (try/main.js), and the app's start clears what's left. */
+export const clearDemoStores = () => clearStores(DEMO_PREFIX, DEMO_DB_SUFFIX);
+function clearStores(prefix, suffix) {
   try {
-    for (const key of Object.keys(globalThis.localStorage ?? {})) if (key.startsWith(SAMPLE_PREFIX)) localStorage.removeItem(key);
+    for (const key of Object.keys(globalThis.localStorage ?? {})) if (key.startsWith(prefix)) localStorage.removeItem(key);
   } catch {}
   return Promise.all(
     SAMPLE_DBS.map(
       (name) =>
         new Promise((resolve) => {
           try {
-            const request = globalThis.indexedDB.deleteDatabase(`${name}${SAMPLE_DB_SUFFIX}`);
+            const request = globalThis.indexedDB.deleteDatabase(`${name}${suffix}`);
             request.onsuccess = request.onerror = () => resolve();
             // Open in another tab: it goes when that closes; nothing here waits for it.
             request.onblocked = () => resolve();
@@ -87,4 +99,12 @@ if (!atStart && globalThis.localStorage && globalThis.indexedDB) {
         if (dbs.some((db) => SAMPLE_DBS.some((name) => db.name === `${name}${SAMPLE_DB_SUFFIX}`))) clearSampleStores();
       })
       .catch(() => {});
+}
+// Any other page's start: what a try-out left in this browser goes (nothing of it is kept as anyone's).
+if (!DEMO && globalThis.localStorage && globalThis.indexedDB) {
+  let left = false;
+  try {
+    left = Object.keys(localStorage).some((key) => key.startsWith(DEMO_PREFIX));
+  } catch {}
+  if (left) clearDemoStores();
 }

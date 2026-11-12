@@ -137,6 +137,8 @@ const EXPORTED = {
   pack_changes: (e) => e.packs.changes.some((c) => c.said === mark("change")),
   pack_audio: (e) => JSON.stringify(e.packs.copies).includes(mark("clip")),
   text_changes: (e) => e.texts.some((t) => t.said === mark("textchange")),
+  // The account's copy: its progress, and its own packs (from 12 Nov 2026), each in the export.
+  account_sync: (e) => ["progress", "packs"].every((kind) => e.progressCopy.some((file) => file.name === `lexicommons-${kind}.${mark("copy")}.json`)),
   progress_clears: (e) => e.progressClears.clears?.some?.((c) => c.id === mark("clear")) ?? JSON.stringify(e.progressClears).includes(mark("clear")),
   user_roles: (e) => e.roles.some((r) => r.note === mark("role")),
   staged_files: (e) => e.stagedFiles.some((s) => s.name === mark("staged")),
@@ -240,6 +242,8 @@ await stage("a row of the account in every table", async () => {
     `INSERT INTO pack_audio (user_id, pack_id, manifest, through, updated_at) VALUES (${q(who.id)}, ${q(`copy-${run}`)}, ${q(JSON.stringify({ clip: mark("clip") }))}, 0, ${now})`,
     `INSERT INTO text_changes (id, user_id, text_id, kind, said, source, created_at, expires_at) VALUES (${q(mark("tchange"))}, ${q(who.id)}, 't1', 'add', ${q(mark("textchange"))}, 'check', ${now}, ${now + 86400_000})`,
     `INSERT INTO progress_clears (user_id, id, before_at, at) VALUES (${q(who.id)}, ${q(mark("clear"))}, ${now}, ${now})`,
+    `INSERT INTO account_sync (user_id, name, size, version, updated_at) VALUES (${q(who.id)}, ${q(`lexicommons-progress.${mark("copy")}.json`)}, 2, 'v1', ${now})`,
+    `INSERT INTO account_sync (user_id, name, size, version, updated_at) VALUES (${q(who.id)}, ${q(`lexicommons-packs.${mark("copy")}.json`)}, 2, 'v1', ${now})`,
     // The paid plan's rows (src/billing.ts), as the webhook and the in-app AI would write them.
     `INSERT INTO billing_customers (user_id, customer, trial_used, created_at) VALUES (${q(who.id)}, ${q(mark("cus"))}, 1, ${now})`,
     `INSERT INTO billing_subscriptions (id, user_id, customer, status, updated_at) VALUES (${q(mark("sub"))}, ${q(who.id)}, ${q(mark("cus"))}, 'canceled', ${now})`,
@@ -509,7 +513,7 @@ await stage("in Chrome: markup in what's shared shows as text and draws nothing;
   }
 });
 
-await stage("a pack made on a device stays there: no copy goes up with no AI; once it's shared, or an AI is connected, it does", async () => {
+await stage("a pack made on a device is kept with the account's copy (and so in the export) and nowhere else on the server with no AI; once it's shared, or an AI is connected, a copy for it goes up too", async () => {
   const who = account(`Deck owner ${run}`);
   // An account with a personal token counts as having an AI connected: this one has no AI.
   sql(`DELETE FROM api_tokens WHERE user_id = ${q(who.id)}`);
@@ -552,8 +556,13 @@ await stage("a pack made on a device stays there: no copy goes up with no AI; on
     assert(edited, "the edit wasn't saved");
     assert(puts.length === 0, `an edit sent a copy up with no AI: ${puts}`);
     assert(copies().length === 0, `after an edit, the server holds a copy: ${copies()}`);
+    // Kept with the account's own copy, so it reaches the learner's other devices (12 Nov 2026; privacy.html "Your progress and your
+    // packs"): its words in the export there, a file of its own, and nowhere else the server keeps.
+    await page.evaluate(async () => (await import("/js/sync.js")).syncNow());
     const exported = await as(who, "GET", "/api/me/export");
-    assert(!exported.text.includes(mark("front")), "its words are in the account's export, so on the server");
+    const { progressCopy = [], ...rest } = exported.json ?? {};
+    assert(progressCopy.some((file) => file.name.startsWith(`lexicommons-packs.${firstId}.`) && file.text?.includes(mark("front"))), `its words aren't in the account's copy: ${progressCopy.map((file) => file.name).join(", ")}`);
+    assert(!JSON.stringify(rest).includes(mark("front")), "its words are on the server outside the account's copy");
     // Shared: it's public anyway, and a fix the author accepts needs the copy to reach them.
     await page.evaluate(async (id) => (await import("/js/study/packs.js")).yourPack(id) && true, firstId);
     const pack = await page.evaluate(async (id) => (await import("/js/study/packs.js")).yourPack(id).pack, firstId);
@@ -577,7 +586,7 @@ await stage("a pack made on a device stays there: no copy goes up with no AI; on
     assert(copies().includes(secondId), `no copy once an AI is connected: ${copies()}`);
     // The server said it was shared: a device that didn't do the sharing learns that from its register, not this device's memory.
     assert(puts.length >= 2, `${puts.length} copies sent`);
-    return "none with no AI; the shared one once shared; the other once an AI is connected";
+    return "with no AI, only in the account's copy (its own file, in the export); the shared one's copy once shared; the other's once an AI is connected";
   } finally {
     await browser.close();
   }

@@ -225,6 +225,7 @@ ${providers.apple ? providerForm("apple", next, "signin") : ""}
 ${createForm()}
 ${notice("wrong", "", { id: "auth-error", hidden: true })}
 <p class="lx-signin-already">Already have an account? <button type="button" class="lx-signin-plain" id="signin">Sign in with a passkey</button></p>
+<p class="lx-signin-try">Not ready for an account? <a class="lx-signin-plain" href="/try/">Try two lessons first</a></p>
 </section>
 ${computerNote()}
 ${options.recovery ? `<p class="lx-signin-note lx-small" id="recover-link"><a href="/login/recover?next=${encodeURIComponent(next)}">Lost your passkey? Get back in with your email</a></p>` : ""}

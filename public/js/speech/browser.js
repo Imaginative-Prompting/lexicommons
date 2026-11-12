@@ -7,6 +7,7 @@
 
 import { SpeechError } from "./errors.js";
 import { LANGUAGES } from "../lang/index.js";
+import { guarded } from "./probe-guard.js";
 
 const Recognition = () => globalThis.SpeechRecognition ?? globalThis.webkitSpeechRecognition ?? null;
 
@@ -45,19 +46,27 @@ const isApple = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator
  *   { state: "unknown" }        there is a recognizer, but the browser won't say where it runs (Safari)
  *   { state: "none", why, unknownLanguage? }   unknownLanguage: Chrome's recognizer doesn't know the language
  */
-export async function browserSupport(lang = "nl-NL") {
+export async function browserSupport(lang = "nl-NL", { onDevice = true } = {}) {
   const R = Recognition();
   if (!R) return { state: "none", why: "This browser has no speech recognizer." };
   if (isChrome(R) && !GOOGLE_KNOWS.has(codeOf(lang))) return { state: "none", why: `Chrome's recognizer doesn't know ${LANGUAGES[codeOf(lang)]?.name ?? lang}.`, unknownLanguage: true };
-  if (typeof R.available === "function") {
+  // Asked only where it's wanted (onDevice: not for Study's list on a phone), and guarded (probe-guard.js): on a device where asking it once
+  // ended the page it's never asked again, and the recognizer is used as one that may or may not have the language on the device.
+  if (typeof R.available === "function" && onDevice) {
     const langs = [recognizerLang(lang)];
     try {
-      const local = await R.available({ langs, processLocally: true });
-      if (local === "available") return { state: "local" };
-      const remote = await R.available({ langs, processLocally: false });
-      if (remote === "available") return local === "downloadable" ? { state: "downloadable" } : { state: "server" };
-      if (local === "downloadable" || local === "downloading") return { state: "downloadable" };
-      return { state: "none", why: "This browser's recognizer doesn't know this language." };
+      return await guarded(
+        "speech-available",
+        async () => {
+          const local = await R.available({ langs, processLocally: true });
+          if (local === "available") return { state: "local" };
+          const remote = await R.available({ langs, processLocally: false });
+          if (remote === "available") return local === "downloadable" ? { state: "downloadable" } : { state: "server" };
+          if (local === "downloadable" || local === "downloading") return { state: "downloadable" };
+          return { state: "none", why: "This browser's recognizer doesn't know this language." };
+        },
+        { state: "unknown" },
+      );
     } catch {
       return { state: "unknown" };
     }

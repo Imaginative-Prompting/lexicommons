@@ -170,8 +170,14 @@ function studyHome(page) {
     // shows the first row of them.
     // A topic at a time (its next lesson, then its own words): a sheet of the topic packs you've added, in a list of its own (a row that
     // opens a sheet is a button, beside the chevron rows it would look like another kind).
-    el("ul", { part: "list", class: "lx-study-rows lx-study-topics" }, quietRow("ways-q", { title: t("study.topics.row"), opens: "sheet", onclick: openTopics })),
-    el("ul", { part: "list", class: "lx-study-rows lx-study-yours" }, quietRow("cards-q", { title: "Your packs", value: packsSummary(), href: "#study/packs" })),
+    // (The two in one holder: on a computer they're a row of two, as the doors and the rows over them are (study-screens.css, from 1280);
+    // on a phone the holder has no box of its own, so each is a row of the page as before.)
+    el(
+      "div",
+      { class: "lx-study-foot" },
+      el("ul", { part: "list", class: "lx-study-rows lx-study-topics" }, quietRow("ways-q", { title: t("study.topics.row"), opens: "sheet", onclick: openTopics })),
+      el("ul", { part: "list", class: "lx-study-rows lx-study-yours" }, quietRow("cards-q", { title: "Your packs", value: packsSummary(), href: "#study/packs" })),
+    ),
   );
   return "Study";
 }

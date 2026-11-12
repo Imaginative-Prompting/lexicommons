@@ -5,6 +5,7 @@
 
 import * as ui from "./lx/ui.js";
 import { el } from "./lx/ui.js";
+import { sampleMark } from "./shell/sample-mark.js";
 import { icon, ICON_NAMES, MEANING_ICON } from "./lx/icons.js";
 import { SYMBOL_NAMES, symbol } from "./lx/symbols.js";
 import { loadPictures, pictureNode } from "./study/pictures.js";
@@ -364,6 +365,7 @@ function gamesSection() {
       resettable("Where does it go?", () => el("div", { class: "lx-stack" }, el("p", { class: "lx-small lx-muted" }, "I read a book yesterday."), ui.placeWord(["Ik", "heb", "gisteren", "een", "boek"], "gelezen", 5, { punct: "." }))),
       resettable("Type the whole sentence", () => el("div", { class: "lx-stack" }, el("p", { class: "lx-small lx-muted" }, "We missed the train."), ui.writeSentence("Type it in Dutch"))),
       resettable("Fill the gap", () => el("div", { class: "lx-stack" }, el("p", { class: "lx-small lx-muted" }, "I'll call you tomorrow."), ui.fillSentence("Ik", "je morgen op.", ["bellen", "bel", "belt"], "bel"))),
+      resettable("Type in the gap", () => el("div", { class: "lx-stack" }, el("p", { class: "lx-small lx-muted" }, "I'll call you tomorrow."), ui.typeInGap("Ik", "je morgen op.", "bel", { lang: "nl", onCheck: () => {} }))),
       // Hebrew and Arabic: the choices with their vowel marks while the word is new, as the sentence's words have them.
       resettable("Fill the gap, with vowel marks (a new word)", () => el("div", { class: "lx-stack" }, el("p", { class: "lx-small lx-muted" }, "I drink coffee."), ui.fillSentence([{ text: "אני", reading: "אֲנִי" }], [{ text: "קפה.", reading: "קָפֶה" }], [{ text: "שותה", reading: "שׁוֹתֶה" }, { text: "שתה", reading: "שָׁתָה" }, { text: "שותים", reading: "שׁוֹתִים" }], "שותה", { lang: "he" }))),
       resettable("Match", () => ui.matchGrid([["oma", "grandma"], ["morgen", "tomorrow"], ["boek", "book"], ["tuin", "garden"]])),
@@ -1063,6 +1065,10 @@ function shellSection() {
     "App shell",
     "Four tabs (Home, Study, Read, Explore; a setting swaps Read for AI once one is connected) in a floating bar the content runs under, with settings behind the button at the top right, and beside it the language you're learning (its flag and code open Settings → Language). On a wide screen the tabs become a sidebar.",
     el("div", { class: "ds-phone" }, app),
+    demo(
+      "A page's bar: the way back, the page's title (a page with no large title of its own) and an admin's sample learner",
+      ui.appHeader("", { back: { href: "#design-shell", label: "Home", title: "Translate" }, mark: sampleMark("Weeks in", () => {}) }),
+    ),
   );
 }
 

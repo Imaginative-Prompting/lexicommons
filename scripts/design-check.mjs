@@ -809,6 +809,63 @@ await stage("Tinta's hooks: perform() plays an act on its targets; the states dr
   return `an act: first frame at once, its target's box in its units each frame (following it, null once gone), its data, made again in the light ink, carried on through a move, ended at endedAt + exit (${Math.round(ended.settled)} ms), a press finishing it, let go off the page, nothing with animations off; ui.performCharacter's early data and early end; a broken act reported, the others drawing on; drafted states: ${drafted.extraHeld.join(", ")} looping, ${drafted.extraOnce.join(", ") || "no reactions"} played once`;
 });
 
+// ui.arrive (11 Nov 2026): a kept page drawn off the screen gets what it held (the rule before left its place held for good); one removed doesn't.
+await stage("held places arrive: on the page in the holder's place (a height off marked), in a page kept off the screen too (nothing measured or faded), never into one removed for good", async () => {
+  const got = await page.evaluate(async () => {
+    const ui = await import("/js/lx/ui.js");
+    const box = (h) => {
+      const n = document.createElement("div");
+      n.style.height = `${h}px`;
+      return n;
+    };
+    const host = document.createElement("div");
+    document.body.prepend(host);
+    const shown = ui.held({ height: 40 }, "check");
+    host.append(shown);
+    const a = box(40);
+    ui.arrive(shown, a);
+    const onPage = { placed: a.parentNode === host && !shown.parentNode, mismatch: a.dataset.holdsMismatch ?? null };
+    const off = ui.held({ height: 40 }, "check");
+    host.append(off);
+    const b = box(52);
+    const warn = console.warn;
+    console.warn = () => {};
+    ui.arrive(off, b);
+    console.warn = warn;
+    const marked = b.dataset.holdsMismatch ?? null;
+    host.remove();
+    // A page kept off the screen: detached, as a kept tab's page is while another is shown.
+    const kept = document.createElement("div");
+    const waiting = ui.held({ height: 40 }, "check");
+    kept.append(waiting);
+    const c = box(52);
+    const back = ui.arrive(waiting, c);
+    const inKept = { placed: c.parentNode === kept && !waiting.parentNode, returned: back === c, mismatch: c.dataset.holdsMismatch ?? null, fading: c.getAnimations().length };
+    // Removed for good: placed nowhere.
+    const gone = ui.held({ height: 40 }, "check");
+    const d = box(40);
+    const removed = { returned: ui.arrive(gone, d) === d, placed: Boolean(d.parentNode) };
+    // The rule from before, planted: a holder not on the page got nothing, so a kept page's place stayed held.
+    const before = (holder, node) => {
+      if (!holder?.isConnected || !node) return node;
+      holder.replaceWith(node);
+      return node;
+    };
+    const kept2 = document.createElement("div");
+    const waiting2 = ui.held({ height: 40 }, "check");
+    kept2.append(waiting2);
+    const e = box(40);
+    before(waiting2, e);
+    return { onPage, marked, inKept, removed, planted: { placed: e.parentNode === kept2 } };
+  });
+  assert(!got.planted.placed, `the planted rule from before should leave the kept page's place held: ${JSON.stringify(got.planted)}`);
+  assert(got.onPage.placed && got.onPage.mismatch === null, `on the page the node should take the holder's place, unmarked: ${JSON.stringify(got.onPage)}`);
+  assert(got.marked === "40→52", `a height 12 px off should be marked 40→52: ${got.marked}`);
+  assert(got.inKept.placed && got.inKept.returned && got.inKept.mismatch === null && got.inKept.fading === 0, `in a kept page the node should take the place, unmeasured and unfaded: ${JSON.stringify(got.inKept)}`);
+  assert(got.removed.returned && !got.removed.placed, `a holder removed for good should get nothing: ${JSON.stringify(got.removed)}`);
+  return "on the page placed and a height off marked 40→52; in a kept page placed, nothing measured or faded; removed for good, placed nowhere; the rule from before (planted) caught leaving the kept page's place held";
+});
+
 await stage("phone width: no sideways scroll, Appearance opens as a sheet", async () => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.reload();

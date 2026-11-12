@@ -1,6 +1,7 @@
 // Accounts: passkey sign-up and sign-in, more passkeys per account, and cookie sessions (Google and GitHub: signin.ts). A session cookie holds a
 // random token; only its sha256 is stored. Challenges live in D1 for five minutes, bound to a short-lived cookie.
 
+import { accountSyncKeysOf, forgetAccountSyncStatement } from "./account-sync";
 import { BILLING_TABLES } from "./billing";
 import { forgetBugReportsStatement, screenshotKeysOf } from "./bug-reports";
 import { takeChallenge } from "./challenges";
@@ -306,13 +307,15 @@ export async function deleteAccount(env: Env, userId: string): Promise<{ files: 
   const forget = await forgetAccountStatements(env, userId);
   // The books it shared stay too, and the books it added from Explore go (community-books.ts).
   const forgetBooks = await forgetBookStatements(env, userId);
-  const [uploadRows, imageRows, stagedRows, bugRows] = await env.DB.batch(
+  const [uploadRows, imageRows, stagedRows, bugRows, syncRows] = await env.DB.batch(
     [
       env.DB.prepare("DELETE FROM uploads WHERE user_id = ? RETURNING id, r2_key").bind(userId),
       env.DB.prepare("DELETE FROM look_images WHERE user_id = ? RETURNING hash").bind(userId),
       deleteStagedStatement(env, userId),
       // Its bug reports go, and their screenshots after the batch (bug-reports.ts).
       forgetBugReportsStatement(env, userId),
+      // Its own copy of its progress goes at once, rows here and bytes after the batch (account-sync.ts).
+      forgetAccountSyncStatement(env, userId),
       // Its requests in Explore go (board.ts), and its "me too"s come off others' counts, before its likes go.
       ...forgetRequestsStatements(env, userId),
       // Its suggestions to a language's grammar go too (grammar-suggestions.ts): what was accepted stays, unnamed.
@@ -334,7 +337,7 @@ export async function deleteAccount(env: Env, userId: string): Promise<{ files: 
   const staged = stagedRows!.results as { id: string; r2_key: string | null }[];
   // Every row's key, pending ones too (bytes may be arriving); the count is of files that had arrived.
   const bugShots = screenshotKeysOf(bugRows);
-  const keys = [...uploads.map((row) => uploadKey(userId, row.id)), ...images.map((row) => lookImageKey(userId, row.hash)), ...stagedKeysOf(userId, stagedRows!), ...bugShots];
+  const keys = [...uploads.map((row) => uploadKey(userId, row.id)), ...images.map((row) => lookImageKey(userId, row.hash)), ...stagedKeysOf(userId, stagedRows!), ...bugShots, ...accountSyncKeysOf(userId, syncRows)];
   for (let i = 0; i < keys.length; i += 1000) await env.UPLOADS.delete(keys.slice(i, i + 1000));
   if (touched.length) await env.DB.batch(recountStatements(env, touched));
   if (touchedBooks.length) await env.DB.batch(recountBookStatements(env, touchedBooks));

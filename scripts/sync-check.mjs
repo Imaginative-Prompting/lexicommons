@@ -5,7 +5,8 @@
 // What it checks, through the app's own pages and Study sessions: Settings → Storage saying what's kept there and when
 // it last synced; study progress and your packs reaching the other device (each writing a file of its own), the
 // answers in the same order and every unit replayed the same on both; a clash on a device's own file (another browser
-// with its id) read and merged; a pack deleted on one device (its relay out of reach) staying deleted after the other
+// with its id) read and merged (every device syncs through the account's own copy too, from v681: no storage of your own
+// still syncs through it, and clearing reaches every device through it); a pack deleted on one device (its relay out of reach) staying deleted after the other
 // syncs; a pack your AI made reaching a device through the storage before the relay, and the relay's change then
 // reported applied, not refused; a pack deleted by a file in the storage kept for 30 days and restored; recordings your
 // AI made reaching a device that missed them on the relay through the storage alone (files of their own, checked by
@@ -14,7 +15,9 @@
 // the other device bringing it all back everywhere; a second tab following without keeping anything twice; and
 // disconnecting; and the reader's: where you are in a text, a highlight with its note and your words reaching the
 // other device, a highlight removed on one staying removed on the other (live in its open reader) and kept there to
-// restore for 30 days, Restore bringing it back on both, a word taken out and added again. Fails on any console error.
+// restore for 30 days, Restore bringing it back on both, a word taken out and added again; and with the account's copy refused at the browser
+// (switched off or full), Dropbox alone carrying a session's answers, a new pack and a deletion to the other device, the same with Dropbox out
+// of reach too reaching nothing (its control). Fails on any console error.
 // Chrome runs muted.
 // Usage (headless Chrome, through the channel's parallel lane, from the channel repo root):
 //   python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "sync check" --kind parallel -- \
@@ -211,6 +214,8 @@ const goSettings = async (p, hash, text) => {
 const escape = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const row = (p, title) => p.locator('[data-part="list-row"]', { has: p.locator(".lx-row-title", { hasText: new RegExp(`^${escape(title)}$`) }) }).first();
 const rowSub = async (p, title) => (await row(p, title).locator(".lx-row-sub").textContent())?.trim();
+// Settings → Storage's row of when it last synced, and through what.
+const syncRow = (p) => p.locator('[data-part="list-row"]', { has: p.locator(".lx-row-title", { hasText: /^(Last synced |Not synced yet$|Syncing…$)/ }) }).first();
 // What's kept in your storage and how it syncs: a sheet, behind its row.
 const openKept = async (p) => {
   await row(p, "What's kept there").click();
@@ -274,17 +279,18 @@ await stage("sign up on one device; a second device signs in to the same account
   return "two devices, one account";
 });
 
-await stage("Settings → Storage without a storage: not syncing, and what would be kept there", async () => {
+await stage("Settings → Storage with no storage of your own: syncing through your account alone (v681), and what would be kept there", async () => {
   await goSettings(A.page, "#settings/storage", "What's kept there");
-  assert((await row(A.page, "Not syncing").count()) === 1, "it says it isn't syncing");
+  await syncRow(A.page).waitFor();
+  assert((await syncRow(A.page).locator(".lx-row-sub").textContent())?.trim() === "Through your account", `the sync row: ${await syncRow(A.page).innerText()}`);
   await shot(A.page, "01-storage-not-connected");
   await openKept(A.page);
   assert((await rowSub(A.page, "Study progress")) === "0 answers on this device", `progress: ${await rowSub(A.page, "Study progress")}`);
   assert((await rowSub(A.page, "Your packs")) === "0 packs on this device", `packs: ${await rowSub(A.page, "Your packs")}`);
   await closeSheet(A.page);
   await goSettings(A.page, "#settings/data", "Download everything");
-  assert((await row(A.page, "Clear study progress on this device").count()) === 1, "clearing is on this device");
-  return "not syncing; Study progress and Your packs listed";
+  assert((await row(A.page, "Clear study progress everywhere").count()) === 1, "clearing reaches every device through the account");
+  return "through your account; Study progress and Your packs listed";
 });
 
 await stage("Dropbox connected on both; one device studies and saves a pack; Settings → Storage says what's kept and when it last synced", async () => {
@@ -299,7 +305,8 @@ await stage("Dropbox connected on both; one device studies and saves a pack; Set
   await goSettings(A.page, "#settings/storage", "What's kept there");
   await row(A.page, "Not synced yet").or(A.page.locator(".lx-row-title", { hasText: /^Last synced / })).first().waitFor();
   await A.page.getByRole("button", { name: "Sync now" }).click();
-  await A.page.locator('[role="status"]', { hasText: "Synced with Dropbox" }).waitFor();
+  // With the account's own copy (v681), a sync goes through it and Dropbox.
+  await A.page.locator('[role="status"]', { hasText: "Synced with your account and Dropbox" }).waitFor();
   const text = await pageText(A.page);
   assert(/Last synced /.test(text), "it says when it last synced");
   assert(/^Synced /.test(await rowSub(A.page, "Dropbox")), "the Dropbox row says when it synced");
@@ -311,12 +318,14 @@ await stage("Dropbox connected on both; one device studies and saves a pack; Set
   const kept = await A.page.locator('[data-part="sheet"]').innerText();
   assert(kept.includes("the later change wins, going by each device's clock"), "it says how a clash is settled");
   await closeSheet(A.page);
-  // The files: one per kind (progress by month), named for the account by a hash, never its id.
+  // The files: one per kind (progress by month, packs by pack), named for the account by a hash, never its id; never one file of every pack
+  // (the form before 12 Nov 2026, still read).
   const names = fileNames();
   const account = await A.page.evaluate(async () => (await (await fetch("/api/me")).json()).user.id);
   const deviceA = await A.page.evaluate(() => localStorage.getItem("lx.sync.device.v1"));
-  tag = names.map((n) => n.match(new RegExp(`^lexicommons-packs\\.([0-9a-f]{8})\\.${deviceA}\\.json$`))).find(Boolean)?.[1];
-  assert(tag, `a packs file of A's: ${names}`);
+  tag = names.map((n) => n.match(new RegExp(`^lexicommons-packs\\.check-nl\\.([0-9a-f]{8})\\.${deviceA}\\.json$`))).find(Boolean)?.[1];
+  assert(tag, `a packs file of A's for its pack: ${names}`);
+  assert(!names.some((n) => new RegExp(`^lexicommons-packs\\.[0-9a-f]{8}\\.[0-9a-f]{8}\\.json$`).test(n)), `no file of every pack: ${names}`);
   assert(names.some((n) => new RegExp(`^lexicommons-progress\\.\\d{4}-\\d{2}\\.${tag}\\.${deviceA}\\.json$`).test(n)), `a progress file of A's: ${names}`);
   assert(!names.some((n) => n.includes(account)), "no file names the account");
   return `${answered} answers and a pack; files: ${names.join(", ")}`;
@@ -325,7 +334,7 @@ await stage("Dropbox connected on both; one device studies and saves a pack; Set
 await stage("the other device takes them: the same answers in the same order, every unit replayed the same, the pack", async () => {
   await goSettings(B.page, "#settings/storage", "What's kept there");
   await B.page.getByRole("button", { name: "Sync now" }).click();
-  await B.page.locator('[role="status"]', { hasText: "Synced with Dropbox" }).waitFor();
+  await B.page.locator('[role="status"]', { hasText: "Synced with your account and Dropbox" }).waitFor();
   const result = await bothTheSame();
   const [pa, pb] = [await yourPack(A.page, "check-nl"), await yourPack(B.page, "check-nl")];
   assert(pb && same(pa, pb), `B's copy of the pack: ${JSON.stringify(pb)?.slice(0, 200)}`);
@@ -398,7 +407,7 @@ await stage("a pack deleted on one device (its relay out of reach) stays deleted
   }
   assert(!(await yourPack(A.page, "check-nl")) && !(await yourPack(B.page, "check-nl")), "still gone on both after more syncs");
   const deviceA = await A.page.evaluate(() => localStorage.getItem("lx.sync.device.v1"));
-  const record = fileJson(`lexicommons-packs.${tag}.${deviceA}.json`).records["check-nl"];
+  const record = fileJson(`lexicommons-packs.check-nl.${tag}.${deviceA}.json`).records["check-nl"];
   assert(record?.gone === true && !("value" in record) && record.about?.edits === 2, `A's file keeps the deletion (saved here, then deleted here: two edits): ${JSON.stringify(record)}`);
   await goSettings(B.page, "#study/packs", "Find packs in Explore");
   assert((await B.page.locator('a[data-part="list-row"][href^="#settings/study/packs/"]', { hasText: "A check pack (Dutch)" }).count()) === 0, "B's packs page doesn't list it");
@@ -477,7 +486,7 @@ await stage("a pack deleted by a file in the storage is kept on the device for 3
   const [made] = (await A.page.evaluate(async () => (await import("/js/study/packs.js")).yourPacks().map((r) => r.id))).filter((id) => id === "trip-sync");
   assert(made, "the pack your AI made is here");
   const here = await yourPack(B.page, made);
-  // A file no device of the account wrote, deleting it.
+  // A file no device of the account wrote, deleting it (in the one-file form from before 12 Nov 2026, which is still read).
   putFile(`lexicommons-packs.${tag}.0badf11e.json`, Buffer.from(JSON.stringify({ format: "lexicommons-sync", version: 1, kind: "packs", account: tag, records: { [made]: { at: here.changedAt + 1, gone: true, about: { changes: here.changes, edits: here.edits + 1, through: here.through } } } })));
   await syncNow(B.page);
   assert(!(await yourPack(B.page, made)), "it's gone from B");
@@ -630,12 +639,13 @@ await stage("clearing study progress everywhere: the sheet says so; the other de
   // The last stage's toast (your AI's pack) gone first, so the sheet's words are in its shot.
   await A.page.locator('[data-part="toast"]').first().waitFor({ state: "detached", timeout: 15_000 }).catch(() => {});
   const onA = (await evidence(A.page)).length;
-  assert((await rowSub(A.page, "Clear study progress everywhere")) === `${onA.toLocaleString("en-US")} answers so far, on every device using Dropbox`, `the row: ${await rowSub(A.page, "Clear study progress everywhere")}`);
+  // A clear goes through the account's own copy (v681): every device and that copy, and the sheet names Dropbox too.
+  assert((await rowSub(A.page, "Clear study progress everywhere")) === `${onA.toLocaleString("en-US")} answers so far, on every device and in your account's copy`, `the row: ${await rowSub(A.page, "Clear study progress everywhere")}`);
   await row(A.page, "Clear study progress everywhere").click();
   const sheet = A.page.locator('[data-part="sheet"]', { hasText: "Clear study progress everywhere?" });
   await sheet.waitFor();
   const said = await sheet.innerText();
-  assert(said.includes("on every device using Dropbox") && said.includes("For 7 days you can bring it back with Undo"), said);
+  assert(said.includes("in your account's own copy and Dropbox") && said.includes("For 7 days you can bring it back with Undo"), said);
   await shot(A.page, "03-clear-everywhere-sheet");
   await sheet.getByRole("button", { name: "Clear everywhere" }).click();
   await A.page.getByText("Study progress cleared everywhere").first().waitFor();
@@ -841,14 +851,84 @@ await stage("your place and your words follow you: B reads on and takes a word o
   return `place ${onB.word}; kat out, then back`;
 });
 
-await stage("disconnecting: not syncing, and clearing is on this device again", async () => {
+// ---------- with the account's copy refused: Dropbox alone ----------
+// The path for anyone whose account copy is switched off or full. The account's store refused at the browser on both devices, and on the
+// device that takes them every other way a pack could come (the relay's inbox and changes, the server's copies: /api/packs/), so whatever
+// reaches it came through Dropbox. Made while Dropbox is out of reach too, nothing reaches it (the CONTROL); Dropbox back, all of it does.
+const ACCOUNT_STORE_URL = (url) => url.pathname.startsWith("/api/account/sync");
+const RELAY_URL = (url) => url.pathname.startsWith("/api/packs/");
+const refusals = { account: 0, relay: 0 };
+const refuseAccount = (route) => (refusals.account++, route.fulfill({ status: 503, contentType: "application/json", body: JSON.stringify({ error: "refused for this check" }) }));
+const refuseRelay = (route) => (refusals.relay++, route.fulfill({ status: 503, contentType: "application/json", body: JSON.stringify({ error: "refused for this check" }) }));
+const dropboxOnly = { made: "dropbox-only-nl", gone: "dropbox-gone-nl", before: 0, answers: 0 };
+
+await stage("CONTROL: with the account's copy refused and Dropbox out of reach too, a session, a new pack and a deletion on one device reach nothing", async () => {
+  // A pack both devices have, to delete below.
+  assert((await A.page.evaluate(async (pack) => (await import("/js/study/packs.js")).savePack(pack, { by: "sync check" }), { ...NL, id: dropboxOnly.gone, name: "Deleted through Dropbox" })).ok, "the pack to delete");
+  await syncNow(A.page);
+  await syncNow(B.page);
+  assert(await yourPack(B.page, dropboxOnly.gone), "B has the pack to delete");
+  for (const p of [A.page, B.page]) {
+    await p.route(ACCOUNT_STORE_URL, refuseAccount);
+    blocked.add(p);
+  }
+  await B.page.route(RELAY_URL, refuseRelay);
+  dropbox.down.add("A");
+  dropbox.down.add("B");
+  dropboxOnly.before = (await evidence(B.page)).length;
+  dropboxOnly.answers = await study(A.page);
+  assert((await A.page.evaluate(async (pack) => (await import("/js/study/packs.js")).savePack(pack, { by: "sync check" }), { ...NL, id: dropboxOnly.made, name: "Made while only Dropbox" })).ok, "a new pack on A");
+  await A.page.evaluate(async (id) => (await import("/js/study/packs.js")).deletePack(id), dropboxOnly.gone);
+  for (let i = 0; i < 2; i++) {
+    await syncNow(A.page);
+    await syncNow(B.page);
+  }
+  assert((await evidence(B.page)).length === dropboxOnly.before, `B took A's answers with no way to: ${(await evidence(B.page)).length} (was ${dropboxOnly.before})`);
+  assert(!(await yourPack(B.page, dropboxOnly.made)), "B took A's new pack with no way to");
+  assert(await yourPack(B.page, dropboxOnly.gone), "B took A's deletion with no way to");
+  assert(refusals.account > 0, `the account's store was asked and refused (${refusals.account})`);
+  return `${dropboxOnly.answers} answers, a new pack and a deletion on A; none of it on B (the account's store refused ${refusals.account} times)`;
+});
+
+await stage("with the account's copy refused at the browser, Dropbox alone carries a session's answers, a new pack and a deletion to the other device", async () => {
+  try {
+    dropbox.down.delete("A");
+    dropbox.down.delete("B");
+    const asked = refusals.account;
+    for (let i = 0; i < 2; i++) {
+      await syncNow(A.page);
+      await syncNow(B.page);
+    }
+    assert(refusals.account > asked, "the account's store wasn't asked (so it wasn't refused)");
+    const result = await bothTheSame();
+    assert(result.answers === dropboxOnly.before + dropboxOnly.answers, `B has ${result.answers} answers, A's ${dropboxOnly.answers} new ones on top of ${dropboxOnly.before}`);
+    assert(await yourPack(B.page, dropboxOnly.made), "A's new pack is on B");
+    assert(!(await yourPack(B.page, dropboxOnly.gone)), "A's deletion is on B");
+    return `B has A's ${dropboxOnly.answers} answers (both replay the same), the new pack, and the deletion, through Dropbox alone (the account refused ${refusals.account - asked} more times, the relay ${refusals.relay})`;
+  } finally {
+    for (const p of [A.page, B.page]) {
+      await p.unroute(ACCOUNT_STORE_URL, refuseAccount);
+      blocked.delete(p);
+    }
+    await B.page.unroute(RELAY_URL, refuseRelay);
+    dropbox.down.delete("A");
+    dropbox.down.delete("B");
+    await syncNow(A.page);
+    await syncNow(B.page);
+  }
+});
+
+await stage("disconnecting Dropbox: syncing goes on through your account alone, and clearing still reaches every device through it", async () => {
   await goSettings(B.page, "#settings/storage", "What's kept there");
   await row(B.page, "Dropbox").getByRole("button", { name: "Disconnect" }).click();
-  await row(B.page, "Not syncing").waitFor();
+  // A quiet sync under way waits up to 30 s for a still page (sync.js STILL_MOST) before the row can say what's left: twice that.
+  await syncRow(B.page).locator(".lx-row-sub", { hasText: /^Through your account$/ }).waitFor({ timeout: 60_000 }).catch(async () => {
+    throw new Error(`the sync row after disconnecting: ${(await syncRow(B.page).innerText().catch(() => "none"))?.replace(/\s+/g, " ")}`);
+  });
   await shot(B.page, "06-disconnected");
   await goSettings(B.page, "#settings/data", "Download everything");
-  assert((await row(B.page, "Clear study progress on this device").count()) === 1, "clearing is on this device");
-  return "not syncing";
+  assert((await row(B.page, "Clear study progress everywhere").count()) === 1, "clearing reaches every device through the account");
+  return "through your account alone";
 });
 
 await stage("deleting the account leaves what your own storage keeps", async () => {

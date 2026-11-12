@@ -23,6 +23,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { chromium } from "./quiet-browser.mjs";
 import { localR2 } from "./fixtures/local-r2.mjs";
+import { playToSummary } from "./fixtures/play-session.mjs";
 
 const argv = process.argv.slice(2);
 const [BASE, outArg] = argv;
@@ -244,6 +245,92 @@ await stage("the home: search, the topics as books with the pack to start face-o
   const body = await text();
   assert(!body.includes("A check pack (German)"), "the German one doesn't (Dutch is the language being learned)");
   await shot("01-home");
+});
+
+// A cover as drawn: its drawing in it, no held place left (explore.js drawnWhole stands a held place in until the drawing has loaded).
+const coverState = (cover) => ({ held: cover.hasAttribute("data-held"), holds: cover.querySelectorAll('[data-part="skeleton"]').length, art: Boolean(cover.querySelector('svg, [data-part="picture"], .lx-generic-book')) });
+const coverDrawn = (state) => Boolean(state) && !state.held && !state.holds && state.art;
+/** The pack to add next's cover on the page shown, once it's drawn or `ms` have gone. */
+async function pickCover(p, ms = 6000) {
+  const read = () => p.locator('[data-part="page"]:not([data-ghost]) .lx-pick[data-pick] [data-part="pack-cover"]').first().evaluate(coverState).catch(() => null);
+  let state = await read();
+  for (const start = Date.now(); !coverDrawn(state) && Date.now() - start < ms; state = await read()) await p.waitForTimeout(200);
+  return state;
+}
+
+await stage("the pack to add next's cover is drawn, not a held place: for the learner above, and for one whose lesson 1 is done while Explore is a kept tab (the home drawn again off the screen); a planted held cover caught first", async () => {
+  // The reader can fail: a cover as explore.js holds it while its drawing loads, planted, isn't drawn; with a drawing in it, it is.
+  await page.evaluate(() => {
+    const part = (tag, attrs, ...kids) => {
+      const node = document.createElement(tag);
+      for (const [name, value] of Object.entries(attrs)) node.setAttribute(name, value);
+      node.append(...kids);
+      return node;
+    };
+    const box = part("div", { id: "lx-check-plant", hidden: "" });
+    box.append(
+      part("span", { id: "lx-plant-held", "data-part": "pack-cover", "data-held": "" }, part("div", { "data-part": "skeleton", "data-holds": "picture" })),
+      part("span", { id: "lx-plant-drawn", "data-part": "pack-cover" }, part("span", { class: "lx-generic-art" }, part("span", { "data-part": "picture" }, document.createElementNS("http://www.w3.org/2000/svg", "svg")))),
+    );
+    document.body.append(box);
+  });
+  const planted = { held: await page.locator("#lx-plant-held").evaluate(coverState), drawn: await page.locator("#lx-plant-drawn").evaluate(coverState) };
+  await page.evaluate(() => document.getElementById("lx-check-plant")?.remove());
+  assert(!coverDrawn(planted.held) && coverDrawn(planted.drawn), `the cover's reader: ${JSON.stringify(planted)}`);
+  // The learner above: lesson 1 done with Explore on the screen, the pick drawn when the page next came.
+  await page.goto(`${BASE}/app/#explore`);
+  await page.locator('[data-part="page"]:not([data-ghost]) .lx-face').waitFor({ timeout: 15_000 });
+  const onReturn = await pickCover(page);
+  assert(coverDrawn(onReturn), `the pack to add next's cover, drawn when the page came back: ${JSON.stringify(onReturn)}`);
+  // Another new learner: Explore opened, then another tab (Explore kept, off the page), lesson 1 done there, then Explore again with no reload.
+  // The kept home is drawn again with its pick while it's off the page; its cover's drawing loads then, and must still be in it when the page
+  // comes back (11 Nov 2026: ui.arrive leaves a place off the page alone, and the cover stayed a blank held place until a reload).
+  // Its home as the live one is: the pack to add next is the server's featured pack, one of Lexicommons' own, and stands on no shelf before
+  // lesson 1, so its cover's drawing is first asked for when the home is drawn again. (This check's own pick heads a curated shelf, shown
+  // before lesson 1, and its drawing was in memory by then: the stage passed on the fault.)
+  const kept = account("Explore Kept Tab");
+  const c = await context.browser().newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+  await c.route((u) => u.pathname === "/api/community/explore", async (route) => {
+    const r = await route.fetch();
+    const body = await r.json();
+    const first = body.sections?.find((section) => section.items?.length);
+    if (!first) return route.fulfill({ response: r, json: body });
+    const pick = { ...first.items[0], curated: true };
+    const own = (items) => (items ?? []).map((item) => (item.id === pick.id ? { ...item, curated: true } : item));
+    await route.fulfill({ response: r, json: { ...body, sections: [], feature: { item: pick, why: null }, popular: own(body.popular), new: own(body.new) } });
+  });
+  await c.addCookies([{ name: "lc_session", value: kept.cookie, url: BASE }]);
+  const p = await c.newPage();
+  let where = null;
+  try {
+    await p.goto(`${BASE}/app/#explore`);
+    await p.locator('[data-part="page"]:not([data-ghost]) .lx-explore-topics').first().waitFor({ timeout: 15_000 });
+    await p.waitForTimeout(1500);
+    assert(!(await p.locator('[data-part="page"]:not([data-ghost]) .lx-face').count()), "a pack to add next before lesson 1 (the kept tab's learner)");
+    assert(!(await p.locator('[data-part="page"]:not([data-ghost])').innerText()).includes("Dutch on the move"), "the pack to add next stands on a shelf before lesson 1: its drawing is in memory, and this stage can't see the fault");
+    // Explore's own host, kept by the router while another page shows: read below for where the pick was drawn.
+    await p.evaluate(() => {
+      globalThis.__sameLoad = true;
+      globalThis.__exploreHost = document.querySelector('[data-part="page"]:not([data-ghost]) .lx-explore-topics').closest(".lx-view");
+    });
+    // Lesson 1 as a learner does it: a real session from the path, played to its summary (its answers and its end are the changes
+    // explore.js pickCheck hears; marking the lesson done by hand drew the pick only when the page came back, on the page).
+    await p.goto(`${BASE}/app/#study/session/lesson`);
+    await p.locator('[data-part="session"]').waitFor({ timeout: 30_000 });
+    await playToSummary(p, { session: '[data-part="session"]' });
+    // pickCheck draws a beat (300 ms) after the last change; the cover's drawing loads after that.
+    await p.waitForTimeout(2500);
+    where = await p.evaluate(() => ({ hostOnPage: Boolean(globalThis.__exploreHost?.isConnected), pickDrawn: Boolean(globalThis.__exploreHost?.querySelector(".lx-pick[data-pick]")) }));
+    await p.goto(`${BASE}/app/#explore`);
+    await p.locator('[data-part="page"]:not([data-ghost]) .lx-face').waitFor({ timeout: 15_000 });
+    assert(await p.evaluate(() => globalThis.__sameLoad === true), "Explore was reloaded to show the pack to add next (the kept tab's learner)");
+    const offScreen = await pickCover(p);
+    await p.screenshot({ path: join(OUT, "01-home-kept-tab.png"), fullPage: true });
+    assert(coverDrawn(offScreen), `the pack to add next's cover after lesson 1 was done with Explore a kept tab: ${JSON.stringify(offScreen)} (a held place with no drawing: blank until a reload); the pick drawn off the page: ${JSON.stringify(where)}`);
+  } finally {
+    await c.close();
+  }
+  return `the kept tab's pick drawn off the page: ${where?.pickDrawn && !where?.hostOnPage}`;
 });
 
 await stage("every pack in Dutch, then a filter: Level → A1 changes the list (and the address, so Back undoes it)", async () => {

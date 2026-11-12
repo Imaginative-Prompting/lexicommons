@@ -2,8 +2,13 @@
 // Chinese voices on it: Mandarin (zh) never takes a Chinese voice from Hong Kong or Macau, which speaks Cantonese
 // (Apple's Sinji, Google's 粵語), not even one picked before; Tagalog takes Filipino's (fil-PH), Hebrew iw's, Indonesian
 // in's and Norwegian no's; a language's main country comes first. The rule is lang/index.js voiceSpeaks, which a recording's
-// locale follows too (test-pack-audio.mjs). Nothing is spoken. Exit 0 = pass.
-//   node scripts/test-voices.mjs
+// locale follows too (test-pack-audio.mjs). Then a synth that answers getVoices() with undefined (an iPhone's Safari did, 11 Nov
+// 2026: voice.js threw while it loaded and the app never started), with null, with a list-like, and one that throws: the module
+// loads, every list is a list, and its polling never throws. Nothing is spoken. Exit 0 = pass.
+//   node scripts/test-voices.mjs [<app dir>]   (another copy's dir to see it fail on one from before)
+import { pathToFileURL } from "node:url";
+import { resolve } from "node:path";
+const APP = process.argv[2] ? pathToFileURL(`${resolve(process.argv[2])}/`) : new URL("../", import.meta.url);
 
 const store = new Map();
 globalThis.localStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => store.set(k, String(v)), removeItem: (k) => store.delete(k) };
@@ -33,8 +38,8 @@ globalThis.speechSynthesis = { getVoices: () => VOICES, addEventListener: () => 
 store.set("lx.learning.v1", JSON.stringify({ lang: "zh", from: "en" }));
 store.set("lx.study.v1", JSON.stringify({ listening: { device: "sinji" } }));
 
-const { voicesFor, voiceChoices, currentDeviceVoiceId } = await import("../public/js/study/voice.js");
-const { voiceSpeaks } = await import("../public/js/lang/index.js");
+const { voicesFor, voiceChoices, currentDeviceVoiceId } = await import(new URL("public/js/study/voice.js", APP).href);
+const { voiceSpeaks } = await import(new URL("public/js/lang/index.js", APP).href);
 
 let failed = 0;
 function check(name, got, want) {
@@ -57,6 +62,35 @@ check(
   [["zh", "zh-CN"], ["zh", "zh_TW"], ["zh", "zh-SG"], ["zh", "zh-HK"], ["zh", "zh_HK"], ["zh", "ZH-mo"], ["zh", "zh-Hant-HK"], ["zh", "zh-Hans-CN"], ["zh", "yue-HK"], ["yue", "yue-HK"], ["yue", "zh-HK"], ["yue", "zh-Hant-HK"], ["yue", "zh-CN"], ["yue", "zh-TW"], ["tl", "fil-PH"], ["tl", "tl"], ["nl", "nl-BE"], ["nl", "de-DE"], ["nl", null]].map(([code, tag]) => voiceSpeaks(code, tag)),
   [true, true, true, false, false, false, false, true, false, true, true, true, false, false, true, true, true, false, false],
 );
+
+// Synths that don't answer with a list. Each a fresh copy of the module (its own address), loaded with that synth in place, then
+// given its polling's time (20 looks, 250 ms apart): a throw anywhere, even in a timer, fails here.
+const late = [];
+process.on("uncaughtException", (error) => late.push(error.message));
+const ODD = {
+  "undefined": () => undefined,
+  "null": () => null,
+  "a list-like": () => ({ length: 2, 0: voice("Xander", "nl-NL"), 1: { name: "No language" } }),
+  "a throw": () => {
+    throw new Error("not allowed");
+  },
+};
+for (const [what, getVoices] of Object.entries(ODD)) {
+  globalThis.speechSynthesis = { getVoices, addEventListener: () => {}, speak() {}, cancel() {} };
+  let loaded = null;
+  let error = null;
+  try {
+    loaded = await import(`${new URL("public/js/study/voice.js", APP).href}?synth=${encodeURIComponent(what)}`);
+  } catch (e) {
+    error = e.message;
+  }
+  check(`a synth whose getVoices() answers ${what}: voice.js loads`, error, null);
+  if (!loaded) continue;
+  const lists = [loaded.voicesFor("nl"), loaded.deviceVoices("nl"), loaded.voicesFor("zh")];
+  check(`and its lists are lists (Dutch: ${what === "a list-like" ? "Xander" : "none"})`, lists.map((list) => Array.isArray(list) && list.map((v) => v.name).join()), what === "a list-like" ? ["Xander", "Xander", ""] : ["", "", ""]);
+}
+await new Promise((done) => setTimeout(done, 21 * 250 + 300));
+check("and nothing threw later, in its polling", late, []);
 
 console.log(failed ? `\n${failed} failed` : "\nall passed");
 process.exit(failed ? 1 : 0);

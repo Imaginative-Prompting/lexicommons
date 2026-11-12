@@ -16,7 +16,7 @@ import * as ui from "../lx/ui.js";
 import { el } from "../lx/ui.js";
 import * as theme from "../lx/theme.js";
 import * as motion from "../lx/motion.js";
-import { loadProgress } from "../study/progress.js";
+import { allEvidence, loadProgress } from "../study/progress.js";
 import { loadWordIndex } from "../know/word-index.js";
 import { loadPlanKept } from "../study/plan-kept.js";
 import { loadPacks, syncLibraryPacks } from "../study/packs.js";
@@ -24,10 +24,10 @@ import { loadClips } from "../study/clips.js";
 import { checkPackInbox, startPackInbox } from "../study/pack-inbox.js";
 import { startStudyRecord } from "../ai/study-record.js";
 import { rememberProviders } from "../storage.js";
-import { startSync } from "../sync.js";
+import { startSync, syncNow } from "../sync.js";
 import { loadFrequency } from "../study/frequency.js";
 import { warmWhileIdle } from "../study/warm-idle.js";
-import { learning, learningFrom, learningFromName, learningName, onLearningChange } from "../study/learning.js";
+import { fromFor, learning, learningFrom, learningFromName, learningName, onLearningChange, setLearning } from "../study/learning.js";
 import { runSession } from "../study/session.js";
 import { SignedOut, keptMe, whoAmI } from "./api.js";
 import { hostedReady } from "../ai/hosted.js";
@@ -36,7 +36,7 @@ import { renderStudy } from "./study.js";
 import { watchForUpdates } from "./new-version.js";
 import { renderSettings } from "./settings.js";
 import { mayNeedWelcome, needsWelcome, openWelcome } from "./welcome.js";
-import { applyInterface, onInterfaceShown } from "./interface-language.js";
+import { applyInterface, onInterfaceShown, speaks } from "./interface-language.js";
 import { htmlDir, htmlLang, languageLabel } from "../lx/i18n.js";
 import { lookToast, watchLook } from "./look-watch.js";
 import { renderTodo, TODO_TABS } from "./todo.js";
@@ -54,6 +54,27 @@ import { copyOf, followSwipeBack, picture, slide as slidePage } from "./page-sli
 import { startReminders } from "../push.js";
 import { sampleAtStart } from "../study/sample-mode.js";
 import { SAMPLE_PRESETS } from "../study/sample-learner.js";
+import { sampleMark as sampleMarkOf } from "./sample-mark.js";
+
+// How long a fresh device's start waits for the account's own copy of its progress (sync.js) before asking what to learn.
+const BRING_WAIT = 6_000;
+/**
+ * A fresh device signed in: one sync with the account's copy, then the language the account last studied, so its progress is here and
+ * the first run isn't. Never past BRING_WAIT (offline, or slow: the first run comes, and the progress arrives behind it as it syncs).
+ */
+async function bringProgress(started) {
+  const brought = (async () => {
+    await started;
+    await syncNow({ quietly: true });
+    const rows = allEvidence();
+    if (!rows.length) return;
+    const last = rows.reduce((a, b) => ((b.at ?? 0) > (a.at ?? 0) ? b : a));
+    if (last.lang && last.lang !== learning()) setLearning(last.lang, fromFor(last.lang, speaks()));
+    syncLibraryPacks();
+  })().catch(() => {});
+  await Promise.race([brought, new Promise((done) => setTimeout(done, BRING_WAIT))]);
+}
+
 
 // The splash (theme-boot.js decided before the first paint, and its first frame is already drawn): it runs over the app,
 // which starts under it at once. Nothing waits for it. A still one is theme-boot.js's alone; with none, its markup goes.
@@ -89,6 +110,11 @@ const tabOf = (page) => {
   return page;
 };
 const SETTINGS_TAB = ["settings", "Settings", "gear"];
+// The tab lit for a page: its own, but Add an Anki deck (#study/import) lights the tab it was opened from (?from=), whose way back it
+// takes: Explore's Add your own and Explore's list, Settings → Packs. Study's own button opens it with no from: Study.
+const IMPORT_FROM = { own: "explore", explore: "explore", packs: "settings" };
+const litTab = ({ tab, rest, params }) =>
+  tab === "study" && rest[0] === "import" && Object.hasOwn(IMPORT_FROM, params?.from ?? "") ? IMPORT_FROM[params.from] : tab === "settings" ? "settings" : tabOf(tab);
 
 const state = {
   me: null,
@@ -358,11 +384,16 @@ function fitBar(bar = barTitle()) {
   box.width = box.right - box.left;
   const pill = header.querySelector(':scope > [data-part="app-back"]');
   const end = header.querySelector(":scope > .lx-header-end");
-  // The room between the pill and the header's end, the wider of the two mirrored (a centered title clears both).
+  // The room around the title's middle (its box's middle on a phone; on a computer a list page's column's: shell.css) between the pill and the
+  // header's end, the nearer of the two mirrored (a centered title clears both). A title on a row of its own (Translate's heading on a computer:
+  // not absolutely placed, its `left` a percentage that isn't a place) has the header's whole width.
+  const placed = getComputedStyle(bar).position === "absolute";
+  const mid = placed ? edge.left + parseFloat(getComputedStyle(bar).left) : 0;
   const room = () => {
-    const left = pill ? pill.getBoundingClientRect().right - box.left + 8 : 0;
-    const right = end ? box.right - end.getBoundingClientRect().left + 8 : 0;
-    return Math.max(0, box.width - 2 * Math.max(left, right));
+    if (!placed) return box.width;
+    const from = pill ? pill.getBoundingClientRect().right + 8 : box.left;
+    const to = end ? end.getBoundingClientRect().left - 8 : box.right;
+    return Math.max(0, 2 * Math.min(mid - from, to - mid));
   };
   header.removeAttribute("data-pill");
   let space = room();
@@ -461,8 +492,7 @@ sidebar?.addEventListener?.("change", () => {
 // English only.
 function sampleMark() {
   const name = SAMPLE_PRESETS.find((preset) => preset.id === sampleAtStart()?.preset)?.name ?? "";
-  const off = el("button", { type: "button", class: "lx-sample-off", "aria-label": `Turn the sample learner off (${name})`, onclick: () => import("../study/sample-start.js").then(({ stopSample }) => stopSample()) }, "Off");
-  return el("div", { part: "sample-mark", title: `Sample learner: ${name}` }, el("span", { class: "lx-sample-name" }, "Sample"), off);
+  return sampleMarkOf(name, () => import("../study/sample-start.js").then(({ stopSample }) => stopSample()));
 }
 
 function setHeader(title, back) {
@@ -476,6 +506,7 @@ function setHeader(title, back) {
 }
 
 function setTabs(active) {
+  state.lit = active;
   // The same tabs: the bubble moves over, from wherever it is. Different tabs (Read and AI swapped): a new bar.
   const key = tabs().map(([id]) => id).join();
   if (tabBar.isConnected && tabBar.lxKey === key) return tabBar.lxSetActive(active);
@@ -558,7 +589,8 @@ const KEPT_TABS = new Set(["today", "study", "read", "ai", "know", "explore", "s
 // between the two rides the page's push.
 // Read's own page too (its lists, the shelf's grid and the paste form stay 720): the book up front and Weave your own in one row, the shelf
 // across the frame (desk-read, 11 Nov 2026).
-const WIDE_PAGES = new Set(["study", "know", "know/words", "know/days", "explore", "explore/topics", "read"]);
+// The AI section's own page too: its main column and an aside (its request pages, Your requests and the connection keep the 720).
+const WIDE_PAGES = new Set(["study", "know", "know/words", "know/days", "know/ideas", "explore", "explore/topics", "read", "ai"]);
 // The pages that are one block centered as a whole on a wide screen (data-column="center": shell.css, 1280 and up), their way back with them,
 // not a 720 column at the frame's start: the path (Where you are), whose winding path sat left of the middle of its ground (the director,
 // 11 Nov 2026).
@@ -850,7 +882,7 @@ function render(force = false, { kind = null, from = nav.i, replaced = false, sy
     state.swiping = false;
     // (Settings' pages beside its menu change in place, as a computer's do.)
     const slideKind = changed && kind && !afterSwipe && !wasOver && leaving && !inSession && !inBook && motion.motionOn() && !(system && PHONE_ANIMATES_ITS_BACK) && !(tab === "settings" && SPLIT.matches) &&
-      (leaving.tab === "settings" ? "settings" : tabOf(leaving.tab)) === (tab === "settings" ? "settings" : tabOf(tab)) ? kind : null;
+      (state.lit ?? (leaving.tab === "settings" ? "settings" : tabOf(leaving.tab))) === litTab({ tab, rest, params }) ? kind : null;
     // A picture of the page leaving, made only if the arriving one has to be waited for (reveal's held): from its host as it was, in this task.
     let held = null;
     if (leaving && (changed || !leavingKept)) {
@@ -911,7 +943,7 @@ function render(force = false, { kind = null, from = nav.i, replaced = false, sy
     else app.removeAttribute("data-column");
     placeAside(tab === "settings" && SPLIT.matches, rest);
     setHeader(entry.view.title, entry.view.back);
-    setTabs(tab === "settings" ? "settings" : tabOf(tab));
+    setTabs(litTab({ tab, rest, params }));
     document.title = `${entry.view.title} · Lexicommons`;
     if (changed && !inSession && !inBook) {
       // The page scrolls in its own area (shell.css): a page kept goes back to where it was, a new one to the top, and
@@ -1145,9 +1177,10 @@ function followKeyboard() {
 // The app's frame at once, from what this device knows (the tab's name and the tabs; the account's initials come with
 // the account), so a start shows the app rather than a line of text, and the page comes in whole when its data is in.
 function drawFrame() {
-  const { tab, rest } = parseRoute();
+  const route = parseRoute();
+  const { tab, rest } = route;
   setHeader(tab !== "settings" && rest.length === 0 ? (PAGES[tab] ?? "") : "");
-  setTabs(tab === "settings" ? "settings" : tabOf(tab));
+  setTabs(litTab(route));
   app.append(...frameParts());
   document.getElementById("root").replaceChildren(app);
 }
@@ -1296,7 +1329,8 @@ async function start() {
       }),
   });
   // Your own storage (Settings → Storage), when one is connected: what's yours, the same on every device (sync.js).
-  startSync({ account: state.me.user.id });
+  // And your account's own copy of your progress, where the site keeps one (sync.js ACCOUNT_STORE): on from sign-in, nothing to connect.
+  const syncStarted = startSync({ account: state.me.user.id, store: state.me.accountSync === true });
   // Reminders on this device (push.js): the badge clears, and the device's report goes out when they're on.
   startReminders();
   // While an AI is connected, what you study goes to where it can read it (ai/study-record.js); with none, nothing does.
@@ -1417,8 +1451,9 @@ async function start() {
   let wasConnected = aiConnected();
   let wasThird = thirdTab();
   onLayoutChange(() => {
-    const { tab, rest } = parseRoute();
-    setTabs(tab === "settings" ? "settings" : tabOf(tab));
+    const route = parseRoute();
+    const { tab, rest } = route;
+    setTabs(litTab(route));
     if (aiConnected() === wasConnected && thirdTab() === wasThird) return;
     // An AI just connected works from the account's copies of your packs: they go now.
     if (aiConnected() && !wasConnected) checkPackInbox();
@@ -1467,6 +1502,9 @@ async function start() {
     startLocale();
     drawAllAgain();
   });
+  // A device with nothing on it, signed in to an account that has studied elsewhere: its progress comes from the account's own copy before
+  // anything's asked (a few seconds at most), with the language it was last studied in. So signing in never looks like starting over.
+  if (held && needsWelcome() && state.me.accountSync === true) await bringProgress(syncStarted);
   // A held start (above): its first run, whole, then the frame under it; or, a device that wasn't new after all, the frame with its page.
   if (held && needsWelcome()) await openWelcome({ whole: true });
   if (held) drawFrame();
@@ -1474,6 +1512,8 @@ async function start() {
   // A first run: what do you want to learn? (welcome.js.) #welcome opens it again, to look at.
   if (!document.querySelector(".lx-welcome") && (needsWelcome() || location.hash === "#welcome")) openWelcome();
   document.documentElement.setAttribute("data-app-ready", "");
+  // This device's progress is another account's (sync.js ownedByAnother): said once a visit, with the way to this account's own.
+  syncStarted.then(() => import("./other-owner.js")).then((m) => m.offerOwnProgress()).catch(() => {});
   // When the app was ready, for whoever measures a start (performance.getEntriesByName("lx-app-ready")).
   performance.mark?.("lx-app-ready");
   appDrawn();

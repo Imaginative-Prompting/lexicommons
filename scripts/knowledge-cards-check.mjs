@@ -93,6 +93,15 @@ const go = async (page, hash) => {
 };
 const tab = (page, href) => page.tap(`[data-part="tab"][href="${href}"], a[href="${href}"][data-part="tab"]`);
 const board = '[data-part="page"] .lx-know-board';
+/**
+ * The ms until `ready()` holds, polled every 50 ms up to `most`, or null. The ideas and Over time come after the pile is at rest and the packs'
+ * notes are read (know/page.js: each wait up to 4 s), so a page just opened has them a moment later than the rest.
+ */
+const until = async (ready, most = 10_000) => {
+  const t0 = Date.now();
+  for (; Date.now() - t0 < most; await page.waitForTimeout(50)) if (await ready()) return Date.now() - t0;
+  return null;
+};
 const sheet = (page) => page.locator('.lx-sheet-layer:not([hidden]) [role="dialog"]').last();
 const closeSheet = async (page) => {
   await page.keyboard.press("Escape");
@@ -473,7 +482,8 @@ await stage("the ideas you've met: the least known four on the card, each drawn 
   const card = page.locator(`${board} [data-card="ideas"]`);
   const ideas = card.locator('[data-part="idea-card"]');
   const shown = Math.min(4, truth.ideas);
-  assert((await ideas.count()) === shown, `${await ideas.count()} ideas on the card for ${truth.ideas} met (the card shows ${shown})`);
+  const came = await until(async () => (await ideas.count()) === shown);
+  assert((await ideas.count()) === shown, `${await ideas.count()} ideas on the card for ${truth.ideas} met (the card shows ${shown}), 10 s after the page settled`);
   const pictures = await card.locator('[data-part="idea-card"] .lx-idea-picture').evaluateAll((nodes) => nodes.filter((n) => n.childElementCount).length);
   assert(pictures === shown, `${pictures} pictures for ${shown} ideas`);
   const noted = await page.evaluate(async () => {
@@ -497,14 +507,15 @@ await stage("the ideas you've met: the least known four on the card, each drawn 
     await page.screenshot({ path: join(OUT, "shots", "05b-ideas-page.png") });
     await go(page, "#know");
   } else assert(!(await seeAll.count()), "See all with nothing more to see");
-  return `${shown} on the card, ${all} on the page, ${lit} words lit${noted ? "" : " (no notes on this server)"}`;
+  return `${shown} on the card ${came} ms after the page settled, ${all} on the page, ${lit} words lit${noted ? "" : " (no notes on this server)"}`;
 });
 await stage("Over time: the chart, with the words that were milestones on it", async () => {
   const card = page.locator(`${board} [data-card="time"]`);
-  assert(await card.locator(".lx-time-chart").count(), "no chart");
+  const came = await until(async () => (await card.locator(".lx-time-chart").count()) > 0);
+  assert(await card.locator(".lx-time-chart").count(), "no chart, 10 s after the page settled");
   const marks = await card.locator(".lx-time-mark").count();
   assert(total < 10 || marks > 0, `${total} words and no milestone on the chart`);
-  return `${marks} milestones`;
+  return `${marks} milestones; the chart there ${came} ms after the ideas`;
 });
 await stage("every control on the cards answers a 44 px press (a link in a sentence exempt)", async () => {
   const small = await page.evaluate(() => {

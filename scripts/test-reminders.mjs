@@ -422,5 +422,43 @@ await test("a new account's reminder time is the one its device gives (a new lea
   await env.DB.prepare("DELETE FROM reminders WHERE user_id LIKE 'big%'").run();
 });
 
+await test("subscribing while the account's state changes under every try: still on (the subscription and the reminders kept), and the next report lands; a report alone still fails", async () => {
+  // Another writer before each of this request's state writes: every compare-and-set finds the row moved.
+  const real = env.DB;
+  let busy = true;
+  let moved = 0;
+  const DB = {
+    ...real,
+    batch: (...args) => real.batch(...args),
+    prepare(sql) {
+      const made = real.prepare(sql);
+      if (!busy || !/^UPDATE reminders SET state/.test(sql)) return made;
+      return {
+        bind: (...values) => {
+          const bound = made.bind(...values);
+          return { ...bound, run: async () => (moved++, await real.prepare("UPDATE reminders SET updated_at = updated_at + 1 WHERE user_id = ?").bind(values[3]).run(), bound.run()) };
+        },
+      };
+    },
+  };
+  const busyEnv = { ...env, DB };
+  await real.prepare("INSERT INTO users (id, name, created_at) VALUES ('burst', 'Burst', ?)").bind(now0).run();
+  const out = await R.subscribe(busyEnv, "burst", { endpoint: "https://fcm.googleapis.com/fcm/send/burst", keys: await subKeys(), device: "cccccccc", time: "19:00", report: { tz: NY, lang: "Dutch", due: 3 } }, now0);
+  eq(out, { ok: true }, "the answer");
+  ok(moved === 5, `the write was tried ${moved} times`);
+  const kept = await R.getReminders(env, "burst");
+  eq([kept.on, kept.devices, kept.settings.time], [true, ["cccccccc"], "19:00"], "on, with its device and time");
+  // The control: a report by itself under the same still says so (the app tries again at its next change).
+  let threw = null;
+  await R.report(busyEnv, "burst", { device: "cccccccc", tz: NY, lang: "Dutch", due: 3 }, now0 + 1000).catch((error) => (threw = error));
+  ok(threw instanceof R.StateBusy, `a report under the same: ${threw?.message ?? "no error"}`);
+  // And with the burst over, the next report is written.
+  busy = false;
+  await R.report(env, "burst", { device: "cccccccc", tz: NY, lang: "Dutch", due: 3 }, now0 + 2000);
+  const row = await real.prepare("SELECT state FROM reminders WHERE user_id = 'burst'").first();
+  ok(JSON.parse(row.state).tz === NY, `the state after the next report: ${row.state.slice(0, 120)}`);
+  await R.unsubscribe(env, "burst", "cccccccc");
+});
+
 console.log(`\n${passed}/${passed + failed} passed`);
 process.exit(failed ? 1 : 0);

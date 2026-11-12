@@ -275,6 +275,9 @@ export async function getReminders(env: Env, userId: string) {
 // studied), or the reminder the cron just sent (a second one that day). So every write is a compare-and-set on
 // updated_at, and every write moves updated_at forward, at least by 1, so two in the same millisecond still differ.
 
+/** Every try of a state write found the state written since it was read. */
+export class StateBusy extends Error {}
+
 const WRITE_STATE = "UPDATE reminders SET state = ?, next_at = ?, updated_at = MAX(?, updated_at + 1) WHERE user_id = ? AND updated_at = ?";
 const TRIES = 5;
 
@@ -290,7 +293,7 @@ async function changeState(env: Env, userId: string, change: (state: State) => S
     const written = await env.DB.prepare(WRITE_STATE).bind(JSON.stringify(state), now, now, userId, row.updated_at).run();
     if (written.meta.changes) return state;
   }
-  throw new Error("reminders: the state kept changing under a write");
+  throw new StateBusy("reminders: the state kept changing under a write");
 }
 
 /**
@@ -332,7 +335,14 @@ export async function subscribe(env: Env, userId: string, body: Record<string, u
   await env.DB.prepare("INSERT INTO reminders (user_id, settings, state, next_at, updated_at) VALUES (?, ?, ?, ?, ?) ON CONFLICT (user_id) DO NOTHING")
     .bind(userId, JSON.stringify(readSettings({ time: body.time })), JSON.stringify(EMPTY_STATE), now, now)
     .run();
-  await changeState(env, userId, (state) => applyReport(state, body.report ?? {}, device, now), now);
+  // The subscription and the account's reminders are kept by now, so they're on. If only the report couldn't be written (the state
+  // changing under every try: a burst of requests for one account), that's still on: the device's next report brings the state up
+  // to date (push.js sends one 5 s after any change and on every open). Anything else still fails.
+  try {
+    await changeState(env, userId, (state) => applyReport(state, body.report ?? {}, device, now), now);
+  } catch (error) {
+    if (!(error instanceof StateBusy)) throw error;
+  }
   return { ok: true as const };
 }
 

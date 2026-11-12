@@ -7,8 +7,7 @@
 
 import * as ui from "../lx/ui.js";
 import { el } from "../lx/ui.js";
-import { ITEMS, describe, nameLang, onContentChange, shownName } from "../study/content.js";
-import { notesReady } from "../study/notes.js";
+import { describe, nameLang, onContentChange, shownName } from "../study/content.js";
 import { evidenceVersion, unitState } from "../study/progress.js";
 import { SKILLS } from "../study/scheduler.js";
 import { planSession } from "../study/plan.js";
@@ -18,7 +17,8 @@ import { bankWords } from "../read/bank.js";
 import { learning } from "../study/learning.js";
 import { minutesOf } from "./today.js";
 import { conceptHref, renderConcept } from "./concept.js";
-import { pileFree, pileMoving, settleAgain, wordsCard } from "./cards.js";
+import { pileFree, pileLook, pileMoving, settleAgain, wordsCard } from "./cards.js";
+import { onChange as onThemeChange } from "../lx/theme.js";
 import { startedWords, stateOf, wordEntries } from "./word-index.js";
 import { inSlices, turn, whole } from "./slices.js";
 import { renderYourWords } from "./words-page.js";
@@ -149,6 +149,11 @@ function knowledgePage(page, { asTab, focus = null }) {
   arm();
   // What the page shows comes from these: coming back with none of them changed, nothing is drawn again (the pile settles again, that's all).
   let notesIn = 0;
+  // The packs' notes (read by their own worker, cards-more.js ideasNotes): the ideas are drawn on the sentences they mark. Asked for once the pile is
+  // at rest (on a phone nothing on the screen needs them while it moves), or at once when the ideas are on the first screen.
+  let notesRead = more.ideasNotesRead();
+  let notesAsked = null;
+  const notes = () => (notesAsked ??= more.ideasNotes().then(() => (notesRead = true)));
   let listsIn = 0;
   let listsShown = -1; // the lists the cards after the pile were last worked out with
   let contentIn = 0;
@@ -176,6 +181,7 @@ function knowledgePage(page, { asTab, focus = null }) {
   let slots = null;
   let wordsOf = "";
   let drawing = 0;
+  let ideasHadNotes = null; // whether the ideas on the page were made with the notes read
   // A card drawn again in place (the packs' notes or the word list arriving bring one up to date) keeps the focus where it was: on the same
   // control in the new card, by its place among the card's own. Left to itself the focus went with the old nodes, and the next Tab started
   // again at the card's first control: back up the page for someone walking it by keyboard.
@@ -261,9 +267,21 @@ function knowledgePage(page, { asTab, focus = null }) {
     ]) {
       if (!alive()) return;
       if (only && !only.includes(name)) continue;
+      // The ideas after the notes, as Everyday waits for the word list: on the first screen a moment at most; else once the pile is at rest.
+      // (Made before them, a card's sentence changed under you when they came: the one that shows the idea takes the notes.)
+      if (name === "ideas" && !notesRead) {
+        if (eager(name)) await Promise.race([notes(), wait(250)]);
+        else {
+          await Promise.race([pileFree(pile), wait(4000)]);
+          await Promise.race([notes(), wait(4000)]);
+        }
+        if (!alive()) return;
+      }
+      const ideasWith = name === "ideas" ? notesRead : null;
       const make = eager(name) ? whole(steps()) : await inSlices(steps(), { alive });
       if (!make || !alive()) return;
       put(name, quiet ? more.quietly(make) : make());
+      if (name === "ideas") ideasHadNotes = ideasWith;
       if (!only) isComposed(name);
       if (held) hold();
     }
@@ -301,10 +319,11 @@ function knowledgePage(page, { asTab, focus = null }) {
   // The ideas' pictures light the words the packs' notes mark: once the notes are read, the page is brought up to date. Read once the pile
   // is at rest (reading them is a long task on a slow phone, and nothing on the screen needs them while it moves).
   Promise.race([pileFree(slots?.words), wait(4000)])
-    .then(() => notesReady([...new Set(ITEMS.map((item) => item.pack))]))
+    .then(notes)
     .then(() => {
       notesIn++;
-      if (slots) draw({ quiet: true, only: ["ideas"] });
+      // (Only where the ideas were drawn before the notes came: the wait for them ran out.)
+      if (slots && ideasHadNotes === false) draw({ quiet: true, only: ["ideas"] });
     })
     .catch(() => {});
   // The word list arrives in the background (it's fetched once, then cached).
@@ -315,6 +334,12 @@ function knowledgePage(page, { asTab, focus = null }) {
     draw({ quiet: true, only: ["everyday", "credit"] });
   });
   const offContent = onContentChange(() => contentIn++);
+  // A new theme, or the system's light and dark under Match device: the pile is drawn in its paints (cards.js relook); one made while the
+  // page is kept off the screen is taken up when it comes back.
+  const relook = () => slots?.words?.nodeType === Node.ELEMENT_NODE && pileLook(slots.words);
+  const offTheme = onThemeChange(relook);
+  const scheme = globalThis.matchMedia?.("(prefers-color-scheme: dark)");
+  scheme?.addEventListener("change", relook);
   // Coming back (the shell keeps it): the same page at once. Only when something it shows has changed is it brought up to date, quietly,
   // card by card; the pile settles again either way.
   return {
@@ -326,6 +351,8 @@ function knowledgePage(page, { asTab, focus = null }) {
     dispose: () => {
       stop();
       offContent();
+      offTheme();
+      scheme?.removeEventListener("change", relook);
       keep?.disconnect();
     },
     refresh: () => {

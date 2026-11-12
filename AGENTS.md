@@ -161,6 +161,18 @@ node scripts/test-sample-learner.mjs --list <frequency.nl.json>   # the sample l
                                           # practice room, clears), its control with the switch off and four planted guards caught; no module naming one of its
                                           # stores but through sampleKey/sampleDb (one exact line excepted, its reason beside it: NAMED_LINE); Off leaving the
                                           # person's keys as they were (exit 0 = pass). A change that reads or writes a localStorage key runs it before landing
+node scripts/test-try-stores.mjs [<app dir>]   # the try-out's stores (study/sample-mode.js demoPage, sampleKey, sampleDb): the page's address alone decides,
+                                          # never a stored switch: /try/ its own (lx.try:…, ….try) whatever the sample learner's switch says, /app/ never, an address
+                                          # that only starts like it not it; clearDemoStores exactly its own, and any other page's start clearing what a try-out left;
+                                          # error reports out from it (not from the sample learner); the first run's done and language through sampleKey; another
+                                          # copy's dir to see it fail on one from before (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "try check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/try-check.mjs http://localhost:<port> <outDir> [--only <regex>]
+  # trying Lexicommons with no account (/try/: try/main.js, session.js tryOut, packs.js on /try/), by real presses: a visitor on a phone (the
+  # quiet band, the first run's chooser, Dutch's lessons 1 and 2 with summaries that promise nothing more, the end card's two buttons one width;
+  # nothing asked of /api/ but error reports, nothing of /login; only the lessons' packs fetched; only the try-out's own stores kept, a planted
+  # real key caught first); a signed-in learner on the same browser (every progress store as it was, "Go to your app", the try-out's keys gone at
+  # the app's start); a computer (the chooser's columns, the cross partway bringing the end card); each full course's lesson 1. LOCAL only (exit 0 = pass)
 node scripts/sample-learner-check.mjs http://localhost:<port> <outDir> [--admin-command "node scripts/local.mjs admin"]   # the sample learner in the
                                           # real app on a phone, as an admin with studying of their own: Admin's row and sheet, each preset by a real tap (timed),
                                           # pictures of Home, Knowledge's cards, Study and the path at 390, the mark on every header and at 320, a reload keeping
@@ -232,6 +244,11 @@ node scripts/test-study-settings.mjs [<app dir>]   # how you like to study as a 
 node scripts/test-back-buttons.mjs [<app dir>]   # every way back is the one floating glass back (ui.backButton): the back chevron drawn
                                           # anywhere else, a button or row given it, or an app-back built by hand fails; another copy's dir to see it
                                           # fail on one from before (exit 0 = pass)
+node scripts/test-parts-listed.mjs [<app dir>]   # every part the app builds is on the theming surface (lx/parts.js PARTS), read from the code (el()'s
+                                          # part, "data-part", dataset.part, setAttribute, markup, an options default; the rig's motion parts aside, comments
+                                          # not counting), so a part on a screen /design doesn't draw can't go out unlisted (v675's reader-turn-button did);
+                                          # design-check then holds every listed part to /design. A part a stylesheet styles is built or listed. Its OWED and
+                                          # OWED_DEAD lists (11 Nov 2026) only shrink; planted parts first; another copy's dir to see it fail (exit 0 = pass)
 node scripts/test-history.mjs [<app dir>]   # the browser's history has one owner, the router (shell/main.js, "back: one rule"): no other file
                                           # under public/ pushes, goes back or forward, or replaces an address without keeping history.state (an entry
                                           # replaced with null was taken for a new one when a back reached it); planted controls; another copy's dir to
@@ -352,6 +369,11 @@ node scripts/test-sw-shell.mjs            # the service worker's shell list (pub
 node scripts/test-webpush.mjs             # Web Push from the Worker (src/webpush.ts): RFC 8291's worked example byte for byte,
                                           # a message a device opens, VAPID's claims and signature, a send's headers, 404/410
                                           # ending a subscription, which endpoints are allowed (exit 0 = pass)
+node scripts/test-reminder-turn-on.mjs [<app dir>]   # turning reminders on is one thing at a time (push.js turnOn), the phone's prompt and the server stood
+                                          # in: six presses while the prompt is up ask once and tell the server once, each with the same answer; a press
+                                          # after it answered is a new one; a failure is everyone's and the next press tries again; another copy's dir to
+                                          # see it fail on one from before (exit 0 = pass). test-reminders holds the server's side: a subscribe whose
+                                          # report can't be written (the state changing under every try) still answers on
 node scripts/test-reminders.mjs           # reminders (src/reminders.ts) on a fake clock: one a day at your time, studied days,
                                           # pauses, quiet hours, backing off and stopping, the cap, your AI's notes batched,
                                           # the week, the words; then the cron on the real migrations with a push service
@@ -648,16 +670,43 @@ node scripts/test-search.mjs              # search in a text (read/search.js): c
 node scripts/test-reader-sync.mjs         # the reader's data through your own storage on three devices in Node: where you
                                           # are, highlights (removed stays removed; kept 30 days to restore), your words;
                                           # each kind's check (exit 0 = pass)
+node scripts/test-own-language.mjs        # a pack in a language Lexicommons doesn't list (src/packs.ts, lang/index.js own languages) on the real migrations:
+                                          # made with its definition, spaced and right to left unspaced; check_items; a device's copy; sentences added; refused
+                                          # in words (no definition, a wrong one, ours given one, a region tag, a second pack saying another definition), nothing
+                                          # queued; every D1 statement with no learner's language in the registry; a study record in it (exit 0 = pass)
 node scripts/test-pack-relay.mjs          # the pack relay (src/packs.ts) in Node's SQLite: corrections accepted in Explore
                                           # reaching the pack the author shared (queueOwnerChange); your AI's add_items, get_pack and update_items
                                           # called through their own schemas (mcp-packs.ts), a word written twice kept as it was there and back:
                                           # te laat's te then om te gaan's, and in Russian and Japanese each time's reading (exit 0 = pass)
+node scripts/test-account-sync.mjs        # an account's own copy of your progress and packs (src/account-sync.ts) on the real migrations, R2 in memory: only
+                                          # progress kinds' and packs' files (a file per pack; never a recording's or a book's), the app's ACCOUNT_KINDS the
+                                          # same list, a write only on the version it read (a clash told), the limits, another account's never read, the
+                                          # export with its packs, deleteAccount taking the rows and bytes (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "account progress check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/account-progress-check.mjs http://localhost:<port> <outDir>
+  # the same in the app, on phones: nothing asked of the store before sign-in; lesson 1 on one device is on a second, empty one signed in to
+  # the account (not asked what to learn; the store down as its control); another account sees none; two devices merge; a device's progress
+  # belongs to one account (sync.js deviceOwner; shell/other-owner.js): another account signing in is told once and nothing merges or uploads
+  # either way (a planted merge caught), Use my progress on this device replaces it and leaves the first account's copy, what lives only on
+  # the device named first with Keep it; your own packs kept there too, a file per pack: two your AI made reaching a phone signed in after the
+  # relay let them go (its control: that phone kept from the packs' files has none), one deleted staying deleted through a reload, and the
+  # one-file form from before planted beside them read with nothing lost or brought back and never written; deleting the account empties its
+  # store. LOCAL only, a copy with Dutch's lessons (npm run local) (exit 0 = pass)
 node scripts/test-sync.mjs                # syncing through your own storage (sync.js) against one in memory: the merge,
                                           # a file per device, deletions staying deleted, limits, crafted files; study
                                           # progress on two devices replaying the same, clear everywhere and Undo; your
-                                          # packs ordered by your AI's changes and bounded by the relay; a sync's count of a kind (what Settings shows)
+                                          # packs ordered by your AI's changes and bounded by the relay, a file per pack (twenty big decks twenty readable
+                                          # files), the one-file form from before read and merged but never written, a file past the read limit never
+                                          # replacing a readable one; a sync's count of a kind (what Settings shows)
                                           # from what it merged, the device's own count after it, a relay change mid-read and a clear's covered rows
-                                          # included (exit 0 = pass)
+                                          # included; a quiet sync passing by a kind with nothing new here or on the storage (a change told, another
+                                          # device's file, its own file gone each bringing it back; no onChange or Sync now never passed by), and a
+                                          # file's text and hash written a piece at a time the same as at once; a quiet sync after a clean one on the
+                                          # page going through only the shards changed since, here (a change says its shards: study progress its
+                                          # months) or on the storage (a file new, changed or gone; another device's past month the control), its
+                                          # count shard by shard, a change with no shards or a sync stopped part way going through all, and what the
+                                          # quiet syncs leave what a full one would. sync.js does its work a few ms at a
+                                          # time and a quiet sync waits for a still page: home-recompute-check and pile-drop-check hold it (exit 0 = pass)
 node scripts/test-translate.mjs           # Translate's engine (translate/engine.js) on the starter, a test pack and books'
                                           # layers: both ways, word forms, phrases, credits, merging; a word's own sentence
                                           # first and 6 sentences for one thing typed, merged too; on the Dutch word packs, a
@@ -791,7 +840,7 @@ node scripts/gate-check.mjs http://localhost:<port> <outDir> --persist-to <dir> 
                                           # answers; the password; a cookie from before the switch), pages (GATE_PUBLIC_PAGES: exactly the three pages,
                                           # and /pricing with --plan, for reading, still out of search; without the plan no spelling of /pricing is the
                                           # page, gated or open), public (every route the code has, walked with no account against private
-                                          # data it writes first; robots.txt, what may be indexed, the share card as card fetchers get it, the cookie table,
+                                          # data it writes first; robots.txt, what may be indexed (the try-out, /try/, open to anyone and never indexed), the share card as card fetchers get it, the cookie table,
                                           # what a visitor can open loads only from this site, in Chrome; the public pages served whole, naming no payment, plan or
                                           # in-app AI without --plan, and the plan's parts with it); a new route fails until it refuses or goes on its
                                           # list; through gpu.py's parallel lane; LOCAL only (exit 0 = pass)
@@ -826,6 +875,12 @@ node scripts/test-errors.mjs              # error reports (src/errors.ts, lx/err
                                           # a server error by its route's pattern; the spike alert and the cron's push; when the app started again
                                           # by itself (a reload of the phone's Home Screen app it didn't make, not after being hidden) and what
                                           # that report keeps (its screen and version alone) (exit 0 = pass)
+node scripts/test-probe-guard.mjs [<app dir>]   # the native probes' marks (speech/probe-guard.js): there while one runs, cleared when it answers, throws,
+                                          # the page is closed (pagehide) or hidden (set again if it comes back with the probe still running); one left at
+                                          # a start told once by name and that probe never run on the device again (speech/browser.js's on-device question
+                                          # too, and skipped where not wanted); the "probe-crash" report (error-clean.js) the probe in fixed words, its
+                                          # screen and version, cleaned again on the server the same, none for a name that's no probe's; another copy's
+                                          # dir to see it fail on one from before (exit 0 = pass)
 node scripts/test-bug-reports.mjs         # bug reports (src/bug-reports.ts, lx/bug-rules.js) on the real migrations, R2 in memory: every refusal writing
                                           # nothing (not a form, too big, nothing written, past 2,000 characters, a screenshot that isn't a PNG, JPEG or
                                           # WebP by its own bytes, one too big); what's kept (what came along cleaned to route names, version, device,
@@ -1019,6 +1074,21 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "speaki
   # deck of its own): offered on the cards in the pack's language and not a reversed one, asked from its meaning with its text not shown, right and
   # recorded on its own unit (say, recall, say), a noun without its article, three wrong tries one row, Can't speak now another of its games,
   # every frame of a try, none offered where nothing listens; LOCAL only, path-nl seeded (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "say whisper check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/say-whisper-check.mjs http://localhost:<port> <outDir> [--from <copy dir>]
+  # Say it where Whisper is the recognizer (Firefox, any browser with no recognizer of its own), a stand-in speech module (no microphone, no model,
+  # Whisper 2.6 s to load) on a phone: while the sentence is read Whisper is got ready, a load over a second says so and then the step's own line;
+  # pressed, it listens with Whisper and the answer is taken; no page error. --from <copy> serves another copy's files (the app from before 12 Nov
+  # 2026 fails it: the step's draw threw "can't access lexical declaration 'shown'"). LOCAL only, a copy with Dutch's lessons (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "probe guard check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/probe-guard-check.mjs http://localhost:<port> <outDir> [--from <copy dir>] [--persist-to <dir>]
+  # the device's native probes (speech/probe-guard.js) on an Android phone's browser (Samsung Internet 30's user agent), the GPU's requestAdapter and
+  # the recognizer's available() counted: opening Study asks neither (game-modes.js askSpeaking's light check), Say it asks both, their marks cleared;
+  # a mark planted as if the page ended inside the GPU's probe told once at the next start (/api/errors, kind "probe-crash"), the GPU never asked
+  # again and the recognizer still, nothing more told after; with --persist-to (the server's local state) the report goes on to the server and
+  # its row is read back: one more probe-crash, the browser ("Samsung Internet 30 · Android"), screen and version (a server that drops it
+  # fails). --from <copy> serves another copy's files (the app from before 12 Nov 2026 fails it).
+  # LOCAL only, a copy with Dutch's lessons (exit 0 = pass). A new native probe goes through probe-guard.js guarded() with a name in PROBES
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "result layout check" --kind parallel -- \
   node 08-lexicommons/app/scripts/result-layout-check.mjs http://localhost:<port> <outDir> --persist-to <dir> [--files <copy>] [--only right]
   # a game's result on a small phone (study/session.js setBar, components.css's answer bar), muted: a planted line over the title caught first; Fill the
@@ -1044,6 +1114,20 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "settin
   # a Settings row's value is never cut (shell.css: one wider than its room wraps): every page of Settings at 320 and 390, each value's words against the
   # box that clips them; a planted value held to one line and too long caught first. --from <copy> serves another copy's files (the app from before
   # 10 Nov 2026 fails it at 320: Sound and speech's Voices lost its start). LOCAL only (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "idea picture check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/idea-picture-check.mjs http://localhost:<port> <outDir> [--from <copy dir>]
+  # an idea's picture (study/concept-picture.js rulePicture) is the same whenever it reaches the page: each one built in place, then built off
+  # the page and put on it 1, 3 and 30 frames later in the same spot, as a card on Knowledge's tab and on an idea's sheet, on a phone and a
+  # computer: its sentence's size, box, lines and every stroke and label the same; one read before any frame told apart first. --from <copy>
+  # serves another copy's files (the app from before 11 Nov 2026 fails it: a late picture was never fitted or drawn). On /design, no account.
+  # Run it after a change to concept-picture.js (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "idea cards check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/idea-cards-check.mjs http://localhost:<port> <outDir> [--from <copy dir>]
+  # Knowledge's idea cards show their idea (know/cards-more.js sentenceOf, ideasNotes), the sample learner weeks in on a phone: each idea drawn on
+  # a sentence of theirs that shows it (its pack's notes mark the idea's words, or it has its own shape), those words lit; one none of theirs shows
+  # drawn plain, never every word dimmed; the tab's cards the Ideas page's first, on the same sentences; a card's sheet on its sentence; opened
+  # straight at the Ideas page its cards there in the first frame. The ideas with such a sentence are counted from the sentences and notes, not the
+  # cards. --from <copy> serves another copy's files (the app from before 11 Nov 2026 fails it). LOCAL only, a copy with Dutch's lessons (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "woven why check" --kind parallel -- \
   node 08-lexicommons/app/scripts/woven-why-check.mjs http://localhost:<port> <outDir>
   # a woven text says why it reads in English (read/reader.js whyEnglish; read/library.js; shelf.js wovenShare), new learners of Dutch on a phone:
@@ -1092,7 +1176,7 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "desk c
   # a page inside it back to Settings, at 1440 none beside the menu and a page further in back to its own; at 820 the menu back to its tab); split
   # (1280 and 1440 by mouse: Settings' menu in a 320 px pane beside its page, Settings itself opening Account, the page's row lit as the sidebar's tab
   # is with its avatar ringed, the pane kept from page to page and level with the page, the page 720 at 1440, gone on leaving; at 1024 the menu alone); Translate keeping the sidebar and the column, its box as tall as its
-  # text (two lines to 40% of the screen, then scrolling), the language bar under the answer and clear of it, a sidebar tab leaving it; games
+  # text (two lines to 40% of the screen, then scrolling), the language bar right under the box where its text starts, a toolbar's size, flat, its row language, swap, language, speak by eye and by Tab, the box a plain box, the swap still swapping, the answer under it, a sidebar tab leaving it; games
   # (744, 820 and 1180 by touch, 1024, 1440, 1920 by mouse; six games): the step and its bar one block in the screen's middle, the game right
   # under its question, Continue right under the game, the step still as the result comes, numbers on the choices with a mouse only; hover
   # (Home, Study, Explore, Knowledge at 1280 and 1440 by mouse, a learner weeks in: every link and button changes its look with the mouse on it); keys
@@ -1103,18 +1187,32 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "desk c
   # single page's text at most 640 px and centered, its picture wider); measure (1024, 1280 and 1440 by mouse: Study's packs, a pack's page, an Explore
   # item, Everyday's words, Translate's sources, Terms, Privacy, and in the wide column Study, Explore, Knowledge, Your words and the topics: no line of
   # reading text over 72 characters, counted as read; a page's line under its title where its column starts); wide (1280 and 1440 by mouse: the grid
-  # pages, Study's, Explore's and Knowledge's own, Your words and the topics, in a 960 column, games 4 a row, topics 6, words 4 a shelf; their lists
+  # pages, Study's, Explore's and Knowledge's own, Your words, the topics and Read, in a 960 column, games 4 a row, topics 6, words 4 a shelf; their lists
   # and forms, Home and Settings at 720 at the one frame's start, every page's title at one place; every block button in a page and its cards 240–360
-  # at its box's start edge or centered in it (BUTTON_RULE); its rows and lists to the column's edge); read (1024, 1280 and 1440 by mouse, a new learner: the book up front beside its name and its way in, 380 × 240 at
-  # most, Weave your own in the first view, the lead shelf's covers one height, Your library's books six to a row at a book's size); reader (1280, 1440 and 1920 by mouse, a text book from the shelf: its two pages' first line and its chapter's
+  # at its box's start edge or centered in it (BUTTON_RULE); its rows and lists to the column's edge); the AI section (1024 to 1920 by mouse, an AI connected over MCP, four requests, one answered: from 1280 its own page the frame's width in two columns, Practice and what to ask for
+  # beside an aside with the connection's card and the three newest unfinished requests, Your requests and Connection gone from the foot; at 1024 one 720 column with them at its foot;
+  # narrowed and widened, the aside goes and comes back; not connected, the page's 720); settings and AI (1280 and 1440 by mouse, an AI connected: Report a bug's values within 220 px of their names,
+  # Appearance's themes five to a row, an AI request's choices' marks right before their words, and Translate's language button, swap, bar and speaker, Read's
+  # Add a book or text and See how it reads and a theme's tile each changing with the mouse on it); reading lines (1024, 1280 and 1440 by mouse, an AI connected, every part opened: on Your AI in Settings and in the AI section, a request's page and Appearance → CSS,
+  # no line of reading text wider than its own --measure, commands to copy left out); first run (1024, 1280 and 1440 by mouse, opened at #welcome: the list the frame's width, the full courses and the
+  # first lessons each in four balanced columns under headings across all four, First lessons' heading in the first view, the search 360 wide, a search
+  # narrowing it to its match and a click picking it); read (a new learner by mouse: at 1024 the book up front beside its name and its way in, 380 × 240 at most; at 1280 and 1440, in the frame,
+  # the book (its picture 560 × 300 at most, its name under it) and Weave your own as a card 360–400 wide side by side, Find a book under both the frame's
+  # width; Weave your own in the first view, the lead shelf's covers one height, Your library's covers one height, 160, on Read's row and on its own page, a picture book's beside a title cover, bottoms level, no title's word broken); reader (1280, 1440 and 1920 by mouse, a text book from the shelf: its two pages' first line and its chapter's
   # heading under the top bar and where they were with the bar put away, the way back, the chevron, the page number and the gear at the book's edges, reading
-  # settings a panel over the gear and Contents one under its button, 400 px at most, no handle, Escape and a press on the page closing them); phones
-  # (390 and 320: Home, Settings, Translate typed, two games asked and answered, Your words, the Knowledge tab (its top without the pile's tiles, which every visit lays out anew, and This week) and the Ideas page, Study's packs, Everyday's words, Read, a book in the reader) pixel for pixel as --base's files draw them, both sides served
+  # settings a panel over the gear and Contents one under its button, 400 px at most, no handle, Escape and a press on the page closing them, an arrow in
+  # the margin either side turning the page and nothing else, the one back dimmed on the first page, a picture book 1400 across at 1920 and 1100 under 1600); phones
+  # (390 and 320: Home, Settings, Translate typed, two games asked and answered, Your words, the Knowledge tab (its top without the pile's tiles, which every visit lays out anew, This week and its idea cards) and the Ideas page, Explore (its home, the topics, a pack's page, Add your own), Study's packs, Everyday's words, Read, a book in the reader) pixel for pixel as --base's files draw them, both sides served
   # from files, animations off, the clock and Math.random fixed, Tinta hidden, a pixel changed past raster rounding (8 of 255); a book's photo (on Read's
   # shelf and in the reader) by its place, its size and its file's size, its own pixels left out (one photo scaled twice comes out a few hundred dots apart with the same files
   # both sides), with a word and a photo each moved one pixel caught first.
   # --from <copy> serves another copy's /js and /css (the app from before fails it); --screens <regex> compares only those of the phones' screens (to prove
   # one: --only '^phones' --screens reader). LOCAL only (exit 0 = pass)
+  # Its files (11 Nov 2026, so the desktop lanes stop colliding in one file): scripts/desk-check.mjs only runs; scripts/desk/common.mjs holds the
+  # arguments, the browser, stage() and every helper, with three registries (PHONE_SCREENS, WIDE_GRIDS, NARROW); scripts/desk/frame.mjs the
+  # frame's stages (hover, keys, targets, tablet, measure, wide, split, phones: lx-app's); study.mjs, know.mjs and read.mjs each lane's own
+  # stages ({ order, run }), phone screens (PHONE_SCREENS.push({ order, screens })) and grid and list pages (WIDE_GRIDS.push, NARROW.push).
+  # Orders are tens apart and run in turn across the files; a page's check goes in its lane's file, a shared rule in common or frame.
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "know grammar check" --kind parallel -- \
   node 08-lexicommons/app/scripts/know-grammar-check.mjs http://localhost:<port> <outDir> --persist-to <dir> [--only <regex>]
   # the Knowledge tab's ideas (know/cards-more.js ideasCard): none before you've met one; then "Ideas you've met" after your words, a card per pattern met with its
@@ -1134,6 +1232,8 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "pile d
   # in from above the card; at rest no two tiles overlapping and none under the floor; 2,500 words slowed 4×: no long task, no frame gap over 100 ms,
   # at rest within 3 s; animations off: still, at random, two loads two piles; a frame strip of each visit, a video of the proof run and the still.
   # LOCAL only (exit 0 = pass)
+  # A new theme: after one is chosen in Settings with Knowledge kept off the screen, and with Knowledge on the screen, no tile of the pile is
+  # still on the old theme's ground, counted on its own canvas (--files <copy>: the app from before 11 Nov 2026 fails it).
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "home numbers check" --kind parallel -- \
   node 08-lexicommons/app/scripts/home-numbers-check.mjs http://localhost:<port> <outDir> [--widths 390,320]   # Home's two numbers against Knowledge's
   # (know/today.js, know/cards.js, know/cards-more.js) on a phone, each width its own device: day one played for real (lesson 1, a Practice, three games by
@@ -1411,9 +1511,13 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "overlo
   # spread over 0-30 s. Each call's tries told apart by a tag on the page's fetch. The app from before fails all five; LOCAL only (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "sync check" --kind parallel -- \
   node 08-lexicommons/app/scripts/sync-check.mjs http://localhost:<port> <outDir>   # two devices of one account
-  # syncing through a Dropbox played from memory: Settings → Sync across devices, progress and packs replaying the same on both, a
-  # clash, a delete staying deleted, the relay after a synced copy, your AI's recordings reaching a device through the
-  # storage alone, clear everywhere and Undo, two tabs, disconnect; LOCAL only
+  # syncing through a Dropbox played from memory, beside the account's own copy: Settings → Sync across devices (through your account
+  # with no storage of your own), progress and packs (a file per pack) replaying the same on both, a clash, a delete staying deleted, the
+  # relay after a synced copy, your AI's recordings reaching a device through the storage alone, clear everywhere and Undo, two tabs,
+  # with the account's copy refused at the browser (off or full) Dropbox alone carrying answers, a new pack and a deletion (and with Dropbox
+  # out of reach too, nothing: its control), disconnect (on through your account). LOCAL only, on the main config's values (npx wrangler dev --persist-to <state> --var
+  # GATE_ENABLED:false --var PUBLIC_ORIGIN:http://localhost:<port> --var RP_ID:localhost …): npm run local's copy offers no storage, so
+  # every stage would time out there
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "lang check" --kind parallel -- \
   node 08-lexicommons/app/scripts/lang-check.mjs http://localhost:<port> <outDir> --persist-to <dir> --langs sv,nb,da
   # new languages end to end: each packs/starter-<code>.json published through the admin tools (a test admin written
@@ -1742,7 +1846,9 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "reader
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "explore check" --kind parallel -- \
   node 08-lexicommons/app/scripts/explore-check.mjs http://localhost:<port> <outDir> --persist-to <dir>   # Explore in
   # Chrome: the home (languages and flags; no pack to add next until lesson 1 is done, none drawn in under the eye as it's done, there on
-  # coming back to the kept page), filters, search, an item, Add pack, Like, Make my own copy, another
+  # coming back to the kept page; its cover a drawing, never a held place left blank, also for a learner whose lesson 1 is a real session
+  # played while Explore is a kept tab, where the home is drawn again off the page: that learner's home is given the live one's shape, the
+  # pick on no shelf before lesson 1, and a planted held cover is caught first), filters, search, an item, Add pack, Like, Make my own copy, another
   # language, the terms, Report, a taken-down pack of yours with its counter-notice, Yours, Share in Explore from a
   # pack's page, corrections on a pack's page (suggest, flag, like, report, accept, decline) and the community
   # corrections switch, requests (the home's way in, the board, asking for a pack and for a book, "me too", answering

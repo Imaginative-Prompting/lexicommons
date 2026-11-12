@@ -14,10 +14,12 @@ import { streakExport } from "../study/done.js";
 import { speaks } from "./interface-language.js";
 import { SITE_FACTS } from "../site-facts.js";
 import { keepNote } from "./keep-here.js";
+import { sampleKey } from "../study/sample-mode.js";
 
 const CATALOGUE = "/library/catalogue.json";
-const DONE = "lx.welcome.v1";
-const LEARNING = "lx.learning.v1";
+// (Through sampleKey: the sample learner's and the try-out's own, so a try-out never marks this browser's real first run done.)
+const DONE = sampleKey("lx.welcome.v1");
+const LEARNING = sampleKey("lx.learning.v1");
 // Among the languages with a full course, the ones most people come for lead, then the rest by name (which languages have one is never
 // written here: fullCourse below).
 const FIRST = ["nl", "es", "fr", "de", "it", "pt", "ja", "ko", "zh"];
@@ -100,7 +102,7 @@ function choiceOrder() {
  * A search and every language to learn, each a press: onPick(code). Returns { find, list }, to lay out as the caller likes. Two groups under
  * their headings: Full courses, each with its lessons, then First lessons (a starter). Only what has something to learn once the catalog says.
  */
-function languageChoices(onPick) {
+export function languageChoices(onPick) {
   const current = learning();
   const rowOf = new Map();
   const row = (code) => {

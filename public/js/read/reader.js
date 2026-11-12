@@ -281,6 +281,11 @@ export function openReader(host, { bookId = null, book: given = null, word: give
     document.fullscreenEnabled && matchMedia("(hover: hover) and (pointer: fine)").matches
       ? el("button", { part: "reader-fullscreen", type: "button", "aria-label": "Full screen", "aria-pressed": "false", onclick: () => toggleFullscreen() }, icon("expand"), icon("contract"))
       : null;
+  // With a mouse, a page's turn has a button either side of the book (reader.css shows them on a computer with a mouse, in pages): the one at
+  // the reading direction's end goes on, the other back. One that has no page to turn to is dimmed (setPage).
+  const turnButton = (dir) => el("button", { part: "reader-turn-button", variant: dir === 1 ? "on" : "back", type: "button", "aria-label": dir === 1 ? "Next page" : "Previous page", onclick: () => turnBy(dir) }, icon("chevron"));
+  const turnBack = turnButton(-1);
+  const turnOn = turnButton(1);
   const settings = ui.sheet({ label: "Reading settings", onClose: (options) => closeSheet(options) });
   const contents = ui.sheet({ label: "Contents", onClose: (options) => closeSheet(options) });
   const marksSheet = ui.sheet({ label: "Highlights and notes", onClose: (options) => closeSheet(options) });
@@ -290,7 +295,7 @@ export function openReader(host, { bookId = null, book: given = null, word: give
   contents.dataset.dock = marksSheet.dataset.dock = "top";
   const status = el("div", { part: "reader-status", "aria-live": "polite" });
   const turnLayer = el("div", { part: "reader-turn", "aria-hidden": "true", hidden: true });
-  const root = el("div", { part: "reader", role: "dialog", "aria-label": "Reader", "data-mode": mode }, text, turnLayer, status, topBar, collapse, gear, fullscreen, settings, contents, marksSheet, noteSheet, cardSheet);
+  const root = el("div", { part: "reader", role: "dialog", "aria-label": "Reader", "data-mode": mode }, text, turnLayer, status, topBar, collapse, turnBack, turnOn, gear, fullscreen, settings, contents, marksSheet, noteSheet, cardSheet);
   host.append(root);
   if (!demo) document.documentElement.setAttribute("data-scroll-lock", "");
   flow.append(el("p", { class: "lx-reader-note" }, "Opening…"));
@@ -1621,6 +1626,8 @@ export function openReader(host, { bookId = null, book: given = null, word: give
       covers[1].style.height = "4000px";
     }
     status.textContent = `${disp + 1}/${pages.length}`;
+    turnBack.disabled = disp === 0 && mounted === 0;
+    turnOn.disabled = disp === pages.length - 1 && mounted + 1 >= model.chapters.length;
     // Where you are is the page's first word.
     lastWord = mountA + page.a;
     savePosition();

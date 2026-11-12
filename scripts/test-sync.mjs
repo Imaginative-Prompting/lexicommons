@@ -72,7 +72,7 @@ const device = async (name) => ({
   sync: await import(moduleOf("sync.js", name)),
 });
 const engine = await import(moduleOf("sync.js", "engine"));
-const { canonical, mergeRecords, SYNC_LIMITS, syncWith, winner } = engine;
+const { canonical, fileText, fileTextSliced, hashText, hashTextSliced, mergeRecords, registerSync, SYNC_LIMITS, syncWith, winner } = engine;
 
 let failed = 0;
 let passed = 0;
@@ -170,6 +170,158 @@ await test("merge: the newer wins, then a deletion, then the larger JSON; a kind
   eq(plain(mergeRecords({ x: at(1, 1), y: at(4, 1) }, { y: at(3, 2), z: gone(2) })), { x: at(1, 1), y: at(4, 1), z: gone(2) });
   const oldest = { prefer: (a, b) => (a.at <= b.at ? a : b) };
   eq(plain(mergeRecords({ y: at(4, 1) }, { y: at(3, 2) }, oldest)), { y: at(3, 2) }, "a kind's own order");
+});
+
+await test("a quiet sync passes by a kind with nothing new either way, and only then (11 Nov 2026: a word band switched went through 62,761 answers)", async () => {
+  // A record compared with itself is equal without being written out: one canonical can't write (nested too deep) proves it isn't.
+  let deep = { at: NOW, value: 0 };
+  for (let i = 0; i < 40; i++) deep = { at: NOW, value: { inner: deep.value } };
+  eq(winner(deep, deep) === deep, true, "a record against itself");
+  // A kind that tells its changes (registerSync's onChange), on a store, synced quietly with a clean map as syncAll keeps one.
+  let told = null;
+  const kind = { ...thing({ x: at(1, "x"), y: at(2, "y") }, { id: "quiet-things" }), onChange: (fn) => (told = fn) };
+  kind.records = () => ({ ...kind.local });
+  registerSync(kind);
+  const store = memoryStore();
+  const remembered = {};
+  const clean = new Map();
+  const quiet = () => syncWith(store, TAG, DA, remembered, [kind], Date.now(), [], { clean });
+  let r = await quiet();
+  eq([r[kind.id].skipped ?? false, r[kind.id].sent], [false, 1], "the first sync on a page goes through and writes its file");
+  let reads = store.reads;
+  let calls = 0;
+  const records = kind.records;
+  kind.records = () => (calls++, records());
+  r = await quiet();
+  eq([r[kind.id].skipped, calls, store.reads - reads], [true, 0, 0], "nothing new here or there: passed by, its records not even asked for");
+  told();
+  r = await quiet();
+  eq([r[kind.id].skipped ?? false, r[kind.id].sent, calls > 0], [false, 0, true], "a change told here: gone through (nothing to send, the same records)");
+  r = await quiet();
+  eq(r[kind.id].skipped, true, "and passed by again after");
+  // Another device's file, new or changed: gone through, and its record taken.
+  await syncWith(store, TAG, DB, {}, [thing({ z: at(3, "z") }, { id: "quiet-things" })], Date.now(), []);
+  r = await quiet();
+  eq([r[kind.id].skipped ?? false, r[kind.id].took, Object.keys(kind.local).sort()], [false, 1, ["x", "y", "z"]], "another device's new file: gone through and taken");
+  r = await quiet();
+  eq(r[kind.id].skipped, true, "then passed by");
+  // This device's own file gone from the store: gone through and written again.
+  store.files.delete(own(DA, "quiet-things"));
+  r = await quiet();
+  eq([r[kind.id].skipped ?? false, r[kind.id].sent, store.files.has(own(DA, "quiet-things"))], [false, 1, true], "its own file gone: written again");
+  // CONTROL: with no clean map (Sync now, Settings opening) it always goes through.
+  r = await syncWith(store, TAG, DA, remembered, [kind], Date.now(), []);
+  eq(r[kind.id].skipped ?? false, false, "no clean map: always gone through");
+  // A kind that never tells its changes is never passed by.
+  const mute = thing({ q: at(1, "q") }, { id: "mute-things" });
+  const muteClean = new Map();
+  await syncWith(store, TAG, DA, {}, [mute], Date.now(), [], { clean: muteClean });
+  r = await syncWith(store, TAG, DA, {}, [mute], Date.now(), [], { clean: muteClean });
+  eq(r[mute.id].skipped ?? false, false, "a kind with no onChange: never passed by");
+});
+
+await test("a quiet sync goes through only the shards changed since its last clean one, here or on the storage, and counts as one through them all (12 Nov 2026: a learner months in, ~1 s at 4× after every session)", async () => {
+  const months = ["2026-07", "2026-08", "2026-09", "2026-10"];
+  const start = {};
+  for (const [i, month] of months.entries()) for (let k = 0; k < 3; k++) start[`${month}:${k}`] = at(i * 10 + k, `${month} ${k}`);
+  let told = null;
+  const asked = [];
+  const options = { id: "months", shard: (key) => key.slice(0, 7), shards: /^\d{4}-\d{2}$/ };
+  const kind = { ...thing(start, options), onChange: (fn) => (told = fn) };
+  // Its records, or a set of shards' alone, as study progress gives them.
+  kind.records = (shards) => {
+    asked.push(shards ? [...shards].sort() : null);
+    return Object.fromEntries(Object.entries(kind.local).filter(([key]) => !shards || shards.has(key.slice(0, 7))));
+  };
+  registerSync(kind);
+  const store = memoryStore();
+  const remembered = {};
+  let clean = new Map();
+  const quiet = () => syncWith(store, TAG, DA, remembered, [kind], Date.now(), [], { clean });
+  const alive = () => Object.values(kind.local).filter((record) => !record.gone).length;
+  const versions = () => new Map([...store.files].map(([name, f]) => [name, f.version]));
+  const changedSince = (before) => [...store.files.keys()].filter((name) => before.get(name) !== store.files.get(name).version).sort();
+  let r = await quiet();
+  eq([r.months.sent, asked.splice(0), r.months.count], [4, [null, null], 12], "the page's first: every shard, every record asked for");
+  // Another device that syncs every shard (a file of its own for each): every shard gone through here, nothing new to take.
+  const other = thing({}, options);
+  const otherRemembered = {};
+  await syncWith(store, TAG, DB, otherRemembered, [other], Date.now(), []);
+  r = await quiet();
+  eq([asked.splice(0), r.months.took, r.months.count], [[months, months], 0, 12], "another device's new files");
+  // THE CONTROL: another device's record in a past month (July), nothing changed here: July gone through, the record taken, July's file here
+  // written with it, and counted.
+  other.local["2026-07:elsewhere"] = at(60, "elsewhere");
+  let before = versions();
+  await syncWith(store, TAG, DB, otherRemembered, [other], Date.now(), []);
+  eq(changedSince(before), [own(DB, "months", "2026-07")], "the other device writes July alone");
+  before = versions();
+  r = await quiet();
+  eq([asked.splice(0), r.months.took, kind.local["2026-07:elsewhere"], changedSince(before), r.months.count], [[["2026-07"], ["2026-07"]], 1, at(60, "elsewhere"), [own(DA, "months", "2026-07")], 13], "another device's past month");
+  // A session's answers in October: October alone asked for and written, nothing read; the count every shard's.
+  kind.local["2026-10:new"] = at(50, "new");
+  told(["2026-10"]);
+  before = versions();
+  const reads = store.reads;
+  r = await quiet();
+  eq([asked.splice(0), r.months.sent, store.reads - reads, changedSince(before), r.months.count], [[["2026-10"], ["2026-10"]], 1, 0, [own(DA, "months", "2026-10")], 14], "a change told in October");
+  // This device's own August file gone from the storage: August alone, written again.
+  store.files.delete(own(DA, "months", "2026-08"));
+  r = await quiet();
+  eq([asked.splice(0), r.months.sent, store.files.has(own(DA, "months", "2026-08")), r.months.count], [[["2026-08"], ["2026-08"]], 1, true, 14], "its own file gone");
+  // A deletion in September: counted out.
+  kind.local["2026-09:0"] = gone(70);
+  told(["2026-09"]);
+  r = await quiet();
+  eq([asked.splice(0), r.months.count, r.months.count === alive()], [[["2026-09"], ["2026-09"]], 13, true], "a deletion");
+  // A change that doesn't say its shards (a clear, an Undo): every shard.
+  told();
+  r = await quiet();
+  eq(asked.splice(0), [null, null], "a change with no shards: every one");
+  // A sync stopped part way (a write failing): the next goes through every shard, the counts kept from before it not trusted.
+  kind.local["2026-10:late"] = at(80, "late");
+  told(["2026-10"]);
+  store.beforeWrite = () => {
+    throw new Error("the storage went away");
+  };
+  r = await quiet();
+  eq([asked.splice(0), Boolean(r.months.error)], [[["2026-10"], ["2026-10"]], true], "a sync that fails part way");
+  r = await quiet();
+  eq([asked.splice(0), r.months.count], [[null, null], 14], "the next goes through every shard");
+  // Another page (a new clean map): every shard first.
+  clean = new Map();
+  r = await quiet();
+  eq(asked.splice(0), [null, null], "a new page's first quiet sync");
+  // What the quiet syncs left: a sync through every shard with no clean map writes nothing new and counts the same.
+  r = await syncWith(store, TAG, DA, remembered, [kind], Date.now(), []);
+  eq([r.months.sent, r.months.count, alive()], [0, 14, 14], "a full sync after them: nothing to write, the same count");
+  // A kind that gives every record whatever it's asked: still only the told shard read and written.
+  const all = { ...thing({ "2026-07:a": at(1, "a"), "2026-08:b": at(2, "b") }, { ...options, id: "months-all" }), onChange: (fn) => (told = fn) };
+  registerSync(all);
+  const allClean = new Map();
+  await syncWith(store, TAG, DA, {}, [all], Date.now(), [], { clean: allClean });
+  const allRemembered = {};
+  await syncWith(store, TAG, DA, allRemembered, [all], Date.now(), [], { clean: allClean });
+  all.local["2026-08:c"] = at(3, "c");
+  told(["2026-08"]);
+  before = versions();
+  r = await syncWith(store, TAG, DA, allRemembered, [all], Date.now(), [], { clean: allClean });
+  eq([changedSince(before), r["months-all"].count], [[own(DA, "months-all", "2026-08")], 3], "a kind that gives every record");
+});
+
+await test("a file's text and its hash, written a piece at a time with breaths between, are the same as written at once", async () => {
+  const kept = Object.create(null);
+  // Keys in JSON.stringify's own order (whole numbers first), deletions, nesting, and characters JSON escapes.
+  for (const key of ["2026-10:b", "7", "2026-09:a", "1", "__proto__", 'quote"d', "ünï ✓"]) kept[key] = key === "7" ? gone(7) : at(key.length, { nested: [key, { deep: true }], text: "line\nbreak" });
+  for (let i = 0; i < 3000; i++) kept[`2026-11:${i}`] = at(i, { n: i });
+  const kind = { id: "things" };
+  const whole = fileText(kind, TAG, kept);
+  const pieces = await fileTextSliced(kind, TAG, kept);
+  eq(pieces === whole, true, "the same characters");
+  eq(JSON.parse(pieces).records["2026-09:a"].value.text, "line\nbreak", "and it reads back");
+  eq(await hashTextSliced(whole), hashText(whole), "the same hash");
+  const long = "x".repeat(400_000) + "ü".repeat(10);
+  eq(await hashTextSliced(long), hashText(long), "and over many stretches");
 });
 
 await test("devices come together, each writing only its own file", async () => {
@@ -442,6 +594,50 @@ await test("progress: two devices' answers come together, in the same order, and
   eq(A.progress.unitState("w:huis", { lang: "nl", now }).strengths.read.lastAt, SAME, "the shared moment is the last read review");
   ok([...store.files.keys()].some((n) => n.includes(".2026-09.")) && [...store.files.keys()].some((n) => n.includes(".2026-10.")), "a file per month");
   return `${pa.rows.length} rows, ${pa.units.length} units identical`;
+});
+
+await test("progress: a quiet sync goes through only the months a change touched here or there, and leaves what a full one would", async () => {
+  // (Before any clear on the account: the clear tests below leave theirs.)
+  const QA = await device("qa");
+  const QB = await device("qb");
+  await QA.progress.loadProgress();
+  await QB.progress.loadProgress();
+  const qs = memoryStore();
+  const rem = { a: {}, b: {} };
+  const clean = { a: new Map(), b: new Map() };
+  const quietA = () => QA.sync.syncWith(qs, TAG, DA, rem.a, undefined, Date.now(), [], { clean: clean.a });
+  const quietB = () => QB.sync.syncWith(qs, TAG, DB, rem.b, undefined, Date.now(), [], { clean: clean.b });
+  const file = (dev, month) => `lexicommons-progress.${month}.${TAG}.${dev}.json`;
+  const versions = () => new Map([...qs.files].map(([name, f]) => [name, f.version]));
+  const changedSince = (before) => [...qs.files.keys()].filter((name) => before.get(name) !== qs.files.get(name).version).sort();
+  const M = (month, day) => Date.UTC(2026, month, day, 9);
+  for (const [i, t] of [M(6, 3), M(7, 5), M(8, 7), M(9, 9)].entries()) for (let k = 0; k < 4; k++) answer(QA, t + k * 60_000, `w:q${i}${k}`);
+  let r = await quietA();
+  eq([r.progress.sent, r.progress.count], [4, 16], "A's first: a file a month");
+  r = await quietB();
+  eq([r.progress.took, r.progress.count], [16, 16], "B's first: every month");
+  await quietA();
+  // A session's answers in October on A: October's file alone written, nothing read.
+  answer(QA, M(9, 20), "w:session");
+  answer(QA, M(9, 20) + 60_000, "w:session", "wrong");
+  let before = versions();
+  let reads = qs.reads;
+  r = await quietA();
+  eq([changedSince(before), qs.reads - reads, r.progress.count], [[file(DA, "2026-10")], 0, 18], "A's session in October");
+  // THE CONTROL: an answer dated in July on B (a device back from months offline): B writes July and October (it takes A's October), and
+  // A takes July's.
+  answer(QB, M(6, 20), "w:offline");
+  r = await quietB();
+  eq([r.progress.took, r.progress.count], [2, 19], "B takes A's October");
+  before = versions();
+  r = await quietA();
+  eq([r.progress.took, r.progress.count, changedSince(before)], [1, 19, [file(DA, "2026-07")]], "A takes B's July");
+  ok(QA.progress.allEvidence().some((row) => row.concept === "w:offline"), "the July answer on A");
+  // What the quiet syncs left is what a sync through every month leaves: nothing more to write, the same count, both devices' rows the same.
+  r = await QA.sync.syncWith(qs, TAG, DA, rem.a, undefined, Date.now(), []);
+  eq([r.progress.sent, r.progress.count], [0, 19], "a full sync on A after them");
+  await quietB();
+  eq(QA.progress.allEvidence().map(({ id: _id, ...row }) => row), QB.progress.allEvidence().map(({ id: _id, ...row }) => row), "the same rows on both");
 });
 
 await test("progress: a failed save is retried before later changes, warns before leaving, and survives a reload", async () => {
@@ -792,7 +988,27 @@ await test("packs: a pack reaches the other device; deleted on one, it stays del
   eq(packOf(PA).edits, 2, "two edits since the relay's change");
 });
 
-await test("packs: individually valid decks cannot overwrite a readable sync file with one past the read limit", async () => {
+await test("a file past the read limit never replaces a readable one: the sync says so and sends nothing, and a fresh device still takes the last", async () => {
+  const kind = thing({ small: at(1, "small") }, { id: "big-things" });
+  const s = memoryStore();
+  const remembered = {};
+  const sync = () => syncWith(s, TAG, DA, remembered, [kind], Date.now(), []);
+  eq((await sync())["big-things"].error, null, "a small file");
+  const previous = s.files.get(own(DA, "big-things"));
+  // Records that are each fine, past the limit together (accented, so bytes and characters differ).
+  for (let i = 0; i < Math.ceil(SYNC_LIMITS.fileBytes / 800_000) + 1; i++) kind.local[`big-${i}`] = at(2 + i, "é".repeat(400_000));
+  const report = await sync();
+  ok(/too big/.test(report["big-things"].error ?? ""), `the oversized file is reported: ${report["big-things"].error}`);
+  eq(report["big-things"].sent, 0, "nothing sent");
+  ok(s.files.get(own(DA, "big-things")) === previous, "the previous readable file stays");
+  const fresh = thing({}, { id: "big-things" });
+  eq((await syncWith(s, TAG, DB, {}, [fresh], Date.now(), []))["big-things"].took, 1, "a fresh device takes the previous file");
+  const empty = memoryStore();
+  const first = await syncWith(empty, TAG, DA, {}, [kind], Date.now(), []);
+  ok(first["big-things"].error && first["big-things"].sent === 0 && empty.writes === 0, "an oversized first upload is refused too");
+});
+
+await test("packs: a file per pack, so twenty big decks are twenty readable files, and a fresh device takes every one (12 Nov 2026: in one file, a few decks passed the account's limit)", async () => {
   const [QA, QB] = [await device("size-a"), await device("size-b")];
   for (const d of [QA, QB]) {
     await d.packs.loadPacks();
@@ -803,34 +1019,64 @@ await test("packs: individually valid decks cannot overwrite a readable sync fil
   const remembered = {};
   const sync = () => QA.sync.syncWith(s, TAG, DA, remembered, undefined);
   const items = Array.from({ length: 1500 }, (_, i) => ({ id: `n${i}`, text: "é".repeat(400), means: "x".repeat(400) }));
-  let previous;
   for (let i = 0; i < 20; i++) {
     const deck = { ...NL, id: `anki-size-${i}`, name: `Deck ${i}`, words: {}, topics: {}, chunks: {}, patterns: {}, items };
     const saved = await QA.packs.savePack(deck, { by: "An Anki deck" });
     ok(saved.ok, JSON.stringify(saved.errors));
-    if (i === 0) {
-      eq((await sync()).packs.error, null, "one deck fits");
-      previous = s.files.get(own(DA, "packs"));
-    }
   }
   const report = await sync();
-  const uploaded = s.files.get(own(DA, "packs"));
-  // Storage lists bytes, not characters: the accented text makes the difference matter.
-  uploaded.size = new Blob([uploaded.text]).size;
-  const received = await QB.sync.syncWith(s, TAG, DB, {}, undefined);
-  ok(uploaded.size <= SYNC_LIMITS.fileBytes, `uploaded ${uploaded.size} bytes; a fresh device took ${received.packs.took} packs`);
-  ok(/too big/.test(report.packs.error ?? ""), `the oversized file is reported: ${report.packs.error}`);
-  eq(report.packs.sent, 0, "nothing sent");
-  ok(uploaded === previous, "the previous readable file stays");
-  eq(received.packs.took, 1, "a fresh device can still take the previous file");
-  for (let i = 0; i < 20; i++) ok(QA.packs.yourPack(`anki-size-${i}`), `deck ${i} stays on the writer`);
-  const empty = memoryStore();
-  const first = await QA.sync.syncWith(empty, TAG, DA, {}, undefined);
-  ok(first.packs.error && first.packs.sent === 0 && empty.writes === 0, "an oversized first upload is refused too");
+  eq([report.packs.error, report.packs.sent], [null, 20], "twenty files written");
+  for (let i = 0; i < 20; i++) {
+    const file = s.files.get(own(DA, "packs", `anki-size-${i}`));
+    ok(file && new Blob([file.text]).size <= SYNC_LIMITS.fileBytes, `deck ${i}'s file is readable`);
+    eq(Object.keys(recordsIn(s, own(DA, "packs", `anki-size-${i}`))), [`anki-size-${i}`], `deck ${i}'s file holds it alone`);
+  }
+  ok(!s.files.has(own(DA, "packs")), "no file of them all");
+  eq((await QB.sync.syncWith(s, TAG, DB, {}, undefined)).packs.took, 20, "a fresh device takes all twenty");
   for (let i = 1; i < 20; i++) await QA.packs.deletePack(`anki-size-${i}`);
-  eq((await sync()).packs.error, null, "sync can write again once the file fits");
+  const after = await sync();
+  eq([after.packs.error, after.packs.sent], [null, 19], "nineteen deletions, each in its pack's own file");
   await QB.sync.syncWith(s, TAG, DB, {}, undefined);
-  ok(QB.packs.yourPack("anki-size-0") && !QB.packs.yourPack("anki-size-1"), "the smaller file reaches the other device");
+  ok(QB.packs.yourPack("anki-size-0") && !QB.packs.yourPack("anki-size-1"), "the deletions reach the other device");
+});
+
+await test("packs: the one file per device from before (until 12 Nov 2026) is read and merged, its deleted packs not brought back and its others not lost, and never written", async () => {
+  const [OA, OB] = [await device("old-a"), await device("old-b")];
+  for (const d of [OA, OB]) {
+    await d.packs.loadPacks();
+    d.packs.setPacksAccount("acct-1");
+    d.packs.setRelayLatest(100);
+  }
+  const s = memoryStore();
+  const r = { a: {}, b: {} };
+  const [sa, sb] = [() => OA.sync.syncWith(s, TAG, DA, r.a, undefined), () => OB.sync.syncWith(s, TAG, DB, r.b, undefined)];
+  ok((await OA.packs.savePack(NL, { by: "test", change: "chg_old1", through: 4, applied: "chg_old1" })).ok, "a pack on A");
+  ok((await OA.packs.savePack({ ...NL, id: "old-only", name: "Only in the old file" }, { by: "test", change: "chg_old2", through: 5, applied: "chg_old2" })).ok, "another");
+  await sa();
+  // As a device on the code from before wrote its file: every pack whole, in one file with no shard (the records as A's own files have them).
+  const old = { ...recordsIn(s, own(DA, "packs", "check-nl")), ...recordsIn(s, own(DA, "packs", "old-only")) };
+  const oldName = `lexicommons-packs.${TAG}.dddddddd.json`;
+  s.files.set(oldName, { version: "v-old", text: JSON.stringify({ format: "lexicommons-sync", version: 1, kind: "packs", account: TAG, records: old }) });
+  // A deletes check-nl; old-only goes from every new file (as if only the old device had it).
+  await OA.packs.deletePack("check-nl");
+  await sa();
+  s.files.delete(own(DA, "packs", "old-only"));
+  const writes = s.writes;
+  const report = await sb();
+  eq(report.packs.error, null, "B's sync");
+  ok(!OB.packs.yourPack("check-nl"), "the pack deleted since isn't brought back by the old file");
+  eq(OB.packs.yourPack("old-only")?.pack.name, "Only in the old file", "the pack only the old file has isn't lost");
+  eq(s.files.get(oldName).version, "v-old", "the old file isn't written");
+  ok(!s.files.has(own(DB, "packs")), "nor one like it for B");
+  ok(s.writes > writes && s.files.has(own(DB, "packs", "old-only")), "B writes the pack it took to a file of its own");
+  // Again and again, from both sides: nothing comes back, nothing goes.
+  for (let i = 0; i < 2; i++) {
+    await sa();
+    await sb();
+  }
+  ok(!OA.packs.yourPack("check-nl") && !OB.packs.yourPack("check-nl"), "still deleted on both");
+  ok(OA.packs.yourPack("old-only") && OB.packs.yourPack("old-only"), "and the other on both");
+  eq(s.files.get(oldName).version, "v-old", "the old file never written");
 });
 
 await test("packs: a copy past the relay's furthest change isn't taken, and a crafted one can't hold a pack", async () => {
@@ -841,7 +1087,7 @@ await test("packs: a copy past the relay's furthest change isn't taken, and a cr
   const report = await syncPB();
   eq(report.packs.took, 0, "not taken");
   eq(packOf(PB), mine, "B's copy is its own");
-  ok(!JSON.stringify(recordsIn(packStore, `lexicommons-packs.${TAG}.${DB}.json`)).includes("chg_forged"), "and so is its file");
+  ok(!JSON.stringify(recordsIn(packStore, own(DB, "packs", "check-nl"))).includes("chg_forged"), "and so is its file");
   // Dated far ahead, it waits; it can't win by its time.
   packStore.files.set(`lexicommons-packs.${TAG}.dddddddd.json`, { version: "v1", text: craftedFile({ ...crafted, through: 5, changedAt: NOW + 1e10 }) });
   eq((await syncPB()).packs.took, 0, "a copy from the future isn't taken");
@@ -950,7 +1196,7 @@ await test("packs: a relay change arriving during a storage read stays on the de
   const read = s.read;
   s.read = async (name) => {
     const text = await read(name);
-    if (name === own(DB, "packs")) {
+    if (name === own(DB, "packs", "check-nl")) {
       s.read = read;
       eq(packOf(SA).through, 1, "A still has sequence 1 when the download starts");
       // The inbox saves a later change while the storage's older copy is still on its way.
@@ -963,7 +1209,7 @@ await test("packs: a relay change arriving during a storage read stays on the de
   eq(report.packs.error, null, "the sync finished");
   eq(packOf(SA).through, 3, "the storage read must not roll sequence 3 back to 2");
   eq(packOf(SA).pack.name, "Sequence three", "the relay's content stays");
-  eq(recordsIn(s, own(DA, "packs"))["check-nl"].value.through, 3, "A's file has sequence 3 too");
+  eq(recordsIn(s, own(DA, "packs", "check-nl"))["check-nl"].value.through, 3, "A's file has sequence 3 too");
   // The count Settings shows comes from what the sync merged, never what it read before the download: it's the device's own count now.
   eq(report.packs.count, await SA.sync.localCount("packs"), "the sync's count of A's packs");
   await SA.sync.syncWith(s, TAG, DA, remembered, undefined);

@@ -49,6 +49,7 @@ const OUTBOUND = [
   [/\/api\/practice\b/, "the practice room"],
   [/\/api\/progress\/clears/, "the account's clears"],
   [/dropbox|googleapis|graph\.microsoft|\/api\/storage/, "a storage"],
+  [/\/api\/account\/sync/, "the account's own copy of your progress"],
 ];
 // The person's progress, by the names the sample has its own of: these must come back byte for byte.
 const PROGRESS_DBS = ["lexicommons-study", "lexicommons-practice", "lexicommons-highlights", "lexicommons-read"];

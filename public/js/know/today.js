@@ -657,6 +657,16 @@ export function renderToday(page, { onTranslate } = {}) {
     progressSlot,
     keepSection,
   );
+  // On a computer (from 1280, know.css) Your progress is a column of its own beside the rest, so in the page's order (Tab, a screen reader) it
+  // comes after them, as it's laid out: down the first column, then down the second. On a phone it's between what's next and what to read, as
+  // it's seen there. Moved again when the window crosses 1280.
+  const beside = globalThis.matchMedia?.("(min-width: 1280px)");
+  const placeProgress = () => {
+    const after = beside?.matches ? keepSection : nextSlot;
+    if (after.nextElementSibling !== progressSlot) after.after(progressSlot);
+  };
+  placeProgress();
+  beside?.addEventListener("change", placeProgress);
   drawAll();
 
   // What only comes later: a practice that's open (from the server), what you're reading (from this device), and
@@ -772,6 +782,7 @@ export function renderToday(page, { onTranslate } = {}) {
     ready,
     dispose: () => {
       alive = false;
+      beside?.removeEventListener("change", placeProgress);
       offContent?.();
       offLessons?.();
       offFrequency?.();

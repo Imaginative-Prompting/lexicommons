@@ -217,7 +217,8 @@ const waitPicture = (loading) => (pictureWaits?.push(loading.catch(() => {})), l
  * A place a drawing decides (a topic's tile, a pack's cover: its paint is never its drawing's own ground), built whole by `build(node)`, node
  * the drawing (null when it can't be had). A drawing in memory already: built now, in the page's first frame. Else a stand-in, `stand()`,
  * the place's own box unpainted with a held place filling it (data-held), until the drawing is here; then the place built whole takes its
- * place (ui.arrive: a fade when it's on the screen), its paint and drawing coming in together, so a paint never changes once it shows.
+ * place (ui.arrive: a fade when it's on the screen; off the page, a kept tab's, at once), its paint and drawing coming in together, so a
+ * paint never changes once it shows.
  * (Word pictures load apart from the app's first load. On a loaded machine Explore's came after the router's hold into bare places, and a
  * learner's cover took a new paint as its drawing came: 8 Nov.)
  */
@@ -229,7 +230,14 @@ function drawnWhole(id, build, stand) {
   const hold = ui.held({}, "picture");
   hold.classList.add("lx-art-held");
   place.append(hold);
-  waitPicture(loadPictures([id])).then((found) => ui.arrive(place, build(found ? pictureNode(id) : null)));
+  waitPicture(loadPictures([id])).then((found) => {
+    const whole = build(found ? pictureNode(id) : null);
+    // On the page it arrives (ui.arrive). Off it (a kept home drawn again while you're elsewhere: pickCheck, a newer home), ui.arrive leaves
+    // a place alone, and the held place stayed for good once the page came back (11 Nov 2026: a new learner's pack to add next had a blank
+    // cover after lesson 1 until a reload). The place takes its drawing there too: nothing is on the screen to fade.
+    if (place.isConnected) ui.arrive(place, whole);
+    else place.replaceWith(whole);
+  });
   return place;
 }
 /** A drawing in its place at its size (drawnWhole). */
@@ -261,7 +269,23 @@ function topicCard(topic, lang) {
   return el("a", { class: "lx-topic", href: topicHref(topic.id, lang), "data-topic": topic.id }, art, el("span", { class: "lx-topic-name" }, topic.name), typeof topic.packs === "number" ? el("span", { class: "lx-topic-count" }, t("explore.packCount", { count: topic.packs })) : null);
 }
 /** Topics to browse by, as cards: three to a row on a phone, more on a wide screen. */
-const topicCards = (topics, lang) => el("nav", { class: "lx-topics", "aria-label": t("explore.topics") }, topics.map((topic) => topicCard(topic, lang)));
+const topicCards = (topics, lang) => {
+  const grid = el("nav", { class: "lx-topics", "aria-label": t("explore.topics") }, topics.map((topic) => topicCard(topic, lang)));
+  // On a computer's wide column (explore.css, from 1280) every topic's page of them fills its rows: how many to a row, from how many there are.
+  if (topics.length > TOPICS_SHOWN) {
+    grid.dataset.aRow = "";
+    grid.style.setProperty("--topics-a-row", String(topicsARow(topics.length)));
+  }
+  return grid;
+};
+/**
+ * How many topics to a row in the wide column, so no row ends with one or two alone: six where they fill their rows or the last is nearly
+ * full (two short at most), else seven, else five by the same rule; six when none does. 14 topics: seven a row.
+ */
+export function topicsARow(count) {
+  const short = (cols) => (cols - (count % cols)) % cols;
+  return [6, 7, 5].find((cols) => short(cols) === 0) ?? [6, 7, 5].find((cols) => short(cols) <= 2) ?? 6;
+}
 /** The one pack to add next: its cover face-out with "Add next", its name, its size and how much of it you know beside it, the whole one link. */
 const pickCard = (pick, lang) =>
   el("div", { class: "lx-pick", "data-pick": "" },
@@ -487,8 +511,8 @@ function renderHome(page, params = {}) {
   // The search first (a place you type, as Home's Translate field), then the language's lessons as the main card, then the one pack to add
   // next face-out, then the topics as cards (their drawings large, their names whole), then what learners have shared, then the quiet
   // rows. The search is made once, so a redraw never takes what's being typed.
-  const top = el("div", { class: "lx-stack" });
-  const rest = el("div", { class: "lx-stack" });
+  const top = el("div", { class: "lx-stack lx-explore-top" });
+  const rest = el("div", { class: "lx-stack lx-explore-rest" });
   const elsewhere = lang !== learning() ? el("p", { class: "lx-small lx-muted" }, t("explore.inLanguage", { language: name })) : null;
   // The search filters this page in place: once you've finished a word (a pause, a space, or Enter) the home gives way to what it finds,
   // and clearing the field brings the home back. The address doesn't change while you type (a redraw would take the field); a pack
@@ -1910,13 +1934,17 @@ function heldItem() {
       Object.assign(ui.pageTitle(ui.heldLine("70%", "title")), { style: "align-self: stretch" }),
       Object.assign(el("p", { class: "lx-small lx-muted lx-explore-facts" }, ui.heldLine("80%", "facts")), { style: "align-self: stretch" }),
       PACK_KNOWN ? knownBarWaiting().bar : null,
-      el("div", { class: "lx-pack-actions" }, ui.heldButton("Like", { size: "lg" }), ui.heldButton("More", { size: "lg" })),
+      el("div", { class: "lx-pack-actions" }, ...(actionsInHead() ? [ui.heldButton("Add pack", { variant: "go", size: "lg", block: true })] : []), ui.heldButton("Like", { size: "lg" }), ui.heldButton("More", { size: "lg" })),
     ),
     // What's in it, below: a screen's height held, so its sentences come in where something was.
     ui.held({ height: "100vh" }, "sentences"),
-    heldPinned(),
+    ...(actionsInHead() ? [] : [heldPinned()]),
   ];
 }
+// On a computer (the tabs a sidebar: 1024 px and up) a pack's way forward sits in its head with Like and More, where the eye is, not in a
+// band at the window's foot: a phone's thumb has that band, a mouse hasn't, and under a pack's sentences it's a screen away from its name.
+const HEAD_ACTIONS = globalThis.matchMedia?.("(min-width: 1024px)") ?? null;
+const actionsInHead = () => Boolean(HEAD_ACTIONS?.matches);
 // Add pinned low, held: the bar it comes in, a held place over the whole of it (the bar that comes is that box), its button held inside.
 function heldPinned() {
   const pinned = ui.pinnedActions([ui.heldButton("Add pack", { variant: "go", size: "lg", block: true })]);
@@ -1952,6 +1980,11 @@ function renderItem(page, id, { lesson = null, from = null } = {}) {
     if (next) old.replaceWith(next);
   };
   const stops = [onContentChange(freshLessons), onDoneChange(freshLessons), onPlaceChange(freshLessons)];
+  // What's drawn, for when the window crosses a computer's width: its way forward moves between the head and the band (actionsInHead).
+  let shown = null;
+  const onWidth = () => !stale && shown && draw(shown);
+  HEAD_ACTIONS?.addEventListener("change", onWidth);
+  stops.push(() => HEAD_ACTIONS?.removeEventListener("change", onWidth));
   const draw = (found) => {
     // The pictures it asks for (its cover's), collected for the page's ready.
     const outer = pictureWaits;
@@ -1963,6 +1996,11 @@ function renderItem(page, id, { lesson = null, from = null } = {}) {
     const addButton = haveAlready(item) ?? ui.button(item.following ? "Added" : "Add pack", { variant: item.following ? "gray" : "go", size: "lg", block: true, icon: item.following ? "check" : undefined, pressed: item.following ? "true" : undefined });
     const likeButton = ui.button(item.liked ? `Liked · ${item.likes}` : `Like${item.likes ? ` · ${item.likes}` : ""}`, { size: "lg", pressed: item.liked ? "true" : "false" });
     const menuButton = ui.button("More", { size: "lg" });
+    // Its way forward and the line that goes with it: in the head on a computer (actionsInHead), in the band low on a phone's screen.
+    const inHead = actionsInHead();
+    const wayOn = item.state === "live" && (!lesson || from === "explore") ? addButton : null;
+    const wayNote = item.state !== "live" ? null : other ? `${withArticle(languageName(item.language), { capital: true })} pack: it waits on this device until you study ${languageName(item.language)}.` : null;
+    shown = found;
     if (!haveAlready(item)) addButton.addEventListener("click", async () => {
       const on = !item.following;
       try {
@@ -2043,7 +2081,8 @@ function renderItem(page, id, { lesson = null, from = null } = {}) {
         ui.pageTitle(item.title),
         el("p", { class: "lx-small lx-muted lx-explore-facts" }, ui.languageFlag(item.language), [languageName(item.language), item.level ? `Level ${item.level}` : null, sizeLine(item), `by ${item.by}`].filter(Boolean).join(" · ")),
         knownBar(item, pack, { page: true }),
-        el("div", { class: "lx-pack-actions" }, likeButton, menuButton),
+        el("div", { class: "lx-pack-actions" }, ...(inHead ? [tinta, wayOn].filter(Boolean) : []), likeButton, menuButton),
+        inHead && wayNote ? el("p", { class: "lx-small lx-muted lx-pack-note" }, wayNote) : null,
       ),
       item.state === "withdrawn" ? el("p", { class: "lx-small" }, "Its author has taken it out of Explore. Whoever added it keeps the version they have.") : null,
       item.mine && (item.state === "hidden" || item.state === "removed" || item.down) ? takenDown(item) : null,
@@ -2079,9 +2118,7 @@ function renderItem(page, id, { lesson = null, from = null } = {}) {
       msg,
       // Add pack, in reach: low on the screen, over the page as it scrolls.
       // (From a lesson you're already studying it: nothing here to add.)
-      ui.pinnedActions([tinta, item.state === "live" && (!lesson || from === "explore") ? addButton : null].filter(Boolean), {
-        note: item.state !== "live" ? null : other ? `${withArticle(languageName(item.language), { capital: true })} pack: it waits on this device until you study ${languageName(item.language)}.` : null,
-      }),
+      inHead ? null : ui.pinnedActions([tinta, wayOn].filter(Boolean), { note: wayNote }),
     ];
     body.replaceChildren(...parts.filter(Boolean));
     const pictures = pictureWaits;

@@ -18,6 +18,7 @@ system (Graphite on black, Instrument Sans for UI, Onest for headings and number
 | `public/css/lx/components.css` | Every component, selected by `data-part` |
 | `public/css/lx/presets.css` | Layout presets, keyed on attributes of `<html>` |
 | `public/css/lx/redesign.css` | The look as it's been chosen, screen by screen: Home and the floating tab bar so far. Loaded after `know.css`, in `lx.page`. |
+| `public/css/lx/settings-wide.css` | On a computer (1024 px and up): the first run, Settings' pages and the AI section, whose own rules are in `shell.css` and `explore.css`. Wide-screen media queries only, keyed to those pages. Loaded after `shell.css`, in `lx.page`. |
 | `public/js/lx/ui.js` | DOM builders for every component. Screens are built from these. |
 | `public/js/lx/icons.js` | The icons, plus `MEANING_ICON` (one icon per meaning) |
 | `public/js/lx/brands.js` | The marks of the ways to sign in (Google's G, GitHub's mark) and the `sign-in-button` part as markup, shared by the server's sign-in pages (`src/pages.ts`) and `ui.signInButton` |
@@ -128,6 +129,11 @@ What themes and custom CSS can rely on. **Target `data-part` names and their att
 - Renaming or removing a part, state or token is a breaking change. Bump `THEMING_SURFACE_VERSION` and keep the old name
   working for a release. Theme files record the version they were made for.
 - `/design` checks itself with `checkSurface()`: every listed part must be shown there, and no unlisted part may appear.
+- Every part the code builds is listed, wherever it's drawn: `scripts/test-parts-listed.mjs` reads them from the code (el()'s `part`,
+  `"data-part"`, `dataset.part`, `setAttribute`, markup, an options default) and fails on one not in `PARTS`, and on a part a stylesheet
+  styles that nothing builds or lists. The landing gate runs it for every change under `public/`, so a new part comes with its row in
+  `parts.js` and its demo on `/design` (design-check) in the same landing. What was missing when it came (11 Nov 2026) is its OWED list,
+  which only shrinks.
 
 ## Motion
 
@@ -1053,14 +1059,41 @@ the page:
   a page further in keeps its own. The pane stays put as the page scrolls, pages beside it change in place with no push, and leaving for a
   tab takes it away.
 - **Translate keeps the sidebar and the column.** Its box is as tall as its text, two lines to about 40% of the screen, then it scrolls
-  inside (`translate/page.js placeWide`: no split to keep and no keys to make room for), and the language bar sits in the page under the
-  answer, never over it.
+  inside (`translate/page.js placeWide`: no split to keep and no keys to make room for), and the language bar is the box's toolbar: right under
+  it, where its text starts (352 × 52), flat (a 1 px edge, no glass, no shadow), the answer and its sentences under it. The row is the whole
+  of the two languages: language, swap, language, speak; `translate/page.js seatSwap` moves the swap into it from 1024 px, so the keys reach
+  them in that order, and the box is a plain box with no bite (`translate.css`; under the answers the bar was still a phone's pill at the
+  window's foot, and the swap hung from the box's middle over nothing).
+- **The first run is a page.** What do you want to learn? is the frame's width (960 at most), not a phone's 480 px column down the window's
+  middle with 75 languages in one long scroll: the full courses and the first lessons are each set in four columns, read down then across as
+  a list is, their headings across all four; a row is 48 px; the search keeps a field's width (360) (`settings-wide.css`). desk-check's first
+  run stage holds it.
+- **The AI section's own page is two columns from 1280** (`settings-wide.css`, `ai/tab.js`, `shell/main.js WIDE_PAGES`): Practice with me,
+  what to ask for and Past practices in the main column (608 of the 960; the page's 720 from 1600), and an aside of its own in the rest: the
+  connection as a card (the AI's mark, its name, when it was last here; the card opens the connection page) and Your requests, the newest
+  three with where each is, the unfinished first, with See all. Your requests and Connection leave the foot's rows then. The aside is built
+  from 1280 only (`matchMedia`), so a phone's page has nothing of it; an AI not connected keeps the page's 720 at the start. Its request
+  pages, Your requests and the connection page keep the 720. desk-check's AI section stage holds all of it.
+- **Reading text on Settings' pages and the AI section keeps the measure** (`settings-wide.css`): a note under a setting, a row's second
+  line and an empty list's line at most `--measure` from 1024 (they ran 95 to 110 characters on Your AI, a request's page and Appearance →
+  CSS). `ai/connection.js` names its page `lx-ai-connection`, so Your AI keeps it in Settings and in the AI section alike. A command to copy
+  stays one line that scrolls. Settings' rows are left as they are: a value or switch at its row's end in the 720 column is frame.md §5's
+  own rule, and a choice list's check at the row's end with the chosen title bold is the list's design, not a stray mark.
+- **Settings' pages and the AI section** (`settings-wide.css`): Report a bug's "sent along" is a small table, each value beside its name;
+  Appearance's themes are five to a row; an AI request's choices have their marks before their words, as a form's do. desk-check's settings
+  and AI stage holds them, and that the parts of these pages that are their own change with the mouse on them (Translate's language
+  buttons, swap, speakers and bar; Read's See how it reads and Add a book or text; a theme's tile).
 - **Read is a shelf, not a phone's page blown up** (`read.css`, "on a computer"). The book up front sits beside its name and its way in, at
   a book's size: a picture book's page 168 px tall and as wide as its shape gives, a designed cover 148 wide, Home's drawing of the book
   you're reading in a tile 320 wide; so Weave your own and the shelf are in the window's first view. The lead shelf's covers are one height
-  (132 px), each as wide as its shape (a wide page 276, a square one 132), side by side and wrapping; the shelves after it and Your library's
-  row keep a picture book's page at the same 132. Your library's page has its books six to a row (a picture book takes two places), and
-  with nothing in it the way to a book sits under the empty card, clear of it. desk-check's read stage holds it.
+  (132 px), each as wide as its shape (a wide page 276, a square one 132), side by side and wrapping; the shelves after it keep a picture book's page at the same 132.
+  Your library mixes shapes (picture books, texts you added on title covers), so its covers are one height, 160 px, on Read's row and on its
+  own page alike: a title cover 107 wide (its title sizes itself to its cover; at 88 a word broke in two), a picture book's page as wide as
+  its picture gives, 360 at most, wrapping on its page. With nothing in it the way to a book sits under the empty card, clear of it. From 1280, where Read's own page fills the frame (`shell/main.js
+  WIDE_PAGES`), two things lead it side by side: the book up front, its picture across its column (536 × 256 at most, 1.5 × a phone's) with
+  its name and its way in under it, and Weave your own as a card 400 wide beside it; Find a book, the shelf, Your library and the way to add
+  run the frame's width under them, and running text keeps its measure. Without one of the two, the other keeps the row. desk-check's read
+  stage holds it.
 - **The reader keeps its things with the book.** The book is at most 1100 px wide in the window's middle, and what belongs to it stays at
   its edges, not the window's corners (`reader.css`, "on a computer"; `--reader-side` is the room either side): the way back and the bar's
   buttons over the pages' edges, the page number under the first page's first letter, the gear and the full-screen button beside the last
@@ -1068,7 +1101,9 @@ the page:
   is as tall with the bar up or away, so putting it away moves no word. Its sheets are panels there, 400 px wide with no handle to drag:
   reading settings, a note and a word's card rise over the gear; Contents and Notes come down under their own buttons (`reader.js` marks
   them `data-dock="top"`). The card at its foot (weaving a text of yours, why a woven text reads in English) is as wide as the pages' text.
-  desk-check's reader stage holds it.
+  With a mouse (1240 px and up, where there's a margin to hold it) a quiet arrow in the margin either side of the book turns the page, the one
+  with no page to turn to dimmed; in a right-to-left book they change sides. A picture book's book is up to 1400 px wide from 1600 (a text
+  keeps 1100: its lines stay a book's). desk-check's reader stage holds it.
 
 A session (a lesson, Practice, any game) changes from 700 px wide and 640 tall (an iPad either way up, a computer; never a phone, upright or on
 its side), in `components.css`:
@@ -1083,6 +1118,25 @@ its side), in `components.css`:
 page's column is 720 at the frame's start edge, never centered in it. A tab's own 720 page (Home, Read, the AI section) uses the frame's
 other 240 for an aside of its own; a sub-page leaves it as its margin.
 
+**The frame's own parts, on a computer** (`shell.css`, `components.css`, `shell/main.js`; desk-check holds each):
+- **The sidebar leads with Lexicommons**: its drop and name over the tabs, as the sign-in pages lead with them.
+- **Every page's heading is 28 px bold**: a tab's title in the header and a page's own (`ui.pageTitle`, 500 on a phone).
+- **A page's title in the bar** (once its large title has gone under the header) stands over the middle of the page's own column: a list
+  page's 720 at the frame's start, a grid page's frame. `fitBar` works its room out around where it stands, so it clears the way back and
+  the header's end ("bar title"). Translate's title is its heading, at the frame's start under its way back to Home.
+- **The path is one block centered as a whole** (`shell/main.js CENTER_PAGES`), its header and its way back with it.
+- **Two columns for a tab's own page.** From 1280 the frame splits as `minmax(0, 1fr) 320px` with 32 between (608 + 32 + 320), from 1600
+  as 720 + 32 + the rest, the aside's top level with the main column's; below 1280 it stays one column. Each such page (the AI section,
+  Home) is listed in desk-check's `WIDE_ASIDES`, and its asides stage holds the split at 1280, 1440 and 1600.
+- **Toasts in the middle of what you're looking at**: at the foot, centered on the page beside the sidebar, or on the window while a
+  session or the reader covers it (`appearance.css`; "toasts").
+- **A sheet is a dialog**: 560 wide with every corner rounded, its handle a close mark in its top corner (a computer drags nothing),
+  centered in the room beside the sidebar (the window's while a session or the reader is open).
+- **A page's pinned action is in the page's flow**, under what it ends, at the column's start, its note too: a phone's band at the window's
+  foot read as stranded on a computer. In a sheet it stays the sheet's.
+- **A page opened from another tab keeps that tab lit**: Add an Anki deck lights Explore or Settings when it's opened from them (its `?from=`,
+  `shell/main.js litTab`), Study when opened from Study.
+
 **A block button on a computer** (1024 and up, `components.css`): as wide as its words, 240 to 360 px, at its box's start edge under what it
 acts on, or centered where its box centers what's above it (an empty state), on the page and in its cards alike. A session's bar, a sheet, a
 dialog and the reader keep theirs spanning their box. (It replaces 9 Nov's cap, under which a 720 button sat at the left of a 960 column and
@@ -1096,13 +1150,34 @@ packs, the path, a topic, a pack's page, Browse, Add your own) stay 720: a list'
 the two rides the page's push. Buttons follow the computer's own rule (above). Rows and lists span the 960 as
 fields, cards and grids do (All packs and the language row end where the search field and the topics do). desk-check's wide stage holds it.
 
-**Knowledge's cards as a board, at 1280 and up** (`know.css`). The tab's first row is what the page draws before its first frame: the pile's
-card about a phone's width (three tenths of the frame, never under 288 px, so the pile fills it as it does on a phone; as tall as its row,
-the pile on its floor) beside This week, itself in two columns: its number, glasses and scale at its start, what they're made of, the new
-words and its button beside them (`cards-more.js weekCard`'s `.lx-week-side`, which draws no box on a phone). Then the ideas two to a row
-(from 1024, and on the Ideas page: one left over takes its row), and Everyday and Over time the frame's width. `know/page.js` draws the ideas
-before the first frame there, since they're on the first screen. desk-check's phones stage holds the tab's top (without the pile's tiles,
-which every visit lays out anew), This week and the Ideas page as they were.
+**Knowledge's cards as a board, where the tabs are a sidebar** (`know.css`). From 1024 the tab's first row is what the page draws before
+its first frame: the pile's card about a phone's width (three tenths of the column, never under 288 px, so the pile fills it as it does on
+a phone) beside This week. In the 720 column (a tablet on its side, a window under 1280) This week is one column, as a phone has it, and
+runs on past the pile's card, which keeps its own height so its heap is in the first view (the card was the column's width there, 720 by
+415 with the heap in its middle third, and This week began under the fold). In the frame, from 1280, the pile's card is as tall as its
+row, the pile on its floor, and This week is two columns: its number, glasses and scale at its start, what they're made of, the new words
+and its button beside them (`cards-more.js weekCard`'s `.lx-week-side`, which draws no box on a phone). Then the
+ideas two to a row (from 1024, and on the Ideas page, a frame page from 1280: one left over takes its row), and Everyday and Over time the
+column's width. `know/page.js` draws the ideas before the first frame in the frame, since they're on the first screen. The pile is drawn in
+the theme as it is: its paints and the page's ground are read when it's built and again on a new theme (`cards.js` relook: `page.js` tells
+a pile on the screen, and a page kept off it asks when it comes back); pile-drop-check counts the old ground's pixels on its
+canvas. desk-check's phones stage holds the tab's top (without the pile's tiles,
+which every visit lays out anew), This week, the tab's idea cards and the Ideas page as they were.
+
+**Explore on a computer** (`explore.css`). From 1024 the language's lessons are one line (cover, words, Continue or Start at its end, 260 px),
+not a card with a bar across it; 32 px stand between the home's sections; the rows at its foot are one list (the language's row with no box
+of its own between All packs and Add your own pack, their symbols on the column's start edge, their chevrons and its value on its end
+edge); Add your own's running text keeps the measure. From 1280 the pack to add next stands beside the lessons on their row, and the
+Topics page fills its rows whatever their number (`explore.js topicsARow`: six a row where they fill or nearly fill, else seven, else
+five: 14 topics seven a row). A pack's page has its way forward (Add pack, Added, Continue) in its head beside Like and More from 1024
+(`explore.js actionsInHead`), where a phone has it pinned low; the window narrowed, it goes back there. That head stands at the column's start
+there, where its sentences start: the cover (120 px) beside the name, which is the page's heading, its facts under the name, then the row
+of its buttons; See all its sentences is centered under them. A topic's packs are one line from 1024 as the lessons are (cover, first
+sentence, Add pack at the end), and a pack's lessons keep each row's line at the measure. A card that's one link (`explore.js linkWhole`:
+the lessons, a topic's packs) wears the keyboard's focus on its own outline and hard edge, in the ring's color, with the ring around them:
+the ring alone, 2 px outside a 2 px outline, read as a second border (desk-check's "explore focus" stage measures it). Books with none
+shared show the empty shelf (`empty-library`). desk-check's phones stage holds Explore's home, the topics, a pack's page and Add your own as
+they were.
 
 **Reading lines at most ~68 characters, everywhere.** `--measure` (tokens.css: `min(31em, 640px)`) is the one cap: ~68 characters of Instrument Sans
 at 12–16 px (it averages ~0.46em a character; `68ch` would be ~100, "ch" being its 0), 640 px at the reader's larger type (~60 characters).

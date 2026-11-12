@@ -89,7 +89,9 @@ await page.waitForTimeout(500);
 // v154): there at once, since the start knew the stores, and Off with none connected.
 const menu = page.locator('[data-part="list-row"]').filter({ has: page.locator(".lx-row-title", { hasText: /^Sync across devices$/ }) }).locator(".lx-row-value").first();
 const value = ((await menu.textContent({ timeout: 10_000 }).catch(() => null)) ?? "(no Sync across devices row)").trim();
-say(value === "Off", "the menu's Sync across devices row is there, Off with nothing connected", value);
+// With the account keeping its own copy of your progress (/api/me accountSync) the row names it; a site whose account keeps none says Off.
+const keeps = await page.evaluate(async () => (await (await fetch("/api/me")).json()).accountSync === true);
+say(value === (keeps ? "Your account" : "Off"), `the menu's Sync across devices row is there, ${keeps ? "naming your account's own copy" : "Off"} with no storage of yours connected`, value);
 await page.waitForTimeout(1500);
 say(((await menu.textContent({ timeout: 2_000 }).catch(() => null)) ?? "").trim() === value, "and doesn't change later");
 

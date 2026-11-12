@@ -1,0 +1,30 @@
+name: Feature request
+description: Something you'd like Lexicommons to do, or do differently.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. One idea per issue is easiest to follow. If someone has already asked for it, a thumbs-up on theirs counts too.
+  - type: textarea
+    id: what
+    attributes:
+      label: What you'd like
+      description: What it would do, as you'd use it.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: What it would help you do, or what's hard without it.
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: The language you're learning
+      description: And the one you learn from, if it isn't English.
+      placeholder: Dutch
+    validations:
+      required: false

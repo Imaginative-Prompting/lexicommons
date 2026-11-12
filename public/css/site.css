@@ -113,6 +113,10 @@ a:focus-visible, .site-button:focus-visible { outline: 2px solid var(--ring); ou
 .site-hero .site-beat-words > p { max-width: 30em; margin: 0 0 28px; font-size: 19px; line-height: 1.45; }
 .site-hero .site-button[data-variant="go"] { width: 100%; }
 .site-note { margin: 12px 0 0 !important; color: var(--ink-3) !important; font-size: 15px !important; }
+/* The try-out's way in (/try/), under Start learning: a link, quieter than the button, a press of 44 px. */
+.site-try { margin: 8px 0 0 !important; font-size: 16px !important; }
+.site-try a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-1); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-strong); }
+.site-end .site-try { margin-top: 12px !important; }
 
 /* A phone: a dark body on either theme (the app in it is Graphite, as it opens), its screen inset with a strip at the top (the camera's
  * pill) and the foot (the home bar), each at least as tall as the screen's corner is round, and the clip between them. */

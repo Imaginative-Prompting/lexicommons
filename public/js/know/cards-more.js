@@ -12,7 +12,7 @@ import * as motion from "../lx/motion.js";
 import { conceptState, evidenceSince, itemEvidence } from "../study/progress.js";
 import { finishedBetween } from "../study/done.js";
 import { ITEMS, PATTERNS, contentLanguage, sentence as itemSentence, sentenceUnits, shownName } from "../study/content.js";
-import { notesNow } from "../study/notes.js";
+import { notesNow, notesReady } from "../study/notes.js";
 import { patternMore } from "../study/grammar.js";
 import { rulePicture } from "../study/concept-picture.js";
 import { separatorOf } from "../study/pack-format.js";
@@ -476,11 +476,33 @@ export function everydayCard({ lang, now, said, action = null }) {
 
 // ---------- the ideas you've met ----------
 
-/** A sentence of yours that shows the idea (one you've played first), else any that does. */
+/**
+ * The sentence an idea is drawn on: one that shows it (its pack's notes mark the idea's words in it, or it carries its own shape for the idea) and
+ * that you've played; else any of yours that shows it; else one you've played; else any with the idea. It used to be the first one you'd played
+ * with the idea, mostly a word pack's (they have no notes) or one whose notes mark other ideas: with nothing to light, every card drew its words
+ * dim (11 Nov 2026: none of the sample learner's 35 cards lit a word, though 29 of their 44 ideas have sentences that show them). The ones
+ * you've played are looked at first, and the looking stops at the first that shows it (a sentence's notes are read an entry at a time). Until the
+ * packs' notes are read (ideasNotes) only a sentence's own shapes can show it, so the cards are made after them.
+ */
 function sentenceOf(unit) {
+  const id = unit.slice(2);
   const withIt = ITEMS.filter((item) => sentenceUnits(item).includes(unit));
-  return withIt.find((item) => itemEvidence(item.id).length) ?? withIt[0] ?? null;
+  const played = withIt.filter((item) => itemEvidence(item.id).length);
+  const shows = (item) => Boolean(item.shapes?.[id]) || Boolean(notesNow(item)?.marks?.[id]?.length);
+  return played.find(shows) ?? withIt.find(shows) ?? played[0] ?? withIt[0] ?? null;
 }
+
+/** The notes of the packs your sentences come from, read by their own worker (study/notes.js): the ideas' cards wait for them. Never rejects. */
+const notesPacks = () => [...new Set(ITEMS.flatMap((item) => [item.copyOf, item.pack]).filter(Boolean))];
+let notesReadFor = ""; // the packs whose notes were last read, all of them
+export function ideasNotes() {
+  const packs = notesPacks();
+  return notesReady(packs)
+    .catch(() => {})
+    .then(() => void (notesReadFor = packs.join(" ")));
+}
+/** Whether they've been read already, for the packs your sentences come from now: then the cards need wait for nothing. */
+export const ideasNotesRead = () => notesReadFor === notesPacks().join(" ");
 
 /** The idea's picture on that sentence, as its sheet draws it: { node, play } (concept-picture.js). */
 function ideaPicture(unit, item) {
@@ -515,13 +537,14 @@ export function* ideaSteps({ lang, now }) {
   };
   rows.sort((a, b) => a.level - b.level || share(a) - share(b) || (b.state === "slipping") - (a.state === "slipping"));
   const plays = [];
+  const playOf = new WeakMap(); // a card → its picture's draw-in
   // Its name first, loud, and how well you know it; under them the idea drawn on a sentence of yours, quieter, only its own words lit.
   const card = (row) => {
     const item = sentenceOf(row.unit);
     const how = states.get(row.unit);
     const picture = ideaPicture(row.unit, item);
     if (picture?.play) plays.push(picture.play);
-    return el(
+    const node = el(
       "button",
       { type: "button", part: "idea-card", "aria-haspopup": "dialog", "data-state": row.state, onclick: () => conceptSheet(row.unit, { item: sentenceOf(row.unit), sentence: item ? itemSentence(item) : undefined, extra: suggestWay(row.unit) }) },
       el(
@@ -532,11 +555,27 @@ export function* ideaSteps({ lang, now }) {
       ),
       el("span", { class: "lx-idea-picture", "aria-hidden": "true" }, picture?.node ?? null),
     );
+    if (picture?.play) playOf.set(node, picture.play);
+    return node;
   };
-  // One after another as `list` comes into view, each its words then its shape (its own draw-in, the one its sheet has).
-  const arrive = (list) => {
+  // One after another as `list` comes into view, each its words then its shape (its own draw-in, the one its sheet has): the tab's few cards.
+  // A page of them (every: the Ideas page, #know/ideas) draws in only the cards on the screen as it opens, together in a quick ripple (40 ms a
+  // card, 400 at most), and the rest are simply drawn, lit already when they're scrolled to. One after another, 450 ms apart, the 35th card of
+  // the sample learner's lit 16 s after the page opened, beside lit ones (11 Nov 2026). With animations off every card is simply drawn.
+  const arrive = (list, { every = false } = {}) => {
     const drawn = plays.slice();
     if (quiet || !motion.motionOn()) return;
+    if (every) {
+      requestAnimationFrame(() => {
+        if (!list.isConnected) return;
+        const shown = [...list.children].filter((node) => {
+          const box = node.getBoundingClientRect();
+          return playOf.has(node) && box.bottom > 0 && box.top < innerHeight;
+        });
+        shown.forEach((node, i) => playOf.get(node)(Math.min(i * 40, 400)));
+      });
+      return;
+    }
     const seen = new IntersectionObserver(
       (entries) => {
         if (!entries.some((entry) => entry.isIntersecting)) return;

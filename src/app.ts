@@ -2,6 +2,7 @@
 // consent screen, the app's own API (cookie session), the REST API (personal access tokens), signed uploads, and
 // the static PWA.
 
+import { ACCOUNT_SYNC_LIMITS, SyncClash, exportAccountSync, listAccountSync, readAccountSync, writeAccountSync } from "./account-sync";
 import { AuthorizationError } from "@cloudflare/workers-oauth-provider";
 import { Hono } from "hono";
 import type { Context } from "hono";
@@ -405,6 +406,8 @@ app.get("/api/me", async (c) => {
     mayShare: sharingOpenFor(c.env, roles),
     // Which stores this site offers, known before Settings draws (storage.js rememberProviders).
     stores: availableStores(c.env),
+    // The account keeps its own copy of your progress here (account-sync.ts): the app syncs with it from sign-in (public/js/sync.js).
+    accountSync: true,
     // What this site has switched on that isn't on for everyone yet (ai/own-key.js: a key of your own for the in-app AI).
     features: features(c.env),
     // The paid plan, where this site offers it (billing.ts entitlement): what this account has; null where it isn't offered.
@@ -547,6 +550,8 @@ app.get("/api/me/export", async (c) => {
   const texts = await exportTexts(c.env, user.id);
   const billing = await exportBilling(c.env, user.id);
   const progressClears = await listClears(c.env, user.id);
+  // The account's own copy of your progress (account-sync.ts): each file as your devices wrote it.
+  const progressCopy = await exportAccountSync(c.env, user.id);
   const [community, reminders, lookHistory, lookImages] = await Promise.all([exportCommunity(c.env, user.id), exportReminders(c.env, user.id), db.prepare("SELECT rev, look, source, created_at FROM look_history WHERE user_id = ? ORDER BY rev").bind(user.id).all(), db.prepare("SELECT hash, content_type, size, created_at FROM look_images WHERE user_id = ? ORDER BY created_at").bind(user.id).all()]);
   return c.json(
     {
@@ -554,6 +559,8 @@ app.get("/api/me/export", async (c) => {
       version: 1,
       exportedAt: new Date().toISOString(),
       // The paid plan (billing.ts): the Stripe customer's id, the subscriptions as kept here, the in-app AI's months and use (no content).
+      // Your progress as kept with your account, for your devices: the sync files they wrote (answers, streak, place, word bank, reading places, highlights, sound settings).
+      progressCopy,
       billing,
       account: account && { id: account.id, name: account.name, createdAt: account.created_at },
       // The account's email for getting back in and receipts (account-email.ts), or null. Codes on their way to it aren't kept past an hour.
@@ -983,6 +990,25 @@ app.put("/api/reminders/settings", async (c) => {
   return c.json(result, result.ok ? 200 : 409);
 });
 app.post("/api/reminders/report", async (c) => c.json(await reminderReport(c.env, signedIn(c).id, await objectBody(c, 8192))));
+// The account's own copy of a learner's progress (account-sync.ts): the files sync writes, listed, read and written by the account's own
+// session alone. The app syncs with it as with any storage (public/js/sync.js); nothing is uploaded before sign-in.
+app.get("/api/account/sync", async (c) => c.json({ files: await listAccountSync(c.env, signedIn(c).id), limits: ACCOUNT_SYNC_LIMITS }, 200, { "Cache-Control": "no-store" }));
+app.get("/api/account/sync/file", async (c) => {
+  const text = await readAccountSync(c.env, signedIn(c).id, c.req.query("name") ?? "");
+  return text === null ? c.json({ error: "Your account has no file by that name." }, 404, { "Cache-Control": "no-store" }) : c.body(text, 200, { "Content-Type": "application/json", "Cache-Control": "no-store" });
+});
+app.put("/api/account/sync/file", async (c) => {
+  const user = signedIn(c);
+  const text = await readTextLimited(c.req.raw, ACCOUNT_SYNC_LIMITS.fileBytes);
+  if (text === null) return c.json({ error: "That file is too big to keep with your account." }, 413);
+  try {
+    return c.json(await writeAccountSync(c.env, user.id, c.req.query("name") ?? "", text, c.req.query("seen") || null), 200, { "Cache-Control": "no-store" });
+  } catch (error) {
+    // Another device's write got there first: the device lists again and merges, as with any storage.
+    if (error instanceof SyncClash) return c.json({ error: "Another device wrote that file first.", code: "clash" }, 409, { "Cache-Control": "no-store" });
+    throw error;
+  }
+});
 app.post("/api/progress/clears/:id/undo", async (c) => c.json(await undoClear(c.env, signedIn(c).id, c.req.param("id"))));
 
 // Connected AI apps are the OAuth grants this account has approved.

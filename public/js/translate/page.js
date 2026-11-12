@@ -1040,6 +1040,19 @@ export function translatePage({ host, onChange }) {
   toLabel.addEventListener("click", () => pickFor(toLabel.dataset.code, toLabel));
   toLabel.addEventListener("mousedown", (event) => event.preventDefault());
   const node = el("section", { class: "lx-today-translate", "aria-label": t("translate.pageLabel") }, field, voiceRow, scroller, bar, sheet);
+  // On a computer (1024 px and up, translate.css) the swap sits in the language bar, between the two languages: the row reads language,
+  // swap, language, speak, by eye and by keys, and the box is a plain box. Narrower, it's in the bite at the box's foot, where it was built.
+  const swapButton = field.querySelector(":scope > .lx-tr-swap");
+  const swapHome = swapButton?.nextSibling ?? null;
+  const barWide = globalThis.matchMedia?.("(min-width: 1024px)");
+  const seatSwap = () => {
+    if (!swapButton || !bar) return;
+    if (barWide?.matches) {
+      if (swapButton.parentElement !== bar) bar.insertBefore(swapButton, bar.querySelector('.lx-way-tab[data-at="1"]'));
+    } else if (swapButton.parentElement !== field) field.insertBefore(swapButton, swapHome?.parentElement === field ? swapHome : null);
+  };
+  seatSwap();
+  barWide?.addEventListener?.("change", seatSwap);
   let lastAnswer = null;
   let lastFrom = "en"; // the language you were last in: where the bubble is when nothing else says
   let ambiguous = null; // { query, readings }: what was typed could be either language
@@ -1409,6 +1422,7 @@ export function translatePage({ host, onChange }) {
       // A page that's gone keeps nothing listening: rebuilt with each change of language, they piled up.
       removeEventListener("resize", place);
       globalThis.visualViewport?.removeEventListener("resize", place);
+      barWide?.removeEventListener?.("change", seatSwap);
       keyboardWatch.disconnect();
       fieldWatch.disconnect();
       placeWatch.disconnect();

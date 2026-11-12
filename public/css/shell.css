@@ -89,6 +89,10 @@
     /* Translate's band (below) stops at the header's own start edge, the sidebar's: reaching left, it painted over the sidebar's first tab
        (desk-read, 11 Nov 2026). */
     :root[data-translate] [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] { clip-path: inset(0 -100vmax 0 0); }
+    /* Translate's title (its header's bar title, which has no page heading to follow) is its heading at the frame's start, on a row of its own
+       under its way back, as every page's is on a computer (frame.md §3), not a small word centered over the back pill's row (11 Nov 2026). */
+    :root[data-translate] [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] { flex-wrap: wrap; row-gap: var(--space-2); }
+    :root[data-translate] [data-part="app"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] > [data-part="bar-title"] { position: static; order: 10; flex: 1 0 100%; max-width: none; transform: none; opacity: 1; font: 700 var(--size-28) / 1.15 var(--type-head); }
   }
   /* 1280 and up: one frame (11 Nov 2026), 960 wide (--lx-frame; 1120 from 1600), centered in the room beside the sidebar, so the header's
      title and its chips never move between tabs (a 720 page and a 960 page were each centered: Home's title 120 px right of Study's). The
@@ -104,14 +108,24 @@
     [data-part="app"]:not([data-column="wide"], [data-column="center"], [data-split="settings"]):has(> [data-part="tab-bar"]) > [data-part="page"] {
       padding-inline: max(var(--space-4), calc((100% - var(--lx-frame)) / 2)) max(var(--space-4), calc((100% - var(--lx-frame)) / 2 + var(--lx-frame) - var(--page-width)));
     }
+    /* A list, form or reading page's title in the bar (ui.appHeader's bar-title, as its large title goes under the header) over the middle of
+       the page's own 720, not the frame's (a pack's page had it 120 px right of its column's middle); main.js fitBar works its room out around
+       it. A grid page's column is the frame, the path's header is its own 720, and Translate's title is its heading: theirs stay. */
+    :root:not([data-translate]) [data-part="app"]:not([data-column="wide"], [data-column="center"], [data-split="settings"]):has(> [data-part="tab-bar"]) > [data-part="app-header"] > [data-part="bar-title"] {
+      left: calc(max(var(--space-4), (100% - var(--lx-frame)) / 2) + min(var(--page-width), 100% - 2 * var(--space-4)) / 2);
+    }
     /* A page that's one block centered as a whole (main.js CENTER_PAGES: the path), its header and its way back with it: its 720 in the
        middle of the room beside the sidebar, as from 1024 to 1279. */
     [data-part="app"][data-column="center"]:has(> [data-part="tab-bar"]) > :is([data-part="app-header"], [data-part="page"]) { padding-inline: max(var(--space-4), calc((100% - var(--page-width)) / 2)); }
     /* Settings: its menu's pane (--settings-pane) beside the page it opened (the 720 column, narrower at 1280), the two centered together;
        the header over the page, not the pane; a first page's way back is the pane, so no pill (main.js SPLIT). The pane stays put as the page
-       scrolls, and scrolls itself if it's taller than the screen. */
+       scrolls, and scrolls itself if it's taller than the screen. The two take the wider of the frame and their own 1072, centered as the
+       frame is: from 1600 they're the frame exactly (the page 768), so the pane's title and the header's chips stand where every tab's do (at
+       1920 they stood 24 px in). --split-side is each side's room, on the app so the header and the page share it. */
+    [data-part="app"][data-split="settings"]:has(> [data-part="tab-bar"]) {
+      --split-side: max(var(--space-4), calc((100% - max(var(--lx-frame), var(--settings-pane) + var(--space-6) + var(--page-width))) / 2));
+    }
     [data-part="app"][data-split="settings"]:has(> [data-part="tab-bar"]) > [data-part="page"] {
-      --split-side: max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2));
       display: grid;
       grid-template-columns: var(--settings-pane) minmax(0, 1fr);
       grid-auto-rows: max-content;
@@ -126,7 +140,7 @@
     [data-part="app"][data-split="settings"] > [data-part="page"] > .lx-settings-aside { padding-inline: var(--space-3); margin-inline: calc(-1 * var(--space-3)); }
     [data-part="app"][data-split="settings"] > [data-part="page"]::before { grid-column: 1 / -1; }
     [data-part="app"][data-split="settings"]:has(> [data-part="tab-bar"]) > [data-part="app-header"] {
-      padding-inline: calc(max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2)) + var(--settings-pane) + var(--space-6)) max(var(--space-4), calc((100% - var(--settings-pane) - var(--space-6) - var(--page-width)) / 2));
+      padding-inline: calc(var(--split-side) + var(--settings-pane) + var(--space-6)) var(--split-side);
     }
     [data-part="app"][data-split="settings"] > [data-part="app-header"] > [data-part="app-back"][href="#settings"] { visibility: hidden; }
     /* The page it opened, lit in the pane with the sidebar's own token for the tab you're on (--fill-active), so "you're here" looks one way;
@@ -185,46 +199,6 @@
   [data-part="app-header"] :is([data-part="header-language"], [data-part="settings-button"]):active { background: color-mix(in srgb, var(--bar-ink) 16%, var(--bar-glass)); }
   @media (hover: hover) {
     [data-part="app-header"] :is([data-part="header-language"], [data-part="settings-button"]):hover { background: color-mix(in srgb, var(--bar-ink) 9%, var(--bar-glass)); }
-  }
-  /* The sample learner's mark (shell/main.js sampleMark), while it's on: the same glass as the language, its word, then Off, a button of its
-     own behind a hairline. Quiet, and on every page's header, so the progress shown is never taken for your own. */
-  [data-part="app-header"] [data-part="sample-mark"] {
-    display: inline-flex;
-    flex: none;
-    align-items: center;
-    height: 32px;
-    padding: 0 2px 0 10px;
-    border: 1px solid var(--bar-edge);
-    border-radius: var(--radius-full);
-    background: var(--bar-glass);
-    -webkit-backdrop-filter: var(--bar-filter);
-    backdrop-filter: var(--bar-filter);
-    box-shadow: var(--bar-rim), 0 4px 14px -6px rgba(0, 0, 0, 0.35);
-    color: var(--bar-ink);
-    font: 600 var(--size-12) / 1 var(--type-ui);
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-  }
-  [data-part="sample-mark"] .lx-sample-off {
-    position: relative;
-    height: 28px;
-    margin-left: 8px;
-    padding: 0 10px;
-    border: 0;
-    border-left: 1px solid var(--bar-edge);
-    border-radius: 0 var(--radius-full) var(--radius-full) 0;
-    background: none;
-    color: inherit;
-    font: 700 var(--size-12) / 1 var(--type-ui);
-    letter-spacing: 0.04em;
-  }
-  /* Its reach, 44 px tall (components.css's rule for every small control). */
-  [data-part="sample-mark"] .lx-sample-off::before { content: ""; position: absolute; inset: min(0px, calc((100% - 44px) / 2)); }
-  [data-part="sample-mark"] .lx-sample-off:active { background: color-mix(in srgb, var(--bar-ink) 16%, transparent); }
-  @media (hover: hover) { [data-part="sample-mark"] .lx-sample-off:hover { background: color-mix(in srgb, var(--bar-ink) 9%, transparent); } }
-  /* On a narrow phone the mark takes the language's place, so the page's title stays whole (the language is a tap away in Settings). */
-  @media (max-width: 359.98px) {
-    [data-part="app-header"]:has(> .lx-header-end > [data-part="sample-mark"]) [data-part="header-language"] { display: none; }
   }
   /* The foot, under the bar on a phone: first in the app, so the bar and the header draw over it and a sliding page's pictures under
    * it. Not while typing (no bar), behind a session, or over a page's pinned action, which has its own fade. */
@@ -397,6 +371,7 @@
   [data-settings] .lx-segmented-stack [data-part="segment"][aria-pressed="true"] { color: var(--ink-1); font-weight: 600; }
   [data-settings] .lx-segmented-stack [data-part="segment"][aria-pressed="true"]::after { content: ""; position: absolute; inset-inline-end: 4px; top: 50%; width: 12px; height: 7px; margin-top: -6px; border-inline-start: 2px solid var(--ink-1); border-bottom: 2px solid var(--ink-1); transform: rotate(-45deg); }
   [data-settings] .lx-segmented-stack [data-part="segment"]:active { background: var(--fill-active); }
+  @media (hover: hover) { [data-settings] .lx-segmented-stack [data-part="segment"]:not(:active):hover { background: var(--fill-hover); } }
   /* A page's one way forward among its rows (Download Whisper, Download a translator): the solid button, the full width. */
   [data-settings] .lx-row-go { padding-block: var(--space-3) var(--space-2); list-style: none; }
   /* A pack's about, whole, as the first thing under About it (settings-packs.js aboutRows). */
@@ -450,6 +425,7 @@
   .lx-anki-start { display: grid; justify-items: center; gap: var(--space-5); padding-block: var(--space-6) 0; color: var(--ink-3); }
   .lx-anki-start > .lx-stack { justify-self: stretch; }
   .lx-anki-done-art { padding-block: var(--space-4) 0; }
+  @media (min-width: 1024px) { .lx-anki-start { justify-items: start; } }
   /* Something that didn't go: Tinta beside the words, the words in the full ink. */
   .lx-anki-start .lx-settings-message[data-tone="wrong"], .lx-anki-other .lx-settings-message[data-tone="wrong"] { align-items: flex-start; gap: var(--space-3); color: var(--ink-1); line-height: 1.45; }
   .lx-anki-start .lx-settings-message > [data-part="character"] { flex: none; }

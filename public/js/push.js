@@ -135,7 +135,14 @@ export function startTime(now = Date.now()) {
  * Returns { ok, why? }: "denied" (the person said no, or did before: Settings in the system turns it back on), "home"
  * (an iPhone browser tab), "unsupported", "server" (this server can't send reminders: the phone is never asked), or the server's refusal.
  */
-export async function turnOn(time = startTime()) {
+export function turnOn(time = startTime()) {
+  // One at a time: presses made while the phone's permission prompt is up all get this one's answer, and the server is told once.
+  // (11 Nov 2026: a burst of presses each waited on the prompt, then all subscribed at once, and one found the account's state
+  // changing under it five times.)
+  return (turning ??= turnOnOnce(time).finally(() => (turning = null)));
+}
+let turning = null;
+async function turnOnOnce(time) {
   if (sampleOn()) throw new Error("Turn the sample learner off first: reminders go by your own studying.");
   const support = pushSupport();
   if (support.needsHomeScreen) return { ok: false, why: "home" };

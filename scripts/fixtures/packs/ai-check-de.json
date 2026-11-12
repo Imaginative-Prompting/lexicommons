@@ -1,0 +1,75 @@
+{
+ "format": "lexicommons-pack",
+ "version": 2,
+ "id": "ai-check-de",
+ "name": "A check pack (German, ai-check)",
+ "about": "One German sentence whose word no shipped German pack has, so a lookup proves it came from this pack. A test pack, never shipped.",
+ "language": "de",
+ "from": "en",
+ "topics": {
+  "everyday": "Everyday"
+ },
+ "words": {
+  "Regenschirm": "umbrella",
+  "nass": "wet"
+ },
+ "chunks": {},
+ "patterns": {},
+ "items": [
+  {
+   "id": "regenschirm-nass",
+   "topic": "everyday",
+   "concepts": [
+    "gender"
+   ],
+   "text": "Mein Regenschirm ist nass.",
+   "means": "My umbrella is wet.",
+   "words": [
+    [
+     "Mein"
+    ],
+    [
+     "Regenschirm",
+     "Regenschirm"
+    ],
+    [
+     "ist"
+    ],
+    [
+     "nass",
+     "nass"
+    ]
+   ],
+   "punct": ".",
+   "literal": [
+    [
+     "My umbrella"
+    ],
+    [
+     "is"
+    ],
+    [
+     "wet"
+    ]
+   ],
+   "english": [
+    0,
+    1,
+    2
+   ],
+   "moved": [],
+   "wrong": [
+    "Mein Regenschirm nass ist.",
+    "Ist mein Regenschirm nass."
+   ],
+   "gap": {
+    "index": 1,
+    "options": [
+     "Regenschirm",
+     "Regenschirme",
+     "Regen"
+    ]
+   }
+  }
+ ]
+}

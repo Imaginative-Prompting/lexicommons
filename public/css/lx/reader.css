@@ -756,6 +756,9 @@
   /* The words a search found, in a place's snippet. */
   [data-part="reader-search-hit"] { padding: 0 1px; border-radius: 3px; background: var(--selection); color: var(--ink-1); font-weight: 600; }
 
+  /* A page's turn by mouse (reader.js): none but on a computer with a mouse, in pages (below). */
+  [data-part="reader-turn-button"] { display: none; }
+
   /* ============ on a computer (1024 px and up) ============ */
 
   /* The book is at most 1100 px wide in the window's middle (the spread's rule, above), so what belongs to it stays with it: the bar's
@@ -800,10 +803,47 @@
       right: max(calc(var(--reader-side) + var(--space-2)), env(safe-area-inset-right));
       bottom: auto;
     }
+    /* A picture book on a big window (1600 px and up): its book up to 1400 px wide, so its pages' pictures aren't two small panels in the
+       window's top half (at 1100, a page's picture was 517 px across a 1920 px window). A text keeps 1100: its lines stay a book's. */
+    @media (min-width: 1600px) {
+      [data-part="reader"][data-pictures] { --reader-side: max(0px, calc((100% - 1400px) / 2)); }
+      [data-part="reader"][data-pictures][data-variant="spread"] > [data-part="reader-text"] { left: var(--reader-side); right: var(--reader-side); }
+    }
     /* The card at the reader's foot (weaving a text of yours, why a woven text reads in English) is as wide as the book's text, not the window. */
     [data-part="reader-offer"] {
       left: max(var(--space-3), calc(var(--reader-side) + var(--reader-gutter)), env(safe-area-inset-left));
       right: max(var(--space-3), calc(var(--reader-side) + var(--reader-gutter)), env(safe-area-inset-right));
     }
+  }
+  /* A page's turn by mouse: a quiet arrow in the margin either side of the book, where there's a margin to hold it (1240 px and up: 70 px a
+     side). Nothing on a page said it turns (a press on its side, the wheel and the arrow keys do). In a right-to-left book they change sides. */
+  @media (min-width: 1240px) and (hover: hover) {
+    [data-part="reader"][data-mode="pages"] > [data-part="reader-turn-button"] {
+      position: absolute;
+      top: calc(50% - 22px);
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      border-radius: var(--radius-full);
+      background: transparent;
+      color: var(--ink-3);
+      cursor: pointer;
+      transition: opacity var(--dur-320) var(--ease-standard);
+    }
+    [data-part="reader"]:not([data-rtl]) > [data-part="reader-turn-button"][data-variant="on"],
+    [data-part="reader"][data-rtl] > [data-part="reader-turn-button"][data-variant="back"] { right: calc(var(--reader-side) - 44px - var(--space-3)); }
+    [data-part="reader"]:not([data-rtl]) > [data-part="reader-turn-button"][data-variant="back"],
+    [data-part="reader"][data-rtl] > [data-part="reader-turn-button"][data-variant="on"] { left: calc(var(--reader-side) - 44px - var(--space-3)); }
+    [data-part="reader"]:not([data-rtl]) > [data-part="reader-turn-button"][data-variant="back"] .lx-icon,
+    [data-part="reader"][data-rtl] > [data-part="reader-turn-button"][data-variant="on"] .lx-icon { transform: rotate(180deg); }
+    [data-part="reader-turn-button"]:not(:active, :disabled):hover { background: var(--fill-hover); color: var(--ink-1); }
+    [data-part="reader-turn-button"]:active { background: var(--fill-active); color: var(--ink-1); }
+    [data-part="reader-turn-button"]:disabled { opacity: 0.25; cursor: default; }
+    [data-part="reader"][data-state="zen"] > [data-part="reader-turn-button"]:not(:hover) { opacity: 0.3; }
+    [data-part="reader"][data-state="zen"] > [data-part="reader-turn-button"]:disabled { opacity: 0.12; }
   }
 }

@@ -41,6 +41,7 @@
   .lx-way-tab { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-width: 0; padding: 0 6px; border: 0; border-radius: 26px; background: none; color: var(--ink-2); font: 600 var(--size-12) / 1.1 var(--type-ui); cursor: pointer; -webkit-tap-highlight-color: transparent; }
   .lx-way-tab > span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .lx-way-tab:active { background: color-mix(in srgb, var(--ink-1) 10%, transparent); }
+  @media (hover: hover) { .lx-way-tab:not(:active):hover { background: color-mix(in srgb, var(--ink-1) 6%, transparent); } }
   .lx-way-all { grid-column: 1 / span 2; grid-row: 1; pointer-events: none; }
   .lx-way-tab[data-at="0"] { grid-column: 1; grid-row: 1; }
   .lx-way-tab[data-at="1"] { grid-column: 2; grid-row: 1; }
@@ -51,6 +52,7 @@
   .lx-way-bar [data-part="mic-button"][data-size="sm"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) > svg[data-symbol] { display: none; }
   .lx-way-bar [data-part="mic-button"][data-size="sm"]:is([data-state="listening"], [data-state="hearing"], [data-state="thinking"], [data-state="loading"]) { color: var(--tab-on); background: var(--tab-bubble); box-shadow: inset 0 0 0 1px var(--tab-bubble-edge); }
   .lx-way-bar [data-part="mic-button"]:active { background: color-mix(in srgb, var(--ink-1) 10%, transparent); }
+  @media (hover: hover) { .lx-way-bar [data-part="mic-button"]:not(:active):hover { background: color-mix(in srgb, var(--ink-1) 6%, transparent); } }
   .lx-tr-lang { display: none; }
   .lx-tr-swap { display: none; }
   [data-part="speak-button"][data-state="playing"] svg :is(.wave-1, .wave-2) { animation: lx-tr-wave 900ms var(--ease-standard) 4 both; }
@@ -88,17 +90,25 @@
   [data-open] > [data-part="translate-field"] [data-part="translate-direction"] { display: none; }
   [data-open] > [data-part="translate-field"] [data-part="translate-clear"] { top: 4px; right: 4px; }
   [data-open] > [data-part="translate-field"] > .lx-tr-swap:active { background: var(--fill-active); }
+  @media (hover: hover) { [data-open] > [data-part="translate-field"] > .lx-tr-swap:not(:active):hover { background: var(--fill-hover); } }
+  @media (min-width: 1024px) and (hover: hover) { .lx-today-translate[data-open] > .lx-way-bar > .lx-tr-swap:not(:active):hover { background: var(--fill-hover); } }
   [data-open] > [data-part="translate-field"] > .lx-tr-swap > svg { width: 22px; height: 22px; transition: rotate 160ms var(--ease-standard); }
   [data-open] > [data-part="translate-field"] > .lx-tr-swap[data-flip] > svg { rotate: 180deg; }
   .lx-today-translate[data-open] .lx-tr-lang { position: relative; display: inline-flex; align-items: center; align-self: flex-start; gap: 6px; min-height: 28px; margin: 0 0 0 -6px; padding: 0 8px 0 6px; border: 0; border-radius: 10px; background: none; color: var(--ink-2); font: 500 var(--size-14) / 1.2 var(--type-ui); cursor: pointer; -webkit-tap-highlight-color: transparent; }
   .lx-today-translate[data-open] .lx-tr-lang::before { content: ""; position: absolute; inset: -8px -4px; }
   .lx-today-translate[data-open] .lx-tr-lang:active { background: var(--fill-active); }
+  @media (hover: hover) { .lx-today-translate[data-open] .lx-tr-lang:not(:active):hover { background: var(--fill-hover); color: var(--ink-1); } }
   .lx-tr-lang [data-part="language-flag"] { width: 20px; height: 15px; margin: 0; }
   .lx-today-translate[data-open] .lx-tr-lang-to:empty { display: none; }
   .lx-tr-box-speak { display: none; }
   [data-open] > [data-part="translate-field"] > .lx-tr-box-speak { position: absolute; right: 4px; bottom: 2px; display: block; }
   .lx-tr-box-speak [data-part="speak-button"] { width: 44px; height: 44px; min-width: 0; border: 0; background: none; color: var(--ink-2); }
   .lx-tr-box-speak [data-part="speak-button"] > svg[data-symbol] { width: 22px; height: 22px; }
+  /* With a mouse, the speakers answer it: the box's own and each answer's (their page rules take the part's own hover's ground away). */
+  @media (hover: hover) {
+    .lx-tr-box-speak [data-part="speak-button"]:not([data-state="playing"], :active):hover { background: var(--fill-hover); color: var(--ink-1); }
+    .lx-today-translate [data-part="translate-result"] [data-part="speak-button"]:not([data-state="playing"], :active):hover { background: var(--fill-hover); color: var(--ink-1); }
+  }
   .lx-tr-box-speak [data-part="speak-button"]:active { background: var(--fill-active); }
   .lx-tr-box-speak [data-part="speak-button"][data-state="playing"] { background: none; color: var(--tab-on); }
   .lx-today-translate[data-open] > .lx-tr-voice { padding-top: 26px; }
@@ -253,7 +263,24 @@
     [data-open] > [data-part="translate-field"] textarea[data-part="text-field"] { flex: none; field-sizing: content; min-height: calc(2lh + 8px); max-height: 40vh; }
   }
   @media (min-width: 1024px) {
-    .lx-today-translate[data-open] > .lx-way-bar { position: static; flex: none; margin: var(--space-3) auto var(--space-5); }
-    .lx-today-translate[data-open] > .lx-tr-scroll { padding-bottom: var(--space-5); }
+    /* The language bar is the box's toolbar on a computer: right under it, where its text starts, before the answer, flat (a 1 px edge, no
+       glass, no shadow), and the whole of the two languages in one row: language, swap, language, speak. page.js seats the swap in it, so
+       it's in that order by keys too, and the box is a plain box with no bite. (Under the answers the bar was a phone's pill at the window's
+       foot; then the swap hung from the box's middle over nothing, the toolbar at the column's start.) The bar places its own lit pill and
+       its lens, so it says so itself: its glass did that for it. */
+    .lx-today-translate[data-open] > .lx-way-bar { order: 1; position: relative; inset: auto; flex: none; align-self: flex-start; grid-template-columns: 1fr 52px 1fr 64px; width: 352px; height: 52px; margin: var(--space-2) 0 0; border-color: var(--edge); background: none; -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none; }
+    .lx-today-translate[data-open] > .lx-way-bar .lx-way-lens { grid-template-columns: 1fr 52px 1fr 64px; }
+    .lx-today-translate[data-open] > .lx-way-bar :is(.lx-way-tab[data-at="1"], .lx-way-lens-item:nth-child(2)) { grid-column: 3; }
+    .lx-today-translate[data-open] > .lx-way-bar .lx-way-all { grid-column: 1 / span 3; }
+    .lx-today-translate[data-open] > .lx-way-bar > [data-part="mic-button"] { grid-column: 4; grid-row: 1; }
+    .lx-today-translate[data-open] > .lx-way-bar > .lx-way-arrow { display: none; }
+    .lx-today-translate[data-open] > .lx-way-bar > .lx-tr-swap { position: relative; z-index: 3; grid-column: 2; grid-row: 1; display: grid; place-items: center; place-self: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--ink-1); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    .lx-today-translate[data-open] > .lx-way-bar > .lx-tr-swap:active { background: var(--fill-active); }
+    .lx-today-translate[data-open] > .lx-way-bar > .lx-tr-swap > svg { width: 22px; height: 22px; transition: rotate 160ms var(--ease-standard); }
+    .lx-today-translate[data-open] > .lx-way-bar > .lx-tr-swap[data-flip] > svg { rotate: 180deg; }
+    .lx-today-translate[data-open] > [data-part="translate-field"] > svg.lx-edge[data-edge="hinge"] { display: none; }
+    .lx-today-translate[data-open] > [data-part="translate-field"] { border: 1px solid var(--edge); background: var(--well); }
+    .lx-today-translate[data-open] > [data-part="translate-field"]:focus-within { border-color: var(--ink-3); }
+    .lx-today-translate[data-open] > .lx-tr-scroll { order: 2; padding-bottom: var(--space-5); }
   }
 }

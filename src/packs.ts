@@ -22,7 +22,7 @@ import { fileSafetyHeaders, randomId, sha256Hex } from "./util";
 import { deviceTexts, dropUploads, textDeliveriesForGoneDevices, textDeliveriesForNewDevice, textHousekeepingWork, tidy as tidyTexts } from "./texts";
 import { soundsRight } from "./audio-bytes";
 import { checkAudio as checkAudioJs, clipName, fitAudio as fitAudioJs, mergeAudio as mergeAudioJs, withoutItems as withoutItemsJs } from "../public/js/study/pack-audio.js";
-import { LANGUAGES } from "../public/js/lang/index.js";
+import { LANGUAGES, isOurLanguage, ownLanguageDef, ownLanguageProblem, withOwnLanguage } from "../public/js/lang/index.js";
 import { BUILT_IN } from "../public/js/packs/index.js";
 import { checkPack as checkPackJs, cleanText as cleanTextJs, defaultInstalled as defaultInstalledJs, PACK_LIMITS } from "../public/js/study/pack-format.js";
 import {
@@ -45,6 +45,8 @@ export interface Pack {
   name: string;
   about?: string;
   language: string;
+  /** A language Lexicommons doesn't list: its definition (lang/index.js ownLanguageDef). */
+  languageDef?: { name: string; direction: string; written: string; case: string; ends: string[] };
   from: string;
   topics: Record<string, string>;
   words: Record<string, string>;
@@ -128,6 +130,40 @@ async function catalogueNow(env: Env): Promise<{ packs?: Record<string, { id: st
 }
 
 /** A language's default packs (the library's, and the app's built-in ones not among them): what everyone has. */
+/**
+ * A pack's language: one of Lexicommons' own (no definition), or a language of the pack's own with its definition (lang/index.js
+ * ownLanguageProblem, 12 Nov 2026). What's wrong in words, at the field your AI sent (language, language_def), or null.
+ */
+function languageProblem(language: string, def: unknown): Problem | null {
+  if (isOurLanguage(language)) return def === undefined ? null : { at: "language_def", message: `${LANGUAGES[language as keyof typeof LANGUAGES].name} is one Lexicommons knows: leave language_def out.` };
+  const problem = ownLanguageProblem(language, def) as { at: string; message: string } | null;
+  return problem ? { at: problem.at.replace(/^languageDef/, "language_def"), message: problem.message } : null;
+}
+
+/**
+ * fn() with a pack's own language known (lang/index.js withOwnLanguage): for one synchronous step only, never across an await, so no other
+ * request this isolate serves meanwhile ever sees another account's language. One of ours, or none, runs as it is.
+ */
+const inLanguage = <T>(pack: { language?: unknown; languageDef?: unknown } | null | undefined, fn: () => T): T =>
+  pack && typeof pack.language === "string" ? (withOwnLanguage(pack.language, pack.languageDef, fn) as T) : fn();
+
+/**
+ * A learner's packs in one language of its own say the same definition of it (a device keeps one: lang/index.js useLanguage), so a pack that
+ * says another, beside one of theirs, is refused in words. null when it says the same, or the language is ours.
+ */
+function sameDefinition(pack: Pack, installed: Pack[]): Problem | null {
+  if (isOurLanguage(pack.language) || !pack.languageDef) return null;
+  const other = installed.find((p) => p.language === pack.language && p.languageDef && JSON.stringify(p.languageDef) !== JSON.stringify(pack.languageDef));
+  return other
+    ? { at: "language_def", message: `Their pack "${other.name}" is in ${other.languageDef!.name} too, as ${JSON.stringify(other.languageDef)}: a pack in the same language says the same (this one says ${JSON.stringify(pack.languageDef)}).` }
+    : null;
+}
+
+/** What a pack is checked beside: the language's default packs (ours only: a language of its own has none) and their own packs in it. */
+async function installedFor(env: Env, userId: string, language: string, packId?: string): Promise<Pack[]> {
+  return [...(isOurLanguage(language) ? await defaultsFor(env, language) : []), ...(await copiesOf(env, userId, language, packId))];
+}
+
 async function defaultsFor(env: Env, language: string): Promise<Pack[]> {
   const catalogue = await catalogueNow(env);
   // The language's shared grammar first (src/grammar.ts): every check beside these packs resolves patterns against it.
@@ -326,7 +362,8 @@ export async function putCopy(env: Env, userId: string, deviceId: string, packId
   const raw = body.pack;
   if (!isObject(raw) || raw.id !== packId) throw new LibraryError("pack must be the pack whose id is in the address.");
   const language = asText(raw.language);
-  if (!Object.hasOwn(LANGUAGES, language)) throw new LibraryError("That pack's language isn't one Lexicommons knows.");
+  const problem = languageProblem(language, raw.languageDef);
+  if (problem) throw new LibraryError(`That pack's language: ${problem.message}`);
   if ((await publicIds(env)).has(packId)) throw new LibraryError("That's a public pack's id.");
   const others = await copiesOf(env, userId, language, packId);
   const { pack, errors } = checkPack(raw, { installed: [...(await defaultsFor(env, language)), ...others] });
@@ -771,11 +808,15 @@ export type Outcome =
 
 /** Checks a pack as it would be after a change; queues the change when it passes (dryRun: only checks). */
 async function checkAndQueue(env: Env, userId: string, source: string, now: PackNow & { pack: Pack | null }, change: Change, place: (index: number) => number | null, { dryRun = false, conversion = [] as Problem[], noticed = [] as Problem[], saying }: { dryRun?: boolean; conversion?: Problem[]; noticed?: Problem[]; saying?: string } = {}): Promise<Outcome> {
-  const applied = applyChange(now.pack, change);
+  const subject = now.pack ?? (change.kind === "create" ? change.pack : null);
+  const applied = inLanguage(subject, () => applyChange(now.pack, change));
   if (!applied.pack) return { ok: false, errors: [...conversion, ...applied.problems], warnings: [] };
   const language = applied.pack.language;
-  if (!Object.hasOwn(LANGUAGES, language)) return { ok: false, errors: [{ at: "language", message: `language must be one of ${Object.keys(LANGUAGES).join(", ")}.` }], warnings: [] };
-  const installed = [...(await defaultsFor(env, language)), ...(await copiesOf(env, userId, language, applied.pack.id))];
+  const problem = languageProblem(language, applied.pack.languageDef);
+  if (problem) return { ok: false, errors: [problem], warnings: [] };
+  const installed = await installedFor(env, userId, language, applied.pack.id);
+  const differs = sameDefinition(applied.pack, installed);
+  if (differs) return { ok: false, errors: [differs], warnings: [] };
   const checked = checkPack(applied.pack, { installed });
   const errors = [...conversion, ...withoutStandIns(inTheirTerms(checked.errors, place), conversion)];
   const warnings = [...noticed, ...inTheirTerms(checked.warnings, place)];
@@ -803,6 +844,8 @@ export interface CreateInput {
   name: string;
   about?: string;
   language: string;
+  /** A language Lexicommons doesn't list: its definition (lang/index.js ownLanguageProblem). */
+  language_def?: unknown;
   pack_id?: string;
   items?: unknown[];
   topics?: Record<string, unknown>;
@@ -818,12 +861,15 @@ export interface CreateInput {
  * "<pack id>.<id>"), against the language's shared grammar as the library has it now.
  */
 async function withOwnPatterns<C>(env: Env, language: string, change: C, pack: Pack | null): Promise<C> {
-  await grammarReady(env, language);
+  // A language of its own has no shared grammar: its patterns are its packs' own.
+  if (isOurLanguage(language)) await grammarReady(env, language);
   return ownPatternIds(change, pack, (LANGUAGES as Record<string, { patterns?: Record<string, unknown> }>)[language]?.patterns ?? {}) as C;
 }
 
 export async function createPack(env: Env, userId: string, source: string, input: CreateInput): Promise<Outcome> {
-  if (!Object.hasOwn(LANGUAGES, input.language)) return { ok: false, errors: [{ at: "language", message: `language must be one of ${Object.keys(LANGUAGES).join(", ")}.` }], warnings: [] };
+  const problem = languageProblem(input.language, input.language_def);
+  if (problem) return { ok: false, errors: [problem], warnings: [] };
+  const languageDef = isOurLanguage(input.language) ? undefined : ownLanguageDef(input.language_def as Parameters<typeof ownLanguageDef>[0]);
   if ((input.items?.length ?? 0) > PACK_RELAY.itemsPerChange) return { ok: false, errors: [{ at: "items", message: `Send up to ${PACK_RELAY.itemsPerChange} items at a time; add_items adds the rest.` }], warnings: [] };
   const taken = new Set([...(await publicIds(env))]);
   const yours = await env.DB.prepare("SELECT pack_id FROM pack_copies WHERE user_id = ? AND pack IS NOT NULL UNION SELECT pack_id FROM pack_changes WHERE user_id = ? AND kind = 'create' AND body IS NOT NULL").bind(userId, userId).all<{ pack_id: string }>();
@@ -833,8 +879,8 @@ export async function createPack(env: Env, userId: string, source: string, input
     if (taken.has(input.pack_id)) return { ok: false, errors: [{ at: "pack_id", message: `"${input.pack_id}" is taken (a pack of theirs, or a public one): leave pack_id out and one is made from the name.` }], warnings: [] };
   }
   const id = input.pack_id ?? packIdFor(input.name, taken);
-  const { items, problems, warnings: noticed } = convertItems(input.items ?? [], input.language, new Set());
-  const shell = { ...newPack({ id, name: input.name, about: input.about, language: input.language, from: "en" }), ...dictionariesOf(input as unknown as Record<string, unknown>), items } as Pack;
+  const { items, problems, warnings: noticed } = inLanguage({ language: input.language, languageDef }, () => convertItems(input.items ?? [], input.language, new Set()));
+  const shell = { ...newPack({ id, name: input.name, about: input.about, language: input.language, from: "en" }), ...(languageDef ? { languageDef } : {}), ...dictionariesOf(input as unknown as Record<string, unknown>), items } as Pack;
   const change = await withOwnPatterns(env, input.language, { kind: "create" as const, pack: shell }, null);
   return checkAndQueue(env, userId, source, { pack: null, head: await headOf(env, userId, id), pending: [], touched: { all: false, items: new Set(), entries: new Set() }, copy: null }, change, (n) => n, { conversion: problems, noticed });
 }
@@ -851,7 +897,7 @@ export async function addItems(env: Env, userId: string, source: string, input: 
   if (input.items.length > PACK_RELAY.itemsPerChange) return { ok: false, errors: [{ at: "items", message: `Send up to ${PACK_RELAY.itemsPerChange} items at a time.` }], warnings: [] };
   const now = await existing(env, userId, input.pack_id);
   const base = now.pack.items.length;
-  const { items, problems, warnings: noticed } = convertItems(input.items, now.pack.language, new Set(now.pack.items.map((item) => item.id)));
+  const { items, problems, warnings: noticed } = inLanguage(now.pack, () => convertItems(input.items, now.pack.language, new Set(now.pack.items.map((item) => item.id))));
   const change = await withOwnPatterns(env, now.pack.language, { kind: "add" as const, items, dictionaries: dictionariesOf(input as unknown as Record<string, unknown>) }, now.pack);
   return checkAndQueue(env, userId, source, now, change, (n) => (n >= base ? n - base : null), { dryRun, conversion: problems, noticed });
 }
@@ -860,7 +906,7 @@ export async function addItems(env: Env, userId: string, source: string, input: 
 export async function updateItems(env: Env, userId: string, source: string, input: ItemsInput, { dryRun = false } = {}): Promise<Outcome> {
   if (input.items.length > PACK_RELAY.itemsPerChange) return { ok: false, errors: [{ at: "items", message: `Send up to ${PACK_RELAY.itemsPerChange} items at a time.` }], warnings: [] };
   const now = await existing(env, userId, input.pack_id);
-  const { items, problems, warnings: noticed } = convertItems(input.items, now.pack.language, new Set());
+  const { items, problems, warnings: noticed } = inLanguage(now.pack, () => convertItems(input.items, now.pack.language, new Set()));
   input.items.forEach((raw, i) => {
     if (!isObject(raw) || typeof raw.id !== "string" || !raw.id) problems.push({ at: `items[${i}].id`, message: `items[${i}]: an update names the item it replaces by its id.` });
   });
@@ -874,7 +920,7 @@ export async function updateItems(env: Env, userId: string, source: string, inpu
  * check_items: items checked as an add (or, for an id the pack has, an update) would check them, or for a new pack as
  * create_pack would, with the topics, words, phrases and patterns given; nothing is kept.
  */
-export async function checkItems(env: Env, userId: string, input: { pack_id?: string; language?: string; items: unknown[] } & Partial<Record<string, unknown>>) {
+export async function checkItems(env: Env, userId: string, input: { pack_id?: string; language?: string; language_def?: unknown; items: unknown[] } & Partial<Record<string, unknown>>) {
   const dictionaries = dictionariesOf(input) ?? {};
   if (input.pack_id) {
     const now = await existing(env, userId, input.pack_id);
@@ -888,10 +934,16 @@ export async function checkItems(env: Env, userId: string, input: { pack_id?: st
     return { ok: results.every((r) => r.ok), errors: results.flatMap((r) => (r.ok ? [] : r.errors)), warnings: results.flatMap((r) => r.warnings), new: adds.length, replacing: updates.length, ...(note ? { note } : {}) };
   }
   const language = asText(input.language);
-  if (!Object.hasOwn(LANGUAGES, language)) throw new LibraryError("Give pack_id (a pack of theirs), or language for items of a new pack.");
-  const { items, problems } = convertItems(input.items, language, new Set());
-  const shell = (await withOwnPatterns(env, language, { kind: "create" as const, pack: { ...newPack({ id: "checking", name: "Checking", language, from: "en" }), ...dictionaries, items } as Pack }, null)).pack;
-  const checked = checkPack(shell, { installed: [...(await defaultsFor(env, language)), ...(await copiesOf(env, userId, language))] });
+  if (!language) throw new LibraryError("Give pack_id (a pack of theirs), or language for items of a new pack.");
+  const problem = languageProblem(language, input.language_def);
+  if (problem) throw new LibraryError(problem.message);
+  const languageDef = isOurLanguage(language) ? undefined : ownLanguageDef(input.language_def as Parameters<typeof ownLanguageDef>[0]);
+  const { items, problems } = inLanguage({ language, languageDef }, () => convertItems(input.items, language, new Set()));
+  const shell = (await withOwnPatterns(env, language, { kind: "create" as const, pack: { ...newPack({ id: "checking", name: "Checking", language, from: "en" }), ...(languageDef ? { languageDef } : {}), ...dictionaries, items } as Pack }, null)).pack;
+  const installed = await installedFor(env, userId, language);
+  const differs = sameDefinition(shell, installed);
+  if (differs) throw new LibraryError(differs.message);
+  const checked = checkPack(shell, { installed });
   const errors = [...problems, ...withoutStandIns(checked.errors, problems)];
   return { ok: !errors.length, errors, warnings: checked.warnings, new: items.length, replacing: 0 };
 }
@@ -965,13 +1017,13 @@ export async function queueOwnerChange(env: Env, ownerId: string, input: { packI
   const current = now.pack;
   let next: Pack | null;
   try {
-    next = input.revise(structuredClone(current));
+    next = inLanguage(current, () => input.revise(structuredClone(current)));
   } catch (error) {
     return refused(`The corrections couldn't be applied to the author's pack: ${error instanceof Error ? error.message : "an error"}`);
   }
   if (!next) return { ok: false, reason: "nothing", errors: [], warnings: [] };
   if (!isObject(next) || !Array.isArray(next.items)) return refused("revise must give back the pack.");
-  if (!Object.hasOwn(LANGUAGES, current.language)) return refused("The pack's language isn't one Lexicommons knows.");
+  if (languageProblem(current.language, current.languageDef)) return refused("The pack's language isn't one Lexicommons knows, and it carries no definition of its own.");
   // Only items' pieces and the dictionaries may change: the rest of the pack stays the author's.
   for (const key of Object.keys({ ...current, ...next }) as (keyof Pack)[]) {
     if (key === "items" || (DICTIONARY_KEYS as readonly string[]).includes(key)) continue;

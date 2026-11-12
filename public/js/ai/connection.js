@@ -79,6 +79,8 @@ const MCP_URL = `${location.origin}/mcp`;
 const askConnected = () => whoAmI().then((me) => setAiConnected(me.aiConnected)).catch(() => {});
 
 export function connectionPage(page) {
+  // Named, so the page's reading text keeps the measure on a computer wherever it opens: in Settings or in the AI section (settings-wide.css).
+  page.classList.add("lx-ai-connection");
   const msg = message();
   const connections = el("ul", { part: "list" });
   const tokens = el("ul", { part: "list" });

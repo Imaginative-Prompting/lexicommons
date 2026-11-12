@@ -8,7 +8,7 @@
 //     into view, by a real tap, in Chromium and WebKit, at 390 and 320; a message appearing moves nothing either;
 //   - the fold still signs up (every check's own way in: summary, name, Create account with a passkey);
 //   - a light-mode phone from the public page's Start learning to the first run, every frame from Chrome's screencast: the sign-in page light
-//     in every frame, the step into /app/ going straight to the app's Graphite (no light frame of the app, no blank one: the held start shows
+//     in every frame (its own, from its first paint: the public page's before it aren't judged; a dark frame planted on it caught first), the step into /app/ going straight to the app's Graphite (no light frame of the app, no blank one: the held start shows
 //     the splash's first frame, Tinta on Graphite, from the app's first frame, then fades into the first run over several frames), and the first
 //     run whole once it shows (the director's call, 7 Nov: the app keeps Graphite with nothing saved; the one change is that step).
 //
@@ -202,6 +202,17 @@ async function look(data) {
   const [r, g, b] = channels;
   return { light: Math.round(0.2126 * r.mean + 0.7152 * g.mean + 0.0722 * b.mean), spread: Math.round((r.stdev + g.stdev + b.stdev) / 3) };
 }
+// The sign-in page's own first paint, as wall time (its frames are those from then until the step into /app/): the public page's frames before
+// the tap on Start learning (its dark phone clip among them) were counted as the sign-in page's until 12 Nov 2026, a red with no fault.
+const SIGNIN_PAINT = () => {
+  if (location.pathname !== "/login") return;
+  new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) if (entry.name === "first-paint") window.__signinPaint ??= performance.timeOrigin + entry.startTime;
+  }).observe({ type: "paint", buffered: true });
+};
+/** The rule for the sign-in page's frames: every one light (over 200). → { ok, lights } */
+const signInLight = (looks) => ({ ok: looks.length > 0 && looks.every((f) => f.light > 200), lights: looks.map((f) => f.light) });
+
 /** How different two frames are, 0 to 255 per pixel on average (small images, so a moving drop counts a little). */
 async function apart(a, b) {
   const px = (d) => sharp(Buffer.from(d, "base64")).resize(78, 168, { fit: "fill" }).removeAlpha().raw().toBuffer();
@@ -211,8 +222,49 @@ async function apart(a, b) {
   return sum / x.length;
 }
 
+await stage("PLANT: a dark frame on a real light sign-in page is caught by the light walk's rule, and the public page's frames are not the sign-in page's", async () => {
+  const context = await engines.chromium.newContext(phoneOf(390, "light"));
+  await context.addInitScript(SIGNIN_PAINT);
+  const page = await context.newPage();
+  const cdp = await context.newCDPSession(page);
+  await page.goto(`${BASE}/`);
+  await page.waitForTimeout(600);
+  const frames = [];
+  cdp.on("Page.screencastFrame", ({ data, metadata, sessionId }) => {
+    frames.push({ at: metadata.timestamp * 1000, data });
+    cdp.send("Page.screencastFrameAck", { sessionId }).catch(() => {});
+  });
+  await cdp.send("Page.startScreencast", { format: "jpeg", quality: 70, everyNthFrame: 1 });
+  await page.waitForTimeout(500);
+  await page.locator('a[data-t="site.start"]').first().tap();
+  await page.waitForURL(/\/login\?new=1/);
+  await page.waitForFunction(() => typeof window.__signinPaint === "number", null, { timeout: 10_000 });
+  const signInFrom = await page.evaluate(() => window.__signinPaint);
+  await page.waitForTimeout(500);
+  const clean = frames.length;
+  // The plant: the whole sign-in page covered dark for a moment, then uncovered.
+  await page.evaluate(() => {
+    const cover = document.createElement("div");
+    cover.style.cssText = "position:fixed;inset:0;background:#000;z-index:99999";
+    document.body.append(cover);
+    setTimeout(() => cover.remove(), 400);
+  });
+  await page.waitForTimeout(900);
+  await cdp.send("Page.stopScreencast");
+  await context.close();
+  const looks = await Promise.all(frames.map((f) => look(f.data)));
+  const signIn = (upTo) => looks.filter((_, i) => i < upTo && frames[i].at >= signInFrom);
+  const before = signInLight(signIn(clean));
+  const planted = signInLight(signIn(frames.length));
+  const publicFrames = looks.filter((_, i) => frames[i].at < signInFrom).length;
+  if (!before.ok) throw new Error(`the sign-in page's own frames weren't light before the plant: ${before.lights.join(",")}`);
+  if (planted.ok) throw new Error(`a dark frame planted on the sign-in page wasn't caught: ${planted.lights.join(",")}`);
+  return `the public page's ${publicFrames} frames left out; the sign-in page's ${signIn(clean).length} light; with the plant, ${Math.min(...planted.lights)} caught`;
+});
+
 await stage("a light phone from Start learning to the first run: sign-in light in every frame, the app never light nor blank (the splash's first frame while its start holds, fading into the first run), the first run in before the app's frame with its flags drawn, nothing popping in after", async () => {
   const context = await engines.chromium.newContext(phoneOf(390, "light"));
+  await context.addInitScript(SIGNIN_PAINT);
   // In the app's page: when the first run and the app's frame (its tab bar) were put on the page, and how many of the first run's first
   // screenful of flags were drawn then.
   await context.addInitScript(() => {
@@ -248,6 +300,8 @@ await stage("a light phone from Start learning to the first run: sign-in light i
   page.on("framenavigated", (frame) => frame === page.mainFrame() && new URL(frame.url()).pathname === "/app/" && (intoApp ??= Date.now()));
   await page.locator('a[data-t="site.start"]').first().tap();
   await page.waitForURL(/\/login\?new=1/);
+  await page.waitForFunction(() => typeof window.__signinPaint === "number", null, { timeout: 10_000 });
+  const signInFrom = await page.evaluate(() => window.__signinPaint);
   await page.fill('input[name="name"]', "Light Phone");
   await page.locator('#register button[type="submit"]').tap();
   await page.waitForURL(`${BASE}/app/`, { timeout: 90_000 });
@@ -258,8 +312,9 @@ await stage("a light phone from Start learning to the first run: sign-in light i
   assert(intoApp && frames.length > 10, `${frames.length} frames, into the app at ${intoApp}`);
   const looks = await Promise.all(frames.map((f) => look(f.data)));
   const settled = frames.at(-1).data;
-  // Each frame as the app (after the navigation into /app/ began) or not, by when it was drawn.
-  const before = looks.filter((_, i) => frames[i].at < intoApp);
+  // Each frame as the sign-in page's (from its first paint until the navigation into /app/ began), the app's, or the public page's before
+  // them (not judged here), by when it was drawn.
+  const before = looks.filter((_, i) => frames[i].at >= signInFrom && frames[i].at < intoApp);
   const appFrames = frames.map((f, i) => ({ ...f, ...looks[i] })).filter((f) => f.at >= intoApp);
   const darkFrom = appFrames.findIndex((f) => f.light < 60);
   assert(darkFrom >= 0, "the app never showed dark");
@@ -279,7 +334,8 @@ await stage("a light phone from Start learning to the first run: sign-in light i
   const story = app.map((f, i) => `${Math.round(f.at - intoApp)}:${f.light}/${f.spread}/${distances[i].toFixed(1)}`).join(" ");
   writeFileSync(join(OUT, "light-walk-frames.txt"), story);
   await context.close();
-  assert(before.length && before.every((f) => f.light > 200), `a sign-in frame wasn't light: ${before.map((f) => f.light).join(",")}`);
+  const rule = signInLight(before);
+  assert(before.length >= 3 && rule.ok, `a sign-in frame wasn't light: ${rule.lights.join(",")} (${before.length} of the sign-in page's frames)`);
   // Frames drawn after /app/ began but before its first paint are the page that left (light): none of the app's own is light.
   const between = appFrames.slice(0, darkFrom);
   assert(between.every((f) => f.light > 200 && f.spread >= 4), `before the app's first dark frame: ${between.map((f) => `${f.light}/${f.spread}`).join(", ")}`);

@@ -119,7 +119,13 @@
   }
   .lx-toasts > * { pointer-events: auto; max-width: 100%; }
   .lx-toasts [data-part="toast"] [data-part="button"] { margin: -4px -8px -4px var(--space-1); }
-  @media (min-width: 1024px) { .lx-toasts { bottom: var(--space-5); padding-left: calc(232px + var(--space-6)); } }
+  /* On a computer (frame.md §0): at the foot, centered on the page beside the sidebar while the sidebar is shown (its 232 px, then the same
+     16 px either side, so a toast's middle is the page's), on the window while a session or the reader covers it (it stood 124 px right of a
+     session's middle, 11 Nov 2026). */
+  @media (min-width: 1024px) {
+    .lx-toasts { bottom: var(--space-5); }
+    :root:has([data-part="app"] > [data-part="tab-bar"]):not(:has([data-part="app"] > :is([data-part="session"], [data-part="reader"]))) .lx-toasts { padding-left: calc(232px + var(--space-4)); }
+  }
 
   .lx-safe-banner { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-3) 0; }
 }

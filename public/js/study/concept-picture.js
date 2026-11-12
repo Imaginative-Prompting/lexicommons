@@ -326,24 +326,34 @@ export function rulePicture({ kind, shapes, words: given, readings = [], text, s
       if (oneLine()) return;
     }
   };
+  // What a frame does once the picture is on the page: its affixes colored from here on, the sentence fitted when its width has changed,
+  // the shape drawn from the words where they are now.
+  let width = 0;
+  let kept = false;
+  const lay = () => {
+    if (!kept) keep();
+    kept = true;
+    const now = line.getBoundingClientRect().width;
+    if (now !== width) (width = now), fit();
+    draw();
+  };
   // Measured again when the width changes (a turned phone, a bigger text size); drawn again on any change, a frame later, so a change
   // it makes itself is never measured in the same frame. Off the page, its affixes stop being colored.
-  let width = 0;
+  // Watched from the start, so a picture built before it's on the page (Knowledge builds its idea cards a few at a time) is fitted and
+  // drawn on the frame after it gets its size there. It used to be looked at once, on the frame after it was built, and one not on the
+  // page by then was never fitted, drawn or watched: the same card came out at one size or another, with its shape or without, by timing.
+  // (Chrome reports once on a picture that isn't on the page yet: that one goes on being watched; only one that has been on the page and
+  // left it is let go.)
   const observer = new ResizeObserver(() =>
     requestAnimationFrame(() => {
-      if (!figure.isConnected) return drop(), observer.disconnect();
-      const now = line.getBoundingClientRect().width;
-      if (now !== width) (width = now), fit();
-      draw();
+      if (figure.isConnected) return lay();
+      if (kept) drop(), observer.disconnect();
     }),
   );
+  observer.observe(figure);
+  // One already on the page is fitted on its first frame, before it's ever shown at another size.
   requestAnimationFrame(() => {
-    if (!figure.isConnected) return;
-    keep();
-    width = line.getBoundingClientRect().width;
-    fit();
-    draw();
-    observer.observe(figure);
+    if (figure.isConnected) lay();
   });
 
   // Once, as the sheet opens (after: how long until it's up): the lit words come up in turn, then the shape draws itself along its length.

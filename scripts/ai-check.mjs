@@ -8,7 +8,7 @@
 // credited), offline with only what's on the device, and that book kept on the device searched offline too. Fails on
 // any console error. Chrome runs muted: nothing is heard.
 //
-// The library stages put a German default pack (scripts/fixtures/packs/check-de.json, through
+// The library stages put a German default pack (scripts/fixtures/packs/ai-check-de.json, through
 // scripts/packs/seed-local.mjs) and a two-sentence Dutch book with an English help layer into the local server's
 // library, and put its catalog back exactly as they found it at the end.
 // Usage (headless Chrome, through the channel's parallel lane, from the channel repo root):
@@ -449,7 +449,12 @@ function languagesAre(langs, what) {
 await stage("Translate on this device: nothing typed is null, the starter both ways, the direction guessed", async () => {
   same([await translate(""), await translate("   ")], [null, null], "nothing typed");
   const boek = await translate("boek", { from: "nl", to: "en" });
-  same(boek.words.map((w) => [w.text, w.en, w.source]), [["boek", "book", "pack:starter-word-order"]], "boek");
+  // The starter's "boek" is among the words. A device with the library's Dutch word bands (a local server seeds every library pack) reads
+  // it as "boeken" too (ik boek: to book), each from its own pack: allowed when that source is credited, below (11 Nov 2026: this was an
+  // exact list and went stale against the bands).
+  const boekRows = boek.words.map((w) => [w.text, w.en, w.source]);
+  assert(boekRows.some((row) => JSON.stringify(row) === '["boek","book","pack:starter-word-order"]'), `boek: the starter's row isn't among ${JSON.stringify(boekRows)}`);
+  assert(boek.words.every((w) => boek.sources.some((source) => source.id === w.source)), `boek: a word whose source isn't listed: ${JSON.stringify(boekRows)}`);
   same(boek.sources.find((source) => source.id === "pack:starter-word-order"), { id: "pack:starter-word-order", kind: "pack", name: "Starter: Dutch word order", credit: "Lexicommons" }, "credited");
   // On a state with a copy of the open library, its books with an English layer say "boek" too, and so do the library's
   // own Dutch packs (path-nl, the word bands): each credited. A pack the catalog doesn't list as Lexicommons' own, or a
@@ -481,6 +486,17 @@ await stage("Translate on this device: nothing typed is null, the starter both w
 
 let book = null;
 let layer = null;
+// The planted book's own reading of a lookup (the library's alone; this device may know the word from a pack of its own).
+const fromBook = (result) => result.words.filter((w) => w.source === "book:ai-check-jas:nl");
+// The book's source as an answer must list it: its name, its credit and the layer's, its license. Each stage that leans on it also runs
+// it once on planted copies of a real answer that it must refuse (the credit cut short, the license gone, the source missing).
+const BOOK_SOURCE = { id: "book:ai-check-jas:nl", kind: "book", name: "De rode jas", credit: "De rode jas, by Check Writer, CC BY 4.0 · English: Translated for the check (CC BY-SA 4.0)", license: "CC BY 4.0" };
+const bookCredited = (result) => JSON.stringify(result.sources.find((source) => source.id === BOOK_SOURCE.id) ?? null) === JSON.stringify(BOOK_SOURCE);
+// Offline, with the book only on the library: its reading and its source aren't in the answer. The kept-book stage runs this on its own
+// offline answer, where the book IS on the device, and it must refuse that.
+const bookAbsentOffline = (result) => result.online === false && fromBook(result).length === 0 && !result.sources.some((source) => source.id === BOOK_SOURCE.id);
+// German, which this device doesn't have: the check's own pack, whose word no shipped German pack has.
+const GERMAN_WORD = "Regenschirm";
 await stage("online: a German pack and a Dutch picture book only the library has, each credited", async () => {
   ({ book, layer } = await checkBook());
   await libraryPut(`${bookPrefix(book)}/book.json`, JSON.stringify(book));
@@ -491,30 +507,60 @@ await stage("online: a German pack and a Dutch picture book only the library has
   const shelved = withBook(base, book, { en: layerEntry(layer, key) }, new Date().toISOString());
   assert(shelved.catalogue, shelved.problems.join(" · "));
   await libraryPut("catalogue.json", JSON.stringify(shelved.catalogue, null, 2));
-  seed(join(HERE, "fixtures/packs/check-de.json"));
+  // The control: before its pack is seeded, the server doesn't know the German word, so finding it after proves that pack answered.
+  const noGerman = await translate(GERMAN_WORD, { from: "de", to: "en" });
+  assert(noGerman.words.length === 0, `the control: ${GERMAN_WORD} is known before its pack is seeded: ${JSON.stringify(noGerman.words)}`);
+  seed(join(HERE, "fixtures/packs/ai-check-de.json"));
   // The server rebuilds an index once it sees the catalog changed, which it checks at most every 30 s.
   const started = Date.now();
+  // "jas" is in the library's Dutch word bands too, so this device may know it from a pack of its own: what's the library's alone is the
+  // planted book's reading, from the book's source (11 Nov 2026: the check waited for any word and wanted the book's alone, stale against
+  // the bands a local server seeds).
   let jas = await translate("jas", { from: "nl", to: "en" });
-  while (!jas.words.length && Date.now() - started < 45_000) {
+  while (!fromBook(jas).length && Date.now() - started < 45_000) {
     await new Promise((r) => setTimeout(r, 2000));
     jas = await translate("jas", { from: "nl", to: "en" });
   }
   const waited = Math.round((Date.now() - started) / 1000);
-  same(jas.words.map((w) => [w.text, w.en, w.source]), [["jas", "coat", "book:ai-check-jas:nl"]], "jas");
-  same(jas.sources, [{ id: "book:ai-check-jas:nl", kind: "book", name: "De rode jas", credit: "De rode jas, by Check Writer, CC BY 4.0 · English: Translated for the check (CC BY-SA 4.0)", license: "CC BY 4.0" }], "the book and its layer credited");
-  assert(jas.online && jas.sentences.length === 2, JSON.stringify(jas.sentences));
+  same(fromBook(jas).map((w) => [w.text, w.en, w.source]), [["jas", "coat", "book:ai-check-jas:nl"]], "jas from the book");
+  assert(bookCredited(jas), `the book and its layer credited: ${JSON.stringify(jas.sources.find((source) => source.id === BOOK_SOURCE.id))}`);
+  // The controls: the same rule refuses the real answer with its credit cut short, its license gone, or the book's source missing.
+  const planted = (change) => {
+    const copy = structuredClone(jas);
+    change(copy.sources.find((source) => source.id === BOOK_SOURCE.id), copy);
+    return copy;
+  };
+  same(
+    [
+      bookCredited(planted((source) => (source.credit = "De rode jas"))),
+      bookCredited(planted((source) => delete source.license)),
+      bookCredited(planted((source, copy) => (copy.sources = copy.sources.filter((one) => one !== source)))),
+    ],
+    [false, false, false],
+    "the credit rule on planted answers",
+  );
+  // Sentences with it, each from a source the answer lists (credited above). A device with the word bands fills the list from its own pack
+  // first, so the book's two may not be among them: the book's sentence is held below, by the whole sentence back.
+  assert(jas.online && jas.sentences.length > 0 && jas.sentences.every((sentence) => jas.sources.some((source) => source.id === sentence.source)), JSON.stringify(jas.sentences.map((sentence) => [sentence.text, sentence.source])));
   // Nothing typed says which way, and this device knows neither word: the server, which does, picks the direction.
   const guessed = await translate("jas");
-  same([guessed.from, guessed.to, guessed.words[0]?.en], ["nl", "en", "coat"], "the direction from the server");
+  same([guessed.from, guessed.to, guessed.words.some((w) => /^coat\b/.test(w.en))], ["nl", "en", true], "the direction from the server");
   const whole = await translate("The coat hangs on the door.", { from: "en", to: "nl" });
   same(whole.whole?.text, "De jas hangt aan de deur.", "the whole sentence back");
-  const buch = await translate("Buch", { from: "de", to: "en" });
-  assert(buch.words.length && buch.words.every((w) => w.source === "pack:check-de") && buch.sources[0].credit === "Lexicommons", JSON.stringify(buch).slice(0, 300));
+  // German, which this device doesn't have, is answered online from the check's own pack, credited. (Its word is one no shipped German pack
+  // has: the planted check-de's words are all in the German starter, which a local server seeds, and the server gives a word one reading.)
+  let german = await translate(GERMAN_WORD, { from: "de", to: "en" });
+  for (const until = Date.now() + 45_000; !german.words.length && Date.now() < until; ) {
+    await new Promise((r) => setTimeout(r, 2000));
+    german = await translate(GERMAN_WORD, { from: "de", to: "en" });
+  }
+  same(german.words.map((w) => [w.text, w.en, w.source]), [[GERMAN_WORD, "umbrella", "pack:ai-check-de"]], "German from its pack");
+  assert(german.sources.length === 1 && german.sources[0].id === "pack:ai-check-de" && german.sources[0].credit === "Lexicommons", `German credited: ${JSON.stringify(german.sources)}`);
   const langs = await languages();
   languagesAre(langs, "languages: yours first, German online only");
   const wrong = await page.request.post(`${BASE}/api/translate`, { data: { q: "x", from: "nl", to: "de" } });
   assert(wrong.status() === 400 && /between English and one language/.test((await wrong.json()).error), `nl → de: ${wrong.status()}`);
-  return `jas → coat (${jas.sources[0].name}, found after ${waited} s); Buch → ${buch.words[0].en}; languages ${langs.map((l) => l.code).join(", ")}`;
+  return `jas → coat (${fromBook(jas)[0].source}, found after ${waited} s); ${GERMAN_WORD} → ${german.words[0].en} (${german.words[0].source}); languages ${langs.map((l) => l.code).join(", ")}`;
 });
 
 await stage("offline: only what's on this device; what only the library has isn't found", async () => {
@@ -523,15 +569,16 @@ await stage("offline: only what's on this device; what only the library has isn'
   try {
     const boek = await translate("boek", { from: "nl", to: "en" });
     assert(boek.online === false && boek.words[0]?.en === "book", JSON.stringify(boek).slice(0, 200));
+    // The book's reading isn't found: it's on the library, not this device. (This device may know "jas" from a word band of its own.)
     const jas = await translate("jas", { from: "nl", to: "en" });
-    same([jas.online, jas.words.length, jas.unknown], [false, 0, ["jas"]], "jas offline");
-    const buch = await translate("Buch", { from: "de", to: "en" });
-    same([buch.words.length, buch.unknown, buch.sources], [0, ["buch"], []], "German offline");
+    assert(bookAbsentOffline(jas), `jas offline: the book's reading or source is here: ${JSON.stringify(jas).slice(0, 300)}`);
+    const german = await translate(GERMAN_WORD, { from: "de", to: "en" });
+    same([german.words.length, german.unknown, german.sources], [0, [GERMAN_WORD.toLowerCase()], []], "German offline");
   } finally {
     await context.setOffline(false);
     expected = null;
   }
-  return "boek found; jas and Buch not, offline";
+  return `boek found; the book's jas and ${GERMAN_WORD} not, offline`;
 });
 
 await stage("a book kept on this device is searched offline too, with its credit", async () => {
@@ -540,7 +587,10 @@ await stage("a book kept on this device is searched offline too, with its credit
   await context.setOffline(true);
   try {
     const jas = await translate("jas", { from: "nl", to: "en" });
-    assert(jas.online === false && jas.words[0]?.en === "coat" && jas.sources[0]?.credit.startsWith("De rode jas, by Check Writer"), JSON.stringify(jas).slice(0, 300));
+    const kept = jas.sources.find((source) => source.id === BOOK_SOURCE.id);
+    assert(jas.online === false && fromBook(jas)[0]?.en === "coat" && kept?.credit.startsWith("De rode jas, by Check Writer"), JSON.stringify(jas).slice(0, 300));
+    // The control: the offline stage's rule refuses this answer, the book's reading found offline.
+    assert(!bookAbsentOffline(jas), "the control: the offline rule passed an answer with the book's reading in it");
     const whole = await translate("De jas hangt aan de deur.", { from: "nl", to: "en" });
     same([whole.whole?.translation, whole.words.map((w) => w.text).join(" ")], ["The coat hangs on the door.", "de jas hangt aan de deur"], "the sentence and its words");
     languagesAre(await languages(), "languages offline");
@@ -553,7 +603,7 @@ await stage("a book kept on this device is searched offline too, with its credit
 });
 
 await stage("the local library is put back as it was found", async () => {
-  seed("--remove", "check-de", "--language", "de");
+  seed("--remove", "ai-check-de", "--language", "de");
   if (originalCatalogue === null) await r2.remove("lexicommons-library", "catalogue.json");
   else await libraryPut("catalogue.json", originalCatalogue);
   assert((await libraryGet("catalogue.json")) === originalCatalogue, "the catalog differs from the one found");

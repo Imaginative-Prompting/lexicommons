@@ -47,13 +47,14 @@ import { BUILT_IN } from "../packs/index.js";
 // The shared grammar first: what it keeps on this device is installed before any pack here is checked.
 import { onGrammarChange, syncGrammar } from "./grammar.js";
 import { syncForms, syncNotes } from "./notes.js";
-import { checkPack, checkPackSteps, checkedProof, isAudioUrl, isPackId, isPackRef, packBytesSteps, packRefs, packUrl, packVersion, proofHolds, upgradePack, versionOfBytes } from "./pack-format.js";
+import { checkPack, checkPackSteps, checkedProof, isAudioUrl, isPackId, isPackRef, PACK_ID, packBytesSteps, packRefs, packUrl, packVersion, proofHolds, upgradePack, versionOfBytes } from "./pack-format.js";
 import { inSlices } from "../know/slices.js";
 import { checkAudio, clipsOf, clipUrl, fitAudio, readAudio, unchangedItems } from "./pack-audio.js";
 import { CLIPS, keepClips } from "./keep-clips.js";
 import { CLIP_BYTES, clipBlob, hasClip, isClip, keepClip, loadClips, onClipsChange, pruneClips } from "./clips.js";
 import { communityOverlay } from "./pack-corrections.js";
 import { learning, onLearningChange } from "./learning.js";
+import { demoPage } from "./sample-mode.js";
 import { canonical, registerBlobs, registerSync, winner } from "../sync.js";
 import { fetchRetrying, onReconnect } from "../lx/retry.js";
 
@@ -1330,7 +1331,8 @@ async function syncNow() {
   // The packs that carry the lessons first, then the rest (every view keeps the catalog's order: keepOrder above, orderLibrary): a newcomer's
   // first lesson is the path's, not the starter's (path-nl came last, 2–4 s after Dutch was picked, and a Start meanwhile opened the
   // starter's lesson, 7 Nov 2026). Once they're checked, studying has them at once, before the word bands come.
-  const queue = [...defaults, ...kept];
+  // The try-out (/try/) fetches the packs that carry the lessons and nothing more: two lessons are what it plays.
+  const queue = demoPage() ? defaults.filter((ref) => lessonIds.has(ref.id)) : [...defaults, ...kept];
   const ordered = [...queue.filter((ref) => lessonIds.has(ref.id)), ...queue.filter((ref) => !lessonIds.has(ref.id))];
   let lessonsLeft = ordered.filter((ref) => lessonIds.has(ref.id)).length;
   for (const ref of ordered) {
@@ -1373,8 +1375,8 @@ async function syncNow() {
     await prepareContent?.().catch(() => {});
     changedEverywhere();
   }
-  // Their recordings kept for offline, a little after (never in a start's way).
-  setTimeout(() => {
+  // Their recordings kept for offline, a little after (never in a start's way). Not for a try-out: nothing of it is kept.
+  if (!demoPage()) setTimeout(() => {
     keepRecordingsForOffline();
     // (Word pictures reach the lessons through this: imported when it's time, so nothing here waits on them.)
     import("./pictures.js").then(({ keepPicturesForOffline }) => keepPicturesForOffline(learning())).catch(() => {});
@@ -1711,6 +1713,11 @@ registerSync({
   label: "Your packs",
   icon: "cards",
   counted: (n) => `${n} ${n === 1 ? "pack" : "packs"}`,
+  // A file per pack (its id the shard), so a pack's change writes its own file, and a big deck never makes one file too big for your
+  // account's copy. Before 12 Nov 2026 a device kept them all in one file: that file is still read and merged, and never written.
+  shard: (key) => key,
+  shards: PACK_ID,
+  wholeBefore: true,
   records() {
     const out = {};
     if (!signedIn) return out;

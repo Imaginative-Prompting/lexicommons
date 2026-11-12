@@ -488,6 +488,9 @@ if (STATE === "public") {
     assert(/noindex/.test(indexHeader(login)) && /name="robots" content="noindex/.test(login.text), `/login: ${indexHeader(login)}`);
     const design = await raw("GET", "/design/");
     assert(/noindex/.test(indexHeader(design)), `/design/: ${design.status} ${indexHeader(design)}`);
+    // The try-out (/try/): open to anyone with no account, never indexed.
+    const tryOut = await raw("GET", "/try/");
+    assert(tryOut.status === 200 && /noindex/.test(indexHeader(tryOut)) && /name="robots" content="noindex/.test(tryOut.text), `/try/: ${tryOut.status} ${indexHeader(tryOut)}`);
     for (const path of ["/app/index.html", "/nothing-here"]) {
       const r = await raw("GET", path);
       if ((r.headers["content-type"] ?? "").startsWith("text/html")) assert(/noindex/.test(indexHeader(r)), `${path}: ${r.status} ${indexHeader(r)}`);
@@ -673,8 +676,8 @@ if (STATE === "public") {
         if (href.startsWith("/") && !href.startsWith("//") && !href.startsWith("/app/") && !seen.has(href.split("#")[0].split("?")[0])) queue.push(href.split("#")[0].split("?")[0]);
       }
     }
-    // The app's own door, signed out, and the design system's page: both reachable.
-    for (const path of ["/app/", "/design/"]) {
+    // The app's own door, signed out, the design system's page and the try-out: all reachable (the try-out stays itself, no sign-in).
+    for (const path of ["/app/", "/design/", "/try/"]) {
       const response = await page.goto(`${BASE}${path}`, { waitUntil: "load" });
       await page.waitForTimeout(400);
       seen.set(path, { status: response.status(), at: new URL(page.url()).pathname });
@@ -682,6 +685,7 @@ if (STATE === "public") {
     await browser.close();
     writeFileSync(join(OUT, "no-account-pages.json"), JSON.stringify(Object.fromEntries(seen), null, 1));
     assert(seen.get("/app/").at === "/login", `/app/ with no account stayed at ${seen.get("/app/").at}`);
+    assert(seen.get("/try/").status === 200 && seen.get("/try/").at === "/try/", `/try/ with no account: ${JSON.stringify(seen.get("/try/"))}`);
     assert(!elsewhere.length, `loaded from elsewhere:\n${[...new Set(elsewhere)].join("\n")}`);
     assert(!problems.length, problems.slice(0, 5).join("\n"));
     return `${seen.size} pages: ${[...seen.keys()].join(", ")}`;

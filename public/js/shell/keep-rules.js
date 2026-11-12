@@ -4,14 +4,14 @@
 // EVERY LINE HERE IS TRUE ONLY WHILE PROGRESS LIVES IN THE BROWSER ALONE. The day an account keeps its own copy of your progress on the server
 // (a route under /api/account/sync, so signing in anywhere brings it back), they're false: set KEPT_WITH_ACCOUNT in that same landing and
 // take keep-here.js's notes out. scripts/test-install.mjs fails while that route exists and this still says anything.
-export const KEPT_WITH_ACCOUNT = false;
+export const KEPT_WITH_ACCOUNT = true;
 
 /**
  * Which of the three this device and browser is, or null: device is install-guide.js detect()'s { id, installed, mobile }.
  * fresh: nothing has been studied here.
  */
-export function keepKind(device, { fresh = true } = {}) {
-  if (!device || KEPT_WITH_ACCOUNT) return null;
+export function keepKind(device, { fresh = true, kept = KEPT_WITH_ACCOUNT } = {}) {
+  if (!device || kept) return null;
   if (device.id === "in-app") return "in-app";
   const ios = typeof device.id === "string" && device.id.startsWith("ios-");
   if (!ios) return null;

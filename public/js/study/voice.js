@@ -66,6 +66,18 @@ function recordedPacks(lang) {
 
 const listeners = new Set();
 const synth = typeof speechSynthesis === "undefined" ? null : speechSynthesis;
+// The device's voices as a list, whatever the synth hands back. One iPhone's Safari (11 Nov 2026, iOS 27) had a speechSynthesis whose
+// getVoices() answered undefined, and voicesFor's .filter on it threw while this module loaded, so the app never started. A list, a
+// list-like, or nothing at all: never a throw.
+function deviceVoiceList() {
+  try {
+    const list = synth?.getVoices?.();
+    if (Array.isArray(list)) return list;
+    return list && typeof list.length === "number" ? Array.from(list) : [];
+  } catch {
+    return [];
+  }
+}
 
 // Apple's novelty and old robotic voices: listed as ordinary English voices, but sound effects rather than speech.
 const NOVELTY = new Set(
@@ -73,7 +85,7 @@ const NOVELTY = new Set(
 );
 // The Eloquence voices (Apple's older synthesizer, kept for screen readers): real speech, but flat and robotic.
 const ELOQUENCE = new Set("eddy,flo,grandma,grandpa,reed,rocko,sandy,shelley".split(","));
-const baseName = (voice) => voice.name.replace(/\s*\(.*\)\s*$/, "").trim().toLowerCase();
+const baseName = (voice) => String(voice.name ?? "").replace(/\s*\(.*\)\s*$/, "").trim().toLowerCase();
 // A voice's language and region, from its tag ("nl-NL", "en_GB").
 const tagOf = (voice) => voice.lang.replace("_", "-").toLowerCase().split("-");
 /** Whether a voice speaks a language (lang/index.js voiceSpeaks: "tl" takes fil-PH voices too; "zh" never Hong Kong's). */
@@ -92,16 +104,15 @@ export function deviceVoices(lang, { preferRegion = [] } = {}) {
     (ELOQUENCE.has(baseName(voice)) ? 4 : 0) +
     (voice.localService ? 0 : 0.5) +
     (preferRegion.length && !preferRegion.includes(region(voice)) ? 0.25 : 0);
-  return synth
-    .getVoices()
-    .filter((voice) => speaks(code)(voice) && !NOVELTY.has(baseName(voice)))
-    .sort((a, b) => rank(a) - rank(b) || a.name.localeCompare(b.name));
+  return deviceVoiceList()
+    .filter((voice) => voice?.lang && speaks(code)(voice) && !NOVELTY.has(baseName(voice)))
+    .sort((a, b) => rank(a) - rank(b) || String(a.name ?? "").localeCompare(String(b.name ?? "")));
 }
 
 /** This device's voices for a language ("nl") (the list fills in a moment after the page loads, and can change). */
 export function voicesFor(code) {
   if (!synth) return [];
-  return synth.getVoices().filter(speaks(code));
+  return deviceVoiceList().filter((voice) => voice?.lang && speaks(code)(voice));
 }
 
 /** This device's voices for the language you're learning. */
@@ -111,7 +122,11 @@ export const targetVoices = () => voicesFor(learning());
 export const dutchVoices = () => voicesFor("nl");
 
 if (synth) {
-  synth.addEventListener?.("voiceschanged", () => listeners.forEach((fn) => fn()));
+  // Nothing here may throw while the module loads: every page that can speak imports it, Study's session among them, and the app's
+  // start with it.
+  try {
+    synth.addEventListener?.("voiceschanged", () => listeners.forEach((fn) => fn()));
+  } catch {}
   // Some browsers never fire voiceschanged; look again a few times while the list is still empty.
   let tries = 0;
   const poll = () => {
@@ -325,7 +340,9 @@ export function unlockAudio() {
   }
   if (synth && !unlockAudio.spoke) {
     unlockAudio.spoke = true;
-    synth.speak(new SpeechSynthesisUtterance(""));
+    try {
+      synth.speak(new SpeechSynthesisUtterance(""));
+    } catch {}
   }
 }
 

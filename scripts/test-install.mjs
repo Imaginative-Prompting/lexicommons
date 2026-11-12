@@ -89,8 +89,9 @@ test("more apps' own browsers: TikTok, X, an iPhone app's plain web view (YouTub
   eq(detect({ ua: UA.ipadDesktop, maxTouchPoints: 5 }).id, "ios-safari");
 });
 
-test("where progress is kept (shell/keep-rules.js): an iPhone's browser, another app's browser, the Home Screen app opening empty; nowhere else", () => {
-  const kind = (name, more = {}, opts) => keepKind(detect({ ua: UA[name], ...more }), opts);
+test("where progress is kept (shell/keep-rules.js), on a site whose account keeps no copy: an iPhone's browser, another app's browser, the Home Screen app opening empty; nowhere else", () => {
+  // (The rules as they stand while progress lives in the browser alone: kept: false. With the account keeping its copy they say nothing, below.)
+  const kind = (name, more = {}, opts) => keepKind(detect({ ua: UA[name], ...more }), { kept: false, ...opts });
   eq(kind("iphoneSafari26"), "ios-browser");
   eq(kind("iphoneSafari18"), "ios-browser");
   eq(kind("iphoneChrome"), "ios-browser", "Chrome on an iPhone keeps its own, too");
@@ -117,7 +118,8 @@ test("the keep-here lines go the day the account keeps its own copy of your prog
   const says = keepKind(detect({ ua: UA.iphoneSafari26 })) !== null;
   ok(!(kept && says), "the server keeps an account's progress now (/api/account/sync), and keep-rules.js still tells learners their progress stays in the browser: set KEPT_WITH_ACCOUNT and take the notes out");
   // The control: the same rule on a server that has the route, with the notes as they are today.
-  ok(/["'`]\/api\/account\/sync/.test(`app.get("/api/account/sync/list", …)`) && (KEPT_WITH_ACCOUNT || says), "control: the route's shape is found, and today the notes still say something");
+  ok(/["'`]\/api\/account\/sync/.test(`app.get("/api/account/sync/list", …)`) && keepKind(detect({ ua: UA.iphoneSafari26 }), { kept: false }) === "ios-browser", "control: the route's shape is found, and with no copy kept the notes say something");
+  ok(kept === KEPT_WITH_ACCOUNT, `the switch (${KEPT_WITH_ACCOUNT}) and the server (${kept ? "keeps" : "doesn't keep"} an account's progress) disagree`);
   return kept ? "kept with the account: nothing said" : "not kept with the account yet: the notes stand";
 });
 

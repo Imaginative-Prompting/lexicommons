@@ -205,7 +205,7 @@ await test("a proof from before plain cards came in (rules 3 and 4) still holds 
   const { proofHolds, checkedProof, PACK_CHECKS } = await import("../public/js/study/pack-format.js");
   const pack = base;
   const now = checkedProof(pack, "abc");
-  ok(PACK_CHECKS === 15, `PACK_CHECKS is ${PACK_CHECKS}: these exceptions are for 15 alone`);
+  ok(PACK_CHECKS === 16, `PACK_CHECKS is ${PACK_CHECKS}: these exceptions are for 16 alone`);
   ok(proofHolds(now, pack, "abc"), "today's");
   ok(proofHolds({ ...now, checks: 4 }, pack, "abc"), "rules 4, no cards");
   ok(proofHolds({ ...now, checks: 3 }, pack, "abc"), "rules 3, no cards or lessons");
@@ -236,6 +236,9 @@ await test("a proof from before plain cards came in (rules 3 and 4) still holds 
   ok(proofHolds({ ...now, checks: 13 }, { ...pack, lessons: [], cards: [] }, "abc"), "rules 13");
   // Rules 15 only add a pack's teaches, which a pack checked before can't have (the field was dropped): a proof under 14 is trusted too.
   ok(proofHolds({ ...now, checks: 14 }, { ...pack, lessons: [], cards: [] }, "abc"), "rules 14");
+  // Rules 16 only add a pack's languageDef, which a pack checked before can't have (the field was dropped, its language refused): a proof
+  // under 15 is trusted too.
+  ok(proofHolds({ ...now, checks: 15 }, { ...pack, lessons: [], cards: [] }, "abc"), "rules 15");
   const ru = { ...pack, language: "ru" };
   const ruBefore = JSON.stringify([" ", "lower", [], null]);
   ok(checkedProof(ru, "abc").rules !== ruBefore, `Russian's rules unchanged: ${checkedProof(ru, "abc").rules}`);

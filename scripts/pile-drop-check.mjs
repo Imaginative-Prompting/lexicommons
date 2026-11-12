@@ -6,7 +6,11 @@
 //   cards.js's lx-pile-visit measures, one a task: laid out, then placed and dropped in the next frame) each under 50 ms, their sum beside it, no long
 //   task from its start to its rest, no frame gap over 100 ms, at rest within 3 s (the page's own long
 //   tasks on its first build reported beside it: the page from before has them too);
-// - animations off (the system's reduced motion): the pile laid out at random and still (it never moves), two loads two piles.
+// - animations off (the system's reduced motion): the pile laid out at random and still (it never moves), two loads two piles;
+// - a new theme: the tiles in its paints and on its ground. Words only started are outlines, each the page's ground inside its paint; counted
+//   on the pile's own canvas, after the theme is changed from Settings (Knowledge kept off the screen) and back on Knowledge, and again
+//   changed with Knowledge on the screen, no pixel is the old theme's ground and the tiles' insides are the new one's (the pile from before
+//   read its paints once, when built: black tiles on Paper's white card after Graphite, until a reload).
 // It writes a frame strip of each visit (strip-<n>-visit-<k>.png), a video of the proof run (proof.webm) and the still (still-<n>.png).
 // LOCAL only (it signs up accounts with a virtual passkey); through gpu.py's parallel lane.
 // --files <copy> serves that copy's /js and /css in place of the server's (the app from before fails it).
@@ -283,6 +287,65 @@ try {
   }
   report(elsewhere(loads[0].rest, loads[1].rest) > 0.6, "animations off: two loads, two piles", `${Math.round(elsewhere(loads[0].rest, loads[1].rest) * 100)}% elsewhere`);
   await still.context.close();
+
+  // 4. A new theme. 40 words started and none known well: every tile an outline, the page's ground inside it.
+  const themed = await learner(40);
+  const tp = themed.page;
+  // The page's ground as the pile reads it (cards.js readPaints), as [r, g, b].
+  const groundNow = () =>
+    tp.evaluate((sel) => {
+      const css = getComputedStyle(document.querySelector(sel));
+      const probe = document.createElement("canvas").getContext("2d");
+      probe.fillStyle = css.getPropertyValue("--page-ground").trim() || css.getPropertyValue("--canvas").trim() || "#000";
+      probe.fillRect(0, 0, 1, 1);
+      return Array.from(probe.getImageData(0, 0, 1, 1).data.slice(0, 3));
+    }, PILE);
+  // How many of the pile's own pixels are exactly that color, solid (an outline tile's inside; the canvas around the tiles is clear).
+  const countOf = (rgb) =>
+    tp.evaluate(
+      ([sel, [r, g, b]]) => {
+        const canvas = document.querySelector(`${sel} canvas`);
+        const { data } = canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height);
+        let n = 0;
+        for (let i = 0; i < data.length; i += 4) if (data[i + 3] === 255 && data[i] === r && data[i + 1] === g && data[i + 2] === b) n++;
+        return n;
+      },
+      [PILE, rgb],
+    );
+  const useTheme = (id) => tp.evaluate(async (theme) => (await import("/js/lx/theme.js")).useTheme(theme), id);
+  const themeNow = () => tp.evaluate(() => document.documentElement.getAttribute("data-theme"));
+  await visit(tp);
+  const first = await themeNow();
+  const other = first === "paper" ? "graphite" : "paper";
+  const groundA = await groundNow();
+  const insideA = await countOf(groundA);
+  report(insideA > 20_000 && (await countOf([1, 2, 3])) === 0, `a new theme: the counter counts (in ${first}, the outline tiles' insides are its ground; a color nothing is drawn in counts none)`, `${insideA} px of ${groundA.join(",")}`);
+  // Changed where a learner changes it: Settings → Appearance, Knowledge kept off the screen; then back to Knowledge, the same load.
+  await tp.evaluate(() => ((globalThis.__sameLoad = true), (location.hash = "#settings/appearance")));
+  await tp.waitForFunction(() => location.hash === "#settings/appearance" && !document.querySelector(".lx-know-board"));
+  await useTheme(other);
+  await tp.waitForTimeout(800);
+  await visit(tp);
+  const groundB = await groundNow();
+  const [oldB, insideB] = [await countOf(groundA), await countOf(groundB)];
+  await tp.locator('.lx-know-board [data-card="words"]').screenshot({ path: join(OUT, `theme-${other}-after-settings.png`) });
+  report(
+    (await themeNow()) === other && groundB.join() !== groundA.join() && (await tp.evaluate(() => globalThis.__sameLoad === true)) && oldB === 0 && insideB > insideA / 2,
+    `a new theme from Settings, back on Knowledge (no reload): no tile on ${first}'s ground, their insides ${other}'s`,
+    `${oldB} px still ${groundA.join(",")}; ${insideB} px of ${groundB.join(",")} (were ${insideA})`,
+  );
+  // Changed with Knowledge on the screen (your AI's change to the look, another tab's): the pile is drawn again where it lies.
+  await useTheme(first);
+  let oldC = -1;
+  let insideC = 0;
+  for (const start = Date.now(); Date.now() - start < 5000; await tp.waitForTimeout(150)) {
+    [oldC, insideC] = [await countOf(groundB), await countOf(groundA)];
+    if (oldC === 0 && insideC > insideA / 2) break;
+  }
+  await tp.locator('.lx-know-board [data-card="words"]').screenshot({ path: join(OUT, `theme-${first}-on-the-page.png`) });
+  report(oldC === 0 && insideC > insideA / 2, `a new theme with Knowledge on the screen: no tile on ${other}'s ground within 5 s, their insides ${first}'s`, `${oldC} px still ${groundB.join(",")}; ${insideC} px of ${groundA.join(",")}`);
+  report(!themed.errors.length, "a new theme: no page errors", themed.errors.join(" | "));
+  await themed.context.close();
 } finally {
   await browser.close();
 }

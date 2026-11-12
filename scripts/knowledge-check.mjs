@@ -162,11 +162,11 @@ await stage("evidence from past days: what's due, and a sentence missed yesterda
 
 await stage("Home: the date, Translate either way (what it finds, the way it goes, nothing about an AI when it's nothing), today's session, your progress, keep going", async () => {
   await page.goto(`${BASE}/app/#today`);
-  await page.waitForSelector('[data-part="next-step"]');
+  await page.waitForSelector('[data-part="next-step"]:not([inert])');
   // While the language's lessons are still on their way (packs.js lessonsComing), Home holds its card in the shape it most likely comes in
   // (today.js heldFirstLesson, heldPractice: its words held as skeletons); what it says is read once it's drawn.
   await page.waitForFunction(() => {
-    const card = document.querySelector('[data-part="next-step"]');
+    const card = document.querySelector('[data-part="next-step"]:not([inert])');
     return Boolean(card) && !card.querySelector('[data-part="skeleton"]');
   }, null, { timeout: 20_000 });
   const tabs = await page.locator('[data-part="tab-bar"] [data-part="tab"]:visible').allTextContents();
@@ -174,10 +174,10 @@ await stage("Home: the date, Translate either way (what it finds, the way it goe
   const date = await page.evaluate(() => [document.querySelector(".lx-today-date")?.textContent, new Date().toLocaleDateString([], { weekday: "long", month: "long", day: "numeric" })]);
   assert(date[0] === date[1], `the date: ${date}`);
   const practice = await page.evaluate(async () => (await import("/js/study/plan.js")).studyOverview().practice);
-  const next = await page.locator('[data-part="next-step"]').textContent();
+  const next = await page.locator('[data-part="next-step"]:not([inert])').textContent();
   // The same one thing as Study: Practice, and it starts the same run.
   assert(practice && next.includes("Practice") && next.includes(`about ${practice.minutes} min`), `the next step: ${next}`);
-  assert((await page.locator('[data-part="next-step"]').getByRole("button", { name: "Start" }).count()) === 1, "it starts the day");
+  assert((await page.locator('[data-part="next-step"]:not([inert])').getByRole("button", { name: "Start" }).count()) === 1, "it starts the day");
   // Your progress: the words you understand well, or before there are any the words you've started (as Knowledge's Your words card counts
   // them, home-numbers-check holding the two together), the words over time, the week.
   const numbers = await page.locator('[data-part="stat-tile"] .lx-tile-number').allTextContents();
@@ -256,7 +256,7 @@ await stage("Home: the date, Translate either way (what it finds, the way it goe
   await page.locator('[data-part="app-back"]').click();
   await page.waitForFunction(() => /^#\/?today$/.test(location.hash) && !document.documentElement.hasAttribute("data-translate"));
   // Start goes into the session; leaving it comes back to Today.
-  await page.locator('[data-part="next-step"] [data-part="button"]', { hasText: "Start" }).click();
+  await page.locator('[data-part="next-step"]:not([inert]) [data-part="button"]', { hasText: "Start" }).click();
   await page.waitForSelector(SESSION);
   // (Its close button: the day may open on Type it, where Escape belongs to the field.)
   await page.locator(`${SESSION} [aria-label="End session"]`).click();
@@ -731,7 +731,7 @@ await stage("Home's Last 4 weeks, once all four weeks have words: shown, a bar f
   const firstDay = await page.evaluate(async () => (await import("/js/know/summary.js")).growth({ phrases: true })[0].n);
   assert(firstDay > 0, `four weeks ago still no words (${planted})`);
   await page.goto(`${BASE}/app/#today`);
-  await page.waitForSelector('[data-part="next-step"]');
+  await page.waitForSelector('[data-part="next-step"]:not([inert])');
   const days = page.locator('[data-part="know-link-card"][href="#know"] [data-part="growth-day"]');
   await days.first().waitFor({ timeout: 10_000 });
   assert((await days.count()) === 28, `${await days.count()} days in Last 4 weeks`);

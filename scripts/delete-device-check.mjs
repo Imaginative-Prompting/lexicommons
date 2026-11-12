@@ -115,12 +115,25 @@ say(Boolean(index?.units) && studied.some((s) => s.store.startsWith("lexicommons
 // Clear study progress on this device.
 await page.evaluate(() => (location.hash = "#settings/data"));
 await page.waitForTimeout(1200);
-await twoPresses("Clear study progress on this device", "Press again to clear it");
+// With the account keeping its own copy of your progress (sync.js ACCOUNT_STORE) a clear is the everywhere kind for everyone: a clear on
+// this device alone would come straight back. Its sheet says where it reaches before the press; a site whose account keeps no copy has the
+// two presses it always had.
+const everywhere = await page.locator(here).getByText("Clear study progress everywhere", { exact: true }).count();
+if (everywhere) {
+  await page.locator(here).getByText("Clear study progress everywhere", { exact: true }).first().click();
+  await page.waitForTimeout(600);
+  const asks = await page.locator('[data-part="sheet"]:visible').last().innerText();
+  say(/on this device at once/.test(asks) && /every other device you're signed in on/.test(asks) && /your account's own copy/.test(asks) && /Undo/.test(asks), "Clear study progress everywhere says where it reaches before the press: this device, every other device, the account's own copy, and Undo", asks.replace(/\s+/g, " ").slice(0, 300));
+  await page.getByRole("button", { name: "Clear everywhere" }).click();
+} else await twoPresses("Clear study progress on this device", "Press again to clear it");
 await page.waitForTimeout(4000);
 const cleared = await page.evaluate(STORES);
 report.cleared = cleared;
-const left = cleared.filter((s) => s.store.startsWith("lexicommons-study/") || s.units > 0);
-say(left.length === 0, "Clear study progress on this device: no answer is left, and no unit in the kept word index", told(left));
+// An everywhere clear keeps the rows it took for its Undo (progress.js: "kept" and "clears", 7 days): those two are its own, not answers left.
+const UNDO = ["lexicommons-study/kept", "lexicommons-study/clears"];
+const left = cleared.filter((s) => (s.store.startsWith("lexicommons-study/") && !(everywhere && UNDO.includes(s.store))) || s.units > 0);
+say(left.length === 0, everywhere ? "Clear study progress everywhere: no answer is left on the device but the clear's own Undo copy, and no unit in the kept word index" : "Clear study progress on this device: no answer is left, and no unit in the kept word index", told(left));
+if (everywhere) say(cleared.some((s) => s.store === UNDO[0] && s.rows > 0) || /kept: \d+ row/.test(told(cleared)), "and its Undo copy is there", told(cleared.filter((s) => UNDO.includes(s.store))));
 // Its control: a unit planted in the kept index is found by that reading.
 await page.evaluate(PLANT, ["lexicommons-word-index", "languages", { lang: "zz", schema: 0, model: "", stamp: "", entries: [["w:planted", 1, 1, 1, [], 0, 0, 0]] }]);
 const plantedUnit = (await page.evaluate(STORES)).filter((s) => s.units > 0);

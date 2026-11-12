@@ -161,6 +161,129 @@ export function withArticle(name, { capital = false } = {}) {
   return `${capital ? article[0].toUpperCase() + article.slice(1) : article} ${name}`;
 }
 
+/**
+ * A language Lexicommons doesn't list, as a pack of a learner's names it (study/pack-format.js languageDef): an endangered language, a
+ * dialect, a conlang, one we haven't added. Its code is one of:
+ *   an ISO 639 code we don't list, two or three letters, optionally with a script as ours have one ("kw" Cornish, "nap" Neapolitan, "tlh"
+ *     Klingon): a real tag, so a device's voice or recognizer for it can be found where there is one;
+ *   for one with no ISO code, "und" (undetermined) with private use: "und-x-" and segments of 1 to 8 letters or digits ("und-x-sindarin"). Never
+ *     a bare "x-…": every Intl API refuses a tag of private use alone (a RangeError), and the app hands a language's code to Intl;
+ *   one of ours with private use after it, a dialect of it ("nl-x-gronings"): a language of its own, never mixed into ours.
+ * 32 characters at most. Never one of ours exactly, English, or a region tag ("de-CH": its base is ours, so it's de-x-…; for Swiss German, gsw).
+ */
+export const OWN_LANGUAGE_CODE = /^[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-x(?:-[a-z0-9]{1,8})+)?$/;
+export const OWN_LANGUAGE_LIMITS = { code: 32, name: 40, ends: 4, end: 3 };
+const OWN_DEF_FIELDS = new Set(["name", "direction", "written", "case", "ends"]);
+const ours = (code) => typeof code === "string" && Object.hasOwn(LANGUAGES, code) && !LANGUAGES[code].own;
+
+/** Whether a code names one of the languages Lexicommons lists itself (not a learner's own, registered on this device). */
+export const isOurLanguage = ours;
+/** A learner's own language, registered on this device (useLanguage). */
+export const isOwnLanguage = (code) => typeof code === "string" && Object.hasOwn(LANGUAGES, code) && LANGUAGES[code].own === true;
+/** The languages Lexicommons lists itself, by code: what a list of every language offers (a learner's own are theirs to show apart). */
+export const ourLanguages = () => Object.keys(LANGUAGES).filter((code) => !LANGUAGES[code].own);
+
+/**
+ * What's wrong with an own language's code and its definition ({ name, direction: "ltr" | "rtl", written: "spaces" | "unspaced", case:
+ * "lower" | "any", ends: ["።"] }), as { at, message }, or null when nothing is. at is "language" or "languageDef(.field)".
+ */
+export function ownLanguageProblem(code, def) {
+  const problem = (at, message) => ({ at, message });
+  if (typeof code !== "string" || !code) return problem("language", "A pack names its language's code.");
+  if (code.length > OWN_LANGUAGE_LIMITS.code) return problem("language", `A language's code is ${OWN_LANGUAGE_LIMITS.code} characters at most.`);
+  if (code === "en" || code.startsWith("en-")) return problem("language", "A pack teaches a language other than English.");
+  if (/^x-/i.test(code)) return problem("language", `"${code.slice(0, 32)}" is private use alone, which no browser takes as a language: write it und-${code.slice(0, 26).toLowerCase()} ("undetermined", then yours).`);
+  if (code === "und") return problem("language", '"und" names no language: give yours after it, und-x-<its name> ("und-x-sindarin").');
+  if (ours(code)) return problem("languageDef", `${LANGUAGES[code].name} is one Lexicommons knows: its pack takes no languageDef.`);
+  if (/^[a-z]{2,3}-[A-Z]{2}$|^[a-z]{2,3}-\d{3}$|-[A-Z]{2}(?:-|$)/.test(code))
+    return problem("language", `"${code}" names a region. A dialect is its language's code with private use after it (${code.split("-")[0]}-x-…), or its own ISO 639 code where it has one (Swiss German: gsw).`);
+  if (!OWN_LANGUAGE_CODE.test(code))
+    return problem("language", `"${code.slice(0, 32)}" isn't a language code: an ISO 639 code we don't list ("kw"), one with none ("und-x-sindarin"), or a dialect of one of ours ("nl-x-gronings"), in small letters.`);
+  const base = code.split("-")[0];
+  if (base !== "x" && ours(base) && !code.includes("-x-"))
+    return problem("language", `${LANGUAGES[base].name} is one Lexicommons knows: a dialect of it is ${base}-x-… ("${base}-x-${code.slice(base.length + 1).toLowerCase() || "name"}").`);
+  if (!def || typeof def !== "object" || Array.isArray(def))
+    return problem("languageDef", `language "${code.slice(0, 32)}" isn't one Lexicommons knows: a pack in a language of its own carries languageDef: { name, direction, written, case, ends }.`);
+  const other = Object.keys(def).find((key) => !OWN_DEF_FIELDS.has(key));
+  if (other !== undefined) return problem(`languageDef.${String(other).slice(0, 20)}`, `languageDef has name, direction, written, case and ends only (not "${String(other).slice(0, 20)}").`);
+  const name = typeof def.name === "string" ? def.name.trim() : "";
+  if (!name || name.length > OWN_LANGUAGE_LIMITS.name || /[\u0000-\u001f\u007f<>]/.test(name))
+    return problem("languageDef.name", `languageDef.name is the language's name, 1 to ${OWN_LANGUAGE_LIMITS.name} characters.`);
+  if (def.direction !== undefined && def.direction !== "ltr" && def.direction !== "rtl") return problem("languageDef.direction", 'languageDef.direction is "ltr" or "rtl".');
+  if (def.written !== undefined && def.written !== "spaces" && def.written !== "unspaced")
+    return problem("languageDef.written", 'languageDef.written is "spaces" (words between spaces) or "unspaced" (written without them: each sentence carries its words).');
+  if (def.case !== undefined && def.case !== "lower" && def.case !== "any")
+    return problem("languageDef.case", 'languageDef.case is "lower" (dictionary forms in small letters) or "any" (as written: some capitalized, or no case at all).');
+  if (def.ends !== undefined) {
+    const ends = def.ends;
+    const fine = Array.isArray(ends) && ends.length <= OWN_LANGUAGE_LIMITS.ends && new Set(ends).size === ends.length &&
+      ends.every((end) => typeof end === "string" && end.length >= 1 && end.length <= OWN_LANGUAGE_LIMITS.end && !/[\p{L}\p{N}\s]/u.test(end));
+    if (!fine) return problem("languageDef.ends", `languageDef.ends is up to ${OWN_LANGUAGE_LIMITS.ends} marks that end a sentence besides . ? ! … (each 1 to ${OWN_LANGUAGE_LIMITS.end} characters, no letters, digits or spaces).`);
+  }
+  return null;
+}
+
+/** An own language's definition as kept: every field said, its defaults filled in, so two packs that mean the same language compare equal. */
+export const ownLanguageDef = (def) => ({
+  name: def.name.trim(),
+  direction: def.direction ?? "ltr",
+  written: def.written ?? "spaces",
+  case: def.case ?? "lower",
+  ends: [...(def.ends ?? [])],
+});
+
+/** An own language as the registry holds it: the fields lang/ reads (see the top of this file), from its definition. */
+function ownEntry(code, def) {
+  const d = ownLanguageDef(def);
+  const unspaced = d.written === "unspaced";
+  return Object.freeze({
+    own: true,
+    name: d.name,
+    // A real tag reaches a device's voice and recognizer for it; private use names nothing a device has.
+    locale: code.includes("x-") ? null : code,
+    segmenter: unspaced ? "fixed" : "spaces",
+    separator: unspaced ? "" : " ",
+    lemmaCase: d.case,
+    abbreviations: [],
+    ...(d.ends.length ? { ends: Object.freeze([...d.ends]) } : {}),
+    ...(d.direction === "rtl" ? { direction: "rtl" } : {}),
+    def: Object.freeze(d),
+  });
+}
+
+/**
+ * Adds a learner's own language to this device's registry, so every place that reads a language reads it (its name, direction, how its
+ * words join, its case). "ours" when the code is one Lexicommons lists (nothing changes), "added", "same" when it's there already as this
+ * definition, "differs" when it's there as another (nothing changes: a device keeps one definition of a language). Never on a server: one
+ * serves every account (withOwnLanguage there).
+ */
+export function useLanguage(code, def) {
+  if (ours(code)) return "ours";
+  if (ownLanguageProblem(code, def)) return "differs";
+  const entry = ownEntry(code, def);
+  if (Object.hasOwn(LANGUAGES, code)) return JSON.stringify(LANGUAGES[code].def) === JSON.stringify(entry.def) ? "same" : "differs";
+  LANGUAGES[code] = entry;
+  return "added";
+}
+
+/** Whether a definition is the one this device holds for its code (an own language registered, and the same). */
+export const sameOwnLanguage = (code, def) =>
+  isOwnLanguage(code) && !ownLanguageProblem(code, def) && JSON.stringify(LANGUAGES[code].def) === JSON.stringify(ownLanguageDef(def));
+
+/**
+ * Runs fn() with an own language in the registry, then takes it out again unless it was there before: what a server checks a pack in it
+ * with, synchronously (nothing else runs meanwhile, so no other account ever sees it). A definition with a problem isn't added.
+ */
+export function withOwnLanguage(code, def, fn) {
+  if (ours(code) || Object.hasOwn(LANGUAGES, code) || ownLanguageProblem(code, def)) return fn();
+  LANGUAGES[code] = ownEntry(code, def);
+  try {
+    return fn();
+  } finally {
+    delete LANGUAGES[code];
+  }
+}
+
 /** A language's name ("Dutch"), or its code when it isn't one Lexicommons knows. */
 export const languageName = (code) => LANGUAGES[code]?.name ?? code;
 

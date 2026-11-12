@@ -151,7 +151,9 @@ function fitWhole(list) {
 
 /**
  * Opens a book card's book as it comes up the screen: shut until it's all in view (its foot 24 px clear of the tab bar floating over the screen's
- * foot), open once its top is a quarter of the way down. Returns stop().
+ * foot), open once its top is a quarter of the way down. A book that's all in view with the page at its top (a computer's Home, where it's in
+ * the first screen) is simply open: it rested part-turned there, its pages squeezed, until you scrolled (11 Nov 2026, 1280 × 800).
+ * Returns stop().
  */
 export function bookOpens(card) {
   const book = card?.querySelector(".lx-hb-book");
@@ -173,6 +175,12 @@ export function bookOpens(card) {
     const foot = bar?.height && bar.top > innerHeight / 2 ? bar.top : innerHeight;
     // Open once its top is a quarter of the way down, or, near the page's end, at the highest it can come (the page scrolled to its
     // end): a book on a short page or last on it opens all the way, never left part way. It opens over a quarter screen of scroll at least.
+    const atTop = box.top + (scroller ? scroller.scrollTop : scrollY); // where it is with the page at its top
+    if (atTop + box.height <= foot - 24) {
+      if (last !== 1) book.style.setProperty("--open", "1");
+      last = 1;
+      return;
+    }
     const reach = scroller ? box.top - Math.max(0, scroller.scrollHeight - scroller.clientHeight - scroller.scrollTop) : -Infinity;
     const end = Math.max(innerHeight * 0.25, reach);
     const start = Math.max(foot - 24 - box.height, end + innerHeight * 0.25);

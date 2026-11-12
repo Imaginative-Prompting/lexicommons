@@ -259,7 +259,9 @@ const STORE_SHORT = { google: "Drive", dropbox: "Dropbox", onedrive: "OneDrive" 
 /** Settings' Storage row, naming the stores this site offers. */
 const storageRow = () => {
   const on = Object.keys(PROVIDERS).filter((id) => isConnected(id));
-  return ui.listRow({ symbol: "cloud-q", icon: "cloud", title: "Sync across devices", value: on.length ? on.map((id) => STORE_SHORT[id]).join(", ") : "Off", href: "#settings/storage" });
+  // Your progress and packs are with your account wherever the site keeps its copy (sync.js ACCOUNT_STORE); a storage of your own carries the rest.
+  const account = sync.syncTargets().some((t) => t.id === sync.ACCOUNT_STORE);
+  return ui.listRow({ symbol: "cloud-q", icon: "cloud", title: "Sync across devices", value: [account ? "Your account" : null, ...on.map((id) => STORE_SHORT[id])].filter(Boolean).join(", ") || "Off", href: "#settings/storage" });
 };
 
 const PROVIDER_NAMES = { google: "Google", github: "GitHub", apple: "Apple" };
@@ -1030,7 +1032,8 @@ function storage(page) {
   const state = el("ul", { part: "list" });
   const kept = el("ul", { part: "list" });
   const renderSync = (status = sync.syncStatus()) => {
-    const names = status.targets.map((t) => t.name).join(" and ");
+    // "Through your account", mid-sentence; a storage by its own name.
+    const names = status.targets.map((t) => (t.id === sync.ACCOUNT_STORE ? "your account" : t.name)).join(" and ");
     state.replaceChildren(
       ui.listRow({
         title: status.syncing ? "Syncing…" : !status.targets.length ? "Not syncing" : status.at ? `Last synced ${when(status.at)}` : "Not synced yet",
@@ -1082,7 +1085,12 @@ function storage(page) {
     sheet.lxOpen();
   };
   page.replaceChildren(
-    ui.pageTitle("Sync across devices", "Your progress and packs, the same on each of your devices, through your own cloud."),
+    ui.pageTitle(
+      "Sync across devices",
+      sync.syncTargets().some((t) => t.id === sync.ACCOUNT_STORE)
+        ? "Your progress and your packs are kept with your account, the same on every device you sign in on. Connect your own cloud to keep your packs' sounds in step too."
+        : "Your progress and packs, the same on each of your devices, through your own cloud.",
+    ),
     el("section", { class: "lx-group" }, list),
     msg,
     el("section", { class: "lx-group" }, state, el("ul", { part: "list" }, ui.listRow({ title: "What's kept there", opens: "sheet", onclick: whatsKept }))),
@@ -1098,10 +1106,12 @@ const day = (ms) => new Date(ms).toLocaleDateString(undefined, { month: "short",
 /** What syncs, said after "live on this device." (nothing without a storage connected). */
 function syncedNote() {
   const status = sync.syncStatus();
-  if (!status.targets.length) return "";
+  // (Your account's own copy carries your progress, said where this note goes; this is about a storage of your own.)
+  const own = status.targets.filter((t) => t.id !== sync.ACCOUNT_STORE);
+  if (!own.length) return "";
   const labels = status.kinds.map((k) => k.label.toLowerCase());
   const list = labels.length > 1 ? `${labels.slice(0, -1).join(", ")} and ${labels.at(-1)}` : labels[0];
-  return ` With ${status.targets.map((t) => t.name).join(" and ")} connected, your ${list} sync between your devices.`;
+  return ` With ${own.map((t) => t.name).join(" and ")} connected, your ${list} sync between your devices.`;
 }
 
 /**
@@ -1110,7 +1120,12 @@ function syncedNote() {
  */
 function clearProgressRows(page, msg) {
   const targets = sync.syncTargets();
-  const names = targets.map((t) => t.name).join(" and ");
+  // Where a clear reaches, in words: with your account keeping its own copy, every device you're signed in on and that copy; and any
+  // storage of your own that's connected.
+  const kept = targets.some((t) => t.id === sync.ACCOUNT_STORE);
+  const own = targets.filter((t) => t.id !== sync.ACCOUNT_STORE).map((t) => t.name);
+  const names = kept ? ["your account's own copy", ...own].join(" and ") : own.join(" and ");
+  const reach = kept ? `on every other device you're signed in on at its next sync, and in ${names}` : `on every device using ${names} at its next sync`;
   const again = () => data(page);
   const undo = async (id) => {
     try {
@@ -1145,7 +1160,7 @@ function clearProgressRows(page, msg) {
         el(
           "p",
           {},
-          `This clears your study progress up to now: on this device at once (${answers(count)}), and on every device using ${names} at its next sync. Answers made after it stay. For ${UNDO_CLEAR_DAYS} days you can bring it back with Undo, here or on any of those devices.`,
+          `This clears your study progress up to now: on this device at once (${answers(count)}), and ${reach}. Answers made after it stay. For ${UNDO_CLEAR_DAYS} days you can bring it back with Undo, here or on any of those devices.`,
         ),
         el(
           "div",
@@ -1160,6 +1175,8 @@ function clearProgressRows(page, msg) {
                 msg.say(`Nothing was cleared: clearing everywhere goes through your account, and it couldn't be reached (${error.message}).`, "wrong");
                 return;
               }
+              // What was worked out from it and kept (the word index, the plan's parts) goes with it, as a clear on this device alone takes it.
+              await forgetDerived();
               const [batch] = clearedProgress();
               sheet.lxClose();
               sync.syncNow();
@@ -1173,7 +1190,7 @@ function clearProgressRows(page, msg) {
       page.append(sheet);
       sheet.lxOpen();
     };
-    rows.push(ui.listRow({ title: "Clear study progress everywhere", sub: `${answers(allEvidence().length)} so far, on every device using ${names}`, trailing: el("span"), onclick: confirm }));
+    rows.push(ui.listRow({ title: "Clear study progress everywhere", sub: kept ? `${answers(allEvidence().length)} so far, on every device and in your account's copy` : `${answers(allEvidence().length)} so far, on every device using ${names}`, trailing: el("span"), onclick: confirm }));
   }
   for (const batch of clearedProgress()) {
     rows.push(
@@ -1275,7 +1292,9 @@ function data(page) {
         // Only with some to delete (they come from an AI, connected now or once).
         practicesRow,
       ),
-      ...(sync.syncTargets().length ? [el("p", { part: "group-note" }, `Your study progress and your texts live on this device.${syncedNote()}`)] : []),
+      ...(sync.syncTargets().length
+        ? [el("p", { part: "group-note" }, `${sync.syncTargets().some((t) => t.id === sync.ACCOUNT_STORE) ? "Your study progress and your packs are kept with your account, and your texts live on this device." : "Your study progress and your texts live on this device."}${syncedNote()}`)]
+        : []),
     ),
 
   );
@@ -1285,6 +1304,30 @@ function data(page) {
 /** What's kept on the device that was worked out from progress and packs (the word index, the plan's parts): it goes when they do. */
 async function forgetDerived() {
   await Promise.all([import("../know/word-index.js").then((m) => m.forgetWordIndex()), import("../study/plan-kept.js").then((m) => m.forgetPlanKept())]).catch(() => {});
+}
+
+/**
+ * Everything Lexicommons keeps on this device, gone: progress, practices, packs, texts, the word bank, settings, the look, storage
+ * connections, and what was worked out from them. After an account is deleted, and when another account takes the device for its own
+ * progress (shell/other-owner.js). Nothing here asks the server anything.
+ */
+export async function clearThisDevice() {
+  await clearProgress();
+  await clearPractices();
+  await clearPacks();
+  // Translate's index kept on this device holds your packs' sentences.
+  await import("../translate/translate.js").then((m) => m.forgetTranslateIndex()).catch(() => {});
+  await clearReading();
+  await clearRemovedTexts();
+  clearBanks();
+  resetStudySettings();
+  await theme.resetLook().catch(() => {});
+  await theme.clearHistory();
+  for (const provider of Object.keys(PROVIDERS)) if (isConnected(provider)) await disconnect(provider).catch(() => {});
+  await forgetKeys().catch(() => {});
+  // Last, so nothing above brings them back: what was worked out from the progress and the packs, and kept.
+  await forgetDerived();
+  for (const key of Object.keys(localStorage)) if (key.startsWith("lx.") || key.startsWith("lc_")) localStorage.removeItem(key);
 }
 
 /** Deleting your account: red from the start, asking once on the row (Account's page, the 6 Nov audit: it lives only there). */
@@ -1301,23 +1344,7 @@ function deleteAccountGroup(msg) {
           if (sampleOn()) return msg.say("Turn the sample learner off first, in Admin.", "wrong");
           try {
             await del("/api/me", { confirm: "delete my account" });
-            // And everything Lexicommons keeps on this device.
-            await clearProgress();
-            await clearPractices();
-            await clearPacks();
-            // Translate's index kept on this device holds your packs' sentences.
-            await import("../translate/translate.js").then((m) => m.forgetTranslateIndex()).catch(() => {});
-            await clearReading();
-            await clearRemovedTexts();
-            clearBanks();
-            resetStudySettings();
-            await theme.resetLook().catch(() => {});
-            await theme.clearHistory();
-            for (const provider of Object.keys(PROVIDERS)) if (isConnected(provider)) await disconnect(provider).catch(() => {});
-            await forgetKeys().catch(() => {});
-            // Last, so nothing above brings them back: what was worked out from the progress and the packs, and kept.
-            await forgetDerived();
-            for (const key of Object.keys(localStorage)) if (key.startsWith("lx.") || key.startsWith("lc_")) localStorage.removeItem(key);
+            await clearThisDevice();
             location.assign("/login?deleted=1");
           } catch (error) {
             msg.say(error.message, "wrong");

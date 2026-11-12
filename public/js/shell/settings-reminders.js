@@ -71,7 +71,11 @@ export function remindersSettings(page, params = {}) {
         ui.button("Turn on reminders", {
           variant: "go",
           block: true,
-          onclick: async () => {
+          onclick: async (event) => {
+            // Working until it answers (the phone's prompt can take its time): no second press meanwhile.
+            const button = event?.currentTarget ?? null;
+            if (button?.disabled) return;
+            if (button) button.disabled = true;
             say("");
             try {
               const result = await turnOn();
@@ -79,6 +83,8 @@ export function remindersSettings(page, params = {}) {
               draw();
             } catch (error) {
               say(error.message);
+            } finally {
+              if (button?.isConnected) button.disabled = false;
             }
           },
         }),

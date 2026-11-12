@@ -150,7 +150,7 @@ function pileIn(holder, { lang, rows, number, label, card }) {
   let loaded = false;
   let built = "";
   let view = { s: 1, ox: 0, oy: 0 };
-  let api = { again: () => {}, paint: () => {} };
+  let api = { again: () => {}, paint: () => {}, look: () => {} };
   // When a visit's drop has begun, and when it's down (and which you know well worked out): the page's other cards wait for these (page.js).
   let moved;
   let rested;
@@ -187,23 +187,33 @@ function pileIn(holder, { lang, rows, number, label, card }) {
     canvas.style.height = `${H}px`;
     holder.replaceChildren(canvas);
     const ctx = canvas.getContext("2d");
-    const css = getComputedStyle(holder);
-    const v = (name) => css.getPropertyValue(name).trim();
-    const face = v("--type-head") || "sans-serif";
-    const paints = {
-      sun: { face: v("--art-sun"), deep: v("--art-sun-deep"), ink: v("--art-ink") },
-      teal: { face: v("--art-teal"), deep: v("--art-teal-deep"), ink: v("--art-ink") },
-      violet: { face: v("--art-violet"), deep: v("--art-violet-deep"), ink: v("--art-paper") },
-      paper: { face: v("--art-paper"), deep: v("--art-paper-deep"), ink: v("--art-ink"), line: true },
-    };
+    // The theme's paints and the page's ground as they are now: read when the pile is built, and again on a new theme (relook, below).
     // An outline tile is the page's ground inside its paint: the paint's tone that stands out on this ground (its face on a dark page, its deep
     // tone on a light one), so it's the same tile, quieter, never a second layer.
-    const ground = v("--page-ground") || v("--canvas") || "#000";
-    const probe = document.createElement("canvas").getContext("2d");
-    probe.fillStyle = ground;
-    probe.fillRect(0, 0, 1, 1);
-    const [gr, gg, gb] = probe.getImageData(0, 0, 1, 1).data;
-    const darkGround = (0.2126 * gr + 0.7152 * gg + 0.0722 * gb) / 255 < 0.5;
+    let face;
+    let paints;
+    let ground;
+    let darkGround;
+    let look = "";
+    const readPaints = () => {
+      const css = getComputedStyle(holder);
+      const v = (name) => css.getPropertyValue(name).trim();
+      face = v("--type-head") || "sans-serif";
+      paints = {
+        sun: { face: v("--art-sun"), deep: v("--art-sun-deep"), ink: v("--art-ink") },
+        teal: { face: v("--art-teal"), deep: v("--art-teal-deep"), ink: v("--art-ink") },
+        violet: { face: v("--art-violet"), deep: v("--art-violet-deep"), ink: v("--art-paper") },
+        paper: { face: v("--art-paper"), deep: v("--art-paper-deep"), ink: v("--art-ink"), line: true },
+      };
+      ground = v("--page-ground") || v("--canvas") || "#000";
+      const probe = document.createElement("canvas").getContext("2d");
+      probe.fillStyle = ground;
+      probe.fillRect(0, 0, 1, 1);
+      const [gr, gg, gb] = probe.getImageData(0, 0, 1, 1).data;
+      darkGround = (0.2126 * gr + 0.7152 * gg + 0.0722 * gb) / 255 < 0.5;
+      look = JSON.stringify([face, paints, ground]);
+    };
+    readPaints();
 
     const n = tiles.length;
     const average = tiles.reduce((sum, tile) => sum + tile.w * TILE_H, 0) / Math.max(1, n) / 0.75;
@@ -424,6 +434,21 @@ function pileIn(holder, { lang, rows, number, label, card }) {
       looping = true;
       requestAnimationFrame(tick);
     };
+    // A new theme (know/page.js tells the pile): every tile is on a sheet in the paints and on the ground it was built with, and stayed so
+    // until a reload (11 Nov 2026: black outline tiles on Paper's white card, the pile built in Graphite). Read again; when they differ,
+    // every tile is drawn again where it lies, and shown once all of them are (never half in each theme). Off the page nothing can be read:
+    // it's read when the page comes back (again), and only then, so an ordinary return reads no style.
+    let lookPending = false;
+    const relook = () => {
+      if (!holder.isConnected) return void (lookPending = true);
+      lookPending = false;
+      const before = look;
+      readPaints();
+      if (look === before || !sheets) return;
+      newSheets(tiles);
+      holdDraw = true;
+      kick();
+    };
     // Down: which words were outlines kept.
     const atRest = () => {
       holder.dataset.pile = knownDone ? "ready" : "resting";
@@ -540,9 +565,11 @@ function pileIn(holder, { lang, rows, number, label, card }) {
 
     api = {
       paint: () => draw(performance.now()),
+      look: relook,
       // Coming back to the page: a new visit, a new pile dropped in; back from Your words, the same visit, the pile as it lay, and which you know
-      // well looked at again. (A word new since, or one gone, draws the card again: page.js.)
+      // well looked at again. (A word new since, or one gone, draws the card again: page.js.) A theme changed meanwhile, first.
       again: () => {
+        if (lookPending) relook();
         const own = toOwnPage;
         toOwnPage = false;
         if (!arrived) return;
@@ -564,6 +591,7 @@ function pileIn(holder, { lang, rows, number, label, card }) {
   });
   return {
     again: () => api.again(),
+    look: () => api.look(),
     get moving() {
       return moving;
     },
@@ -695,6 +723,10 @@ export function settleAgain(card) {
  * When the Words card's pile has begun its way in (moving), and when it's first at rest (free): what the page's other cards wait for, so
  * nothing holds up its frames. Resolved at once for a card with no pile.
  */
+/** A new theme: the Words card's pile drawn again in its paints and on its ground (pileIn's relook). */
+export function pileLook(card) {
+  piles.get(card)?.look();
+}
 export const pileMoving = (card) => piles.get(card)?.moving ?? Promise.resolve();
 export const pileFree = (card) => piles.get(card)?.free ?? Promise.resolve();
 

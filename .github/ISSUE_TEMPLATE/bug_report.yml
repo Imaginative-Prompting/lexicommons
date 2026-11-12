@@ -1,0 +1,52 @@
+name: Bug report
+description: Something in Lexicommons doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **The quickest way to report a bug is in the app: Settings → Report a bug.** It sends the screen you were on and your device's details along with what you write, and it shows you all of it before anything is sent. If you're signed out, the sign-in page has the same link at its foot.
+
+        If you'd rather use GitHub, this form works too. Please leave out anything private, such as your email or your account's name.
+
+        A security problem goes to [SECURITY.md](https://github.com/Imaginative-Prompting/lexicommons/blob/main/SECURITY.md)'s private routes, not an issue.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen again
+      description: The steps, if you know them.
+      placeholder: |
+        1. Open Study
+        2. Start lesson 12
+        3. …
+    validations:
+      required: false
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      description: Say if it's the app on your Home Screen.
+      placeholder: iPhone 15, the app on the Home Screen
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: The language you're learning
+      placeholder: Dutch
+    validations:
+      required: false
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drop a picture here if it helps.
+    validations:
+      required: false

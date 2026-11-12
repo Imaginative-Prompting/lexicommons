@@ -321,7 +321,11 @@ function afterLessons(start) {
   };
 }
 
-function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = {}) {
+/**
+ * tryOut (the try-out page, /try/): its summary says what the lesson taught and nothing that promises more (no streak, no "they're yours", no
+ * reminder ask, nothing about keeping it), and its bar is the page's own actions ([{ label, variant, onclick }]), each ending the session first.
+ */
+function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", tryOut = null } = {}) {
   const plan = planSession(mode, arg);
   // The session's drawings, got ready as it starts, so a picture question draws at once. Any that can't be had: that question's in words.
   const drawingsReady = new Set();
@@ -458,13 +462,49 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
   // placed in the screen's middle as the step is first fitted (--stage-top, the room over it) and held there for the step, so a result
   // filling the bar never moves the step; the room under the block takes it (docs/design-system.md, "Tablets and computers").
   const stage = globalThis.matchMedia?.("(min-width: 700px) and (min-height: 640px)");
+  // On the stage a question is fitted with its result's room held under it, so the result comes into room that's already there and
+  // nothing in the step resizes or moves as you answer (11 Nov 2026: at 1280 × 800 the picture question's tiles went from 352 px wide to
+  // 278 as its result came; a phone gets away with it, its bar sliding up over the step's foot). The room is a right answer's result in
+  // this game as this session last showed it, the shortest of them; before it has shown one, a plain result's (its two lines, its "?" and
+  // Continue), measured at the bar's width on a stand-in bar that's never shown, with 4 px over. What a result may lie over anyway (the step's empty foot, down
+  // to 8 px under its last part: liesOver) counts as room it has.
+  const resultRooms = new Map(); // a game's kind → its right result's height in the bar, the shortest seen
+  const plainResults = new Map(); // the bar's width → a plain result's height at it
+  const plainRoom = () => {
+    // (At the bar's own width: a result's lines wrap by it, and the picture question's bar is narrower than the rest, study-screens.css.)
+    const width = Math.round(bar.getBoundingClientRect().width);
+    if (plainResults.has(width)) return plainResults.get(width);
+    const head = ui.feedback("right", "–", "–");
+    head.removeAttribute("role");
+    const more = el("span", { part: "learn-more" });
+    more.style.cssText = "flex: none; width: 44px; height: 44px;";
+    const standIn = ui.answerBar();
+    standIn.setAttribute("data-meaning", "right");
+    standIn.setAttribute("aria-hidden", "true");
+    standIn.inert = true;
+    standIn.style.cssText = `position: absolute; left: 0; top: 0; width: ${width}px; margin: 0; visibility: hidden; pointer-events: none;`;
+    standIn.firstElementChild.append(el("div", { class: "lx-answer-body" }, el("div", { class: "lx-answer-head" }, head, more)), el("div", { class: "lx-answer-actions" }, ui.button("Continue", { variant: "white", size: "lg", block: true })));
+    root.append(standIn);
+    const room = standIn.offsetHeight + 4;
+    standIn.remove();
+    plainResults.set(width, room);
+    return room;
+  };
+  const resultRoom = () => resultRooms.get(root.getAttribute("data-step")) ?? plainRoom();
   let fitFresh = true;
   const fit = () => {
+    bar.style.minHeight = "";
     // A summary scrolls: its words and the bar above it keep their size.
     if (activity.querySelector('[data-part="session-summary"]')) {
       root.removeAttribute("data-fit");
       root.removeAttribute("data-keys-fit");
       root.style.removeProperty("--stage-top");
+      // On the stage (a tablet, a computer) it's one block in the screen's middle with its bar, as every step before it was, when it
+      // fits: at the window's top it left half a large window empty under it. (It scrolls on a phone, and here when it's too tall.)
+      if (stage?.matches && activity.scrollHeight <= activity.clientHeight + 1) {
+        const room = root.clientHeight - sessionBar.offsetHeight - activity.offsetHeight - bar.offsetHeight;
+        if (room > 1) root.style.setProperty("--stage-top", `${Math.floor(room / 2)}px`);
+      }
       return;
     }
     const fresh = fitFresh;
@@ -478,10 +518,21 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     answerFirst(false);
     let level = fresh ? 0 : Number(root.getAttribute("data-fit") ?? 0);
     fitFresh = false;
+    // (A question only: a game not yet answered, its bar holding no result or hint.)
+    const holds = Boolean(stage?.matches) && !barHoldsResult && !current?.answered && !bar.hasAttribute("data-meaning") && Boolean(activity.querySelector(".lx-game"));
+    const hold = () => {
+      bar.style.minHeight = "";
+      if (!holds) return;
+      const foot = activity.getBoundingClientRect().top - activity.scrollTop + activity.scrollHeight;
+      const clear = Math.max(0, Math.floor(foot - (lowestNow() + 8)));
+      const room = resultRoom() - clear;
+      if (room > bar.offsetHeight) bar.style.minHeight = `${room}px`;
+    };
     const apply = () => {
       if (level) root.setAttribute("data-fit", String(level));
       else root.removeAttribute("data-fit");
       layActions();
+      hold();
       for (const part of activity.querySelectorAll("[data-reserves]")) part.lxReserve?.();
     };
     if (fresh) orderFit(false);
@@ -560,6 +611,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
   // The screen changing (turned, the keys coming or going): the step fits what there is now, moving as one to get there.
   const onScreen = () => {
     bar.style.marginTop = "";
+    plainResults.clear();
+    resultRooms.clear();
     unhold();
     refit();
     if (barHoldsResult) holdNear();
@@ -597,8 +650,19 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
   // (The instruction's and the sentence's look too: at a tighter fit their words wrap differently, and they crossfade on their way. And
   // Tinta's beside them: his as he was, for his way out.)
   const WRAPS = '[data-part="activity-prompt"] > p, [data-part="activity-prompt"] > span, [data-part="activity-prompt"] > [data-part="character"]';
-  const rememberStep = () => {
-    stepBefore = { step: current, parts: motion.measure(stepParts()), looks: motion.keepLooks(activity.querySelectorAll(WRAPS)) };
+  const rememberStep = (event) => {
+    const parts = motion.measure(stepParts());
+    // The part being pressed is kept where it stands, not where the press has it: a choice sinks 2 px while it's held down (its :active
+    // rule), and measured so, a press on the game's first choice read as the whole game having moved 2 px (liesOver): the result no
+    // longer lay over the step's room, the step was fitted again, and on a computer the picture tiles went from 400 px wide to 382 on a
+    // right answer on the first tile, where an answer on any other moved nothing.
+    const pressed = event?.target instanceof Element ? [...parts.keys()].find((part) => part.contains(event.target)) : null;
+    if (pressed) {
+      const { a, b, c, d, e, f } = new DOMMatrixReadOnly(getComputedStyle(pressed).transform);
+      const at = parts.get(pressed);
+      if (a === 1 && b === 0 && c === 0 && d === 1 && (e || f)) parts.set(pressed, new DOMRect(at.x - e, at.y - f, at.width, at.height));
+    }
+    stepBefore = { step: current, parts, looks: motion.keepLooks(activity.querySelectorAll(WRAPS)) };
   };
   root.addEventListener("pointerdown", rememberStep, true);
   document.addEventListener("keydown", rememberStep, true);
@@ -715,6 +779,11 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     else inner.replaceChildren(...parts);
     barHoldsResult = result;
     bar.style.marginTop = "";
+    if (result) bar.style.minHeight = "";
+    if (meaning === "right" && stage?.matches) {
+      const kind = root.getAttribute("data-step");
+      resultRooms.set(kind, Math.min(resultRooms.get(kind) ?? Infinity, bar.offsetHeight));
+    }
     barLiesFrom = null;
     if (!result) {
       holdTop = null;
@@ -1693,16 +1762,19 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     // memory while you read the sentence, so the press doesn't wait (a slow load says so, after a second).
     let preparing = false;
     speechApi();
+    // (Held to `shown`, the session's own step, as everything here is: `step` is a card's as a word step reads it. A flag of its own named
+    // `shown` here once hid the step from this callback: on every device Whisper listens on, the step's draw threw "can't access lexical
+    // declaration 'shown' before initialization", and Whisper was never readied while you read, 11 Nov 2026.)
     chooseEngine().then((choice) => {
       if (choice.engine !== "whisper" || current.step !== shown) return;
-      let shown = false;
+      let told = false;
       readyWhisper(choice, (seconds) => {
         if (listener || preparing || current.answered || current.step !== shown || seconds < 1) return;
         status.textContent = loadingText(seconds);
-        shown = true;
+        told = true;
       })
         .then(() => {
-          if (shown && !listener && !preparing && !current.answered && current.step === step) status.textContent = ready;
+          if (told && !listener && !preparing && !current.answered && current.step === shown) status.textContent = ready;
         })
         .catch(() => {});
     });
@@ -1762,7 +1834,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
         mic.lxState("loading");
         status.textContent = loadingText(0);
         try {
-          await readyWhisper(choice, (seconds) => current.step === step && (status.textContent = loadingText(seconds)));
+          await readyWhisper(choice, (seconds) => current.step === shown && (status.textContent = loadingText(seconds)));
         } catch (error) {
           preparing = false;
           mic.lxState(null);
@@ -2179,12 +2251,12 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
       else if (plan.practice) finishedPractice();
       else if (mode === "game") finishedGame();
       else finishedSession();
-      // Something worth keeping is on this device now: ask the browser to keep it (keep-here.js).
-      keepStorage();
+      // Something worth keeping is on this device now: ask the browser to keep it (keep-here.js). (A try-out keeps nothing.)
+      if (!tryOut) keepStorage();
     }
     const moment = momentOf({ before: atStart.streak, after: streakNow(), wordsBefore: atStart.words, wordsAfter: wordsKnown() });
-    // Whether the server can send reminders, asked while the summary's up, so the ask after its Done knows (finish).
-    beforeReminderStep();
+    // Whether the server can send reminders, asked while the summary's up, so the ask after its Done knows (finish). (Not on a try-out.)
+    if (!tryOut) beforeReminderStep();
     updateProgress();
     const graded = results.filter((r) => r === "right" || r === "wrong");
     const right = graded.filter((r) => r === "right").length;
@@ -2245,7 +2317,9 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
     if (tally) edge(tally, "receipt");
     // What a lesson taught, in a line. A lesson of one idea taught no words: it says what it taught.
     const taughtLine =
-      plan.lesson && taught
+      plan.lesson && taught && tryOut
+        ? el("p", { class: "lx-muted" }, `${taught} new ${taught === 1 ? "word" : "words"} in this lesson.`)
+        : plan.lesson && taught
         ? el("p", { class: "lx-muted" }, `${taught} new. They're yours now: they'll come up when you practice.`)
         : plan.lesson && !taught && plan.lesson.idea && !plan.lesson.units.length
           ? el("p", { class: "lx-muted" }, `New: ${plan.lesson.idea.name}. It'll come up when you practice.`)
@@ -2257,14 +2331,25 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
         { part: "session-summary", ...(plan.lesson ? { "data-kind": "lesson" } : plan.practice ? { "data-kind": "practice" } : {}) },
         el("h2", {}, plan.lesson?.full ? "Unit done" : plan.lesson ? "Lesson done" : plan.practice ? "Practice done" : accuracy >= 80 ? "Nicely done" : "Session done"),
         taughtLine,
-        nudge,
-        celebration(moment, { unit: Boolean(plan.lesson?.full) }),
-        tally,
-        // Once, on the first summary, where this browser's progress is about to be left behind (keep-here.js): an iPhone's browser before
-        // the Home Screen app, another app's browser.
-        ...[keepNoteOnce()].filter(Boolean),
+        ...(tryOut
+          ? [tally].filter(Boolean)
+          : [
+              nudge,
+              celebration(moment, { unit: Boolean(plan.lesson?.full) }),
+              tally,
+              // Once, on the first summary, where this browser's progress is about to be left behind (keep-here.js): an iPhone's browser before
+              // the Home Screen app, another app's browser.
+              ...[keepNoteOnce()].filter(Boolean),
+            ].filter(Boolean)),
       ),
     );
+    if (tryOut) {
+      // The try-out's own way on (its next lesson, its end), each ending the session first: no reminder ask, nothing about practice.
+      const actions = tryOut.actions.map(({ label, variant = "gray", onclick }) => ui.button(label, { variant, size: "lg", onclick: () => (end(), onclick()) }));
+      current = { answered: true, continue: () => (end(), tryOut.actions.at(-1)?.onclick()) };
+      setBar(null, el("div", { class: "lx-answer-actions" }, ...actions));
+      return;
+    }
     setBar(null, el("div", { class: "lx-answer-actions" }, again, done));
   }
 
@@ -2273,6 +2358,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up" } = 
   // straight out. (Not a sheet over the page it goes back to: that page has its own moment after a session, Study's Tinta hopping onto the
   // new place, Home's throwing his drip into today's square.)
   function finish() {
+    if (tryOut) return end();
     const bar = (...buttons) => setBar(null, el("div", { class: "lx-answer-actions" }, ...buttons));
     // Done's own press, when a finger or a pointer pressed it just now (not Enter): its second tap, in a double tap, is Done's too.
     const from = lastPress && performance.now() - lastPress.at < 1000 ? lastPress : null;

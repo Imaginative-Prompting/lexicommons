@@ -10,7 +10,7 @@ import { LANGUAGES } from "../lang/index.js";
 import { ITEMS, sentence as itemSentence, sentenceUnits } from "../study/content.js";
 import { conceptSheet } from "../study/after-answer.js";
 import { suggestWay } from "../explore/suggest-way.js";
-import { ideaCards } from "./cards-more.js";
+import { ideaCards, ideasNotes, ideasNotesRead } from "./cards-more.js";
 
 /** A language's ideas in the order to learn them: each after the first idea it builds on (`after`), the rest as they come. */
 function learnOrder(patterns) {
@@ -58,7 +58,9 @@ function stillToCome(lang, met) {
 /** Renders every idea you've met into `page`, and the ones still to come. */
 export function renderIdeas(page) {
   const lang = learning();
+  let withNotes = false; // whether the cards on the page were drawn with the packs' notes read
   const draw = () => {
+    withNotes = ideasNotesRead();
     const ideas = ideaCards({ lang, now: Date.now() });
     const toCome = stillToCome(lang, new Set(ideas.rows.map((row) => row.unit)));
     if (!ideas.rows.length) {
@@ -66,9 +68,12 @@ export function renderIdeas(page) {
       return;
     }
     const list = el("div", { class: "lx-idea-cards" }, ideas.rows.map(ideas.card));
-    ideas.arrive(list);
+    ideas.arrive(list, { every: true });
     page.replaceChildren(el("div", { class: "lx-ideas-page" }, ui.pageTitle(t("know.ideas.title"), t("know.ideas.count", { count: ideas.rows.length })), list, toCome));
   };
   draw();
+  // Drawn at once, so the page is there in its first frame. Each card is drawn on the sentence the packs' notes mark: opened straight at this page,
+  // before anything read them, it's drawn again once they're read.
+  if (!withNotes) ideasNotes().then(() => page.isConnected && !withNotes && draw());
   return { title: t("know.ideas.title"), back: { href: "#know", label: t("know.week.back") }, refresh: draw };
 }

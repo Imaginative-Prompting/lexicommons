@@ -5,7 +5,8 @@
 // that can't be sent (offline) is dropped. Imported first by shell/main.js, so it's listening before anything else runs.
 
 import { cleanReport, ERROR_LIMITS, groupKey, RELOAD, startedAgainByItself } from "./error-clean.js";
-import { sampleOn } from "../study/sample-mode.js";
+import { crashedLastTime } from "../speech/probe-guard.js";
+import { demoPage, sampleOn } from "../study/sample-mode.js";
 
 const sent = new Set();
 // Noise that says nothing about our code: the browser's ResizeObserver note, and a fetch the page itself called off.
@@ -22,8 +23,9 @@ function version() {
 
 function send(kind, error, message, file, line, col) {
   try {
-    // Nothing goes out while the sample learner is on (study/sample-mode.js).
-    if (sent.size >= ERROR_LIMITS.perPage || sampleOn()) return;
+    // Nothing goes out while the sample learner is on (study/sample-mode.js); the try-out's errors do (/api/errors takes a signed-out page's,
+    // checked and capped as ever), so a stranger's crash on /try/ reaches us too.
+    if (sent.size >= ERROR_LIMITS.perPage || (sampleOn() && !demoPage())) return;
     const isError = error instanceof Error;
     if (isError && error.name === "AbortError") return;
     const raw = isError ? error.message : message ?? (error === undefined ? "" : String(error));
@@ -94,6 +96,14 @@ try {
   const installed = matchMedia("(display-mode: standalone)").matches || matchMedia("(display-mode: fullscreen)").matches || navigator.standalone === true;
   const touch = matchMedia("(pointer: coarse)").matches;
   if (startedAgainByItself({ type, installed, touch, own, lastSeen })) send("reload", undefined, RELOAD.message);
+} catch {
+  // A report must never be the next error.
+}
+
+// A native probe that ended the page last time (speech/probe-guard.js: its mark still there at this start): told once, by name, and never run
+// on this device again.
+try {
+  for (const probe of crashedLastTime()) send("probe-crash", undefined, probe);
 } catch {
   // A report must never be the next error.
 }

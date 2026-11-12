@@ -1604,11 +1604,17 @@ const onScreenNow = (node) => {
 
 /**
  * What was held arrives (ui.held): it takes the holder's place in the same box and fades in. A height off from the holder's by more than
- * 1 px marks the node data-holds-mismatch="<before>→<after>" for the gate, and says so in the console. A holder no longer on the page: the
- * node is returned as it is. Returns node.
+ * 1 px marks the node data-holds-mismatch="<before>→<after>" for the gate, and says so in the console. A holder in a page kept off the screen
+ * (a tab's page drawn while another is shown): the node takes its place there, with nothing to measure or fade (until 11 Nov 2026 it was
+ * returned unplaced, and Explore's pick kept its held cover for good). A holder removed for good (no parent): the node is returned as it is.
+ * Returns node.
  */
 export function arrive(holder, node) {
-  if (!holder?.isConnected || !node) return node;
+  if (!node || !holder?.parentNode) return node;
+  if (!holder.isConnected) {
+    holder.replaceWith(node);
+    return node;
+  }
   const late = onScreenNow(holder);
   const before = holder.getBoundingClientRect().height;
   holder.replaceWith(node);

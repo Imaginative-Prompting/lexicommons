@@ -174,13 +174,23 @@ export function cleanPlace(value) {
   return names.length ? `${path}#${names.join("/")}` : path;
 }
 
-const KINDS = new Set(["error", "rejection", "reload"]);
+const KINDS = new Set(["error", "rejection", "reload", "probe-crash"]);
 
 /**
  * The app started again by itself: what a report of the "reload" kind says, always, whatever a device sends with it. Only its
  * screen (place) and the app's version are its own.
  */
 export const RELOAD = Object.freeze({ name: "Reload", message: "The app started again by itself, on this screen." });
+
+/**
+ * A native probe that ended the page (speech/probe-guard.js): the probe's name is all it says, one of these, in fixed words; with its screen
+ * and the app's version (the browser is the request's, as for every report).
+ */
+export const PROBE_CRASH = Object.freeze({
+  name: "ProbeCrash",
+  probes: Object.freeze({ "webgpu-adapter": "asking the GPU for an adapter (WebGPU)", "speech-available": "asking the recognizer whether it has the language on the device" }),
+});
+const probeCrashMessage = (probe) => `The page ended while ${PROBE_CRASH.probes[probe]}: ${probe}, never asked again on this device.`;
 
 /**
  * Whether this start is the app's page coming back after it ended without being closed: a reload (the navigation's type) of the
@@ -201,12 +211,20 @@ const cleanVersion = (value) => (typeof value === "string" && /^[\w.\-]{1,24}$/.
  * no inline script and no eval, so an error of ours always has a frame under /js/; one with none is someone else's. A rejection
  * with no stack at all (a promise rejected with a string or nothing) can't be told apart, so it's kept. A "reload" is RELOAD's
  * name and words, with no stack, its screen and the app's version: nothing else of the input is read.
+ * A "probe-crash" is PROBE_CRASH's: the probe's name (its message, one of PROBE_CRASH.probes) in fixed words, its screen and version; one
+ * naming no probe isn't kept.
  *   input: { kind, name, message, stack, file, line, col, place, version } from lx/error-report.js, or anything at all.
  */
 export function cleanReport(input) {
   if (!input || typeof input !== "object" || Array.isArray(input)) return null;
   const kind = KINDS.has(input.kind) ? input.kind : "error";
   if (kind === "reload") return { kind, name: RELOAD.name, message: RELOAD.message, stack: "", place: cleanPlace(input.place), version: cleanVersion(input.version) };
+  if (kind === "probe-crash") {
+    // The probe's name, or the words a device already cleaned it into (the server cleans what the device sends again, and gets the same).
+    const probe = Object.keys(PROBE_CRASH.probes).find((name) => input.message === name || input.message === probeCrashMessage(name));
+    if (!probe) return null;
+    return { kind, name: PROBE_CRASH.name, message: probeCrashMessage(probe), stack: "", place: cleanPlace(input.place), version: cleanVersion(input.version) };
+  }
   const name = typeof input.name === "string" && /^[A-Za-z][\w$]{0,39}$/.test(input.name) ? input.name : "Error";
   const message = cleanMessage(input.message);
   let stack = cleanStack(input.stack, appOwn);

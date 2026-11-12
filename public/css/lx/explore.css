@@ -43,6 +43,25 @@
   .lx-pack-head > [data-part="pack-cover"] { width: 168px; margin-bottom: var(--space-2); border-radius: 24px; }
   .lx-pack-head [data-part="page-title"] { margin: 0; }
   .lx-pack-actions { display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-1); }
+  /* On a computer the pack's way forward leads its head's row (explore.js actionsInHead), at a computer's own width for a block button
+     (components.css: 240 to 360), beside Like and More; the line that goes with it under them. */
+  @media (min-width: 1024px) {
+    .lx-pack-actions > [data-part="button"][data-block] { flex: none; }
+    .lx-pack-actions > [data-part="character"] { align-self: center; }
+    .lx-pack-note { margin: 0; max-width: var(--measure); }
+    /* And the head stands at the column's start there, where the pack's sentences start: its cover beside its name (the page's heading,
+       in a heading's weight), its facts and how much of it you know under the name, then the row of its buttons. Centered, it floated over
+       a list that begins at the left, in a frame with room beside it. (A book's page keeps its own head.) */
+    .lx-pack-head:not(.lx-book-head) { display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: var(--space-5); row-gap: 0; align-items: start; justify-items: start; text-align: start; }
+    .lx-pack-head:not(.lx-book-head) > [data-part="pack-cover"] { grid-column: 1; grid-row: 1 / span 6; width: 120px; margin: 0; border-radius: 20px; }
+    .lx-pack-head:not(.lx-book-head) > :not([data-part="pack-cover"]) { grid-column: 2; min-width: 0; }
+    .lx-pack-head:not(.lx-book-head) > :not([data-part="pack-cover"], .lx-page-head) { margin-top: var(--space-2); }
+    .lx-pack-head:not(.lx-book-head) [data-part="page-title"] { font-weight: 700; }
+    .lx-pack-head:not(.lx-book-head) > .lx-pack-actions { justify-content: flex-start; margin-top: var(--space-4); }
+    /* See all its sentences (a quiet button with no edge of its own) in the column's middle under them: at a block button's width on a
+       computer and left where it fell, its words sat a little in from the list's edge, neither with it nor centered. */
+    .lx-explore-item [data-part="section"] > [data-part="button"][data-variant="fade"][data-block] { margin-inline: auto; }
+  }
   .lx-explore-item .lx-explore-sentences [data-part="sentence-row"] { padding: 14px 0; border: 0; border-top: 1px solid var(--hair); border-radius: 0; background: none; }
   .lx-quiet-more { border-top: 1px solid var(--hair); }
   /* A report's reasons (terms.js reasonPicker): what the chosen one means, under them; nothing while none is chosen. */
@@ -52,6 +71,7 @@
   .lx-quiet-more > summary::after { content: ""; width: 8px; height: 8px; margin-inline-end: 4px; border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3); rotate: 45deg; translate: 0 -2px; }
   .lx-quiet-more[open] > summary::after { rotate: 225deg; translate: 0 2px; }
   .lx-quiet-more > summary:active { background: var(--fill-active); }
+  @media (hover: hover) { .lx-quiet-more > summary:not(:active):hover { background: var(--fill-hover); } }
   .lx-quiet-body { display: flex; flex-direction: column; gap: var(--space-3); padding-bottom: var(--space-4); }
   .lx-quiet-body [data-part="section-title"] { display: none; }
   /* A pack's units (Lessons on its page): each a row that opens its lessons in place, under it, so it ends in the mark the sections around it
@@ -163,7 +183,8 @@
   /* The link's own press, over the whole card it stands for: a light layer of ink (its fill would hide the card). */
   .lx-card-link:active::after { background: color-mix(in oklab, var(--ink-1) 6%, transparent); }
   .lx-card-link:focus-visible { outline: none; }
-  .lx-card-whole:has(.lx-card-link:focus-visible) { outline: 2px solid var(--ring); outline-offset: 2px; }
+  /* Its own outline and hard edge take the ring's color too: the ring alone, 2 px outside a card's 2 px border, read as a second border. */
+  .lx-card-whole:has(.lx-card-link:focus-visible) { outline: 2px solid var(--ring); outline-offset: 2px; border-color: var(--ring); box-shadow: 0 4px 0 var(--ring); }
   @media (hover: hover) { .lx-card-whole:has(.lx-card-link:hover) .lx-card-link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; } }
 
   /* The one pack to add next (explore.js pickCard): its cover face-out, "Add next", its name and its size beside it. */
@@ -232,6 +253,7 @@
   .lx-cover-card { display: flex; flex-direction: column; gap: 6px; flex: 0 1 calc((100% - 20px) / 3); min-width: 0; color: var(--ink-2); font-size: var(--size-14); text-decoration: none; }
   .lx-cover-card > [data-part="pack-cover"] { width: 100%; }
   .lx-cover-card:active > [data-part="pack-cover"] { filter: brightness(0.9); }
+  @media (hover: hover) { .lx-cover-card:not(:active):hover > [data-part="pack-cover"]:not([data-held]) { filter: brightness(1.06); } }
   .lx-cover-by { overflow-wrap: anywhere; }
 
   /* A topic's first pack (explore.js renderTopic): its first sentence leads its card, a reading size, in the language's face. */
@@ -291,4 +313,37 @@
   .lx-book-mini :is(.lx-cover-head, .lx-cover-by) { display: none; }
   .lx-share-head > .lx-share-book-cover { width: 64px; flex: none; }
   .lx-share-head > .lx-share-book-cover > [data-part="book-cover"] { border-radius: 8px; }
+
+  /* ---------- Explore on a computer (docs/design-system.md, "Tablets and computers") ----------
+     Where the tabs are a sidebar: the language's lessons as one line (its cover, its words, Continue at its end), not a card with a bar across
+     it; 32 px between the home's sections; the foot's rows alike (the language's row with no box of its own between All packs and Add your
+     own pack: a row that spans the column, its value at its end); running text in Add your own at the measure. */
+  @media (min-width: 1024px) {
+    /* A topic's packs the same way (explore.js renderTopic's cards: its first sentence leads, Add pack or Added at the end). */
+    :is(.lx-lessons-card, .lx-topic-card):has(> [data-part="button"]) { grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: var(--space-5); }
+    :is(.lx-lessons-card, .lx-topic-card) > .lx-next-top { flex-direction: row-reverse; justify-content: flex-end; flex-wrap: nowrap; }
+    :is(.lx-lessons-card, .lx-topic-card) > .lx-next-top > .lx-next-head { flex: 1 1 auto; }
+    :is(.lx-lessons-card, .lx-topic-card) > [data-part="button"] { width: 260px; min-width: 0; max-width: none; }
+    .lx-explore-top { gap: var(--space-6); }
+    .lx-explore-rest > :not(.lx-group), .lx-explore-rest > :not(.lx-group) + .lx-group { margin-top: calc(var(--space-6) - var(--space-3)); }
+    /* The language's row as its neighbors are: no box, its symbol and words where theirs start (a bare row reaches 12 px past the column
+       each side, so its symbol's drawing stands on the column's edge), its value ending on the column's end edge. The rows follow one
+       another as a list, All packs first, and a row's chevron ends on the column's edge too (its drawing stood 3 px past it). */
+    .lx-explore-rest :is(a, button)[data-part="list-row"][data-opens="sheet"] { width: calc(100% + 2 * var(--space-3)); margin: 0 calc(-1 * var(--space-3)); padding-inline: 0 var(--space-3); border: 0; border-radius: var(--radius-12); box-shadow: none; }
+    .lx-explore-rest :is(a, button)[data-part="list-row"][data-opens="sheet"]:active { transform: none; box-shadow: none; }
+    .lx-explore-rest > .lx-group + .lx-group, .lx-explore-top:has(.lx-all-packs) + .lx-explore-rest > .lx-group:first-child { margin-top: calc(var(--space-3) * -1); }
+    .lx-explore-body a[data-part="list-row"]:not([data-opens]) { padding-inline-end: 3px; }
+    :is(.lx-own-hand, .lx-own-ai) > p.lx-muted { max-width: var(--measure); }
+    /* A pack's lessons (its page's Lessons): each row's line of what it teaches at the measure, as running text is (it ran the 720 column). */
+    .lx-explore-lessons .lx-row-sub { max-width: var(--measure); }
+  }
+  /* From 1280 (the 960 frame): the pack to add next beside the lessons, on their row, and every topic's page of them filling its rows
+     (explore.js topicsARow: 14 topics seven a row, never two alone on a third). */
+  @media (min-width: 1280px) {
+    .lx-explore-top:has(> .lx-lessons-slot:not([hidden]) + .lx-pick) { display: grid; grid-template-columns: minmax(0, 1fr) fit-content(320px); column-gap: var(--space-5); align-items: center; }
+    .lx-explore-top:has(> .lx-lessons-slot:not([hidden]) + .lx-pick) > * { grid-column: 1 / -1; min-width: 0; }
+    .lx-explore-top > .lx-lessons-slot:not([hidden]):has(+ .lx-pick) { grid-column: 1; }
+    .lx-explore-top > .lx-lessons-slot:not([hidden]) + .lx-pick { grid-column: 2; }
+    .lx-topics[data-a-row] { grid-template-columns: repeat(var(--topics-a-row, 6), minmax(0, 1fr)); }
+  }
 }

@@ -48,6 +48,33 @@
     .lx-quick-play { gap: var(--space-2); }
   }
 
+  /* ---------- Study on a computer ---------- */
+  /* The holder of Study's two foot lists (Study a topic, Your packs: shell/study.js): on a phone it has no box of its own, so each list
+     is a row of the page as before. */
+  .lx-study-foot { display: contents; }
+  /* On a computer Study's settings stand inside the Practice card, beside its arrow, and the card is whole: the bite out of its corner with
+     the gear in it is a phone's, where the gear sits over the card's edge; on a wide card it read as a circle cutting the card's border. The
+     card takes the doors' own border again (redesign.css hides it under the notch's drawing), and its words end clear of the gear. */
+  @media (min-width: 1024px) {
+    [data-part="study-door"][data-door="practice"] { border-color: var(--line-strong); box-shadow: 0 3px 0 var(--line-strong); }
+    [data-part="study-door"][data-door="practice"]:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); }
+    [data-part="study-door"][data-door="practice"] > svg.lx-edge { display: none; }
+    [data-part="study-door"][data-door="practice"] > .lx-door-words { padding-inline-end: calc(44px - var(--space-2)); }
+    .lx-door-gear { top: calc(50% - 1.5px); inset-inline-end: calc(var(--space-4) + 2px + 20px + var(--space-1)); translate: 0 -50%; }
+  }
+  /* From 1280, in the frame's whole width (shell.css), two a row: the doors (one alone, a newcomer's first lesson, keeps half the frame at
+     its start: its name in a bar 960 px long read as a phone's row stretched), the two rows under the games, and the foot's two, so no
+     row's value sits a window away from its name. */
+  @media (min-width: 1280px) {
+    .lx-study-doors { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-4); }
+    .lx-quick-play > .lx-study-rows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-4); }
+    .lx-study-foot { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-4); align-items: center; }
+    /* Your packs beside Study a topic takes that row's shape (components.css's row that opens a sheet), so the two are a pair: a bare
+       row beside a boxed one read as two kinds of thing. It keeps its chevron and its count: it still goes to a page. */
+    .lx-study-foot .lx-study-yours a[data-part="list-row"] { width: 100%; margin: var(--space-1) 0 calc(var(--space-1) + 3px); border: 2px solid var(--line-strong); border-radius: var(--radius-16); box-shadow: 0 3px 0 var(--line-strong); transition: transform 70ms var(--ease-standard), box-shadow 70ms var(--ease-standard), background-color var(--dur-150) var(--ease-standard); }
+    .lx-study-foot .lx-study-yours a[data-part="list-row"]:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--line-strong); }
+  }
+
   /* ---------- a lesson's page ---------- */
   .lx-lesson-where { margin: 0 0 var(--space-1); color: var(--ink-2); font-size: var(--size-14); }
   .lx-lesson-words [data-part="list-row"] { min-height: 52px; }
@@ -156,4 +183,14 @@
   /* Its other side is how it's said: the answer, read under the letter, never a footnote. */
   [data-part="study-card"][data-letter] [data-part="natural-line"] { font-size: 32px; line-height: 1.25; text-align: center; color: var(--ink-1); }
   .lx-game[data-letters] [data-part="choice"] { font-size: 28px; }
+
+  /* A session on a computer (the stage: from 1024 wide and 640 tall). The picture question is one block the width of its tiles (components.css
+     caps them at 400): its line, its word's card and its tiles in the middle, and the result's bar that width under them, so the step never ends
+     wider than it began (the bar was the column's 688 under a 400 block). Keyed on the tiles themselves: the session's data-step stays the last
+     game's through its summary. And the summary's two ways on in equal halves of its bar (Study again was 140 px beside a 490 px Done). */
+  @media (min-width: 1024px) and (min-height: 640px) {
+    [data-part="session"] .lx-step:has([data-part="picture-choices"][data-kind="pictures"]) { width: 100%; max-width: 400px; margin-inline: auto; }
+    [data-part="session"]:has(> [data-part="activity"] [data-part="picture-choices"][data-kind="pictures"]) > [data-part="answer-bar"] { width: min(calc(100% - 2 * var(--space-4)), 400px); }
+    [data-part="session"]:has(> [data-part="activity"] [data-part="session-summary"]) > [data-part="answer-bar"] .lx-answer-actions { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+  }
 }

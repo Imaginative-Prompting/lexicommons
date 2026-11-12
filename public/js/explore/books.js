@@ -118,7 +118,7 @@ export function renderBooks(page, params = {}) {
       grid.replaceChildren(
         tiles.length
           ? ui.bookList(tiles, { layout: "grid", label: t("explore.books.title") })
-          : ui.emptyState(t("explore.books.none", { language: languageName(lang) }), { pose: "page", art: "empty-books" }),
+          : ui.emptyState(t("explore.books.none", { language: languageName(lang) }), { pose: "page", art: "empty-library" }),
       );
       if (holder.isConnected) ui.arrive(holder, grid);
       requestAnimationFrame(() => keepHeight("explore.books", grid));
@@ -542,7 +542,7 @@ export function renderShareBook(page, textId, params = {}) {
       const [entries, langs, mine, topics] = await Promise.all([store.listBooks(), store.weaveLanguages(), api("/api/community/books/mine"), api("/api/community/topics")]);
       if (stale) return;
       const entry = entries.find((e) => e.id === textId);
-      if (!entry || !isYours(entry)) return body.replaceChildren(ui.emptyState(t("explore.shareBook.notYours"), { pose: "shrug", art: "empty-books" }));
+      if (!entry || !isYours(entry)) return body.replaceChildren(ui.emptyState(t("explore.shareBook.notYours"), { pose: "shrug", art: "empty-library" }));
       const already = mine.find((b) => b.sourceId === textId && b.state !== "removed");
       if (already) {
         return body.replaceChildren(
@@ -550,9 +550,9 @@ export function renderShareBook(page, textId, params = {}) {
           ui.button(t("explore.shareBook.openPage"), { variant: "go", size: "lg", block: true, onclick: () => replaceRoute(bookLink(already.id, from)) }),
         );
       }
-      if (entry.pictures?.length) return body.replaceChildren(ui.emptyState(t("explore.yours.bookPictures"), { pose: "shrug", art: "empty-books" }));
+      if (entry.pictures?.length) return body.replaceChildren(ui.emptyState(t("explore.yours.bookPictures"), { pose: "shrug", art: "empty-library" }));
       const text = (await store.getBook(textId))?.text;
-      if (!text) return body.replaceChildren(ui.emptyState(t("explore.shareBook.notYours"), { pose: "shrug", art: "empty-books" }));
+      if (!text) return body.replaceChildren(ui.emptyState(t("explore.shareBook.notYours"), { pose: "shrug", art: "empty-library" }));
       const weaves = {};
       for (const to of langs.get(textId) ?? []) {
         const weave = await store.getWeave(textId, to);

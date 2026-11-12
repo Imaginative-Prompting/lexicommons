@@ -32,11 +32,17 @@ export function studyDoor({ door, art, title, sub, href }) {
   return node;
 }
 
+// The strip is drawn to the width it's shown at, so its stops and its line keep a phone's size: 340 for a phone's column, and on a computer
+// the page's own (720; 960 from 1280; 1120 from 1600: shell.css's frame). Drawn 340 wide and stretched to 960, every stop stood nearly three
+// times its size, with Tinta small inside the ring of your place.
+const STRIP_WIDTHS = [["(min-width: 1600px)", 1064], ["(min-width: 1280px)", 912], ["(min-width: 1024px)", 684]];
+const stripWidth = () => STRIP_WIDTHS.find(([query]) => globalThis.matchMedia?.(query).matches)?.[1] ?? 340;
+
 /** Where you are, drawn small: a few stops either side of yours, in the path's ink, with Tinta at your place. here: your place among `count` lessons; place: its words. */
 export function pathStrip({ here, count, place, href, held = false }) {
   const first = Math.max(0, Math.min(here - 3, count - 7));
   const stops = Array.from({ length: Math.min(7, count - first) }, (_, i) => first + i);
-  const W = 340, y = 22;
+  const W = stripWidth(), y = 22;
   const x = (i) => 10 + (i * (W - 20)) / (stops.length - 1 || 1);
   const at = stops.indexOf(here);
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");

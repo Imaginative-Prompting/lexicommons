@@ -1,0 +1,32 @@
+/* Trying Lexicommons with no account (/try/, try/main.js): a quiet band over the first run's chooser, then the session screen, then the end card. */
+.lx-try { min-height: 100dvh; display: flex; flex-direction: column; background: var(--canvas); color: var(--ink-1); }
+.lx-try-band {
+  position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+  padding: calc(env(safe-area-inset-top) + var(--space-2)) var(--space-4) var(--space-2); background: var(--canvas); border-bottom: 1px solid var(--line);
+}
+.lx-try-band > p { margin: 0; color: var(--ink-2); font-size: var(--size-14); line-height: 1.3; text-wrap: pretty; }
+.lx-try-band > p strong { color: var(--ink-1); font-weight: 600; }
+.lx-try-band > [data-part="button"] { flex: none; }
+.lx-try-stage { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.lx-try-stage .lx-welcome-head { padding: var(--space-5) var(--space-4) var(--space-3); }
+.lx-try-stage .lx-welcome-head [data-part="page-title"] { font: 700 34px / 1.08 var(--type-head); letter-spacing: -0.02em; margin: 0; }
+.lx-try-stage .lx-welcome-list { overflow: visible; padding: 0 var(--space-4) var(--space-6); }
+.lx-try-end { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); width: 100%; max-width: 480px; margin-inline: auto; padding: var(--space-6) var(--space-4); }
+.lx-try-end [data-part="page-title"] { font: 700 30px / 1.1 var(--type-head); letter-spacing: -0.02em; margin: 0; }
+.lx-try-end > p { margin: 0; color: var(--ink-2); max-width: 46ch; text-wrap: pretty; }
+/* Its two buttons one width, the wider one's: stacked on a phone, side by side from 600 px. */
+.lx-try-actions { display: inline-grid; grid-auto-flow: row; grid-auto-columns: 1fr; gap: var(--space-2); margin-top: var(--space-2); max-width: 100%; }
+.lx-try-actions > [data-part="button"] { width: 100%; }
+@media (min-width: 600px) { .lx-try-actions { grid-auto-flow: column; } }
+.lx-try-end a { color: var(--ink-1); }
+@media (min-width: 1024px) {
+  .lx-try-band { padding-inline: var(--space-6); }
+  .lx-try-band > p { font-size: var(--size-16); }
+  .lx-try-stage .lx-welcome-head, .lx-try-stage .lx-welcome-list { max-width: 960px; width: 100%; margin-inline: auto; padding-inline: var(--space-5); }
+  .lx-try-stage .lx-welcome-head { padding-top: var(--space-7); }
+  .lx-try-stage .lx-welcome-head > [data-part="text-field"] { max-width: 360px; }
+  .lx-try-stage .lx-welcome-list .lx-language-list > [data-part="list"] { display: block; column-count: 4; column-gap: var(--space-5); }
+  .lx-try-stage .lx-welcome-list .lx-language-head { column-span: all; padding-top: var(--space-5); padding-bottom: var(--space-2); }
+  .lx-try-stage .lx-welcome-list .lx-row-item { break-inside: avoid; }
+  .lx-try-end { padding-top: var(--space-7); }
+}

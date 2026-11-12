@@ -9,6 +9,7 @@
 import { sentencesOf } from "../study/pack-items.js";
 import * as ui from "../lx/ui.js";
 import { el } from "../lx/ui.js";
+import { icon } from "../lx/icons.js";
 import { REQUEST_KINDS, answerParts, cancelRequest, createRequest, describeRequest, requestLinks, requestStatus, watchRequests } from "./client.js";
 import { aiConnected, setAiConnected, thirdTab } from "../shell/layout.js";
 import { connectionPage } from "./connection.js";
@@ -69,13 +70,13 @@ function message() {
 }
 
 /** A request as a row: where it is, and the way on (an answer's page, what it made, or Cancel while it waits). */
-function requestRowOf(request, msg) {
+function requestRowOf(request, msg, { cancelable = true } = {}) {
   const { mark, text } = requestStatus(request);
   const links = requestLinks(request);
   const answered = request.kind === "ask" && request.result?.answer;
   const href = answered || request.kind === "ask" ? `#ai/request/${encodeURIComponent(request.id)}` : links[0] ? LINK_HREF[links[0].kind]?.(links[0].id) : undefined;
   const cancel =
-    mark === "waiting"
+    cancelable && mark === "waiting"
       ? ui.button("Cancel", {
           size: "sm",
           onclick: async () => {
@@ -211,21 +212,63 @@ function home(page) {
   const requestsRow = ui.listRow({ icon: "clock", title: "Your requests", value: "", href: "#ai/requests" });
   const connectionRow = ui.listRow({ icon: "plug", title: "Connection", value: "", href: "#ai/connect" });
   const valueOf = (row) => row.querySelector(".lx-row-value");
-  page.replaceChildren(
-    ...(sectionBack() ? [ui.pageTitle("AI")] : []),
-    el(
-      "div",
-      { class: "lx-stack lx-ai-body" },
-      practice,
-      ui.group("Ask your AI for something", [
-        ...ASKABLE.filter((kind) => REQUEST_KINDS[kind]).map((kind) => ui.listRow({ symbol: KIND_SYMBOL[kind], title: REQUEST_KINDS[kind].name, sub: KIND_TILE[kind]?.sub ?? REQUEST_KINDS[kind].about, href: `#ai/new/${kind}` })),
-        // Weaving is asked from the text itself, in Read (reader.js offerWeave), and only into a language it's ready for: said here so it's found.
-        ...(WEAVE_LANGUAGES.includes(learning()) ? [ui.listRow({ symbol: KIND_SYMBOL.weave, title: "Weave a text", sub: `English that turns ${learningName()} as you learn. Start in Read`, href: "#read" })] : []),
-      ]),
-      ui.group("", [ui.listRow({ icon: "chat", title: "Past practices", href: "#practice" }), requestsRow, connectionRow]),
-    ),
-    msg,
+  // On a computer (1280 px and up) the page is two columns (settings-wide.css): beside Practice and what to ask for, an aside holds the
+  // connection (which AI, when it was last here) and your newest requests, the ones your AI hasn't finished first. It's built there
+  // only: narrower, the page is as it always was, with Your requests and Connection as rows at its foot.
+  const body = el("div", { class: "lx-stack lx-ai-body lx-ai-home" });
+  const wide = globalThis.matchMedia?.("(min-width: 1280px)");
+  const ASIDE_ROWS = 3;
+  let aside = null;
+  let latest = null;
+  const markOf = (who) => (/claude/i.test(who ?? "") ? aiMark("claude", 28) : /codex|openai|chatgpt|gpt/i.test(who ?? "") ? aiMark("openai", 28) : icon("plug"));
+  function drawAside() {
+    if (!aside || !latest) return;
+    const { requests, ai } = latest;
+    const who = ai?.client ?? keptMe()?.aiClient ?? null;
+    aside.lxMark.replaceChildren(markOf(who));
+    aside.lxWho.textContent = who ?? "Your AI";
+    aside.lxWhen.textContent = ai ? ago(ai.at) : "";
+    aside.lxWhen.hidden = !ai;
+    // The ones still to do first (waiting, then being worked on, as they came), then the newest finished.
+    const open = requests.filter((r) => r.state === "waiting" || r.state === "taken");
+    const shown = [...open, ...requests.filter((r) => !open.includes(r))].slice(0, ASIDE_ROWS);
+    aside.lxList.replaceChildren(...shown.map((request) => requestRowOf(request, msg, { cancelable: false })));
+    aside.lxList.hidden = !shown.length;
+    aside.lxNone.hidden = shown.length > 0;
+  }
+  function placeAside() {
+    if (wide?.matches && !aside) {
+      const lxMark = el("span", { class: "lx-ai-aside-mark", "aria-hidden": "true" });
+      const lxWho = el("span", { class: "lx-ai-aside-who" });
+      const lxWhen = el("span", { class: "lx-ai-aside-when" });
+      const lxList = el("ul", { class: "lx-requests" });
+      const lxNone = el("p", { class: "lx-ai-aside-none" }, "Nothing asked yet. What you ask your AI for shows here, with where it is.");
+      aside = el(
+        "aside",
+        { class: "lx-ai-aside" },
+        el("a", { class: "lx-ai-aside-card", href: "#ai/connect" }, lxMark, el("span", { class: "lx-ai-aside-text" }, el("span", { class: "lx-ai-aside-label" }, "Connection"), lxWho, lxWhen), icon("chevron")),
+        el("section", { class: "lx-ai-aside-requests" }, ui.sectionHead("Your requests", { link: { href: "#ai/requests" } }), lxList, lxNone),
+      );
+      Object.assign(aside, { lxMark, lxWho, lxWhen, lxList, lxNone });
+      body.append(aside);
+      drawAside();
+    } else if (!wide?.matches && aside) {
+      aside.remove();
+      aside = null;
+    }
+  }
+  wide?.addEventListener?.("change", placeAside);
+  body.append(
+    practice,
+    ui.group("Ask your AI for something", [
+      ...ASKABLE.filter((kind) => REQUEST_KINDS[kind]).map((kind) => ui.listRow({ symbol: KIND_SYMBOL[kind], title: REQUEST_KINDS[kind].name, sub: KIND_TILE[kind]?.sub ?? REQUEST_KINDS[kind].about, href: `#ai/new/${kind}` })),
+      // Weaving is asked from the text itself, in Read (reader.js offerWeave), and only into a language it's ready for: said here so it's found.
+      ...(WEAVE_LANGUAGES.includes(learning()) ? [ui.listRow({ symbol: KIND_SYMBOL.weave, title: "Weave a text", sub: `English that turns ${learningName()} as you learn. Start in Read`, href: "#read" })] : []),
+    ]),
+    ui.group("", [ui.listRow({ icon: "chat", title: "Past practices", href: "#practice" }), requestsRow, connectionRow]),
   );
+  placeAside();
+  page.replaceChildren(...(sectionBack() ? [ui.pageTitle("AI")] : []), body, msg);
   // Your requests, followed live while the page is on the screen. The shell keeps the page while you're elsewhere: it stops following
   // then (hide), and takes it up again when you're back (refresh).
   let stop = () => {};
@@ -238,6 +281,8 @@ function home(page) {
       valueOf(connectionRow).textContent = ai ? `${who ?? "Your AI"} · ${ago(ai.at)}` : "";
       valueOf(requestsRow).textContent = requests.length ? String(requests.length) : "";
       practice.lxClient(who);
+      latest = { requests, ai };
+      drawAside();
       const states = new Map(requests.map((r) => [r.id, r.state]));
       const arrived = statesWere && requests.some((r) => r.state === "done" && statesWere.has(r.id) && statesWere.get(r.id) !== "done");
       statesWere = states;
@@ -253,7 +298,7 @@ function home(page) {
     if (now) practice.lxRedraw();
     follow();
   };
-  return { title: "AI", back: sectionBack(), ready: Promise.all([ready, practice.lxFitted]), dispose: () => (stop(), practice.lxStop()), hide: () => stop(), refresh, stale: () => practice.lxStale() };
+  return { title: "AI", back: sectionBack(), ready: Promise.all([ready, practice.lxFitted]), dispose: () => (stop(), practice.lxStop(), wide?.removeEventListener?.("change", placeAside)), hide: () => stop(), refresh, stale: () => practice.lxStale() };
 }
 
 /** Your requests, every one, newest first (#ai/requests): where each is, and its way on (an answer, what it made, Cancel while it waits). */

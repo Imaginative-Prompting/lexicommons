@@ -13,7 +13,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { LANGUAGES, directionOf, endMark, englishEnd, languageName, sentenceEnds, withArticle, withoutInvisible } from "../public/js/lang/index.js";
+import { LANGUAGES, directionOf, endMark, englishEnd, isOurLanguage, languageName, ourLanguages, ownLanguageProblem, sentenceEnds, useLanguage, withArticle, withOwnLanguage, withoutInvisible } from "../public/js/lang/index.js";
 import { mayRead, needsReading, readingOver, readingProblem, rubyOf, vowelled } from "../public/js/lang/readings.js";
 import { LANGUAGES as FORMAT_LANGUAGES } from "../public/js/read/book-format.js";
 import { BUILT_IN } from "../public/js/packs/index.js";
@@ -1434,6 +1434,123 @@ await testAsync("shapes: a checker that knows them keeps them and the version ho
   const result = checkPack(bad, { installed: builtIn });
   ok(result.pack && result.pack.items[at] && !result.pack.items[at].shapes, "a bad mark sank the item or was kept");
   ok(result.warnings.some((w) => /shapes/.test(w.at)), "no warning for the dropped mark");
+});
+
+// ---------- A pack in a language Lexicommons doesn't list (12 Nov 2026) ----------
+
+// A made-up language with spaces, and one written right to left without them (each sentence carries its words); the code and languageDef
+// each way they can be wrong; the registry as it was after every check (a server keeps no account's language).
+const ownItem = (id, words, means, literal) => ({ id, topic: "home", concepts: ["greet"], words, punct: ".", literal, english: literal.map((_, i) => i), means });
+const ownPack = (over = {}) => ({
+  format: "lexicommons-pack", version: 2, id: "own-testish", name: "Testish greetings", language: "und-x-testish", languageDef: { name: "Testish" }, from: "en",
+  topics: { home: "At home" }, words: { mellon: "friend" }, chunks: {}, patterns: { greet: { name: "Greetings", about: "How people greet each other." } },
+  items: [ownItem("suilad", [["Suilad"], ["mellon", "mellon"]], "Greetings, friend.", [["Greetings"], ["friend"]]), ownItem("mae", [["Mae"], ["govannen"]], "Well met.", [["Well"], ["met"]])],
+  ...over,
+});
+const unspacedPack = () => ({
+  ...ownPack({ id: "own-rtlish", language: "und-x-rtlish", languageDef: { name: "Rtlish", direction: "rtl", written: "unspaced", case: "any", ends: ["።"] } }),
+  words: { "ሰላም": "peace" },
+  items: [{ ...ownItem("selam", [["ሰላም", "ሰላም"], ["ነህ"]], "Are you well?", [["Peace"], ["are you"]]), punct: "።" }],
+});
+const registry = () => Object.keys(LANGUAGES).join();
+
+test("own languages: a pack in a made-up language passes with its languageDef, kept with every default said; the registry is as it was after", () => {
+  const before = registry();
+  const { pack, errors } = checkPack(ownPack());
+  eq(errors, []);
+  eq(pack.languageDef, { name: "Testish", direction: "ltr", written: "spaces", case: "lower", ends: [] });
+  eq(pack.items.map((item) => itemSentence(item, "nl")), ["Suilad mellon.", "Mae govannen."]);
+  eq(registry(), before);
+  ok(!isOurLanguage("und-x-testish") && !Object.hasOwn(LANGUAGES, "und-x-testish"), "und-x-testish left in the registry");
+});
+test("own languages: right to left and written without spaces, its sentences their words joined with nothing, its own end mark, its case as written", () => {
+  const { pack, errors } = checkPack(unspacedPack());
+  eq(errors, []);
+  eq(pack.languageDef, { name: "Rtlish", direction: "rtl", written: "unspaced", case: "any", ends: ["።"] });
+  withOwnLanguage("und-x-rtlish", pack.languageDef, () => {
+    eq(directionOf("und-x-rtlish"), "rtl");
+    eq(languageName("und-x-rtlish"), "Rtlish");
+    eq(itemSentence(pack.items[0], "und-x-rtlish"), "ሰላምነህ።");
+    ok(sentenceEnds("und-x-rtlish").includes("።"), "its end mark");
+  });
+  eq(directionOf("und-x-rtlish"), "ltr");
+  // Its words are the pack's own split, kept as written; its sentence is them joined with nothing.
+  eq(pack.items[0].words.map(([word]) => word), ["ሰላም", "ነህ"]);
+});
+test("own languages: the code and languageDef refused each way they're wrong, each with its own words", () => {
+  const before = registry();
+  const refused = (over, at, words) => {
+    const { pack, errors } = checkPack(ownPack(over));
+    ok(!pack && errors.some((e) => e.at === at && e.message.includes(words)), `${JSON.stringify(over)}: ${JSON.stringify(errors)}`);
+  };
+  refused({ language: "nl", languageDef: { name: "Dutch" } }, "languageDef", "Dutch is one Lexicommons knows");
+  refused({ language: "en", from: "nl" }, "languageDef", "English is one Lexicommons knows");
+  refused({ language: "en-x-pirate" }, "language", "other than English");
+  refused({ language: "de-CH" }, "language", "names a region");
+  refused({ language: "nl-BE" }, "language", "names a region");
+  refused({ language: "nl-Latn" }, "language", "a dialect of it is nl-x-");
+  refused({ language: "Und-x-testish" }, "language", "isn't a language code");
+  refused({ language: "und-x-" }, "language", "isn't a language code");
+  refused({ language: "und-x-abcdefghi" }, "language", "isn't a language code");
+  refused({ language: `und-x-${"abcdefgh-".repeat(3)}abcd` }, "language", "32 characters at most");
+  // Private use alone, which no browser's Intl takes, and "und" with nothing after it.
+  refused({ language: "x-testish" }, "language", "write it und-x-testish");
+  refused({ language: "und" }, "language", "names no language");
+  refused({ languageDef: undefined }, "languageDef", "carries languageDef");
+  refused({ languageDef: ["Testish"] }, "languageDef", "carries languageDef");
+  refused({ languageDef: { name: "" } }, "languageDef.name", "1 to 40");
+  refused({ languageDef: { name: "x".repeat(41) } }, "languageDef.name", "1 to 40");
+  refused({ languageDef: { name: "Test<b>ish" } }, "languageDef.name", "1 to 40");
+  refused({ languageDef: { name: "Testish", direction: "down" } }, "languageDef.direction", '"ltr" or "rtl"');
+  refused({ languageDef: { name: "Testish", written: "joined" } }, "languageDef.written", '"spaces"');
+  refused({ languageDef: { name: "Testish", case: "upper" } }, "languageDef.case", '"lower"');
+  refused({ languageDef: { name: "Testish", ends: ["a"] } }, "languageDef.ends", "no letters");
+  refused({ languageDef: { name: "Testish", ends: [";", ";"] } }, "languageDef.ends", "up to 4");
+  refused({ languageDef: { name: "Testish", ends: ["።", "፧", "፨", ";", "؟"] } }, "languageDef.ends", "up to 4");
+  refused({ languageDef: { name: "Testish", voice: "x" } }, "languageDef.voice", "name, direction, written, case and ends only");
+  refused({ from: "und-x-testish" }, "from", "isn't a language Lexicommons knows");
+  eq(registry(), before);
+  // Real ISO codes we don't list, and a dialect of ours, are codes of their own.
+  for (const language of ["kw", "nap", "gsw", "tlh", "nl-x-gronings", "und-x-my-family-dialect"]) eq([language, ownLanguageProblem(language, { name: "A language" })], [language, null]);
+});
+test("own languages: a device keeps one definition of a language (useLanguage); a pack that says another is refused there, and ours are never touched", () => {
+  const before = registry();
+  try {
+    eq(useLanguage("nl", { name: "Dutch" }), "ours");
+    eq(useLanguage("und-x-testish", { name: "Testish" }), "added");
+    eq(useLanguage("und-x-testish", { name: "Testish", direction: "ltr", written: "spaces", case: "lower", ends: [] }), "same");
+    eq(useLanguage("und-x-testish", { name: "Testish", direction: "rtl" }), "differs");
+    ok(!ourLanguages().includes("und-x-testish") && ourLanguages().includes("nl"), "ourLanguages lists ours alone");
+    eq(LANGUAGES["und-x-testish"].locale, null);
+    eq(checkPack(ownPack()).errors, []);
+    const other = checkPack(ownPack({ languageDef: { name: "Testish", direction: "rtl" } }));
+    ok(!other.pack && other.errors.some((e) => e.at === "languageDef" && e.message.includes("is on this device as")), JSON.stringify(other.errors));
+    // Kept for good on a device, a piece at a time checks it too (checkPackSteps, as a sync does).
+    eq(useLanguage("kw", { name: "Cornish" }), "added");
+    eq(LANGUAGES.kw.locale, "kw");
+  } finally {
+    delete LANGUAGES["und-x-testish"];
+    delete LANGUAGES.kw;
+  }
+  eq(registry(), before);
+});
+test("own languages: withOwnLanguage takes the language out again even when what it runs throws, and adds nothing for a bad definition", () => {
+  const before = registry();
+  try {
+    withOwnLanguage("und-x-testish", { name: "Testish" }, () => {
+      ok(Object.hasOwn(LANGUAGES, "und-x-testish"), "not there while it runs");
+      throw new Error("planted");
+    });
+  } catch (error) {
+    eq(error.message, "planted");
+  }
+  withOwnLanguage("und-x-testish", { name: "" }, () => ok(!Object.hasOwn(LANGUAGES, "und-x-testish"), "a bad definition was added"));
+  eq(registry(), before);
+});
+test("own languages: a proof checked under rules 15 still holds (rules 16 only add languageDef, which no pack checked before can carry)", () => {
+  const pack = checked(copy(BUILT_IN[0]));
+  const proof = { ...checkedProof(pack, "v1"), checks: 15 };
+  ok(PACK_CHECKS === 16 && proofHolds(proof, pack, "v1"), "a 15 proof doesn't hold");
 });
 
 console.log(`\n${passed}/${passed + failed} passed`);

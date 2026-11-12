@@ -30,23 +30,30 @@ const report = (ok, what, detail = "") => {
 };
 
 const browser = await chromium.launch({ headless: true });
-const desk = await browser.newContext();
-const signup = await desk.newPage();
-const cdp = await desk.newCDPSession(signup);
-await cdp.send("WebAuthn.enable");
-await cdp.send("WebAuthn.addVirtualAuthenticator", { options: { protocol: "ctap2", transport: "internal", hasResidentKey: true, hasUserVerification: true, isUserVerified: true, automaticPresenceSimulation: true } });
-await signup.goto(`${BASE}/app/`);
-await signup.waitForURL(/\/login\?next=/);
-await signup.click("summary");
-await signup.fill('input[name="name"]', "Home Numbers");
-await signup.click('#register button[type="submit"]');
-await signup.waitForURL(`${BASE}/app/`, { timeout: 90_000 });
-const cookies = await desk.cookies();
+// Each width is a learner of its own: an account of its own, signed up here. (One account for both, since the account keeps your progress and
+// every device signed in to it has it (/api/account/sync), the second width's day one began with the first's: its practice and games
+// counted twice, lesson 1 already done, and the first's words known well.)
+async function signedUp(name) {
+  const desk = await browser.newContext();
+  const signup = await desk.newPage();
+  const cdp = await desk.newCDPSession(signup);
+  await cdp.send("WebAuthn.enable");
+  await cdp.send("WebAuthn.addVirtualAuthenticator", { options: { protocol: "ctap2", transport: "internal", hasResidentKey: true, hasUserVerification: true, isUserVerified: true, automaticPresenceSimulation: true } });
+  await signup.goto(`${BASE}/app/`);
+  await signup.waitForURL(/\/login\?next=/);
+  await signup.click("summary");
+  await signup.fill('input[name="name"]', name);
+  await signup.click('#register button[type="submit"]');
+  await signup.waitForURL(`${BASE}/app/`, { timeout: 90_000 });
+  const cookies = await desk.cookies();
+  await desk.close();
+  return cookies;
+}
 
 // One phone, its device's own study (each width is its own device, so each plays its own day one).
 async function phone(width) {
   const context = await browser.newContext({ viewport: { width, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, serviceWorkers: "block" });
-  await context.addCookies(cookies);
+  await context.addCookies(await signedUp(`Home Numbers ${width}`));
   const page = await context.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
@@ -180,10 +187,10 @@ for (const width of WIDTHS) {
     `${made.known} known (${made.units.join(", ")}); Home “${wordsTile2?.text}”, Knowledge “${know2.words.n} ${know2.words.label}”`,
   );
   report(errors.length === 0, `${width}: no page errors`, errors.slice(0, 3).join(" | "));
+  await page.evaluate(() => fetch("/api/me", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ confirm: "delete my account" }) })).catch(() => {});
   await context.close();
 }
 writeFileSync(join(OUT, "results.json"), JSON.stringify(results, null, 1));
 console.log(failed ? `\n${failed} FAILED` : "\nall passed");
-await signup.evaluate(() => fetch("/api/me", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ confirm: "delete my account" }) })).catch(() => {});
 await browser.close();
 process.exit(failed ? 1 : 0);

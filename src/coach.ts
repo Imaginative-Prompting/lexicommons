@@ -3,9 +3,11 @@
 // is shown as data: a pack someone shared can say anything, and get_coaching_guide tells the AI so.
 
 import { LibraryError } from "./library";
+import { OWN_LANGUAGE_CODE, OWN_LANGUAGE_LIMITS } from "../public/js/lang/index.js";
 
-/** A language's code as the registry writes it (lang/index.js): nl, zh-Hant. */
+/** A language's code as the registry writes it (lang/index.js): nl, zh-Hant; or a learner's own (lang/index.js OWN_LANGUAGE_CODE: kw, und-x-sindarin, nl-x-gronings). */
 const LANGUAGE_CODE = /^[a-z]{2,3}(?:-[A-Za-z0-9]{1,8}){0,2}$/;
+const isLanguageCode = (code: string) => LANGUAGE_CODE.test(code) || (code.length <= OWN_LANGUAGE_LIMITS.code && OWN_LANGUAGE_CODE.test(code));
 
 type Unit = { id: string; name?: string; nl?: string; en?: string; deck?: string; about?: string; level: number; recall?: Record<string, number>; seen: number; right: number; wrong: number; lapses?: number; met?: number; due?: boolean; slipping?: boolean; leech?: boolean; last?: string };
 type Sentence = { nl?: string; literal?: string[]; en?: string; units?: string[]; words?: string[]; right: number; missed: number; games?: Record<string, number>; last?: string };
@@ -38,7 +40,7 @@ export type StudyRecord = {
 export function checkRecord(value: Record<string, unknown>): StudyRecord {
   const list = (key: string) => value[key] === undefined || Array.isArray(value[key]);
   if (value.version !== 1) throw new LibraryError("This study record is from another version of the app.");
-  if (typeof value.language !== "string" || !LANGUAGE_CODE.test(value.language)) throw new LibraryError("A study record names its language.");
+  if (typeof value.language !== "string" || !isLanguageCode(value.language)) throw new LibraryError("A study record names its language.");
   if (typeof value.evidenceAt !== "number" || !Number.isFinite(value.evidenceAt)) throw new LibraryError("A study record says when its latest answer was.");
   if (!["lessons", "patterns", "phrases", "words", "cards", "misses"].every(list)) throw new LibraryError("A study record's lists must be lists.");
   return value as unknown as StudyRecord;

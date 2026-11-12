@@ -21,6 +21,7 @@ import { stopArt, STOP_THEMES } from "../lx/stop-art.js";
 import { starterNote } from "./starter-note.js";
 import { play } from "../lx/sound.js";
 import { standOn } from "../character/stand.js";
+import { onChange as onThemeChange } from "../lx/theme.js";
 
 const DOING = { strong: "Strong", learning: "Coming along", slipping: "Ready to practice" };
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
@@ -122,6 +123,7 @@ export function pathPageTake(page, { upTo = 40, moreLessons, open = null } = {})
   let closeBubble = () => {};
   // Where it opens (the shell's view.place, right before its first frame): your place, or where it was left; set by its first draw.
   let placeFirst = () => {};
+  let reground = () => {};
   let scroller = page;
   let isReady;
   const ready = new Promise((done) => (isReady = done));
@@ -397,8 +399,12 @@ export function pathPageTake(page, { upTo = 40, moreLessons, open = null } = {})
       document.documentElement.style.setProperty("--page-ground", grounds[(unit.n - 1) % 3]);
     };
 
-    const wrapStyle = getComputedStyle(wrap);
-    const grounds = [0, 1, 2].map((i) => wrapStyle.getPropertyValue(`--paper-${i}`).trim() || "var(--canvas)");
+    // (Read as the theme has them: each a color mixed from its canvas. Read again when the theme changes, reground.)
+    const groundsNow = () => {
+      const style = getComputedStyle(wrap);
+      return [0, 1, 2].map((i) => style.getPropertyValue(`--paper-${i}`).trim() || "var(--canvas)");
+    };
+    const grounds = groundsNow();
     // What's finished lights up as it comes into view, one after another in the path's order: its color comes in. Your place and a grand stop just
     // reached have a moment of their own as they light (a pop; the grand stop's ring of gold).
     // (Only on its first draw: drawn again over itself, what was lit stays lit. And only on an open: built again for a way back to it (a back, which
@@ -590,6 +596,17 @@ export function pathPageTake(page, { upTo = 40, moreLessons, open = null } = {})
     };
     frame();
     setGround(unitAt(scroller.scrollTop, scroller.clientHeight));
+    // A theme changing under the page (Match device at the system's switch, a look your AI changes): the grounds are read again and the shell's
+    // and the header's written again. Read once at the draw, they kept the old theme's: in Paper after Graphite, a black band under the header
+    // until you left and came back (11 Nov 2026).
+    reground = () => {
+      if (!page.isConnected) return;
+      grounds.splice(0, 3, ...groundsNow());
+      groundWas = -1;
+      headerWas = "";
+      setGround(unitAt(scroller.scrollTop, scroller.clientHeight));
+      headerGround();
+    };
     requestAnimationFrame(() => {
       if (scroller.scrollTop !== firstTop() && !openId) scroller.scrollTop = firstTop();
       if (openId) openOn(openId);
@@ -626,6 +643,11 @@ export function pathPageTake(page, { upTo = 40, moreLessons, open = null } = {})
   // Its packs arriving (a cold start in a language whose packs came after the page): drawn again.
   // Its lessons given up for now (they didn't come in time: packs.js LESSONS_WAIT): drawn with what's here.
   const stops = [onContentChange(() => redraw()), onLessonsComing(() => redraw())];
+  // The theme: a change of look (theme.js), or of the scheme Match device follows (<html data-theme>), read once it's in.
+  stops.push(onThemeChange(() => requestAnimationFrame(() => reground())));
+  const schemes = new MutationObserver(() => requestAnimationFrame(() => reground()));
+  schemes.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  stops.push(() => schemes.disconnect());
   const dispose = () => {
     for (const stop of stops) stop();
     leave();
