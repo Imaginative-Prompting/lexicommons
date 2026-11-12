@@ -16,6 +16,11 @@
 //     stays deleted on the second, through a reload; and the one-file form from before (a device on old code still writes it), planted
 //     beside the new files with the deleted pack alive and a pack no new file has, is read on a phone signed in after: the deleted pack
 //     not brought back, the other not lost, and the old file never written.
+//   - Your texts are kept there too (12 Nov 2026), on an account and phones of their own: a text pasted on the first phone, one your AI
+//     adds there, and a book from the open shelf opened there (your place in it set) go to the account's copy; a phone signed in afterwards
+//     has the two texts whole and the shelf book in its library with your place, Read's top card continuing it, its text fetched again (its control: the
+//     same phone kept from the texts' files has none of them); a text removed on the first phone stays removed on the second, through a
+//     reload.
 // Usage (from the channel repo root, sandbox off):
 //   python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "account progress check" --kind parallel -- \
 //     node 08-lexicommons/app/scripts/account-progress-check.mjs http://localhost:<port> <outDir>     (exit 0 = pass)
@@ -474,6 +479,140 @@ await stage("the one-file form from before beside the new files: the deleted pac
   assert(own.length, `the phone wrote the café pack to a file of its own: ${puts}`);
   await d.context.close();
   return `the café pack taken from the old file alone and written to its own file; the deleted one stays deleted; the old file untouched (${oldVersion})`;
+});
+
+// ---------- your texts, kept with the account (an account and phones of their own) ----------
+
+const tx = { a: null, cookies: null, token: null, ids: {} };
+const textsOn = (page) => page.evaluate(async () => (await (await import("/js/read/store.js")).listBooks()).map((b) => b.id).sort());
+async function textsUntil(page, fn, seconds = 60) {
+  let ids = [];
+  for (let i = 0; i < seconds / 3; i++) {
+    await syncNow(page);
+    ids = await textsOn(page);
+    if (fn(ids)) return ids;
+    await page.waitForTimeout(3000);
+  }
+  return ids;
+}
+
+await stage("a text pasted on the first phone, one your AI adds, and a book from the shelf opened there go to the account's copy", async () => {
+  tx.a = await device();
+  await signUp(tx.a.page, tx.a.context, "Texts through the account");
+  await pickDutch(tx.a.page);
+  pk.token = await tx.a.page.evaluate(async () => (await (await fetch("/api/tokens", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: "Account texts check" }) })).json()).token);
+  assert(pk.token?.startsWith("lct_"), "a token for the AI");
+  // Pasted, as Read's Add a text does it (import-text.js, store.addBook).
+  tx.ids.pasted = await tx.a.page.evaluate(async () => {
+    const { bookFromText } = await import("/js/read/import-text.js");
+    const book = await bookFromText("Mijn dagboek\n\nIk lees elke dag een boek. Het is mooi en het is stil.", { lang: "nl", title: "Mijn dagboek" });
+    await (await import("/js/read/store.js")).addBook(book);
+    return book.id;
+  });
+  // Your AI's, over MCP: the upload, its PUT, add_text, then the first phone takes it.
+  const ticket = await mcpTool("request_text_upload", { format: "text", filename: "jas.txt" });
+  const put = await fetch(ticket.upload_url, { method: "PUT", headers: { "Content-Type": ticket.content_type }, body: "De rode jas\n\nOma heeft een rode jas. De jas hangt aan de deur." });
+  assert(put.ok, `the upload: ${put.status}`);
+  const added = await mcpTool("add_text", { upload_id: ticket.upload_id, language: "nl", title: "De rode jas", authors: [] });
+  tx.ids.ai = added.text_id;
+  for (let i = 0; i < 20 && !(await textsOn(tx.a.page)).includes(tx.ids.ai); i++) {
+    await tx.a.page.evaluate(async () => (await import("/js/study/pack-inbox.js")).checkPackInbox());
+    await tx.a.page.waitForTimeout(1500);
+  }
+  assert((await textsOn(tx.a.page)).includes(tx.ids.ai), "your AI's text reached the first phone");
+  // A book from the open shelf, opened as the shelf opens one, and your place in it.
+  const shelf = await tx.a.page.evaluate(async () => {
+    const { loadCatalog, fetchOpenBook } = await import("/js/read/shelf.js");
+    const store = await import("/js/read/store.js");
+    const catalog = await loadCatalog();
+    const meta = (catalog.books ?? []).find((b) => b.lang === "nl") ?? (catalog.books ?? [])[0];
+    if (!meta) return null;
+    const record = await fetchOpenBook(meta);
+    await store.addBook(record.book, record.weaves, { definitions: record.definitions, from: "shelf" });
+    await store.setPosition(meta.id, 7, record.book.version);
+    return { id: meta.id, title: meta.title };
+  });
+  assert(shelf, "the local library has no shelf book to open");
+  tx.ids.shelf = shelf.id;
+  await syncNow(tx.a.page);
+  await tx.a.page.waitForTimeout(1500);
+  await syncNow(tx.a.page);
+  tx.cookies = await tx.a.context.cookies();
+  pk.cookies = tx.cookies;
+  const names = (await storeList()).map((f) => f.name).filter((n) => n.startsWith("lexicommons-texts."));
+  assert(names.length >= 3, `the account's texts files: ${names}`);
+  const texts = await Promise.all(names.map(storeRead));
+  assert(texts.some((t) => t.includes("Mijn dagboek")) && texts.some((t) => t.includes("De rode jas")), "the two texts are in the account's copy");
+  const shelfFile = texts.find((t) => t.includes(`"${shelf.id}"`));
+  assert(shelfFile && !shelfFile.includes('"words":['), "the shelf book went as its entry alone");
+  return `${names.length} texts files: the pasted text, your AI's, and "${shelf.title}" as its entry`;
+});
+
+await stage("CONTROL: a phone signed in now but kept from the texts' files on the account has none of them", async () => {
+  const control = await device({
+    before: (context) => context.route((url) => url.pathname === "/api/account/sync/file" && (url.searchParams.get("name") ?? "").startsWith("lexicommons-texts."), (route) => route.fulfill({ status: 503, body: "{}" })),
+  });
+  await control.context.addCookies(tx.cookies);
+  await startApp(control.page);
+  const ids = await textsUntil(control.page, (got) => got.length > 0, 24);
+  await control.context.close();
+  const ours = [tx.ids.pasted, tx.ids.ai, tx.ids.shelf].filter((id) => ids.includes(id));
+  assert(!ours.length, `the kept-out phone has them anyway: ${ours}`);
+  return `after 24 s of syncs it has ${ids.length ? ids.join(", ") : "none of them"}`;
+});
+
+await stage("a phone signed in afterwards has both texts whole, and the shelf book in its library with your place: Read continues it, its text fetched again here", async () => {
+  tx.b = await device();
+  await tx.b.context.addCookies(tx.cookies);
+  await startApp(tx.b.page);
+  const want = [tx.ids.pasted, tx.ids.ai, tx.ids.shelf];
+  const ids = await textsUntil(tx.b.page, (got) => want.every((id) => got.includes(id)));
+  assert(want.every((id) => ids.includes(id)), `the second phone's texts: ${ids}`);
+  const here = await tx.b.page.evaluate(async (ids) => {
+    const store = await import("/js/read/store.js");
+    return {
+      pasted: (await store.getBook(ids.pasted))?.text.words.length ?? 0,
+      ai: (await store.getBook(ids.ai))?.book.source.kind ?? null,
+      shelfEntry: (await store.getEntry(ids.shelf))?.from ?? null,
+      title: (await store.getEntry(ids.shelf))?.title ?? null,
+      place: (await store.getPosition(ids.shelf))?.word ?? null,
+    };
+  }, tx.ids);
+  assert(here.pasted > 5 && here.ai === "ai", `the two texts whole: ${JSON.stringify(here)}`);
+  assert(here.shelfEntry === "shelf" && here.place === 7, `the shelf book listed with your place: ${JSON.stringify(here)}`);
+  // Being read on the first phone: Read's top card continues it here (its text fetched again in the background), never offers it as a first book.
+  await tx.b.page.evaluate(() => (location.hash = "#read"));
+  const card = tx.b.page.locator('[data-part="page"] [data-part="continue-card"]', { hasText: "Continue reading" });
+  await card.waitFor({ timeout: 30_000 });
+  const said = (await card.innerText()).replace(/\s+/g, " ");
+  assert(said.includes(here.title ?? "") && !/A good first book/.test(said), `Read's top card: ${said}`);
+  await tx.b.page.screenshot({ path: join(OUT, "texts-continue-phone2.png") });
+  await tx.b.page.evaluate((id) => (location.hash = `#read/book/${encodeURIComponent(id)}`), tx.ids.shelf);
+  await tx.b.page.waitForSelector('[data-part="reader"][data-ready]', { timeout: 60_000 });
+  const fetched = await tx.b.page.evaluate(async (id) => Boolean(await (await import("/js/read/store.js")).getBook(id)), tx.ids.shelf);
+  assert(fetched, "the shelf book's text wasn't fetched on open");
+  await tx.b.page.screenshot({ path: join(OUT, "texts-shelf-opened.png") });
+  await tx.b.page.evaluate(() => (location.hash = "#read"));
+  return `both texts whole; "${here.title}" listed at word 7, continued on Read, opened with its text fetched again`;
+});
+
+await stage("a text removed on the first phone stays removed on the second, through a reload and more syncs", async () => {
+  const done = await tx.a.page.evaluate(async (id) => (await import("/js/read/text-inbox.js")).removeText(id), tx.ids.pasted);
+  assert(!(await textsOn(tx.a.page)).includes(tx.ids.pasted), `removed on the first phone (${JSON.stringify(done)})`);
+  await syncNow(tx.a.page);
+  let ids = await textsUntil(tx.b.page, (got) => !got.includes(tx.ids.pasted));
+  assert(!ids.includes(tx.ids.pasted), `the second phone after: ${ids}`);
+  await tx.b.page.reload();
+  await tx.b.page.waitForSelector("html[data-app-ready]");
+  for (let i = 0; i < 2; i++) {
+    await syncNow(tx.b.page);
+    await syncNow(tx.a.page);
+  }
+  ids = await textsOn(tx.b.page);
+  assert(!ids.includes(tx.ids.pasted) && ids.includes(tx.ids.ai), `after a reload: ${ids}`);
+  await tx.a.context.close();
+  await tx.b.context.close();
+  return "removed on both, through a reload";
 });
 
 await stage("deleting the account empties its store at once, and a device left signed out keeps its own copy", async () => {

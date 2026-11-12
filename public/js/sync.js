@@ -143,12 +143,22 @@ const talliesOf = new WeakMap();
 
 // ---------- records and the merge (pure) ----------
 
-/** How deep a JSON value nests (stopping once past the limit). */
+/**
+ * How deep a JSON value nests (stopping once past the limit). A plain value inside counts one deeper without a call of its own: a text's
+ * hundred thousand words were a call each (12 Nov 2026: 65–73 ms at 4× per novel-sized text, every sync).
+ */
 function depthOf(value, depth = 0) {
   if (depth > SYNC_LIMITS.depth || !value || typeof value !== "object") return depth;
   let most = depth;
-  for (const v of Array.isArray(value) ? value : Object.values(value)) {
-    most = Math.max(most, depthOf(v, depth + 1));
+  const values = Array.isArray(value) ? value : Object.values(value);
+  for (let i = 0; i < values.length; i++) {
+    const v = values[i];
+    if (v === null || typeof v !== "object") {
+      if (most <= depth) most = depth + 1;
+      continue;
+    }
+    const d = depthOf(v, depth + 1);
+    if (d > most) most = d;
     if (most > SYNC_LIMITS.depth) break;
   }
   return most;
@@ -496,7 +506,7 @@ export async function syncWith(store, tag, device, remembered = {}, list = [...k
     for (const key of Object.keys(settled)) {
       const record = settled[key];
       const shard = shardOfKey.get(key) ?? shardOf(kind, key);
-      if (!record.gone) alive.set(shard, (alive.get(shard) ?? 0) + 1);
+      if (!record.gone && (!kind.counts || kind.counts(key))) alive.set(shard, (alive.get(shard) ?? 0) + 1);
       (byShard.get(shard) ?? byShard.set(shard, records()).get(shard))[key] = record;
       if (++n % 1024 === 0) await breathe();
     }
@@ -507,21 +517,54 @@ export async function syncWith(store, tag, device, remembered = {}, list = [...k
     }
     result.count = 0;
     for (const count of tally.values()) result.count += count;
+    // What this storage doesn't hold of the kind, by key: "big" (a file past what the storage keeps: your account's copy, 12 MB) or "full"
+    // (the storage is full); and the keys it does (result.notKept, result.keptHere: syncAll keeps them for Read to say so).
+    result.notKept = {};
+    result.keptHere = [];
+    let full = null;
     // Every shard a file or this device has, and any the merge brought (an old whole file's records come from no file of their shard).
     for (const shard of new Set([...shards.keys(), ...byShard.keys()])) {
       // The old whole file is read, never written (a device on the code from before still reads and writes its own).
       if (oldWhole(kind, shard)) continue;
       const own = fileName(kind.id, shard, tag, device);
       const kept = byShard.get(shard) ?? records();
+      const keys = Object.keys(kept).filter((key) => !kept[key].gone);
       if (!Object.keys(kept).length && !files.has(own)) continue;
       const text = await fileTextSliced(kind, tag, kept);
-      // Never replace a readable file with one every other device would refuse.
-      if (!utf8Within(text, SYNC_LIMITS.fileBytes)) throw new Error(`${own} is too big to sync.`);
+      // Never replace a readable file with one every other device would refuse: a file of one record (a text, a pack) stays on this device,
+      // the rest going on; one of many (a month's answers) is a sync that can't finish.
+      if (!utf8Within(text, SYNC_LIMITS.fileBytes)) {
+        if (keys.length > 1) throw new Error(`${own} is too big to sync.`);
+        for (const key of keys) result.notKept[key] = "big";
+        continue;
+      }
+      // Past what this storage keeps in one file, or the storage full: those records stay on this device (the rest go on).
+      if (full || (store.maxFileBytes && !utf8Within(text, store.maxFileBytes))) {
+        for (const key of keys) result.notKept[key] = full ? "full" : "big";
+        continue;
+      }
       const hash = await hashTextSliced(text);
-      if (files.has(own) && remembered[own]?.hash === hash && remembered[own]?.version === files.get(own).version) continue;
-      const written = await store.write(own, text, { version: files.get(own)?.version ?? null });
+      if (files.has(own) && remembered[own]?.hash === hash && remembered[own]?.version === files.get(own).version) {
+        result.keptHere.push(...keys);
+        continue;
+      }
+      let written;
+      try {
+        written = await store.write(own, text, { version: files.get(own)?.version ?? null });
+      } catch (error) {
+        if (error?.tooBig || error?.full) {
+          if (error.full) {
+            full = error;
+            result.error ??= error.message;
+          }
+          for (const key of keys) result.notKept[key] = error.full ? "full" : "big";
+          continue;
+        }
+        throw error;
+      }
       remembered[own] = { version: written?.version ?? null, hash };
       result.sent++;
+      result.keptHere.push(...keys);
     }
     // Kept for the next quiet sync only from a sync with nothing wrong (with anything wrong, the next one goes through every shard).
     if (tallies && kind.shard && !result.error) tallies.set(kind.id, tally);
@@ -559,7 +602,8 @@ export async function syncWith(store, tag, device, remembered = {}, list = [...k
  * A kind of data that syncs: { id, label, icon?, counted?(n), records() → { key: record }, apply(newer) → [keys it
  * turned down]?, onChange?(fn), check?(record, key), shard?(key), shards?, prefer?(a, b), settle?(held), prepare?() }.
  *   id        lowercase letters, digits and dashes (it names the files)
- *   label, icon (icons.js), counted (how a count of its records reads, "12 answers"): how Settings → Storage lists it
+ *   label, icon (icons.js), counted (how a count of its records reads, "12 answers"): how Settings → Storage lists it; counts(key):
+ *             whether a record counts (a text's weave doesn't: it goes with its text)
  *   records   this device's records, deletions included; apply gets the ones newer than them. Given a Set of shards (a quiet sync's), it
  *             may give only theirs (any others are left out here)
  *   onChange  calls its fn on every change here, with the shards it touched (an array) when it knows them
@@ -603,23 +647,33 @@ export function registerBlobs(kind) {
 
 // ---------- the account's own copy ----------
 //
-// Your progress and your own packs are kept with your account too (src/account-sync.ts), so signing in on a device with nothing on it brings
-// them back: the server is one more storage to sync with, on from sign-in with nothing to connect, when the site says it keeps one (/api/me's
+// Your progress, your own packs and your texts are kept with your account too (src/account-sync.ts), so signing in on a device with nothing on
+// it brings them back: the server is one more storage to sync with, on from sign-in with nothing to connect, when the site says it keeps one (/api/me's
 // accountSync). Its kinds (ACCOUNT_KINDS: the server refuses any other kind's file): answers, the done log and streak, the place on the path,
-// the word bank, reading places, highlights, sound settings, and your packs (12 Nov 2026: one your AI made reached only the devices signed in
-// while the relay held it). Never the packs' recordings or books: those sync with a storage of your own.
+// the word bank, reading places, highlights, sound settings, your packs (12 Nov 2026: one your AI made reached only the devices signed in
+// while the relay held it) and your texts (a shelf or Explore book as its entry alone). Never the packs' recordings: those sync with a
+// storage of your own.
 // Nothing is sent before sign-in (sync starts with the account), and signing out leaves this device's copy as it is.
 export const ACCOUNT_STORE = "account";
-export const ACCOUNT_KINDS = ["progress", "streak", "path", "word-bank", "highlights", "reading-place", "sound", "packs"];
+export const ACCOUNT_KINDS = ["progress", "streak", "path", "word-bank", "highlights", "reading-place", "sound", "packs", "texts"];
 let accountStore = false;
 const accountFile = (name, seen) => `/api/account/sync/file?name=${encodeURIComponent(name)}${seen ? `&seen=${encodeURIComponent(seen)}` : ""}`;
 const accountAsk = async (url, options) => {
   const response = await fetch(url, { credentials: "same-origin", cache: "no-store", ...options });
   if (response.status === 409) throw Object.assign(new Error("Another device wrote that file first."), { conflict: true });
-  if (!response.ok) throw new Error((await response.json().catch(() => null))?.error ?? `your account answered ${response.status}`);
+  if (!response.ok) {
+    const error = new Error((await response.json().catch(() => null))?.error ?? `your account answered ${response.status}`);
+    // A file past what your account keeps (413, or a 400 saying so), and your account's copy full (429): what stays on this device, said.
+    if (response.status === 413 || /too big to keep with your account/.test(error.message)) error.tooBig = true;
+    if (response.status === 429) error.full = true;
+    throw error;
+  }
   return response;
 };
+// The most your account keeps in one file (src/account-sync.ts ACCOUNT_SYNC_LIMITS.fileBytes; test-account-sync holds them the same).
+export const ACCOUNT_FILE_BYTES = 12 * 1024 * 1024;
 const accountAdapter = {
+  maxFileBytes: ACCOUNT_FILE_BYTES,
   list: async () => (await (await accountAsk("/api/account/sync")).json()).files,
   read: async (name) => (await accountAsk(accountFile(name))).text(),
   write: async (name, text, { version = null } = {}) => (await accountAsk(accountFile(name, version), { method: "PUT", headers: { "Content-Type": "application/json" }, body: text })).json(),
@@ -726,7 +780,8 @@ const storageAdapter = (provider) => ({
 
 /** How many records of a kind this device has, deletions aside: what Settings → Sync across devices shows, "N on this device". */
 export async function localCount(id) {
-  return Object.values(await kinds.get(id).records()).filter((r) => !r.gone).length;
+  const kind = kinds.get(id);
+  return Object.entries(await kind.records()).filter(([key, r]) => !r.gone && (!kind.counts || kind.counts(key))).length;
 }
 // Every kind's records counted again (or those not in `skip`).
 async function count(skip = new Set()) {
@@ -812,6 +867,10 @@ export function syncNow({ quietly = false } = {}) {
 /** Syncs with each connected storage in turn. Resolves to the first error, or null. */
 // The kinds the last sync counted from what it merged (syncWith's report).
 let countedBySync = new Set();
+// What your account's copy doesn't hold, by kind: Map(kind id → Map(key → "big" | "full")), as its last syncs found (Read says so: read/store.js).
+const notKept = new Map();
+/** The keys of a kind your account's copy doesn't hold, and why: Map(key → "big" | "full"). */
+export const notKeptWithAccount = (kindId) => new Map(notKept.get(kindId) ?? []);
 async function syncAll({ quietly = false } = {}) {
   countedBySync = new Set();
   if (sampleOn()) return "Paused while the sample learner is on.";
@@ -836,11 +895,17 @@ async function syncAll({ quietly = false } = {}) {
         : await syncWith(adapter(id), accountTag, device, (remembered[id] ??= {}), undefined, Date.now(), undefined, { clean });
       // Its sign-in ended during this round (storage.js signInEnded): Settings says so on its row, beside Connect, so neither this
       // line nor what's kept says it again; the next round leaves it out.
-      if (!own && signInEnded(id)) continue;
+      // Disconnected during this round (Settings → Sync across devices' Disconnect while it ran): its error is no one's now either.
+      if (!own && (signInEnded(id) || !isConnected(id))) continue;
       for (const [kindId, r] of Object.entries(report)) {
         if (kindId.startsWith("blobs:")) {
           targetError ??= r.error;
           continue;
+        }
+        if (own && r.notKept) {
+          const here = notKept.get(kindId) ?? notKept.set(kindId, new Map()).get(kindId);
+          for (const key of r.keptHere ?? []) here.delete(key);
+          for (const [key, why] of Object.entries(r.notKept)) here.set(key, why);
         }
         // Passed by (nothing new): as it was, its count too.
         if (r.skipped) {
@@ -855,7 +920,7 @@ async function syncAll({ quietly = false } = {}) {
         targetError ??= r.error;
       }
     } catch (e) {
-      if (id !== ACCOUNT_STORE && signInEnded(id)) continue;
+      if (id !== ACCOUNT_STORE && (signInEnded(id) || !isConnected(id))) continue;
       // A network failure is the browser's own words ("Failed to fetch", "Load failed"): say what it means instead.
       const network = e instanceof TypeError && /^(Failed to fetch|Load failed|NetworkError)/.test(e.message);
       targetError = network ? (navigator.onLine === false ? "you're offline; it syncs again once you're back." : "it couldn't be reached; it tries again in a while.") : (e?.message ?? String(e));

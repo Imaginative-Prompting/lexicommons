@@ -545,8 +545,9 @@ export function shelfStart(catalog, n = 4) {
 }
 
 /** The first book to offer for the language you're learning (Read's "A good first book"), from the catalog alone; null with none. */
-export function firstBookOf(catalog) {
-  return startingBooks(catalog)[0] ?? null;
+export function firstBookOf(catalog, { started = new Set() } = {}) {
+  // Never one you've started: on another device, it's listed here with your place before its text comes (read/store.js, the texts kind).
+  return startingBooks(catalog).find((meta) => !started.has(meta.id)) ?? null;
 }
 
 /** One of the shelf's sections, all of it, as a grid (#read/shelf/<id>). Returns { title, back, dispose }. */

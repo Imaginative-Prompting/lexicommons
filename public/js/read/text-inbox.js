@@ -268,8 +268,8 @@ let checkNow = async () => 0;
 /**
  * Removes a text. One your AI added goes from every device through the relay (this one takes it like the rest, so it
  * can be undone everywhere); it's never taken out here on its own once the relay has it, so if this round didn't take
- * it yet, the next one does. One you added yourself only ever lived here. Offline, a text your AI added goes from this
- * device only. Resolves to { everywhere, error? }.
+ * it yet, the next one does. One you added yourself goes everywhere as its deletion (read/store.js removeBook, the texts sync
+ * kind). Offline, a text your AI added goes from this device, and to the others at its next sync. Resolves to { everywhere, error? }.
  */
 export async function removeText(id) {
   const here = await store.getBook(id);

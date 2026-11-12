@@ -241,7 +241,8 @@ await stage("Read: nothing of yours yet, the ways to add a text, where texts are
   await shot("01-read-empty");
   await openAdd();
   // Where texts are kept is in the sheet: its words fill in once the device has said.
-  await page.waitForFunction(() => /kept on this device|can't keep texts/.test(document.querySelector('.lx-sheet-layer:not([hidden]) [data-part="sheet"]')?.textContent ?? ""), null, { timeout: 10000 });
+  // Kept with your account and on this device where the account keeps a copy (12 Nov 2026: read/store.js's texts kind), else on this device.
+  await page.waitForFunction(() => /kept with your account|kept on this device|can't keep/.test(document.querySelector('.lx-sheet-layer:not([hidden]) [data-part="sheet"]')?.textContent ?? ""), null, { timeout: 10000 });
   const note = (await page.locator('.lx-sheet-layer:not([hidden]) [data-part="sheet"]').textContent()).match(/Your texts are kept[^.]*\.|This window can't keep texts[^.]*\./)?.[0] ?? "";
   assert(note, "the sheet says where texts are kept");
   assert(await page.getByText("Paste a text", { exact: true }).isVisible(), "Paste a text");
@@ -400,7 +401,7 @@ await stage("settings: rise from their button, a tap outside only closes them", 
   const sheet = page.locator(`${READER} [data-part="sheet"][aria-label="Reading settings"]`);
   assert(await sheet.isVisible(), "the settings are open");
   assert(await sheet.locator('[data-part="reader-size"] input[type=range]').isVisible(), "the text size slider");
-  assert(await sheet.getByText("Remove it from this device").isVisible(), "removing it");
+  assert(await sheet.getByText("Remove it from every device").isVisible(), "removing it");
   await shot("05-reader-settings");
   const before = await zen();
   await tapAt(0.3);
@@ -1171,10 +1172,11 @@ await stage("remove a text: two presses, back to the list without it", async () 
   if (await zen()) await tapAt(0.08);
   await page.locator(`${READER} [data-part="reader-settings-button"]`).click();
   await sheetStill();
-  const row = page.locator(`${READER} [data-part="sheet"]`).getByText("Remove it from this device");
+  // From every device you're signed in on (12 Nov 2026: your texts go to your other devices, and so does taking one out).
+  const row = page.locator(`${READER} [data-part="sheet"]`).getByText("Remove it from every device");
   await row.click();
-  assert(await page.locator(`${READER} [data-part="sheet"]`).getByText("Press again to remove it").isVisible(), "the first press arms it");
-  await page.locator(`${READER} [data-part="sheet"]`).getByText("Press again to remove it").click();
+  assert(await page.locator(`${READER} [data-part="sheet"]`).getByText("Press again to remove it everywhere").isVisible(), "the first press arms it");
+  await page.locator(`${READER} [data-part="sheet"]`).getByText("Press again to remove it everywhere").click();
   await page.waitForURL(/#read$/);
   const listed = await yourBooks();
   const removed = await page.evaluate(async (id) => (await (await import("/js/read/store.js")).getBook(id)) === null, fileId);
@@ -1720,9 +1722,23 @@ await stage("Your data: the export lists your texts and their highlights; deleti
   assert(Array.isArray(texts) && texts.length === (LONG_BOOK ? 2 : 1) && texts.some((t) => t.title === "The Bakery") && texts.every((t) => typeof t.position === "number"), `texts in the export: ${JSON.stringify(texts)}`);
   const marks = texts.find((t) => t.title === "The Bakery").highlights;
   assert(marks?.length === 1 && marks[0].note === "For the export" && marks[0].quote.length > 0, `its highlight in the export: ${JSON.stringify(marks)}`);
-  await page.getByText("Delete your texts on this device").click();
-  await page.getByText("Press again to delete them").click();
-  await page.waitForFunction(() => document.body.textContent.includes("Your texts on this device deleted"));
+  // Everywhere, with a week to bring them back (12 Nov 2026): deleted, brought back, deleted again.
+  const titles = async () => (await page.evaluate(async () => (await (await import("/js/read/store.js")).listBooks()).map((b) => b.title).sort()));
+  const before = await titles();
+  await page.getByText("Delete your texts everywhere").click();
+  await page.getByText("Press again to delete them everywhere").click();
+  await page.waitForFunction(() => document.body.textContent.includes("deleted everywhere"));
+  assert((await titles()).length === 0, `texts left after deleting: ${await titles()}`);
+  const back = page.locator('[data-part="list-row"]', { hasText: "Bring back deleted texts" });
+  await back.waitFor();
+  assert(/until /.test(await back.innerText()), `the row says until when: ${await back.innerText()}`);
+  await shot("11-texts-deleted-bring-back");
+  await back.getByRole("button", { name: "Bring back" }).click();
+  for (let i = 0; i < 50 && (await titles()).length !== before.length; i++) await page.waitForTimeout(200);
+  assert(JSON.stringify(await titles()) === JSON.stringify(before), `brought back: ${await titles()} (was ${before})`);
+  await page.getByText("Delete your texts everywhere").click();
+  await page.getByText("Press again to delete them everywhere").click();
+  await page.waitForFunction(() => document.body.textContent.includes("deleted everywhere"));
   const left = await page.evaluate(async () => (await import("/js/read/highlights.js")).allHighlights());
   assert(left.length === 0, `highlights deleted with the texts: ${left.length}`);
   await page.goto(`${BASE}/app/#read`);
@@ -3292,7 +3308,16 @@ await stage("a classic with only its cover as a picture (its `cover`): its tile 
   // Its tile in Your library (the shelf has Alice too, as the catalog has it: its own drawing).
   await page.waitForSelector('.lx-read-texts [data-part="book-tile"]');
   // The cover's picture (the tile's flag, the language it teaches, is an image too).
-  const src = await page.locator('.lx-read-texts [data-part="book-tile"]', { hasText: "Alice" }).first().locator('[data-part="book-cover"] > img:not([data-part="language-flag"])').getAttribute("src");
+  const src = await page
+    .locator('.lx-read-texts [data-part="book-tile"]', { hasText: "Alice" })
+    .first()
+    .locator('[data-part="book-cover"] > img:not([data-part="language-flag"])')
+    .getAttribute("src", { timeout: 15_000 })
+    .catch(async () => {
+      const tiles = await page.evaluate(() => [...document.querySelectorAll('.lx-read-texts [data-part="book-tile"]')].map((t) => `${t.textContent.trim().slice(0, 30)} [${[...t.querySelectorAll("img")].map((i) => i.getAttribute("data-part") ?? "img").join(",")}]`));
+      const kept = await page.evaluate(async (id) => JSON.stringify((await (await import("/js/read/store.js")).getEntry(id)) ?? null).slice(0, 300), setup.id);
+      throw new Error(`no cover picture on Alice's tile; the tiles: ${tiles.join(" | ")}; Alice's entry: ${kept}`);
+    });
   assert(src && (src.endsWith(setup.path) || src.startsWith("blob:")), `the tile shows the cover: ${src}`);
   await page.goto(`${BASE}/app/#read/book/${encodeURIComponent(setup.id)}`);
   await page.waitForSelector(`${READER}[data-ready]`, { timeout: 20_000 });

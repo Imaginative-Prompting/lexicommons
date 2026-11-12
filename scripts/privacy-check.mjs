@@ -137,8 +137,8 @@ const EXPORTED = {
   pack_changes: (e) => e.packs.changes.some((c) => c.said === mark("change")),
   pack_audio: (e) => JSON.stringify(e.packs.copies).includes(mark("clip")),
   text_changes: (e) => e.texts.some((t) => t.said === mark("textchange")),
-  // The account's copy: its progress, and its own packs (from 12 Nov 2026), each in the export.
-  account_sync: (e) => ["progress", "packs"].every((kind) => e.progressCopy.some((file) => file.name === `lexicommons-${kind}.${mark("copy")}.json`)),
+  // The account's copy: its progress, its own packs and its texts (from 12 Nov 2026), each in the export.
+  account_sync: (e) => ["progress", "packs", "texts"].every((kind) => e.progressCopy.some((file) => file.name === `lexicommons-${kind}.${mark("copy")}.json`)),
   progress_clears: (e) => e.progressClears.clears?.some?.((c) => c.id === mark("clear")) ?? JSON.stringify(e.progressClears).includes(mark("clear")),
   user_roles: (e) => e.roles.some((r) => r.note === mark("role")),
   staged_files: (e) => e.stagedFiles.some((s) => s.name === mark("staged")),
@@ -244,6 +244,7 @@ await stage("a row of the account in every table", async () => {
     `INSERT INTO progress_clears (user_id, id, before_at, at) VALUES (${q(who.id)}, ${q(mark("clear"))}, ${now}, ${now})`,
     `INSERT INTO account_sync (user_id, name, size, version, updated_at) VALUES (${q(who.id)}, ${q(`lexicommons-progress.${mark("copy")}.json`)}, 2, 'v1', ${now})`,
     `INSERT INTO account_sync (user_id, name, size, version, updated_at) VALUES (${q(who.id)}, ${q(`lexicommons-packs.${mark("copy")}.json`)}, 2, 'v1', ${now})`,
+    `INSERT INTO account_sync (user_id, name, size, version, updated_at) VALUES (${q(who.id)}, ${q(`lexicommons-texts.${mark("copy")}.json`)}, 2, 'v1', ${now})`,
     // The paid plan's rows (src/billing.ts), as the webhook and the in-app AI would write them.
     `INSERT INTO billing_customers (user_id, customer, trial_used, created_at) VALUES (${q(who.id)}, ${q(mark("cus"))}, 1, ${now})`,
     `INSERT INTO billing_subscriptions (id, user_id, customer, status, updated_at) VALUES (${q(mark("sub"))}, ${q(who.id)}, ${q(mark("cus"))}, 'canceled', ${now})`,

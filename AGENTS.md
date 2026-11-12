@@ -668,8 +668,12 @@ node scripts/test-read-store.mjs          # the reading library with two account
 node scripts/test-search.mjs              # search in a text (read/search.js): case and accents, across words, the limit,
                                           # snippets (exit 0 = pass)
 node scripts/test-reader-sync.mjs         # the reader's data through your own storage on three devices in Node: where you
-                                          # are, highlights (removed stays removed; kept 30 days to restore), your words;
-                                          # each kind's check (exit 0 = pass)
+                                          # are, highlights (removed stays removed; kept 30 days to restore), your words; your texts
+                                          # (read/store.js "texts", 12 Nov 2026): your own whole with your AI's weave and cover, a shelf
+                                          # book as its entry alone, a file per text and per weave, a weave not counted as a text, one
+                                          # removed staying removed and Undo bringing it back, Delete everywhere and Bring back, another
+                                          # account's text never sent, a crafted text, a made-up version and a crafted weave turned down
+                                          # and listed; each kind's check (exit 0 = pass)
 node scripts/test-own-language.mjs        # a pack in a language Lexicommons doesn't list (src/packs.ts, lang/index.js own languages) on the real migrations:
                                           # made with its definition, spaced and right to left unspaced; check_items; a device's copy; sentences added; refused
                                           # in words (no definition, a wrong one, ours given one, a region tag, a second pack saying another definition), nothing
@@ -688,7 +692,8 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "accoun
   # the account (not asked what to learn; the store down as its control); another account sees none; two devices merge; a device's progress
   # belongs to one account (sync.js deviceOwner; shell/other-owner.js): another account signing in is told once and nothing merges or uploads
   # either way (a planted merge caught), Use my progress on this device replaces it and leaves the first account's copy, what lives only on
-  # the device named first with Keep it; your own packs kept there too, a file per pack: two your AI made reaching a phone signed in after the
+  # the device named first with Keep it; your texts kept there too (a pasted one and your AI's whole, a shelf book as its entry, on a phone
+  # signed in later with your place, fetched again on open; its control kept from the texts' files; a removed one staying removed); your own packs kept there too, a file per pack: two your AI made reaching a phone signed in after the
   # relay let them go (its control: that phone kept from the packs' files has none), one deleted staying deleted through a reload, and the
   # one-file form from before planted beside them read with nothing lost or brought back and never written; deleting the account empties its
   # store. LOCAL only, a copy with Dutch's lessons (npm run local) (exit 0 = pass)

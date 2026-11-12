@@ -127,7 +127,7 @@ The picture books, in 33 languages, each have English beside the text or a tap a
 
 ## Your data stays yours
 
-No ads and no tracking. Your progress and your packs are kept with your account, so they're there on any device you sign in on. You can also keep them in step between your devices through your own cloud storage, with your packs' recordings too. The books and texts you add stay on your device. Settings → Your data downloads everything we hold, or deletes your account.
+No ads and no tracking. Your progress, your packs and your texts are kept with your account, so they're there on any device you sign in on. You can also keep them in step between your devices through your own cloud storage, with your packs' recordings too. A book from the shelf or Explore goes as its place in your library, and is fetched again on the device that opens it. Settings → Your data downloads everything we hold; Settings → Account deletes your account.
 
 ## Your own AI, if you want one
 

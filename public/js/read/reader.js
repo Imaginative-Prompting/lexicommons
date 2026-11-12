@@ -3110,29 +3110,30 @@ export function openReader(host, { bookId = null, book: given = null, word: give
     );
   }
 
-  // Two presses: the first arms it, the second removes the text from this device.
+  // Two presses: the first arms it, the second removes the text from every device you're signed in on (read/store.js removeBook: it goes
+  // to them as its deletion, 12 Nov 2026).
   function removeRow() {
     let armed = 0;
     const item = ui.listRow({
       icon: "trash",
-      title: "Remove it from this device",
+      title: "Remove it from every device",
       variant: "danger",
       trailing: el("span"),
       onclick: async () => {
         const row = item.querySelector('[data-part="list-row"]');
         const title = row.querySelector(".lx-row-title");
         if (!armed) {
-          title.textContent = "Press again to remove it";
+          title.textContent = "Press again to remove it everywhere";
           row.setAttribute("data-armed", "");
           armed = setTimeout(() => {
             armed = 0;
-            title.textContent = "Remove it from this device";
+            title.textContent = "Remove it from every device";
             row.removeAttribute("data-armed");
           }, 5000);
           return;
         }
         clearTimeout(armed);
-        // One your AI added goes from every device, through the relay (with Undo); one you added, from here.
+        // One your AI added goes from every device through the relay too (with Undo); either way it goes as its deletion.
         await removeText(model.book.id);
         model = null;
         onClose?.();
@@ -3524,8 +3525,27 @@ export function openReader(host, { bookId = null, book: given = null, word: give
     // A demo opens at once (before anything awaits), so a page building it can see all of it straight away.
     // A demo's layer, as given: a translation beside the book (a parallel layer) is never a weave.
     if (demo) return givenWeave?.kind === "parallel" ? open(given, givenWord, null, givenWeave) : open(given, givenWord, givenWeave);
-    const found = await store.getBook(bookId);
+    let found = await store.getBook(bookId);
     if (ended) return;
+    // A book from the shelf or Explore your other device listed here: fetched again now (read/fetch-again.js).
+    const listed = found ? null : await store.getEntry(bookId);
+    if (ended) return;
+    if (listed && !store.ownText(listed)) {
+      const bar = ui.downloadBar({ label: `Getting ${listed.title}`, tinta: false });
+      flow.replaceChildren(el("div", { class: "lx-reader-getting" }, el("p", { class: "lx-reader-note" }, `Getting ${listed.title} from the library…`), bar));
+      try {
+        await (await import("./fetch-again.js")).fetchAgain(listed, { onProgress: (share) => bar.set(share) });
+        bar.done();
+      } catch (error) {
+        bar.stop();
+        if (ended) return;
+        flow.replaceChildren(el("div", { class: "lx-reader-getting" }, el("p", { class: "lx-reader-note" }, error.message), ui.button("Back to your texts", { onclick: () => onClose?.() })));
+        return;
+      }
+      if (ended) return;
+      found = await store.getBook(bookId);
+      if (ended) return;
+    }
     if (!found) {
       flow.replaceChildren(el("p", { class: "lx-reader-note" }, "This text isn't on this device any more."), ui.button("Back to your texts", { onclick: () => onClose?.() }));
       return;

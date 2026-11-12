@@ -53,6 +53,9 @@
   [data-part="reader-text"] p { margin: 0 0 1.1em; }
   .lx-it { font-style: italic; }
   .lx-reader-note { color: var(--ink-3); font: 400 var(--size-16) / 1.5 var(--type-ui); text-align: center; }
+  /* A book your other device listed, its text being fetched again (read/fetch-again.js): the line and its bar in the middle of the page, clear
+   * of the top bar (in pages the text's own room starts under it). */
+  .lx-reader-getting { display: grid; align-content: center; gap: var(--space-3); min-height: 70vh; padding: var(--reader-bar-h, 61px) var(--space-4) 0; }
 
   [data-part="reader-heading"] {
     margin: 4em 0 2em;

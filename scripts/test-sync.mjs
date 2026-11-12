@@ -1008,6 +1008,28 @@ await test("a file past the read limit never replaces a readable one: the sync s
   ok(first["big-things"].error && first["big-things"].sent === 0 && empty.writes === 0, "an oversized first upload is refused too");
 });
 
+await test("a storage's own limits: a shard past its file size stays on this device and the rest go on; a full storage keeps what it has and says so (12 Nov 2026: your account's copy keeps 12 MB a file)", async () => {
+  const options = { id: "sized", shard: (key) => key, shards: /^[a-z0-9-]+$/ };
+  const kind = thing({ small: at(1, "s"), other: at(2, "o"), big: at(3, "x".repeat(5000)) }, options);
+  const store = memoryStore();
+  store.maxFileBytes = 2000;
+  let r = await syncWith(store, TAG, DA, {}, [kind], Date.now(), []);
+  eq([r.sized.error, r.sized.sent, r.sized.notKept, [...r.sized.keptHere].sort()], [null, 2, { big: "big" }, ["other", "small"]], "the big one stays here, the rest written");
+  ok(!store.files.has(own(DA, "sized", "big")) && store.files.has(own(DA, "sized", "small")), "no file of the big one");
+  // A full storage: its first refusal says so, and nothing after it is tried in this round.
+  const fullStore = memoryStore();
+  const write = fullStore.write;
+  let writes = 0;
+  fullStore.write = async (name, text, o) => {
+    if (++writes > 1) throw Object.assign(new Error("Your account's copy is full. Nothing is lost on this device."), { full: true });
+    return write(name, text, o);
+  };
+  const three = thing({ a: at(1, "a"), b: at(2, "b"), c: at(3, "c") }, { ...options, id: "sized2" });
+  r = await syncWith(fullStore, TAG, DA, {}, [three], Date.now(), []);
+  eq([r.sized2.sent, Object.values(r.sized2.notKept), /full/.test(r.sized2.error ?? "")], [1, ["full", "full"], true], "one written, the rest kept here, said");
+  eq(writes, 2, "nothing more tried after the storage said it's full");
+});
+
 await test("packs: a file per pack, so twenty big decks are twenty readable files, and a fresh device takes every one (12 Nov 2026: in one file, a few decks passed the account's limit)", async () => {
   const [QA, QB] = [await device("size-a"), await device("size-b")];
   for (const d of [QA, QB]) {

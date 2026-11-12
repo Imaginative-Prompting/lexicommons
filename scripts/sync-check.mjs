@@ -792,7 +792,10 @@ await stage("the reader's: where you are in a text, a highlight with its note an
       assert(names.includes(`lexicommons-${kind}.${tag}.${dev}.json`), `${kind} of ${d.name}: ${names}`);
     }
   }
-  return `word ${at.word}, a highlight on words ${start}–${start + 3} with its note, "kat"`;
+  // The texts themselves go through your own storage too (12 Nov 2026, read/store.js's texts kind): a file of A's in Dropbox.
+  const devA = await deviceOf(A.page);
+  assert(names.some((n) => n.startsWith("lexicommons-texts.") && n.endsWith(`.${tag}.${devA}.json`)), `no texts file of A's in Dropbox: ${names}`);
+  return `word ${at.word}, a highlight on words ${start}–${start + 3} with its note, "kat"; the text's own file in Dropbox`;
 });
 
 await stage("a highlight removed on one device: out on the other at its next sync (in its open reader too), kept there to restore for 30 days; Restore brings it back on both", async () => {

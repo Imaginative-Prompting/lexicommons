@@ -53,6 +53,11 @@ function send(kind, error, message, file, line, col) {
   }
 }
 
+/** Reports an error the app caught itself, as an uncaught one goes (cleaned the same; once a page per kind of message). */
+export function reportCaught(error) {
+  send("error", error, undefined);
+}
+
 addEventListener("error", (event) => {
   // Only the page's own errors: a picture or a script that failed to load fires here too, with no message, on capture only.
   if (event instanceof ErrorEvent) send("error", event.error, event.message, event.filename, event.lineno, event.colno);

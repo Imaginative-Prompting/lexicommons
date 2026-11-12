@@ -210,7 +210,7 @@ export function renderBook(page, id, params = {}) {
         const meta = await post(`/api/community/books/${encodeURIComponent(book.id)}/follow`);
         book.following = true;
         const record = await fetchOpenBook(meta, { onProgress: (share) => bar.set(share) });
-        await store.addBook(record.book, record.weaves, { definitions: record.definitions });
+        await store.addBook(record.book, record.weaves, { definitions: record.definitions, from: "explore" });
         bar.done();
         if (stale) return;
         msg.say(t("explore.book.added"), "right");

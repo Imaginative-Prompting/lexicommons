@@ -1,7 +1,7 @@
 // The account's own copy of a learner's progress and own packs (src/account-sync.ts) on the real migrations, R2 in memory: the files sync
 // writes, kept for the account's own devices. Listing, reading and writing by name; a write over the version the device last saw, a clash
-// when another got there first (nothing kept of the loser); only the kinds of progress and packs (a file per pack), never a recording's or a
-// book's file; every refusal writing
+// when another got there first (nothing kept of the loser); only the kinds of progress, packs (a file per pack) and texts (a file per text
+// and per weave), never a recording's file; every refusal writing
 // nothing (a name that isn't sync's, another account's tag is still only a name, too big, empty, too many files, the account's room);
 // another account never sees or writes a file; the export with each file's text; deleting an account taking its rows and bytes and no
 // one else's; the kinds here the ones the app syncs with it (public/js/sync.js ACCOUNT_KINDS). `node scripts/test-account-sync.mjs` (exit 0 = pass).
@@ -83,16 +83,20 @@ await test("a clash: a write that saw an older version, or none, is refused and 
   assert.match(await store.readAccountSync(world.env, "u1", n), /third/);
 });
 
-await test("progress and packs: each kind the app syncs here is taken, a pack's file by its id; a recording's, a book's and anything else's is refused with nothing written", async () => {
+await test("progress, packs and texts: each kind the app syncs here is taken, a pack's file by its id, a text's by its key's hash; a recording's and anything else's is refused with nothing written", async () => {
   const world = fresh();
   for (const kind of store.ACCOUNT_SYNC_KINDS) await store.writeAccountSync(world.env, "u1", name(kind), file({}), null);
   await store.writeAccountSync(world.env, "u1", name("packs", "trip-utrecht"), file({}), null);
-  assert.equal(rowsOf(world, "u1").length, store.ACCOUNT_SYNC_KINDS.length + 1);
+  await store.writeAccountSync(world.env, "u1", name("texts", "t0123456789abcd"), file({}), null);
+  assert.equal(rowsOf(world, "u1").length, store.ACCOUNT_SYNC_KINDS.length + 2);
   // The app's own list (sync.js ACCOUNT_KINDS) is this one.
   const app = /export const ACCOUNT_KINDS = (\[[^\]]*\])/.exec(readFileSync(new URL("../public/js/sync.js", import.meta.url), "utf8"))?.[1];
   assert.deepEqual(JSON.parse(app ?? "null"), [...store.ACCOUNT_SYNC_KINDS], "the app syncs the kinds the server keeps");
+  // And knows the most it keeps in one file (sync.js ACCOUNT_FILE_BYTES: what stays on the device, and Read says so).
+  const appBytes = /export const ACCOUNT_FILE_BYTES = ([0-9 *]+);/.exec(readFileSync(new URL("../public/js/sync.js", import.meta.url), "utf8"))?.[1];
+  assert.equal(appBytes && Function(`return ${appBytes}`)(), store.ACCOUNT_SYNC_LIMITS.fileBytes, "the app's file limit is the server's");
   const before = keysOf(world).length;
-  for (const bad of [name("pack-audio"), name("clip"), "lexicommons-clip.1b2c3d4e.0123456789abcdef.mp3", name("books"), name("texts"), "lexicommons-progress.json", "progress.1b2c3d4e.0a0a0a0a.json", "lexicommons-progress.1b2c3d4e.0a0a0a0a.json.exe", "../lexicommons-progress.1b2c3d4e.0a0a0a0a.json", name("progress", "", "ZZZZZZZZ"), `lexicommons-progress.${"a".repeat(200)}.1b2c3d4e.0a0a0a0a.json`, ""]) {
+  for (const bad of [name("pack-audio"), name("clip"), "lexicommons-clip.1b2c3d4e.0123456789abcdef.mp3", name("books"), name("pictures"), "lexicommons-progress.json", "progress.1b2c3d4e.0a0a0a0a.json", "lexicommons-progress.1b2c3d4e.0a0a0a0a.json.exe", "../lexicommons-progress.1b2c3d4e.0a0a0a0a.json", name("progress", "", "ZZZZZZZZ"), `lexicommons-progress.${"a".repeat(200)}.1b2c3d4e.0a0a0a0a.json`, ""]) {
     await assert.rejects(store.writeAccountSync(world.env, "u1", bad, file({}), null), LibraryError, `kept: ${bad}`);
     assert.equal(await store.readAccountSync(world.env, "u1", bad), null, `read: ${bad}`);
   }
@@ -143,17 +147,20 @@ await test("the export: every file of the account with its text, its packs' too,
   const world = fresh();
   await store.writeAccountSync(world.env, "u1", name("progress", "2026-11"), file({ a: { at: 1, value: 1 } }), null, 1234);
   await store.writeAccountSync(world.env, "u1", name("packs", "trip-utrecht"), file({ "trip-utrecht": { at: 1, value: { name: "Trip to Utrecht" } } }), null, 1235);
+  await store.writeAccountSync(world.env, "u1", name("texts", "t0123456789abcd"), file({ "my-diary": { at: 1, value: { entry: { title: "My diary" } } } }), null, 1236);
   await store.writeAccountSync(world.env, "u2", name("streak"), file({}), null);
   const out = await store.exportAccountSync(world.env, "u1");
-  assert.deepEqual(out.map((f) => [f.name, f.updatedAt]), [[name("packs", "trip-utrecht"), 1235], [name("progress", "2026-11"), 1234]]);
+  assert.deepEqual(out.map((f) => [f.name, f.updatedAt]), [[name("packs", "trip-utrecht"), 1235], [name("progress", "2026-11"), 1234], [name("texts", "t0123456789abcd"), 1236]]);
   assert.match(out[0].text, /Trip to Utrecht/);
   assert.match(out[1].text, /"records"/);
+  assert.match(out[2].text, /My diary/);
 });
 
-await test("deleting the account takes its rows and its bytes at once, its packs' with them, and leaves another account's", async () => {
+await test("deleting the account takes its rows and its bytes at once, its packs' and texts' with them, and leaves another account's", async () => {
   const world = fresh();
   for (const kind of ["progress", "streak", "path"]) await store.writeAccountSync(world.env, "u1", name(kind), file({}), null);
   await store.writeAccountSync(world.env, "u1", name("packs", "trip-utrecht"), file({}), null);
+  await store.writeAccountSync(world.env, "u1", name("texts", "t0123456789abcd"), file({}), null);
   await store.writeAccountSync(world.env, "u2", name("streak"), file({}), null);
   await deleteAccount(world.env, "u1");
   assert.equal(rowsOf(world, "u1").length, 0);

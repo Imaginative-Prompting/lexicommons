@@ -32,7 +32,7 @@ import { ITEMS } from "../study/content.js";
 import { allEvidence, clearedProgress, clearProgress, UNDO_CLEAR_DAYS, undoClear } from "../study/progress.js";
 import { clearPacks, packsOff, yourPacks } from "../study/packs.js";
 import { clearPractices, listPractices } from "../practice/store.js";
-import { clearReading, readingExport } from "../read/store.js";
+import { bringBackTexts, clearReading, deleteTextsEverywhere, readingExport, TEXTS_BACK_DAYS, textsToBringBack } from "../read/store.js";
 import { clearRemovedTexts } from "../read/text-inbox.js";
 import { bankExport, clearBanks } from "../read/bank.js";
 import { streakExport, streakNow } from "../study/done.js";
@@ -259,7 +259,7 @@ const STORE_SHORT = { google: "Drive", dropbox: "Dropbox", onedrive: "OneDrive" 
 /** Settings' Storage row, naming the stores this site offers. */
 const storageRow = () => {
   const on = Object.keys(PROVIDERS).filter((id) => isConnected(id));
-  // Your progress and packs are with your account wherever the site keeps its copy (sync.js ACCOUNT_STORE); a storage of your own carries the rest.
+  // Your progress, packs and texts are with your account wherever the site keeps its copy (sync.js ACCOUNT_STORE); a storage of your own carries the rest.
   const account = sync.syncTargets().some((t) => t.id === sync.ACCOUNT_STORE);
   return ui.listRow({ symbol: "cloud-q", icon: "cloud", title: "Sync across devices", value: [account ? "Your account" : null, ...on.map((id) => STORE_SHORT[id])].filter(Boolean).join(", ") || "Off", href: "#settings/storage" });
 };
@@ -1079,7 +1079,7 @@ function storage(page) {
         kept,
         el("p", {}, "Lexicommons only sees its own folder there, and the connection lives on this device."),
         el("p", {}, "Each storage you connect keeps a whole copy, and your devices sync through it: a few seconds after a change, when you come back to the app, and every 15 minutes. When two devices change the same thing, the later change wins, going by each device's clock."),
-        el("p", {}, "Anyone who can change the files Lexicommons keeps there can change what syncs to your devices, so keep that storage to yourself; clearing your study progress everywhere goes through your account, so no file can do that. Your texts themselves stay on the device they're on."),
+        el("p", {}, "Anyone who can change the files Lexicommons keeps there can change what syncs to your devices, so keep that storage to yourself; clearing your study progress everywhere goes through your account, so no file can do that. A book from the shelf or Explore goes as its place in your library, and is fetched again on the device that opens it."),
       ),
     );
     sheet.lxOpen();
@@ -1088,8 +1088,8 @@ function storage(page) {
     ui.pageTitle(
       "Sync across devices",
       sync.syncTargets().some((t) => t.id === sync.ACCOUNT_STORE)
-        ? "Your progress and your packs are kept with your account, the same on every device you sign in on. Connect your own cloud to keep your packs' sounds in step too."
-        : "Your progress and packs, the same on each of your devices, through your own cloud.",
+        ? "Your progress, your packs and your texts are kept with your account, the same on every device you sign in on. Connect your own cloud to keep your packs' sounds in step too."
+        : "Your progress, packs and texts, the same on each of your devices, through your own cloud.",
     ),
     el("section", { class: "lx-group" }, list),
     msg,
@@ -1215,6 +1215,7 @@ function clearProgressRows(page, msg) {
 }
 
 function data(page) {
+  let deleteTexts = null;
   const practicesRow = twoStepRow({
     title: "Delete practices with your AI on this device",
     confirm: "Press again to delete them",
@@ -1279,25 +1280,46 @@ function data(page) {
         "ul",
         { part: "list" },
         ...clearProgressRows(page, msg),
-        twoStepRow({
-          title: "Delete your texts on this device",
-          sub: "Everything in Read, your place in each, your highlights and notes",
-          confirm: "Press again to delete them",
+        // Your texts go to your other devices (read/store.js, the texts kind): deleting them is everywhere, with a week to bring them back.
+        (deleteTexts = twoStepRow({
+          title: "Delete your texts everywhere",
+          sub: `Everything in Read on every device you're signed in on, your place in each, your highlights and notes. For ${TEXTS_BACK_DAYS} days you can bring them back here.`,
+          confirm: "Press again to delete them everywhere",
           action: async () => {
-            await clearReading();
+            const n = await deleteTextsEverywhere();
             await clearRemovedTexts();
-            msg.say("Your texts on this device deleted", "right");
+            // A toast, as Bring back's: the page is drawn again at once, with the row that brings them back.
+            lookToast("right", n ? `${n === 1 ? "Your text" : "Your texts"} deleted everywhere` : "There were no texts to delete");
+            data(page);
           },
-        }),
+        })),
         // Only with some to delete (they come from an AI, connected now or once).
         practicesRow,
       ),
       ...(sync.syncTargets().length
-        ? [el("p", { part: "group-note" }, `${sync.syncTargets().some((t) => t.id === sync.ACCOUNT_STORE) ? "Your study progress and your packs are kept with your account, and your texts live on this device." : "Your study progress and your texts live on this device."}${syncedNote()}`)]
+        ? [el("p", { part: "group-note" }, `${sync.syncTargets().some((t) => t.id === sync.ACCOUNT_STORE) ? "Your study progress, your packs and your texts are kept with your account." : "Your study progress, your packs and your texts go to your other devices through your own storage."}${syncedNote()}`)]
         : []),
     ),
 
   );
+  // Texts deleted everywhere from here, for their week: one row to bring them all back (on every device).
+  textsToBringBack().then((kept) => {
+    if (!kept.length || !deleteTexts?.isConnected) return;
+    deleteTexts.after(
+      ui.listRow({
+        title: "Bring back deleted texts",
+        sub: `${kept.length === 1 ? "1 text" : `${kept.length} texts`}; you can bring them back until ${day(Math.min(...kept.map((t) => t.until)))}`,
+        trailing: ui.button("Bring back", {
+          size: "sm",
+          onclick: async () => {
+            const n = await bringBackTexts();
+            lookToast("right", `${n === 1 ? "1 text" : `${n} texts`} brought back`);
+            data(page);
+          },
+        }),
+      }),
+    );
+  });
   return { title: "Your data" };
 }
 

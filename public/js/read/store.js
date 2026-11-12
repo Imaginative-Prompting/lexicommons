@@ -1,6 +1,8 @@
-// Your texts, kept on this device and nowhere else (IndexedDB "lexicommons-read"):
-//   books      { id, title, authors, lang, source, version, addedAt, openedAt, words, chapters, cover? }: the list
-//              (cover: { file }, a cover your AI drew, in pictures; source.kind "ai" for a text your AI added)
+// Your texts, kept on this device (IndexedDB "lexicommons-read") and, from 12 Nov 2026, on your other devices through your account's copy
+// and your own storage (sync.js, kind "texts", below):
+//   books      { id, title, authors, lang, source, version, addedAt, changedAt, openedAt, words, chapters, cover?, from? }: the list
+//              (cover: { file }, a cover your AI drew, in pictures; source.kind "ai" for a text your AI added; from: "shelf" or
+//              "explore" for a book from the open shelf or Explore, which another device lists and fetches again when it's opened)
 //   texts      the text itself, a lexicommons-book (book-format.js), loaded only to read it
 //   weaves     { id: "<book>:<to>", weave, definitions? }: a lexicommons-weave of it into another language, and the
 //              definitions of the words it teaches ({ url, file }, a lexicommons-definitions); "<book>:#book" holds
@@ -9,26 +11,29 @@
 //   pictures   { id: file, blob }: a picture book's pictures, by their file name (their content's hash), shared by
 //              every book that shows them, so a picture book reads offline; and covers ("<16 hex>.svg", cover-svg.js),
 //              shown only as <img>
+//   gone       { id, at, kept?, until? }: a text (its id) or a weave of one ("<id>:<to>") taken out, so it stays out on every
+//              device; kept: everything it was (snapshotBook) until `until`, for Settings → Your data to bring back
 // Your highlights and notes are kept apart (highlights.js), and go with their text: removed, kept for Undo, cleared and
 // exported with it.
-// Where you are in each text goes to your other devices through your own storage (sync.js, kind "reading-place"). The
-// texts themselves stay on the device that has them.
+// Where you are in each text goes to your other devices too (sync.js, kind "reading-place"). Your own texts (pasted, from a file, or
+// added by your AI) go whole, with your AI's weaves and cover; a book from the shelf or Explore goes as its list entry alone.
 // Without IndexedDB (a private window) everything lasts for the visit only.
 
-import { BOOK_ID, coverPicture, picturePath } from "./book-format.js";
-import { registerSync } from "../sync.js";
+import { BOOK_ID, coverPicture, picturePath, validateBook, validateWeave } from "./book-format.js";
+import { cleanCover, coverFile, COVER_TYPE } from "./cover-svg.js";
+import { hashText, notKeptWithAccount, registerSync } from "../sync.js";
 import { allHighlights, clearHighlights, highlightsOf, removeHighlightsOf, restoreHighlights } from "./highlights.js";
 import { sampleOn } from "../study/sample-mode.js";
 
 const DB = "lexicommons-read";
-const STORES = ["books", "texts", "weaves", "positions", "pictures"];
+const STORES = ["books", "texts", "weaves", "positions", "pictures", "gone"];
 
 let opening = null;
 let memory = null; // the visit-only fallback: { books: Map, texts: Map, positions: Map }
 
 function db() {
   return (opening ??= new Promise((resolve, reject) => {
-    const request = indexedDB.open(DB, 2);
+    const request = indexedDB.open(DB, 3);
     request.onupgradeneeded = () => {
       for (const name of STORES) if (!request.result.objectStoreNames.contains(name)) request.result.createObjectStore(name, { keyPath: "id" });
     };
@@ -62,6 +67,7 @@ async function run(names, mode, action) {
 // The same calls as an object store, over a Map (results are plain values rather than requests).
 const memoryStore = (map) => ({
   get: (id) => map.get(id),
+  getKey: (id) => (map.has(id) ? id : undefined),
   getAll: () => [...map.values()],
   getAllKeys: () => [...map.keys()],
   put: (value) => map.set(value.id, value),
@@ -107,7 +113,12 @@ export async function getBook(id) {
  * Saves a text (a lexicommons-book) and any weaves of it ({ nl: weave }), replacing what was there; returns its entry.
  * cover: { file, blob }, a cover already cleaned (cover-svg.js), kept with the pictures.
  */
-export async function addBook(text, weaves = {}, { cover, definitions = {} } = {}) {
+export async function addBook(text, weaves = {}, { cover, definitions = {}, from } = {}) {
+  // An entry another device listed here, waiting for its text (read/fetch-again.js), keeps when it was added and opened; a text added
+  // again over one that's here starts as it always has (added now, not yet opened).
+  const [was, hadText] = (await run(["books", "texts"], "readonly", (s) => [s.books.get(text.id), s.texts.getKey(text.id)]).catch(() => null)) ?? [];
+  const listed = was && hadText === undefined ? was : null;
+  const now = Date.now();
   const entry = {
     id: text.id,
     title: text.title,
@@ -115,8 +126,8 @@ export async function addBook(text, weaves = {}, { cover, definitions = {} } = {
     lang: text.lang,
     source: text.source,
     version: text.version,
-    addedAt: Date.now(),
-    openedAt: null,
+    addedAt: listed?.addedAt ?? now,
+    openedAt: listed?.openedAt ?? null,
     words: text.words.length,
     chapters: text.chapters.length,
     // The pictures it shows (their files, its cover's too), so removing it can tell which pictures nothing else needs.
@@ -124,17 +135,31 @@ export async function addBook(text, weaves = {}, { cover, definitions = {} } = {
     // Its cover picture's file (its `cover`, else its first page's picture), for the library's covers.
     coverFile: coverPicture(text)?.file ?? null,
     ...(cover ? { cover: { file: cover.file } } : {}),
+    ...((from ?? was?.from) ? { from: from ?? was.from } : {}),
   };
-  await run(["books", "texts", "weaves", "pictures"], "readwrite", (s) => {
+  // Changed for your other devices only when what they're given of it changed (fetching a book's text again here changes nothing there).
+  entry.changedAt = was && sameForOthers(was, entry) ? (was.changedAt ?? was.addedAt) : now;
+  await run(["books", "texts", "weaves", "pictures", "gone"], "readwrite", (s) => {
     s.books.put(entry);
     s.texts.put(text);
-    for (const [to, weave] of Object.entries(weaves)) s.weaves.put({ id: `${text.id}:${to}`, weave, ...(definitions[to] ? { definitions: definitions[to] } : {}) });
+    s.gone.delete(text.id);
+    for (const [to, weave] of Object.entries(weaves)) {
+      s.weaves.put({ id: `${text.id}:${to}`, weave, at: now, ...(definitions[to] ? { definitions: definitions[to] } : {}) });
+      s.gone.delete(`${text.id}:${to}`);
+    }
     if (definitions.book) s.weaves.put({ id: `${text.id}:#book`, definitions: definitions.book });
     if (cover) s.pictures.put({ id: cover.file, blob: cover.blob });
   });
   persist();
   readingChanged();
+  textsChanged([text.id, ...Object.keys(weaves).map((to) => `${text.id}:${to}`)]);
   return entry;
+}
+
+/** A text's list entry alone, or null (one another device listed is here before its text is fetched). */
+export async function getEntry(id) {
+  const book = await run(["books"], "readonly", (s) => s.books.get(id)).catch(() => null);
+  return book && visible(book) ? book : null;
 }
 
 /**
@@ -156,16 +181,23 @@ export async function snapshotBook(id) {
 
 /** Puts a text back from snapshotBook, as it was: in one transaction. */
 export async function restoreBook(snapshot) {
+  const now = Date.now();
   await run(STORES, "readwrite", (s) => {
-    s.books.put(snapshot.book);
+    // Back on every device: newer than the deletion it undoes.
+    s.books.put({ ...snapshot.book, changedAt: now });
     s.texts.put(snapshot.text);
-    for (const weave of snapshot.weaves) s.weaves.put(weave);
+    s.gone.delete(snapshot.book.id);
+    for (const weave of snapshot.weaves) {
+      s.weaves.put(weave.weave ? { ...weave, at: now } : weave);
+      s.gone.delete(weave.id);
+    }
     if (snapshot.position) s.positions.put(snapshot.position);
     for (const picture of snapshot.pictures) s.pictures.put({ id: picture.file, blob: picture.blob });
   });
   await restoreHighlights(snapshot.highlights);
   persist();
   readingChanged();
+  textsChanged([snapshot.book.id, ...snapshot.weaves.filter((w) => w.weave).map((w) => w.id)]);
 }
 
 /** The languages each text on the device is woven into: Map of id → ["nl", …], from the weaves' keys ("<id>:<to>"). */
@@ -200,14 +232,16 @@ export async function keepDefinitions(id, to, definitions) {
 
 /** Keeps a layer into `to` that came after the text did (your AI wove it: read/text-inbox.js), beside whatever definitions are kept there. */
 export async function keepWeave(id, to, weave) {
-  await run(["weaves"], "readwrite", (s) => {
-    const key = `${id}:${to}`;
-    const keep = (row) => s.weaves.put({ ...(row ?? { id: key }), weave });
+  const key = `${id}:${to}`;
+  await run(["weaves", "gone"], "readwrite", (s) => {
+    const keep = (row) => s.weaves.put({ ...(row ?? { id: key }), weave, at: Date.now() });
     const got = s.weaves.get(key);
     if (got instanceof IDBRequest) got.onsuccess = () => keep(got.result);
     else keep(got);
+    s.gone.delete(key);
   });
   readingChanged();
+  textsChanged([key]);
 }
 
 /** A text's weave into `to` ("nl"), or null. */
@@ -215,12 +249,17 @@ export async function getWeave(id, to) {
   return (await run(["weaves"], "readonly", (s) => s.weaves.get(`${id}:${to}`)).catch(() => null))?.weave ?? null;
 }
 
-export async function removeBook(id) {
+/**
+ * Takes a text out: everywhere (its deletion goes to your other devices, and stays; keep: what to bring back until `until`), or with
+ * everywhere false on this device alone (clearing a device's own copy, and taking another device's deletion: at is that one's time).
+ */
+export async function removeBook(id, { everywhere = true, keep = null, at = Date.now() } = {}) {
   const books = await everyBook();
   const book = books.find((b) => b.id === id);
   if (book && !visible(book)) return;
   const gone = book?.pictures ?? [];
   const needed = new Set(books.filter((b) => b.id !== id).flatMap((b) => b.pictures ?? []));
+  const woven = (((await run(["weaves"], "readonly", (s) => s.weaves.getAllKeys()).catch(() => [])) ?? []).map(String)).filter((key) => key.startsWith(`${id}:`) && !key.includes(":#"));
   await run(STORES, "readwrite", (s) => {
     for (const name of ["books", "texts", "positions"]) s[name].delete(id);
     // A text's weaves are keyed "<id>:<to>".
@@ -228,9 +267,14 @@ export async function removeBook(id) {
     else for (const key of [...memory.weaves.keys()]) if (key.startsWith(`${id}:`)) memory.weaves.delete(key);
     // Its pictures, unless another book shows them too.
     for (const file of gone) if (!needed.has(file)) s.pictures.delete(file);
+    if (everywhere || at) {
+      s.gone.put({ id, at, ...(keep ? { kept: keep.snapshot, until: keep.until } : {}) });
+      for (const key of woven) s.gone.put({ id: key, at });
+    }
   });
   await removeHighlightsOf(id);
   readingChanged();
+  if (everywhere) textsChanged([id, ...woven]);
 }
 
 /**
@@ -364,17 +408,293 @@ export const placeSync = {
 };
 registerSync(placeSync);
 
-/** Deletes every text in Read on this device, and where you were in each. */
+// ---------- your texts, on your other devices (sync.js) ----------
+//
+// Your own texts (pasted, from a file, or added by your AI for this account) go whole: the list entry, the text, your AI's cover and
+// its weaves. A book from the open shelf or Explore goes as its list entry alone (another device lists it, with your place, and fetches
+// it again when it's opened: read/fetch-again.js). A text taken out goes as its deletion, and stays out. A record per text and per weave,
+// each in a file of its own (a text and a weave can each be 8 MB), named by a short hash of its key (a book's id runs to 80 characters).
+// Everything from a storage is checked here as a text added any other way is (book-format.js, cover-svg.js); one that doesn't pass is
+// turned down, tried again at the next sync, and listed in Read (textsTurnedDown).
+
+const OWN_SOURCES = new Set(["upload", "paste", "ai"]);
+/** Whether a text is your own (it goes whole to your other devices), not a book from the shelf or Explore (its entry alone). */
+export const ownText = (entry) => OWN_SOURCES.has(entry?.source?.kind);
+const TO = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8}){0,3}$/;
+const TEXT_MOST = 8_000_000; // characters of a text or a weave as JSON (a text's upload limit)
+const isPlain = (v) => Boolean(v) && typeof v === "object" && !Array.isArray(v);
+/** A key's text id and weave language ("<id>" or "<id>:<to>"), or null. */
+function keyParts(key) {
+  if (typeof key !== "string") return null;
+  const [id, to, more] = key.split(":");
+  if (more !== undefined || !BOOK_ID.test(id) || (to !== undefined && !TO.test(to))) return null;
+  return { id, to: to ?? null };
+}
+const textShard = (key) => `t${hashText(key)}`;
+/** What another device is given of a text's entry. */
+const forOthers = (entry) => ({
+  id: entry.id,
+  title: entry.title,
+  authors: entry.authors ?? [],
+  lang: entry.lang,
+  source: entry.source ?? null,
+  version: entry.version,
+  addedAt: entry.addedAt,
+  words: entry.words,
+  chapters: entry.chapters,
+  ...(entry.from ? { from: entry.from } : {}),
+});
+function sameForOthers(a, b) {
+  return JSON.stringify(forOthers(a)) === JSON.stringify(forOthers(b));
+}
+const text$ = (v, most) => typeof v === "string" && v.length <= most;
+const count$ = (n) => Number.isInteger(n) && n >= 0 && n <= 10_000_000;
+/** An entry from another device as this one keeps it, or null: exactly its fields, each what it must be. */
+function entryFrom(value, id) {
+  if (!isPlain(value)) return null;
+  const fields = Object.keys(value);
+  if (!fields.every((f) => ["id", "title", "authors", "lang", "source", "version", "addedAt", "words", "chapters", "from"].includes(f))) return null;
+  const { title, authors, lang, source, version, addedAt, words, chapters, from } = value;
+  if (value.id !== id || !text$(title, 500) || !Array.isArray(authors) || authors.length > 50 || !authors.every((a) => isPlain(a) && text$(a.name, 300))) return null;
+  if (!text$(lang, 35) || !(source === null || (isPlain(source) && JSON.stringify(source).length <= 4000))) return null;
+  if (!/^[0-9a-f]{16}$/.test(version ?? "") || !Number.isFinite(addedAt) || addedAt < 0 || !count$(words) || !count$(chapters)) return null;
+  if (from !== undefined && from !== "shelf" && from !== "explore") return null;
+  return { id, title, authors, lang, source, version, addedAt, words, chapters, ...(from ? { from } : {}) };
+}
+
+const textListeners = new Set();
+let applyingTexts = false;
+/** Tells the sync which texts and weaves changed here ("<id>", "<id>:<to>"); not what a sync brought. */
+function textsChanged(keys) {
+  if (applyingTexts || sampleOn()) return;
+  for (const fn of textListeners) fn(keys);
+}
+// Texts a sync brought that didn't pass here: { key, title }, listed in Read (in plain words: why goes in an error report, without the text's
+// own words) until one passes, it's hidden, or the page goes.
+const turnedDown = new Map();
+const hiddenDown = new Set();
+export const textsTurnedDown = () => [...turnedDown.values()].filter((t) => !hiddenDown.has(t.key));
+/** Takes a turned-down text off Read's list for this visit (it's still tried at each sync, and taken once it passes). */
+export function hideTurnedDown(key) {
+  hiddenDown.add(key);
+  readingChanged();
+}
+function reportTurnedDown(why) {
+  // What a check said, less anything it quotes (a text may be someone's own writing).
+  const said = String(why).replace(/"[^"]*"|“[^”]*”|\([^)]*\)/g, "…").slice(0, 300);
+  import("../lx/error-report.js").then((m) => m.reportCaught?.(new Error(`A text from another device didn't pass the checks here: ${said}`))).catch(() => {});
+}
+/**
+ * Texts here that your account's copy doesn't hold (sync.js notKeptWithAccount): [{ id, title, why: "big" | "full" }]. A text too big for
+ * it (12 MB a file) stays on this device; with your account's copy full, it does until there's room.
+ */
+export async function textsOnlyHere() {
+  const missing = notKeptWithAccount("texts");
+  if (!missing.size) return [];
+  const books = await listBooks();
+  const out = [];
+  for (const book of books) {
+    const why = missing.get(book.id) ?? [...missing].find(([key]) => key.startsWith(`${book.id}:`))?.[1];
+    if (why) out.push({ id: book.id, title: book.title, why });
+  }
+  return out;
+}
+
+export const textSync = {
+  id: "texts",
+  label: "Your texts",
+  icon: "book",
+  counted: (n) => `${n.toLocaleString()} ${n === 1 ? "text" : "texts"}`,
+  // A weave goes with its text: it isn't counted as one.
+  counts: (key) => !key.includes(":"),
+  shard: textShard,
+  shards: /^t[0-9a-f]{14}$/,
+  // What's kept to bring back goes once its time is up (the deletion stays).
+  async prepare() {
+    const now = Date.now();
+    const old = ((await run(["gone"], "readonly", (s) => s.gone.getAll()).catch(() => [])) ?? []).filter((row) => row.kept && !(row.until > now));
+    if (old.length) await run(["gone"], "readwrite", (s) => old.forEach((row) => s.gone.put({ id: row.id, at: row.at }))).catch(() => {});
+  },
+  async records(shards) {
+    const out = {};
+    const wanted = (key) => !shards || shards.has(textShard(key));
+    const [books, gone, weaveKeys] = (await run(["books", "gone", "weaves"], "readonly", (s) => [s.books.getAll(), s.gone.getAll(), s.weaves.getAllKeys()]).catch(() => null)) ?? [[], [], []];
+    for (const row of gone ?? []) if (keyParts(row.id) && Number.isFinite(row.at) && row.at > 0 && wanted(row.id)) out[row.id] = { at: row.at, gone: true };
+    const woven = new Map();
+    for (const key of (weaveKeys ?? []).map(String)) {
+      const parts = keyParts(key);
+      if (parts?.to) woven.set(parts.id, [...(woven.get(parts.id) ?? []), key]);
+    }
+    for (const entry of books ?? []) {
+      if (!visible(entry) || !BOOK_ID.test(entry.id) || out[entry.id]) continue;
+      const at = entry.changedAt ?? entry.addedAt;
+      if (!ownText(entry)) {
+        if (wanted(entry.id)) out[entry.id] = { at, value: { entry: forOthers(entry) } };
+        continue;
+      }
+      if (wanted(entry.id)) {
+        const [text, cover] = (await run(["texts", "pictures"], "readonly", (s) => [s.texts.get(entry.id), entry.cover?.file ? s.pictures.get(entry.cover.file) : null]).catch(() => null)) ?? [];
+        if (text) out[entry.id] = { at, value: { entry: forOthers(entry), text, ...(cover?.blob ? { cover: await cover.blob.text() } : {}) } };
+      }
+      for (const key of woven.get(entry.id) ?? []) {
+        if (!wanted(key) || out[key]) continue;
+        const row = await run(["weaves"], "readonly", (s) => s.weaves.get(key)).catch(() => null);
+        if (row?.weave) out[key] = { at: row.at ?? at, value: { weave: row.weave } };
+      }
+    }
+    return out;
+  },
+  check(record, key) {
+    const parts = keyParts(key);
+    if (!parts) return false;
+    if (record.gone) return record.about === undefined;
+    const value = record.value;
+    if (!isPlain(value)) return false;
+    if (parts.to) return Object.keys(value).join() === "weave" && isPlain(value.weave);
+    const entry = entryFrom(value.entry, parts.id);
+    if (!entry) return false;
+    if (!ownText(entry)) return Object.keys(value).join() === "entry";
+    return Object.keys(value).every((f) => ["entry", "text", "cover"].includes(f)) && isPlain(value.text) && value.text.id === parts.id && (value.cover === undefined || text$(value.cover, 70_000));
+  },
+  async apply(newer) {
+    const turned = [];
+    const refuse = (key, title, why) => {
+      turned.push(key);
+      if (!turnedDown.has(key)) reportTurnedDown(why);
+      turnedDown.set(key, { key, title });
+    };
+    // Deletions and texts before weaves: a weave is checked against its text.
+    const keys = Object.keys(newer).sort((a, b) => Number(a.includes(":")) - Number(b.includes(":")));
+    applyingTexts = true;
+    try {
+      for (const key of keys) {
+        const record = newer[key];
+        const { id, to } = keyParts(key);
+        if (record.gone) {
+          if (to) await run(["weaves", "gone"], "readwrite", (s) => (s.weaves.delete(key), s.gone.put({ id: key, at: record.at }))).catch(() => {});
+          else await removeBook(id, { everywhere: false, at: record.at });
+          turnedDown.delete(key);
+          continue;
+        }
+        const was = await run(["books"], "readonly", (s) => s.books.get(id)).catch(() => null);
+        if (was && !visible(was)) {
+          turned.push(key);
+          continue;
+        }
+        if (to) {
+          const text = await run(["texts"], "readonly", (s) => s.texts.get(id)).catch(() => null);
+          const weave = record.value.weave;
+          if (!text) {
+            turned.push(key);
+            continue;
+          }
+          const problems = JSON.stringify(weave).length > TEXT_MOST ? ["it's too big"] : await validateWeave(weave, text);
+          if (problems.length) {
+            refuse(key, was?.title ?? id, `Its ${to} layer: ${problems[0]}`);
+            continue;
+          }
+          await run(["weaves", "gone"], "readwrite", (s) => {
+            const keep = (row) => s.weaves.put({ ...(row ?? { id: key }), weave, at: record.at });
+            const got = s.weaves.get(key);
+            if (got instanceof IDBRequest) got.onsuccess = () => keep(got.result);
+            else keep(got);
+            s.gone.delete(key);
+          });
+          turnedDown.delete(key);
+          continue;
+        }
+        const entry = entryFrom(record.value.entry, id);
+        if (!ownText(entry)) {
+          // A book from the shelf or Explore: its entry, its text fetched again here when it's opened (one already here stays).
+          await run(["books", "gone"], "readwrite", (s) => {
+            s.books.put({ ...(was ?? { pictures: [], coverFile: null, openedAt: null }), ...entry, changedAt: record.at });
+            s.gone.delete(id);
+          });
+          turnedDown.delete(key);
+          continue;
+        }
+        const text = record.value.text;
+        const problems = JSON.stringify(text).length > TEXT_MOST ? ["it's too big"] : text.version !== entry.version ? ["its version isn't its entry's"] : await validateBook(text);
+        if (problems.length) {
+          refuse(key, entry.title, problems[0]);
+          continue;
+        }
+        // A cover this device won't show is left out; the text still comes (as text-inbox.js takes one).
+        let cover = null;
+        try {
+          if (record.value.cover) {
+            const { svg } = cleanCover(record.value.cover);
+            cover = { file: await coverFile(svg), blob: new Blob([svg], { type: COVER_TYPE }) };
+          }
+        } catch {
+          cover = null;
+        }
+        const full = {
+          ...entry,
+          changedAt: record.at,
+          openedAt: was?.openedAt ?? null,
+          pictures: [...(text.pictures ?? []).map((picture) => picture.file), ...(cover ? [cover.file] : [])],
+          coverFile: coverPicture(text)?.file ?? null,
+          ...(cover ? { cover: { file: cover.file } } : {}),
+        };
+        await run(["books", "texts", "pictures", "gone"], "readwrite", (s) => {
+          s.books.put(full);
+          s.texts.put(text);
+          if (cover) s.pictures.put({ id: cover.file, blob: cover.blob });
+          s.gone.delete(id);
+        });
+        turnedDown.delete(key);
+      }
+    } finally {
+      applyingTexts = false;
+    }
+    readingChanged();
+    return turned;
+  },
+  onChange: (fn) => textListeners.add((keys) => fn(keys.map(textShard))),
+};
+registerSync(textSync);
+
+/**
+ * Deletes every text in Read on this device, and where you were in each: this device's copy alone (after the account is deleted, or
+ * another account takes the device for its own: settings.js clearThisDevice). Your other devices keep theirs.
+ */
 export async function clearReading() {
   // Texts your AI added for another account signed in on this device aren't in this Read, so they stay.
   if ((await everyBook()).some((book) => !visible(book))) {
-    for (const book of await listBooks()) await removeBook(book.id).catch(() => {});
+    for (const book of await listBooks()) await removeBook(book.id, { everywhere: false, at: 0 }).catch(() => {});
     return;
   }
   await run(STORES, "readwrite", (s) => {
     for (const name of STORES) s[name].clear();
   }).catch(() => {});
   await clearHighlights();
+}
+
+// Settings → Your data → Delete your texts everywhere: each kept here for this long, to bring back.
+export const TEXTS_BACK_DAYS = 7;
+/** Takes every text in Read out on every device, keeping all of each here for TEXTS_BACK_DAYS to bring back. Resolves to how many. */
+export async function deleteTextsEverywhere() {
+  const until = Date.now() + TEXTS_BACK_DAYS * 86_400_000;
+  const books = await listBooks();
+  for (const book of books) {
+    const snapshot = await snapshotBook(book.id).catch(() => null);
+    await removeBook(book.id, { keep: snapshot ? { snapshot, until } : null }).catch(() => {});
+  }
+  return books.length;
+}
+/** The texts deleted everywhere that can still be brought back here: [{ id, title, until }]. */
+export async function textsToBringBack() {
+  const now = Date.now();
+  const rows = ((await run(["gone"], "readonly", (s) => s.gone.getAll()).catch(() => [])) ?? []).filter((row) => row.kept && row.until > now);
+  return rows.map((row) => ({ id: row.id, title: row.kept.book?.title ?? row.id, until: row.until }));
+}
+/** Brings back every text textsToBringBack lists, on every device. Resolves to how many. */
+export async function bringBackTexts() {
+  const now = Date.now();
+  const rows = ((await run(["gone"], "readonly", (s) => s.gone.getAll()).catch(() => [])) ?? []).filter((row) => row.kept && row.until > now);
+  for (const row of rows) await restoreBook(row.kept);
+  return rows.length;
 }
 
 /**

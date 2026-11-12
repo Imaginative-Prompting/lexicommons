@@ -12,6 +12,7 @@ import { heldPlace, keepHeight } from "../lx/shapes.js";
 import { el } from "../lx/ui.js";
 import * as store from "./store.js";
 import { MAX_TEXT_BYTES, bookFromText } from "./import-text.js";
+import { onSyncStatus, syncTargets } from "../sync.js";
 import { LANGUAGES, coverageOf, joinWords, picturePath, weaveSentence } from "./book-format.js";
 import { canWeaveInto, storyLine, tryWeaving, weaveOwn } from "./weave-own.js";
 import { aiConnected } from "../shell/layout.js";
@@ -32,6 +33,14 @@ const KEEP_NOTE = {
   kept: "Your texts are kept on this device only, and it won't clear them to make space.",
   "may-clear": "Your texts are kept on this device only. Adding the app to your home screen makes it less likely to clear them when space runs low.",
   visit: "This window can't keep texts (private browsing?), so they last until you close it.",
+};
+// The same with your texts going to your other devices too (read/store.js, the texts kind: your account's copy or your own storage).
+// (Your account keeps 12 MB a file: a text longer than about ten novels, a hundred thousand words each, stays on this device, and Read lists
+// it under Kept on this device only.)
+const KEEP_NOTE_SYNCED = {
+  kept: "Your texts are kept with your account and on this device, which won't clear them to make space. One longer than about ten novels stays on this device only.",
+  "may-clear": "Your texts are kept with your account and on this device. Adding the app to your home screen makes this device less likely to clear its copy when space runs low. One longer than about ten novels stays on this device only.",
+  visit: "Your texts are kept with your account. This window can't keep its own copy (private browsing?), so here they last until you close it. One longer than about ten novels stays on this device only.",
 };
 
 // The language a text on the device teaches, for its tile's flag: the languages it's woven into and its own, leaving out
@@ -284,11 +293,38 @@ function renderLibrary(page) {
   const yours = el("section", { class: "lx-library-section lx-read-texts", "aria-label": "Your library" }, ...heldPlace("read.library"));
   // Texts your AI added that this device couldn't read: each with why, and Remove.
   const failed = el("div", { class: "lx-library-failed" });
+  // Texts your account's copy doesn't hold, as the last syncs found (read/store.js textsOnlyHere): drawn again when that changes.
+  let onlyHere = [];
   const drawFailed = () => {
+    store.textsOnlyHere().then((list) => {
+      if (stale || JSON.stringify(list) === JSON.stringify(onlyHere)) return;
+      onlyHere = list;
+      drawFailed();
+    }, () => {});
     const rows = failedTexts();
     failed.replaceChildren(
       ...(rows.length
         ? [ui.group("Your AI couldn't add these", rows.map((f) => ui.listRow({ icon: "info", title: f.title, sub: f.why, trailing: ui.button("Remove", { size: "sm", onclick: () => dismissFailedText(f.changeId) }) })))]
+        : []),
+      // Texts from your other devices that couldn't be read here (read/store.js): tried again at each sync; Hide takes one off the list.
+      ...(store.textsTurnedDown().length
+        ? [
+            ui.group(
+              "These couldn't come from your other devices",
+              store.textsTurnedDown().map((f) =>
+                ui.listRow({ icon: "info", title: f.title, sub: "It couldn't be read here, so it's still only on your other device. It's tried again each time this device syncs.", trailing: ui.button("Hide", { size: "sm", onclick: () => store.hideTurnedDown(f.key) }) }),
+              ),
+            ),
+          ]
+        : []),
+      // Texts your account's copy doesn't hold (too big for it, or it's full): they stay on this device, said here.
+      ...(onlyHere.length
+        ? [
+            ui.group(
+              "Kept on this device only",
+              onlyHere.map((t) => ui.listRow({ icon: "info", title: t.title, sub: t.why === "big" ? "Too big to keep with your account, so it stays on this device." : "Your account's copy is full, so it stays on this device for now." })),
+            ),
+          ]
         : []),
     );
   };
@@ -438,7 +474,7 @@ function renderLibrary(page) {
         .catch(() => {});
     }
     drawWeaving();
-    note.textContent = KEEP_NOTE[keep];
+    note.textContent = (syncTargets().length ? KEEP_NOTE_SYNCED : KEEP_NOTE)[keep];
     const levelOf = (id) => meta?.books?.find((b) => b.id === id)?.level;
     const from = JSON.stringify([
       books.map((b) => [b.id, b.title, b.lang, b.openedAt, b.cover?.file, b.coverFile, b.pictures?.[0], percent(b, positions), taughtBy(b, woven), levelOf(b.id)]),
@@ -482,7 +518,8 @@ function renderLibrary(page) {
       // with none (no books for the language, or no catalog at all) the place goes at once, never held empty. Its tile moves up
       // here, the same one, so a press on its cover and its download's bar work as on the shelf: the shelf draws from the same
       // catalog, so it's there as soon as the shelf is.
-      const first = meta ? firstBookOf(meta) : null;
+      // (A book you've started, on another device too, is never offered as a first book: it's in Your library with how far you are.)
+      const first = meta ? firstBookOf(meta, { started: new Set(books.filter((b) => b.openedAt || positions.get(b.id)?.word > 0).map((b) => b.id)) }) : null;
       const held = heroFromOldShelf ? null : carryOn.querySelector('[data-part="book-tile"]');
       heroFromOldShelf = false;
       let firstTile = first && held?.dataset.book === first.id ? held : null;
@@ -556,7 +593,10 @@ function renderLibrary(page) {
   const stopReading = store.onReadingChange(() => {
     clearTimeout(followTimer);
     followTimer = setTimeout(() => !stale && load(), 300);
+    if (!stale) drawFailed();
   });
+  // A sync's end: what your account's copy holds may have changed.
+  const stopSyncWatch = onSyncStatus((status) => !stale && !status.syncing && drawFailed());
   return {
     title: "Read",
     ready,
@@ -573,6 +613,7 @@ function renderLibrary(page) {
       removeEventListener("offline", onNetwork);
       stopTexts();
       stopReading();
+      stopSyncWatch();
       clearTimeout(followTimer);
       stopOpening?.();
       shelfView?.dispose?.();
@@ -647,7 +688,7 @@ function renderYourLibrary(page) {
 
 // Opening an open book: kept here, with its woven layers, then opened.
 async function openRecord({ book, weaves, definitions }) {
-  await store.addBook(book, weaves, { definitions });
+  await store.addBook(book, weaves, { definitions, from: "shelf" });
   location.hash = `#read/book/${encodeURIComponent(book.id)}`;
 }
 
@@ -743,17 +784,31 @@ const shownAt = (row, word) => {
   return shown && Number.isInteger(shown.n) && Number.isInteger(shown.of) && word >= shown.a && word <= shown.b ? { n: shown.n, of: shown.of } : null;
 };
 
+// Books your other device was reading, listed here without their text (read/store.js's texts kind): each fetched again in the background
+// once a visit, so it can be continued here as there (read/fetch-again.js; a book that can't be fetched now is tried at the next visit).
+const fetchingAgain = new Set();
+function fetchInBackground(entry) {
+  if (fetchingAgain.has(entry.id) || navigator.onLine === false) return;
+  fetchingAgain.add(entry.id);
+  import("./fetch-again.js").then((m) => m.fetchAgain(entry)).catch(() => {});
+}
+
 export async function continueReading({ lang = "nl" } = {}) {
   // follow: in a woven book, the share of it you'd see in the language; in a book in the language, of its words you
   // know.
   const [books, positions] = await Promise.all([store.listBooks(), store.getPositions()]);
-  for (const entry of books) {
-    if (!entry.openedAt) continue;
+  // Started: opened here, or with your place in it from another device (a book listed from there).
+  const opened = (entry) => entry.openedAt ?? (positions.get(entry.id)?.word > 0 ? positions.get(entry.id).at : null);
+  for (const entry of [...books].sort((a, b) => (opened(b) ?? 0) - (opened(a) ?? 0))) {
+    if (!opened(entry)) continue;
     const word = positions.get(entry.id)?.word ?? 0;
     const read = entry.words > 1 ? Math.min(1, word / (entry.words - 1)) : 0;
     if (read >= FINISHED) continue;
     const found = await store.getBook(entry.id);
-    if (!found) continue;
+    if (!found) {
+      if (!store.ownText(entry)) fetchInBackground(entry);
+      continue;
+    }
     const { text } = found;
     // The chapter holding the word: the last one starting at or before it (a book without chapters is one, its title).
     let n = 0;
