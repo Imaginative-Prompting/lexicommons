@@ -5,7 +5,10 @@
 //   "whisper"  Whisper, running in the app on your device, on WebGPU (WebAssembly where there's no WebGPU); its model
 //              is downloaded once and kept on the device
 //
-//   support(lang)                       what this device can do, without touching the microphone
+//   support(lang, { light, known })     what this device can do, without touching the microphone; known: only what this page's native
+//                                       probes have already answered, asking nothing (Settings: probe-guard.js)
+//   probesKnown(lang)                   whether they have, for that language (so a support() would ask nothing)
+//   whisperSupportNow(lang)             support() for Whisper alone: asks the GPU, never the recognizer (a download's press)
 //   whisperKnows(lang)                  whether Whisper knows the language (WHISPER_LANGUAGES); support says none if not
 //   languageCode(lang)                  the registry's language for a locale (zh-TW → zh-Hant, nl-BE → nl)
 //   MODELS, recommendedModel(support)   the Whisper models, and the one that suits this device
@@ -29,12 +32,12 @@
 //   started) → "thinking" → the result.
 // Errors: SpeechError with .code (errors.js) and a .message for people.
 
-import { browserListen, browserSupport, installLanguage, noteTrackDeaf, takesTrack } from "./browser.js";
-import { guarded } from "./probe-guard.js";
+import { browserKnown, browserListen, browserSupport, installLanguage, noteTrackDeaf, takesTrack } from "./browser.js";
+import { guarded, probesOff } from "./probe-guard.js";
 import { asSpeechError, SpeechError } from "./errors.js";
 import { onPhone } from "./guard.js";
 import { match } from "./match.js";
-import { LANGUAGES } from "../lang/index.js";
+import { LANGUAGES, ourLanguages } from "../lang/index.js";
 import { audioContext, holdMic, loadCapture, monitorLevel, openMic, record, releaseMic } from "./mic.js";
 import { LIBRARIES, modelById, MODELS, runtimeFor, RUNTIMES } from "./models.js";
 import * as store from "./store.js";
@@ -48,11 +51,11 @@ export { megabytes } from "./store.js";
 export function languageCode(lang) {
   const tag = String(lang);
   const lower = tag.toLowerCase();
-  const exact = Object.keys(LANGUAGES).find((code) => code.toLowerCase() === lower || LANGUAGES[code].locale?.toLowerCase() === lower);
+  const exact = ourLanguages().find((code) => code.toLowerCase() === lower || LANGUAGES[code].locale?.toLowerCase() === lower);
   if (exact) return exact;
   const [base, ...rest] = lower.split("-");
   const script = rest.find((part) => /^[a-z]{4}$/.test(part));
-  const scripted = script && Object.keys(LANGUAGES).find((code) => code.toLowerCase() === `${base}-${script}`);
+  const scripted = script && ourLanguages().find((code) => code.toLowerCase() === `${base}-${script}`);
   return scripted ?? base;
 }
 // The code Whisper knows a language by: its own, except where Whisper's differs (Norwegian Bokmål, nb, is no to it;
@@ -71,22 +74,30 @@ export const WHISPER_LANGUAGES = new Set(
 export const whisperKnows = (lang) => WHISPER_LANGUAGES.has(whisperCode(lang));
 
 let gpu = null;
+// What the GPU's probe answered on this page (undefined: not asked yet).
+let gpuAnswer;
 function gpuInfo() {
   gpu ??= (async () => {
     // (Guarded, probe-guard.js: on a device where asking for an adapter once ended the page, it's never asked again, and Whisper runs on the
-    // processor.)
-    if (!navigator.gpu) return null;
+    // processor; on Samsung Internet it's never asked.)
+    if (!navigator.gpu || probesOff()) return (gpuAnswer = null);
     try {
-      return await guarded("webgpu-adapter", async () => {
+      gpuAnswer = await guarded("webgpu-adapter", async () => {
         const adapter = await navigator.gpu.requestAdapter();
         return adapter ? { f16: adapter.features.has("shader-f16") } : null;
       });
     } catch {
-      return null;
+      gpuAnswer = null;
     }
+    return gpuAnswer;
   })();
   return gpu;
 }
+// The GPU as known without asking: what it answered, none where it's never asked, else WebGPU's being there (unasked).
+const gpuKnown = () => (gpuAnswer !== undefined ? gpuAnswer : !navigator.gpu || probesOff() ? null : { f16: false, unasked: true });
+
+/** Whether this page's native probes have answered for a locale already (or are never asked here), so support() would ask nothing. */
+export const probesKnown = (lang = "nl-NL") => gpuKnown()?.unasked !== true && browserKnown(lang).unasked !== true;
 
 /**
  * What this device can do:
@@ -94,17 +105,34 @@ function gpuInfo() {
  *   whisper: { state: "webgpu" | "wasm" | "none", f16, why?, unknownLanguage? }
  *   unknownLanguage: true when the device could run Whisper but Whisper doesn't know the language
  */
-export async function support(lang = "nl-NL", { light = false } = {}) {
+export async function support(lang = "nl-NL", { light = false, known = false } = {}) {
   // light: no native probe at all (Study's list of games on a phone): the recognizer by its presence, the GPU by WebGPU's being there, unasked.
-  const [browser, gpu] = await Promise.all([browserSupport(lang, { onDevice: !light }), light ? (navigator.gpu ? { f16: false, unasked: true } : null) : gpuInfo()]);
+  // known: only what's been answered on this page (Settings' pages, which aren't using speech), else as light. Otherwise asked, one after the
+  // other, never together (probe-guard.js).
+  const quiet = light || known;
+  const browser = known ? browserKnown(lang) : await browserSupport(lang, { onDevice: !light });
+  const gpu = known ? gpuKnown() : light ? (navigator.gpu && !probesOff() ? { f16: false, unasked: true } : null) : await gpuInfo();
+  return { browser, whisper: await whisperSupport(lang, gpu, quiet) };
+}
+
+/** support() for Whisper alone: the GPU asked (if it wasn't), the browser's recognizer as known, never asked (a Whisper download's press). */
+export async function whisperSupportNow(lang = "nl-NL") {
+  return { browser: browserKnown(lang), whisper: await whisperSupport(lang, await gpuInfo()) };
+}
+
+// Whisper on this device, from what's known of its GPU (null: none, or not one to ask).
+async function whisperSupport(lang, gpu, quiet = false) {
   let whisper;
   if (!globalThis.Worker || !globalThis.WebAssembly || !globalThis.caches) whisper = { state: "none", f16: false, why: "This browser can't run a speech model in the app." };
   else if (!whisperKnows(lang)) whisper = { state: "none", f16: false, why: `Whisper doesn't know ${LANGUAGES[languageCode(lang)]?.name ?? lang}.`, unknownLanguage: true };
   else if (!(await store.siteHasModels(MODELS[0].id))) whisper = { state: "none", f16: false, why: "This copy of Lexicommons doesn't have the speech model. Whoever runs it can add it." };
-  else if (gpu) whisper = { state: "webgpu", f16: gpu.f16 };
+  else if (gpu) whisper = { state: "webgpu", f16: gpu.f16, ...(gpu.unasked && quiet ? { unasked: true } : {}) };
+  else if (probesOff() && navigator.gpu) whisper = { state: "wasm", f16: false, why: SAMSUNG_WHY, samsung: true };
   else whisper = { state: "wasm", f16: false, why: "No WebGPU here, so the speech model runs on the processor: slower." };
-  return { browser, whisper };
+  return whisper;
 }
+/** Where Whisper is offered on Samsung Internet: why it runs on the processor there. */
+export const SAMSUNG_WHY = "On Samsung Internet it runs on the processor, which is slower: asking for the graphics chip has closed the app on these phones.";
 
 /** The model that suits this device: the best one where the GPU can, smaller without 16-bit GPU maths or memory. */
 export function recommendedModel(supported) {
@@ -133,11 +161,19 @@ export async function modelState(id, { device, supported } = {}) {
   const model = modelById(id);
   if (!model) throw new SpeechError("model-missing", `There's no speech model called ${id}.`);
   try {
-    const states = await Promise.all(packsFor(model, device ?? deviceFor(model, supported ?? (await support()))).map((pack) => store.packState(pack)));
-    const have = states.reduce((n, s) => n + s.have, 0);
-    const total = states.reduce((n, s) => n + s.total, 0);
-    // The runtime is shared, so another model's download doesn't make this one partly here.
-    return { state: states[0].state === "absent" ? "absent" : have >= total ? "ready" : "partial", have, total };
+    // Asking the device nothing (support's known): with its GPU not asked yet, whichever runtime is further along is the one it has.
+    const known = device ? null : (supported ?? (await support(undefined, { known: true })));
+    const devices = device ? [device] : known.whisper?.unasked && model.devices.includes("wasm") ? model.devices : [deviceFor(model, known)];
+    const each = await Promise.all(
+      devices.map(async (one) => {
+        const states = await Promise.all(packsFor(model, one).map((pack) => store.packState(pack)));
+        const have = states.reduce((n, s) => n + s.have, 0);
+        const total = states.reduce((n, s) => n + s.total, 0);
+        // The runtime is shared, so another model's download doesn't make this one partly here.
+        return { state: states[0].state === "absent" ? "absent" : have >= total ? "ready" : "partial", have, total };
+      }),
+    );
+    return each.reduce((best, one) => (one.state === "ready" && best.state !== "ready" ? one : best.state !== "ready" && one.have - one.total > best.have - best.total ? one : best));
   } catch (error) {
     throw asSpeechError(error, "offline");
   }
@@ -148,7 +184,8 @@ export async function downloadModel(id, { onProgress, signal, device } = {}) {
   const model = modelById(id);
   if (!model) throw new SpeechError("model-missing", `There's no speech model called ${id}.`);
   try {
-    const result = await store.download(packsFor(model, device ?? deviceFor(model, await support())), { onProgress, signal });
+    // Which runtime: from the GPU alone (asked if it wasn't; the browser's recognizer has nothing to do with it).
+    const result = await store.download(packsFor(model, device ?? deviceFor(model, { whisper: await whisperSupport("nl-NL", await gpuInfo()) })), { onProgress, signal });
     await store.keep(LIBRARIES);
     return result;
   } catch (error) {
@@ -172,7 +209,8 @@ export async function deleteModel(id) {
 /** Loads Whisper ahead of the first answer, so that one isn't slow. → { device } */
 export async function prepare({ engine = "whisper", model = null } = {}) {
   if (engine !== "whisper") return { device: null };
-  const supported = await support();
+  // Loading Whisper asks the GPU only (the browser's recognizer has nothing to do with it).
+  const supported = { whisper: await whisperSupport("nl-NL", await gpuInfo()) };
   const chosen = modelById(model ?? recommendedModel(supported));
   if (!chosen) throw new SpeechError("unsupported", "This device can't run the speech model.");
   const state = await modelState(chosen.id, { device: deviceFor(chosen, supported) });

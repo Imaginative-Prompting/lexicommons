@@ -13,7 +13,7 @@ import { englishOrderTexts, orderDiffers } from "../lx/literal-case.js";
 import { CHUNKS, ITEMS, READINGS, aboutOf, conceptsOf, contentLanguage, describe, itemById, nameLang, sentence, sentenceUnits, shownName } from "./content.js";
 import { learningFrom, learningFromName, learningLocale, learningName } from "./learning.js";
 import { LANGUAGES, withArticle } from "../lang/index.js";
-import { allEvidence, conceptState, meaningOf, readingHides, record, studiedUnits, TESTS } from "./progress.js";
+import { allEvidence, conceptState, meaningOf, readingHides, record as recordEvidence, studiedUnits, TESTS } from "./progress.js";
 import { allWrong, orderOutcome, patternOutcomes, slipBetween, slipOfResult, typedRight, wordOutcomes } from "./attribute.js";
 import { conceptKind } from "../lang/form-concepts.js";
 import { formNow, formsReady, notesNow, notesReady } from "./notes.js";
@@ -31,7 +31,9 @@ import { optionText, separatorOf } from "./pack-format.js";
 import { fillChoices, heardChoices, readingOfForm, matchEnglish, meaningChoices, meaningOfWord, meaningsOfWord, shortMeaning, strayTile, targetOf } from "./new-words.js";
 import { loadPictures, pictureNode } from "./pictures.js";
 import { askMenu } from "../ai/ask.js";
-import { finishedGame, finishedLesson, finishedPractice, finishedSession } from "./done.js";
+import { finishedGame, finishedLesson, finishedPractice, finishedSession, lessonsFinished } from "./done.js";
+import { applyPlacement, keepPlacement, placementPlan } from "./placement.js";
+import { placementOn } from "./path-place.js";
 import { beforeReminderStep, reminderStep } from "../shell/settings-reminders.js";
 import { streakNow } from "./done.js";
 import { momentOf } from "../know/celebrate.js";
@@ -50,6 +52,8 @@ import { bareChoice, gapMarks } from "./gap-marks.js";
 // The answer bar's quiet actions (Hint, I don't know, Can't speak now, Can't listen now): their words in a span of their own. They sit on
 // one line wherever they fit, else wrap with their lines alike (layActions); only a Hint wider than the whole row gives way (`gives`):
 // a long language name in it ends in an ellipsis ("Hint: Chinese (Trad…"), and the others stay whole (components.css).
+// A step's drawings, with its stand-ins' (a placement's sentence asked another way on a small screen: placement.js spare), fetched as it's planned.
+const drawingsOf = (step) => [...(step.kind === "see" ? step.options.map((option) => option.picture).filter(Boolean) : step.picture ? [step.picture] : []), ...(step.spare ? drawingsOf(step.spare) : [])];
 const quiet = (text, { gives = false } = {}) => el("span", { "data-gives": gives ? "" : undefined }, text);
 
 /** How long a picture question waits for its drawings before it's drawn with them held (a failure comes sooner: then it asks in words). */
@@ -290,7 +294,8 @@ export function runSession(host, mode, arg, options = {}) {
   // places then, so only a link asks for one. Once they're here this is the session as ever.
   // A newcomer's game (nothing studied yet) waits the same way: its first words are the path's, never a word band's that came first (8 Nov
   // 2026: Tap the picture opened a second after picking Dutch met werken, niet and gaan, with no drawings). A tile pressed meanwhile opens it then.
-  const waits = (mode === "lesson" && !arg) || (mode === "game" && beforeFirstWords());
+  // Find your level waits the same way: its questions are the path's units.
+  const waits = (mode === "lesson" && !arg) || mode === "placement" || (mode === "game" && beforeFirstWords());
   if (waits && lessonsComing()) return afterLessons(() => startSession(host, mode, arg, options));
   return startSession(host, mode, arg, options);
 }
@@ -326,7 +331,10 @@ function afterLessons(start) {
  * reminder ask, nothing about keeping it), and its bar is the page's own actions ([{ label, variant, onclick }]), each ending the session first.
  */
 function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", tryOut = null } = {}) {
-  const plan = planSession(mode, arg);
+  // Find your level (study/placement.js) is a session of its own kind: its questions come a unit at a time as it finds where you are.
+  const plan = mode === "placement" ? placementPlan(arg) : planSession(mode, arg);
+  // What's kept of an answer: in a placement, only what was right (a word you were never taught isn't a memory that failed); else all of it.
+  const record = (rows) => recordEvidence(plan.placement ? rows.filter((row) => row.outcome === "right") : rows);
   // The session's drawings, got ready as it starts, so a picture question draws at once. Any that can't be had: that question's in words.
   const drawingsReady = new Set();
   const getDrawings = (ids) =>
@@ -334,7 +342,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
       if (ready) ids.forEach((id) => drawingsReady.add(id));
       return ready;
     });
-  getDrawings([...new Set(plan.steps.flatMap((step) => (step.kind === "see" ? step.options.map((option) => option.picture).filter(Boolean) : step.picture ? [step.picture] : [])))]);
+  getDrawings([...new Set(plan.steps.flatMap(drawingsOf))]);
   let questions = plan.steps.length;
   const settings = getStudySettings();
   const startedAt = Date.now();
@@ -358,7 +366,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
   // And the language's word forms, for a tapped form a sentence's notes don't explain (showMeaning).
   formsReady(contentLanguage()).catch(() => {});
 
-  const sessionBar = ui.sessionBar({ onClose: () => end(), states: plan.steps.map(() => "upcoming"), step: "", onGames: plan.instead ? () => gamesSheet({ current: wayOfStep(plan.steps[index]), onClose: gamesChanged }) : null });
+  // (A placement's cross asks whether to stop there: stopPlacement.)
+  const sessionBar = ui.sessionBar({ onClose: () => (placing() ? stopPlacement() : end()), states: plan.steps.map(() => "upcoming"), step: "", onGames: plan.instead && !plan.placement ? () => gamesSheet({ current: wayOfStep(plan.steps[index]), onClose: gamesChanged }) : null });
   // See the idea again: in a lesson, once its idea has been met, every step after it (the planner marks them, step.idea) has the idea's
   // card a press away, the same sheet an answer opens. Nothing is graded and the step waits under it.
   const ideaButton = el("button", { type: "button", part: "session-idea", hidden: true, onclick: () => openIdea() }, symbol("theme-idea", { size: 22 }), el("span", {}, t("study.idea.again")));
@@ -366,7 +375,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
   const activity = el("main", { part: "activity", "aria-live": "polite" });
   const bar = ui.answerBar();
   // (data-lesson: which lesson it is, for automated checks, as data-item says which sentence.)
-  const root = el("div", { part: "session", role: "dialog", "aria-label": plan.title, ...(plan.lesson ? { "data-lesson": plan.lesson.id } : {}) }, sessionBar, activity, bar);
+  const root = el("div", { part: "session", role: "dialog", "aria-label": plan.title, ...(plan.lesson ? { "data-lesson": plan.lesson.id } : {}), ...(plan.placement ? { "data-placement": "" } : {}) }, sessionBar, activity, bar);
   host.append(root);
   // Tinta on every question (places: studying), beside its instruction: it says each sentence as it plays, its eyes go
   // to what you touch, it reacts to your answer, and points at a hint's clues. One for the whole session, moved into
@@ -383,6 +392,14 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
   document.documentElement.setAttribute("data-scroll-lock", "");
 
   const updateProgress = () => {
+    // A placement's length isn't known ahead: its bar fills by the units settled out of the most it could still try (which only shrinks), so it
+    // never goes back and never waits near its end; the unit being tried is the current one.
+    if (plan.placement) {
+      const { settled, most } = plan.placement.progress();
+      ui.setProgress(sessionBar.lxProgress, Array.from({ length: Math.max(most, 1) }, (_, i) => (i < settled ? "right" : i === settled ? "current" : "upcoming")));
+      sessionBar.lxCount.textContent = "Finding your level";
+      return;
+    }
     const states = plan.steps.map((_, i) => results[i] ?? (i === index ? "current" : "upcoming"));
     ui.setProgress(sessionBar.lxProgress, states);
     sessionBar.lxCount.textContent = `${Math.min(index + 1, questions)}/${questions}`;
@@ -551,7 +568,12 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
       orderFit(true);
       apply();
     }
-    if (ordering && root.hasAttribute("data-order-fit") && tall() && !activity.querySelector('[data-part="arrange-answer"] [data-part="tile"]')) queueMicrotask(askAnotherWay);
+    // (For this step only: a step is fitted twice as it's drawn, and the second's ask, run after the first's took the step's place, asked the
+    // new step another way unmeasured: a placement's shorter sentence, which fits, went on to a word.)
+    if (ordering && root.hasAttribute("data-order-fit") && tall() && !activity.querySelector('[data-part="arrange-answer"] [data-part="tile"]')) {
+      const measured = current;
+      queueMicrotask(() => askAnotherWay(measured));
+    }
     // The keys up on a short screen (an iPhone SE in a typing game, 7 Nov 2026): a step still too tall at its last level would scroll its
     // word's drawing under the bar, so the drawing is drawn smaller (data-keys-fit 1), then not at all (2), rather than pass under it. Only
     // while the keys are up: they going refits from loose, the drawing back as it was.
@@ -876,6 +898,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
   // item: the sentence the answer was about, shown (and heard) under the feedback; literal: its Dutch-order line too.
   // answer: what you answered, as text (a question to your AI carries it); skipped: you said you didn't know.
   function finishStep(outcome, { feedbackMeaning, title, text, item, literal = false, answer, skipped = false, also = [], sound = true, learn = null } = {}) {
+    if (plan.placement) return placementAnswered(outcome);
     current.answered = true;
     // Right or wrong, at once: none for I don't know (as Tinta does nothing then), nor where the game has just sounded (Match's last pair).
     // What's said after the answer waits for it to pass (afterAnswerSound).
@@ -1072,6 +1095,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
     onReturn: () => playSound("tile-out"),
   });
   function showMeaning(node) {
+    // (In a placement a word's meaning would answer the question: nothing.)
+    if (plan.placement) return;
     const info = meaningOfWord(node.dataset.word ?? node.textContent, plan.steps[index]?.item, node.dataset.at === undefined ? null : Number(node.dataset.at));
     if (!info) return;
     // In a lesson, the sense it teaches.
@@ -1406,7 +1431,9 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
     hint.setAttribute("aria-label", hintWords);
     if (current.ordering) current.ordering.hint = { words: hint.querySelector("span[data-gives]"), long: hintWords, short: "Hint" };
     // The hint shows the language's order, so it's offered only where that's another order than the English.
-    setBar(null, checkNow, el("div", { class: "lx-answer-actions" }, s.hint && kind !== "listen" && orderDiffers(item) ? hint : null, wordsShown ? wordsAction(item, wordsShown) : null, skip, listening || current.playFirst ? cantListen() : null));
+    // (A placement asks what you can read: no hint, no words' meanings and no other way to ask it, only I don't know.)
+    const placing = Boolean(plan.placement);
+    setBar(null, checkNow, el("div", { class: "lx-answer-actions" }, !placing && s.hint && kind !== "listen" && orderDiffers(item) ? hint : null, !placing && wordsShown ? wordsAction(item, wordsShown) : null, skip, !placing && (listening || current.playFirst) ? cantListen() : null));
   }
 
   // Listening's controls: the sentence plays as the step appears; Play again, and Slower.
@@ -1529,9 +1556,11 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
       lang: contentLanguage(),
       onAnswer: ({ correct, picked }) => {
         if (current.answered) return;
-        // Its answer's sound is the right word (Answers); with Answers off, the word you tapped (Words you tap).
-        if (settings.listening.answers) afterAnswerSound(() => voice.speakWord(step.options[step.correct]));
-        else sayTapped(step.options[picked], { answers: true });
+        // Its answer's sound is the right word (Answers); with Answers off, the word you tapped (Words you tap). (Not in a placement: it would say which was right.)
+        if (!plan.placement) {
+          if (settings.listening.answers) afterAnswerSound(() => voice.speakWord(step.options[step.correct]));
+          else sayTapped(step.options[picked], { answers: true });
+        }
         record([{ concept: step.unit, outcome: correct ? "right" : "wrong", activity: "word", ...TESTS.word, ...(correct ? {} : { said: step.options[picked].slice(0, 300) }) }]);
         touched.add(step.unit);
         finishStep(correct ? "right" : "wrong", { feedbackMeaning: correct ? "right" : "wrong", title: correct ? "Right" : "Not quite", text: `${step.options[step.correct]}: ${step.means}` });
@@ -2165,9 +2194,9 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
   // as tall, path-ja's longest at 320 × 568 as What does it say? 155 px over, 9 Nov 2026), so the next way has none (Type it, Which is right?,
   // Fill). Nothing of it has been placed, and it was never drawn. Its evidence is that game's. Once a step; with no other way (a deck's card, a
   // plan without one), it stays as it is.
-  function askAnotherWay() {
+  function askAnotherWay(measured = current) {
     const step = plan.steps[index];
-    if (!current?.ordering || current.answered || current.askedAnother || !plan.instead || !step) return;
+    if (current !== measured || !current?.ordering || current.answered || current.askedAnother || !plan.instead || !step) return;
     current.askedAnother = true;
     const other = plan.instead(step, new Set(["arrange", "listen", "translate"]));
     if (!other) return;
@@ -2199,6 +2228,134 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
   }
 
   // ---------- flow ----------
+
+  // ---------- Find your level (study/placement.js) ----------
+
+  // A placement still finding where you are: its cross and Escape ask whether to stop there (stopPlacement).
+  const placing = () => Boolean(plan.placement) && !plan.placement.done && index < plan.steps.length;
+  // Where it leaves you if you don't take what it found: the placement you had, or your place as it is (nothing studied: the beginning).
+  const keepWords = () => {
+    const before = placementOn(contentLanguage())?.placed;
+    if (before?.n && before.unit) return `Keep unit ${before.n}`;
+    return before || lessonsFinished().size ? "Keep my place" : "Start from the beginning";
+  };
+  const unitsUpTo = (n) => (n === 2 ? "unit 1" : `units 1 to ${n - 1}`);
+
+  // An answer in a placement: nothing of right or wrong shown or said, Tinta still. The search takes it and the next question comes: the unit's
+  // next, its two more on a close call, the next unit's, or the result.
+  function placementAnswered(outcome) {
+    current.answered = true;
+    results[index] = outcome === "wrong" ? "wrong" : "right";
+    if (activity.contains(document.activeElement)) document.activeElement.blur();
+    document.documentElement.removeAttribute("data-keyboard");
+    activity.querySelector(".lx-game")?.setAttribute("inert", "");
+    const more = plan.placement.answered(plan.steps[index], outcome === "right");
+    if (more.length) {
+      plan.steps.push(...more);
+      getDrawings([...new Set(more.flatMap(drawingsOf))]);
+    }
+    const answered = current;
+    current.continue = advance;
+    // A beat for the press to show, then on (at once with animations off).
+    setTimeout(() => current === answered && !ended && advance(), motion.motionOn() ? 160 : 0);
+  }
+
+  // Taking a placement's result: put on the path, then where it says (the placed unit's first lesson, lesson 1, what's after the course).
+  function takePlacement(result, then) {
+    applyPlacement(result);
+    if (then) location.hash = then;
+    else end();
+  }
+  // Leaving it: noted as taken, with what it asked, and nothing else changed; then lesson 1 for someone with nothing studied yet.
+  function leavePlacement(result) {
+    keepPlacement(result);
+    if (keepWords() === "Start from the beginning") location.hash = "#study/session/lesson";
+    else end();
+  }
+
+  // The cross (or Escape) partway: stop here, placed by what's shown so far, or keep going.
+  function stopPlacement() {
+    const result = plan.placement.stopNow();
+    const n = result.placed;
+    const layer = ui.sheetLayer({ label: "Stop here?" });
+    const close = () => layer.lxClose?.({ animate: false });
+    const placed = n >= 2 && n <= result.count;
+    const words = placed ? `So far you've shown ${unitsUpTo(n)}. You'd start at unit ${n}, ${result.unit.title}.` : n > result.count ? `You've shown all ${result.count} units.` : "Nothing's shown yet, so nothing changes.";
+    const take = placed
+      ? ui.button(`Start at unit ${n}`, { variant: "go", size: "lg", block: true, onclick: () => (close(), takePlacement(result, "#study/session/lesson")) })
+      : ui.button(keepWords(), { variant: "go", size: "lg", block: true, onclick: () => (close(), leavePlacement(result)) });
+    layer.lxBody.append(
+      el(
+        "div",
+        { class: "lx-stack", "data-placement-stop": "" },
+        el("h2", { class: "lx-sheet-title" }, "Stop here?"),
+        el("p", { class: "lx-small lx-muted" }, words),
+        take,
+        ui.button("Keep going", { variant: "gray", size: "lg", block: true, onclick: close }),
+        placed ? ui.button(keepWords(), { variant: "fade", onclick: () => (close(), leavePlacement(result)) }) : null,
+      ),
+    );
+    layer.lxOpen();
+  }
+
+  // The result: where it places you, what you showed, and the two ways on.
+  function placementResult() {
+    current = { answered: true, continue: () => {} };
+    if (!counted) {
+      counted = true;
+      finishedSession();
+      keepStorage();
+    }
+    updateProgress();
+    const result = plan.placement.result();
+    const n = result.placed;
+    const whole = n > result.count;
+    const minutes = Math.max(1, Math.round((Date.now() - startedAt) / 60000));
+    const stat = (value, label) => el("div", { class: "lx-stat" }, el("strong", {}, value), el("span", {}, label));
+    const unitRow = (unit, done) =>
+      el(
+        "div",
+        { class: "lx-moved-row lx-placement-row", "data-done": done ? "" : undefined },
+        el("span", { class: "lx-placement-unit" }, `Unit ${unit.n} · ${unit.title}`),
+        done ? el("span", { class: "lx-placement-done", role: "img", "aria-label": "Behind you" }, icon("check")) : el("span", { class: "lx-tally" }, "next"),
+      );
+    const parts = [];
+    let take;
+    if (n <= 1) {
+      // Nothing shown: a warm start, never a verdict.
+      const tinta = ui.character({ size: 96 });
+      parts.push(
+        el("h2", {}, "Start from the beginning"),
+        el("p", { class: "lx-muted" }, "Lesson 1 is the place to start: a few words at a time, with pictures."),
+        ...(result.right ? [el("p", { class: "lx-muted" }, "What you got right here counts already.")] : []),
+        el("div", { class: "lx-placement-tinta" }, tinta),
+      );
+      requestAnimationFrame(() => tinta.isConnected && ui.playCharacter(tinta, "wave"));
+      const label = keepWords() === "Start from the beginning" ? "Start lesson 1" : keepWords();
+      take = ui.button(label, { variant: "go", size: "lg", block: true, onclick: () => leavePlacement(result) });
+    } else {
+      const shownUnits = result.units.slice(0, whole ? result.count : n - 1);
+      parts.push(
+        el("h2", {}, whole ? "You know this course" : `Start at unit ${n}`),
+        el("p", { class: "lx-muted" }, whole ? `You showed all ${result.count} units. Practice keeps them fresh, and there's more to learn after the course.` : `Unit ${n} · ${result.unit.title} is next. ${n === 2 ? "Unit 1 is" : `Units 1 to ${n - 1} are`} behind you.`),
+      );
+      const tally = el(
+        "div",
+        { part: "session-tally" },
+        el("div", { class: "lx-stats" }, stat(`${result.right}/${result.questions}`, "right"), stat(String(result.tried), result.tried === 1 ? "unit" : "units"), stat(String(minutes), minutes === 1 ? "minute" : "minutes")),
+        el("div", { class: "lx-stack" }, el("h3", { class: "lx-h3" }, "Your path"), el("div", {}, ...shownUnits.map((unit) => unitRow(unit, true)), ...(whole ? [] : [unitRow(result.unit, false)]))),
+      );
+      edge(tally, "receipt");
+      parts.push(tally, el("p", { class: "lx-small lx-muted" }, `The words in ${whole ? "the course" : unitsUpTo(n)} come back now and then in Practice, to check them.`));
+      take = whole
+        ? ui.button("See what's next", { variant: "go", size: "lg", block: true, onclick: () => takePlacement(result, MORE_LESSONS) })
+        : ui.button(`Start unit ${n}`, { variant: "go", size: "lg", block: true, onclick: () => takePlacement(result, "#study/session/lesson") });
+    }
+    const leave = n <= 1 ? null : ui.button(keepWords(), { variant: "gray", size: "lg", block: true, onclick: () => leavePlacement(result) });
+    show(el("section", { part: "session-summary", "data-kind": "placement" }, ...parts));
+    current = { answered: true, continue: () => take.click() };
+    setBar(null, el("div", { class: "lx-answer-actions lx-placement-actions" }, take, leave));
+  }
 
   function renderStep() {
     const step = plan.steps[index];
@@ -2242,6 +2399,7 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
 
   let counted = false;
   function summary() {
+    if (plan.placement) return placementResult();
     current = { answered: true, continue: () => finish() };
     // A finished session: the streak counts its day (done.js), once however often its summary is drawn, and the summary says what that made
     // (celebrate.js).
@@ -2394,7 +2552,8 @@ function startSession(host, mode, arg, { onExit, onRestart, entrance = "up", try
     const typing = event.target instanceof HTMLElement && event.target.matches("input, textarea");
     if (event.key === "Escape" && !typing) {
       event.preventDefault();
-      end();
+      if (placing()) stopPlacement();
+      else end();
     } else if (event.key === "Enter" && !typing) {
       if ((current?.answered || (current?.revealed && current?.continue)) && current.continue) {
         event.preventDefault();

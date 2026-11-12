@@ -48,6 +48,29 @@ export function addMarked(lang, lessons) {
 }
 
 /**
+ * A placement in a language (study/placement.js), or null: { placed, taken, asked }. placed: where it put you, or null (from the beginning, or
+ * put back there): { unit (its id; null past the whole course), n (its number), at, lessons (the written lessons before it: done without being
+ * taken, plan.js), missed (words it asked in those units and you missed: taught as new) }. taken: when one was last finished (Study offers
+ * it only before). asked: its sentence ids and words, so the next draws others.
+ */
+export const placementOn = (lang) => places[lang]?.placement ?? null;
+
+/** Keeps a placement (placementOn's shape), and with `lesson` puts you there (null: where your learning has got to). */
+export function setPlacement(lang, placement, { lesson } = {}) {
+  places[lang] = { lesson: null, ...places[lang], at: Date.now(), placement, ...(lesson !== undefined ? { lesson } : {}) };
+  save();
+}
+
+/** A language's place as it is now (your place and its placement), for putting back (restorePlace). */
+export const placeSnapshot = (lang) => JSON.parse(JSON.stringify({ lesson: places[lang]?.lesson ?? null, placement: places[lang]?.placement ?? null }));
+
+/** Puts back a language's place and placement as placeSnapshot had them: an Undo. The rest of what's kept (marks, anchors) stays as it is now. */
+export function restorePlace(lang, snapshot) {
+  places[lang] = { ...places[lang], at: Date.now(), lesson: snapshot?.lesson ?? null, placement: snapshot?.placement ?? null };
+  save();
+}
+
+/**
  * Where a pack you added goes on the path: the unit it comes after (path.js), set once, the first time the path is laid out with it, so it
  * stays put as you go on. undefined: not placed yet; null: after the language's own path.
  */
@@ -100,6 +123,22 @@ export const onPlaceChange = (fn) => {
   return () => listeners.delete(fn);
 };
 
+// A placement as another device sent it, taken only in its own shape (anything else: none). Its lists are of ids and words, held to their sizes.
+const strings = (list, most) => (Array.isArray(list) ? list.filter((one) => typeof one === "string" && one.length <= 200).slice(0, most) : []);
+function placementFrom(value) {
+  if (!value || typeof value !== "object") return null;
+  const placed = value.placed;
+  const okPlaced =
+    placed === null ||
+    (placed && typeof placed === "object" && (placed.unit === null || typeof placed.unit === "string") && Number.isInteger(placed.n) && placed.n >= 2 && Number.isFinite(placed.at));
+  if (!okPlaced) return null;
+  return {
+    placed: placed && { unit: placed.unit, n: placed.n, at: placed.at, lessons: strings(placed.lessons, 1000), missed: strings(placed.missed, 400) },
+    taken: Number.isFinite(value.taken) ? value.taken : 0,
+    asked: strings(value.asked, 200),
+  };
+}
+
 /** Its sync kind (sync.js), exported so a test can apply a record as another device would send it. */
 export const pathSync = {
   id: "path",
@@ -107,7 +146,7 @@ export const pathSync = {
   icon: "target",
   counted: (n) => `${n.toLocaleString()} ${n === 1 ? "language" : "languages"}`,
   records() {
-    return Object.fromEntries(Object.entries(places).map(([lang, p]) => [lang, { at: p.at, value: { lesson: p.lesson, ...(p.marked?.length ? { marked: p.marked } : {}), ...(p.anchors ? { anchors: p.anchors } : {}), ...(p.seen?.length ? { seen: p.seen } : {}) } }]));
+    return Object.fromEntries(Object.entries(places).map(([lang, p]) => [lang, { at: p.at, value: { lesson: p.lesson, ...(p.marked?.length ? { marked: p.marked } : {}), ...(p.anchors ? { anchors: p.anchors } : {}), ...(p.seen?.length ? { seen: p.seen } : {}), ...(p.placement ? { placement: p.placement } : {}) } }]));
   },
   check: (record, key) => typeof key === "string" && /^[a-zA-Z-]{2,16}$/.test(key) && Number.isFinite(record?.at) && (record?.value?.lesson === null || typeof record?.value?.lesson === "string"),
   apply(newer) {
@@ -117,7 +156,9 @@ export const pathSync = {
       const anchors = { ...theirs, ...places[lang]?.anchors };
       // The lessons laid out: every device's together (a lesson new to one is new to all until laid out somewhere).
       const seen = [...new Set([...(places[lang]?.seen ?? []), ...(Array.isArray(record.value.seen) ? record.value.seen.filter((id) => typeof id === "string") : [])])];
-      places[lang] = { at: record.at, lesson: record.value.lesson, ...(Array.isArray(record.value.marked) ? { marked: record.value.marked.filter((id) => typeof id === "string") } : {}), ...(Object.keys(anchors).length ? { anchors } : {}), ...(seen.length ? { seen } : {}) };
+      // A record from a device that keeps no placement (one from before them) says nothing of it: this device's stays. Taking one back is placed: null.
+      const placement = record.value.placement === undefined ? (places[lang]?.placement ?? null) : placementFrom(record.value.placement);
+      places[lang] = { at: record.at, lesson: record.value.lesson, ...(Array.isArray(record.value.marked) ? { marked: record.value.marked.filter((id) => typeof id === "string") } : {}), ...(Object.keys(anchors).length ? { anchors } : {}), ...(seen.length ? { seen } : {}), ...(placement ? { placement } : {}) };
     }
     applying = true;
     try {

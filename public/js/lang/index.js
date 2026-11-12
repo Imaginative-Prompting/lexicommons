@@ -284,6 +284,17 @@ export function withOwnLanguage(code, def, fn) {
   }
 }
 
+/**
+ * A language's short label where its code stands alone as text (the order switch's "NL"): its code in capitals; for a learner's own, its
+ * name's first two letters in capitals ("TE" for Testish), as its mark (ui.languageMark) shows them, never its long code (UND-X-TESTISH).
+ */
+export function languageShort(code) {
+  if (typeof code !== "string") return "";
+  if (!Object.hasOwn(LANGUAGES, code) || !LANGUAGES[code].own) return code.toUpperCase();
+  const letters = [...LANGUAGES[code].name.replace(/[^\p{L}\p{N}]/gu, "")].slice(0, 2).join("");
+  return (letters || "?").toLocaleUpperCase();
+}
+
 /** A language's name ("Dutch"), or its code when it isn't one Lexicommons knows. */
 export const languageName = (code) => LANGUAGES[code]?.name ?? code;
 
@@ -303,6 +314,8 @@ const CANTONESE_REGIONS = new Set(["hk", "mo"]);
  */
 export function voiceSpeaks(code, tag) {
   if (typeof code !== "string" || typeof tag !== "string") return false;
+  // A learner's own language with no real tag of its own (und-x-…, or a dialect, nl-x-…) has no device voice: Dutch's would misread Gronings.
+  if (Object.hasOwn(LANGUAGES, code) && LANGUAGES[code].own && !LANGUAGES[code].locale) return false;
   const [language, ...rest] = tag.replace(/_/g, "-").toLowerCase().split("-");
   const base = code.split("-")[0].toLowerCase();
   if (!(VOICE_LANGUAGES[base] ?? [base]).includes(language)) return false;

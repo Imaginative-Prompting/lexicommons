@@ -36,7 +36,7 @@ sqlite.prepare("INSERT INTO pack_devices (user_id, device_id, label, packs, adde
 
 const T = await import(join(APP, "src/texts.ts"));
 const { receiveUpload } = await import(join(APP, "src/library.ts"));
-const { SMALLEST, FULL, OTHER_GENDER, READINGS, REFUSALS } = await import(join(APP, "src/pack-guide.ts"));
+const { SMALLEST, FULL, OTHER_GENDER, READINGS, OWN_LANGUAGE, REFUSALS } = await import(join(APP, "src/pack-guide.ts"));
 const { TEXT_EXAMPLE, TEXT_REFUSALS, BOOK_EXAMPLE } = await import(join(APP, "src/text-guide.ts"));
 const { WEAVE_EXAMPLE, WEAVE_EXAMPLE_ES, WEAVE_MORE, WEAVE_REFUSALS, FLIP_AT } = await import(join(APP, "src/weave-guide.ts"));
 const { WEAVE_LANGUAGES, WEAVE_TUNED } = await import(join(APP, "public/js/read/weave-languages.generated.js"));
@@ -140,12 +140,12 @@ await test("the controls: a refusal saying something else, and a guide missing a
 await test("get_pack_guide: the whole guide, every example and every refusal in it", async () => {
   const { guide, examples } = passes(await packs("get_pack_guide"), "get_pack_guide");
   assert.doesNotMatch(guide, /@@/);
-  for (const example of [SMALLEST, FULL, OTHER_GENDER, READINGS]) {
+  for (const example of [SMALLEST, FULL, OTHER_GENDER, READINGS, OWN_LANGUAGE]) {
     assert.ok(guide.includes(shownJson(example)), "an example missing from the guide");
     assert.deepEqual(JSON.parse(shownJson(example)), example, "an example as shown isn't the example");
   }
   assert.deepEqual(listsRefusals(guide, REFUSALS), [], "refusals missing from the guide");
-  assert.deepEqual(examples, { smallest: SMALLEST, full: FULL, otherGender: OTHER_GENDER, readings: READINGS });
+  assert.deepEqual(examples, { smallest: SMALLEST, full: FULL, otherGender: OTHER_GENDER, readings: READINGS, ownLanguage: OWN_LANGUAGE });
   return `${guide.length.toLocaleString("en")} characters`;
 });
 
@@ -156,8 +156,11 @@ await test("get_pack_guide with a language: that language's pattern ids at its e
   const listed = [...served.guide.slice(at).matchAll(/^- ([a-z0-9-]+): /gm)].map((m) => m[1]);
   const shared = [...SMALLEST.items, ...FULL.items].flatMap((item) => item.patterns ?? []).filter((id) => !Object.hasOwn(FULL.patterns, id));
   assert.deepEqual([...new Set(shared)].filter((id) => !listed.includes(id)), [], "a pattern an example uses isn't listed");
-  const refused = await packs("get_pack_guide", { language: "xx" });
-  ok(!refused.ok && refused.text.includes("language must be one of"), refused.text.slice(0, 200));
+  // A language of their own has no shared grammar: the guide with no pattern ids; a code that's no language's refused in words.
+  const own = passes(await packs("get_pack_guide", { language: "und-x-sindarin" }), "get_pack_guide (und-x-sindarin)");
+  ok(!own.guide.includes("## Pattern ids") && own.guide.includes("## A language Lexicommons doesn't list"), "an own language's guide");
+  const refused = await packs("get_pack_guide", { language: "x-sindarin" });
+  ok(!refused.ok && refused.text.includes("write it und-x-sindarin"), refused.text.slice(0, 200));
   return `${listed.length} Dutch pattern ids`;
 });
 
@@ -174,7 +177,10 @@ await test("the pack guide's examples through the real tools: the whole new pack
   assert.ok(Object.keys(got.patterns ?? {}).some((id) => id === `${FULL.pack_id}.graag`), JSON.stringify(Object.keys(got.patterns ?? {})));
   passes(await packs("check_items", OTHER_GENDER), "check_items (the other gender)");
   passes(await packs("check_items", READINGS), "check_items (readings)");
-  return `${FULL.items.length} + 1 kept, 2 checked`;
+  passes(await packs("check_items", OWN_LANGUAGE), "check_items (a language Lexicommons doesn't list)");
+  const own = passes(await packs("create_pack", OWN_LANGUAGE), "create_pack (a language Lexicommons doesn't list)");
+  assert.equal(own.sentences, OWN_LANGUAGE.items.length);
+  return `${FULL.items.length} + ${OWN_LANGUAGE.items.length} + 1 kept, 3 checked`;
 });
 
 await test("every refusal the pack guide lists: planted, refused, saying what the guide says", async () => {

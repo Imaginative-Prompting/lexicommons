@@ -6,7 +6,14 @@
 // page: it's kept as one this device never runs again (the answer taken as unknown), and the start says so once (lx/error-report.js, a report
 // of the "probe-crash" kind naming the probe; error-clean.js).
 
+// Samsung Internet (12 Nov 2026, v730): a page ended at once with BOTH probes in flight (the Speaking page asked them together), two
+// probe-crash reports 116 ms apart; the guard stops a phone asking again, but every new Samsung phone would crash once first. So on Samsung
+// Internet neither is ever asked (probesOff): its recognizer is used by its presence, and Whisper runs on the processor. No other browser
+// has a probe-crash report (error reports, 30 days, 12 Nov), so it's Samsung's alone until one does. And anywhere, never two at once: each
+// probe waits for the one before it to answer (guarded's queue).
 export const PROBES = Object.freeze(["webgpu-adapter", "speech-available"]);
+/** Whether this browser is one the native probes are never asked on (Samsung Internet, by its user agent). */
+export const probesOff = () => /\bSamsungBrowser\//.test(globalThis.navigator?.userAgent ?? "");
 const RUNNING = (name) => `lx.probe.running.${name}`;
 const CRASHED = "lx.probe.crashed.v1";
 
@@ -50,20 +57,47 @@ globalThis.document?.addEventListener?.("visibilitychange", () => {
   for (const name of running) write(RUNNING(name), String(Date.now()));
 });
 
+// The probe asked last, until it has answered (null: none in flight): the next waits for it, up to TURN_WAIT. One still unanswered by then
+// is still in flight, so the next isn't asked beside it: it resolves to its `otherwise` (not known), and the one after waits for the
+// unanswered one again. With none in flight, a probe starts at once.
+let last = null;
+export const TURN_WAIT = 5000;
+
 /**
- * Runs a native probe under its mark. Resolves to what run() resolves to; throws what it throws. A probe that crashed here before isn't run:
- * resolves to `otherwise`.
+ * Runs a native probe under its mark, after any asked before it has answered. Resolves to what run() resolves to; throws what it throws. A
+ * probe that crashed here before, or any on a browser they're off on (probesOff), isn't run: resolves to `otherwise`.
  */
 export async function guarded(name, run, otherwise = null) {
   if (!PROBES.includes(name)) throw new Error(`No probe named ${name}`);
-  if (probeCrashed(name)) return otherwise;
-  running.add(name);
-  write(RUNNING(name), String(Date.now()));
+  if (probesOff() || probeCrashed(name)) return otherwise;
+  // Its turn, claimed before anything waits (two asked in the same moment take turns): after every probe asked before it has answered.
+  const before = last;
+  let done;
+  const mine = new Promise((resolve) => (done = resolve));
+  last = mine;
+  mine.then(() => last === mine && (last = null));
+  if (before) {
+    let waited;
+    const turn = await Promise.race([before.then(() => true), new Promise((resolve) => (waited = setTimeout(resolve, TURN_WAIT, false)))]);
+    clearTimeout(waited);
+    if (!turn) {
+      // Not asked; its place in line passes on once the one in flight answers.
+      before.then(done);
+      return otherwise;
+    }
+  }
   try {
-    return await run();
+    if (probeCrashed(name)) return otherwise;
+    running.add(name);
+    write(RUNNING(name), String(Date.now()));
+    try {
+      return await run();
+    } finally {
+      running.delete(name);
+      write(RUNNING(name), null);
+    }
   } finally {
-    running.delete(name);
-    write(RUNNING(name), null);
+    done();
   }
 }
 

@@ -528,7 +528,7 @@
 
   /* What you said, word by word. Meaning is never color alone: each result has its own line. */
   [data-part="said-line"] { margin: 0; font: 500 var(--size-20) / 1.6 var(--type-read); }
-  [data-part="said-word"] { text-decoration-thickness: 2px; text-underline-offset: 6px; border-radius: 4px; }
+  [data-part="said-word"] { text-decoration-thickness: 2px; text-underline-position: under; text-underline-offset: 2px; text-decoration-skip-ink: none; border-radius: 4px; }
   [data-part="said-word"][data-state="right"] { color: var(--m-right); text-decoration-line: underline; text-decoration-color: var(--m-right-edge, currentColor); }
   [data-part="said-word"][data-state="close"] { color: var(--m-slipping); text-decoration-line: underline; text-decoration-style: dotted; }
   [data-part="said-word"][data-state="order"] { background: var(--m-moved-mark); box-shadow: 0 0 0 2px var(--m-moved-mark); }
@@ -714,12 +714,17 @@
     font: inherit;
     letter-spacing: inherit;
     text-decoration: underline transparent 2px;
-    text-underline-offset: 6px;
+    /* Under the word's lowest marks, so a line marking it runs its whole width in every script: 6px under the baseline, skipping
+     * ink cut it short where marks reach below (Burmese's ရည်, Hindi's प्रकृति; 12 Nov 2026). */
+    text-underline-position: under;
+    text-underline-offset: 2px;
+    /* And unbroken: Myanmar's deepest tails (ရ, ျ) reach below even that, and skipping their ink still cut the word's line short. */
+    text-decoration-skip-ink: none;
     transition: background-color var(--dur-150) var(--ease-standard), text-decoration-color var(--dur-150) var(--ease-standard);
   }
   @media (hover: hover) { button[data-part="target-word"]:hover { background: var(--fill-hover); } }
   [data-part="target-word"][data-state="missed"] { background: var(--m-wrong-bg); color: var(--m-wrong); text-decoration-color: var(--m-wrong); text-decoration-style: wavy; }
-  [data-part="target-word"][data-state="new"] { text-decoration: underline dashed var(--m-new-edge) 2px; text-underline-offset: 6px; }
+  [data-part="target-word"][data-state="new"] { text-decoration: underline dashed var(--m-new-edge) 2px; }
   /* The one word a card or a question is about: boxed, not only tinted. */
   [data-part="target-word"][data-state="target"] { background: var(--m-new-bg); box-shadow: 0 0 0 2px var(--ink-2); font-weight: 600; }
   [data-part="word-meaning"] { overflow-wrap: anywhere; margin: 0; color: var(--ink-1); font-size: var(--size-16); line-height: 1.35; overflow-wrap: anywhere; }
@@ -730,7 +735,7 @@
   /* A word's meaning by the word: it takes no presses, so what's under it still answers. */
   [data-part="session"] > [data-part="word-popover"] { position: absolute; z-index: 5; width: max-content; max-width: min(320px, calc(100% - 24px)); pointer-events: none; }
   [data-part="word-popover"] > [data-part="word-meaning"] strong { font: inherit; font-weight: 600; }
-  [data-part="target-word"][data-state="slipping"] { text-decoration: underline var(--m-slipping) 2px; text-underline-offset: 6px; }
+  [data-part="target-word"][data-state="slipping"] { text-decoration: underline var(--m-slipping) 2px; }
   [data-part="target-word"][data-state="right"] { color: var(--m-right); }
 
   /* A word's reading over it (Japanese kana, Chinese pinyin), small and dim, over the characters it reads: half its
@@ -2100,6 +2105,24 @@
   /* A language's flag: a mark beside its name, with a hairline so a white field holds on a light page. */
   [data-part="language-flag"] { display: inline-block; flex: none; width: 20px; height: 15px; margin-inline-end: 0.4em; border-radius: 2px; object-fit: cover; box-shadow: 0 0 0 1px var(--hair); vertical-align: -2px; }
   [data-part="language-flag"][data-size="lg"] { width: 28px; height: 21px; border-radius: 3px; vertical-align: -4px; }
+  /* A learner's own language's mark (ui.languageMark): a flag's box with its name's first letters, quiet. */
+  [data-part="language-mark"] {
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    width: 20px;
+    height: 15px;
+    margin-inline-end: 0.4em;
+    border-radius: 2px;
+    background: var(--fill);
+    box-shadow: 0 0 0 1px var(--hair);
+    color: var(--ink-2);
+    font: 700 9px / 1 var(--type-ui);
+    letter-spacing: 0.02em;
+    vertical-align: -2px;
+  }
+  [data-part="language-mark"][data-size="lg"] { width: 28px; height: 21px; border-radius: 3px; font-size: 12px; vertical-align: -4px; }
+  [data-part="header-language"] [data-part="language-mark"] { margin: 0; }
   /* A flag after words on its line ("Dutch, from [flag] English"): as far from them as from its name. */
   [data-part="language-flag"].lx-flag-mid { margin-inline-start: 0.4em; }
   [data-part="search-field"] { position: relative; display: flex; align-items: center; }

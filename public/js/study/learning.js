@@ -2,6 +2,8 @@
 // "lx.learning.v1"), Dutch from English until you pick another. Studying draws on that language's packs (content.js),
 // and evidence is recorded in it (progress.js). Other tabs follow a change.
 
+// A learner's own languages first: the language you're learning may be one (lang/own-languages.js).
+import "../lang/own-languages.js";
 import { LANGUAGES, languageName } from "../lang/index.js";
 import { sampleKey } from "./sample-mode.js";
 

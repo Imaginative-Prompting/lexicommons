@@ -37,7 +37,7 @@ import { aiConnected } from "../shell/layout.js";
 import { onProgressChange, readingHides } from "../study/progress.js";
 import * as packs from "../study/packs.js";
 import { addPackAction } from "../study/pack-actions.js";
-import { LANGUAGES } from "../lang/index.js";
+import { LANGUAGES, ourLanguages } from "../lang/index.js";
 import { WORDS_NAMED, pathLessons, taughtForm } from "../study/path.js";
 import { lessonFinished, lessonNow, studyOverview } from "../study/plan.js";
 
@@ -465,7 +465,7 @@ function coverShelf(title, items, link, from) {
 }
 
 // The languages to find packs in: the one you're learning first, then every other the app has, by name.
-const languagesOf = () => [learning(), ...Object.keys(LANGUAGES).filter((code) => code !== "en" && code !== learning()).sort((a, b) => languageName(a).localeCompare(languageName(b)))];
+const languagesOf = () => [learning(), ...ourLanguages().filter((code) => code !== "en" && code !== learning()).sort((a, b) => languageName(a).localeCompare(languageName(b)))];
 
 const packsLine = (n) => (n == null ? null : n === 0 ? "No packs yet" : plural(n, "pack"));
 const countOf = (n) => n ?? -1;

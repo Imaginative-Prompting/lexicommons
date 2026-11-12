@@ -1,7 +1,9 @@
-// How you like to study, kept on this device: how long a practice is, what a quick session is made of, and each way of
-// studying's own settings. Settings → Study edits these.
+// How you like to study: how long a practice is, what a quick session is made of, and each way of studying's own settings. Settings →
+// Study edits these. Kept on this device, and (12 Nov 2026) on your other devices, each setting as you last set it (below); what belongs
+// to a device stays on it.
 
 import { learningName } from "./learning.js";
+import { registerSync } from "../sync.js";
 
 const KEY = "lx.study.v1";
 
@@ -143,17 +145,28 @@ export const getStudySettings = () => clone(settings);
 
 /** Sets one value by path ("cards.flip", "quick.include.match") and saves. */
 export function setStudySetting(path, value) {
-  const keys = path.split(".");
-  let node = settings;
-  for (const key of keys.slice(0, -1)) node = node[key];
-  node[keys.at(-1)] = value;
+  setAt(settings, path, value);
   try {
     localStorage.setItem(KEY, JSON.stringify(settings));
   } catch {
     // Private browsing: the setting lasts for this visit.
   }
+  // Set here: dated, for your other devices (unless it's this device's own).
+  if (synced(path, value)) {
+    times[path] = Date.now();
+    keepTimes();
+    for (const fn of syncListeners) fn();
+  }
   for (const listener of listeners) listener(getStudySettings());
 }
+
+function setAt(target, path, value) {
+  const keys = path.split(".");
+  let node = target;
+  for (const key of keys.slice(0, -1)) node = node[key] ??= {};
+  node[keys.at(-1)] = value;
+}
+const valueAt = (source, path) => path.split(".").reduce((node, key) => (node && typeof node === "object" ? node[key] : undefined), source);
 
 export function onStudySettingsChange(listener) {
   listeners.add(listener);
@@ -162,16 +175,150 @@ export function onStudySettingsChange(listener) {
 
 // Another tab changed them. (Not in Node, where the scheduler's tests load this with the defaults.)
 globalThis.addEventListener?.("storage", (event) => {
+  if (event.key === TIMES) times = readTimes();
   if (event.key !== KEY) return;
   settings = load();
   for (const listener of listeners) listener(getStudySettings());
 });
 
-/** Back to the defaults (Settings → Your data → start over clears this too). */
-export function resetStudySettings() {
+/**
+ * Back to the defaults. Settings → Study's Reset (everywhere: true) is a choice like any other: every setting that goes to your other
+ * devices goes back there too. Clearing this device (Settings → Your data) forgets them here alone; your account still has them.
+ */
+export function resetStudySettings({ everywhere = false } = {}) {
+  const chosen = everywhere ? Object.keys(times) : [];
   settings = clone(DEFAULTS);
+  times = {};
   try {
     localStorage.removeItem(KEY);
+    localStorage.removeItem(TIMES);
   } catch {}
+  if (chosen.length) {
+    const now = Date.now();
+    for (const path of chosen) {
+      // A pack's pinned voice has no default: it goes back to none (null, as unpinning it on the pack's page does).
+      const value = valueAt(settings, path) ?? null;
+      if (!synced(path, value)) continue;
+      if (value === null) setAt(settings, path, null);
+      times[path] = now;
+    }
+    try {
+      localStorage.setItem(KEY, JSON.stringify(settings));
+    } catch {}
+    keepTimes();
+    for (const fn of syncListeners) fn();
+  }
   for (const listener of listeners) listener(getStudySettings());
 }
+
+// ---------- on your other devices (sync.js, kind "study-settings") ----------
+//
+// Each setting is a record of its own (its path, "quick.include.match"), dated when it was set: a change on one device and another on a
+// second both stay, and one never set goes nowhere, so a new device's defaults never undo your choices. What belongs to a device stays on
+// it: which recognizer and model Say it runs here (Whisper is downloaded per device), this device's voice (listening.device), and sound
+// effects (their own kind, lx/sound.js). A setting from another device is taken only if it's one of these and what it may be.
+const TIMES = "lx.study.times.v1";
+const HERE_ONLY = /^(?:version|sound(?:\.|$)|say\.(?:engine|model)$|listening\.device$)/;
+const CHOICES = {
+  "quick.length": Object.keys(LENGTHS),
+  "cards.reveal": ["slide", "dutch", "english"],
+  "cards.position": ["below", "above"],
+  "arrange.tiles": ["dutch", "english", "mix"],
+  "type.from": ["english", "audio"],
+  "type.accents": ["forgiving", "strict"],
+  "listen.mode": ["meaning", "order", "type", "mix"],
+  "repeat.show": ["after", "always"],
+  "say.prompt": ["dutch", "english"],
+  "listening.speed": ["normal", "slower"],
+};
+const RANGES = { "practice.minutes": [1, 180], "practice.suggestEvery": [1, 100], "quick.newPerSession": [0, 50], "match.pairs": [2, 12], "memory.target": [0.5, 0.99] };
+/** Whether a setting goes to your other devices, and a value is one it may be there. */
+function synced(path, value) {
+  if (typeof path !== "string" || path.length > 120 || HERE_ONLY.test(path)) return false;
+  // A pack's voice pinned on its page (listening.pins.<pack id>): a voice's slug, or null for none.
+  if (/^listening\.pins\.[a-z0-9][a-z0-9-]{1,47}$/.test(path)) return value === null || (typeof value === "string" && /^[a-z0-9][a-z0-9-]{0,47}$/.test(value));
+  let node = DEFAULTS;
+  for (const key of path.split(".")) {
+    if (!node || typeof node !== "object" || Array.isArray(node) || !Object.hasOwn(node, key)) return false;
+    node = node[key];
+  }
+  if ((node && typeof node === "object") || typeof value !== typeof node) return false;
+  if (typeof value === "number") {
+    const [low, high] = RANGES[path] ?? [0, 1e6];
+    return Number.isFinite(value) && value >= low && value <= high;
+  }
+  if (typeof value === "string") return (CHOICES[path] ?? []).includes(value);
+  return typeof value === "boolean";
+}
+// When each setting was set here. A device that kept settings before they went to other devices (before 12 Nov 2026) has none: what it
+// chose then (each setting not at its default) counts as set at the dawn of time (1), so a new device takes it and any choice made since,
+// on any device, wins over it. That's worked out in memory and written with the first setting set or brought here, so opening a page
+// writes nothing (the try-out keeps only its own stores).
+function readTimes() {
+  try {
+    const raw = localStorage.getItem(TIMES);
+    if (raw === null) return chosenBefore();
+    const kept = JSON.parse(raw);
+    return kept && typeof kept === "object" && !Array.isArray(kept) ? kept : {};
+  } catch {
+    return {};
+  }
+}
+function chosenBefore() {
+  let saved = null;
+  try {
+    saved = localStorage.getItem(KEY);
+  } catch {}
+  if (saved === null) return {};
+  const out = {};
+  const walk = (node, base, path) => {
+    for (const [key, value] of Object.entries(node ?? {})) {
+      const at = path ? `${path}.${key}` : key;
+      if (value && typeof value === "object" && !Array.isArray(value)) walk(value, base?.[key], at);
+      else if (synced(at, value) && value !== base?.[key]) out[at] = 1;
+    }
+  };
+  walk(settings, DEFAULTS, "");
+  return out;
+}
+let times = readTimes();
+function keepTimes() {
+  try {
+    localStorage.setItem(TIMES, JSON.stringify(times));
+  } catch {}
+}
+const syncListeners = new Set();
+
+export const studySettingsSync = {
+  id: "study-settings",
+  label: "How you like to study",
+  icon: "sliders",
+  counted: (n) => `${n.toLocaleString()} ${n === 1 ? "setting" : "settings"} you chose`,
+  records() {
+    const out = {};
+    for (const [path, at] of Object.entries(times)) {
+      const value = valueAt(settings, path);
+      if (Number.isFinite(at) && at > 0 && synced(path, value)) out[path] = { at, value };
+    }
+    return out;
+  },
+  check: (record, key) => !record.gone && synced(key, record.value),
+  // What a sync brought (never asking for another sync: only setStudySetting and Reset tell it).
+  apply(newer) {
+    for (const [path, record] of Object.entries(newer)) {
+      setAt(settings, path, record.value);
+      times[path] = record.at;
+    }
+    try {
+      localStorage.setItem(KEY, JSON.stringify(settings));
+    } catch {}
+    keepTimes();
+    for (const listener of listeners) listener(getStudySettings());
+    return [];
+  },
+  onChange: (fn) => {
+    syncListeners.add(fn);
+    return () => syncListeners.delete(fn);
+  },
+};
+registerSync(studySettingsSync);

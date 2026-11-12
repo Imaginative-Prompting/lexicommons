@@ -5,7 +5,7 @@
 import type { McpServer } from "@modelcontextprotocol/server";
 import { z } from "zod";
 import type { CallerProps, Env } from "./env";
-import { LANGUAGES } from "../public/js/lang/index.js";
+import { LANGUAGES, isOurLanguage, ourLanguages, ownLanguageProblem } from "../public/js/lang/index.js";
 import { addItems, checkItems, createPack, editPack, getPack, listChanges, listPacks, removeItems, removePackAudio, requestPackAudioUpload, setPackAudio, undoChange, updateItems, PACK_RELAY, type Outcome } from "./packs";
 import { packGuide } from "./pack-guide";
 import { LibraryError } from "./library";
@@ -58,6 +58,19 @@ const NEXT = {
   refused: "Nothing was kept. Fix every problem listed, then send it again (check_items checks without keeping anything).",
 };
 
+// A language Lexicommons doesn't list, as create_pack and check_items take it (lang/index.js ownLanguageProblem checks it in words).
+const languageDef = z
+  .object({
+    name: z.string().min(1).max(40),
+    direction: z.enum(["ltr", "rtl"]).optional(),
+    written: z.enum(["spaces", "unspaced"]).optional(),
+    case: z.enum(["lower", "any"]).optional(),
+    ends: z.array(z.string().min(1).max(3)).max(4).optional(),
+  })
+  .strict()
+  .optional()
+  .describe("Only for a language Lexicommons doesn't list: its name, and how it's written (defaults: ltr, spaces, lower, no other sentence ends)");
+
 export function registerPackTools(server: McpServer, env: Env, { caller, sourceLabel, ok, guarded }: Helpers) {
   const user = () => caller().userId;
   const failure = (value: unknown): ToolResult => ({ content: [{ type: "text", text: JSON.stringify(value, null, 2) }], isError: true });
@@ -73,12 +86,17 @@ export function registerPackTools(server: McpServer, env: Env, { caller, sourceL
       annotations: { readOnlyHint: true, openWorldHint: false },
       description:
         "Read this once before making or changing the person's packs: what a pack and a sentence are, shaping one, the smallest sentence and a whole pack, every field and refusal, how a change reaches them and what they see. Give language (nl, es…) for that language's pattern ids, which every sentence is tagged with.",
-      inputSchema: z.object({ language: z.string().min(2).max(12).optional().describe("The language the pack teaches: its pattern ids, with what each is, come at the end") }),
+      inputSchema: z.object({ language: z.string().min(2).max(32).optional().describe("The language the pack teaches: its pattern ids, with what each is, come at the end (a language Lexicommons doesn't list has none)") }),
     },
     async ({ language }) =>
       guarded(async () => {
         if (language === undefined) return ok(packGuide());
-        if (!Object.hasOwn(LANGUAGES, language)) throw new LibraryError(`language must be one of ${Object.keys(LANGUAGES).join(", ")}.`);
+        if (!isOurLanguage(language)) {
+          // A language of their own: no shared grammar, so no pattern ids; the guide's section on it says what to send.
+          const problem = ownLanguageProblem(language, { name: "check" });
+          if (problem && problem.at === "language") throw new LibraryError(`${problem.message} Lexicommons' own: ${ourLanguages().join(", ")}.`);
+          return ok(packGuide());
+        }
         // The language's grammar as the library has it now (what check_items and add_items check a sentence's patterns against).
         await grammarReady(env, language);
         const patterns = Object.fromEntries(
@@ -119,7 +137,7 @@ export function registerPackTools(server: McpServer, env: Env, { caller, sourceL
       annotations: { readOnlyHint: true, openWorldHint: false },
       description:
         "Checks sentences the way add_items and update_items would (an id the pack has is checked as a replacement), or create_pack for a new pack, and keeps nothing. Give pack_id for a pack of theirs, or language (nl, de…) for a new one, with any topics, words, phrases or patterns the sentences need. Every problem comes back at once.",
-      inputSchema: z.object({ pack_id: packId.optional(), language: z.string().max(8).optional(), items, ...dictionaries }),
+      inputSchema: z.object({ pack_id: packId.optional(), language: z.string().max(32).optional(), language_def: languageDef, items, ...dictionaries }),
     },
     async (input) => guarded(async () => ok(await checkItems(env, user(), input))),
   );
@@ -134,7 +152,8 @@ export function registerPackTools(server: McpServer, env: Env, { caller, sourceL
       inputSchema: z.object({
         name: z.string().min(1).max(80),
         about: z.string().max(400).optional().describe("A line on what it's for"),
-        language: z.string().max(8).describe(`The language it teaches: ${Object.keys(LANGUAGES).filter((code) => code !== "en").join(", ")}`),
+        language: z.string().max(32).describe(`The language it teaches: ${ourLanguages().filter((code) => code !== "en").join(", ")}; or one Lexicommons doesn't list, with language_def (get_pack_guide: "A language Lexicommons doesn't list")`),
+        language_def: languageDef,
         pack_id: z.string().max(48).optional().describe("Made from the name when left out"),
         items: z.array(item).max(PACK_RELAY.itemsPerChange).optional(),
         ...dictionaries,

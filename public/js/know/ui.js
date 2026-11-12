@@ -8,6 +8,7 @@ import { icon } from "../lx/icons.js";
 import { symbol, SYMBOL_NAMES } from "../lx/symbols.js";
 import { edge } from "../lx/edge.js";
 import { formatDate, formatList, formatNumber, intlLocale, languageLabel, t } from "../lx/i18n.js";
+import { LANGUAGES } from "../lang/index.js";
 import { frequencyCredit } from "../study/frequency.js";
 
 const go = (href) => () => (location.hash = href);
@@ -608,7 +609,9 @@ export function translateField({ left, right, both = true, value = "", onInput, 
   form.lxSetWay = ({ left, right, both }) => {
     input.setAttribute("aria-label", label({ left, right, both }));
     way.setAttribute("aria-label", `${both ? t("know.eitherWayAnd", { left: left.name, right: right.name }) : `${left.name} to ${right.name}`}. Change which way`);
-    way.replaceChildren(...[wayFlags(left.code), el("span", {}, left.code.toUpperCase()), icon(both ? "moved" : "chevron"), wayFlags(right.code), el("span", {}, right.code.toUpperCase())].filter(Boolean)); // a language with no flag has none
+    // A learner's own language's mark is its letters already: no code beside it.
+    const code = (lang) => (LANGUAGES[lang]?.own ? null : el("span", {}, lang.toUpperCase()));
+    way.replaceChildren(...[wayFlags(left.code), code(left.code), icon(both ? "moved" : "chevron"), wayFlags(right.code), code(right.code)].filter(Boolean)); // a language with no flag has none
   };
   form.lxSetWay({ left, right, both });
   form.lxSetValue = (text) => {

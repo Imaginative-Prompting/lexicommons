@@ -163,6 +163,28 @@ export const OTHER_GENDER = {
   words: { estar: "to be (a state)", listo: "ready", para: "for", el: "the", viaje: "trip" },
 };
 
+/** A new pack in a language Lexicommons doesn't list (Cornish: an ISO 639 code it doesn't list), with its definition and its own pattern. */
+export const OWN_LANGUAGE = {
+  name: "Cornish greetings",
+  language: "kw",
+  language_def: { name: "Cornish" },
+  items: [
+    {
+      id: "dydh-da",
+      sentence: "Dydh da.",
+      lemmas: { dydh: "dydh", da: "da" },
+      literal: ["Day", "good"],
+      english: [1, 0],
+      natural: "Good day.",
+      wrong: ["Da dydh."],
+      gap: { word: "da", options: ["da", "drog", "teg"] },
+      patterns: ["adjective-after"],
+    },
+  ],
+  words: { dydh: "day", da: "good" },
+  patterns: { "adjective-after": { name: "The adjective after its noun", about: "An adjective comes after the noun it describes: dydh da, a good day." } },
+};
+
 /** A sentence in a language written without spaces, with readings (Japanese), checked as a new pack's would be. */
 export const READINGS = {
   language: "ja",
@@ -217,7 +239,7 @@ export const REFUSALS: { id: string; says: string; fix: string }[] = [
   { id: "words-join", says: "words, joined, give", fix: "Joined with nothing between them, words must be the sentence without its end punctuation." },
   { id: "words-spaced", says: "words is only for a language written without spaces", fix: "Leave words out: the sentence is split at its spaces." },
   { id: "reading", says: "the reading \"…\" must be", fix: "A reading must fit its word: kana for the word's kanji (its own kana kept), pinyin a syllable per character; the message says which." },
-  { id: "language", says: "language must be one of", fix: "language is the code of the language it teaches (nl, de, es…), one of those listed." },
+  { id: "language", says: "isn't one Lexicommons knows", fix: "language is the code of the language it teaches: one Lexicommons lists (nl, de, es…), or one it doesn't with language_def (A language Lexicommons doesn't list)." },
   { id: "too-many-words", says: "words has … entries; keep it to", fix: `Keep a sentence to ${PACK_LIMITS.words} words.` },
   { id: "pack-id", says: "\"…\" is taken (a pack of theirs, or a public one)", fix: "Leave pack_id out (one is made from the name), or choose another." },
 ];
@@ -339,7 +361,7 @@ export function packGuide({ language, patterns }: { language?: string; patterns?
   return {
     guide: GUIDE.replace("@@LANGUAGES@@", LANGUAGE_SECTIONS).replace("@@REFUSALS@@", REFUSAL_LINES) + ids,
     exampleItem: FULL.items[0],
-    examples: { smallest: SMALLEST, full: FULL, otherGender: OTHER_GENDER, readings: READINGS },
+    examples: { smallest: SMALLEST, full: FULL, otherGender: OTHER_GENDER, readings: READINGS, ownLanguage: OWN_LANGUAGE },
     limits: { sentencesPerCall: PACK_RELAY.itemsPerChange, sentencesPerPack: PACK_LIMITS.items, wordsPerSentence: PACK_LIMITS.words, daysAChangeWaits: PACK_RELAY.keep / 86_400_000 },
   };
 }
@@ -365,6 +387,17 @@ ${block(READINGS)}
 - The pack's readings too: { lemma: reading } for each dictionary form. The marks show on the word until the learner knows it, so give every such word its lemma.
 - A word written the same way more than once in a sentence and read differently takes a list, one reading per time in order (null for a time with none), as lemmas do.
 - gap's options too: each { text, reading } (gap: { word: "أذهب", options: [{ "text": "أذهب", "reading": "أَذْهَبُ" }, { "text": "ذهبت", "reading": "ذَهَبْتُ" }] }), the right one with its reading in the sentence. Fill shows the choices with their marks until the learner knows the word; give every choice its reading, or none.
+
+## A language Lexicommons doesn't list
+For a language it doesn't list (an endangered one, a dialect, a conlang, one not added yet), a pack carries the language itself.
+- language: an ISO 639 code Lexicommons doesn't list (kw Cornish, nap Neapolitan, gsw Swiss German, tlh Klingon); for one with no code, und-x- and its name (und-x-sindarin: "undetermined", then theirs); for a dialect of one it lists, that code, -x- and its name (nl-x-gronings: its own language in the app, never mixed into Dutch). Never a region tag (de-CH) or English.
+- language_def: { "name": "Cornish", "direction": "ltr" or "rtl", "written": "spaces" or "unspaced", "case": "lower" or "any", "ends": ["።"] }. Only name is needed; the rest default to ltr, spaces, lower and no other ends. unspaced: written without spaces, so each sentence carries its words, as Japanese's do. case any: dictionary forms as written, for a script with no small and capital letters (Burmese, Amharic, Thai) or a language that writes some words with a capital (German's nouns, Toki Pona's names); lower refuses both. ends: up to 4 marks that end a sentence besides . ? ! …
+- create_pack and check_items take language_def; add_items and the rest need none (the pack has it). Every pack of theirs in one language gives the same definition: a second that says another is refused.
+- It has no shared grammar: what a sentence is an example of is a pattern the pack declares (patterns: { "id": { "name", "about" } }), and get_pack_guide with its code lists no pattern ids.
+- What they'll find: its name with its first letters where a flag would be. No device voice unless its code is a real one a device has a voice for, so give recordings for listening (request_pack_audio_upload). No speaking games, no path, books or weaving, Translate from their own packs only, and Practice with you not yet. Tell them so.
+
+- Example (check_items or create_pack: a new pack in Cornish):
+${block(OWN_LANGUAGE)}
 
 ## Shapes (optional): how a sentence's rule is drawn
 On a pattern's sheet, the app draws the person's own sentence with the rule's words lit and the rule's shape on them. shapes says exactly what to draw, per pattern the sentence is an example of. Leave it out and the app draws only what it can work out itself (often just the marked words lit): never guess a mark, and give only marks that show what the pattern is about. Up to ${SHAPE_LIMITS.marks} marks per pattern.

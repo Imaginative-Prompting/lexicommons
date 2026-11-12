@@ -6,7 +6,6 @@
 import { GAME_MODES, modeOf, needsSound } from "./plan.js";
 import { hearsAnything } from "./voice.js";
 import { chooseEngine } from "./speaking.js";
-import { onPhone } from "../speech/guard.js";
 import { learningName } from "./learning.js";
 import { setSpeechHearing } from "./deck.js";
 
@@ -26,9 +25,10 @@ let speaking = null;
 
 /** Asks again whether this device can listen to you (the recognizer, speaking.js); resolves once it has answered. */
 export function askSpeaking() {
-  // On a phone without the device's native probes (the GPU's adapter, the recognizer's on-device answer): opening Study never asks them, and
-  // Say it asks them when it opens (speaking.js, probe-guard.js). Samsung Internet 30 started the app again by itself on Study (12 Nov 2026).
-  return chooseEngine(undefined, { light: onPhone() })
+  // Without the device's native probes (the GPU's adapter, the recognizer's on-device answer), on every device: opening Study never asks
+  // them, only what they've answered on this page is read, and Say it asks them when it opens (speaking.js, probe-guard.js). Samsung
+  // Internet 30 started the app again by itself on Study, then on Settings (12 Nov 2026).
+  return chooseEngine(undefined, { known: true })
     .then((choice) => {
       speaking = choice?.engine ? { ok: true } : { ok: false, why: choice?.why ?? (choice?.reason === "setup" ? "This browser has no speech recognizer of its own. Whisper can listen on this device once it's downloaded." : "This browser can't recognize speech.") };
       // A pack's plain cards are offered Say it only where something can listen (deck.js).

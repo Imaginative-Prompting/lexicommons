@@ -29,7 +29,7 @@ import { learning, learningLocale } from "../study/learning.js";
 import { chooseDictation, speechApi } from "../study/speaking.js";
 import { onPhone } from "../speech/guard.js";
 import { microphone } from "../practice/listen.js";
-import { LANGUAGES, typeset } from "../lang/index.js";
+import { LANGUAGES, ourLanguages, typeset } from "../lang/index.js";
 
 // ms after the last key before Tinta shows: past a quick answer, so it never comes in for one. This device answers in 25 ms at the
 // 95th percentile on a phone slowed 4× (translate-check's speed stage); the server is asked 300 ms after the last key (ONLINE_PAUSE)
@@ -1094,7 +1094,7 @@ export function translatePage({ host, onChange }) {
   const loadKnown = () => translateLanguages().then((list) => (known = list), () => null);
   const wheelItems = () => {
     const server = known ? new Map(known.map((item) => [item.code, item])) : null;
-    const all = [{ code: "en", name: languageLabel("en"), offline: true }, ...Object.keys(LANGUAGES).filter((code) => code !== "en" && (!server || server.has(code))).map((code) => ({ code, name: languageLabel(code), offline: server ? server.get(code).offline : undefined }))];
+    const all = [{ code: "en", name: languageLabel("en"), offline: true }, ...ourLanguages().filter((code) => code !== "en" && (!server || server.has(code))).map((code) => ({ code, name: languageLabel(code), offline: server ? server.get(code).offline : undefined }))];
     // Offline, a language with nothing on this device has nothing to search; online, every one can be asked.
     const online = navigator.onLine !== false;
     return all.map((item) => ({ ...item, offline: online ? true : item.offline })).sort((a, b) => a.name.localeCompare(b.name));

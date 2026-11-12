@@ -39,7 +39,7 @@ import { lessonSteps, poolOf, seeStep, shownThing, speakWordStep, translateStep,
 import { ideaLine, ideaName } from "./idea-parts.js";
 import { conceptLabel, focusNow } from "./concept-focus.js";
 import { lastLessonFinished, lessonsFinished, practicedToday, practicesDone, practicesSinceLesson } from "./done.js";
-import { addMarked, markedOn, placeAt, placeOn } from "./path-place.js";
+import { addMarked, markedOn, placeAt, placeOn, placementOn } from "./path-place.js";
 import { TESTS, canonicalUnit, conceptState, evidenceSince, evidenceVersion, gradeOf, itemEvidence, langOf, latestBefore, memoryNow, recentEvidence, record, studiedUnits, unitEvidence, unitState } from "./progress.js";
 import { SKILLS, dueAtOf, recallAt } from "./scheduler.js";
 import { indexed, stateOf, wordEntries, wordEntry, wordIndexVersion } from "../know/word-index.js";
@@ -597,9 +597,38 @@ function placesInOrder() {
 }
 
 /** What one plan keeps as it goes, over the view. */
+// A placement's assumed words (study/placement.js): the words and phrases of the lessons it put you past that nothing has graded since and that
+// you didn't miss in it. Read as known where the plan decides what you can read (known, phraseNew, a sentence's words: so the unit it placed you
+// at plays whole), never counted (Knowledge reads evidence alone), never due. Worked out once a view (its st), placement and laying out of the path.
+const NONE = new Set();
+const assumedFor = new WeakMap(); // st → { at, build, set }
+function assumedOf(st) {
+  const placed = placementOn(contentLanguage())?.placed;
+  if (!placed?.lessons?.length) return NONE;
+  const kept = assumedFor.get(st);
+  if (kept && kept.at === placed.at && kept.build === pathBuild()) return kept.set;
+  const ids = new Set(placed.lessons);
+  const missed = new Set(placed.missed ?? []);
+  const set = new Set();
+  for (const lesson of pathLessons()) {
+    if (!ids.has(lesson.id)) continue;
+    for (const thing of lesson.things ?? []) if (!thing.formOnly && !missed.has(thing.lemma ?? thing.phrase) && st(thing.unit).isNew) set.add(thing.unit);
+  }
+  assumedFor.set(st, { at: placed.at, build: pathBuild(), set });
+  return set;
+}
+// The lessons a placement counts as done (its record's: the units before the one it placed you at). None without one.
+function placedLessonsNow() {
+  const ids = placementOn(contentLanguage())?.placed?.lessons;
+  return ids?.length ? new Set(ids) : NONE;
+}
+
 function withPlanState({ st, infos, due, now, byId, focus }) {
   // The words met in this plan count as known for the steps after them.
   const meeting = new Set();
+  // A placement's words nothing has tested since: known for what you can read, never counted.
+  const assumed = assumedOf(st);
+  const placed = placedLessonsNow();
   // A word with no meaning in any pack can't be taught, so it never stands in a sentence's way. What the view says of a word is read once
   // a plan (the view's states don't change under it; the words met in this plan are asked first, each time).
   // A word the word index has no entry for is new (planState), so its state isn't worked out just to say so: a new learner's plan asks
@@ -609,6 +638,7 @@ function withPlanState({ st, infos, due, now, byId, focus }) {
   const byContent = contentKnows(lang);
   const known = (lemma) => {
     if (meeting.has(lemma)) return true;
+    if (assumed.size && assumed.has(`w:${lemma}`)) return true;
     let k = byContent.get(lemma);
     if (k !== undefined) return k;
     k = viewKnows.get(lemma);
@@ -621,7 +651,7 @@ function withPlanState({ st, infos, due, now, byId, focus }) {
     return k;
   };
   // The same for a phrase: one with no entry is new.
-  const phraseNew = (unit) => wordEntry(unit, { lang }) === null || st(unit).isNew;
+  const phraseNew = (unit) => !assumed.has(unit) && (wordEntry(unit, { lang }) === null || st(unit).isNew);
   // Whether you know enough for a flagged sentence to start a word (new-words.js).
   let past = null;
   const pastFirst = () => {
@@ -637,7 +667,7 @@ function withPlanState({ st, infos, due, now, byId, focus }) {
   // Nothing in the word index (no word or phrase met) and nothing met in this plan yet: every word with a meaning and every phrase is new, so
   // a sentence's count is the content's alone (freshIn), less `except` where it's one of them.
   let indexEmpty = null;
-  const blank = () => meeting.size === 0 && (indexEmpty ??= wordEntries({ lang }).length === 0);
+  const blank = () => meeting.size === 0 && !assumed.size && (indexEmpty ??= wordEntries({ lang }).length === 0);
   const freshBut = (info, except) => freshIn(info.item) - (except !== null && WORDS[except] && info.words.includes(except) ? 1 : 0);
   // How many of a sentence's words are new to you, other than `except`.
   const newIn = (info, except = null) => {
@@ -672,7 +702,7 @@ function withPlanState({ st, infos, due, now, byId, focus }) {
   // Nothing studied in this language: no sentence has been had, so none is resting (resting reads a sentence's own history).
   let noHistory = null;
   const unstudied = () => (noHistory ??= studiedUnits(contentLanguage()).length === 0);
-  return { st, infos, due, now, byId, focus, meeting, known, knownRanked, unstudied, newIn, newInAtMost, pastFirst, canHear: (item) => hears(item), patternName: (id) => PATTERNS[id]?.name };
+  return { st, infos, due, now, byId, focus, meeting, known, knownRanked, unstudied, newIn, newInAtMost, pastFirst, assumed, placed, canHear: (item) => hears(item), patternName: (id) => PATTERNS[id]?.name };
 }
 
 // Patterns and phrases in the order the deck first teaches them (until patterns name what they build on, the deck's
@@ -1253,6 +1283,8 @@ const placeIndex = (lessons) => {
 const LEARNED_ELSEWHERE = 0.3;
 const doneMarks = () => new Set([...lessonsFinished(), ...markedOn(contentLanguage())]);
 const lessonDone = (lesson, ctx, finished) => {
+  // A lesson a placement put you past is behind you: you showed its unit, or one further on (study/placement.js).
+  if (ctx.placed?.has(lesson.id)) return true;
   const own = lesson.things.filter((thing) => !thing.formOnly);
   const fresh = own.filter((thing) => ctx.st(thing.unit).isNew).length;
   // A chosen pack's lesson (path.js: one you chose or made for its subject) is its words, whatever was done under its id: the pack can grow,
@@ -1320,7 +1352,7 @@ function newThingsFor(kind, ctx, count, taken = new Set()) {
   const lessons = pathLessons();
   for (const lesson of lessons) {
     if (out.length >= count) break;
-    const fresh = lesson.things.filter((thing) => !thing.formOnly && !taken.has(thing.unit) && ctx.st(thing.unit).isNew);
+    const fresh = lesson.things.filter((thing) => !thing.formOnly && !taken.has(thing.unit) && ctx.st(thing.unit).isNew && !ctx.assumed.has(thing.unit));
     if (!fresh.length) continue;
     const pool = poolOf(lesson, lessons, ctx);
     const concrete = (thing) => Boolean(thing.picture || thing.article || thing.phrase);
@@ -1395,13 +1427,15 @@ function practiceOf(ctx, settings, { countOnly = false } = {}) {
   // A pack's plain items have no concepts, so none of them while a session keeps to some.
   const plain = ctx.focus ? { due: [], fresh: [] } : plainOfDay(ctx.now);
   if (!pool.length && !plain.due.length && ITEMS.length) plain.fresh = [];
-  if (!pool.length && !plain.due.length && !plain.fresh.length) return countOnly ? 0 : [];
+  // A placement's words nothing has tested since: a few asked each time (assumedChecks), so what it placed you past is checked bit by bit.
+  const checkCount = ctx.focus ? 0 : Math.min(ASSUMED_CHECKS, assumedWords(ctx).length);
+  if (!pool.length && !plain.due.length && !plain.fresh.length && !checkCount) return countOnly ? 0 : [];
   const random = seededRandom(`${dayKey(ctx.now)}:${practicesDone()}:${pool.length}`);
   const goal = Math.round((settings.practice.minutes * 60) / SECONDS_A_QUESTION);
   const canRead = (info) => {
     if (!info.words.length && !(info.item.chunks ?? []).length) return false;
     if (!info.words.every((word) => ctx.known(word))) return false;
-    if (!(info.item.chunks ?? []).every((id) => !ctx.st(`c:${id}`).isNew)) return false;
+    if (!(info.item.chunks ?? []).every((id) => !ctx.st(`c:${id}`).isNew || ctx.assumed.has(`c:${id}`))) return false;
     if (isNotFirst(info.item) && !info.played && !ctx.pastFirst()) return false;
     return !resting(info, ctx.now);
   };
@@ -1416,9 +1450,9 @@ function practiceOf(ctx, settings, { countOnly = false } = {}) {
   // Match can take a due item that wasn't asked by itself: any of your items, as a round picks them.
   const inMatch = plain.due.slice(share.due).filter((one) => canMatchCard(one.card)).slice(0, pool.length >= 3 ? 2 : 5 - pool.length);
   const canMatch = allowed.includes("match") && pool.length + inMatch.length >= 4;
-  const total = Math.min(goal, readable.length + wordQuestions + plainQuestions + (canMatch ? 1 : 0));
+  const total = Math.min(goal, readable.length + wordQuestions + plainQuestions + checkCount + (canMatch ? 1 : 0));
   if (countOnly) return total;
-  const sentenceQuestions = Math.min(readable.length, Math.max(0, total - wordQuestions - plainQuestions - (canMatch ? 1 : 0)));
+  const sentenceQuestions = Math.min(readable.length, Math.max(0, total - wordQuestions - plainQuestions - checkCount - (canMatch ? 1 : 0)));
   // The harder it's been, the likelier it comes up.
   const weigh = (level, due, slipping) => 1 + (due ? 3 : 0) + (slipping ? 2 : 0) + Math.max(0, 3 - level);
   const sample = (list, weight, count) =>
@@ -1477,6 +1511,7 @@ function practiceOf(ctx, settings, { countOnly = false } = {}) {
       if (step) return void steps.push(step);
     }
   });
+  steps.push(...assumedChecks(ctx, pool, checkCount, allowed));
   const planned = plainSteps(plain.due.slice(0, share.due), plain.fresh.slice(0, share.fresh), { allowed, now: ctx.now });
   steps.push(...planned.asked);
   if (canMatch) {
@@ -1517,6 +1552,38 @@ function notThreeRunning(list, from = 0) {
     }
   }
   return list;
+}
+
+/** A placement's assumed words a practice asks each time (assumedChecks): few, so the rest of it is still what you know. */
+export const ASSUMED_CHECKS = 3;
+// The assumed words (study/placement.js) a check can ask by themselves, commonest first: each its path thing, as a lesson shows it.
+function assumedWords(ctx) {
+  if (!ctx.assumed.size) return [];
+  const lang = contentLanguage();
+  return [...ctx.assumed]
+    .filter((unit) => unit.startsWith("w:"))
+    .map((unit) => pathThing(unit))
+    .filter((thing) => thing?.lemma && thing.means && !isHeavy(thing.lemma))
+    .sort((a, b) => rankOf(a.lemma, lang) - rankOf(b.lemma, lang) || a.lemma.localeCompare(b.lemma));
+}
+/**
+ * Up to `count` of a placement's assumed words, each asked by itself (Which word is it?, else Which one is it?, as the games on allow): never a
+ * card, since a placement put you past it. Right, it's yours from then (its own evidence); wrong, its answer shows as any miss's does, and it's
+ * a word you're learning. The wrong choices from what you know and the other assumed words.
+ */
+function assumedChecks(ctx, pool, count, allowed) {
+  if (count <= 0) return [];
+  const kinds = ["word", "see"].filter((kind) => allowed.includes(kind));
+  if (!kinds.length) return [];
+  const entries = assumedWords(ctx).map((thing) => ({ key: thing.lemma, thing, own: false, ...shownThing(thing) }));
+  const choices = [...pool, ...entries];
+  const out = [];
+  for (const entry of entries) {
+    if (out.length >= count) break;
+    const step = kinds.map((kind) => wordGameStep(kind, entry, choices)).find(Boolean);
+    if (step) out.push(step);
+  }
+  return out;
 }
 
 /** Questions a practice opens with on the idea a lesson just taught (a lesson of one idea, or one that brings an idea with its words). */
@@ -1688,7 +1755,7 @@ export function pathOverview(upTo = 40, now = Date.now()) {
     const state = i === at ? "here" : done[i] ? "done" : i < Math.max(at, lastDone) ? (lesson.kind === "idea" ? "open" : "skipped") : "ahead";
     const own = lesson.things.filter((thing) => !thing.formOnly);
     const states = own.map((thing) => ctx.st(thing.unit));
-    const doing = !done[i] ? null : states.some((one) => one.slipping) ? "slipping" : states.every((one) => one.level >= 3) ? "strong" : "learning";
+    const doing = !done[i] ? null : ctx.placed.has(lesson.id) && states.every((one) => one.isNew) ? "placed" : states.some((one) => one.slipping) ? "slipping" : states.every((one) => one.level >= 3) ? "strong" : "learning";
     return {
       id: lesson.id,
       // A worked-out lesson is called by its words; its unit has the name (the pack you chose, or the topic most of its words are about).

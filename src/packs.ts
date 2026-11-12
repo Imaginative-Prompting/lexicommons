@@ -137,7 +137,8 @@ async function catalogueNow(env: Env): Promise<{ packs?: Record<string, { id: st
 function languageProblem(language: string, def: unknown): Problem | null {
   if (isOurLanguage(language)) return def === undefined ? null : { at: "language_def", message: `${LANGUAGES[language as keyof typeof LANGUAGES].name} is one Lexicommons knows: leave language_def out.` };
   const problem = ownLanguageProblem(language, def) as { at: string; message: string } | null;
-  return problem ? { at: problem.at.replace(/^languageDef/, "language_def"), message: problem.message } : null;
+  // Said as your AI's tools name it (language_def), not as the pack keeps it (languageDef).
+  return problem ? { at: problem.at.replace(/^languageDef/, "language_def"), message: problem.message.replaceAll("languageDef", "language_def") } : null;
 }
 
 /**
@@ -195,7 +196,7 @@ function devicePacks(value: unknown): DevicePack[] {
   return value.slice(0, 400).flatMap((p) => {
     if (!isObject(p) || !PACK_ID.test(asText(p.id))) return [];
     const kind = p.kind === "default" || p.kind === "follow" ? p.kind : "yours";
-    return [{ id: asText(p.id), name: text(p.name, PACK_LIMITS.name), language: text(p.language, 8), kind, on: p.on !== false, items: Math.max(0, Math.min(asNumber(p.items) || 0, PACK_LIMITS.items)) }];
+    return [{ id: asText(p.id), name: text(p.name, PACK_LIMITS.name), language: text(p.language, 32), kind, on: p.on !== false, items: Math.max(0, Math.min(asNumber(p.items) || 0, PACK_LIMITS.items)) }];
   });
 }
 

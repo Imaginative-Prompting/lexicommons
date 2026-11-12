@@ -193,4 +193,11 @@
     [data-part="session"]:has(> [data-part="activity"] [data-part="picture-choices"][data-kind="pictures"]) > [data-part="answer-bar"] { width: min(calc(100% - 2 * var(--space-4)), 400px); }
     [data-part="session"]:has(> [data-part="activity"] [data-part="session-summary"]) > [data-part="answer-bar"] .lx-answer-actions { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
   }
+
+  /* Find your level's result (study/session.js placementResult): each unit behind you with a check (its shape says it, the ink is the right
+   * answer's), the next one said in words; and Tinta's warm start, by itself in the middle, when there's nothing to place you past. */
+  .lx-placement-row .lx-placement-unit { min-width: 0; color: var(--ink-1); font-size: var(--size-16); font-weight: 500; }
+  .lx-placement-row .lx-placement-done { display: inline-flex; color: var(--m-right); }
+  .lx-placement-row .lx-placement-done .lx-icon { width: 20px; height: 20px; }
+  .lx-placement-tinta { display: flex; justify-content: center; padding: var(--space-5) 0 var(--space-3); }
 }

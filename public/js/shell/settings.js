@@ -28,7 +28,9 @@ import * as theme from "../lx/theme.js";
 import { anyTokenEditor, colourEditor, cssEditor, flagPicker, imageEditor, importTheme, partsReference, recentLooks, sectionImageEditor, statusLine, themeDetails, themeList, themePicker, typeAndShapeEditor } from "../lx/appearance.js";
 import { lookToast } from "./look-watch.js";
 import { getSyncStatus, onSyncStatus, sourceLabel, syncNow } from "../lx/look-sync.js";
-import { ITEMS } from "../study/content.js";
+import { ITEMS, contentLanguage } from "../study/content.js";
+import { placementOn } from "../study/path-place.js";
+import { clearPlacement, courseHere, undoPlacement } from "../study/placement.js";
 import { allEvidence, clearedProgress, clearProgress, UNDO_CLEAR_DAYS, undoClear } from "../study/progress.js";
 import { clearPacks, packsOff, yourPacks } from "../study/packs.js";
 import { clearPractices, listPractices } from "../practice/store.js";
@@ -707,11 +709,61 @@ function describeQuick(s) {
   return `${LENGTHS[s.quick.length].label} · ${s.quick.newPerSession} new${ways === all ? "" : ` · ${ways} of ${all} ways`}`;
 }
 
+// Find your level (study/placement.js), for a language with a course to place you on: taking it again (from where it placed you), and going
+// back to the start, with an Undo while its message is up. The group redraws itself in place.
+const UNDO_FOR = 8000;
+// Its own message, right under it (an Undo for UNDO_FOR, where the press was: at the page's end it fell under a 320 × 568 phone's tab bar).
+function placementGroup() {
+  if (!courseHere()) return null;
+  const msg = message();
+  const lang = contentLanguage();
+  const day = (at) => new Date(at).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  const draw = () => {
+    const placement = placementOn(lang);
+    const placed = placement?.placed;
+    const sub = placed ? (placed.unit ? `Last placed at unit ${placed.n}, on ${day(placed.at)}` : `Last placed past the whole course, on ${day(placed.at)}`) : placement?.taken ? `Last taken on ${day(placement.taken)}` : "About 20 questions";
+    const rows = [ui.listRow({ icon: "target", title: "Find your level", sub, href: "#study/session/placement/again?from=settings" })];
+    if (placed)
+      rows.push(
+        ui.listRow({
+          icon: "refresh",
+          title: "Start from the beginning",
+          sub: "The path goes back to lesson 1. Your answers stay.",
+          onclick: () => {
+            const before = clearPlacement(lang);
+            redraw();
+            const undo = ui.button("Undo", {
+              variant: "fade",
+              size: "sm",
+              onclick: () => {
+                undoPlacement(before, lang);
+                redraw();
+                msg.say("Your place is back", "right");
+              },
+            });
+            msg.say("Back at the beginning. Your answers stay.", "right");
+            msg.append(" ", undo);
+            setTimeout(() => undo.remove(), UNDO_FOR);
+          },
+        }),
+      );
+    return ui.group("Your place on the path", rows, "Taking it again can move you up or down. Lessons you've done stay done.");
+  };
+  let group = draw();
+  const redraw = () => {
+    const next = draw();
+    group.replaceWith(next);
+    group = next;
+  };
+  return [group, msg];
+}
+
 function studyMenu(page) {
   const s = getStudySettings();
   const msg = message();
   page.replaceChildren(
     ui.pageTitle("Study"),
+    ...(placementGroup() ?? []),
     // The 6 Nov audit: Quick session's row went with its entry (More ways), Streak's page opens from Home's streak; resetting is this page's.
     ui.group(null, [
       ui.listRow({ title: "Practice", value: `${s.practice.minutes} min`, href: "#settings/study/practice" }),
@@ -723,7 +775,7 @@ function studyMenu(page) {
         title: "Reset study settings",
         confirm: "Press again to reset them",
         action: async () => {
-          resetStudySettings();
+          resetStudySettings({ everywhere: true });
           msg.say("Study settings are back to the defaults", "right");
           studyMenu(page);
         },
@@ -1050,8 +1102,10 @@ function storage(page) {
           : el("span"),
       }),
     );
+    // What's yours first, in the order each kind registers; the settings that go with you (how you like to study, sound effects) last.
+    const settingsLast = (kind) => (kind.id === "study-settings" || kind.id === "sound" ? 1 : 0);
     kept.replaceChildren(
-      ...status.kinds.map((kind) =>
+      ...[...status.kinds].sort((a, b) => settingsLast(a) - settingsLast(b)).map((kind) =>
         ui.listRow({
           title: kind.label,
           sub: kind.error ?? (kind.count == null ? "" : `${kind.counted ? kind.counted(kind.count) : kind.count.toLocaleString()} on this device`),

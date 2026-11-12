@@ -12,7 +12,7 @@ import { icon } from "../lx/icons.js";
 import { setLang } from "../lx/bidi.js";
 import { languageName } from "../lang/index.js";
 import { ITEMS, PACK, PACKS, TOPICS, onContentChange, packLanguages, sentence } from "../study/content.js";
-import { allPacks, deletedElsewhere, isPackOn, keepingNow, libraryPacks, onKeeping, onKeptChange, onPacksChange, packProblems, restorePack, RESTORE_DAYS, setPackOn, yourPacks } from "../study/packs.js";
+import { allPacks, deletedElsewhere, isPackOn, keepingNow, libraryPacks, onKeeping, onKeptChange, onPacksChange, packProblems, restorePack, RESTORE_DAYS, setPackOn, yourPack, yourPacks } from "../study/packs.js";
 import { deletePackEverywhere, missingPacks, packChanges, packOnAccount, undoPackChange } from "../study/pack-inbox.js";
 import { fromFor, learning, learningFrom, learningName, setLearning } from "../study/learning.js";
 import { packActions } from "../study/pack-actions.js";
@@ -21,6 +21,9 @@ import { getStudySettings, setStudySetting } from "../study/settings.js";
 import * as voice from "../study/voice.js";
 import { drawnEmpty, twoStepRow, wordsRow } from "./settings.js";
 import { lookToast } from "./look-watch.js";
+import { hasClip, onClipsChange } from "../study/clips.js";
+import { clipsOf } from "../study/pack-audio.js";
+import { ACCOUNT_STORE, onSyncStatus, syncTargets } from "../sync.js";
 import { openLanguageSheet, primeLanguageChoices } from "./welcome.js";
 import { canGrow, iSpeak, interfaceSetting, isShipped, onInterfaceChange, setAppLanguage, setGrow, setISpeak, speaks } from "./interface-language.js";
 import { shippedLocales } from "../lx/locales.js";
@@ -171,7 +174,16 @@ export function languageSettings(page) {
             ].filter(Boolean),
           ),
           ]
-        : [el("p", { class: "lx-small lx-muted lx-language-line" }, t("settings.language.englishOnly"))]),
+        : [
+          // A group of its own under I speak, its title as Learning's is over its list: the line under the Add a language button read as the
+          // button's (the director, 12 Nov 2026).
+          el(
+            "section",
+            { class: "lx-group", "aria-label": t("settings.language.iSpeak") },
+            el("p", { class: "lx-choice-title" }, t("settings.language.iSpeak")),
+            el("p", { part: "group-note" }, t("settings.language.englishOnly")),
+          ),
+        ]),
     );
   };
   return { title: "Language", dispose: live(draw, onInterfaceChange) };
@@ -322,6 +334,35 @@ function voicesGroup(id) {
   );
 }
 
+// Its recordings on your other device (12 Nov 2026): your account keeps your packs but never their recordings (sync.js ACCOUNT_KINDS; the
+// relay holds a recording only on its way, clips.js), so a device that took this pack from your account has none of them until a storage
+// of your own brings them; meanwhile the device's own voice reads it. Said with the way to bring them, and gone once they're here or
+// coming (a storage of your own connected).
+const ownStorage = () => syncTargets().some((target) => target.id !== ACCOUNT_STORE);
+/** Calls fn when a storage of your own is connected or let go (not at every sync). Returns a stop. */
+function onOwnStorage(fn) {
+  let had = ownStorage();
+  return onSyncStatus(() => {
+    if (ownStorage() === had) return;
+    had = ownStorage();
+    fn();
+  });
+}
+function recordingsElsewhereGroup(id) {
+  const manifest = yourPack(id)?.audio?.manifest;
+  const clips = manifest ? clipsOf(manifest) : [];
+  const missing = clips.filter((clip) => !hasClip(clip)).length;
+  if (!missing || ownStorage()) return null;
+  return ui.group(null, [
+    ui.listRow({
+      icon: "cloud",
+      title: "Its recordings are on your other device",
+      sub: `Your account keeps your packs but not their recordings. Connect your own cloud storage to bring ${missing === clips.length ? "them" : `the ${missing} missing`} here; until then this device's own voice reads it.`,
+      trailing: ui.button("Connect", { size: "sm", variant: "fade", onclick: () => (location.hash = "#settings/storage") }),
+    }),
+  ]);
+}
+
 // Its recordings being kept for offline (packs.js keepingNow): a row with their download's bar while they come, Tinta
 // pouring in as the fill; once they're all here, it says so and stays, full, until you leave the page. `keep` is the
 // page's own: { bar, title, sub, kept }, made when they start coming; this draws it, and keepingRow's update moves it on.
@@ -456,6 +497,7 @@ export function packSettings(page, id, back = toPacks) {
       studyDeck(pack),
       kind === "yours" ? ui.group(null, [ui.listRow({ title: "Edit its items", href: `#settings/study/packs/${encodeURIComponent(id)}/edit` })]) : null,
       voicesGroup(id),
+      kind === "yours" ? recordingsElsewhereGroup(id) : null,
       keepingGroup(keep),
       actions.length ? ui.group(null, actions.map((action) => ui.listRow({ title: action.label, sub: action.sub, opens: action.opens, onclick: () => action.run() }))) : null,
       el("section", { class: "lx-group" }, el("details", { class: "lx-settings-fold" }, el("summary", { part: "list-row" }, el("span", { class: "lx-row-text" }, el("span", { class: "lx-row-title" }, "About it")), icon("chevron")), el("ul", { part: "list" }, aboutRows(info)))),
@@ -481,6 +523,6 @@ export function packSettings(page, id, back = toPacks) {
   };
   readChanges();
   follow(keepingNow(id));
-  const dispose = live(draw, voice.onVoicesChange, () => onPacksChange(readChanges), () => onKeptChange((entry) => entry.packId === id && readChanges()), () => onKeeping((packId, now) => packId === id && follow(now)));
+  const dispose = live(draw, voice.onVoicesChange, onClipsChange, onOwnStorage, () => onPacksChange(readChanges), () => onKeptChange((entry) => entry.packId === id && readChanges()), () => onKeeping((packId, now) => packId === id && follow(now)));
   return { title, back, dispose };
 }

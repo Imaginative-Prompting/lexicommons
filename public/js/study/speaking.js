@@ -3,7 +3,7 @@
 // died with it in memory on this device (speech/guard.js). The speech module (js/speech/) is loaded only when something needs it.
 
 import { getStudySettings, setStudySetting } from "./settings.js";
-import { learningLocale } from "./learning.js";
+import { learningLocale, learningName } from "./learning.js";
 import { guardReady, onPhone, whisperStopped } from "../speech/guard.js";
 
 // Once, on a phone: a Whisper chosen before 4 Nov 2026 goes back to the browser's recognizer. A model on the device used to pick Whisper for
@@ -40,12 +40,12 @@ export const usableModels = (api, support) =>
   );
 
 /**
- * The Whisper model to use: the one you chose; else the best one already on this device (so a download is never
- * wasted); else the one that suits this device.
+ * The Whisper model to use: the one you chose, if this device can run it (Smaller and Best need its graphics chip); else the best one
+ * already on this device (so a download is never wasted); else the one that suits this device.
  */
 export async function pickModel(api, support) {
   const chosen = getStudySettings().say.model;
-  if (chosen) return chosen;
+  if (chosen && usableModels(api, support).some((m) => m.id === chosen)) return chosen;
   for (const model of usableModels(api, support)) {
     if ((await api.modelState(model.id, { supported: support }).catch(() => null))?.state === "ready") return model.id;
   }
@@ -74,12 +74,12 @@ export async function readyWhisper(choice, onWait) {
 }
 
 /** What can listen for a locale, as the choosers below read it. refused: recognizers that failed outright just now. */
-async function recognizers(locale, refused = [], { light = false } = {}) {
+async function recognizers(locale, refused = [], { light = false, known = false } = {}) {
   await guardReady;
   const api = await speechApi();
   if (!api) return { api };
   const want = getStudySettings().say.engine;
-  const support = await api.support(locale, { light });
+  const support = await api.support(locale, { light, known });
   const model = await pickModel(api, support);
   const stopped = whisperStopped();
   const whisperOk = support.whisper.state !== "none" && !stopped && !refused.includes("whisper");
@@ -96,6 +96,9 @@ function chosenFirst({ api, want, model, stopped, whisperReady, browserOk }) {
   return null;
 }
 
+// A learner's own language with no real tag (und-x-…, nl-x-…): nothing on a device listens for it, and the screen says so.
+const ownUnheard = () => `Nothing on this device listens for ${learningName()}: it's a language of your own, so speaking games and saying a text are off for it.`;
+
 // When the app died with Whisper in memory: no choice starts it, and with nothing else to listen, this says why.
 const STOPPED_WHY = "Whisper stopped this app on this device, and this browser has no recognizer of its own. Settings, Study, Speaking can try it again.";
 
@@ -104,10 +107,12 @@ const STOPPED_WHY = "Whisper stopped this app on this device, and this browser h
  * "browser" | "whisper", model, fellBack, whisperStopped? }. When neither can run, { api, engine: null, reason, why? } where reason is
  * "setup" (Whisper could run once its model is downloaded) or "unsupported"; why, when Whisper doesn't know the
  * language, says so (the browser's recognizer can't help either), for the screen to show. light: asked without the device's native probes
- * (speech.js support), for a list of what can play.
+ * (speech.js support), for a list of what can play; known: with only what they've answered on this page (anything that isn't using
+ * speech: Study's list, Settings).
  */
-export async function chooseEngine(locale = learningLocale(), { light = false } = {}) {
-  const found = await recognizers(locale, [], { light });
+export async function chooseEngine(locale = learningLocale(), { light = false, known = false } = {}) {
+  if (!locale) return { api: null, engine: null, reason: "unsupported", why: ownUnheard() };
+  const found = await recognizers(locale, [], { light, known });
   const { api, support, model, stopped, whisperOk, whisperReady } = found;
   if (!api) return { api, engine: null, reason: "unsupported" };
   const first = chosenFirst(found);
@@ -129,6 +134,7 @@ export async function chooseEngine(locale = learningLocale(), { light = false } 
  * { engine: null, reason: "unsupported", why } when nothing can. refused: recognizers that failed outright just now.
  */
 export async function chooseDictation(locale = learningLocale(), { refused = [] } = {}) {
+  if (!locale) return { api: null, engine: null, reason: "unsupported", why: ownUnheard() };
   const found = await recognizers(locale, refused);
   const { api, support, model, state, stopped, whisperOk, whisperReady } = found;
   if (!api) return { api, engine: null, reason: "unsupported" };

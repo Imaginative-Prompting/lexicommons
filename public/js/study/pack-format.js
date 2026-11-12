@@ -299,7 +299,10 @@ function lemmaOf(value, at, language, r) {
   if (lemma === undefined) return undefined;
   const rule = LANGUAGES[language].lemmaCase === "any" ? "any" : "lower";
   if (!LEMMA[rule].test(lemma)) {
-    return void r.error(at, `${at} "${lemma}" isn't a dictionary form: ${rule === "lower" ? "lowercase letters" : "letters"}, with apostrophes, spaces or dashes inside.`);
+    // A language of their own defined as "lower" (the default) whose word is a dictionary form as written: what to change is its definition
+    // (12 Nov 2026, the worked cases: Burmese's letters have no small and capital forms, and Toki Pona writes a name with its capital).
+    const fix = rule === "lower" && LANGUAGES[language].own && LEMMA.any.test(lemma) ? ` For a language whose letters have no small and capital forms (Burmese, Amharic) or that writes some words with a capital (Toki Pona's names, German's nouns): language_def "case": "any".` : "";
+    return void r.error(at, `${at} "${lemma}" isn't a dictionary form: ${rule === "lower" ? "lowercase letters" : "letters"}, with apostrophes, spaces or dashes inside.${fix}`);
   }
   return lemma;
 }

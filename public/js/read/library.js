@@ -14,6 +14,7 @@ import * as store from "./store.js";
 import { MAX_TEXT_BYTES, bookFromText } from "./import-text.js";
 import { onSyncStatus, syncTargets } from "../sync.js";
 import { LANGUAGES, coverageOf, joinWords, picturePath, weaveSentence } from "./book-format.js";
+import { ourLanguages } from "../lang/index.js";
 import { canWeaveInto, storyLine, tryWeaving, weaveOwn } from "./weave-own.js";
 import { aiConnected } from "../shell/layout.js";
 import { FLIP_AT, isTarget, pieceGap } from "./woven-text.js";
@@ -90,10 +91,14 @@ async function addFile(file, say) {
   try {
     if (!isEpub(file) && !isText(file)) throw new Error("That isn't an EPUB or a plain-text file (.txt).");
     say("Opening…");
-    if (isEpub(file)) return await addAndOpen(await bookFromEpub(file, { fileName: file.name }));
-    if (file.size > MAX_TEXT_BYTES) throw new Error(`That file is ${Math.round(file.size / 1e6)} MB; a text can be up to ${MAX_TEXT_BYTES / 1e6} MB.`);
-    const text = await file.text();
-    await addAndOpen(await bookFromText(text, { fileName: file.name, lang: await learningIfItLooksIt(text) }));
+    if (isEpub(file)) await addAndOpen(await bookFromEpub(file, { fileName: file.name }));
+    else {
+      if (file.size > MAX_TEXT_BYTES) throw new Error(`That file is ${Math.round(file.size / 1e6)} MB; a text can be up to ${MAX_TEXT_BYTES / 1e6} MB.`);
+      const text = await file.text();
+      await addAndOpen(await bookFromText(text, { fileName: file.name, lang: await learningIfItLooksIt(text) }));
+    }
+    // Opened: the line goes (it stayed under Add a book or text, saying Opening…, after the reader closed).
+    say("");
   } catch (error) {
     say(error.message, "wrong");
   }
@@ -154,7 +159,8 @@ function acceptDrops(page, say) {
 function message() {
   const node = el("p", { class: "lx-settings-message lx-read-message", role: "status" });
   node.say = (text, tone) => {
-    node.replaceChildren(text);
+    // No words: an empty line (nothing left in it).
+    node.replaceChildren(...(text ? [text] : []));
     if (tone) node.setAttribute("data-tone", tone);
     else node.removeAttribute("data-tone");
   };
@@ -701,7 +707,7 @@ function renderPaste(page) {
   const nameOf = (code) => LANGUAGES[code]?.name ?? code;
   const languageRow = pickLanguageRow({
     title: "Its language",
-    codes: wheelOrder([learning(), "en"], Object.keys(LANGUAGES), nameOf),
+    codes: wheelOrder([learning(), "en"], ourLanguages(), nameOf),
     current: lang,
     nameOf,
     onchange: (code) => {

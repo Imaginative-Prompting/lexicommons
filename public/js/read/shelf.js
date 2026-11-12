@@ -22,6 +22,7 @@ import { loadPictures, pictureNode } from "../study/pictures.js";
 import { readableBooks, readableFor } from "./readable.js";
 import { LANGUAGES, ownDrawingOf, coverageOf, validateBook, validateDefinitions, validateWeave } from "./book-format.js";
 import { learning, learningName } from "../study/learning.js";
+import { isOwnLanguage } from "../lang/index.js";
 import { refreshGrammar } from "../study/grammar.js";
 
 const CATALOGUE = "/library/catalogue.json";
@@ -491,7 +492,7 @@ export function renderShelf(container, { catalog, open, known } = {}) {
     grid.classList.add("lx-shelf-grid");
     list.replaceChildren(
       // Said as an empty state, Tinta waiting on a box: honest about what isn't here yet, promising no when.
-      ...(none ? [el("div", { class: "lx-read-none-yet" }, ui.emptyState(`No books in ${learningName()} yet. These are free to read in other languages.`, { pose: "box" }))] : []),
+      ...(none ? [el("div", { class: "lx-read-none-yet" }, ui.emptyState((isOwnLanguage(learning()) ? `Books are in the languages Lexicommons lists, so none are in ${learningName()}, a language of your own. These are free to read in others.` : `No books in ${learningName()} yet. These are free to read in other languages.`), { pose: "box" }))] : []),
       el(
         "div",
         { class: "lx-shelf-section", "data-lead": "", "data-kind": lead.find ?? undefined },

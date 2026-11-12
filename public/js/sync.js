@@ -651,11 +651,11 @@ export function registerBlobs(kind) {
 // it brings them back: the server is one more storage to sync with, on from sign-in with nothing to connect, when the site says it keeps one (/api/me's
 // accountSync). Its kinds (ACCOUNT_KINDS: the server refuses any other kind's file): answers, the done log and streak, the place on the path,
 // the word bank, reading places, highlights, sound settings, your packs (12 Nov 2026: one your AI made reached only the devices signed in
-// while the relay held it) and your texts (a shelf or Explore book as its entry alone). Never the packs' recordings: those sync with a
-// storage of your own.
+// while the relay held it), your texts (a shelf or Explore book as its entry alone) and how you like to study (study/settings.js, less
+// what belongs to one device). Never the packs' recordings: those sync with a storage of your own.
 // Nothing is sent before sign-in (sync starts with the account), and signing out leaves this device's copy as it is.
 export const ACCOUNT_STORE = "account";
-export const ACCOUNT_KINDS = ["progress", "streak", "path", "word-bank", "highlights", "reading-place", "sound", "packs", "texts"];
+export const ACCOUNT_KINDS = ["progress", "streak", "path", "word-bank", "highlights", "reading-place", "sound", "packs", "texts", "study-settings"];
 let accountStore = false;
 const accountFile = (name, seen) => `/api/account/sync/file?name=${encodeURIComponent(name)}${seen ? `&seen=${encodeURIComponent(seen)}` : ""}`;
 const accountAsk = async (url, options) => {

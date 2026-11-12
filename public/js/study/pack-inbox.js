@@ -30,6 +30,7 @@
 
 import { applyChange, inverseOf, withInverse } from "./pack-authoring.js";
 import { refreshGrammar } from "./grammar.js";
+import { isOurLanguage } from "../lang/index.js";
 import { checkAudio, fitAudio, mergeAudio } from "./pack-audio.js";
 import { fetchClip } from "./clips.js";
 import { allPacks, changesOf, claimPack, deletePack, isPackOn, keepChange, keptChange, loadPacks, onPacksChange, packsBatch, savePack, setPacksAccount, setRelayAsk, setRelayLatest, yourPack, yourPacks } from "./packs.js";
@@ -274,7 +275,7 @@ async function apply(relayed, here) {
   // here yet. Once that grammar is in (study/grammar.js) and what's here is checked again against it, it's tried once
   // more.
   const language = here?.pack.language ?? change.pack?.language;
-  if (first.state !== "refused" || typeof language !== "string" || !(await refreshGrammar(language, { orThrow: true }))) return first;
+  if (first.state !== "refused" || typeof language !== "string" || !isOurLanguage(language) || !(await refreshGrammar(language, { orThrow: true }))) return first;
   await loadPacks();
   return attempt();
 }

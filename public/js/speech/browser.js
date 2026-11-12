@@ -7,7 +7,7 @@
 
 import { SpeechError } from "./errors.js";
 import { LANGUAGES } from "../lang/index.js";
-import { guarded } from "./probe-guard.js";
+import { guarded, probeCrashed, probesOff } from "./probe-guard.js";
 
 const Recognition = () => globalThis.SpeechRecognition ?? globalThis.webkitSpeechRecognition ?? null;
 
@@ -47,31 +47,53 @@ const isApple = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator
  *   { state: "none", why, unknownLanguage? }   unknownLanguage: Chrome's recognizer doesn't know the language
  */
 export async function browserSupport(lang = "nl-NL", { onDevice = true } = {}) {
+  const plain = browserPlain(lang);
+  if (plain) return plain;
+  // Asked only where it's wanted (onDevice: not for Study's list on a phone, never on Samsung Internet), and guarded (probe-guard.js): on a
+  // device where asking it once ended the page it's never asked again, and the recognizer is used as one that may or may not have the
+  // language on the device. One ask a language a page: what it answered is kept (browserKnown), and callers asking at once share it.
+  if (!onDevice || !asksOnDevice()) return { state: "unknown" };
+  const key = recognizerLang(lang);
+  if (!onDeviceAsked.has(key)) {
+    const R = Recognition();
+    const langs = [key];
+    const asking = guarded(
+      "speech-available",
+      async () => {
+        const local = await R.available({ langs, processLocally: true });
+        if (local === "available") return { state: "local" };
+        const remote = await R.available({ langs, processLocally: false });
+        if (remote === "available") return local === "downloadable" ? { state: "downloadable" } : { state: "server" };
+        if (local === "downloadable" || local === "downloading") return { state: "downloadable" };
+        return { state: "none", why: "This browser's recognizer doesn't know this language." };
+      },
+      { state: "unknown" },
+    ).catch(() => ({ state: "unknown" }));
+    onDeviceAsked.set(key, asking);
+    asking.then((answer) => onDeviceAnswers.set(key, answer));
+  }
+  return { ...(await onDeviceAsked.get(key)) };
+}
+// The browser's recognizer as known without asking it anything: none, or a language it doesn't know; else this page's answer for it.
+function browserPlain(lang) {
   const R = Recognition();
   if (!R) return { state: "none", why: "This browser has no speech recognizer." };
   if (isChrome(R) && !GOOGLE_KNOWS.has(codeOf(lang))) return { state: "none", why: `Chrome's recognizer doesn't know ${LANGUAGES[codeOf(lang)]?.name ?? lang}.`, unknownLanguage: true };
-  // Asked only where it's wanted (onDevice: not for Study's list on a phone), and guarded (probe-guard.js): on a device where asking it once
-  // ended the page it's never asked again, and the recognizer is used as one that may or may not have the language on the device.
-  if (typeof R.available === "function" && onDevice) {
-    const langs = [recognizerLang(lang)];
-    try {
-      return await guarded(
-        "speech-available",
-        async () => {
-          const local = await R.available({ langs, processLocally: true });
-          if (local === "available") return { state: "local" };
-          const remote = await R.available({ langs, processLocally: false });
-          if (remote === "available") return local === "downloadable" ? { state: "downloadable" } : { state: "server" };
-          if (local === "downloadable" || local === "downloading") return { state: "downloadable" };
-          return { state: "none", why: "This browser's recognizer doesn't know this language." };
-        },
-        { state: "unknown" },
-      );
-    } catch {
-      return { state: "unknown" };
-    }
-  }
-  return { state: "unknown" };
+  return null;
+}
+const asksOnDevice = () => typeof Recognition()?.available === "function" && !probesOff() && !probeCrashed("speech-available");
+const onDeviceAsked = new Map();
+const onDeviceAnswers = new Map();
+/**
+ * What browserSupport would say, asking nothing: its answer on this page if it's been asked; "unknown" where it's never asked (Safari,
+ * Samsung Internet); else "unknown" and unasked, for a screen to say it's checked when you first use it.
+ */
+export function browserKnown(lang = "nl-NL") {
+  const plain = browserPlain(lang);
+  if (plain) return plain;
+  if (!asksOnDevice()) return { state: "unknown" };
+  const answer = onDeviceAnswers.get(recognizerLang(lang));
+  return answer ? { ...answer } : { state: "unknown", unasked: true };
 }
 
 // A device where a listen on our own track heard nothing while our meter measured a voice (speech.js viaBrowser): from then on its
@@ -106,6 +128,10 @@ export async function installLanguage(lang = "nl-NL") {
     return await R.install({ langs: [recognizerLang(lang)], processLocally: true });
   } catch {
     return false;
+  } finally {
+    // What it answered before the install is out of date: the next browserSupport asks again.
+    onDeviceAsked.delete(recognizerLang(lang));
+    onDeviceAnswers.delete(recognizerLang(lang));
   }
 }
 

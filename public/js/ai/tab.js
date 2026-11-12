@@ -18,7 +18,7 @@ import { HOSTED_NAME, hostedReady } from "./hosted.js";
 import { ANSWERS, KINDS as PRACTICE_KINDS, MINUTES } from "../practice/protocol.js";
 import { yourPacks } from "../study/packs.js";
 import { learning, learningName } from "../study/learning.js";
-import { LANGUAGES, languageName } from "../lang/index.js";
+import { LANGUAGES, isOwnLanguage, languageName, ourLanguages } from "../lang/index.js";
 import { languageRow as pickLanguageRow, wheelOrder } from "../translate/picker.js";
 import { ITEMS, conceptsOf, onContentChange, sentence } from "../study/content.js";
 import { unitState } from "../study/progress.js";
@@ -185,7 +185,10 @@ function practiceCard({ client }) {
       scene,
       el("div", { class: "lx-ap-text" }, el("h2", { class: "lx-ap-title" }, "Practice with me"), sub),
     ),
-    ui.button("Start", { variant: "go", size: "lg", block: true, onclick: () => (location.hash = "#practice") }),
+    // In a language of your own, not yet (3b): said where Start would be, never a Start that fails.
+    isOwnLanguage(learning())
+      ? el("p", { part: "group-note", class: "lx-ap-off" }, `Practice with your AI isn't offered for ${learningName()} yet: it's a language of your own. Its packs, games and Knowledge are all here.`)
+      : ui.button("Start", { variant: "go", size: "lg", block: true, onclick: () => (location.hash = "#practice") }),
   );
   resized.observe(card);
   card.lxTinta = tinta;
@@ -261,7 +264,8 @@ function home(page) {
   body.append(
     practice,
     ui.group("Ask your AI for something", [
-      ...ASKABLE.filter((kind) => REQUEST_KINDS[kind]).map((kind) => ui.listRow({ symbol: KIND_SYMBOL[kind], title: REQUEST_KINDS[kind].name, sub: KIND_TILE[kind]?.sub ?? REQUEST_KINDS[kind].about, href: `#ai/new/${kind}` })),
+      // In a language of your own, only what carries no language (your look) for now: a text, a pack and Practice in it come in 3b.
+      ...ASKABLE.filter((kind) => REQUEST_KINDS[kind] && (!isOwnLanguage(learning()) || kind === "look")).map((kind) => ui.listRow({ symbol: KIND_SYMBOL[kind], title: REQUEST_KINDS[kind].name, sub: KIND_TILE[kind]?.sub ?? REQUEST_KINDS[kind].about, href: `#ai/new/${kind}` })),
       // Weaving is asked from the text itself, in Read (reader.js offerWeave), and only into a language it's ready for: said here so it's found.
       ...(WEAVE_LANGUAGES.includes(learning()) ? [ui.listRow({ symbol: KIND_SYMBOL.weave, title: "Weave a text", sub: `English that turns ${learningName()} as you learn. Start in Read`, href: "#read" })] : []),
     ]),
@@ -435,7 +439,7 @@ function requestPage(page, kind) {
   } else if (kind === "pack_new" || kind === "text_new") {
     let language = learning();
     const what = field(kind === "text_new" ? { placeholder: "What to add: a short story about a market, at A2, say; or the EPUB in your Downloads", "aria-label": "What to add" } : { placeholder: "What it's for: a trip to Berlin in May, say", "aria-label": "What it's for" });
-    const languages = Object.keys(LANGUAGES).filter((code) => code !== "en");
+    const languages = ourLanguages().filter((code) => code !== "en");
     body.push(
       el("section", { class: "lx-stack" }, el("h2", { part: "group-label" }, kind === "text_new" ? "What to add" : "What it's for"), what),
       ui.group(null, [(wheelRow = pickLanguageRow({ title: "In which language", codes: wheelOrder([learning()], languages, languageName), current: language, nameOf: languageName, onchange: (code) => (language = code) }))]),

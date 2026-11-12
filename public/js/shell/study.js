@@ -8,7 +8,7 @@ import { drawnEmpty } from "./settings.js";
 import { el } from "../lx/ui.js";
 import { CHUNKS, PACKS, PATTERNS, PATTERNS_IN_USE, TOPICS, ITEMS, WORD_PACKS, contentLanguage, describe, nameLang, sentenceUnits } from "../study/content.js";
 import { conceptState, evidenceVersion } from "../study/progress.js";
-import { onDoneChange } from "../study/done.js";
+import { lessonsFinished, onDoneChange } from "../study/done.js";
 import { GAMES, MORE_LESSONS, lessonFinished, lessonsSkippedBy, markLessonsDone, overview, packLessons, pathOverview, studyOverview } from "../study/plan.js";
 import { coverOfPack } from "../study/pack-format.js";
 import { loadPictures, pictureNode } from "../study/pictures.js";
@@ -25,7 +25,8 @@ import { starterNote } from "../study/starter-note.js";
 import { pathStrip, studyDoor } from "../study/doors.js";
 import { symbol } from "../lx/symbols.js";
 import { onVoicesChange } from "../study/voice.js";
-import { onPlaceChange, placeOn, setPlace } from "../study/path-place.js";
+import { onPlaceChange, placeOn, placementOn, setPlace } from "../study/path-place.js";
+import { courseHere } from "../study/placement.js";
 import { onFrequency } from "../study/frequency.js";
 import { WAYS, getStudySettings, setStudySetting } from "../study/settings.js";
 import { icon } from "../lx/icons.js";
@@ -119,7 +120,7 @@ function studyHome(page) {
   const decks = decksHere()
     .map((pack) => ({ pack, line: pack.id === letters ? `If ${learningName()}'s letters are new to you, start here` : deckLine(deckOverview(pack)) }))
     .sort((a, b) => (b.pack.id === letters) - (a.pack.id === letters));
-  const key = JSON.stringify([learningName(), study, coming, instead, focusNow(), lessons.length, here, decks.map(({ pack, line }) => [pack.id, pack.name, line])]);
+  const key = JSON.stringify([learningName(), study, coming, instead, focusNow(), lessons.length, here, decks.map(({ pack, line }) => [pack.id, pack.name, line]), offerPlacement(coming)]);
   // The games follow what can play here themselves (quick-play.js); coming back, they look again.
   if (kept?.key === key && kept.games.parentNode === page) {
     kept.games.lxRefresh?.();
@@ -158,6 +159,8 @@ function studyHome(page) {
     // Its rows only when it has some: an empty list would hold a gap above the games.
     ...(() => {
       const rows = [
+        // Find your level (study/placement.js), for someone who may know some already: until about PLACEMENT_ROW lessons are done or it's been taken.
+        offerPlacement(coming) ? ui.listRow({ icon: "target", title: `Know some ${learningName()} already?`, sub: "Find your level: about 20 questions", href: "#study/session/placement/again" }) : null,
         study.writtenEnd ? ui.listRow({ icon: "compass", title: "Learn something new", sub: `You've done every ${learningName()} lesson here`, href: MORE_LESSONS }) : null,
         here < 0 && lessons.length ? quietRow("path-q", { title: "The lessons", href: "#study/path" }) : null,
         ...decks.map(({ pack, line }) => quietRow("deck-q", { title: pack.name, sub: line, href: `#study/session/deck/${encodeURIComponent(pack.id)}` })),
@@ -182,6 +185,18 @@ function studyHome(page) {
   return "Study";
 }
 
+
+/** Lessons done in a language past which Study stops offering Find your level (Settings → Study always has it). */
+const PLACEMENT_ROW = 10;
+/** Whether Study offers Find your level: a full course, its lessons here, never taken, and fewer than PLACEMENT_ROW of its lessons done. */
+function offerPlacement(coming) {
+  if (coming) return false;
+  const lang = contentLanguage();
+  if (placementOn(lang)?.taken || !courseHere()) return false;
+  let done = 0;
+  for (const id of lessonsFinished()) if (id.startsWith(`path-${lang}/`) && ++done >= PLACEMENT_ROW) return false;
+  return true;
+}
 
 /** The first-lesson door while its lesson is on its way: the door it comes in, its name held in its place, no link (nothing to open yet). */
 function heldDoor() {

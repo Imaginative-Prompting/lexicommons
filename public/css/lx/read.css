@@ -7,6 +7,10 @@
   .lx-library-add [data-part="list-row"][data-opens="sheet"]:active { transform: none; box-shadow: none; background: var(--fill-active); }
   @media (hover: hover) { .lx-library-add [data-part="list-row"][data-opens="sheet"]:not(:active):hover { background: var(--fill-hover); } }
   .lx-read-texts:empty, .lx-library-failed:empty { display: none; }
+  /* Read's lists of texts that couldn't come or stay (library.js drawFailed): rows inside the page's gutter like the rest of Read (a row's
+   * margin is for the padding Read takes away; with it, Hide ended 4 px from the screen's edge). */
+  .lx-library-failed [data-part="list-row"] { margin-inline: 0; }
+  .lx-library-failed { display: flex; flex-direction: column; gap: var(--space-4); }
   .lx-library [data-part="section-title"] { color: var(--ink-1); font: 700 var(--size-20) / 1.2 var(--type-head); letter-spacing: -0.01em; }
   .lx-shelf-section { gap: var(--space-2); }
   .lx-shelf-sections { gap: 22px; }

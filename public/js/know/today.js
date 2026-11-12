@@ -26,6 +26,7 @@ import { shownName } from "../study/content.js";
 import { growthChart, heldText, knowLinkCard, nextStep, statTiles, streakSpot, streakSummary, weekStrip } from "./ui.js";
 import { translatePage } from "../translate/page.js";
 import { learning, learningName } from "../study/learning.js";
+import { isOwnLanguage } from "../lang/index.js";
 import { installOffer } from "../shell/settings-install.js";
 import { lessonsFinished, onDoneChange, streakNow } from "../study/done.js";
 import { scriptFirst } from "../study/deck.js";
@@ -572,11 +573,13 @@ export function renderToday(page, { onTranslate } = {}) {
     const where = reading ? whereIn(reading) : null;
     // With a book, its heading's end is the way to every book (as All of it is on Your progress); with none, the card itself opens Read.
     if (reading) wanted.push({ key: "reading-head", make: () => ({ node: el("div", { class: "lx-hc-head" }, ui.sectionHead(t("home.reading"), { link: { href: "#read", label: t("home.allBooks") } })) }) });
-    wanted.push({
-      key: JSON.stringify(["book", reading, cover.picture, where, shelf, language]),
-      make: () => ({ node: bookCard({ reading, picture: reading ? cover.picture : null, where, shelf, language }) }),
-    });
-    if (aiConnected() && thirdTab() !== "ai") {
+    // A language of your own has no books (they're in the languages Lexicommons lists): its card only while you're reading one.
+    if (reading || !isOwnLanguage(learning()))
+      wanted.push({
+        key: JSON.stringify(["book", reading, cover.picture, where, shelf, language]),
+        make: () => ({ node: bookCard({ reading, picture: reading ? cover.picture : null, where, shelf, language }) }),
+      });
+    if (aiConnected() && thirdTab() !== "ai" && !isOwnLanguage(learning())) {
       const exchange = talk?.exchange ?? null;
       const client = talk?.client ?? null;
       // Under its own heading, never read as part of Reading.
@@ -595,7 +598,7 @@ export function renderToday(page, { onTranslate } = {}) {
       card.stop = () => stops.forEach((stop) => stop());
     }
     shown = next;
-    keepSection.hidden = false;
+    keepSection.hidden = !nodes.length;
   };
   const stopBook = () => {
     for (const card of shown.values()) card.stop?.();

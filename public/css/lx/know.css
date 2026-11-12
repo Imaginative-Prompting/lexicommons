@@ -1019,10 +1019,10 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
-  [data-part="word-tile"][data-wide] { grid-column: span 2; }
-  /* A tablet or wider: the 720 column's cells are ~240 px, twice a phone's, so only a word over 18 letters or a meaning over 44 takes two
-     places (words-page.js data-long), and a shelf holds three words. */
-  @media (min-width: 700px) { [data-part="word-tile"][data-wide]:not([data-long]) { grid-column: auto; } }
+  /* A tile takes as many of its shelf's places as its word and its meaning need, measured in the page (words-page.js fitTiles): on a phone
+     and a tablet alike, in every script. */
+  [data-part="word-tile"][data-span="2"] { grid-column: span 2; }
+  [data-part="word-tile"][data-span="3"] { grid-column: span 3; }
   /* Your words in the wide column (1280 and up: shell.css): four to a shelf. */
   @media (min-width: 1280px) { [data-part="app"][data-column="wide"] .lx-shelf-tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
   .lx-tile-face {

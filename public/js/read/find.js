@@ -9,6 +9,7 @@ import { ownDrawingOf } from "./book-format.js";
 import { OFFLINE_OPEN, asDrawn, bookKinds, coverOfMeta, kindOf, loadCatalog, opener } from "./shelf.js";
 import { lookToast } from "../shell/look-watch.js";
 import { learning, learningName } from "../study/learning.js";
+import { isOwnLanguage } from "../lang/index.js";
 import { readableBooks } from "./readable.js";
 import * as store from "./store.js";
 
@@ -103,7 +104,7 @@ export function renderFind(page, { open, known } = {}) {
     const mine = new Set((await store.listBooks().catch(() => [])).map((book) => book.id));
     if (stale) return;
     if (others) {
-      none.replaceChildren(ui.emptyState(`No books in ${learningName()} yet. These are free to read in other languages.`, { pose: "box" }));
+      none.replaceChildren(ui.emptyState((isOwnLanguage(learning()) ? `Books are in the languages Lexicommons lists, so none are in ${learningName()}, a language of your own. These are free to read in others.` : `No books in ${learningName()} yet. These are free to read in other languages.`), { pose: "box" }));
       none.hidden = false;
     }
     search.querySelector("input")?.setAttribute("placeholder", `Search ${offered.length.toLocaleString("en")} ${offered.length === 1 ? "book" : "books"}`);

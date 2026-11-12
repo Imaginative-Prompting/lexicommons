@@ -102,6 +102,22 @@ export function voicesSettings(page, back) {
 
 const mb = (bytes) => (bytes ? `${Math.round(bytes / 1048576)} MB` : "");
 
+// The sizes of the models this device could suit, smallest first, each as it would download (its runtime too), while its GPU isn't known:
+// with WebGPU and 16-bit maths, with WebGPU alone, and on the processor (speech.js recommendedModel).
+async function suitSizes(api) {
+  const ways = [{ state: "webgpu", f16: true }, { state: "webgpu", f16: false }, { state: "wasm", f16: false }];
+  const seen = new Map();
+  for (const whisper of ways) {
+    const id = api.recommendedModel({ whisper });
+    const device = whisper.state;
+    if (!id || seen.has(`${id}:${device}`)) continue;
+    seen.set(`${id}:${device}`, await api.modelState(id, { device }).then((st) => st.total).catch(() => 0));
+  }
+  return [...new Set([...seen.values()].filter(Boolean).map((bytes) => Math.round(bytes / 1048576)))].sort((a, b) => a - b).map((n) => n * 1048576);
+}
+// "225 MB or 314 MB": a few sizes, the last after "or".
+const orList = (items) => (items.length < 2 ? items.join("") : `${items.slice(0, -1).join(", ")} or ${items.at(-1)}`);
+
 /** The recognizer in use, in a few words (the Study menu and Say it's settings show it). */
 export const engineName = () => (getStudySettings().say.engine === "whisper" && !whisperStopped() ? "Whisper" : "Browser's recognizer");
 
@@ -114,6 +130,7 @@ export function speakingSettings(page, back) {
   const recognisers = el("div", { class: "lx-voice-groups" });
   let download = null; // { controller, have, total, bar } while downloading
   let downloaded = null; // the bar of a download that finished while this page was open: it stays, full, until you leave
+  let pickNote = null; // why the model you chose can't download here, under the button, once the device has said so
   let disposed = false;
 
   const render = async () => {
@@ -124,9 +141,10 @@ export function speakingSettings(page, back) {
       recognisers.replaceChildren(ui.namedGroup("Recognizer", [el("li", { part: "list-row", class: "lx-row-empty" }, el("span", { class: "lx-row-text lx-muted" }, "Speaking can't load in this browser."))]));
       return;
     }
-    const support = await api.support(learningLocale());
+    // What's known, never asked (probe-guard.js): opening this page isn't using speech. Try it, below, asks.
+    const support = await api.support(learningLocale(), { known: true });
     const model = await pickModel(api, support);
-    const state = support.whisper.state === "none" || !model ? null : await api.modelState(model);
+    const state = support.whisper.state === "none" || !model ? null : await api.modelState(model, { supported: support });
     if (disposed) return;
     const stopped = whisperStopped();
     // What's really listening: with Whisper stopped, the browser's, whatever was chosen before.
@@ -135,14 +153,27 @@ export function speakingSettings(page, back) {
     const browserSub =
       support.browser.state === "local"
         ? undefined
-        : support.browser.state === "server" || support.browser.state === "unknown"
-          ? "Your voice goes to the browser's maker, so it needs a connection."
-          : support.browser.why || "This browser doesn't have one.";
+        : support.browser.unasked
+          ? "Your voice goes to the browser's maker unless it can listen on this device. That's checked when you first use it."
+          : support.browser.state === "server" || support.browser.state === "unknown"
+            ? "Your voice goes to the browser's maker, so it needs a connection."
+            : support.browser.why || "This browser doesn't have one.";
     const whisperSub = stopped
       ? `Whisper stopped this app on this device ${WHILE[stopped.stage] ?? "while it was running"}, probably because it ran out of memory. Lexicommons won't start it by itself again.`
       : support.whisper.state === "none"
         ? support.whisper.why || "This browser can't run it."
-        : [support.whisper.state === "wasm" ? "Slower here: this device can't run it on its graphics chip." : null, onPhone() ? "A phone may not have the memory for it." : null].filter(Boolean).join(" ") || undefined;
+        : [
+            support.whisper.samsung
+              ? support.whisper.why
+              : support.whisper.state === "wasm"
+                ? "Slower here: this device can't run it on its graphics chip."
+                : support.whisper.unasked
+                  ? "Whether it can run on this device's graphics chip is checked when you first use it."
+                  : null,
+            onPhone() ? "A phone may not have the memory for it." : null,
+          ]
+            .filter(Boolean)
+            .join(" ") || undefined;
     const radio = (id, title, sub, usable) => {
       const row = ui.radioRow({ title, sub, name: "engine", value: id, checked: chosen === id, onchange: (value) => (setStudySetting("say.engine", value), render()) });
       if (!usable) row.querySelector("input").disabled = true;
@@ -152,7 +183,13 @@ export function speakingSettings(page, back) {
     // how faithfully they hear a wrong word order, so it's a choice (each model's own description says how). Read
     // before the rows are built: nothing waits between building them and putting them on the page.
     const usable = usableModels(api, support);
-    const sizes = await Promise.all(usable.map((m) => api.modelState(m.id).then((st) => st.total).catch(() => 0)));
+    const sizes = await Promise.all(usable.map((m) => api.modelState(m.id, { supported: support }).then((st) => st.total).catch(() => 0)));
+    if (disposed) return;
+    // Until the GPU has answered on this page (support's known: it isn't asked to open this page), which model suits this device isn't known:
+    // with none of your choosing, none is shown as chosen, and the download names no size but says what it could be, the models this device
+    // could suit (speech.js recommendedModel) at their sizes; the press asks, and fetches the one that suits (startDownload).
+    const guessing = support.whisper.state !== "none" && support.whisper.unasked && !getStudySettings().say.model;
+    const couldBe = guessing ? await suitSizes(api) : [];
     if (disposed) return;
     let modelRow;
     if (support.whisper.state === "none" || !model) modelRow = null;
@@ -167,11 +204,16 @@ export function speakingSettings(page, back) {
       // Downloaded just now: its bar stays, full, Tinta come out at its far end.
       if (downloaded) modelRow = ui.listRow({ title: "Whisper is downloaded", sub: ["It works offline now.", downloaded] });
     } else {
-      // The page's one way forward: solid, its size on it.
+      // The page's one way forward: solid, its size on it (none while which model suits isn't known: a line under it says what it could be).
+      const unsure = guessing && state?.state !== "partial" && couldBe.length > 1;
       modelRow = el(
         "li",
         { class: "lx-row-item lx-row-go" },
-        ui.button(state?.state === "partial" ? `Finish downloading Whisper · ${mb(Math.max(0, (state.total ?? 0) - (state.have ?? 0)))} left` : `Download Whisper · ${mb(state?.total)}`, { variant: "go", size: "lg", block: true, onclick: () => startDownload(api, model) }),
+        ui.button(
+          state?.state === "partial" ? `Finish downloading Whisper · ${mb(Math.max(0, (state.total ?? 0) - (state.have ?? 0)))} left` : unsure ? "Download Whisper" : `Download Whisper · ${mb(guessing && couldBe.length === 1 ? couldBe[0] : state?.total)}`,
+          { variant: "go", size: "lg", block: true, onclick: () => startDownload(api, model, support) },
+        ),
+        unsure ? el("p", { part: "group-note" }, `${orList(couldBe.map(mb))}, depending on this device. Which suits it is checked when you press Download.`) : pickNote ? el("p", { part: "group-note", "data-nudge": "" }, pickNote) : null,
       );
     }
     const modelChoice =
@@ -179,8 +221,9 @@ export function speakingSettings(page, back) {
         ? ui.choiceRow({
             title: "Whisper model",
             options: usable.map((m, i) => [m.id, `${m.name} · ${mb(sizes[i])}`]),
-            value: model,
-            onchange: (value) => (setStudySetting("say.model", value), render()),
+            // Nothing shown as chosen until you choose, or the device has said which suits it.
+            value: guessing ? null : model,
+            onchange: (value) => ((pickNote = null), setStudySetting("say.model", value), render()),
           })
         : null;
     recognisers.replaceChildren(
@@ -205,9 +248,26 @@ export function speakingSettings(page, back) {
     );
   };
 
-  // Downloads keep going if you leave the page; this page just shows their progress while it's open.
-  const startDownload = (api, model) => {
+  // Downloads keep going if you leave the page; this page just shows their progress while it's open. Downloading is using speech: where the
+  // device's GPU wasn't asked yet (the page shows what's known), it's asked now, and the model is the one that suits what it answers (unless
+  // you chose one), not the page's guess.
+  const startDownload = async (api, guessed, shown) => {
     if (download) return;
+    let model = guessed;
+    pickNote = null;
+    if (shown?.whisper?.unasked) {
+      const real = await api.whisperSupportNow(learningLocale());
+      // A model you chose that this device can't run (Smaller and Best need its graphics chip): said under the button, not downloaded; the
+      // page then offers the one that suits (pickModel passes over a choice the device can't run).
+      const chosen = getStudySettings().say.model;
+      const fits = usableModels(api, real);
+      if (chosen && !fits.some((m) => m.id === chosen)) {
+        pickNote = `${api.MODELS.find((m) => m.id === chosen)?.name ?? "That model"} needs this device's graphics chip, which it can't use here. ${fits.length ? `${fits.map((m) => m.name).join(" or ")} runs on its processor instead.` : ""}`.trim();
+        return render();
+      }
+      model = await pickModel(api, real);
+    }
+    if (download || disposed || !model) return;
     const controller = new AbortController();
     const bar = ui.downloadBar({ label: "Downloading Whisper" });
     download = { controller, have: 0, total: 0, bar };
@@ -296,9 +356,10 @@ export function speakingSettings(page, back) {
     msg.textContent = text;
     msg.setAttribute("data-meaning", meaning);
   };
-  // Get Whisper into memory as the page opens, when it's the one chosen and it's on the device, so Try it doesn't wait.
-  chooseEngine().then((choice) => {
-    if (choice.engine !== "whisper" || disposed) return;
+  // Get Whisper into memory as the page opens, when it's the one chosen and it's on the device, so Try it doesn't wait: only once the
+  // device's probes have answered on this page (using speech asks them; opening this page doesn't).
+  chooseEngine(undefined, { known: true }).then((choice) => {
+    if (choice.engine !== "whisper" || disposed || !choice.api?.probesKnown?.(learningLocale())) return;
     readyWhisper(choice, (seconds) => !listener && !preparing && !disposed && seconds >= 1 && (status.textContent = loadingText(seconds)))
       .then(() => !listener && !preparing && !disposed && (status.textContent = READY))
       .catch(() => {});

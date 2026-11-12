@@ -15,7 +15,11 @@
 //     control: the same phone kept from the packs' files has neither, so the relay no longer holds them); a pack deleted on the first phone
 //     stays deleted on the second, through a reload; and the one-file form from before (a device on old code still writes it), planted
 //     beside the new files with the deleted pack alive and a pack no new file has, is read on a phone signed in after: the deleted pack
-//     not brought back, the other not lost, and the old file never written.
+//     not brought back, the other not lost, and the old file never written. A pack's recordings never go through the account: the phone that
+//     has them says nothing, the phone that took the pack from the account says where they are, with Connect (its own storage brings them).
+//     How you like to study goes there too (12 Nov 2026): Practice's length chosen by a press on the first phone reaches the second (its
+//     control: a phone kept from the settings' files stays at the default), the first phone's recognizer stays on it, and Reset on the
+//     second, by its two presses, puts the first back to the defaults.
 //   - Your texts are kept there too (12 Nov 2026), on an account and phones of their own: a text pasted on the first phone, one your AI
 //     adds there, and a book from the open shelf opened there (your place in it set) go to the account's copy; a phone signed in afterwards
 //     has the two texts whole and the shelf book in its library with your place, Read's top card continuing it, its text fetched again (its control: the
@@ -87,6 +91,10 @@ const signInAs = async (from, to) => to.context.addCookies(await from.context.co
 const pickDutch = async (page) => {
   await page.waitForSelector(".lx-welcome", { timeout: 30_000 });
   await page.evaluate(() => document.querySelector('.lx-welcome [data-language="nl"]').click());
+  // A language with a full course asks next whether you know some of it already (v738, Find your level): new to it, lesson 1.
+  const asked = await page.waitForSelector('.lx-welcome [data-start="new"]', { timeout: 5_000 }).catch(() => null);
+  if (asked) await asked.click();
+  await page.waitForSelector(".lx-welcome", { state: "detached", timeout: 15_000 });
   await page.waitForSelector("html[data-app-ready]");
 };
 async function playLesson(page) {
@@ -442,6 +450,124 @@ await stage("a pack deleted on the first phone stays deleted on the second, thro
   for (const f of (await storeList()).filter((f) => PACK_FILE.exec(f.name)?.[1] === "account-trip")) tombs.push(JSON.parse(await storeRead(f.name)).records["account-trip"]?.gone === true);
   assert(tombs.length >= 2 && tombs.every(Boolean), `each phone's file of it says deleted: ${tombs}`);
   return `deleted ${done.everywhere ? "everywhere through the relay" : "here"}, gone on both through a reload; ${tombs.length} files of it say so`;
+});
+
+await stage("a pack's recordings never go through the account: the phone that has them says nothing, and the phone that took the pack from the account says where they are and how to bring them", async () => {
+  // A recording of the café pack's on the first phone, kept as your AI's recordings are (a real clip, named by its bytes), its manifest saved
+  // with the pack.
+  const clip = await pk.a.page.evaluate(async () => {
+    const bytes = new Uint8Array(await (await fetch("/audio/fx/match-1.mp3")).arrayBuffer());
+    const { sha256Hex } = await import("/js/storage.js");
+    const clip = `${(await sha256Hex(bytes)).slice(0, 16)}.mp3`;
+    const { keepClip } = await import("/js/study/clips.js");
+    const { mergeAudio } = await import("/js/study/pack-audio.js");
+    const packs = await import("/js/study/packs.js");
+    const record = packs.yourPack("account-cafe");
+    const item = record.pack.items.find((i) => (i.words ?? []).length);
+    const manifest = mergeAudio(null, { voices: { anna: { name: "Anna", locale: "nl-NL", items: { [item.id]: { clip, seconds: 1.5, words: item.words.map((_, n) => [n * 0.2, n * 0.2 + 0.1]) } } } } }, record.pack);
+    const saved = await packs.savePack(record.pack, { by: record.by, audio: manifest, account: record.account });
+    if (!saved.ok) throw new Error(`the recordings: ${JSON.stringify(saved.errors).slice(0, 300)}`);
+    if (!(await keepClip(clip, new Blob([bytes], { type: "audio/mpeg" })))) throw new Error("the clip wasn't kept");
+    return clip;
+  });
+  const elsewhere = (page) => page.evaluate(() => /Its recordings are on your other device/.test(document.querySelector('[data-part="page"]')?.textContent ?? ""));
+  const openPack = async (page) => {
+    await page.evaluate(() => (location.hash = "#study/packs"));
+    await page.waitForTimeout(400);
+    await page.evaluate(() => (location.hash = "#settings/study/packs/account-cafe"));
+    await page.waitForFunction(() => /Account café/.test(document.querySelector('[data-part="page"]')?.textContent ?? ""), null, { timeout: 30_000 });
+    await page.waitForTimeout(800);
+  };
+  await openPack(pk.a.page);
+  assert(!(await elsewhere(pk.a.page)), "the phone with the recording says they're elsewhere");
+  await pk.a.page.screenshot({ path: join(OUT, "recordings-here-phone1.png") });
+  await syncNow(pk.a.page);
+  // The second phone takes the pack with its manifest from the account, and no recording comes with it.
+  for (let i = 0; i < 20; i++) {
+    await syncNow(pk.b.page);
+    if (await pk.b.page.evaluate(async () => Boolean((await import("/js/study/packs.js")).yourPack("account-cafe")?.audio))) break;
+    await pk.b.page.waitForTimeout(2000);
+  }
+  const onB = await pk.b.page.evaluate(async (clip) => ({ audio: Boolean((await import("/js/study/packs.js")).yourPack("account-cafe")?.audio), clip: (await import("/js/study/clips.js")).hasClip(clip) }), clip);
+  assert(onB.audio && !onB.clip, `the second phone: ${JSON.stringify(onB)}`);
+  await openPack(pk.b.page);
+  assert(await elsewhere(pk.b.page), "the second phone doesn't say where its recordings are");
+  const row = pk.b.page.locator('[data-part="list-row"]', { hasText: "Its recordings are on your other device" });
+  assert((await row.getByRole("button", { name: "Connect" }).count()) === 1, "no way to bring them");
+  await row.scrollIntoViewIfNeeded();
+  await pk.b.page.screenshot({ path: join(OUT, "recordings-elsewhere-phone2.png") });
+  return "the first phone (recording here): nothing said; the second (from the account, none here): said, with Connect";
+});
+
+await stage("how you like to study: a choice on the first phone reaches the second through the account (a phone kept from the settings' files gets none: the control), the device's own recognizer stays on its device, and Reset on the second reaches the first", async () => {
+  const studied = (page) => page.evaluate(async () => { const s = (await import("/js/study/settings.js")).getStudySettings(); return { minutes: s.practice.minutes, reveal: s.cards.reveal, engine: s.say.engine }; });
+  // The first phone: Practice's length chosen in Settings → Study by a press, a card setting and its recognizer (the device's own) set too.
+  await pk.a.page.evaluate(() => (location.hash = "#settings/study/practice"));
+  await pk.a.page.locator('[data-part="segment"]', { hasText: /^10 min$/ }).click();
+  await pk.a.page.evaluate(async () => {
+    const { setStudySetting } = await import("/js/study/settings.js");
+    setStudySetting("cards.reveal", "english");
+    setStudySetting("say.engine", "whisper");
+  });
+  const a = await studied(pk.a.page);
+  assert(a.minutes === 10 && a.reveal === "english" && a.engine === "whisper", `the first phone: ${JSON.stringify(a)}`);
+  await syncNow(pk.a.page);
+  const control = await device({
+    before: (context) => context.route((url) => url.pathname === "/api/account/sync/file" && (url.searchParams.get("name") ?? "").startsWith("lexicommons-study-settings."), (route) => route.fulfill({ status: 503, body: "{}" })),
+  });
+  await control.context.addCookies(pk.cookies);
+  await startApp(control.page);
+  for (let i = 0; i < 6; i++) {
+    await syncNow(control.page);
+    await control.page.waitForTimeout(2000);
+  }
+  const kept = await studied(control.page);
+  await control.context.close();
+  assert(kept.minutes === 5 && kept.reveal === "slide", `CONTROL: the phone kept from the settings' files has them anyway: ${JSON.stringify(kept)}`);
+  let b = null;
+  for (let i = 0; i < 20; i++) {
+    await syncNow(pk.b.page);
+    b = await studied(pk.b.page);
+    if (b.minutes === 10) break;
+    await pk.b.page.waitForTimeout(2000);
+  }
+  assert(b.minutes === 10 && b.reveal === "english", `the second phone: ${JSON.stringify(b)}`);
+  assert(b.engine === "browser", `the first phone's recognizer reached the second: ${b.engine}`);
+  await pk.b.page.evaluate(() => (location.hash = "#settings/study"));
+  const row = pk.b.page.locator('[data-part="list-row"]', { hasText: "Practice" }).first();
+  await row.waitFor();
+  // The page's slide in finished (the still is of the page, not the way to it).
+  await pk.b.page.waitForFunction(() => { const r = document.querySelector('[data-part="list-row"]')?.getBoundingClientRect(); return r && r.left >= 0 && r.left < 40; }, null, { timeout: 10_000 });
+  await pk.b.page.waitForTimeout(600);
+  assert(/10 min/.test(await row.textContent()), `Settings → Study on the second phone: ${await row.textContent()}`);
+  await pk.b.page.screenshot({ path: join(OUT, "study-settings-phone2.png") });
+  // What Settings → Sync's What's kept there lists for it (sync.js syncStatus, the sheet's rows: a copy from npm run local has no Sync page):
+  // its name and count, the two settings chosen on the first phone.
+  const kindRow = await pk.b.page.evaluate(async () => {
+    const kind = (await import("/js/sync.js")).syncStatus().kinds.find((k) => k.id === "study-settings");
+    return kind ? { label: kind.label, count: kind.count, says: kind.counted?.(kind.count) ?? null } : null;
+  });
+  assert(kindRow?.label === "How you like to study" && kindRow.count === 2 && kindRow.says === "2 settings you chose", `What's kept there for it: ${JSON.stringify(kindRow)}`);
+  await pk.b.page.evaluate(() => (location.hash = "#settings/study"));
+  await pk.b.page.locator('[data-part="list-row"]', { hasText: "Reset study settings" }).waitFor();
+  await pk.b.page.waitForTimeout(600);
+  // Reset on the second phone, by its two presses: back to the defaults on both, the first phone's recognizer as it was.
+  const reset = pk.b.page.locator('[data-part="list-row"]', { hasText: "Reset study settings" });
+  await reset.click();
+  await pk.b.page.locator('[data-part="list-row"]', { hasText: "Press again to reset them" }).click();
+  await pk.b.page.waitForTimeout(500);
+  b = await studied(pk.b.page);
+  assert(b.minutes === 5 && b.reveal === "slide", `reset on the second phone: ${JSON.stringify(b)}`);
+  await syncNow(pk.b.page);
+  let after = null;
+  for (let i = 0; i < 20; i++) {
+    await syncNow(pk.a.page);
+    after = await studied(pk.a.page);
+    if (after.minutes === 5) break;
+    await pk.a.page.waitForTimeout(2000);
+  }
+  assert(after.minutes === 5 && after.reveal === "slide" && after.engine === "whisper", `the first phone after the second's Reset: ${JSON.stringify(after)}`);
+  return `10 min and the English-order card reached the second phone (the kept-out phone stayed at 5 min); the recognizer stayed; Reset on the second put the first back to 5 min, its recognizer still Whisper`;
 });
 
 await stage("the one-file form from before beside the new files: the deleted pack not brought back, the other not lost, the old file never written", async () => {

@@ -5,7 +5,7 @@
 
 import * as ui from "../lx/ui.js";
 import { el } from "../lx/ui.js";
-import { LANGUAGES } from "../lang/index.js";
+import { LANGUAGES, ourLanguages } from "../lang/index.js";
 import { intlLocale, languageLabel, t } from "../lx/i18n.js";
 import { allEvidence } from "../study/progress.js";
 import { fromFor, learning, setLearning } from "../study/learning.js";
@@ -93,7 +93,7 @@ export const primeLanguageChoices = () => {
 function choiceOrder() {
   const skip = speaks();
   const byName = (a, b) => languageLabel(a).localeCompare(languageLabel(b), intlLocale());
-  const codes = Object.keys(LANGUAGES).filter((code) => code !== skip);
+  const codes = ourLanguages().filter((code) => code !== skip);
   const full = [...FIRST.filter((code) => codes.includes(code) && fullCourse(code)), ...codes.filter((code) => fullCourse(code) && !FIRST.includes(code)).sort(byName)];
   return { all: [...full, ...codes.filter((code) => !full.includes(code)).sort(byName)], full: full.length };
 }
@@ -200,6 +200,29 @@ export function openLanguageSheet() {
  * The first run, over the app. whole (a start's): it shows once its first screenful's flags are drawn (FLAGS_WAIT at most), so it comes in
  * whole rather than with its flags popping in; it then returns a promise of its node. Else it shows at once and returns its node.
  */
+/**
+ * The first run's second question, for a language with a full course: whether you know some of it already. new (lesson 1), few, by or talk
+ * (where Find your level starts: study/placement.js STARTS). { find: the line under the question, list } as ask() takes them.
+ */
+function placementChoices(onPick) {
+  const row = (start, title, sub) => {
+    const item = ui.listRow({ title, sub, onclick: () => onPick(start) });
+    item.firstElementChild?.setAttribute("data-start", start);
+    return item;
+  };
+  return {
+    find: el("p", { class: "lx-muted lx-welcome-lead" }, t("welcome.placement.lead")),
+    list: el(
+      "ul",
+      { part: "list" },
+      row("new", t("welcome.placement.new"), t("welcome.placement.newSub")),
+      row("few", t("welcome.placement.few")),
+      row("by", t("welcome.placement.by")),
+      row("talk", t("welcome.placement.talk")),
+    ),
+  };
+}
+
 export function openWelcome({ whole = false } = {}) {
   if (document.querySelector(".lx-welcome")) return null;
   const previously = document.activeElement;
@@ -227,10 +250,19 @@ export function openWelcome({ whole = false } = {}) {
   ask(
     t("welcome.question"),
     languageChoices((code) => {
-      close();
       setLearning(code, fromFor(code, speaks()));
       // (Picking the language it already was changes nothing, so nothing has asked for its packs yet.)
       syncLibraryPacks();
+      // A full course: whether you know some of it already (its packs come meanwhile). Anything else starts where it starts.
+      if (!fullCourse(code)) return close();
+      ask(
+        t("welcome.placement.question", { language: languageLabel(code) }),
+        placementChoices((start) => {
+          close();
+          // New to it: lesson 1, as ever. Else Find your level (study/placement.js), from where the answer says, over Home.
+          if (start !== "new") location.hash = `#study/session/placement/${start}`;
+        }),
+      );
     }),
   );
   const show = () => {

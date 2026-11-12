@@ -11,7 +11,7 @@
 // for the server: onLocal has this device's results first. The worker keeps the last index it built on the device (worker.js, IndexedDB) under
 // a key naming what it was made of (keptKey), so a worker started again reads it back instead of being sent every pack.
 
-import { LANGUAGES, languageName } from "../lang/index.js";
+import { LANGUAGES, isOurLanguage, languageName, ourLanguages } from "../lang/index.js";
 import { allPacks, onPacksChange, packDownloads, packsSettled, yourPacks } from "../study/packs.js";
 import { learning } from "../study/learning.js";
 import * as store from "../read/store.js";
@@ -80,7 +80,7 @@ const PART = 200;
 async function bookSources(books) {
   const sources = [];
   for (const entry of books) {
-    const layers = entry.lang === "en" ? Object.keys(LANGUAGES).filter((code) => code !== "en") : ["en"];
+    const layers = entry.lang === "en" ? ourLanguages().filter((code) => code !== "en") : ["en"];
     for (const to of layers) {
       const layer = await store.getWeave(entry.id, to).catch(() => null);
       if (!layer) continue;

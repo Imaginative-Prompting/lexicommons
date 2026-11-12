@@ -501,6 +501,8 @@ export function formatMessage(text, vars, key = "(a message)", locale = intlLoca
 
 /** A language's name in the interface's locale (language.<code>). */
 export const languageLabel = (code) => {
+  // A learner's own language is named by its definition: the interface's catalog only has Lexicommons' own.
+  if (typeof code === "string" && Object.hasOwn(LANGUAGES, code) && LANGUAGES[code].own) return LANGUAGES[code].name;
   const out = t(`language.${code}`);
   return typeof out === "string" ? out : String(code);
 };

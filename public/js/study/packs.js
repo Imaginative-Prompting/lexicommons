@@ -54,6 +54,8 @@ import { CLIPS, keepClips } from "./keep-clips.js";
 import { CLIP_BYTES, clipBlob, hasClip, isClip, keepClip, loadClips, onClipsChange, pruneClips } from "./clips.js";
 import { communityOverlay } from "./pack-corrections.js";
 import { learning, onLearningChange } from "./learning.js";
+import { keepOwnLanguage } from "../lang/own-languages.js";
+import { isOwnLanguage } from "../lang/index.js";
 import { demoPage } from "./sample-mode.js";
 import { canonical, registerBlobs, registerSync, winner } from "../sync.js";
 import { fetchRetrying, onReconnect } from "../lx/retry.js";
@@ -526,6 +528,8 @@ export function lessonsComing(language = learning()) {
 // Whether a language's lessons may still be on their way, the clock aside: what a sync has said, else none here and the catalog listing some
 // (or never read for it on this device).
 function mayBeComing(language) {
+  // A learner's own language is in no library catalog: none of its lessons are on their way from there (its packs bring their own).
+  if (isOwnLanguage(language)) return false;
   const said = lessonsSaid.get(language);
   return said ?? (!lessonsHere(language) && (lessonPacksSaid[language] === undefined || lessonPacksSaid[language].length > 0));
 }
@@ -694,7 +698,9 @@ async function readAndCheck() {
     // Its full check's proof still holds and its content still hashes to its version: used as it was checked.
     const version = record.source.version;
     const trusted = proofHolds(record.checked, record.pack, version) && (await hashOf(record, hashes, counts)) === version;
-    const { pack, errors } = trusted ? { pack: upgradePack(record.pack), errors: [] } : checkPack(record.pack, { installed: defaultPacks().filter((p) => p.id !== id) });
+    // A pack in a language of its own: its language kept first (a device that holds another definition of it refuses the pack).
+    const own = keepOwnLanguage(record.pack);
+    const { pack, errors } = trusted && own !== "differs" ? { pack: upgradePack(record.pack), errors: [] } : checkPack(record.pack, { installed: defaultPacks().filter((p) => p.id !== id) });
     counts[trusted ? "trusted" : "checked"]++;
     if (!pack) {
       fail(record, errors);
@@ -718,7 +724,7 @@ async function readAndCheck() {
       ? { pack: null, errors: [{ at: "id", message: "A public pack has this id." }] }
       : record.pack?.id !== record.id
         ? { pack: null, errors: [{ at: "id", message: "The pack's id isn't the one it's stored under." }] }
-        : checkPack(record.pack, { installed: allPacks() });
+        : (keepOwnLanguage(record.pack), checkPack(record.pack, { installed: allPacks() }));
     if (pack) {
       // Its recordings are checked again with it; ones that no longer fit are left out (the pack is still used).
       const { audio: _audio, ...plain } = record;
@@ -833,6 +839,7 @@ export async function savePack(value, { by = "you", change, through, account, ap
     return { ok: false, errors: [{ at: "id", message: `"${id}" is a public pack's id; a pack of yours needs its own.` }], warnings: [] };
   }
   const installed = allPacks().filter((pack) => pack.id !== id);
+  keepOwnLanguage(value);
   const { pack, errors, warnings } = checkPack(value, { installed });
   if (!pack) return { ok: false, errors, warnings };
   const now = Date.now();
@@ -920,6 +927,7 @@ export async function restorePack(id) {
   const tomb = signedIn ? tombs.get(`${signedIn}:${id}`) : undefined;
   if (!tomb?.restore || relayGone.has(`${signedIn}:${id}`) || !(tomb.restoreUntil > Date.now())) return cant;
   if (allPacks().some((pack) => pack.id === id)) return cant;
+  keepOwnLanguage(tomb.restore);
   const { pack, errors, warnings } = checkPack(tomb.restore, { installed: allPacks() });
   if (!pack) return { ok: false, errors, warnings };
   const now = Date.now();
@@ -1666,6 +1674,7 @@ async function applySynced(newer) {
     }
     const value = syncedRecord(record.value, id);
     const publicId = allPacks().some((pack) => pack.id === id && pack.origin?.kind !== "yours");
+    if (value && !publicId) keepOwnLanguage(value.pack);
     const { pack, errors } = value && !publicId ? checkPack(value.pack, { installed: allPacks().filter((p) => p.id !== id) }) : { pack: null, errors: [] };
     if (!pack) {
       if (errors.length) console.warn(`Lexicommons: the pack "${id}" from your storage didn't pass the check, so it isn't used:`, errors);

@@ -4,7 +4,9 @@
 // ended inside the probe) is told once and that probe is never run on the device again; the recognizer's on-device question (speech/browser.js
 // browserSupport) is asked only where wanted and never once it crashed; the report of it (lx/error-clean.js, kind "probe-crash") says only
 // the probe in fixed words, its screen and version. 12 Nov 2026: Samsung Internet 30 started the app again by itself on Study, where these
-// are first asked.
+// are first asked, then on Settings with both in flight at once: so never two at once (asked together, they take turns; one behind a probe
+// that never answers isn't asked), one ask a language a page (shared, then known without asking: browserKnown), and on Samsung Internet
+// neither is ever asked.
 //   node scripts/test-probe-guard.mjs [<app dir>]   (another copy's dir to see it fail on one from before; exit 0 = pass)
 import { existsSync } from "node:fs";
 import { join, resolve } from "node:path";
@@ -113,6 +115,57 @@ store.set("lx.probe.running.speech-available", "1");
 guard.crashedLastTime();
 const afterCrash = await browserSupport("nl-NL");
 check(asked === 1 && afterCrash.state === "unknown", "once it crashed here, never asked again: the recognizer used as one that may have it", JSON.stringify({ asked, afterCrash }));
+
+// Never two at once: asked together, they take turns, each starting once the one before has answered.
+store.delete("lx.probe.crashed.v1");
+let now = 0;
+let most = 0;
+const slow = (ms, value) => async () => {
+  most = Math.max(most, ++now);
+  await new Promise((done) => setTimeout(done, ms));
+  now--;
+  return value;
+};
+const together = await Promise.all([guard.guarded("speech-available", slow(80, "a")), guard.guarded("webgpu-adapter", slow(80, "g")), guard.guarded("speech-available", slow(40, "b"))]);
+check(together.join() === "a,g,b" && most === 1 && !marks().length, "three asked together: one at a time, in the order asked, each its own answer", JSON.stringify({ together, most }));
+// One that doesn't answer: the next waits TURN_WAIT, then isn't asked (its answer taken as unknown) rather than run beside it.
+most = 0;
+let ranBehind = false;
+const stuck = guard.guarded("speech-available", slow(guard.TURN_WAIT + 600, "late"));
+const t0 = Date.now();
+const behind = await guard.guarded("webgpu-adapter", async () => ((ranBehind = true), "ran"), "unknown");
+const waitedFor = Date.now() - t0;
+check(!ranBehind && behind === "unknown" && waitedFor >= guard.TURN_WAIT - 50 && most === 1, "behind one that doesn't answer: not asked after TURN_WAIT, never two at once", JSON.stringify({ behind, waitedFor, most }));
+check((await stuck) === "late" && !marks().length, "the slow one still answers, and its mark goes");
+
+// One ask a language a page: two asking at once share it, and what it answered is known after without asking (Settings' pages).
+const { browserKnown } = await import(pathToFileURL(browserFile).href);
+const unasked = browserKnown("de-DE");
+const askedBefore = asked;
+const [one, two] = await Promise.all([browserSupport("de-DE"), browserSupport("de-DE")]);
+const knownAfter = browserKnown("de-DE");
+const askedAgain = (await browserSupport("de-DE"), asked);
+check(
+  unasked.state === "unknown" && unasked.unasked === true && asked - askedBefore === 1 && one.state === "local" && two.state === "local" && knownAfter.state === "local" && !knownAfter.unasked && askedAgain === askedBefore + 1,
+  "two asking at once share one ask; known after without asking; not asked again on the page",
+  JSON.stringify({ unasked, asks: asked - askedBefore, knownAfter }),
+);
+
+// Samsung Internet: neither probe is ever asked, and the recognizer is used by its presence.
+const nodeNavigator = Object.getOwnPropertyDescriptor(globalThis, "navigator");
+Object.defineProperty(globalThis, "navigator", { configurable: true, value: { userAgent: "Mozilla/5.0 (Linux; Android 14; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/30.0 Chrome/140.0.0.0 Mobile Safari/537.36" } });
+let ranOnSamsung = false;
+const gpuOnSamsung = await guard.guarded("webgpu-adapter", async () => ((ranOnSamsung = true), "ran"), "not asked");
+const askedBeforeSamsung = asked;
+const onSamsung = await browserSupport("fr-FR");
+const knownOnSamsung = browserKnown("fr-FR");
+check(
+  guard.probesOff() && !ranOnSamsung && gpuOnSamsung === "not asked" && asked === askedBeforeSamsung && onSamsung.state === "unknown" && knownOnSamsung.state === "unknown" && !knownOnSamsung.unasked && !marks().length,
+  "Samsung Internet: neither probe asked, no mark; its recognizer used as one that may have the language (nothing to check on first use)",
+  JSON.stringify({ gpuOnSamsung, onSamsung, knownOnSamsung }),
+);
+if (nodeNavigator) Object.defineProperty(globalThis, "navigator", nodeNavigator);
+check(!guard.probesOff(), "another browser (Node's own): probes asked as before");
 
 // The report: the probe's name in fixed words, its screen and version; nothing else of the input; none for a name that's no probe's.
 const clean = await import(pathToFileURL(join(APP, "public/js/lx/error-clean.js")).href);

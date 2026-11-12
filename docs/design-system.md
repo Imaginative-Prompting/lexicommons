@@ -1189,8 +1189,9 @@ doesn't. A phone's column is narrower, so it changes nothing there.
 A tablet (700 to 1023 px wide: an iPad upright; the floating tab bar stays) keeps the 720 column and a phone's ways, with room used:
 - **Translate's box as tall as its text**, as on a wide screen (`translate/page.js` from 700 px), the language bar floating at the foot as on
   a phone, over the keys while typing.
-- **Your words three to a shelf.** A cell there is ~240 px, twice a phone's, so only a word over 18 letters or a meaning over 44 takes two
-  places (`know/words-page.js data-long`); on a phone, one over 9 or 22.
+- **Your words three to a shelf.** A cell there is ~240 px, twice a phone's, so fewer words take two places. A tile takes the fewest places
+  whose width holds its word on one line and its meaning in two, measured in the page in every script (`know/words-page.js fitTiles`; by
+  letter count, Burmese's လက်ဖက်ရည် ran off a 320 screen, 12 Nov 2026).
 - **The reader's single page at most the measure (640 px at its type),** centered between wider gutters; a picture keeps the page's whole
   width (`reader.css`).
 - **44 px on a tablet too.** An iPad is touched at arm's length: every control reaches 44 × 44 there as on a phone (components.css's rule for

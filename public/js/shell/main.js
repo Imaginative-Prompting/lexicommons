@@ -19,7 +19,8 @@ import * as motion from "../lx/motion.js";
 import { allEvidence, loadProgress } from "../study/progress.js";
 import { loadWordIndex } from "../know/word-index.js";
 import { loadPlanKept } from "../study/plan-kept.js";
-import { loadPacks, syncLibraryPacks } from "../study/packs.js";
+import { loadPacks, onPacksChange, syncLibraryPacks } from "../study/packs.js";
+import { LANGUAGES } from "../lang/index.js";
 import { loadClips } from "../study/clips.js";
 import { checkPackInbox, startPackInbox } from "../study/pack-inbox.js";
 import { startStudyRecord } from "../ai/study-record.js";
@@ -69,7 +70,13 @@ async function bringProgress(started) {
     const rows = allEvidence();
     if (!rows.length) return;
     const last = rows.reduce((a, b) => ((b.at ?? 0) > (a.at ?? 0) ? b : a));
-    if (last.lang && last.lang !== learning()) setLearning(last.lang, fromFor(last.lang, speaks()));
+    // A language of their own is known once a pack in it is taken in (lang/own-languages.js), which can come just after the sync.
+    if (last.lang && !LANGUAGES[last.lang])
+      await new Promise((known) => {
+        const off = onPacksChange(() => LANGUAGES[last.lang] && (off(), known()));
+        setTimeout(() => (off(), known()), BRING_WAIT);
+      });
+    if (last.lang && LANGUAGES[last.lang] && last.lang !== learning()) setLearning(last.lang, fromFor(last.lang, speaks()));
     syncLibraryPacks();
   })().catch(() => {});
   await Promise.race([brought, new Promise((done) => setTimeout(done, BRING_WAIT))]);
@@ -525,7 +532,7 @@ function openSession(rest, params = {}, entrance = state.session ? "push" : "up"
   closeSession({ push: entrance === "push", now: entrance === "now" });
   state.sessionRoute = rest.join("/");
   // A session started from Today, the Knowledge page, the path or Explore's lessons goes back there when it's over (Study otherwise).
-  const back = params.from === "today" ? "#today" : params.from === "know" ? "#know" : params.from === "path" ? "#study/path" : params.from === "explore" ? "#explore" : "#study";
+  const back = params.from === "today" ? "#today" : params.from === "know" ? "#know" : params.from === "path" ? "#study/path" : params.from === "explore" ? "#explore" : params.from === "settings" ? "#settings/study" : "#study";
   state.session = runSession(app, mode, args.join("/") || undefined, {
     entrance,
     onExit: () => {

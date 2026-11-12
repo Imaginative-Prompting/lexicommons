@@ -563,6 +563,46 @@ export const stages = [
   // never under it; the page the 720 column at 1440 (narrower at 1280); leaving for a tab takes the pane away; at 1024 none, the menu alone.
   // Before 9 Nov the menu was a page of its own at every size.
   {
+    order: 12,
+    run: () =>
+      stage("language page: while the app is in English alone, Settings → Language's line on what you speak is a group of its own under I speak, titled as Learning is, never under the Add a language button", async () => {
+        const faults = [];
+        for (const size of [{ width: 390, height: 844, touch: true }, { width: 1280, height: 800 }]) {
+          const { context, page, errors } = await device(size);
+          try {
+            await go(page, "#settings/language");
+            await page.waitForTimeout(800);
+            const at = await page.evaluate(() => {
+              const view = document.querySelector('[data-part="page"] > .lx-view:not([data-waiting])');
+              const note = [...(view?.querySelectorAll('[data-part="group-note"], p') ?? [])].find((node) => /More languages are coming/.test(node.textContent));
+              const group = note?.closest("section");
+              const title = group?.querySelector(":scope > .lx-choice-title")?.textContent.trim() ?? null;
+              const learning = [...(view?.querySelectorAll(".lx-choice-title") ?? [])].find((node) => node.textContent.trim() === "Learning");
+              const add = [...(view?.querySelectorAll("button, [data-part='button'], [data-part='list-row']") ?? [])].find((node) => /Add a language/.test(node.textContent));
+              const style = (node) => node && (({ fontSize, fontWeight, color }) => ({ fontSize, fontWeight, color }))(getComputedStyle(node));
+              return {
+                found: Boolean(note),
+                title,
+                sameAsLearning: JSON.stringify(style(group?.querySelector(":scope > .lx-choice-title"))) === JSON.stringify(style(learning)),
+                withAdd: Boolean(add && group && group.contains(add)),
+              };
+            });
+            if (!at.found) faults.push(`${size.width}: no line on what you speak`);
+            else {
+              if (at.title !== "I speak") faults.push(`${size.width}: the line's group is titled ${JSON.stringify(at.title)}, not "I speak"`);
+              if (!at.sameAsLearning) faults.push(`${size.width}: "I speak" isn't titled as Learning is`);
+              if (at.withAdd) faults.push(`${size.width}: the line sits in the group with Add a language`);
+            }
+            if (errors.length) faults.push(`${size.width}: ${errors.join("; ")}`);
+          } finally {
+            await context.close();
+          }
+        }
+        assert(faults.length === 0, faults.join("\n"));
+        return "I speak, a group of its own, at 390 and 1280";
+      }),
+  },
+  {
     order: 92,
     run: () =>
       stage("asides: at 1280, 1440 and 1600 by mouse a tab's page with an aside (WIDE_ASIDES) splits the frame's column in two: below 1600 its main column and a 320 aside 32 apart, from 1600 a 720 main column, 32, and the rest; the aside level with the main column's first block, nothing of the main column past its edge and its widest block at it (frame.md §1)", async () => {

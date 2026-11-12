@@ -4,7 +4,7 @@
 
 import { signInButtonMarkup } from "./brands.js";
 import { flagOf } from "../lang/flags.js";
-import { englishEnd, typeset, withoutAccents } from "../lang/index.js";
+import { englishEnd, languageShort, typeset, withoutAccents } from "../lang/index.js";
 import { englishOrderTexts, flipsOrder } from "./literal-case.js";
 import { LANGUAGES } from "../lang/index.js";
 import { readingKind, rubyOf, rubyText, vowelled } from "../lang/readings.js";
@@ -466,7 +466,7 @@ export function orderSwitch(line, { lang = target.code, name = target.name } = {
       onclick: () => line.lxSetOrder(english() ? "dutch" : "english"),
     },
     el("span", { class: "lx-order-thumb", "aria-hidden": "true" }),
-    el("span", { class: "lx-order-label", lang, "aria-hidden": "true" }, lang.toUpperCase()),
+    el("span", { class: "lx-order-label", lang, "aria-hidden": "true" }, languageShort(lang)),
     el("span", { class: "lx-order-label", "aria-hidden": "true" }, target.fromCode.toUpperCase()),
   );
   line.addEventListener("lx-order", () => toggle.setAttribute("aria-pressed", String(english())));
@@ -1522,7 +1522,7 @@ export function appHeader(title, { onSettings, initials = "?", back, language, m
 /** The language you're learning, at a glance: its flag and code, small, opening where you change it (href). Every page's header is drawn anew
  * (Study's as a session goes back down over it), so its flag is a steady one, there in the header's first frame. */
 export function headerLanguage({ code, name, href }) {
-  return el("a", { part: "header-language", href, "aria-label": t("core.learningChange", { language: name }), title: t("core.learning", { language: name }) }, languageFlag(code), el("span", { "aria-hidden": "true" }, code.toUpperCase()));
+  return el("a", { part: "header-language", href, "aria-label": t("core.learningChange", { language: name }), title: t("core.learning", { language: name }) }, languageFlag(code), LANGUAGES[code]?.own ? null : el("span", { "aria-hidden": "true" }, code.toUpperCase()));
 }
 
 export function toast(meaning, text) {
@@ -3074,12 +3074,22 @@ function keepFlag(src) {
  */
 export function languageFlag(lang, { size, label = "", lazy = false } = {}) {
   const src = flagOf(lang);
-  if (!src) return null;
+  if (!src) return Object.hasOwn(LANGUAGES, lang) && LANGUAGES[lang].own ? languageMark(LANGUAGES[lang].name, { size, label }) : null;
   const kept = flagsKept.get(src);
   const waits = lazy && !kept;
   const img = el("img", { part: "language-flag", src, srcset: kept?.url, alt: label, width: "20", height: "15", loading: waits ? "lazy" : "eager", decoding: waits ? "async" : "sync", "data-size": size });
   if (!kept) img.addEventListener("load", () => void keepFlag(src), { once: true });
   return img;
+}
+
+/**
+ * Where a flag would be, for a learner's own language (one Lexicommons doesn't list has none): the first two letters of its name in a flag's
+ * box, quiet, so the name beside it reads as a language's. size lg: larger. label: its alt text, where no name sits beside it.
+ */
+export function languageMark(name, { size, label = "" } = {}) {
+  const letters = [...String(name ?? "").replace(/[^\p{L}\p{N}]/gu, "")].slice(0, 2);
+  const shown = letters.length ? letters[0].toLocaleUpperCase() + letters.slice(1).join("").toLocaleLowerCase() : "?";
+  return el("span", { part: "language-mark", "data-size": size, ...(label ? { role: "img", "aria-label": label } : { "aria-hidden": "true" }) }, shown);
 }
 
 /** Loads these languages' flags ahead and keeps them (the ones every screen shows: the language you learn, the one you learn it from). */

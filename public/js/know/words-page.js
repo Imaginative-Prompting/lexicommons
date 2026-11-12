@@ -31,16 +31,67 @@ function item(unit, lang, { learning: still = false } = {}) {
       part: "word-tile",
       "data-paint": still ? undefined : paintOf(unit),
       "data-still": still ? "" : undefined,
-      // A long word or phrase takes two of a shelf's three places: on a phone (cells ~119 px) a word over 9 letters or a meaning over 22; on a
-      // tablet or wider (the 720 column's cells ~240 px, know.css) only one over 18 letters or 44, so a shelf holds three words there.
-      "data-wide": writtenName(unit).length > 9 || meaning.length > 22 ? "" : undefined,
-      "data-long": writtenName(unit).length > 18 || meaning.length > 44 ? "" : undefined,
+      // How many of the shelf's places it takes is measured once the shelf is laid out (fitTiles, below).
       "aria-haspopup": "dialog",
       onclick: () => openUnitSheet(unit),
     },
     el("span", { class: "lx-tile-face" }, ui.wordLabel(shownName(unit), lang)),
     meaning ? el("span", { class: "lx-tile-means", lang: "en" }, meaning) : null,
   );
+}
+
+// ---------- a tile's places, by measure ----------
+// A tile takes the fewest of its shelf's places whose width holds its word on one line and its meaning in its two, measured in the page.
+// (12 Nov 2026: counted by letters, a word over 9 took two places, tuned for a 390 phone's ~119 px cells; Burmese's လက်ဖက်ရည် (tea) is 9
+// letters drawn far wider than 9 Latin ones, and ran off a 320 screen, whose cells are ~90 px.) A shelf is measured once it's laid out, so a
+// page kept off-screen and a month that opens later are measured when they arrive, again when its width changes, and when Show all adds tiles.
+
+/** The width a node's text is laid out at (one line: a tile's face doesn't wrap). Its real shaping: Myanmar's marks, a word's reading over it. */
+function laidOutWidth(node) {
+  const range = document.createRange();
+  range.selectNodeContents(node);
+  return range.getBoundingClientRect().width;
+}
+let measuring = null;
+const widthOf = (text, font) => {
+  measuring ??= document.createElement("canvas").getContext("2d");
+  measuring.font = font;
+  return measuring.measureText(text).width;
+};
+/** The narrowest width that holds a meaning in two lines, where its line is cut (know.css .lx-tile-means): its best place to break. */
+function meaningWidth(node) {
+  const words = node.textContent.trim().split(/\s+/).filter(Boolean);
+  if (!words.length) return 0;
+  const font = getComputedStyle(node).font;
+  const space = widthOf(" ", font);
+  const widths = words.map((word) => widthOf(word, font));
+  const line = (from, to) => widths.slice(from, to).reduce((sum, width) => sum + width, 0) + space * Math.max(0, to - from - 1);
+  let best = line(0, words.length);
+  for (let at = 1; at < words.length; at++) best = Math.min(best, Math.max(line(0, at), line(at, words.length)));
+  return best;
+}
+/** Sets each of a shelf's tiles to the places it needs (data-span 2 or 3; one by default). Every width read first, then every span set. */
+export function fitTiles(grid) {
+  const width = grid.clientWidth;
+  if (!width || !grid.isConnected) return;
+  const columns = getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length || 3;
+  const cell = width / columns;
+  const tiles = [...grid.querySelectorAll(':scope > [data-part="word-tile"]')];
+  const needs = tiles.map((tile) => {
+    const face = tile.querySelector(".lx-tile-face");
+    const means = tile.querySelector(".lx-tile-means");
+    const around = (style) => parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+    // A face may give up half its padding (13 px a side, know.css) before its tile needs another place: "gisteren" at 320 keeps one, as it
+    // always looked right with 9 px a side; a word wider than that takes two.
+    const word = face ? laidOutWidth(face) + around(getComputedStyle(face)) / 2 : 0;
+    return Math.max(word, means ? meaningWidth(means) : 0) + around(getComputedStyle(tile));
+  });
+  tiles.forEach((tile, i) => {
+    // (A hair over a cell is still one: a width read to a fraction of a pixel.)
+    const span = Math.min(columns, Math.max(1, Math.ceil(needs[i] / cell - 0.01)));
+    const value = span > 1 ? String(span) : null;
+    if (tile.getAttribute("data-span") !== value) value ? tile.setAttribute("data-span", value) : tile.removeAttribute("data-span");
+  });
 }
 
 /** Which shelf a day goes on: this week, last week, else its month. */
@@ -54,7 +105,10 @@ function shelfOf(at, now) {
 
 export function renderYourWords(page, { at = null } = {}) {
   const lang = learning();
+  // Each shelf measured as it's laid out and whenever its width changes (fitTiles): before it's painted, so a tile is never seen too narrow.
+  const fitting = new ResizeObserver((entries) => entries.forEach((entry) => fitTiles(entry.target)));
   const draw = () => {
+    fitting.disconnect();
     const now = Date.now();
     const rows = recalledUnits(lang, now);
     const known = new Set(rows.map((row) => row.unit));
@@ -73,11 +127,13 @@ export function renderYourWords(page, { at = null } = {}) {
     // A shelf's tiles, a page of them at a time: past SHOWN, the rest open in place.
     const tilesOf = (units, opts) => {
       const grid = el("div", { class: "lx-shelf-tiles" }, units.slice(0, SHOWN).map((unit) => item(unit, lang, opts)));
+      fitting.observe(grid);
       if (units.length <= SHOWN) return [grid];
       const more = wideButton(t("know.yourWords.showAll", { count: units.length }), {
         variant: "fade",
         onclick: () => {
           grid.append(...units.slice(SHOWN).map((unit) => item(unit, lang, opts)));
+          fitTiles(grid);
           more.remove();
         },
       });
@@ -124,6 +180,7 @@ export function renderYourWords(page, { at = null } = {}) {
       board.hidden = Boolean(q);
       found.hidden = !q;
       if (!q) return;
+      found.querySelectorAll(".lx-shelf-tiles").forEach((grid) => fitting.unobserve(grid));
       const hits = everything.filter((unit) => plain(describe(unit).name).includes(q) || plain(meaningOf(unit)).includes(q));
       // The words that start with it first.
       hits.sort((a, b) => Number(!plain(describe(a).name).startsWith(q)) - Number(!plain(describe(b).name).startsWith(q)));

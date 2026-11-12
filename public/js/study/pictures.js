@@ -5,6 +5,7 @@
 // not in the shell, not through the service worker, under a name carrying the drawing's hash, so a redrawn one replaces it.
 
 import { ART_ID, checkArt } from "../lx/art-rules.js";
+import { isOurLanguage } from "../lang/index.js";
 import { LESSONS, contentLanguage } from "./content.js";
 import { keepClips } from "./keep-clips.js";
 import { setPictures } from "./lesson.js";
@@ -176,7 +177,8 @@ async function fetchWords(language) {
  * had now. Never rejects. The language asked for last is the one pictureOfWord answers for.
  */
 export function loadWordPictures(language) {
-  if (typeof language !== "string" || !WORDS_LANGUAGE.test(language)) return Promise.resolve(false);
+  // A language of the learner's own has no map (only ours do): never asked for (a real code, my or tok, was a 404 on every start).
+  if (typeof language !== "string" || !WORDS_LANGUAGE.test(language) || !isOurLanguage(language)) return Promise.resolve(false);
   wordsLanguage = language;
   if (!wordMaps.has(language)) wordMaps.set(language, fetchWords(language));
   return wordMaps.get(language).then((map) => {
@@ -186,7 +188,7 @@ export function loadWordPictures(language) {
 }
 /** A language's words and the drawing each is ({ lemma: concept }), or null when it has none or they can't be had now. Never rejects; changes nothing pictureOfWord answers. */
 export function pictureWords(language) {
-  if (typeof language !== "string" || !WORDS_LANGUAGE.test(language)) return Promise.resolve(null);
+  if (typeof language !== "string" || !WORDS_LANGUAGE.test(language) || !isOurLanguage(language)) return Promise.resolve(null);
   if (!wordMaps.has(language)) wordMaps.set(language, fetchWords(language));
   return wordMaps.get(language);
 }

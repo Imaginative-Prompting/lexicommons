@@ -42,6 +42,9 @@ export function exploreSection({ section, demo, states }) {
       ["German", el("span", {}, ui.languageFlag("de"), "German")],
       ["Spanish", el("span", {}, ui.languageFlag("es"), "Spanish")],
       ["French, larger (size lg)", el("span", {}, ui.languageFlag("fr", { size: "lg" }), "French")],
+      // A learner's own language (a pack of theirs in a language Lexicommons doesn't list) has no flag: its mark stands where one would.
+      ["A language of your own (its mark)", el("span", {}, ui.languageMark("Sindarin"), "Sindarin")],
+      ["A language of your own, larger", el("span", {}, ui.languageMark("Gronings", { size: "lg" }), "Gronings")],
     ]),
     demo(
       "The languages: the one you're learning, the one shown (selected), the rest in All languages",

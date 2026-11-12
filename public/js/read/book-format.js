@@ -41,7 +41,7 @@
 // any false positives would make the pipeline's repair loop force wrong output, so judgment calls (does this English
 // word really mean that?) belong to the audit (scripts/books/weave-audit.mjs) and the judge, never here.
 
-import { LANGUAGES, sentenceEnds, spaceBeforeNext, typeset, withoutInvisible } from "../lang/index.js";
+import { LANGUAGES, isOurLanguage, ourLanguages, sentenceEnds, spaceBeforeNext, typeset, withoutInvisible } from "../lang/index.js";
 import { readingProblem } from "../lang/readings.js";
 
 // What the format needs to know about each language (segmenter, separator, lemma case, abbreviations, the pattern
@@ -400,8 +400,8 @@ export async function validateBook(book) {
   if (typeof book.title !== "string" || !book.title.trim()) fail("title is required.");
   if (!Array.isArray(book.authors)) fail("authors must be a list (it may be empty).");
   // A language is one of the registry's own (never "__proto__", or an object a lookup would turn into a key).
-  const known = typeof book.lang === "string" && Object.hasOwn(LANGUAGES, book.lang);
-  if (!known) fail(`lang must be a supported language (${Object.keys(LANGUAGES).join(", ")}).`);
+  const known = isOurLanguage(book.lang);
+  if (!known) fail(`lang must be a supported language (${ourLanguages().join(", ")}).`);
   if (!Array.isArray(book.words) || book.words.length === 0) return [...errors, "words must be a non-empty list."];
   const n = book.words.length;
   book.words.forEach((word, i) => {
@@ -1112,7 +1112,7 @@ export function validateFrequency(list) {
   if (!list || typeof list !== "object") return ["The frequency list must be an object."];
   if (list.format !== FREQUENCY_FORMAT || list.v !== FORMAT_VERSION) fail(`format must be "${FREQUENCY_FORMAT}" and v ${FORMAT_VERSION}.`);
   const L = typeof list.lang === "string" && Object.hasOwn(LANGUAGES, list.lang) ? LANGUAGES[list.lang] : null;
-  if (!L) return [...errors, `lang must be a supported language (${Object.keys(LANGUAGES).join(", ")}).`];
+  if (!L || L.own) return [...errors, `lang must be a supported language (${ourLanguages().join(", ")}).`];
   if (list.unit !== "lemma") fail('unit must be "lemma": counts are of word-bank keys, not of word forms.');
   const corpus = list.corpus ?? {};
   if (typeof corpus.name !== "string" || !corpus.name) fail("corpus.name must name the corpus counted.");
@@ -1196,7 +1196,7 @@ export function validateDefinitions(defs, book, { layer = null, layerSha = null 
   if (defs.format !== DEFINITIONS_FORMAT || defs.v !== 1) fail(`format must be "${DEFINITIONS_FORMAT}", v 1.`);
   for (const key of Object.keys(defs)) if (!DEFINITION_FIELDS.has(key)) fail(`${key} isn't a field of a definitions file.`);
   if (defs.book !== book?.id || defs.bookVersion !== book?.version) fail(`book and bookVersion must be ${book?.id}@${book?.version}.`);
-  if (!LANGUAGES[defs.in]) fail(`in must be a language code (${Object.keys(LANGUAGES).join(", ")}).`);
+  if (!isOurLanguage(defs.in)) fail(`in must be a language code (${ourLanguages().join(", ")}).`);
   if (!OPEN_DATA_LICENCES.has(defs.licence)) fail(`licence must be one of ${[...OPEN_DATA_LICENCES].join(", ")}.`);
   if (!cleanString(defs.credit)) fail("credit must say who made them, on one line.");
   // Whose words: a layer's lemmas, or the book's own.

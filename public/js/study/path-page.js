@@ -23,7 +23,8 @@ import { play } from "../lx/sound.js";
 import { standOn } from "../character/stand.js";
 import { onChange as onThemeChange } from "../lx/theme.js";
 
-const DOING = { strong: "Strong", learning: "Coming along", slipping: "Ready to practice" };
+// placed: behind you because Find your level placed you past it (study/placement.js), nothing in it tested since.
+const DOING = { strong: "Strong", learning: "Coming along", slipping: "Ready to practice", placed: "Placed by Find your level" };
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const plural = (n, word) => `${n.toLocaleString()} ${word}${n === 1 ? "" : "s"}`;
 

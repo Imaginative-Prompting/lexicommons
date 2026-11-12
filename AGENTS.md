@@ -173,6 +173,22 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "try ch
   # nothing asked of /api/ but error reports, nothing of /login; only the lessons' packs fetched; only the try-out's own stores kept, a planted
   # real key caught first); a signed-in learner on the same browser (every progress store as it was, "Go to your app", the try-out's keys gone at
   # the app's start); a computer (the chooser's columns, the cross partway bringing the end card); each full course's lesson 1. LOCAL only (exit 0 = pass)
+node scripts/test-placement.mjs [<app dir>] [--trials <n>]   # Find your level (study/placement.js) on every full course's real path: each unit's pool
+                                          # (sentences readable by its end, short enough for tiles), a unit's block five of its own questions, none twice, the same
+                                          # seed the same test, a retake drawing others; the search (4 of 5 shows a unit, 3 asks 2 more; up 4, then halving; at most
+                                          # 6 units), its bar never going back; each step's chance by guessing from its real choices and tiles, a unit shown by luck
+                                          # under 1 in 1,000; the real controller played by simulated learners (exactly at the unit after what they know at least
+                                          # 90%, too high at most 1%; again with every sentence on its shorter stand-in, as a 320 × 568 phone asks it), a larger model run of the same rules, a 2-of-5 rule its control; what a placement leaves:
+                                          # the lessons before its unit done ("placed"), its words assumed (readable, Practice's sentences, never counted, never
+                                          # due, at most plan.js ASSUMED_CHECKS asked a practice, never as a card), a missed word new, taken again lower, Start
+                                          # from the beginning and its Undo, the record through sync (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "placement check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/placement-check.mjs http://localhost:<port> <outDir> [--only <regex>] [--sizes 390x844,320x568] [--schemes dark,light]
+  # Find your level in the app by real presses, at 390 and 320 in dark and light: the first run's second question (No, I'm new to it opening nothing),
+  # a learner of units 1–7 placed at unit 8 (each step its unit's, no Hint, Words or Can't listen now, no meaning on a tapped word, nothing scrolling,
+  # its bar never going back, only right answers kept, nothing sent of its own), its result and Start unit 8; stopping partway; knowing nothing (Start
+  # from the beginning, Tinta, no box); Study's row until it's taken; Settings → Study, Start from the beginning and its Undo; pictures of each.
+  # LOCAL only (sets LX_FIRST_RUN: the first run is its to see) (exit 0 = pass)
 node scripts/sample-learner-check.mjs http://localhost:<port> <outDir> [--admin-command "node scripts/local.mjs admin"]   # the sample learner in the
                                           # real app on a phone, as an admin with studying of their own: Admin's row and sheet, each preset by a real tap (timed),
                                           # pictures of Home, Knowledge's cards, Study and the path at 390, the mark on every header and at 320, a reload keeping
@@ -236,7 +252,10 @@ node scripts/test-activity-names.mjs      # what a word's History calls each act
                                           # TESTS lists, the reader and each talk with your AI named, never its id; a game by plan.js GAMES' own name; every
                                           # string an `activity:` is given under public/js named; the names from before, a kind with no name and a planted
                                           # literal its controls. A new game or activity names itself here in the same landing (exit 0 = pass)
-node scripts/test-study-settings.mjs [<app dir>]   # how you like to study as a device reads it back (study/settings.js load): What does it say?'s
+node scripts/test-study-settings.mjs [<app dir>]   # how you like to study as a device reads it back (study/settings.js load), and on your other devices
+                                          # (sync kind "study-settings", 12 Nov 2026: each setting a record dated when chosen, what's the device's own never,
+                                          # what was chosen before carried at 1 and written only with the first change, another device's taken only when it's
+                                          # one of these settings and a value it may be, Reset reaching every device, clearing the device here alone): What does it say?'s
                                           # word-for-word line with the answer on by default from version 2 (9 Nov 2026), its hint off; a device that saved
                                           # before then (the line off with every save, though no one chose it) has it on once, its other settings and its hint
                                           # as they were; turned off from version 2 on, it stays off through a reload; another copy's dir to see it fail on one
@@ -678,6 +697,13 @@ node scripts/test-own-language.mjs        # a pack in a language Lexicommons doe
                                           # made with its definition, spaced and right to left unspaced; check_items; a device's copy; sentences added; refused
                                           # in words (no definition, a wrong one, ours given one, a region tag, a second pack saying another definition), nothing
                                           # queued; every D1 statement with no learner's language in the registry; a study record in it (exit 0 = pass)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "own language check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/own-language-check.mjs http://localhost:<port> <outDir>
+                                          # a learner's own languages on a phone, end to end: their AI makes a pack in a made-up language with spaces and one
+                                          # right to left without them (create_pack's language_def); the device keeps both (lang/own-languages.js) and lists them by
+                                          # name with their mark; a lesson in each played to its summary, Rtlish laid out right to left, its words joined with
+                                          # nothing; Knowledge; the speaking games, Read and Practice each saying why they're off; a reload; a second device signed
+                                          # in later with both packs, both languages, the progress and the language last studied; no console error. LOCAL only (exit 0 = pass)
 node scripts/test-pack-relay.mjs          # the pack relay (src/packs.ts) in Node's SQLite: corrections accepted in Explore
                                           # reaching the pack the author shared (queueOwnerChange); your AI's add_items, get_pack and update_items
                                           # called through their own schemas (mcp-packs.ts), a word written twice kept as it was there and back:
@@ -695,7 +721,10 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "accoun
   # the device named first with Keep it; your texts kept there too (a pasted one and your AI's whole, a shelf book as its entry, on a phone
   # signed in later with your place, fetched again on open; its control kept from the texts' files; a removed one staying removed); your own packs kept there too, a file per pack: two your AI made reaching a phone signed in after the
   # relay let them go (its control: that phone kept from the packs' files has none), one deleted staying deleted through a reload, and the
-  # one-file form from before planted beside them read with nothing lost or brought back and never written; deleting the account empties its
+  # one-file form from before planted beside them read with nothing lost or brought back and never written; a pack's recordings never going
+  # through the account (the phone that has one says nothing; the phone that took the pack from the account says where they are, with
+  # Connect: settings-packs.js recordingsElsewhereGroup); how you like to study kept there too (study/settings.js studySettingsSync: a choice
+  # on one phone on the other, a phone kept from its files the control, the recognizer staying on its device, Reset reaching every phone); deleting the account empties its
   # store. LOCAL only, a copy with Dutch's lessons (npm run local) (exit 0 = pass)
 node scripts/test-sync.mjs                # syncing through your own storage (sync.js) against one in memory: the merge,
                                           # a file per device, deletions staying deleted, limits, crafted files; study
@@ -880,7 +909,9 @@ node scripts/test-errors.mjs              # error reports (src/errors.ts, lx/err
                                           # a server error by its route's pattern; the spike alert and the cron's push; when the app started again
                                           # by itself (a reload of the phone's Home Screen app it didn't make, not after being hidden) and what
                                           # that report keeps (its screen and version alone) (exit 0 = pass)
-node scripts/test-probe-guard.mjs [<app dir>]   # the native probes' marks (speech/probe-guard.js): there while one runs, cleared when it answers, throws,
+node scripts/test-probe-guard.mjs [<app dir>]   # the native probes (speech/probe-guard.js): one at a time (asked together they take turns; one behind a probe
+                                          # that never answers isn't asked after TURN_WAIT), none on Samsung Internet (probesOff), the recognizer's
+                                          # one ask a language a page shared and then known without asking (browser.js browserKnown); their marks: there while one runs, cleared when it answers, throws,
                                           # the page is closed (pagehide) or hidden (set again if it comes back with the probe still running); one left at
                                           # a start told once by name and that probe never run on the device again (speech/browser.js's on-device question
                                           # too, and skipped where not wanted); the "probe-crash" report (error-clean.js) the probe in fixed words, its
@@ -1087,12 +1118,17 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "say wh
   # 2026 fails it: the step's draw threw "can't access lexical declaration 'shown'"). LOCAL only, a copy with Dutch's lessons (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "probe guard check" --kind parallel -- \
   node 08-lexicommons/app/scripts/probe-guard-check.mjs http://localhost:<port> <outDir> [--from <copy dir>] [--persist-to <dir>]
-  # the device's native probes (speech/probe-guard.js) on an Android phone's browser (Samsung Internet 30's user agent), the GPU's requestAdapter and
-  # the recognizer's available() counted: opening Study asks neither (game-modes.js askSpeaking's light check), Say it asks both, their marks cleared;
-  # a mark planted as if the page ended inside the GPU's probe told once at the next start (/api/errors, kind "probe-crash"), the GPU never asked
-  # again and the recognizer still, nothing more told after; with --persist-to (the server's local state) the report goes on to the server and
-  # its row is read back: one more probe-crash, the browser ("Samsung Internet 30 · Android"), screen and version (a server that drops it
-  # fails). --from <copy> serves another copy's files (the app from before 12 Nov 2026 fails it).
+  # the device's native probes (speech/probe-guard.js), the GPU's requestAdapter and the recognizer's available() counted with how many were in
+  # flight at once, on two phones. Samsung Internet 30's user agent (probesOff: never asked there): Study, Settings and every Settings page (26)
+  # ask neither, Say it asks neither and plays (the browser's recognizer, or Can't speak now), Settings → Speaking says where Whisper is offered
+  # that it runs on the processor and why (stills). Chrome on Android: Study and every Settings page ask neither (only what's answered on the page
+  # is read: support's known; Speaking shows no Whisper model as chosen and names no size on its Download, saying what it could be), Speaking's
+  # Download asks the GPU alone and fetches the model its answer suits, a pick the GPU can't run (Smaller) said under the button with nothing
+  # fetched and Basic offered at its size (speaking.js pickModel passes it over), Say it asks both one after the other
+  # (never together), their marks cleared; a mark planted as if the page ended inside the GPU's probe told once at the next start (/api/errors,
+  # kind "probe-crash"), the GPU never asked again and the recognizer still, nothing more told after; with --persist-to the report's row read
+  # back from the server: one more probe-crash, the browser ("Chrome 140 · Android"), screen and version. --from <copy> serves another copy's
+  # files (the app from before 12 Nov 2026's evening fails it: Speaking asked both at once, Downloads the recognizer, Say it on Samsung asked).
   # LOCAL only, a copy with Dutch's lessons (exit 0 = pass). A new native probe goes through probe-guard.js guarded() with a name in PROBES
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "result layout check" --kind parallel -- \
   node 08-lexicommons/app/scripts/result-layout-check.mjs http://localhost:<port> <outDir> --persist-to <dir> [--files <copy>] [--only right]

@@ -186,6 +186,7 @@ export const PARTS = [
   { name: "ask-status", group: "AI", about: "A line by what you asked about: sent (with Undo), copied, canceled, or why it couldn't go (data-meaning: right or wrong)", meanings: true },
   // Explore (components.css)
   { name: "language-flag", group: "Explore", about: "A language's flag, always beside its name or code (data-size lg: larger)" },
+  { name: "language-mark", group: "Explore", about: "Where a flag would be for a learner's own language (one Lexicommons doesn't list has none): its name's first two letters in a flag's box (data-size lg: larger)" },
   { name: "search-field", group: "Explore", about: "A search field with its icon; Enter searches" },
   { name: "language-row", group: "Explore", about: "The languages to find packs in, the one you're learning first, in a row that scrolls sideways" },
   { name: "language-choice", group: "Explore", about: "One language: its name and how many packs (selected: the one shown)", states: ["selected"] },

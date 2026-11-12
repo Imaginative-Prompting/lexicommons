@@ -11,7 +11,7 @@ import * as ui from "../lx/ui.js";
 import { el } from "../lx/ui.js";
 import { api, del, post } from "../shell/api.js";
 import { reasonPicker, termsFirst } from "./terms.js";
-import { LANGUAGES, languageName } from "../lang/index.js";
+import { LANGUAGES, languageName, ourLanguages } from "../lang/index.js";
 import { learning } from "../study/learning.js";
 import { t } from "../lx/i18n.js";
 import { symbol } from "../lx/symbols.js";
@@ -30,7 +30,7 @@ const requestHref = (id) => `#explore/request/${encodeURIComponent(id)}`;
 const itemHref = (id) => `#explore/item/${encodeURIComponent(id)}`;
 const learnable = (code) => typeof code === "string" && code !== "en" && Object.hasOwn(LANGUAGES, code);
 // The languages to ask in: the one you're learning first, then every other the app has, by name (as Explore's).
-const languagesOf = () => [learning(), ...Object.keys(LANGUAGES).filter((code) => code !== "en" && code !== learning()).sort((a, b) => languageName(a).localeCompare(languageName(b)))];
+const languagesOf = () => [learning(), ...ourLanguages().filter((code) => code !== "en" && code !== learning()).sort((a, b) => languageName(a).localeCompare(languageName(b)))];
 
 /** A status line (as Explore's): what came of a press, in words. */
 const message = () => {

@@ -6,7 +6,8 @@
 //
 // What it keeps, by the file's kind (ACCOUNT_SYNC_KINDS): progress, and from 12 Nov 2026 the learner's own packs (one your AI made reached
 // only the devices signed in while the relay held it), a file per pack, and their texts (which may be their own private writing), a file
-// per text and per weave. A file of any other kind is refused: the packs' recordings stay on the device and in a storage of the learner's own.
+// per text and per weave, and how they like to study (one small file a device). A file of any other kind is refused: the packs' recordings
+// stay on the device and in a storage of the learner's own.
 
 import type { Env } from "./env";
 import { LibraryError } from "./library";
@@ -14,7 +15,7 @@ import { OverLimit } from "./moderation";
 import { randomId } from "./util";
 
 /** The kinds of file kept: each a kind sync knows (public/js: its registerSync id). */
-export const ACCOUNT_SYNC_KINDS = ["progress", "streak", "path", "word-bank", "highlights", "reading-place", "sound", "packs", "texts"] as const;
+export const ACCOUNT_SYNC_KINDS = ["progress", "streak", "path", "word-bank", "highlights", "reading-place", "sound", "packs", "texts", "study-settings"] as const;
 
 export const ACCOUNT_SYNC_LIMITS = {
   // One file. Measured 11 Nov 2026: lesson 1's 42 answers are 15,600 bytes over three files, about 330 bytes an answer at most; the sample
