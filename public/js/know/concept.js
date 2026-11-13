@@ -125,7 +125,7 @@ export function renderConcept(page, unit, { back = { href: "#know", label: "What
     return ui.listRow({ icon: SKILL[skill].icon, title: SKILL[skill].label, sub, trailing: ui.strengthMeter(strength?.level ?? 0, slipping ? "slipping" : undefined) });
   });
 
-  const { tests, met } = history(unit);
+  const { tests, met, placedAt } = history(unit);
   const shown = tests.slice(0, 30);
   const rows = shown.map((test) => {
     const [meaning, word] = verdict(test);
@@ -140,6 +140,11 @@ export function renderConcept(page, unit, { back = { href: "#know", label: "What
       trailing: ui.badge(meaning, word),
     });
   });
+  // A placement's entry, the oldest: what Find your level put down as known, never an answer.
+  const placedDay = placedAt ? new Date(placedAt).toLocaleDateString([], { day: "numeric", month: "short" }) : "";
+  // In its place in time among the answers (newest first): after the placement's own right answers, before any since.
+  const placedPos = shown.filter((test) => test.at > placedAt).length;
+  if (placedAt && (placedPos < shown.length || tests.length <= shown.length)) rows.splice(placedPos, 0, ui.listRow({ title: "Placed by Find your level", sub: [SKILL.read?.short, placedDay].filter(Boolean).join(" · "), trailing: ui.badge("right", "Known") }));
   const metTimes = (met.reading ?? 0) + (met.games ?? 0) + (met.talk ?? 0) + (met.listening ?? 0);
   const metLine = [
     met.reading && `${met.reading} in your reading`,
@@ -157,7 +162,8 @@ export function renderConcept(page, unit, { back = { href: "#know", label: "What
     tests.length > shown.length ? el("p", { class: "lx-small lx-muted" }, `And ${tests.length - shown.length} earlier.`) : null,
     metLine.length ? el("p", { class: "lx-small lx-muted" }, `Met ${metLine.join(", ")}.`) : null,
   );
-  const historyRow = tests.length
+  const entries = tests.length + (placedAt ? 1 : 0);
+  const historyRow = entries
     ? el(
         "button",
         {
@@ -170,8 +176,8 @@ export function renderConcept(page, unit, { back = { href: "#know", label: "What
             historyBody.hidden = !opening;
           },
         },
-        el("span", { class: "lx-shelf-label" }, "History", el("span", { class: "lx-shelf-count" }, String(tests.length))),
-        el("span", { class: "lx-shelf-peek" }, [`${right} right`, missed ? `${missed} missed` : null, metTimes ? `met ${metTimes} ${metTimes === 1 ? "time" : "times"}` : null].filter(Boolean).join(" · ")),
+        el("span", { class: "lx-shelf-label" }, "History", el("span", { class: "lx-shelf-count" }, String(entries))),
+        el("span", { class: "lx-shelf-peek" }, [placedAt ? `Placed ${placedDay}` : null, tests.length || !placedAt ? `${right} right` : null, missed ? `${missed} missed` : null, metTimes ? `met ${metTimes} ${metTimes === 1 ? "time" : "times"}` : null].filter(Boolean).join(" · ")),
       )
     : null;
 

@@ -4,6 +4,7 @@
 
 import { api, post } from "../shell/api.js";
 import { learning, learningFrom } from "../study/learning.js";
+import { LANGUAGES, isOwnLanguage } from "../lang/index.js";
 import { REQUEST_KINDS, REQUEST_TIMING, answerParts, describeAsk as describeAskChecked, describeRequest } from "./requests.js";
 
 export { REQUEST_KINDS, answerParts, describeRequest };
@@ -18,8 +19,15 @@ export function createRequest(input) {
   return post("/api/ai/requests", withLanguage(input));
 }
 
+// A language of your own goes with how it's written (its definition): the server and your AI know it only through that (12 Nov 2026).
+const definitionOf = (code) => (isOwnLanguage(code) ? { languageDef: LANGUAGES[code].def } : {});
+
 function withLanguage(input) {
-  if (input?.kind === "practice") return { ...input, practice: { language: learning(), from: learningFrom(), ...input.practice } };
+  if (input?.kind === "practice") {
+    const language = input.practice?.language ?? learning();
+    return { ...input, practice: { language, from: learningFrom(), ...definitionOf(language), ...input.practice } };
+  }
+  if (input?.kind === "pack_new") return { ...input, ...definitionOf(input.language) };
   if (input?.kind === "ask" && input.about) return { ...input, about: { language: learning(), ...input.about } };
   return input;
 }

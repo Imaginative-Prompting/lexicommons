@@ -15,6 +15,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 const { chromium } = await import("./quiet-browser.mjs");
 const { answerStep, nextStep, pastReminderAsk, SESSION } = await import("./fixtures/play-session.mjs");
+const { pastKnowSome, pressInPage } = await import("./fixtures/first-run.mjs");
 
 const [BASE, outArg, ...rest] = process.argv.slice(2);
 if (!BASE || !outArg || !/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(BASE)) {
@@ -187,6 +188,8 @@ await stage("a signed-in learner on the same browser: their progress untouched b
   await page.waitForFunction(() => location.pathname === "/app/", null, { timeout: 60_000 });
   await page.waitForSelector(".lx-welcome", { timeout: 30_000 });
   await page.evaluate(() => document.querySelector('.lx-welcome [data-language="nl"]').click());
+  // Dutch is a full course: its question whether you know some already, answered No, I'm new to it (fixtures/first-run.mjs).
+  await pastKnowSome(page, { press: pressInPage });
   await page.waitForSelector("html[data-app-ready]");
   await page.evaluate(() => (location.hash = "#study/session/lesson"));
   await playToSummary(page);

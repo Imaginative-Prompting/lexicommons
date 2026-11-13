@@ -17,6 +17,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { chromium } from "./quiet-browser.mjs";
+import { withStillPlan } from "./fixtures/still-plan.mjs";
 import { knowWords } from "./fixtures/know-words.mjs";
 import { answerStep, SESSION } from "./fixtures/play-session.mjs";
 
@@ -223,7 +224,8 @@ async function rightAnswers({ width, height }) {
   await context.addCookies([{ name: "lc_session", value: account(), url: BASE, httpOnly: true, secure: false, sameSite: "Lax" }]);
   await context.route(/\/(js|css)\/.*\.(js|css)(\?.*)?$/, async (route) => {
     const path = new URL(route.request().url()).pathname;
-    const still = path.endsWith("/js/study/session.js");
+    // (plan.js with mode "still" playing the set plan: fixtures/still-plan.mjs.)
+    const still = path.endsWith("/js/study/plan.js");
     if (!FILES && !still) return route.continue();
     let body;
     if (FILES) {
@@ -231,7 +233,7 @@ async function rightAnswers({ width, height }) {
       if (!existsSync(file)) return route.fulfill({ status: 404, body: "" });
       body = readFileSync(file, "utf8");
     } else body = await (await route.fetch()).text();
-    if (still) body = body.replace("const plan = planSession(mode, arg);", 'const plan = mode === "still" ? globalThis.__stillPlan : planSession(mode, arg);');
+    if (still) body = withStillPlan(body) ?? body;
     await route.fulfill({ status: 200, contentType: path.endsWith(".css") ? "text/css" : "text/javascript", body });
   });
   const page = await context.newPage();

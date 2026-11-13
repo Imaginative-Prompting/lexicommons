@@ -12,6 +12,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { chromium } from "./quiet-browser.mjs";
+import { routeStillPlan } from "./fixtures/still-plan.mjs";
 import * as fw from "./frame-watch.mjs";
 
 const [BASE, outArg] = process.argv.slice(2);
@@ -50,15 +51,8 @@ const assert = (ok, what) => {
 
 const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: "block", hasTouch: true, isMobile: true, colorScheme: "dark" });
-// A set plan for the pictures and the accents (session.js plays globalThis.__stillPlan for mode "still"); every other session is the app's own.
-let routed = 0;
-await context.route(/\/js\/study\/session\.js(\?|$)/, async (route) => {
-  const response = await route.fetch();
-  const text = await response.text();
-  const from = "const plan = planSession(mode, arg);";
-  if (text.includes(from)) routed++;
-  return route.fulfill({ response, body: text.replace(from, 'const plan = mode === "still" ? globalThis.__stillPlan : planSession(mode, arg);'), headers: { ...response.headers(), "content-type": "text/javascript" } });
-});
+// A set plan for the pictures and the accents (mode "still" plays globalThis.__stillPlan: fixtures/still-plan.mjs); every other session is the app's own.
+const stillPlan = await routeStillPlan(context);
 const page = await context.newPage();
 await fw.install(page);
 const errors = [];
@@ -677,7 +671,7 @@ await stage("Type it's marked line in view under a result with an explanation on
 });
 
 await stage("no page errors, and the session's plan was the app's own wherever it wasn't set", async () => {
-  assert(routed > 0, "session.js wasn't routed (its planSession line moved), so no set plan could be played");
+  assert(stillPlan.routed() > 0, "plan.js wasn't wrapped (its planSession export moved: fixtures/still-plan.mjs), so no set plan could be played");
   assert(!errors.length, errors.slice(0, 3).join(" | "));
 });
 

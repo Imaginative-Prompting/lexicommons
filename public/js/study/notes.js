@@ -6,7 +6,7 @@
 // own JSON, read the first time its sentence or word is asked for, so no task reads a whole file.
 
 import { formLine, formsRef, notesFor, notesRef } from "./pack-notes.js";
-import { packed, read, take } from "./notes-worker.js";
+import { CACHE, packed, read, take } from "./notes-worker.js";
 
 const KEY = "lx.notes.v1";
 const here = new Map(); // pack id → { version, notes: a held file }
@@ -43,6 +43,25 @@ function writeKept(kept) {
   try {
     localStorage.setItem(KEY, JSON.stringify(kept));
   } catch {}
+}
+/**
+ * Whether a file named in what's kept is still in Cache Storage. iOS Safari clears Cache Storage on its own (storage pressure, a week unused)
+ * and keeps localStorage, so a file named there may be gone (12 Nov 2026). With no cache to ask, or one that can't be asked: taken as there.
+ */
+async function inCache(url) {
+  try {
+    if (typeof caches === "undefined" || !url) return true;
+    return Boolean(await (await caches.open(CACHE)).match(url));
+  } catch {
+    return true;
+  }
+}
+/** A file named in what's kept but not there to read (or not readable): forgotten, so the next sync takes it again. */
+function forget(key, url) {
+  const kept = readKept();
+  if (kept[key]?.url !== url) return;
+  delete kept[key];
+  writeKept(kept);
 }
 
 // The worker, while work is out: each message answered by its own number with { value } or { error }; null when there's no worker, it fails, or it
@@ -111,7 +130,8 @@ export async function syncNotes(catalogue, packIds) {
   const kept = readKept();
   for (const id of packIds) {
     const ref = notesRef(catalogue, id);
-    if (!ref || kept[id]?.version === ref.version) continue;
+    // The same version kept, and its file still in the cache: nothing to take.
+    if (!ref || (kept[id]?.version === ref.version && (await inCache(kept[id].url)))) continue;
     try {
       const notes = await takeFile({ kind: "notes", url: ref.url, owner: id, version: ref.version, old: kept[id]?.url });
       kept[id] = { version: ref.version, url: ref.url };
@@ -134,7 +154,11 @@ function loadNotes(id) {
   const going = (async () => {
     try {
       const notes = await readFile({ kind: "notes", url: ref.url, owner: id });
-      if (!notes) return null;
+      if (!notes) {
+        // Named but gone from the cache (or not readable): forgotten, so the next sync takes it again.
+        forget(id, ref.url);
+        return null;
+      }
       here.set(id, { version: ref.version, notes });
       return notes;
     } catch {
@@ -156,7 +180,7 @@ export async function syncForms(catalogue, lang) {
   const ref = formsRef(catalogue, lang);
   const kept = readKept();
   const key = `forms:${lang}`;
-  if (!ref || kept[key]?.version === ref.version) return [];
+  if (!ref || (kept[key]?.version === ref.version && (await inCache(kept[key].url)))) return [];
   try {
     const forms = await takeFile({ kind: "forms", url: ref.url, owner: lang, version: ref.version, old: kept[key]?.url });
     kept[key] = { version: ref.version, url: ref.url };
@@ -177,7 +201,10 @@ function loadForms(lang) {
   const going = (async () => {
     try {
       const forms = await readFile({ kind: "forms", url: ref.url, owner: lang });
-      if (!forms) return null;
+      if (!forms) {
+        forget(`forms:${lang}`, ref.url);
+        return null;
+      }
       formsHere.set(lang, { version: ref.version, forms });
       return forms;
     } catch {

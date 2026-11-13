@@ -81,10 +81,12 @@ export function fitTiles(grid) {
     const face = tile.querySelector(".lx-tile-face");
     const means = tile.querySelector(".lx-tile-means");
     const around = (style) => parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
-    // A face may give up half its padding (13 px a side, know.css) before its tile needs another place: "gisteren" at 320 keeps one, as it
-    // always looked right with 9 px a side; a word wider than that takes two.
-    const word = face ? laidOutWidth(face) + around(getComputedStyle(face)) / 2 : 0;
-    return Math.max(word, means ? meaningWidth(means) : 0) + around(getComputedStyle(tile));
+    // A face never squeezes (its tile's track grows to fit it) and stands centered on its tile: it may use the tile's own padding (4 px a
+    // side) but never pass its cell, or it hangs over the next tile, or past the shelf when last in its row (the director, 12 Nov 2026:
+    // Burmese's tea at 390, 8 px past). So the word with the face's whole padding fits the cell ("gisteren" at 320: 96 in 96, one place,
+    // as ever); the meaning fits inside the tile's padding.
+    const word = face ? laidOutWidth(face) + around(getComputedStyle(face)) : 0;
+    return Math.max(word, means ? meaningWidth(means) + around(getComputedStyle(tile)) : 0);
   });
   tiles.forEach((tile, i) => {
     // (A hair over a cell is still one: a width read to a fraction of a pixel.)

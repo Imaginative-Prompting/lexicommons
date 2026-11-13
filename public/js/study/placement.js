@@ -1,31 +1,25 @@
 // Find your level: a short check that places someone who already knows some of a language on its path (a full course: the language's own
-// written path, in units). A unit is tried with questions from its own lessons, tapping only: two of its words (Which word is it?), two of
-// its sentences to build in English (What does it say?) and one to put in order. Four right shows the unit; three asks two more of it, and
-// both right shows it. The search starts where the first run's answer says, goes up PLACEMENT.climb units at a time while units are shown,
-// then halves the gap between the highest shown and the lowest not, until they're next to each other or PLACEMENT.mostTried units are
-// tried. You're placed at the first unit not shown. A sentence too tall for the screen is asked on a shorter one, then as a word (shortStep).
-// The rules' numbers, measured on every full course: scripts/test-placement.mjs.
+// written path, in units). One question at a time, tapping only: a word (Which word is it?) or a sentence, built in English (What does it say?)
+// or put in order. It starts simple for everyone and climbs: the first questions are unit 1's, each right answer climbs (faster on a streak),
+// a wrong one or I don't know steps back down and probes the easier units more finely, and the first run's answer only says where the first
+// climb lands (makeSearch, SEARCH). About 20 questions; then a few more for the grammar ideas not asked yet, each in the unit that teaches it.
+// Knowing the whole course is a real outcome, and needs proof across its last third. A sentence too tall for the screen is asked on a shorter
+// one, then as a word (shortStep).
 //
 // What's kept: a right answer, as the game records any (session.js keeps only right rows in a placement: a word you were never taught isn't
 // a memory that failed); and the placement, on the path (path-place.js placementOn): the lessons before the unit you're placed at count as done
-// (plan.js), their words that nothing has tested since are read as known where the plan decides what you can read and never counted
-// (plan.js assumed), and the words you missed in them are taught as new. Pure but for applyPlacement, so its rules run in Node.
+// (plan.js), and what they teach is put down as known (placedSeeds, PLACED: known well from the start, counted, and back in your reviews over
+// the weeks after, a few a day, so each is confirmed or taught again); the words you missed in it, and an idea missed in the unit that teaches
+// it, are taught as new. Pure but for applyPlacement, so its rules run in Node.
 
 import { WORDS, contentLanguage, itemById } from "./content.js";
 import { pathLessons } from "./path.js";
 import { alsoAnswer, englishTiles, shownThing, translateStep, wordStep } from "./lesson.js";
 import { isHeavy } from "./new-words.js";
 import { placementOn, placeSnapshot, restorePlace, setPlacement } from "./path-place.js";
+import { scriptOf } from "./script.js";
 
 export const PLACEMENT = {
-  // The questions a unit is tried with, in turn, and what shows it.
-  block: ["word", "translate", "arrange", "translate", "word"],
-  need: 4,
-  // Exactly `close` right: `extra` more of the unit, and every one of them right shows it.
-  close: 3,
-  extra: ["word", "translate"],
-  mostTried: 6,
-  climb: 4,
   // A sentence asked as tiles: at most so long (a 375 × 667 phone fits every one; at 320 × 568 a long one is asked another way: shortStep).
   mostWords: 8,
   mostTiles: 7,
@@ -34,9 +28,15 @@ export const PLACEMENT = {
   leastShort: 4,
 };
 
-/** Where the first run's answers start the search: a few words, enough to get by, a conversation. */
-export const STARTS = { few: 2, by: 5, talk: 9 };
-const START_AGAIN = 5;
+/**
+ * What a placement puts down as known (placedSeeds; progress.js setPlaced, scheduler.js seededMemory): every word, phrase and idea the units
+ * it placed you past teach, but the words you missed in it, each known from the day it's taken with a stability that's the day of its first
+ * review: the unit next to where you're placed first, from day `firstDay`, then each unit before it, about `aDay` a day, so they come back
+ * spread over weeks, the earliest (surest) last, and never all at once. At least 10 days: a word you know well (know/word-index.js
+ * UNDERSTOOD_LEVEL) from the start.
+ */
+export const PLACED = { firstDay: 10, aDay: 6 };
+
 
 // ---------- seeded draws ----------
 
@@ -207,112 +207,326 @@ function beyondCount(also, answer) {
 
 // ---------- the search ----------
 
-/** A search's start: nothing shown, nothing not shown, the first unit to try. count: the units there are. */
-export function searchStart(count, start) {
-  return { count, passed: 0, failed: count + 1, tried: [], at: Math.max(1, Math.min(count, Math.round(start) || 1)), done: false };
+/**
+ * The search's rules. It asks one question at a time and keeps a belief about two things: the learner's level L (where they know half of a
+ * unit's words) and their spread s (how gently their knowing falls off from unit to unit), on a grid. Knowing a unit's word: ceiling ·
+ * σ((L − unit) / s); a word picked right on knowing it or a 1-in-3 guess; a sentence right on knowing to the power sentenceHarder (it holds
+ * several words and its ideas) or a near-impossible guess. After each answer the belief is updated by that chance (Bayes), and the next
+ * question goes to the unit where the belief expects `aim.normal` right, `aim.streak` after a streak of right answers (it climbs faster), and
+ * `aim.missed` after a miss or I don't know (it steps down and probes the easier units finely: never a harder unit than the one missed). The first `opening` questions are unit 1's, for
+ * everyone; both right, the next lands at the first run's answer (`landing`, the only say the self-rating has). Words and sentences in turn
+ * (every `wordEvery`th a word), What does it say? and Put it in order in turn. It settles at `least` questions once the belief's middle and
+ * hopeful readings of where they'd start are `narrow` units apart or less, or at `most`, then asks up to `ideaChecks` more: each a sentence
+ * from the unit that teaches an idea not asked yet below where it would place them. Sure they start at the beginning (`beginning`), it stops
+ * early: a newcomer isn't asked unit 1 again and again. The place: the belief's median start unit (`middle`), a
+ * unit counting as known where `known` of its words are, never past the highest unit answered right but one; stopped partway, the lower
+ * of its cautious `stopAt` reading and the unit after the highest with `stopEvidence` sentences answered right at it or above. Knowing the whole course needs proof at the top: `everything.sure` sure, and at least `everything.lastThird` questions
+ * asked in the last third with `everything.rightShare` of them right (while it looks likely, each unit of the last third is asked in turn).
+ * Measured on graded learners (knowing that fades by unit, ideas a little behind their words): scripts/test-placement.mjs.
+ */
+export const SEARCH = {
+  opening: 2,
+  landing: { few: 3, by: 6, talk: 10 },
+  aim: { normal: 0.65, streak: 0.5, missed: 0.85 },
+  streak: 3,
+  wordEvery: 3,
+  least: 18,
+  most: 24,
+  narrow: 2,
+  middle: 0.5,
+  hopeful: 0.75,
+  stopAt: 0.1,
+  stopEvidence: 2,
+  everything: { sure: 0.9, lastThird: 6, rightShare: 0.8 },
+  beginning: { sure: 0.95, least: 4 },
+  ideaChecks: 6,
+  ceiling: 0.97,
+  known: 0.8,
+  sentenceHarder: 2.3,
+  guessWord: 1 / 3,
+  guessSentence: 0.002,
+};
+
+const sigmoid = (x) => 1 / (1 + Math.exp(-x));
+/** How likely a learner at level L with spread s knows unit u's words (the search's model). */
+export const knowing = (L, s, u) => SEARCH.ceiling * sigmoid((L - u) / s);
+/** How likely they answer a question of unit u right: a word or a sentence ("sentence"), knowing it or guessing (guess: its own chance by guessing). */
+export function chanceRight(L, s, u, kind, guess = kind === "word" ? SEARCH.guessWord : SEARCH.guessSentence) {
+  const k = knowing(L, s, u);
+  const known = kind === "word" ? k : k ** SEARCH.sentenceHarder;
+  return known + (1 - known) * guess;
 }
 
-/** A unit settled, shown or not: the search after it (the next unit to try in `at`, or done). Pure. */
-export function settle(state, n, shown) {
-  const tried = [...state.tried, n];
-  let passed = shown ? Math.max(state.passed, n) : state.passed;
-  const failed = shown ? state.failed : Math.min(state.failed, n);
-  // A unit not shown below one shown: the one not shown decides (placed lower, never higher).
-  if (failed <= passed) passed = failed - 1;
-  const next = { ...state, tried, passed, failed };
-  if (failed - passed <= 1 || tried.length >= PLACEMENT.mostTried) return { ...next, done: true, at: null };
-  const at = failed === state.count + 1 ? Math.min(state.count, passed + PLACEMENT.climb) : Math.floor((passed + failed) / 2);
-  if (at === passed || tried.includes(at)) return { ...next, done: true, at: null };
-  return { ...next, at };
+// Ordered picks of `answer.length` of `tiles` that read as `answer`, over every ordered pick of that many: a guesser who knows how many to place.
+function orderChance(tiles, answer) {
+  let all = 1;
+  for (let i = 0; i < answer.length; i++) all *= tiles.length - i;
+  const left = new Map();
+  for (const tile of tiles) left.set(tile, (left.get(tile) ?? 0) + 1);
+  let ways = 1;
+  for (const word of answer) {
+    const n = left.get(word) ?? 0;
+    if (!n) return 0;
+    ways *= n;
+    left.set(word, n - 1);
+  }
+  return ways / all;
 }
-
-/** The most units a search could still try, whatever it finds: what its progress fills toward. */
-export function mostLeft(state) {
-  if (state.done) return 0;
-  return 1 + Math.max(mostLeft(settle(state, state.at, true)), mostLeft(settle(state, state.at, false)));
+/**
+ * A step's chance of being right by guessing alone, from its real choices and tiles: a word's 1 in its choices; What does it say?'s orders that
+ * read right (its word-for-word reading's too) over every order; Put it in order's its own words and the one stray (session.js strayFor). The
+ * search weighs a right answer by it, so a lucky short sentence counts for little.
+ */
+export function guessChance(step) {
+  if (step.kind === "word") return 1 / Math.max(1, step.options?.length ?? 3);
+  if (step.kind === "translate") return Math.min(1, orderChance(step.tiles, step.answer) + (step.also ? orderChance(step.tiles, step.also) : 0));
+  const words = step.item.words.map(([text]) => text);
+  return orderChance([...words, "\u0000stray"], words);
 }
+const LOGIT = () => Math.log(SEARCH.known / SEARCH.ceiling / (1 - SEARCH.known / SEARCH.ceiling));
+/** Where such a learner starts: the first unit whose words they know under SEARCH.known (count + 1: the whole course). */
+export const startUnit = (L, s, count) => Math.max(1, Math.min(count + 1, Math.floor(L - LOGIT() * s) + 1));
 
-/** Where a search places you: the first unit not shown (1: from the beginning; count + 1: past the whole course). */
-export const placedAt = (state) => state.passed + 1;
-
-/** A unit's answers so far (in order) as a verdict: "shown", "not", "more" (exactly PLACEMENT.close of the first: its extra questions next) or null (not all in). */
-export function verdictOf(answers) {
-  const first = answers.slice(0, PLACEMENT.block.length);
-  if (first.length < PLACEMENT.block.length) return null;
-  const right = first.filter(Boolean).length;
-  if (right >= PLACEMENT.need) return "shown";
-  if (right !== PLACEMENT.close) return "not";
-  const extra = answers.slice(PLACEMENT.block.length);
-  if (extra.length < PLACEMENT.extra.length) return extra.some((one) => !one) ? "not" : "more";
-  return extra.every(Boolean) ? "shown" : "not";
+/**
+ * A search over `count` units, pure (session.js plays it through makePlacement; the checks play it with simulated learners). landing: the unit
+ * the first climb lands at. { next(previous) → { n, kind, idea? } (kind: word, translate or arrange; idea: an idea check's) or null when it's done,
+ * answered(n, kind, right, guess), placed() → its place now (count + 1: the whole course), stopped() → the place were it stopped now, sure(t) → how sure it
+ * is they'd start at t, asked: the answers so far ([{ n, kind, right }]), done }. ideaCheck(placed) → { n, idea } for the next idea check, or null.
+ */
+export function makeSearch({ count, landing, ideaCheck = () => null }) {
+  const grid = [];
+  for (let L = -1; L <= count + 6.0001; L += 0.25) for (const s of [0.8, 1.3, 2.0]) grid.push({ L, s, w: 1, start: startUnit(L, s, count) });
+  const answers = [];
+  let sentenceTurn = 0;
+  let settledAt = 0;
+  let done = false;
+  const normalize = () => {
+    const sum = grid.reduce((a, g) => a + g.w, 0);
+    for (const g of grid) g.w /= sum;
+  };
+  normalize();
+  const starts = () => {
+    const p = new Array(count + 2).fill(0);
+    for (const g of grid) p[g.start] += g.w;
+    return p;
+  };
+  const quantile = (q) => {
+    const p = starts();
+    let c = 0;
+    for (let t = 1; t <= count + 1; t++) {
+      c += p[t];
+      if (c >= q - 1e-12) return t;
+    }
+    return count + 1;
+  };
+  const top = Math.ceil((count * 2) / 3) + 1;
+  const lastThird = () => answers.filter((a) => a.n >= top);
+  // Never placed past the highest unit answered right but one: nothing it hasn't seen you know.
+  const highestRight = () => Math.max(0, ...answers.filter((a) => a.right).map((a) => a.n));
+  const sentenceKind = () => (sentenceTurn++ % 2 === 0 ? "translate" : "arrange");
+  function unitFor(kind) {
+    const i = answers.length;
+    if (i < SEARCH.opening) return 1;
+    if (i === SEARCH.opening && answers.every((a) => a.right)) return Math.max(1, Math.min(count, landing));
+    const recent = answers.slice(-SEARCH.streak);
+    const last = answers.at(-1);
+    const missed = last?.right === false;
+    const p = starts();
+    // Past the course, likely: the proof is across its last third, each of its units in turn (the least asked first, the later of two); after
+    // a miss there, none harder than the one missed.
+    if (p[count + 1] > 0.5 && !(missed && last.n < top)) {
+      const times = (n) => answers.filter((a) => a.n === n).length;
+      const highest = missed ? last.n : count;
+      let pick = highest;
+      for (let n = highest; n >= top; n--) if (times(n) < times(pick)) pick = n;
+      return pick;
+    }
+    const onStreak = recent.length === SEARCH.streak && recent.every((a) => a.right);
+    const aim = missed ? SEARCH.aim.missed : onStreak ? SEARCH.aim.streak : SEARCH.aim.normal;
+    const as = kind === "word" ? "word" : "sentence";
+    let best = 1;
+    let bestGap = Infinity;
+    for (let n = 1; n <= count; n++) {
+      const chance = grid.reduce((a, g) => a + g.w * chanceRight(g.L, g.s, n, as), 0);
+      const gap = Math.abs(chance - aim);
+      if (gap < bestGap - 1e-9 || (Math.abs(gap - bestGap) < 1e-9 && n > best)) {
+        best = n;
+        bestGap = gap;
+      }
+    }
+    // After a miss it steps back down: never a harder unit than the one missed (a word is easier than a sentence of its unit, so aiming alone
+    // could ask a word of a later one).
+    return missed ? Math.min(best, last.n) : best;
+  }
+  const placedNow = (q) => Math.max(1, Math.min(count, quantile(q), highestRight() + 1));
+  // The highest unit with real evidence under it: at least `stopEvidence` sentences answered right at it or above (a word is a 1-in-3 guess).
+  const evidenced = () => {
+    const right = answers.filter((a) => a.right && a.kind !== "word").map((a) => a.n).sort((a, b) => b - a);
+    return right[SEARCH.stopEvidence - 1] ?? 0;
+  };
+  function placed() {
+    const p = starts();
+    const topAsked = lastThird();
+    const everything =
+      p[count + 1] >= SEARCH.everything.sure && topAsked.length >= SEARCH.everything.lastThird && topAsked.filter((a) => a.right).length >= SEARCH.everything.rightShare * topAsked.length;
+    return everything ? count + 1 : placedNow(SEARCH.middle);
+  }
+  return {
+    get asked() {
+      return answers;
+    },
+    get done() {
+      return done;
+    },
+    next() {
+      if (done) return null;
+      if (settledAt) {
+        const check = answers.length - settledAt < SEARCH.ideaChecks ? ideaCheck(placedNow(SEARCH.middle)) : null;
+        if (!check) {
+          done = true;
+          return null;
+        }
+        return { n: check.n, kind: sentenceKind(), idea: check.idea };
+      }
+      const kind = answers.length % SEARCH.wordEvery === 0 ? "word" : sentenceKind();
+      return { n: unitFor(kind), kind };
+    },
+    answered(n, kind, right, guess) {
+      if (done) return;
+      answers.push({ n, kind, right: Boolean(right) });
+      const as = kind === "word" ? "word" : "sentence";
+      for (const g of grid) {
+        const p = chanceRight(g.L, g.s, n, as, guess);
+        g.w *= right ? p : 1 - p;
+      }
+      normalize();
+      const i = answers.length;
+      // Settled; or sure they start at the beginning, so a newcomer isn't asked unit 1 again and again.
+      const beginning = i >= SEARCH.beginning.least && starts()[1] >= SEARCH.beginning.sure;
+      if (!settledAt && (i >= SEARCH.most || beginning || (i >= SEARCH.least && quantile(SEARCH.hopeful) - quantile(SEARCH.middle) <= SEARCH.narrow))) {
+        settledAt = i;
+        if (!SEARCH.ideaChecks) done = true;
+      }
+    },
+    placed,
+    // Stopped partway: the lower of its cautious reading and the unit after the highest with real evidence, so a few answers never skip
+    // many units.
+    stopped: () => (answers.length ? Math.max(1, Math.min(placedNow(SEARCH.stopAt), SEARCH.stopEvidence ? evidenced() + 1 : Infinity)) : 1),
+    sure: (t) => starts()[t] ?? 0,
+    // The most questions it could take: what its bar fills toward.
+    most: () => (done ? answers.length : SEARCH.most + SEARCH.ideaChecks),
+    // Done now (a question it wanted couldn't be asked: the course has none left).
+    end() {
+      done = true;
+    },
+  };
 }
 
 // ---------- a placement as a session plays it ----------
 
+/** Where each idea a course teaches is taught: its first unit, by pattern id. */
+export function ideasTaught(units) {
+  const at = new Map();
+  for (const unit of units) for (const lesson of unit.lessons) if (lesson.concept?.pattern && !at.has(lesson.concept.pattern)) at.set(lesson.concept.pattern, unit.n);
+  return at;
+}
+
 /**
- * A placement for session.js: start (STARTS' keys, or "again": from where you're placed, else unit START_AGAIN); seed and avoid (the last
- * placement's questions) make each one its own. { units, steps (the first unit's), answered(step, right) → the steps to add (none: done or the
- * unit's not in yet), progress() → { settled, most }, result(), stopNow() (the result if it stopped here), done }.
+ * A placement for session.js: start (SEARCH.landing's keys, or "again": landing where you're placed, else at "by"); seed and avoid (the last
+ * placement's questions) make each one its own. { units, steps (its first question), answered(step, right) → the next question (none: done),
+ * progress() → { settled, most }, result(), stopNow() (the result were it stopped here), done, instead(step) }. A sentence asks the ideas not
+ * asked yet first, the unit's own first (each idea asked in the unit that teaches it).
  */
 export function makePlacement({ start = "few", seed = String(Date.now()), units = placementUnits(), avoid = [] } = {}) {
   const random = seededRandom(`placement:${seed}`);
   const placed = placementOn(contentLanguage())?.placed;
-  const from = start === "again" ? (placed?.n ?? START_AGAIN) : (STARTS[start] ?? STARTS.few);
-  let state = searchStart(units.length, from);
+  const landing = start === "again" ? (placed?.n ?? SEARCH.landing.by) : (SEARCH.landing[start] ?? SEARCH.landing.few);
+  const count = units.length;
+  const taught = ideasTaught(units);
+  const covered = new Set(); // ideas asked
   const asked = new Set(avoid);
   const askedNow = [];
-  const answers = new Map(); // unit n → [right…]
   const missedWords = []; // [unit n, lemma]
+  const missedIdeas = []; // [unit n, "p:<pattern>"]: a sentence missed in the unit that teaches its idea
   let right = 0;
   let questions = 0;
-  const stepsFor = (n, kinds) => {
-    const steps = unitSteps(units[n - 1], kinds, random, asked);
-    for (const step of steps) askedNow.push(step.item?.id ?? step.target);
-    // Each sentence's stand-ins (instead, below), drawn with its block: a shorter sentence asked the same way (shortStep), and under that, a
-    // word of the same unit by itself, its drawing fetched with the block's (a step waiting for its drawing leaves the one before it showing).
-    for (const step of steps) {
-      if (step.kind === "word") continue;
-      const short = shortStep(units[n - 1], step.kind, random, asked);
-      const word = unitSteps(units[n - 1], ["word"], random, asked)[0] ?? null;
-      if (short) short.spare = word;
-      step.spare = short ?? word;
+  // The next idea check: the earliest idea below `below` not asked yet whose unit still has a sentence with it to ask.
+  const ideaCheck = (below) => {
+    const left = [...taught].filter(([id, n]) => n < below && !covered.has(id) && units[n - 1].sentences.some((one) => !asked.has(one.item.id) && (one.item.concepts ?? []).includes(id)));
+    left.sort((a, b) => a[1] - b[1]);
+    return left.length ? { n: left[0][1], idea: left[0][0] } : null;
+  };
+  const search = makeSearch({ count, landing, ideaCheck });
+  // A sentence of unit n to ask this way: an idea check's own idea first, then the most ideas not asked yet (the unit's own count three).
+  const sentenceStep = (n, kind, idea) => {
+    const unit = units[n - 1];
+    const left = shuffled(unit.sentences.filter((one) => !asked.has(one.item.id) && (kind !== "arrange" || one.item.words.length > 1)), random);
+    if (!left.length) return null;
+    const gain = (one) =>
+      (one.item.concepts ?? []).reduce((a, id) => a + (id === idea ? 100 : !taught.has(id) || covered.has(id) ? 0 : taught.get(id) === n ? 3 : taught.get(id) < n ? 1 : 0), 0);
+    let best = left[0];
+    for (const one of left) if (gain(one) > gain(best)) best = one;
+    asked.add(best.item.id);
+    const step = kind === "translate" ? translateStep(best.item, unit.sentences.map((one) => one.item), unit.words) : { kind: "arrange", mode: "dutch", skill: "read", item: best.item };
+    return { ...step, placement: { unit: n } };
+  };
+  // The question the search wants, as a step: in its unit, or (that unit asked out) the nearest unit that has one, its stand-ins drawn with it.
+  const stepFor = ({ n, kind, idea }) => {
+    for (let d = 0; d < count; d++) {
+      for (const at of d ? [n - d, n + d] : [n]) {
+        if (at < 1 || at > count) continue;
+        const step = kind === "word" ? (unitSteps(units[at - 1], ["word"], random, asked)[0] ?? null) : (sentenceStep(at, kind, idea) ?? unitSteps(units[at - 1], ["word"], random, asked)[0] ?? null);
+        if (!step) continue;
+        askedNow.push(step.item?.id ?? step.target);
+        for (const id of step.item?.concepts ?? []) covered.add(id);
+        // A sentence's stand-ins (instead, below), drawn with it: a shorter sentence asked the same way (shortStep), and under that, a word of the
+        // same unit by itself, its drawing fetched with the step's (a step waiting for its drawing leaves the one before it showing).
+        if (step.kind !== "word") {
+          const short = shortStep(units[at - 1], step.kind, random, asked);
+          const word = unitSteps(units[at - 1], ["word"], random, asked)[0] ?? null;
+          if (short) short.spare = word;
+          step.spare = short ?? word;
+        }
+        return step;
+      }
     }
-    return steps;
+    return null;
+  };
+  const nextSteps = () => {
+    const want = search.next();
+    if (!want) return [];
+    const step = stepFor(want);
+    if (step) return [step];
+    search.end();
+    return [];
   };
   const self = {
     units,
-    from,
-    steps: units.length ? stepsFor(state.at, PLACEMENT.block) : [],
+    landing,
+    search,
+    steps: count ? nextSteps() : [],
     get done() {
-      return state.done;
-    },
-    get state() {
-      return state;
+      return search.done;
     },
     answered(step, wasRight) {
       const n = step.placement?.unit;
-      if (!n || state.done) return [];
+      if (!n || search.done) return [];
       questions++;
       if (wasRight) right++;
       else if (step.kind === "word" && step.target) missedWords.push([n, step.target]);
-      const list = [...(answers.get(n) ?? []), Boolean(wasRight)];
-      answers.set(n, list);
-      const verdict = verdictOf(list);
-      if (verdict === null) return [];
-      if (verdict === "more") return list.length === PLACEMENT.block.length ? stepsFor(n, PLACEMENT.extra) : [];
-      state = settle(state, n, verdict === "shown");
-      return state.done ? [] : stepsFor(state.at, PLACEMENT.block);
+      else for (const id of step.item?.concepts ?? []) if (taught.get(id) === n) missedIdeas.push([n, `p:${id}`]);
+      search.answered(n, step.kind === "word" ? "word" : step.kind, wasRight, guessChance(step));
+      return nextSteps();
     },
     progress() {
-      const settled = state.tried.length;
-      return { settled, most: settled + mostLeft(state) };
+      return { settled: search.asked.length, most: search.most() };
     },
     result() {
-      return resultOf(state);
+      return resultOf(search.placed());
     },
     stopNow() {
-      // Stopped partway: placed by the units shown so far (the unit being tried counts for nothing).
-      return resultOf({ ...state, done: true });
+      // Stopped partway: placed only as far as its answers so far are sure of.
+      return resultOf(search.stopped());
     },
     // A question of tiles too tall for this screen at its tightest (session.js askAnotherWay): its stand-in instead, a shorter sentence asked
     // the same way, or (that too tall as well) a word of the same unit by itself, which always fits. null when the unit had none left.
@@ -322,18 +536,19 @@ export function makePlacement({ start = "few", seed = String(Date.now()), units 
       return other;
     },
   };
-  function resultOf(at) {
-    const n = placedAt(at);
+  function resultOf(n) {
+    const tried = [...new Set(search.asked.map((a) => a.n))].sort((a, b) => a - b);
     return {
       placed: n,
-      count: units.length,
+      count,
       units,
       unit: units[n - 1] ?? null,
-      shown: at.tried.filter((one) => one < n),
-      tried: at.tried.length,
+      everything: n > count,
+      shown: tried.filter((one) => one < n),
+      tried: tried.length,
       right,
       questions,
-      missed: missedWords.filter(([unit]) => unit < n).map(([, lemma]) => lemma),
+      missed: [...missedWords, ...missedIdeas].filter(([unit]) => unit < n).map(([, what]) => what),
       asked: askedNow,
     };
   }
@@ -348,6 +563,29 @@ export const lessonsBefore = (units, n) => units.filter((unit) => unit.n < n).fl
  * lesson (past the whole course: after it); from the beginning, as keepPlacement leaves it (nothing changed: a placement already there stays).
  * Either way it's noted as taken, with what it asked (the next one draws others). Returns what was there before, for an Undo (undoPlacement).
  */
+/**
+ * A placement's seeds: [[unit, stability in days]] for what the units before `placed` teach (words and phrases, and each lesson's idea), but
+ * what's in `missed` (words, and ideas as "p:<pattern>"), the unit next to `placed` first (PLACED). The same units and order for the same path.
+ */
+export function placedSeeds(units, placed, missed = []) {
+  const skip = new Set(missed);
+  const order = [];
+  const have = new Set();
+  const add = (unit) => {
+    if (!unit || have.has(unit)) return;
+    have.add(unit);
+    order.push(unit);
+  };
+  for (let n = Math.min(placed, units.length + 1) - 1; n >= 1; n--) {
+    for (const lesson of units[n - 1].lessons) {
+      if (lesson.full) continue;
+      for (const thing of lesson.things ?? []) if (!thing.formOnly && !skip.has(thing.lemma ?? thing.phrase)) add(thing.unit);
+      if (lesson.concept?.pattern && !skip.has(`p:${lesson.concept.pattern}`)) add(`p:${lesson.concept.pattern}`);
+    }
+  }
+  return order.map((unit, k) => [unit, PLACED.firstDay + Math.floor(k / PLACED.aDay)]);
+}
+
 export function applyPlacement(result, lang = contentLanguage()) {
   const before = placeSnapshot(lang);
   const asked = result.asked.slice(-200);
@@ -363,6 +601,9 @@ export function applyPlacement(result, lang = contentLanguage()) {
     at: taken,
     lessons: lessonsBefore(result.units, result.placed),
     missed: [...new Set(result.missed)].slice(0, 400),
+    seeds: placedSeeds(result.units, result.placed, result.missed),
+    // Read in this script (study/script.js): its seeds are read strengths there alone, as answers read in it are.
+    script: scriptOf(lang),
   };
   setPlacement(lang, { placed, taken, asked }, { lesson: whole ? null : result.unit.first.id });
   return before;

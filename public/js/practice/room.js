@@ -11,7 +11,7 @@ import * as motion from "../lx/motion.js";
 import * as voice from "../study/voice.js";
 import { getStudySettings } from "../study/settings.js";
 import { learningName } from "../study/learning.js";
-import { LANGUAGES, languageName } from "../lang/index.js";
+import { LANGUAGES, isOwnLanguage, languageName } from "../lang/index.js";
 import { api, keptMe, post, whoAmI } from "../shell/api.js";
 import { keySummary, ownKeyPresent } from "../ai/own-key.js";
 import { KINDS } from "./protocol.js";
@@ -190,6 +190,9 @@ export function openRoom(host, id, { onClose, base = "#study/practice" } = {}) {
   // The practice's language, once it arrives (before its turns are drawn).
   function useLanguage(practice) {
     const code = languageOf(practice);
+    // Reading its lines aloud only where something here can say them (transcript.js sayable): set each time, as the room may already be
+    // in the practice's language (one started on this device).
+    readButton.hidden = isOwnLanguage(code) && !voice.voicesFor(code).length;
     if (code === transcript.state.language) return;
     transcript.state.language = code;
     composer.lxSetLanguage(code, languageName(code));

@@ -50,6 +50,8 @@ You're the other half of a live language practice. The person is in the Lexicomm
   language: (mcp) => `## The language
 Each practice is in one language, the one they're learning: ${mcp ? "joined's practice says which" : "the practice says which"} (language: its code, languageName, locale: the region its voice and speech recognition use). Every line you say, every sentence on a card and every grade is in that language; explain, en and translate are English. The examples in this guide are Dutch (the field names nl and from: dutch keep those names for every language); ${mcp ? "get_learner's examples are sentences" : "the learner summary's examples are sentences"} in their language in the same shapes.
 
+A language of their own (one Lexicommons doesn't list: a dialect, a conlang, an endangered language) comes with languageDef: its name, direction (ltr or rtl), written (spaces, or unspaced: a sentence's words joined with nothing), case and its own sentence ends. Write it exactly so, in its own script. It has no shared grammar: grade its words (w:<lemma>, as their packs write them) and the patterns their packs declare, never a p: of another language's. Its voice and speech recognition are whatever their device has for its code, often none: the practice's answer says whether they speak or type.
+
 `,
   loop: (mcp) => `## The loop
 1. Read this guide once. Then call practice_wait with no practice_id. It joins the practice open in their app. If none is open it answers no_practice: call it again (they may be opening it now). When it answers stop, tell them in one line and stop.

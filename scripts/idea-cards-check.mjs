@@ -13,6 +13,7 @@
 // --from <copy> serves another copy's /js and /css (the app from before 11 Nov 2026 fails it). LOCAL only (it signs up an account), a copy with
 // Dutch's lessons and word packs (npm run local); through gpu.py's parallel lane. Exit 0 = pass.
 import { chromium } from "./quiet-browser.mjs";
+import { WELCOME, chooseToLearn } from "./fixtures/first-run.mjs";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { extname, join, resolve } from "node:path";
 
@@ -81,12 +82,8 @@ try {
   await page.click('#register button[type="submit"]');
   await page.waitForURL(`${BASE}/app/`, { timeout: 60_000 });
   await page.waitForSelector("html[data-app-ready]", { timeout: 60_000 });
-  for (let i = 0; i < 4; i++) {
-    const choice = page.locator(".lx-welcome button, .lx-welcome [role='option']").filter({ hasText: /Dutch|Nederlands/ }).first();
-    if (!(await choice.count())) break;
-    await choice.click();
-    await page.waitForTimeout(700);
-  }
+  // A first run, if it's up (quiet-browser.mjs skips it unless LX_FIRST_RUN): Dutch, and past what follows (fixtures/first-run.mjs).
+  if (await page.locator(WELCOME).count()) await chooseToLearn(page, "nl");
   await page.evaluate(async () => (await import("/js/study/packs.js")).syncLibraryPacks());
   const why = await page.evaluate(async () => {
     const { pathLessons } = await import("/js/study/path.js");

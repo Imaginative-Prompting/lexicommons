@@ -200,4 +200,13 @@
   .lx-placement-row .lx-placement-done { display: inline-flex; color: var(--m-right); }
   .lx-placement-row .lx-placement-done .lx-icon { width: 20px; height: 20px; }
   .lx-placement-tinta { display: flex; justify-content: center; padding: var(--space-5) 0 var(--space-3); }
+  /* Knowing the whole course: the words you'll know under Tinta's heart, the number as a celebration's milestone draws it. */
+  .lx-placement-known { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); margin: 0; }
+  .lx-placement-known strong { color: var(--ink-1); font: 600 calc(var(--size-28) * 2) / 1 var(--type-mono); font-variant-numeric: tabular-nums; }
+  .lx-placement-known span { color: var(--ink-2); font-size: var(--size-16); }
+  /* A short screen (320 × 568): the celebration above the fold, its three ways on below it (Tinta at 64 px: session.js). */
+  @media (max-height: 700px) {
+    [data-part="session-summary"][data-whole] .lx-placement-tinta { padding: var(--space-2) 0 0; }
+    .lx-placement-known strong { font-size: calc(var(--size-28) * 1.5); }
+  }
 }

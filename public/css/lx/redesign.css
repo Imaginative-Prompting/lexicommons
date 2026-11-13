@@ -68,8 +68,8 @@
     [data-part="tab-bar"][data-no-lens] :is(.lx-tab-bubble, .lx-tab-lens) { visibility: hidden; }
     /* Symbols only: the tabs show no names, so the bar stays quiet and each symbol reads at a glance; each name stays its link's accessible name, unseen. The sidebar shows them. */
     [data-part="app"] > [data-part="tab-bar"] .lx-tab-label { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-    /* Toasts clear the floating bar. */
-    .lx-toasts { bottom: calc(var(--bar-height) + var(--bar-gap) + var(--space-3)); }
+    /* Toasts clear the floating bar (a session's own toasts sit under its top: components.css). */
+    .lx-toasts:not(.lx-session-toasts) { bottom: calc(var(--bar-height) + var(--bar-gap) + var(--space-3)); }
   }
   /* The glass made solid: with Reduce Transparency on, or where a browser can't blur what's behind (the bar and the header's buttons
    * alike, shell.css). */

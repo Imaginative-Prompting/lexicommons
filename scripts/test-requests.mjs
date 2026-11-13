@@ -83,7 +83,9 @@ test("finishing: done with what it did and links, couldn't with why, an answer o
 
 test("a text: what to add and in which language; finished with a link to the text", () => {
   eq(checkRequest({ kind: "text_new", what: "A short story about the market", language: "nl" }), { kind: "text_new", what: "A short story about the market", language: "nl" });
-  refuses(() => checkRequest({ kind: "text_new", what: "x", language: "xx" }), /language must be one of/);
+  refuses(() => checkRequest({ kind: "text_new", what: "x", language: "Klingon!" }), /language must be one of/);
+  // A code a language of their own could have (Klingon's): Read is in the languages Lexicommons lists, said so (12 Nov 2026).
+  refuses(() => checkRequest({ kind: "text_new", what: "x", language: "tlh" }), /Read and its texts are in the languages Lexicommons lists/);
   refuses(() => checkRequest({ kind: "text_new", language: "nl" }), /what is missing/);
   eq(checkFinish({ done: { said: "Added a story", links: { text: "ai-0123456789abcdef" } } }, "text_new"), { state: "done", said: "Added a story", links: { text: "ai-0123456789abcdef" } });
   refuses(() => checkFinish({ done: { said: "x", links: { text: "../etc" } } }, "text_new"), /links.text must be its id/);
@@ -99,7 +101,8 @@ test("a weave: which text of yours, its title, the language to weave in and the 
     what: "“Alice in Wonderland” into Dutch",
   });
   refuses(() => checkRequest({ kind: "weave", book: "../etc", title: "x", language: "nl", upload: "upl_0123456789ab" }), /book must be the id/);
-  refuses(() => checkRequest({ kind: "weave", book: "paste-0123abcd", title: "x", language: "xx", upload: "upl_0123456789ab" }), /language must be one of/);
+  refuses(() => checkRequest({ kind: "weave", book: "paste-0123abcd", title: "x", language: "Klingon!", upload: "upl_0123456789ab" }), /language must be one of/);
+  refuses(() => checkRequest({ kind: "weave", book: "paste-0123abcd", title: "x", language: "tlh", upload: "upl_0123456789ab" }), /Weaving is into the languages Lexicommons lists/);
   // A language of the app's that weaves aren't ready for yet (weave-languages.generated.js has Dutch alone as this is written).
   const notYet = Object.keys(LANGUAGES).find((code) => !WEAVE_LANGUAGES.includes(code));
   refuses(() => checkRequest({ kind: "weave", book: "paste-0123abcd", title: "x", language: notYet, upload: "upl_0123456789ab" }), /isn't ready yet/);
@@ -175,6 +178,15 @@ test("an answer: plain text, the language's words marked [[like this]], a marker
   eq(answerParts("Open [[marker"), [{ text: "Open [[marker", language: false }]);
   eq(answerParts("<b>not html</b> [[<i>x</i>]]"), [{ text: "<b>not html</b> ", language: false }, { text: "<i>x</i>", language: true }]);
   eq(answerParts(""), []);
+});
+
+test("in a language of their own (12 Nov 2026): Make a new pack keeps its definition for create_pack, Practice with me carries it, Add to my pack names the pack; one without a definition refused", () => {
+  const BURMESE = { name: "Burmese", written: "unspaced", case: "any", ends: ["။"] };
+  eq(checkRequest({ kind: "pack_new", what: "Ordering tea", language: "my", languageDef: BURMESE }), { kind: "pack_new", what: "Ordering tea", language: "my", languageDef: { name: "Burmese", direction: "ltr", written: "unspaced", case: "any", ends: ["။"] } });
+  refuses(() => checkRequest({ kind: "pack_new", what: "Ordering tea", language: "my" }), /a language of their own with its languageDef/);
+  eq(checkRequest({ kind: "practice", practice: { kind: "conversation", answer: "type", minutes: 10, language: "my", languageDef: BURMESE } }).practice.languageDef, { name: "Burmese", direction: "ltr", written: "unspaced", case: "any", ends: ["။"] });
+  eq(checkRequest({ kind: "pack_add", pack: "burmese-first-words", what: "Ten more" }).pack, "burmese-first-words");
+  ok(!Object.hasOwn(LANGUAGES, "my"), "checking left Burmese in the registry");
 });
 
 console.log(`\n${passed}/${passed + failed} passed`);

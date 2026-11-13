@@ -9,13 +9,15 @@ import { el } from "../lx/ui.js";
 import * as motion from "../lx/motion.js";
 import * as voice from "../study/voice.js";
 import { PATTERNS } from "../study/content.js";
-import { languageName } from "../lang/index.js";
+import { isOwnLanguage, languageName } from "../lang/index.js";
 import { conceptLabel } from "./protocol.js";
 import { languageOf, tally } from "./store.js";
 import { playCard } from "./cards.js";
 import * as P from "./ui.js";
 
 /** Reads a line in a language (its code) aloud with this device's voice (lines your AI writes have no recordings). */
+/** Whether lines in a language get a speaker here: one of ours always; a language of your own where this device has a voice for its code. */
+export const sayable = (lang) => !isOwnLanguage(lang) || voice.voicesFor(lang).length > 0;
 export const speakLine = (text, id, lang) => (options) => voice.speakItem({ id, words: text.split(/\s+/).filter(Boolean).map((w) => [w]), punct: "" }, { ...options, lang });
 
 /**
@@ -48,7 +50,7 @@ export function createTranscript({ practiceId, client = "Your AI", live = false,
     clearDraft();
     turn.grades?.forEach((grade) => {
       const target = lines.get(grade.turn);
-      const box = P.correction(grade, { speak: grade.better ? speakLine(grade.better, `practice:${practiceId}:${turn.seq}:better`, state.language) : null, patterns: PATTERNS, lang: state.language });
+      const box = P.correction(grade, { speak: grade.better && sayable(state.language) ? speakLine(grade.better, `practice:${practiceId}:${turn.seq}:better`, state.language) : null, patterns: PATTERNS, lang: state.language });
       if (target) {
         target.lxSetMarks(grade.marks);
         target.setAttribute("data-state", "graded");
@@ -59,7 +61,7 @@ export function createTranscript({ practiceId, client = "Your AI", live = false,
     if (turn.scene) add(P.scene(turn.scene), { animate: arriving });
     if (turn.explain) add(P.aiNote(turn.explain), { animate: arriving });
     (turn.say ?? []).forEach((line, i) => {
-      const view = P.aiLine(line, { speak: speakLine(line.nl, `practice:${practiceId}:${turn.seq}:${i}`, state.language), ...named() });
+      const view = P.aiLine(line, { speak: sayable(state.language) ? speakLine(line.nl, `practice:${practiceId}:${turn.seq}:${i}`, state.language) : null, ...named() });
       add(view, { animate: arriving && i >= drafted });
       toRead.push(view);
     });
@@ -130,7 +132,7 @@ export function createTranscript({ practiceId, client = "Your AI", live = false,
     /** The in-app AI's lines so far, while its reply is still coming (each new one appears; the reply takes their place). */
     draftLines(sayLines) {
       const start = draft.length;
-      sayLines.slice(start).forEach((line, i) => draft.push(add(P.aiLine(line, { speak: speakLine(line.nl, `practice:${practiceId}:draft:${start + i}`, state.language), ...named() }))));
+      sayLines.slice(start).forEach((line, i) => draft.push(add(P.aiLine(line, { speak: sayable(state.language) ? speakLine(line.nl, `practice:${practiceId}:draft:${start + i}`, state.language) : null, ...named() }))));
     },
     clearDraft,
     /** Your line, drawn the moment you send it; the server's copy (same key) takes it over. */
@@ -191,7 +193,7 @@ export function summaryBlock(practice, { actions } = {}) {
           el(
             "ul",
             { class: "lx-summary-list" },
-            summary.newWords.map((w, i) => el("li", {}, ui.speakButton(speakLine(w.nl, `practice:${practice.id}:word:${i}`, lang), { label: `Say ${w.nl}` }), el("span", { lang }, w.nl), w.en ? el("span", { class: "lx-muted" }, ` · ${w.en}`) : null)),
+            summary.newWords.map((w, i) => el("li", {}, sayable(lang) ? ui.speakButton(speakLine(w.nl, `practice:${practice.id}:word:${i}`, lang), { label: `Say ${w.nl}` }) : null, el("span", { lang }, w.nl), w.en ? el("span", { class: "lx-muted" }, ` · ${w.en}`) : null)),
           ),
         )
       : null,

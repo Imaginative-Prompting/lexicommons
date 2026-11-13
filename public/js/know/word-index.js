@@ -26,7 +26,7 @@ import { sampleDb } from "../study/sample-mode.js";
 export const UNDERSTOOD_LEVEL = 3;
 
 // Kept snapshots of another shape are worked out again.
-const SCHEMA = 4;
+const SCHEMA = 5; // 5: an entry's placedAt (a placement's seed, progress.js placedSeedOf)
 const DB = sampleDb("lexicommons-word-index");
 const STORE = "languages";
 const KEPT = /^[wcp]:/; // the units it keeps: words, phrases and ideas (patterns)
@@ -34,8 +34,8 @@ const WORDISH = /^[wc]:/; // the ones that are words you know: words and phrases
 const SAVE_AFTER = 2000; // ms after the last change: one write for a session's answers
 
 // lang → { entries: Map<unit, entry>, dirty: Set<unit>, epoch, order: the entries the first met first (kept until they change) }
-// entry: { unit, metAt, firstAt, lastAt, levels: [[at, level]], read, hear, say }; each strength { level, until, stability, last, well,
-// recalled } or null.
+// entry: { unit, metAt, firstAt, lastAt, placedAt, levels: [[at, level]], read, hear, say }; each strength { level, until, stability, last,
+// well, recalled } or null. placedAt: when a placement put it down as known (Find your level), where nothing was answered before; else 0.
 const langs = new Map();
 let stored = new Map(); // lang → a kept snapshot not yet used
 let version = 0;
@@ -48,8 +48,8 @@ export const indexed = (unit) => typeof unit === "string" && KEPT.test(unit);
 const keyOf = (unit, lang) => (unit.startsWith("p:") ? canonicalUnit(unit, lang) : unit);
 
 function entryOf(unit, lang) {
-  const { metAt, firstAt, lastAt, levels, strengths } = unitLasting(unit, lang, { well: UNDERSTOOD_LEVEL });
-  return { unit, metAt, firstAt, lastAt, levels, read: strengths.read, hear: strengths.hear, say: strengths.say };
+  const { metAt, firstAt, lastAt, placedAt, levels, strengths } = unitLasting(unit, lang, { well: UNDERSTOOD_LEVEL });
+  return { unit, metAt, firstAt, lastAt, placedAt, levels, read: strengths.read, hear: strengths.hear, say: strengths.say };
 }
 
 function build(lang) {
@@ -74,7 +74,7 @@ export function wordIndexSnapshot(lang = learning()) {
   const state = ensure(lang);
   const entries = [...state.entries.values()]
     .sort((a, b) => (a.unit < b.unit ? -1 : a.unit > b.unit ? 1 : 0))
-    .map((e) => [e.unit, e.metAt, e.firstAt, e.lastAt, e.levels.flat(), packStrength(e.read), packStrength(e.hear), packStrength(e.say)]);
+    .map((e) => [e.unit, e.metAt, e.firstAt, e.lastAt, e.levels.flat(), packStrength(e.read), packStrength(e.hear), packStrength(e.say), e.placedAt]);
   return { lang, schema: SCHEMA, model: modelStamp(), stamp: evidenceStamp(lang), entries };
 }
 
@@ -90,8 +90,8 @@ function adopt(lang) {
   stored.delete(lang);
   if (record.schema !== SCHEMA || record.model !== modelStamp() || record.stamp !== evidenceStamp(lang)) return null;
   const entries = new Map();
-  for (const [unit, metAt, firstAt, lastAt, levels, read, hear, say] of record.entries) {
-    entries.set(unit, { unit, metAt, firstAt, lastAt, levels: pairs(levels), read: unpackStrength(read), hear: unpackStrength(hear), say: unpackStrength(say) });
+  for (const [unit, metAt, firstAt, lastAt, levels, read, hear, say, placedAt] of record.entries) {
+    entries.set(unit, { unit, metAt, firstAt, lastAt, placedAt: placedAt ?? 0, levels: pairs(levels), read: unpackStrength(read), hear: unpackStrength(hear), say: unpackStrength(say) });
   }
   stats.adopted++;
   return entries;
@@ -186,7 +186,12 @@ function ensure(lang) {
     if (!kept) saveSoon(lang);
   }
   if (state.dirty.size) {
-    for (const unit of state.dirty) state.entries.set(unit, entryOf(unit, lang));
+    // (One with no evidence left, a placement's seed taken back with nothing answered, goes: a fresh build wouldn't have it.)
+    for (const unit of state.dirty) {
+      const entry = entryOf(unit, lang);
+      if (entry.metAt) state.entries.set(unit, entry);
+      else state.entries.delete(unit);
+    }
     stats.updated += state.dirty.size;
     state.dirty.clear();
     state.order = null;
@@ -294,7 +299,7 @@ function stateOfEntry(entry, now, memory = memoryNow()) {
       if (s.level >= 2) slipping = true;
     }
   }
-  return { unit: entry.unit, kind: KINDS[kind] ?? null, isNew: !entry.firstAt, level, trained: memory.train, strengths, due, dueAt: soonest, slipping, firstAt: entry.firstAt, lastAt: entry.lastAt };
+  return { unit: entry.unit, kind: KINDS[kind] ?? null, isNew: !entry.firstAt && !entry.placedAt, level, trained: memory.train, strengths, due, dueAt: soonest, slipping, firstAt: entry.firstAt, lastAt: entry.lastAt, placedAt: entry.placedAt ?? 0 };
 }
 
 // Every entry, the first met first (then by unit): sorted once until the entries change.
@@ -321,7 +326,7 @@ export function statesNow({ lang = learning(), now = Date.now() } = {}) {
 export function startedWords({ lang = learning(), now = Date.now() } = {}) {
   const rows = [];
   for (const entry of inOrder(lang)) {
-    if (!entry.firstAt || !WORDISH.test(entry.unit)) continue;
+    if ((!entry.firstAt && !entry.placedAt) || !WORDISH.test(entry.unit)) continue;
     rows.push({ unit: entry.unit, first: entry.metAt, known: saidWord(entry, lang) || wellNow(entry, now) });
   }
   return rows;
@@ -341,6 +346,23 @@ export function knownWords({ lang = learning(), now = Date.now() } = {}) {
 }
 
 /**
+ * Home's number (counts' understood) once `units` are put down as known well too: a placement's seeds (study/placement.js placedSeeds), for
+ * its result to say what Home will before it's taken. Its ideas and anything not a word or phrase don't count, as in counts.
+ */
+export function understoodWith(units, { lang = learning(), now = Date.now() } = {}) {
+  const more = new Set(units.filter((unit) => WORDISH.test(unit)));
+  let understood = 0;
+  for (const entry of ensure(lang).entries.values()) {
+    if ((!entry.firstAt && !entry.placedAt) || !WORDISH.test(entry.unit)) continue;
+    if (saidWord(entry, lang) || wellNow(entry, now)) {
+      understood++;
+      more.delete(entry.unit);
+    }
+  }
+  return understood + more.size;
+}
+
+/**
  * How many: understood (words and phrases you've started and understand well: Home's number), started, words (the lemmas knownWords gives),
  * said (the words in your word bank).
  */
@@ -350,7 +372,7 @@ export function counts({ lang = learning(), now = Date.now() } = {}) {
   const words = new Set(bankWords(lang));
   for (const entry of ensure(lang).entries.values()) {
     if (entry.unit.startsWith("w:") && wellNow(entry, now)) words.add(entry.unit.slice(2));
-    if (!entry.firstAt || !WORDISH.test(entry.unit)) continue;
+    if ((!entry.firstAt && !entry.placedAt) || !WORDISH.test(entry.unit)) continue;
     started++;
     if (saidWord(entry, lang) || wellNow(entry, now)) understood++;
   }

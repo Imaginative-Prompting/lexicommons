@@ -216,6 +216,23 @@ await stage("a start with the network gone: read from the device's copy, with th
   return got.item;
 });
 
+// iOS Safari clears Cache Storage on its own (storage pressure, a week unused) and keeps localStorage (12 Nov 2026, found by ls-order).
+await stage("Cache Storage cleared on its own, localStorage kept: after a reload the sync takes them again, the sentence has its words back, and the file is in the cache again", async () => {
+  const named = () => page.evaluate(() => JSON.parse(localStorage.getItem("lx.notes.v1") ?? "{}")["path-nl"] ?? null);
+  const before = await named();
+  assert(before?.version === published.what.version, `named before: ${JSON.stringify(before)}`);
+  await page.evaluate(async () => caches.delete("lx-notes-v1"));
+  await page.reload();
+  await page.waitForSelector("html[data-app-ready]");
+  const problemsNow = await sync();
+  assert(!problemsNow.some((p) => /notes/.test(p.at ?? "")), JSON.stringify(problemsNow).slice(0, 300));
+  const got = await notesOfSample();
+  assert(got.notes?.words?.[0]?.role === "the first word", `after the cache was cleared: ${JSON.stringify(got).slice(0, 300)}`);
+  const back = await page.evaluate(async (url) => Boolean(await (await caches.open("lx-notes-v1")).match(url)), (await named())?.url);
+  assert(back, "the file isn't in the cache again");
+  return `${got.notes.words.length} words on ${got.item} again`;
+});
+
 await stage("saving data: nothing's fetched, and the sentence simply has none yet", async () => {
   const other = await context.browser().newContext({ viewport: { width: 390, height: 844 } });
   await other.addCookies([{ name: "lc_session", value: learner.cookie, url: BASE }]);

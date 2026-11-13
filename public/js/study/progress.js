@@ -34,6 +34,7 @@
 
 import { KINDS, KNOWN_AT, SKILLS, calibration as calibrate, kindOf, knownUntil, levelOfMemory, recallAt, replay, strengthAt } from "./scheduler.js";
 import { getStudySettings, onStudySettingsChange } from "./settings.js";
+import { CHARACTERS, onScriptChange, scriptOf } from "./script.js";
 import { learning } from "./learning.js";
 import { canonical, hashText, registerSync } from "../sync.js";
 import { SAMPLE_DB_SUFFIX, sampleDb, sampleOn } from "./sample-mode.js";
@@ -553,6 +554,8 @@ export function setUnitAliases(lang, map = {}) {
   if (Object.keys(next).length) aliases.set(lang, next);
   else aliases.delete(lang);
   reindex();
+  // A placement's seeds count for the same units the evidence does.
+  if (placedGiven.has(lang)) placedSeeds.set(lang, { ...placedSeeds.get(lang), seeds: seedsOf(lang, placedGiven.get(lang)) });
   epoch++; // which units the evidence counts for changed, and no listener is told: what's kept per unit is worked out again
   return true;
 }
@@ -599,13 +602,87 @@ export const evidenceEpoch = () => epoch;
 // Saying it counts as spoken when it was: your AI's rows say how; Study's Say it is always spoken.
 const spokenRow = (row) => row.how === "spoken" || row.activity === "say";
 
-function reviewsOf(rows, until) {
+// A read answer counts for the script it was read in (study/script.js): a row's own (row.script), or the characters for a row with none.
+// Only the language's current script's count, for its strengths and for whether a unit is new, met or answered at all (unitState,
+// unitLasting): a word read only in pinyin is new to read in characters. Hearing, saying and how it sounds don't depend on how it's written.
+const inScript = (row, script) => row.skill !== "read" || (row.script ?? CHARACTERS) === script;
+function reviewsOf(rows, until, script = CHARACTERS) {
   const reviews = [];
   for (const row of rows) {
     if (row.at >= until) continue;
+    if (!inScript(row, script)) continue;
     const grade = gradeOf(row);
     if (grade) reviews.push({ at: row.at, skill: row.skill, grade, spoken: spokenRow(row) });
   }
+  return reviews;
+}
+
+// ---------- placed: Find your level's seeds (study/placement.js) ----------
+// A placement puts what the units it placed you past teach down as known, each thing at its own stability (placement.js spreads them, so
+// their first reviews come over weeks), as if last reviewed when it was taken. No row is written: evidence is only ever added, and a
+// placement can be taken back (Undo, a retake lower, Start from the beginning). The placement record is their truth (path-place.js, synced as
+// "path"), and hands them here whenever it changes (setPlaced). The scheduler starts each thing's read strength from its seed where nothing
+// was answered before it, or raises one whose last answer was right and holds less (scheduler.js seedTakes, seededMemory); an answer after
+// it moves it as any answer does, a miss demoting it as any miss. Seeds are read strengths in the script the test was read in (study/script.js):
+// while the language is studied in another, they count for nothing, as that script's answers would.
+const placedSeeds = new Map(); // lang → { at, script, seeds: Map(unit → stability) }, each unit as the evidence counts it (canonicalUnit)
+const placedGiven = new Map(); // lang → the seeds as handed over, to count again when which units are the same changes (setUnitAliases)
+const seedsOf = (lang, list) => {
+  const seeds = new Map();
+  for (const [unit, stability] of list ?? []) if (typeof unit === "string" && Number.isFinite(stability) && stability > 0) seeds.set(canonicalUnit(unit, lang), stability);
+  return seeds;
+};
+let placedMark = new Map(); // lang → a short fingerprint of its seeds (evidenceStamp)
+// A language's placement, while it's studied in the script the placement was read in.
+const placedNow = (lang) => {
+  const placed = placedSeeds.get(lang);
+  return placed && placed.script === scriptOf(lang) ? placed : null;
+};
+
+/**
+ * The seeds of a language's placement (path-place.js hands them over): { at, script, seeds: [[unit, stability days]] }, or null for none
+ * (script: the one it was read in, "characters" when none is given). Listeners hear the units whose seeds came or went (and no months: no
+ * row changed, so nothing syncs).
+ */
+export function setPlaced(lang, placement) {
+  const before = placedSeeds.get(lang);
+  const seeds = seedsOf(lang, placement?.seeds);
+  const script = placement?.script ?? CHARACTERS;
+  const next = seeds.size && Number.isFinite(placement.at) ? { at: placement.at, script, seeds } : null;
+  const mark = next ? `${next.at}:${script}:${hashText([...next.seeds].map(([unit, s]) => `${unit}=${s}`).join("|"))}` : "";
+  if ((placedMark.get(lang) ?? "") === mark) return false;
+  if (next) {
+    placedSeeds.set(lang, next);
+    placedGiven.set(lang, placement.seeds);
+  } else {
+    placedSeeds.delete(lang);
+    placedGiven.delete(lang);
+  }
+  if (mark) placedMark.set(lang, mark);
+  else placedMark.delete(lang);
+  const touched = new Set([...(before?.seeds.keys() ?? []), ...(next?.seeds.keys() ?? [])]);
+  for (const unit of touched) memories.delete(unitKeyOf(lang, unit));
+  version++;
+  const detail = { units: [...touched].map((unit) => unitKeyOf(lang, unit)), shards: [], placed: true };
+  changeListeners.forEach((fn) => fn(detail));
+  return true;
+}
+
+/** A unit's placement seed in a language: { at, stability }, or null (the read strength starts from it where scheduler.js seedTakes says). */
+export function placedSeedOf(unit, lang = learning()) {
+  const placed = placedNow(lang);
+  const stability = placed?.seeds.get(canonicalUnit(unit, lang));
+  return stability ? { at: placed.at, stability } : null;
+}
+
+/** Every unit a language's placement put down as known (none while it's studied in another script). */
+export const placedUnits = (lang = learning()) => [...(placedNow(lang)?.seeds.keys() ?? [])];
+
+// A unit's reviews before `until` in the language's script, its placement's seed among them (scheduler.js replay applies it where seedTakes says).
+function reviewsFor(lang, unit, rows, until) {
+  const reviews = reviewsOf(rows, until, scriptOf(lang));
+  const seed = placedSeedOf(unit, lang);
+  if (seed && seed.at < until) reviews.push({ at: seed.at, skill: "read", grade: "placed", stability: seed.stability, spoken: false });
   return reviews;
 }
 
@@ -613,10 +690,17 @@ function reviewsOf(rows, until) {
 function memoryOf(lang, unit, until = Infinity) {
   const key = unitKeyOf(lang, unit);
   const rows = byUnit.get(key) ?? [];
-  if (until !== Infinity) return replay(unit, reviewsOf(rows, until));
-  if (!memories.has(key)) memories.set(key, replay(unit, reviewsOf(rows, Infinity)));
+  if (until !== Infinity) return replay(unit, reviewsFor(lang, unit, rows, until));
+  if (!memories.has(key)) memories.set(key, replay(unit, reviewsFor(lang, unit, rows, Infinity)));
   return memories.get(key);
 }
+// A language's script changed (study/script.js): every unit's memory is worked out again by the new one's read answers, and what's kept from
+// the evidence (the word index, by evidenceStamp; plan.js, by evidenceVersion) is its own no more.
+onScriptChange(() => {
+  memories.clear();
+  version++;
+  epoch++;
+});
 
 // Which strengths you train and the recall they're due at (Settings → Study → Remembering).
 let memorySettings = getStudySettings().memory;
@@ -631,6 +715,10 @@ export function record(events) {
   const ids = uids(events.length);
   const rows = events.map((event, i) => {
     const row = { at, v: 2, skill: "read", test: "recall", help: "none", ...event, lang: event.lang ?? learning(), uid: ids[i] };
+    // Read in a romanization (study/script.js): kept with it, so it never counts as reading the characters.
+    const script = scriptOf(row.lang);
+    if (script !== CHARACTERS && normalize(row).skill === "read") row.script = script;
+    else delete row.script;
     // What the scheduler predicted for this strength, before this answer counts.
     const memory = gradeOf(row) && kindOf(row.concept) ? memoryOf(langOf(row), row.concept).strengths[normalize(row).skill] : null;
     if (memory) row.p = Math.round(recallAt(kindOf(row.concept), memory.card, row.at) * 10000) / 10000;
@@ -692,8 +780,15 @@ export const unitEvidence = (unit, lang = learning()) => [...(byUnit.get(unitKey
 /** One item's rows in a language (a sentence, a practice line), in the current format, oldest first. */
 export const itemEvidence = (item, lang = learning()) => [...(byItem.get(keyOf(lang, item)) ?? [])];
 
-/** Every unit with any evidence in a language. */
-export const studiedUnits = (lang = learning()) => [...byUnit.keys()].filter((key) => key.startsWith(`${lang} `)).map((key) => key.slice(lang.length + 1));
+/** Every unit with any evidence in a language, and every one its placement put down as known. */
+export const studiedUnits = (lang = learning()) => {
+  const units = [...byUnit.keys()].filter((key) => key.startsWith(`${lang} `)).map((key) => key.slice(lang.length + 1));
+  const placed = placedUnits(lang);
+  if (!placed.length) return units;
+  const have = new Set(units);
+  for (const unit of placed) if (!have.has(unit)) units.push(unit);
+  return units;
+};
 
 /**
  * What a unit's evidence says that stays the same until it changes (know/word-index.js keeps it): when it was first met (its first row of any
@@ -710,10 +805,14 @@ export const studiedUnits = (lang = learning()) => [...byUnit.keys()].filter((ke
 export function unitLasting(unit, lang = learning(), { well = 3 } = {}) {
   const kind = kindOf(unit);
   const key = unitKeyOf(lang, unit);
+  const script = scriptOf(lang);
   const rows = byUnit.get(key) ?? [];
   let firstAt = 0;
   let lastAt = 0;
+  let metAt = 0;
   for (const row of rows) {
+    if (!inScript(row, script)) continue;
+    metAt ||= row.at;
     if (!gradeOf(row)) continue;
     firstAt ||= row.at;
     lastAt = Math.max(lastAt, row.at);
@@ -741,7 +840,7 @@ export function unitLasting(unit, lang = learning(), { well = 3 } = {}) {
         if (levelOfMemory(kind, memory) >= well) add(spans[skill], from, end);
       }
     };
-    const memory = replay(unit, reviewsOf(rows, Infinity), {
+    const memory = replay(unit, reviewsFor(lang, unit, rows, Infinity), {
       after: (at, now) => {
         if (before) close(at + 1);
         before = { at, memories: Object.fromEntries(SKILLS.map((skill) => [skill, now[skill]])) };
@@ -756,7 +855,10 @@ export function unitLasting(unit, lang = learning(), { well = 3 } = {}) {
       if (card) strengths[skill] = { level: levelOfMemory(kind, memory.strengths[skill]), until: knownUntil(kind, card), stability: card.stability, last: +card.last_review, well: spans[skill], recalled: recalled[skill] };
     }
   }
-  return { metAt: rows[0]?.at ?? 0, firstAt, lastAt, levels, strengths };
+  // A placement's seed, where it took: met then if nothing came before it, and placed.
+  const placedAt = memories.get(key)?.strengths.read?.placed ?? 0;
+  if (placedAt && (!metAt || placedAt < metAt)) metAt = placedAt;
+  return { metAt, firstAt, lastAt, placedAt, levels, strengths };
 }
 
 /**
@@ -778,7 +880,10 @@ export function evidenceStamp(lang = learning()) {
     for (let i = 0; i < id.length; i++) h = (Math.imul(h, 31) + id.charCodeAt(i)) | 0;
     mix ^= h;
   }
-  return `${n} ${latest} ${sum} ${mix >>> 0}`;
+  // And the script it's studied in: the same rows read another way are another index.
+  // And its placement's seeds: what's kept from the evidence holds them too.
+  const placed = placedMark.get(lang);
+  return `${n} ${latest} ${sum} ${mix >>> 0} ${scriptOf(lang)}${placed ? ` placed ${placed}` : ""}`;
 }
 
 /**
@@ -803,8 +908,9 @@ export function unitState(unit, { lang = learning(), now = Date.now(), until = I
   let met = 0;
   let firstAt = 0;
   let lastAt = 0;
+  const script = scriptOf(lang);
   for (const row of byUnit.get(unitKeyOf(lang, unit)) ?? []) {
-    if (row.at >= until) continue;
+    if (row.at >= until || !inScript(row, script)) continue;
     const grade = gradeOf(row);
     if (!grade) {
       if (row.outcome === "met") met++;
@@ -819,6 +925,8 @@ export function unitState(unit, { lang = learning(), now = Date.now(), until = I
   const started = SKILLS.filter((skill) => strengths[skill]);
   const dueNow = started.filter((skill) => train.includes(skill) && strengths[skill].due);
   const dueAts = started.filter((skill) => train.includes(skill)).map((skill) => strengths[skill].dueAt);
+  // Put down as known by a placement (its seed took): not new, though it may never have been asked.
+  const placedAt = memory.strengths.read?.placed ?? 0;
   return {
     unit,
     lang,
@@ -826,7 +934,8 @@ export function unitState(unit, { lang = learning(), now = Date.now(), until = I
     strengths,
     trained: train,
     level: Math.max(0, ...started.map((skill) => strengths[skill].level)),
-    isNew: reviews === 0,
+    isNew: reviews === 0 && !placedAt,
+    placedAt,
     due: dueNow.length > 0,
     dueAt: dueAts.length ? Math.min(...dueAts) : 0,
     slipping: dueNow.some((skill) => strengths[skill].level >= 2),
@@ -852,14 +961,15 @@ export function recalledOver(units, ats, { lang = learning() } = {}) {
     const kind = kindOf(unit);
     if (!kind) continue;
     const rows = byUnit.get(unitKeyOf(lang, unit)) ?? [];
+    const seed = placedSeedOf(unit, lang);
     let seen = -1;
     let memory = null;
     ats.forEach((at, i) => {
-      let before = 0;
+      let before = seed && seed.at < at ? 1 : 0;
       for (const row of rows) if (row.at < at && gradeOf(row)) before++;
       if (!before) return;
       if (before !== seen) {
-        memory = replay(unit, reviewsOf(rows, at));
+        memory = replay(unit, reviewsFor(lang, unit, rows, at));
         seen = before;
       }
       if (train.some((skill) => memory.strengths[skill] && strengthAt(kind, memory.strengths[skill], at, memorySettings.target).known)) counts[i]++;
@@ -880,7 +990,8 @@ export function strengthsOver(units, ats, { lang = learning(), level = 0 } = {})
     if (!kind) continue;
     const rows = byUnit.get(unitKeyOf(lang, unit)) ?? [];
     // Its graded answers' times, in order: how many came before each time is a pointer that only moves on (ats ascend).
-    const graded = rows.filter((row) => gradeOf(row)).map((row) => row.at).sort((a, b) => a - b);
+    const seed = placedSeedOf(unit, lang);
+    const graded = [...rows.filter((row) => gradeOf(row)).map((row) => row.at), ...(seed ? [seed.at] : [])].sort((a, b) => a - b);
     let before = 0;
     let seen = -1;
     let memory = null;
@@ -890,7 +1001,7 @@ export function strengthsOver(units, ats, { lang = learning(), level = 0 } = {})
       while (before < graded.length && graded[before] < at) before++;
       if (!before) return;
       if (before !== seen) {
-        memory = replay(unit, reviewsOf(rows, at));
+        memory = replay(unit, reviewsFor(lang, unit, rows, at));
         seen = before;
         gone = new Set();
       }
@@ -1087,6 +1198,8 @@ const ROW_FIELDS = {
   note: text(1200),
   said: text(1200),
   slip: (v) => v === true,
+  // Read in a romanization instead of the characters (study/script.js); a row with none was read in them.
+  script: oneOf("pinyin", "jyutping"),
 };
 /**
  * A row from another device as it may be kept here, or null: a time and a concept, every field it shares with

@@ -2,6 +2,8 @@
 // that are stored (what you've learned comes from the evidence). Kept on this device and synced through your own storage (kind "path"), newest wins.
 
 import { registerSync } from "../sync.js";
+import { setPlaced } from "./progress.js";
+import { CHARACTERS, ROMANIZATIONS } from "./script.js";
 import { sampleKey } from "./sample-mode.js";
 
 // The sample learner's own while it's on (sample-mode.js): never yours.
@@ -17,12 +19,28 @@ function load() {
 }
 let places = load();
 let applying = false;
+// A placement's seeds go to the evidence (progress.js setPlaced: the things it put down as known) whenever the record changes, here or from
+// another device, and when it's taken back; at the start, from what's kept.
+let told = new Set();
+function tellPlaced() {
+  const now = new Set();
+  for (const [lang, entry] of Object.entries(places)) {
+    const placed = entry?.placement?.placed;
+    if (!placed?.seeds?.length) continue;
+    setPlaced(lang, { at: placed.at, script: placed.script, seeds: placed.seeds });
+    now.add(lang);
+  }
+  for (const lang of told) if (!now.has(lang)) setPlaced(lang, null);
+  told = now;
+}
+tellPlaced();
 function save() {
   try {
     localStorage.setItem(KEY, JSON.stringify(places));
   } catch {
     // Private browsing: it lasts for this visit.
   }
+  tellPlaced();
   for (const fn of listeners) fn();
 }
 
@@ -125,6 +143,11 @@ export const onPlaceChange = (fn) => {
 
 // A placement as another device sent it, taken only in its own shape (anything else: none). Its lists are of ids and words, held to their sizes.
 const strings = (list, most) => (Array.isArray(list) ? list.filter((one) => typeof one === "string" && one.length <= 200).slice(0, most) : []);
+// Its seeds: [unit, stability in days] pairs (placement.js placedSeeds), a unit as the evidence names one, a stability a placement could give;
+// and the script it was read in (study/script.js; none: the characters).
+const scriptFrom = (value) => (ROMANIZATIONS.includes(value) ? value : CHARACTERS);
+const seedsFrom = (list) =>
+  Array.isArray(list) ? list.filter((one) => Array.isArray(one) && one.length === 2 && typeof one[0] === "string" && /^[wcp]:/.test(one[0]) && one[0].length <= 300 && Number.isFinite(one[1]) && one[1] >= 1 && one[1] <= 1000).slice(0, 4000) : [];
 function placementFrom(value) {
   if (!value || typeof value !== "object") return null;
   const placed = value.placed;
@@ -133,7 +156,7 @@ function placementFrom(value) {
     (placed && typeof placed === "object" && (placed.unit === null || typeof placed.unit === "string") && Number.isInteger(placed.n) && placed.n >= 2 && Number.isFinite(placed.at));
   if (!okPlaced) return null;
   return {
-    placed: placed && { unit: placed.unit, n: placed.n, at: placed.at, lessons: strings(placed.lessons, 1000), missed: strings(placed.missed, 400) },
+    placed: placed && { unit: placed.unit, n: placed.n, at: placed.at, lessons: strings(placed.lessons, 1000), missed: strings(placed.missed, 400), seeds: seedsFrom(placed.seeds), script: scriptFrom(placed.script) },
     taken: Number.isFinite(value.taken) ? value.taken : 0,
     asked: strings(value.asked, 200),
   };

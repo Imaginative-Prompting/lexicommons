@@ -7,6 +7,7 @@ import sharp from "sharp";
 import { fileURLToPath } from "node:url";
 import { knowWords } from "../fixtures/know-words.mjs";
 import { answerStep, SESSION } from "../fixtures/play-session.mjs";
+import { WELCOME, chooseToLearn } from "../fixtures/first-run.mjs";
 
 export const argv = process.argv.slice(2);
 export const [BASE_URL, outArg] = argv;
@@ -125,13 +126,8 @@ export async function device({ width, height, touch = false, files = FROM, still
   await page.click('#register button[type="submit"]');
   await page.waitForURL(`${BASE_URL}/app/`, { timeout: 60_000 });
   await page.waitForSelector("html[data-app-ready]", { timeout: 60_000 });
-  // A first run, if it's up: the language you speak, then what you learn.
-  for (let i = 0; i < 4; i++) {
-    const choice = page.locator(".lx-welcome button, .lx-welcome [role='option']").filter({ hasText: /English|Dutch|Nederlands/ }).first();
-    if (!(await choice.count())) break;
-    await choice.click();
-    await page.waitForTimeout(600);
-  }
+  // A first run, if it's up (quiet-browser.mjs skips it unless LX_FIRST_RUN): Dutch, and past what follows (fixtures/first-run.mjs).
+  if (await page.locator(WELCOME).count()) await chooseToLearn(page, "nl");
   if (still) await page.addStyleTag({ content: STILL });
   return { context, page, errors };
 }

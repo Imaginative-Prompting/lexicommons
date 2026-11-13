@@ -15,7 +15,7 @@ import { studiedUnits, unitState } from "./progress.js";
 import { LENGTHS, getStudySettings } from "./settings.js";
 import { WORDS } from "./content.js";
 import { spelledAlike } from "../lang/index.js";
-import { leansTo } from "../anki/language.js";
+import { leansTo } from "../lang/common-words.js";
 
 const MATCH_PAIRS = 5;
 
@@ -116,7 +116,7 @@ const writtenIn = (text, scripts) => {
  *     whose sides are the other way round between two scripts, fails here, card by card.
  *   - Where the language you're learning from is written in the same script (Dutch from English), script can't tell them apart. Then a card is
  *     left out when its text shows itself to be in the language learned from more than in the pack's (by each language's little words and own
- *     letters, anki/language.js leansTo) while its meaning doesn't: "the dog" / "de hond", "What is your name?" / "Hoe heet je?". Losing a card
+ *     letters, lang/common-words.js leansTo) while its meaning doesn't: "the dog" / "de hond", "What is your name?" / "Hoe heet je?". Losing a card
  *     that way costs it one game; asking an English prompt aloud would be wrong. A card that shows neither way ("huis" / "house") is taken as the
  *     pack says: its language was settled when the pack was made (an imported deck's by the importer, which asks when it can't tell the sides apart).
  *   - A language whose script can't be worked out is never asked aloud.

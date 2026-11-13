@@ -9,7 +9,7 @@ import { OWN_LANGUAGE_CODE, OWN_LANGUAGE_LIMITS } from "../public/js/lang/index.
 const LANGUAGE_CODE = /^[a-z]{2,3}(?:-[A-Za-z0-9]{1,8}){0,2}$/;
 const isLanguageCode = (code: string) => LANGUAGE_CODE.test(code) || (code.length <= OWN_LANGUAGE_LIMITS.code && OWN_LANGUAGE_CODE.test(code));
 
-type Unit = { id: string; name?: string; nl?: string; en?: string; deck?: string; about?: string; level: number; recall?: Record<string, number>; seen: number; right: number; wrong: number; lapses?: number; met?: number; due?: boolean; slipping?: boolean; leech?: boolean; last?: string };
+type Unit = { id: string; name?: string; nl?: string; en?: string; deck?: string; about?: string; level: number; recall?: Record<string, number>; seen: number; right: number; wrong: number; lapses?: number; met?: number; due?: boolean; slipping?: boolean; leech?: boolean; last?: string; placed?: string };
 type Sentence = { nl?: string; literal?: string[]; en?: string; units?: string[]; words?: string[]; right: number; missed: number; games?: Record<string, number>; last?: string };
 type Miss = { at?: string; game: string; skill?: string; item?: string; nl?: string; literal?: string[]; en?: string; said?: string; note?: string; units: string[] };
 type Lesson = { n: number; id: string; title: string; status: string; pattern?: string; teaches: { unit: string; text: string; means?: string }[]; sentences: string[] };
@@ -47,7 +47,7 @@ export function checkRecord(value: Record<string, unknown>): StudyRecord {
 }
 
 const HOW_TO_READ =
-  "level: 0 new to 4 strong. recall: how likely they are to recall it now, in %, by skill (read, hear, say). seen, right, wrong: answers. lapses: separate days they forgot it after knowing it. due: time to review. slipping: was strong, now due. leech: keeps coming back wrong. In a literal line, the word-for-word English follows the language's order, and *starred* words sit somewhere English wouldn't put them. nl always holds text in the language they're learning, whatever it is.";
+  "level: 0 new to 4 strong. recall: how likely they are to recall it now, in %, by skill (read, hear, say). seen, right, wrong: answers. lapses: separate days they forgot it after knowing it. due: time to review. slipping: was strong, now due. leech: keeps coming back wrong. placed: when a placement test (Find your level) put it down as known without asking it; its seen, right and wrong count only answers since, never the placement. In a literal line, the word-for-word English follows the language's order, and *starred* words sit somewhere English wouldn't put them. nl always holds text in the language they're learning, whatever it is.";
 
 const nameOfUnit = (record: StudyRecord, id: string) => {
   const list = id.startsWith("p:") ? record.patterns : id.startsWith("c:") ? record.phrases : id.startsWith("k:") ? record.cards : record.words;

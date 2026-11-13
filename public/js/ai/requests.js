@@ -13,8 +13,8 @@
 // concept, book or Translate search it was asked from), and its answer is plain text with the language's words marked
 // [[like this]] (answerParts splits it for the screen). describeAsk is the same question as text to paste anywhere.
 
-import { checkSettings, KINDS, PracticeError, text } from "../practice/protocol.js";
-import { LANGUAGES } from "../lang/index.js";
+import { checkSettings, KINDS, PracticeError, ownLanguageCode, practiceLanguage, text } from "../practice/protocol.js";
+import { LANGUAGES, isOurLanguage, ourLanguages } from "../lang/index.js";
 import { WEAVE_LANGUAGES } from "../read/weave-languages.generated.js";
 
 const PACK_ID = /^[a-z0-9][a-z0-9-]{1,47}$/;
@@ -128,13 +128,17 @@ export function checkAbout(value) {
  * shows; check(value) returns what's kept, or throws a PracticeError saying what's wrong. from: where it's asked, when that's
  * somewhere other than its own page in the AI section (#ai/new/<kind>).
  */
+// Read is in the languages Lexicommons lists (v1, 12 Nov 2026): a text or a weave in a language of their own is refused saying so.
+const OWN_NO_READ = "Read and its texts are in the languages Lexicommons lists, so a text can't be added in a language of your own yet. Ask for a pack in it instead.";
+const OWN_NO_WEAVE = "Weaving is into the languages Lexicommons lists, so a text can't be woven into a language of your own yet.";
+
 export const REQUEST_KINDS = {
   practice: {
     name: "Practice with me",
     about: "A practice in the app, the kind you pick: your AI starts it when it checks in.",
     check: (value) => {
       // checkSettings reads each field as text or a number; anything else (an object) is refused here first.
-      if (isObject(value.practice) && Object.values(value.practice).some((field) => field !== null && typeof field === "object")) throw new PracticeError("practice must be { kind, answer?, topic?, minutes?, language? }.");
+      if (isObject(value.practice) && Object.entries(value.practice).some(([key, field]) => key !== "languageDef" && field !== null && typeof field === "object")) throw new PracticeError("practice must be { kind, answer?, topic?, minutes?, language?, languageDef? }.");
       return { practice: checkSettings(value.practice) };
     },
   },
@@ -150,10 +154,10 @@ export const REQUEST_KINDS = {
   pack_new: {
     name: "Make a new pack",
     about: "A pack for something you want to study on its own, like a trip.",
+    // In a language of their own too: the request keeps its definition, for create_pack's language_def (12 Nov 2026).
     check: (value) => {
-      const language = plain(value.language);
-      if (!Object.hasOwn(LANGUAGES, language)) throw new PracticeError(`language must be one of ${Object.keys(LANGUAGES).join(", ")}.`);
-      return { what: text(value.what, REQUEST_LIMITS.what, "what", { required: true }), language };
+      const { language, languageDef } = practiceLanguage(plain(value.language), value.languageDef);
+      return { what: text(value.what, REQUEST_LIMITS.what, "what", { required: true }), language, ...(languageDef ? { languageDef } : {}) };
     },
   },
   text_new: {
@@ -161,7 +165,7 @@ export const REQUEST_KINDS = {
     about: "A text for Read: a story at your level, an article, a book from your computer.",
     check: (value) => {
       const language = plain(value.language);
-      if (!Object.hasOwn(LANGUAGES, language)) throw new PracticeError(`language must be one of ${Object.keys(LANGUAGES).join(", ")}.`);
+      if (!isOurLanguage(language)) throw new PracticeError(ownLanguageCode(language) ? OWN_NO_READ : `language must be one of ${ourLanguages().join(", ")}.`);
       return { what: text(value.what, REQUEST_LIMITS.what, "what", { required: true }), language };
     },
   },
@@ -178,7 +182,7 @@ export const REQUEST_KINDS = {
       const book = plain(value.book);
       if (!BOOK_ID.test(book)) throw new PracticeError("book must be the id of a text of yours.");
       const language = plain(value.language);
-      if (!Object.hasOwn(LANGUAGES, language)) throw new PracticeError(`language must be one of ${Object.keys(LANGUAGES).join(", ")}.`);
+      if (!isOurLanguage(language)) throw new PracticeError(ownLanguageCode(language) ? OWN_NO_WEAVE : `language must be one of ${ourLanguages().join(", ")}.`);
       // Only into a language a text of yours can be woven into (weave-languages.generated.js), as the server.
       if (!WEAVE_LANGUAGES.includes(language)) throw new PracticeError("Weaving into that language isn't ready yet.");
       const upload = plain(value.upload);

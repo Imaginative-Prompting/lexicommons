@@ -747,7 +747,9 @@ function placementGroup() {
           },
         }),
       );
-    return ui.group("Your place on the path", rows, "Taking it again can move you up or down. Lessons you've done stay done.");
+    // "Again" only once it's been taken; before that, what it does.
+    const note = placement?.taken ? "Taking it again can move you up or down. Lessons you've done stay done." : "Places you on the path. Lessons you've done stay done.";
+    return ui.group("Your place on the path", rows, note);
   };
   let group = draw();
   const redraw = () => {

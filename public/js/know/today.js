@@ -579,7 +579,7 @@ export function renderToday(page, { onTranslate } = {}) {
         key: JSON.stringify(["book", reading, cover.picture, where, shelf, language]),
         make: () => ({ node: bookCard({ reading, picture: reading ? cover.picture : null, where, shelf, language }) }),
       });
-    if (aiConnected() && thirdTab() !== "ai" && !isOwnLanguage(learning())) {
+    if (aiConnected() && thirdTab() !== "ai") {
       const exchange = talk?.exchange ?? null;
       const client = talk?.client ?? null;
       // Under its own heading, never read as part of Reading.

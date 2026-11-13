@@ -327,7 +327,7 @@ export function packIdOf(name) {
  * What's on each side once it's known which language is which: a pack ready for checkPack, its cards' sounds beside
  * it ({ card id: [file names] }), and what each game gets. A card whose sides swap keeps its id, so evidence stays.
  */
-export function packOf(deck, { language, from, swap = false, separator = " " }) {
+export function packOf(deck, { language, from, swap = false, separator = " ", languageDef = null }) {
   const items = [];
   const sounds = {};
   for (const card of deck.cards) {
@@ -346,6 +346,8 @@ export function packOf(deck, { language, from, swap = false, separator = " " }) 
     name: deck.name,
     ...(deck.description ? { about: deck.description } : {}),
     language,
+    // A language Lexicommons doesn't list: how it's written, as the person said on the import's page (anki/own-language.js).
+    ...(languageDef ? { languageDef } : {}),
     from,
     topics: {},
     words: {},

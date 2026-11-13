@@ -173,21 +173,35 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "try ch
   # nothing asked of /api/ but error reports, nothing of /login; only the lessons' packs fetched; only the try-out's own stores kept, a planted
   # real key caught first); a signed-in learner on the same browser (every progress store as it was, "Go to your app", the try-out's keys gone at
   # the app's start); a computer (the chooser's columns, the cross partway bringing the end card); each full course's lesson 1. LOCAL only (exit 0 = pass)
-node scripts/test-placement.mjs [<app dir>] [--trials <n>]   # Find your level (study/placement.js) on every full course's real path: each unit's pool
-                                          # (sentences readable by its end, short enough for tiles), a unit's block five of its own questions, none twice, the same
-                                          # seed the same test, a retake drawing others; the search (4 of 5 shows a unit, 3 asks 2 more; up 4, then halving; at most
-                                          # 6 units), its bar never going back; each step's chance by guessing from its real choices and tiles, a unit shown by luck
-                                          # under 1 in 1,000; the real controller played by simulated learners (exactly at the unit after what they know at least
-                                          # 90%, too high at most 1%; again with every sentence on its shorter stand-in, as a 320 × 568 phone asks it), a larger model run of the same rules, a 2-of-5 rule its control; what a placement leaves:
-                                          # the lessons before its unit done ("placed"), its words assumed (readable, Practice's sentences, never counted, never
-                                          # due, at most plan.js ASSUMED_CHECKS asked a practice, never as a card), a missed word new, taken again lower, Start
-                                          # from the beginning and its Undo, the record through sync (exit 0 = pass)
+node scripts/test-placement.mjs [<app dir>] [--trials <n>] [--only <regex>]   # Find your level (study/placement.js) on every full course's real
+                                          # path: each unit's pool (sentences readable by its end, short enough for tiles); one question at a time, unit 1's two first for everyone,
+                                          # then where the first run's answer lands it, none twice, the same seed the same test, a retake drawing others; a too-tall sentence's
+                                          # stand-ins; the search's rules (makeSearch, SEARCH: climbing on right answers and faster on a streak, never a harder unit after a miss,
+                                          # settling at 18 to 24 questions then its idea checks, its bar never going back, never past the highest unit answered right but one,
+                                          # stopped partway no further than its cautious reading or the unit after the highest with two sentences right, and after 5 questions
+                                          # never too high; knowing the whole course only with proof across its last third); the real controller
+                                          # played by graded learners (knowing that fades by unit, ideas a little behind their words, each guess at its question's own chance) on
+                                          # each course and with every sentence on its stand-in, bounded on too high, too low, "knows it all" and the questions it takes, with
+                                          # most ideas below the place asked; someone who knows nothing starting from the beginning in a few questions; what a placement leaves: the
+                                          # lessons before its unit done ("placed"), what they teach put down as known (seeds in its record: progress.js setPlaced, scheduler.js
+                                          # seededMemory; known well from the start in Home's and Knowledge's count, its ideas at Getting there, kept per script), a word missed in it
+                                          # and an idea missed in its own unit taught as new, each placed unit's whole-unit lesson done with it, the whole course placed with Home's
+                                          # number what its result said and what's next past the course, spread nearest unit
+                                          # first from day 10 (placement.js PLACED), the load by the real plan (plan.js PLACED_PER_SESSION, still known at week 8), a miss demoting as
+                                          # any miss, answers before it, retake lower, Start from the beginning and its Undo, two devices, your AI's study record, sync (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "placement check" --kind parallel -- \
-  node 08-lexicommons/app/scripts/placement-check.mjs http://localhost:<port> <outDir> [--only <regex>] [--sizes 390x844,320x568] [--schemes dark,light]
-  # Find your level in the app by real presses, at 390 and 320 in dark and light: the first run's second question (No, I'm new to it opening nothing),
-  # a learner of units 1–7 placed at unit 8 (each step its unit's, no Hint, Words or Can't listen now, no meaning on a tapped word, nothing scrolling,
-  # its bar never going back, only right answers kept, nothing sent of its own), its result and Start unit 8; stopping partway; knowing nothing (Start
-  # from the beginning, Tinta, no box); Study's row until it's taken; Settings → Study, Start from the beginning and its Undo; pictures of each.
+  node 08-lexicommons/app/scripts/placement-check.mjs http://localhost:<port> <outDir> [--only <regex>] [--sizes 390x844,320x568] [--schemes dark,light] [--lang nl]
+  # Find your level in the app by real presses, at 390 and 320 in dark and light, on a full course (--lang's, Dutch by default): the first run's second
+  # question (No, I'm new to it opening nothing), unit 1's two questions first; a learner of units 1–7 placed at unit 8 (each answer's result as a lesson's,
+  # a wrong one with the right answer, waiting for Continue: a step that goes on by itself fails it; each step its unit's, no Hint, Words or Can't listen
+  # now, no meaning on a tapped word, nothing scrolling, its bar never going back, only right answers kept, nothing sent of its own), its result, Start
+  # unit 8, then Practice; stopping partway (no further than the highest unit answered right but one, nor the unit after the highest with two sentences
+  # right); knowing nothing (a few questions, Start from the
+  # beginning, Tinta, no box, then Practice); knowing it all (proof across the last third, You know this course with Tinta's heart and the words you'll
+  # know, Start practice opening Practice from the late units too, Home then saying that number, Home, Study and the path offering nothing of the course
+  # as new); Study's row until it's taken; Settings → Study, Start
+  # from the beginning and its Undo; placed at 8, Home's and Knowledge's words known well counting what it placed, a word's History its placement with a
+  # miss after it above; pictures of each.
   # LOCAL only (sets LX_FIRST_RUN: the first run is its to see) (exit 0 = pass)
 node scripts/sample-learner-check.mjs http://localhost:<port> <outDir> [--admin-command "node scripts/local.mjs admin"]   # the sample learner in the
                                           # real app on a phone, as an admin with studying of their own: Admin's row and sheet, each preset by a real tap (timed),
@@ -260,6 +274,13 @@ node scripts/test-study-settings.mjs [<app dir>]   # how you like to study as a 
                                           # before then (the line off with every save, though no one chose it) has it on once, its other settings and its hint
                                           # as they were; turned off from version 2 on, it stays off through a reload; another copy's dir to see it fail on one
                                           # from before (exit 0 = pass)
+node scripts/test-script-evidence.mjs [<app dir>]   # read evidence kept per script (study/script.js scriptOf, study settings' writing.<lang>; progress.js
+                                          # record, reviewsOf, unitState, unitLasting, evidenceStamp; plan-kept.js planKey), 12 Nov 2026: Chinese read in pinyin
+                                          # (Cantonese in jyutping) never counts as reading its characters: a read answer kept with its script, a unit's read
+                                          # strength and whether it's new from its current script's answers alone (hear, say and sound from all), back in
+                                          # characters exactly as left, a word read only in pinyin new to read in characters; only zh, zh-Hant (pinyin) and yue
+                                          # (jyutping) can switch, Dutch's and Japanese's rows plain; the index's stamp and the kept plan's key per script; a
+                                          # row's script and the setting checked as another device sends them; another copy's dir to see it fail (exit 0 = pass)
 node scripts/test-back-buttons.mjs [<app dir>]   # every way back is the one floating glass back (ui.backButton): the back chevron drawn
                                           # anywhere else, a button or row given it, or an app-back built by hand fails; another copy's dir to see it
                                           # fail on one from before (exit 0 = pass)
@@ -349,6 +370,11 @@ node scripts/test-play-session.mjs        # the one session player every check p
                                           # quietly; give it its handler in the same landing; each rule catches a plant first (exit 0 = pass). A check that
                                           # presses a summary's Done calls its pastReminderAsk next: an account's first Done brings "Want a reminder?" as a step
                                           # of its own, once, and that presses its Not now
+# Two more fixtures every check shares, so a change to what they pass changes one file: scripts/fixtures/first-run.mjs (the first run as a
+# check passes it: chooseToLearn, then pastKnowSome answers a full course's "Do you know some … already?", No, I'm new to it unless asked
+# otherwise, and waits for the first run to close; every check that sets LX_FIRST_RUN goes through it) and scripts/fixtures/still-plan.mjs
+# (a set plan played in the real session for mode "still", by wrapping plan.js's planSession export, never a line of session.js: v738's
+# placement branch broke four checks' line rewrite).
 node scripts/test-anki.mjs [--decks <dir>]  # reading Anki files (public/js/anki/), on files scripts/fixtures/anki-decks.mjs writes: every generation of the
                                           # format (collection.anki2, .anki21, zstd .anki21b, .colpkg), cloze, sound, which side is which, the games each card
                                           # carries, the pack check's every refusal; script and markup in every field and template, a deflate bomb, a zstd bomb,
@@ -1748,6 +1774,14 @@ python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "compon
   # answer and a right one the step not scrolling, the right sentence whole and in view (over a held result's fade, nothing scrolled: answerFirst)
   # and Continue on the screen (a held result's chips below its foot allowed: it scrolls); served without the swap (planted) the order step is shown
   # and doesn't fit; --order-must-show the same where none may be asked another way (390x844, the control)
+python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "toast check" --kind parallel -- \
+  node 08-lexicommons/app/scripts/toast-check.mjs http://localhost:<port> <outDir>   # every toast the app raises, where it shows, at
+  # 390 × 844, 320 × 568 and 1280 × 800: a session's Practice this (from a result's idea) and the notice of a look changed on Home, Study,
+  # Knowledge, the AI section and Settings → Language. Each its own small pill: at most two lines of its words, no wider than the screen less
+  # its margins; in a session over nothing that takes a press, on a page over nothing that stays put and takes one (the tabs, the header, a
+  # pinned action); and while Continue changes the step under it, its pixels as they were, frame after frame (planted at 390: its layer just
+  # under the step's ghosts, 17% changed). 12 Nov 2026: the session's toast drew 223 × 490 over the question, the choices and the result.
+  # LOCAL only (exit 0 = pass)
 python3 pipelines/lyric-video/tools/gpu.py run --who lexicommons --label "a11y check" --kind parallel -- \
   node 08-lexicommons/app/scripts/a11y-check.mjs http://localhost:<port> <outDir> [--only names,text,contrast,focus,motion] [--width 320] [--themes <ids|general,flags,motifs,ready>]   # what VoiceOver
   # and TalkBack are given and what large text does, on a touch phone across the tabs, Translate, the path, Read, Explore and a topic's page, Knowledge and every

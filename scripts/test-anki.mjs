@@ -13,6 +13,7 @@ import { allowUnicase, mediaMap } from "../public/js/anki/collection.js";
 import { clozeParts, furigana, plainField, stripMarkup, templateFields } from "../public/js/anki/text.js";
 import { DETECTABLE, codeOfLocale, detectLanguage, languageOfSample, languagesNamed } from "../public/js/anki/language.js";
 import { gamesReport, leftOutLines, packIdOf, packOf, rolesOf } from "../public/js/anki/deck.js";
+import { guessDefinition, suggestCode } from "../public/js/anki/own-language.js";
 import { politeError, readDeck, soundOf } from "../public/js/anki/read.js";
 import { ITEM_LIMITS, gamesOf, itemOthers, orderOf, orderWords } from "../public/js/study/pack-items.js";
 import { checkPack, packText } from "../public/js/study/pack-format.js";
@@ -438,6 +439,43 @@ await test("the report counts each game once per card that has it", async () => 
   const { pack } = packOf(deck, { language: "nl", from: "en" });
   same(gamesReport(pack.items, { sounded: new Set([pack.items[0].id]) }), { card: 4, type: 4, match: 3, choose: 4, fill: 2, listen: 1, arrange: 1, say: 0 });
   same(itemOthers(pack.items)(pack.items[0]).means, 4);
+});
+
+// A deck in a language Lexicommons doesn't list (12 Nov 2026, packs in any language, part 4).
+const BURMESE_DECK = { deck: "Burmese words", types: [decks.BASIC], notes: [["ရေ", "water"], ["ကော်ဖီ", "coffee"], ["မင်္ဂလာပါ", "hello"], ["ရေသောက်ချင်တယ်။", "I want to drink water."], ["ကော်ဖီသောက်ချင်တယ်။", "I want to drink coffee."], ["နေကောင်းလား။", "Are you well?"]].map((fields) => ({ fields })) };
+
+await test("a deck in a language Lexicommons doesn't list: how its cards suggest it's written, each guess its own", () => {
+  same(guessDefinition(["ရေ", "မင်္ဂလာပါ", "ရေသောက်ချင်တယ်။", "ကော်ဖီသောက်ချင်တယ်။", "နေကောင်းလား။"]), { direction: "ltr", written: "unspaced", case: "any", ends: ["။"] }, "Burmese");
+  same(guessDefinition(["מים", "אני שותה מים", "שלום", "בית"]), { direction: "rtl", written: "spaces", case: "any", ends: [] }, "Hebrew");
+  same(guessDefinition(["ماء", "أشرب الماء", "مرحبا"]).direction, "rtl", "Arabic");
+  same(guessDefinition(["dydh da", "fatla genes?", "meur ras.", "yeghes da!"]), { direction: "ltr", written: "spaces", case: "lower", ends: [] }, "Cornish");
+  same(guessDefinition(["das Haus", "der Hund", "Ich trinke Wasser", "Wir sehen den Baum", "Die Katze schläft", "Das Kind spielt im Garten"]).case, "any", "German's nouns");
+  same(guessDefinition(["ilovelongwordswithoutanyspace", "anotherverylongwordwithoutspace", "andathirdlongwordwithnospacesatall", "short"]).written, "unspaced", "long cards with no space");
+  same(guessDefinition(["ሰላም ነህ።", "ደህና ነኝ።", "ውሃ እፈልጋለሁ።"]).ends, ["።"], "Amharic's full stop");
+  same(guessDefinition([]), { direction: "ltr", written: "spaces", case: "lower", ends: [] }, "nothing to go on");
+});
+
+await test("a code made from its name: und-x- and up to three of its words, 8 letters each, accents gone; none from a name with no such letters", () => {
+  same(suggestCode("Toki Pona"), "und-x-toki-pona");
+  same(suggestCode("Kölsch"), "und-x-kolsch");
+  same(suggestCode("Tolkiens Quenya of the First Age"), "und-x-tolkiens-quenya-of");
+  same(suggestCode("日本語"), "");
+  same(suggestCode(""), "");
+});
+
+await test("a Burmese deck's pack carries its definition through the pack check, and the check leaves the registry as it was", async () => {
+  const { deck } = await read(decks.oldApkg(SQL, BURMESE_DECK));
+  ok(!deck.language.language || deck.language.unsureAbout || !deck.language.sure, `the deck was taken for ${deck.language.language}, sure`);
+  const languageDef = { name: "Burmese", direction: "ltr", written: "unspaced", case: "any", ends: ["။"] };
+  const { pack } = packOf(deck, { language: "my", from: "en", swap: false, languageDef });
+  same([pack.language, pack.languageDef], ["my", languageDef]);
+  const checked = checkPack(pack, { installed: [] });
+  same(checked.errors, []);
+  same(checked.pack.items.map((item) => item.text), ["ရေ", "ကော်ဖီ", "မင်္ဂလာပါ", "ရေသောက်ချင်တယ်။", "ကော်ဖီသောက်ချင်တယ်။", "နေကောင်းလား။"]);
+  ok(!Object.hasOwn(LANGUAGES, "my"), "the check left Burmese in the registry");
+  // Without its definition, a code Lexicommons doesn't list is refused in words.
+  const bare = checkPack(packOf(deck, { language: "my", from: "en", swap: false }).pack, { installed: [] });
+  ok(bare.errors.length && /languageDef/.test(bare.errors[0].message), `without its definition: ${JSON.stringify(bare.errors)}`);
 });
 
 if (decksDir) {

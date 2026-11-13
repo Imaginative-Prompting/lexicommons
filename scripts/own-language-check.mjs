@@ -8,7 +8,9 @@
 // Worked cases (the director, 12 Nov 2026): Burmese (my), Myanmar script we serve no font for, written without spaces, at 320 wide: the phone's
 // own font draws it, its lines wrap inside the screen with nothing clipped, a tapped word shows its meaning. Toki Pona (tok), made over MCP as
 // an AI that has read only the guide makes it (its first try refused saying what to change); its sentences as it writes them, never capitalized.
-// Every sentence here is written for this check.
+// Every sentence here is written for this check. 3b: Practice with your AI and the asks are offered in a language of your own (a text for Read
+// isn't); a practice in Burmese, with the check as the AI over MCP: it joins seeing Burmese by name and how it's written, its line in Burmese,
+// a typed answer graded on a Burmese word, End and its summary; Make a new pack asked in Burmese carries its definition to the AI.
 // Usage: node scripts/own-language-check.mjs http://localhost:<port> <outDir> (LOCAL only; through gpu.py's parallel lane) (exit 0 = pass).
 
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -148,6 +150,22 @@ const playLesson = async (page) => {
 const first = await phone();
 const { page } = first;
 let token = "";
+// One of the AI's tools over MCP, as the check's own AI calls it: its answer, or an Error with its words.
+const tool = async (name, args) => {
+  const response = await fetch(`${BASE}/mcp`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json", Accept: "application/json, text/event-stream" },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "tools/call", params: { name, arguments: args } }),
+  });
+  const body = await response.text();
+  const line = body.split("\n").find((l) => l.startsWith("data: "));
+  if (!line) throw new Error(`${name}: ${response.status} ${body.slice(0, 200)}`);
+  const { result, error } = JSON.parse(line.slice(6));
+  if (error) throw new Error(`${name}: ${error.message}`);
+  if (result.isError) throw new Error(`${name}: ${result.content[0].text}`);
+  return JSON.parse(result.content[0].text);
+};
+const ROOM = ".lx-practice-room:not([data-ghost])";
 try {
   await stage("their AI makes four packs in languages Lexicommons doesn't list, over MCP: Testish (spaces), Rtlish (right to left, unspaced), Burmese (Myanmar script, unspaced) and Toki Pona, the last two as an AI that has read only the guide sends them first (its definition's case left to its default), refused saying what to change, then made", async () => {
     await page.goto(`${BASE}/login?new=1`);
@@ -239,7 +257,7 @@ try {
     return `${steps} steps to the summary`;
   });
 
-  await stage("what's off for it says why where it would have been: the speaking games and Say it's reason, Read's empty shelf, the AI section's Practice", async () => {
+  await stage("what's off for it says why where it would have been: the speaking games and Say it's reason, Read's empty shelf; the AI section offers Practice (typed, where nothing listens for it) and the asks it can have, never a text for Read", async () => {
     await go(page, "#study");
     const speaking = await page.evaluate(() =>
       [...document.querySelectorAll('[data-part="page"] [data-part="way-tile"], [data-part="page"] .lx-quick-play [data-part="button"]')]
@@ -255,14 +273,22 @@ try {
     await go(page, "#read");
     assert((await text(page)).includes("a language of your own"), "Read's empty shelf doesn't say why");
     await shot(page, "5-read");
-    // Home's Your AI card (an AI is connected here) doesn't offer a conversation in it either.
-    await go(page, "#today");
-    assert(!(await text(page)).includes("Have a conversation"), "Home offers a conversation with your AI in Testish");
+    // The AI section (3b): Practice with your AI, and the asks a language of your own can have (a pack, your look), never a text for Read.
     await go(page, "#ai");
-    const ai = await text(page);
+    const ai = await page.evaluate(() => ({
+      start: [...document.querySelectorAll('[data-part="ai-practice"] [data-part="button"]')].some((button) => button.textContent.trim() === "Start"),
+      asks: [...document.querySelectorAll('[data-part="page"] [data-part="list-row"] .lx-row-title')].map((node) => node.textContent.trim()),
+    }));
     await shot(page, "6-ai");
-    assert(ai.includes("isn't offered for Testish yet") && !/\bStart\b/.test(ai.split("Practice with me")[1]?.split("Ask your AI")[0] ?? ""), "the AI section offers Practice in Testish");
-    return `${speaking.map((game) => game.name.replace(/\s+/g, " ")).join(", ")} off; Say it, Read and Practice say why`;
+    assert(ai.start, "the AI section doesn't offer Practice in Testish");
+    for (const ask of ["Add to my pack", "Make a new pack", "Change my look"]) assert(ai.asks.includes(ask), `the AI section doesn't offer ${ask}: ${ai.asks.join(", ")}`);
+    assert(!ai.asks.includes("Add a text"), "the AI section offers a text for Read in Testish");
+    // How you'll answer, where nothing could listen for it (und-x-): typed, and said so.
+    await go(page, "#practice/new/conversation");
+    const setup = await text(page);
+    await shot(page, "6b-practice-setup-testish");
+    assert(setup.includes("How you'll answer") && setup.includes("Nothing listens for Testish"), `How you'll answer in Testish: ${setup.slice(0, 300)}`);
+    return `${speaking.map((game) => game.name.replace(/\s+/g, " ")).join(", ")} off; Say it and Read say why; Practice offered, typed; asks: ${ai.asks.filter((row) => ["Add to my pack", "Make a new pack", "Change my look"].includes(row)).join(", ")}`;
   });
 
   await stage("Rtlish: right to left and written without spaces, its sentence its words joined with nothing; a lesson played to its summary", async () => {
@@ -404,6 +430,30 @@ try {
     }
     if (clear !== null && clear < 2) faults.push(`${where}: the line under "${marked.word}" comes within ${clear}px of the word-for-word line`);
   };
+  // Your words' tiles, each face inside its own tile's box (12 Nov 2026: the tea tile's face, never squeezed, hung 6 px past each side of its
+  // tile, 8 px past the shelf when last in its row), and inside its shelf.
+  const tilesInside = async (where, faults) => {
+    const out = await page.evaluate(() => {
+      const found = [];
+      let faces = 0;
+      for (const grid of document.querySelectorAll(".lx-shelf-tiles")) {
+        if (!grid.checkVisibility()) continue;
+        const shelf = grid.getBoundingClientRect();
+        for (const tile of grid.querySelectorAll(':scope > [data-part="word-tile"]')) {
+          const face = tile.querySelector(".lx-tile-face");
+          if (!face?.checkVisibility()) continue;
+          faces++;
+          const f = face.getBoundingClientRect();
+          const t = tile.getBoundingClientRect();
+          const past = Math.max(t.left - f.left, f.right - t.right, shelf.left - f.left, f.right - shelf.right);
+          if (past > 0.5) found.push(`"${face.textContent.trim()}" ${Math.round(past * 10) / 10} px past its ${f.right > shelf.right + 0.5 || f.left < shelf.left - 0.5 ? "shelf" : "tile"}`);
+        }
+      }
+      return { faces, found };
+    });
+    if (!out.faces) faults.push(`${where}: no tile on screen`);
+    for (const line of out.found) faults.push(`${where}: a tile hangs over: ${line}`);
+  };
   // A word of the line on screen tapped (not the step's question, not a tile): what shows by it.
   const tapAWord = async (taps, shotName) => {
     const word = await page.evaluate((S) => {
@@ -426,7 +476,7 @@ try {
     });
   };
 
-  await stage("Burmese at 320 wide, in Myanmar script we serve no font for: the phone's own font draws every word (none of ours, no missing-glyph boxes); on Home, a lesson, the sentence games (what it means, the order, the gap) and Knowledge, nothing off the screen or clipped above or below, a sentence's line wraps between words; a marked word's line runs under ≥ 90% of it, clear of the word for word; a tapped word shows its meaning", async () => {
+  await stage("Burmese at 320 wide, in Myanmar script we serve no font for: the phone's own font draws every word (none of ours, no missing-glyph boxes); on Home, a lesson, the sentence games (what it means, the order, the gap) and Knowledge (every tile inside its shelf, at 320 and 390), nothing off the screen or clipped above or below, a sentence's line wraps between words; a marked word's line runs under ≥ 90% of it, clear of the word for word; a tapped word shows its meaning", async () => {
     await page.setViewportSize({ width: 320, height: 700 });
     try {
       await choose(page, "my");
@@ -476,10 +526,12 @@ try {
       }
       await go(page, "#know/words");
       await myanmarOnScreen("Knowledge at 320", faults, seen);
+      await tilesInside("Knowledge at 320", faults);
       await shot(page, "13-knowledge-burmese-320");
       await page.setViewportSize({ width: 390, height: 844 });
       await go(page, "#know/words");
       await myanmarOnScreen("Knowledge at 390", faults, seen);
+      await tilesInside("Knowledge at 390", faults);
       await shot(page, "13-knowledge-burmese-390");
       assert(seen.nodes > 0, "no Myanmar word was on screen");
       assert(!faults.length, faults.slice(0, 10).join("\n"));
@@ -493,6 +545,89 @@ try {
     } finally {
       await page.setViewportSize({ width: 390, height: 844 });
     }
+  });
+
+  await stage("Practice with your AI in Burmese, the check as the AI over MCP: started from the AI section, typed; it joins seeing Burmese by name and how it's written; its line in Burmese, a typed answer graded on a Burmese word, End and its summary, kept on this device as Burmese evidence; Make a new pack asked in Burmese carries its definition to the AI", async () => {
+    await choose(page, "my");
+    await go(page, "#ai");
+    await shot(page, "16-ai-burmese");
+    const waiting = tool("practice_wait", { wait_seconds: 40 });
+    await page.locator('[data-part="ai-practice"] [data-part="button"]', { hasText: "Start" }).click();
+    await page.waitForFunction(() => location.hash === "#practice");
+    await page.locator('[data-part="list-row"]', { hasText: "Conversation" }).first().click();
+    await page.waitForFunction(() => location.hash === "#practice/new/conversation");
+    await page.locator('[data-part="segment"]', { hasText: /^Type$/ }).click();
+    await shot(page, "17-practice-setup-burmese");
+    await page.getByRole("button", { name: "Start" }).click();
+    await page.locator(ROOM).waitFor({ timeout: 20_000 });
+    const joined = await waiting;
+    const seen = joined.practice ?? {};
+    assert(joined.status === "joined" && seen.language === "my" && seen.languageName === "Burmese" && seen.languageDef?.written === "unspaced" && seen.answer === "type", `the AI joined seeing: ${JSON.stringify({ status: joined.status, ...seen }).slice(0, 400)}`);
+    assert(joined.learner?.languageDef?.written === "unspaced", `the learner the AI was given: ${JSON.stringify(joined.learner ?? null).slice(0, 200)}`);
+    const ai = { id: seen.id, seat: joined.seat, after: joined.after };
+    const aiWait = async () => {
+      for (;;) {
+        const r = await tool("practice_wait", { practice_id: ai.id, seat: ai.seat, after: ai.after, wait_seconds: 20 });
+        if (r.status === "waiting") continue;
+        if (r.after !== undefined) ai.after = r.after;
+        return r;
+      }
+    };
+    await tool("practice_reply", { practice_id: ai.id, seat: ai.seat, say: { nl: "မင်္ဂလာပါ။ ဘာသောက်ချင်လဲ။", en: "Hello. What would you like to drink?" } });
+    const line = page.locator(`${ROOM} [data-part="chat-line"][data-variant="ai"]`).first();
+    await line.waitFor({ timeout: 20_000 });
+    const shown = await line.evaluate((node) => {
+      const nl = node.querySelector(".lx-chat-nl");
+      return { text: nl?.textContent.trim() ?? null, lang: nl?.closest("[lang]")?.getAttribute("lang") ?? null };
+    });
+    assert(shown.text?.includes("ဘာသောက်ချင်လဲ") && shown.lang === "my", `its line: ${JSON.stringify(shown)}`);
+    // Its speaker only where something here says Burmese (a device voice for "my"), never one that says nothing.
+    const speaking = await page.evaluate(async (R) => {
+      const voices = (await import("/js/study/voice.js")).voicesFor("my").length;
+      const line = document.querySelector(`${R} [data-part="chat-line"][data-variant="ai"]`);
+      return { voices, speaker: Boolean(line?.querySelector('[data-part="speak-button"], button[aria-label="Read it aloud"]')), toggle: Boolean(document.querySelector(`${R} [aria-label="Read your AI's lines aloud"]`)?.checkVisibility()) };
+    }, ROOM);
+    assert(speaking.speaker === speaking.voices > 0 && speaking.toggle === speaking.voices > 0, `Burmese read aloud: ${JSON.stringify(speaking)}`);
+    const input = page.locator(`${ROOM} [data-part="composer"] input`);
+    const placeholder = await input.getAttribute("placeholder");
+    assert(placeholder === "Type in Burmese…", `the field says ${JSON.stringify(placeholder)}`);
+    const heard = aiWait();
+    await input.fill("ရေသောက်ချင်တယ်။");
+    await input.press("Enter");
+    const turn = await heard;
+    assert(turn.status === "your_move" && turn.turns?.[0]?.text === "ရေသောက်ချင်တယ်။", `the AI heard: ${JSON.stringify(turn).slice(0, 300)}`);
+    await tool("practice_reply", { practice_id: ai.id, seat: ai.seat, grade: { turn: turn.turns[0].seq, verdict: "right", concepts: [{ concept: "w:ရေ", outcome: "right" }] }, say: { nl: "ကောင်းတယ်။", en: "Good." } });
+    await page.locator(`${ROOM} [data-part="chat-line"][data-variant="ai"]`, { hasText: "ကောင်းတယ်" }).waitFor({ timeout: 20_000 });
+    await page.waitForTimeout(600);
+    await shot(page, "18-practice-room-burmese");
+    const ending = aiWait();
+    await page.locator(ROOM).getByRole("button", { name: "End", exact: true }).click();
+    const ended = await ending;
+    assert(ended.status === "ended", `End reached the AI as: ${JSON.stringify(ended).slice(0, 200)}`);
+    await tool("practice_end", { practice_id: ai.id, seat: ai.seat, summary: { text: "Good: ရေသောက်ချင်တယ်။ was right, word for word.", went_well: ["ရေသောက်ချင်တယ်။"] } });
+    await page.locator(`${ROOM} [data-part="session-summary"]`).waitFor({ timeout: 30_000 });
+    await page.waitForTimeout(600);
+    await shot(page, "19-practice-summary-burmese");
+    let kept = 0;
+    for (let i = 0; i < 20 && !kept; i++) {
+      await page.waitForTimeout(500);
+      kept = await page.evaluate(async () => (await import("/js/study/progress.js")).allEvidence().filter((row) => row.lang === "my" && row.concept === "w:ရေ" && String(row.item ?? "").startsWith("practice:")).length);
+    }
+    assert(kept > 0, "the grade on ရေ isn't Burmese evidence on this device");
+    // Make a new pack, asked in Burmese: the request carries its definition, for create_pack's language_def.
+    await go(page, "#ai/new/pack_new");
+    await page.locator('[aria-label^="What it"]').first().fill("Ordering tea and coffee");
+    const asked = await text(page);
+    await shot(page, "20-ask-pack-burmese");
+    assert(asked.includes("Burmese") && asked.includes("its lessons on Home"), `Make a new pack's page: ${asked.slice(0, 300)}`);
+    await page.getByRole("button", { name: "Send to your AI" }).click();
+    await page.waitForFunction(() => location.hash === "#ai", null, { timeout: 15_000 });
+    const requests = await tool("list_requests", {});
+    const list = [...(requests.waiting ?? []), ...(requests.taken ?? []), ...(requests.recent ?? [])];
+    const pack = list.find((request) => request.kind === "pack_new" && /Ordering tea/.test(JSON.stringify(request)));
+    const asks = pack?.asked ?? {};
+    assert(asks.language === "my" && asks.languageDef?.written === "unspaced", `the request the AI sees: ${JSON.stringify(pack ?? list).slice(0, 400)}`);
+    return `joined as Burmese (${seen.languageDef.written}); 2 lines and a typed answer graded on ရေ; summary kept; ${kept} evidence row(s); Make a new pack carries its definition`;
   });
 
   await stage("Toki Pona: its sentences as it writes them, in small letters from the start and Sonja with its capital, on every step of a lesson and the sentence games (never capitalized by the app); a tapped word shows its meaning", async () => {

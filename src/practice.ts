@@ -30,7 +30,7 @@ import {
   LIMITS,
   PracticeError,
 } from "../public/js/practice/protocol.js";
-import { LANGUAGES, languageName } from "../public/js/lang/index.js";
+import { LANGUAGES, languageName, withOwnLanguage } from "../public/js/lang/index.js";
 import { checkFinish, checkRequest, REQUEST_LIMITS, REQUEST_TIMING } from "../public/js/ai/requests.js";
 import { grammarReady } from "./grammar";
 
@@ -99,7 +99,9 @@ type Row = {
 };
 
 /** language: the one being learned when it started (a practice from before practices had one is Dutch). */
-export type Settings = { kind: keyof typeof KINDS; answer: string; minutes: number; topic?: string; language?: string; from?: string };
+export type Settings = { kind: keyof typeof KINDS; answer: string; minutes: number; topic?: string; language?: string; languageDef?: LanguageDef; from?: string };
+/** A learner's own language's definition, as checkSettings keeps it (lang/index.js ownLanguageDef). */
+type LanguageDef = { name: string; direction: "ltr" | "rtl"; written: "spaces" | "unspaced"; case: "lower" | "any"; ends: string[] };
 
 /** What the app sees of a practice. */
 export type PracticeMeta = {
@@ -478,8 +480,10 @@ export class PracticeRoom extends DurableObject<Env> {
     const last = this.lastSeq(id);
     if (body.after !== last) return { stale: true as const, after: last };
     const seq = last + 1;
-    const reply = checkReply(body.reply, { cardId: `practice:${id}:${seq}`, language: this.languageOf(row) }) as { grades: Grade[]; [k: string]: unknown };
-    const notes = this.placeGrades(id, reply.grades);
+    const { reply, notes } = this.inLanguage(row, () => {
+      const reply = checkReply(body.reply, { cardId: `practice:${id}:${seq}`, language: this.languageOf(row) }) as { grades: Grade[]; [k: string]: unknown };
+      return { reply, notes: this.placeGrades(id, reply.grades) };
+    });
     const stored = this.addTurn(id, "ai", "reply", reply);
     this.changed();
     await this.schedule();
@@ -490,7 +494,7 @@ export class PracticeRoom extends DurableObject<Env> {
   private async doAppSummary(id: string, input: unknown) {
     const row = this.row(id);
     if (!row || row.mode !== "inapp") throw new PracticeError("That practice isn't one the app runs.");
-    const summary = checkSummary((input as { summary?: unknown } | null)?.summary, { language: this.languageOf(row) });
+    const summary = this.inLanguage(row, () => checkSummary((input as { summary?: unknown } | null)?.summary, { language: this.languageOf(row) }));
     if (row.state !== "ended") this.end(row, "you", null);
     const existing = this.sql.exec<{ seq: number }>("SELECT seq FROM turns WHERE practice_id = ? AND type = 'summary'", id).toArray()[0];
     if (existing) this.sql.exec("DELETE FROM turns WHERE practice_id = ? AND seq = ?", id, existing.seq);
@@ -729,6 +733,15 @@ export class PracticeRoom extends DurableObject<Env> {
   }
 
   /**
+   * Runs one synchronous step (a check, the AI's view) with the practice's language known: a learner's own is known only through the
+   * definition the practice keeps, and only while fn runs, never across an await (12 Nov 2026). One of ours is known always.
+   */
+  private inLanguage<T>(row: Row, fn: () => T): T {
+    const settings = JSON.parse(row.settings) as Settings;
+    return withOwnLanguage(settings.language ?? "nl", settings.languageDef, fn) as T;
+  }
+
+  /**
    * A practice as the AI sees it: its settings with the kind's and the language's names, the language's locale, and their own language (from,
    * fromName: what the summary is written in; English for a practice from before it was kept).
    */
@@ -736,7 +749,8 @@ export class PracticeRoom extends DurableObject<Env> {
     const settings = JSON.parse(row.settings) as Settings;
     const language = this.languageOf(row);
     const from = settings.from ?? "en";
-    return { id: row.id, ...settings, language, kindName: KINDS[settings.kind]?.name, languageName: languageName(language), locale: (LANGUAGES as Record<string, { locale: string } | undefined>)[language]?.locale, from, fromName: languageName(from) };
+    // A language of their own: its name and definition from the practice (languageDef: how it's written; no locale, no voice).
+    return this.inLanguage(row, () => ({ id: row.id, ...settings, language, kindName: KINDS[settings.kind]?.name, languageName: languageName(language), locale: (LANGUAGES as Record<string, { locale: string } | undefined>)[language]?.locale, from, fromName: languageName(from) }));
   }
 
   private learnerTurnsAfter(id: string, after: number) {
@@ -799,8 +813,10 @@ export class PracticeRoom extends DurableObject<Env> {
     if (row.mode === "inapp") throw new PracticeError("That practice is run by the app's own AI, on their device.");
     if (row.mode !== "app") throw new PracticeError("That practice was logged with practice_log; add to it with practice_log.");
     const seq = this.lastSeq(row.id) + 1;
-    const reply = checkReply(input.reply, { cardId: `practice:${row.id}:${seq}`, language: this.languageOf(row) }) as { grades: Grade[]; [k: string]: unknown };
-    const notes = this.placeGrades(row.id, reply.grades);
+    const { reply, notes } = this.inLanguage(row, () => {
+      const reply = checkReply(input.reply, { cardId: `practice:${row.id}:${seq}`, language: this.languageOf(row) }) as { grades: Grade[]; [k: string]: unknown };
+      return { reply, notes: this.placeGrades(row.id, reply.grades) };
+    });
     const stored = this.addTurn(row.id, "ai", "reply", reply);
     this.sql.exec("UPDATE practices SET seat_seen_at = ? WHERE id = ?", Date.now(), row.id);
     this.changed();
@@ -821,7 +837,7 @@ export class PracticeRoom extends DurableObject<Env> {
     const row = this.seated(input.practiceId, input.seat);
     // The app's own AI runs it on their device, and ends it there: an AI over MCP can't end it or give it a summary (6 Nov 2026, Codex C18).
     if (row.mode === "inapp") throw new PracticeError("That practice is run by the app's own AI, on their device.");
-    const summary = checkSummary(input.summary, { language: this.languageOf(row) });
+    const summary = this.inLanguage(row, () => checkSummary(input.summary, { language: this.languageOf(row) }));
     if (row.state !== "ended") this.end(row, "ai", null);
     const existing = this.sql.exec<{ seq: number }>("SELECT seq FROM turns WHERE practice_id = ? AND type = 'summary'", row.id).toArray()[0];
     if (existing) this.sql.exec("DELETE FROM turns WHERE practice_id = ? AND seq = ?", row.id, existing.seq);
@@ -846,16 +862,22 @@ export class PracticeRoom extends DurableObject<Env> {
       if (!row || row.mode !== "ai") throw new PracticeError("No logged practice with that id is on the server. Leave practice_id out to start a new one.");
       if (row.state === "ended") throw new PracticeError("That logged practice has ended. Leave practice_id out to start a new one.");
     } else {
-      // In the language the AI names, or the one their app last said they're learning.
+      // In the language the AI names, or the one their app last said they're learning; a language of their own with the definition their
+      // app sent with it (learner.js), when it's that one.
       const learner = await this.getLearner();
-      const learning = learner ? (JSON.parse(learner.snapshot) as { language?: unknown }).language : undefined;
-      const language = input.language ?? (typeof learning === "string" && Object.hasOwn(LANGUAGES, learning) ? learning : undefined);
-      settings = checkSettings({ kind: input.kind ?? "conversation", answer: "both", minutes: 10, language }) as Settings;
+      const said = learner ? (JSON.parse(learner.snapshot) as { language?: unknown; languageDef?: unknown }) : {};
+      const learning = typeof said.language === "string" ? said.language : undefined;
+      const language = input.language ?? learning;
+      const languageDef = language !== undefined && language === learning ? said.languageDef : undefined;
+      settings = checkSettings({ kind: input.kind ?? "conversation", answer: "both", minutes: 10, language, languageDef }) as Settings;
     }
-    // Checked in the practice's language before anything is stored.
-    const language = row ? this.languageOf(row) : (settings!.language ?? "nl");
-    const turns = checkLogTurns(input.turns, { language }) as (Record<string, unknown> & { who: Who; type: string; gradesPrevious?: boolean; grades?: Grade[] })[];
-    const summary = input.summary === undefined ? undefined : checkSummary(input.summary, { language });
+    // Checked in the practice's language before anything is stored (a language of their own known for this step alone).
+    const known = settings ?? (JSON.parse(row!.settings) as Settings);
+    const language = known.language ?? "nl";
+    const { turns, summary } = withOwnLanguage(language, known.languageDef, () => ({
+      turns: checkLogTurns(input.turns, { language }) as (Record<string, unknown> & { who: Who; type: string; gradesPrevious?: boolean; grades?: Grade[] })[],
+      summary: input.summary === undefined ? undefined : checkSummary(input.summary, { language }),
+    }));
     if (!row) {
       const id = randomId(9);
       const now = Date.now();

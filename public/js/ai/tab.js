@@ -17,7 +17,7 @@ import { keptMe, whoAmI } from "../shell/api.js";
 import { HOSTED_NAME, hostedReady } from "./hosted.js";
 import { ANSWERS, KINDS as PRACTICE_KINDS, MINUTES } from "../practice/protocol.js";
 import { yourPacks } from "../study/packs.js";
-import { learning, learningName } from "../study/learning.js";
+import { learning, learningLocale, learningName } from "../study/learning.js";
 import { LANGUAGES, isOwnLanguage, languageName, ourLanguages } from "../lang/index.js";
 import { languageRow as pickLanguageRow, wheelOrder } from "../translate/picker.js";
 import { ITEMS, conceptsOf, onContentChange, sentence } from "../study/content.js";
@@ -38,6 +38,8 @@ const KIND_TILE = {
 // What you can ask your AI for, as rows on the AI page (Practice is the page's card; a free question isn't one: you'd type it here, go to
 // your AI's app, then come back for the answer): each kind's quiet symbol, no well, and its page.
 const ASKABLE = ["text_new", "pack_add", "pack_new", "look"];
+// What a language of your own can be asked for (12 Nov 2026): Read, and so a text, is in the languages Lexicommons lists in v1.
+const OWN_ASKABLE = new Set(["pack_add", "pack_new", "look"]);
 // How your AI picks a request up, and where what it makes shows: said on each kind's page, so you know where to look once it's done.
 const PICKUP = "It waits for your AI: in its own app, start a new chat, or ask it to check your Lexicommons requests. You can cancel it until then.";
 const LANDS = {
@@ -47,6 +49,12 @@ const LANDS = {
   look: "Your app changes as soon as it's done, and Undo puts it back.",
   ask: "Its answer comes here, under Your requests.",
 };
+// In a language of your own there's no path: a pack's lessons come on Home, the pack itself in Study.
+const OWN_LANDS = {
+  pack_new: "It comes under its own name in Study, and its lessons on Home.",
+  pack_add: "Its new words come in that pack's lessons, on Home and in Study.",
+};
+const landsFor = (kind) => (isOwnLanguage(learning()) && OWN_LANDS[kind]) || LANDS[kind];
 const KIND_SYMBOL = { text_new: "reading-q", pack_add: "cards-q", pack_new: "deck-q", look: "palette-q", ask: "hint-q", practice: "theme-talk", weave: "translate-q" };
 // Where each link a finished request carries goes.
 const LINK_HREF = { text: (id) => `#read/book/${encodeURIComponent(id)}`, pack: (id) => `#settings/study/packs/${encodeURIComponent(id)}`, theme: (id) => `#settings/appearance/themes/${encodeURIComponent(id)}`, practice: (id) => `#practice/past/${encodeURIComponent(id)}` };
@@ -185,10 +193,7 @@ function practiceCard({ client }) {
       scene,
       el("div", { class: "lx-ap-text" }, el("h2", { class: "lx-ap-title" }, "Practice with me"), sub),
     ),
-    // In a language of your own, not yet (3b): said where Start would be, never a Start that fails.
-    isOwnLanguage(learning())
-      ? el("p", { part: "group-note", class: "lx-ap-off" }, `Practice with your AI isn't offered for ${learningName()} yet: it's a language of your own. Its packs, games and Knowledge are all here.`)
-      : ui.button("Start", { variant: "go", size: "lg", block: true, onclick: () => (location.hash = "#practice") }),
+    ui.button("Start", { variant: "go", size: "lg", block: true, onclick: () => (location.hash = "#practice") }),
   );
   resized.observe(card);
   card.lxTinta = tinta;
@@ -264,8 +269,8 @@ function home(page) {
   body.append(
     practice,
     ui.group("Ask your AI for something", [
-      // In a language of your own, only what carries no language (your look) for now: a text, a pack and Practice in it come in 3b.
-      ...ASKABLE.filter((kind) => REQUEST_KINDS[kind] && (!isOwnLanguage(learning()) || kind === "look")).map((kind) => ui.listRow({ symbol: KIND_SYMBOL[kind], title: REQUEST_KINDS[kind].name, sub: KIND_TILE[kind]?.sub ?? REQUEST_KINDS[kind].about, href: `#ai/new/${kind}` })),
+      // In a language of your own: a pack (added to, or a new one) and your look; a text for Read is in a language Lexicommons lists.
+      ...ASKABLE.filter((kind) => REQUEST_KINDS[kind] && (!isOwnLanguage(learning()) || OWN_ASKABLE.has(kind))).map((kind) => ui.listRow({ symbol: KIND_SYMBOL[kind], title: REQUEST_KINDS[kind].name, sub: KIND_TILE[kind]?.sub ?? REQUEST_KINDS[kind].about, href: `#ai/new/${kind}` })),
       // Weaving is asked from the text itself, in Read (reader.js offerWeave), and only into a language it's ready for: said here so it's found.
       ...(WEAVE_LANGUAGES.includes(learning()) ? [ui.listRow({ symbol: KIND_SYMBOL.weave, title: "Weave a text", sub: `English that turns ${learningName()} as you learn. Start in Read`, href: "#read" })] : []),
     ]),
@@ -388,7 +393,9 @@ function requestPage(page, kind) {
   let wheelRow = null; // a language's row: its wheel goes when the page does
   if (kind === "practice") {
     let picked = "conversation";
-    let answer = "both";
+    // Typed, where nothing could listen for the language (a language of your own with no real tag), as the practice's own start says.
+    const answers = learningLocale() ? ANSWERS : { type: ANSWERS.type };
+    let answer = learningLocale() ? "both" : "type";
     let minutes = 10;
     // The kinds by name, and what the one picked is under them: six explanations at once were a wall to read.
     const kinds = ui.group(
@@ -411,7 +418,7 @@ function requestPage(page, kind) {
     body.push(
       kinds,
       el("section", { class: "lx-stack" }, el("h2", { part: "group-label" }, "About"), topic),
-      el("section", { class: "lx-stack" }, el("h2", { part: "group-label" }, "How you'll answer"), ui.segmented(Object.entries(ANSWERS), answer, (value) => (answer = value), "How you'll answer")),
+      el("section", { class: "lx-stack" }, el("h2", { part: "group-label" }, "How you'll answer"), ui.segmented(Object.entries(answers), answer, (value) => (answer = value), "How you'll answer")),
       el("section", { class: "lx-stack" }, el("h2", { part: "group-label" }, "How many minutes"), ui.segmented(MINUTES.map((m) => [m, String(m)]), minutes, (value) => (minutes = value), "How many minutes")),
       el("p", { class: "lx-small lx-muted" }, "It opens here as soon as your AI joins. ", el("a", { href: "#practice" }, "Or start one now"), "."),
     );
@@ -437,12 +444,14 @@ function requestPage(page, kind) {
     }
     build = () => ({ kind, pack: pack?.id, packName: pack?.name, what: what.value.trim(), due });
   } else if (kind === "pack_new" || kind === "text_new") {
-    let language = learning();
-    const what = field(kind === "text_new" ? { placeholder: "What to add: a short story about a market, at A2, say; or the EPUB in your Downloads", "aria-label": "What to add" } : { placeholder: "What it's for: a trip to Berlin in May, say", "aria-label": "What it's for" });
+    // A pack in a language of your own too; a text only in one Lexicommons lists (Read's).
+    const mine = kind === "pack_new" || !isOwnLanguage(learning()) ? [learning()] : [];
     const languages = ourLanguages().filter((code) => code !== "en");
+    let language = mine[0] ?? languages[0];
+    const what = field(kind === "text_new" ? { placeholder: "What to add: a short story about a market, at A2, say; or the EPUB in your Downloads", "aria-label": "What to add" } : { placeholder: "What it's for: a trip to Berlin in May, say", "aria-label": "What it's for" });
     body.push(
       el("section", { class: "lx-stack" }, el("h2", { part: "group-label" }, kind === "text_new" ? "What to add" : "What it's for"), what),
-      ui.group(null, [(wheelRow = pickLanguageRow({ title: "In which language", codes: wheelOrder([learning()], languages, languageName), current: language, nameOf: languageName, onchange: (code) => (language = code) }))]),
+      ui.group(null, [(wheelRow = pickLanguageRow({ title: "In which language", codes: wheelOrder(mine, languages, languageName), current: language, nameOf: languageName, onchange: (code) => (language = code) }))]),
     );
     build = () => ({ kind, what: what.value.trim(), language });
   } else if (kind === "look") {
@@ -469,7 +478,7 @@ function requestPage(page, kind) {
       }
     },
   });
-  const lands = LANDS[kind] ? [el("p", { class: "lx-small lx-muted" }, LANDS[kind])] : [];
+  const lands = landsFor(kind) ? [el("p", { class: "lx-small lx-muted" }, landsFor(kind))] : [];
   page.replaceChildren(el("div", { class: "lx-stack lx-ai-form" }, ui.pageTitle(def.name, def.about), ...body, ...(sendable ? lands : [])), msg, ...(sendable ? [ui.pinnedActions([send], { note: PICKUP })] : []));
   return { title: def.name, back: BACK, dispose: () => wheelRow?.lxClose() };
 }

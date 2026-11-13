@@ -10,6 +10,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { chromium } from "./quiet-browser.mjs";
+import { routeStillPlan } from "./fixtures/still-plan.mjs";
 import * as fw from "./frame-watch.mjs";
 
 const [BASE, outArg] = process.argv.slice(2);
@@ -89,12 +90,8 @@ await context.route(/\/js\/speech\/speech\.js(\?|$)/, (route) => {
   stoodIn++;
   return route.fulfill({ status: 200, contentType: "text/javascript", body: SPEECH });
 });
-// A set plan for the drawings (session.js plays globalThis.__stillPlan for mode "still"); every other session is the app's own.
-await context.route(/\/js\/study\/session\.js(\?|$)/, async (route) => {
-  const response = await route.fetch();
-  const text = await response.text();
-  return route.fulfill({ response, body: text.replace("const plan = planSession(mode, arg);", 'const plan = mode === "still" ? globalThis.__stillPlan : planSession(mode, arg);'), headers: { ...response.headers(), "content-type": "text/javascript" } });
-});
+// A set plan for the drawings (mode "still" plays globalThis.__stillPlan: fixtures/still-plan.mjs); every other session is the app's own.
+await routeStillPlan(context);
 const page = await context.newPage();
 await fw.install(page);
 const errors = [];

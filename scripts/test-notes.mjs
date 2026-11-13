@@ -413,5 +413,55 @@ await test("the page with a worker: every notes and forms file taken and read ba
   }
 });
 
+// iOS Safari clears Cache Storage on its own (storage pressure, a week unused) and keeps localStorage (12 Nov 2026, found by ls-order).
+await test("a kept file the cache has lost, localStorage kept: after a reload, the next sync takes it again, the notes and the forms back; with them in the cache, nothing's fetched", async () => {
+  const store = new Map();
+  globalThis.localStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => store.set(k, v), removeItem: (k) => store.delete(k) };
+  const cache = standInCaches();
+  globalThis.caches = cache;
+  try {
+    const { notes } = checkNotes(NOTES, PACK);
+    const version = await notesVersion(notes);
+    const { forms } = checkForms(FORMS);
+    const formsV = await notesVersion(forms);
+    const catalogue = withFormsEntry(withNotesEntry({}, "path-xx", { version, url: notesUrl("path-xx", version), sentences: 2 }), "nl", { version: formsV, url: formsUrl("nl", formsV), lines: 3 });
+    let asked = 0;
+    globalThis.fetch = async (at) => {
+      asked++;
+      return new Response(String(at).includes("/forms/") ? notesText(forms) : notesText(notes), { status: 200 });
+    };
+    // A page of its own (notes.js's module afresh, as after a reload), each time.
+    let pages = 0;
+    const page = () => import(`${NOTES_JS}?page=${++pages}`);
+    const view = { ...PACK.items[0], id: "path-xx/s1", pack: "path-xx" };
+    const first = await page();
+    eq(await first.syncNotes(catalogue, ["path-xx"]), []);
+    eq(await first.syncForms(catalogue, "nl"), []);
+    eq(asked, 2, "taken");
+    ok([...(cache.named.get(CACHE)?.keys() ?? [])].length === 2, "both kept in the cache");
+    // A reload with them in the cache: read from it, nothing fetched.
+    const second = await page();
+    eq(await second.syncNotes(catalogue, ["path-xx"]), []);
+    eq(await second.syncForms(catalogue, "nl"), []);
+    eq(asked, 2, "kept and in the cache: not fetched again");
+    ok((await second.notesOfItem(view))?.marks?.v2, "read from the cache");
+    // Cache Storage cleared; localStorage still names both. A reload: nothing to read, then the next sync takes them again.
+    cache.named.clear();
+    const third = await page();
+    eq(await third.notesOfItem(view), null, "gone, at first");
+    eq(await third.syncNotes(catalogue, ["path-xx"]), []);
+    eq(await third.syncForms(catalogue, "nl"), []);
+    eq(asked, 4, "taken again");
+    ok(third.notesNow(view)?.marks?.v2, "the notes back");
+    eq(third.formNow("nl", "huis", "huizen"), "plural of huis", "the forms back");
+    // And a reload after that reads them from the cache again.
+    const fourth = await page();
+    ok((await fourth.notesOfItem(view))?.marks?.v2, "kept again");
+    eq(asked, 4);
+  } finally {
+    delete globalThis.caches;
+  }
+});
+
 console.log(`\n${passed}/${passed + failed} passed`);
 process.exit(failed ? 1 : 0);

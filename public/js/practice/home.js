@@ -12,8 +12,8 @@ import { el } from "../lx/ui.js";
 import { api, keptMe, post, whoAmI } from "../shell/api.js";
 import { keySummary, ownKeyPresent } from "../ai/own-key.js";
 import { HOSTED_NAME, hostedReady } from "../ai/hosted.js";
-import { learning, learningFrom, learningName } from "../study/learning.js";
-import { languageName } from "../lang/index.js";
+import { learning, learningFrom, learningLocale, learningName } from "../study/learning.js";
+import { LANGUAGES, isOwnLanguage, languageName } from "../lang/index.js";
 import { ANSWERS, KINDS, MINUTES } from "./protocol.js";
 import * as P from "./ui.js";
 import { learnerSnapshot, sendLearner } from "./learner.js";
@@ -117,7 +117,10 @@ function setup(page, kindId, nav) {
   const kind = KINDS[kindId];
   if (!kind) return home(page, nav);
   const prefs = practicePrefs();
-  const choice = { answer: prefs.answer, minutes: prefs.minutes };
+  // A language of your own with no real tag (und-x-…): nothing on any device listens for it, so you type, and the row says so rather than
+  // offering a microphone that can't hear it. A real code (Burmese's) keeps the choice: the room's microphone says why if this device can't.
+  const typesOnly = !learningLocale();
+  const choice = { answer: typesOnly ? "type" : prefs.answer, minutes: prefs.minutes };
   const topic = el("input", { part: "text-field", type: "text", maxlength: "80", placeholder: kindId === "roleplay" ? "A scene: dinner with family, the bakery…" : "Anything", "aria-label": "Topic", autocomplete: "off" });
   const error = el("p", { class: "lx-small", role: "alert" });
   // Who runs it: the in-app AI with a key of yours on this device (ai/own-key.js), the in-app AI on the plan (ai/hosted.js), or
@@ -183,7 +186,7 @@ function setup(page, kindId, nav) {
           if (!key) throw new Error("There's no key on this device for this account any more. Add it again in the AI section.");
           inapp = { inapp: { engine: "own-key", name: key.model.name } };
         }
-        const practice = await post("/api/practice", { kind: kindId, answer: choice.answer, minutes: choice.minutes, topic: topic.value.trim() || undefined, language: learning(), from: learningFrom(), snapshot: learnerSnapshot(), ...inapp });
+        const practice = await post("/api/practice", { kind: kindId, answer: choice.answer, minutes: choice.minutes, topic: topic.value.trim() || undefined, language: learning(), ...(isOwnLanguage(learning()) ? { languageDef: LANGUAGES[learning()].def } : {}), from: learningFrom(), snapshot: learnerSnapshot(), ...inapp });
         location.hash = `${nav.base}/room/${encodeURIComponent(practice.id)}`;
       } catch (e) {
         error.textContent = e.message;
@@ -197,7 +200,9 @@ function setup(page, kindId, nav) {
     ui.pageTitle(kind.name, kind.about),
     who,
     ui.group(null, [
-      ui.choiceRow({ icon: "mic", title: "How you'll answer", options: Object.entries(ANSWERS), value: choice.answer, onchange: (v) => (choice.answer = v) }),
+      typesOnly
+        ? ui.listRow({ icon: "pencil", title: "How you'll answer", value: ANSWERS.type, sub: `Nothing listens for ${learningName()}: it's a language of your own.` })
+        : ui.choiceRow({ icon: "mic", title: "How you'll answer", options: Object.entries(ANSWERS), value: choice.answer, onchange: (v) => (choice.answer = v) }),
       ui.choiceRow({ icon: "clock", title: "How many minutes", options: MINUTES.map((m) => [m, String(m)]), value: choice.minutes, onchange: (v) => (choice.minutes = v) }),
     ]),
     el("label", { part: "field" }, el("span", { class: "lx-small lx-muted" }, kindId === "roleplay" ? "The scene (optional)" : "A topic (optional)"), topic),

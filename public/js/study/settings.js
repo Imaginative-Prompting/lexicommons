@@ -88,6 +88,9 @@ const DEFAULTS = {
   // Dutch sentence to read aloud, or the English to say in Dutch.
   // model: a Whisper model id, or "" for the one that suits this device.
   say: { engine: "browser", model: "", prompt: "dutch", hint: true, literal: true },
+  // The script a language is studied in (study/script.js), for the languages that may be studied in their romanization instead of their
+  // characters (Chinese in pinyin, Cantonese in jyutping): { <lang>: "characters" | "pinyin" | "jyutping" }, characters when not set.
+  writing: {},
   // Hearing Dutch (Settings → Study → Voices). A pack's recorded voices belong to the pack, so they aren't chosen here:
   // sentences take turns between them, unless the pack's page pins one (pins: { packId: voice slug }).
   listening: {
@@ -235,6 +238,8 @@ const RANGES = { "practice.minutes": [1, 180], "practice.suggestEvery": [1, 100]
 /** Whether a setting goes to your other devices, and a value is one it may be there. */
 function synced(path, value) {
   if (typeof path !== "string" || path.length > 120 || HERE_ONLY.test(path)) return false;
+  // The script a language is studied in (writing.<lang>): its characters, or its romanization (study/script.js checks it fits the language).
+  if (/^writing\.[a-z]{2,3}(?:-[A-Z][a-z]{3})?$/.test(path)) return ["characters", "pinyin", "jyutping"].includes(value);
   // A pack's voice pinned on its page (listening.pins.<pack id>): a voice's slug, or null for none.
   if (/^listening\.pins\.[a-z0-9][a-z0-9-]{1,47}$/.test(path)) return value === null || (typeof value === "string" && /^[a-z0-9][a-z0-9-]{0,47}$/.test(value));
   let node = DEFAULTS;

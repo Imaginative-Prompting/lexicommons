@@ -58,6 +58,8 @@ function unitOf(id, lang, now, recentWrong) {
       ...(s.slipping ? { slipping: true } : {}),
       ...(s.leech ? { leech: true } : {}),
       ...(s.lastAt ? { last: iso(s.lastAt) } : {}),
+      // Put down as known by a placement (Find your level), not by answers: when, so coaching never reads it as answers.
+      ...(s.placedAt ? { placed: iso(s.placedAt) } : {}),
     },
     score: struggling ? recent * 2 + lapses * 2 + (s.leech ? 4 : 0) + (s.slipping ? 1.5 : 0) + (lowest === null ? 0 : (1 - lowest) * 2) + rate : 0,
     why,

@@ -4,9 +4,12 @@
 // a press making that language the one you're learning, its packs on their way and Home in that language, never asked again; a press while Tinta waves; an account that has already
 // studied, and a device where a language was picked, never asked; a control that the check can fail. A press in the list to learn waits for the list
 // the welcome shows once the catalog has answered (until then every language; on a server with only Dutch's packs, Dutch alone), with a control
-// holding the catalog back. LOCAL only. node scripts/first-run-check.mjs http://localhost:<port> <outDir>
+// holding the catalog back. A full course then asks whether you know some of it already (Find your level), its four answers; No, I'm new to
+// it closes the first run on Home; a language with first lessons only asks nothing more. Every press past the first run goes through
+// scripts/fixtures/first-run.mjs, as every check's does. LOCAL only. node scripts/first-run-check.mjs http://localhost:<port> <outDir>
 process.env.LX_FIRST_RUN = "1";
 const { chromium } = await import("./quiet-browser.mjs");
+const { KNOW_SOME, pastKnowSome, pressInPage } = await import("./fixtures/first-run.mjs");
 import { mkdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 
@@ -121,11 +124,13 @@ async function settledList(page, limit = 10_000) {
     );
   return shownRows(page);
 }
-/** Presses the first of codes the settled list shows, else its first row, as a person would; the code pressed. */
+/** Presses the first of codes the settled list shows, else its first row, as a person would, then past what follows (a full course's
+ * question, answered No, I'm new to it: fixtures/first-run.mjs); the code pressed. */
 async function pickToLearn(page, codes) {
   const shown = await settledList(page);
   const code = codes.find((c) => shown.includes(c)) ?? shown[0];
   await page.locator(`${welcome} [data-language="${code}"]`).click();
+  await pastKnowSome(page);
   return code;
 }
 
@@ -294,18 +299,21 @@ await stage("the search narrows the list, and says when there's nothing", async 
   assert(back.length === listed.length, `${back.length} of the ${listed.length} shown before the search are back`);
   return `"${q}": ${shown.join(", ")} of ${listed.length}`;
 });
-await stage("a press 3 ms in, while Tinta waves: it's gone in that frame, and that's the language", async () => {
+await stage("a press 3 ms in, while Tinta waves: in that frame the next question (Spanish is a full course: do you know some already?), and that's the language; No, I'm new to it closes it", async () => {
   await page.reload();
   await page.waitForSelector(welcome);
   await page.waitForTimeout(3);
-  const at = await page.evaluate(async () => {
+  const at = await page.evaluate(async (rows) => {
     const row = document.querySelector('.lx-welcome [data-language="es"]');
     row.click();
-    return { gone: !document.querySelector(".lx-welcome"), lock: document.documentElement.hasAttribute("data-scroll-lock") };
-  });
-  assert(at.gone && !at.lock, `after the press: ${JSON.stringify(at)}`);
+    return { asked: document.querySelectorAll(rows).length, title: document.querySelector('.lx-welcome [data-part="page-title"]')?.textContent ?? null };
+  }, KNOW_SOME);
+  assert(at.asked === 4 && /Do you know some Spanish already\?/.test(at.title ?? ""), `after the press: ${JSON.stringify(at)}`);
   const lang = await page.evaluate(async () => (await import("/js/study/learning.js")).learning());
   assert(lang === "es", `learning ${lang}`);
+  await pastKnowSome(page);
+  const lock = await page.evaluate(() => document.documentElement.hasAttribute("data-scroll-lock"));
+  assert(!lock, "the page still locked after the first run closed");
   await page.waitForSelector('[data-part="header-language"]');
   await page.waitForFunction(() => document.querySelector('[data-part="header-language"]')?.textContent.includes("ES"), null, { timeout: 15_000 });
   await page.waitForTimeout(800);
@@ -358,6 +366,40 @@ await stage("the control: with a language's pack held back, that wait fails, and
   await held.context.close();
   return "the wait failed as it should";
 });
+await stage("a full course asks whether you know some of it already: its four answers (No, I'm new to it first, with lesson 1 under it); No, I'm new to it closes the first run on Home, Dutch kept, nothing opened; a language with first lessons only asks nothing more", async () => {
+  const fresh = await newAccount("Knows None");
+  try {
+    await onLearn(fresh.page);
+    const shown = await settledList(fresh.page);
+    await fresh.page.locator(`${welcome} [data-language="nl"]`).click();
+    await fresh.page.waitForSelector(KNOW_SOME);
+    const title = await titleOf(fresh.page);
+    const rows = await fresh.page.locator(KNOW_SOME).evaluateAll((nodes) => nodes.map((n) => [n.dataset.start, n.innerText.replace(/\s+/g, " ").trim()]));
+    assert(/Do you know some Dutch already\?/.test(title), `its question: ${title}`);
+    assert(rows.map(([start]) => start).join(",") === "new,few,by,talk" && /No, I'm new to it/.test(rows[0][1]) && /lesson 1/.test(rows[0][1]), `its answers: ${JSON.stringify(rows)}`);
+    await fresh.page.screenshot({ path: join(OUT, "shots", "06-know-some-dutch.png") });
+    assert(await pastKnowSome(fresh.page), "not asked");
+    await fresh.page.waitForTimeout(500);
+    const after = await fresh.page.evaluate(async () => ({ learning: (await import("/js/study/learning.js")).learning(), hash: location.hash, session: Boolean(document.querySelector('[data-part="session"]')) }));
+    assert(after.learning === "nl" && !after.session && !/session/.test(after.hash), `after No, I'm new to it: ${JSON.stringify(after)}`);
+    // A language with first lessons only, where the list offers one: a row with no lessons counted under it (a full course's says how many).
+    const second = await newAccount("Knows Some Other");
+    await onLearn(second.page);
+    const offered = new Set(await settledList(second.page));
+    const other = (await rowsOf(second.page)).find(([code, , sub]) => offered.has(code) && !sub)?.[0] ?? null;
+    if (!other) {
+      await second.context.close();
+      return `asked for Dutch, its four answers; no language with first lessons only offered here (${shown.length} offered)`;
+    }
+    await second.page.locator(`${welcome} [data-language="${other}"]`).click();
+    assert(!(await pastKnowSome(second.page)), `${other}, first lessons only, asked whether you know some`);
+    await second.context.close();
+    return `asked for Dutch, its four answers; ${other} asked nothing more`;
+  } finally {
+    await fresh.context.close();
+  }
+});
+
 await stage("never asked again: a reload, and a language kept", async () => {
   await page.reload();
   await page.waitForSelector("html[data-app-ready]");
@@ -462,6 +504,7 @@ await stage("the language you learn from: from English for a new learner on a Sp
     await onLearn(fresh.page);
     // (German: picking Dutch, the language a device starts on, changes nothing, so nothing is kept to read.)
     await press(fresh.page, welcome, "de");
+    await pastKnowSome(fresh.page, { press: pressInPage });
     const dutchNew = await kept(fresh.page);
     assert(dutchNew?.lang === "de" && dutchNew?.from === "en", `a new learner on a Spanish phone picks German: kept as ${said(dutchNew)}`);
     const english = await fresh.page.evaluate(async () => {
@@ -472,6 +515,7 @@ await stage("the language you learn from: from English for a new learner on a Sp
     assert(!english, "English is offered to learn to someone nobody asked which language they speak");
     await onLearn(old.page);
     await press(old.page, welcome, "en");
+    await pastKnowSome(old.page, { press: pressInPage });
     const first = await kept(old.page);
     assert(first?.lang === "en" && first?.from === "es", `a device that said Spanish picks English: kept as ${said(first)}`);
     await sheet(old.page, "nl");

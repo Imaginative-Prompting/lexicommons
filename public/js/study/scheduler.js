@@ -112,6 +112,8 @@ function counted(kind, memory, at, grade, answer) {
     reviews: (memory?.reviews ?? 0) + 1,
     days: (memory?.days ?? 0) + (memory && memory.lastDay === day ? 0 : 1),
     lastDay: day,
+    // Put down as known by a placement once: kept through the answers after it (a word's History shows it).
+    ...(memory?.placed ? { placed: memory.placed } : {}),
   };
 }
 
@@ -180,8 +182,30 @@ export function knownUntil(kind, card) {
 }
 
 /**
+ * A strength a placement put down as known (Find your level, study/placement.js): known at `stability` days from `at`, as if last
+ * reviewed then, so its first review falls `stability` days on at FSRS's own target recall. It isn't an answer: it counts no review,
+ * no day and no lapse (an idea's level still waits for its own answers: firmEnough), and `placed` says when, for the screens that tell it
+ * apart (a word's History). A miss after it is a lapse, as a miss of anything you knew is.
+ */
+export function seededMemory(kind, at, stability, memory = null) {
+  const when = new Date(at);
+  const first = memory?.card ?? engine(kind).next(createEmptyCard(when), when, Rating.Good).card;
+  const card = { ...first, stability, scheduled_days: Math.round(stability), due: new Date(at + Math.round(stability) * DAY), last_review: when };
+  // Over answers before it (the placement's own right ones, a lesson's): their counts stay; it's known from the placement on.
+  if (memory) return { ...memory, card, lastAt: at, placed: at };
+  return { card, firstAt: at, lastAt: at, lastGrade: "placed", recalled: true, lapseDays: 0, reviews: 0, days: 0, lastDay: Math.floor(at / DAY), placed: at };
+}
+
+/**
+ * Whether a placement's seed of `stability` takes on a strength as it stands: one never answered, or one whose last answer was right and
+ * holds less (the placement's own right answers, or a lesson's, before it). One last missed keeps its miss: the placement doesn't hide it.
+ */
+export const seedTakes = (memory, stability) => !memory || (memory.lastGrade !== "again" && memory.card.stability < stability);
+
+/**
  * One unit's memory, replayed from its reviews: [{ at, skill, grade, spoken }] in any order (skill read · hear · say,
- * grade again · hard · good). Returns { kind, strengths, reviews }: strengths has a memory for each strength that has
+ * grade again · hard · good; or "placed" with its stability: a placement's seed, applied where seedTakes says, never counted as a
+ * review). Returns { kind, strengths, reviews }: strengths has a memory for each strength that has
  * been tested, { card, firstAt, lastAt, lastGrade, recalled, lapseDays, reviews, days, lastDay, pool } (days: how
  * many different UTC days it was answered on, the last of them lastDay); reviews is every review applied, in order, with p
  * (the predicted recall just before it, null for the first), carried (it came from another strength's answer) and counted (the grade the
@@ -201,6 +225,8 @@ export function replay(unit, reviews, { after = null } = {}) {
     let spoken = false;
     for (; i < sorted.length && sorted[i].at === at; i++) {
       const { skill, grade } = sorted[i];
+      // A placement's seed: the strength as placed, where nothing was answered before it (an answer is truer than a placement).
+      if (grade === "placed" && SKILLS.includes(skill) && seedTakes(strengths[skill], sorted[i].stability)) strengths[skill] = seededMemory(kind, at, sorted[i].stability, strengths[skill]);
       if (!RATING[grade] || !SKILLS.includes(skill)) continue;
       if (!direct[skill] || WORST[grade] < WORST[direct[skill]]) direct[skill] = grade;
       if (skill === "say" && sorted[i].spoken) spoken = true;

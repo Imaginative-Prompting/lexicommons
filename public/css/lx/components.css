@@ -1032,6 +1032,10 @@
     max-width: calc(100% - 2 * var(--space-2));
     margin: 0;
     padding: 0 var(--space-2);
+    /* A tap's 44 px though it's a line in the sentence (12 Nov 2026: 42 tall), the room given back by a margin as large, so no line moves. */
+    --gap-reach: max(0px, calc((44px - 1lh - 2px) / 2));
+    padding-block: var(--gap-reach);
+    margin-block: calc(-1 * var(--gap-reach));
     border: 0;
     border-bottom: 2px solid var(--edge-strong);
     border-radius: 0;
@@ -1419,9 +1423,11 @@
      its own presses, and what scrolls goes under it; only Tinta is over the bar (below), and only at the step's start.
      Held by scripts/tinta-whole-check.mjs. (A practice room's chat keeps its own edge: no Tinta rises from its top.) */
   [data-part="session"] > [data-part="session-bar"] { position: relative; z-index: 1; }
-  /* A session's own toast (Practice this): under its bar, clear of the answer bar, and it takes no presses. */
-  [data-part="session"] > .lx-session-toasts { position: absolute; top: calc(env(safe-area-inset-top) + 64px); bottom: auto; z-index: 6; }
-  [data-part="session"] > .lx-session-toasts > * { pointer-events: none; }
+  /* A session's own toast (Practice this): under its bar, clear of the answer bar, and it takes no presses. A layer of the page's own
+     (session.js sessionToasts), over the ghosts a step leaves as (motion.js's layer is 1000): inside the session (30), a step's leave drew over
+     it (12 Nov 2026). Anchored at the top, its toast hangs from it at its own height. */
+  .lx-toasts.lx-session-toasts { position: fixed; top: calc(env(safe-area-inset-top) + 64px); bottom: auto; z-index: 1001; align-items: flex-start; }
+  .lx-toasts.lx-session-toasts > * { pointer-events: none; }
   [data-part="session"] > [data-part="activity"]:not(.lx-room-chat) {
     --step-room: 24px;
     margin-top: calc(-1 * var(--step-room));

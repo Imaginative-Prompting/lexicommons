@@ -1113,6 +1113,14 @@ its side), in `components.css`:
 - **Number keys, shown.** With a mouse, each choice a key answers (1–9: `data-keys` on Choose's, Tap the picture's and Fill's choices)
   shows its number in its corner until the step is answered.
 
+From 1024 wide and 640 tall (a computer), also (`study-screens.css`, `study/session.js`; desk-study's, v712):
+- **The picture question is one block the width of its tiles** (components.css caps them at 400), and the result's bar is that width
+  under it, so the step never ends wider than it began. Keyed on the tiles themselves (`[data-part="picture-choices"][data-kind="pictures"]`).
+- **The summary sits in the screen's middle,** and its two ways on are equal halves of its bar (Study again was 140 px beside a 490 px Done).
+- **A result's room is held from the start on a short window**: every question on the stage that gives room to its result keeps it from
+  the first frame, measured at the bar's own width, so nothing moves when the result comes.
+- **A pressed choice is measured where it stands** (the press's translate undone), so a right answer never shrinks the tiles.
+
 **One frame, at 1280 and up** (11 Nov 2026). Every page sits in one frame, 960 wide (1120 from 1600), centered beside the sidebar
 (`shell.css --lx-frame`), so the header's title and chips stand at the same place on every tab. A grid page fills the frame; every other
 page's column is 720 at the frame's start edge, never centered in it. A tab's own 720 page (Home, Read, the AI section) uses the frame's
@@ -1150,6 +1158,38 @@ packs, the path, a topic, a pack's page, Browse, Add your own) stay 720: a list'
 the two rides the page's push. Buttons follow the computer's own rule (above). Rows and lists span the 960 as
 fields, cards and grids do (All packs and the language row end where the search field and the topics do). desk-check's wide stage holds it.
 
+**Home on a computer** (`know.css`, `know/today.js`, `know/home-cards.js`; desk-study's). Nothing changes under 1024:
+- **The week strip's seven days held to 420 px** in the 720 column (1024 to 1279), so its marks keep together under the streak (as
+  sevenths of 720 they stood 103 px apart). v704.
+- **The book card's and Your AI's words start where every heading starts** (a phone's sit 4 px in under their picture). v704.
+- **Two columns from 1280** (the frame, 960; 1120 from 1600): Translate, what to do next and what to read in the first; Your progress
+  beside them, 320 wide (from 1600 the first column is the page's own 720 and the second the rest), so the first view holds the day whole.
+  Not while Translate is open (its page is the column's). Your progress's two tiles one over the other (side by side in 320 they'd be
+  narrower than the smallest phone's); the streak's line balanced (`text-wrap: balance`); the words tile's row ends on a whole word
+  (it wraps, no fade). v704.
+- **Your progress after what to read in the page's order** from 1280 (`today.js placeProgress`, a matchMedia), so keys and a screen
+  reader meet the day's first column first. v704.
+- **The book card opens at once when it's wholly in the first screen** (`home-cards.js bookOpens`), not only as you scroll to it: on a
+  computer it usually is. v709.
+
+**Study on a computer** (`study-screens.css`, `shell/study.js`, `study/doors.js`; desk-study's, v690):
+- **The Practice card is whole** from 1024, with Study's gear inside it beside its arrow: the bite out of its corner is a phone's, where
+  the gear sits over the card's edge; on a wide card it read as a circle cutting the border.
+- **Two a row in the frame's whole width** from 1280: the two doors (one alone, a newcomer's first lesson, keeps half the frame at its
+  start), the two rows under the games, and the foot's two (Study a topic, Your packs), so no row's value sits a window away from its
+  name. Your packs takes Study a topic's boxed row shape beside it (a bare row beside a boxed one read as two kinds of thing).
+
+**The path page on a computer** (`path-page.css`, `study/path-page.js`; desk-study's). From 1024:
+- **Its grounds run the whole width beside the sidebar** (a `border-image` outset, so nothing scrolls sideways), and the page ends on its
+  ground, not on canvas. The path itself stays where it is. v664.
+- **The way back to your place stays with the path** (over the column's middle, level with the way back), not in the window's far
+  corner; Show more centered under a centered path. v664.
+- **The grounds are read again on a theme change** (`theme.js` onChange and `<html data-theme>`): a black band stayed under the header in
+  Paper after Graphite. v707.
+
+desk-check holds these (`scripts/desk/study.mjs`: Home 95, the path's theme 97, the picture question 32, and Study's in its wide, keys
+and phones stages, with `WIDE_ASIDES`' Home entry and `DRAWN_SCREENS`), as idea-picture-check and idea-cards-check hold the idea cards.
+
 **Knowledge's cards as a board, where the tabs are a sidebar** (`know.css`). From 1024 the tab's first row is what the page draws before
 its first frame: the pile's card about a phone's width (three tenths of the column, never under 288 px, so the pile fills it as it does on
 a phone) beside This week. In the 720 column (a tablet on its side, a window under 1280) This week is one column, as a phone has it, and
@@ -1162,7 +1202,9 @@ column's width. `know/page.js` draws the ideas before the first frame in the fra
 the theme as it is: its paints and the page's ground are read when it's built and again on a new theme (`cards.js` relook: `page.js` tells
 a pile on the screen, and a page kept off it asks when it comes back); pile-drop-check counts the old ground's pixels on its
 canvas. desk-check's phones stage holds the tab's top (without the pile's tiles,
-which every visit lays out anew), This week, the tab's idea cards and the Ideas page as they were.
+which every visit lays out anew), This week, the tab's idea cards and the Ideas page as they were. An idea's card shows a sentence that
+shows the idea (one whose notes mark it and that you've played, else any marked one of yours, else the first played), and no word in it
+is dimmed unless some word is lit (`cards-more.js`; desk-study's, v694).
 
 **Explore on a computer** (`explore.css`). From 1024 the language's lessons are one line (cover, words, Continue or Start at its end, 260 px),
 not a card with a bar across it; 32 px stand between the home's sections; the rows at its foot are one list (the language's row with no box

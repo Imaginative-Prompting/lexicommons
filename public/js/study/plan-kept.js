@@ -10,6 +10,7 @@ import { allPacks, isPackOn, yourPacks } from "./packs.js";
 import { frequencyVersion } from "./frequency.js";
 import { grammarNow } from "../lang/grammar.js";
 import { anchorsOn } from "./path-place.js";
+import { scriptOf } from "./script.js";
 import { sampleDb } from "./sample-mode.js";
 
 // Kept records of another shape are worked out again.
@@ -35,7 +36,7 @@ export function planKey(lang, { anchors = true } = {}) {
     .filter((pack) => pack.language === lang)
     .map((pack) => [pack.id, pack.origin?.kind === "yours" ? changed.get(pack.id) ?? 0 : JSON.stringify(pack.origin ?? null), isPackOn(pack.id) ? 1 : 0]);
   const grammar = grammarNow(lang);
-  return JSON.stringify([SCHEMA, appVersion(), lang, packs, frequencyVersion(lang), grammar?.revision ?? 1, grammar?.libraryVersion ?? null, anchors ? anchorsOn(lang) : null]);
+  return JSON.stringify([SCHEMA, appVersion(), lang, packs, frequencyVersion(lang), grammar?.revision ?? 1, grammar?.libraryVersion ?? null, anchors ? anchorsOn(lang) : null, scriptOf(lang)]);
 }
 
 const stats = { read: 0, missed: 0, kept: 0 };

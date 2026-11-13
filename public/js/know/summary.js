@@ -440,5 +440,7 @@ export function history(unit, { lang = learning() } = {}) {
     if (grade) tests.push({ at: row.at, activity: row.activity, skill: row.skill, grade, outcome: row.outcome, help: row.help, said: row.said, note: row.note });
     else if (row.outcome === "met") met[sourceOf(row.activity)]++;
   }
-  return { tests: tests.reverse(), met };
+  // Put down as known by a placement (Find your level) with nothing answered before it: when, as an entry of its own (never an answer).
+  const placedAt = unitState(unit, { lang }).placedAt ?? 0;
+  return { tests: tests.reverse(), met, placedAt };
 }

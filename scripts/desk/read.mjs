@@ -81,6 +81,7 @@ import {
   weeksIn,
   writeFileSync,
 } from "./common.mjs";
+import { pastKnowSome } from "../fixtures/first-run.mjs";
 
 // Reading text against the measure itself (frame.md §6: "Running text at most --measure, on the text itself"): each element of prose, its
 // widest line in px against its own --measure (min(31em, 640px) in its own font size), with a command to copy left out (code and pre are
@@ -601,7 +602,8 @@ export const stages = [
             const found = await now();
             assert(found.rows.length === 1 && found.rows[0].code === "nl" && Math.abs(found.rows[0].x - up.list.x) <= 13, `${size.width}: "dutc" typed shows ${found.rows.map((row) => row.code).join(", ")}, not Dutch alone where the list starts`);
             await page.locator('.lx-welcome [data-language="nl"]').click();
-            await page.waitForFunction(() => !document.querySelector(".lx-welcome"), null, { timeout: 10_000 });
+            // Dutch is a full course: its question whether you know some already, answered No, I'm new to it, and the first run gone.
+            await pastKnowSome(page);
             assert(!errors.length, `${size.width}: page errors: ${errors.join(" | ")}`);
             seen.push(`${size.width}: ${up.rows.length} languages in four columns across ${up.list.w} px, First lessons at ${rest.y} of ${up.view.h}, the search ${up.find.w} wide`);
           } finally {

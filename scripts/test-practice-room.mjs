@@ -328,5 +328,40 @@ await test("control: collected with all it has, or from a device from before (no
   }
 });
 
+// A practice in a language of their own (12 Nov 2026): the room knows it only through the definition the practice keeps, and only while a
+// step that reads it runs, never between calls.
+await test("a practice in a language of their own (Burmese): started with its definition, the AI shown its name and definition, a reply graded on a Burmese word and a summary taken; a logged one takes the definition the app sent; the registry never keeps it", async () => {
+  const { LANGUAGES } = await import("../public/js/lang/index.js");
+  const BURMESE = { name: "Burmese", written: "unspaced", case: "any", ends: ["။"] };
+  const KEPT = { name: "Burmese", direction: "ltr", written: "unspaced", case: "any", ends: ["။"] };
+  const known = () => Object.hasOwn(LANGUAGES, "my");
+  const r = room(PracticeRoom, env);
+  const practice = noError(await r.create({ kind: "conversation", answer: "type", minutes: 10, language: "my", languageDef: BURMESE }, null), "create");
+  assert.ok(!known(), "starting it left Burmese in the registry");
+  const joined = noError(await r.aiWait(SOURCE, { waitMs: 0 }), "practice_wait");
+  const seat = joined.seat ?? joined.practice?.seat;
+  const shown = joined.practice;
+  assert.equal(shown.language, "my");
+  assert.equal(shown.languageName, "Burmese", `the AI's view: ${JSON.stringify(shown).slice(0, 300)}`);
+  assert.deepEqual(shown.languageDef, KEPT);
+  assert.ok(!known(), "the AI's view left Burmese in the registry");
+  const said = noError(await r.learnerTurn(practice.id, { type: "said", text: "ရေသောက်ချင်တယ်။" }), "their turn");
+  const reply = noError(
+    await r.aiReply(SOURCE, { practiceId: practice.id, seat, reply: { say: "ကော်ဖီသောက်ချင်လား။", grades: [{ turn: said.turn.seq, verdict: "right", concepts: [{ concept: "w:ရေ", outcome: "right" }] }] } }),
+    "practice_reply",
+  );
+  assert.ok(!known(), "the reply left Burmese in the registry");
+  noError(await r.aiEnd(SOURCE, { practiceId: practice.id, seat, summary: { text: "ကောင်းတယ်။", went_well: ["ရေ"] } }), "practice_end");
+  assert.ok(!known(), "the summary left Burmese in the registry");
+  const after = noError(await r.get(practice.id), "get");
+  assert.ok(JSON.stringify(after.turns).includes("w:ရေ"), `the grade on ရေ: ${JSON.stringify(after.turns).slice(0, 400)} (${JSON.stringify(reply).slice(0, 120)})`);
+  // A logged one: in the language their app last sent, with the definition it sent.
+  const logged = room(PracticeRoom, env);
+  noError(await logged.putLearner({ version: 1, language: "my", languageName: "Burmese", languageDef: BURMESE }), "their app's snapshot");
+  const log = noError(await logged.aiLog(SOURCE, { turns: [{ who: "you", type: "said", text: "ရေသောက်ချင်တယ်။" }] }), "practice_log");
+  assert.ok(!known(), "the log left Burmese in the registry");
+  assert.ok(JSON.stringify(log).length > 2, "practice_log answered nothing");
+});
+
 console.log(fails.length ? `${fails.length} FAILED` : "all passed");
 process.exit(fails.length ? 1 : 0);

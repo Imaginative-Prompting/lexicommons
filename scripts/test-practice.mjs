@@ -286,6 +286,17 @@ test("the tally: verdicts, cards and concepts", () => {
   eq(t.concepts.find((c) => c.concept === "p:separable").avoided, 1);
 });
 
+test("a practice in a language of their own (12 Nov 2026): kept with its definition as a pack's is; without one, with a wrong one, one of ours given one, or from it, refused in words", () => {
+  const BURMESE = { name: "Burmese", written: "unspaced", case: "any", ends: ["။"] };
+  eq(checkSettings({ kind: "conversation", answer: "type", minutes: 10, language: "my", languageDef: BURMESE, from: "en" }), { kind: "conversation", answer: "type", minutes: 10, topic: undefined, language: "my", languageDef: { name: "Burmese", direction: "ltr", written: "unspaced", case: "any", ends: ["။"] }, from: "en" });
+  refuses(() => checkSettings({ kind: "conversation", language: "my" }), /a language of their own with its languageDef/);
+  refuses(() => checkSettings({ kind: "conversation", language: "my", languageDef: { name: "Burmese", direction: "down" } }), /"ltr" or "rtl"/);
+  refuses(() => checkSettings({ kind: "conversation", language: "nl", languageDef: { name: "Dutch" } }), /leave languageDef out/);
+  refuses(() => checkSettings({ kind: "conversation", language: "Burmese", languageDef: BURMESE }), /isn't a language code/);
+  refuses(() => checkSettings({ kind: "conversation", language: "my", languageDef: BURMESE, from: "my" }), /from must be one of/);
+  if (Object.hasOwn(LANGUAGES, "my")) throw new Error("checking left Burmese in the registry");
+});
+
 test("any field of any input, set to an object whose toString is null, is refused in words or read, never thrown on", () => {
   const trap = JSON.parse('{"toString": null}');
   // Every path into a value (the value itself included), and the value with the trap put at one path.

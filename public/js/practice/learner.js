@@ -6,7 +6,7 @@
 // evidence stays here. It's kept under the practice room's size limit, dropping the strongest words first.
 
 import { api } from "../shell/api.js";
-import { languageName } from "../lang/index.js";
+import { LANGUAGES, isOwnLanguage, languageName } from "../lang/index.js";
 import { CHUNKS, ITEMS, PATTERNS, WORDS, contentLanguage, itemById, storedSentence } from "../study/content.js";
 import { learningFrom } from "../study/learning.js";
 import { allEvidence, langOf, unitState } from "../study/progress.js";
@@ -52,6 +52,8 @@ export function learnerSnapshot(now = Date.now()) {
     version: 1,
     language: lang,
     languageName: languageName(lang),
+    // A language of their own: how it's written, the one thing about it the server and your AI can't know otherwise (12 Nov 2026).
+    ...(isOwnLanguage(lang) ? { languageDef: LANGUAGES[lang].def } : {}),
     from: learningFrom(),
     about:
       "language: the one they're learning (from: the one they know); every nl field holds text in it, whatever the language (the field keeps its name). level: 0 new (never practiced) … 4 strong. recall: the chance (%) they'd recall it now, by strength: read (understand it written), hear (understand it heard), say (produce it, typed or spoken). due: time to review it. slipping: due and it was known. leech: missed again and again; a contrast or a memory hook helps more than repeating it. Grade with these ids (p:<pattern>, c:<phrase>, w:<lemma>); new ids are fine.",

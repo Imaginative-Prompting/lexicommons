@@ -114,10 +114,13 @@
     z-index: 40;
     display: flex;
     justify-content: center;
+    /* Each toast at its own height, at the edge its layer is anchored to: never stretched to the layer's (12 Nov 2026: a session's toast
+       drew 490 px tall when its layer was given a top and a bottom). */
+    align-items: flex-end;
     padding: 0 var(--space-4);
     pointer-events: none;
   }
-  .lx-toasts > * { pointer-events: auto; max-width: 100%; }
+  .lx-toasts > * { flex: none; pointer-events: auto; max-width: 100%; }
   .lx-toasts [data-part="toast"] [data-part="button"] { margin: -4px -8px -4px var(--space-1); }
   /* On a computer (frame.md §0): at the foot, centered on the page beside the sidebar while the sidebar is shown (its 232 px, then the same
      16 px either side, so a toast's middle is the page's), on the window while a session or the reader covers it (it stood 124 px right of a

@@ -26,7 +26,7 @@ const HOW: Record<string, string> = {
   pack_add:
     "Read get_pack_guide once. get_pack shows the pack; if due is true, get_learner says what's due and weak, so aim the sentences there. Add with add_items (check_items first if you like), then finish_request with done: { said: \"Added 20 sentences about cooking to Travel\", links: { pack, changes: [the change ids add_items gave] } }.",
   pack_new:
-    "Read get_pack_guide once. Make one pack for this purpose with create_pack, in the request's language, then finish_request with done: { said, links: { pack, changes: [its change id] } }.",
+    "Read get_pack_guide once. Make one pack for this purpose with create_pack, in the request's language (a language of their own comes with languageDef: give it to create_pack as language_def), then finish_request with done: { said, links: { pack, changes: [its change id] } }.",
   text_new:
     "Read get_text_guide once, and get_learner for their level. Get or write the text as asked, upload it with request_text_upload (a cover too, if it fits) and add it with add_text, then finish_request with done: { said: \"Added a short story about the market\", links: { text: its text_id } }.",
   look:

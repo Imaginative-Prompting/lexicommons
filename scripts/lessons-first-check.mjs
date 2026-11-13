@@ -1,6 +1,7 @@
 // A brand-new learner's first lesson is the path's lesson 1, never the starter's (study/packs.js lessonsComing and the sync's order, the path
 // page's hold, study/session.js's start), on a phone in Chromium and WebKit, with path-nl's file held HOLD ms (5 s) on its way. Each round a
-// new account (its passkey made in Chromium, as WebKit can't) on a new device of the engine's, through the real first run (English, then Dutch):
+// new account (its passkey made in Chromium, as WebKit can't) on a new device of the engine's, through the real first run (Dutch, then No, I'm
+// new to it: scripts/fixtures/first-run.mjs):
 //   home   Home's Start tapped 1.0 s after Dutch is picked (or, while Home holds its card, the address its Start opens): the session that opens is
 //          path-nl's lesson 1, started only once path-nl is here; the tap itself came while it was still held, so the wait is what's proven
 //   study  the same from Study's lesson door, 1.4 s after
@@ -14,6 +15,7 @@
 //   node scripts/lessons-first-check.mjs http://localhost:<port> <outDir> [--engines chromium,webkit] [--hold 5000] [--rounds 3] [--dwell 20000]
 process.env.LX_FIRST_RUN = "1";
 const { chromium, webkit } = await import("./quiet-browser.mjs");
+const { WELCOME, pastKnowSome } = await import("./fixtures/first-run.mjs");
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -99,15 +101,15 @@ async function newDevice(engine) {
   return { context, page, errors, packsAsked, path };
 }
 
-// The first run: English, then Dutch, dwell ms on the second question first. Returns when Dutch was picked (Date.now()).
+// The first run: dwell ms on its question, Dutch, then No, I'm new to it. Returns when Dutch was picked (Date.now()): its packs are asked for
+// from that press. (Until 11 Nov 2026 a first question asked which language you speak, and this pressed English for it.)
 async function firstRun(page, { dwell = 0 } = {}) {
   await page.goto(`${BASE}/app/`);
-  await page.waitForSelector(".lx-welcome [data-language]", { timeout: 60_000 });
-  await page.locator('.lx-welcome [data-language="en"]').click();
-  await page.waitForFunction(() => document.querySelector('.lx-welcome [data-part="page-title"]')?.textContent === "What do you want to learn?", null, { timeout: 10_000 });
+  await page.waitForSelector(`${WELCOME} [data-language]`, { timeout: 60_000 });
   if (dwell) await page.waitForTimeout(dwell);
   const picked = Date.now();
-  await page.locator('.lx-welcome [data-language="nl"]').click();
+  await page.locator(`${WELCOME} [data-language="nl"]`).click();
+  await pastKnowSome(page);
   return picked;
 }
 

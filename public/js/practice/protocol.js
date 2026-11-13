@@ -16,7 +16,7 @@
 // A practice is in one language (settings.language, the one being learned when it started): its lines, its grades and
 // the evidence they become are all in it.
 
-import { LANGUAGES, sentenceEnds } from "../lang/index.js";
+import { LANGUAGES, isOurLanguage, ourLanguages, ownLanguageDef, ownLanguageProblem, sentenceEnds } from "../lang/index.js";
 
 export const KINDS = {
   conversation: {
@@ -442,22 +442,43 @@ export function checkSummary(value, { language = "nl" } = {}) {
   };
 }
 
+/**
+ * The language a practice or a request is in: one Lexicommons lists, or a learner's own (a language it doesn't list, 12 Nov 2026) with its
+ * definition, checked by a pack's rules (lang/index.js ownLanguageProblem) and kept with it, since the server knows such a language only
+ * through it. → { language, languageDef? }, or a PracticeError saying what to send.
+ */
+export function practiceLanguage(code, def) {
+  const language = asText(code ?? "");
+  if (isOurLanguage(language)) {
+    if (def !== undefined && def !== null) throw new PracticeError(`${LANGUAGES[language].name} is one Lexicommons knows: leave languageDef out.`);
+    return { language };
+  }
+  if (def === undefined || def === null)
+    throw new PracticeError(`language must be one of ${ourLanguages().join(", ")}, or a language of their own with its languageDef ({ name, direction, written, case, ends }, as its packs have it).`);
+  const problem = ownLanguageProblem(language, def);
+  if (problem) throw new PracticeError(problem.message);
+  return { language, languageDef: ownLanguageDef(def) };
+}
+/** Whether a code is a well-formed one for a learner's own language (refusals say why it's not offered, not that it's no language). */
+export const ownLanguageCode = (code) => typeof code === "string" && !isOurLanguage(code) && !ownLanguageProblem(code, { name: "?" });
+
 /** A practice's settings, as the app starts it. */
 export function checkSettings(value) {
-  if (!isObject(value)) throw new PracticeError("Send { kind, answer, topic?, minutes?, language?, from? }.");
+  if (!isObject(value)) throw new PracticeError("Send { kind, answer, topic?, minutes?, language?, languageDef?, from? }.");
   const kind = asText(value.kind ?? "");
   if (!KINDS[kind]) throw new PracticeError(`kind must be one of ${Object.keys(KINDS).join(", ")}.`);
   const answer = asText(value.answer ?? "both");
   if (!ANSWERS[answer]) throw new PracticeError(`answer must be one of ${Object.keys(ANSWERS).join(", ")}.`);
   const minutes = asNumber(value.minutes ?? 10);
   if (!MINUTES.includes(minutes)) throw new PracticeError(`minutes must be one of ${MINUTES.join(", ")}.`);
-  // The language it's in: the one being learned when it started (Dutch for a practice from before practices had one).
-  const language = asText(value.language ?? "nl");
-  if (!Object.hasOwn(LANGUAGES, language)) throw new PracticeError(`language must be one of ${Object.keys(LANGUAGES).join(", ")}.`);
-  // Their own language, the one they learn from: what the AI explains in and writes the summary in (English for one from before).
+  // The language it's in: the one being learned when it started (Dutch for a practice from before practices had one); a learner's own
+  // comes with its definition, and the practice keeps it.
+  const { language, languageDef } = practiceLanguage(value.language ?? "nl", value.languageDef);
+  // Their own language, the one they learn from: what the AI explains in and writes the summary in (English for one from before). One
+  // Lexicommons lists: the app's words are in it.
   const from = asText(value.from ?? "en");
-  if (!Object.hasOwn(LANGUAGES, from)) throw new PracticeError(`from must be one of ${Object.keys(LANGUAGES).join(", ")}.`);
-  return { kind, answer, minutes, topic: text(value.topic, LIMITS.topic, "topic"), language, from };
+  if (!isOurLanguage(from)) throw new PracticeError(`from must be one of ${ourLanguages().join(", ")}.`);
+  return { kind, answer, minutes, topic: text(value.topic, LIMITS.topic, "topic"), language, ...(languageDef ? { languageDef } : {}), from };
 }
 
 /** One turn of yours, from the app. */

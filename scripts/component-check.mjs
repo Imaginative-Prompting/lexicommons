@@ -24,6 +24,7 @@
 //   --tablet: the pages measured on a tablet by touch instead of a phone (an iPad's agent, not a phone's view, at that size: 744x1133,
 //   820x1180, 1180x820), where the layouts from 700 and 1024 px wide apply (the session's stage, the sidebar); it measures the pages only.
 import { chromium } from "./quiet-browser.mjs";
+import { routeStillPlan } from "./fixtures/still-plan.mjs";
 import { knowWords } from "./fixtures/know-words.mjs";
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -653,16 +654,23 @@ const ORDER_OR_ANOTHER = (sel) => {
   const kind = document.querySelector(sel)?.getAttribute("data-step");
   return kind === "arrange" || kind === "listen" ? document.querySelectorAll(`${sel} [data-part="arrange-bank"] [data-part="tile"]`).length >= 2 : Boolean(kind && document.querySelector(`${sel} [data-part="activity-prompt"], ${sel} [data-part="study-card"]`));
 };
-// session.js as served, but playing a set plan for mode "still" (globalThis.__stillPlan: the order loop's exact step, as speaking-words-check
-// sets one), and while `planted` without its swap (askAnotherWay): the order step it would have asked another way is shown.
+// A set plan for mode "still" (globalThis.__stillPlan: the order loop's exact step, fixtures/still-plan.mjs), and session.js as served but,
+// while `planted`, without its swap (askAnotherWay): the order step it would have asked another way is shown. The swap is matched however
+// its queueing is written (with the step it measured, or without).
 let planted = false;
-if (ORDER_ONLY)
+const ASK_ANOTHER = /queueMicrotask\((?:\(\) => )?askAnotherWay(?:\([a-z]*\))?\)/;
+if (ORDER_ONLY) {
+  await routeStillPlan(sp);
   await sp.route(/\/js\/study\/session\.js(\?|$)/, async (route) => {
     const response = await route.fetch();
-    let text = (await response.text()).replace("const plan = planSession(mode, arg);", 'const plan = mode === "still" ? globalThis.__stillPlan : planSession(mode, arg);');
-    if (planted) text = text.replace("queueMicrotask(askAnotherWay)", "void 0");
+    let text = await response.text();
+    if (planted) {
+      if (!ASK_ANOTHER.test(text)) throw new Error("session.js's swap (askAnotherWay) not found to take out");
+      text = text.replace(ASK_ANOTHER, "void 0");
+    }
     return route.fulfill({ response, body: text, headers: { ...response.headers(), "content-type": "text/javascript" } });
   });
+}
 /** The page loaded afresh at Study (never at the set plan's address: a fresh page has no plan to play there). */
 async function freshPage() {
   await sp.evaluate(() => history.replaceState(history.state, "", "#study"));

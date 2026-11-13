@@ -65,6 +65,8 @@ const FILES = {
     { fields: ["de boom", "the tree", "", "", ""] },
     { fields: ["de vis", "the fish", "", "", ""] },
   ] })),
+  // A deck in a language Lexicommons doesn't list (12 Nov 2026): Burmese, written without spaces, ။ its full stop.
+  burmese: file("burmese.apkg", decks.oldApkg(SQL, { deck: "Burmese words", types: [decks.BASIC], notes: [["ရေ", "water"], ["ကော်ဖီ", "coffee"], ["မင်္ဂလာပါ", "hello"], ["ရေသောက်ချင်တယ်။", "I want to drink water."], ["ကော်ဖီသောက်ချင်တယ်။", "I want to drink coffee."], ["နေကောင်းလား။", "Are you well?"]].map((fields) => ({ fields })) })),
   unsure: file("mystery.apkg", decks.oldApkg(SQL, { deck: "My words", types: [decks.BASIC], notes: [{ fields: ["kaj", "and"] }, { fields: ["hundo", "dog"] }] })),
   flipped: file("flipped.apkg", decks.oldApkg(SQL, { deck: "Swedish the other way", types: [{ ...decks.BASIC, fields: ["English", "Swedish"], templates: [{ q: "{{English}}", a: "{{Swedish}}" }] }], notes: [{ fields: ["the house", "huset"] }, { fields: ["the dog", "hunden"] }, { fields: ["the cat", "katten"] }] })),
   hostile: file("hostile.apkg", decks.newApkg(SQL, decks.HOSTILE)),
@@ -915,6 +917,50 @@ await stage("Safari's engine reads each generation in the parser's worker (an iP
   } finally {
     await engine.close();
   }
+});
+
+await stage("a deck in a language Lexicommons doesn't list: It teaches → Another language… names it, its code made from the name or typed (my), how it's written guessed from its cards (no spaces, no small and capital letters, ။ ending a sentence); added, the language is yours for good, and a session plays its cards", async () => {
+  await importAndReport(FILES.burmese);
+  assert(/We couldn't tell/.test(await words()), "it didn't ask which language");
+  await page.getByText("It teaches").click();
+  await page.getByText("Another language…").click();
+  const name = page.locator('input[aria-label="Its name"]');
+  await name.waitFor({ timeout: 10_000 });
+  // In the sheet the list was in: one sheet up, never one opened over another.
+  await page.waitForTimeout(600);
+  same(await page.evaluate(() => [...document.querySelectorAll(".lx-sheet-layer")].filter((layer) => !layer.hidden && layer.getAttribute("data-state") !== "closing").length), 1, "sheets up");
+  await name.fill("Burmese");
+  same(await page.locator('input[aria-label="Its code"]').inputValue(), "und-x-burmese", "the code made from its name");
+  const guessed = await page.evaluate(() => Object.fromEntries([...document.querySelectorAll('[data-part="segmented"]')].map((group) => [group.getAttribute("aria-label"), group.querySelector('[aria-pressed="true"]')?.textContent.trim()])));
+  same([guessed.Direction, guessed["Between words"], guessed["Its words"]], ["Left to right", "No spaces", "As written"], "its guesses");
+  same(await page.locator('input[aria-label="What else ends a sentence"]').inputValue(), "။", "its full stop");
+  await page.locator('input[aria-label="Its code"]').fill("my");
+  await page.screenshot({ path: `${OUT}/another-language.png` });
+  await page.getByRole("button", { name: "Use it" }).click();
+  await page.waitForTimeout(300);
+  const report = await words();
+  assert(report.includes("Burmese") && !report.includes("und-x"), `the page after: ${report.slice(0, 300)}`);
+  await page.screenshot({ path: `${OUT}/burmese-deck.png`, fullPage: true });
+  await addIt();
+  await page.screenshot({ path: `${OUT}/burmese-added.png` });
+  const pack = await packNamed("Burmese words");
+  same([pack?.language, pack?.languageDef], ["my", { name: "Burmese", direction: "ltr", written: "unspaced", case: "any", ends: ["။"] }], "the pack");
+  const kept = await page.evaluate(async () => {
+    const { LANGUAGES } = await import("/js/lang/index.js");
+    return { own: LANGUAGES.my?.own === true, name: LANGUAGES.my?.name, stored: Object.keys(JSON.parse(localStorage.getItem("lx.ownLanguages.v1") ?? "{}")) };
+  });
+  assert(kept.own && kept.name === "Burmese" && kept.stored.includes("my"), `the language kept: ${JSON.stringify(kept)}`);
+  await page.getByRole("button", { name: "Study it" }).click();
+  await page.waitForTimeout(500);
+  const learning = await page.evaluate(async () => (await import("/js/study/learning.js")).learning());
+  same(learning, "my", "studying it switches to Burmese");
+  // Played to its summary and left by Done, as every session here is (one left open stands under the next stage's).
+  const played = await playSession(pack, { most: 40 });
+  assert(await page.locator('[data-part="session-summary"]').count(), `no summary after ${played.length} steps`);
+  await leaveSession();
+  await page.evaluate(async () => (await import("/js/study/learning.js")).setLearning("nl"));
+  assert(played.length > 0, "no step of a session played");
+  return `Burmese (my): ltr, no spaces, as written, ။; added and kept; a session of ${played.map((step) => step.game).join(", ")}`;
 });
 
 await stage("no errors on the page through all of it", async () => {
